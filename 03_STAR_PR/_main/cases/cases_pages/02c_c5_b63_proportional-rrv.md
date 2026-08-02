@@ -20,10 +20,7 @@ runoff family, but it also seats the minority bloc — included for comparison.
 ```yaml
 voting_method: rrv
 num_winners: 3
-expected_winners:
-- Alice
-- Ben
-- Dan
+expected_winners: [Alice, Ben, Dan]
 ```
 
 ## Ballots

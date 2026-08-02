@@ -26,8 +26,7 @@ elects Alan.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Beth
+expected_winners: [Beth]
 ```
 
 ## Ballots

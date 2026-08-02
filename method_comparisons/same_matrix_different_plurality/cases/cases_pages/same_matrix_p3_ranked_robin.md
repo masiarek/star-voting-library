@@ -24,8 +24,7 @@ outside the pairwise matrix (Fishburn C3).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ben
+expected_winners: [Ben]
 ```
 
 ## Ballots

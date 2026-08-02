@@ -32,8 +32,7 @@ methods elect Cash.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cash
+expected_winners: [Cash]
 bv_election_id: 7f4f7q
 bv_test_id: BV2194
 ```

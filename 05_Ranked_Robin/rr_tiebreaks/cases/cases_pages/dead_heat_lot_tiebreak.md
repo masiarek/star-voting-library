@@ -21,12 +21,8 @@ LH-ONLY ON PURPOSE. This case is exactly where the LH and BetterVoting tiebreak 
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ada
-lot_numbers:
-- Ada
-- Ben
-- Cara
+expected_winners: [Ada]
+lot_numbers: [Ada, Ben, Cara]
 ```
 
 ## Ballots

@@ -33,8 +33,7 @@ agrees on all four winners.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cora
+expected_winners: [Cora]
 bv_election_id: qdtqf2
 bv_test_id: BV2200
 ```

@@ -31,12 +31,9 @@ lives.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Blake
+expected_winners: [Blake]
 blocs:
-  Coalition:
-  - Blake
-  - Carmen
+  Coalition: [Blake, Carmen]
 ```
 
 ## Ballots

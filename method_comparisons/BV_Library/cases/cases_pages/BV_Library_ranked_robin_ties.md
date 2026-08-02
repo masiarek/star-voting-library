@@ -21,8 +21,7 @@ converted to scores for the LH engine (rank 1->4, 2->3, 3->2, 4->1).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Alice
+expected_winners: [Alice]
 ```
 
 ## Ballots

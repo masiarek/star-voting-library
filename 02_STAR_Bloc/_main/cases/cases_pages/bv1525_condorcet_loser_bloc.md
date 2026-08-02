@@ -39,17 +39,8 @@ A pre-published lot makes which of the two happens reproducible; a random draw
 ```yaml
 voting_method: Bloc STAR
 num_winners: 4
-expected_winners:
-- First
-- Second
-- Third
-- Fourth
-lot_numbers:
-- First
-- Condorcet Loser
-- Second
-- Third
-- Fourth
+expected_winners: [First, Second, Third, Fourth]
+lot_numbers: [First, Condorcet Loser, Second, Third, Fourth]
 bv_election_id: dkj9dx
 bv_test_id: BV1525
 ```

@@ -32,19 +32,8 @@ ties to alphabetical priority (matching the approval file's D-over-F choice).
 ```yaml
 voting_method: Bloc STAR
 num_winners: 4
-expected_winners:
-- A
-- B
-- C
-- D
-lot_numbers:
-- A
-- B
-- C
-- D
-- E
-- F
-- G
+expected_winners: [A, B, C, D]
+lot_numbers: [A, B, C, D, E, F, G]
 ```
 
 ## Ballots

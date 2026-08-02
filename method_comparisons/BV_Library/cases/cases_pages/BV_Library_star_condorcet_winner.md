@@ -20,8 +20,7 @@ the runner-up in BetterVoting's result.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Allison
+expected_winners: [Allison]
 ```
 
 ## Ballots

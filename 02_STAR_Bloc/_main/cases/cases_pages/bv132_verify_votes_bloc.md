@@ -45,9 +45,7 @@ STAR" — cf. #904.
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- C
-- B
+expected_winners: [C, B]
 ```
 
 ## Ballots

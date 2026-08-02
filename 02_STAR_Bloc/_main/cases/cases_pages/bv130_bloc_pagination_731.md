@@ -31,10 +31,7 @@ retest built around a dead-rung lot tie — see bv130r2_dead_rung_bloc.md.
 ```yaml
 voting_method: Bloc STAR
 num_winners: 3
-expected_winners:
-- Someone I Like
-- Santa Claus
-- The Lesser Evil
+expected_winners: [Someone I Like, Santa Claus, The Lesser Evil]
 bv_election_id: yhxy7q
 bv_test_id: BV130
 ```

@@ -20,8 +20,7 @@ The electowiki Ranked Robin worked example (electowiki.org/wiki/Ranked_Robin), a
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ava
+expected_winners: [Ava]
 bv_election_id: 48hjkv
 bv_test_id: BV2140
 ```

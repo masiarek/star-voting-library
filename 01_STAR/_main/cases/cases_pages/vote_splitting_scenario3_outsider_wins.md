@@ -29,12 +29,9 @@ the winner, so no spoiler occurred.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Vanilla
+expected_winners: [Vanilla]
 blocs:
-  Chocolate:
-  - DarkChoco
-  - MilkChoco
+  Chocolate: [DarkChoco, MilkChoco]
 ```
 
 ## Ballots

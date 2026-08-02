@@ -21,8 +21,7 @@ runoff — now 6-3, a clean 67% to 33%. The pattern doesn't depend on small numb
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Brownie
+expected_winners: [Brownie]
 ```
 
 ## Ballots

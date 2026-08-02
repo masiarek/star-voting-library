@@ -26,8 +26,7 @@ We are adding up the scores given to each candidate (Tallying = Scoring Round).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Choco
+expected_winners: [Choco]
 ```
 
 ## Ballots

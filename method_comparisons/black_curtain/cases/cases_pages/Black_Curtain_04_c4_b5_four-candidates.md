@@ -29,8 +29,7 @@ Original 0–9 video scores mapped to 0–5: 0→0, 1→1, 4→2, 5→3, 8→4, 
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cal
+expected_winners: [Cal]
 ```
 
 ## Ballots

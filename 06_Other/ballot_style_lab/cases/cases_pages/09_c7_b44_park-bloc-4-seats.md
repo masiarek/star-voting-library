@@ -56,11 +56,7 @@ generate_ballot_styles.py --emit park_bloc
 ```yaml
 voting_method: Bloc STAR
 num_winners: 4
-expected_winners:
-- Dogwood
-- Aspen
-- Elm
-- Cedar
+expected_winners: [Dogwood, Aspen, Elm, Cedar]
 bv_election_id: v9rhhr
 bv_test_id: BV2247
 ```

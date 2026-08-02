@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/q3h4fk/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- C
+expected_winners: [C]
 bv_election_id: q3h4fk
 bv_test_id: BV2161
 ```

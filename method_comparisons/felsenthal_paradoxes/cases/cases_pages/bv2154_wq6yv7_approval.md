@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/wq6yv7/results
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- April
+expected_winners: [April]
 bv_election_id: wq6yv7
 bv_test_id: BV2154
 ```

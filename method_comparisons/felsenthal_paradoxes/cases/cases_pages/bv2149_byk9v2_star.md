@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/byk9v2/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bruno
+expected_winners: [Bruno]
 bv_election_id: byk9v2
 bv_test_id: BV2149
 ```

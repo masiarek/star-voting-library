@@ -27,8 +27,7 @@ RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Chris
+expected_winners: [Chris]
 ```
 
 ## Ballots

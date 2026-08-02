@@ -39,12 +39,8 @@ Set overview: ../README.md
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- A
-lot_numbers:
-- A
-- B
-- C
+expected_winners: [A]
+lot_numbers: [A, B, C]
 ```
 
 ## Ballots

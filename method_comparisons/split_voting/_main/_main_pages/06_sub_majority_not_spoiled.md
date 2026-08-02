@@ -37,8 +37,7 @@ hide a flipped result.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Aspen
+expected_winners: [Aspen]
 ```
 
 ## Ballots

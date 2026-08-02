@@ -28,13 +28,9 @@ the bloc can live with — over the spoiler Vanilla.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- MilkChoco
+expected_winners: [MilkChoco]
 blocs:
-  Chocolate:
-  - DarkChoco
-  - MilkChoco
-  - ChocoChip
+  Chocolate: [DarkChoco, MilkChoco, ChocoChip]
 ```
 
 ## Ballots

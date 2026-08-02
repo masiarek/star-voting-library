@@ -33,17 +33,8 @@ below the seat count is what opens space for a concentrated minority.
 ```yaml
 voting_method: Plurality
 num_winners: 3
-expected_winners:
-- Ada
-- Ben
-- Uma
-lot_numbers:
-- Ada
-- Ben
-- Cal
-- Uma
-- Val
-- Wren
+expected_winners: [Ada, Ben, Uma]
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
 bv_election_id: 3x4vrv
 bv_test_id: BV2135
 ```

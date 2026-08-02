@@ -24,8 +24,7 @@ precinct tables, never pooling ballots.
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 ```
 
 ## Ballots

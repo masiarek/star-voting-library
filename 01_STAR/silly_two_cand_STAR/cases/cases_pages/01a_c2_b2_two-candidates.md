@@ -21,8 +21,7 @@ files line by line to see exactly which numbers one added ballot moves.
 ## Parameters (from the YAML)
 
 ```yaml
-expected_winners:
-- Chocolate
+expected_winners: [Chocolate]
 bv_election_id: my82v6
 ```
 

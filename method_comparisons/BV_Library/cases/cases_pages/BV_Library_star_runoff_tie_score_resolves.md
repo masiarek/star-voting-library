@@ -19,8 +19,7 @@ The runoff ties, and the higher score total resolves it in Bill's favor.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bill
+expected_winners: [Bill]
 ```
 
 ## Ballots

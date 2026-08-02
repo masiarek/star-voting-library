@@ -24,8 +24,7 @@ Carol 1, Dave 0).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Alice
+expected_winners: [Alice]
 ```
 
 ## Ballots

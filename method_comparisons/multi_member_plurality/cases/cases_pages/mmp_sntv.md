@@ -30,17 +30,8 @@ the majoritarian sweep of Block Voting turned into rough proportionality.
 ```yaml
 voting_method: Plurality
 num_winners: 3
-expected_winners:
-- Uma
-- Ada
-- Ben
-lot_numbers:
-- Ada
-- Ben
-- Cal
-- Uma
-- Val
-- Wren
+expected_winners: [Uma, Ada, Ben]
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
 ```
 
 ## Ballots

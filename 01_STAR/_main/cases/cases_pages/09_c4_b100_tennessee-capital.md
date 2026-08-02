@@ -21,8 +21,7 @@ but isolated faction.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Nashville
+expected_winners: [Nashville]
 ```
 
 ## Ballots

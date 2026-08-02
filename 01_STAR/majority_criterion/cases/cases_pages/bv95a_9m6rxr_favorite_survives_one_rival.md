@@ -32,8 +32,7 @@ https://bettervoting.com/9m6rxr/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ada
+expected_winners: [Ada]
 ```
 
 ## Ballots

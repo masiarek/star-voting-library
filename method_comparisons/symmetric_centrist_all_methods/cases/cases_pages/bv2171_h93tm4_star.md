@@ -25,8 +25,7 @@ Overview: bv2171_h93tm4_all_methods.md · Full 100-voter version: bv2172_bkwfjr_
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Casey
+expected_winners: [Casey]
 bv_election_id: h93tm4
 bv_test_id: BV2171
 ```

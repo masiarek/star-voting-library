@@ -20,8 +20,7 @@ One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confir
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Anderson
+expected_winners: [Anderson]
 bv_election_id: ywckmg
 bv_test_id: BV2137
 ```

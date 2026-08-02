@@ -23,8 +23,7 @@ the percentages never look like votes went missing.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Dog
+expected_winners: [Dog]
 ```
 
 ## Ballots

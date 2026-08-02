@@ -26,12 +26,8 @@ lesson md and BV #1063.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- C
-lot_numbers:
-- C
-- A
-- B
+expected_winners: [C]
+lot_numbers: [C, A, B]
 ```
 
 ## Ballots

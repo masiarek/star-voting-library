@@ -24,8 +24,7 @@ loser (the non-monotonicity paradox); STAR still elects X. See
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- X
+expected_winners: [X]
 ```
 
 ## Ballots

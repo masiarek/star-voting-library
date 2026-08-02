@@ -28,8 +28,7 @@ LH-only for now (no BetterVoting election).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Baker
+expected_winners: [Baker]
 ```
 
 ## Ballots

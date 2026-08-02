@@ -21,8 +21,7 @@ as plain 0 so the file validates under this engine while preserving every approv
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- Dave
+expected_winners: [Dave]
 ```
 
 ## Ballots

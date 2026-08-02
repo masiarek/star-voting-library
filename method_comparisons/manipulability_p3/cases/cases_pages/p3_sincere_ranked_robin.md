@@ -22,14 +22,8 @@ Zwicker's profile P3 (Handbook of Computational Social Choice ch. 2, Definition 
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Edinburgh
-lot_numbers:
-- Athens
-- Bergen
-- Cork
-- Dublin
-- Edinburgh
+expected_winners: [Edinburgh]
+lot_numbers: [Athens, Bergen, Cork, Dublin, Edinburgh]
 bv_election_id: 4w96tr
 bv_test_id: BV2253
 ```

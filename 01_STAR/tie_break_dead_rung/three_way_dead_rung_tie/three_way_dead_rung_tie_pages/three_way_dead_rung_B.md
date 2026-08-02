@@ -25,12 +25,8 @@ under a random tie-break is a 1-in-3 draw. See the lesson md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- B
-lot_numbers:
-- B
-- C
-- A
+expected_winners: [B]
+lot_numbers: [B, C, A]
 ```
 
 ## Ballots

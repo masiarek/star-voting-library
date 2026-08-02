@@ -23,11 +23,8 @@ Ben: the expected winner (Ann) proves five-star outranks the lot.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ann
-lot_numbers:
-- Ben
-- Ann
+expected_winners: [Ann]
+lot_numbers: [Ben, Ann]
 ```
 
 ## Ballots

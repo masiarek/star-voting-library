@@ -22,8 +22,7 @@ engine (pref_voting score_voting, cross-checked against a hand sum).
 ```yaml
 voting_method: Range
 num_winners: 1
-expected_winners:
-- Beth
+expected_winners: [Beth]
 ```
 
 ## Ballots

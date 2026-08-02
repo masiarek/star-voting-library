@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/4htk44/results
 ```yaml
 voting_method: IRV
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 bv_election_id: 4htk44
 bv_test_id: BV2162
 ```

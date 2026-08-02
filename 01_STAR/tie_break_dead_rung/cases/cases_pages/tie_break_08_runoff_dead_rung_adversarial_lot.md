@@ -25,11 +25,8 @@ suggests. Strange-looking, but perfectly legal ballots.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ben
-lot_numbers:
-- Ben
-- Ann
+expected_winners: [Ben]
+lot_numbers: [Ben, Ann]
 ```
 
 ## Ballots

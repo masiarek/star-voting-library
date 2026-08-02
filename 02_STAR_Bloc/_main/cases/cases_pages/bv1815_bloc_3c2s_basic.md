@@ -29,9 +29,7 @@ case Passes; it's the Bloc analog of a runoff decided by the score tiebreaker.
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- A
-- C
+expected_winners: [A, C]
 ```
 
 ## Ballots

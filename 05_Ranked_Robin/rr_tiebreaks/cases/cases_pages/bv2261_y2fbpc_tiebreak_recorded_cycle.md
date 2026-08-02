@@ -25,12 +25,8 @@ This file pins lot_numbers to this race's recorded perm, so LH's lot rung replay
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Anika
-lot_numbers:
-- Anika
-- Cleo
-- Beto
+expected_winners: [Anika]
+lot_numbers: [Anika, Cleo, Beto]
 bv_election_id: y2fbpc
 bv_test_id: BV2261
 ```

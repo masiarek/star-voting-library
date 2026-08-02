@@ -27,12 +27,9 @@ DarkChoco wins. Watch the [Vote-splitting check] confirm it.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- DarkChoco
+expected_winners: [DarkChoco]
 blocs:
-  Chocolate:
-  - DarkChoco
-  - MilkChoco
+  Chocolate: [DarkChoco, MilkChoco]
 ```
 
 ## Ballots

@@ -18,8 +18,7 @@ Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 598 voters, group
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- G
+expected_winners: [G]
 ```
 
 ## Ballots

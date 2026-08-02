@@ -37,12 +37,8 @@ bv2173_gmfv4c_edelman_saari_cancellation.yaml
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ada
-lot_numbers:
-- Ada
-- Ben
-- Cara
+expected_winners: [Ada]
+lot_numbers: [Ada, Ben, Cara]
 ```
 
 ## Ballots

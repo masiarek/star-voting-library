@@ -19,8 +19,7 @@ Bill wins the automatic runoff despite a simple two-ballot field.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bill
+expected_winners: [Bill]
 ```
 
 ## Ballots

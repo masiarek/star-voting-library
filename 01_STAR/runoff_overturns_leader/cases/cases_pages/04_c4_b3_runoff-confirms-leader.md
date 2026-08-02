@@ -24,8 +24,7 @@ when the leader really is the most-preferred candidate, the leader wins.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Blue
+expected_winners: [Blue]
 ```
 
 ## Ballots

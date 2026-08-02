@@ -36,9 +36,7 @@ are a clean 30, then 20/16/4.)
 ```yaml
 voting_method: allocated
 num_winners: 2
-expected_winners:
-- Asa
-- Cleo
+expected_winners: [Asa, Cleo]
 bv_election_id: 89wwvr
 bv_test_id: BV2199
 ```

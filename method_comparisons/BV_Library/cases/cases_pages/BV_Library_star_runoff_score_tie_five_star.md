@@ -20,8 +20,7 @@ Score totals and runoff both tie; the five-star count breaks it for Allison.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Allison
+expected_winners: [Allison]
 ```
 
 ## Ballots

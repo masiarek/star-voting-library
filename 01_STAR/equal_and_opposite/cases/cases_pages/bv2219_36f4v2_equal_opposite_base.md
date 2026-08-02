@@ -24,8 +24,7 @@ the winner never moves. See the lesson: equal_and_opposite/README.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Comet
+expected_winners: [Comet]
 bv_election_id: 36f4v2
 bv_test_id: BV2219
 ```

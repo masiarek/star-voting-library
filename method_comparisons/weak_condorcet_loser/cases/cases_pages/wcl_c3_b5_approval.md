@@ -50,8 +50,7 @@ election. That is Approval's standing ambiguity, not a quirk of this case.
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- Ben
+expected_winners: [Ben]
 bv_election_id: c73pfw
 bv_test_id: BV2249
 ```

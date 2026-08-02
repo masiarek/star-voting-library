@@ -38,8 +38,7 @@ wrong, and the repo says so on the folder page.
 ```yaml
 voting_method: IRV
 num_winners: 1
-expected_winners:
-- Peter
+expected_winners: [Peter]
 bv_election_id: khcwm4
 bv_test_id: BV2250
 ```

@@ -27,8 +27,7 @@ This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_compa
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- Bob
+expected_winners: [Bob]
 ```
 
 ## Ballots

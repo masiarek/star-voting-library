@@ -32,8 +32,7 @@ automatic runoff, and the winner has majority support head-to-head.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- DarkChoco
+expected_winners: [DarkChoco]
 ```
 
 ## Ballots

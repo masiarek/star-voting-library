@@ -29,8 +29,7 @@ Live on BetterVoting (Test ID BV2197): https://bettervoting.com/ggg7hd/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Alba
+expected_winners: [Alba]
 bv_election_id: ggg7hd
 bv_test_id: BV2197
 ```

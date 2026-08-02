@@ -20,9 +20,7 @@ One 100-voter electorate, two food-truck spots, five counts — this file is the
 ```yaml
 voting_method: RankedRobin
 num_winners: 2
-expected_winners:
-- Arepa
-- Bao
+expected_winners: [Arepa, Bao]
 bv_election_id: fvg8y8
 bv_test_id: BV2210
 ```

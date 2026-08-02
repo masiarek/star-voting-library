@@ -29,9 +29,7 @@ giving the minority its seat; see
 ```yaml
 voting_method: Approval_Multi_Winner
 num_winners: 2
-expected_winners:
-- Amy
-- Ben
+expected_winners: [Amy, Ben]
 ```
 
 ## Ballots

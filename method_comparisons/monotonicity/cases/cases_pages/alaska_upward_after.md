@@ -30,8 +30,7 @@ upward_monotonicity_alaska.md.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Begich
+expected_winners: [Begich]
 ```
 
 ## Ballots

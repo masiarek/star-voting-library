@@ -33,8 +33,7 @@ by center-squeezing the Condorcet winner Bess).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bess
+expected_winners: [Bess]
 bv_election_id: yyhj9x
 bv_test_id: BV2196
 ```

@@ -32,8 +32,7 @@ Deep dive: 07_Concepts/is_rcv_simple.md (the "simple — which half?" point).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Carmen
+expected_winners: [Carmen]
 ```
 
 ## Ballots

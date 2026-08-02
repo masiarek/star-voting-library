@@ -44,8 +44,7 @@ Companion LH-only file: edelman_perfect_component_c3_b30.yaml (the
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ada
+expected_winners: [Ada]
 bv_election_id: gmfv4c
 bv_test_id: BV2173
 ```

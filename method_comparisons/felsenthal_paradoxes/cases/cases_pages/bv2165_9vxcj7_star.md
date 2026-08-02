@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/9vxcj7/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Boone
+expected_winners: [Boone]
 bv_election_id: 9vxcj7
 bv_test_id: BV2165
 ```

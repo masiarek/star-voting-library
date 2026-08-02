@@ -37,8 +37,7 @@ and Ranked Robin all hold (Alba).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Alba
+expected_winners: [Alba]
 bv_election_id: 93gjx6
 bv_test_id: BV2198
 ```

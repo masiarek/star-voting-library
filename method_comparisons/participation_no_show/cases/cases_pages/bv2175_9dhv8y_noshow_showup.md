@@ -41,8 +41,7 @@ Live results: https://bettervoting.com/9dhv8y/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- April
+expected_winners: [April]
 bv_election_id: 9dhv8y
 bv_test_id: BV2175
 ```

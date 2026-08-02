@@ -43,9 +43,7 @@ engine's; BV STV races whose endgame leaves a hopeful standing
 ```yaml
 voting_method: STV
 num_winners: 2
-expected_winners:
-- Austen
-- Camus
+expected_winners: [Austen, Camus]
 bv_election_id: tk776t
 bv_test_id: BV2201
 ```

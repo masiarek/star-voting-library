@@ -34,19 +34,8 @@ original: ../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skow
 ```yaml
 voting_method: rrv
 num_winners: 4
-expected_winners:
-- A
-- B
-- C
-- F
-lot_numbers:
-- A
-- B
-- C
-- D
-- E
-- F
-- G
+expected_winners: [A, B, C, F]
+lot_numbers: [A, B, C, D, E, F, G]
 ```
 
 ## Ballots

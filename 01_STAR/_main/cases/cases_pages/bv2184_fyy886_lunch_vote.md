@@ -28,8 +28,7 @@ and RCV-IRV both elect Sushi here; STAR elects Pizza.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Pizza
+expected_winners: [Pizza]
 bv_election_id: fyy886
 bv_test_id: BV2184
 ```

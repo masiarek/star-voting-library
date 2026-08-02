@@ -24,8 +24,7 @@ center-squeeze topic hub for the cross-method view.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Left
+expected_winners: [Left]
 ```
 
 ## Ballots

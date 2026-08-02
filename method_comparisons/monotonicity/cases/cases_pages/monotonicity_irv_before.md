@@ -22,8 +22,7 @@ ballots differ only in those four voters.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- X
+expected_winners: [X]
 ```
 
 ## Ballots

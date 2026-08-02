@@ -23,8 +23,7 @@ See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Alice
+expected_winners: [Alice]
 ```
 
 ## Ballots

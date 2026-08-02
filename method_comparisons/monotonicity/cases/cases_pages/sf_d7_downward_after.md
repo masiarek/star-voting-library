@@ -28,8 +28,7 @@ counts (not a reduced model) are used. Companion page: downward_monotonicity_sf.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Engardio
+expected_winners: [Engardio]
 ```
 
 ## Ballots

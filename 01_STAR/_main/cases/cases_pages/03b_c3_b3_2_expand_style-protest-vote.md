@@ -28,8 +28,7 @@ ballots.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Almond
+expected_winners: [Almond]
 ```
 
 ## Ballots

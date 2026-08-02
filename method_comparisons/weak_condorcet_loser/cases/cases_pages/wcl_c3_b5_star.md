@@ -53,8 +53,7 @@ result), not as "this happens in practice."
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ben
+expected_winners: [Ben]
 bv_election_id: c73pfw
 bv_test_id: BV2249
 ```

@@ -24,8 +24,7 @@ defect (concede it). Caveats on ../README.md: the electorate is a Condorcet cycl
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 ```
 
 ## Ballots

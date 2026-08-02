@@ -33,8 +33,7 @@ AFTER outcome (Engardio wins once Melgar is eliminated).
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Melgar
+expected_winners: [Melgar]
 ```
 
 ## Ballots

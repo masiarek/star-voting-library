@@ -84,6 +84,30 @@ MARKER_LEGEND = ("`-` blank · `~` race abstention · `&` candidate abstention �
                  "`?` spoiled · `%` spoiled+reissued — all tabulate as 0 "
                  "(reported honestly)")
 
+# Widest parameter line we'll allow before falling back to block style.
+PARAM_LINE_WIDTH = 88
+
+
+def _dump_param(key, value):
+    """One `key: value` chunk, written the way the cases themselves write it.
+
+    A scalar-only list stays inline (`lot_numbers: [A, B, C]`) — one dash per
+    line was noise the source files never had. Two guards: scalars are dumped
+    on their own so a params block with no collection in it can't collapse into
+    a flow map (`{bv_election_id: g3f7r2, ...}`), and a chunk too wide for the
+    fence falls back to block style, which beats a flow list wrapped mid-list.
+    """
+    def _dump(flow_style):
+        return yaml.safe_dump({key: value}, sort_keys=False, allow_unicode=True,
+                              default_flow_style=flow_style, width=10 ** 6).rstrip()
+
+    if not isinstance(value, (list, tuple, dict)):
+        return _dump(False)
+    inline = _dump(None)
+    if any(len(line) > PARAM_LINE_WIDTH for line in inline.splitlines()):
+        return _dump(False)
+    return inline
+
 
 # --------------------------------------------------------------------------- #
 # Extraction helpers (schema-tolerant: flat files and nested BV imports)
@@ -321,8 +345,7 @@ def render(yaml_path, siblings):
         L.append("## Parameters (from the YAML)")
         L.append("")
         L.append("```yaml")
-        L.append(yaml.safe_dump(params, sort_keys=False, allow_unicode=True,
-                                default_flow_style=False).rstrip())
+        L.append("\n".join(_dump_param(k, v) for k, v in params.items()))
         L.append("```")
         L.append("")
     L.append("## Ballots")

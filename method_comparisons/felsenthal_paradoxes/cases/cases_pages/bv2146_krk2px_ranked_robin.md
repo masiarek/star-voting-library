@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/krk2px/results
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ada
+expected_winners: [Ada]
 bv_election_id: krk2px
 bv_test_id: BV2146
 ```

@@ -30,11 +30,8 @@ winner, decided only by the lot. See the lesson md and BV #1063.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ben
-lot_numbers:
-- Ben
-- Ada
+expected_winners: [Ben]
+lot_numbers: [Ben, Ada]
 bv_election_id: jfk7pd
 ```
 

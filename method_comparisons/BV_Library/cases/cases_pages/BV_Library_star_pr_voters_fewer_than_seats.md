@@ -21,10 +21,7 @@ or leaving seats empty. LH's `allocated` method agrees with BetterVoting.
 ```yaml
 voting_method: allocated
 num_winners: 3
-expected_winners:
-- Allison
-- Bill
-- Carmen
+expected_winners: [Allison, Bill, Carmen]
 ```
 
 ## Ballots

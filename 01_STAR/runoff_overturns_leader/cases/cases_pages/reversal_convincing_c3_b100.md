@@ -19,8 +19,7 @@ Lesson: 01_STAR/concepts/the_count/STAR_second_round_FAQ.md
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Nora
+expected_winners: [Nora]
 ```
 
 ## Ballots

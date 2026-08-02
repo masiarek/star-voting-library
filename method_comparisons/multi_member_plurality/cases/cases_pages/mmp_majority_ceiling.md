@@ -38,16 +38,8 @@ here, missing the actual pathology while flagging consensus as a failure.
 ```yaml
 voting_method: Plurality
 num_winners: 3
-expected_winners:
-- Alice
-- Bruno
-- Cleo
-lot_numbers:
-- Alice
-- Bruno
-- Cleo
-- Dev
-- Esme
+expected_winners: [Alice, Bruno, Cleo]
+lot_numbers: [Alice, Bruno, Cleo, Dev, Esme]
 ```
 
 ## Ballots

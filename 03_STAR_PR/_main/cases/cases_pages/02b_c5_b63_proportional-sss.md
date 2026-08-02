@@ -20,10 +20,7 @@ minority bloc again earns a seat that Bloc STAR would deny.
 ```yaml
 voting_method: sss
 num_winners: 3
-expected_winners:
-- Alice
-- Ben
-- Dan
+expected_winners: [Alice, Ben, Dan]
 ```
 
 ## Ballots

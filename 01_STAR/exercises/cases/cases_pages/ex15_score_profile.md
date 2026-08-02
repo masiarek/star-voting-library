@@ -44,8 +44,7 @@ own STAR count agrees: Clara.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Clara
+expected_winners: [Clara]
 bv_election_id: tfm64p
 bv_test_id: BV2259
 ```

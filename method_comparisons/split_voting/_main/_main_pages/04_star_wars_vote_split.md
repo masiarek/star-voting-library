@@ -31,12 +31,9 @@ preferred wins. Watch the [Vote-splitting check] confirm it.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Leia
+expected_winners: [Leia]
 blocs:
-  Rebellion:
-  - Skywalker
-  - Leia
+  Rebellion: [Skywalker, Leia]
 ```
 
 ## Ballots

@@ -25,8 +25,7 @@ IRV. Confirmed identical to RCV-IRV on this electorate (s3).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ana
+expected_winners: [Ana]
 bv_election_id: rfyk46
 bv_test_id: BV2222
 ```

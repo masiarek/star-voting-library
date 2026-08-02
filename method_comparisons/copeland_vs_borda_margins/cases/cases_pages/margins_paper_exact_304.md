@@ -20,12 +20,8 @@ The source profile exactly as it is printed in the textbook: 102 a>b>c, 101 b>c>
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- b
-lot_numbers:
-- a
-- b
-- c
+expected_winners: [b]
+lot_numbers: [a, b, c]
 ```
 
 ## Ballots

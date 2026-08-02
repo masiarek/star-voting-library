@@ -20,13 +20,8 @@ The 02_cycle election (Ada beats Ben, Ben beats Cara, Cara beats Ada — no Cond
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ada
-lot_numbers:
-- Ada
-- Ben
-- Cara
-- Dave
+expected_winners: [Ada]
+lot_numbers: [Ada, Ben, Cara, Dave]
 ```
 
 ## Ballots

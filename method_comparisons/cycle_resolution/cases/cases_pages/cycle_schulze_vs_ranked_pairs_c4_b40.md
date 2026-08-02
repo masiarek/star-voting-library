@@ -54,13 +54,8 @@ cycle_copeland_ties_c4_b21.yaml
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ana
-lot_numbers:
-- Ana
-- Bruno
-- Chloe
-- Diego
+expected_winners: [Ana]
+lot_numbers: [Ana, Bruno, Chloe, Diego]
 ```
 
 ## Ballots

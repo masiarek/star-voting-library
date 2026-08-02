@@ -26,8 +26,7 @@ Overview page: bv2170_pp2q4q_symmetric_centrist.md
 ```yaml
 voting_method: IRV
 num_winners: 1
-expected_winners:
-- Avery
+expected_winners: [Avery]
 bv_election_id: pp2q4q
 bv_test_id: BV2170
 ```

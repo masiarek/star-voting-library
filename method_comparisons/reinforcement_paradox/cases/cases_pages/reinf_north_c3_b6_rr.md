@@ -33,12 +33,8 @@ reinf_combined_c3_b9_rr.yaml and reinf_combined_c3_b9_star.yaml (Cara wins).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ada
-lot_numbers:
-- Ada
-- Ben
-- Cara
+expected_winners: [Ada]
+lot_numbers: [Ada, Ben, Cara]
 ```
 
 ## Ballots

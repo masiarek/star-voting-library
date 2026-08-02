@@ -30,8 +30,7 @@ of votes.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Kiss
+expected_winners: [Kiss]
 ```
 
 ## Ballots

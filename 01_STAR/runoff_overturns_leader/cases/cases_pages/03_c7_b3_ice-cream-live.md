@@ -25,8 +25,7 @@ voter's full vote back the finalist they actually prefer.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- ChocoAlm
+expected_winners: [ChocoAlm]
 ```
 
 ## Ballots

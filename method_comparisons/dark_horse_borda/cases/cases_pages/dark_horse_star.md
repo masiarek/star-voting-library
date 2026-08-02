@@ -33,8 +33,7 @@ Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 ```
 
 ## Ballots

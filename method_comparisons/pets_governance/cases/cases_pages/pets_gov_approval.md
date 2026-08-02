@@ -25,9 +25,7 @@ again. Compare with the proportional STAR-PR / STV races on the same electorate.
 ```yaml
 voting_method: Approval_Multi_Winner
 num_winners: 2
-expected_winners:
-- Dog
-- Cat
+expected_winners: [Dog, Cat]
 bv_election_id: kcf8vf
 bv_test_id: BV2134
 ```

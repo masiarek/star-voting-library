@@ -28,8 +28,7 @@ STAR rewards the broadly-liked compromise over a candidate that half the voters 
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Vanilla
+expected_winners: [Vanilla]
 ```
 
 ## Ballots

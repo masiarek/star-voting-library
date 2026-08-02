@@ -36,8 +36,7 @@ Curriculum 301.8).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Orange5
+expected_winners: [Orange5]
 ```
 
 ## Ballots

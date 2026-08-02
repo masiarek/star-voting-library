@@ -33,8 +33,7 @@ majoritarian one (Ben) and the utilitarian one (Amy) — and which is
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ben
+expected_winners: [Ben]
 ```
 
 ## Ballots

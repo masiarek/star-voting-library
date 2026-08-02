@@ -18,8 +18,7 @@ An abstract counterexample (bare A/B/C, because the mechanism is the whole lesso
 ```yaml
 voting_method: IRV
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 ```
 
 ## Ballots

@@ -28,8 +28,7 @@ more voters in the next example.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Choco
+expected_winners: [Choco]
 ```
 
 ## Ballots

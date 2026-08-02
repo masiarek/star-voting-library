@@ -20,8 +20,7 @@ scores only 0s and 1s, yet a winner still emerges (Almond) from the 1s.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Almond
+expected_winners: [Almond]
 ```
 
 ## Ballots

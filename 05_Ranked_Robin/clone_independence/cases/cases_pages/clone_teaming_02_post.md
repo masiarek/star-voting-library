@@ -20,16 +20,8 @@ The electowiki Ranked Robin clone-independence example, part 2 of 2 (the "after"
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- A1
-lot_numbers:
-- A1
-- A2
-- B
-- C
-- D
-- E
-- F
+expected_winners: [A1]
+lot_numbers: [A1, A2, B, C, D, E, F]
 ```
 
 ## Ballots

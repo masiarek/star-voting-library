@@ -22,13 +22,8 @@ The textbook Tennessee example, and the first BV-backed Ranked Robin case. Four 
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Nashville
-lot_numbers:
-- Memphis
-- Nashville
-- Chattanooga
-- Knoxville
+expected_winners: [Nashville]
+lot_numbers: [Memphis, Nashville, Chattanooga, Knoxville]
 bv_election_id: vqyqkr
 bv_test_id: BV2131
 ```

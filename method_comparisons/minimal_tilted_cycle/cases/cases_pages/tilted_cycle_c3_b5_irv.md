@@ -33,8 +33,7 @@ that is what a cycle costs. See the folder README.
 ```yaml
 voting_method: RCV-IRV
 num_winners: 1
-expected_winners:
-- Cara
+expected_winners: [Cara]
 ```
 
 ## Ballots

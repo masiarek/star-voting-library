@@ -22,15 +22,8 @@ The electowiki clone-independence example, part 1 (before cloning), BV-backed. 3
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- A
-lot_numbers:
-- A
-- B
-- C
-- D
-- E
-- F
+expected_winners: [A]
+lot_numbers: [A, B, C, D, E, F]
 bv_election_id: 4gfwdq
 bv_test_id: BV2142
 ```

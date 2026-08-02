@@ -26,8 +26,7 @@ STAR and Ranked Robin do NOT reproduce the winner=loser on this example.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 ```
 
 ## Ballots

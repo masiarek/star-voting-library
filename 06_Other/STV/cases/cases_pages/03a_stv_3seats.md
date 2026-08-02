@@ -23,10 +23,7 @@ hand the majority a 3-0 sweep. Score-ballot counterpart: 03_STAR_PR/
 ```yaml
 voting_method: STV
 num_winners: 3
-expected_winners:
-- Housing
-- Schools
-- SmallBiz
+expected_winners: [Housing, Schools, SmallBiz]
 ```
 
 ## Ballots

@@ -23,8 +23,7 @@ the pairwise matrix.
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Ada
+expected_winners: [Ada]
 ```
 
 ## Ballots

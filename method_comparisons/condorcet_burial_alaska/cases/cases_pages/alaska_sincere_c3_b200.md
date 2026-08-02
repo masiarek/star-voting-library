@@ -24,8 +24,7 @@ last, manufacturing a cycle. See the write-up: condorcet_burial_alaska/README.md
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Peltola
+expected_winners: [Peltola]
 ```
 
 ## Ballots

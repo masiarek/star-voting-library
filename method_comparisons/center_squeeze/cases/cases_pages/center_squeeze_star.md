@@ -27,8 +27,7 @@ See 07_Concepts/center_squeeze.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Center
+expected_winners: [Center]
 ```
 
 ## Ballots

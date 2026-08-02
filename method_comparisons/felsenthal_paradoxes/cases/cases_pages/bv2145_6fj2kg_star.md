@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/6fj2kg/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ada
+expected_winners: [Ada]
 bv_election_id: 6fj2kg
 bv_test_id: BV2145
 ```

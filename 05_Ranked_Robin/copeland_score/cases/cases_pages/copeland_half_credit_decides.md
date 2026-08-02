@@ -23,14 +23,8 @@ LH-ONLY ON PURPOSE. Nothing here is un-freezable — the result is fully determi
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Alice
-lot_numbers:
-- Alice
-- Bruno
-- Carmen
-- Dmitri
-- Elena
+expected_winners: [Alice]
+lot_numbers: [Alice, Bruno, Carmen, Dmitri, Elena]
 ```
 
 ## Ballots

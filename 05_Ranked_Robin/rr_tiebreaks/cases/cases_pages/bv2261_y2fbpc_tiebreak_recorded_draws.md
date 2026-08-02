@@ -24,12 +24,8 @@ BV recorded perm [Anika, Beto, Cleo] for this race and elected Anika. This file 
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Anika
-lot_numbers:
-- Anika
-- Beto
-- Cleo
+expected_winners: [Anika]
+lot_numbers: [Anika, Beto, Cleo]
 bv_election_id: y2fbpc
 bv_test_id: BV2261
 ```

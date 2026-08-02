@@ -33,8 +33,7 @@ whose 3-way tie BV resolves at random — not freezable.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Amir
+expected_winners: [Amir]
 bv_election_id: g6q42v
 bv_test_id: BV2195
 ```

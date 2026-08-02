@@ -30,12 +30,9 @@ Deep dive: 07_Concepts/residual_vote_splitting.md
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cara
+expected_winners: [Cara]
 blocs:
-  Allies:
-  - Ada
-  - Ben
+  Allies: [Ada, Ben]
 ```
 
 ## Ballots

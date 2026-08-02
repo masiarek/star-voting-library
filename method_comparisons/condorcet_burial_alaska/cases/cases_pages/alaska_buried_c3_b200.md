@@ -26,8 +26,7 @@ completion resists it far better than a runoff/Hare completion.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Peltola
+expected_winners: [Peltola]
 ```
 
 ## Ballots

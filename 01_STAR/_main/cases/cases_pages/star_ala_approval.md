@@ -23,8 +23,7 @@ counting (most approvals wins), see 04_Approval/.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- D
+expected_winners: [D]
 ```
 
 ## Ballots

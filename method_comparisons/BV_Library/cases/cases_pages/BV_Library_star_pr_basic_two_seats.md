@@ -25,9 +25,7 @@ reproduces BetterVoting's committee {Allison, Doug}.
 ```yaml
 voting_method: allocated
 num_winners: 2
-expected_winners:
-- Allison
-- Doug
+expected_winners: [Allison, Doug]
 ```
 
 ## Ballots

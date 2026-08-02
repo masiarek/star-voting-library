@@ -34,9 +34,7 @@ Live on BetterVoting (Test ID BV2203): https://bettervoting.com/gvtg2h
 ```yaml
 voting_method: STV
 num_winners: 2
-expected_winners:
-- Austen
-- Camus
+expected_winners: [Austen, Camus]
 bv_election_id: gvtg2h
 bv_test_id: BV2203
 ```

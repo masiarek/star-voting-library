@@ -26,14 +26,8 @@ Live results: https://bettervoting.com/gg9qh9/results (election gg9qh9, BV2260).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Cora
-lot_numbers:
-- Amy
-- Blake
-- Cora
-- Diego
-- Erin
+expected_winners: [Cora]
+lot_numbers: [Amy, Blake, Cora, Diego, Erin]
 bv_election_id: gg9qh9
 bv_test_id: BV2260
 ```

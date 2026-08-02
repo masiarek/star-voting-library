@@ -25,12 +25,8 @@ The expected winner (Ben) therefore proves the rung was consulted.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ben
-lot_numbers:
-- Cara
-- Ann
-- Ben
+expected_winners: [Ben]
+lot_numbers: [Cara, Ann, Ben]
 ```
 
 ## Ballots

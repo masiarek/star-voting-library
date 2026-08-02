@@ -34,8 +34,7 @@ Lesson: 07_Concepts/topics/plurality.md · README.md
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cleo
+expected_winners: [Cleo]
 bv_election_id: 2p33qq
 bv_test_id: BV2215
 ```

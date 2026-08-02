@@ -20,8 +20,7 @@ for the five-candidate display.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Andre
+expected_winners: [Andre]
 ```
 
 ## Ballots

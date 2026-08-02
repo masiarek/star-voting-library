@@ -18,8 +18,7 @@ STAR's turn to fail, on the same profile and cheaply. The two sincere Edinburgh>
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Edinburgh
+expected_winners: [Edinburgh]
 ```
 
 ## Ballots

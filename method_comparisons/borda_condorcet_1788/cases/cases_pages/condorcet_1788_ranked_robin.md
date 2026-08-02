@@ -37,8 +37,7 @@ ballot and not a count.
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Peter
+expected_winners: [Peter]
 bv_election_id: khcwm4
 bv_test_id: BV2250
 ```

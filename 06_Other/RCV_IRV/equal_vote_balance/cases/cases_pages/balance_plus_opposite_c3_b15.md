@@ -26,8 +26,7 @@ fails the Test of Balance, by the center-squeeze mechanism. Lesson:
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Ada
+expected_winners: [Ada]
 ```
 
 ## Ballots

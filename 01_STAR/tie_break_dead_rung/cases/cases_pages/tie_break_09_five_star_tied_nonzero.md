@@ -23,11 +23,8 @@ Compare case 03 (rung separates) and case 04 (rung dead).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ben
-lot_numbers:
-- Ben
-- Ann
+expected_winners: [Ben]
+lot_numbers: [Ben, Ann]
 ```
 
 ## Ballots

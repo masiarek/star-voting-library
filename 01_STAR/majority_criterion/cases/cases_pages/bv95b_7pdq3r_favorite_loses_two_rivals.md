@@ -38,8 +38,7 @@ https://bettervoting.com/7pdq3r/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bruno
+expected_winners: [Bruno]
 ```
 
 ## Ballots

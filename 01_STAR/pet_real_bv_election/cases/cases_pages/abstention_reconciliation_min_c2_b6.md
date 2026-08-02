@@ -44,8 +44,7 @@ reconciliation note), which is the entire 461-vs-455 gap in the pet race.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Dog
+expected_winners: [Dog]
 ```
 
 ## Ballots

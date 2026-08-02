@@ -21,8 +21,7 @@ Choose-One; the interesting cases start at three.
 ## Parameters (from the YAML)
 
 ```yaml
-expected_winners:
-- Chocolate
+expected_winners: [Chocolate]
 ```
 
 ## Ballots

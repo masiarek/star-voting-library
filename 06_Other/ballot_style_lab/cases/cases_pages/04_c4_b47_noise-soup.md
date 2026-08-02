@@ -60,8 +60,7 @@ generate_ballot_styles.py --emit noise_soup
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Caleb
+expected_winners: [Caleb]
 bv_election_id: 74pbyg
 bv_test_id: BV2237
 ```

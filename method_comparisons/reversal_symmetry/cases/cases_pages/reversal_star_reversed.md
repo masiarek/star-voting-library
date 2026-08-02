@@ -22,8 +22,7 @@ not a general reversal-symmetry proof. Condorcet cycle electorate.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 ```
 
 ## Ballots

@@ -33,19 +33,8 @@ Majoritarian shadow (Bloc STAR): 02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_
 ```yaml
 voting_method: allocated
 num_winners: 4
-expected_winners:
-- A
-- B
-- C
-- D
-lot_numbers:
-- A
-- B
-- C
-- D
-- E
-- F
-- G
+expected_winners: [A, B, C, D]
+lot_numbers: [A, B, C, D, E, F, G]
 ```
 
 ## Ballots

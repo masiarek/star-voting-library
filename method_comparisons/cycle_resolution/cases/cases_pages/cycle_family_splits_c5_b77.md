@@ -49,14 +49,8 @@ with a real, reproducible one). Companion: cycle_schulze_vs_ranked_pairs_c4_b40.
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ava
-lot_numbers:
-- Ava
-- Ben
-- Cole
-- Dana
-- Ezra
+expected_winners: [Ava]
+lot_numbers: [Ava, Ben, Cole, Dana, Ezra]
 ```
 
 ## Ballots

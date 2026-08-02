@@ -24,8 +24,7 @@ choice). The electorate is a Condorcet cycle, so no winner is "correct."
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 ```
 
 ## Ballots

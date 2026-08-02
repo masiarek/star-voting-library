@@ -24,8 +24,7 @@ SAME electorate under strategic-5-1-0 STAR elects Beth, the Condorcet winner.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Ana
+expected_winners: [Ana]
 bv_election_id: dyh93j
 bv_test_id: BV2223
 ```

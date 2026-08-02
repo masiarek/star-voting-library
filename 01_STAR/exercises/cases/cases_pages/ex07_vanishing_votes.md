@@ -30,8 +30,7 @@ Exercise: ex07_vanishing_votes.md. Ballots and cast are this repo's own.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Aspen
+expected_winners: [Aspen]
 ```
 
 ## Ballots

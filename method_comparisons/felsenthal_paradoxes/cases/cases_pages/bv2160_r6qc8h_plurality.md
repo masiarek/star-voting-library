@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/r6qc8h/results
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 bv_election_id: r6qc8h
 bv_test_id: BV2160
 ```

@@ -26,11 +26,8 @@ argument for deterministic lot numbers (BV #1063). See the lesson md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ada
-lot_numbers:
-- Ada
-- Ben
+expected_winners: [Ada]
+lot_numbers: [Ada, Ben]
 ```
 
 ## Ballots

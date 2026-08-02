@@ -30,8 +30,7 @@ is ex04_olympics_1994.md. Ordinals as reproduced in Brendan W. Sullivan,
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Baiul
+expected_winners: [Baiul]
 ```
 
 ## Ballots

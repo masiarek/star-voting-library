@@ -56,14 +56,8 @@ Schulze or Split Cycle, and the LH Copeland result here is a tie. Lesson page:
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Cascade
-lot_numbers:
-- Arches
-- Bryce
-- Cascade
-- Denali
-- Everglade
+expected_winners: [Cascade]
+lot_numbers: [Arches, Bryce, Cascade, Denali, Everglade]
 ```
 
 ## Ballots

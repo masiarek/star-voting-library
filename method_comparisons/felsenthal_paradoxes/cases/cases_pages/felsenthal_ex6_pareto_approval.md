@@ -21,13 +21,8 @@ LH-only reference (no BetterVoting election ON PURPOSE: the paradox turns on a R
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- Beau
-lot_numbers:
-- Beau
-- Aria
-- Cole
-- Dean
+expected_winners: [Beau]
+lot_numbers: [Beau, Aria, Cole, Dean]
 ```
 
 ## Ballots

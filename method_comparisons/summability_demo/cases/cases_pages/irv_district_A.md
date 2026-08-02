@@ -22,8 +22,7 @@ depends on ALL ballots at once.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 ```
 
 ## Ballots

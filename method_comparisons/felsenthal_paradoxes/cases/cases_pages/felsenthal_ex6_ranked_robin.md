@@ -19,8 +19,7 @@ The same 3 voters' full rankings counted by Ranked Robin (Copeland): Aria wins e
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Aria
+expected_winners: [Aria]
 ```
 
 ## Ballots

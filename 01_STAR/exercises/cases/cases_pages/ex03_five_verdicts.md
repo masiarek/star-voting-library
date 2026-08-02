@@ -33,8 +33,7 @@ Robin), all five verdicts live; BV agrees with LH on every race.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cherry
+expected_winners: [Cherry]
 bv_election_id: ywqhq4
 bv_test_id: BV2191
 ```

@@ -26,10 +26,7 @@ literature's running example).
 ```yaml
 voting_method: Approval_Multi_Winner
 num_winners: 3
-expected_winners:
-- Adams
-- Brown
-- Clark
+expected_winners: [Adams, Brown, Clark]
 ```
 
 ## Ballots

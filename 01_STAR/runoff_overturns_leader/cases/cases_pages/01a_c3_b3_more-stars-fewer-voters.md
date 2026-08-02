@@ -25,8 +25,7 @@ here so the runoff is picking finalists out of a real field, not a forced pair.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Brownie
+expected_winners: [Brownie]
 ```
 
 ## Ballots

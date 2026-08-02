@@ -23,8 +23,7 @@ either way.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Vanilla
+expected_winners: [Vanilla]
 ```
 
 ## Ballots

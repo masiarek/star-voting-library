@@ -28,12 +28,8 @@ three; a deterministic published lot fixes it. See the lesson md and BV #1063.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- A
-lot_numbers:
-- A
-- B
-- C
+expected_winners: [A]
+lot_numbers: [A, B, C]
 ```
 
 ## Ballots

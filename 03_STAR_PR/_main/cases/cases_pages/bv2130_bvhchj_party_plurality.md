@@ -20,8 +20,7 @@ The second race of the Presidential Board election (BetterVoting bvhchj) — a c
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Democrat
+expected_winners: [Democrat]
 bv_election_id: bvhchj
 bv_test_id: BV2130
 ```

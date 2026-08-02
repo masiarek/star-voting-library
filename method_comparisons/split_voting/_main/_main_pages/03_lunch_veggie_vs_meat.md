@@ -29,13 +29,9 @@ can agree on — instead of the spoiler BeefBurger.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- VeggieCurry
+expected_winners: [VeggieCurry]
 blocs:
-  Veggie:
-  - VeggieCurry
-  - TofuStirFry
-  - GardenSalad
+  Veggie: [VeggieCurry, TofuStirFry, GardenSalad]
 ```
 
 ## Ballots

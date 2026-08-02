@@ -31,8 +31,7 @@ Source: Brendan W. Sullivan, An Introduction to the Math of Voting Methods
 ```yaml
 voting_method: Range
 num_winners: 1
-expected_winners:
-- C
+expected_winners: [C]
 ```
 
 ## Ballots

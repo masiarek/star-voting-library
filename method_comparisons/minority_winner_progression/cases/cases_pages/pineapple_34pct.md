@@ -27,8 +27,7 @@ Next rung adds a topping and the winner's share shrinks. Lesson: README.md
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cheese
+expected_winners: [Cheese]
 bv_election_id: ht2c3g
 bv_test_id: BV2216
 ```

@@ -34,9 +34,7 @@ seat pairs.
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- Asa
-- Bram
+expected_winners: [Asa, Bram]
 bv_election_id: 89wwvr
 bv_test_id: BV2199
 ```

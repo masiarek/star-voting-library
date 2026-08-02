@@ -40,12 +40,8 @@ Lesson: 06_Other/Plurality/README.md
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Sushi
-lot_numbers:
-- Sushi
-- Tacos
-- Pizza
+expected_winners: [Sushi]
+lot_numbers: [Sushi, Tacos, Pizza]
 bv_election_id: q2rkfm
 bv_test_id: BV2257
 ```

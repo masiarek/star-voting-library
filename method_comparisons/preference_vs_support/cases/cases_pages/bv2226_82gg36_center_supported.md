@@ -30,8 +30,7 @@ Live results: https://bettervoting.com/82gg36/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Blair
+expected_winners: [Blair]
 bv_election_id: 82gg36
 bv_test_id: BV2226
 ```

@@ -24,18 +24,8 @@ This file pins lot_numbers to that recorded perm, so LH's lot rung replays BV's 
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Boris
-lot_numbers:
-- Boris
-- Felix
-- Greta
-- Dmitri
-- Carmen
-- Alice
-- Ivan
-- Elena
-- Hugo
+expected_winners: [Boris]
+lot_numbers: [Boris, Felix, Greta, Dmitri, Carmen, Alice, Ivan, Elena, Hugo]
 bv_election_id: 2gvwr9
 bv_test_id: BV2262
 ```

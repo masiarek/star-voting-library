@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/pcttmr/results
 ```yaml
 voting_method: IRV
 num_winners: 1
-expected_winners:
-- Amos
+expected_winners: [Amos]
 bv_election_id: pcttmr
 bv_test_id: BV2153
 ```

@@ -24,12 +24,8 @@ cell by cell, to the combined result with no ballot-level recount.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Maple
-lot_numbers:
-- Maple
-- Oak
-- Pine
+expected_winners: [Maple]
+lot_numbers: [Maple, Oak, Pine]
 ```
 
 ## Ballots

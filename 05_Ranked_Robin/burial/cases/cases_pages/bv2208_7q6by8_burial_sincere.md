@@ -20,8 +20,7 @@ The sincere half of the repo's worked BURIAL pair — Ranked Robin's signature s
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Beryl
+expected_winners: [Beryl]
 bv_election_id: 7q6by8
 bv_test_id: BV2208
 ```

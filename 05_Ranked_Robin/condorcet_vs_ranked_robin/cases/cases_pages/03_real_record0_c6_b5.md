@@ -21,15 +21,8 @@ Ranked Robin still produces a winner —  whoever wins the most matchups — and
 ```yaml
 voting_method: rr
 num_winners: 1
-expected_winners:
-- B
-lot_numbers:
-- A
-- B
-- C
-- D
-- E
-- F
+expected_winners: [B]
+lot_numbers: [A, B, C, D, E, F]
 ```
 
 ## Ballots

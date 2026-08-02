@@ -20,8 +20,7 @@ Because she scores the two finalists the same, her ballot counts as
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Choco
+expected_winners: [Choco]
 ```
 
 ## Ballots

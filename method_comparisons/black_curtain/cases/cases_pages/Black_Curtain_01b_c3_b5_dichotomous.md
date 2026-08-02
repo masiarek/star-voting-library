@@ -46,8 +46,7 @@ See README.md in this folder.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bob
+expected_winners: [Bob]
 ```
 
 ## Ballots

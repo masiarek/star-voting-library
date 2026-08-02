@@ -29,8 +29,7 @@ elect Center. Concept: favorite_betrayal_voting_301.md.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Center
+expected_winners: [Center]
 bv_election_id: bgcmxx
 bv_test_id: BV2228
 ```

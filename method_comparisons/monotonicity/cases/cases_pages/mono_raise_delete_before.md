@@ -33,8 +33,7 @@ score. See 01_STAR/concepts/properties_and_limits/STAR_monotonicity.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- X
+expected_winners: [X]
 ```
 
 ## Ballots

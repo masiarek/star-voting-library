@@ -21,10 +21,7 @@ to see the contrast.
 ```yaml
 voting_method: allocated
 num_winners: 3
-expected_winners:
-- Alice
-- Ben
-- Dan
+expected_winners: [Alice, Ben, Dan]
 ```
 
 ## Ballots

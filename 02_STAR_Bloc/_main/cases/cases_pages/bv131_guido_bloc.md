@@ -41,13 +41,8 @@ Two findings worth flagging:
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- Cand2
-- Cand3
-lot_numbers:
-- Cand2
-- Cand1
-- Cand3
+expected_winners: [Cand2, Cand3]
+lot_numbers: [Cand2, Cand1, Cand3]
 ```
 
 ## Ballots

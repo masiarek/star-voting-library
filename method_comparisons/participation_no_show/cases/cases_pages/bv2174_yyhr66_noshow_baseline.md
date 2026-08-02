@@ -37,8 +37,7 @@ RCV-IRV hands them their LAST choice).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bruno
+expected_winners: [Bruno]
 bv_election_id: yyhr66
 bv_test_id: BV2174
 ```

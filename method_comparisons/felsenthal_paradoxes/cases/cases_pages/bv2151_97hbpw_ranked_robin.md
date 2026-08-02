@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/97hbpw/results
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Beth
+expected_winners: [Beth]
 bv_election_id: 97hbpw
 bv_test_id: BV2151
 ```

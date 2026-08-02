@@ -20,8 +20,7 @@ One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy) â€
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cat
+expected_winners: [Cat]
 bv_election_id: ykjjhy
 bv_test_id: BV2132
 ```

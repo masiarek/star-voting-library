@@ -26,10 +26,7 @@ STV counterpart: 03a_stv_3seats.yaml. See 07_Concepts/proportional_stv_vs_star.m
 ```yaml
 voting_method: sss
 num_winners: 3
-expected_winners:
-- Housing
-- Schools
-- SmallBiz
+expected_winners: [Housing, Schools, SmallBiz]
 ```
 
 ## Ballots

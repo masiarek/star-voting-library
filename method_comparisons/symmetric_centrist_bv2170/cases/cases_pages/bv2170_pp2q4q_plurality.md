@@ -28,12 +28,8 @@ Overview page: bv2170_pp2q4q_symmetric_centrist.md
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Blake
-lot_numbers:
-- Casey
-- Blake
-- Avery
+expected_winners: [Blake]
+lot_numbers: [Casey, Blake, Avery]
 bv_election_id: pp2q4q
 bv_test_id: BV2170
 ```

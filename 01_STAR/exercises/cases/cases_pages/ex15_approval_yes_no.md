@@ -38,8 +38,7 @@ BetterVoting's own Approval count agrees: Blair.)
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- Blair
+expected_winners: [Blair]
 bv_election_id: d4v2dh
 bv_test_id: BV2258
 ```

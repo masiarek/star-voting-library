@@ -26,8 +26,7 @@ McCune, arXiv:2301.12075). Companion page: upward_monotonicity_alaska.md.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Peltola
+expected_winners: [Peltola]
 ```
 
 ## Ballots

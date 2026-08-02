@@ -47,8 +47,7 @@ is a serious position, not a mistake. See the claim-check page for both sides.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Celia
+expected_winners: [Celia]
 ```
 
 ## Ballots

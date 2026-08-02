@@ -20,9 +20,7 @@ automatic runoff.
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- Don
-- Cal
+expected_winners: [Don, Cal]
 ```
 
 ## Ballots

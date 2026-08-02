@@ -27,12 +27,8 @@ ballots (five-star), case 02 by the pre-drawn lot. See
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ann
-lot_numbers:
-- Cara
-- Ann
-- Ben
+expected_winners: [Ann]
+lot_numbers: [Cara, Ann, Ben]
 ```
 
 ## Ballots

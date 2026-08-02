@@ -26,8 +26,7 @@ Lesson: 01_STAR/concepts/STAR_ballot_voting_styles.md
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bianca
+expected_winners: [Bianca]
 ```
 
 ## Ballots

@@ -42,12 +42,8 @@ reinf_south_cara_c3_b3_rr.yaml (Cara branch → combined elects Ben).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ben
-lot_numbers:
-- Ada
-- Ben
-- Cara
+expected_winners: [Ben]
+lot_numbers: [Ada, Ben, Cara]
 ```
 
 ## Ballots

@@ -40,8 +40,7 @@ dispute; the UI/export mislabel is bettervoting#1090).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Option 1
+expected_winners: [Option 1]
 bv_election_id: jfrk9t
 bv_test_id: BV655
 ```

@@ -38,12 +38,8 @@ Two BV issues surface together:
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Amy
-lot_numbers:
-- Amy
-- Chuck
-- Brian
+expected_winners: [Amy]
+lot_numbers: [Amy, Chuck, Brian]
 ```
 
 ## Ballots

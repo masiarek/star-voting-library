@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/xbqq8t/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Arlo
+expected_winners: [Arlo]
 bv_election_id: xbqq8t
 bv_test_id: BV2164
 ```

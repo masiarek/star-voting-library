@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/dxg8pb/results
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Beth
+expected_winners: [Beth]
 bv_election_id: dxg8pb
 bv_test_id: BV2150
 ```

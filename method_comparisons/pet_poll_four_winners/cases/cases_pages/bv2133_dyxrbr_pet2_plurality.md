@@ -20,8 +20,7 @@ One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr). Ch
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Dog
+expected_winners: [Dog]
 bv_election_id: dyxrbr
 bv_test_id: BV2133
 ```

@@ -24,8 +24,7 @@ and IRV fail the SAME way — rb-j's core point, confirmed.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Ana
+expected_winners: [Ana]
 bv_election_id: rfyk46
 bv_test_id: BV2222
 ```

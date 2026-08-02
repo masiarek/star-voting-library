@@ -31,8 +31,7 @@ the approval winner; no cut is canonical.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cole
+expected_winners: [Cole]
 ```
 
 ## Ballots

@@ -25,12 +25,8 @@ test.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Oak
-lot_numbers:
-- Maple
-- Oak
-- Pine
+expected_winners: [Oak]
+lot_numbers: [Maple, Oak, Pine]
 ```
 
 ## Ballots

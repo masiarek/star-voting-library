@@ -29,9 +29,7 @@ reports votingMethod "STAR" rather than "Bloc STAR" (#1086, same family as #904)
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- Carmen
-- Andre
+expected_winners: [Carmen, Andre]
 ```
 
 ## Ballots

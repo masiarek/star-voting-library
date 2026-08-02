@@ -24,12 +24,8 @@ Live results: https://bettervoting.com/mxfmhm/results
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Ana
-lot_numbers:
-- Ana
-- Cal
-- Bo
+expected_winners: [Ana]
+lot_numbers: [Ana, Cal, Bo]
 bv_election_id: mxfmhm
 bv_test_id: BV2144
 ```

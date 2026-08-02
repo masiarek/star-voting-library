@@ -37,12 +37,8 @@ reinf_combined_ben_c3_b9_rr.yaml (Ben branch → Ada wins).
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Ben
-lot_numbers:
-- Ada
-- Ben
-- Cara
+expected_winners: [Ben]
+lot_numbers: [Ada, Ben, Cara]
 ```
 
 ## Ballots

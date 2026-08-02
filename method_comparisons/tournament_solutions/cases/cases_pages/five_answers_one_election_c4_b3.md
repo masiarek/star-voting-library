@@ -18,8 +18,7 @@ The smallest election that makes the whole tournament-solutions literature neces
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 ```
 
 ## Ballots

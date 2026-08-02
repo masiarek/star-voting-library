@@ -32,8 +32,7 @@ scoring round — a reminder STAR is not a Condorcet method, by design.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bob
+expected_winners: [Bob]
 ```
 
 ## Ballots

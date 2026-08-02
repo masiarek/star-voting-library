@@ -23,8 +23,7 @@ order can do.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 ```
 
 ## Ballots

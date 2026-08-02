@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/f3dxq9/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 bv_election_id: f3dxq9
 bv_test_id: BV2167
 ```

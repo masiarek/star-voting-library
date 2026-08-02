@@ -20,8 +20,7 @@ the finalists-only matrix, Condorcet line, and score distribution are all on.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Strawberry
+expected_winners: [Strawberry]
 ```
 
 ## Ballots

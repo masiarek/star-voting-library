@@ -56,10 +56,7 @@ generate_ballot_styles.py --emit herb_council
 ```yaml
 voting_method: allocated
 num_winners: 3
-expected_winners:
-- Anise
-- Basil
-- Chive
+expected_winners: [Anise, Basil, Chive]
 bv_election_id: pmrq4q
 bv_test_id: BV2245
 ```

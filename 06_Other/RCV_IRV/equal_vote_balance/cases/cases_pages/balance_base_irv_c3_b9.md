@@ -24,8 +24,7 @@ Balance. Lesson: 06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Bruno
+expected_winners: [Bruno]
 ```
 
 ## Ballots

@@ -31,9 +31,7 @@ every seat.
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- Alice
-- Bruno
+expected_winners: [Alice, Bruno]
 ```
 
 ## Ballots

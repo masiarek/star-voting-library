@@ -31,8 +31,7 @@ voters counted by Approval vs STAR vs RCV-IRV).
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- Bob
+expected_winners: [Bob]
 bv_election_id: ff6mk3
 bv_test_id: BV135
 ```

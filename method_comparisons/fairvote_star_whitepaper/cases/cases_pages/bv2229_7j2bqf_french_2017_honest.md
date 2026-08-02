@@ -31,8 +31,7 @@ Concept: ../README.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Macron
+expected_winners: [Macron]
 bv_election_id: 7j2bqf
 bv_test_id: BV2229
 ```

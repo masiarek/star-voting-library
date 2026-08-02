@@ -26,8 +26,7 @@ Live results: https://bettervoting.com/tg4779/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Almond
+expected_winners: [Almond]
 bv_election_id: tg4779
 bv_test_id: BV2182
 ```

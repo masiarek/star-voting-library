@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/h87k6v/results
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Bruno
+expected_winners: [Bruno]
 bv_election_id: h87k6v
 bv_test_id: BV2148
 ```

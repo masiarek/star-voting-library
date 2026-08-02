@@ -46,13 +46,8 @@ cycle_schulze_vs_ranked_pairs_c4_b40.yaml
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Alder
-lot_numbers:
-- Alder
-- Birch
-- Cedar
-- Dogwood
+expected_winners: [Alder]
+lot_numbers: [Alder, Birch, Cedar, Dogwood]
 ```
 
 ## Ballots

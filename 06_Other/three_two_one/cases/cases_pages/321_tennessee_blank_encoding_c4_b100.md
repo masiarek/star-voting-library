@@ -26,8 +26,7 @@ winner" result most non-plurality methods give on this electorate.
 
 ```yaml
 voting_method: 3-2-1
-expected_winners:
-- Nashville
+expected_winners: [Nashville]
 ```
 
 ## Ballots

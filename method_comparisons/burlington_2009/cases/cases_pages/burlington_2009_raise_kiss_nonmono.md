@@ -33,8 +33,7 @@ figure reproduces within +/-1 and every margin is hundreds of votes.
 ```yaml
 voting_method: RCV_IRV
 num_winners: 1
-expected_winners:
-- Montroll
+expected_winners: [Montroll]
 ```
 
 ## Ballots

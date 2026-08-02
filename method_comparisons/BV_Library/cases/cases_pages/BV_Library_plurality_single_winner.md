@@ -24,8 +24,7 @@ single-mark ballots is equivalent to a plurality count.
 ```yaml
 voting_method: Plurality
 num_winners: 1
-expected_winners:
-- Dave
+expected_winners: [Dave]
 ```
 
 ## Ballots

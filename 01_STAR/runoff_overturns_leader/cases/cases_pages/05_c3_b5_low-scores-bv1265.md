@@ -27,8 +27,7 @@ in explaining_to_voters.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- A
+expected_winners: [A]
 ```
 
 ## Ballots

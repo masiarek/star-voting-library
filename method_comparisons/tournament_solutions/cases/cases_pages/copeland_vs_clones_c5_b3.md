@@ -18,8 +18,7 @@ The companion case: where Ranked Robin's simple count and the literature's favou
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- D
+expected_winners: [D]
 ```
 
 ## Ballots

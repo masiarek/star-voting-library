@@ -22,8 +22,7 @@ Chicago, Denver and Erie are genuine options that simply don't reach the final t
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Boston
+expected_winners: [Boston]
 ```
 
 ## Ballots

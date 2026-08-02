@@ -22,8 +22,7 @@ Live results: https://bettervoting.com/wq6yv7/results
 ```yaml
 voting_method: IRV
 num_winners: 1
-expected_winners:
-- Clara
+expected_winners: [Clara]
 bv_election_id: wq6yv7
 bv_test_id: BV2154
 ```

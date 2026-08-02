@@ -42,8 +42,7 @@ ex15_approval_yes_no_bv_export.json — one export covers both races.)
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Blair
+expected_winners: [Blair]
 bv_election_id: d4v2dh
 bv_test_id: BV2258
 ```

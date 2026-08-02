@@ -36,13 +36,8 @@ Two BV issues together:
 ```yaml
 voting_method: Bloc STAR
 num_winners: 2
-expected_winners:
-- c
-- a
-lot_numbers:
-- c
-- a
-- b
+expected_winners: [c, a]
+lot_numbers: [c, a, b]
 ```
 
 ## Ballots

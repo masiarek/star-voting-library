@@ -38,12 +38,8 @@ district that agrees with it and a merged electorate that overturns it.
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Cara
-lot_numbers:
-- Ada
-- Ben
-- Cara
+expected_winners: [Cara]
+lot_numbers: [Ada, Ben, Cara]
 ```
 
 ## Ballots

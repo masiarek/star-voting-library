@@ -30,8 +30,7 @@ center-squeezes under HONESTY (Burlington, Alaska). Concept: ../README.md.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Melenchon
+expected_winners: [Melenchon]
 bv_election_id: 2hqmrd
 bv_test_id: BV2230
 ```

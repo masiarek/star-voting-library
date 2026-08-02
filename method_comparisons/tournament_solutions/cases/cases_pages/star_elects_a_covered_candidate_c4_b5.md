@@ -18,8 +18,7 @@ A candidate is COVERED when someone beats them AND beats everyone they beat: str
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Denver
+expected_winners: [Denver]
 ```
 
 ## Ballots

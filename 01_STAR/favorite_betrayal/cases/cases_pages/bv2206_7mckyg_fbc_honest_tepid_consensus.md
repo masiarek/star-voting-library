@@ -38,8 +38,7 @@ Clover, no tiebreaks).
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Clover
+expected_winners: [Clover]
 bv_election_id: 7mckyg
 bv_test_id: BV2206
 ```

@@ -31,8 +31,7 @@ This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_compa
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Cal
+expected_winners: [Cal]
 ```
 
 ## Ballots

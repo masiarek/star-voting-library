@@ -33,8 +33,7 @@ Discussion (Larry):
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Carmen
+expected_winners: [Carmen]
 ```
 
 ## Ballots

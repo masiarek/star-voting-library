@@ -30,8 +30,7 @@ of change leaves X winning). Concept: 01_STAR/concepts/properties_and_limits/STA
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Z
+expected_winners: [Z]
 ```
 
 ## Ballots

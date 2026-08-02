@@ -20,14 +20,8 @@ The manipulation that should worry us more than the book's. The complete reversa
 ```yaml
 voting_method: RankedRobin
 num_winners: 1
-expected_winners:
-- Dublin
-lot_numbers:
-- Athens
-- Bergen
-- Cork
-- Dublin
-- Edinburgh
+expected_winners: [Dublin]
+lot_numbers: [Athens, Bergen, Cork, Dublin, Edinburgh]
 ```
 
 ## Ballots

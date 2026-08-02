@@ -19,8 +19,7 @@ Allison wins; Bill is the runner-up after tie handling.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Allison
+expected_winners: [Allison]
 ```
 
 ## Ballots

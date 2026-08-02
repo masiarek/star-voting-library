@@ -20,12 +20,8 @@ Generated dead-rung scenario (scoring round, 'dead' five-star rung). no 5 anywhe
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Ann
-lot_numbers:
-- Ann
-- Ben
-- Cara
+expected_winners: [Ann]
+lot_numbers: [Ann, Ben, Cara]
 ```
 
 ## Ballots

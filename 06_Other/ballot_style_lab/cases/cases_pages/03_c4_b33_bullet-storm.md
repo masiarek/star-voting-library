@@ -56,8 +56,7 @@ generate_ballot_styles.py --emit bullet_storm
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Carla
+expected_winners: [Carla]
 bv_election_id: w9f4vd
 bv_test_id: BV2236
 ```

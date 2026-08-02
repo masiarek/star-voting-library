@@ -42,8 +42,7 @@ Set overview: ../README.md
 ```yaml
 voting_method: Approval
 num_winners: 1
-expected_winners:
-- B
+expected_winners: [B]
 ```
 
 ## Ballots

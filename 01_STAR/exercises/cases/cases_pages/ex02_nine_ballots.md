@@ -25,8 +25,7 @@ the Math of Voting Methods" (2022), ch. 5.
 ```yaml
 voting_method: STAR
 num_winners: 1
-expected_winners:
-- Alex
+expected_winners: [Alex]
 ```
 
 ## Ballots
