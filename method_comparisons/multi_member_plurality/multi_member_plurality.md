@@ -6,11 +6,13 @@
 
 10 voters, **3 seats**: a 6-voter **Home** majority (60%) and a 4-voter **Away** minority (40%). Same voters in all three races — only the *number of votes per voter* changes.
 
-| Method | Votes / voter | Winners | Home : Away | src |
-|--------|:---:|---------|:---:|:--:|
-| [**Block Voting**](cases/mmp_block_voting.yaml) (plurality-at-large) | 3 (= seats) | Ada, Ben, Cal | **3 : 0** — majority sweeps | full slate |
-| [**Limited Voting**](cases/mmp_limited_voting.yaml) | 2 (< seats) | Ada, Ben, Uma | 2 : 1 | 2 votes each |
-| [**SNTV**](cases/mmp_sntv.yaml) | 1 | **Uma**, Ada, Ben | 2 : 1 — minority *tops the poll* | 1 vote each |
+| Method | Votes / voter | Winners | Home : Away | Read · run |
+|--------|:---:|---------|:---:|:--|
+| [**Block Voting**](cases/cases_pages/mmp_block_voting.md) (plurality-at-large) | 3 (= seats) | Ada, Ben, Cal | **3 : 0** — majority sweeps | [page](cases/cases_pages/mmp_block_voting.md) · [yaml](cases/mmp_block_voting.yaml) |
+| [**Limited Voting**](cases/cases_pages/mmp_limited_voting.md) | 2 (< seats) | Ada, Ben, Uma | 2 : 1 | [page](cases/cases_pages/mmp_limited_voting.md) · [yaml](cases/mmp_limited_voting.yaml) |
+| [**SNTV**](cases/cases_pages/mmp_sntv.md) | 1 | **Uma**, Ada, Ben | 2 : 1 — minority *tops the poll* | [page](cases/cases_pages/mmp_sntv.md) · [yaml](cases/mmp_sntv.yaml) |
+
+*Each method name links to its page — the ballots and the engine's full count, written up; the **yaml** is the same election as raw source. The fourth case in this family, [the majority ceiling](cases/cases_pages/mmp_majority_ceiling.md) ([yaml](cases/mmp_majority_ceiling.yaml)), is why a multi-seat winner's "%" can never reach 50 — see the [folder README](README.md).*
 
 ## What the dial does
 
@@ -26,9 +28,9 @@ BV has no method *named* "Block Voting" or "Limited Voting" (its **Plurality** i
 
 - **Block voting** = bloc Approval where each voter approves their **full N-candidate slate**.
 - **Limited voting** = bloc Approval where each voter approves **k < N**.
-- **SNTV** = bloc Approval (or Plurality) where each voter approves **exactly 1** — already BV-confirmed as the [BV2134 governance Bloc Plurality race](../pets_governance/cases/pets_gov_bloc_plurality.yaml).
+- **SNTV** = bloc Approval (or Plurality) where each voter approves **exactly 1** — already BV-confirmed as the [BV2134 governance Bloc Plurality race](../pets_governance/cases/cases_pages/pets_gov_bloc_plurality.md).
 
-This set's *point* is the Plurality-family framing (votes-per-voter), and our engine labels the tally Block / Limited / SNTV accordingly — but the arithmetic is **BV-confirmed end-to-end**. Block and Limited are backed by BV election **BV2135** ([`3x4vrv`](https://bettervoting.com/3x4vrv/results)), which runs both as bloc Approval and elects exactly the same seats (Block → Ada, Ben, Cal; Limited → Ada, Ben, Uma). SNTV is BV-backed separately as the [governance Bloc Plurality race](../pets_governance/cases/pets_gov_bloc_plurality.yaml). Full recipe: [running_on_bettervoting.md](running_on_bettervoting.md).
+This set's *point* is the Plurality-family framing (votes-per-voter), and our engine labels the tally Block / Limited / SNTV accordingly — but the arithmetic is **BV-confirmed end-to-end**. Block and Limited are backed by BV election **BV2135** ([`3x4vrv`](https://bettervoting.com/3x4vrv/results)), which runs both as bloc Approval and elects exactly the same seats (Block → Ada, Ben, Cal; Limited → Ada, Ben, Uma). SNTV is BV-backed separately as the [governance Bloc Plurality race](../pets_governance/cases/cases_pages/pets_gov_bloc_plurality.md). Full recipe: [running_on_bettervoting.md](running_on_bettervoting.md).
 
 **▶ Block & Limited live on BetterVoting:** [results ↗](https://bettervoting.com/3x4vrv/results) (election `3x4vrv`, Test ID BV2135) · frozen export [`mmp_bv2135_3x4vrv_bv_export.json`](cases/mmp_bv2135_3x4vrv_bv_export.json).
 
@@ -41,5 +43,5 @@ This set's *point* is the Plurality-family framing (votes-per-voter), and our en
 ## See also
 
 - Folder overview: [multi_member_plurality — README](README.md)
-- The BV-backed SNTV instance: [Pets Governance — Bloc Plurality](../pets_governance/cases/pets_gov_bloc_plurality.yaml) · the whole [governance set](../pets_governance/)
+- The BV-backed SNTV instance: [Pets Governance — Bloc Plurality](../pets_governance/cases/cases_pages/pets_gov_bloc_plurality.md) ([yaml](../pets_governance/cases/pets_gov_bloc_plurality.yaml)) · the whole [governance set](../pets_governance/)
 - Proportional alternatives: [STV](../../06_Other/STV/) · [STAR-PR](../../03_STAR_PR/)

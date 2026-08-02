@@ -2,13 +2,15 @@
 
 The three multi-member plurality methods on **one** 60/40 electorate (6-voter Home majority, 4-voter Away minority; 3 seats). They differ only in **votes per voter**, and that alone slides the result from majority sweep to minority-tops-the-poll.
 
-| Method | Votes/voter | Winners | Home : Away | src |
-|--------|:---:|---------|:---:|:--:|
-| Block Voting (plurality-at-large) | 3 | Ada, Ben, Cal | **3 : 0** | [`.yaml`](cases/mmp_block_voting.yaml) |
-| Limited Voting | 2 | Ada, Ben, Uma | 2 : 1 | [`.yaml`](cases/mmp_limited_voting.yaml) |
-| SNTV | 1 | Uma, Ada, Ben | 2 : 1 (Uma leads) | [`.yaml`](cases/mmp_sntv.yaml) |
+Each row links the **page** — the readable write-up with the ballots and the engine's full count — and the **yaml** you feed the engine to run it yourself.
 
-Plus a fourth case on the same family — **[the majority ceiling](cases/cases_pages/mmp_majority_ceiling.md)**: with *k* marks per voter no candidate can exceed **1/k** of the votes cast, so a *unanimous* candidate still shows 33.3% at 3 seats. That kills the common "the winner got under 50%, so the vote was split" reading in any multi-seat race — see [How often does vote splitting actually happen?](../split_voting/how_often_does_vote_splitting_happen.md).
+| Method | Votes/voter | Winners | Home : Away | Read · run |
+|--------|:---:|---------|:---:|:--|
+| Block Voting (plurality-at-large) | 3 | Ada, Ben, Cal | **3 : 0** | [page](cases/cases_pages/mmp_block_voting.md) · [yaml](cases/mmp_block_voting.yaml) |
+| Limited Voting | 2 | Ada, Ben, Uma | 2 : 1 | [page](cases/cases_pages/mmp_limited_voting.md) · [yaml](cases/mmp_limited_voting.yaml) |
+| SNTV | 1 | Uma, Ada, Ben | 2 : 1 (Uma leads) | [page](cases/cases_pages/mmp_sntv.md) · [yaml](cases/mmp_sntv.yaml) |
+
+Plus a fourth case on the same family — **[the majority ceiling](cases/cases_pages/mmp_majority_ceiling.md)** ([yaml](cases/mmp_majority_ceiling.yaml)): with *k* marks per voter no candidate can exceed **1/k** of the votes cast, so a *unanimous* candidate still shows 33.3% at 3 seats. That kills the common "the winner got under 50%, so the vote was split" reading in any multi-seat race — see [How often does vote splitting actually happen?](../split_voting/how_often_does_vote_splitting_happen.md).
 
 Confirms our engine's multi-winner Plurality (`run_plurality_multi`) tabulates the whole family (it auto-detects Block / Limited / SNTV from votes-per-voter).
 

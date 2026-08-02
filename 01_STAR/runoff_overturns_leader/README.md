@@ -77,7 +77,22 @@ A related point: because your runoff vote is decided by the scores you already g
 
 ## Going deeper — read the full count (201)
 
-Everything above is the *minimal* view: scores → finalists → runoff → winner, which is all a first-time voter needs. But every example here also writes a complete **audit report** to its `_tabulated.txt` sibling (in `runoff_overturns_leader_tabulated/`) — the pairwise **preference matrix**, the **score distribution**, and the engine's plain-English **Majority Preference** block stating exactly which candidate led on score and which won the runoff. Learning to read that report is **Voting 201**: see the annotated walkthrough [How to read a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) (it uses this folder's BV1265 example), plus [CURRICULUM 201.1 — Reading the results](../../07_Concepts/CURRICULUM.md) and the step-by-step [STAR vs RCV-IRV count](../../07_Concepts/topics/tabulation_star_vs_irv.md). Don't put the full report in front of a 101 beginner — point them here when they're ready.
+Everything above is the *minimal* view: scores → finalists → runoff → winner, which is all a first-time voter needs. But every example here also writes a complete **audit report** to its `_tabulated.txt` sibling (in `runoff_overturns_leader_tabulated/`) — the pairwise **preference matrix**, the **score distribution**, and the engine's plain-English **Majority Preference** block stating exactly which candidate led on score and which won the runoff. Learning to read that report is **Voting 201**. Don't put the full report in front of a 101 beginner — point them here when they're ready.
+
+**The whole 201 level is one page: → [Voting 201 — reading results, comparisons, multi-winner intro](../../07_Concepts/curriculum/CURRICULUM_201.md).** That's the index of everything below, in teaching order. The topics it opens up, if you'd rather jump straight to one:
+
+| 201 topic | Page |
+|---|---|
+| Read a full engine report, section by section (uses this folder's BV1265 example) | [How to read a STAR result report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) |
+| Where the preference matrix comes from — every ballot is a tiny matrix, and they add up | [Pairwise counting](../../07_Concepts/topics/pairwise_counting.md) |
+| The runoff shown two ways (% of all voters vs % of those with a preference) | [Two denominators, one winner](../concepts/the_count/runoff_percentages.md) |
+| The same election counted by STAR and by RCV-IRV, step by step | [STAR vs RCV-IRV — the count](../../07_Concepts/topics/tabulation_star_vs_irv.md) · [the honest comparison](../../07_Concepts/topics/rcv_irv_vs_star.md) |
+| What happens when the count *can't* be summed by precinct | [Central tabulation](../../07_Concepts/topics/central_tabulation.md) |
+| Ties, tiebreakers, and the ladder they climb | [Ties (topic hub)](../../07_Concepts/topics/ties/README.md) · [the tie-breaking ladder](../concepts/Tie_Breaking_STAR/tie_breaking.md) |
+| Electing more than one seat — the majoritarian intro | [Bloc STAR](../../02_STAR_Bloc/README.md) (201.5) |
+| What are we even optimizing for? | [What makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md) · [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) |
+
+Above 201: [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md) (proportional methods, criteria, debate theory) and [Voting 401](../../07_Concepts/curriculum/CURRICULUM_401.md) (failure modes) — the full map is the [curriculum hub](../../07_Concepts/CURRICULUM.md), and every concept page is listed in the [topic index](../../07_Concepts/topics/README.md).
 
 ## How often does it happen? (301)
 
