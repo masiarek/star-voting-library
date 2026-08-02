@@ -377,6 +377,12 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
+  # GitHub auto-links bare URLs; Python-Markdown does not, so pages authored for
+  # GitHub (LINKS.md's registry tables above all) rendered their URL column as
+  # dead plain text on the site. MagicLink restores GitHub's behaviour. Left at
+  # defaults on purpose: repo_url_shorthand/social_url_shorthand stay off, so
+  # `#123` and `@name` in prose are never silently turned into links.
+  - pymdownx.magiclink
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
