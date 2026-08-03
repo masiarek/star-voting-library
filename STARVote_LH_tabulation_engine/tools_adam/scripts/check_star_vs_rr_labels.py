@@ -2,7 +2,7 @@
 """
 check_star_vs_rr_labels.py
 ==========================
-Guard the ANSWER KEYS of 05_Ranked_Robin/star_vs_rr_divergence/ against the LH
+Guard the ANSWER KEYS of 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/ against the LH
 engine — every place a sample *names* its STAR or Ranked Robin winner.
 
 WHY THIS EXISTS. The 30 samples are auto-generated, and the generator that made
@@ -57,7 +57,7 @@ sys.path.insert(0, str(ENGINE_DIR / "tools_adam"))
 import starvote_larry_hastings as wrapper  # noqa: E402
 from scenario_eval import scenario_winners  # noqa: E402
 
-DEFAULT_DIR = REPO_ROOT / "05_Ranked_Robin" / "star_vs_rr_divergence"
+DEFAULT_DIR = REPO_ROOT / "05_Ranked_Robin" / "02_Examples" / "star_vs_rr_divergence"
 
 # --- the label sites, as (name, pattern, star-group, rr-group) --------------
 # Each pattern must capture the STAR and the RR name so one regex both CHECKS

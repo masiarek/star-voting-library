@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2138_cxrf8v_stv.yaml`](../bv2138_cxrf8v_stv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/concepts) · **1 seat** · **Expected winner:** Dave
+**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **1 seat** · **Expected winner:** Dave
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v`).
 
@@ -84,7 +84,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Abby, Brad) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    RCV-IRV winner Dave is INSIDE the Smith set. ✓

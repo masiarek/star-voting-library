@@ -7,7 +7,7 @@ search:
 
 *Generated from [`06_sub_majority_not_spoiled.yaml`](../06_sub_majority_not_spoiled.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Aspen
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Aspen
 
 ## Scenario
 
@@ -120,7 +120,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Vote splitting (worked set)](../../README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

@@ -1,0 +1,102 @@
+---
+search:
+  exclude: true
+---
+
+# No Condorcet winner (a cycle) — Ranked Robin still elects one
+
+*Generated from [`02_cycle_no_condorcet.yaml`](../02_cycle_no_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Ada
+
+**Official tie-break (lot) order:** Ada > Ben > Cara — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
+
+## Scenario
+
+7 ranked ballots, 3 candidates, in a rock-paper-scissors cycle: Ada beats Ben, Ben beats Cara, Cara beats Ada. NO candidate beats both others, so there is NO Condorcet winner. Ranked Robin still produces a winner: everyone has a 1-1 record, so it breaks the tie by total margin — Ada (strongest margins) wins. This is where Ranked Robin and "the Condorcet winner" PART WAYS: the Condorcet winner is undefined, Ranked Robin is not.
+
+## Ballots
+
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+Ada>Ben>Cara
+Ada>Ben>Cara
+Ada>Ben>Cara
+Ben>Cara>Ada
+Ben>Cara>Ada
+Cara>Ada>Ben
+Cara>Ada>Ben
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+```text
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 7 ballots (ranked ballots).
+
+Ballots:
+     3 × Ada > Ben > Cara
+     2 × Ben > Cara > Ada
+     2 × Cara > Ada > Ben
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ada   beats Ben    5 – 2
+   Cara  beats Ada    4 – 3
+   Ben   beats Cara   5 – 2
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |    Ada    |   Ben    |  Cara    |
+--------------------------------------------
+   Ada > |    ---    |5 - 0 - 2 |3 - 0 - 4 |
+   Ben > | 2 - 0 - 5 |   ---    |5 - 0 - 2 |
+  Cara > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ada        1–1–0         1      +2  Ben
+    2  Ben        1–1–0         1      +0  Cara
+    3  Cara       1–1–0         1      -2  Ada
+
+Winner — Ranked Robin (RCV-RR): Ada
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+```
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): Ada, Ben, Cara
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Ranked Robin (RCV-RR) winner Ada is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02_cycle_no_condorcet_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/02_cycle_no_condorcet.yaml
+```
+
+## See also
+
+- [Condorcet efficiency (topic hub)](../../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../../07_Concepts/topics/ties/README.md)
+- [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [01_condorcet_winner](01_condorcet_winner.md) · [03_real_record0_c6_b5](03_real_record0_c6_b5.md) · [04_smith_set_c4_b7](04_smith_set_c4_b7.md) · [bv2140_48hjkv_most_pairwise_wins](bv2140_48hjkv_most_pairwise_wins.md)

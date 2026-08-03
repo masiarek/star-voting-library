@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2133_dyxrbr_pet2_approval.yaml`](../bv2133_dyxrbr_pet2_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../04_Approval/concepts) · **1 seat** · **Expected winner:** Bird
+**Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Bird
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyxrbr) · **[results ↗](https://bettervoting.com/dyxrbr/results)** (election `dyxrbr`).
 

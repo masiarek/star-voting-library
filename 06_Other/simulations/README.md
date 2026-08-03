@@ -70,7 +70,7 @@ python3 fbc_simulation.py --elections 3000 --voters 41 --candidates 3 --seed 7
 
 ## Runoff Reversal frequency simulation
 
-`runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in [Runoff Reversal](../../01_STAR/runoff_overturns_leader/)).
+`runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/)).
 
 ### Why this exists
 
@@ -112,14 +112,14 @@ python3 runoff_reversal_simulation.py --elections 300000 --voters 21 --candidate
 
 - Sincere ballots only — no strategy.
 - Spatial model is 2-D uniform; real issue spaces are lumpier (clusters, polarization).
-- "Reversal" here is score-leader-vs-runoff only; it says nothing about the Condorcet winner (see [Three notions of "winner"](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md)).
+- "Reversal" here is score-leader-vs-runoff only; it says nothing about the Condorcet winner (see [Three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)).
 - **Always report the model, the size, and the tie split with the number.**
 
 ---
 
 ## STAR vs Ranked Robin divergence simulation
 
-`star_vs_rr_divergence.py` — how often, and *why*, do STAR and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) (Copeland / Condorcet) elect different single winners?
+`star_vs_rr_divergence.py` — how often, and *why*, do STAR and [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) (Copeland / Condorcet) elect different single winners?
 
 ### The mechanism
 
@@ -143,7 +143,7 @@ Until 2026-07-26 the fast model settled every tie by column order, and that gap 
 uv run 06_Other/simulations/star_vs_rr_divergence.py --audit-model 400
 ```
 
-About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 voters — precisely the corner the [30 divergence samples](../../05_Ranked_Robin/star_vs_rr_divergence/README.md) live in, and one of those 30 was in fact born mislabelled (`cycle_C10_fewV29_bloc_2` claimed "STAR A"; the engine elects C). Their labels now come from the engine and are held there by `tools_adam/scripts/check_star_vs_rr_labels.py` + `tests/test_star_vs_rr_labels.py`.
+About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 voters — precisely the corner the [30 divergence samples](../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) live in, and one of those 30 was in fact born mislabelled (`cycle_C10_fewV29_bloc_2` claimed "STAR A"; the engine elects C). Their labels now come from the engine and are held there by `tools_adam/scripts/check_star_vs_rr_labels.py` + `tests/test_star_vs_rr_labels.py`.
 
 ### Representative results (3000 trials/cell, seed 20260721)
 
@@ -172,7 +172,7 @@ About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 
 ### Caveats (read before quoting)
 
 - Sincere, **normalized** 0–5 scores (each voter min-maxes their utilities). Real voters don't perfectly normalize; different scoring assumptions move the numbers.
-- **STAR here matches the LH engine exactly.** `star_winner()` implements starvote's tie-break rungs — head-to-head wins among the tied, then five-star counts, then lot (lowest column index, the engine's own fallback when a file publishes no lot numbers). It did not always: until 2026-07-26 it resolved every tie by numpy index order, which disagreed with the engine on ~2% of tie-heavy profiles and mislabelled one of the [30 dumped samples](../../05_Ranked_Robin/star_vs_rr_divergence/README.md). `STARVote_LH_tabulation_engine/tests/test_sim_star_model.py` now cross-checks the model against the real engine, so that drift cannot return silently.
+- **STAR here matches the LH engine exactly.** `star_winner()` implements starvote's tie-break rungs — head-to-head wins among the tied, then five-star counts, then lot (lowest column index, the engine's own fallback when a file publishes no lot numbers). It did not always: until 2026-07-26 it resolved every tie by numpy index order, which disagreed with the engine on ~2% of tie-heavy profiles and mislabelled one of the [30 dumped samples](../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md). `STARVote_LH_tabulation_engine/tests/test_sim_star_model.py` now cross-checks the model against the real engine, so that drift cannot return silently.
 - **RR is still a model, not the engine.** Copeland with a lowest-index tiebreak; LH breaks Copeland ties by margin then lot, so a knife-edge RR cell may still differ slightly from the engine.
 - "Divergence" counts *any* different winner, including ties resolved differently — report the model, size, and mechanism split with the number.
 
@@ -184,7 +184,7 @@ About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 
 
 ### Why this exists
 
-Several reform packages narrow a crowded open field to the top N (usually 4) before running a good method in the general. [Consensus Choice](../../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) is the live example: step 1 is *"an open qualifying election ... [that] determines at least four of the strongest candidates,"* and the published materials **do not say which method that round uses**.
+Several reform packages narrow a crowded open field to the top N (usually 4) before running a good method in the general. [Consensus Choice](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_consensus_choice.md) is the live example: step 1 is *"an open qualifying election ... [that] determines at least four of the strongest candidates,"* and the published materials **do not say which method that round uses**.
 
 That gap produced a genuine disagreement among people who know the field, with **no published numbers on either side**:
 

@@ -27,7 +27,7 @@ import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 SIM = REPO_ROOT / "06_Other" / "simulations" / "star_vs_rr_divergence.py"
-SAMPLES = REPO_ROOT / "05_Ranked_Robin" / "star_vs_rr_divergence"
+SAMPLES = REPO_ROOT / "05_Ranked_Robin" / "02_Examples" / "star_vs_rr_divergence"
 
 np = pytest.importorskip("numpy", reason="the simulation model is numpy-based")
 

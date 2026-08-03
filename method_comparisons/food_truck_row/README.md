@@ -70,11 +70,11 @@ Note what this shows: **ranked ballots do not create proportionality.** Sweeps a
 - **STAR-PR / Allocated Score:** Arepa wins seat 1; the quota of ballots that elected him is spent; the remaining live weight is majority-sweet, and Donut takes seat 2.
 - **STV:** Droop quota 34. Churro's elimination pools the savory vote → Arepa elected; Eclair's elimination pools the sweet vote → Donut elected. (The count deliberately ends with a hopeful still standing — clear of the [BV sole-survivor STV crash](../../06_Other/STV/bv_stv_sole_survivor_crash/README.md).)
 
-A 57:43 room, a 1:1 delegation — one seat per ~quota of voters, the [proportional representation](../../03_STAR_PR/concepts/README.md) promise kept by both the score-ballot and ranked-ballot routes.
+A 57:43 room, a 1:1 delegation — one seat per ~quota of voters, the [proportional representation](../../03_STAR_PR/01_Learn/README.md) promise kept by both the score-ballot and ranked-ballot routes.
 
 ## BV verification notes
 
-All five live races agree with the LH engine, with no genuine tie anywhere (every rung 22/21/20/19/18 distinct by design). One display quirk for the record: BetterVoting banners the **STAR_PR** race "Tied!" with `tieBreakType: random` despite no tie existing — the same STAR_PR serializer quirk first seen on `89wwvr` ([exercise 12](../../01_STAR/exercises/ex12_bloc_vs_proportional.md)) and `jwxr3j`; this election is the **third confirming instance**. The elected pair itself is correct.
+All five live races agree with the LH engine, with no genuine tie anywhere (every rung 22/21/20/19/18 distinct by design). One display quirk for the record: BetterVoting banners the **STAR_PR** race "Tied!" with `tieBreakType: random` despite no tie existing — the same STAR_PR serializer quirk first seen on `89wwvr` ([exercise 12](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md)) and `jwxr3j`; this election is the **third confirming instance**. The elected pair itself is correct.
 
 ## Run it yourself
 
@@ -90,6 +90,6 @@ Full mirrors: [Bloc STAR sweep](cases/cases_tabulated/bv2210_fvg8y8_bloc_star_sw
 
 ---
 
-**Where this comes from.** Ballots and cast are this repo's own. Siblings: [sntv_village_council](../sntv_village_council/sntv_village_council.md) (the gentle SNTV intro this case escalates), [multi_member_plurality](../multi_member_plurality/) (block & limited voting), [pets_governance](../pets_governance/) (six methods, one electorate), [exercise 12](../../01_STAR/exercises/ex12_bloc_vs_proportional.md) (Bloc-vs-PR at whiteboard scale), and the seat-family map at [electing more than one](../../07_Concepts/topics/electing_more_than_one.md).
+**Where this comes from.** Ballots and cast are this repo's own. Siblings: [sntv_village_council](../sntv_village_council/sntv_village_council.md) (the gentle SNTV intro this case escalates), [multi_member_plurality](../multi_member_plurality/) (block & limited voting), [pets_governance](../pets_governance/) (six methods, one electorate), [exercise 12](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) (Bloc-vs-PR at whiteboard scale), and the seat-family map at [electing more than one](../../07_Concepts/topics/electing_more_than_one.md).
 
 # file: README.md

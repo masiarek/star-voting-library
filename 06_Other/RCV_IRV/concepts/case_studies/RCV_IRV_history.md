@@ -10,7 +10,7 @@
 
 There are **several ways to tally a ranked ballot**, and the *first* idea was the thorough one: read the entire ranking and elect the candidate **preferred over every other head-to-head** — what we now call the **Condorcet winner**. The Marquis de Condorcet formalized this in **1785** (Jean-Charles de Borda had proposed his own rank-points method a few years earlier; the idea traces back to Ramon Llull centuries before that).
 
-These methods use *all* the rankings, so they tend to elect a broadly-preferred candidate — but tallying every pairwise matchup **by hand** is laborious. That tallying cost is exactly the problem the next idea set out to solve. (The modern, practical version of "count the whole ballot" is [Ranked Robin](../../../../05_Ranked_Robin/concepts/ranked_robin.md).)
+These methods use *all* the rankings, so they tend to elect a broadly-preferred candidate — but tallying every pairwise matchup **by hand** is laborious. That tallying cost is exactly the problem the next idea set out to solve. (The modern, practical version of "count the whole ballot" is [Ranked Robin](../../../../05_Ranked_Robin/01_Learn/ranked_robin.md).)
 
 ## IRV: a hand-countable workaround (~150 years ago)
 

@@ -21,7 +21,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Cash**. Only **Approval** differs,
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/cases/ex06_bullet_backfire.yaml`](../../../../01_STAR/exercises/cases/ex06_bullet_backfire.yaml)  ·  **STAR tabulated mirror:** [`ex06_bullet_backfire_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex06_bullet_backfire_tabulated.txt)
+**Source election:** [`01_STAR/05_Practice/cases/ex06_bullet_backfire.yaml`](../../../../01_STAR/05_Practice/cases/ex06_bullet_backfire.yaml)  ·  **STAR tabulated mirror:** [`ex06_bullet_backfire_tabulated.txt`](../../../../01_STAR/05_Practice/cases/cases_tabulated/ex06_bullet_backfire_tabulated.txt)
 
 _3 candidates, 9 ballots._
 

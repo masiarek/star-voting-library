@@ -36,8 +36,8 @@ Read that table both ways. The rows where STAR wins (summability, monotonicity, 
 
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [Strict vs. weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md)
 - [Tabulation, step by step](tabulation_star_vs_irv.md) — same ballots, both counts
-- [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · [Monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [Summability](../../01_STAR/concepts/properties_and_limits/STAR_summability.md)
-- [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) · [Residual vote-splitting](../../01_STAR/concepts/properties_and_limits/residual_vote_splitting.md)
+- [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · [Monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [Summability](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md)
+- [Exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) · [Residual vote-splitting](../../01_STAR/01_Learn/properties_and_limits/residual_vote_splitting.md)
 - [Is RCV "simple"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) · [Is IRV "just plurality"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md)
 
 ## Further reading — note on sources

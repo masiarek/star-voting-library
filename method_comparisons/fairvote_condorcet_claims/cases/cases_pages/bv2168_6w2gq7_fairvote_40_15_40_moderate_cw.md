@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml`](../bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Moderate
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Moderate
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6w2gq7) · **[results ↗](https://bettervoting.com/6w2gq7/results)** (election `6w2gq7`).
 
@@ -160,7 +160,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2169_2jrfpg_fairvote_shifted_left_liberal_cw](bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md)

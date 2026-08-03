@@ -1,35 +1,35 @@
 paradox,kind,case_title,method,expected_winners,bv_test_id,bv_election_id,yaml_path
-Condorcet winner paradox,Simple,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C03_fewV15_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C03_fewV15_noise_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 45 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C03_medV45_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 45 voters, cycle (STAR B, RR C)",STAR,B,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C03_medV45_noise_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 15 voters, cycle (STAR B, RR E)",STAR,B,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C05_fewV15_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 15 voters, cycle (STAR A, RR E)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C05_fewV15_noise_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 28 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C05_fewV28_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C05_medV45_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR D, RR B)",STAR,D,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C05_medV45_noise_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 15 voters, cycle (STAR D, RR A)",STAR,D,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C07_fewV15_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 28 voters, cycle (STAR D, RR A)",STAR,D,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C07_fewV28_bloc_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 598 voters, cycle (STAR C, RR E)",STAR,C,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C07_largeV598_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C)",STAR,F,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C07_medV149_bloc_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_fewV15_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR J, RR F)",STAR,J,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_fewV15_noise_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 28 voters, cycle (STAR C, RR F)",STAR,C,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_fewV28_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 29 voters, cycle (STAR C, RR B)",STAR,C,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_fewV29_bloc_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 148 voters, cycle (STAR E, RR G)",STAR,E,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_medV148_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 149 voters, cycle (STAR I, RR H)",STAR,I,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_medV149_bloc_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR E, RR G)",STAR,E,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_medV45_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR A, RR I)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_medV45_noise_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, darkhorse (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C03_fewV15_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 599 voters, darkhorse (STAR A, RR E)",STAR,A,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C05_largeV599_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 30 voters, darkhorse (STAR D, RR C)",STAR,D,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C07_fewV30_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 597 voters, darkhorse (STAR D, RR E)",STAR,D,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C07_largeV597_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 598 voters, darkhorse (STAR E, RR G)",STAR,E,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C07_largeV598_bloc_2.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 147 voters, darkhorse (STAR F, RR D)",STAR,F,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C07_medV147_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 45 voters, darkhorse (STAR E, RR A)",STAR,E,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C07_medV45_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 598 voters, darkhorse (STAR G, RR F)",STAR,G,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C10_largeV598_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 599 voters, darkhorse (STAR B, RR E)",STAR,B,,,05_Ranked_Robin/star_vs_rr_divergence/darkhorse_C10_largeV599_bloc_2.yaml
+Condorcet winner paradox,Simple,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C03_fewV15_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C03_fewV15_noise_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 45 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C03_medV45_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 45 voters, cycle (STAR B, RR C)",STAR,B,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C03_medV45_noise_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 15 voters, cycle (STAR B, RR E)",STAR,B,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_fewV15_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 15 voters, cycle (STAR A, RR E)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_fewV15_noise_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 28 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_fewV28_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_medV45_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR D, RR B)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_medV45_noise_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 15 voters, cycle (STAR D, RR A)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_fewV15_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 28 voters, cycle (STAR D, RR A)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_fewV28_bloc_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 598 voters, cycle (STAR C, RR E)",STAR,C,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_largeV598_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C)",STAR,F,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_medV149_bloc_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV15_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR J, RR F)",STAR,J,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV15_noise_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 28 voters, cycle (STAR C, RR F)",STAR,C,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV28_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 29 voters, cycle (STAR C, RR B)",STAR,C,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV29_bloc_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 148 voters, cycle (STAR E, RR G)",STAR,E,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_medV148_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 149 voters, cycle (STAR I, RR H)",STAR,I,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_medV149_bloc_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR E, RR G)",STAR,E,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_medV45_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 45 voters, cycle (STAR A, RR I)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_medV45_noise_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, darkhorse (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C03_fewV15_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 599 voters, darkhorse (STAR A, RR E)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C05_largeV599_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 30 voters, darkhorse (STAR D, RR C)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C07_fewV30_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 597 voters, darkhorse (STAR D, RR E)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C07_largeV597_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 598 voters, darkhorse (STAR E, RR G)",STAR,E,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C07_largeV598_bloc_2.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 147 voters, darkhorse (STAR F, RR D)",STAR,F,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C07_medV147_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 45 voters, darkhorse (STAR E, RR A)",STAR,E,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C07_medV45_noise_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 598 voters, darkhorse (STAR G, RR F)",STAR,G,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C10_largeV598_bloc_1.yaml
+Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 599 voters, darkhorse (STAR B, RR E)",STAR,B,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C10_largeV599_bloc_2.yaml
 Condorcet winner paradox,Simple,"Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut",STAR,Begich,BV2213,k3fmwv,method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml
 Condorcet winner paradox,Simple,"Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola",STAR,Peltola,BV2214,m3hb6y,method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml
 Condorcet winner paradox,Simple,Hamlin & Hua §4.1 — the approval count as printed: B wins with 100%,Approval,B,,,method_comparisons/approval_majority_criterion/cases/hh41_01_approval_as_printed.yaml
@@ -106,8 +106,8 @@ SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the 
 SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_irv.yaml
 SCC / spoiler,Conditional,Borda SCC Ex.15 — Choose-One: C wins on first choices,Plurality,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_plurality.yaml
 SCC / spoiler,Conditional,Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits),STAR,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml
-Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
-Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/cases/clone_teaming_01_pre.yaml
+Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
+Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
 Condorcet's paradox (cycle),Simple,"A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder",RankedRobin,Alder,,,method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml
 Condorcet's paradox (cycle),Simple,"The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots",RankedRobin,Ava,,,method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml
 Condorcet's paradox (cycle),Simple,"Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both",RankedRobin,Ana,,,method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml
@@ -179,12 +179,12 @@ Truncation paradox,Conditional,Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY t
 Truncation paradox,Conditional,"Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B",RankedRobin,B,BV2163,74j6vv,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_ranked_robin.yaml
 Truncation paradox,Conditional,"Nurmi Ex.16 truncated — STAR: unmoved, still B",STAR,B,BV2163,74j6vv,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_star.yaml
 Truncation paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
-Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
-Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/clone_independence/cases/bv2143_9pr3wr_teaming_fails.yaml
-Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/clone_independence/cases/clone_teaming_01_pre.yaml
-Clone dependence / teaming,Conditional,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,RankedRobin,A1,,,05_Ranked_Robin/clone_independence/cases/clone_teaming_02_post.yaml
-Favorite betrayal,Conditional,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
-Favorite betrayal,Conditional,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,STAR,Bluebell,BV2207,b6xrdr,01_STAR/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml
+Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
+Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2143_9pr3wr_teaming_fails.yaml
+Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
+Clone dependence / teaming,Conditional,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,RankedRobin,A1,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_02_post.yaml
+Favorite betrayal,Conditional,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
+Favorite betrayal,Conditional,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,STAR,Bluebell,BV2207,b6xrdr,01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml
 Favorite betrayal,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_irv.yaml
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District I — STAR: also Bruno,STAR,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml

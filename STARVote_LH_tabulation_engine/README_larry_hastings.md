@@ -9,7 +9,7 @@ Use it to run a single election file; every run also refreshes that file's commi
 ```bash
 # Run one election file (YAML or starvote CSV), from the repo root
 uv run python STARVote_LH_tabulation_engine/starvote_larry_hastings.py \
-    01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml
+    01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml
 ```
 
 Color is shown automatically in a real terminal and in PyCharm's run console. Set `NO_COLOR=1` to force plain output anywhere.
@@ -72,7 +72,7 @@ Set under `options:` (top level or per race). All are booleans unless noted.
 - **Round separators**: in multi-round methods (e.g. Bloc STAR) a faint rule is drawn before each new round after the first, grouping the output into blocks.
 - **Winner line** restates the method and winner count, e.g. `Winner (STAR Voting Method — single winner)` or `Winners (Bloc STAR Method — 3 winners)`.
 - **Setup line** (multiwinner): the base engine's standalone `Want to fill N seats.` is folded into the ballot-count line, so the two "size of this election" facts sit together — `Tabulating 4 ballots to fill 3 seats.` Single-winner output is unchanged. (Done in the wrapper's `custom_print`; the vendored engine is untouched.)
-- **`[Score Distribution]`** (with `show_score_counts`): a per-candidate star histogram, captioned `(how many ballots gave each star rating)`, with a `Score` corner label and a `===` rule row so the `5 4 3 2 1 0` header reads unmistakably as star values. The **Avg** column is computed from an *exact rational* and rounded **half-up** to one decimal (not float `/` + `{:.1f}`, which rounds half-to-even and would print an exact `1.25` as `1.2`). See [Score Distribution & averages](../01_STAR/concepts/reporting/score_distribution_and_averages.md).
+- **`[Score Distribution]`** (with `show_score_counts`): a per-candidate star histogram, captioned `(how many ballots gave each star rating)`, with a `Score` corner label and a `===` rule row so the `5 4 3 2 1 0` header reads unmistakably as star values. The **Avg** column is computed from an *exact rational* and rounded **half-up** to one decimal (not float `/` + `{:.1f}`, which rounds half-to-even and would print an exact `1.25` as `1.2`). See [Score Distribution & averages](../01_STAR/01_Learn/reporting/score_distribution_and_averages.md).
 
 ## Change log — wrapper display (this is *our* code, not the vendored engine)
 
@@ -81,7 +81,7 @@ Set under `options:` (top level or per race). All are booleans unless noted.
 Behavioral edits to `starvote_larry_hastings.py`'s presentation layer. The vendored `starvote/` core stays pristine (see [`FORK_NOTES.md`](FORK_NOTES.md)); these never touch it.
 
 - **Ranked Robin equal-rankings (`A=B>C`) — parser fix** — `run_ranked_robin`'s ranked-ballot reader now splits each `>` rank level on `=`, so tied candidates share a rank and are scored as *Equal Support* against each other (exactly how Ranked Robin treats a tie). Previously the parser split only on `>`, so a level like `Ava=Bianca=Cedric` was mis-read as a *single phantom candidate* by that literal name — inflating the field and electing the wrong winner. Strict ballots (every level a singleton) are byte-for-byte unchanged. Equal ranking is a core Ranked Robin feature, so this lets the engine read the weak orders RR is defined on natively (e.g. the [electowiki worked example](https://electowiki.org/wiki/Ranked_Robin)). Guarded by `tests/test_ranked_robin.py::test_equal_rankings_are_ties`.
-- **`[Score Distribution]` header + exact-rational half-up average** — `Score` corner label, `===` rule row, star-rating caption, and the Avg float→`Decimal`/`ROUND_HALF_UP` fix. ([full write-up](../01_STAR/concepts/reporting/score_distribution_and_averages.md))
+- **`[Score Distribution]` header + exact-rational half-up average** — `Score` corner label, `===` rule row, star-rating caption, and the Avg float→`Decimal`/`ROUND_HALF_UP` fix. ([full write-up](../01_STAR/01_Learn/reporting/score_distribution_and_averages.md))
 - **Multiwinner setup line** — merged `Want to fill N seats.` into `Tabulating N ballots to fill N seats.`
 - Earlier: `[Lot-decided tie — rare]` callout; validator accepts `voting_method: Bloc STAR`.
 
@@ -90,8 +90,8 @@ Behavioral edits to `starvote_larry_hastings.py`'s presentation layer. The vendo
 Every run of a file also writes a plain-text copy into a sibling **mirror folder** whose name is the source folder + `_tabulated`, with the file itself also suffixed `_tabulated`:
 
 ```
-03_STAR_PR/_main/cases/foo.yaml
-  -> 03_STAR_PR/_main/cases/cases_tabulated/foo_tabulated.txt
+03_STAR_PR/02_Examples/cases/foo.yaml
+  -> 03_STAR_PR/02_Examples/cases/cases_tabulated/foo_tabulated.txt
 ```
 
 Each `_tabulated.txt` contains:

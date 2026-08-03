@@ -36,13 +36,13 @@ Each level is its **own page** so it can stand alone; this page is just the hub.
 *Anyone about to **choose or adopt** a method. The responsible last step before you stake an election on one.* No method is perfect (Arrow / Gibbard), so the skill is knowing **how** your favorite fails, whether the failure is real-world or lab-grade, and which whoops you can live with. The four-part test, each method's safety datasheet, the failures that really happened, and the runnable criterion-failure gallery. (Its unfair, for-sport twin is the [Mudroom](../method_comparisons/mudroom/).)
 → **[Start Voting 401](curriculum/CURRICULUM_401.md)**
 
-*Prefer learning by doing? The **[exercises set](../01_STAR/exercises/README.md)** — predict-then-peek problems with tested answer keys — practices the criteria on paper-sized elections.*
+*Prefer learning by doing? The **[exercises set](../01_STAR/05_Practice/README.md)** — predict-then-peek problems with tested answer keys — practices the criteria on paper-sized elections.*
 
 ---
 
 ## Suggested pacing by audience
 
-*Presenting or teaching STAR? [Teaching STAR Voting](../01_STAR/concepts/hands_on/teaching_star_voting.md) turns this pacing into a full guide — the arc, the terms to cover, which example to use when, and the misconceptions to head off.*
+*Presenting or teaching STAR? [Teaching STAR Voting](../01_STAR/01_Learn/hands_on/teaching_star_voting.md) turns this pacing into a full guide — the arc, the terms to cover, which example to use when, and the misconceptions to head off.*
 
 - **Public talk (15–20 min):** [101](curriculum/CURRICULUM_101.md) only (the problem → the two rounds → the compromise → the payoff). Skip theory.
 - **Workshop (60–90 min):** all of [101](curriculum/CURRICULUM_101.md) + [201.1–201.4](curriculum/CURRICULUM_201.md), hands-on with the files.

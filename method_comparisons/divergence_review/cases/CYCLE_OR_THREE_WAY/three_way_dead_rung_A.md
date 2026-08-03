@@ -21,9 +21,9 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml`](../../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml)  ·  **STAR tabulated mirror:** [`three_way_dead_rung_A_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml`](../../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml)  ·  **STAR tabulated mirror:** [`three_way_dead_rung_A_tabulated.txt`](../../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_tabulated/three_way_dead_rung_A_tabulated.txt)
 
-_Also present (identical ballots) at: `01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml`._
+_Also present (identical ballots) at: `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml`._
 
 _3 candidates, 3 ballots._
 
@@ -193,7 +193,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    RCV-IRV winner B is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
@@ -247,7 +247,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

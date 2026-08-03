@@ -7,7 +7,7 @@ search:
 
 *Generated from [`06_c4_b24_narrow-bands.yaml`](../06_c4_b24_narrow-bands.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Beige
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Beige
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gyv2qt) · **[results ↗](https://bettervoting.com/gyv2qt/results)** (election `gyv2qt`).
 
@@ -25,7 +25,7 @@ The electorate (24 ballots, all individual rows):
   - warm tilt: 10 voters (5 cliff35, 5 gentle)
   - drift: 5 voters (3 flat, 2 ranked_style)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - cliff34: sliver ballot: 0 or 3-4 only
@@ -207,8 +207,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/06_c4_b24_narrow-bands.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [01_c3_b31_graders-divide](01_c3_b31_graders-divide.md) · [02_c4_b40_cliff-city](02_c4_b40_cliff-city.md) · [03_c4_b33_bullet-storm](03_c4_b33_bullet-storm.md) · [04_c4_b47_noise-soup](04_c4_b47_noise-soup.md) · [05_c3_b38_squeeze-survives](05_c3_b38_squeeze-survives.md) · [07a_c5_b36_herb-council-bloc-3-seats](07a_c5_b36_herb-council-bloc-3-seats.md) · [07b_c5_b36_herb-council-pr-3-seats](07b_c5_b36_herb-council-pr-3-seats.md) · [08_c6_b29_quota-circus-pr-2-seats](08_c6_b29_quota-circus-pr-2-seats.md) · [09_c7_b44_park-bloc-4-seats](09_c7_b44_park-bloc-4-seats.md)

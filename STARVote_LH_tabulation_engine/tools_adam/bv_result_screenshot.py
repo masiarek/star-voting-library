@@ -20,11 +20,11 @@ USAGE (uv-native, PEP 723 — no venv needed):
 
     # the result card: winner headline + voters + the Head-to-head/Runoff chart
     uv run bv_result_screenshot.py 48hjkv --shot result \
-        -o 05_Ranked_Robin/condorcet_vs_ranked_robin/img/48hjkv_result_bars.png
+        -o 05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/img/48hjkv_result_bars.png
 
     # the Race Details table (expands the accordion first)
     uv run bv_result_screenshot.py 48hjkv --shot race-details \
-        -o 05_Ranked_Robin/condorcet_vs_ranked_robin/img/48hjkv_race_details.png
+        -o 05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/img/48hjkv_race_details.png
 
     # anything else: clip to your own selector, optionally after running some JS
     uv run bv_result_screenshot.py 48hjkv -o img/48hjkv_matchups.png \

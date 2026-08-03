@@ -7,7 +7,7 @@ search:
 
 *Generated from [`08_c6_b29_quota-circus-pr-2-seats.yaml`](../08_c6_b29_quota-circus-pr-2-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Amir, Bree
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Amir, Bree
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdh9qp) · **[results ↗](https://bettervoting.com/qdh9qp/results)** (election `qdh9qp`).
 
@@ -26,7 +26,7 @@ The electorate (29 ballots, all individual rows):
   - south side: 8 voters (4 gentle, 3 cliff34, 1 nuanced)
   - floaters: 4 voters (2 chaos, 1 anyone_but, 1 flat)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - cliff34: sliver ballot: 0 or 3-4 only

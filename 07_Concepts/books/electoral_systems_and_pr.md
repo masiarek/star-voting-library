@@ -17,7 +17,7 @@ The standard survey course in a book: plurality, majority (including the alterna
 
 **The lean:** Comparative-politics neutral — Farrell describes and assesses rather than campaigns. A political-science lens (party systems, governance), which usefully complements this repo's mechanism-and-ballot lens.
 
-**In this repo:** [electing more than one](../topics/electing_more_than_one.md) · [two-party dominance](../topics/two_party_dominance.md) · [STV vs. proportional STAR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md)
+**In this repo:** [electing more than one](../topics/electing_more_than_one.md) · [two-party dominance](../topics/two_party_dominance.md) · [STV vs. proportional STAR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)
 
 </td>
 </tr>
@@ -34,7 +34,7 @@ Exactly what the subtitle says — the most accessible *civic* book on the shelf
 
 **The lean:** Amy is a **proportional-representation advocate**; the book makes the case that PR beats winner-take-all for representativeness. Read it for the clearest citizen-level argument *for* multi-winner PR — a lever this repo also points to (single-winner method choice can't fix what only proportionality can — see [two-party dominance](../topics/two_party_dominance.md)).
 
-**In this repo:** [two-party dominance](../topics/two_party_dominance.md) · [wasted votes](../topics/wasted_votes.md) · [proportional representation](../../03_STAR_PR/concepts/README.md)
+**In this repo:** [two-party dominance](../topics/two_party_dominance.md) · [wasted votes](../topics/wasted_votes.md) · [proportional representation](../../03_STAR_PR/01_Learn/README.md)
 
 </td>
 </tr>
@@ -51,7 +51,7 @@ The definitive book on **apportionment** — how a fixed number of seats gets di
 
 **The lean:** Rigorous and neutral — a mathematical treatment, not advocacy. The apportionment problem is orthogonal to which *ballot* you use, so this shelf's least partisan entry.
 
-**In this repo:** [the math behind proportional STAR](../../03_STAR_PR/concepts/STAR_PR/the_math_behind_proportional_star.md) · [electing more than one](../topics/electing_more_than_one.md)
+**In this repo:** [the math behind proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/the_math_behind_proportional_star.md) · [electing more than one](../topics/electing_more_than_one.md)
 
 </td>
 </tr>
@@ -62,5 +62,5 @@ The definitive book on **apportionment** — how a fixed number of seats gets di
 ## Where to go next
 
 - The single-winner methods these systems are built from → **[Rated & score methods](rated_and_score_methods.md)** and [How to Learn About Voting Methods](../topics/how_to_learn_about_voting_methods.md).
-- This repo's own proportional material → [proportional representation](../../03_STAR_PR/concepts/README.md).
+- This repo's own proportional material → [proportional representation](../../03_STAR_PR/01_Learn/README.md).
 - Back to the full shelf → **[Books on Voting Methods](README.md)**.

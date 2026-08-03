@@ -2,7 +2,7 @@
 
 *A runnable companion to Ebadian, Latifian & Shah, **"The Distortion of Approval Voting with Runoff"** (AAMAS 2023) — the closest published relative to STAR's score-then-runoff shape, and a result that **cuts against the runoff**: in the adversarial (unit-sum) distortion model, adding a majority runoff to approval voting makes its worst case **worse**, not better — Θ(m) → Θ(m²) — because a runoff structurally blocks a candidate the paper's proof pivots on: the **valuable Condorcet loser**, adored by a large minority, ranked below everyone by the rest, and still the highest-welfare candidate in the race. This page states the paper's results honestly, then makes that pivotal scenario countable on nine ballots — where **Score elects Amy and STAR's runoff (correctly, majoritarianly) rejects her**. Read next to [Metric distortion](../../07_Concepts/topics/distortion.md), where the *same* runoff is the insurance step: two models, two verdicts, and the model decides.*
 
-**Level: 301.** Companions: [Distortion (umbrella)](../../07_Concepts/topics/distortion.md) · [Metric distortion](../../07_Concepts/topics/distortion.md) · [What makes a good winner? — majoritarian vs. utilitarian](../../07_Concepts/topics/what_makes_a_good_winner.md#the-deepest-split-majoritarian-vs-utilitarian) · [Where do you draw the line? (ex13)](../../01_STAR/exercises/ex13_draw_the_line.md).
+**Level: 301.** Companions: [Distortion (umbrella)](../../07_Concepts/topics/distortion.md) · [Metric distortion](../../07_Concepts/topics/distortion.md) · [What makes a good winner? — majoritarian vs. utilitarian](../../07_Concepts/topics/what_makes_a_good_winner.md#the-deepest-split-majoritarian-vs-utilitarian) · [Where do you draw the line? (ex13)](../../01_STAR/05_Practice/ex13_draw_the_line.md).
 
 ---
 
@@ -18,7 +18,7 @@ The setting is the **unit-sum** distortion model — each voter's utilities sum 
 Three findings worth carrying:
 
 1. **The majority runoff is the culprit — by a factor of m.** Single-stage approval achieves Θ(m) deterministically; bolt on a majority runoff and the best achievable becomes Θ(m²) (their Theorems 5.2–5.5). The failure is *structural*, not a matter of picking finalists badly: even a pair-selection rule **with access to the exact utilities** can't beat Ω(m), because a Condorcet loser can never survive a majority runoff no matter how valuable she is (their Example 5.1 — the instance made countable below).
-2. **The approval threshold is load-bearing.** For τ > 1/(m−1), *any* deterministic rule has unbounded distortion (everyone may approve nobody); the optimum sits at τ = 1/m, and their experiments put the empirically best threshold at about **2/m**. Theory's version of the repo's cutoff lesson: [where you draw the approval line has outcome power](../../01_STAR/exercises/ex13_draw_the_line.md).
+2. **The approval threshold is load-bearing.** For τ > 1/(m−1), *any* deterministic rule has unbounded distortion (everyone may approve nobody); the optimum sits at τ = 1/m, and their experiments put the empirically best threshold at about **2/m**. Theory's version of the repo's cutoff lesson: [where you draw the approval line has outcome power](../../01_STAR/05_Practice/ex13_draw_the_line.md).
 3. **Their fix keeps the two-round shape but drops the majority rule:** a *proportional runoff* (each finalist wins with probability equal to her share of the runoff vote) restores Θ(m) — at the price of a randomized winner, which real public elections don't accept. The honest reading: within this model, the welfare cost *is* the majority check itself, not the second round.
 
 **Lean disclosure:** peer-reviewed CS (AAMAS), no stake in the US reform fight — the neutral tier. Its blind spot is the usual one for worst-case theory: adversarial instances, tractability-driven models, nothing about usability or legitimacy — and a randomized "proportional runoff" is a theorist's device, not a proposal any election office would run.
@@ -38,7 +38,7 @@ One electorate, three defensible winners, all from the same arithmetic:
 
 - **Score totals: Amy 20, Ben 11, Cora 10, Dan 9.** Amy is the **utilitarian winner** — nearly double the runner-up. Pure Score voting elects her.
 - **Head-to-head: Amy loses every matchup 4:5.** She is the **Condorcet loser**; Ben (who beats Amy 5:4 and edges Cora and Dan 1:0 with eight Equal Support) is the **Condorcet winner**.
-- **STAR: finalists Amy (20) and Ben (11); runoff Ben 5, Amy 4 → Ben.** A textbook [Runoff Reversal](../../01_STAR/runoff_overturns_leader/) — the score leader with the most total support loses the majority check. And any *approval-with-runoff* rule does the same or worse: whichever pair reaches the runoff, Amy can't win it, exactly the paper's point.
+- **STAR: finalists Amy (20) and Ben (11); runoff Ben 5, Amy 4 → Ben.** A textbook [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/) — the score leader with the most total support loses the majority check. And any *approval-with-runoff* rule does the same or worse: whichever pair reaches the runoff, Amy can't win it, exactly the paper's point.
 
 The embedded LH report, with the engine calling all of it:
 

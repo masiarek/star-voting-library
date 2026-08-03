@@ -8,7 +8,7 @@
 
 ## One electorate, honest opinions
 
-Five coworkers pick the team lunch — Sushi, Tacos, or Pizza. Everyone scores each option 0–5, honestly (this is the repo's [canonical lunch vote](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md), [runnable](../../01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml) · [live on BetterVoting ↗](https://bettervoting.com/fyy886/results)):
+Five coworkers pick the team lunch — Sushi, Tacos, or Pizza. Everyone scores each option 0–5, honestly (this is the repo's [canonical lunch vote](../../01_STAR/02_Examples/cases/cases_pages/bv2184_fyy886_lunch_vote.md), [runnable](../../01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml) · [live on BetterVoting ↗](https://bettervoting.com/fyy886/results)):
 
 | Voter | Sushi | Tacos | Pizza |
 |---|:--:|:--:|:--:|
@@ -43,7 +43,7 @@ Now count the *same* five ballots every way. (Every winner here is engine-verifi
 | **Choose-One (Plurality)** | first choices only | Sushi |
 | **RCV-IRV (Hare)** | first choices, then eliminate the lowest | Sushi |
 | **Approval** | how many are OK with each | 🍕 **Pizza** |
-| **[Ranked Robin](../../05_Ranked_Robin/concepts/why_ranked_robin.md)** | every head-to-head matchup | 🍕 **Pizza** |
+| **[Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md)** | every head-to-head matchup | 🍕 **Pizza** |
 | **[STAR](Why_STAR_Voting.md)** | total scores, then an automatic runoff | 🍕 **Pizza** |
 
 ## What the line-up shows

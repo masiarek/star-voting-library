@@ -2,7 +2,7 @@
 
 **The finding:** BetterVoting's STV tabulator throws a server error on any election whose eliminations leave exactly **one** remaining hopeful who then **reaches quota**. The elect-branch removes the winner from the candidate list and redistributes their surplus over an *empty* list — and `distributeVotes` reduces over that empty array with no initial value, which JavaScript rejects (`TypeError: Reduce of empty array with no initial value`). The results page shows `{"error":"Error (…)"}` with a fresh ID per attempt.
 
-Found by [exercise 14](../../../01_STAR/exercises/ex14_transfer_machine.md) going live (2026-07-17), bisected with permanent public elections as the lab notebook, then confirmed in BetterVoting's open-source tabulator code.
+Found by [exercise 14](../../../01_STAR/05_Practice/ex14_transfer_machine.md) going live (2026-07-17), bisected with permanent public elections as the lab notebook, then confirmed in BetterVoting's open-source tabulator code.
 
 ## The evidence table
 
@@ -103,6 +103,6 @@ when no candidates remain. Test gap: STV.test.ts's single test is this same
 
 Exercise 14 was designed so every STV moving part fires exactly once — quota, surplus, two eliminations, a final quota election. That tidiness is precisely what walks the count into the sole-survivor finish, which real-world STV elections (big fields, standing also-rans) almost never reach. The exercise wasn't unlucky; it was *thorough*, and thoroughness is what found the edge. Methods are math, implementations are software — both need testing. That's the [triple-check habit](../../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md), doing its job.
 
-*Found from [exercise 14 — the transfer machine](../../../01_STAR/exercises/ex14_transfer_machine.md) · STV method home: [06_Other/STV](../README.md)*
+*Found from [exercise 14 — the transfer machine](../../../01_STAR/05_Practice/ex14_transfer_machine.md) · STV method home: [06_Other/STV](../README.md)*
 
 # file: README.md

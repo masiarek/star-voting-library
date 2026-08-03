@@ -9,7 +9,7 @@ The same 20 voters as [the Post-it RCV example (BV2176)](bv2176_p8dp28_postit_rc
 | # | Race (BV) | Method | BV winner | How |
 |--:|---|---|:--:|:--|
 | 1 | STAR | STAR | **Blue** | scores 46/38/44/44; 44–44 second-finalist tie → head-to-head Blue 10–3 Pink; runoff **Blue 10–9 Purple** (a Runoff Reversal) |
-| 2 | Ranked Robin | RankedRobin (Copeland) | **Green** | cycle; Green and Blue tie 2–1; BV's head-to-head rung → Green 7–4 (LH's margin rung says **Blue** — [the ladder divergence](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md)) |
+| 2 | Ranked Robin | RankedRobin (Copeland) | **Green** | cycle; Green and Blue tie 2–1; BV's head-to-head rung → Green 7–4 (LH's margin rung says **Blue** — [the ladder divergence](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md)) |
 | 3 | Approval (approve = any support) | Approval | **Pink** | approvals 12/10/10/8 — the six Green fans' 3-for-their-last-choice carries Pink |
 | 4 | RCV-IRV | IRV | **Purple** | the video's whiteboard count: 7/6/4/3 → 8/7/4 → 9–8, 3 exhausted |
 | 5 | Choose-One | Plurality | **Purple** | 7 first choices (35%) |

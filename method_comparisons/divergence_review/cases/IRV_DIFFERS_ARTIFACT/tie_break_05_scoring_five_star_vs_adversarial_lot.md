@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Cara** rather than STAR's **Ben**, but this i
 
 **Flags:** 2 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie); RR conversion-sensitive (weak=Ben, strict=Cara)
 
-**Source election:** [`01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml`](../../../../01_STAR/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/cases/cases_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml`](../../../../01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml)  ·  **STAR tabulated mirror:** [`tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt`](../../../../01_STAR/03_Criteria/tie_break_dead_rung/cases/cases_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt)
 
 _3 candidates, 5 ballots._
 
@@ -158,7 +158,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Ben) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    RCV-IRV winner Cara is INSIDE the Smith set. ✓
@@ -216,7 +216,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Ben) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner Ben is INSIDE the Smith set. ✓

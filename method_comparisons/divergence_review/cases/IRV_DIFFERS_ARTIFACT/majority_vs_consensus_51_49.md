@@ -21,7 +21,7 @@ On these ballots RCV-IRV reports **Alma** rather than STAR's **Celia**, but this
 
 **Flags:** 3 tied-score ballot(s); RR conversion-sensitive (weak=Celia, strict=Alma)
 
-**Source election:** [`01_STAR/majority_criterion/cases/majority_vs_consensus_51_49.yaml`](../../../../01_STAR/majority_criterion/cases/majority_vs_consensus_51_49.yaml)  ·  **STAR tabulated mirror:** [`majority_vs_consensus_51_49_tabulated.txt`](../../../../01_STAR/majority_criterion/cases/cases_tabulated/majority_vs_consensus_51_49_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/majority_criterion/cases/majority_vs_consensus_51_49.yaml`](../../../../01_STAR/03_Criteria/majority_criterion/cases/majority_vs_consensus_51_49.yaml)  ·  **STAR tabulated mirror:** [`majority_vs_consensus_51_49_tabulated.txt`](../../../../01_STAR/03_Criteria/majority_criterion/cases/cases_tabulated/majority_vs_consensus_51_49_tabulated.txt)
 
 _3 candidates, 100 ballots._
 

@@ -24,8 +24,8 @@ Sincerely, here is where everyone lands:
 |---|---|
 | Choose-One (Plurality) | **Dublin** (3 first choices) |
 | [Borda](../../06_Other/other_ranked_methods/borda.md) | **Edinburgh** (17; Dublin 16, Cork 13, Athens 12, Bergen 12) |
-| Copeland / [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) | **Edinburgh** (3–1) |
-| [STAR](../../01_STAR/concepts/README.md) (ranks → 5/4/3/2/0) | **Dublin** (23; runoff 5–2 over Edinburgh) |
+| Copeland / [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) | **Edinburgh** (3–1) |
+| [STAR](../../01_STAR/01_Learn/README.md) (ranks → 5/4/3/2/0) | **Dublin** (23; runoff 5–2 over Edinburgh) |
 | [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) | **indeterminate** — see below |
 
 There is **no Condorcet winner**: Edinburgh beats Cork, Athens and Bergen but loses to Dublin 5–2. Edinburgh's symmetric Copeland score is **+2**, Bergen's is **−2**, and the other three are **0** — exactly the numbers the chapter prints.
@@ -101,8 +101,8 @@ Can a **single voter**, acting alone, change the winner to someone they sincerel
 |---|---|---|
 | Choose-One (Plurality) | **No** | a voter can't lower the leader's score without top-ranking them; at best she lifts her own favourite to a *tie*. Verified exhaustively over all 120 ballots for each of the 7 voters |
 | [Borda](../../06_Other/other_ranked_methods/borda.md) | **Yes** | but **not** by reversal — Ali lifting Dublin to the top (`Dublin > Athens > Bergen > Cork > Edinburgh`) makes Dublin the unique Borda winner, 19 to Edinburgh's 17 |
-| Copeland / [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) | **Yes** | reversal *or* a three-swap compromise; 52 of 119 ballots work |
-| [STAR](../../01_STAR/concepts/README.md) | **Yes** | two voters burying one candidate by two points; single-voter routes exist but cost a favourite betrayal at this spacing |
+| Copeland / [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) | **Yes** | reversal *or* a three-swap compromise; 52 of 119 ballots work |
+| [STAR](../../01_STAR/01_Learn/README.md) | **Yes** | two voters burying one candidate by two points; single-voter routes exist but cost a favourite betrayal at this spacing |
 | [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) | *not assessable here* | the sincere baseline is already a coin flip, so "did the manipulation change the winner" has no well-defined answer. This is an artifact of the profile, **not** evidence that IRV resists strategy |
 
 **Plurality is the only clean row, and it is worth being precise about why.** It is strategyproof *here* only in the narrow single-voter sense — and the chapter immediately breaks even that: if the **two** Edinburgh-first voters both switch to Athens-first, Athens takes it 4–3, and both of them prefer Athens to Dublin. A rule that resists one liar but folds to two is not a rule anyone should adopt for that reason. (Plurality has its own well-documented problems — see [vote splitting](../split_voting/README.md).)

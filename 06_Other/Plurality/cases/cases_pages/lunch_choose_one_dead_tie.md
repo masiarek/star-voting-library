@@ -11,7 +11,7 @@ search:
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/q2rkfm) · **[results ↗](https://bettervoting.com/q2rkfm/results)** (election `q2rkfm`).
 
-**Official tie-break (lot) order:** Sushi > Tacos > Pizza — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** Sushi > Tacos > Pizza — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -23,7 +23,7 @@ The Pizza-fan is the one voter who could have broken the tie, and a choose-one
 ballot gave them no way to say so.
 
 Same five people, same opinions, on a 5-star ballot:
-01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml — where STAR elects Pizza,
+01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml — where STAR elects Pizza,
 the compromise everyone is happy with.
 
 TIEBREAK — this case is NOT deterministic, on purpose. LH resolves the 2-2 tie
@@ -91,5 +91,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/Plurali
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

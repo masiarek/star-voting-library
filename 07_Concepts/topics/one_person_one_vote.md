@@ -2,7 +2,7 @@
 
 *Two different ideas wear the same four words, and conflating them causes half the arguments about voting methods. **One is settled constitutional law; the other is a method-design criterion.** This page keeps them apart — because "RCV upholds one person, one vote" and "RCV fails the equal vote" can *both* be true, and are.*
 
-→ Companions: [The Equally Weighted Vote (Test of Balance)](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) · [RCV-IRV fails the Equal Vote](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md) · [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md). Glossary: [`equally weighted vote`](../GLOSSARY.md).
+→ Companions: [The Equally Weighted Vote (Test of Balance)](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) · [RCV-IRV fails the Equal Vote](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md) · [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md). Glossary: [`equally weighted vote`](../GLOSSARY.md).
 
 ---
 
@@ -14,7 +14,7 @@ Crucially, this is about **districting and vote-counting equality**, not about *
 
 ## Sense 2 — the reformer's "equally weighted vote" (a stronger, different bar)
 
-Voting-reform advocates — especially the [Equal Vote Coalition](https://equal.vote) — use the same phrase for a **stronger, mathematical** idea: the [**Equal Vote / cancellation criterion**, the "Test of Balance."](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) It asks: *for any ballot one voter casts, can another voter cast an exact-opposite ballot so the two together change nothing?* If yes, no voter's ballot can outweigh another's.
+Voting-reform advocates — especially the [Equal Vote Coalition](https://equal.vote) — use the same phrase for a **stronger, mathematical** idea: the [**Equal Vote / cancellation criterion**, the "Test of Balance."](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) It asks: *for any ballot one voter casts, can another voter cast an exact-opposite ballot so the two together change nothing?* If yes, no voter's ballot can outweigh another's.
 
 This is a **property of the tabulation**, not a legal standard — and the methods split on it:
 
@@ -45,4 +45,4 @@ So the precise sentence is: **all these methods give one person one vote in the 
 
 - *Gray v. Sanders* (1963), *Wesberry v. Sanders* (1964), *Reynolds v. Sims* (1964) — the reapportionment cases that established the legal principle.
 - FairVote, ["How ranked choice voting survives the one-person-one-vote challenge"](https://fairvote.org/how_ranked_choice_voting_survives_the_one_person_one_vote_challenge/) — the RCV-IRV legal defense.
-- Equal Vote Coalition — the [equally weighted vote / Test of Balance](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) (after Mark Frohnmayer).
+- Equal Vote Coalition — the [equally weighted vote / Test of Balance](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) (after Mark Frohnmayer).

@@ -41,7 +41,7 @@ Same ballot; the more strictness or intensity the method demands, the more it ha
 ## Why this matters in practice
 
 - **You can hand STAR scores to Ranked Robin or RCV-IRV** (derive ranks) — but **you cannot run STAR on ranked ballots**, because there are no scores to add. The richer object only flows downhill.
-- **RCV-IRV's fragility is rung 2 in action** — the tie-break it's forced to invent. See [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) and the [RR-vs-Condorcet side-by-side](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md), which shows rung 1 and rung 2 on the same ballot.
+- **RCV-IRV's fragility is rung 2 in action** — the tie-break it's forced to invent. See [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) and the [RR-vs-Condorcet side-by-side](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md), which shows rung 1 and rung 2 on the same ballot.
 - **STAR's ballot sits above the whole ladder** — it carries the intensity natively, so it never has to drop or invent anything to *be* itself; it only converts *downward* when compared against ranked methods.
 
 ## Related
@@ -49,4 +49,4 @@ Same ballot; the more strictness or intensity the method demands, the more it ha
 - [Scores vs. ranks](scores_vs_ranks.md) — why scores are the richer ballot
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — the rung-1-vs-rung-2 distinction in depth
 - [Borda](../../06_Other/other_ranked_methods/borda.md) — rung 3, manufacturing scores from ranks
-- [Ranked Robin vs. Condorcet](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) — rungs 1 & 2 live on one election
+- [Ranked Robin vs. Condorcet](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md) — rungs 1 & 2 live on one election

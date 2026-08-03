@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2204_39py93_control_standing_hopefuls.yaml`](../bv2204_39py93_control_standing_hopefuls.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Angelou, Cummings
+**Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Angelou, Cummings
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/39py93) · **[results ↗](https://bettervoting.com/39py93/results)** (election `39py93`).
 
@@ -81,7 +81,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
    candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
    may be smaller here.

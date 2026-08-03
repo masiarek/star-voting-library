@@ -1,0 +1,62 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 28 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: A, B, C, D, E
+     7 × B > D > C=E > A      (0, 5, 1, 3, 1)
+    14 × A > E > C > B=D      (5, 0, 2, 0, 4)
+     7 × C > D > B=E > A      (0, 1, 5, 3, 1)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  ties  B   14 – 14
+   A  ties  C   14 – 14
+   A  ties  D   14 – 14
+   A  ties  E   14 – 14
+   C  beats B   21 –  7
+   B  ties  D    7 –  7
+   E  beats B   14 –  7
+   C  beats D   21 –  7
+   E  beats C   14 –  7
+   D  ties  E   14 – 14
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      A       |     B       |     C       |     D       |     E       |
+------------------------------------------------------------------------------
+  A > |     ---      |14 -  0 - 14 |14 -  0 - 14 |14 -  0 - 14 |14 -  0 - 14 |
+  B > | 14 -  0 - 14 |    ---      | 7 -  0 - 21 | 7 - 14 -  7 | 7 -  7 - 14 |
+  C > | 14 -  0 - 14 |21 -  0 -  7 |    ---      |21 -  0 -  7 | 7 -  7 - 14 |
+  D > | 14 -  0 - 14 | 7 - 14 -  7 | 7 -  0 - 21 |    ---      |14 -  0 - 14 |
+  E > | 14 -  0 - 14 |14 -  7 -  7 |14 -  7 -  7 |14 -  0 - 14 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  E          2–0–2         3     +14  C, B
+    2  C          2–1–1       2.5     +21  D, B
+    3  A          0–0–4         2      +0  —
+    4  D          0–1–3       1.5     -14  —
+    5  B          0–2–2         1     -21  —
+
+Winner — Ranked Robin (RCV-RR): E
+   unbeaten, but draws A, D — a *weak* Condorcet winner, not a strict one (highest Copeland score, 3).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (5 of 5): E, C, A, D, B
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (E) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner E is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md

@@ -50,7 +50,7 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 - **What changed:** `ballot_get(candidate1, 1)` → `ballot_get(candidate1, 0)`. The `.get()` default for the *second* candidate was `1` while the first candidate (and the general N-candidate path) correctly used `0`.
 - **Effect:** this function powers the **five-star** tiebreaker (it counts votes equal to `maximum_score`). With the wrong default, a ballot that *omits* candidate1 contributed a phantom score of `1`; that only equals `maximum_score` when `maximum_score == 1` (Approval-style), so the miscount was **dormant for normal 0–5 STAR** (full ballots always include both candidates, and `1 ≠ 5`). It was still a latent correctness bug, now aligned with `candidate0` and the general path so all three agree.
 - **Why upstream:** it's the *voting algorithm's* tiebreak mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Consider offering it to Larry.
-- **Regression guard:** the four `01_STAR/tie_break_dead_rung/` cases exercise the five-star rung firing vs. falling through to the lot in both rounds.
+- **Regression guard:** the four `01_STAR/03_Criteria/tie_break_dead_rung/` cases exercise the five-star rung firing vs. falling through to the lot in both rounds.
 
 ### Bug fix — SSS ballot allocation gated on verbosity (2026-08)
 

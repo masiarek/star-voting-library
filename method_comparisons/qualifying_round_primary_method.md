@@ -2,11 +2,11 @@
 
 *Several reform packages are two-stage: an open qualifying election narrows a crowded field to the top few, then a good method runs the general. That design has a quiet assumption baked into it — that the primary won't discard the very candidate the reform exists to elect. This page measures whether that assumption holds, and finds that **it depends almost entirely on a design choice most proposals leave unspecified.***
 
-**Level: 301.** Companions: [election simulation models](../07_Concepts/topics/election_simulation_models.md) · [simulate utilities, not ballots](../07_Concepts/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
+**Level: 301.** Companions: [election simulation models](../07_Concepts/topics/election_simulation_models.md) · [simulate utilities, not ballots](../07_Concepts/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/01_Learn/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
 
 ## The question, and why it isn't rhetorical
 
-[Consensus Choice](../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md), promoted by Better Choices for Democracy, is the live example. Step 1 of the proposal is *"an open qualifying election—without party restrictions—[that] determines at least four of the strongest candidates who advance to the general election."* Step 2 onward is the pairwise Condorcet count.
+[Consensus Choice](../05_Ranked_Robin/01_Learn/ranked_robin_vs_consensus_choice.md), promoted by Better Choices for Democracy, is the live example. Step 1 of the proposal is *"an open qualifying election—without party restrictions—[that] determines at least four of the strongest candidates who advance to the general election."* Step 2 onward is the pairwise Condorcet count.
 
 Neither their [main page](https://www.betterchoices.vote/consensus-choice) nor their [FAQ](https://www.betterchoices.vote/faqs) says **which voting method the qualifying round uses.** Alaska's top-4 uses Choose-One. If a reform's own first round runs on the method the reform exists to replace, the obvious worry is that it discards the consensus candidate before the good count ever sees the ballot.
 
@@ -58,7 +58,7 @@ Debating "should four or five advance?" is optimizing the wrong variable. Fixing
 
 - **Sincere ballots only**, no strategy, no candidate entry/exit effects.
 - **Pre-primary drop-out pressure is not modelled** — parties pressuring co-partisans to withdraw *before* the qualifying round, the real Alaska failure mode. This is the biggest gap, and it cuts *toward* broad-support methods, so the numbers above understate the case for a good primary method rather than overstating it.
-- **"Accuracy" means matching the full-field Condorcet winner.** That's the right benchmark for a Condorcet general, but it bakes in a Condorcet definition of the right answer; the VSE column is the utilitarian cross-check. See [three notions of "winner"](../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md).
+- **"Accuracy" means matching the full-field Condorcet winner.** That's the right benchmark for a Condorcet general, but it bakes in a Condorcet definition of the right answer; the VSE column is the utilitarian cross-check. See [three notions of "winner"](../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md).
 - **Cycles are counted, not hidden.** A Condorcet winner exists in ~99% of spatial, ~93% of factional, and ~54% of noise-model elections; rates are computed over elections where one exists.
 - Fixed tiebreak (stable sort → lower candidate index) rather than a lot draw — identical across methods, so cross-method comparison stays fair.
 - **Always report the model, field size, and N with the number.**

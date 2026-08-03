@@ -33,7 +33,7 @@ _Last full review: 2026-06-21._
 | **Automatic Runoff** | Deep-dive visuals for the runoff (Segment 5) | [Google Slides ↗](https://docs.google.com/presentation/d/1DNJg5kbsNbNQFV3bosm4KZmgJtNfIbQdpirhm5XlCqY/edit) (private) | 2026-06-21 |
 | **Scores vs Rankings** | "What is the difference?" — ranks vs scores (Segment 3) | [Google Slides ↗](https://docs.google.com/presentation/d/1vu3i7gMV-P87SDosWJe6P-y3h21Bloc2_Ovhyf4yOLQ/edit) (private) | 2026-06-21 |
 | **STAR-vs-RCV Template** | Equal Vote's STAR-vs-RCV talk; source of the "Results" pie (Equal Support = supported both / neither) | [Google Slides ↗](https://docs.google.com/presentation/d/1G40n79tcUPdVkZWr-tNXSz7q9ddbwOUw4Ev0G_jKq6I/edit) (private) | 2026-06-22 |
-| **Voting Methods 101 (DPO)** | Methods-survey talk for the Democratic Party of Oregon's voting-methods committee — vote-splitting case, per-method pros/cons (cons for STAR included), Oregon reform timeline (Portland RCV+PR, Measure 117, Eugene, Oakridge, Astoria). Claim-checked in [STAR_resources.md](../01_STAR/concepts/reference/STAR_resources.md) | [Google Slides ↗](https://docs.google.com/presentation/d/1vm41jc8N7qsi7QZvMNS27500gUYggZc4kL3mp-LAcHY/edit) (private) | 2026-07-24 |
+| **Voting Methods 101 (DPO)** | Methods-survey talk for the Democratic Party of Oregon's voting-methods committee — vote-splitting case, per-method pros/cons (cons for STAR included), Oregon reform timeline (Portland RCV+PR, Measure 117, Eugene, Oakridge, Astoria). Claim-checked in [STAR_resources.md](../01_STAR/01_Learn/reference/STAR_resources.md) | [Google Slides ↗](https://docs.google.com/presentation/d/1vm41jc8N7qsi7QZvMNS27500gUYggZc4kL3mp-LAcHY/edit) (private) | 2026-07-24 |
 
 ## Core docs
 
@@ -48,7 +48,7 @@ _Last full review: 2026-06-21._
 
 | Short name | Purpose | Source | Last reviewed |
 |------------|---------|--------|---------------|
-| **Discounted votes (FairVote)** | Rebutting the "equal-score votes are discounted" claim — repo page on this claim: [Are equal-score votes discounted?](../01_STAR/concepts/reference/are_equal_score_votes_discounted.md) | [Google Doc ↗](https://docs.google.com/document/d/1RmjWCKUDMrtzxTPqP-0XwaD-0BVxQDrLZvQNBv1iuRY/edit) (private) | 2026-06-21 |
+| **Discounted votes (FairVote)** | Rebutting the "equal-score votes are discounted" claim — repo page on this claim: [Are equal-score votes discounted?](../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md) | [Google Doc ↗](https://docs.google.com/document/d/1RmjWCKUDMrtzxTPqP-0XwaD-0BVxQDrLZvQNBv1iuRY/edit) (private) | 2026-06-21 |
 | **Equal Support / No Preference** | Definition & framing of the no-preference runoff vote | [Google Doc ↗](https://docs.google.com/document/d/1dkNDjIDVbvRVSGtz-UzP3D5D90jnDJSBuK_XIOMRHok/edit) (private) | 2026-06-21 |
 | **Exhausted Ballots (doc)** | RCV-IRV exhausted-ballot explainer (the contrast case) — repo page on this topic: [exhausted ballots](../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) | [Google Doc ↗](https://docs.google.com/document/d/1ASC5BS10rCfAYZWGeCyS7dKdKc4p5wwI6DHs4F7ScGc/edit) (private) | 2026-06-21 |
 | **RCV false claims (doc)** | Source list of common RCV-IRV claims; basis for the repo's [false-claims index](../06_Other/RCV_IRV/concepts/rcv_irv_false_claims.md) | [Google Doc ↗](https://docs.google.com/document/d/1KWs52o4xYgmG4s8udHjgaa_hHY6QrHgt_NO4cEHGhaA/edit) (private) | 2026-06-24 |
@@ -100,7 +100,7 @@ _Last full review: 2026-06-21._
 | **How STAR Works (YT transcript)** | Transcript of the "How Does STAR Voting Work?" video | [Google Doc ↗](https://docs.google.com/document/d/1gr8T36_ARPOIS0Mj8VWr6W6iDRMlngcj-CuOUlgLb3M/edit) (private) | 2026-06-21 |
 | **Runoff Phase (YT script)** | Video script: STAR Voting — The Automatic Runoff Phase | [Google Doc ↗](https://docs.google.com/document/d/1J_jxAxD58czvQOgpr8-RKWqWZyo0eaJd4prOBWimGUY/edit) (private) | 2026-06-21 |
 | **Equal Support vs Equal Preference** | Terminology for the no-preference runoff bucket | [Google Doc ↗](https://docs.google.com/document/d/1_b2kBNqp-XwM71JOXyWm5LIXQvNzT0UVREr_WYFGhv4/edit) (private) | 2026-06-21 | <!-- terminology-ok: external slide title -->
-| **STAR's Hybrid Nature** | Expressive scoring + majority-style runoff — repo page on this topic: [STAR's hybrid nature](../01_STAR/concepts/the_count/STAR_hybrid_nature.md) | [Google Doc ↗](https://docs.google.com/document/d/1OdwXLsXKO7i3MwoFuTFGDjlLraG6eK1JYH10zpFjNKc/edit) (private) | 2026-06-21 |
+| **STAR's Hybrid Nature** | Expressive scoring + majority-style runoff — repo page on this topic: [STAR's hybrid nature](../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md) | [Google Doc ↗](https://docs.google.com/document/d/1OdwXLsXKO7i3MwoFuTFGDjlLraG6eK1JYH10zpFjNKc/edit) (private) | 2026-06-21 |
 | **Ratings, Rankings & Preferences** | The cardinal-vs-ordinal main reference — repo pages on this topic: [scores and ranks](scores_and_ranks/README.md) | [Google Doc ↗](https://docs.google.com/document/d/1ImJsgGzxkcdWwAJjDZEaWbgTRi4sPiDFSEP2OkfOhgI/edit) (private) | 2026-06-21 |
 
 ---
@@ -117,7 +117,7 @@ _Last full review: 2026-06-21._
 | **STAR vs RCV** | Side-by-side comparison | [web.archive.org ↗](https://web.archive.org/web/20220424220341/https://www.equal.vote/star-vs-rcv) |
 | **Beyond RCV zine** | "Beyond Ranked Choice Voting" | [equal.vote/beyond_rcv_zine ↗](https://equal.vote/beyond_rcv_zine) |
 | **STAR Voting org** | Campaign / get involved | [starvoting.org ↗](https://starvoting.org) |
-| **STAR-PR (starvoting.org)** | Proportional STAR explainer — what PR is, pros/cons, the case for STAR-PR (advocacy framing; our mechanics page is [03_STAR_PR/concepts/STAR_PR/](../03_STAR_PR/concepts/STAR_PR/README.md)) | [starvoting.org/star-pr ↗](https://www.starvoting.org/star-pr) |
+| **STAR-PR (starvoting.org)** | Proportional STAR explainer — what PR is, pros/cons, the case for STAR-PR (advocacy framing; our mechanics page is [03_STAR_PR/01_Learn/STAR_PR/](../03_STAR_PR/01_Learn/STAR_PR/README.md)) | [starvoting.org/star-pr ↗](https://www.starvoting.org/star-pr) |
 | **BetterVoting** | Cast a STAR ballot / run a poll (audience CTA) | [bettervoting.com ↗](https://bettervoting.com) |
 | **BetterVoting Docs** | Help & FAQ — paper ballots, hand count, ties, security options, preliminary results | [docs.bettervoting.com ↗](https://docs.bettervoting.com) |
 | **Better elections (video)** | Equal Vote intro; STV / proportional 3-seat example (basis for 03a/03b) | [youtu.be ↗](https://youtu.be/C_27pYcjsJs) |
@@ -128,7 +128,7 @@ _Last full review: 2026-06-21._
 | **Copeland's method (Wikipedia)** | The *algorithm* under Ranked Robin — most head-to-head wins (ties = ½) | [Wikipedia ↗](https://en.wikipedia.org/wiki/Copeland%27s_method) |
 | **Ranked Robin (electowiki)** | The *branded method* definition (name coined by Sara Wolk, Equal Vote, 2021). Community wiki + Equal-Vote-adjacent — cite as definition, not authority; prefer academic sources for critical claims | [electowiki ↗](https://electowiki.org/wiki/Ranked_Robin) |
 | **Ranked Robin (Equal Vote)** | Equal Vote's own Ranked Robin page (advocacy framing) | [equal.vote/ranked_robin ↗](https://www.equal.vote/ranked_robin) |
-| **Ballotpedia — RCV** | Encyclopedia overview; source of the Atkinson/Foley/Ganz (U. Ill. L. Rev.) Condorcet quote used in [ranked_robin.md](../05_Ranked_Robin/concepts/ranked_robin.md) | [Ballotpedia ↗](https://ballotpedia.org/Ranked-choice_voting_(RCV)) |
+| **Ballotpedia — RCV** | Encyclopedia overview; source of the Atkinson/Foley/Ganz (U. Ill. L. Rev.) Condorcet quote used in [ranked_robin.md](../05_Ranked_Robin/01_Learn/ranked_robin.md) | [Ballotpedia ↗](https://ballotpedia.org/Ranked-choice_voting_(RCV)) |
 | **Nicky Case — better ballot** | Interactive, playable guide to alternative voting systems (plurality/IRV/approval/score, spatial simulations). Excellent newcomer explainer — reform-friendly but even-handed across methods | [ncase.me/ballot ↗](https://ncase.me/ballot/) |
 | **Darlington — Condorcet/Minimax "best"?** | Academic argument *for* Condorcet/Minimax over IRV and score methods (arXiv 1807.01366) — a pro-Condorcet steelman; read alongside [edelman_condorcet_myth](../method_comparisons/edelman_condorcet_myth/README.md) and the [Condorcet hub](topics/condorcet/README.md) | [arXiv ↗](https://arxiv.org/abs/1807.01366) |
 
@@ -156,8 +156,8 @@ These live in this repo and stay exactly in sync — **prefer them for live demo
 | **Why STAR (repo)** | [07_Concepts/topics/Why_STAR_Voting.md](topics/Why_STAR_Voting.md) |
 | **Glossary** | [07_Concepts/GLOSSARY.md](GLOSSARY.md) |
 | **Curriculum** | [07_Concepts/CURRICULUM.md](CURRICULUM.md) |
-| **Flagship script** | [whats_so_good_about_STAR_Voting.md](../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md) |
+| **Flagship script** | [whats_so_good_about_STAR_Voting.md](../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) |
 | **Spoiler demos** | [split_voting/](../method_comparisons/split_voting/README.md) |
-| **Two-round demo** | [01b_c2_b2_two-candidates.yaml](../01_STAR/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) |
+| **Two-round demo** | [01b_c2_b2_two-candidates.yaml](../01_STAR/09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) |
 
 > Note: deep links of the form `…/edit#slide=id.g…` break when a slide is copied or duplicated. Prefer searching the slide **title** inside the deck over saving a deep link.

@@ -985,7 +985,7 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
                  "Which member of")
         L.append("   the set should win is exactly what Minimax / Ranked Pairs / "
                  "Schulze disagree")
-        L.append("   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.")
+        L.append("   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.")
 
     # The Copeland leaders are always inside the Smith set, but need not BE it —
     # the win-loss table's top block can understate how wide the contention is.
@@ -1763,7 +1763,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                          "(no candidate beats all others). Resolved by total margin, then "
                          "lot order. (This is "
                          "where Minimax / Ranked Pairs / Schulze differ — see "
-                         "05_Ranked_Robin/concepts/cycle_resolution.md.)")
+                         "05_Ranked_Robin/01_Learn/cycle_resolution.md.)")
         if full or _show_smith:
             # The Smith set reads the same pairwise matrix Ranked Robin counts, so
             # nothing is discarded in the translation — it is RR's native yardstick,
@@ -3302,14 +3302,14 @@ if __name__ == "__main__":
     # election file is open in the editor is the one that gets tabulated. Open
     # the next file, hit Run again.
     #
-    #   python starvote_larry_hastings.py 01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml
+    #   python starvote_larry_hastings.py 01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml
     #
     # A .yaml/.yml file also supplies its own num_winners -> SEATS,
     # voting_method -> METHOD, and an optional `options:` block (see below).
     #
     # Add  --save  to write the result back into the YAML as an
     # `expected_results:` block (winners + plain-text report):
-    #   python starvote_larry_hastings.py 01_STAR/_main/cases/09_c4_b100_tennessee-capital.yaml --save
+    #   python starvote_larry_hastings.py 01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml --save
     args = [a for a in sys.argv[1:]]
     SAVE_RESULTS = "--save" in args
     positional = [a for a in args if not a.startswith("-")]

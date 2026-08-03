@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2210_fvg8y8_stv_share.yaml`](../bv2210_fvg8y8_stv_share.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/concepts) · **2 seats** · **Expected winners:** Arepa, Donut
+**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Arepa, Donut
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
 

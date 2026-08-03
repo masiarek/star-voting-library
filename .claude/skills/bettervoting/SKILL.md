@@ -258,7 +258,7 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
      declines to pick, and reports whether LH's winner is inside it (`CONSISTENT ✓`).
      Run it on every RR case — it is what makes an RR result trustworthy rather than
      self-confirming. Full ladder + divergences:
-     `05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md`.
+     `05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md`.
 6. **Build the case files** (AI). Name `bv<testid>_<bvid>_<descriptor>.{yaml,md,
    _bv_export.json}` (see naming rule above). The `.md` is the per-election page:
    the clickable `▶ … /results` lead line, ballots, the **inline LH tabulation

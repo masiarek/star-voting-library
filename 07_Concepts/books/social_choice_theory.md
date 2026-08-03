@@ -15,7 +15,7 @@ These are the books the whole field cites: *why* no voting method is perfect, pr
 
 The book that founded modern social choice theory and won a Nobel Prize. Arrow's **impossibility theorem**: no *ranked* voting method can satisfy a short list of obviously-reasonable fairness conditions at once. Slim and formal — you can read the key argument in an afternoon, and everything else on this shelf is a response to it.
 
-**The lean:** Neutral and foundational; it sells no method. Note the crucial fine print this repo leans on: Arrow's theorem is about **ranked** ballots — *rated* methods like [score](../../06_Other/Range/concepts/range_voting.md) and [STAR](../../01_STAR/concepts/STAR_start_here.md) sidestep it (they fall under the later Gibbard–Satterthwaite manipulation result instead, not this one).
+**The lean:** Neutral and foundational; it sells no method. Note the crucial fine print this repo leans on: Arrow's theorem is about **ranked** ballots — *rated* methods like [score](../../06_Other/Range/concepts/range_voting.md) and [STAR](../../01_STAR/01_Learn/STAR_start_here.md) sidestep it (they fall under the later Gibbard–Satterthwaite manipulation result instead, not this one).
 
 **In this repo:** [Arrow's theorem](../GLOSSARY.md) (glossary) · [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md) · [what makes a voting method good](../topics/what_makes_a_voting_method_good.md)
 
@@ -85,7 +85,7 @@ The gentlest *rigorous* book on the shelf — an undergraduate text (SIAM, from 
 
 **The lean:** Neutral textbook — it teaches the mathematics and sells no method. Its voting coverage is classical (ranked methods and their theory); rated methods like score and STAR aren't its subject, so read it for the Condorcet-family foundations, not a method comparison.
 
-**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/)
+**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/)
 
 </td>
 </tr>
@@ -117,9 +117,9 @@ A field guide to the paradoxes themselves: Condorcet cycles, monotonicity failur
 
 *The Potential for Public Choice.* The most comprehensive single-author survey on the shelf — Tideman works through criteria, methods, and the design of collective decision procedures with unusual care about *what we should want* from them before asking which method delivers it.
 
-**The lean:** Tideman invented **Ranked Pairs** (a Condorcet method), and the book leans toward Condorcet-consistent, criterion-driven design — a different destination from this repo's STAR. That makes it a valuable *opposing-camp* read: the strongest careful case for "get the Condorcet winner right." See also [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), this repo's Condorcet method.
+**The lean:** Tideman invented **Ranked Pairs** (a Condorcet method), and the book leans toward Condorcet-consistent, criterion-driven design — a different destination from this repo's STAR. That makes it a valuable *opposing-camp* read: the strongest careful case for "get the Condorcet winner right." See also [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), this repo's Condorcet method.
 
-**In this repo:** [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [Condorcet](../topics/condorcet/) · [criteria at a glance](../topics/criteria_at_a_glance.md)
+**In this repo:** [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [Condorcet](../topics/condorcet/) · [criteria at a glance](../topics/criteria_at_a_glance.md)
 
 </td>
 </tr>

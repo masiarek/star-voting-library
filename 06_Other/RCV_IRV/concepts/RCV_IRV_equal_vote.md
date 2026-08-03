@@ -2,13 +2,13 @@
 
 **One line:** RCV-IRV does **not** deliver an equally weighted vote. Because it counts only one ranking at a time and eliminates candidates sequentially, two voters with exactly opposite preferences often **cannot cancel each other out** — so vote-splitting and the spoiler effect survive. STAR, Score, and Approval pass this test; RCV-IRV does not.
 
-→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../../../07_Concepts/CURRICULUM.md).
+→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../../../07_Concepts/CURRICULUM.md).
 
 ---
 
 ## The test it fails
 
-The **Equal Vote Criterion** (the "Test of Balance") asks: for any ballot one voter casts, can another voter cast an *equal-and-opposite* ballot so the two together change nothing? If yes, no voter's ballot outweighs another's. The full concept — and the worked example where two opposite score ballots cancel — is on the STAR page, [The Equally Weighted Vote](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md). RCV-IRV fails it for two connected reasons: **vote-splitting** and **ballot exhaustion**.
+The **Equal Vote Criterion** (the "Test of Balance") asks: for any ballot one voter casts, can another voter cast an *equal-and-opposite* ballot so the two together change nothing? If yes, no voter's ballot outweighs another's. The full concept — and the worked example where two opposite score ballots cancel — is on the STAR page, [The Equally Weighted Vote](../../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md). RCV-IRV fails it for two connected reasons: **vote-splitting** and **ballot exhaustion**.
 
 ## Why RCV-IRV fails: one active ranking at a time
 
@@ -30,7 +30,7 @@ X and Y did *not* have an equal-and-opposite effect. They inadvertently **both h
 
 ### The same failure, counted — balanced ballots flip the winner
 
-Here it is with real numbers — the exact mirror of the STAR case where opposite ballots *do* cancel ([equal & opposite](../../../01_STAR/equal_and_opposite/)). Three candidates on a line — **Ada** (left), **Bruno** (center), **Cyrus** (right) — and a small electorate where Bruno is the compromise:
+Here it is with real numbers — the exact mirror of the STAR case where opposite ballots *do* cancel ([equal & opposite](../../../01_STAR/03_Criteria/equal_and_opposite/)). Three candidates on a line — **Ada** (left), **Bruno** (center), **Cyrus** (right) — and a small electorate where Bruno is the compromise:
 
 ```
 4: Bruno > Ada  > Cyrus
@@ -40,7 +40,7 @@ Here it is with real numbers — the exact mirror of the STAR case where opposit
 
 **Before.** Bruno is the [Condorcet winner](../../../07_Concepts/topics/condorcet/) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
 
-Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
+Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
 
 But watch RCV-IRV:
 
@@ -54,7 +54,7 @@ The six new ballots put their first-choices on the two **extremes** (Ada +3, Cyr
 
 That is the Test of Balance failing in a single election, and the mechanism is exactly [center squeeze](RCV_IRV_center_squeeze.md): under sequential elimination it's *first-choice* counts that decide who survives, so opposite ballots don't cancel — they pile onto the ends and starve the middle. **Run it:** [`06_Other/RCV_IRV/equal_vote_balance/`](../equal_vote_balance/) (base → Bruno, plus-balanced → Ada).
 
-**Is this a fair test, or an anti-IRV gotcha?** Fair — and the fairness is in *what passes*: **[Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) is also a ranked method**, and the opposite ballots cancel under it perfectly. So the lesson is *not* "ranks are worse than scores" — it's that **summable and pairwise counts cancel opposites, while sequential elimination doesn't.** A score ballot cancels in the *sum*; a ranked-Condorcet count cancels in the *pairwise matrix*; only IRV's round-by-round elimination breaks the symmetry. That's also why Ranked Robin is the natural olive branch to ranked-choice voters — the *same ranked ballot*, counted in a way that keeps every voter's weight equal. (And this is a constructed illustration; center squeeze is a genuine IRV property but concentrated in competitive 3-way races — the honest scope is spelled out just below.)
+**Is this a fair test, or an anti-IRV gotcha?** Fair — and the fairness is in *what passes*: **[Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) is also a ranked method**, and the opposite ballots cancel under it perfectly. So the lesson is *not* "ranks are worse than scores" — it's that **summable and pairwise counts cancel opposites, while sequential elimination doesn't.** A score ballot cancels in the *sum*; a ranked-Condorcet count cancels in the *pairwise matrix*; only IRV's round-by-round elimination breaks the symmetry. That's also why Ranked Robin is the natural olive branch to ranked-choice voters — the *same ranked ballot*, counted in a way that keeps every voter's weight equal. (And this is a constructed illustration; center squeeze is a genuine IRV property but concentrated in competitive 3-way races — the honest scope is spelled out just below.)
 
 ## Vote-splitting and exhaustion, precisely
 
@@ -84,4 +84,4 @@ This is an **RCV-IRV** failure, not a property of ranked ballots in general. Wit
 - Equal Vote Coalition — the Equal Vote / Test of Balance: <https://www.equal.vote/equalvote>
 - electowiki — [Equal Vote Criterion](https://electowiki.org/wiki/Equal_Vote_Criterion)
 - FairVote (contrasting view) — [How RCV survives the one-person-one-vote challenge](https://fairvote.org/how_ranked_choice_voting_survives_the_one_person_one_vote_challenge/)
-- Companion page: [The Equally Weighted Vote (STAR)](../../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md)
+- Companion page: [The Equally Weighted Vote (STAR)](../../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md)

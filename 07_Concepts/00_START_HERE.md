@@ -1,6 +1,6 @@
 # Start Here
 
-This is the **STAR Voting education library** — for learning, teaching, and debating **[STAR Voting](../01_STAR/concepts/STAR_start_here.md)** (Score Then Automatic Runoff). STAR comes first here. What makes the case for it trustworthy is that we *don't hide the ball*: STAR is tested honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness **is** the argument — the STAR case is stronger because you can check it yourself.
+This is the **STAR Voting education library** — for learning, teaching, and debating **[STAR Voting](../01_STAR/01_Learn/STAR_start_here.md)** (Score Then Automatic Runoff). STAR comes first here. What makes the case for it trustworthy is that we *don't hide the ball*: STAR is tested honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness **is** the argument — the STAR case is stronger because you can check it yourself.
 
 **Pick your path — what brings you here?**
 
@@ -8,9 +8,9 @@ This is the **STAR Voting education library** — for learning, teaching, and de
 
 ## ⭐ Learn STAR Voting
 
-The main event — and it has its own front door now. **[01_STAR](../01_STAR/README.md)** carries the whole STAR reading path in one place: the gentle on-ramp, why STAR, how the two rounds work, the FAQ, the hands-on demos, and the runnable example elections, with the concept pages beside them in [`01_STAR/concepts/`](../01_STAR/concepts/README.md).
+The main event — and it has its own front door now. **[01_STAR](../01_STAR/README.md)** carries the whole STAR reading path in one place: the gentle on-ramp, why STAR, how the two rounds work, the FAQ, the hands-on demos, and the runnable example elections, with the concept pages beside them in [`01_STAR/01_Learn/`](../01_STAR/01_Learn/README.md).
 
-Straight to the on-ramp → **[STAR — start here](../01_STAR/concepts/STAR_start_here.md)**. The full course → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md).
+Straight to the on-ramp → **[STAR — start here](../01_STAR/01_Learn/STAR_start_here.md)**. The full course → [Curriculum — Voting 101 / 201 / 301](CURRICULUM.md).
 
 Everything below this line is the **cross-method** material: the problem STAR is built to fix, the honest comparisons, and the library itself.
 
@@ -32,7 +32,7 @@ The honest comparison — where STAR's case is actually made.
 - [Choosing among the Equal Vote methods](topics/choosing_among_evc_methods.md) — STAR vs. Approval vs. Ranked Robin, the tradeoff triangle, even-handed
 - [RCV-IRV vs. STAR](topics/rcv_irv_vs_star.md) — head-to-head with the method most people mean by "RCV"
 - [Strategic voting](topics/strategic_voting.md) — the four kinds of insincere vote, and why honesty pays in STAR
-- **Skeptical?** [STAR for skeptics — the honest 5-minute path](../01_STAR/concepts/getting_started/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
+- **Skeptical?** [STAR for skeptics — the honest 5-minute path](../01_STAR/01_Learn/getting_started/star_for_skeptics.md) — "you think this is weird, what's the catch?", answered without cheerleading
 - **More than one seat?** [Electing more than one, simply](topics/electing_more_than_one.md) — majoritarian vs. proportional, in plain language
 
 ## The whole field, even-handed
@@ -42,7 +42,7 @@ The credibility layer — read the arguments *against*, too.
 - [How to Learn About Voting Methods](topics/how_to_learn_about_voting_methods.md) — a method-neutral reading path, beginner → advanced (after Marcus Ogren)
 - [Books on Voting Methods](books/README.md) — an annotated shelf of the popular and scholarly books, with covers and an honest "the lean" on each
 - [Same ballots, different methods](../method_comparisons/README.md) — where methods disagree, worked (center squeeze, monotonicity, the divergence ledger, [paradoxes & whoops](../method_comparisons/paradoxes_and_whoops/README.md))
-- **Honest limits** — every method's weaknesses, stated plainly: [STAR](../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [Approval](../04_Approval/concepts/approval_honest_limits.md) · [Ranked Robin](../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md)
+- **Honest limits** — every method's weaknesses, stated plainly: [STAR](../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) · [Approval](../04_Approval/01_Learn/approval_honest_limits.md) · [Ranked Robin](../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md)
 - [Who champions each method](topics/advocacy_organizations.md) — FairVote, CES, the Equal Vote Coalition
 
 ## Run & verify elections (the library + engine)
@@ -62,10 +62,10 @@ The thing that makes every claim above checkable.
 
 | Method | Ballot | Learn more |
 |---|---|---|
-| **STAR** | score 0–5, then automatic runoff | [STAR — start here →](../01_STAR/concepts/STAR_start_here.md) |
-| **Approval** | approve any number (0/1) | [Approval overview →](../04_Approval/concepts/approval_voting.md) |
+| **STAR** | score 0–5, then automatic runoff | [STAR — start here →](../01_STAR/01_Learn/STAR_start_here.md) |
+| **Approval** | approve any number (0/1) | [Approval overview →](../04_Approval/01_Learn/approval_voting.md) |
 | **Range / Score** | grade each; highest total wins | [Range / Score overview →](../06_Other/Range/concepts/range_voting.md) |
-| **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [Ranked Robin overview →](../05_Ranked_Robin/concepts/ranked_robin.md) |
+| **Ranked Robin** (Condorcet) | rank; every pair head-to-head | [Ranked Robin overview →](../05_Ranked_Robin/01_Learn/ranked_robin.md) |
 | **RCV-IRV** | rank; instant runoff | [RCV-IRV (Hare) →](../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) |
 | **3-2-1** | Good / OK / Bad | [3-2-1 overview →](../06_Other/three_two_one/README.md) |
 

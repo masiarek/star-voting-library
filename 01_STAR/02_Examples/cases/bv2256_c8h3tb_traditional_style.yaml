@@ -1,0 +1,55 @@
+bv_test_id: BV2256
+bv_election_id: c8h3tb
+bv_results_url: https://bettervoting.com/c8h3tb/results
+election_title: "Traditional voting style — one mark each (BV2256, c8h3tb)"
+
+scenario_description: |-
+  The "traditional" voting style, done to the hilt. Three voters, five candidates,
+  and every voter fills out the 5-star ballot the old familiar way: one 5 for a
+  favorite, the other four rows blank (a blank counts as 0). One marks Carmen, two
+  mark Ella.
+
+  Said plainly: as an approach and as a strategy this is a POOR use of a STAR
+  ballot — unless one candidate really is your only acceptable choice, period, in
+  which case it is exactly honest and you should vote it. Otherwise you spend 5 of
+  the 25 points the ballot offers, say nothing about the rest of the field, and if
+  your one pick misses the runoff your ballot has no voice in the final head-to-head.
+  Nothing is penalized: a bullet vote is legal, full-weight and impossible to spoil,
+  and a backup score can never hurt your favorite. You are simply choosing not to
+  use the ballot.
+
+  Watch what it costs the count. STAR's scoring round becomes nothing but a
+  first-choice tally — Ella 10, Carmen 5, and Andre, Blake and David on 0 with
+  nothing ever said about them — and the automatic runoff has nothing left to add
+  (Ella 2 - Carmen 1, nobody at Equal Support). A ballot carrying one bit per voter
+  gives the method one bit to read, so this count could not have done better than
+  the choose-one ballot it is imitating.
+
+  Live results (BV2256): https://bettervoting.com/c8h3tb/results
+  Lesson: 01_STAR/01_Learn/voting_styles/traditional.md
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: true   # true = finalists only; false = full N×N grid (needs show_matrix)
+  show_condorcet: false   # show the [Condorcet Winner] line
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
+  show_runoff_percent: true   # the two-line self-reconciling runoff summary
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: false   # one row per voter — each ballot is a distinct teaching case
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+ballots: |-
+  Andre,Blake,Carmen,David,Ella
+      0,    0,     5,    0,   0   # traditional: "Carmen. Period."
+      0,    0,     0,    0,   5   # traditional: "Ella. Period."
+      0,    0,     0,    0,   5   # traditional: "Ella. Period."
+
+expected_winners:
+  - Ella
+
+# file: bv2256_c8h3tb_traditional_style.yaml

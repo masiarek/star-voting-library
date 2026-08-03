@@ -2,7 +2,7 @@
 """
 check_star_vs_rr_causes.py
 ==========================
-Guard the CAUSE CLAIMS of 05_Ranked_Robin/star_vs_rr_divergence/ against the
+Guard the CAUSE CLAIMS of 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/ against the
 ballots — the structural assertions each sample's `scenario_description` makes
 about *why* STAR and Ranked Robin disagree.
 
@@ -71,7 +71,7 @@ sys.path.insert(0, str(ENGINE_DIR))
 
 import starvote_larry_hastings as wrapper  # noqa: E402
 
-DEFAULT_DIR = REPO_ROOT / "05_Ranked_Robin" / "star_vs_rr_divergence"
+DEFAULT_DIR = REPO_ROOT / "05_Ranked_Robin" / "02_Examples" / "star_vs_rr_divergence"
 
 CYCLE_CAUSE = re.compile(r"CAUSE = CONDORCET CYCLE: no candidate beats all others"
                          r"(?: \(([A-Za-z0-9>]+)\))?")

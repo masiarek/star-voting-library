@@ -4,7 +4,7 @@
 
 *Robert LeGrand's flagship "the method decides everything" example, from his [ranked-ballot calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html). 921 voters rank five candidates, and there is **no Condorcet winner** — a top cycle. Across the ~15 ranked methods the win splits **five ways**. Run through the four tabulations BetterVoting supports, one electorate yields **three different winners** — and one of them is a documented LH-vs-BetterVoting tiebreak divergence.*
 
-→ **Level: Voting 301** — Curriculum [301.10](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [RR tiebreak: LH vs BV](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).
+→ **Level: Voting 301** — Curriculum [301.10](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [RR tiebreak: LH vs BV](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md).
 
 ## The electorate
 
@@ -50,7 +50,7 @@ Copeland (Ranked Robin's core) **ties Abby and Brad** — each wins three head-t
 - **LH** breaks the Copeland tie by **total margin, then lot** → **Abby** (her wins are by larger margins).
 - **BetterVoting** breaks it **head-to-head** → **Brad** (Brad beats Abby directly, 463–458).
 
-Both are deterministic here; they simply encode different notions of "who deserves the tie." This is the same LH-vs-BV Ranked Robin tiebreak split documented in [`rr_tiebreak_lh_vs_bv.md`](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md). The `.yaml`'s `expected_winners` is LH's **Abby** (that's what the LH engine computes and the test suite checks); BetterVoting's live result is **Brad**. Note that STAR's automatic runoff *also* resolves Abby-vs-Brad head-to-head → Brad, so BV's Ranked Robin and STAR agree, and LH's Ranked Robin is the lone Abby.
+Both are deterministic here; they simply encode different notions of "who deserves the tie." This is the same LH-vs-BV Ranked Robin tiebreak split documented in [`rr_tiebreak_lh_vs_bv.md`](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md). The `.yaml`'s `expected_winners` is LH's **Abby** (that's what the LH engine computes and the test suite checks); BetterVoting's live result is **Brad**. Note that STAR's automatic runoff *also* resolves Abby-vs-Brad head-to-head → Brad, so BV's Ranked Robin and STAR agree, and LH's Ranked Robin is the lone Abby.
 
 ## The rank→score conversion (STAR race)
 

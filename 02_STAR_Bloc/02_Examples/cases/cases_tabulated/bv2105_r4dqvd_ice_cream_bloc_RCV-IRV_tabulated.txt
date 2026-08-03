@@ -1,0 +1,43 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention
+ Tabulating 4 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Vanilla, Chocolate, Strawberry
+     1 ×   Vanilla > Chocolate > Strawberry      (5, 5, 5)
+     1 ×   (all unranked)      (0, 0, 0)
+     1 ×   Vanilla      (1, 0, 0)
+     1 ×   Chocolate > Strawberry > Vanilla      (2, 5, 4)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Vanilla            2  Elected
+Chocolate          1  Rejected
+Strawberry         0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Vanilla
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): Chocolate, Vanilla, Strawberry
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Chocolate) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner Vanilla is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

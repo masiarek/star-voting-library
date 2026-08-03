@@ -10,7 +10,7 @@
 
 On a weak-ranked ballot you may give two (or more) candidates the **same** rank. You're never forced to invent a preference you don't feel — if two candidates are equally good to you, you say so. In the PrefLib data taxonomy these are the **TOC / TOI** types (Ties allowed, Complete or Incomplete).
 
-Which ranked methods allow it? Condorcet methods — [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Schulze, Ranked Pairs, Minimax — allow equal ranks and compare candidates head-to-head. Borda and Bucklin usually allow ties too. **RCV-IRV (Hare) and STV do not** — on those a tie is an overvote.
+Which ranked methods allow it? Condorcet methods — [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Schulze, Ranked Pairs, Minimax — allow equal ranks and compare candidates head-to-head. Borda and Bucklin usually allow ties too. **RCV-IRV (Hare) and STV do not** — on those a tie is an overvote.
 
 ## Why it matters
 
@@ -24,6 +24,6 @@ Weak ranks still only capture *order*, not *strength* — a second choice "could
 
 - [Strict vs. weak ranks](strict_vs_weak_ranks.md) — the head-to-head, with the method table
 - [Strict ranks](strict_ranks.md) · [Scores vs. ranks](scores_vs_ranks.md)
-- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — the Condorcet method that allows equal ranks and compares pairwise
+- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) — the Condorcet method that allows equal ranks and compares pairwise
 
 # file: weak_ranks.md

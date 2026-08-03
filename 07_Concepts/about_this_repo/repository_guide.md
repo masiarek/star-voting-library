@@ -86,10 +86,10 @@ incompatible with the project's Python requirement: >=3.10, <3.14
 
 Dispatched automatically from the file's `voting_method` (or from the ballot style — ranked `A>B>C` always routes to RCV-IRV):
 
-- **STAR** — single-winner Score Then Automatic Runoff (the default). → [learn](../../01_STAR/concepts/STAR_start_here.md)
-- **Bloc STAR** / **proportional STAR** (`bloc`, `sss`, `rrv`, `allocated`) — multi-winner variants. → [Bloc](../../02_STAR_Bloc/README.md) · [proportional](../../03_STAR_PR/concepts/STAR_PR/README.md)
-- **Approval** — score each candidate 0/1; most approvals wins. → [learn](../../04_Approval/concepts/approval_voting.md)
-- **Ranked Robin** (`RankedRobin`, aka RCV-RR / Copeland / Consensus) — every pair of candidates compared head-to-head; best win–loss record wins. Prints the full pairwise table and flags Condorcet cycles. → [learn](../../05_Ranked_Robin/concepts/ranked_robin.md)
+- **STAR** — single-winner Score Then Automatic Runoff (the default). → [learn](../../01_STAR/01_Learn/STAR_start_here.md)
+- **Bloc STAR** / **proportional STAR** (`bloc`, `sss`, `rrv`, `allocated`) — multi-winner variants. → [Bloc](../../02_STAR_Bloc/README.md) · [proportional](../../03_STAR_PR/01_Learn/STAR_PR/README.md)
+- **Approval** — score each candidate 0/1; most approvals wins. → [learn](../../04_Approval/01_Learn/approval_voting.md)
+- **Ranked Robin** (`RankedRobin`, aka RCV-RR / Copeland / Consensus) — every pair of candidates compared head-to-head; best win–loss record wins. Prints the full pairwise table and flags Condorcet cycles. → [learn](../../05_Ranked_Robin/01_Learn/ranked_robin.md)
 - **RCV-IRV** — ranked ballots, tabulated by the vendored RCV-IRV engine. → [learn](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)
 
 > Terminology: this repo says **RCV-IRV** (or **IRV**) for the instant-runoff count, reserving bare **RCV** for the ranked-ballot family. "RCV" loosely means IRV in US usage; we clarify once, then use the precise term. See [Tips — Terminology: RCV vs IRV vs RCV-IRV (and friends)](../tips/TIPS_terminology.md).

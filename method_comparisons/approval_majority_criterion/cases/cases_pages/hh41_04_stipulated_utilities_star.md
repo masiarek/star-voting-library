@@ -7,7 +7,7 @@ search:
 
 *Generated from [`hh41_04_stipulated_utilities_star.yaml`](../hh41_04_stipulated_utilities_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** A
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** A
 
 ## Scenario
 
@@ -41,7 +41,7 @@ block cuts these scores at the approval line (3+) and reports Approval = B —
 i.e. these 0-5 ballots reproduce the paper's assumed approval ballots exactly.
 This is not a different election. It is their election at higher resolution.
 
-Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
+Claim-check page: ../../../04_Approval/01_Learn/hamlin_hua_2023.md
 Set overview: ../README.md
 
 ## Ballots

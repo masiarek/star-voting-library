@@ -29,8 +29,8 @@ WHY THIS MATTERS — the distinction it makes concrete:
 That is why a case whose WINNER turns on a BV tiebreak is kept LH-only in this
 repo: LH's `lot_numbers` is a published input a reader can check, while BV's order
 is carried by a database UUID. See
-05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md and the confirmation cases
-05_Ranked_Robin/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md (3 candidates)
+05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md and the confirmation cases
+05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md (3 candidates)
 and bv2262_*.md (9 candidates).
 
 Usage:

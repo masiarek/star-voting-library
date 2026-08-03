@@ -7,7 +7,7 @@ search:
 
 *Generated from [`05_c3_b38_squeeze-survives.yaml`](../05_c3_b38_squeeze-survives.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Ben
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ben
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/td7jfy) · **[results ↗](https://bettervoting.com/td7jfy/results)** (election `td7jfy`).
 
@@ -25,7 +25,7 @@ The electorate (38 ballots, all individual rows):
   - Cora pole: 20 voters (11 weak_backup, 4 ranked_style, 3 nuanced, 2 slate)
   - Ben middle: 5 voters (4 nuanced, 1 gentle)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - gentle: gentle soul: everything squeezed into 3-5, no zeros
   - nuanced: full 0-5 range, honest gaps, ties allowed
@@ -221,7 +221,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 - [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

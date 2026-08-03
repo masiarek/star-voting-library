@@ -62,7 +62,7 @@ Look again at the Pizza-fan. Theirs is the only ballot that could break the tie 
 
 ## The same five people, on a ballot that asks more
 
-These are the [canonical team-lunch voters](../../01_STAR/_main/cases/cases_pages/bv2184_fyy886_lunch_vote.md) — same people, same opinions, no strategy anywhere. Hand them a 5-star ballot and they say considerably more:
+These are the [canonical team-lunch voters](../../01_STAR/02_Examples/cases/cases_pages/bv2184_fyy886_lunch_vote.md) — same people, same opinions, no strategy anywhere. Hand them a 5-star ballot and they say considerably more:
 
 | Voter | Sushi | Tacos | Pizza |
 |---|:--:|:--:|:--:|
@@ -72,7 +72,7 @@ These are the [canonical team-lunch voters](../../01_STAR/_main/cases/cases_page
 | Taco-lover | 0 | 5 | 3 |
 | Pizza-fan | 3 | 1 | 5 |
 
-Now the Pizza-fan's *"Sushi over Tacos"* is on the ballot, and so is everyone's quiet **"…Pizza is fine, actually"** — four voters rate it a 3. [STAR](../../01_STAR/concepts/STAR_start_here.md) elects **Pizza**, the one lunch nobody objects to, and no lot is needed. Same electorate, same opinions: the entire difference is **how much the ballot let them say.**
+Now the Pizza-fan's *"Sushi over Tacos"* is on the ballot, and so is everyone's quiet **"…Pizza is fine, actually"** — four voters rate it a 3. [STAR](../../01_STAR/01_Learn/STAR_start_here.md) elects **Pizza**, the one lunch nobody objects to, and no lot is needed. Same electorate, same opinions: the entire difference is **how much the ballot let them say.**
 
 That's the honest comparison to draw here — not "Choose-One is stupid." It counted its ballots perfectly. It just wasn't given much to count.
 
@@ -89,7 +89,7 @@ That's the honest comparison to draw here — not "Choose-One is stupid." It cou
 - [Minority winner](../../method_comparisons/minority_winner/README.md) — the other classic Choose-One story: 34% wins while two-thirds wanted someone else
 - [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/README.md) — three electorates that look identical to Choose-One
 - [Multi-member plurality](../../method_comparisons/multi_member_plurality/README.md) — Block Voting, Limited Voting, SNTV
-- [The traditional voting style](../../01_STAR/concepts/voting_styles/traditional.md) — what happens when voters bring the choose-one habit to a 5-star ballot
+- [The traditional voting style](../../01_STAR/01_Learn/voting_styles/traditional.md) — what happens when voters bring the choose-one habit to a 5-star ballot
 
 ---
 

@@ -492,8 +492,8 @@ def check_bv_case_md():
 # EXHAUSTIVE index of their generated pages (the teaching progression's front
 # door). A new case added to the folder but forgotten in that README goes
 # silently missing — the exact bug that dropped bv2184_fyy886_lunch_vote from
-# 01_STAR/_main, rr_blank_is_last_c4_b3 from 05_Ranked_Robin/_main, and
-# bv2130_bvhchj_party_plurality from 03_STAR_PR/_main. This gate makes that
+# 01_STAR/02_Examples, rr_blank_is_last_c4_b3 from 05_Ranked_Robin/02_Examples, and
+# bv2130_bvhchj_party_plurality from 03_STAR_PR/02_Examples. This gate makes that
 # impossible: for each listed folder, every generated page must be referenced
 # (by href) somewhere in its index README.
 #
@@ -520,43 +520,43 @@ def check_bv_case_md():
 #       branch matching `cases/cases_pages`; the same pages as the parent folder
 #
 # Value = the README that indexes the folder, when that is NOT the folder's own
-# README.md. 02_STAR_Bloc/_main is the standing example: its own page says the
+# README.md. 02_STAR_Bloc/02_Examples is the standing example: its own page says the
 # index "lives one level up … That's the single source of truth", so the gate has
 # to read the parent's table or it would police the wrong file.
 # --------------------------------------------------------------------------- #
 INDEX_COMPLETE_DIRS = {
     # --- 01_STAR
-    "01_STAR/Flat_scores_ties": None,
-    "01_STAR/_main": None,
-    "01_STAR/abstain_bugs": None,
-    "01_STAR/equal_and_opposite": None,
-    "01_STAR/exercises": None,
-    "01_STAR/favorite_betrayal": None,
-    "01_STAR/iia_cycle_spoiler": None,
-    "01_STAR/majority_criterion": None,
-    "01_STAR/none_of_the_above": None,
-    "01_STAR/runoff_overturns_leader": None,
-    "01_STAR/runoff_reversal_bv_cases": None,
-    "01_STAR/silly_two_cand_STAR": None,
-    "01_STAR/tie_break_ladder": None,
+    "01_STAR/03_Criteria/Flat_scores_ties": None,
+    "01_STAR/02_Examples": None,
+    "01_STAR/04_Real_Elections/abstain_bugs": None,
+    "01_STAR/03_Criteria/equal_and_opposite": None,
+    "01_STAR/05_Practice": None,
+    "01_STAR/03_Criteria/favorite_betrayal": None,
+    "01_STAR/03_Criteria/iia_cycle_spoiler": None,
+    "01_STAR/03_Criteria/majority_criterion": None,
+    "01_STAR/03_Criteria/none_of_the_above": None,
+    "01_STAR/02_Examples/runoff_overturns_leader": None,
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases": None,
+    "01_STAR/09_Parked/silly_two_cand_STAR": None,
+    "01_STAR/03_Criteria/tie_break_ladder": None,
     # --- 02_STAR_Bloc
-    "02_STAR_Bloc/_main": "02_STAR_Bloc/README.md",   # index lives in the parent table
+    "02_STAR_Bloc/02_Examples": "02_STAR_Bloc/README.md",   # index lives in the parent table
     # --- 03_STAR_PR
-    "03_STAR_PR/_main": None,
+    "03_STAR_PR/02_Examples": None,
     # --- 04_Approval
-    "04_Approval/_main": None,
-    "04_Approval/multiwinner": None,
+    "04_Approval/02_Examples": None,
+    "04_Approval/02_Examples/multiwinner": None,
     # --- 05_Ranked_Robin
-    "05_Ranked_Robin/_main": None,
-    "05_Ranked_Robin/burial": None,
-    "05_Ranked_Robin/clone_independence": None,
-    "05_Ranked_Robin/condorcet_vs_ranked_robin": None,
-    "05_Ranked_Robin/consensus_choice_divergence": None,
-    "05_Ranked_Robin/copeland_score": None,
-    "05_Ranked_Robin/most_wins_vs_condorcet": None,
-    "05_Ranked_Robin/rr_tiebreaks": None,
-    "05_Ranked_Robin/rr_vs_irv_plurality": None,
-    "05_Ranked_Robin/star_vs_rr_divergence": None,
+    "05_Ranked_Robin/02_Examples": None,
+    "05_Ranked_Robin/03_Criteria/burial": None,
+    "05_Ranked_Robin/03_Criteria/clone_independence": None,
+    "05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin": None,
+    "05_Ranked_Robin/02_Examples/consensus_choice_divergence": None,
+    "05_Ranked_Robin/02_Examples/copeland_score": None,
+    "05_Ranked_Robin/02_Examples/most_wins_vs_condorcet": None,
+    "05_Ranked_Robin/03_Criteria/rr_tiebreaks": None,
+    "05_Ranked_Robin/02_Examples/rr_vs_irv_plurality": None,
+    "05_Ranked_Robin/02_Examples/star_vs_rr_divergence": None,
     # --- 06_Other
     "06_Other/Plurality": None,
     "06_Other/RCV_IRV": None,
@@ -642,8 +642,8 @@ def check_pages_indexed():
 
     An allowlisted folder whose README or pages directory cannot be resolved is
     reported as a FAILURE, never skipped: this check spent its whole life inert
-    because it looked for `01_STAR/_main/_main_pages/` while the actual layout
-    is `01_STAR/_main/cases/cases_pages/`, so a missing directory silently meant
+    because it looked for `01_STAR/02_Examples/_main_pages/` while the actual layout
+    is `01_STAR/02_Examples/cases/cases_pages/`, so a missing directory silently meant
     "✓ nothing to check". A gate that cannot find its target is broken, not clean.
     """
     missing = []

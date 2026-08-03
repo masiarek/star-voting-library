@@ -11,6 +11,6 @@ Read the reader-friendly **pages** (`edelman_condorcet_myth_pages/`); the `.yaml
 | [BV2173 — the 81-voter cancellation profile](cases/cases_pages/bv2173_gmfv4c_edelman_saari_cancellation.md) | Ada is the Condorcet winner 41–40; remove the two cyclic blocs and the rest say Ben 28–20 (Borda: 109–101). STAR shows both counts in one method — scoring round Ben 257–233, runoff Ada 41–40. RR/IRV → Ada; Plurality → Ben | [`.yaml`](cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml) |
 | [The perfect "Condorcet component," alone](cases/cases_pages/edelman_perfect_component_c3_b30.md) | 30 voters, a perfectly symmetric cycle: scores tie 70/70/70, pairwise ties 20–10 cyclically, the engine's tiebreak ladder exhausts and flags "[Lot-decided tie — rare]". LH-only (BV would resolve at random — not freezable) | [`.yaml`](cases/edelman_perfect_component_c3_b30.yaml) |
 
-Concept hubs: [Condorcet efficiency](../../07_Concepts/topics/condorcet/) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · up: [method_comparisons — same ballots, different methods](../)
+Concept hubs: [Condorcet efficiency](../../07_Concepts/topics/condorcet/) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · up: [method_comparisons — same ballots, different methods](../)
 
 # file: README.md

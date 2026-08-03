@@ -7,7 +7,7 @@ search:
 
 *Generated from [`pets_gov_stv.yaml`](../pets_gov_stv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Dog, Bird, Cat
+**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Dog, Bird, Cat
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
 

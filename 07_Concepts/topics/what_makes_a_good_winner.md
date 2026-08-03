@@ -2,7 +2,7 @@
 
 *When we say a voting method "gets it right" or "elects the wrong winner," what do we actually mean? There is no single **correct** winner handed down from on high — "good winner" is a **design choice** about what we value. This page lays out the competing ideals, shows them disagreeing on real elections in this repo, and pins down the vocabulary (consensus candidate, strong candidate, utilitarian winner) so the rest of the docs can use it precisely.*
 
-→ **Level: Voting 201** — Curriculum [201.6](../CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](condorcet) · [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
+→ **Level: Voting 201** — Curriculum [201.6](../CURRICULUM.md) (deeper theory — VSE, Arrow — at 301). Related topic hubs: [Condorcet efficiency](condorcet) · [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Why STAR](Why_STAR_Voting.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
 ## The trap: "the winner should have won"
 
@@ -30,7 +30,7 @@ These are *different questions*. "Who has the most passionate first-choice base?
 
 ## They disagree — on real elections in this repo
 
-**[Tennessee (BV2131)](../../05_Ranked_Robin/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md).** One ballot set, three "good winners":
+**[Tennessee (BV2131)](../../05_Ranked_Robin/02_Examples/rr_vs_irv_plurality/bv2131_tennessee_condorcet_center_vqyqkr.md).** One ballot set, three "good winners":
 
 - Plurality → **Memphis** (most first choices — but 58% rank it *last*).
 - RCV-IRV → **Knoxville** (last one standing after eliminations).
@@ -70,7 +70,7 @@ In practice the Condorcet and utilitarian (VSE) answers **usually agree**; they 
 - **Approval** rewards **broad acceptability**.
 - **Plurality / IRV** center on **first-choice** support (all at once, or round by round), which is why they can miss the consensus candidate.
 
-*(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).)*
+*(Which ideal one **should** prioritize is a values question — this page deliberately doesn't pick a favorite. It gives you the vocabulary and the worked cases to reason about the trade-off yourself. For the case that STAR strikes a good balance, see [Why STAR](Why_STAR_Voting.md); for where STAR itself doesn't elect the Condorcet winner, see [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).)*
 
 ## A theorist's "best": the candidate at the center
 
@@ -89,7 +89,7 @@ This sidesteps the "which winner is correct?" argument by asking a measurable qu
 
 In these studies the ordering is consistently roughly **STAR ≳ Approval > RCV-IRV > Plurality**, plurality falls sharply as the field grows past two candidates, and STAR's edge is *largest in big, competitive fields* (score-plus-runoff was in fact *predicted* to top the list by Bayesian-Regret work around 2000). Caveats that keep it honest: the result **depends on the voter model and on how strategic voters are** (honest vs. fully strategic reshuffles the middle of the pack; STAR stays near the top across both), and every simulation is only as good as its assumptions. VSE is the closest thing to an objective score, but it's why "STAR tops the accuracy charts" is a claim about *simulated voter satisfaction under a model*, not a claim that its winner is metaphysically "correct."
 
-**VSE has an academic sibling worth knowing about: [distortion](distortion.md).** Same premise — voter utility is what an election is trying to find, and a ballot is a lossy channel — but proved instead of simulated, and worst-case instead of average-case. That matters when someone waves VSE away as reform-movement math: the peer-reviewed computer-science literature (AAAI/IJCAI/FOCS, fifteen-plus years) made the *identical* modeling choice and derived bounds. It also supplies results the simulations can't: Copeland/[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) is within a constant factor of the welfare optimum however large the field, while STV/IRV's bound grows with it — and a ranking plus *a few* intensity questions provably collapses the worst case from quadratic to constant.
+**VSE has an academic sibling worth knowing about: [distortion](distortion.md).** Same premise — voter utility is what an election is trying to find, and a ballot is a lossy channel — but proved instead of simulated, and worst-case instead of average-case. That matters when someone waves VSE away as reform-movement math: the peer-reviewed computer-science literature (AAAI/IJCAI/FOCS, fifteen-plus years) made the *identical* modeling choice and derived bounds. It also supplies results the simulations can't: Copeland/[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) is within a constant factor of the welfare optimum however large the field, while STV/IRV's bound grows with it — and a ranking plus *a few* intensity questions provably collapses the worst case from quadratic to constant.
 
 VSE measures only *accuracy*. Its companion metric, **[PVSI](pvsi_strategic_incentive.md)** (Pivotal Voter Strategic Incentive), measures the other axis — how much a method **rewards voting dishonestly** — and the two are judged together, since a method that invites strategy erodes its own accuracy in practice.
 
@@ -110,8 +110,8 @@ A good *winner* is only half of it. The rest is whether the *method* is practica
 ## See also
 
 - [What makes a voting *method* good? (criteria & practicality)](what_makes_a_voting_method_good.md)
-- [Condorcet efficiency (topic hub)](condorcet) · [Ranked Robin vs. "the Condorcet winner"](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md)
+- [Condorcet efficiency (topic hub)](condorcet) · [Ranked Robin vs. "the Condorcet winner"](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md)
 - [Center squeeze](center_squeeze) · [Majority criterion](majority_criterion) · [Spoiler effect](spoiler_effect.md)
-- [Why STAR Voting](Why_STAR_Voting.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [Glossary](../GLOSSARY.md)
+- [Why STAR Voting](Why_STAR_Voting.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) · [Glossary](../GLOSSARY.md)
 
 **External references:** [Utilitarian winner (electowiki)](https://electowiki.org/wiki/Utilitarian_winner) · [Condorcet winner criterion (electowiki)](https://electowiki.org/wiki/Condorcet_winner_criterion) · [Voter Satisfaction Efficiency](https://electionscience.github.io/vse-sim/) · Graham-Squire & McCune, *RCV in the US*, [arXiv:2301.12075](https://arxiv.org/abs/2301.12075) (the Alaska Condorcet failure).

@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`01_STAR/exercises/cases/ex13_opinions.yaml`](../../../../01_STAR/exercises/cases/ex13_opinions.yaml)  ·  **STAR tabulated mirror:** [`ex13_opinions_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex13_opinions_tabulated.txt)
+**Source election:** [`01_STAR/05_Practice/cases/ex13_opinions.yaml`](../../../../01_STAR/05_Practice/cases/ex13_opinions.yaml)  ·  **STAR tabulated mirror:** [`ex13_opinions_tabulated.txt`](../../../../01_STAR/05_Practice/cases/cases_tabulated/ex13_opinions_tabulated.txt)
 
 _3 candidates, 9 ballots._
 
@@ -144,7 +144,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    RCV-IRV winner Cora is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
    More: 07_Concepts/topics/smith_set.md
@@ -185,7 +185,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     3  Beck       1–1–0         1      -4  Cora
 
 Winner — Ranked Robin (RCV-RR): Ash
-   *** 3 candidates tie for the most wins (Ash, Beck, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ash, Beck, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -195,7 +195,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner Ash is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

@@ -2,7 +2,7 @@
 
 *The single most useful idea in this whole topic: a voting method is **two parts**, not one, and you can't judge one without the other.*
 
-→ Spoken version: [What Is a Voting Method? (conversation)](what_is_a_voting_method.md) · primer: [Ballot & terminology basics](ballot_and_terminology_basics.md) · next: [STAR — start here](../../01_STAR/concepts/STAR_start_here.md).
+→ Spoken version: [What Is a Voting Method? (conversation)](what_is_a_voting_method.md) · primer: [Ballot & terminology basics](ballot_and_terminology_basics.md) · next: [STAR — start here](../../01_STAR/01_Learn/STAR_start_here.md).
 
 ---
 
@@ -30,7 +30,7 @@ In a two-way race they're identical: the most votes *is* over half. The gap only
 
 **A worked example.** 100 voters, three candidates; first choices Andre 40, Blake 35, Carmen 25. Under plurality **Andre wins** — the most votes. But 60 of 100 wanted someone else, so Andre has no majority. And if Blake and Carmen are two flavors of one coalition, choose-one just **split** a 60-vote bloc and crowned the candidate a majority actively opposed — the [spoiler effect](spoiler_effect.md).
 
-A majority rule wouldn't accept that. Since nobody cleared half, it demands another step: a runoff. STAR's [automatic runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) is that step — after scoring, the top two meet head-to-head, and the winner holds a majority *between those two finalists*. That's not proof the winner is everyone's favorite across the whole field, but it's exactly the check plurality never even performs.
+A majority rule wouldn't accept that. Since nobody cleared half, it demands another step: a runoff. STAR's [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) is that step — after scoring, the top two meet head-to-head, and the winner holds a majority *between those two finalists*. That's not proof the winner is everyone's favorite across the whole field, but it's exactly the check plurality never even performs.
 
 ## Two takeaways
 
@@ -42,4 +42,4 @@ A majority rule wouldn't accept that. Since nobody cleared half, it demands anot
 - The spoken companion, with the demo run live: [What Is a Voting Method? (conversation)](what_is_a_voting_method.md)
 - The terminology cluster hiding behind "RCV": [Ballot & terminology basics](ballot_and_terminology_basics.md) · [ballot styles](ballot_styles.md)
 - Ballot families: [scores vs ranks](../scores_and_ranks/scores_vs_ranks.md) · the problem this all fixes: [the spoiler effect](spoiler_effect.md)
-- The method this library teaches: [STAR — start here](../../01_STAR/concepts/STAR_start_here.md) · [its benefits](../../01_STAR/concepts/getting_started/STAR_benefits.md)
+- The method this library teaches: [STAR — start here](../../01_STAR/01_Learn/STAR_start_here.md) · [its benefits](../../01_STAR/01_Learn/getting_started/STAR_benefits.md)

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`04_c4_b47_noise-soup.yaml`](../04_c4_b47_noise-soup.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Caleb
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Caleb
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/74pbyg) · **[results ↗](https://bettervoting.com/74pbyg/results)** (election `74pbyg`).
 
@@ -27,7 +27,7 @@ The electorate (47 ballots, all individual rows):
   - static: 11 voters (6 ranked_style, 3 chaos, 2 flat)
   - plus 2 marker row(s): 1 spoiled ballot, 1 race abstention
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - slate: partisan slate: equal 5s for the in-group, 0 outside
   - flat: flat-liner: same score for everyone
@@ -259,7 +259,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/04_c4_b47_noise-soup.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

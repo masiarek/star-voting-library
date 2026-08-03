@@ -1,6 +1,6 @@
 # ⭐ Rated & score methods — this repo's home turf
 
-The *cardinal* family: ballots where you **grade** candidates (approve / score 0–5 / grade Reject–Excellent) rather than only **rank** them. [STAR](../../01_STAR/concepts/STAR_start_here.md) lives here — a score ballot plus an automatic runoff — so these are the books that argue the case STAR builds on. Read them to understand *why scoring instead of ranking*, and where the scholars who pioneered it think it still falls short.
+The *cardinal* family: ballots where you **grade** candidates (approve / score 0–5 / grade Reject–Excellent) rather than only **rank** them. [STAR](../../01_STAR/01_Learn/STAR_start_here.md) lives here — a score ballot plus an automatic runoff — so these are the books that argue the case STAR builds on. Read them to understand *why scoring instead of ranking*, and where the scholars who pioneered it think it still falls short.
 
 ← Back to [Books on Voting Methods](README.md)
 
@@ -19,7 +19,7 @@ The founding text of modern approval voting: mark every candidate you approve of
 
 **The lean:** These are approval voting's **inventors-advocates** — the book argues *for* the method. It's the cleanest statement of "the simplest cardinal ballot," which is exactly the baseline STAR extends (a 0–5 score is a richer approval mark, and the runoff answers approval's "where do I draw the line?" problem).
 
-**In this repo:** [Approval voting](../../04_Approval/concepts/approval_voting.md) · [Approval's honest limits](../../04_Approval/concepts/approval_honest_limits.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
+**In this repo:** [Approval voting](../../04_Approval/01_Learn/approval_voting.md) · [Approval's honest limits](../../04_Approval/01_Learn/approval_honest_limits.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
 
 </td>
 </tr>
@@ -36,7 +36,7 @@ The scholarly reference: an edited volume collecting the theory, experiments, an
 
 **The lean:** An edited academic handbook, so more balanced than a single-advocate book — but its subject is approval, and contributors are largely sympathetic. Best mined for specific chapters (Laslier's own experimental work is a highlight).
 
-**In this repo:** [Approval voting](../../04_Approval/concepts/approval_voting.md) · [multi-winner approval](../../04_Approval/concepts/Multiwinner_Approval/) · the repo cross-checks approval counts against the [`abcvoting` engine](../tabulation_engines/)
+**In this repo:** [Approval voting](../../04_Approval/01_Learn/approval_voting.md) · [multi-winner approval](../../04_Approval/01_Learn/Multiwinner_Approval/) · the repo cross-checks approval counts against the [`abcvoting` engine](../tabulation_engines/)
 
 </td>
 </tr>
@@ -70,7 +70,7 @@ The scholarly reference: an edited volume collecting the theory, experiments, an
 
 **The lean:** Brams designs and champions specific procedures (approval voting, and here "satisfaction approval" and others), so it's advocacy-tinged — but the framing is constructive engineering, and the fair-division half is largely orthogonal to the voting debates.
 
-**In this repo:** [electing more than one](../topics/electing_more_than_one.md) · [proportional representation](../../03_STAR_PR/concepts/README.md) · [Who's who](../topics/whos_who_voting_reform.md)
+**In this repo:** [electing more than one](../topics/electing_more_than_one.md) · [proportional representation](../../03_STAR_PR/01_Learn/README.md) · [Who's who](../topics/whos_who_voting_reform.md)
 
 </td>
 </tr>
@@ -82,5 +82,5 @@ The scholarly reference: an edited volume collecting the theory, experiments, an
 
 - The theory *under* all cardinal methods (why none escapes trade-offs) → **[Social choice theory](social_choice_theory.md)**.
 - The gentle on-ramp if this was too dense → **[Popular introductions](popular_introductions.md)**.
-- STAR itself, runnable → [STAR — start here](../../01_STAR/concepts/STAR_start_here.md) · [why STAR](../topics/Why_STAR_Voting.md).
+- STAR itself, runnable → [STAR — start here](../../01_STAR/01_Learn/STAR_start_here.md) · [why STAR](../topics/Why_STAR_Voting.md).
 - Back to the full shelf → **[Books on Voting Methods](README.md)**.

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`pineapple_25pct.yaml`](../pineapple_25pct.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Cheese
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cheese
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/mvxbxr) · **[results ↗](https://bettervoting.com/mvxbxr/results)** (election `mvxbxr`).
 

@@ -16,7 +16,7 @@ That conditional carries real weight and is the most common place these numbers 
 
 Six methods read **the same sampled electorate**, each through its own ballot, so the comparison is apples-to-apples. Voter utilities are sampled first and every ballot is derived from them — never the reverse ([simulate utilities, not ballots](../simulate_utilities_not_ballots.md)).
 
-**Ranked Robin is the control, not a result.** [Copeland](../../../05_Ranked_Robin/concepts/ranked_robin.md) is Condorcet-efficient by construction, so its column *must* read exactly 100.0%. It is printed precisely so that a reader can check the harness: any cell below 100.0% would mean the pairwise code and the method code disagree, and every other number in the run would be worthless.
+**Ranked Robin is the control, not a result.** [Copeland](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) is Condorcet-efficient by construction, so its column *must* read exactly 100.0%. It is printed precisely so that a reader can check the harness: any cell below 100.0% would mean the pairwise code and the method code disagree, and every other number in the run would be worthless.
 
 ## The measured table
 
@@ -76,7 +76,7 @@ But the same model that flatters IRV also destroys its own credibility: impartia
 
 **6. More candidates hurt everyone except the control.** Every method's efficiency declines with field size in every model. Nothing here is a small-field phenomenon that vanishes at scale.
 
-**7. More voters cut both ways.** Under structured models, more ballots *raise* efficiency (sampling noise fades, structure dominates: STAR 87.5% → 92.2% in `spatial2d` at 7). Under impartial culture they change almost nothing. This mirrors the [STAR-vs-RR divergence](../../../05_Ranked_Robin/star_vs_rr_divergence/README.md) finding that "fewer ballots → more disagreement" is a property of *structured* electorates, not random ones.
+**7. More voters cut both ways.** Under structured models, more ballots *raise* efficiency (sampling noise fades, structure dominates: STAR 87.5% → 92.2% in `spatial2d` at 7). Under impartial culture they change almost nothing. This mirrors the [STAR-vs-RR divergence](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) finding that "fewer ballots → more disagreement" is a property of *structured* electorates, not random ones.
 
 ## Why STAR misses — and the surprise in the answer
 
@@ -128,12 +128,12 @@ For the modern empirical treatment, [Green-Armytage, Tideman & Cosman (2016)](co
 
 ## Where this lands
 
-STAR is **not** Condorcet-compliant and this repo does not claim otherwise ([STAR's honest limits](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md), [Campbell–Kelly](campbell_kelly_theorem.md)). What these numbers support is narrower and more defensible than the slogan:
+STAR is **not** Condorcet-compliant and this repo does not claim otherwise ([STAR's honest limits](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md), [Campbell–Kelly](campbell_kelly_theorem.md)). What these numbers support is narrower and more defensible than the slogan:
 
 > In realistic electorates, STAR elects the Condorcet winner **most of the time** — 92–99% at three candidates, 74–92% as the field grows — and it is the **most Condorcet-efficient non-Condorcet method measured here in every structured model**. Under impartial culture at small fields, RCV-IRV does better; under a single-issue spectrum with a crowded field, RCV-IRV elects the head-to-head winner less than half the time.
 
-If what you want is a *guarantee* rather than a rate, that is what [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) is for — and the 100.0% control column is the proof. The price of that guarantee, and why STAR does not pay it, is the subject of [what makes a good winner](../what_makes_a_good_winner.md).
+If what you want is a *guarantee* rather than a rate, that is what [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) is for — and the 100.0% control column is the proof. The price of that guarantee, and why STAR does not pay it, is the subject of [what makes a good winner](../what_makes_a_good_winner.md).
 
 ---
 
-**See also:** [Topic hub: Condorcet efficiency](README.md) · [30 worked STAR ≠ Ranked Robin elections](../../../05_Ranked_Robin/star_vs_rr_divergence/README.md) · [the divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) (real library elections where the methods disagree) · [center squeeze](../center_squeeze/) · [the Smith set](../smith_set.md) · [reading list](condorcet_reading_list.md) · [simulations folder](../../../06_Other/simulations/README.md)
+**See also:** [Topic hub: Condorcet efficiency](README.md) · [30 worked STAR ≠ Ranked Robin elections](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) · [the divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) (real library elections where the methods disagree) · [center squeeze](../center_squeeze/) · [the Smith set](../smith_set.md) · [reading list](condorcet_reading_list.md) · [simulations folder](../../../06_Other/simulations/README.md)

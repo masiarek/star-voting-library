@@ -2,13 +2,13 @@
 
 *What "the strongest candidate" means when no single candidate beats everyone. When a cycle erases the Condorcet winner, the principled fallback isn't a person — it's a **set**: the smallest group whose every member beats every outsider head-to-head. Once you have that club, "any decent method should at least pick from inside it" becomes a testable criterion — and it neatly sorts the Condorcet family.*
 
-→ **Level: Voting 301** — Curriculum [301.4](../CURRICULUM.md) (limits & theory) · Glossary: [`Smith set`](../GLOSSARY.md) · the tournament math: [The math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) · the *other* generalized Condorcet winner: [the uncovered set](uncovered_set.md) (always a **subset** of the Smith set, and the Pareto line)
+→ **Level: Voting 301** — Curriculum [301.4](../CURRICULUM.md) (limits & theory) · Glossary: [`Smith set`](../GLOSSARY.md) · the tournament math: [The math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · the *other* generalized Condorcet winner: [the uncovered set](uncovered_set.md) (always a **subset** of the Smith set, and the Pareto line)
 
 ---
 
 ## The problem: "beats everyone head-to-head" can come up empty
 
-A [Condorcet winner](condorcet/) beats every rival one-on-one, and when one exists it's a natural "correct answer" for majority rule. But majority preference isn't guaranteed to be transitive: a majority can prefer A over B, B over C, *and* C over A — a rock-paper-scissors **cycle**, and suddenly "the candidate who beats everyone" doesn't exist. That's the [Condorcet paradox](../../05_Ranked_Robin/concepts/cycle_resolution.md), and every Condorcet method needs an answer to it.
+A [Condorcet winner](condorcet/) beats every rival one-on-one, and when one exists it's a natural "correct answer" for majority rule. But majority preference isn't guaranteed to be transitive: a majority can prefer A over B, B over C, *and* C over A — a rock-paper-scissors **cycle**, and suddenly "the candidate who beats everyone" doesn't exist. That's the [Condorcet paradox](../../05_Ranked_Robin/01_Learn/cycle_resolution.md), and every Condorcet method needs an answer to it.
 
 The Smith set is the *principled* part of that answer. Before asking "who wins the cycle?", it asks a more modest question with a provably clean answer: **who is even in contention?**
 
@@ -28,7 +28,7 @@ One set, several names — the literature is messy: **Smith set** (after mathema
 
 ## See it: a cycle plus an outsider (runnable)
 
-Take the [Ada/Ben/Cara cycle](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) and change one thing: add a fourth candidate, **Dave**, whom every voter ranks last ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md), counted by [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)):
+Take the [Ada/Ben/Cara cycle](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) and change one thing: add a fourth candidate, **Dave**, whom every voter ranks last ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md), counted by [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)):
 
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
@@ -66,7 +66,7 @@ Now run the club-membership check, smallest group first:
 
 No smaller group works, so **the Smith set is `{Ada, Ben, Cara}`** — and Dave, despite being *on* every ballot, is provably out of contention: to get into the club, Dave would have to stop losing to someone inside it. Notice the shortcut the win–loss table hands you: the club is exactly the top block of the Copeland standings (records 2–1, 2–1, 2–1 vs Dave's 0–3) — that's not a coincidence, it's a theorem (dominating sets are nested *by Copeland score*).
 
-The full pairwise grid, and this exact election as a runnable YAML, are in [`04_smith_set_c4_b7`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md). (It's an LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie *randomly*, so a deliberate three-way tie isn't freezable there — see [the tiebreak divergence](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md).) For a Smith set of four in a *real* library election, see the [no-Condorcet-winner comparison set](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md).
+The full pairwise grid, and this exact election as a runnable YAML, are in [`04_smith_set_c4_b7`](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md). (It's an LH-only case: BetterVoting's Ranked Robin breaks a Copeland tie *randomly*, so a deliberate three-way tie isn't freezable there — see [the tiebreak divergence](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md).) For a Smith set of four in a *real* library election, see the [no-Condorcet-winner comparison set](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md).
 
 ## The criterion: Smith-efficient methods never leave the club
 
@@ -74,20 +74,20 @@ A method satisfies the **Smith criterion** (is **Smith-efficient**) if its winne
 
 | Method | In the club? | Why |
 |--------|:---:|-----|
-| **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (margins, lot, or BV's random draw), the winner stays inside |
-| **Ranked Pairs, Schulze** | ✅ | the "serious" [cycle resolvers](../../05_Ranked_Robin/concepts/cycle_resolution.md) are Smith-efficient by construction |
+| **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (margins, lot, or BV's random draw), the winner stays inside |
+| **Ranked Pairs, Schulze** | ✅ | the "serious" [cycle resolvers](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) are Smith-efficient by construction |
 | **Minimax** | ❌ | Condorcet-efficient, but in a 4+ candidate cycle its "least bad worst loss" pick can fall *outside* the Smith set — the classic fine-print failure |
 | **RCV-IRV (Hare)** | ❌ | not even Condorcet-efficient ([center squeeze](center_squeeze/)), so Smith is out of reach |
 | **Borda, Score, Approval, Plurality** | ❌ | point totals can crown a candidate the club collectively beats |
-| **STAR** | ❌ | not Condorcet-compliant *by design* — it trades the guarantee for counting preference strength; see [three notions of "winner"](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) |
+| **STAR** | ❌ | not Condorcet-compliant *by design* — it trades the guarantee for counting preference strength; see [three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md) |
 
-Two footnotes to the table. First, the criterion has spawned a whole construction kit: **Smith//X** methods first *eliminate everyone outside the Smith set*, then run method X on the survivors — Smith//IRV (a.k.a. Tideman's Alternative) and Smith//Minimax are the common ones, bolting Smith-efficiency onto methods that lack it. Equal Vote's own tie-breaking protocol reaches for the same idea ("Smith-Minimax" sits in [Ranked Robin's tiebreak hierarchy](../../05_Ranked_Robin/concepts/ranked_robin.md)). Second, there's a related *independence* criterion, **ISDA** ("Independence of Smith-Dominated Alternatives"): candidates outside the Smith set should be ignorable — delete them from every ballot and the winner shouldn't change. Our demo passes the spot-check: delete Dave and you get exactly [the 02_cycle election](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md), where Ranked Robin still elects Ada. ([electowiki](https://electowiki.org/wiki/Independence_of_Smith-dominated_alternatives) has the formal statement — advocacy-adjacent wiki, fine for definitions.)
+Two footnotes to the table. First, the criterion has spawned a whole construction kit: **Smith//X** methods first *eliminate everyone outside the Smith set*, then run method X on the survivors — Smith//IRV (a.k.a. Tideman's Alternative) and Smith//Minimax are the common ones, bolting Smith-efficiency onto methods that lack it. Equal Vote's own tie-breaking protocol reaches for the same idea ("Smith-Minimax" sits in [Ranked Robin's tiebreak hierarchy](../../05_Ranked_Robin/01_Learn/ranked_robin.md)). Second, there's a related *independence* criterion, **ISDA** ("Independence of Smith-Dominated Alternatives"): candidates outside the Smith set should be ignorable — delete them from every ballot and the winner shouldn't change. Our demo passes the spot-check: delete Dave and you get exactly [the 02_cycle election](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md), where Ranked Robin still elects Ada. ([electowiki](https://electowiki.org/wiki/Independence_of_Smith-dominated_alternatives) has the formal statement — advocacy-adjacent wiki, fine for definitions.)
 
 ## Fine print: Schwartz, ties, and "Smith's method"
 
 - **The [Schwartz set](https://electowiki.org/wiki/Schwartz_set)** (a.k.a. GOCHA) is the Smith set's slightly tighter cousin: always **Schwartz ⊆ Smith**, and the two differ *only* when pairwise **ties** are involved (a tie is enough to keep you in Smith, not in Schwartz). With an odd number of voters and full rankings — like our 7 ballots — no pairwise ties are possible and the two sets coincide.
-- **"Smith's method"** — electing the Smith set *itself* — is set-valued: fine for shortlists, but a single-winner election still needs a rule for inside the club. That's exactly the [cycle-resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) split, and why the [ranked-ballot method zoo](ranked_ballot_methods_zoo.md) files Smith/Schwartz under "set-valued, usually used as a filter."
-- **Computing it is graph theory, and cheap:** the Smith set is the **top strongly connected component** of the pairwise-results tournament — or, equivalently, walk down the Copeland standings until the block above the line beats everyone below it. Standard algorithms, quadratic work; [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) maps this corner (tournaments, SCCs, and friends).
+- **"Smith's method"** — electing the Smith set *itself* — is set-valued: fine for shortlists, but a single-winner election still needs a rule for inside the club. That's exactly the [cycle-resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) split, and why the [ranked-ballot method zoo](ranked_ballot_methods_zoo.md) files Smith/Schwartz under "set-valued, usually used as a filter."
+- **Computing it is graph theory, and cheap:** the Smith set is the **top strongly connected component** of the pairwise-results tournament — or, equivalently, walk down the Copeland standings until the block above the line beats everyone below it. Standard algorithms, quadratic work; [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) maps this corner (tournaments, SCCs, and friends).
 - **The Copeland standings can understate the club.** The leaders of the win–loss table are always *inside* the Smith set, but they need not *be* it. Five candidates where E loses to everyone and, among the rest, A beats B and C, B beats C and D, C beats D, D beats A: the Copeland leaders are just A and B at 3 wins each, while the Smith set is all of `{A, B, C, D}`. So "who tied at the top?" is a narrower question than "who is still in contention?" — which is why the engine prints the set explicitly rather than leaving you to read it off the standings.
 
 ## The engine reports it
@@ -116,17 +116,17 @@ Forty voters rank `A>C>B`, thirty-five `B>C>A`, twenty-five `C>A>B`. C beats A 6
 
 ## How big is the club in practice?
 
-Almost always: **one member.** Real electorates that spread along a [spatial](spatial_voting_model.md) spectrum produce Condorcet winners overwhelmingly often — in one dimension the median-voter theorem *guarantees* one — so the Smith set is a singleton and every Condorcet method just elects it. The set only becomes interesting when preferences genuinely cycle: rare, likeliest in small, sharply three-way-divided electorates ([how often?](../../05_Ranked_Robin/concepts/cycle_resolution.md)). The deep-theory footnote is that in **2+ spatial dimensions** the guarantee collapses spectacularly — the McKelvey–Schofield chaos theorem says the top cycle can then wander essentially anywhere, which is *why* theorists wanted a disciplined "still in contention" set in the first place.
+Almost always: **one member.** Real electorates that spread along a [spatial](spatial_voting_model.md) spectrum produce Condorcet winners overwhelmingly often — in one dimension the median-voter theorem *guarantees* one — so the Smith set is a singleton and every Condorcet method just elects it. The set only becomes interesting when preferences genuinely cycle: rare, likeliest in small, sharply three-way-divided electorates ([how often?](../../05_Ranked_Robin/01_Learn/cycle_resolution.md)). The deep-theory footnote is that in **2+ spatial dimensions** the guarantee collapses spectacularly — the McKelvey–Schofield chaos theorem says the top cycle can then wander essentially anywhere, which is *why* theorists wanted a disciplined "still in contention" set in the first place.
 
-So the honest summary matches the repo's [house caveat](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md): the Smith set is the right *standard* for judging cycle behavior, and knowing it costs nothing — but no voter needs it on election day, and a method's Smith-efficiency is fine print that matters only on the rare day the matrix eats its own tail.
+So the honest summary matches the repo's [house caveat](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md): the Smith set is the right *standard* for judging cycle behavior, and knowing it costs nothing — but no voter needs it on election day, and a method's Smith-efficiency is fine print that matters only on the rare day the matrix eats its own tail.
 
 ---
 
 ## Cross-references
 
-- [`04_smith_set_c4_b7` — the worked demo](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md) ([source YAML](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/04_smith_set_c4_b7.yaml)) · its no-Dave companion [`02_cycle_no_condorcet`](../../05_Ranked_Robin/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) · a real 4-member Smith set: [BV2138](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md)
-- [The math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) — tournaments, SCCs, Schwartz, and the theorems (this page's mathematical home)
-- [Cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — what Minimax / Ranked Pairs / Schulze do *inside* the club
+- [`04_smith_set_c4_b7` — the worked demo](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md) ([source YAML](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/04_smith_set_c4_b7.yaml)) · its no-Dave companion [`02_cycle_no_condorcet`](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) · a real 4-member Smith set: [BV2138](../../method_comparisons/no_condorcet_bv2138/bv2138_cxrf8v_no_condorcet.md)
+- [The math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) — tournaments, SCCs, Schwartz, and the theorems (this page's mathematical home)
+- [Cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — what Minimax / Ranked Pairs / Schulze do *inside* the club
 - [Condorcet efficiency — topic hub](condorcet/README.md) · [Pairwise counting](pairwise_counting.md) — the matrix all of this reads from
 - Books: [Börgers, *Mathematics of Social Choice*](../books/social_choice_theory.md) — the gentlest rigorous treatment ("generalized Condorcet candidates")
 - External: [Wikipedia — Smith set](https://en.wikipedia.org/wiki/Smith_set) (the criteria claims) · [electowiki — Smith set](https://electowiki.org/wiki/Smith_set) (mechanics; advocacy-adjacent)

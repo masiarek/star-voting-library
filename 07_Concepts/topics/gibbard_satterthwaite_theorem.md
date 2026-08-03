@@ -42,7 +42,7 @@ This is the theoretical backbone of the repo's honesty stance — **"resistant, 
 - **When does honesty pay?** For which method, and under what electorate, is a sincere ballot the best *practical* strategy most of the time?
 - **How hard and how risky is manipulation?** Does it require coordination and knowing the result in advance? Does it backfire?
 
-Those are exactly what [Voter Satisfaction Efficiency](election_simulation_models.md) simulations and the [strategic-voting analysis](strategic_voting.md) measure. Gibbard–Satterthwaite doesn't end the debate — it *starts* it correctly, by ruling out the fantasy of an unmanipulable method and forcing the argument onto *degrees* of strategy-resistance. STAR's own advocates concede the point openly; the honest case for any method has to. See [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
+Those are exactly what [Voter Satisfaction Efficiency](election_simulation_models.md) simulations and the [strategic-voting analysis](strategic_voting.md) measure. Gibbard–Satterthwaite doesn't end the debate — it *starts* it correctly, by ruling out the fantasy of an unmanipulable method and forcing the argument onto *degrees* of strategy-resistance. STAR's own advocates concede the point openly; the honest case for any method has to. See [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
 ## Allowing ties does not escape it (Duggan and Schwartz)
 
@@ -52,7 +52,7 @@ G-S assumes every election has a **unique** winner. That looks like a loophole: 
 
 (One genuine subtlety worth stating: "strategyproof" needs more care here, because a voter comparing two *sets* of tied winners has to be assumed to compare them somehow — optimistically, pessimistically, or by expected utility. The result holds across those readings, which is what makes it a closed door rather than a technicality.)
 
-The practical reading is the same one this repo takes everywhere: **you cannot tiebreak your way out of manipulability.** Consistent with the [Ranked Robin tiebreak analysis](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md), where Brandt, Saile & Stricker prove no anonymous, Pareto-optimal tiebreaking rule — fixed order *or* coin flip — escapes manipulability once voters may express ties.
+The practical reading is the same one this repo takes everywhere: **you cannot tiebreak your way out of manipulability.** Consistent with the [Ranked Robin tiebreak analysis](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md), where Brandt, Saile & Stricker prove no anonymous, Pareto-optimal tiebreaking rule — fixed order *or* coin flip — escapes manipulability once voters may express ties.
 
 ## Relation to Arrow's theorem
 
@@ -61,7 +61,7 @@ Arrow (1951) and Gibbard–Satterthwaite are close cousins — G-S can even be d
 - **Arrow** is about *aggregation*: no rule can combine individual rankings into a group ranking while satisfying a short list of fairness conditions.
 - **Gibbard–Satterthwaite** is about *incentives*: no rule can make honest voting a dominant strategy.
 
-Two faces of the same fact — **there is no perfect voting method** — which is why every method in this library has an [honest-limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) page, and why "it fails criterion X" is a trade-off to weigh, never a disqualification. Deeper math: [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) (Arrow & Gibbard–Satterthwaite in context).
+Two faces of the same fact — **there is no perfect voting method** — which is why every method in this library has an [honest-limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) page, and why "it fails criterion X" is a trade-off to weigh, never a disqualification. Deeper math: [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) (Arrow & Gibbard–Satterthwaite in context).
 
 ## Sources
 

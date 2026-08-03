@@ -34,7 +34,7 @@ Here is the distinction reformers most often blur. Two-party dominance has **two
 
 So the honest claim, which cuts against a common overreach:
 
-> **Better single-winner methods end the *spoiler-enforced* part of two-party dominance — they do not, by themselves, end two-party dominance.** What reliably produces a multiparty legislature is **proportional representation** ([STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md), MMP, party-list, [proportional STAR](../../03_STAR_PR/concepts/STAR_PR/README.md)) — multi-winner methods, not single-winner ones.
+> **Better single-winner methods end the *spoiler-enforced* part of two-party dominance — they do not, by themselves, end two-party dominance.** What reliably produces a multiparty legislature is **proportional representation** ([STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md), MMP, party-list, [proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/README.md)) — multi-winner methods, not single-winner ones.
 
 This is why Australia is two-party in its AV House but multiparty in its **STV** Senate. If your goal is specifically to *break* two-party dominance, single-winner reform is necessary-but-not-sufficient; the lever is proportional multi-winner elections. If your goal is honest, spoiler-free single-winner elections (a worthy goal on its own), STAR/Approval/Ranked Robin deliver that whether or not the party system ever changes.
 
@@ -58,5 +58,5 @@ Two-party dominance is a genuine trade-off, not a self-evident evil — it buys 
 
 - [The spoiler effect](spoiler_effect.md) · [Choose-One / plurality](plurality.md) — the method-caused half
 - [The Alternative Vote in Australia](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_australia.md) — two-party House, multiparty (STV) Senate
-- [Proportional representation: STV vs STAR-PR](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md) · [Proportional STAR](../../03_STAR_PR/concepts/STAR_PR/README.md) — what actually yields multiparty legislatures
+- [Proportional representation: STV vs STAR-PR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md) · [Proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) — what actually yields multiparty legislatures
 - [Choosing among the Equal Vote methods](choosing_among_evc_methods.md) · [Glossary](../GLOSSARY.md)

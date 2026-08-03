@@ -54,7 +54,7 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   lead term.
 - **Favorite Betrayal Criterion ≠ Later-No-Harm** — keep distinct. Neither STAR
   nor IRV is FBC-compliant; RCV-IRV fails it structurally (center squeeze), STAR
-  only in rare constructions. See `01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md`.
+  only in rare constructions. See `01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md`.
 - Spelling: **Bucklin** (not "Buckling"). **Hare ≈ IRV** single-winner, **STV**
   multi-winner. Borda & Bucklin are ranked but **not** Condorcet.
 
@@ -174,12 +174,23 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   drift). Don't tag every file. Example folders stay content-typed
   (`01_STAR/`…`05_Ranked_Robin/`, `method_comparisons/`, `06_Other/`).
 - **One door per voting method (reorganized 2026-07-29).** A method's concept
-  pages live **inside that method's folder**, under `concepts/` —
-  `01_STAR/concepts/` (incl. `concepts/reporting/`), `03_STAR_PR/concepts/`,
-  `04_Approval/concepts/`, `05_Ranked_Robin/concepts/`,
+  pages live **inside that method's folder**, in its `01_Learn/` bucket —
+  `01_STAR/01_Learn/` (incl. `01_Learn/reporting/`), `03_STAR_PR/01_Learn/`,
+  `04_Approval/01_Learn/`, `05_Ranked_Robin/01_Learn/`. The two 06_Other
+  methods still use the older `concepts/` name:
   `06_Other/RCV_IRV/concepts/`, `06_Other/Range/concepts/`. The folder's
   `README.md` is that method's **start-here** (what it is → its concepts → its
-  runnable examples). They previously lived in a parallel `07_Concepts/<Method>/`
+  runnable examples).
+- **The method-folder spine (reorganized 2026-08-02).** Inside `01_STAR/`…
+  `05_Ranked_Robin/`, the second level is a fixed, ordered set of buckets —
+  `01_Learn/`, `02_Examples/`, `03_Criteria/`, `04_Real_Elections/`,
+  `05_Practice/`, `09_Parked/` — and each method takes only the ones it needs.
+  Adding a case set? Put it in the bucket that fits rather than creating a new
+  second-level sibling. **Capitalize the word after the number** (`02_Examples`,
+  not `02_examples`): MkDocs derives sidebar labels from folder names and
+  renders an all-lowercase name lowercase. **Difficulty stays out of the folder
+  names** — a case is often 101 for its basic idea and 301 for the deep dive, so
+  levels live in `07_Concepts/CURRICULUM.md` and per-set tables, never in a path. They previously lived in a parallel `07_Concepts/<Method>/`
   tree, which gave each method two competing front doors. **`07_Concepts/` is now
   cross-method only** (topics, paradoxes, scores_and_ranks, curriculum, glossary,
   engines, tips, books) — don't put method-specific pages back into it.
@@ -189,6 +200,25 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   `git mv`, and add a `redirect_maps` entry per moved page. Those redirects are
   **permanent**: published URLs are quoted in BetterVoting election descriptions
   that can never be edited, so a deleted redirect is an unfixable 404.
+  **Three things that script will NOT do for you** — each one fails silently,
+  and all three bit the 2026-08-02 reorganization:
+  1. **Repoint existing redirect DESTINATIONS.** You must pass `--exclude
+     mkdocs.yml` (its redirect *keys* are historical URLs and must never move),
+     but that also leaves every *value* pointing into the folder you just moved.
+     Those already-published URLs then 404 — the exact outcome the redirects
+     exist to prevent. Freeze the keys, repoint the values by hand, and assert
+     every destination exists on disk afterward.
+  2. **Fix segment-wise paths in Python.** `REPO_ROOT / "01_STAR" / "_main"`
+     contains no literal `01_STAR/_main`, so the literal pass cannot see it, and
+     a glob over the now-missing directory yields **nothing without erroring** —
+     parameterized cases just vanish. `tests/test_case_roots_exist.py` now fails
+     the suite when a test module names a path that doesn't resolve; keep it.
+  3. **Touch `.claude/`.** It is in the script's `SKIP_DIRS`, so paths inside
+     the repo's own skill files survive every rename. Grep it by hand.
+  And re-read the *prose* afterward: the literal pass cannot tell a live path
+  from a sentence about the old path, and a link whose visible label is a
+  backticked folder name keeps saying the old name after its target is
+  repointed — the label is text, not a path.
 - **Where text lives:** per-file context in the YAML (`scenario_description`
   printable, `video_script` = notes, never shown on screen); cross-file teaching in
   Markdown. No hand-authored `.md` per YAML (the generated pages are the exception —
@@ -216,7 +246,7 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — use sparingly.**
   They replace the *built* page at a URL while leaving the `.md` on disk intact, so
   GitHub still renders the source but **the site never shows it**. Live case:
-  `05_Ranked_Robin/README.md` → `05_Ranked_Robin/concepts/ranked_robin.md`, because
+  `05_Ranked_Robin/README.md` → `05_Ranked_Robin/01_Learn/ranked_robin.md`, because
   the case folder is a top-level nav section and is where visitors land wanting "Ranked
   Robin," but the page that *teaches* the method is the concept page. Whenever you add a
   redirect, **move or mirror whatever the source said onto the destination** (here the
@@ -431,8 +461,8 @@ reproduce loop is in the **`bettervoting` skill**.
   so a case whose **winner** turns on it is still **LH-only** (only LH's published
   lot lets a reader derive the result from the file). Publishing such a case on BV is
   fine when the *recording mechanism* is the subject and the page says to ignore who
-  won. Worked: `05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md`,
-  `05_Ranked_Robin/rr_tiebreaks/bv2261_…md` / `bv2262_…md`.
+  won. Worked: `05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md`,
+  `05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_…md` / `bv2262_…md`.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

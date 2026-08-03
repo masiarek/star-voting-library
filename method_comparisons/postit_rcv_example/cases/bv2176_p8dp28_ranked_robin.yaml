@@ -8,7 +8,7 @@ scenario_description: |-
   Pink beats Purple 12-8) — so no candidate beats all others, and Green and
   Blue tie on record at 2-1 (Copeland 2). This is the documented spot where
   the two engines' tiebreak ladders part ways
-  (05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md), and BOTH stay
+  (05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md), and BOTH stay
   deterministic here: BetterVoting's ladder (exactly 2 tied -> their own
   head-to-head) elects GREEN, who beats Blue 7-4 — BV-confirmed, freezable;
   the LH ladder below (total margin, then lot) elects BLUE (+5 vs Green's +4).

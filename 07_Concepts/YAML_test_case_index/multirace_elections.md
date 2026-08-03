@@ -6,7 +6,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2130 — Presidential Board Election
 
-**Election** [`bvhchj`](https://bettervoting.com/bvhchj/results) · **2 races** · **102 ballots** · [frozen export](../../03_STAR_PR/_main/cases/bv2130_presidential_board_star_pr_bv_export.json)
+**Election** [`bvhchj`](https://bettervoting.com/bvhchj/results) · **2 races** · **102 ballots** · [frozen export](../../03_STAR_PR/02_Examples/cases/bv2130_presidential_board_star_pr_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -404,7 +404,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2188 — Two Districts, One Mayor (I of III) — West District: STAR elects Avery
 
-**Election** [`d3b9wc`](https://bettervoting.com/d3b9wc/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex01_district_west_bv_export.json)
+**Election** [`d3b9wc`](https://bettervoting.com/d3b9wc/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex01_district_west_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -413,7 +413,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again
 
-**Election** [`rhbfj7`](https://bettervoting.com/rhbfj7/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex01_district_east_bv_export.json)
+**Election** [`rhbfj7`](https://bettervoting.com/rhbfj7/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex01_district_east_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -422,7 +422,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts
 
-**Election** [`923q3d`](https://bettervoting.com/923q3d/results) · **2 races** · **18 ballots** · [frozen export](../../01_STAR/exercises/cases/ex01_district_combined_bv_export.json)
+**Election** [`923q3d`](https://bettervoting.com/923q3d/results) · **2 races** · **18 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex01_district_combined_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -431,7 +431,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2191 — One Electorate, Five Verdicts — the snack vote counted five ways
 
-**Election** [`ywqhq4`](https://bettervoting.com/ywqhq4/results) · **5 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex03_five_verdicts_bv_export.json)
+**Election** [`ywqhq4`](https://bettervoting.com/ywqhq4/results) · **5 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex03_five_verdicts_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -443,7 +443,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2192 — The Squeezed Bridge-Builder — everyone's second choice, IRV's first elimination
 
-**Election** [`6bry7c`](https://bettervoting.com/6bry7c/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex05_center_squeeze_bv_export.json)
+**Election** [`6bry7c`](https://bettervoting.com/6bry7c/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex05_center_squeeze_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -453,7 +453,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise
 
-**Election** [`x4dkfd`](https://bettervoting.com/x4dkfd/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex06_bullet_honest_bv_export.json)
+**Election** [`x4dkfd`](https://bettervoting.com/x4dkfd/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex06_bullet_honest_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -463,7 +463,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare
 
-**Election** [`7f4f7q`](https://bettervoting.com/7f4f7q/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex06_bullet_backfire_bv_export.json)
+**Election** [`7f4f7q`](https://bettervoting.com/7f4f7q/results) · **3 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex06_bullet_backfire_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -473,7 +473,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2195 — Later-No-Harm (1 of 2) — the reticent ballots protect Amir
 
-**Election** [`g6q42v`](https://bettervoting.com/g6q42v/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex10_reticent_bv_export.json)
+**Election** [`g6q42v`](https://bettervoting.com/g6q42v/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex10_reticent_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -482,7 +482,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess
 
-**Election** [`yyhj9x`](https://bettervoting.com/yyhj9x/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex10_generous_bv_export.json)
+**Election** [`yyhj9x`](https://bettervoting.com/yyhj9x/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex10_generous_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -491,7 +491,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race
 
-**Election** [`ggg7hd`](https://bettervoting.com/ggg7hd/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex11_two_way_base_bv_export.json)
+**Election** [`ggg7hd`](https://bettervoting.com/ggg7hd/results) · **2 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex11_two_way_base_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -500,7 +500,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it
 
-**Election** [`93gjx6`](https://bettervoting.com/93gjx6/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex11_spoiler_added_bv_export.json)
+**Election** [`93gjx6`](https://bettervoting.com/93gjx6/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex11_spoiler_added_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -511,7 +511,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2199 — Two Seats, One Neighborhood — Bloc STAR sweeps, Allocated Score shares
 
-**Election** [`89wwvr`](https://bettervoting.com/89wwvr/results) · **2 races** · **10 ballots** · [frozen export](../../01_STAR/exercises/cases/ex12_bloc_vs_proportional_bv_export.json)
+**Election** [`89wwvr`](https://bettervoting.com/89wwvr/results) · **2 races** · **10 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex12_bloc_vs_proportional_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -520,7 +520,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2200 — Where Do You Draw the Line? — one electorate, three approval thresholds
 
-**Election** [`qdtqf2`](https://bettervoting.com/qdtqf2/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/exercises/cases/ex13_draw_the_line_bv_export.json)
+**Election** [`qdtqf2`](https://bettervoting.com/qdtqf2/results) · **4 races** · **9 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex13_draw_the_line_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -706,7 +706,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2258 — Read the ballot, name the method: 35 voters say only Yes or No
 
-**Election** [`d4v2dh`](https://bettervoting.com/d4v2dh/results) · **2 races** · **35 ballots** · [frozen export](../../01_STAR/exercises/cases/ex15_approval_yes_no_bv_export.json)
+**Election** [`d4v2dh`](https://bettervoting.com/d4v2dh/results) · **2 races** · **35 ballots** · [frozen export](../../01_STAR/05_Practice/cases/ex15_approval_yes_no_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -715,7 +715,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV2261 — A three-way Ranked Robin tie: the random tiebreak is recorded, not lost
 
-**Election** [`y2fbpc`](https://bettervoting.com/y2fbpc/results) · **2 races** · **6 ballots** · [frozen export](../../05_Ranked_Robin/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_bv_export.json)
+**Election** [`y2fbpc`](https://bettervoting.com/y2fbpc/results) · **2 races** · **6 ballots** · [frozen export](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -724,7 +724,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
-**Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
+**Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|
@@ -733,7 +733,7 @@ Elections with **more than one race** (several contests / methods on one ballot)
 
 ## — — 2026 California Governor Election
 
-**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/runoff_reversal_bv_cases/cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
+**Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)
 
 | Race | Method | Candidates | Winner |
 |------|--------|:----------:|--------|

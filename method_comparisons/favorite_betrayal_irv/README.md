@@ -6,7 +6,7 @@
 - **Honest ballots** (STAR + RCV-IRV + Ranked Robin, same voters): [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`, BV2227)
 - **The betrayal** (RCV-IRV, 2 voters rank the compromise first): [vote](https://bettervoting.com/bgcmxx) · **[results ↗](https://bettervoting.com/bgcmxx/results)** (election `bgcmxx`, BV2228)
 
-→ The deep-dive concept page: [Favorite Betrayal — the full explainer](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md). Related: [center squeeze](../center_squeeze/) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [what makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md).
+→ The deep-dive concept page: [Favorite Betrayal — the full explainer](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md). Related: [center squeeze](../center_squeeze/) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [what makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md).
 
 ---
 
@@ -77,8 +77,8 @@ Automatic Runoff Round
 
 - **The incentive is real**, not a debating trick: under RCV-IRV, sincerely ranking a viable favorite first can elect your worst outcome, and betraying them can prevent it.
 - **A common wrong rebuttal:** *"if your favorite gets eliminated round 1, ranking them second changes nothing."* True but beside the point — the betrayal bites precisely when your favorite is **strong enough to squeeze the center**, not when they're hopeless.
-- **STAR and Ranked Robin don't have this hole.** They elect the Condorcet-winning compromise from honest ballots, so honesty is safe. That's the pitch — and the reason [Later-No-Harm ≠ Favorite Betrayal](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) is worth keeping straight.
-- **Fair note:** STAR has its *own* rare strategic seams (min/maxing), conceded in [strategic voting](../../07_Concepts/topics/strategic_voting.md) and [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md). The claim isn't "STAR is strategy-proof" — it's "STAR doesn't punish plain honesty the way IRV can here."
+- **STAR and Ranked Robin don't have this hole.** They elect the Condorcet-winning compromise from honest ballots, so honesty is safe. That's the pitch — and the reason [Later-No-Harm ≠ Favorite Betrayal](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) is worth keeping straight.
+- **Fair note:** STAR has its *own* rare strategic seams (min/maxing), conceded in [strategic voting](../../07_Concepts/topics/strategic_voting.md) and [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md). The claim isn't "STAR is strategy-proof" — it's "STAR doesn't punish plain honesty the way IRV can here."
 
 ## Reproduce it
 

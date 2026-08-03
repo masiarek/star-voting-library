@@ -2,7 +2,7 @@
 
 *A **spoiler** is a candidate who can't win but still changes who does — by splitting another candidate's support. It's the single most-felt flaw of choose-one voting, the reason "don't waste your vote on a third party" is common advice, and the problem every reform on this site is partly trying to fix.*
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md) · where it sits among the other ways a vote loses its power: [the problem, in four causes](the_problem_in_four_causes.md)
+→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md) · where it sits among the other ways a vote loses its power: [the problem, in four causes](the_problem_in_four_causes.md)
 
 ---
 
@@ -14,7 +14,7 @@ Nothing about the electorate's actual preferences changed — only the ballot's 
 
 ## The root cause: one mark
 
-The spoiler comes from **vote splitting** — similar candidates sharing one pool of supporters who are each allowed only one mark. Fix the ballot so a voter can back several candidates at once, or express *degree* of support, and the forced split goes away. This is the same root the [equally-weighted-vote](../../01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) argument starts from.
+The spoiler comes from **vote splitting** — similar candidates sharing one pool of supporters who are each allowed only one mark. Fix the ballot so a voter can back several candidates at once, or express *degree* of support, and the forced split goes away. This is the same root the [equally-weighted-vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) argument starts from.
 
 ## How each method handles it
 
@@ -22,9 +22,9 @@ The spoiler comes from **vote splitting** — similar candidates sharing one poo
 |---|---|
 | **[Choose-One / Plurality](plurality.md)** | Full spoiler effect — the classic case above. |
 | **[RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** | Reduces the *classic* spoiler: a trailing similar candidate is eliminated and their ballots transfer, instead of splitting the vote outright. But elimination on first-choices creates its **own** failure — [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — and can still spoil in some configurations. |
-| **[Ranked Robin / RCV-RR](../../05_Ranked_Robin/concepts/ranked_robin.md)** | Reads the whole ballot and elects the head-to-head (Condorcet) winner — no elimination rounds, so no vote splitting or center squeeze. Only a rare **Condorcet cycle** can produce a spoiler. |
-| **[Approval](../../04_Approval/concepts/approval_voting.md)** | Approve *both* similar candidates — they no longer split, since a supporter can back all of them. |
-| **[Score / Range](../../06_Other/Range/concepts/range_voting.md), [STAR](../../01_STAR/concepts/STAR_start_here.md)** | Score each candidate independently, so running an ally doesn't bleed your support. STAR adds a majoritarian runoff on top. |
+| **[Ranked Robin / RCV-RR](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** | Reads the whole ballot and elects the head-to-head (Condorcet) winner — no elimination rounds, so no vote splitting or center squeeze. Only a rare **Condorcet cycle** can produce a spoiler. |
+| **[Approval](../../04_Approval/01_Learn/approval_voting.md)** | Approve *both* similar candidates — they no longer split, since a supporter can back all of them. |
+| **[Score / Range](../../06_Other/Range/concepts/range_voting.md), [STAR](../../01_STAR/01_Learn/STAR_start_here.md)** | Score each candidate independently, so running an ally doesn't bleed your support. STAR adds a majoritarian runoff on top. |
 
 ## How often is the setup there?
 
@@ -41,7 +41,7 @@ These get conflated, but they're different failures:
 
 ## Does STAR fully escape it?
 
-Almost. STAR removes the *forced* split, but a **narrow, self-inflicted residual** survives in the top-two runoff — a faction can still split itself if it refuses to use the score ballot honestly. That edge case (and why it's minor) is [STAR's residual vote-splitting](../../01_STAR/concepts/properties_and_limits/residual_vote_splitting.md).
+Almost. STAR removes the *forced* split, but a **narrow, self-inflicted residual** survives in the top-two runoff — a faction can still split itself if it refuses to use the score ballot honestly. That edge case (and why it's minor) is [STAR's residual vote-splitting](../../01_STAR/01_Learn/properties_and_limits/residual_vote_splitting.md).
 
 ## How social choice theory frames it
 
@@ -53,10 +53,10 @@ Susceptibility depends heavily on the method (Wikipedia's summary):
 |---|:--:|
 | [Plurality](plurality.md) | **High** |
 | Runoffs / [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) | **Medium** |
-| Condorcet methods ([Ranked Robin / RCV-RR](../../05_Ranked_Robin/concepts/ranked_robin.md), Schulze, Ranked Pairs) | **Low** (only in a cyclic tie) |
-| Score / median ([Approval](../../04_Approval/concepts/approval_voting.md), [Score](../../06_Other/Range/concepts/range_voting.md), [STAR](../../01_STAR/concepts/STAR_start_here.md)) | **None** (on an absolute scale) |
+| Condorcet methods ([Ranked Robin / RCV-RR](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Schulze, Ranked Pairs) | **Low** (only in a cyclic tie) |
+| Score / median ([Approval](../../04_Approval/01_Learn/approval_voting.md), [Score](../../06_Other/Range/concepts/range_voting.md), [STAR](../../01_STAR/01_Learn/STAR_start_here.md)) | **None** (on an absolute scale) |
 
-Two theorems sit under this. **Arrow's impossibility theorem** shows no *ranked* method can fully escape spoilers; **rated** methods aren't subject to Arrow, so they *can* be spoilerproof — with one caveat: only if voters score on an **absolute** scale. If voters rescale their scores around who's running (a *relative* scale), a spoiler can reappear — which is exactly STAR's [narrow residual](../../01_STAR/concepts/properties_and_limits/residual_vote_splitting.md).
+Two theorems sit under this. **Arrow's impossibility theorem** shows no *ranked* method can fully escape spoilers; **rated** methods aren't subject to Arrow, so they *can* be spoilerproof — with one caveat: only if voters score on an **absolute** scale. If voters rescale their scores around who's running (a *relative* scale), a spoiler can reappear — which is exactly STAR's [narrow residual](../../01_STAR/01_Learn/properties_and_limits/residual_vote_splitting.md).
 
 Methods that fail IIA can be gamed by **strategic nomination**. The Borda count has a severe *entry* incentive — a faction can "clone their way to victory" by running many candidates, which made Borda himself concede "my system is meant only for honest men." Plurality has the opposite, an *exit* incentive: similar candidates get pressured to drop out or merge so they don't split the vote. (Theory suggests **90–99% of real elections have a Condorcet winner**, so cyclic-tie spoilers are rare; the first Condorcet cycle found in a ranked US election was in 2021.)
 
@@ -75,7 +75,7 @@ The most prominent recent example is **[Alaska's 2022 U.S. House special electio
 - [The split-voting set](../../method_comparisons/split_voting) — the spoiler progression from plurality through each reform, on the same ballots.
 - [Star Wars vote split](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) — a compact worked example (Skywalker & Leia split the Rebel vote).
 - [Plurality vs. majority](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) — where the minority winner comes from.
-- Debate framing: [what's so good about STAR — Segment 1](../../01_STAR/concepts/reference/whats_so_good_about_STAR_Voting.md)
+- Debate framing: [what's so good about STAR — Segment 1](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md)
 
 Sources: [Spoiler effect — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect), [Spoiler effect rhetoric — Wikipedia](https://en.wikipedia.org/wiki/Spoiler_effect_rhetoric), [Independence of irrelevant alternatives — Wikipedia](https://en.wikipedia.org/wiki/Independence_of_irrelevant_alternatives), [2009 Burlington mayoral election — Wikipedia](https://en.wikipedia.org/wiki/2009_Burlington_mayoral_election)
 

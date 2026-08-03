@@ -2,7 +2,7 @@
 
 *Yes — and the reason is worth understanding, because it is a genuine structural advantage of score methods over elimination methods. But STAR has one wrinkle that nobody mentions: **the scoring round is the easy case; the automatic runoff is not.** This page explains why, and how the wrinkle is resolved.*
 
-**Level: 301 → 401.** Companion: [summability](summability/) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
+**Level: 301 → 401.** Companion: [summability](summability/) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
 ---
 
@@ -51,7 +51,7 @@ Trivial sizes for an organizational election.
 
 **The real work** is proving the matrix is **consistent with the scores** — otherwise a malicious client submits scores saying one thing and comparisons saying another. That's another disjunctive proof, over the possible score pairs. This is the genuine engineering task, and it is tractable.
 
-**The bonus:** those indicators *are* the full [pairwise preference matrix](pairwise_counting.md). So a verifiable STAR election gets the **Condorcet check** — and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) itself — for free, on the same encrypted data.
+**The bonus:** those indicators *are* the full [pairwise preference matrix](pairwise_counting.md). So a verifiable STAR election gets the **Condorcet check** — and [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) itself — for free, on the same encrypted data.
 
 ## Why this is an argument for STAR
 
@@ -78,5 +78,5 @@ Read these before repeating any of the above as a selling point:
 
 - [Summability](summability/) — the property this whole page rests on
 - [Pairwise counting & the preference matrix](pairwise_counting.md) — what the indicator matrix *is*
-- [STAR's honest limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) — ballot verifiability, and the cast-or-challenge mitigation
+- [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) — ballot verifiability, and the cast-or-challenge mitigation
 - [What makes a voting method good?](what_makes_a_voting_method_good.md) — where auditability sits among the criteria

@@ -46,8 +46,8 @@ TEACHING_ROOTS = [
 # Folders whose single-winner STAR files test_single_winner_positive.py already
 # runs (keep in sync with SINGLE_WINNER_DIRS there).
 STAR_COVERED = {
-    REPO_ROOT / "01_STAR" / "_main",
-    REPO_ROOT / "01_STAR" / "runoff_overturns_leader",
+    REPO_ROOT / "01_STAR" / "02_Examples",
+    REPO_ROOT / "01_STAR" / "02_Examples" / "runoff_overturns_leader",
     REPO_ROOT / "method_comparisons" / "summability_demo",
     REPO_ROOT / "method_comparisons" / "BV_Library",
     REPO_ROOT / "method_comparisons" / "split_voting" / "_main",

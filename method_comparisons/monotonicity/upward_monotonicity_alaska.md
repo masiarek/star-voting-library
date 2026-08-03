@@ -13,7 +13,7 @@ Non-monotonicity comes in a matched pair (Graham-Squire & McCune, [arXiv:2301.12
 - **Upward monotonicity paradox** ("more is less"): shift the **winner up** the rankings on some ballots — keeping every other candidate's relative order the same — and the winner *loses*. Giving a candidate **more** support defeats them. **← this page.**
 - **Downward monotonicity paradox** ("less is more"): shift a **loser down** on some ballots and that loser *wins*. Giving a candidate **less** support elects them. → [San Francisco D7 2020](downward_monotonicity_sf.md).
 
-Both are failures of the **monotonicity criterion**: raising a candidate should never hurt them, and lowering one should never help them. (Note: monotonicity is **not** the same as [Later-No-Harm](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) — a common conflation.)
+Both are failures of the **monotonicity criterion**: raising a candidate should never hurt them, and lowering one should never help them. (Note: monotonicity is **not** the same as [Later-No-Harm](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) — a common conflation.)
 
 ## The real example: Alaska 2022
 
@@ -54,13 +54,13 @@ The winner's fate under IRV depends on *who gets eliminated first*, and that dep
 Both methods are **monotonic** in this sense — raising a candidate on some ballots can never cost them the election — so **neither has an upward monotonicity paradox.**
 
 - **Ranked Robin** (Condorcet / Copeland) reads the *whole* pairwise picture, not just who's eliminated first, so the shift doesn't move it at all. On the **same** ballots it elects **Begich both times** — before *and* after — because Begich is the [Condorcet winner](../../07_Concepts/topics/condorcet/) who beats each rival head-to-head (Begich > Peltola, Begich > Palin). It's completely unmoved by the raise. (Same ballot as RCV-IRV, a monotonic count — the olive branch to ranked-choice voters.)
-- **STAR** passes **mono-raise**: raising your score for a candidate can only ever help them reach and win the runoff. (See the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md) and [STAR & monotonicity](../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md).)
+- **STAR** passes **mono-raise**: raising your score for a candidate can only ever help them reach and win the runoff. (See the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md) and [STAR & monotonicity](../../01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md).)
 
 ## Keep it in proportion — the fair reading
 
 - **This is a real, documented failure**, not a hypothetical — Alaska 2022 is one of the clearest real-world monotonicity failures on record, which is exactly why it's worth teaching.
 - **But it is rare.** Monotonicity failures need a near-three-way race with a specific transfer structure; most IRV elections never trigger one. Don't oversell frequency — sell the *structural* point: IRV's winner can depend on elimination order, and elimination order can move the wrong way.
-- **It is IRV-specific, not "ranked voting" writ large.** The same ranked ballots counted by [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) are monotonic. Saying "ranked voting is non-monotonic" is imprecise; it's *instant-runoff* that is.
+- **It is IRV-specific, not "ranked voting" writ large.** The same ranked ballots counted by [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) are monotonic. Saying "ranked voting is non-monotonic" is imprecise; it's *instant-runoff* that is.
 - **STAR is not perfectly immune to every monotonicity variant.** It passes mono-raise (no upward paradox), but fails the stronger **mono-raise-delete** in lab constructions — conceded and shown in the [worked set](README.md#the-301-nuance-star-fails-a-stronger-variant). Honesty is naming both.
 
 The takeaway isn't "IRV is bad." It's that **a voter should be able to rank their favourite honestly without the ranking backfiring** — and STAR and Ranked Robin deliver that guarantee where instant-runoff can't.

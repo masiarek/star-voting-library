@@ -1,10 +1,10 @@
 # Condorcet's 1788 rebuttal to Borda — where the Condorcet criterion comes from
 
-*Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../07_Concepts/topics/condorcet/), and it is also the cleanest demonstration of what [STAR](../../01_STAR/concepts/README.md)'s second round is **for**.*
+*Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../07_Concepts/topics/condorcet/), and it is also the cleanest demonstration of what [STAR](../../01_STAR/01_Learn/README.md)'s second round is **for**.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`, Test ID **BV2250** — three races on the same 11 ballots: STAR, Ranked Robin, RCV-IRV).
 
-→ Related: [Borda count](../../06_Other/other_ranked_methods/borda.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
+→ Related: [Borda count](../../06_Other/other_ranked_methods/borda.md) · [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) · [the dark horse](../dark_horse_borda/README.md) (Borda's *strategic* pathology, as opposed to this *sincere* one)
 
 ---
 
@@ -45,10 +45,10 @@ Peter is the **Condorcet winner** — and neither of the two methods on trial el
 |---|---|---|
 | [Choose-One (Plurality)](../../07_Concepts/topics/plurality.md) | Paul | ✗ |
 | [**Borda**](../../06_Other/other_ranked_methods/borda.md) | **Paul** | **✗ — Condorcet's target** |
-| [Approval](../../04_Approval/concepts/README.md) | Paul | ✗ |
+| [Approval](../../04_Approval/01_Learn/README.md) | Paul | ✗ |
 | [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) | Peter | ✓ |
-| [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) | Peter | ✓ |
-| [STAR](../../01_STAR/concepts/README.md) | Peter | ✓ |
+| [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) | Peter | ✓ |
+| [STAR](../../01_STAR/01_Learn/README.md) | Peter | ✓ |
 
 **Keep it fair — this is not an IRV failure case.** RCV-IRV gets it right: James is eliminated with 2 first choices, both his ballots transfer to Peter, and Peter wins 6–5 ([`condorcet_1788_irv.md`](cases/cases_pages/condorcet_1788_irv.md)). The methods that miss the Condorcet winner in this particular election are plurality, Borda and approval. (IRV's own Condorcet failures need a [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md), which this profile doesn't contain.) The IRV race is on the live BetterVoting election deliberately, so nobody can accuse the demo of hiding it.
 
@@ -88,7 +88,7 @@ Automatic Runoff Round
   Approval               = Paul   (differs from STAR)
 ```
 
-**STAR is Borda's scoring step followed by Condorcet's check** — and on Condorcet's own counterexample to Borda, it returns Condorcet's answer. That two-step shape is STAR's [hybrid nature](../../01_STAR/concepts/the_count/STAR_hybrid_nature.md) in one election: the reversal is not a malfunction, it is a 238-year-old objection being answered on screen by the [automatic runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md).
+**STAR is Borda's scoring step followed by Condorcet's check** — and on Condorcet's own counterexample to Borda, it returns Condorcet's answer. That two-step shape is STAR's [hybrid nature](../../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md) in one election: the reversal is not a malfunction, it is a 238-year-old objection being answered on screen by the [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md).
 
 Want the whole count? See the full LH reports → [`condorcet_1788_star.md`](cases/cases_pages/condorcet_1788_star.md) · [`condorcet_1788_ranked_robin.md`](cases/cases_pages/condorcet_1788_ranked_robin.md).
 

@@ -6,8 +6,8 @@ list every one of them. Adding a case is two steps — drop the YAML in, regener
 the mirrors — and the third step (add the row) is the one that gets forgotten; the
 new case then exists, tabulates, and is reachable only from a sibling case page's
 "More cases in this set" footer, while the folder's own front door says it isn't
-there. That happened to 05_Ranked_Robin/_main (rr_blank_is_last_c4_b3), to
-03_STAR_PR/_main (bv2130_bvhchj_party_plurality) and, earlier, to 01_STAR/_main
+there. That happened to 05_Ranked_Robin/02_Examples (rr_blank_is_last_c4_b3), to
+03_STAR_PR/02_Examples (bv2130_bvhchj_party_plurality) and, earlier, to 01_STAR/02_Examples
 (bv2184_fyy886_lunch_vote).
 
 The scan lives in tools_adam/scripts/check_repo_hygiene.py (`check_pages_indexed`)

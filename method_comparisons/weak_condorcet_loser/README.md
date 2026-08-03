@@ -97,7 +97,7 @@ Automatic Runoff Round: First tiebreaker
 
 Two things had to go wrong together, and both are visible above.
 
-**The Condorcet winner was eliminated in the scoring round.** Ada's 5/5/5/0/0 profile totals 15 — less than either moderate. That part is ordinary STAR behavior and has its own page ([three notions of "winner"](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md)).
+**The Condorcet winner was eliminated in the scoring round.** Ada's 5/5/5/0/0 profile totals 15 — less than either moderate. That part is ordinary STAR behavior and has its own page ([three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)).
 
 **Then the runoff tied.** One voter scored Ben and Cora both 4 — [Equal Support](../../07_Concepts/GLOSSARY.md) — leaving 2 vs 2 among the voters with a preference. STAR's first tiebreaker is the higher score, and Ben takes it.
 
@@ -127,7 +127,7 @@ Ada is the first choice of three of five voters — an outright majority — so 
 
 The case is live as **BV2249** (`c73pfw`), and BetterVoting's independent tabulator agrees with the LH engine on **all three races** — winners, scores, and Copeland records. Two details in BV's own export are worth pulling out, because they corroborate this page rather than merely matching it:
 
-**BV records *which rung* broke the tie.** The STAR race's result carries `tieBreakType: "score"` — exactly the LH ladder's *Runoff 1* rung (higher total score). That matters for reproducibility: LH and BetterVoting [differ at only two rungs](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md#lh-vs-bettervoting-where-the-two-star-ladders-differ), the 3-way scoring tie and the terminal floor, where BV shuffles **randomly** and a result can't be frozen. This election resolves well above that floor, so its winner is a function of the ballots in both engines — unlike a case that ties all the way down, which has to stay LH-only.
+**BV records *which rung* broke the tie.** The STAR race's result carries `tieBreakType: "score"` — exactly the LH ladder's *Runoff 1* rung (higher total score). That matters for reproducibility: LH and BetterVoting [differ at only two rungs](../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md#lh-vs-bettervoting-where-the-two-star-ladders-differ), the 3-way scoring tie and the terminal floor, where BV shuffles **randomly** and a result can't be frozen. This election resolves well above that floor, so its winner is a function of the ballots in both engines — unlike a case that ties all the way down, which has to stay LH-only.
 
 **BV's own data says Ben beats nobody.** Each candidate in the export carries a `winsAgainst` map. In the STAR race, Ben's and Cora's are all `false` while Ada's are `true, true` — BetterVoting is independently publishing the weak-Condorcet-loser fact this page is built on. The Ranked Robin race prints it as Copeland scores: Ada **2**, Ben **0.5**, Cora **0.5** — the halves being ties, not wins.
 
@@ -144,8 +144,8 @@ The case is live as **BV2249** (`c73pfw`), and BetterVoting's independent tabula
 ## See also
 
 - [The Condorcet loser paradox](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) — the strict version, worked on 7 voters
-- [Three notions of "winner"](../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) — why the Condorcet winner can miss STAR's runoff
+- [Three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md) — why the Condorcet winner can miss STAR's runoff
 - [The Smith set](../../07_Concepts/topics/smith_set.md) — the generalized Condorcet winner; a Condorcet loser is never in it
-- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — ties and cycles are different things
-- [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) · [STAR's criteria failures](../../01_STAR/concepts/properties_and_limits/star_criteria_failures.md)
+- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — ties and cycles are different things
+- [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) · [STAR's criteria failures](../../01_STAR/01_Learn/properties_and_limits/star_criteria_failures.md)
 - [Reading these fairly](../paradoxes_and_whoops/reading_these_fairly.md)

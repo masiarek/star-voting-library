@@ -29,9 +29,9 @@ Felsenthal splits paradoxes into two families, and the split is worth learning b
 
 | Paradox | Also known as | Kind | Repo home |
 |---|---|---|---|
-| Condorcet's paradox (cycle) | Cyclical majorities | Simple | [BV2157 (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) |
-| Clone dependence / teaming | Cloning paradox | Conditional | [Ranked Robin & clone independence](../../05_Ranked_Robin/concepts/rr_clone_independence.md) |
-| Favorite betrayal | — | Conditional | [Favorite betrayal](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) |
+| Condorcet's paradox (cycle) | Cyclical majorities | Simple | [BV2157 (rock-paper-scissors)](../../method_comparisons/paradoxes_and_whoops/bv2157_mmcmpy_condorcet_cycle_rps.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) |
+| Clone dependence / teaming | Cloning paradox | Conditional | [Ranked Robin & clone independence](../../05_Ranked_Robin/01_Learn/rr_clone_independence.md) |
+| Favorite betrayal | — | Conditional | [Favorite betrayal](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) |
 | Absolute Majority paradox | Majority criterion failure | Simple | [BV2153 Felsenthal Ex.7](../../method_comparisons/felsenthal_paradoxes/bv2153_pcttmr_felsenthal_ex7_absolute_majority.md) |
 | Pareto-dominated winner | Pareto violation | Simple | [Felsenthal Ex.6 (LH-only)](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
 

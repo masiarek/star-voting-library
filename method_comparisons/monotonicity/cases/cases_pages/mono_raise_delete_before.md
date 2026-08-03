@@ -7,7 +7,7 @@ search:
 
 *Generated from [`mono_raise_delete_before.yaml`](../mono_raise_delete_before.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** X
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** X
 
 ## Scenario
 
@@ -26,7 +26,7 @@ That pure "raise X and bury the losers below X" move drops Y from 84 to 66,
 below Z's 72, so the finalists become X and Z instead of X and Y. X still leads
 the scoring, but now faces Z in the runoff and loses. Raising X made X lose:
 STAR fails mono-raise-delete. The soft spot is finalist selection, not X's own
-score. See 01_STAR/concepts/properties_and_limits/STAR_monotonicity.md.
+score. See 01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md.
 
 ## Ballots
 
@@ -129,7 +129,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Methods disagree on this election](../../../divergence_review/cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md) — its entry in the divergence review ledger
 - [Monotonicity (topic hub)](../../../../07_Concepts/topics/monotonicity/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [alaska_upward_after](alaska_upward_after.md) · [alaska_upward_before](alaska_upward_before.md) · [mono_raise_delete_after](mono_raise_delete_after.md) · [monotonicity_irv_after](monotonicity_irv_after.md) · [monotonicity_irv_before](monotonicity_irv_before.md) · [monotonicity_star_after](monotonicity_star_after.md) · [monotonicity_star_before](monotonicity_star_before.md) · [sf_d7_downward_after](sf_d7_downward_after.md) · [sf_d7_downward_before](sf_d7_downward_before.md)

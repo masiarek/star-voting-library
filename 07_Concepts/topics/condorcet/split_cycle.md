@@ -2,7 +2,7 @@
 
 *Wesley H. Holliday and Eric Pacuit propose a new Condorcet method in ["Split Cycle: A New Condorcet-Consistent Voting Method Independent of Clones and Immune to Spoilers"](https://arxiv.org/abs/2004.02350) (arXiv:2004.02350; **Public Choice** 197, 1–62, 2023). The claim is specific and checkable: among clone-independent methods, **only** Split Cycle also satisfies a criterion they define called* immunity to spoilers, *plus positive and negative involvement. So we ran it — and built an election where the older, better-known Schulze method gets spoiled by a candidate that* not one voter *ranks above the winner.*
 
-**Level 301.** Prerequisite: [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md) (why Minimax, Ranked Pairs and Schulze exist at all). Where this sits in the family: [the Condorcet reading list](condorcet_reading_list.md) puts it in **Fishburn's C2 tier** — rules that read the pairwise *margins*, not just who-beat-whom.
+**Level 301.** Prerequisite: [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) (why Minimax, Ranked Pairs and Schulze exist at all). Where this sits in the family: [the Condorcet reading list](condorcet_reading_list.md) puts it in **Fishburn's C2 tier** — rules that read the pairwise *margins*, not just who-beat-whom.
 
 **Set expectations first.** Split Cycle has been adopted by no jurisdiction and is on no ballot measure. Neither STAR nor Ranked Robin is affected by anything on this page — neither is a C2 method. This page is here because the paper is **the clearest modern statement of what the older cycle rules actually do**, and because its central counterexample is the kind of claim this library exists to run rather than repeat.
 
@@ -19,7 +19,7 @@ Two consequences follow immediately, and both matter:
 1. **Split Cycle can return more than one winner.** If discarding leaves two candidates undefeated, it reports both. This is deliberate: the authors' position is that the ballots did not separate them, and a method that names one anyway is applying a convention, not reading the voters.
 2. **Its winner set contains Schulze's and Ranked Pairs'.** Split Cycle never contradicts them — it declines to narrow. Every disagreement between Split Cycle and those two is Split Cycle saying "you broke a tie I don't think the ballots break."
 
-Worked side by side against the other rules, on a 40-voter cycle where Schulze says Ana and Ranked Pairs says Bruno: [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md).
+Worked side by side against the other rules, on a 40-voter cycle where Schulze says Ana and Ranked Pairs says Bruno: [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md).
 
 ## The claim we checked: "immunity to spoilers"
 
@@ -70,21 +70,21 @@ The repo's [reading-these-fairly discipline](../../../method_comparisons/paradox
 1. **It needs a knotted election.** Five candidates, no Condorcet winner, and a Smith set containing *every* candidate. Cycles are rare to begin with; cycles this tangled are rarer. A criterion failure that requires this much structure is a real defect but not an everyday risk.
 2. **Ranked Pairs is not convicted here.** On this profile Ranked Pairs elects Cascade in both fields. The paper proves it fails the criterion too (Proposition 4.12), on a different profile we did not reproduce — so treat that as cited, not demonstrated.
 3. **The price is real.** Split Cycle avoids the spoiler by *returning two winners* in the full field. A public election needs one name, so a real deployment would bolt a tiebreak onto the back — and whatever that tiebreak is, it inherits the properties Split Cycle just refused to assume. "Immune to spoilers" is a property of the set, not of whatever picks from it.
-4. **Immunity to spoilers is not IIA.** The criterion says nothing about cases where the majority *prefers the newcomer*. This library's sharpest [STAR spoiler case](../../../01_STAR/iia_cycle_spoiler/README.md) — where deleting Ben flips STAR from Alice to Carla — is **not** a violation of it, because Ben beats Carla head-to-head. Split Cycle's criterion would not have flagged our own best example. That's a limit worth stating plainly, in both directions.
+4. **Immunity to spoilers is not IIA.** The criterion says nothing about cases where the majority *prefers the newcomer*. This library's sharpest [STAR spoiler case](../../../01_STAR/03_Criteria/iia_cycle_spoiler/README.md) — where deleting Ben flips STAR from Alice to Carla — is **not** a violation of it, because Ben beats Carla head-to-head. Split Cycle's criterion would not have flagged our own best example. That's a limit worth stating plainly, in both directions.
 
 ## Does any of this touch STAR or Ranked Robin?
 
 No, and it's worth being explicit about why, because "Condorcet method fails a criterion" arguments get recycled loosely:
 
-- **Ranked Robin** is Copeland — a **C1** method that reads only who-beat-whom, with a margins tiebreak. It is not Schulze and does not inherit Schulze's failure. Its own honest limits are [documented separately](../../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md).
-- **STAR** is not a Condorcet method at all ([why](../../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md)), so a criterion defined over pairwise margins in a cycle isn't the right lens. STAR's analogous weakness is a different one, tabulated at [the IIA cycle spoiler](../../../01_STAR/iia_cycle_spoiler/README.md).
+- **Ranked Robin** is Copeland — a **C1** method that reads only who-beat-whom, with a margins tiebreak. It is not Schulze and does not inherit Schulze's failure. Its own honest limits are [documented separately](../../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md).
+- **STAR** is not a Condorcet method at all ([why](../../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)), so a criterion defined over pairwise margins in a cycle isn't the right lens. STAR's analogous weakness is a different one, tabulated at [the IIA cycle spoiler](../../../01_STAR/03_Criteria/iia_cycle_spoiler/README.md).
 
 What the paper *does* offer this library is precision. It is the clearest available account of the difference between "the ballots chose" and "the rule chose," and that distinction — not Split Cycle the method — is the part worth teaching.
 
 ## Related
 
-- [Cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md) — Minimax / Ranked Pairs / Schulze / Split Cycle, with the disagreement case
+- [Cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — Minimax / Ranked Pairs / Schulze / Split Cycle, with the disagreement case
 - [Condorcet reading list](condorcet_reading_list.md) — where this paper sits, and the C1/C2/C3 taxonomy
-- [Topic: Condorcet efficiency](README.md) · [Smith set](../smith_set.md) · [clone independence](../../../05_Ranked_Robin/concepts/rr_clone_independence.md)
+- [Topic: Condorcet efficiency](README.md) · [Smith set](../smith_set.md) · [clone independence](../../../05_Ranked_Robin/01_Learn/rr_clone_independence.md)
 - The arguments *against* privileging the Condorcet winner: [Edelman, tabulated](edelman_condorcet_myth.md) · [ordered majority rule](ordered_majority_rule_irv.md)
 - [Cross-checking with pref_voting](../../tabulation_engines/cross_checking_with_pref_voting.md)

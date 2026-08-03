@@ -391,7 +391,7 @@ def main():
                     "factions). This is the one cut the method-family view below hides, "
                     "since Bloc STAR normalizes to STAR. Note multi-winner Ranked Robin is "
                     "**Bloc RR** and lands here as bloc, not Condorcet. → "
-                    "[bloc vs proportional, worked](../../01_STAR/exercises/ex12_bloc_vs_proportional.md)"))
+                    "[bloc vs proportional, worked](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md)"))
     M.append(_facet(races, "canon", "method (family)",
                     "Canonical method family — e.g. Bloc STAR and STAR both normalize to "
                     "STAR; allocated/sss/rrv to STAR_PR."))

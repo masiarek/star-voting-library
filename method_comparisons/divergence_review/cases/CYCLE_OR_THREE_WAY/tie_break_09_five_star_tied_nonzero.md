@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`01_STAR/tie_break_dead_rung/cases/tie_break_09_five_star_tied_nonzero.yaml`](../../../../01_STAR/tie_break_dead_rung/cases/tie_break_09_five_star_tied_nonzero.yaml)  ·  **STAR tabulated mirror:** [`tie_break_09_five_star_tied_nonzero_tabulated.txt`](../../../../01_STAR/tie_break_dead_rung/cases/cases_tabulated/tie_break_09_five_star_tied_nonzero_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_09_five_star_tied_nonzero.yaml`](../../../../01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_09_five_star_tied_nonzero.yaml)  ·  **STAR tabulated mirror:** [`tie_break_09_five_star_tied_nonzero_tabulated.txt`](../../../../01_STAR/03_Criteria/tie_break_dead_rung/cases/cases_tabulated/tie_break_09_five_star_tied_nonzero_tabulated.txt)
 
 _2 candidates, 2 ballots._
 
@@ -150,7 +150,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    RCV-IRV winner Ann is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
@@ -199,7 +199,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner Ben is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

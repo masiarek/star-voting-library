@@ -1,0 +1,50 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Dead rung 02 — same tie, but nobody scored a 5
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ann, Ben, Cara
+     1 ×   Ben > Ann > Cara      (3, 4, 1)
+     1 ×   Ben > Ann      (3, 4, 0)
+     1 ×   Ann > Cara      (4, 0, 3)
+     1 ×   Cara > Ann      (4, 0, 4)
+     1 ×   Cara > Ben      (0, 1, 1)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Cara               2  Hopeful
+Ben                2  Hopeful
+Ann                1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cara               3  Elected
+Ben                2  Rejected
+Ann                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cara
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): Ben, Ann, Cara
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Ben) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner Cara is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

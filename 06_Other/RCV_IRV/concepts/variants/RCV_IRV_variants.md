@@ -73,7 +73,7 @@ These keep the "instant runoff" shape but swap the elimination rule. They read a
 
 Two things worth underlining. First, **Hare is the only one of these the US actually calls "RCV"** — but it's also the one prone to *center squeeze* (eliminating a broadly-liked middle candidate who'd beat everyone head-to-head). Second, the **Condorcet-safe** variants (BTR, Baldwin, Nanson) fix that specific flaw precisely because they stop eliminating purely on first-choice counts. (Borda and Coombs read whole ballots but are **not** Condorcet methods; BTR/Baldwin/Nanson are.)
 
-> **Where does Ranked Robin fit?** It doesn't eliminate at all — **RCV-RR** (Ranked Robin / Copeland) compares every pair head-to-head and elects whoever wins the most matchups. It's the round-robin alternative to sequential elimination. See [`../RCV_Ranked_Robin/`](../../../../05_Ranked_Robin/concepts/).
+> **Where does Ranked Robin fit?** It doesn't eliminate at all — **RCV-RR** (Ranked Robin / Copeland) compares every pair head-to-head and elects whoever wins the most matchups. It's the round-robin alternative to sequential elimination. See [`../RCV_Ranked_Robin/`](../../../../05_Ranked_Robin/01_Learn/).
 
 ---
 

@@ -9,19 +9,19 @@
 ## 201.1 — Reading the results (transparency)
 
 - **Key terms:** preference matrix, For / Equal Support / Against, Condorcet winner, summability, score distribution.
-- **See it:** the [display-options example](../../01_STAR/_main/cases/cases_pages/04b_c4_b3_display-options-all.md) with the matrix and Condorcet blocks turned on. The auditable, precinct-summable heart of the count is the **pairwise matrix**.
+- **See it:** the [display-options example](../../01_STAR/02_Examples/cases/cases_pages/04b_c4_b3_display-options-all.md) with the matrix and Condorcet blocks turned on. The auditable, precinct-summable heart of the count is the **pairwise matrix**.
 - **How that matrix is built:** [Pairwise counting — every ballot is a tiny matrix](../topics/pairwise_counting.md) — each ballot's pair verdicts add up to the election's preference matrix (on the canonical Ann/Bob/Cal ballots), the runoff as one cell of it, and why the whole thing sums by precinct.
 - **When the count *can't* sum:** [Central tabulation — when every ballot must travel](../topics/central_tabulation.md) — the operational price of a non-summable count (IRV/STV): every ballot gathered in one place, a single point of failure, and a heavier audit — with the real incidents (Maine's courier runs, NYC 2021's test-ballot tally, Alameda 2022's misconfigured tabulator).
 - **Two reports, one count:** the same election appears both as BetterVoting's visual display and the LH engine's text report — why there are two, how they map, and the convert→validate→test pipeline: [BetterVoting and the LH Engine — One Election, Two Reports](../tabulation_engines/bettervoting_and_the_engine.md).
-- **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (preference matrix + score distribution + the rounds). 101.4 showed the *minimal* on-screen view; reading the **full** report of those same elections (e.g. the `_tabulated` mirrors under [Runoff Reversal](../../01_STAR/runoff_overturns_leader/)) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
+- **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (preference matrix + score distribution + the rounds). 101.4 showed the *minimal* on-screen view; reading the **full** report of those same elections (e.g. the `_tabulated` mirrors under [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/)) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
 - **Worked walkthrough:** [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md) — a full LH report annotated section by section, with a "which parts to show at 101 / 201 / 301" table.
-- **Reading the runoff percentages:** [Two Denominators, One Winner](../../01_STAR/concepts/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. Enable in the engine with `options: { show_runoff_percent: true }`. Pairs with 301.3 (Equal Support).
-- **A real election, end to end:** [What Makes the Best Pet?](../../01_STAR/pet_real_bv_election/) — a real 461-ballot BetterVoting STAR election, the actual export read section by section (scoring → runoff → runoff % → Condorcet), including the real-ballot difference between an abstention (blank) and an explicit-zero ballot.
+- **Reading the runoff percentages:** [Two Denominators, One Winner](../../01_STAR/01_Learn/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. Enable in the engine with `options: { show_runoff_percent: true }`. Pairs with 301.3 (Equal Support).
+- **A real election, end to end:** [What Makes the Best Pet?](../../01_STAR/04_Real_Elections/pet_real_bv_election/) — a real 461-ballot BetterVoting STAR election, the actual export read section by section (scoring → runoff → runoff % → Condorcet), including the real-ballot difference between an abstention (blank) and an explicit-zero ballot.
 
 ## 201.2 — Edge cases & trust
 
 - **Key terms:** unanimous ballots, ties / tiebreaker, abstention, equal-max ballot.
-- **See it:** [unanimous ballots](../../01_STAR/_main/cases/cases_pages/05a_c5_b3_unanimous-ballots.md); the tie-break cascade in [Flat scores, ties & tie-breaking](../../01_STAR/Flat_scores_ties/) and the [dead-rung](../../01_STAR/tie_break_dead_rung/) set; abstention handling in [abstain_bugs](../../01_STAR/abstain_bugs/).
+- **See it:** [unanimous ballots](../../01_STAR/02_Examples/cases/cases_pages/05a_c5_b3_unanimous-ballots.md); the tie-break cascade in [Flat scores, ties & tie-breaking](../../01_STAR/03_Criteria/Flat_scores_ties/) and the [dead-rung](../../01_STAR/03_Criteria/tie_break_dead_rung/) set; abstention handling in [abstain_bugs](../../01_STAR/04_Real_Elections/abstain_bugs/).
 
 ## 201.3 — Nomenclature: RCV vs IRV vs RCV-IRV
 
@@ -39,9 +39,9 @@
 - **Start plain:** [Electing more than one, simply](../topics/electing_more_than_one.md) — the majoritarian-vs-proportional fork before any machinery ("do you want the N best, or a body that mirrors the electorate?").
 - **Objective:** electing several seats with a majoritarian / at-large method.
 - **Key terms:** Bloc STAR, seats, at-large.
-- **See it:** [Bloc STAR, 2 seats](../../02_STAR_Bloc/_main/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../../02_STAR_Bloc/)).
+- **See it:** [Bloc STAR, 2 seats](../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../../02_STAR_Bloc/)).
 - **The point:** a cohesive majority can *sweep* all seats — which is exactly what motivates 301's proportional methods.
-- **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](../../04_Approval/concepts/Multiwinner_Approval/abc_rules_intro.md) — a counting-only walk through "most approved" vs "cover everyone" vs proportional, on Lackner & Skowron's steering-committee example.
+- **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md) — a counting-only walk through "most approved" vs "cover everyone" vs proportional, on Lackner & Skowron's steering-committee example.
 
 ## 201.6 — What are we optimizing for? (good winner, good method)
 

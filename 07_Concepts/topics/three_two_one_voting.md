@@ -2,7 +2,7 @@
 
 *A well-regarded rated method designed by **Jameson Quinn** (Center for Election Science). Voters rate every candidate **Good**, **OK**, or **Bad**; the winner is found in three steps — **3** semifinalists, then **2** finalists, then **1** winner. It dodges the same strategic traps STAR does (no center squeeze, a non-slippery chicken dilemma, a built-in dark-horse guard), which is why it keeps coming up as a serious reform option. This page explains it fairly and lays it next to STAR — they're close cousins, with real trade-offs either way.*
 
-→ Related: [the strategic pathologies (five Molochs)](strategic_pathologies.md) · [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [Approval voting](../../04_Approval/concepts/approval_voting.md).
+→ Related: [the strategic pathologies (five Molochs)](strategic_pathologies.md) · [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [Approval voting](../../04_Approval/01_Learn/approval_voting.md).
 
 ---
 
@@ -72,4 +72,4 @@ Neither is strictly better. **STAR** is finer-grained and structurally simpler (
 
 - [3-2-1 voting — electowiki](https://electowiki.org/wiki/3-2-1_voting) — the clearest mechanics reference for this niche/branded method (**advocacy-adjacent**: electowiki leans reformer, and 3-2-1 is a Center for Election Science proposal — cite it for *how it works*, not for verdicts).
 - Jameson Quinn, *The Six Voting Molochs* — where 3-2-1 is proposed as the non-slippery fix to the [chicken dilemma](../../method_comparisons/chicken_dilemma/); Quinn is CES-aligned (Approval/3-2-1), which is exactly why his praise of methods he *didn't* design carries weight.
-- Contrast within this library: [STAR](../../01_STAR/concepts/STAR_start_here.md) · [Approval](../../04_Approval/concepts/approval_voting.md) · [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) · glossary [`3-2-1 voting`](../GLOSSARY.md).
+- Contrast within this library: [STAR](../../01_STAR/01_Learn/STAR_start_here.md) · [Approval](../../04_Approval/01_Learn/approval_voting.md) · [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) · glossary [`3-2-1 voting`](../GLOSSARY.md).

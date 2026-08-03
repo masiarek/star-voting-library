@@ -15,7 +15,7 @@ The books to read first, and the ones to lend. Narrative, example-driven, writte
 
 *Why Elections Aren't Fair (and What We Can Do About It).* The most readable popular book in the field: spoilers, strategy, and a tour of real elections that went sideways, building to a case for **range (score) voting**. If you read one book off this whole shelf, read this one — it's the closest popular title to this repo's own outlook.
 
-**The lean:** Openly pro-**range/score voting** — it argues score is the best single-winner method. That happens to align with the *cardinal* family [STAR](../../01_STAR/concepts/STAR_start_here.md) belongs to, so enjoy it but notice the advocacy. STAR's automatic runoff is a later refinement Poundstone's range voting doesn't include.
+**The lean:** Openly pro-**range/score voting** — it argues score is the best single-winner method. That happens to align with the *cardinal* family [STAR](../../01_STAR/01_Learn/STAR_start_here.md) belongs to, so enjoy it but notice the advocacy. STAR's automatic runoff is a later refinement Poundstone's range voting doesn't include.
 
 **In this repo:** [Range voting](../../06_Other/Range/concepts/range_voting.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [the spoiler effect](../topics/spoiler_effect.md)
 

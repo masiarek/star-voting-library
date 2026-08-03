@@ -44,15 +44,15 @@ GENERATED_SUFFIXES = ("_tabulated", "_generated", "_pages")
 
 # --- method → (display name, concept-docs path relative to repo root) --------
 METHOD_DOCS = {
-    "star":        ("STAR (single winner)", "01_STAR/concepts"),
-    "approval":    ("Approval Voting", "04_Approval/concepts"),
-    "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "05_Ranked_Robin/concepts"),
+    "star":        ("STAR (single winner)", "01_STAR/01_Learn"),
+    "approval":    ("Approval Voting", "04_Approval/01_Learn"),
+    "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "05_Ranked_Robin/01_Learn"),
     "rcv_irv":     ("RCV-IRV (Instant Runoff)", "06_Other/RCV_IRV/concepts"),
-    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "03_STAR_PR/concepts"),
-    "sss":         ("Sequentially Spent Score (proportional STAR)", "03_STAR_PR/concepts"),
-    "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/concepts"),
-    "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/concepts"),
-    "stv":         ("STV (proportional, ranked ballots)", "03_STAR_PR/concepts"),
+    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "03_STAR_PR/01_Learn"),
+    "sss":         ("Sequentially Spent Score (proportional STAR)", "03_STAR_PR/01_Learn"),
+    "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/01_Learn"),
+    "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/01_Learn"),
+    "stv":         ("STV (proportional, ranked ballots)", "03_STAR_PR/01_Learn"),
 }
 METHOD_ALIASES = {
     "rcv_rr": "rankedrobin", "copeland": "rankedrobin", "consensus": "rankedrobin",
@@ -68,10 +68,10 @@ TOPIC_LINKS = [
     (r"summab",              "Summability (topic hub)", "07_Concepts/topics/summability/README.md"),
     (r"condorcet|cycle",     "Condorcet efficiency (topic hub)", "07_Concepts/topics/condorcet/README.md"),
     (r"\btie|lot[ _]order|lot[ _]number|dead[ _]rung|tiebreak", "Ties & tie-breaking (topic hub)", "07_Concepts/topics/ties/README.md"),
-    (r"tie[ _-]?break|dead[ _]rung", "The tie-breaking ladder (full chain)", "01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md"),
+    (r"tie[ _-]?break|dead[ _]rung", "The tie-breaking ladder (full chain)", "01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md"),
     (r"quorum",              "Quorum", "07_Concepts/topics/quorum.md"),
     (r"split|spoiler",       "Vote splitting (worked set)", "method_comparisons/split_voting/README.md"),
-    (r"runoff",              "Runoff reversal (worked set)", "01_STAR/runoff_overturns_leader/README.md"),
+    (r"runoff",              "Runoff reversal (worked set)", "01_STAR/02_Examples/runoff_overturns_leader/README.md"),
     (r"abstention|marker|blank|spoiled", "Ballot & terminology basics", "07_Concepts/topics/ballot_and_terminology_basics.md"),
     (r"black[ _]curtain",    "The Black Curtain (worked set)", "method_comparisons/black_curtain/README.md"),
     (r"exhaust",             "Exhausted ballots (conversation)", "06_Other/RCV_IRV/concepts/exhausted_ballots_301.md"),
@@ -324,7 +324,7 @@ def render(yaml_path, siblings):
         L.append("")
         L.append(f"**Official tie-break (lot) order:** {' > '.join(str(c) for c in lot)} "
                  f"— consulted only if every deterministic tiebreaker stays tied "
-                 f"([how the ladder works]({_rel('01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md', page_dir)})).")
+                 f"([how the ladder works]({_rel('01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md', page_dir)})).")
     L.append("")
     if desc:
         L.append("## Scenario")

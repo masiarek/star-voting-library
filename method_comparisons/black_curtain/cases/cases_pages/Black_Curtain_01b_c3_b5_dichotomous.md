@@ -7,7 +7,7 @@ search:
 
 *Generated from [`Black_Curtain_01b_c3_b5_dichotomous.yaml`](../Black_Curtain_01b_c3_b5_dichotomous.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Bob
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Bob
 
 ## Scenario
 

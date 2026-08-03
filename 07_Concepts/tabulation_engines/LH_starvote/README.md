@@ -58,10 +58,10 @@ The payoff: **the on-screen demo stays clean while the saved record stays comple
 
 Beyond the raw result, the wrapper renders the parts that make a STAR result *trustworthy and teachable*:
 
-- **Runoff (Preference) Matrix** — the head-to-head / pairwise grid, the summable heart of the count (`For – Equal Support – Against` per cell). See [STAR is summable](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md).
+- **Runoff (Preference) Matrix** — the head-to-head / pairwise grid, the summable heart of the count (`For – Equal Support – Against` per cell). See [STAR is summable](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md).
 - **`[Runoff Reversal]` summary** — a plain-English sentence naming *why* the runoff winner beat the score leader when they differ: the runoff elects the finalist preferred by the majority (of voters with a preference). The whole Runoff-Reversal lesson in two lines. (Header formerly "Majority Preference Enforcement Principle" — renamed to the glossary term.)
 - **`[Divergence from STAR]`** — a quick cross-check that flags when Approval / a pure score count, or RCV-IRV, would pick someone else; it prints whenever methods disagree, so comparative demos keep their punch even with the minimal on-screen report.
-- **Self-reconciling runoff line** (`show_runoff_percent`) — a compact two-line summary of the winner's share of the **decided** voters, stated against the total ballots with the Equal Support gap named inline so the denominator never has to be inferred; the `_tabulated` copy expands it into a "Runoff math" funnel. Details: [runoff percentages](../../../01_STAR/concepts/the_count/runoff_percentages.md).
+- **Self-reconciling runoff line** (`show_runoff_percent`) — a compact two-line summary of the winner's share of the **decided** voters, stated against the total ballots with the Equal Support gap named inline so the denominator never has to be inferred; the `_tabulated` copy expands it into a "Runoff math" funnel. Details: [runoff percentages](../../../01_STAR/01_Learn/the_count/runoff_percentages.md).
 - **Score distribution, Condorcet line, tiebreaker rounds** — on demand on screen, always in the mirror. The **lot-number tiebreak cascade** (head-to-head → most 5s → lot order) is shown step by step so a tie's resolution is auditable.
 - **Color palette + round separators** — distinct colors per phase (scoring, runoff, winner), mirroring the matrix legend; auto-off when piped to a file or under `NO_COLOR`, so the saved text stays clean.
 
@@ -72,7 +72,7 @@ The wrapper reads `voting_method` and routes to the right tabulator, so the *sam
 - **STAR** (single), **Bloc STAR**, and proportional **Allocated / SSS / RRV** (multi).
 - **RCV-IRV (Hare)** — ranked ballots (`A>B>C`) route to the vendored RCV-IRV engine.
 - **Approval** — single or explicit multi-winner.
-- **Ranked Robin (RCV-RR / Copeland)** — *first-class*: `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and writes its own `_tabulated` mirror — it does **not** fall through to the IRV rounds. See [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md).
+- **Ranked Robin (RCV-RR / Copeland)** — *first-class*: `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and writes its own `_tabulated` mirror — it does **not** fall through to the IRV rounds. See [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md).
 
 It also runs an extra **`blocs:` vote-splitting check** and supports **quorum** / eligible-voter accounting on STAR races.
 
@@ -89,5 +89,5 @@ Correct *and* readable isn't the same as *self-certified*. The repo's third engi
 
 - [Reading a STAR report](reading_a_star_report.md) — the section-by-section walkthrough.
 - [BetterVoting and the LH engine](../bettervoting_and_the_engine.md) — the visual half of the same race.
-- [Runoff Reversal](../../../01_STAR/runoff_overturns_leader/) — the phenomenon the report is built to expose.
+- [Runoff Reversal](../../../01_STAR/02_Examples/runoff_overturns_leader/) — the phenomenon the report is built to expose.
 - [starvote_larry_hastings.py — presentation wrapper](../../../STARVote_LH_tabulation_engine/README_larry_hastings.md) · [Fork Notes — starvote (vendored fork)](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) — the engine docs themselves.

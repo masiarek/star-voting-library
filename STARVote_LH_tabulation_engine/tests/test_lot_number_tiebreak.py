@@ -388,7 +388,7 @@ def test_two_way_import_diverges(tmp_path):
 
 # --- 7. The REAL frozen BetterVoting export (jfk7pd) ------------------------
 
-FROZEN_JFK7PD = (REPO_ROOT / "01_STAR" / "tie_break_dead_rung"
+FROZEN_JFK7PD = (REPO_ROOT / "01_STAR" / "03_Criteria" / "tie_break_dead_rung"
                  / "lot_random_vs_published_jfk7pd"
                  / "lot_random_vs_published_jfk7pd_bv_export.json")
 

@@ -1,7 +1,7 @@
 """
 test_star_vs_rr_labels.py
 =========================
-The 30 auto-generated samples in 05_Ranked_Robin/star_vs_rr_divergence/ must
+The 30 auto-generated samples in 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/ must
 name the winners the ENGINE elects — in every place they name one.
 
 WHY. Those samples were labelled from a numpy model of STAR
@@ -29,7 +29,7 @@ sys.path.insert(0, str(ENGINE_DIR / "tools_adam" / "scripts"))
 
 import check_star_vs_rr_labels as checker  # noqa: E402
 
-SAMPLE_DIR = REPO_ROOT / "05_Ranked_Robin" / "star_vs_rr_divergence"
+SAMPLE_DIR = REPO_ROOT / "05_Ranked_Robin" / "02_Examples" / "star_vs_rr_divergence"
 
 
 def _samples():

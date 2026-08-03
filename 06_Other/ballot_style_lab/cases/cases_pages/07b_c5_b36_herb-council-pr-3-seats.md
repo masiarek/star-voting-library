@@ -7,7 +7,7 @@ search:
 
 *Generated from [`07b_c5_b36_herb-council-pr-3-seats.yaml`](../07b_c5_b36_herb-council-pr-3-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Anise, Basil, Chive
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Anise, Basil, Chive
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/pmrq4q) · **[results ↗](https://bettervoting.com/pmrq4q/results)** (election `pmrq4q`).
 
@@ -26,7 +26,7 @@ The electorate (36 ballots, all individual rows):
   - kitchen bloc: 20 voters (10 slate, 4 bullet, 4 nuanced, 2 gentle)
   - tea caucus: 16 voters (9 nuanced, 4 slate, 3 cliff35)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - nuanced: full 0-5 range, honest gaps, ties allowed
   - bullet: choose-one transplant: favorite 5, rest 0/blank

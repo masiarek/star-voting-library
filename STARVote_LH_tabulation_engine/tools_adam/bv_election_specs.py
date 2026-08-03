@@ -39,7 +39,7 @@ you need not hoard every spec here.
 #   BV2134 — Pets Governance (6 methods, 6 positions)     -> kcf8vf   (multi-race; backs method_comparisons/pets_governance)
 #   BV2135 — Block & Limited voting (as bloc Approval)     -> 3x4vrv   (backs method_comparisons/multi_member_plurality)
 #   BV2136 — Village Council by SNTV (multi-winner Plurality) -> y3tvxm  (backs method_comparisons/sntv_village_council)
-#   BV2187 — Ann, Bob, Cal (canonical STAR mechanics demo)      -> qrw6wb  (backs 01_STAR/_main/bv2187_qrw6wb_ann-bob-cal)
+#   BV2187 — Ann, Bob, Cal (canonical STAR mechanics demo)      -> qrw6wb  (backs 01_STAR/02_Examples/bv2187_qrw6wb_ann-bob-cal)
 #   BV830 — No Condorcet winner (top-two tie, score breaks it)   -> vb3xv2  (backs 01_STAR/… bv830_vb3xv2_no_condorcet_tie_score; STAR-only, RR unfreezable)
 #   BV2212 — STAR IIA under a Condorcet cycle (cycle-spoiler)      -> g3f7r2  (STAR-only, RR unfreezable; a losing candidate flips the winner)
 #   BV2213 — Alaska 2022 special (reduced 200-voter model, 4 races) -> k3fmwv  (Plurality/IRV -> Peltola; RR/STAR -> Begich, the Condorcet winner IRV cut)
@@ -275,8 +275,8 @@ _CREATED_BV2141 = [
 #     (LH / Equal Vote) A1 wins (+134) — teaming succeeds. But A1 and C tie at 5
 #     wins and C beats A1 head-to-head 21-12, so BV's 2-way head-to-head tiebreak
 #     elects C — the teaming attack FAILS on BV. Live probe of that divergence.
-# All strict full rankings (no ties). Lesson: 05_Ranked_Robin/concepts/
-# rr_clone_independence.md ; LH-only pair: 05_Ranked_Robin/clone_independence/.
+# All strict full rankings (no ties). Lesson: 05_Ranked_Robin/01_Learn/
+# rr_clone_independence.md ; LH-only pair: 05_Ranked_Robin/03_Criteria/clone_independence/.
 _C5_CANDS = ["A", "B", "C", "D", "E", "F"]
 _C5_LEVELS = [
     (12, [["A"], ["B"], ["C"], ["D"], ["E"], ["F"]]),
@@ -1934,7 +1934,7 @@ _CREATED_BV2174_75 = [
 # 2-1. The tie is FREEZABLE on BV: exactly 2 tied -> BV's ladder goes to their
 # head-to-head, Green beats Blue 7-4 -> GREEN, deterministic. LH's ladder
 # (total margin) picks BLUE (+5 vs +4) — the documented RankedRobin.ts-vs-LH
-# ladder divergence (05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md),
+# ladder divergence (05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md),
 # live for the first time. All LH-verified 2026-07-10.
 # Already created -> p8dp28 (BV2176). Reference only — do NOT re-run (permanent).
 
@@ -2368,7 +2368,7 @@ _BV830_NO_CONDORCET = {
 # (BV2190); all six races verified live against LH. Reference only — do NOT
 # point ELECTIONS back at _TD_TRIO (re-running would create undeletable
 # duplicates).
-# SOURCE: 01_STAR/exercises/ex01_two_districts.md (this repo) — ballots adapted
+# SOURCE: 01_STAR/05_Practice/ex01_two_districts.md (this repo) — ballots adapted
 # from a RangeVoting.org worked example, posed as a districts exercise in
 # Brendan W. Sullivan, "An Introduction to the Math of Voting Methods" (2022),
 # ch. 5. THREE elections, the STAR-side sibling of the Felsenthal BV2147-49
@@ -2384,7 +2384,7 @@ _BV830_NO_CONDORCET = {
 # Each election adds a Ranked Robin race on the same opinions (dense EQUAL
 # ranks, the encoding proven on BV2140): Elena — the Condorcet winner in every
 # electorate — wins 4-0 in all three, deterministic and freezable. All six
-# races LH-verified pre-creation (01_STAR/exercises/, tested answer keys).
+# races LH-verified pre-creation (01_STAR/05_Practice/, tested answer keys).
 _TD_CANDS = ["Avery", "Blake", "Carmen", "Diego", "Elena"]
 _TD_W_STAR = [(5, [3, 3, 4, 0, 5]), (3, [5, 5, 3, 0, 0]), (1, [5, 3, 3, 0, 0])]
 _TD_W_RR = [(5, [3, 3, 2, 0, 1]), (3, [1, 1, 2, 0, 0]), (1, [1, 2, 2, 0, 0])]
@@ -2404,7 +2404,7 @@ def _td_races(prefix, star_blocs, rr_blocs):
 
 _TD_SRC = ("The 'Two Districts, One Mayor' consistency exercise from the STAR "
            "education repo (github.com/masiarek/star-voting-library — "
-           "01_STAR/exercises/ex01_two_districts.md): a live demonstration that "
+           "01_STAR/05_Practice/ex01_two_districts.md): a live demonstration that "
            "STAR Voting is not reinforcement-proof — a candidate can win every "
            "district separately and still lose the combined election, because "
            "WHO REACHES the automatic runoff is not an additive fact (the "
@@ -2501,7 +2501,7 @@ _TD_TRIO = [
 # (BV2197) / 93gjx6 (BV2198); all 22 races verified live against LH. Reference
 # only — do NOT point ELECTIONS back at _EX_TRIO_2 (re-running would create
 # undeletable duplicates).
-# Eight elections backing 01_STAR/exercises/ (ex09 stays LH-only on purpose: its
+# Eight elections backing 01_STAR/05_Practice/ (ex09 stays LH-only on purpose: its
 # 3-way Ranked Robin wins tie is BV-random). All races LH-verified pre-creation;
 # ranked races use ranks-in-slots (1 = top, 0 = unranked), Approval/Plurality 0/1.
 # ex10 carries NO Ranked Robin races: the reticent profile's rank conversion
@@ -2509,7 +2509,7 @@ _TD_TRIO = [
 # stays symmetric with STAR + IRV only.
 
 _EX_SRC = ("From the exercises set of the STAR education repo "
-           "(github.com/masiarek/star-voting-library, 01_STAR/exercises/) — "
+           "(github.com/masiarek/star-voting-library, 01_STAR/05_Practice/) — "
            "predict-then-peek problems with hidden solutions; this election is "
            "the live, vote-able copy of its exercise. ")
 
@@ -3093,7 +3093,7 @@ _FBC_HONEST = _expand([(9, [5, 5, 0]), (6, [5, 0, 0]), (24, [0, 1, 0]), (18, [0,
 _FBC_BETRAY = _expand([(9, [4, 5, 0]), (6, [5, 0, 0]), (24, [0, 1, 0]), (18, [0, 0, 4])])
 
 _FBC_SRC = ("From the STAR education repo (github.com/masiarek/star-voting-library, "
-            "01_STAR/favorite_betrayal/) — the worked favorite-betrayal pair behind "
+            "01_STAR/03_Criteria/favorite_betrayal/) — the worked favorite-betrayal pair behind "
             "favorite_betrayal_voting_301.md. ")
 
 _FBC_PAIR = [
@@ -3152,7 +3152,7 @@ _FBC_PAIR = [
 
 # RESULTS (2026-07-17): BV2206 -> 7mckyg (Clover), BV2207 -> b6xrdr (Bluebell)
 # — BV agrees with LH on both halves, no tiebreaks. Case folder:
-# 01_STAR/favorite_betrayal/. Do NOT re-run (permanent dupes).
+# 01_STAR/03_Criteria/favorite_betrayal/. Do NOT re-run (permanent dupes).
 
 # --- BV2208-2209 — burial in Ranked Robin, the worked pair --------------------
 # The classic anti-Condorcet strategy nobody in the repo demonstrates yet:
@@ -3176,7 +3176,7 @@ _RRB_SINCERE = _expand([(15, [1, 2, 3, 4]), (12, [2, 1, 4, 3]), (9, [4, 3, 1, 2]
 _RRB_BURIED = _expand([(15, [1, 4, 2, 3]), (12, [2, 1, 4, 3]), (9, [4, 3, 1, 2]), (6, [4, 2, 3, 1])])
 
 _RRB_SRC = ("From the STAR education repo (github.com/masiarek/star-voting-library, "
-            "05_Ranked_Robin/burial/) — the worked burial pair: Ranked Robin's "
+            "05_Ranked_Robin/03_Criteria/burial/) — the worked burial pair: Ranked Robin's "
             "signature strategic wart, shown honestly. ")
 
 _RR_BURIAL_PAIR = [
@@ -3233,7 +3233,7 @@ _RR_BURIAL_PAIR = [
 
 # RESULTS (2026-07-17): BV2208 -> 7q6by8 (Beryl), BV2209 -> fxhw6g (Amber) —
 # unanimous triple-check (LH, pref_voting, BV), tieBreakType none on both.
-# Case folder: 05_Ranked_Robin/burial/. ERRATUM: the live descriptions'
+# Case folder: 05_Ranked_Robin/03_Criteria/burial/. ERRATUM: the live descriptions'
 # slim-vs-blowout aside mislabels which wins flip (the buriers sit inside
 # Beryl's 33-9 Coral win and 27-15 Diamond win — those flip; her 27-15 Amber
 # win holds); the repo yamls/README carry the corrected analysis. Do NOT
@@ -3592,7 +3592,7 @@ _PINEAPPLE = [
 # Cast Astra…Flux. The 'plus' election adds two voters whose ballots are exact
 # opposites (each candidate's two scores sum to 5); every total rises by 5 and
 # the runoff cancels 1-1, so STAR elects the same winner (Comet) either way.
-# Reproduces 01_STAR/equal_and_opposite/. Ready to create — see EQO note below.
+# Reproduces 01_STAR/03_Criteria/equal_and_opposite/. Ready to create — see EQO note below.
 _EQO_CANDS = ["Astra", "Bolt", "Comet", "Dune", "Echo", "Flux"]
 _EQO_BASE = [[3, 2, 5, 1, 4, 0], [2, 4, 5, 0, 3, 1], [4, 1, 4, 2, 5, 0]]
 _EQO_MIRROR = [[2, 1, 0, 1, 5, 4], [3, 4, 5, 4, 0, 1]]  # two exact-opposite ballots
@@ -4037,7 +4037,7 @@ C1788_SPEC = {
 # a head-to-head rung for a clean 2-WAY tie, so on a 3-way tie it falls through
 # to RANDOM. The pairwise MATRIX is deterministic and is the actual artifact —
 # BV's crowned winner in that race is a coin flip and must not be cited as a
-# result. See 05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md.
+# result. See 05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
 # Ranks are aligned to the candidate order [Almond, Berry, Cocoa]; 1 = top.
 _MARG_CANDS = ["Almond", "Berry", "Cocoa"]
 _MARG_STAR = ([[5, 3, 0]] * 5) + ([[0, 5, 3]] * 3) + ([[3, 0, 5]] * 2) + ([[0, 3, 5]] * 2)
@@ -4256,7 +4256,7 @@ REINFORCEMENT_SPEC = {
 }
 
 # --- BV2255 — The "traditional" style, all the way down (four ballots, one bit) ---
-# Backs 01_STAR/concepts/voting_styles/traditional.md — the choose-one habit
+# Backs 01_STAR/01_Learn/voting_styles/traditional.md — the choose-one habit
 # transplanted onto a 5-star ballot. Here EVERY voter votes that way: 3 voters, 5
 # candidates, one mark each (Carmen 1, Ella 2). The same single mark is then encoded on
 # all three ballot formats — choose-one, 0-5 score, ranked — and counted four ways. All
@@ -4319,7 +4319,7 @@ TRADITIONAL_SPEC = {
 
 # --- BV2256 — Traditional voting style: one mark each (the BV2255 redo) -----------
 # The plain version: ONE STAR race, the same three bullet ballots. Backs the "What if
-# everyone voted this way?" example on 01_STAR/concepts/voting_styles/
+# everyone voted this way?" example on 01_STAR/01_Learn/voting_styles/
 # traditional.md — every voter fills the 5-star ballot the old choose-one way (one 5, four
 # blanks), so the scoring round is just a first-choice count and the runoff has nothing
 # left to add. LH-verified: Ella 10, Carmen 5, everyone else 0; runoff Ella 2-1.
@@ -4401,7 +4401,7 @@ LUNCH_CHOOSE_ONE_SPEC = {
 }
 
 # --- BV2258 / BV2259 — Exercise 15, "Read the ballot, name the method" ---
-# Backs 01_STAR/exercises/ex15_read_the_ballot.md. Two SEPARATE elections because
+# Backs 01_STAR/05_Practice/ex15_read_the_ballot.md. Two SEPARATE elections because
 # the two profiles have different electorates (35 voters vs 4) — they cannot be
 # races of one election, since every BV voter votes every race.
 # BV2258 = profile (a): 35 voters, Yes/No, two races on the SAME index-aligned

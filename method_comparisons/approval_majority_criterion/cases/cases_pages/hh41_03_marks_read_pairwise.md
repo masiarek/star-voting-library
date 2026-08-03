@@ -7,7 +7,7 @@ search:
 
 *Generated from [`hh41_03_marks_read_pairwise.yaml`](../hh41_03_marks_read_pairwise.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** B
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** B
 
 ## Scenario
 
@@ -32,7 +32,7 @@ marked, not when it was counted. On these ballots B is legitimately the
 Condorcet winner; on the underlying preferences (hh41_02) A is. That gap is
 the compression.
 
-Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
+Claim-check page: ../../../04_Approval/01_Learn/hamlin_hua_2023.md
 Companion set: ../../black_curtain/condorcet_compression.md
 Set overview: ../README.md
 
@@ -136,7 +136,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Methods disagree on this election](../../../divergence_review/cases/IRV_DIFFERS_ARTIFACT/hh41_03_marks_read_pairwise.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [The Black Curtain (worked set)](../../../black_curtain/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`hh41_01_approval_as_printed.yaml`](../hh41_01_approval_as_printed.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../04_Approval/concepts) · **1 seat** · **Expected winner:** B
+**Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** B
 
 ## Scenario
 
@@ -34,7 +34,7 @@ Note what the approval ballots can no longer distinguish: the 30 B>C>A voters
 and the 10 C>B>A voters cast IDENTICAL ballots, so the engine collapses them
 to a single 40-voter row. That erasure is the lesson, not a display quirk.
 
-Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
+Claim-check page: ../../../04_Approval/01_Learn/hamlin_hua_2023.md
 Set overview: ../README.md
 
 ## Ballots

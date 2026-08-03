@@ -54,13 +54,13 @@ Exactly as in [Alaska](upward_monotonicity_alaska.md), the trick is the **order 
 Both methods are **monotonic** — lowering a candidate can never *help* them, and raising one can never *hurt* — so **neither has a downward (or upward) monotonicity paradox.**
 
 - **Ranked Robin** (Condorcet / Copeland) reads every head-to-head, so the elimination-order trick has no purchase. On the **same** ballots it elects **Melgar both times** — before *and* after — because Melgar is the [Condorcet winner](../../07_Concepts/topics/condorcet/) (he beats Engardio 18561–16370 and Nguyen 24971–11655). Note the sharp contrast: RCV-IRV's result *moves off* the Condorcet winner under the paradox; Ranked Robin stays on him. (Same ranked ballot, a monotonic count.)
-- **STAR** passes **mono-raise** and its downward form: a candidate losing points can only ever *hurt* their own total, never help. (See [STAR & monotonicity](../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md) and the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md).)
+- **STAR** passes **mono-raise** and its downward form: a candidate losing points can only ever *hurt* their own total, never help. (See [STAR & monotonicity](../../01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md) and the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md).)
 
 ## Keep it in proportion — the fair reading
 
 - **Real and documented** — SF D7 2020 is a genuine recorded election, one of the cleanest downward-paradox cases in the literature. That's why it teaches well.
 - **But rare.** Like its mirror, the downward paradox needs a near-three-way race with a specific transfer structure; most IRV elections never trigger one. The durable point is *structural*: IRV's winner depends on elimination order, which can move the wrong way in **both** directions.
-- **IRV-specific, not "ranked voting."** The same ballots under [Ranked Robin](../../05_Ranked_Robin/concepts/README.md) are monotonic. It's *instant-runoff* that fails here, not ranked ballots as such.
+- **IRV-specific, not "ranked voting."** The same ballots under [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) are monotonic. It's *instant-runoff* that fails here, not ranked ballots as such.
 - **STAR's own limit stays on the table.** STAR passes mono-raise but fails the stronger **mono-raise-delete** in lab constructions — [conceded in the worked set](README.md#the-301-nuance-star-fails-a-stronger-variant). Naming both sides is the point.
 
 The takeaway matches the upward page: **a voter's honest ranking shouldn't be able to backfire** — up *or* down — and STAR and Ranked Robin give that guarantee where instant-runoff can't.

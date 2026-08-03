@@ -16,9 +16,9 @@
 
 What it *does* is take the same **ranked** ballot RCV-IRV uses and count it a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
 
-**Which name means what** — Condorcet the family, Copeland the count, Ranked Robin and Consensus Choice two campaigns' brands for it — has a page of its own: [the naming decoder](concepts/condorcet_naming_decoder.md), which also carries where the name came from, what its coiner says it means, and how Equal Vote's own wording has moved. Which one we *ought* to lead with, argued both ways → [What should we call this method?](concepts/what_to_call_this_method.md).
+**Which name means what** — Condorcet the family, Copeland the count, Ranked Robin and Consensus Choice two campaigns' brands for it — has a page of its own: [the naming decoder](01_Learn/condorcet_naming_decoder.md), which also carries where the name came from, what its coiner says it means, and how Equal Vote's own wording has moved. Which one we *ought* to lead with, argued both ways → [What should we call this method?](01_Learn/what_to_call_this_method.md).
 
-This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](concepts/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](concepts/why_ranked_robin.md)** (the positive case), **[honest limits](concepts/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](concepts/README.md).
+This page is the folder's front door: the method, one worked election, and the index of runnable examples below. The full concept treatment lives next door — **[Ranked Robin — the method](01_Learn/ranked_robin.md)** (mechanics, names, family), **[Why Ranked Robin](01_Learn/why_ranked_robin.md)** (the positive case), **[honest limits](01_Learn/RCV_RR_honest_limits.md)** (where it struggles), and the [full concept index](01_Learn/README.md).
 
 ---
 
@@ -59,7 +59,7 @@ Winner — Ranked Robin (RCV-RR): Ben
 
 *(Honest footnote: RCV-IRV elects Ben here too — Cara is eliminated first and her ballots flow to Ben. This election separates Ranked Robin from **plurality**, not from IRV. For the case where RR and IRV genuinely part ways, see the Tennessee [center squeeze](../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) in the examples below.)*
 
-Want the whole count — the pairwise matrix, the [Smith set](../07_Concepts/topics/smith_set.md), the audit trail? → the full report: [`ranked_robin_consensus_center.md`](_main/cases/cases_pages/ranked_robin_consensus_center.md) · run it yourself: [`.yaml`](_main/cases/ranked_robin_consensus_center.yaml)
+Want the whole count — the pairwise matrix, the [Smith set](../07_Concepts/topics/smith_set.md), the audit trail? → the full report: [`ranked_robin_consensus_center.md`](02_Examples/cases/cases_pages/ranked_robin_consensus_center.md) · run it yourself: [`.yaml`](02_Examples/cases/ranked_robin_consensus_center.yaml)
 
 ## How it differs from RCV-IRV
 
@@ -75,7 +75,7 @@ Same ranked ballot, opposite counting philosophy — read the whole ballot again
 | [Precinct-summable](../07_Concepts/topics/summability/README.md)? | ❌ No | ✅ Yes (add pairwise matrices) |
 | [Exhausted ballots](../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md)? | Possible | **No** — every ballot is read in every pairwise contest |
 
-*(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](concepts/ranked_robin.md).)*
+*(The canonical, fuller version of this table — plus the cycle question, the naming family, and the sourcing — is on the [method page](01_Learn/ranked_robin.md).)*
 
 ---
 
@@ -85,15 +85,15 @@ Runnable elections, each isolating one idea. Tabulate any of them yourself.
 
 | Where | What |
 |---|---|
-| [The worked intro — the consensus center wins](_main/cases/cases_pages/ranked_robin_consensus_center.md) | the full report for the election above: Ben beats every rival head-to-head and wins 3–0, though Ada and Dan each hold more first choices ([folder](_main/)) |
-| [Condorcet vs. Ranked Robin — worked examples](condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
-| [RR vs. IRV vs. plurality — same ballots](rr_vs_irv_plurality/) | one ranked ballot set, three winners — the Tennessee center-squeeze (BV-backed, triple-checked: LH / BetterVoting / pref_voting) |
-| [Tiebreaks — dead heat → lot](rr_tiebreaks/) | the Equal Support column, the ½-Copeland credit, and the full ladder to lot order — and where the LH & BetterVoting tiebreaks [diverge](concepts/rr_tiebreak_lh_vs_bv.md) |
-| [**The Copeland score — a draw is worth half a win**](copeland_score/) | why "most head-to-head wins" is a shorthand and not the rule: a single ½-credit elects a candidate who ties on raw wins *and lost a matchup* — and puts Copeland alone against every other Condorcet method, which is the C1/C2 divide made visible |
-| [**Most matchups won ≠ Condorcet winner**](most_wins_vs_condorcet/) | the claim-check companion: 18 voters, no drawn matchups at all, and the candidate with strictly the most wins still loses a head-to-head. Every margin is 12–6, so Minimax / Ranked Pairs / Schulze / Split Cycle all tie five ways and only Copeland decides — the mirror image of the case above |
-| [**Ranked Robin vs Consensus Choice — two winners, one cycle**](consensus_choice_divergence/) | the two rival "consensus" brands on identical ballots: Copeland ties all three, and Equal Vote's margins rule elects Ana while Better Choices for Democracy's "Most Wins, Smallest Loss" elects Celia — the entire practical difference between the two proposals, made visible |
-| [**Burial — RR's signature wart, worked**](burial/) | the sincere/buried pair (BV2208/BV2209): fifteen voters rank the Condorcet winner last, manufacture a cycle, and win the record tie — triple-checked, deterministic on both engines |
-| [STAR vs RR — 30 divergence samples](star_vs_rr_divergence/) | an auto-generated dump of 30 elections where STAR and RR elect different winners, spread across candidate field (3/5/7/10), electorate size, and grouped-vs-random structure — each YAML states its own cause (cycle vs dark horse), with RCV-IRV / Approval / Plurality on the same ballots (they scatter — no clean alignment). Empirical companion to the [simulation](../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation) |
+| [The worked intro — the consensus center wins](02_Examples/cases/cases_pages/ranked_robin_consensus_center.md) | the full report for the election above: Ben beats every rival head-to-head and wins 3–0, though Ada and Dan each hold more first choices ([folder](02_Examples/)) |
+| [Condorcet vs. Ranked Robin — worked examples](02_Examples/condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine cycle (rock/paper/scissors) and how RR resolves it, and a real 0-wins record |
+| [RR vs. IRV vs. plurality — same ballots](02_Examples/rr_vs_irv_plurality/) | one ranked ballot set, three winners — the Tennessee center-squeeze (BV-backed, triple-checked: LH / BetterVoting / pref_voting) |
+| [Tiebreaks — dead heat → lot](03_Criteria/rr_tiebreaks/) | the Equal Support column, the ½-Copeland credit, and the full ladder to lot order — and where the LH & BetterVoting tiebreaks [diverge](01_Learn/rr_tiebreak_lh_vs_bv.md) |
+| [**The Copeland score — a draw is worth half a win**](02_Examples/copeland_score/) | why "most head-to-head wins" is a shorthand and not the rule: a single ½-credit elects a candidate who ties on raw wins *and lost a matchup* — and puts Copeland alone against every other Condorcet method, which is the C1/C2 divide made visible |
+| [**Most matchups won ≠ Condorcet winner**](02_Examples/most_wins_vs_condorcet/) | the claim-check companion: 18 voters, no drawn matchups at all, and the candidate with strictly the most wins still loses a head-to-head. Every margin is 12–6, so Minimax / Ranked Pairs / Schulze / Split Cycle all tie five ways and only Copeland decides — the mirror image of the case above |
+| [**Ranked Robin vs Consensus Choice — two winners, one cycle**](02_Examples/consensus_choice_divergence/) | the two rival "consensus" brands on identical ballots: Copeland ties all three, and Equal Vote's margins rule elects Ana while Better Choices for Democracy's "Most Wins, Smallest Loss" elects Celia — the entire practical difference between the two proposals, made visible |
+| [**Burial — RR's signature wart, worked**](03_Criteria/burial/) | the sincere/buried pair (BV2208/BV2209): fifteen voters rank the Condorcet winner last, manufacture a cycle, and win the record tie — triple-checked, deterministic on both engines |
+| [STAR vs RR — 30 divergence samples](02_Examples/star_vs_rr_divergence/) | an auto-generated dump of 30 elections where STAR and RR elect different winners, spread across candidate field (3/5/7/10), electorate size, and grouped-vs-random structure — each YAML states its own cause (cycle vs dark horse), with RCV-IRV / Approval / Plurality on the same ballots (they scatter — no clean alignment). Empirical companion to the [simulation](../06_Other/simulations/README.md#star-vs-ranked-robin-divergence-simulation) |
 
 Same ballot, different count: RCV-IRV (elimination rounds) lives in [other methods](../06_Other/) and inside the comparison sets.
 

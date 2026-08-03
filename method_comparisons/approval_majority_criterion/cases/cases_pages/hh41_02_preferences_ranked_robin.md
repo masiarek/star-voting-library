@@ -7,9 +7,9 @@ search:
 
 *Generated from [`hh41_02_preferences_ranked_robin.yaml`](../hh41_02_preferences_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **1 seat** · **Expected winner:** A
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** A
 
-**Official tie-break (lot) order:** A > B > C — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)).
+**Official tie-break (lot) order:** A > B > C — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
@@ -31,7 +31,7 @@ This file exists to establish that fact from the engine rather than by hand,
 because it is the one thing the paper's own framing does not say about its
 own example.
 
-Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
+Claim-check page: ../../../04_Approval/01_Learn/hamlin_hua_2023.md
 Set overview: ../README.md
 
 ## Ballots

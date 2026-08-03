@@ -2,7 +2,7 @@
 
 *The Condorcet literature is genuinely hard to enter, and the reason is almost never the math — it's the names. "Condorcet method," "pairwise method," "round-robin voting," "tournament solution," "Copeland," "Ranked Robin," "Consensus Choice" all show up in the first ten minutes of reading, at four different levels of generality, from four camps with four agendas. This page is the way in: one taxonomy that makes the names stop sliding, then the sources worth your time, each with its lean marked.*
 
-**Level: reference** (a 201/301 aid). Start with the [naming decoder](../../../05_Ranked_Robin/concepts/condorcet_naming_decoder.md) if you just need the brands untangled; come here for the literature behind it.
+**Level: reference** (a 201/301 aid). Start with the [naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) if you just need the brands untangled; come here for the literature behind it.
 
 ---
 
@@ -12,8 +12,8 @@ Before any book: **"Condorcet method" is not a method.** It's a *property* — e
 
 | Fishburn class | What the rule reads | Members you'll meet | Where in this repo |
 |---|---|---|---|
-| **C1** | only **who beat whom** (the tournament — a matrix of wins/losses, margins discarded) | **Copeland**, Smith set, Schwartz set, Uncovered set, Top Cycle | [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) (a Copeland variant) · [Smith set](../smith_set.md) |
-| **C2** | the **margins** too (how *badly* each pair went) | **Minimax**, **Ranked Pairs**, **Schulze (beatpath)**, **Kemeny**, Split Cycle | [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md) |
+| **C1** | only **who beat whom** (the tournament — a matrix of wins/losses, margins discarded) | **Copeland**, Smith set, Schwartz set, Uncovered set, Top Cycle | [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) (a Copeland variant) · [Smith set](../smith_set.md) |
+| **C2** | the **margins** too (how *badly* each pair went) | **Minimax**, **Ranked Pairs**, **Schulze (beatpath)**, **Kemeny**, Split Cycle | [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) |
 | **C3** | more than the pairwise matrix — the rule must go back to the ballots and iterate | **Dodgson**, **Young** | [the ranked-ballot zoo](../ranked_ballot_methods_zoo.md) |
 
 Once that ladder is in your head, most of the confusion resolves itself:
@@ -21,7 +21,7 @@ Once that ladder is in your head, most of the confusion resolves itself:
 - **"Condorcet" / "pairwise" / "round-robin voting"** all name the **family** (the property), at different levels of formality and friendliness. "Round-robin voting" is a *recent* Wikipedia reframing of what the field has always called Condorcet methods — which is exactly why those two articles read as redundant.
 - **"Tournament solution"** is the academic name for the **C1 tier specifically** — the theory of what to do with nothing but a win/loss graph. If a paper says "tournament solution," it is not talking about the whole family.
 - **Copeland** is *one* C1 rule (most head-to-head wins, ½ per tie). **Ranked Robin** is a **brand** for Copeland plus a defined cycle tiebreak. **Consensus Choice** is a further brand. None of these is a new tier of the taxonomy — they're leaves.
-- **The famous disagreements inside the family are all about cycles.** When a Condorcet winner exists, every rule above elects the same person. C1 vs. C2 vs. C3 only matters when the pairwise results loop — which is why so much of the literature is about a case that is empirically rare. Keep that proportion in mind while reading; see [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md) and the repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md).
+- **The famous disagreements inside the family are all about cycles.** When a Condorcet winner exists, every rule above elects the same person. C1 vs. C2 vs. C3 only matters when the pairwise results loop — which is why so much of the literature is about a case that is empirically rare. Keep that proportion in mind while reading; see [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) and the repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md).
 
 > **The reading trick:** whenever a source names a method, ask *which tier?* A claim proved for C1 rules ("depends only on the tournament") does not transfer to Minimax, and a Minimax result does not transfer to Copeland. Half of all cross-talk in online voting arguments is a tier mismatch.
 
@@ -43,7 +43,7 @@ Once that ladder is in your head, most of the confusion resolves itself:
 
 - **Peter C. Fishburn, "Condorcet Social Choice Functions," *SIAM Journal on Applied Mathematics* 33(3), 1977, pp. 469–489.** The source of the C1/C2/C3 classification above, and of "Condorcet social choice function" as a precise term. If you read one primary source for *vocabulary*, read this one. **The lean:** neutral; pure taxonomy.
 - **H. Peyton Young, "Condorcet's Theory of Voting," *American Political Science Review* 82(4), 1988, pp. 1231–1244.** The historical correction, argued properly: Condorcet the man was after a *maximum-likelihood* estimate of the "correct" ranking, which is closer to Kemeny than to what now carries his name. Genuinely clarifying about why the modern label is a bit of a misnomer. **The lean:** academic; sympathetic to the maximum-likelihood reading.
-- **T. Nicolaus Tideman, "Independence of Clones as a Criterion for Voting Rules," *Social Choice and Welfare* 4(3), 1987, pp. 185–206.** Coins the term, defines the criterion, introduces Ranked Pairs. Pairs with this repo's [clone independence in Ranked Robin](../../../05_Ranked_Robin/concepts/rr_clone_independence.md). **The lean:** pro-Condorcet (Tideman's own rule).
+- **T. Nicolaus Tideman, "Independence of Clones as a Criterion for Voting Rules," *Social Choice and Welfare* 4(3), 1987, pp. 185–206.** Coins the term, defines the criterion, introduces Ranked Pairs. Pairs with this repo's [clone independence in Ranked Robin](../../../05_Ranked_Robin/01_Learn/rr_clone_independence.md). **The lean:** pro-Condorcet (Tideman's own rule).
 - **Markus Schulze, "A New Monotonic, Clone-Independent, Reversal Symmetric, and Condorcet-Consistent Single-Winner Election Method," *Social Choice and Welfare* 36(2), 2011, pp. 267–303.** Long, but the definitions section is a de facto glossary for the C2 tier. **The lean:** the author is the method's inventor and advocate.
 - **Wesley H. Holliday & Eric Pacuit, ["Split Cycle: A New Condorcet-Consistent Voting Method Independent of Clones and Immune to Spoilers"](https://arxiv.org/abs/2004.02350)** (arXiv:2004.02350; published in *Public Choice* 197, 2023). A modern paper whose background sections carefully re-lay the entire Condorcet landscape before adding to it — often the clearest available statement of what the older rules actually do. **The lean:** academic, proposing their own rule; unusually explicit about trade-offs. **→ claim-checked in this repo, with the Schulze spoiler tabulated: [Split Cycle](split_cycle.md).**
 - **Samuel Merrill III, "A Comparison of Efficiency of Multicandidate Electoral Systems," *American Journal of Political Science* 28(1), 1984, pp. 23–48** — expanded into ***Making Multicandidate Elections More Democratic*** (Princeton, 1988). The origin of the **Condorcet-efficiency** numbers everyone still quotes: Plurality, Hare/IRV, Borda, Approval and Condorcet rules simulated under impartial-culture and spatial models. Read it before citing any Condorcet-efficiency figure — including this repo's. This library's own [measured run](condorcet_efficiency_measured.md) independently reproduces the *shape* of Merrill's impartial-culture results, which is some evidence both are doing the arithmetic right. **The lean:** broadly sympathetic to Condorcet and Approval methods, and predates STAR entirely — which makes it a useful outside check rather than a friendly one.
@@ -79,13 +79,13 @@ The Condorcet camp argues well, and the strongest version deserves a serious rea
 
 | You just read about… | Run it here |
 |---|---|
-| Condorcet winners, pairwise matrices | [pairwise counting](../pairwise_counting.md) · [the math behind Condorcet](../../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) |
-| Copeland / tournament solutions (C1) | [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) · [Smith set](../smith_set.md) |
-| Cycles, and what the tiers do about them | [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md) · [the Condorcet-winner paradox](../../voting_paradoxes/condorcet_winner_paradox.md) · [runnable: the two profiles](../../../method_comparisons/cycle_resolution/README.md) |
+| Condorcet winners, pairwise matrices | [pairwise counting](../pairwise_counting.md) · [the math behind Condorcet](../../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) |
+| Copeland / tournament solutions (C1) | [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [Smith set](../smith_set.md) |
+| Cycles, and what the tiers do about them | [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [the Condorcet-winner paradox](../../voting_paradoxes/condorcet_winner_paradox.md) · [runnable: the two profiles](../../../method_comparisons/cycle_resolution/README.md) |
 | Split Cycle, and "immunity to spoilers" | [Split Cycle, claim-checked](split_cycle.md) — the paper's central claim, run |
-| Clone independence | [clone independence in Ranked Robin](../../../05_Ranked_Robin/concepts/rr_clone_independence.md) |
-| Why the brands differ | [the naming decoder](../../../05_Ranked_Robin/concepts/condorcet_naming_decoder.md) · [Ranked Robin vs. Consensus Choice](../../../05_Ranked_Robin/concepts/ranked_robin_vs_consensus_choice.md) |
-| Whether a *rated* method should chase the Condorcet winner at all | [three notions of winner](../../../01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) · [scores vs. ranks](../../scores_and_ranks/scores_vs_ranks.md) |
+| Clone independence | [clone independence in Ranked Robin](../../../05_Ranked_Robin/01_Learn/rr_clone_independence.md) |
+| Why the brands differ | [the naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) · [Ranked Robin vs. Consensus Choice](../../../05_Ranked_Robin/01_Learn/ranked_robin_vs_consensus_choice.md) |
+| Whether a *rated* method should chase the Condorcet winner at all | [three notions of winner](../../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md) · [scores vs. ranks](../../scores_and_ranks/scores_vs_ranks.md) |
 | Cross-checking a real count three ways | [cross-checking with pref_voting](../../tabulation_engines/cross_checking_with_pref_voting.md) |
 
 ---
@@ -93,7 +93,7 @@ The Condorcet camp argues well, and the strongest version deserves a serious rea
 ## Related
 
 - [Topic: Condorcet efficiency](README.md) — the hub this page sits under
-- [Round-robin, Copeland, Condorcet, Ranked Robin — a naming decoder](../../../05_Ranked_Robin/concepts/condorcet_naming_decoder.md) — the brands, mapped
+- [Round-robin, Copeland, Condorcet, Ranked Robin — a naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) — the brands, mapped
 - [Books on Voting Methods](../../books/README.md) — the general shelf, with covers and leans
 - [How to Learn About Voting Methods](../how_to_learn_about_voting_methods.md) — the runnable reading path
 - [Glossary](../../GLOSSARY.md)

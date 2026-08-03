@@ -6,7 +6,7 @@ Two jobs live here. **Teaching elections do not** — those live in [`01_STAR/`]
 
 - `01_convert_json_yaml.py` — converts a real BetterVoting JSON export into a canonical election YAML (real candidate names, aligned columns, the election's official lot order, embedded `expected_results`).
 - Converter input: the frozen real BetterVoting export lives at
-  `01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/…_bv_export.json`
+  `01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/…_bv_export.json`
   (the test copies it into a temp dir; nothing here is mutated).
 - `_generated/` + `_generated_tabulated/` — converter output and its tabulation mirror.
 
@@ -32,6 +32,6 @@ voting_method: STAR
 
 ## History note
 
-Until 2026-07 this folder also held flattened copies of the `Runoff_*`, `Flat_scores_ties_*`, `Whoops_*`, and `center_squeeze_voteline_1d` teaching cases. They had already diverged from their canonical siblings and the test harness runs the canonical files directly, so the copies were removed. If you need one of those cases, use the canonical copies in their current homes: `01_STAR/runoff_reversal_bv_cases/cases/`, `01_STAR/Flat_scores_ties/cases/`, `method_comparisons/paradoxes_and_whoops/cases/`, and `method_comparisons/center_squeeze/cases/`.
+Until 2026-07 this folder also held flattened copies of the `Runoff_*`, `Flat_scores_ties_*`, `Whoops_*`, and `center_squeeze_voteline_1d` teaching cases. They had already diverged from their canonical siblings and the test harness runs the canonical files directly, so the copies were removed. If you need one of those cases, use the canonical copies in their current homes: `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/`, `01_STAR/03_Criteria/Flat_scores_ties/cases/`, `method_comparisons/paradoxes_and_whoops/cases/`, and `method_comparisons/center_squeeze/cases/`.
 
 # file: README.md

@@ -22,7 +22,7 @@ scenario_description: |-
   Condorcet winner; on the underlying preferences (hh41_02) A is. That gap is
   the compression.
 
-  Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
+  Claim-check page: ../../../04_Approval/01_Learn/hamlin_hua_2023.md
   Companion set: ../../black_curtain/condorcet_compression.md
   Set overview: ../README.md
 

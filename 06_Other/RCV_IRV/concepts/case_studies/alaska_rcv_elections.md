@@ -43,7 +43,7 @@ The **[August 2022 US House special](../../../../method_comparisons/alaska_2022/
 
 The [center squeeze](../RCV_IRV_center_squeeze.md) is a **real, structural** flaw of IRV: it *can* eliminate the candidate a majority prefers, and in Alaska's August 2022 special it *did*, in a high-profile federal race. But it is **rare and conditional** — it only causes a wrong result when a genuine centrist Condorcet winner has too few first choices, which is *not* most elections (not even most Alaska ones).
 
-So the honest case for [STAR](../../../../01_STAR/concepts/STAR_start_here.md) and [Ranked Robin](../../../../05_Ranked_Robin/concepts/ranked_robin.md) is **not** "IRV always fails." It's: *IRV has a known, structural failure mode that has struck real elections — and methods that read the whole ballot avoid it entirely, at no cost to the races IRV already handles well.* Alaska is Exhibit A for both halves of that sentence.
+So the honest case for [STAR](../../../../01_STAR/01_Learn/STAR_start_here.md) and [Ranked Robin](../../../../05_Ranked_Robin/01_Learn/ranked_robin.md) is **not** "IRV always fails." It's: *IRV has a known, structural failure mode that has struck real elections — and methods that read the whole ballot avoid it entirely, at no cost to the races IRV already handles well.* Alaska is Exhibit A for both halves of that sentence.
 
 ---
 

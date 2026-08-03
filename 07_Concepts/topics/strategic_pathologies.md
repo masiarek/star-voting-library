@@ -14,7 +14,7 @@
 | **Center Squeeze** | premature elimination | RCV-IRV (Hare) | [center squeeze](../../method_comparisons/center_squeeze/) · [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/) |
 | **Dark Horse** | prisoner's dilemma | Borda / ranked-point | [the Dark Horse](../../method_comparisons/dark_horse_borda/) |
 | **Chicken / Burr** | chicken (snowdrift) | Approval / Score | [the chicken dilemma](../../method_comparisons/chicken_dilemma/) |
-| **Condorcet Cycle** | Gibbard-universal | *every* method | [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) |
+| **Condorcet Cycle** | Gibbard-universal | *every* method | [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) |
 
 ## The scorecard — STAR, Ranked Robin, and 3-2-1 on each
 
@@ -32,7 +32,7 @@
 
 > **Fine print (three caveats the scorecard glosses, raised in the discussion of Quinn's originals):**
 > - **PR doesn't fully kill Lesser Evil.** Proportional representation softens it, but any **threshold** recreates a milder wasted-vote fear — a small new party below the cutoff still feels unsafe to support. Escape is partial, not total.
-> - **Ranked Robin has its own, sincere dark horse.** RR escapes the *strategic Borda* Dark Horse (above), but a Condorcet method can crown a **thinly-supported unknown** everyone merely tolerates as a second choice — a real [RR limit](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md). STAR resists *both*, because it reads **support**, not just order ([preference vs support](../scores_and_ranks/preference_vs_support.md)). So on Dark Horse, STAR is a touch ahead of RR.
+> - **Ranked Robin has its own, sincere dark horse.** RR escapes the *strategic Borda* Dark Horse (above), but a Condorcet method can crown a **thinly-supported unknown** everyone merely tolerates as a second choice — a real [RR limit](../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md). STAR resists *both*, because it reads **support**, not just order ([preference vs support](../scores_and_ranks/preference_vs_support.md)). So on Dark Horse, STAR is a touch ahead of RR.
 > - **Arrow only binds ordinal methods.** The impossibility that dooms *ranked* methods (Arrow) doesn't apply to a cardinal ballot — which is why STAR escapes Arrow but **not** Gibbard ([STAR escapes Arrow, not Gibbard](arrow_theorem_and_star.md)). The Condorcet-cycle row is a **Gibbard** limit, not an Arrow one.
 
 ## The five, one paragraph each
@@ -45,13 +45,13 @@
 
 **Chicken / Burr (Approval).** Two allies must cooperate to beat a third, but honest cooperation leaves them tied, so each is tempted to bullet-vote — a slippery slope that can hand victory to the majority-opposed candidate. STAR's runoff converts the *slippery* slope to a *non-slippery* one (the same fix as Quinn's [3-2-1](three_two_one_voting.md)): support both allies honestly, and a few defectors can't start an avalanche. → [the chicken dilemma](../../method_comparisons/chicken_dilemma/).
 
-**Condorcet Cycle (universal).** Sometimes a majority prefers A to B, B to C, *and* C to A — a rock-paper-scissors with no honest winner. This is at the heart of the proof that **no** method escapes strategy ([Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md)). Cycles are genuinely rare (~1–5% in realistic models and empirical data), and every method — STAR and Ranked Robin included — must simply resolve them somehow. → [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md).
+**Condorcet Cycle (universal).** Sometimes a majority prefers A to B, B to C, *and* C to A — a rock-paper-scissors with no honest winner. This is at the heart of the proof that **no** method escapes strategy ([Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md)). Cycles are genuinely rare (~1–5% in realistic models and empirical data), and every method — STAR and Ranked Robin included — must simply resolve them somehow. → [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md).
 
 ## The takeaway
 
 The Molochs aren't a reason to despair of voting reform — they're a **method-selection tool**. Four of the five can be *designed away*; only the Condorcet cycle is permanent, and it's both rare and mild. The lesson Quinn draws, and the one this library's cases keep landing on:
 
-> **Don't force voters to dishonestly support one candidate merely to oppose another.** A ballot that lets you say *how much* you like each option — independently — sidesteps Dark Horse and softens Chicken; a runoff or pairwise check sidesteps Center Squeeze and Lesser Evil. That's [STAR](../../01_STAR/concepts/STAR_start_here.md) and [Ranked Robin](../../05_Ranked_Robin/concepts/README.md), and it's why they hold up against a scorecard built by someone rooting for neither.
+> **Don't force voters to dishonestly support one candidate merely to oppose another.** A ballot that lets you say *how much* you like each option — independently — sidesteps Dark Horse and softens Chicken; a runoff or pairwise check sidesteps Center Squeeze and Lesser Evil. That's [STAR](../../01_STAR/01_Learn/STAR_start_here.md) and [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md), and it's why they hold up against a scorecard built by someone rooting for neither.
 
 ## Sources
 

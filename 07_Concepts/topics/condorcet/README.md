@@ -8,13 +8,13 @@
 
 | Method | Condorcet winner? | Notes | Full page |
 |--------|:---:|------|-----------|
-| **Ranked Robin / Copeland** | ✅ always | it *is* a Condorcet method — most pairwise wins | [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) |
+| **Ranked Robin / Copeland** | ✅ always | it *is* a Condorcet method — most pairwise wins | [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) |
 | **BTR / Baldwin / Nanson** | ✅ always | Condorcet-safe IRV variants | [Which RCV-IRV?](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) |
-| **STAR** | ⚠️ very often | not guaranteed; the runoff usually recovers it. [Measured](condorcet_efficiency_measured.md): 74–99% | [STAR automatic runoff](../../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) |
+| **STAR** | ⚠️ very often | not guaranteed; the runoff usually recovers it. [Measured](condorcet_efficiency_measured.md): 74–99% | [STAR automatic runoff](../../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) |
 | **RCV-IRV (Hare)** | ❌ not guaranteed | can eliminate the Condorcet winner before the final round | [Center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) |
 | **Approval / Plurality** | ❌ | don't use the full pairwise picture | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 
-When there's **no** Condorcet winner (a cycle), the principled "still in contention" list is [the Smith set](../smith_set.md), and methods differ in how they pick from it — see [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md).
+When there's **no** Condorcet winner (a cycle), the principled "still in contention" list is [the Smith set](../smith_set.md), and methods differ in how they pick from it — see [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md).
 
 The mirror image of this table is the **Condorcet loser** — the candidate who loses every head-to-head ([the loser paradox](../../voting_paradoxes/condorcet_loser_paradox.md)) — and its ties-allowed refinement, the **weak Condorcet loser**, the candidate who *beats nobody*. That distinction is where STAR's guarantee has fine print: it can never elect a strict Condorcet loser, but a **tie is not a loss**, so a weak one can win on the runoff tiebreaker. Worked across five methods on five voters: [The weak Condorcet loser](../../../method_comparisons/weak_condorcet_loser/README.md). The repo's [divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) catalogs real library elections where STAR, IRV, and the Condorcet winner disagree.
 
@@ -24,7 +24,7 @@ The mirror image of this table is the **Condorcet loser** — the candidate who 
 
 > **"Is there anything that *positively* proves the pairwise approach right?"** Yes — one theorem, and it's the strongest card the Condorcet family holds. **[Campbell–Kelly (2003)](campbell_kelly_theorem.md)**, "May's Theorem for three or more alternatives": restricted to profiles where a Condorcet winner exists, electing that winner is **resolute, anonymous, neutral and strategyproof** — and for an odd number of voters it is the *unique* such rule. State it at full strength, then state the price, which is large and specific: the theorem holds only on that restricted domain, so it says nothing about **cycles** — exactly the profiles where methods actually disagree — and it can't distinguish Ranked Robin from Minimax from Schulze, since all of them agree there by definition. It also doesn't contradict [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md), and *why* is the useful lesson: **G–S's bite comes from the full domain, not from having three or more candidates.** Fair warning for STAR advocates — STAR is not a Condorcet extension, so this one lands on the other side of the table: [the full treatment, limits included](campbell_kelly_theorem.md).
 
-> **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a Condorcet winner exists, and part ways only in a cycle (Condorcet goes blank, Ranked Robin still picks the best record). Worked through with a real example in [Ranked Robin vs. the Condorcet winner](../../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md).
+> **"Isn't Ranked Robin the same as Condorcet?"** Almost — they're identical when a Condorcet winner exists, and part ways only in a cycle (Condorcet goes blank, Ranked Robin still picks the best record). Worked through with a real example in [Ranked Robin vs. the Condorcet winner](../../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md).
 
 > **"But a paper proves Condorcet, IIA, and monotonicity aren't even desirable?"** That's the most sophisticated form of the argument — an arXiv paper defining "ordered majority rule" and claiming IRV uniquely satisfies it. The catch: the property is IRV's own algorithm restated, defined circularly, so the "uniqueness" is a mirror. Taken apart (with the honest core — the case for *cardinal* ballots — kept) in [Ordered majority rule and the "Condorcet isn't desirable" argument](ordered_majority_rule_irv.md).
 

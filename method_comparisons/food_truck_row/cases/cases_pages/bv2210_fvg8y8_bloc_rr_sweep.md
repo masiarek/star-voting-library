@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2210_fvg8y8_bloc_rr_sweep.yaml`](../bv2210_fvg8y8_bloc_rr_sweep.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/concepts) · **2 seats** · **Expected winners:** Arepa, Bao
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **2 seats** · **Expected winners:** Arepa, Bao
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
 

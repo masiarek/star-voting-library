@@ -2,7 +2,7 @@
 
 *Robert LeGrand's [ranked-ballot voting calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) offers fifteen-plus methods — Baldwin, Black, Borda, Bucklin, Carey, Coombs, Copeland, Dodgson, Hare, Nanson, Raynaud, Schulze, Simpson, Small, Tideman — all fed **the same ranked ballots**. That single screen is the clearest possible demonstration of this repo's core terminology point: **RCV names a ballot (ranked); it does not name a tabulation.** IRV is just one way to count a ranked ballot; here are a dozen more, and they routinely pick different winners on identical votes.*
 
-→ **Level: Voting 301** — Curriculum [301.10](../CURRICULUM.md). Companions: [Ranked Robin vs. the Condorcet winner](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) · [Cycle resolution — why Minimax, Ranked Pairs, Schulze exist](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · terminology canon: [TIPS_terminology](../tips/TIPS_terminology.md).
+→ **Level: Voting 301** — Curriculum [301.10](../CURRICULUM.md). Companions: [Ranked Robin vs. the Condorcet winner](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md) · [Cycle resolution — why Minimax, Ranked Pairs, Schulze exist](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · terminology canon: [TIPS_terminology](../tips/TIPS_terminology.md).
 
 Live tool: **[calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html)** · authoritative method write-ups: **[descriptions](https://cs.angelo.edu/~rlegrand/rbvote/desc.html)** (LeGrand). Paste ballots like `14:Alan>Beth>Carl` (14 identical ballots; `=` for equal ranks) and it runs all methods at once — a great sandbox for the examples below.
 
@@ -71,7 +71,7 @@ These build a **pairwise matrix** in one pass — for every pair, how many voter
 - **Schulze** (beatpaths / CSSD) — resolves cycles via **strongest indirect paths** of victories. Clone-independent, monotonic, and **never** picks a Condorcet loser.
 - **Tideman** (**Ranked Pairs**) — lock in pairwise victories strongest-first, skipping any that would contradict a stronger, already-locked one. Also clone-independent, monotonic, and never a Condorcet loser.
 
-Minimax (Simpson), Ranked Pairs (Tideman), and Schulze are the three cycle-resolvers the repo treats in depth in **[cycle_resolution.md](../../05_Ranked_Robin/concepts/cycle_resolution.md)** — Ranked Robin runs the round-robin and, if a cycle appears, hands off to one of these.
+Minimax (Simpson), Ranked Pairs (Tideman), and Schulze are the three cycle-resolvers the repo treats in depth in **[cycle_resolution.md](../../05_Ranked_Robin/01_Learn/cycle_resolution.md)** — Ranked Robin runs the round-robin and, if a cycle appears, hands off to one of these.
 
 ## Beyond single winners — the set-valued three
 
@@ -121,4 +121,4 @@ Three payoffs for our teaching:
 
 - Robert LeGrand, **Ranked-ballot voting calculator** — [calc.html](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) · **method descriptions** — [desc.html](https://cs.angelo.edu/~rlegrand/rbvote/desc.html) (Angelo State University). Source of the definitions and worked examples above.
 - electowiki: [Borda](https://electowiki.org/wiki/Borda_count) · [Nanson & Baldwin](https://electowiki.org/wiki/Nanson%27s_method) · [Bucklin](https://electowiki.org/wiki/Bucklin_voting) · [Coombs](https://electowiki.org/wiki/Coombs%27_method) · [Copeland](https://electowiki.org/wiki/Copeland%27s_method) · [Minimax (Simpson)](https://electowiki.org/wiki/Minimax) · [Schulze](https://electowiki.org/wiki/Schulze_method) · [Ranked Pairs (Tideman)](https://electowiki.org/wiki/Ranked_pairs) · [Smith set](https://electowiki.org/wiki/Smith_set)
-- In-repo: [Ranked Robin vs. the Condorcet winner](../../05_Ranked_Robin/concepts/ranked_robin_vs_condorcet.md) · [Cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [The math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md) · [What makes a good winner?](what_makes_a_good_winner.md)
+- In-repo: [Ranked Robin vs. the Condorcet winner](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md) · [Cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [The math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [What makes a good winner?](what_makes_a_good_winner.md)

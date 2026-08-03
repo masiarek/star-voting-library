@@ -60,7 +60,7 @@ Uncovered ⊆ Smith, always. The Smith set answers *who is in contention*; the u
 
 **Ranked Robin never elects a covered candidate.** The Copeland set is always a subset of the uncovered set, and the proof is one line: if B covers A then B beats everything A beats *plus* A itself, so B's win count is strictly greater than A's, so A cannot have the maximum win count. Verified as a sanity check over 300,000 random tournaments — zero violations.
 
-That is a genuine, citable virtue of [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), and via the Pareto theorem above it means **Ranked Robin is Pareto-optimal in the tournament sense**. It's a better thing to say about the method than any axiom scorecard, because a voter can follow it.
+That is a genuine, citable virtue of [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), and via the Pareto theorem above it means **Ranked Robin is Pareto-optimal in the tournament sense**. It's a better thing to say about the method than any axiom scorecard, because a voter can follow it.
 
 **RCV-IRV can, and often does.** Over 120,000 random tie-free four-candidate ranked profiles, IRV elected a covered candidate 9.1% of the time — 61.6% of the time when there was no Condorcet winner. Two honest caveats on that number, both cutting the same way: uniform-random profiles ("impartial culture") produce far more cycles than real electorates do — 14.8% here, against the [2-in-182 rate observed in real IRV elections](../../06_Other/RCV_IRV/concepts/) — so treat 9.1% as *what the failure looks like when cycles are common*, not as a forecast for any real jurisdiction. When there is a Condorcet winner, no method that elects them can elect a covered candidate.
 
@@ -86,7 +86,7 @@ Both halves of that, because the repo doesn't get to keep only the flattering on
 - **Against STAR.** No rule reading only the win-loss graph would elect Denver, and the objection travels in one sentence to a lay audience. Plurality, RCV-IRV and Ranked Robin all elect Chicago here; STAR is the outlier, and the engine says so in its own divergence block.
 - **For STAR.** Covering is a purely *ordinal* verdict, and STAR is deliberately reading what the tournament throws away. Denver is **not** Pareto-dominated — ballot 3 scores Denver 5 and Chicago 0 — and Denver outscores both Boston and Chicago. The ordinal evidence says "redundant"; the cardinal evidence says "more support." That disagreement *is* the score-versus-pairwise argument, in five ballots.
 
-Ranked Robin, as guaranteed, stays inside: Copeland ties Boston and Chicago at 2–1, both uncovered. At four candidates that tie is unavoidable — a unique Copeland winner and a Condorcet winner are the same thing there (exhaustively true over all 64 four-candidate tournaments), so a cycle forces a tie. LH's margin rung then elects **Chicago** (+1 vs Boston's −1); BetterVoting's head-to-head rung would elect **Boston** (3–2). Deterministic on both sides, and [they disagree](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) — and the disagreement isn't arbitrary on either side: the sharpest solution in the family, the **Slater set, returns `{Boston}`**, siding with BetterVoting's rung. Two engines, two published tiebreaks, and each has a tournament solution behind it.
+Ranked Robin, as guaranteed, stays inside: Copeland ties Boston and Chicago at 2–1, both uncovered. At four candidates that tie is unavoidable — a unique Copeland winner and a Condorcet winner are the same thing there (exhaustively true over all 64 four-candidate tournaments), so a cycle forces a tie. LH's margin rung then elects **Chicago** (+1 vs Boston's −1); BetterVoting's head-to-head rung would elect **Boston** (3–2). Deterministic on both sides, and [they disagree](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) — and the disagreement isn't arbitrary on either side: the sharpest solution in the family, the **Slater set, returns `{Boston}`**, siding with BetterVoting's rung. Two engines, two published tiebreaks, and each has a tournament solution behind it.
 
 ## The caveat before you quote this at a real election
 
@@ -113,6 +113,6 @@ Four defensible answers to "who is redundant here," from one election. So: **"th
 ## Related
 
 - [Tournament solutions](tournament_solutions.md) — the whole C1 family, and where Ranked Robin sits in it
-- [The Smith set](smith_set.md) — the coarser sibling · [the math behind Condorcet](../../05_Ranked_Robin/concepts/the_math_behind_condorcet.md)
+- [The Smith set](smith_set.md) — the coarser sibling · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md)
 - [Tournament solutions, counted](../../method_comparisons/tournament_solutions/) — the runnable exhibits
-- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) · [its honest limits](../../05_Ranked_Robin/concepts/RCV_RR_honest_limits.md) · [STAR's properties and limits](../../01_STAR/concepts/properties_and_limits/)
+- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [its honest limits](../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md) · [STAR's properties and limits](../../01_STAR/01_Learn/properties_and_limits/)

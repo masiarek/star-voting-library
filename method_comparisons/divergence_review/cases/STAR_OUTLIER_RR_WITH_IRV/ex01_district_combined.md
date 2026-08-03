@@ -21,7 +21,7 @@ RCV-IRV and Ranked Robin both elect **Elena**, the Condorcet (pairwise) winner. 
 
 **Flags:** 18 tied-score ballot(s)
 
-**Source election:** [`01_STAR/exercises/cases/ex01_district_combined.yaml`](../../../../01_STAR/exercises/cases/ex01_district_combined.yaml)  ·  **STAR tabulated mirror:** [`ex01_district_combined_tabulated.txt`](../../../../01_STAR/exercises/cases/cases_tabulated/ex01_district_combined_tabulated.txt)
+**Source election:** [`01_STAR/05_Practice/cases/ex01_district_combined.yaml`](../../../../01_STAR/05_Practice/cases/ex01_district_combined.yaml)  ·  **STAR tabulated mirror:** [`ex01_district_combined_tabulated.txt`](../../../../01_STAR/05_Practice/cases/cases_tabulated/ex01_district_combined_tabulated.txt)
 
 _5 candidates, 18 ballots._
 

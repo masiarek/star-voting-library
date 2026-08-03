@@ -44,7 +44,7 @@ Same ballots as the [Hare page](../RCV-IRV-Hare.md), opposite result: BTR elects
 
 ## Where it's used
 
-Mostly a **reform proposal** rather than current law — introduced by Rob LeGrand (2006) as "BTR-STV," and a frequent suggestion for making RCV-IRV Condorcet-compliant with minimal change to how it already works. Compare with the no-elimination Condorcet method, **[Ranked Robin (RCV-RR)](../../../../05_Ranked_Robin/concepts/ranked_robin.md)**.
+Mostly a **reform proposal** rather than current law — introduced by Rob LeGrand (2006) as "BTR-STV," and a frequent suggestion for making RCV-IRV Condorcet-compliant with minimal change to how it already works. Compare with the no-elimination Condorcet method, **[Ranked Robin (RCV-RR)](../../../../05_Ranked_Robin/01_Learn/ranked_robin.md)**.
 
 ## Related
 

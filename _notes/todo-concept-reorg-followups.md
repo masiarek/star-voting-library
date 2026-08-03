@@ -32,18 +32,18 @@ Recover the whole page as it stood: `git show 49cc43b:07_Concepts/README.md`
 
 | Concept | One line |
 |---------|----------|
-| [**STAR's hybrid nature**](01_STAR/concepts/the_count/STAR_hybrid_nature.md) | expressive scoring to find the finalists + a majority runoff to pick the winner — the design the rest of these pages build on |
-| [**The Automatic Runoff Round**](01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) | STAR's second step, end to end — finalists, the For/Against/Equal Support counts, percentages, tie-breaking, and Runoff Reversal; the hub for all runoff topics |
-| [**Runoff Reversal — top scorer ≠ winner**](01_STAR/runoff_overturns_leader/) | the Scoring Round picks two finalists; the Automatic Runoff lets the *majority-preferred* finalist win — even with fewer total stars |
-| [**Reading the runoff percentages**](01_STAR/concepts/the_count/runoff_percentages.md) | the same runoff vote shown two ways — % of all voters vs % of the voters *with a preference*; why the winner needs a majority of the decided voters, and where Equal Support goes |
-| [**Three notions of "winner"**](01_STAR/concepts/properties_and_limits/STAR_three_winner_notions.md) | Condorcet vs Score vs Runoff can name three different candidates in one election |
-| [**STAR is monotone**](01_STAR/concepts/properties_and_limits/STAR_monotonicity.md) | raising a candidate's score can never make them lose — the failure IRV has, STAR doesn't |
-| [**STAR is summable**](01_STAR/concepts/properties_and_limits/STAR_summability.md) | tally by adding independent precinct totals; precinct-auditable, meaningful partials |
-| [**Residual vote-splitting**](01_STAR/concepts/properties_and_limits/residual_vote_splitting.md) | STAR ends *forced* splitting; the narrow leftover is self-inflicted bullet-voting / the chicken dilemma |
-| [**Equally Weighted Vote (Equal Vote Criterion)**](01_STAR/concepts/properties_and_limits/equally_weighted_vote.md) | every ballot has an exact opposite that cancels it (the Test of Balance) — why STAR fully ends *forced* vote-splitting; Choose-One and RCV-IRV fail it |
-| [**STAR — honest limits**](01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) | not Condorcet-compliant, not FBC-proof, gives up Later-No-Harm, residual splitting, strategic scoring — stated plainly |
-| [**Tie-breaking — the full chain**](01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) | ties fall through pairwise → five-star → lot order, in both rounds |
-| [**Tie-breaking in BetterVoting JSON**](01_STAR/concepts/Tie_Breaking_STAR/tie_breaking_JSON.md) | how a BV export pre-draws the official lot order, and its YAML mapping |
+| [**STAR's hybrid nature**](01_STAR/01_Learn/the_count/STAR_hybrid_nature.md) | expressive scoring to find the finalists + a majority runoff to pick the winner — the design the rest of these pages build on |
+| [**The Automatic Runoff Round**](01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) | STAR's second step, end to end — finalists, the For/Against/Equal Support counts, percentages, tie-breaking, and Runoff Reversal; the hub for all runoff topics |
+| [**Runoff Reversal — top scorer ≠ winner**](01_STAR/02_Examples/runoff_overturns_leader/) | the Scoring Round picks two finalists; the Automatic Runoff lets the *majority-preferred* finalist win — even with fewer total stars |
+| [**Reading the runoff percentages**](01_STAR/01_Learn/the_count/runoff_percentages.md) | the same runoff vote shown two ways — % of all voters vs % of the voters *with a preference*; why the winner needs a majority of the decided voters, and where Equal Support goes |
+| [**Three notions of "winner"**](01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md) | Condorcet vs Score vs Runoff can name three different candidates in one election |
+| [**STAR is monotone**](01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md) | raising a candidate's score can never make them lose — the failure IRV has, STAR doesn't |
+| [**STAR is summable**](01_STAR/01_Learn/properties_and_limits/STAR_summability.md) | tally by adding independent precinct totals; precinct-auditable, meaningful partials |
+| [**Residual vote-splitting**](01_STAR/01_Learn/properties_and_limits/residual_vote_splitting.md) | STAR ends *forced* splitting; the narrow leftover is self-inflicted bullet-voting / the chicken dilemma |
+| [**Equally Weighted Vote (Equal Vote Criterion)**](01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) | every ballot has an exact opposite that cancels it (the Test of Balance) — why STAR fully ends *forced* vote-splitting; Choose-One and RCV-IRV fail it |
+| [**STAR — honest limits**](01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) | not Condorcet-compliant, not FBC-proof, gives up Later-No-Harm, residual splitting, strategic scoring — stated plainly |
+| [**Tie-breaking — the full chain**](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md) | ties fall through pairwise → five-star → lot order, in both rounds |
+| [**Tie-breaking in BetterVoting JSON**](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking_JSON.md) | how a BV export pre-draws the official lot order, and its YAML mapping |
 
 Note: the links above are rewritten **relative to the repo root** (this file's location), not to `07_Concepts/` where they originally sat. They already point at the post-move paths, so the targets are right — just fix the relative depth when pasting one into a method folder's `concepts/README.md`.
 

@@ -53,5 +53,5 @@ Full report: [`…_tabulated.txt`](cases/cases_tabulated/bv2183_dfw8rj_forced_ex
 
 - [Forced vs. Voluntary Exhaustion](../../06_Other/RCV_IRV/concepts/forced_vs_voluntary_exhaustion.md) — the concept this case makes concrete
 - [Exhausted (Inactive) Ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) — the full picture, including the **real** election rates
-- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — reads every ballot in every pair, so it never exhausts
+- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) — reads every ballot in every pair, so it never exhausts
 - [Reading these paradoxes fairly](reading_these_fairly.md)

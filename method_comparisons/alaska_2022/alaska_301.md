@@ -64,7 +64,7 @@ The fair conclusion isn't "STAR never fails." It's: **STAR's failures are contri
 
 ### It is fair *because STAR's real cost is conceded, openly*
 
-STAR is **not** perfect, and this library says so on its own pages. STAR's genuine honest limit is the [runoff reversal](../../01_STAR/runoff_overturns_leader/README.md): a broadly-liked, high-average candidate can lose the automatic runoff to a *polarizing* candidate a bare majority ranks higher. That's a real philosophical cost (utility vs. majority), documented plainly in [STAR's Honest Limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) — STAR is also not [Condorcet-compliant](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md), not favorite-betrayal-proof, and gives up Later-No-Harm by design. Teaching Alaska *next to* those admissions is what makes the comparison trustworthy rather than a sales pitch.
+STAR is **not** perfect, and this library says so on its own pages. STAR's genuine honest limit is the [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md): a broadly-liked, high-average candidate can lose the automatic runoff to a *polarizing* candidate a bare majority ranks higher. That's a real philosophical cost (utility vs. majority), documented plainly in [STAR's Honest Limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) — STAR is also not [Condorcet-compliant](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md), not favorite-betrayal-proof, and gives up Later-No-Harm by design. Teaching Alaska *next to* those admissions is what makes the comparison trustworthy rather than a sales pitch.
 
 ### So how do you answer FairVote?
 

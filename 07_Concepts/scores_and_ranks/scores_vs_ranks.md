@@ -42,11 +42,11 @@ flowchart LR
 Four things this diagram is careful about, because popular versions of it usually aren't:
 
 - **STAR's second round is a *runoff*, not a ranking.** It counts, for each ballot, which of the **two finalists** that voter scored higher — a majority preference, not an ordering of the field. Calling it "ranking" feeds the very confusion this page exists to clear up.
-- **Both sides branch by *tabulation*.** Whether a ballot permits **equal ranks** is a *ballot rule*, not a method family — most US RCV-IRV forbids them, [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) allows them, and the same is true of truncation limits. Those belong as footnotes on the ballot, not as branches. (What defines IRV is *sequential elimination*, not its equal-ranks rule.)
+- **Both sides branch by *tabulation*.** Whether a ballot permits **equal ranks** is a *ballot rule*, not a method family — most US RCV-IRV forbids them, [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) allows them, and the same is true of truncation limits. Those belong as footnotes on the ballot, not as branches. (What defines IRV is *sequential elimination*, not its equal-ranks rule.)
 - **Condorcet is a *family*, not a method.** Ranked Robin sits **inside** it, alongside Ranked Pairs, Schulze and Minimax — it isn't a sibling of "Condorcet."
 - **A ranked ballot is not one method.** IRV, Ranked Robin and STV read *the same ballot* and can elect *different winners*. The full ranked breakdown — with aliases and the summability split — is the canonical [ranked-method family tree](../tips/TIPS_terminology.md).
 
-*(Single-winner unless marked; STV is the proportional multi-winner branch. The rated side has proportional forms too — [STAR-PR](../../03_STAR_PR/concepts/STAR_PR/README.md) — and a majoritarian multi-winner one, Bloc STAR.)*
+*(Single-winner unless marked; STV is the proportional multi-winner branch. The rated side has proportional forms too — [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) — and a majoritarian multi-winner one, Bloc STAR.)*
 
 > **The naming trap.** *Rank* and *rate* sound almost identical and get swapped constantly — but they are opposites in what they measure. This library uses **rank** only for ordering and **score** (synonyms: rate, grade) only for independent values. If you remember one thing: **equal rankings are still rankings; a score is not a ranking.**
 
@@ -61,7 +61,7 @@ Four things this diagram is careful about, because popular versions of it usuall
 | Familiar from | A race: 1st, 2nd, 3rd | Amazon / movie **five-star** reviews |
 | Methods | RCV-IRV, STV, Condorcet (Ranked Robin), Borda | STAR, Score, Approval (0/1) |
 
-Because differences are meaningful only for scores, you can **average** scores (a column sum) but it makes no sense to "average" ranks. This is exactly why STAR is summable and IRV is not. (See [STAR Is Summable — Add Up Precinct Totals](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) and [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md).)
+Because differences are meaningful only for scores, you can **average** scores (a column sum) but it makes no sense to "average" ranks. This is exactly why STAR is summable and IRV is not. (See [STAR Is Summable — Add Up Precinct Totals](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) and [How the Count Works — STAR vs RCV-IRV, Step by Step](../topics/tabulation_star_vs_irv.md).)
 
 ## Why "ranked" is about the *data*, not just the ballot
 

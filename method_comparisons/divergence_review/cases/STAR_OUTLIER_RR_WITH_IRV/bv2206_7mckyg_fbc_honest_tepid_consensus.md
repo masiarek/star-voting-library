@@ -21,7 +21,7 @@ RCV-IRV and Ranked Robin both elect **Bluebell**, the Condorcet (pairwise) winne
 
 **Flags:** 9 tied-score ballot(s)
 
-**Source election:** [`01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml`](../../../../01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml)  ·  **STAR tabulated mirror:** [`bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt`](../../../../01_STAR/favorite_betrayal/cases/cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml`](../../../../01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml)  ·  **STAR tabulated mirror:** [`bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt`](../../../../01_STAR/03_Criteria/favorite_betrayal/cases/cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_tabulated.txt)
 
 _3 candidates, 57 ballots._
 

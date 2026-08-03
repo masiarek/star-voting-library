@@ -1,8 +1,8 @@
 # The minimal tilted cycle — five voters, and already the methods disagree
 
-*Five voters. Three candidates. Every voter perfectly rational, the electorate not: **Ada beats Ben 4–1, Ben beats Cara 3–2, Cara beats Ada 3–2**. This is the smallest election in existence in which a majority cycle is **lopsided** — and that lopsidedness is exactly what pries the [Condorcet family](../../07_Concepts/topics/condorcet/README.md) apart. [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)'s Copeland count still ties all three; the [maximin](../../07_Concepts/voting_paradoxes/minimax.md) family drops Ben. Five ballots is all it takes. This page proves the minimality — by hand and by brute force — and runs every rule on it.*
+*Five voters. Three candidates. Every voter perfectly rational, the electorate not: **Ada beats Ben 4–1, Ben beats Cara 3–2, Cara beats Ada 3–2**. This is the smallest election in existence in which a majority cycle is **lopsided** — and that lopsidedness is exactly what pries the [Condorcet family](../../07_Concepts/topics/condorcet/README.md) apart. [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)'s Copeland count still ties all three; the [maximin](../../07_Concepts/voting_paradoxes/minimax.md) family drops Ben. Five ballots is all it takes. This page proves the minimality — by hand and by brute force — and runs every rule on it.*
 
-→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · the collapse it complicates: [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) · the symmetric sibling: [reinforcement paradox — North district](../reinforcement_paradox/README.md) · [cycle resolution at four candidates](../../05_Ranked_Robin/concepts/cycle_resolution.md) · the tie-break shape: [three-way dead rung](../../01_STAR/tie_break_dead_rung/README.md).
+→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · the collapse it complicates: [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) · the symmetric sibling: [reinforcement paradox — North district](../reinforcement_paradox/README.md) · [cycle resolution at four candidates](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · the tie-break shape: [three-way dead rung](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md).
 
 ---
 
@@ -90,7 +90,7 @@ Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the
 
 | Rule | Winner(s) | Reads | Why |
 |---|:--|:--:|---|
-| **Copeland / [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** | Ada, Ben, Cara — *a three-way tie* | wins | every record is 1–1 |
+| **Copeland / [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** | Ada, Ben, Cara — *a three-way tie* | wins | every record is 1–1 |
 | ↳ LH's Ranked Robin, after tie-break | **Ada** | +margins | total margin +2 / 0 / −2 |
 | **Minimax** (maximin) | **Ada, Cara** | margins | worst loss −1 each; Ben's is −3 |
 | **Ranked Pairs** | Ada, Cara | margins | the [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) — |
@@ -109,13 +109,13 @@ Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the
 
 Two things to take from that table.
 
-**First, the headline: Copeland is not in the maximin family, and five voters proves it.** On the *symmetric* cycle every one of these Condorcet rules returns all three names — indistinguishable. Tilt by a single voter and the margin-reading rules immediately see that Ben's worst defeat (−3) is far worse than anybody else's (−1) and drop him, while Copeland — which counts only *whether* you won, never *by how much* — still reports 1–1, 1–1, 1–1. That is the practical content of "[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) doesn't inherit maximin's no-show immunity": it is a different rule, and this is the smallest election where you can watch it be different.
+**First, the headline: Copeland is not in the maximin family, and five voters proves it.** On the *symmetric* cycle every one of these Condorcet rules returns all three names — indistinguishable. Tilt by a single voter and the margin-reading rules immediately see that Ben's worst defeat (−3) is far worse than anybody else's (−1) and drop him, while Copeland — which counts only *whether* you won, never *by how much* — still reports 1–1, 1–1, 1–1. That is the practical content of "[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) doesn't inherit maximin's no-show immunity": it is a different rule, and this is the smallest election where you can watch it be different.
 
 **Second, and fairly: nobody here is wrong.** Ada, Cara, and the {Ada, Cara} set are all defensible answers, and IRV's Cara is a perfectly legitimate reading — in a cycle there is no Condorcet winner to miss, so none of these rules can be accused of missing one. What the profile shows is the *cost* of a cycle: five ballots, and reasonable rules already land in different places. Note too that strict and weak Nanson — two spellings of the same rule — disagree with each other (Cara vs Ada), though both stay inside maximin's {Ada, Cara}. Precision about tie-breaks is not pedantry; it changes the winner.
 
 ## The "three-way dead rung" connection
 
-Ranked Robin's tie here has the shape of [the three-way dead rung](../../01_STAR/tie_break_dead_rung/README.md) — every candidate tied on the deciding measure — but only **one rung deep**:
+Ranked Robin's tie here has the shape of [the three-way dead rung](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) — every candidate tied on the deciding measure — but only **one rung deep**:
 
 | Rung | Symmetric 6-voter cycle | **This tilted 5-voter cycle** |
 |---|---|---|
@@ -129,7 +129,7 @@ So the tilt is doing double duty: it is what lets maximin separate the candidate
 
 ## Why this case is LH-only
 
-No BetterVoting election backs it, deliberately. A Copeland three-way tie is precisely the case where [BV breaks the tie at **random**](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) (head-to-head, then random) while LH breaks it by margin, then lot. A random BV result cannot be frozen into a stable teaching artifact, so minting a permanent public election here would produce an unreproducible page. The [tie-break divergence page](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) covers that difference on its own terms.
+No BetterVoting election backs it, deliberately. A Copeland three-way tie is precisely the case where [BV breaks the tie at **random**](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) (head-to-head, then random) while LH breaks it by margin, then lot. A random BV result cannot be frozen into a stable teaching artifact, so minting a permanent public election here would produce an unreproducible page. The [tie-break divergence page](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) covers that difference on its own terms.
 
 ## The cases
 

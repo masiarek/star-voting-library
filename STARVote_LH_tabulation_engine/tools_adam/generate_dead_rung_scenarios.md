@@ -2,7 +2,7 @@
 
 A generator for the trickiest STAR tie-break fact, the one that keeps causing confusion: **STAR's second tiebreaker counts only score-5 votes — "most five-star votes" — and it never steps down to the 4s.** If the tied candidates have equal (or zero) 5s, that rung reads `0–0`, can't separate them, and the tie falls straight through to the **lot**. Piling up 4s does nothing.
 
-You give it a round, a rung state, and (optionally) a score cap; it prints a ready-to-tabulate YAML election that lands on exactly that situation. It generalizes the checked-in cases in [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md) (cases 01–09).
+You give it a round, a rung state, and (optionally) a score cap; it prints a ready-to-tabulate YAML election that lands on exactly that situation. It generalizes the checked-in cases in [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) (cases 01–09).
 
 ---
 
@@ -231,7 +231,7 @@ The adversarial `scoring/alive` → **B** vs `scoring/dead` → **A**, and `runo
 
 ## Related
 
-- The hand-built case set this generalizes: [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/tie_break_dead_rung/README.md) (cases 01–09).
-- Canonical concept page: [STAR Tie-Breaking — The Full Chain](../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) (Level 301) — has the "dead rung" section.
+- The hand-built case set this generalizes: [The "dead rung" — when STAR's five-star tiebreaker can't fire](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) (cases 01–09).
+- Canonical concept page: [STAR Tie-Breaking — The Full Chain](../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md) (Level 301) — has the "dead rung" section.
 - Why one point of scale can flip a winner: [Scale granularity can flip the winner](../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md).
-- The runoff and scoring rounds themselves: [The Automatic Runoff Round](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) · [reporting true ties](../../01_STAR/concepts/reporting/reporting_ties.md).
+- The runoff and scoring rounds themselves: [The Automatic Runoff Round](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) · [reporting true ties](../../01_STAR/01_Learn/reporting/reporting_ties.md).

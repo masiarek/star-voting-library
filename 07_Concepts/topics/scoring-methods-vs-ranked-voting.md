@@ -12,9 +12,9 @@ Because they use a fundamentally different ballot, scoring methods sit **outside
 
 | | Ballot | What it captures | Examples |
 |---|---|---|---|
-| **[Ranked (ordinal)](../scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md), [STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [Schulze](../../05_Ranked_Robin/concepts/cycle_resolution.md), [Ranked Pairs](../../05_Ranked_Robin/concepts/cycle_resolution.md)), [Borda](../../06_Other/other_ranked_methods/borda.md), [Bucklin](../../05_Ranked_Robin/concepts/glossary_ranked_robin.md) |
-| **[Scored (cardinal)](../scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](../../04_Approval/concepts/approval_voting.md), [Score](../../06_Other/Range/concepts/range_voting.md) |
-| **[Hybrid](../../01_STAR/concepts/the_count/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5 ([scoring round](../../01_STAR/concepts/the_count/STAR_Scoring_Round.md)), then an [automatic runoff](../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) between the top two | Strength of support **and** a majority check | **[STAR](../../01_STAR/concepts/STAR_start_here.md)** |
+| **[Ranked (ordinal)](../scores_and_ranks/scores_vs_ranks.md)** | Order candidates 1, 2, 3… | Relative order only ([strict or weak ranks](../scores_and_ranks/strict_vs_weak_ranks.md)) | [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md), [STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md), Condorcet ([Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), [Schulze](../../05_Ranked_Robin/01_Learn/cycle_resolution.md), [Ranked Pairs](../../05_Ranked_Robin/01_Learn/cycle_resolution.md)), [Borda](../../06_Other/other_ranked_methods/borda.md), [Bucklin](../../05_Ranked_Robin/01_Learn/glossary_ranked_robin.md) |
+| **[Scored (cardinal)](../scores_and_ranks/scores_vs_ranks.md)** | Rate/approve each candidate | Strength of support | [Approval](../../04_Approval/01_Learn/approval_voting.md), [Score](../../06_Other/Range/concepts/range_voting.md) |
+| **[Hybrid](../../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md)** (score + runoff) | Rate each candidate 0–5 ([scoring round](../../01_STAR/01_Learn/the_count/STAR_Scoring_Round.md)), then an [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) between the top two | Strength of support **and** a majority check | **[STAR](../../01_STAR/01_Learn/STAR_start_here.md)** |
 
 ## Approval Voting
 
@@ -22,7 +22,7 @@ Voters simply mark every candidate they approve of — no ranking, no scoring be
 
 ## STAR Voting (Score Then Automatic Runoff)
 
-Voters score each candidate 0–5. The two highest-scoring candidates advance to an automatic runoff, where each ballot counts for whichever finalist it scored higher. This combines the expressiveness of scoring with a final majoritarian check — a deliberate **hybrid** of a scored ballot and a majority runoff, which is why it sits in its own row above. Full explanation: [STAR's hybrid nature](../../01_STAR/concepts/the_count/STAR_hybrid_nature.md).
+Voters score each candidate 0–5. The two highest-scoring candidates advance to an automatic runoff, where each ballot counts for whichever finalist it scored higher. This combines the expressiveness of scoring with a final majoritarian check — a deliberate **hybrid** of a scored ballot and a majority runoff, which is why it sits in its own row above. Full explanation: [STAR's hybrid nature](../../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md).
 
 ## Where scoring methods are weak (for balance)
 

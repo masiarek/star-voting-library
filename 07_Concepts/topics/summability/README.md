@@ -8,8 +8,8 @@
 
 | Method | Summable? | The summable artifact (what precincts publish & add) | Full page |
 |--------|:---:|------------------------------------------------------|-----------|
-| **STAR** | ✅ | score totals **+** the For/Equal/Against pairwise matrix | [STAR is summable](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md) |
-| **Ranked Robin / Condorcet** | ✅ | the pairwise matrix (adds cell by cell) | [RR is summable](../../../05_Ranked_Robin/concepts/RCV_RR_summability.md) |
+| **STAR** | ✅ | score totals **+** the For/Equal/Against pairwise matrix | [STAR is summable](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) |
+| **Ranked Robin / Condorcet** | ✅ | the pairwise matrix (adds cell by cell) | [RR is summable](../../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) |
 | **Approval** | ✅ | one approval count per candidate | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 | **Plurality** | ✅ | one vote count per candidate | — |
 | **RCV-IRV (Hare)** | ❌ | *none exists* — needs every ballot centrally | [IRV isn't summable](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) |
@@ -21,8 +21,8 @@ What "needs every ballot centrally" costs in practice — the courier runs, the 
 The same two-district example, counted two ways — [`summability_demo/`](../../../method_comparisons/summability_demo):
 
 - **IRV (not summable):** B wins both districts, but is *eliminated* when they merge — no subtotal predicts it. → [worked example](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses)
-- **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../../01_STAR/concepts/properties_and_limits/STAR_summability.md#worked-example-two-districts-subtotals-that-add-up)
-- **Ranked Robin (summable):** the *same ranked ballots* IRV couldn't combine — the pairwise matrices add cell by cell and recover the winner. → [RR is summable](../../../05_Ranked_Robin/concepts/RCV_RR_summability.md#worked-example-the-same-ballots-irv-couldnt-combine)
+- **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md#worked-example-two-districts-subtotals-that-add-up)
+- **Ranked Robin (summable):** the *same ranked ballots* IRV couldn't combine — the pairwise matrices add cell by cell and recover the winner. → [RR is summable](../../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md#worked-example-the-same-ballots-irv-couldnt-combine)
 
 ## How much summing? (order of summability, and multi-winner)
 
@@ -32,7 +32,7 @@ The examples above are all **single-winner**, where the summable artifact is tin
 
 **Multi-winner is harder.** Most proportional methods are *not* first-order summable, but many can be made **k-th order summable** by **seat capping** — limiting an election to at most `k` seats, so precincts publish `O(candidatesᵏ)` totals that still add. The trade-off is practical, not theoretical: capping at 3 seats keeps the totals manageable (and 3-seat districts already give decent proportionality); capping at 7 technically qualifies but generates far too many totals to publish usefully.
 
-There's an asymmetry that matters for this repo's [PR comparison](../../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md): the **STAR-PR family** (Allocated Score, Sequentially Spent Score, RRV) *is* compatible with seat capping, so it can be made summable to a small order — but **STV is not**, because it eliminates never-elected candidates to free up their votes for transfer, and no fixed precinct total can anticipate which. So STV's non-summability runs deeper than IRV's: even the seat-capping workaround can't rescue it, whereas the STAR-PR methods it's usually compared against can be made precinct-verifiable at 3-seat districts.
+There's an asymmetry that matters for this repo's [PR comparison](../../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md): the **STAR-PR family** (Allocated Score, Sequentially Spent Score, RRV) *is* compatible with seat capping, so it can be made summable to a small order — but **STV is not**, because it eliminates never-elected candidates to free up their votes for transfer, and no fixed precinct total can anticipate which. So STV's non-summability runs deeper than IRV's: even the seat-capping workaround can't rescue it, whereas the STAR-PR methods it's usually compared against can be made precinct-verifiable at 3-seat districts.
 
 → Technique + bit-complexity analysis: BTernaryTau, ["Precinct-summability through seat capping"](https://bternarytau.github.io/miscellaneous/voting-theory/precinct-summability-through-seat-capping) (an enthusiast write-up; the formal criterion itself is on [electowiki](https://electowiki.org/wiki/Summability_criterion)).
 
@@ -54,7 +54,7 @@ The asymmetry that follows:
 
 - **Summable methods (STAR, Approval, Score, Choose-One)** — the tally is a fixed set of sums, known in advance. They map directly onto additive encryption; only **partial** homomorphic encryption is needed (adding, not multiplying), which is decades-old, well-understood maths. STAR's scoring round is the same construction as ElectionGuard's, just with scores 0–5 instead of 0/1.
 
-  **STAR's runoff needs one extra step, and it's worth knowing.** The runoff asks a *comparison* — "did this ballot score A above B?" — which addition alone can't compute, and the finalist pair isn't known until the scoring round is decrypted. The fix: have each ballot also carry an encrypted **1/0 indicator for every candidate pair** ("I scored i above j"), proved consistent with the scores. Then the runoff for *any* pair is again just a sum, decided in one shot with no second round of decryption. It costs n(n−1) extra values — 20 for five candidates — and it hands you the whole [pairwise preference matrix](../pairwise_counting.md) for free, so the Condorcet check and [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) come along at no extra cost. STAR therefore stays inside partial homomorphic encryption end to end; it never needs the heavier machinery below.
+  **STAR's runoff needs one extra step, and it's worth knowing.** The runoff asks a *comparison* — "did this ballot score A above B?" — which addition alone can't compute, and the finalist pair isn't known until the scoring round is decrypted. The fix: have each ballot also carry an encrypted **1/0 indicator for every candidate pair** ("I scored i above j"), proved consistent with the scores. Then the runoff for *any* pair is again just a sum, decided in one shot with no second round of decryption. It costs n(n−1) extra values — 20 for five candidates — and it hands you the whole [pairwise preference matrix](../pairwise_counting.md) for free, so the Condorcet check and [Ranked Robin](../../../05_Ranked_Robin/01_Learn/README.md) come along at no extra cost. STAR therefore stays inside partial homomorphic encryption end to end; it never needs the heavier machinery below.
 - **Non-summable methods (RCV-IRV, STV)** — the count is **sequential and adaptive**: you cannot know what to tally in round 3 until rounds 1–2 are decrypted. There is no fixed sum to compute homomorphically, so verifiable implementations fall back on **mixnets** — shuffling and then decrypting individual ballots with proofs that the shuffle was honest. That is heavier machinery, and it means individual ballots *do* get opened.
 
 So the [central-tabulation](../central_tabulation.md) cost of non-summability shows up a second time in cryptography. It's the same structural property, and it's an argument for summable methods that has nothing to do with who wins.

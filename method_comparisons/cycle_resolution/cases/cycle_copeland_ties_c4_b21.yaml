@@ -2,7 +2,7 @@ election_title: "A cycle Copeland can't break — three trails tie 1-1, and the 
 
 scenario_description: |-
   The first worked profile from "Cycle Resolution — why Minimax, Ranked Pairs,
-  and Schulze exist" (05_Ranked_Robin/concepts/cycle_resolution.md), now
+  and Schulze exist" (05_Ranked_Robin/01_Learn/cycle_resolution.md), now
   runnable. 21 hikers rank four trails; Dogwood is everyone's last choice, and
   the other three form a majority CYCLE:
 

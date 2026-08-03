@@ -4,7 +4,7 @@
 
 It's natural to assume that because RCV-IRV uses plain rankings, breaking a tie should be simpler than in a score method. The reverse is closer to the truth, for three reasons: **where** ties happen, **what** you have to break them with, and **how much** a tie changes the outcome.
 
-→ Companion to [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) and [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md). Part of the [Ties & Tie-Breaking](README.md) topic hub. Level **301**.
+→ Companion to [STAR Tie-Breaking — The Full Chain](../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md) and [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md). Part of the [Ties & Tie-Breaking](README.md) topic hub. Level **301**.
 
 ---
 
@@ -36,7 +36,7 @@ An **IRV elimination tie decides who gets removed** — and removing a different
 
 ## 4. The unavoidable floor
 
-To be fair to both: a **perfectly symmetric** tie can't be broken from the ballots by *any* method. STAR reaches the lot; RCV-IRV coin-tosses the elimination; neither can do better, because the voters genuinely said nothing to separate the candidates. (See the real [BetterVoting `jfk7pd` case](../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) and its [three-candidate analog](../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md).) The *difference between methods* shows up in **near-ties**: STAR's extra signals can separate candidates who tie on one measure but differ on another; strict-rank RCV-IRV more often has nothing left but chance.
+To be fair to both: a **perfectly symmetric** tie can't be broken from the ballots by *any* method. STAR reaches the lot; RCV-IRV coin-tosses the elimination; neither can do better, because the voters genuinely said nothing to separate the candidates. (See the real [BetterVoting `jfk7pd` case](../../../01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) and its [three-candidate analog](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md).) The *difference between methods* shows up in **near-ties**: STAR's extra signals can separate candidates who tie on one measure but differ on another; strict-rank RCV-IRV more often has nothing left but chance.
 
 ## 5. Reproducibility and consistency
 
@@ -67,8 +67,8 @@ The single-rule simplicity is a **real virtue**: "eliminate the candidate with t
 
 ## See also
 
-- [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) — STAR's two ladders and the "dead rung."
+- [STAR Tie-Breaking — The Full Chain](../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md) — STAR's two ladders and the "dead rung."
 - [Which RCV-IRV? — variants & tie-breaks](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) — how ranked-ballot methods differ, including tie handling.
 - [Strict vs. Weak Ranks](../../scores_and_ranks/strict_vs_weak_ranks.md) — why RCV-IRV's strict ranks carry less information than scores.
 - [How the Count Works — STAR vs RCV-IRV](../tabulation_star_vs_irv.md) — the two counts side by side (the non-tie case).
-- Worked lot-decided ties: [BetterVoting `jfk7pd`](../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) · [the dead-rung set](../../../01_STAR/tie_break_dead_rung/README.md).
+- Worked lot-decided ties: [BetterVoting `jfk7pd`](../../../01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) · [the dead-rung set](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md).

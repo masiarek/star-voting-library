@@ -50,7 +50,7 @@ uv run …/pref_voting_tabulation_engine/cycle_resolution_report.py FILE.yaml   
 uv run …/pref_voting_tabulation_engine/cycle_resolution_report.py FILE.yaml --drop Bryce   # …and the same field minus a candidate
 ```
 
-`cycle_resolution_report.py` is what makes the [cycle-resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) and [Split Cycle](../topics/condorcet/split_cycle.md) pages runnable rather than asserted: it prints the pairwise margins, the Smith set, and every cycle-resolution rule's winner *set*, tagged by [Fishburn class](../topics/condorcet/condorcet_reading_list.md). The `--drop` flag re-runs the same ballots with a candidate removed, which is how a spoiler or IIA failure gets demonstrated. It's a *report*, not a guard — there's no LH result to compare against.
+`cycle_resolution_report.py` is what makes the [cycle-resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) and [Split Cycle](../topics/condorcet/split_cycle.md) pages runnable rather than asserted: it prints the pairwise margins, the Smith set, and every cycle-resolution rule's winner *set*, tagged by [Fishburn class](../topics/condorcet/condorcet_reading_list.md). The `--drop` flag re-runs the same ballots with a candidate removed, which is how a spoiler or IIA failure gets demonstrated. It's a *report*, not a guard — there's no LH result to compare against.
 
 The pytest **skips cleanly** if `pref_voting` isn't installed, so it never blocks the core suite. Declared as the `crosscheck` optional-dependency extra in the engine's `pyproject.toml` (`pip install -e .[crosscheck]`).
 

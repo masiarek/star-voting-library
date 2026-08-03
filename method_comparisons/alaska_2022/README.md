@@ -136,4 +136,4 @@ Methods that read the whole ballot — Ranked Robin, any Condorcet method, and S
 - **Reproduce from the raw ballots:** the public [Cast Vote Record + tabulation code](https://github.com/nardo/Equal.Vote/tree/master/alaska) and Alaska's [official RCV detailed report](https://www.elections.alaska.gov/results/22SSPG/RcvDetailedReport.pdf) — the actual data behind this case's reduced model
 - [Alaska 2022 — RCV-IRV case study](../../06_Other/RCV_IRV/concepts/case_studies/RCV_IRV_alaska_2022.md) (the prose write-up with the real vote totals)
 - [Burlington 2009](../burlington_2009/README.md) — the other canonical real IRV center squeeze, also runnable
-- [Center squeeze](../../07_Concepts/topics/center_squeeze/README.md) · [Favorite betrayal (301)](../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md) · [Non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md)
+- [Center squeeze](../../07_Concepts/topics/center_squeeze/README.md) · [Favorite betrayal (301)](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) · [Non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md)

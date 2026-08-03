@@ -123,8 +123,8 @@ shuffle — point it at a frozen `_bv_export.json` and it reproduces each race's
 python3 STARVote_LH_tabulation_engine/tools_adam/bv_replay_tiebreak.py <case>_bv_export.json
 ```
 
-Confirmed live on [BV2261 `y2fbpc`](../../../../05_Ranked_Robin/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md)
-(3 candidates, two races) and [BV2262 `2gvwr9`](../../../../05_Ranked_Robin/rr_tiebreaks/bv2262_2gvwr9_nine_way_dead_heat.md)
+Confirmed live on [BV2261 `y2fbpc`](../../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md)
+(3 candidates, two races) and [BV2262 `2gvwr9`](../../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2262_2gvwr9_nine_way_dead_heat.md)
 (9 candidates, a nine-deep order). Note what the seed inputs imply: the order is **recorded but
 not derivable** — it depends on the ballot *count* and the race id, never on how anyone voted.
 

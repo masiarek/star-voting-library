@@ -31,8 +31,7 @@ CONVERTER = LIB_POS / "01_convert_json_yaml.py"
 # test_lot_number_tiebreak.py; here it feeds the YAML_library converter.
 SOURCE_JSON = (
     REPO_ROOT
-    / "01_STAR"
-    / "tie_break_dead_rung"
+    / "01_STAR" / "03_Criteria" / "tie_break_dead_rung"
     / "lot_random_vs_published_jfk7pd"
     / "lot_random_vs_published_jfk7pd_bv_export.json"
 )

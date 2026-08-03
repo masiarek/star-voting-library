@@ -83,7 +83,7 @@ Automatic Runoff Round
  Peltola wins.  (55% vs 45% of the 183 voters with a preference)
 ```
 
-Begich is the *most-approved* candidate (that's why [Approval](../../04_Approval/concepts/README.md) elects him), but Peltola is the *majority-preferred* one — and STAR's runoff, like every majority method here, picks Peltola. In the special, that same runoff step is what let STAR reach the Condorcet winner Begich; here it keeps STAR aligned with the majority. The runoff is doing its job in both.
+Begich is the *most-approved* candidate (that's why [Approval](../../04_Approval/01_Learn/README.md) elects him), but Peltola is the *majority-preferred* one — and STAR's runoff, like every majority method here, picks Peltola. In the special, that same runoff step is what let STAR reach the Condorcet winner Begich; here it keeps STAR aligned with the majority. The runoff is doing its job in both.
 
 Full engine detail: [the full report](cases/cases_tabulated/bv2214_m3hb6y_alaska_2022_general_tabulated.txt) · run it: [`bv2214_m3hb6y_alaska_2022_general.yaml`](cases/bv2214_m3hb6y_alaska_2022_general.yaml).
 

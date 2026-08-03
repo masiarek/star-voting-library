@@ -1,0 +1,148 @@
+======================================================================
+SOURCE FILE:     bv2256_c8h3tb_traditional_style.yaml
+TABULATED FILE:  bv2256_c8h3tb_traditional_style_tabulated.txt
+======================================================================
+
+bv_test_id: BV2256
+bv_election_id: c8h3tb
+bv_results_url: https://bettervoting.com/c8h3tb/results
+election_title: "Traditional voting style — one mark each (BV2256, c8h3tb)"
+
+scenario_description: |-
+  The "traditional" voting style, done to the hilt. Three voters, five candidates,
+  and every voter fills out the 5-star ballot the old familiar way: one 5 for a
+  favorite, the other four rows blank (a blank counts as 0). One marks Carmen, two
+  mark Ella.
+
+  Said plainly: as an approach and as a strategy this is a POOR use of a STAR
+  ballot — unless one candidate really is your only acceptable choice, period, in
+  which case it is exactly honest and you should vote it. Otherwise you spend 5 of
+  the 25 points the ballot offers, say nothing about the rest of the field, and if
+  your one pick misses the runoff your ballot has no voice in the final head-to-head.
+  Nothing is penalized: a bullet vote is legal, full-weight and impossible to spoil,
+  and a backup score can never hurt your favorite. You are simply choosing not to
+  use the ballot.
+
+  Watch what it costs the count. STAR's scoring round becomes nothing but a
+  first-choice tally — Ella 10, Carmen 5, and Andre, Blake and David on 0 with
+  nothing ever said about them — and the automatic runoff has nothing left to add
+  (Ella 2 - Carmen 1, nobody at Equal Support). A ballot carrying one bit per voter
+  gives the method one bit to read, so this count could not have done better than
+  the choose-one ballot it is imitating.
+
+  Live results (BV2256): https://bettervoting.com/c8h3tb/results
+  Lesson: 01_STAR/01_Learn/voting_styles/traditional.md
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: true   # true = finalists only; false = full N×N grid (needs show_matrix)
+  show_condorcet: false   # show the [Condorcet Winner] line
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
+  show_runoff_percent: true   # the two-line self-reconciling runoff summary
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: false   # one row per voter — each ballot is a distinct teaching case
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+ballots: |-
+  Andre,Blake,Carmen,David,Ella
+      0,    0,     5,    0,   0   # traditional: "Carmen. Period."
+      0,    0,     0,    0,   5   # traditional: "Ella. Period."
+      0,    0,     0,    0,   5   # traditional: "Ella. Period."
+
+expected_winners:
+  - Ella
+
+# file: bv2256_c8h3tb_traditional_style.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Traditional voting style — one mark each (BV2256, c8h3tb) ===
+  The "traditional" voting style, done to the hilt. Three voters, five candidates,
+  and every voter fills out the 5-star ballot the old familiar way: one 5 for a
+  favorite, the other four rows blank (a blank counts as 0). One marks Carmen, two
+  mark Ella.
+
+  Said plainly: as an approach and as a strategy this is a POOR use of a STAR
+  ballot — unless one candidate really is your only acceptable choice, period, in
+  which case it is exactly honest and you should vote it. Otherwise you spend 5 of
+  the 25 points the ballot offers, say nothing about the rest of the field, and if
+  your one pick misses the runoff your ballot has no voice in the final head-to-head.
+  Nothing is penalized: a bullet vote is legal, full-weight and impossible to spoil,
+  and a backup score can never hurt your favorite. You are simply choosing not to
+  use the ballot.
+
+  Watch what it costs the count. STAR's scoring round becomes nothing but a
+  first-choice tally — Ella 10, Carmen 5, and Andre, Blake and David on 0 with
+  nothing ever said about them — and the automatic runoff has nothing left to add
+  (Ella 2 - Carmen 1, nobody at Equal Support). A ballot carrying one bit per voter
+  gives the method one bit to read, so this count could not have done better than
+  the choose-one ballot it is imitating.
+
+  Live results (BV2256): https://bettervoting.com/c8h3tb/results
+  Lesson: 01_STAR/01_Learn/voting_styles/traditional.md
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |    Andre   |   Blake   | * Carmen  |   David   |  * Ella   |
+-----------------------------------------------------------------------------
+       Andre > |    ---     |0 - 3 - 0  |0 - 2 - 1  |0 - 3 - 0  |0 - 1 - 2  |
+       Blake > | 0 - 3 - 0  |   ---     |0 - 2 - 1  |0 - 3 - 0  |0 - 1 - 2  |
+    * Carmen > | 1 - 2 - 0  |1 - 2 - 0  |   ---     |1 - 2 - 0  |1 - 0 - 2  |
+       David > | 0 - 3 - 0  |0 - 3 - 0  |0 - 2 - 1  |   ---     |0 - 1 - 2  |
+      * Ella > | 2 - 1 - 0  |2 - 1 - 0  |2 - 0 - 1  |2 - 1 - 0  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ella — matches the STAR winner
+
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Andre, Blake, David (winless — pairwise ties)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Andre,Blake,Carmen,David,Ella
+    2 ×     0,    0,     0,    0,   5
+    1 ×     0,    0,     5,    0,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Andre      0  0  0  0  0  3  |     0   0.0
+Blake      0  0  0  0  0  3  |     0   0.0
+Carmen     1  0  0  0  0  2  |     5   1.7
+David      0  0  0  0  0  3  |     0   0.0
+Ella       2  0  0  0  0  1  |    10   3.3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ella          -- 10 -- First place
+   Carmen        --  5 -- Second place
+   Andre         --  0
+   Blake         --  0
+   David         --  0
+ Ella and Carmen advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ella          -- 2 -- First place
+   Carmen        -- 1
+   Equal Support -- 0
+ Ella wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Ella 2 (67%)  ·  Carmen 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ella

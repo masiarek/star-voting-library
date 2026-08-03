@@ -73,7 +73,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/Range/c
 
 ## See also
 
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [range_sullivan_score_c4_b10](range_sullivan_score_c4_b10.md)

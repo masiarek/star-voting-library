@@ -7,7 +7,7 @@ search:
 
 *Generated from [`09_c7_b44_park-bloc-4-seats.yaml`](../09_c7_b44_park-bloc-4-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **4 seats** · **Expected winners:** Dogwood, Aspen, Elm, Cedar
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **4 seats** · **Expected winners:** Dogwood, Aspen, Elm, Cedar
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/v9rhhr) · **[results ↗](https://bettervoting.com/v9rhhr/results)** (election `v9rhhr`).
 
@@ -26,7 +26,7 @@ The electorate (44 ballots, all individual rows):
   - shade slate: 19 voters (7 cliff35, 7 ranked_style, 5 nuanced)
   - wildcards: 9 voters (4 chaos, 4 anyone_but, 1 ranked_style)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - bullet: choose-one transplant: favorite 5, rest 0/blank
@@ -322,8 +322,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

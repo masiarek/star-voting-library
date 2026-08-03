@@ -7,7 +7,7 @@ search:
 
 *Generated from [`02_c4_b40_cliff-city.yaml`](../02_c4_b40_cliff-city.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Churro
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Churro
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fm8cbv) · **[results ↗](https://bettervoting.com/fm8cbv/results)** (election `fm8cbv`).
 
@@ -26,7 +26,7 @@ The electorate (40 ballots, all individual rows):
   - Churro crowd: 9 voters (5 slate, 3 cliff34, 1 cliff35)
   - grazers: 7 voters (3 cliff34, 2 chaos, 1 anyone_but, 1 flat)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - slate: partisan slate: equal 5s for the in-group, 0 outside
@@ -230,7 +230,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 - [Methods disagree on this election](../../../../method_comparisons/divergence_review/cases/IRV_DIFFERS_ARTIFACT/02_c4_b40_cliff-city.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [01_c3_b31_graders-divide](01_c3_b31_graders-divide.md) · [03_c4_b33_bullet-storm](03_c4_b33_bullet-storm.md) · [04_c4_b47_noise-soup](04_c4_b47_noise-soup.md) · [05_c3_b38_squeeze-survives](05_c3_b38_squeeze-survives.md) · [06_c4_b24_narrow-bands](06_c4_b24_narrow-bands.md) · [07a_c5_b36_herb-council-bloc-3-seats](07a_c5_b36_herb-council-bloc-3-seats.md) · [07b_c5_b36_herb-council-pr-3-seats](07b_c5_b36_herb-council-pr-3-seats.md) · [08_c6_b29_quota-circus-pr-2-seats](08_c6_b29_quota-circus-pr-2-seats.md) · [09_c7_b44_park-bloc-4-seats](09_c7_b44_park-bloc-4-seats.md)

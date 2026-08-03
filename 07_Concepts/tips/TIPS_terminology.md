@@ -85,9 +85,9 @@ So if you say *"RCV has center squeeze,"* a sharp opponent can correctly reply *
 | Technical / comparison / criticism of the method | **[IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** | the exact, defensible name; criticisms like center squeeze are IRV's, not all ranked ballots' |
 | Naming the elimination *rule* itself | **[Hare](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
 | Talking about the *ballot* / the ranked family | **[ranked ballots](../scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
-| A Condorcet count of a ranked ballot | **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
-| Technical passage about that count — cycles, tiebreaks, clone independence | **Copeland** (the [naming decoder](../../05_Ranked_Robin/concepts/condorcet_naming_decoder.md) maps the rest) | "Ranked Robin" no longer picks out one procedure — its own coiner calls it a synonym for Condorcet generally — so name the algorithm where precision carries the argument |
-| Proportional multi-winner ranked | **[STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
+| A Condorcet count of a ranked ballot | **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
+| Technical passage about that count — cycles, tiebreaks, clone independence | **Copeland** (the [naming decoder](../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) maps the rest) | "Ranked Robin" no longer picks out one procedure — its own coiner calls it a synonym for Condorcet generally — so name the algorithm where precision carries the argument |
+| Proportional multi-winner ranked | **[STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
 
 ## House style for this repo
 

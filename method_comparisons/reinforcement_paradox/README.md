@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`, BV2254) — the combined 9-voter electorate as two races (STAR + Ranked Robin); both elect **Cara**, matching the counts below.
 
-→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · related: [the No-Show paradox](../../07_Concepts/voting_paradoxes/no_show.md) · [multiple-districts / consistency](../../07_Concepts/voting_paradoxes/multiple_districts.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · [Runoff Reversal](../../01_STAR/runoff_overturns_leader/teaching_runoff_reversal.md).
+→ The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · related: [the No-Show paradox](../../07_Concepts/voting_paradoxes/no_show.md) · [multiple-districts / consistency](../../07_Concepts/voting_paradoxes/multiple_districts.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -70,7 +70,7 @@ The Brandt–Dong–Peters result above is a *tight three-candidate* statement. 
 
 A **compound scoring rule** allows a cascade of [score vectors](../../07_Concepts/topics/ranked_ballot_methods_zoo.md): ties under `w₁` are broken by score differences under a second vector `w₂` (say, plurality score to separate tied Borda winners), a third if any remain, and so on for any finite number. Add one further axiom — **continuity**, aka the **Archimedean property** (for any `s` and any `t` with a unique winner `x`, enough copies of `t` eventually carry the merged election: `f(s + j·t) = {x}` for all large `j`) — and the class narrows to the *simple*, one-vector scoring rules.
 
-That converse is what makes this page's verdict sharp rather than anecdotal. **STAR fails reinforcement, so STAR is provably not a compound scoring rule** — no cascade of score vectors, however elaborate, reproduces it. Its scoring round is a scoring rule; the automatic runoff is not, and the theorem says that is exactly the step where the promise had to break. Same for [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), [RCV-IRV](../../06_Other/RCV_IRV/concepts/), and every other method here with an elimination or runoff stage. Conversely it explains why Score, Approval and Plurality can *never* be paradoxed this way: they are simple scoring rules, and the theorem covers them by construction.
+That converse is what makes this page's verdict sharp rather than anecdotal. **STAR fails reinforcement, so STAR is provably not a compound scoring rule** — no cascade of score vectors, however elaborate, reproduces it. Its scoring round is a scoring rule; the automatic runoff is not, and the theorem says that is exactly the step where the promise had to break. Same for [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), [RCV-IRV](../../06_Other/RCV_IRV/concepts/), and every other method here with an elimination or runoff stage. Conversely it explains why Score, Approval and Plurality can *never* be paradoxed this way: they are simple scoring rules, and the theorem covers them by construction.
 
 ## Whichever way the cycle falls — the other two branches
 

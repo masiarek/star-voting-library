@@ -42,10 +42,10 @@ Run across the repo's single-winner elections: **0 mismatches** — the LH engin
 The **LH engine now tabulates Ranked Robin first-class** — set `voting_method: RankedRobin` and it prints the round-robin (ballots + pairwise table + win-loss record) itself. This script is the **independent second opinion**: a dependency-light Ranked Robin (RCV-RR / Copeland) report you can run beside the LH engine to confirm the head-to-heads agree:
 
 ```bash
-python ranked_robin_report.py ../../../05_Ranked_Robin/_main/cases/ranked_robin_consensus_center.yaml
+python ranked_robin_report.py ../../../05_Ranked_Robin/02_Examples/cases/ranked_robin_consensus_center.yaml
 ```
 
-It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland cross-check) and **flags a cycle** when the leaders tie on wins — pointing to [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../05_Ranked_Robin/concepts/cycle_resolution.md).
+It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland cross-check) and **flags a cycle** when the leaders tie on wins — pointing to [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md).
 
 ## Files
 

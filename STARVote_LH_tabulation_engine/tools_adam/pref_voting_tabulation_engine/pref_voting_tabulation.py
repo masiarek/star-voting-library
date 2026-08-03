@@ -305,10 +305,10 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     REPO = _REPO
     if args == ["--all"]:
-        dirs = [os.path.join(REPO, "01_STAR", "_main", "cases"),
-                os.path.join(REPO, "01_STAR", "runoff_overturns_leader", "cases"),
+        dirs = [os.path.join(REPO, "01_STAR", "02_Examples", "cases"),
+                os.path.join(REPO, "01_STAR", "02_Examples", "runoff_overturns_leader", "cases"),
                 os.path.join(REPO, "method_comparisons", "paradoxes_and_whoops", "cases"),
-                os.path.join(REPO, "01_STAR", "Flat_scores_ties", "cases"),
+                os.path.join(REPO, "01_STAR", "03_Criteria", "Flat_scores_ties", "cases"),
                 os.path.join(REPO, "method_comparisons", "summability_demo", "cases"),
                 os.path.join(REPO, "YAML_library", "1_positive")]
         args = discover(dirs)

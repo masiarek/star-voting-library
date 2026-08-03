@@ -1,0 +1,62 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 30 ballots (ranked ballots).
+
+Ballots:
+     9 × Alice > Elena > Dmitri > Bruno > Carmen
+     8 × Carmen > Bruno > Alice > Elena > Dmitri
+     7 × Dmitri > Bruno > Carmen > Alice > Elena
+     6 × Carmen > Alice > Dmitri > Elena > Bruno
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Alice   beats Elena    30 –  0
+   Alice   beats Dmitri   23 –  7
+   Alice   ties  Bruno    15 – 15
+   Carmen  beats Alice    21 –  9
+   Elena   beats Dmitri   17 – 13
+   Elena   ties  Bruno    15 – 15
+   Carmen  beats Elena    21 –  9
+   Dmitri  beats Bruno    22 –  8
+   Dmitri  beats Carmen   16 – 14
+   Bruno   beats Carmen   16 – 14
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |    Alice     |   Elena     |   Dmitri    |   Bruno     |   Carmen    |
+-----------------------------------------------------------------------------------
+   Alice > |     ---      |30 -  0 -  0 |23 -  0 -  7 |15 -  0 - 15 | 9 -  0 - 21 |
+   Elena > |  0 -  0 - 30 |    ---      |17 -  0 - 13 |15 -  0 - 15 | 9 -  0 - 21 |
+  Dmitri > |  7 -  0 - 23 |13 -  0 - 17 |    ---      |22 -  0 -  8 |16 -  0 - 14 |
+   Bruno > | 15 -  0 - 15 |15 -  0 - 15 | 8 -  0 - 22 |    ---      |16 -  0 - 14 |
+  Carmen > | 21 -  0 -  9 |21 -  0 -  9 |14 -  0 - 16 |14 -  0 - 16 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Alice      2–1–1       2.5     +34  Dmitri, Elena
+    2  Carmen     2–2–0         2     +20  Alice, Elena
+    3  Dmitri     2–2–0         2      -4  Carmen, Bruno
+    4  Bruno      1–1–2         2     -12  Carmen
+    5  Elena      1–2–1       1.5     -38  Dmitri
+
+Winner — Ranked Robin (RCV-RR): Alice
+   the highest Copeland score (2.5 = wins + ½·ties).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (5 of 5): Alice, Dmitri, Bruno, Carmen, Elena
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Alice) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Alice is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md

@@ -13,7 +13,7 @@
 
 Which one a jurisdiction *needs* is a property of the voting method's count. IRV (and STV, and every sequential-elimination variant) is the prominent method that structurally **requires** central tabulation: who gets eliminated in round 2 depends on the *combined* round-1 totals of every precinct, so the count can't start until every ballot's full ranking is in one system. The worked two-district demonstration — B wins both districts, B is eliminated when they merge — is on [IRV is not summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md); this page is about what the centralization itself costs.
 
-The methods that *don't* need it publish an artifact that adds: [STAR](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) (score totals + the pairwise matrix), [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) (the pairwise matrix alone — the *same ranked ballots* IRV must pool), Approval and Plurality (one count per candidate).
+The methods that *don't* need it publish an artifact that adds: [STAR](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) (score totals + the pairwise matrix), [Ranked Robin](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) (the pairwise matrix alone — the *same ranked ballots* IRV must pool), Approval and Plurality (one count per candidate).
 
 ## Cost 1 — a single point of failure
 
@@ -52,7 +52,7 @@ And the *results themselves* are slower and murkier along the way: partial count
 
 - **Plenty of jurisdictions centrally count anyway.** Vote-by-mail states run central-count scanners as a matter of logistics, whatever the voting method. The difference is *optionality*: with a summable method, central counting is a choice, and cheap public checks (precinct/batch subtotals that add) exist regardless of where the scanners sit. With IRV it's structural — no subtotal can stand in for the ballots, so the checks have to be rebuilt the heavy way.
 - **Published CVRs are a real mitigation.** Alameda 2022 is simultaneously the cautionary tale *and* the proof that transparency works: the county published full CVRs, an outsider re-ran the count, and the error surfaced. But note what the check required — downloading every ballot record and re-running tabulation software — versus adding a column of published precinct tables by hand.
-- **It's the count, not the ballot.** The same ranked ballots, counted by [Ranked Robin](../../05_Ranked_Robin/concepts/RCV_RR_summability.md), tally locally into pairwise matrices that add — no ballot has to travel. "Ranked ballots require central counting" is the same myth as "ranked ballots can't be summed," and it's wrong for the same reason: this is a property of **IRV's elimination count**, not of ranking. ([electowiki](https://electowiki.org/wiki/Summability_criterion) has the formal criterion; it's an advocacy-adjacent wiki, fine for the definition.)
+- **It's the count, not the ballot.** The same ranked ballots, counted by [Ranked Robin](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md), tally locally into pairwise matrices that add — no ballot has to travel. "Ranked ballots require central counting" is the same myth as "ranked ballots can't be summed," and it's wrong for the same reason: this is a property of **IRV's elimination count**, not of ranking. ([electowiki](https://electowiki.org/wiki/Summability_criterion) has the formal criterion; it's an advocacy-adjacent wiki, fine for the definition.)
 
 ---
 
@@ -60,7 +60,7 @@ And the *results themselves* are slower and murkier along the way: partial count
 
 - [Summability topic hub](summability/) — the mathematical property whose absence forces central tabulation (STAR / Ranked Robin / IRV side by side, and the multi-winner seat-capping story)
 - [IRV is not summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) — *why* no precinct subtotal exists, with the two-districts worked example this page leans on
-- [STAR is summable](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) · [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) — the methods that keep the local count
+- [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) · [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) — the methods that keep the local count
 - [Pairwise counting — every ballot is a tiny matrix](pairwise_counting.md) — the artifact precincts publish instead of shipping ballots
 - [What makes a voting method good?](what_makes_a_voting_method_good.md) — where auditability and summability sit among the criteria
 - [Is RCV "simple"?](../../06_Other/RCV_IRV/concepts/RCV_IRV_is_simple.md) — the ballot-vs-count distinction this page's costs hang off ("the ballot is simple; the count needs a computer and a central tally")

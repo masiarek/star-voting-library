@@ -24,7 +24,7 @@ Peter Fishburn (1977) sorted rules by how much of the **pairwise** data they nee
 
 | Tier | Reads | Members you'll meet |
 |:---:|---|---|
-| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../../05_Ranked_Robin/concepts/)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
+| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../../05_Ranked_Robin/01_Learn/)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
 | **C2** | the **weighted tournament** — the same graph *with the margins on it* | Minimax/Simpson, Ranked Pairs, Schulze, Kemeny, Split Cycle — and Borda |
 | **C3** | more than the pairwise matrix contains | Dodgson, Young, **plurality**, RCV-IRV |
 
@@ -76,7 +76,7 @@ This isn't STAR dodging a question. It's the same type distinction as the [SWF/S
 
 ## Why C3 is not a demerit
 
-C3 is a bag, not a basement. It holds **plurality** — the cheapest, most summable method in this library, one number per candidate — *and* **[RCV-IRV](../../06_Other/RCV_IRV/concepts/)**, the one method here whose count [doesn't summarize into precinct subtotals](../../01_STAR/concepts/properties_and_limits/STAR_summability.md) at all. Those two have nothing in common except that the pairwise matrix doesn't determine them.
+C3 is a bag, not a basement. It holds **plurality** — the cheapest, most summable method in this library, one number per candidate — *and* **[RCV-IRV](../../06_Other/RCV_IRV/concepts/)**, the one method here whose count [doesn't summarize into precinct subtotals](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) at all. Those two have nothing in common except that the pairwise matrix doesn't determine them.
 
 Which is exactly why the tiers must not be read as a ladder:
 

@@ -2,7 +2,7 @@
 
 *Same ranked ballots, different tabulation — taken to the extreme. In agenda voting the tabulation has a **parameter**: the order in which alternatives face each other. Change the agenda, change the winner — with the very same ballots. It is the cleanest illustration in the repo of why "the ballots" never decide anything by themselves; the procedure always co-decides.*
 
-→ Companions: [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) (the *neutral* way to run the same pairwise matchups) · [Borda](borda.md) · Glossary: [`Condorcet`](../../07_Concepts/GLOSSARY.md)
+→ Companions: [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) (the *neutral* way to run the same pairwise matchups) · [Borda](borda.md) · Glossary: [`Condorcet`](../../07_Concepts/GLOSSARY.md)
 
 **Source:** notes digested from Sherif El-Helaly, *The Mathematics of Voting and Apportionment* (§1.3.5–1.3.7), collected in Adam's [Tactical Voting doc](https://docs.google.com/document/d/1-xpTrD2TEaGCRp5iCd-Ao9cqu7sH2uXNTYF21gxCY00/edit). Paraphrased summary — see the book for the full text.
 
@@ -118,7 +118,7 @@ Fail modes (from the book's 23-voter drill: 17 pro-motion, 6 status quo): let to
 
 ## Related
 
-- [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md) — the neutral round-robin over the same matchups
-- [Cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) — what to do when the cycle isn't manufactured
+- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) — the neutral round-robin over the same matchups
+- [Cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — what to do when the cycle isn't manufactured
 - [Borda](borda.md) — the other classic "ranked but not Condorcet" method in this folder
 - [Scoring methods vs. ranked voting](../../07_Concepts/topics/scoring-methods-vs-ranked-voting.md) — the ballot-type map

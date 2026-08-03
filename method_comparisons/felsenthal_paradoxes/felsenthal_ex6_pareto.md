@@ -1,6 +1,6 @@
 # Felsenthal Example 6 — Approval can elect a Pareto-dominated candidate (LH-only)
 
-**No BetterVoting election on purpose:** the paradox turns on a *random* Aria/Beau tie, and a random BV result can't be frozen into a repeatable case — the same reason as the [RR tiebreak study](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md). This is an LH-only reference pair.
+**No BetterVoting election on purpose:** the paradox turns on a *random* Aria/Beau tie, and a random BV result can't be frozen into a repeatable case — the same reason as the [RR tiebreak study](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md). This is an LH-only reference pair.
 
 ## Source
 

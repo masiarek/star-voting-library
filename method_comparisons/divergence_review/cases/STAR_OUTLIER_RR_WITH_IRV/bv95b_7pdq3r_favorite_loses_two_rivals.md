@@ -21,7 +21,7 @@ RCV-IRV and Ranked Robin both elect **Ada**, the Condorcet (pairwise) winner. ST
 
 **Flags:** 2 tied-score ballot(s)
 
-**Source election:** [`01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../../../01_STAR/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)  ·  **STAR tabulated mirror:** [`bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](../../../../01_STAR/majority_criterion/cases/cases_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](../../../../01_STAR/03_Criteria/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml)  ·  **STAR tabulated mirror:** [`bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](../../../../01_STAR/03_Criteria/majority_criterion/cases/cases_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt)
 
 _3 candidates, 5 ballots._
 

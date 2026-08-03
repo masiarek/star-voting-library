@@ -21,7 +21,7 @@ There is **no Condorcet winner** — the head-to-head results form a cycle (X be
 
 **Flags:** none
 
-**Source election:** [`01_STAR/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml`](../../../../01_STAR/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml)  ·  **STAR tabulated mirror:** [`bv2212_g3f7r2_cycle_spoiler_tabulated.txt`](../../../../01_STAR/iia_cycle_spoiler/cases/cases_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt)
+**Source election:** [`01_STAR/03_Criteria/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml`](../../../../01_STAR/03_Criteria/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml)  ·  **STAR tabulated mirror:** [`bv2212_g3f7r2_cycle_spoiler_tabulated.txt`](../../../../01_STAR/03_Criteria/iia_cycle_spoiler/cases/cases_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt)
 
 _3 candidates, 23 ballots._
 
@@ -138,7 +138,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    RCV-IRV winner Carla is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
    More: 07_Concepts/topics/smith_set.md
@@ -179,7 +179,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     3  Carla      1–1–0         1      -6  Alice
 
 Winner — Ranked Robin (RCV-RR): Alice
-   *** 3 candidates tie for the most wins (Alice, Ben, Carla) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/concepts/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Alice, Ben, Carla) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -189,7 +189,7 @@ the honest answer to "who is even in contention?".
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/concepts/cycle_resolution.md.
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Ranked Robin (RCV-RR) winner Alice is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

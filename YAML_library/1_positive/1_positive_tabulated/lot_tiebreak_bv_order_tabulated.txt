@@ -15,7 +15,7 @@ scenario_description: |-
   Its twin lot_tiebreak_published_order.yaml uses the pre-published order (Ada
   first) instead and elects Ada — same ballots, different winner, purely from the
   lot. That divergence is the point of BetterVoting issue #1063 (deterministic,
-  pre-published lot numbers). See 01_STAR/tie_break_dead_rung/README.md.
+  pre-published lot numbers). See 01_STAR/03_Criteria/tie_break_dead_rung/README.md.
 
 options:
   show_description: false
@@ -55,7 +55,7 @@ TABULATION RESULTS
   Its twin lot_tiebreak_published_order.yaml uses the pre-published order (Ada
   first) instead and elects Ada — same ballots, different winner, purely from the
   lot. That divergence is the point of BetterVoting issue #1063 (deterministic,
-  pre-published lot numbers). See 01_STAR/tie_break_dead_rung/README.md.
+  pre-published lot numbers). See 01_STAR/03_Criteria/tie_break_dead_rung/README.md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

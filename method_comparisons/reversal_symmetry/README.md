@@ -2,7 +2,7 @@
 
 *A voting method has **reversal symmetry** if flipping every voter's ballot — so everyone now expresses the exact opposite preference, as if choosing the **worst** candidate — can never re-elect the original winner. **RCV-IRV fails it:** here's a 24-voter election where IRV elects A whether the voters are picking the best candidate or the worst. It's a real, IRV-specific defect — conceded — though the example is a deliberately hard one (a Condorcet cycle), and the argument comes from a Range-advocacy source whose lean we disclose.*
 
-→ Related: [IRV non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [the participation / no-show paradox](../participation_no_show/) · [Condorcet cycles](../../05_Ranked_Robin/concepts/cycle_resolution.md) · glossary [`reversal symmetry`](../../07_Concepts/GLOSSARY.md).
+→ Related: [IRV non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) · [the participation / no-show paradox](../participation_no_show/) · [Condorcet cycles](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · glossary [`reversal symmetry`](../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -28,7 +28,7 @@
 | **Range / Score, Borda, Approval** | ✅ pass | additive — reversing the ballots reverses the totals |
 | **Ranked Pairs, Schulze** (Condorcet) | ✅ pass | — |
 | **STAR** | *avoids it here* | original → **B**, reversed → **A** ([star original](cases/cases_pages/reversal_star_original.md) · [reversed](cases/cases_pages/reversal_star_reversed.md)) — a *different* winner each way, so no winner=loser |
-| **Ranked Robin** | *avoids it here* | flags the [cycle](../../05_Ranked_Robin/concepts/cycle_resolution.md) and resolves by margin |
+| **Ranked Robin** | *avoids it here* | flags the [cycle](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) and resolves by margin |
 
 **A careful, honest note on STAR:** the cases above show STAR *avoiding* the winner=loser on this electorate — **not** a proof that STAR satisfies reversal symmetry as a criterion. STAR is a hybrid (an additive scoring round plus a pairwise runoff), and the rank→score mapping used here (5/3/0) is a modeling choice. We claim only what we ran: STAR gives B then A, so its best and worst here differ.
 

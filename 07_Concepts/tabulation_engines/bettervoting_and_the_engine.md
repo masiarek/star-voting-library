@@ -2,7 +2,7 @@
 
 **One line:** the same STAR election shows up in these materials as **two** result reports — BetterVoting's **live visual display** (what voters see) and the LH `starvote` **engine's text report** (the full audit/teaching tabulation). They're independent implementations of the *same* STAR method, so they **agree on the winner and the runoff margin**. They can differ in one bookkeeping detail — **how a "no preference" ballot is classified** (abstention vs Equal Support) — which nudges the score totals and the Equal Support count without changing the result. See [When the two reports differ](#when-the-two-reports-differ-abstentions-vs-equal-support).
 
-→ The engine report section by section: [reading a STAR report](LH_starvote/reading_a_star_report.md). The runoff percentages in both: [runoff percentages](../../01_STAR/concepts/the_count/runoff_percentages.md). Glossary: [`BetterVoting`](../GLOSSARY.md). The LH engine upstream: [`larryhastings/starvote` on GitHub](https://github.com/larryhastings/starvote) · [`starvote` on PyPI](https://pypi.org/project/starvote/).
+→ The engine report section by section: [reading a STAR report](LH_starvote/reading_a_star_report.md). The runoff percentages in both: [runoff percentages](../../01_STAR/01_Learn/the_count/runoff_percentages.md). Glossary: [`BetterVoting`](../GLOSSARY.md). The LH engine upstream: [`larryhastings/starvote` on GitHub](https://github.com/larryhastings/starvote) · [`starvote` on PyPI](https://pypi.org/project/starvote/).
 
 ---
 
@@ -26,7 +26,7 @@ How the pieces line up (same Dog/Cat race):
 | **% Between Finalists** (52 / 48) | the `show_runoff_percent` line — *Voters with a preference: 363…* |
 | **Race Details** tables | the **Preference Matrix** (For–Equal–Against) + runoff block |
 
-See both sides for this exact race, end to end — the export YAML and the full engine report — in the worked lesson [A real BetterVoting election, end to end](../../01_STAR/pet_real_bv_election/).
+See both sides for this exact race, end to end — the export YAML and the full engine report — in the worked lesson [A real BetterVoting election, end to end](../../01_STAR/04_Real_Elections/pet_real_bv_election/).
 
 ## When the two reports differ — abstentions vs Equal Support
 
@@ -44,12 +44,12 @@ BetterVoting's 6 "abstentions" are all **flat** ballots — every candidate scor
 
 This is the "results don't reconcile" branch of the pipeline below. It's tracked as a documentation/correctness issue for BetterVoting:
 
-- Minimal **real** BetterVoting reproduction (3 candidates / 8 ballots, where BV files a flat `3,3,3` as an abstention): [When "no preference" gets called an "abstention"](../../01_STAR/pet_real_bv_election/small_case_abstention_lesson.md)
-- Frozen evidence + raw export (the 461-ballot race): [BetterVoting result — frozen snapshot (pet race)](../../01_STAR/pet_real_bv_election/BV_result_snapshot.md)
-- Write-up & GitHub issue [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](../../01_STAR/pet_real_bv_election/LH_BV_reconciliation_issue.md)
-- Synthetic minimal illustration: [`abstention_reconciliation_min_c2_b6.yaml`](../../01_STAR/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml)
+- Minimal **real** BetterVoting reproduction (3 candidates / 8 ballots, where BV files a flat `3,3,3` as an abstention): [When "no preference" gets called an "abstention"](../../01_STAR/04_Real_Elections/pet_real_bv_election/small_case_abstention_lesson.md)
+- Frozen evidence + raw export (the 461-ballot race): [BetterVoting result — frozen snapshot (pet race)](../../01_STAR/04_Real_Elections/pet_real_bv_election/BV_result_snapshot.md)
+- Write-up & GitHub issue [Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407): [Equal Support ballots (incl. an all-5s vote) are being counted as "abs](../../01_STAR/04_Real_Elections/pet_real_bv_election/LH_BV_reconciliation_issue.md)
+- Synthetic minimal illustration: [`abstention_reconciliation_min_c2_b6.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml)
 
-The terminology — why a flat ballot is *Equal Support*, not a discarded or abstaining vote — is [runoff percentages](../../01_STAR/concepts/the_count/runoff_percentages.md) and [`Equal Support`](../GLOSSARY.md).
+The terminology — why a flat ballot is *Equal Support*, not a discarded or abstaining vote — is [runoff percentages](../../01_STAR/01_Learn/the_count/runoff_percentages.md) and [`Equal Support`](../GLOSSARY.md).
 
 ## How a real election becomes a trusted example
 

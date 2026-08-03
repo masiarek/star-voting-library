@@ -1,7 +1,7 @@
 """
 test_star_vs_rr_causes.py
 =========================
-The 30 auto-generated samples in 05_Ranked_Robin/star_vs_rr_divergence/ must
+The 30 auto-generated samples in 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/ must
 make CAUSE claims the ballots actually support — the cycle chain, the Condorcet
 claim, the score rank and the finalist pair each description asserts.
 
@@ -35,7 +35,7 @@ sys.path.insert(0, str(ENGINE_DIR / "tools_adam" / "scripts"))
 
 import check_star_vs_rr_causes as checker  # noqa: E402
 
-SAMPLE_DIR = REPO_ROOT / "05_Ranked_Robin" / "star_vs_rr_divergence"
+SAMPLE_DIR = REPO_ROOT / "05_Ranked_Robin" / "02_Examples" / "star_vs_rr_divergence"
 
 CYCLE_STEM = "cycle_C10_fewV29_bloc_2"
 DARKHORSE_STEM = "darkhorse_C03_fewV15_noise_1"

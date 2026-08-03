@@ -19,7 +19,7 @@ scenario_description: |-
   because it is the one thing the paper's own framing does not say about its
   own example.
 
-  Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
+  Claim-check page: ../../../04_Approval/01_Learn/hamlin_hua_2023.md
   Set overview: ../README.md
 
 voting_method: RankedRobin

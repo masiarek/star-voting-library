@@ -27,7 +27,7 @@ needs to be "closed" first.)
 USAGE (uv-native, PEP 723 — no venv needed):
 
     # one election, explicit output path (house naming: <yaml stem>_bv_export.json)
-    uv run fetch_bv_export.py 7mckyg -o 01_STAR/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus_bv_export.json
+    uv run fetch_bv_export.py 7mckyg -o 01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus_bv_export.json
 
     # several at once, default names <id>_bv_export.json in the current dir
     uv run fetch_bv_export.py 7mckyg b6xrdr 39py93

@@ -23,7 +23,7 @@ Watch for this: an argument that quietly assumes the mean is the right summary i
 
 If every voter scores every candidate, ranking by total and ranking by average give the **same order** — the denominator is identical, so it cancels. They come apart the moment some ballots don't count for some candidates: **abstentions, blanks, and skipped races**.
 
-That's not academic. It's precisely the [runoff-denominator](../../01_STAR/concepts/the_count/runoff_percentages.md) question — should the runoff percentage be out of *all* ballots, or only those expressing a preference (excluding [Equal Support](../GLOSSARY.md))? Any paper reporting a percentage owes you its denominator.
+That's not academic. It's precisely the [runoff-denominator](../../01_STAR/01_Learn/the_count/runoff_percentages.md) question — should the runoff percentage be out of *all* ballots, or only those expressing a preference (excluding [Equal Support](../GLOSSARY.md))? Any paper reporting a percentage owes you its denominator.
 
 ## 3. Distribution shape — consensus, polarization, and why the average hides it
 

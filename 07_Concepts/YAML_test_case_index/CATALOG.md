@@ -448,7 +448,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 ### By multi-winner style
 
-*Multi-winner races only.* The distinction that decides whether a minority gets represented: **bloc / at-large** (Bloc STAR, Bloc Approval, Bloc RR, SNTV — no reweighting, so a cohesive majority can sweep **every** seat) vs **proportional** (STAR-PR, STV — seats track factions). This is the one cut the method-family view below hides, since Bloc STAR normalizes to STAR. Note multi-winner Ranked Robin is **Bloc RR** and lands here as bloc, not Condorcet. → [bloc vs proportional, worked](../../01_STAR/exercises/ex12_bloc_vs_proportional.md)
+*Multi-winner races only.* The distinction that decides whether a minority gets represented: **bloc / at-large** (Bloc STAR, Bloc Approval, Bloc RR, SNTV — no reweighting, so a cohesive majority can sweep **every** seat) vs **proportional** (STAR-PR, STV — seats track factions). This is the one cut the method-family view below hides, since Bloc STAR normalizes to STAR. Note multi-winner Ranked Robin is **Bloc RR** and lands here as bloc, not Condorcet. → [bloc vs proportional, worked](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md)
 
 | multi-winner style | # races | example elections |
 |---|--:|---|

@@ -4,7 +4,7 @@ test_readme_index_complete.py
 Some folders keep a README that is meant to be an EXHAUSTIVE index of their
 generated pages (the teaching progression's front door). A new page added to
 `<folder>_pages/` but forgotten in that README goes silently missing — the exact
-bug that dropped `bv2184_fyy886_lunch_vote` from `01_STAR/_main`. This test makes
+bug that dropped `bv2184_fyy886_lunch_vote` from `01_STAR/02_Examples`. This test makes
 that impossible to commit for the allowlisted folders.
 
 The scan lives in STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py

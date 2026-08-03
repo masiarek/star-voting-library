@@ -41,7 +41,7 @@ cannot drift if the engine's rungs ever change.
 
 That distinction is not academic. Until 2026-07-26 the fast model settled every
 tie by numpy index order, which disagrees with the engine, and it mislabelled
-05_Ranked_Robin/star_vs_rr_divergence/cycle_C10_fewV29_bloc_2.yaml ("STAR A";
+05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV29_bloc_2.yaml ("STAR A";
 the engine elects C — fixed in 7ddde36, model corrected in this commit). The
 labels are additionally guarded by
 STARVote_LH_tabulation_engine/tools_adam/scripts/check_star_vs_rr_labels.py.

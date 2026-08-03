@@ -21,7 +21,7 @@ The IRV mechanism, in one sentence: the 8 extra April-first ballots keep April a
 
 Two footnotes on the pair, both deliberate:
 
-- **Both electorates are a Condorcet cycle** (April > Bruno > Celia > April) — that's the soil no-show paradoxes grow in, and it's why there is **no Ranked Robin race on BetterVoting**: a Copeland three-way tie resolves by *random draw* there (not freezable), while the LH engine's margin tiebreak resolves it deterministically (Celia before, April after — see the `_tabulated` mirrors, and [LH vs BV on RR ties](../../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md)).
+- **Both electorates are a Condorcet cycle** (April > Bruno > Celia > April) — that's the soil no-show paradoxes grow in, and it's why there is **no Ranked Robin race on BetterVoting**: a Copeland three-way tie resolves by *random draw* there (not freezable), while the LH engine's margin tiebreak resolves it deterministically (Celia before, April after — see the `_tabulated` mirrors, and [LH vs BV on RR ties](../../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md)).
 - **BV2174's STAR count is a [Runoff Reversal](../../GLOSSARY.md)** — Celia tops the scores 136/122/120, Bruno wins the runoff 34–20. One pair, two lessons.
 
 ## Which methods can punish participation — and where each is treated
@@ -30,7 +30,7 @@ Two footnotes on the pair, both deliberate:
 |--------|:---:|------|-----------|
 | **Score / Approval** | ✅ immune | a sincere added ballot only adds support where the voter intends — summation can't backfire | [scoring methods vs ranked](../scoring-methods-vs-ranked-voting.md) |
 | **Choose-One (Plurality)** | ✅ immune | more votes for your favorite never hurts your favorite | [plurality](../plurality.md) |
-| **STAR** | ❌ rare | the *runoff stage* costs the formal guarantee — live flip: [BV2165→BV2166 (Coombs Ex.19)](../../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_coombs_noshow.md), shown honestly | [STAR's honest limits](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) |
+| **STAR** | ❌ rare | the *runoff stage* costs the formal guarantee — live flip: [BV2165→BV2166 (Coombs Ex.19)](../../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_coombs_noshow.md), shown honestly | [STAR's honest limits](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) |
 | **Ranked Robin / all Condorcet methods** | ❌ provably | **Moulin's theorem**: Condorcet consistency ⇒ no-show paradoxes exist; see also Edelman's join-consistency argument | [Edelman, tabulated](../condorcet/edelman_condorcet_myth.md) |
 | **RCV-IRV / plurality-runoff / Coombs** | ❌ readily | the elimination machinery — same root as [non-monotonicity](../monotonicity/) | [no-show paradox](../../voting_paradoxes/no_show.md) |
 

@@ -2,7 +2,7 @@
 
 *[May's Theorem](../mays_theorem.md) leaves an obvious question hanging: it proves majority rule is uniquely right for **two** alternatives, and its content evaporates at three. So which rule inherits the mantle? On the **full domain** the honest answer is nobody — no completely satisfactory extension of May exists. But **restrict the domain to profiles where a Condorcet winner exists**, and a uniqueness theorem comes back: electing the head-to-head winner is resolute, anonymous, neutral, and **strategyproof** — and for an odd number of voters it is the **only** such rule. This is the strongest positive result in the Condorcet family's favour, and it is worth stating at full strength before stating its limit.*
 
-→ Level: **Voting 301** ([301.19](../../curriculum/CURRICULUM_301.md)) · the two-candidate original: [May's theorem](../mays_theorem.md) · the impossibility it does *not* contradict: [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) · the family it characterises: [the Condorcet hub](README.md) · this repo's Condorcet method: [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md).
+→ Level: **Voting 301** ([301.19](../../curriculum/CURRICULUM_301.md)) · the two-candidate original: [May's theorem](../mays_theorem.md) · the impossibility it does *not* contradict: [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) · the family it characterises: [the Condorcet hub](README.md) · this repo's Condorcet method: [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md).
 
 ---
 
@@ -44,13 +44,13 @@ Set that beside May and the parallel is exact — same axioms, one substitution:
 
 ### Why Copeland qualifies — the one-line proof
 
-A Condorcet winner beats all `m − 1` rivals, so their [Copeland score](../../../05_Ranked_Robin/concepts/ranked_robin.md) is `m − 1` — the maximum possible, and no one else can reach it (they lost to the Condorcet winner). Uniquely highest ⇒ Copeland elects them ⇒ **Copeland, and therefore [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md), is a Condorcet extension.** Two sentences, no case analysis.
+A Condorcet winner beats all `m − 1` rivals, so their [Copeland score](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) is `m − 1` — the maximum possible, and no one else can reach it (they lost to the Condorcet winner). Uniquely highest ⇒ Copeland elects them ⇒ **Copeland, and therefore [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md), is a Condorcet extension.** Two sentences, no case analysis.
 
 ## The honest limits — read these before citing it
 
 This is a real theorem and a genuinely strong card. It is also routinely overstated, in four specific ways.
 
-**1. The restriction is doing enormous work.** `𝒟_Condorcet` is precisely the set of *easy* profiles — the ones where an obvious answer exists. The theorem says: **when there is an obvious answer, taking it is uniquely well-behaved.** True, valuable, and much narrower than "Condorcet methods are optimal." Every genuine dispute in this library lives *outside* the domain: [cycles](../../../05_Ranked_Robin/concepts/cycle_resolution.md), the [minimal tilted cycle](../../../method_comparisons/minimal_tilted_cycle/README.md), how to resolve the [Smith set](../smith_set.md). On exactly the profiles where methods disagree, Campbell–Kelly is silent by construction.
+**1. The restriction is doing enormous work.** `𝒟_Condorcet` is precisely the set of *easy* profiles — the ones where an obvious answer exists. The theorem says: **when there is an obvious answer, taking it is uniquely well-behaved.** True, valuable, and much narrower than "Condorcet methods are optimal." Every genuine dispute in this library lives *outside* the domain: [cycles](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md), the [minimal tilted cycle](../../../method_comparisons/minimal_tilted_cycle/README.md), how to resolve the [Smith set](../smith_set.md). On exactly the profiles where methods disagree, Campbell–Kelly is silent by construction.
 
 **2. It cannot choose among Condorcet methods.** Every Condorcet extension agrees with PMR on `𝒟_Condorcet` — that *is* the definition — so the theorem cannot distinguish Ranked Robin from [Minimax](../../voting_paradoxes/minimax.md) from Ranked Pairs from Schulze. It characterises the **family** on the easy profiles and offers nothing on the hard ones, which is where the entire cycle-resolution literature lives.
 
@@ -72,7 +72,7 @@ Three things worth saying alongside that, none of which are dodges:
 
 - **The theorem's axis is one axis.** It says nothing about [center squeeze](../center_squeeze/), [distortion](../distortion.md), expressiveness, or [strategic incentive](../pvsi_strategic_incentive.md) in the full-domain world elections actually inhabit. STAR's case has never rested on Condorcet efficiency, and this theorem doesn't move it.
 - **STAR's Condorcet efficiency is empirically high** — it elects the Condorcet winner on the large majority of realistic profiles ([measured](condorcet_efficiency_measured.md): 74–99%, depending on the field size and the electorate model) — so "not a Condorcet extension" is a statement about a guarantee, not about typical behaviour. Guarantee ≠ frequency, in both directions; that cuts against overstating STAR's misses *and* against overstating the guarantee's practical value.
-- **This is exactly why [Ranked Robin is the olive branch](../../../05_Ranked_Robin/concepts/ranked_robin.md)** in this library's comparisons. If Condorcet consistency is the property you can't give up, there's a method here that has it, on the same ranked ballot, without IRV's elimination pathologies. Campbell–Kelly is the formal statement of what that buys.
+- **This is exactly why [Ranked Robin is the olive branch](../../../05_Ranked_Robin/01_Learn/ranked_robin.md)** in this library's comparisons. If Condorcet consistency is the property you can't give up, there's a method here that has it, on the same ranked ballot, without IRV's elimination pathologies. Campbell–Kelly is the formal statement of what that buys.
 
 ## The bookend
 
@@ -97,6 +97,6 @@ Which is the same shape as [Ties Are Forced](../ties/ties_are_forced.md) one lev
 ## Related
 
 - [May's theorem](../mays_theorem.md) — the two-candidate original · [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) — the full-domain impossibility · [Ties Are Forced](../ties/ties_are_forced.md) — the same price, one level down
-- [The Condorcet hub](README.md) · [three-candidate collapse](three_candidate_collapse.md) · [the Smith set](../smith_set.md) · [cycle resolution](../../../05_Ranked_Robin/concepts/cycle_resolution.md)
-- [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) · [criteria at a glance](../criteria_at_a_glance.md) · [social welfare function](../social_welfare_function.md)
+- [The Condorcet hub](README.md) · [three-candidate collapse](three_candidate_collapse.md) · [the Smith set](../smith_set.md) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md)
+- [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [criteria at a glance](../criteria_at_a_glance.md) · [social welfare function](../social_welfare_function.md)
 - [Glossary](../../GLOSSARY.md) — Condorcet domain, Condorcet extension, strategyproofness, resolute

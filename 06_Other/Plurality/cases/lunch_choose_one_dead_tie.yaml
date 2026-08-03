@@ -12,7 +12,7 @@ scenario_description: |-
   ballot gave them no way to say so.
 
   Same five people, same opinions, on a 5-star ballot:
-  01_STAR/_main/cases/bv2184_fyy886_lunch_vote.yaml — where STAR elects Pizza,
+  01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml — where STAR elects Pizza,
   the compromise everyone is happy with.
 
   TIEBREAK — this case is NOT deterministic, on purpose. LH resolves the 2-2 tie

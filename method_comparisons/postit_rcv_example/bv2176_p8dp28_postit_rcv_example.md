@@ -39,7 +39,7 @@ The video then flips the round-2 elimination: *what if Green (7 votes) had gone 
 
 ## The Ranked Robin race — one tie, two ladders, both deterministic
 
-There is **no Condorcet winner** here: the pairwise picture is a genuine cycle (Purple beats Green 9–8, Green beats Blue 7–4, Blue beats Purple 10–9 — and Pink beats Purple 12–8). Green and Blue each go **2–1** (Copeland 2), and that tie is exactly where [the two engines' tiebreak ladders diverge](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md):
+There is **no Condorcet winner** here: the pairwise picture is a genuine cycle (Purple beats Green 9–8, Green beats Blue 7–4, Blue beats Purple 10–9 — and Pink beats Purple 12–8). Green and Blue each go **2–1** (Copeland 2), and that tie is exactly where [the two engines' tiebreak ladders diverge](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md):
 
 - **BetterVoting** (`RankedRobin.ts`): exactly 2 tied → their own head-to-head. Green beats Blue **7–4** → **Green**, deterministically (BV-confirmed live).
 - **LH** (`run_ranked_robin`): total margin. Blue +5 vs Green +4 → **Blue**, deterministically.
@@ -158,7 +158,7 @@ BetterVoting's live result for the same race: **Green** (Copeland 2, elected via
 
 Frozen BetterVoting export (Election + Ballots + Results): [bv2176_p8dp28_bv_export.json](cases/bv2176_p8dp28_bv_export.json) — BV's stored winners match every LH prediction (STAR Blue, RCV-IRV Purple, Ranked Robin **Green** — the ladder divergence, on the record).
 
-Related: [the video](https://youtu.be/Vte4nly_Neg) · [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/concepts/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../05_Ranked_Robin/concepts/cycle_resolution.md) · up: [method_comparisons](../)
+Related: [the video](https://youtu.be/Vte4nly_Neg) · [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · up: [method_comparisons](../)
 
 *BetterVoting result screenshots (View 1) can be dropped into `img/` as `img/p8dp28_<what>.png` and linked here.*
 

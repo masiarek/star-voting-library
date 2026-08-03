@@ -2,7 +2,7 @@
 
 **One line:** a broadly-liked moderate is eliminated *early* because few voters rank/score them **first**, so a more polarizing candidate the majority actually opposed goes on to win. It's an **[RCV-IRV (Hare)](RCV-IRV-Hare.md)** failure — a property of the *eliminate-the-fewest-first-choices* rule specifically, not of ranked ballots in general (and not of every instant-runoff variant); STAR avoids it.
 
-→ Glossary: [`center squeeze`](../../../07_Concepts/GLOSSARY.md) · deeper debate version: [Favorite betrayal (301)](../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md)
+→ Glossary: [`center squeeze`](../../../07_Concepts/GLOSSARY.md) · deeper debate version: [Favorite betrayal (301)](../../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md)
 
 ---
 
@@ -12,7 +12,7 @@ IRV only ever looks at each ballot's **top remaining** choice, and each round it
 
 **So when a page says "center squeeze," assume Hare.** It's a property of the fewest-first-choices elimination rule — the one US "RCV" uses — and it is **not** a property of ranked ballots in general, nor even of every instant-runoff variant:
 
-- **[Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md)** (a Condorcet count of the *same* ballot) doesn't eliminate at all, so it has **no** center squeeze.
+- **[Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md)** (a Condorcet count of the *same* ballot) doesn't eliminate at all, so it has **no** center squeeze.
 - The **Condorcet-safe IRV variants** — **BTR-IRV, Baldwin, Nanson** — keep the instant-runoff *shape* but stop eliminating on first-choices alone, so a Condorcet winner can never be squeezed out. Fittingly, **Nanson** — quoted at the bottom of this page warning about exactly this flaw in **1882** — designed one of those fixes.
 
 So the precise statement isn't "RCV has center squeeze," or even "IRV" — it's <!-- terminology-ok: quotes the imprecise claim --> **RCV-IRV (Hare)**. For the full family, see [Which RCV-IRV? — Hare and the other variants](variants/RCV_IRV_variants.md) and [the terminology tips](../../../07_Concepts/tips/TIPS_terminology.md).
@@ -83,7 +83,7 @@ Center squeeze is a depolarization argument, not just a fairness one. A simulati
 ## Real elections
 
 - **Burlington, VT 2009 (mayor).** Montroll was the Condorcet winner — preferred over Wright 56–44 and over Kiss 54–46 — but had too few first-choices, was eliminated, and **Kiss won**. IRV was repealed there in 2010.
-- **[Alaska 2022 (US House special)](case_studies/RCV_IRV_alaska_2022.md).** Begich beat both Peltola and Palin head-to-head, but was eliminated first; **Peltola won.** (Worked through in [Favorite betrayal (301)](../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md).)
+- **[Alaska 2022 (US House special)](case_studies/RCV_IRV_alaska_2022.md).** Begich beat both Peltola and Palin head-to-head, but was eliminated first; **Peltola won.** (Worked through in [Favorite betrayal (301)](../../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md).)
 
 ## How STAR avoids it
 

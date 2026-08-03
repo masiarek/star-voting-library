@@ -44,4 +44,4 @@ The [**case_studies/**](case_studies/) subfolder — real elections:
 
 - Glossary: [RCV-IRV & ranked-ballot terms](glossary_rcv_irv.md)
 
-*(Other tabulations of the same ranked ballot: [Ranked Robin](../../../05_Ranked_Robin/concepts/README.md) (Condorcet/consensus), [STV](../../../03_STAR_PR/concepts/) (proportional). Up: the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*
+*(Other tabulations of the same ranked ballot: [Ranked Robin](../../../05_Ranked_Robin/01_Learn/README.md) (Condorcet/consensus), [STV](../../../03_STAR_PR/01_Learn/) (proportional). Up: the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*

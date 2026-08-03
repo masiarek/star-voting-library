@@ -7,7 +7,7 @@ search:
 
 *Generated from [`mono_raise_delete_after.yaml`](../mono_raise_delete_after.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/concepts) · **1 seat** · **Expected winner:** Z
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Z
 
 ## Scenario
 
@@ -23,7 +23,7 @@ change from {X, Y} to {X, Z}. X still leads the scoring round (now 96), but the
 runoff is X vs Z, and Z beats X 18-12. X went from winning to losing after being
 raised — STAR fails the mono-raise-delete criterion (Woodall 1996). It still
 passes plain mono-raise (see the monotonicity_star_* pair, where the same kind
-of change leaves X winning). Concept: 01_STAR/concepts/properties_and_limits/STAR_monotonicity.md.
+of change leaves X winning). Concept: 01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md.
 
 ## Ballots
 
@@ -125,7 +125,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/mono_raise_delete_after.md) — its entry in the divergence review ledger
 - [Monotonicity (topic hub)](../../../../07_Concepts/topics/monotonicity/README.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [alaska_upward_after](alaska_upward_after.md) · [alaska_upward_before](alaska_upward_before.md) · [mono_raise_delete_before](mono_raise_delete_before.md) · [monotonicity_irv_after](monotonicity_irv_after.md) · [monotonicity_irv_before](monotonicity_irv_before.md) · [monotonicity_star_after](monotonicity_star_after.md) · [monotonicity_star_before](monotonicity_star_before.md) · [sf_d7_downward_after](sf_d7_downward_after.md) · [sf_d7_downward_before](sf_d7_downward_before.md)

@@ -10,7 +10,7 @@
 
 ABIF was designed by **Rob Lanphier** (`robla`) under the [electorama](https://electorama.com) umbrella, with a published spec ([electowiki](https://electowiki.org/wiki/ABIF)), a reference toolchain (`abiftool`), and a live editor at [abif.electorama.com](https://abif.electorama.com). Its stated job: *"a concise, aggregated, text-based document to describe the ballots cast in range-based or ranked elections, as well as approval-based and choose-one balloting systems."*
 
-That "as well as" is the whole point. The **same** set of voter opinions can be tabulated by STAR, RCV-IRV, [Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md), Approval, or Condorcet — and ABIF's ambition is to be the one file all of those tools read, so you can hold the voters constant and swap the method. (That is exactly Lanphier's [Tennessee example](https://abif.electorama.com/id/TNexampleSTAR), the same "three methods, three winners" puzzle this repo tells in [BV2155](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.md).)
+That "as well as" is the whole point. The **same** set of voter opinions can be tabulated by STAR, RCV-IRV, [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Approval, or Condorcet — and ABIF's ambition is to be the one file all of those tools read, so you can hold the voters constant and swap the method. (That is exactly Lanphier's [Tennessee example](https://abif.electorama.com/id/TNexampleSTAR), the same "three methods, three winners" puzzle this repo tells in [BV2155](../../method_comparisons/paradoxes_and_whoops/bv2155_cphxpt_tennessee_four_ways.md).)
 
 ## The grammar, decoded
 
@@ -46,7 +46,7 @@ Because ranks and scores are both first-class, ABIF has three registers:
 | Register | Looks like | This is a… |
 |---|---|---|
 | **Ranked** (order only) | `Allie > Billy = Candace > Dennis` | [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) / Ranked Robin ballot |
-| **Rated** (strength only) | `Allie/5, Billy/5, Candace/4, Dennis/3` | [STAR](../../01_STAR/concepts/STAR_start_here.md) / Score / Approval ballot |
+| **Rated** (strength only) | `Allie/5, Billy/5, Candace/4, Dennis/3` | [STAR](../../01_STAR/01_Learn/STAR_start_here.md) / Score / Approval ballot |
 | **Hybrid** (both at once) | `Allie/5 =Billy/5 >Candace/4` | scores **and** explicit operators — `test003` above |
 
 The first two are clean. The **hybrid** is what tripped you up, and the confusion is legitimate: it encodes the ordering **twice** — once in the numbers (`5`, `5`, `4`) and again in the operators (`=`, `>`). In `test003` the two agree by construction (every `=` sits between equal scores, every `>` between descending ones), so it's a tidy belt-and-suspenders demo. But nothing in the *syntax* forces agreement — `Allie/5 >Billy/6` is writable, and now the operator says "Allie beats Billy" while the scores say the opposite. A reader (or parser) has to know which wins. **Two sources of truth for one fact is a footgun**, and the hybrid form is where ABIF looks most like line noise for the least added information.

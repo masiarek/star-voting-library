@@ -2,7 +2,7 @@
 
 *Plain-language first, jargon and references at the very bottom. This is the "a majority scored them highest but they still lost?!" idea — the objection FairVote raises most against STAR — and Equal Vote's answer to it.*
 
-Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md).
+Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
 ---
 
@@ -18,7 +18,7 @@ Choose-One (plurality) and RCV-IRV always obey this rule. **STAR does not always
 
 Five voters. Three of them (a **60% majority**) love **Ada** — they give her the top score, 5. The other two can't stand Ada (they give her 0) but love **Bruno** and **Cleo** (5 each). The only thing we change between the two elections is *how generous Ada's own supporters are to everyone else.*
 
-**Election A — Ada's majority backs only ONE other candidate** ([`bv95a`](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md)). They give Bruno a 4 and Cleo a 0:
+**Election A — Ada's majority backs only ONE other candidate** ([`bv95a`](../../../01_STAR/03_Criteria/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md)). They give Bruno a 4 and Cleo a 0:
 
 ```
 Ada,Bruno,Cleo
@@ -31,7 +31,7 @@ Finalists (top two by score): Bruno & Ada  →  runoff: Ada beats Bruno  →  AD
 
 Ada's majority got their favorite. Supporting *one* compromise candidate cost them nothing.
 
-**Election B — the same majority also backs a SECOND candidate** ([`bv95b`](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md)). Everything identical except they now give Cleo a 3 instead of 0:
+**Election B — the same majority also backs a SECOND candidate** ([`bv95b`](../../../01_STAR/03_Criteria/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md)). Everything identical except they now give Cleo a 3 instead of 0:
 
 ```
 Ada,Bruno,Cleo
@@ -61,7 +61,7 @@ A related trap the same argument exposes: **consensus is not the same as "centri
 **Three honest caveats before deploying it:**
 
 - **It concedes the practical point.** The same argument grants that majority-of-preference is *"a very good rule of thumb"* — a candidate near the consensus will usually be on the majority's side anyway. So the critique is conceptual, not a claim that ranked methods routinely elect the wrong person. Anyone citing it as a knockout is overreading it.
-- **It is an argument for Score, not for STAR.** STAR's [automatic runoff](../../../01_STAR/concepts/the_count/STAR_Automatic_Runoff.md) is *itself* a pairwise majority step — precisely the mechanism the critique targets. A STAR advocate cannot adopt this wholesale without arguing against STAR's own second round. (It fits pure Score, and to a degree Approval.)
+- **It is an argument for Score, not for STAR.** STAR's [automatic runoff](../../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) is *itself* a pairwise majority step — precisely the mechanism the critique targets. A STAR advocate cannot adopt this wholesale without arguing against STAR's own second round. (It fits pure Score, and to a degree Approval.)
 - **Source and lean.** The clearest write-up is [Lucasvb's essay on electowiki](https://electowiki.org/wiki/User:Lucasvb/Majority_and_consensus_under_ordinal_and_cardinal_perspectives) — a **personal user page**, not a community-reviewed article, by a cardinal-methods advocate. Its geometric argument is genuinely illuminating; its behavioural claim (that ranked ballots make voters *become* more factionalist) is asserted, not evidenced. Treat the first as an idea worth thinking with and the second as a hypothesis.
 
 ## The Relaxed Majority Criterion — Equal Vote's answer
@@ -76,7 +76,7 @@ Methods that **pass** RMC: RCV-IRV, **STAR**, Unified Primary, 3-2-1. Methods th
 
 ## The same fork as Later-No-Harm
 
-Here's the deep connection — the Majority-Criterion failure and STAR's **Later-No-Harm** failure ([honest limit #3](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md)) are *the same event*, described two ways.
+Here's the deep connection — the Majority-Criterion failure and STAR's **Later-No-Harm** failure ([honest limit #3](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md)) are *the same event*, described two ways.
 
 - **Later-No-Harm** (a voter's-eye view): "scoring my *later* choices should never hurt my favorite." STAR breaks this.
 - **Majority Criterion** (the electorate's view): "a majority's favorite should win." STAR can break this.
@@ -98,13 +98,13 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 |--------|:--:|:--:|--------------------|
 | Choose-One (plurality) | ✅ | ✅ | [plurality](../plurality.md) |
 | RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../rcv_irv_vs_star.md) |
-| **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) |
+| **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) |
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../../06_Other/Range/concepts/range_voting.md) |
-| Approval | ❌ *(1 rival)* | ❌ | [approval](../../../04_Approval/concepts/) — worked in [the Approval camp's own example](../../../method_comparisons/approval_majority_criterion/README.md) |
+| Approval | ❌ *(1 rival)* | ❌ | [approval](../../../04_Approval/01_Learn/) — worked in [the Approval camp's own example](../../../method_comparisons/approval_majority_criterion/README.md) |
 
-Worked demonstrations in this repo — each with its own per-election page: [BV95a — favorite survives](../../../01_STAR/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md) / [BV95b — favorite loses](../../../01_STAR/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md), plus the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus).
+Worked demonstrations in this repo — each with its own per-election page: [BV95a — favorite survives](../../../01_STAR/03_Criteria/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md) / [BV95b — favorite loses](../../../01_STAR/03_Criteria/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md), plus the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus).
 
-**And the Approval side of the table, worked too.** The row above says Approval fails on *one* supported rival; the demonstration comes from the Approval camp itself — Hamlin & Hua's academic case for approval voting concedes a majority-criterion failure in its §4.1 and argues it's harmless. Counted, that electorate turns out to have a Condorcet winner (the majority's favorite), and the paper's own "the utility gap is negligible" defence is *correct* and still doesn't save the result: [the case set](../../../method_comparisons/approval_majority_criterion/README.md) · [the claim-check](../../../04_Approval/concepts/hamlin_hua_2023.md). It is the cleanest side-by-side of what "1 rival" versus "2 rivals" actually costs. Both BV95 elections were also reproduced live on BetterVoting — [`9m6rxr`](https://bettervoting.com/9m6rxr) elects Ada, [`7pdq3r`](https://bettervoting.com/7pdq3r) elects Bruno — so the demo is verified on the real platform, not just the LH engine.
+**And the Approval side of the table, worked too.** The row above says Approval fails on *one* supported rival; the demonstration comes from the Approval camp itself — Hamlin & Hua's academic case for approval voting concedes a majority-criterion failure in its §4.1 and argues it's harmless. Counted, that electorate turns out to have a Condorcet winner (the majority's favorite), and the paper's own "the utility gap is negligible" defence is *correct* and still doesn't save the result: [the case set](../../../method_comparisons/approval_majority_criterion/README.md) · [the claim-check](../../../04_Approval/01_Learn/hamlin_hua_2023.md). It is the cleanest side-by-side of what "1 rival" versus "2 rivals" actually costs. Both BV95 elections were also reproduced live on BetterVoting — [`9m6rxr`](https://bettervoting.com/9m6rxr) elects Ada, [`7pdq3r`](https://bettervoting.com/7pdq3r) elects Bruno — so the demo is verified on the real platform, not just the LH engine.
 
 ---
 

@@ -33,9 +33,26 @@ Tempting, but it creates exactly the sync problem you already dislike with the G
 - **Per-YAML `.md`** doubles maintenance and drifts out of sync. The YAML already has two slots — `scenario_description` (printable) and `video_script` (notes) — which cover everything a single file needs.
 - **A folder per scenario** (`yaml` + `md` + `_tabulated` together) fragments navigation: you can no longer skim a folder of examples, and the lesson order gets buried. Heavy for no benefit.
 
-## Recommended folder structure (keep what you have)
+## Folder structure
 
-Group by **teaching role**, not by file type:
+Group by **teaching role**, not by file type.
+
+**Inside a method folder, the second level is a fixed spine** (reorganized 2026-08-02). Every method uses the same numbered buckets, in the same reading order, and takes only the ones it needs:
+
+| | Bucket | Holds |
+|---|---|---|
+| **01** | `01_Learn/` | concept pages for this method |
+| **02** | `02_Examples/` | the teaching progression and themed example sets |
+| **03** | `03_Criteria/` | criterion probes, tie-breaking, edge behavior |
+| **04** | `04_Real_Elections/` | live BetterVoting races reconciled against the engine |
+| **05** | `05_Practice/` | exercises with tested answer keys |
+| **09** | `09_Parked/` | kept, but off the learning path |
+
+Before this, `01_STAR/` had sixteen sibling folders that mixed four different axes at one level — kinds of material (`concepts`, `exercises`), criteria (`majority_criterion`), mechanisms (`tie_break_ladder`) and single artifacts (`pet_real_bv_election`) — sorted alphabetically, which is what the sidebar showed. The buckets exist so a reader learns the shape once and can then navigate every method.
+
+**Difficulty is deliberately NOT in the folder names.** A case is often 101 for its basic idea and 301 for the deep dive; levels live in [CURRICULUM.md](../CURRICULUM.md) and in per-set tables, so a case can appear at two levels without being duplicated or moved. The numeric prefix orders the sidebar (MkDocs derives nav order and labels straight from folder names); capitalize the word after the number, or MkDocs renders the label lowercase.
+
+Prefixed folders are also why every rename here is expensive: see the redirect rule below.
 
 Prominence follows the library's mission: the **equal-vote (EVC) methods get the numbered, front-rank folders**; other methods appear mainly as contrast material.
 
@@ -48,14 +65,18 @@ Prominence follows the library's mission: the **equal-vote (EVC) methods get the
   voting_paradoxes/ scores_and_ranks/ tabulation_engines/ books/ …
                       the rest of the material that belongs to no single method
 01_STAR/              single-winner STAR — the headline method
-  concepts/           concept pages FOR THIS METHOD (start here, the count,
+  01_Learn/           concept pages FOR THIS METHOD (start here, the count,
                       properties & limits, hands-on, reporting/); the
                       Larry↔Adam conversation scripts live beside their
                       topics, indexed in conversation_scripts.md
-  _main/              loose files that belong to no themed set
-  _main/_main_tabulated/          their generated _tabulated.txt mirrors
-  runoff_overturns_leader/ …      themed sets: YAMLs + README (+ img/), each
-                                  with its mirrors nested inside
+  02_Examples/        the teaching progression — the smallest elections, one
+                      new idea each — plus themed sets like
+                      runoff_overturns_leader/
+  02_Examples/cases/cases_tabulated/   their generated _tabulated.txt mirrors
+  03_Criteria/        criterion probes and the tie-breaking cascade
+  04_Real_Elections/  live BetterVoting races, reconciled against the engine
+  05_Practice/        predict-then-peek exercises with tested answer keys
+  09_Parked/          kept, but off the learning path
 02_STAR_Bloc/         Bloc STAR (multi-winner, majoritarian)
 03_STAR_PR/           proportional STAR (sss / allocated / rrv)
 04_Approval/          Approval Voting
@@ -76,11 +97,11 @@ STARVote_LH_tabulation_engine/   the STAR engine, its tests/, and
                       pref_voting cross-check engine, find_*divergence.py
 ```
 
-- **`_tabulated` output nests INSIDE the source file's own folder** as `<folder>/<folder>_tabulated/` (the engine computes this: `tabulated_output_path`). Loose files live in a `_main/` subfolder so their mirrors nest the same way. Generated, regenerable, separate from source, but right next to the YAML it came from. (Committed by choice; they could be gitignored instead.)
-- **One door per voting method (2026-07-29).** A method's concept pages live in **that method's own folder**, under `concepts/` — `01_STAR/concepts/`, `04_Approval/concepts/`, `05_Ranked_Robin/concepts/`, `06_Other/RCV_IRV/concepts/`, and so on. The folder's `README.md` is the method's **start-here**: what the method is, then its concepts, then its runnable examples. They used to sit in a parallel `07_Concepts/<Method>/` tree, which gave every method two competing front doors — the case folder was a top-level nav section, so that is where readers landed, but the page that actually taught the method was somewhere else entirely.
+- **`_tabulated` output nests INSIDE the source file's own folder** as `<folder>/<folder>_tabulated/` (the engine computes this: `tabulated_output_path`). Loose files live in a folder's `02_Examples/cases/` subfolder (still `_main/` under `method_comparisons/`) so their mirrors nest the same way. Generated, regenerable, separate from source, but right next to the YAML it came from. (Committed by choice; they could be gitignored instead.)
+- **One door per voting method (2026-07-29).** A method's concept pages live in **that method's own folder**, in its `01_Learn/` bucket — `01_STAR/01_Learn/`, `04_Approval/01_Learn/`, `05_Ranked_Robin/01_Learn/` (the two `06_Other/` methods still use the older `concepts/` name: `06_Other/RCV_IRV/concepts/`, `06_Other/Range/concepts/`), and so on. The folder's `README.md` is the method's **start-here**: what the method is, then its concepts, then its runnable examples. They used to sit in a parallel `07_Concepts/<Method>/` tree, which gave every method two competing front doors — the case folder was a top-level nav section, so that is where readers landed, but the page that actually taught the method was somewhere else entirely.
 - **`07_Concepts/` is now cross-method material only** — topics, paradoxes, scores-and-ranks, curriculum, glossary, engines. Nothing in it competes with a method folder for the same reader.
 - **Every relocated page keeps a permanent redirect** in `mkdocs.yml`'s `redirect_maps` (120 of them). Published URLs are quoted in permanent BetterVoting election descriptions that cannot be edited after the election goes live, so those redirects are not housekeeping — deleting one creates an unfixable 404. Moving concept pages again? Use `tools_adam/scripts/migrate_concept_links.py`, which resolves relative links against each source file rather than blind-replacing strings, and add the new redirects.
-- **Markdown teaching docs cluster in `07_Concepts/`** (cross-method) and in each method folder's `concepts/` and `README.md`, so the prose has a home that isn't tangled with the data.
+- **Markdown teaching docs cluster in `07_Concepts/`** (cross-method) and in each method folder's `01_Learn/` and `README.md`, so the prose has a home that isn't tangled with the data.
 
 ## The clean-demo / recording recipe
 

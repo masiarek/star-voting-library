@@ -19,7 +19,7 @@ scores are equal -> break it by PAIRWISE (the runoff's question). The runoff
 decides by PAIRWISE preference, so a runoff tie means preference is equal ->
 break it by SCORE (the scoring round's measure). Five-star is the shared second
 rung; the lot is the floor of both. (Full write-up:
-01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.)
+01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md.)
 
 This script builds a tie that lands on the five-star rung, and lets you set what
 that rung finds:
@@ -51,7 +51,7 @@ Regression mode:
 
 Every generated file carries an `expected_winners:` assertion, so it doubles as a
 positive test case. The ballots are taken from the verified cases in
-`01_STAR/tie_break_dead_rung/` (cases 01-09), generalized over the score cap,
+`01_STAR/03_Criteria/tie_break_dead_rung/` (cases 01-09), generalized over the score cap,
 electorate scale, and candidate names.
 
 Examples
@@ -129,7 +129,7 @@ def build_template(round_: str, rung: str, adversarial: bool, cap: int,
 
     Non-adversarial cases teach *which rung decides* (the leader wins either way).
     Adversarial cases make the *elected winner* depend on the ladder order.
-    Ballots mirror the checked-in cases in 01_STAR/tie_break_dead_rung/.
+    Ballots mirror the checked-in cases in 01_STAR/03_Criteria/tie_break_dead_rung/.
     """
     c = cap
     if round_ == "full":
@@ -260,8 +260,8 @@ def render_yaml(t: Template, names: list[str], scale: int, round_: str, rung: st
             "Every candidate is a perfect rotation of the others, so no STAR rung "
             "(pairwise, five-star) can separate them and the pre-published lot order "
             "picks the winner. This is the k-candidate analog of BV jfk7pd. "
-            "See 01_STAR/tie_break_dead_rung/README.md and "
-            "01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md."
+            "See 01_STAR/03_Criteria/tie_break_dead_rung/README.md and "
+            "01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md."
         )
     else:
         description = (
@@ -270,8 +270,8 @@ def render_yaml(t: Template, names: list[str], scale: int, round_: str, rung: st
             + t.teach + " "
             "STAR's second rung counts only score-5 votes and never steps down to 4s; "
             "when it can't separate the tied candidates the lot decides. "
-            "See 01_STAR/tie_break_dead_rung/README.md and "
-            "01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md."
+            "See 01_STAR/03_Criteria/tie_break_dead_rung/README.md and "
+            "01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md."
         )
 
     # Flat schema (top-level keys) to match tie_break_dead_rung/ cases 01-09,

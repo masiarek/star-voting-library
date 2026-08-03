@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2205_8xwx43_minimal_sole_survivor.yaml`](../bv2205_8xwx43_minimal_sole_survivor.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/concepts) · **1 seat** · **Expected winner:** Ash
+**Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/01_Learn) · **1 seat** · **Expected winner:** Ash
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/8xwx43) · **[results ↗](https://bettervoting.com/8xwx43/results)** (election `8xwx43`).
 

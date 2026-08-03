@@ -7,7 +7,7 @@ search:
 
 *Generated from [`07a_c5_b36_herb-council-bloc-3-seats.yaml`](../07a_c5_b36_herb-council-bloc-3-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/concepts) · **3 seats** · **Expected winners:** Basil, Chive, Dill
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Basil, Chive, Dill
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dx494) · **[results ↗](https://bettervoting.com/9dx494/results)** (election `9dx494`).
 
@@ -26,7 +26,7 @@ The electorate (36 ballots, all individual rows):
   - kitchen bloc: 20 voters (10 slate, 4 bullet, 4 nuanced, 2 gentle)
   - tea caucus: 16 voters (9 nuanced, 4 slate, 3 cliff35)
 
-Ballot styles in play (taxonomy: 01_STAR/concepts/
+Ballot styles in play (taxonomy: 01_STAR/01_Learn/
 STAR_ballot_voting_styles.md):
   - nuanced: full 0-5 range, honest gaps, ties allowed
   - bullet: choose-one transplant: favorite 5, rest 0/blank
@@ -251,8 +251,8 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/ballot_
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md)
-- [Runoff reversal (worked set)](../../../../01_STAR/runoff_overturns_leader/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

@@ -2,11 +2,11 @@
 
 **One line:** under **RCV-IRV**, giving the eventual winner **more** first-choice support can cause them to **lose** — and moving a loser **down** can make them **win**. This isn't a glitch; it's baked into eliminate-and-transfer.
 
-> **Applies to:** [Hare](RCV-IRV-Hare.md) **and the other sequential-elimination variants** — [BTR](variants/RCV-IRV-BTR.md), [Coombs](variants/RCV-IRV-Coombs.md), and [Baldwin/Nanson](variants/RCV-IRV-Baldwin-Nanson.md) are non-monotonic too, because *eliminate-and-transfer* is the cause. (So this is **not** Hare-specific the way [center squeeze](RCV_IRV_center_squeeze.md) is.) The non-eliminating Condorcet methods like [Ranked Robin](../../../05_Ranked_Robin/concepts/ranked_robin.md) are **monotonic**. See [Which RCV-IRV?](variants/RCV_IRV_variants.md).
+> **Applies to:** [Hare](RCV-IRV-Hare.md) **and the other sequential-elimination variants** — [BTR](variants/RCV-IRV-BTR.md), [Coombs](variants/RCV-IRV-Coombs.md), and [Baldwin/Nanson](variants/RCV-IRV-Baldwin-Nanson.md) are non-monotonic too, because *eliminate-and-transfer* is the cause. (So this is **not** Hare-specific the way [center squeeze](RCV_IRV_center_squeeze.md) is.) The non-eliminating Condorcet methods like [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) are **monotonic**. See [Which RCV-IRV?](variants/RCV_IRV_variants.md).
 
 > Why this page matters: most people are never told this. "Rank your honest favorite first, it can't backfire" is the core promise of IRV — and non-monotonicity is the case where that promise breaks. It's the single most underappreciated structural problem with the method.
 
-→ STAR doesn't have this failure — see [`STAR is monotone`](../../../01_STAR/concepts/properties_and_limits/STAR_monotonicity.md). Glossary: [`monotonicity`](../../../07_Concepts/GLOSSARY.md).
+→ STAR doesn't have this failure — see [`STAR is monotone`](../../../01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md). Glossary: [`monotonicity`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -72,7 +72,7 @@ A well-known argument from **rangevoting.org** ([*"The logic behind IRV is flawe
 
 ## Don't confuse it with Later-No-Harm
 
-A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt them?" **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?" They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity; STAR is the opposite shape. (Worked out in [Favorite Betrayal — Does *Only* RCV Avoid It?](../../../01_STAR/concepts/properties_and_limits/favorite_betrayal_voting_301.md).)
+A frequent mix-up: **monotonicity** asks "can *raising* a candidate ever hurt them?" **Later-No-Harm** asks "can adding a *lower* preference ever hurt your *top* choice?" They're different criteria. IRV **passes** Later-No-Harm but **fails** monotonicity; STAR is the opposite shape. (Worked out in [Favorite Betrayal — Does *Only* RCV Avoid It?](../../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md).)
 
 → More source notes: **RCV-IRV monotonicity** group in [LINKS — source-of-truth registry](../../../07_Concepts/LINKS.md).
 

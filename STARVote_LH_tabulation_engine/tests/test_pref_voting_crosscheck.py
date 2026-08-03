@@ -33,9 +33,9 @@ sys.path.insert(0, str(REPO_ROOT / "STARVote_LH_tabulation_engine" / "tools_adam
 from pref_voting_tabulation import crosscheck, discover  # noqa: E402
 
 CROSS_DIRS = [
-    str(REPO_ROOT / "01_STAR" / "_main"),
-    str(REPO_ROOT / "01_STAR" / "runoff_overturns_leader"),
-    str(REPO_ROOT / "01_STAR" / "Flat_scores_ties"),
+    str(REPO_ROOT / "01_STAR" / "02_Examples"),
+    str(REPO_ROOT / "01_STAR" / "02_Examples" / "runoff_overturns_leader"),
+    str(REPO_ROOT / "01_STAR" / "03_Criteria" / "Flat_scores_ties"),
     str(REPO_ROOT / "method_comparisons" / "paradoxes_and_whoops"),
     str(REPO_ROOT / "method_comparisons" / "summability_demo"),
     str(REPO_ROOT / "method_comparisons" / "BV_Library"),

@@ -8,8 +8,8 @@ scenario_description: |-
   (Ada first), so the tie resolves the same way on every run and is auditable in
   advance. It elects Ada — whereas the BV-order twin elects Ben from the same
   ballots. Same votes, different winner, decided entirely by which lot order you
-  follow. See 01_STAR/tie_break_dead_rung/README.md and
-  01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
+  follow. See 01_STAR/03_Criteria/tie_break_dead_rung/README.md and
+  01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md.
 
 options:
   show_description: false

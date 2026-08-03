@@ -2,7 +2,7 @@
 
 *In praise of the contrived example. The tiny, symmetric elections in this repo — `5,5,5 / 4,4,4`, or `4,0,0 / 0,4,0 / 0,0,4` — will never show up at a polling place. That's the point: they're **probes**, built on purpose to drive a tabulation algorithm into its corners so we can see exactly what it does there.*
 
-Part of the [Ties & Tie-Breaking](README.md) hub · companion to [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md).
+Part of the [Ties & Tie-Breaking](README.md) hub · companion to [STAR Tie-Breaking — The Full Chain](../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md).
 
 ---
 
@@ -18,8 +18,8 @@ A deliberately-degenerate election isn't pedantry — it's the same move as a un
 
 **What each of your two examples isolates:**
 
-- **`5,5,5` then `4,4,4`** — every voter rates *all* candidates equally, so no ballot expresses any preference at all. Totals tie, every pairwise is "Equal Support," five-star ties: a **fully flat** dead heat. It probes *"what happens when the ballots say literally nothing to separate anyone?"* (See [Flat scores, ties & tie-breaking](../../../01_STAR/Flat_scores_ties/README.md).)
-- **`4,0,0 / 0,4,0 / 0,0,4`** — a perfect rotation: three equal, mutually symmetric camps, and (capped at 4) **no 5s**, so the five-star rung is a *dead rung*. It probes *"a genuine k-way symmetric tie with no cardinal signal to break it"* — the 3-candidate analog of `jfk7pd`. (See [the three-way dead-rung tie](../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md).)
+- **`5,5,5` then `4,4,4`** — every voter rates *all* candidates equally, so no ballot expresses any preference at all. Totals tie, every pairwise is "Equal Support," five-star ties: a **fully flat** dead heat. It probes *"what happens when the ballots say literally nothing to separate anyone?"* (See [Flat scores, ties & tie-breaking](../../../01_STAR/03_Criteria/Flat_scores_ties/README.md).)
+- **`4,0,0 / 0,4,0 / 0,0,4`** — a perfect rotation: three equal, mutually symmetric camps, and (capped at 4) **no 5s**, so the five-star rung is a *dead rung*. It probes *"a genuine k-way symmetric tie with no cardinal signal to break it"* — the 3-candidate analog of `jfk7pd`. (See [the three-way dead-rung tie](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md).)
 
 **A sixth payoff, which outranks the other five: they aren't actually contrived.** The rotation above is the exact profile the standard impossibility proof constructs. Moulin (1983) shows that anonymity + neutrality + Pareto are incompatible with always naming one winner whenever the voter count `n` has a divisor `r` with `1 < r ≤ m` candidates — and the witness he builds is `k` voters per rotation of the top three, which at `k = 1` is `4,0,0 / 0,4,0 / 0,0,4` and at `k = 2` is [the symmetric six-voter cycle](../../../method_comparisons/reinforcement_paradox/README.md) this repo also runs. So these files weren't a hunt for a pathological corner; they were a reconstruction of the textbook example, arrived at independently. That also converts the arithmetic into a **search rule** for building more: want a forced tie at `m` candidates? Pick `n` with a prime factor `≤ m`. See [Ties Are Forced](ties_are_forced.md).
 
@@ -59,16 +59,16 @@ The left spine (all "yes") is the ordinary election: a clean top two and a decis
 
 | Branch reached | What it isolates | Probe |
 |----------------|------------------|-------|
-| Clean top two + decisive runoff | the baseline (no tiebreak) | [`Flat_scores_ties_01`](../../../01_STAR/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.md) |
-| Scoring tie → **pairwise** breaks it | a finalist chosen by head-to-head | [dead-rung case 01](../../../01_STAR/tie_break_dead_rung/README.md) |
-| Scoring tie → **five-star** breaks it | a finalist chosen by most 5s | [dead-rung case 05](../../../01_STAR/tie_break_dead_rung/README.md) |
-| Scoring tie → **dead rung → lot** | no 5s; the lot picks the finalist | [dead-rung cap ladder](../../../01_STAR/tie_break_dead_rung/README.md) |
-| Runoff tie → **score** breaks it | winner by higher total score | [dead-rung case 04](../../../01_STAR/tie_break_dead_rung/README.md) |
-| Runoff tie → **five-star** breaks it | winner by most 5s | [dead-rung case 04/07](../../../01_STAR/tie_break_dead_rung/README.md) |
-| Runoff tie → **dead rung → lot** | no 5s; the lot picks the winner | [BV `jfk7pd`](../../../01_STAR/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) |
-| Runoff tie → five-star **tied non-zero → lot** | rung runs, decides nothing | [dead-rung case 09](../../../01_STAR/tie_break_dead_rung/README.md) |
-| **Fully flat** (no preference anywhere) | ties at both loci at once | [`Flat_scores_ties_07`](../../../01_STAR/Flat_scores_ties/Flat_scores_ties_07_fully_flat.md) |
-| **k-way symmetric** (rotation) | any of k wins by lot; divergence (k−1)/k | [three-way dead-rung](../../../01_STAR/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md) |
+| Clean top two + decisive runoff | the baseline (no tiebreak) | [`Flat_scores_ties_01`](../../../01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.md) |
+| Scoring tie → **pairwise** breaks it | a finalist chosen by head-to-head | [dead-rung case 01](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
+| Scoring tie → **five-star** breaks it | a finalist chosen by most 5s | [dead-rung case 05](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
+| Scoring tie → **dead rung → lot** | no 5s; the lot picks the finalist | [dead-rung cap ladder](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
+| Runoff tie → **score** breaks it | winner by higher total score | [dead-rung case 04](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
+| Runoff tie → **five-star** breaks it | winner by most 5s | [dead-rung case 04/07](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
+| Runoff tie → **dead rung → lot** | no 5s; the lot picks the winner | [BV `jfk7pd`](../../../01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) |
+| Runoff tie → five-star **tied non-zero → lot** | rung runs, decides nothing | [dead-rung case 09](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
+| **Fully flat** (no preference anywhere) | ties at both loci at once | [`Flat_scores_ties_07`](../../../01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_07_fully_flat.md) |
+| **k-way symmetric** (rotation) | any of k wins by lot; divergence (k−1)/k | [three-way dead-rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md) |
 
 Generate your own along any branch with [`generate_dead_rung_scenarios.py`](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md).
 
@@ -76,6 +76,6 @@ Generate your own along any branch with [`generate_dead_rung_scenarios.py`](../.
 
 ## See also
 
-- [STAR Tie-Breaking — The Full Chain](../../../01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md) — the ladders in words.
-- [The "dead rung" case set](../../../01_STAR/tie_break_dead_rung/README.md) and [Flat scores, ties & tie-breaking](../../../01_STAR/Flat_scores_ties/README.md) — the probes themselves.
+- [STAR Tie-Breaking — The Full Chain](../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md) — the ladders in words.
+- [The "dead rung" case set](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) and [Flat scores, ties & tie-breaking](../../../01_STAR/03_Criteria/Flat_scores_ties/README.md) — the probes themselves.
 - [Tie-Breaking: STAR vs. RCV-IRV](tiebreaking_star_vs_irv.md) — why strict ranks make ties harder, not easier.

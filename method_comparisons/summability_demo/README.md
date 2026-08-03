@@ -10,7 +10,7 @@ Runnable elections behind the **[Summability topic hub](../../07_Concepts/topics
 | `star_district_A.yaml`, `star_district_B.yaml`, `star_combined.yaml` | **STAR** | ✅ | precinct **score totals + pairwise matrix add** to the combined winner |
 | `rr_district_A.yaml`, `rr_district_B.yaml`, `rr_combined.yaml` | **Ranked Robin / RCV-RR** | ✅ | the **same ranked ballots** IRV couldn't combine — the **pairwise matrix adds** cell by cell and recovers B |
 
-> **Note on the `rr_*` files.** Ranked Robin runs on the *same ranked ballots* as IRV (`irv_*`) — only the *count* differs — so the `rr_*` files carry **identical ballots** to `irv_*` and just set `voting_method: RankedRobin`. They exist so the exact **pairwise (For–Against–Equal) matrix** in the [RR write-up](../../05_Ranked_Robin/concepts/RCV_RR_summability.md) is reproducible **on the LH engine** (not only via the pref_voting cross-check): District A + District B add cell-by-cell to the Combined matrix, from which B beats A (11–9) and C (11–9). The folder stays a cross-method (IRV / STAR / RR) demo — it is **not** prefixed `RCV_RR_`.
+> **Note on the `rr_*` files.** Ranked Robin runs on the *same ranked ballots* as IRV (`irv_*`) — only the *count* differs — so the `rr_*` files carry **identical ballots** to `irv_*` and just set `voting_method: RankedRobin`. They exist so the exact **pairwise (For–Against–Equal) matrix** in the [RR write-up](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) is reproducible **on the LH engine** (not only via the pref_voting cross-check): District A + District B add cell-by-cell to the Combined matrix, from which B beats A (11–9) and C (11–9). The folder stays a cross-method (IRV / STAR / RR) demo — it is **not** prefixed `RCV_RR_`.
 
 ## Run them
 
@@ -31,8 +31,8 @@ python pref_voting_tabulation.py ../../../method_comparisons/summability_demo/ca
 
 ## The three write-ups
 
-- [STAR is summable](../../01_STAR/concepts/properties_and_limits/STAR_summability.md)
-- [Ranked Robin is summable](../../05_Ranked_Robin/concepts/RCV_RR_summability.md)
+- [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md)
+- [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md)
 - [IRV is *not* summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md)
 
 The STAR files are guarded by the positive test harness; the `rr_*` files carry `expected_winners` (B for all three) and tabulate to it on the LH engine, confirmed independently by the [`pref_voting` cross-check](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md).
