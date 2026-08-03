@@ -1,6 +1,6 @@
 # The STAR Ballot — and every legal way to fill it out
 
-*One ballot, scored 0–5. This page shows what a STAR ballot actually looks like, then the gallery of legal ways to fill it out — from a plain choose-one vote to a fully expressive spread — and what each one says to the count. There is no wrong way to fill out a STAR ballot.*
+*One ballot, scored 0–5. This page shows what a STAR ballot actually looks like, then the gallery of legal ways to fill it out — from a plain choose-one vote to a fully expressive spread — and what each one says to the count. There is no wrong way to fill out a STAR ballot. Thirteen named styles here; [the ballot itself allows 4,650](#is-that-all-of-them).*
 
 ---
 
@@ -84,6 +84,51 @@ Automatic Runoff Round
 
 Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../02_Examples/cases/cases_tabulated/03c_c6_b8_style-gallery_tabulated.txt).
 
+## Five more the gallery leaves out
+
+The eight above are the styles voters *recognize*, and they all answer the same question: how much do you like these people? Five more come up constantly and aren't on that list, because they answer different questions — how do I play this, what do I do about the names I don't know, and how wide should my scale be at all. **Click any style for its own page**, same as above.
+
+| Ballot | Style | What the voter is saying |
+|---|---|---|
+| <img src="voting_styles/img/style_approval_style.png" width="190" alt="Approval-style ballot: Andre, Carmen, and David scored 5; Blake and Ella scored 0"> | **[Approval-style](voting_styles/approval_style.md)** | "These three are acceptable; those two aren't." — only 0s and 5s, no middle. |
+| <img src="voting_styles/img/style_exaggerated_compromise.png" width="190" alt="Exaggerated-compromise ballot: Carmen 5 and Andre also 5, David 2, Blake 1, Ella 0"> | **[Exaggerated Compromise](voting_styles/exaggerated_compromise.md)** | "Carmen's my favorite — but the front-runner gets a 5 too, just in case." |
+| <img src="voting_styles/img/style_partial_ballot.png" width="190" alt="Partial ballot: Carmen 5 and David 3, with Andre, Blake, and Ella left blank"> | **[Partial Ballot](voting_styles/partial_ballot.md)** | "I know these two. I've never heard of the other three." |
+| <img src="voting_styles/img/style_compressed_middle.png" width="190" alt="Compressed-middle ballot: every score a 2 or a 3, no 5s and no 0s"> | **[Compressed Middle](voting_styles/compressed_middle.md)** | "They're all roughly fine — mild preferences, nothing extreme." |
+| <img src="voting_styles/img/style_null_ballot.png" width="190" alt="Null ballot: every candidate scored 3"> | **[Null Ballot](voting_styles/null_ballot.md)** | Nothing at all — legal, counted, and provably without effect. |
+
+These five are a runnable election too — one ballot per style, five candidates (**Alice, Bruno, Clara, Diego, Erin**): [reader page](../02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) · [`03d_c5_b5_style-gallery-five-more.yaml`](../02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml). It is deliberately the awkward counterpart to the gallery above: **three of its five ballots are [Equal Support](the_count/STAR_Automatic_Runoff.md) in the runoff**, so the race is settled by the two voters who left themselves something to say.
+
+That's the thread running through this second table. Unlike the first eight, four of these five come with a warning attached — three warnings, in fact, and they're the only genuinely cautionary things on this page:
+
+- **Equal top scores forfeit the runoff.** Approval-style and the Exaggerated Compromise both risk landing as Equal Support in exactly the final they cared most about. The fix is one mark — favorite 5, next-best 4 — and it costs nothing in the scoring round.
+- **A blank is a zero, not an abstention.** The Partial Ballot's empty rows count against candidates the voter had no opinion about at all. Score an unknown candidate in the middle if that's what you actually mean.
+- **A ballot with no gaps has no voice.** The Null Ballot is the one style here that cannot affect any election, ever.
+
+None of that makes them *wrong* ballots — every one is legal, counted, and carries exactly the weight any other ballot carries. It makes them ballots whose consequences are worth knowing before you cast one.
+
+## Is that all of them?
+
+No — and it isn't close. Thirteen is a gallery of recognizable habits, not an inventory of the possibilities.
+
+Count the actual space. Five candidates, each scored 0–5 independently, gives **6⁵ = 7,776** legal ballots. Many of those are the same vote wearing different numbers, though: adding the same amount to every row raises every candidate's total equally, so it changes no ranking in the scoring round, and it moves no gap, so it changes nothing in the runoff either. Only the *differences* between your scores do any work. Collapse each ballot to its differences — slide it down until your lowest score is 0 — and the count of genuinely distinct ballots is
+
+**6⁵ − 5⁵ = 7,776 − 3,125 = 4,651**
+
+and one of those is the [Null Ballot](voting_styles/null_ballot.md), which says nothing. So a five-candidate STAR ballot has **4,650 meaningfully different things it can say** — each of which differs from every other in at least one election.
+
+```python
+from itertools import product
+ballots = list(product(range(6), repeat=5))            # 7776
+distinct = {tuple(s - min(b) for s in b) for b in ballots}
+print(len(ballots), len(distinct), len(distinct) - 1)  # 7776 4651 4650
+```
+
+Two things follow, and they pull in opposite directions in a way worth sitting with.
+
+The space is enormous, so **any list of styles is a teaching device**, not a taxonomy — the thirteen here were chosen because voters recognize themselves in them, not because they partition anything. Several overlap in their marks and differ only in the voter's reason: [Partisan](voting_styles/partisan.md) and [Approval-style](voting_styles/approval_style.md) can produce the identical ballot from a team loyalty and a quality threshold; [Traditional](voting_styles/traditional.md) and the [Partial Ballot](voting_styles/partial_ballot.md) can be the same marks made by decision and by ignorance. The count cannot tell those apart, which is the honest reason the styles are described by intent rather than by pattern.
+
+And yet the ballot is small enough to hold in your head. The instructions printed on it — favorite 5, last choice 0, equal scores allowed, blanks are zeros — reach all 4,650 of those ballots without a single extra rule, and the [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) means no corner of that space out-muscles another. You are never picking a style. You are just answering, five times, how much you like someone.
+
 ## Blanks, and what they mean
 
 Leaving a candidate's line blank counts as **0** — always, with no penalty to the rest of the ballot. In this library's YAML files a blank is written `-`, and there are markers for the other real-world cases (race abstention `~`, candidate abstention `&`, spoiled `?`, spoiled-and-reissued `%`) — all tabulate as 0 but are reported honestly. See [Ballot & Terminology Basics](../../07_Concepts/topics/ballot_and_terminology_basics.md) and the [GLOSSARY](../../07_Concepts/GLOSSARY.md).
@@ -108,7 +153,7 @@ Contrast RCV-IRV: skipped or repeated rankings are, in many jurisdictions, ballo
 - [Equally Weighted Vote](properties_and_limits/equally_weighted_vote.md) — why no style out-muscles another
 - [STAR's honest limits](properties_and_limits/STAR_honest_limits.md) — what a backup score does and doesn't risk
 - [Curriculum 101.3 — How you're allowed to vote](../../07_Concepts/CURRICULUM.md) — this page's slot in the learning path
-- Small demos: [`03a` bullet vote](../02_Examples/cases/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the full gallery](../02_Examples/cases/03c_c6_b8_style-gallery.yaml)
+- Small demos: [`03a` bullet vote](../02_Examples/cases/03a_c3_b3_style-bullet-vote.yaml) · [`03b` protest vote](../02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml) · [`03c` the eight-style gallery](../02_Examples/cases/03c_c6_b8_style-gallery.yaml) · [`03d` the five more](../02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml)
 
 ## Learn more
 

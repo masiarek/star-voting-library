@@ -1,0 +1,152 @@
+======================================================================
+SOURCE FILE:     03d_c5_b5_style-gallery-five-more.yaml
+TABULATED FILE:  03d_c5_b5_style-gallery-five-more_tabulated.txt
+======================================================================
+
+election_title: "Voting styles — five more ways to fill out one 5-star ballot"
+
+scenario_description: |-
+  A companion to the eight-style gallery (03c), for the five styles that gallery
+  doesn't show: approval-style (only 0s and 5s), the exaggerated compromise (a
+  fear-driven 5 for the candidate you'd honestly rate mid-field), a partial
+  ballot (score the two you've heard of, leave the rest blank), a compressed
+  middle (everything 2s and 3s), and a null ballot (every candidate the same
+  score). One voter per style.
+  Three of the five say nothing in the runoff. The null ballot says nothing
+  anywhere — delete it and the finalists, the winner and both runoff tallies are
+  identical (Clara 21/Alice 15 becomes Clara 18/Alice 12: every total drops by
+  the same 3, so nothing moves relative to anything else). That is "equal scores
+  indicate no preference" taken to its limit. The
+  exaggerated-compromise voter is the sharp one: Clara was their real favorite
+  and they gave the front-runner Alice a 5 as insurance, so when the final came
+  down to exactly Clara vs Alice they had no preference left to express.
+  Meanwhile the compressed-middle voter, whose widest gap is a single point,
+  cast a full-strength runoff vote — runoff votes count direction, not distance.
+  Lesson: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+
+options:
+  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
+  show_matrix: true   # show the Runoff (Preference) Matrix
+  matrix_finalists_only: true   # true = finalists only; false = full N×N grid (needs show_matrix)
+  show_condorcet: false   # show the [Condorcet Winner] line
+  show_score_counts: false   # show the per-candidate [Score Distribution] table
+  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
+  show_runoff_percent: true   # compact self-reconciling runoff summary
+  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
+  collapse_ballots: false   # each ballot is a distinct teaching case — one row per voter
+  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
+
+voting_method: STAR   # STAR Voting — single-winner
+num_winners: 1
+
+ballots: |-
+  Alice,Bruno,Clara,Diego,Erin
+      5,    0,    5,    0,   0   # approval-style: a yes/no threshold, only 0s and 5s
+      5,    1,    5,    2,   0   # exaggerated compromise: Clara is the favorite, Alice a fearful 5
+      -,    -,    5,    3,   -   # partial ballot: only knows Clara and Diego; blanks count as 0
+      2,    2,    3,    2,   3   # compressed middle: everything 2s and 3s, nothing extreme
+      3,    3,    3,    3,   3   # null ballot: same score for everyone — no preference anywhere
+
+expected_winners:
+  - Clara
+
+# file: 03d_c5_b5_style-gallery-five-more.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Voting styles — five more ways to fill out one 5-star ballot ===
+  A companion to the eight-style gallery (03c), for the five styles that gallery
+  doesn't show: approval-style (only 0s and 5s), the exaggerated compromise (a
+  fear-driven 5 for the candidate you'd honestly rate mid-field), a partial
+  ballot (score the two you've heard of, leave the rest blank), a compressed
+  middle (everything 2s and 3s), and a null ballot (every candidate the same
+  score). One voter per style.
+  Three of the five say nothing in the runoff. The null ballot says nothing
+  anywhere — delete it and the finalists, the winner and both runoff tallies are
+  identical (Clara 21/Alice 15 becomes Clara 18/Alice 12: every total drops by
+  the same 3, so nothing moves relative to anything else). That is "equal scores
+  indicate no preference" taken to its limit. The
+  exaggerated-compromise voter is the sharp one: Clara was their real favorite
+  and they gave the front-runner Alice a 5 as insurance, so when the final came
+  down to exactly Clara vs Alice they had no preference left to express.
+  Meanwhile the compressed-middle voter, whose widest gap is a single point,
+  cast a full-strength runoff vote — runoff votes count direction, not distance.
+  Lesson: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Alice   |   Bruno   | * Clara   |   Diego   |    Erin   |
+-----------------------------------------------------------------------------
+     * Alice > |    ---     |2 - 3 - 0  |0 - 3 - 2  |2 - 2 - 1  |2 - 2 - 1  |
+       Bruno > | 0 - 3 - 2  |   ---     |0 - 1 - 4  |0 - 3 - 2  |1 - 3 - 1  |
+     * Clara > | 2 - 3 - 0  |4 - 1 - 0  |   ---     |4 - 1 - 0  |3 - 2 - 0  |
+       Diego > | 1 - 2 - 2  |2 - 3 - 0  |0 - 1 - 4  |   ---     |2 - 2 - 1  |
+        Erin > | 1 - 2 - 2  |1 - 3 - 1  |0 - 2 - 3  |1 - 2 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Clara — matches the STAR winner
+
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Bruno, Erin (winless — pairwise ties)
+
+[Divergence from STAR]
+  STAR                   = Clara
+  Choose-One (Plurality) = Alice   (differs from STAR)
+  RCV-IRV                = Alice   (differs from STAR)
+  Note: 4 of 5 ballots (80%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/03d_c5_b5_style-gallery-five-more_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 5 ballots.
+Alice,Bruno,Clara,Diego,Erin
+    5,    0,    5,    0,   0
+    5,    1,    5,    2,   0
+    -,    -,    5,    3,   -
+    2,    2,    3,    2,   3
+    3,    3,    3,    3,   3
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  Abs  | Total   Avg
+Alice      2  0  1  1  0  0    1  |    15   3.8
+Bruno      0  0  1  1  1  1    1  |     6   1.5
+Clara      3  0  2  0  0  0    0  |    21   4.2
+Diego      0  0  2  2  0  1    0  |    10   2.0
+Erin       0  0  2  0  0  2    1  |     6   1.5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Clara         -- 21 -- First place
+   Alice         -- 15 -- Second place
+   Diego         -- 10
+   Bruno         --  6
+   Erin          --  6
+ Clara and Alice advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Clara         -- 2 -- First place
+   Alice         -- 0
+   Equal Support -- 3
+ Clara wins.
+   Runoff math:
+     5  ballots cast
+   − 3  Equal Support (no preference between the two finalists)
+     ─
+     2  voters with a preference  (majority = 2)
+           Clara 2 (100%)  ·  Alice 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Clara

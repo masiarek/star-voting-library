@@ -1,0 +1,39 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Voting styles — five more ways to fill out one 5-star ballot
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alice, Bruno, Clara, Diego, Erin
+     1 ×   Alice > Clara      (5, 0, 5, 0, 0)
+     1 ×   Alice > Clara > Diego > Bruno      (5, 1, 5, 2, 0)
+     1 ×   Clara > Diego      (0, 0, 5, 3, 0)
+     1 ×   Clara > Erin > Alice > Bruno > Diego      (2, 2, 3, 2, 3)
+     1 ×   Alice > Bruno > Clara > Diego > Erin      (3, 3, 3, 3, 3)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alice              3  Elected
+Clara              2  Rejected
+Diego              0  Rejected
+Bruno              0  Rejected
+Erin               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alice
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): Clara
+   Outside (4):        Alice, Bruno, Diego, Erin
+   One member ⇒ Clara is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Alice is OUTSIDE the Smith set. ✗
+      Every member of the set (Clara) beats Alice head-to-head, yet
+      RCV-IRV elected Alice anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

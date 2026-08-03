@@ -126,7 +126,7 @@ You've seen the two rounds turn once. Now watch them on more elections, smallest
 | Step | Read in order | What you'll see |
 |---|---|---|
 | **Three candidates** | [one ballot](../02_Examples/cases/cases_pages/02a_c3_b1_three-candidates.md) · [two ballots](../02_Examples/cases/cases_pages/02b_c3_b2_three-candidates.md) | A third option, and the winner becomes the broad compromise — the lunch, formalized in the smallest possible way. |
-| **Ways to vote** | [the eight-style gallery](../02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) | Bullet votes, equal scores, "anyone but…" — all the honest ways to fill it out. |
+| **Ways to vote** | [the eight-style gallery](../02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) · [five more](../02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) | Bullet votes, equal scores, "anyone but…" — then the awkward ones: approval-style, a partial ballot, and a ballot that says nothing. |
 | **The classic** | [Tennessee capital](../02_Examples/cases/cases_pages/09_c4_b100_tennessee-capital.md) | The textbook example, with the same shape as the lunch. |
 | **Do it yourself** | [Count a STAR election by hand](hands_on/count_star_by_hand.md) | Tally the lunch with pencil and paper — proof that STAR is genuinely simple to count. |
 

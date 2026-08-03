@@ -2,7 +2,7 @@
 
 *Favorite at 5, a reluctant second at just 1, everyone else blank. A backup with the volume turned way down.*
 
-← One of eight [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_not_much_of_a_backup.png" width="420" alt="A STAR ballot marked with a weak backup: Carmen scored 5, Ella scored just 1; Andre, Blake, and David left blank, which counts as 0 for each.">
 

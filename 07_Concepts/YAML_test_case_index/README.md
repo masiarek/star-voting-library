@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**458 election files** (407 single-winner, 51 multi-winner) across 16 method(s).
+**459 election files** (408 single-winner, 51 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 246 |
+| STAR | 247 |
 | RCV-IRV (Hare) | 28 |
 | Ranked Robin (RCV-RR / Copeland) | 70 |
 | Approval | 18 |
@@ -29,7 +29,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (246)
+## STAR  (247)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -39,6 +39,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`03b_c3_b3_1_style-protest-vote`](../../01_STAR/02_Examples/cases/cases_pages/03b_c3_b3_1_style-protest-vote.md) | `01_STAR/02_Examples/cases/` | 1 | Voting styles — low-score ballots → _Almond_ | [`.yaml`](../../01_STAR/02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml) |
 | [`03b_c3_b3_2_expand_style-protest-vote`](../../01_STAR/02_Examples/cases/cases_pages/03b_c3_b3_2_expand_style-protest-vote.md) | `01_STAR/02_Examples/cases/` | 1 | Voting styles — low-score ballots (continued) → _Almond_ | [`.yaml`](../../01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vote.yaml) |
 | [`03c_c6_b8_style-gallery`](../../01_STAR/02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) | `01_STAR/02_Examples/cases/` | 1 | Voting styles — eight ways to fill out one 5-star ballot → _Bianca_ | [`.yaml`](../../01_STAR/02_Examples/cases/03c_c6_b8_style-gallery.yaml) |
+| [`03d_c5_b5_style-gallery-five-more`](../../01_STAR/02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) | `01_STAR/02_Examples/cases/` | 1 | Voting styles — five more ways to fill out one 5-star ballot → _Clara_ | [`.yaml`](../../01_STAR/02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml) |
 | [`04b_c4_b3_display-options-all`](../../01_STAR/02_Examples/cases/cases_pages/04b_c4_b3_display-options-all.md) | `01_STAR/02_Examples/cases/` | 1 | All options demo → _Strawberry_ | [`.yaml`](../../01_STAR/02_Examples/cases/04b_c4_b3_display-options-all.yaml) |
 | [`05a_c5_b3_unanimous-ballots`](../../01_STAR/02_Examples/cases/cases_pages/05a_c5_b3_unanimous-ballots.md) | `01_STAR/02_Examples/cases/` | 1 | Unanimous ballots (five candidates) → _Andre_ | [`.yaml`](../../01_STAR/02_Examples/cases/05a_c5_b3_unanimous-ballots.yaml) |
 | [`06a_c9_b3_large-field-equal-support`](../../01_STAR/02_Examples/cases/cases_pages/06a_c9_b3_large-field-equal-support.md) | `01_STAR/02_Examples/cases/` | 1 | Large field (9 candidates) — STAR scales, and Equal Support decides → _Carmen_ | [`.yaml`](../../01_STAR/02_Examples/cases/06a_c9_b3_large-field-equal-support.yaml) |

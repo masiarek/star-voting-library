@@ -9,6 +9,9 @@
 # Converter staging output (regenerable from the JSON sources)
 **/_generated/
 
+# Local virtualenv (uv/venv both land here; recreate with `uv sync`)
+.venv/
+
 # Python bytecode caches (regenerable)
 __pycache__/
 **/__pycache__/

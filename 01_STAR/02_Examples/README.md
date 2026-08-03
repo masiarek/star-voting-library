@@ -22,7 +22,7 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 **Ballot styles.** The choices a voter can make on a STAR ballot.
 
-- [A valid bullet vote](cases/cases_pages/03a_c3_b3_style-bullet-vote.md) · [Low-score "protest" ballots](cases/cases_pages/03b_c3_b3_1_style-protest-vote.md) · […low-score ballots, continued](cases/cases_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [Eight ways to fill out one ballot](cases/cases_pages/03c_c6_b8_style-gallery.md)
+- [A valid bullet vote](cases/cases_pages/03a_c3_b3_style-bullet-vote.md) · [Low-score "protest" ballots](cases/cases_pages/03b_c3_b3_1_style-protest-vote.md) · […low-score ballots, continued](cases/cases_pages/03b_c3_b3_2_expand_style-protest-vote.md) · [Eight ways to fill out one ballot](cases/cases_pages/03c_c6_b8_style-gallery.md) · [five more ways](cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) — approval-style, exaggerated compromise, partial, compressed, null
 - [STAR à la Approval](cases/cases_pages/star_ala_approval.md) — scoring only 0/5 (Approval-style)
 - [Traditional style — one mark each](cases/cases_pages/bv2256_c8h3tb_traditional_style.md) — every voter bullet-votes, so the scoring round is just a first-choice count · **[live ↗](https://bettervoting.com/c8h3tb/results)**
 

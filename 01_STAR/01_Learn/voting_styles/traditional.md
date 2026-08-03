@@ -2,7 +2,7 @@
 
 *One 5 for your favorite, every other row left blank. The familiar single-choice vote, written on a 5-star ballot.*
 
-← One of eight [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_traditional.png" width="420" alt="A STAR ballot marked traditional-style: Carmen scored 5; Andre, Blake, David, and Ella left blank, which counts as 0 for each.">
 
