@@ -25,8 +25,8 @@ The electorate (24 ballots, all individual rows):
   - warm tilt: 10 voters (5 cliff35, 5 gentle)
   - drift: 5 voters (3 flat, 2 ranked_style)
 
-Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-STAR_ballot_voting_styles.md):
+Ballot styles in play (taxonomy:
+01_STAR/01_Learn/voting_styles/README.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - cliff34: sliver ballot: 0 or 3-4 only
   - flat: flat-liner: same score for everyone

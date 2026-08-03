@@ -53,7 +53,7 @@ Here's the whole thing on paper — one voter's finished ballot:
 
 *One voter's finished ballot — order **and** strength, at a glance.*
 
-→ Every legal way to fill it out — bullet votes, backups, equal scores, "anyone but…", protest votes, eight styles with a worked election: [The STAR ballot & voting styles](STAR_ballot_voting_styles.md).
+→ Every legal way to fill it out — bullet votes, backups, equal scores, "anyone but…", protest votes, eight styles with a worked election: [The STAR ballot & voting styles](voting_styles/README.md).
 
 ## Watch STAR fix the lunch
 

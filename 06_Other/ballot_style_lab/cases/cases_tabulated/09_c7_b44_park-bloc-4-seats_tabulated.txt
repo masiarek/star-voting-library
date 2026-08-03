@@ -22,8 +22,8 @@ scenario_description: |-
     - shade slate: 19 voters (7 cliff35, 7 ranked_style, 5 nuanced)
     - wildcards: 9 voters (4 chaos, 4 anyone_but, 1 ranked_style)
 
-  Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-  STAR_ballot_voting_styles.md):
+  Ballot styles in play (taxonomy:
+  01_STAR/01_Learn/voting_styles/README.md):
     - cliff35: cliff ballot: 0 or 3-5, nothing in between
     - bullet: choose-one transplant: favorite 5, rest 0/blank
     - strong_backup: 5 + a strong 4 backup, rest 0/blank
@@ -134,8 +134,8 @@ TABULATION RESULTS
     - shade slate: 19 voters (7 cliff35, 7 ranked_style, 5 nuanced)
     - wildcards: 9 voters (4 chaos, 4 anyone_but, 1 ranked_style)
 
-  Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-  STAR_ballot_voting_styles.md):
+  Ballot styles in play (taxonomy:
+  01_STAR/01_Learn/voting_styles/README.md):
     - cliff35: cliff ballot: 0 or 3-5, nothing in between
     - bullet: choose-one transplant: favorite 5, rest 0/blank
     - strong_backup: 5 + a strong 4 backup, rest 0/blank

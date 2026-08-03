@@ -2,7 +2,7 @@
 
 *5, 4, 3, 2, 1 — every score used exactly once, top choice to last. A ranking, volunteered onto a scored ballot.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_ranked.png" width="420" alt="A STAR ballot filled in like a ranking, each score used once: Carmen 5, Blake 4, David 3, Andre 2, Ella 1.">
 

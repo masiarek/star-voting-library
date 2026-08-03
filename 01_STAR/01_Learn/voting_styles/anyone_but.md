@@ -2,7 +2,7 @@
 
 *Fives across the board, one row left blank. A ballot with a single, emphatic message: not that one.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_anyone_but.png" width="420" alt="A STAR ballot marked anyone-but-style: Andre, Carmen, David, and Ella all scored 5; Blake left blank, which counts as 0.">
 

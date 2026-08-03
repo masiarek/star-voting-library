@@ -24,7 +24,7 @@ STAR ends with an [automatic runoff](../the_count/STAR_Automatic_Runoff.md) betw
 
 ## A ballot you already know
 
-It's the five-star rating you use for movies and rideshares — rate them 0–5, done. Equal scores are fine, blanks are fine, and you can't accidentally spoil it, so error rates are low and nothing gets thrown away. → [filling out the ballot](../STAR_ballot_voting_styles.md)
+It's the five-star rating you use for movies and rideshares — rate them 0–5, done. Equal scores are fine, blanks are fine, and you can't accidentally spoil it, so error rates are low and nothing gets thrown away. → [filling out the ballot](../voting_styles/README.md)
 
 ## One election, not two
 

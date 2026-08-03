@@ -27,8 +27,8 @@ The electorate (47 ballots, all individual rows):
   - static: 11 voters (6 ranked_style, 3 chaos, 2 flat)
   - plus 2 marker row(s): 1 spoiled ballot, 1 race abstention
 
-Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-STAR_ballot_voting_styles.md):
+Ballot styles in play (taxonomy:
+01_STAR/01_Learn/voting_styles/README.md):
   - slate: partisan slate: equal 5s for the in-group, 0 outside
   - flat: flat-liner: same score for everyone
   - anyone_but: 5 for everyone except the villain (0)

@@ -18,8 +18,8 @@ scenario_description: |-
     - Carla brigade: 8 voters (8 bullet)
     - the thoughtful few: 6 voters (5 nuanced, 1 ranked_style)
 
-  Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-  STAR_ballot_voting_styles.md):
+  Ballot styles in play (taxonomy:
+  01_STAR/01_Learn/voting_styles/README.md):
     - weak_backup: 5 + a grudging 1 backup, rest 0/blank
     - strong_backup: 5 + a strong 4 backup, rest 0/blank
     - bullet: choose-one transplant: favorite 5, rest 0/blank

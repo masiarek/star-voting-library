@@ -13,7 +13,7 @@ Everything explaining **STAR** (Score Then Automatic Runoff). New here? Start wi
 
 ## The ballot
 
-- [The STAR ballot & voting styles](STAR_ballot_voting_styles.md) — what the ballot looks like, and the full gallery of legal ways to fill it out ([one page per style](voting_styles/README.md))
+- [The STAR ballot & voting styles](voting_styles/README.md) — what the ballot looks like, and the full gallery of legal ways to fill it out, one page per style
 - [Tie-breaking](Tie_Breaking_STAR/tie_breaking.md) — the tiebreak ladder (pairwise → five-star → lot)
 
 ## Properties & honest limits

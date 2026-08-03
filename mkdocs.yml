@@ -343,7 +343,7 @@ plugins:
         00_start_here/STAR_reporting/reporting_ties.md: 01_STAR/01_Learn/reporting/reporting_ties.md
         00_start_here/STAR_reporting/score_distribution_and_averages.md: 01_STAR/01_Learn/reporting/score_distribution_and_averages.md
         00_start_here/STAR_Voting/README.md: 01_STAR/01_Learn/README.md
-        00_start_here/STAR_Voting/STAR_ballot_voting_styles.md: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+        00_start_here/STAR_Voting/STAR_ballot_voting_styles.md: 01_STAR/01_Learn/voting_styles/README.md
         00_start_here/STAR_Voting/STAR_history.md: 01_STAR/01_Learn/STAR_history.md
         00_start_here/STAR_Voting/STAR_start_here.md: 01_STAR/01_Learn/STAR_start_here.md
         00_start_here/STAR_Voting/Tie_Breaking_STAR/README.md: 01_STAR/01_Learn/Tie_Breaking_STAR/README.md
@@ -460,7 +460,14 @@ plugins:
         01_STAR/abstain_bugs/cases/cases_pages/bv1570_6hv7jf_undecided_plurality.md: 01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv1570_6hv7jf_undecided_plurality.md
         01_STAR/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md: 01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md
         01_STAR/concepts/README.md: 01_STAR/01_Learn/README.md
-        01_STAR/concepts/STAR_ballot_voting_styles.md: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+        01_STAR/concepts/STAR_ballot_voting_styles.md: 01_STAR/01_Learn/voting_styles/README.md
+
+        # --- The style gallery folded into the folder it indexed (2026-08-03).
+        # The hub page and voting_styles/ were one topic split across a file and
+        # a folder, which MkDocs' alphabetical auto-nav then showed at opposite
+        # ends of the 01_Learn sidebar. The hub is now the folder's own README,
+        # so the section landing page IS the gallery. Permanent, like the rest.
+        01_STAR/01_Learn/STAR_ballot_voting_styles.md: 01_STAR/01_Learn/voting_styles/README.md
         01_STAR/concepts/STAR_history.md: 01_STAR/01_Learn/STAR_history.md
         01_STAR/concepts/STAR_start_here.md: 01_STAR/01_Learn/STAR_start_here.md
         01_STAR/concepts/Tie_Breaking_STAR/README.md: 01_STAR/01_Learn/Tie_Breaking_STAR/README.md

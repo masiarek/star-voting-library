@@ -2,7 +2,7 @@
 
 *A 5 where you love, a 1 where you don't, a genuine tie where you're torn, a blank where there's nothing to say. The ballot used the way it was designed.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_nuanced.png" width="420" alt="A STAR ballot marked nuanced-style: Carmen 5, Blake 4, Ella 4 — an honest tie — Andre 1, and David left blank, which counts as 0.">
 

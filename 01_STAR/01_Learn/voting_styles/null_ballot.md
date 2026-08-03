@@ -2,7 +2,7 @@
 
 *A legal, counted ballot that has no effect on anything. The one way to fill out a STAR ballot that says nothing at all.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_null_ballot.png" width="420" alt="A STAR ballot with every candidate scored 3: Andre, Blake, Carmen, David, and Ella all identical.">
 

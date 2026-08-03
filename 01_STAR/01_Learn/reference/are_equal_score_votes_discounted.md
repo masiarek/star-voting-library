@@ -63,7 +63,7 @@ Counted in both rounds, decisive in neither tie they had no stake in — a very 
 
 There is one version of this criticism that is legitimate, and pretending otherwise would cost more than it saves. Suppose you like A a *tiny* bit more than B, but you think both are excellent and you want them both to beat C. On a 0–5 scale you might give both a 5 to keep them strong — and now a preference you really had is recorded as a tie. The ballot's resolution failed to capture it. In one Oregon Independent Party race, nearly 30% of runoff ballots landed as "no preference," and some of those voters surely had a faint lean they maxed out of existence.
 
-That is a fair, objective criticism of *cardinal ballots with few levels* — a self-inflicted discount the scale makes easy. The practical answer is voter education, and it's one sentence: **show the gap you feel between the front-runners — if you like A more, give A the 5 and B a 4.** Your 4 still supports B strongly in the Scoring Round, and your preference now counts in the runoff. (STAR's design rewards exactly this honesty; see [the ways to fill out a STAR ballot](../STAR_ballot_voting_styles.md).)
+That is a fair, objective criticism of *cardinal ballots with few levels* — a self-inflicted discount the scale makes easy. The practical answer is voter education, and it's one sentence: **show the gap you feel between the front-runners — if you like A more, give A the 5 and B a 4.** Your 4 still supports B strongly in the Scoring Round, and your preference now counts in the runoff. (STAR's design rewards exactly this honesty; see [the ways to fill out a STAR ballot](../voting_styles/README.md).)
 
 ## The asymmetry: compare it to how ranked-IRV ballots get wasted
 

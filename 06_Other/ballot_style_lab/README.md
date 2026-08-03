@@ -2,7 +2,7 @@
 
 *What happens when you fill a whole election with the ballot styles real people actually use — bullet votes, partisan slates, harsh graders who top out at 2, gentle souls who never score below 3, cliff voters who jump straight from 0 to "one of mine"? This folder is a seeded generator plus ten frozen elections it found — six single-winner STAR, plus a multi-winner wing (Bloc STAR and STAR-PR, up to 7 candidates and 4 seats): random enough to surprise, human enough to mean something, deterministic enough to be test cases.*
 
-→ The style taxonomy these voters follow: [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/01_Learn/STAR_ballot_voting_styles.md) · the methodology this generator obeys: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md) · one voter's opinion across ballot *formats*: [Alternate ballot styles](../../07_Concepts/topics/ballot_styles.md)
+→ The style taxonomy these voters follow: [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/01_Learn/voting_styles/README.md) · the methodology this generator obeys: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md) · one voter's opinion across ballot *formats*: [Alternate ballot styles](../../07_Concepts/topics/ballot_styles.md)
 
 ---
 
@@ -11,7 +11,7 @@
 Pure-uniform random ballots correspond to no electorate on Earth, and the methodology page explains why they rig method comparisons. So this generator injects randomness in two human-shaped layers:
 
 1. **Opinion (layer 1):** each voter's underlying 0–1 *utilities* are sampled from a **faction model** — slanted camps with a shared lean, personal noise on top, plus a few genuinely noisy voters.
-2. **Expression (layer 2):** those utilities are then *rendered* through the voter's **ballot style** — the legal styles from the [style gallery](../../01_STAR/01_Learn/STAR_ballot_voting_styles.md) (bullet, backups, slate, ranked-style, nuanced, anyone-but, protest) plus deliberately compressed scale habits (0–2 harsh, 3–5 gentle, 0-or-3–5 cliff, 3–4 sliver, flat lines, pure noise).
+2. **Expression (layer 2):** those utilities are then *rendered* through the voter's **ballot style** — the legal styles from the [style gallery](../../01_STAR/01_Learn/voting_styles/README.md) (bullet, backups, slate, ranked-style, nuanced, anyone-but, protest) plus deliberately compressed scale habits (0–2 harsh, 3–5 gentle, 0-or-3–5 cliff, 3–4 sliver, flat lines, pure noise).
 
 Same opinion, different rendering — the [same-opinion line-up idea](../../07_Concepts/topics/ballot_styles.md), scaled up to a whole electorate. Per the methodology page, this sits in the honest **"stress-test the tabulator"** job (not a method-welfare comparison): the ballots exist to exercise the count, and the human shaping makes the exercises look like elections instead of dice.
 
@@ -78,7 +78,7 @@ The Scoring Round can't tell a harsh 2 from a gentle enthusiasm — but the Auto
 
 ## The style menu
 
-Renderings implemented by the generator (utilities → 0–5 scores). Gallery styles carry the [style-gallery](../../01_STAR/01_Learn/STAR_ballot_voting_styles.md) names; band styles are the lab's additions.
+Renderings implemented by the generator (utilities → 0–5 scores). Gallery styles carry the [style-gallery](../../01_STAR/01_Learn/voting_styles/README.md) names; band styles are the lab's additions.
 
 | Style | Renders as | From |
 |---|---|---|
@@ -111,7 +111,7 @@ Stdlib-only; runs with the repo `.venv` (or any Python 3) and calls `starvote_la
 
 ## Related
 
-- [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/01_Learn/STAR_ballot_voting_styles.md) — the human taxonomy these voters follow
+- [Filling Out the 5-Star Ballot — Voting Styles](../../01_STAR/01_Learn/voting_styles/README.md) — the human taxonomy these voters follow
 - [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md) — why layer 1 exists at all
 - [Election simulation models](../../07_Concepts/topics/election_simulation_models.md) — the menu of utility models beyond this lab's faction-Gaussian
 - [`06_Other/simulations/`](../simulations/README.md) — the brute-force method-comparison sims (utility-first, like this lab)

@@ -2,7 +2,7 @@
 
 *Favorite at 5, a strong second at 4, everyone else blank. The everyday super-power of a scored ballot.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_decent_backup.png" width="420" alt="A STAR ballot marked with a decent backup: Carmen scored 5, Ella scored 4; Andre, Blake, and David left blank, which counts as 0 for each.">
 

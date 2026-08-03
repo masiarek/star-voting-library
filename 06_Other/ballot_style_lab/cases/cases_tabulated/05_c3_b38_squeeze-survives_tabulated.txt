@@ -21,8 +21,8 @@ scenario_description: |-
     - Cora pole: 20 voters (11 weak_backup, 4 ranked_style, 3 nuanced, 2 slate)
     - Ben middle: 5 voters (4 nuanced, 1 gentle)
 
-  Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-  STAR_ballot_voting_styles.md):
+  Ballot styles in play (taxonomy:
+  01_STAR/01_Learn/voting_styles/README.md):
     - gentle: gentle soul: everything squeezed into 3-5, no zeros
     - nuanced: full 0-5 range, honest gaps, ties allowed
     - strong_backup: 5 + a strong 4 backup, rest 0/blank
@@ -123,8 +123,8 @@ TABULATION RESULTS
     - Cora pole: 20 voters (11 weak_backup, 4 ranked_style, 3 nuanced, 2 slate)
     - Ben middle: 5 voters (4 nuanced, 1 gentle)
 
-  Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-  STAR_ballot_voting_styles.md):
+  Ballot styles in play (taxonomy:
+  01_STAR/01_Learn/voting_styles/README.md):
     - gentle: gentle soul: everything squeezed into 3-5, no zeros
     - nuanced: full 0-5 range, honest gaps, ties allowed
     - strong_backup: 5 + a strong 4 backup, rest 0/blank

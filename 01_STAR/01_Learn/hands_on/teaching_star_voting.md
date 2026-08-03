@@ -36,7 +36,7 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 | **[The team lunch](../../02_Examples/cases/cases_pages/bv2184_fyy886_lunch_vote.md)** | your go-to intro — 5 voters, politics-free, relatable, and the compromise wins. |
 | **[Tennessee capital](../../02_Examples/cases/cases_pages/09_c4_b100_tennessee-capital.md)** | the classic textbook case — same shape as the lunch, at scale. |
 | **[Runoff reversal](../../02_Examples/runoff_overturns_leader/)** | the "aha" — the top scorer can *lose* the runoff. The most important single lesson; use it *after* the basics land. |
-| **[Ways to vote](../STAR_ballot_voting_styles.md)** | reassuring voters there's no wrong ballot (bullet, equal scores, "anyone but…"). |
+| **[Ways to vote](../voting_styles/README.md)** | reassuring voters there's no wrong ballot (bullet, equal scores, "anyone but…"). |
 | **[Count by hand](count_star_by_hand.md)** | a hands-on demystifier — tally a tiny election live. |
 | **[Center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)** | only when the room asks "why not RCV/IRV?" |
 
@@ -97,6 +97,6 @@ The conceptual walkthrough is [Count a STAR election by hand](count_star_by_hand
 ## Audience quick-adaptations
 
 - **Classroom / kids** → the lunch, a live hand-count, colored-paper "candidates." Pure mechanics, no theory.
-- **Voters / general public** → the arc + [ways to vote](../STAR_ballot_voting_styles.md) ("no wrong ballot") + a live poll.
+- **Voters / general public** → the arc + [ways to vote](../voting_styles/README.md) ("no wrong ballot") + a live poll.
 - **Officials / administrators** → [summability](../properties_and_limits/STAR_summability.md), [hand-count](count_star_by_hand.md), audits; skip the criteria theory.
 - **Skeptics / debaters / RCV advocates** → [honest limits](../properties_and_limits/STAR_honest_limits.md), [criteria at a glance](../../../07_Concepts/topics/criteria_at_a_glance.md), [STAR vs RCV-IRV](../../../07_Concepts/topics/rcv_irv_vs_star.md). Concede limits first — it's disarming.

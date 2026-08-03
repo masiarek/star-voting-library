@@ -2,7 +2,7 @@
 
 *Every candidate on your side gets a 5; every other row stays blank. A party-line vote, written in stars.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_partisan.png" width="420" alt="A STAR ballot marked partisan-style: Andre, Carmen, and David all scored 5; Blake and Ella left blank, which counts as 0 for each.">
 

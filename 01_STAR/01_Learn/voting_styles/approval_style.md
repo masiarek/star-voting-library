@@ -2,7 +2,7 @@
 
 *Every candidate gets either full marks or nothing. A yes/no threshold, drawn wherever you choose to draw it.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_approval_style.png" width="420" alt="A STAR ballot marked approval-style: Andre, Carmen, and David each scored 5; Blake and Ella each scored 0.">
 

@@ -26,8 +26,8 @@ The electorate (40 ballots, all individual rows):
   - Churro crowd: 9 voters (5 slate, 3 cliff34, 1 cliff35)
   - grazers: 7 voters (3 cliff34, 2 chaos, 1 anyone_but, 1 flat)
 
-Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-STAR_ballot_voting_styles.md):
+Ballot styles in play (taxonomy:
+01_STAR/01_Learn/voting_styles/README.md):
   - cliff35: cliff ballot: 0 or 3-5, nothing in between
   - slate: partisan slate: equal 5s for the in-group, 0 outside
   - anyone_but: 5 for everyone except the villain (0)

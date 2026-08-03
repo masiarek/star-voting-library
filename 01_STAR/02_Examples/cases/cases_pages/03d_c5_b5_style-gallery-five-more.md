@@ -27,7 +27,7 @@ and they gave the front-runner Alice a 5 as insurance, so when the final came
 down to exactly Clara vs Alice they had no preference left to express.
 Meanwhile the compressed-middle voter, whose widest gap is a single point,
 cast a full-strength runoff vote — runoff votes count direction, not distance.
-Lesson: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 ## Ballots
 

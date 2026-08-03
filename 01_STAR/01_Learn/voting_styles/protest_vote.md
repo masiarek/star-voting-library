@@ -2,7 +2,7 @@
 
 *Every row blank but one, and that one gets a single star. Displeasure, on the record — with a preference of last resort.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_protest_vote.png" width="420" alt="A STAR ballot marked as a protest vote: Blake scored 1; Andre, Carmen, David, and Ella all left blank, which counts as 0 for each.">
 

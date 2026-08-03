@@ -9,7 +9,7 @@ own methodology page (07_Concepts/topics/simulate_utilities_not_ballots.md):
                           (slants/bias + personal noise, a few true-noise voters)
     layer 2 — EXPRESSION: render those utilities through a BALLOT STYLE — the
                           legal styles from the style gallery
-                          (01_STAR/01_Learn/STAR_ballot_voting_styles.md)
+                          (01_STAR/01_Learn/voting_styles/README.md)
                           plus deliberately compressed ranges (all-zeros-plus-0..2
                           "harsh graders", 3..5-only "gentle souls", 0-or-3..5
                           "cliff" voters, etc.)
@@ -679,8 +679,11 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
     desc.append(f"The electorate ({len(rows)} ballots, all individual rows):")
     desc.extend(census_lines(spec, census))
     desc.append("")
-    desc.append("Ballot styles in play (taxonomy: 01_STAR/01_Learn/")
-    desc.append("STAR_ballot_voting_styles.md):")
+    # Keep the path whole on one line. Splitting it to fit the width hid it from
+    # migrate_concept_links.py's literal pass, so the 2026-08-03 move of the
+    # taxonomy page into voting_styles/ had to patch nine YAMLs by hand.
+    desc.append("Ballot styles in play (taxonomy:")
+    desc.append("01_STAR/01_Learn/voting_styles/README.md):")
     desc.extend(styles_used(census))
     desc.append("")
     if facts:

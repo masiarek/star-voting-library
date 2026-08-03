@@ -19,7 +19,7 @@ skipped candidates can't spoil a ballot. Note the two Equal Support ballots
 in the runoff: the partisan and "anyone but" voters scored both finalists
 the same, so they expressed no preference between them — but their scores
 still helped pick the finalists.
-Lesson: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 ## Ballots
 

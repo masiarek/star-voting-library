@@ -22,7 +22,7 @@ scenario_description: |-
   down to exactly Clara vs Alice they had no preference left to express.
   Meanwhile the compressed-middle voter, whose widest gap is a single point,
   cast a full-strength runoff vote — runoff votes count direction, not distance.
-  Lesson: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+  Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 options:
   show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
@@ -73,7 +73,7 @@ TABULATION RESULTS
   down to exactly Clara vs Alice they had no preference left to express.
   Meanwhile the compressed-middle voter, whose widest gap is a single point,
   cast a full-strength runoff vote — runoff votes count direction, not distance.
-  Lesson: 01_STAR/01_Learn/STAR_ballot_voting_styles.md
+  Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

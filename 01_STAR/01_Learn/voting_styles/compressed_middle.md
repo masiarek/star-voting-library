@@ -2,7 +2,7 @@
 
 *Mild preferences, honestly recorded. No candidate gets full marks, none gets a zero, and the whole ballot fits in a one-point band.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_compressed_middle.png" width="420" alt="A STAR ballot with all scores in a narrow band: Andre 3, Blake 2, Carmen 3, David 3, Ella 2 — no 5s and no 0s.">
 

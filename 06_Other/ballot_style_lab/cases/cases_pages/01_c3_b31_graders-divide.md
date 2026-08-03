@@ -24,8 +24,8 @@ The electorate (31 ballots, all individual rows):
   - Abby camp: 15 voters (15 harsh)
   - Bruno camp: 16 voters (16 gentle)
 
-Ballot styles in play (taxonomy: 01_STAR/01_Learn/
-STAR_ballot_voting_styles.md):
+Ballot styles in play (taxonomy:
+01_STAR/01_Learn/voting_styles/README.md):
   - gentle: gentle soul: everything squeezed into 3-5, no zeros
   - harsh: harsh grader: everything squeezed into 0-2
 

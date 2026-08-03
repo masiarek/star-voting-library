@@ -2,7 +2,7 @@
 
 *One ballot style, several counts. A score ballot asks a different question than a ranking: not "which do you prefer?" but "**how much** do you like each one?" — every candidate gets an independent value, so the ballot carries your order **and** your strength. This page is the anatomy of the ballot itself; its twin is [the ranked ballot](ranked_ballot.md), and the side-by-side comparison is [alternate ballot styles](../topics/ballot_styles.md).*
 
-→ Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [filling out the 5-star ballot — the style gallery](../../01_STAR/01_Learn/STAR_ballot_voting_styles.md) · [the fidelity ladder](fidelity_ladder.md) · [scale granularity](scale_granularity_flips_the_winner.md)
+→ Companions: [scores vs. ranks](scores_vs_ranks.md) (the core distinction) · [filling out the 5-star ballot — the style gallery](../../01_STAR/01_Learn/voting_styles/README.md) · [the fidelity ladder](fidelity_ladder.md) · [scale granularity](scale_granularity_flips_the_winner.md)
 
 ---
 
@@ -56,7 +56,7 @@ Every row is **independent** — there is no grid constraint tying your candidat
 - **Blanks count as 0.** Skipping a candidate can't spoil anything.
 - **No skipped-rank traps, and overvotes are contained.** Each row is its own question, so there are no cross-candidate overvotes and no skipped-rank rules. On paper you *can* still mark two bubbles in one row — that spoils **that candidate's score** (counted 0), not the ballot, where a ranked-ballot overvote can end the count for the whole ballot. Reported spoilage runs roughly **0–2% for rated vs. 4–9% for ranked**, though the rated figure is thinly evidenced and comes from an advocacy compilation — see [scores vs. ranks](scores_vs_ranks.md).
 
-Filling it out is anchor-based, not field-scanning: give your favorite a 5, your last choice a 0, then place everyone else against those two anchors. Even a 20-candidate race never asks you to hold the whole field in your head — contrast each ranked slot, which means re-scanning everyone you haven't placed yet. The full gallery of legal styles (bullet votes, protest ballots, "anyone but…") is [filling out the 5-star ballot](../../01_STAR/01_Learn/STAR_ballot_voting_styles.md).
+Filling it out is anchor-based, not field-scanning: give your favorite a 5, your last choice a 0, then place everyone else against those two anchors. Even a 20-candidate race never asks you to hold the whole field in your head — contrast each ranked slot, which means re-scanning everyone you haven't placed yet. The full gallery of legal styles (bullet votes, protest ballots, "anyone but…") is [filling out the 5-star ballot](../../01_STAR/01_Learn/voting_styles/README.md).
 
 ## What it captures — order, strength, and honest ties
 

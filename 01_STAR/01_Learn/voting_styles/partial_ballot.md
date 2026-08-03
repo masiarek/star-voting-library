@@ -2,7 +2,7 @@
 
 *Two candidates you've actually heard of get real scores. The others stay blank, because you have no opinion to give them.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_partial_ballot.png" width="420" alt="A partially filled STAR ballot: Carmen scored 5 and David scored 3; Andre, Blake, and Ella left blank, which counts as 0 for each.">
 

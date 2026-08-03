@@ -2,7 +2,7 @@
 
 *Your favorite gets a 5. So does the candidate you'd honestly rate a 3 — because you're afraid your favorite can't win and you want insurance.*
 
-← One of thirteen [voting styles](../STAR_ballot_voting_styles.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
+← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.
 
 <img src="img/style_exaggerated_compromise.png" width="420" alt="A STAR ballot marked as an exaggerated compromise: Carmen scored 5, Andre also scored 5, David 2, Blake 1, Ella 0.">
 
