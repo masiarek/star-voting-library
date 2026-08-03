@@ -91,3 +91,32 @@ def test_clean_is_idempotent(derived):
     """Running the pipeline on its own output must change nothing."""
     once = hooks.clean(derived)
     assert hooks.clean(once) == once
+
+
+# --- NAV_ORDER ----------------------------------------------------------
+#
+# The order list names files and folders by their on-disk name. Nothing at
+# build time notices a name that has since been renamed or deleted — the entry
+# simply stops matching and the page slides back to its alphabetical spot,
+# which looks like nobody ever set an order rather than like a bug. These two
+# tests are what notices.
+
+
+def test_nav_order_folders_exist():
+    for folder in hooks.NAV_ORDER:
+        assert (REPO_ROOT / folder).is_dir(), f"NAV_ORDER key is not a folder: {folder}"
+
+
+def test_nav_order_entries_exist():
+    for folder, names in hooks.NAV_ORDER.items():
+        for name in names:
+            if name == hooks.SPINE_BREAK:
+                continue
+            assert (REPO_ROOT / folder / name).exists(), \
+                f"NAV_ORDER lists {name!r}, which is not in {folder}"
+
+
+def test_nav_order_has_no_duplicates():
+    for folder, names in hooks.NAV_ORDER.items():
+        listed = [n for n in names if n != hooks.SPINE_BREAK]
+        assert len(listed) == len(set(listed)), f"NAV_ORDER repeats an entry in {folder}"

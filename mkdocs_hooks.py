@@ -49,11 +49,67 @@ that first character; the deliberate capitals further in are left alone.
 `SECTIONS` maps a derived title to a replacement outright — the escape hatch for
 folder names that aren't a cased version of what the reader should see, like the
 generated SCREAMING_SNAKE divergence buckets.
+
+## Reading order in the sidebar
+
+MkDocs' automatic nav sorts **alphabetically**, files before folders, uppercase
+before lowercase. For a reference tree that is fine; for a *lesson* tree it is
+actively misleading — `01_STAR/01_Learn` shipped with "Welcome to STAR Voting"
+third, under the ballot page and a history page, because `STAR_s` sorts after
+`STAR_b` and `STAR_h`. The sidebar is the only sequence signal a reader gets,
+and the alphabet was writing it.
+
+`NAV_ORDER` states the intended order for the folders that have one, keyed by
+the folder's repo-relative path and listing children by their **on-disk name**
+(a file name, or the sub-folder a section opens). Anything not listed keeps its
+alphabetical position, after everything that is — so adding a page never needs
+an edit here, it just lands at the bottom of its section until someone places
+it. A folder's own `README.md` stays pinned first whatever the list says: the
+theme's `navigation.indexes` requires the index page at `children[0]`, and
+demoting it would silently break the section's landing link.
+
+Ordering here rather than by renaming files to `01_`, `02_`… is the same
+trade-off the casing rules above make: a number in a filename is a number in a
+permanent URL, and inserting one lesson later would move a run of them.
+
+`SPINE_BREAK` splits a list into a numbered **lesson spine** and an unnumbered
+reference shelf below it. Items before the break get a `N. ` prefix in the
+sidebar; items after get none, because a number promises a next one and
+"Reference" is not step 7 of anything. Numbering a *page* also sets that page's
+`<title>` — see `_page_title` — which is why the spine is kept short and made of
+mostly sections.
 """
 
 from __future__ import annotations
 
+import posixpath
 import re
+from pathlib import Path
+
+# Folders whose children have a reading order, keyed by repo-relative path.
+# Values are on-disk names — a file name, or the folder a section opens.
+# `SPINE_BREAK` ends the numbered run; everything below it is reference.
+SPINE_BREAK = "--- reference below ---"
+
+NAV_ORDER: dict[str, list[str]] = {
+    # The STAR lesson tree. Spine: what STAR is → the ballot you fill out → how
+    # it is counted → doing it yourself → the awkward corners. Then the shelf:
+    # the FAQ/objections bucket, result reporting, glossary and resources, and
+    # the history, which is context rather than a step.
+    "01_STAR/01_Learn": [
+        "STAR_start_here.md",
+        "voting_styles",
+        "the_count",
+        "hands_on",
+        "Tie_Breaking_STAR",
+        "properties_and_limits",
+        SPINE_BREAK,
+        "getting_started",
+        "reporting",
+        "reference",
+        "STAR_history.md",
+    ],
+}
 
 # Runs before TERMS, so "ranked robin" is settled before the single-word pass
 # looks at "rr". This is also where punctuation a folder name cannot carry gets
@@ -146,6 +202,109 @@ def _retitle(items) -> None:
             _retitle(item.children)
 
 
+# --- reading order -------------------------------------------------------
+
+_H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.M)
+
+
+def _descendant_srcs(item, out: list[str]) -> None:
+    if item.is_page:
+        if item.file is not None:
+            out.append(item.file.src_uri)
+    else:
+        for child in item.children or ():
+            _descendant_srcs(child, out)
+
+
+def folder_of(item) -> str:
+    """The repo folder a nav item stands for.
+
+    A page's own directory; for a section, the directory every page beneath it
+    shares. Taking the common prefix rather than the first child's directory is
+    what keeps a section with sub-sections (`reporting/`, which holds
+    `reporting_BV/` and `reporting_LH/`) reporting itself and not its first
+    grandchild's folder.
+    """
+    if item.is_page:
+        return posixpath.dirname(item.file.src_uri) if item.file else ""
+    srcs: list[str] = []
+    _descendant_srcs(item, srcs)
+    if not srcs:
+        return ""
+    common: list[str] = []
+    for segments in zip(*(posixpath.dirname(s).split("/") for s in srcs)):
+        if len(set(segments)) != 1:
+            break
+        common.append(segments[0])
+    return "/".join(common)
+
+
+def order_key(item, folder: str) -> str:
+    """The on-disk name `item` is listed under in `NAV_ORDER`."""
+    if item.is_page:
+        return posixpath.basename(item.file.src_uri) if item.file else ""
+    sub = folder_of(item)
+    if not sub.startswith(folder + "/" if folder else ""):
+        return ""
+    return sub[len(folder) + 1 :].split("/")[0] if folder else sub.split("/")[0]
+
+
+def _page_title(page) -> str:
+    """The title MkDocs *will* derive for `page` — needed before it derives it.
+
+    `on_nav` runs before a single page is read, so `page.title` is still None
+    for every page that doesn't set one in meta, and there is nothing to prefix
+    a number onto. So read the `# H1` the same place MkDocs will. Whatever we
+    set here survives: MkDocs' own `_set_title()` returns early once `title` is
+    not None, which is also why this shows up in the page's `<title>` tag and in
+    search results, not only in the sidebar.
+    """
+    if page.title:
+        return str(page.title)
+    try:
+        text = Path(page.file.abs_src_path).read_text(encoding="utf-8")
+    except OSError:
+        return page.file.name.replace("_", " ")
+    match = _H1_RE.search(text)
+    return match.group(1).strip() if match else page.file.name.replace("_", " ")
+
+
+def _number(item, n: int) -> None:
+    item.title = f"{n}. {item.title if item.is_section else _page_title(item)}"
+
+
+def _apply_order(items: list, folder: str) -> None:
+    order = NAV_ORDER.get(folder)
+    if not order:
+        return
+    named = [name for name in order if name != SPINE_BREAK]
+    rank = {name: i for i, name in enumerate(named)}
+    spine = order[: order.index(SPINE_BREAK)] if SPINE_BREAK in order else order
+    number = {name: i + 1 for i, name in enumerate(spine)}
+
+    # `navigation.indexes` renders children[0] as the section's own landing
+    # link, so the folder README is not orderable — it is the section.
+    is_pinned = [bool(it.is_page and getattr(it, "is_index", False)) for it in items]
+    pinned = [it for it, p in zip(items, is_pinned) if p]
+    rest = [it for it, p in zip(items, is_pinned) if not p]
+    # Unlisted items sort after listed ones, keeping their alphabetical order.
+    rest.sort(key=lambda it: rank.get(order_key(it, folder), len(rank)))
+    items[:] = pinned + rest
+
+    for item in items:
+        n = number.get(order_key(item, folder))
+        if n:
+            _number(item, n)
+
+
+def _order(items: list, folder: str) -> None:
+    _apply_order(items, folder)
+    for item in items:
+        if item.is_section:
+            _order(item.children, folder_of(item))
+
+
 def on_nav(nav, config, files):
     _retitle(nav.items)
+    _order(nav.items, "")
     return nav

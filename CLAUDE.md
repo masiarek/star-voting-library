@@ -260,6 +260,18 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   It already carries the sidebar acronym casing (`rr_tiebreaks` → "RR tiebreaks"),
   which is fixed at build time precisely *because* renaming the folder would move
   permanent URLs.
+  **Sidebar reading order lives there too** — `NAV_ORDER` in `mkdocs_hooks.py`,
+  keyed by folder path, listing children by on-disk name. Auto-nav is
+  alphabetical, which for a *lesson* folder is actively wrong (`01_Learn` opened
+  on the ballot page, with "Welcome to STAR Voting" third). Set the order there,
+  **never by renaming files to `01_`, `02_`…**: that is a number in a permanent
+  URL, and inserting one lesson later moves a whole run of them. Unlisted pages
+  keep their alphabetical slot at the bottom, so adding a page needs no edit;
+  a folder's `README.md` is always pinned first (`navigation.indexes` needs the
+  index at `children[0]`). Entries before `SPINE_BREAK` get a visible `N. ` in
+  the sidebar — keep that run short and mostly *sections*, since numbering a
+  page also prefixes that page's `<title>`. `tests/test_nav_labels.py` fails if
+  a listed name no longer exists on disk.
 - **Companion repo — research-paper topics live OUTSIDE this repo.**
   <https://github.com/masiarek/star-voting-research-topics> (**private**) holds the
   vetted research-paper prospectuses that use this library as their reproducibility
