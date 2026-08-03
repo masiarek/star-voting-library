@@ -95,7 +95,7 @@ node@20 is keg-only. `fish_add_path /usr/local/opt/node@20/bin`.
 
 - **Repo:** `/Volumes/T7/Voting/BetterVoting/BV/bettervoting`
 - **Dev URLs:** frontend `localhost:3000` · backend `localhost:5001` · keycloak `localhost:8080` · postgres `localhost:5432`
-- **Dev-realm login:** `PlayWrightTest` / `test`
+- **Dev-realm login:** register your own at `localhost:8080` (self-registration is on); for the seeded test user, [ask Adam](https://github.com/masiarek/star-voting-library/issues)
 - **Env files (don't overwrite from sample.env):** `packages/backend/.env` → `BACKEND_PORT=5001`; `packages/frontend/.env` → `REACT_APP_BACKEND_URL=http://localhost:5001`
 - **`__META_TITLE__` placeholder** in the browser tab under the dev flow is normal — meta-tag injection only runs in the backend-served build, not the RSBuild dev server.
 
