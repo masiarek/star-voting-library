@@ -23,7 +23,7 @@ flowchart LR
     %% LR, not TD: the 9 leaves stack vertically, keeping the diagram ~3 node-columns
     %% wide — a TD layout is ~2000px wide and gets shrunk to unreadable on the site.
     R["<b>RANKED ballot</b><br/>('RCV' names the BALLOT,<br/>not any one method)"]
-    R --> COND["<b>Condorcet</b> / round-robin / pairwise<br/><i>elects the head-to-head winner<br/>when one exists · precinct-summable</i>"]
+    R --> COND["<b>Condorcet</b> / round-robin / pairwise<br/>paired comparison / tournament voting<br/><i>elects the head-to-head winner<br/>when one exists · precinct-summable</i>"]
     R --> ELIM["<b>Sequential elimination</b><br/><i>eliminate &amp; transfer ·<br/>order-dependent · NOT summable</i>"]
     R --> POS["<b>Positional</b><br/><i>points by rank position</i>"]
 
@@ -40,7 +40,7 @@ flowchart LR
     POS --> BU["Bucklin · aka Grand Junction"]
 ```
 
-*(**Copeland** is the algorithm under Ranked Robin, so it's folded into that node. A Condorcet **cousin**: "**Consensus Choice**" — Better Choices for Democracy's variant, same family but a different cycle-resolution rule. Plain-text version of this tree is in the `git log` if a viewer can't render Mermaid.)*
+*(**Copeland** is the algorithm under Ranked Robin, so it's folded into that node — and it answers to **Llull method** too, after the man who described it in 1299; Wikipedia's article opens "The Copeland or Llull method." A Condorcet **cousin**: "**Consensus Choice**" — Better Choices for Democracy's variant, same family but a different cycle-resolution rule. A second rebrand of the family, **Instant Round-Robin Voting (IRRV)**, is deliberately left off the tree because it doesn't sit at one level — see the alias table. Plain-text version of this tree is in the `git log` if a viewer can't render Mermaid.)*
 
 True statements that follow (and good ways to test your own precision):
 - "Ranked Robin, Ranked Pairs, Schulze, and Minimax are forms of **Condorcet** RCV." ✅
@@ -57,10 +57,13 @@ The single biggest source of confusion is that one method has many names. This t
 |---|---|---|
 | "RCV" (US / FairVote usage) | the eliminate-and-transfer single-winner method | **RCV-IRV** |
 | "Instant runoff", "Alternative Vote", "Hare" (single-winner) | the same eliminate-and-transfer method | **RCV-IRV** |
-| "Round-robin voting", "pairwise voting", "Condorcet" (used as *a* method) | the *family* that elects the head-to-head winner | **Condorcet methods** (a family, not one method) |
+| "Round-robin voting", "pairwise voting", "paired comparison", "tournament voting", "Condorcet" (used as *a* method) | the *family* that elects the head-to-head winner — four plain-descriptive names for one everyone-plays-everyone format, plus Condorcet's surname | **Condorcet methods** (a family, not one method) |
 | "Ranked Robin", "RCV-RR" | Equal Vote's Copeland-plus-margin-tiebreak | **Ranked Robin** |
 | "Consensus Choice" | Better Choices for Democracy's Condorcet variant (different cycle rule) | a **Condorcet cousin** — *not* identical to Ranked Robin |
+| "Instant Round-Robin Voting", "IRRV" | **depends who's speaking** — electowiki defines one specific method, Wikipedia redirects it to the family, the Condorcet Canada Initiative uses it as a banner, and some sources mean Schulze | **ask before you answer** — then say **Copeland** or **Condorcet methods**, whichever they meant |
 | "Copeland" | the win-minus-loss algorithm underneath Ranked Robin | **Copeland** |
+| "Llull method", "Llull voting" | the *same* algorithm as Copeland, credited to its 1299 author instead of its 1951 one | **Copeland** |
+| "Condorcet candidate", "pairwise champion", "beats-all winner" | **not a method at all** — these name the *candidate* who beats every other head-to-head | the **Condorcet winner** (which every Condorcet method elects when one exists) |
 | "Beatpath" → Schulze · "Tideman" → Ranked Pairs · "Grand Junction" → Bucklin | older / academic names | as named |
 
 Rule of thumb: when you mean the **family**, say "Condorcet" or "round-robin"; when you mean the **specific Equal-Vote method**, say "Ranked Robin." Reserve bare "**RCV**" for the *ballot*.
@@ -83,6 +86,7 @@ So if you say *"RCV has center squeeze,"* a sharp opponent can correctly reply *
 | Naming the elimination *rule* itself | **[Hare](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** (fewest-first-choices elimination; single-winner = IRV) | precise for the rule — but note "Hare" *also* names the STV quota, so single-winner "Hare" ≈ IRV |
 | Talking about the *ballot* / the ranked family | **[ranked ballots](../scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
 | A Condorcet count of a ranked ballot | **[Ranked Robin](../../05_Ranked_Robin/concepts/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
+| Technical passage about that count — cycles, tiebreaks, clone independence | **Copeland** (the [naming decoder](../../05_Ranked_Robin/concepts/condorcet_naming_decoder.md) maps the rest) | "Ranked Robin" no longer picks out one procedure — its own coiner calls it a synonym for Condorcet generally — so name the algorithm where precision carries the argument |
 | Proportional multi-winner ranked | **[STV](../../03_STAR_PR/concepts/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
 
 ## House style for this repo
