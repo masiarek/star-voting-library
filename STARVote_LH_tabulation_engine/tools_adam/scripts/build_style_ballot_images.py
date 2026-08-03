@@ -31,13 +31,26 @@ CANDIDATES = ["Andre", "Blake", "Carmen", "David", "Ella"]
 # Scores are 0-5; None means the row was left blank (which STAR counts as 0, but
 # the ballot shows no mark at all -- that distinction is the whole point of the
 # partial-ballot and null-ballot styles).
+# Listed in the hub page's gallery order. Titles match the style names in that
+# table on purpose: the original hand-made art disagreed with itself (some
+# titles rust and left-aligned, some black and centred; "Not much of a backup"
+# in sentence case against "Decent Backup" in title case), and the marks below
+# are transcribed from those originals.
 STYLES: dict[str, tuple[str, list[int | None]]] = {
     # slug: (title shown on the ballot, scores in CANDIDATES order)
-    "style_approval_style": ("Approval-style", [5, 0, 5, 5, 0]),
-    "style_exaggerated_compromise": ("Exaggerated Compromise", [5, 1, 5, 2, 0]),
+    "style_traditional": ("Traditional", [None, None, 5, None, None]),
     "style_partial_ballot": ("Partial Ballot", [None, None, 5, 3, None]),
+    "style_decent_backup": ("Decent Backup", [None, None, 5, None, 4]),
+    "style_not_much_of_a_backup": ("Not Much of a Backup", [None, None, 5, None, 1]),
+    "style_exaggerated_compromise": ("Exaggerated Compromise", [5, 1, 5, 2, 0]),
+    "style_partisan": ("Partisan", [5, None, 5, 5, None]),
+    "style_approval_style": ("Approval-style", [5, 0, 5, 5, 0]),
+    "style_ranked": ("Ranked", [2, 4, 5, 3, 1]),
+    "style_nuanced": ("Nuanced", [1, 4, 5, None, 4]),
     "style_compressed_middle": ("Compressed Middle", [3, 2, 3, 3, 2]),
     "style_null_ballot": ("Null Ballot", [3, 3, 3, 3, 3]),
+    "style_anyone_but": ("Anyone But…", [5, None, 5, 5, 5]),
+    "style_protest_vote": ("Protest Vote", [None, 1, None, None, None]),
 }
 
 # Palette sampled from the existing hand-made thumbnails.
