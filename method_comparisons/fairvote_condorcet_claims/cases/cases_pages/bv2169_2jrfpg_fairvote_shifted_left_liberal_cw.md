@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Liberal
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2jrfpg) · **[results ↗](https://bettervoting.com/2jrfpg/results)** (election `2jrfpg`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2jrfpg) · **[results ↗](https://bettervoting.com/2jrfpg/results)** (election `2jrfpg` · test `BV2169`).
 
 ## Scenario
 
@@ -33,12 +33,6 @@ STAR race plus an RCV-IRV race that agrees (first-choice majority).
 Live results: https://bettervoting.com/2jrfpg/results
 Full claim-by-claim reading of the article:
 07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2169
-```
 
 ## Ballots
 

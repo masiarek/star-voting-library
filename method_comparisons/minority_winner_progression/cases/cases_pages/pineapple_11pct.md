@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cheese
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h34pp9) · **[results ↗](https://bettervoting.com/h34pp9/results)** (election `h34pp9`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h34pp9) · **[results ↗](https://bettervoting.com/h34pp9/results)** (election `h34pp9` · test `BV2218`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ Yet nothing has really changed — plain Cheese is still everyone's easy second,
 Condorcet winner, and STAR / Ranked Robin / Approval still find it. The more crowded
 the menu, the sillier Choose-One's winner looks — and the more it matters that a
 method read the whole ballot. Lesson: README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2218
-```
 
 ## Ballots
 

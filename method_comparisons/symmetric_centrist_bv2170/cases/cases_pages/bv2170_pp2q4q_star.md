@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Casey
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q` · test `BV2170`).
 
 **Official tie-break (lot) order:** Blake > Casey > Avery — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -20,12 +20,6 @@ One of four races in the Symmetric Centrist election (BV2170, bvid pp2q4q; BV-co
 Live results: https://bettervoting.com/pp2q4q/results
 Companion races: bv2170_pp2q4q_irv.yaml, bv2170_pp2q4q_ranked_robin.yaml, bv2170_pp2q4q_plurality.yaml.
 Overview page: bv2170_pp2q4q_symmetric_centrist.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2170
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Alba
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ggg7hd) · **[results ↗](https://bettervoting.com/ggg7hd/results)** (election `ggg7hd`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ggg7hd) · **[results ↗](https://bettervoting.com/ggg7hd/results)** (election `ggg7hd` · test `BV2197`).
 
 ## Scenario
 
@@ -23,12 +23,6 @@ show_matrix is off per house style.) Exercise: ex11_recruit_a_spoiler.md.
 Ballots and cast are this repo's own.
 Live on BetterVoting (Test ID BV2197): https://bettervoting.com/ggg7hd/results
 — with a Choose-One race (also Alba: two names, one verdict).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2197
-```
 
 ## Ballots
 

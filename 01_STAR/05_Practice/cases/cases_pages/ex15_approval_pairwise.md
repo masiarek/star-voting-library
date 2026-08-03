@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Blair
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh` · test `BV2258`).
 
 ## Scenario
 
@@ -36,12 +36,6 @@ Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 2 of 2 —
 the same 35 ballots as race 1, cast as 5/0 scores; BV's STAR count agrees:
 Blair. The frozen export sits beside the sibling yaml,
 ex15_approval_yes_no_bv_export.json — one export covers both races.)
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2258
-```
 
 ## Ballots
 

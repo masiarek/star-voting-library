@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **3 seats** · **Expected winners:** Ada, Ben, Cal
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv` · test `BV2135`).
 
 **Official tie-break (lot) order:** Ada > Ben > Cal > Uma > Val > Wren — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -25,12 +25,6 @@ votes and every Away candidate all 4 minority votes — Ada, Ben, Cal (6 each) b
 Uma, Val, Wren (4 each) and the majority SWEEPS all three seats, 3-0. The 40%
 minority is shut out entirely. Contrast SNTV and Limited Voting (same electorate),
 where the minority earns a seat.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2135
-```
 
 ## Ballots
 

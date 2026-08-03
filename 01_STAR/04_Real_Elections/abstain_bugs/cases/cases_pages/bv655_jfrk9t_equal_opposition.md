@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Option 1
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfrk9t) · **[results ↗](https://bettervoting.com/jfrk9t/results)** (election `jfrk9t`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfrk9t) · **[results ↗](https://bettervoting.com/jfrk9t/results)** (election `jfrk9t` · test `BV655`).
 
 ## Scenario
 
@@ -34,12 +34,6 @@ nAbstentions = 0). Only a truly blank ballot abstains in LH. Both engines still
 elect Option 1, but they disagree on the count — and LH's treatment matches the view
 that an explicit 0 is a cast vote, not a non-vote (the heart of the bettervoting#884
 dispute; the UI/export mislabel is bettervoting#1090).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV655
-```
 
 ## Ballots
 

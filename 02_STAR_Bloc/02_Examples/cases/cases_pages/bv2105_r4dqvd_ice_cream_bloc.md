@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Chocolate, Strawberry
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd` · test `BV2105`).
 
 ## Scenario
 
@@ -50,12 +50,6 @@ resolved, this case is a REGRESSION GUARD — the frozen export captures the
 buggy summaryData (nTallyVotes 2 / nAbstentions 2), and this LH reference pins
 the correct count (4 ballots, 1 abstention, 3 tallied) so a re-export can be
 checked against it if the miscount ever returns.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2105
-```
 
 ## Ballots
 

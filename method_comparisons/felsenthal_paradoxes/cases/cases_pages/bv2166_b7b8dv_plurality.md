@@ -9,19 +9,13 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Cass
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b7b8dv) · **[results ↗](https://bettervoting.com/b7b8dv/results)** (election `b7b8dv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b7b8dv) · **[results ↗](https://bettervoting.com/b7b8dv/results)** (election `b7b8dv` · test `BV2166`).
 
 ## Scenario
 
 Race 2 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 19 (continued) — see bv2166_b7b8dv_star.yaml for the setup.
 The 13 remaining voters under Choose-One: first choices Amy 4, Boone 4, Cass 5 → Cass, exactly as with all 15 (BV2165). The first-choice count never wavers; the no-show flips live in Coombs' elimination (on paper) and STAR's runoff (live).
 Live results: https://bettervoting.com/b7b8dv/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2166
-```
 
 ## Ballots
 

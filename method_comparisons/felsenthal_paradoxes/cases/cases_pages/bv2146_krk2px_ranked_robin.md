@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Ada
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/krk2px) · **[results ↗](https://bettervoting.com/krk2px/results)** (election `krk2px`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/krk2px) · **[results ↗](https://bettervoting.com/krk2px/results)** (election `krk2px` · test `BV2146`).
 
 ## Scenario
 
 Race 2 of 3 in the Felsenthal runoff-paradoxes election, part 2 of 2 (BV2146, bvid krk2px; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 (continued) — see bv2146_krk2px_irv.yaml for the setup.
 The raise (2× Cleo>Ben>Ada → Ben>Cleo>Ada) only swaps Ben and Cleo on those ballots; Ada's position against each rival is untouched, so the pairwise table barely moves: Ada still beats Ben 9–8 and Cleo 9–8 and stays the Condorcet winner. Ranked Robin elects Ada before and after — monotone where the runoff procedure (the IRV race) flips.
 Live results: https://bettervoting.com/krk2px/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2146
-```
 
 ## Ballots
 

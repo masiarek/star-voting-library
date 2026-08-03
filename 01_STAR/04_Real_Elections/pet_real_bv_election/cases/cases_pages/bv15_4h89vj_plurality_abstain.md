@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../../07_Concepts) · **1 seat** · **Expected winner:** Andre
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4h89vj) · **[results ↗](https://bettervoting.com/4h89vj/results)** (election `4h89vj`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4h89vj) · **[results ↗](https://bettervoting.com/4h89vj/results)** (election `4h89vj` · test `BV15`).
 
 ## Scenario
 
@@ -44,12 +44,6 @@ no Plurality method — it does: single-winner Plurality tabulates via the STAR
 path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
 accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
 preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV15
-```
 
 ## Ballots
 

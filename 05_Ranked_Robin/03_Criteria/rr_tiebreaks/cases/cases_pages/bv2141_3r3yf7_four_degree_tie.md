@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Ava
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3r3yf7) · **[results ↗](https://bettervoting.com/3r3yf7/results)** (election `3r3yf7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3r3yf7) · **[results ↗](https://bettervoting.com/3r3yf7/results)** (election `3r3yf7` · test `BV2141`).
 
 **Official tie-break (lot) order:** Fabio > Eli > Cedric > Deegan > Ava > Bianca — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 The electowiki Ranked Robin "all four tie-breaking degrees" example (electowiki.org/wiki/Ranked_Robin). 81 voters, six candidates, with equal rankings and partial (truncated) ballots. Ava and Bianca TIE for the most pairwise wins (3 each), and they also tie on total win margin (+55) AND on votes-against (149) — so the first three degrees of the Equal Vote Coalition's Ranked Robin tiebreak protocol all fail to separate them. Only the 4th-degree beatpath comparison resolves it, to Bianca (14 vs 7). Neither engine here implements that 4-degree protocol: LH breaks the (wins, then margin) tie by pre-published lot, and BetterVoting breaks it at RANDOM — its results log even says so: "Ava picked in random tie-breaker, more robust tiebreaker not yet implemented." This file pins lot_numbers to BV's recorded random order (perm) so LH reproduces BV's frozen instance (Ava). Note BV's "random" is a SEEDED shuffle: a re-tally of these same 81 ballots returns Ava again — the order moves only if the ballot count changes. What it is not is derivable from the ballots. See 05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md, and the case built to confirm it: 05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md. Live results: https://bettervoting.com/3r3yf7/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2141
-```
 
 ## Ballots
 

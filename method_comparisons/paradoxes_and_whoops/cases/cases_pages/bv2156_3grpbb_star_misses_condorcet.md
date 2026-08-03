@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ada
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3grpbb) · **[results ↗](https://bettervoting.com/3grpbb/results)** (election `3grpbb`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3grpbb) · **[results ↗](https://bettervoting.com/3grpbb/results)** (election `3grpbb` · test `BV2156`).
 
 ## Scenario
 
@@ -21,12 +21,6 @@ center squeeze: the broadly-acceptable middle is excluded before the final compa
 Rare (STAR is ~98% Condorcet-efficient in spatial models) but structural. Level 301.
 Cross-ref: STAR_three_winner_notions. Lesson: bv2156_3grpbb_star_misses_condorcet.md
 Live on BetterVoting: https://bettervoting.com/3grpbb/results (BV-confirmed; STAR is race 1).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2156
-```
 
 ## Ballots
 

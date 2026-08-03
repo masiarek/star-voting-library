@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Dog
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 
 **Official tie-break (lot) order:** Dog > Cat > Fish > Bird > Rabbit > Hamster — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -22,12 +22,6 @@ Hamster), voting ranked ballots. This single-seat Mayor race uses Ranked Robin
 the minority, Dog beats every rival head-to-head — the Condorcet winner. So the
 executive (Mayor) goes to the majority's choice even as the proportional Council
 races (STAR-PR, STV) seat the minority.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2134
-```
 
 ## Ballots
 

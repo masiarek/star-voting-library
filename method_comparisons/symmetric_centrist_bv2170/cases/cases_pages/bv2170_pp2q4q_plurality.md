@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Blake
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q` · test `BV2170`).
 
 **Official tie-break (lot) order:** Casey > Blake > Avery — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -22,12 +22,6 @@ Random tiebreak — NOT freezable. The 47–47 pole tie is exact (perfect symmet
 Live results: https://bettervoting.com/pp2q4q/results
 Companion races: bv2170_pp2q4q_star.yaml, bv2170_pp2q4q_irv.yaml, bv2170_pp2q4q_ranked_robin.yaml.
 Overview page: bv2170_pp2q4q_symmetric_centrist.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2170
-```
 
 ## Ballots
 

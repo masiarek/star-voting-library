@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Beth
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2kcwbw) · **[results ↗](https://bettervoting.com/2kcwbw/results)** (election `2kcwbw`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2kcwbw) · **[results ↗](https://bettervoting.com/2kcwbw/results)** (election `2kcwbw` · test `BV2221`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ on SINCERE ballots the poles' supporters score her a genuine 3, so she leads
 the scoring round (310) and wins the runoff — STAR elects the Condorcet
 winner. The strategic-5-1-0 twin (s2) shows what happens when voters min-max
 instead. Part of the rb-j "does STAR collapse to IRV under 5-1-0?" claim-check.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2221
-```
 
 ## Ballots
 

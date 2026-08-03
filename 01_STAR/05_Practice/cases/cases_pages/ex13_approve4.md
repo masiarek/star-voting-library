@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Beck
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2` · test `BV2200`).
 
 ## Scenario
 
@@ -23,12 +23,6 @@ quiet middle candidate tops the count. Compare ex13_approve3.yaml
 Exercise: ex13_draw_the_line.md.
 Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
 — this is the "approve 4 and up" race; BV agrees: Beck 5.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2200
-```
 
 ## Ballots
 

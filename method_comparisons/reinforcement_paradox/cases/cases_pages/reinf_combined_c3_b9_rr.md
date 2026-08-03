@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Cara
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x` · test `BV2254`).
 
 **Official tie-break (lot) order:** Ada > Ben > Cara — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -32,12 +32,6 @@ The same 9 ballots counted by STAR: reinf_combined_c3_b9_star.yaml (the
 scoring round leads Ada, but the runoff flips to Cara — STAR's runoff catches
 the same pairwise flip). Additive methods (Score/Approval/Plurality) instead
 keep Ada and show no paradox — see the folder README.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2254
-```
 
 ## Ballots
 

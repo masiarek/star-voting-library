@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Right
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck` · test `BV2227`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ final 18-16. The Left voters' sincere ballots elected their LEAST-favorite candi
 See the companion fb_irv_betray (2 of those Left voters rank Center first and Center
 wins) and fb_star_honest (STAR/Ranked Robin elect Center from these same honest
 preferences — no betrayal needed). Concept: favorite_betrayal_voting_301.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2227
-```
 
 ## Ballots
 

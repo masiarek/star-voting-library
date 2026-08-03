@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cheese
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mvxbxr) · **[results ↗](https://bettervoting.com/mvxbxr/results)** (election `mvxbxr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mvxbxr) · **[results ↗](https://bettervoting.com/mvxbxr/results)** (election `mvxbxr` · test `BV2217`).
 
 ## Scenario
 
@@ -19,12 +19,6 @@ quarter of the table picking the pizza the other three-quarters didn't ask for.
 Cheese is still everybody's happy second, still the Condorcet winner, and STAR /
 Ranked Robin / Approval still elect it. Same story, more toppings, smaller mandate.
 Lesson: README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2217
-```
 
 ## Ballots
 

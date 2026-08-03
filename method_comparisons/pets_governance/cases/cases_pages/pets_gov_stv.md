@@ -9,7 +9,7 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Dog, Bird, Cat
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ quota = floor(22/4)+1 = 6). The majority (13) meets two quotas and the minority
 (9) meets one, so STV elects Dog, Cat (majority) and Bird (minority) — 2 + 1,
 proportional. Like STAR-PR (Bird, Dog, Fish) it seats the minority; the two
 proportional methods differ only on the majority's third pick (Cat vs Fish).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2134
-```
 
 ## Ballots
 

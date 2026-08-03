@@ -9,7 +9,7 @@ search:
 
 **Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Bird, Dog, Fish
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 
 ## Scenario
 
@@ -21,12 +21,6 @@ seat its ballots are down-weighted, so the minority's Bird wins a seat: the
 result is Bird, Dog, Fish — 2 majority + 1 minority. Same ballots as Bloc STAR
 (which swept all three for the majority): proportional vs majoritarian, side by
 side.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2134
-```
 
 ## Ballots
 

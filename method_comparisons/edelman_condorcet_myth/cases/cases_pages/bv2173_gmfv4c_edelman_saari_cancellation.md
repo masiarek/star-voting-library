@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ada
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gmfv4c) · **[results ↗](https://bettervoting.com/gmfv4c/results)** (election `gmfv4c`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gmfv4c) · **[results ↗](https://bettervoting.com/gmfv4c/results)** (election `gmfv4c` · test `BV2173`).
 
 ## Scenario
 
@@ -38,12 +38,6 @@ Ranked Robin, RCV-IRV, Choose-One).
 Live results: https://bettervoting.com/gmfv4c/results
 Companion LH-only file: edelman_perfect_component_c3_b30.yaml (the
 30-voter "Condorcet component" on its own — everything ties).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2173
-```
 
 ## Ballots
 

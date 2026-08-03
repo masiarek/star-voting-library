@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Bree
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/x4dkfd) · **[results ↗](https://bettervoting.com/x4dkfd/results)** (election `x4dkfd`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/x4dkfd) · **[results ↗](https://bettervoting.com/x4dkfd/results)** (election `x4dkfd` · test `BV2193`).
 
 ## Scenario
 
@@ -24,12 +24,6 @@ Ballots and cast are this repo's own.
 Live on BetterVoting (Test ID BV2193): https://bettervoting.com/x4dkfd/results
 — with RCV-IRV and Ranked Robin races on the same opinions (IRV elects
 Cash even on the honest ballots — the squeeze cameo; RR confirms Bree).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2193
-```
 
 ## Ballots
 

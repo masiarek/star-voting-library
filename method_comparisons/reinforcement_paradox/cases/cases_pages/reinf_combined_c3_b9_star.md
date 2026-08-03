@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cara
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/t4by6x) · **[results ↗](https://bettervoting.com/t4by6x/results)** (election `t4by6x` · test `BV2254`).
 
 ## Scenario
 
@@ -29,12 +29,6 @@ Condorcet flip Ranked Robin shows: a Runoff Reversal, with Cara the Condorcet
 winner. The engine's divergence block also reports Choose-One = Ada and
 Approval = Ada — the additive methods that keep the reinforcement promise here.
 Full discussion: the folder README.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2254
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Anderson
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywckmg) · **[results ↗](https://bettervoting.com/ywckmg/results)** (election `ywckmg`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywckmg) · **[results ↗](https://bettervoting.com/ywckmg/results)** (election `ywckmg` · test `BV2137`).
 
 **Official tie-break (lot) order:** Anderson > Carter > Reagan — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confirmed). 100 voters, three candidates, ONE ranked electorate tabulated four ways. Anderson is the Condorcet winner (beats Reagan 55–45, Carter 65–35) but holds the fewest first-choices (20). Ranked Robin counts head-to-heads: Anderson beats BOTH rivals, so RR → Anderson — the Condorcet winner IRV threw away.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2137
-```
 
 ## Ballots
 

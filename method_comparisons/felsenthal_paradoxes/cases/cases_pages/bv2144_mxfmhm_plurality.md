@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Ana
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm` · test `BV2144`).
 
 **Official tie-break (lot) order:** Ana > Cal > Bo — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -18,12 +18,6 @@ search:
 Race 1 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010 (Leverhulme Trust "Voting Power in Practice" workshop, Château du Baffy, Normandy); Appendix A1, Example 1.
 7 voters, three candidates (Ana=a, Bo=b, Cal=c); rankings 3×(Ana>Bo>Cal), 2×(Bo>Cal>Ana), 2×(Cal>Bo>Ana). Bo is the Condorcet winner (beats Ana 4–3, Cal 5–2). Ana is both the Condorcet LOSER and the ABSOLUTE loser — a majority (4 of 7) rank Ana dead last. Yet Choose-One elects Ana 3–2–2 on first choices; and if Cal dropped out, Bo would beat Ana 4–3 — Felsenthal's SCC (the spoiler effect). Four paradoxes in one 7-voter election.
 Live results: https://bettervoting.com/mxfmhm/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2144
-```
 
 ## Ballots
 

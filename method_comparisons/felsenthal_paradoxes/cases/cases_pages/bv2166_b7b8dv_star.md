@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cass
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b7b8dv) · **[results ↗](https://bettervoting.com/b7b8dv/results)** (election `b7b8dv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b7b8dv) · **[results ↗](https://bettervoting.com/b7b8dv/results)** (election `b7b8dv` · test `BV2166`).
 
 ## Scenario
 
 Race 1 of 2 in the Coombs No-Show pair, part 2 of 2 (BV2166, bvid b7b8dv; BV-confirmed; the pair is BV2165/66). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure), Example 19 (continued).
 Ceteris paribus, the two Cass>Boone>Amy voters do NOT participate: 13 voters — 4×(Amy>Boone>Cass), 4×(Boone>Cass>Amy), 5×(Cass>Amy>Boone). Coombs (on the case page): now BOONE is ranked last by the most voters (5) and is deleted; Cass — the abstainers' TOP preference — wins: Felsenthal's No-Show paradox (same flip via truncation). HONEST BONUS, live: STAR flips here too. With all 15 ballots STAR elects Boone (BV2165: 41/43/51, runoff 8–7); on these 13 it scores Amy 39, Boone 37, Cass 41 and CASS beats Amy 9–4 in the runoff. The absent pair's sincere ballots (scoring Boone 3) had helped Boone reach and win the runoff — staying home gets them their favorite: a genuine STAR participation failure on this profile. The mechanism is STAR's runoff stage (which costs it Moulin-style participation guarantees); score-only methods cannot do this. First live score-family entry in the no-show group — the honest-limits pledge in action.
 Live results: https://bettervoting.com/b7b8dv/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2166
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Dan, Ada, Eve
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9ff9jk) · **[results ↗](https://bettervoting.com/9ff9jk/results)** (election `9ff9jk`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9ff9jk) · **[results ↗](https://bettervoting.com/9ff9jk/results)** (election `9ff9jk` · test `BV130-r2`).
 
 **Official tie-break (lot) order:** Finn > Ben > Dan > Eve > Ada > Cara — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -36,12 +36,6 @@ would instead elect Ada (seat 1), Dan (seat 2), Eve (seat 3): same three
 winners, but the tied pair's seats swap. The result is therefore
 non-reproducible (cf. #1063 / #1417), and BV's top-level tieBreakType is
 reported as "none" even though a seat was decided by the lot.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV130-r2
-```
 
 ## Ballots
 

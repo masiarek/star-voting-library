@@ -9,17 +9,11 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cat
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyxrbr) · **[results ↗](https://bettervoting.com/dyxrbr/results)** (election `dyxrbr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyxrbr) · **[results ↗](https://bettervoting.com/dyxrbr/results)** (election `dyxrbr` · test `BV2133`).
 
 ## Scenario
 
 One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr) — 32 voters, four pets (Dog, Cat, Fish, Bird), tallied four ways, each electing a DIFFERENT pet. This is the STAR race: Cat (84) and Fish (72) lead on score and advance; Cat wins the automatic runoff 22-10, so STAR elects the consensus, Cat. The other races elect Dog (Plurality), Fish (RCV-IRV), and Bird (Approval). BV also elects Cat. Live results: https://bettervoting.com/dyxrbr/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2133
-```
 
 ## Ballots
 

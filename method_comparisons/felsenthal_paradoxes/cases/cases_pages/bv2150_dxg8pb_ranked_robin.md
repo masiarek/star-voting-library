@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Beth
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dxg8pb) · **[results ↗](https://bettervoting.com/dxg8pb/results)** (election `dxg8pb`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dxg8pb) · **[results ↗](https://bettervoting.com/dxg8pb/results)** (election `dxg8pb` · test `BV2150`).
 
 ## Scenario
 
 Race 2 of 3 in the No-Show-paradox pair, part 1 of 2 (BV2150, bvid dxg8pb; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2150_dxg8pb_irv.yaml for the setup.
 The same 11 ranked ballots counted by Ranked Robin (Copeland): Beth wins both her head-to-heads (Andy 6–5, Carl 7–4) — the Condorcet winner, elected directly. No cycle here, so the count is fully deterministic on BetterVoting too.
 Live results: https://bettervoting.com/dxg8pb/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2150
-```
 
 ## Ballots
 

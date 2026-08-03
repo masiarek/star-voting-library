@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Arlo
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t` · test `BV2164`).
 
 ## Scenario
 
 Race 3 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 17 — see bv2164_xbqq8t_star.yaml for the setup.
 The same 33 rankings counted by Ranked Robin (Copeland): Arlo wins every head-to-head (Bree 19–14, Cole 17–16, Dana 17–16) — the Condorcet winner, elected directly. The irony this case teaches: Coombs deletes candidates for being ranked LAST by many, and Arlo — everyone's pairwise favorite — is also the most-frequent last choice (12 ballots), so Coombs deletes the Condorcet winner FIRST. Felsenthal conjectures four candidates are the minimum for this failure.
 Live results: https://bettervoting.com/xbqq8t/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2164
-```
 
 ## Ballots
 

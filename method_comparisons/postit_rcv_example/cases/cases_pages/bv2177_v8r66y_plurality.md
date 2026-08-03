@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Purple
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/v8r66y) · **[results ↗](https://bettervoting.com/v8r66y/results)** (election `v8r66y`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/v8r66y) · **[results ↗](https://bettervoting.com/v8r66y/results)** (election `v8r66y` · test `BV2177`).
 
 ## Scenario
 
@@ -29,12 +29,6 @@ Companion races: BV2176's bv2176_p8dp28_star.yaml / _irv.yaml /
 _ranked_robin.yaml (identical ballots to the BV2177 STAR/IRV/RR/STV races)
 and bv2177_v8r66y_approval.yaml.
 Overview page: bv2177_v8r66y_seven_methods.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2177
-```
 
 ## Ballots
 

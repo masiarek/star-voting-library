@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Bess
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yyhj9x) · **[results ↗](https://bettervoting.com/yyhj9x/results)** (election `yyhj9x`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yyhj9x) · **[results ↗](https://bettervoting.com/yyhj9x/results)** (election `yyhj9x` · test `BV2196`).
 
 ## Scenario
 
@@ -27,12 +27,6 @@ ex10_later_no_harm.md. Ballots and cast are this repo's own.
 Live on BetterVoting (Test ID BV2196): https://bettervoting.com/yyhj9x/results
 — with an RCV-IRV race (still Amir: IRV keeps later-no-harm precisely
 by center-squeezing the Condorcet winner Bess).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2196
-```
 
 ## Ballots
 

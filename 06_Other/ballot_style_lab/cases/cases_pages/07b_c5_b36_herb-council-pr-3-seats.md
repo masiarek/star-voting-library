@@ -9,7 +9,7 @@ search:
 
 **Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Anise, Basil, Chive
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pmrq4q) · **[results ↗](https://bettervoting.com/pmrq4q/results)** (election `pmrq4q`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pmrq4q) · **[results ↗](https://bettervoting.com/pmrq4q/results)** (election `pmrq4q` · test `BV2245`).
 
 ## Scenario
 
@@ -50,12 +50,6 @@ then rendered through each voter's ballot style. Per
 'stress-test the tabulator' job (with human-shaped renderings), not a
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit herb_council
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2245
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Center
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bgcmxx) · **[results ↗](https://bettervoting.com/bgcmxx/results)** (election `bgcmxx`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bgcmxx) · **[results ↗](https://bettervoting.com/bgcmxx/results)** (election `bgcmxx` · test `BV2228`).
 
 ## Scenario
 
@@ -23,12 +23,6 @@ got a far better outcome (their second choice instead of their worst). That is
 first is only safe when they're either very strong or have no chance at all. STAR and
 Ranked Robin remove the incentive: see fb_star_honest, where the HONEST ballots already
 elect Center. Concept: favorite_betrayal_voting_301.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2228
-```
 
 ## Ballots
 

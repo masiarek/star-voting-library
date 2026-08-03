@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Anika
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y2fbpc) · **[results ↗](https://bettervoting.com/y2fbpc/results)** (election `y2fbpc`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y2fbpc) · **[results ↗](https://bettervoting.com/y2fbpc/results)** (election `y2fbpc` · test `BV2261`).
 
 **Official tie-break (lot) order:** Anika > Beto > Cleo — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -18,12 +18,6 @@ search:
 Six voters, three candidates, and the most evenly balanced electorate that can exist: all six possible rankings of Anika, Beto and Cleo appear exactly once. Every head-to-head therefore draws 3-3, every candidate goes 0-0-2 for a Copeland score of 1, and every margin is +0. Ranked Robin's deterministic rungs — Copeland score, then total margin — both tie, so the count falls through to the rung of last resort.
 THE POINT OF THIS CASE is what that last rung leaves behind. BetterVoting calls its rung "random", and it is unpredictable from the ballots — but it is NOT lost and it is NOT re-rolled. shuffleCandidatesForRandomTiebreak.ts seeds a deterministic PRNG (TinyRand) with (rawVoteCount + hash(raceId)) >>> 0, shuffles the candidates ONCE, and writes each candidate's position back as tieBreakOrder; the shuffled order ships in the results JSON as `perm`. So the export publishes the WHOLE tiebreak sequence — winner and runners-up — and a re-tally returns the same answer (verified: re-fetched, perm and tieBreakOrder byte-identical).
 BV recorded perm [Anika, Beto, Cleo] for this race and elected Anika. This file pins lot_numbers to that recorded order, so LH's own lot rung replays BV's draw exactly — same winner, same full ordering. Companion race (a Condorcet cycle, different perm): bv2261_y2fbpc_tiebreak_recorded_cycle.yaml. Lesson: 05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md Live results: https://bettervoting.com/y2fbpc/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2261
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Basil, Chive, Dill
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dx494) · **[results ↗](https://bettervoting.com/9dx494/results)** (election `9dx494`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dx494) · **[results ↗](https://bettervoting.com/9dx494/results)** (election `9dx494` · test `BV2244`).
 
 ## Scenario
 
@@ -51,12 +51,6 @@ then rendered through each voter's ballot style. Per
 'stress-test the tabulator' job (with human-shaped renderings), not a
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit herb_council
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2244
-```
 
 ## Ballots
 

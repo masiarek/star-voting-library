@@ -9,19 +9,13 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** April
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7` · test `BV2154`).
 
 ## Scenario
 
 Race 1 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 8.
 15 voters, rankings 6×(April>Bruce>Clara), 4×(Bruce>Clara>April), 1×(Clara>April>Bruce), 4×(Clara>Bruce>April). The social ordering is Bruce>Clara>April: April is the Condorcet LOSER and the ABSOLUTE loser (an absolute majority — 8 of 15 — rank April dead last). But if the single Clara>April>Bruce voter approves the top two while everyone else bullet-votes, the approval totals are April 7, Bruce 4, Clara 5 — APPROVAL ELECTS APRIL: the Condorcet-loser and Absolute-loser paradoxes under Approval, triggered by one voter's cutoff choice.
 Live results: https://bettervoting.com/wq6yv7/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2154
-```
 
 ## Ballots
 

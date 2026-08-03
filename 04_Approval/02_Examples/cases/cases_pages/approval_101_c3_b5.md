@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../01_Learn) · **1 seat** · **Expected winner:** Bob
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ff6mk3) · **[results ↗](https://bettervoting.com/ff6mk3/results)** (election `ff6mk3`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ff6mk3) · **[results ↗](https://bettervoting.com/ff6mk3/results)** (election `ff6mk3` · test `BV135`).
 
 ## Scenario
 
@@ -25,12 +25,6 @@ Frozen export: approval_101_c3_b5_bv_export.json.
 More Approval cases: method_comparisons/BV_Library (a real BetterVoting
 approval election) and method_comparisons/black_curtain (the same five
 voters counted by Approval vs STAR vs RCV-IRV).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV135
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Strawberry
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2` · test `BV2180`).
 
 ## Scenario
 
@@ -25,12 +25,6 @@ the pre-published lot order is never consulted, so LH and BetterVoting agree and
 the result is fully reproducible (unlike the 3-way dead heat in BV555/xmyf7k,
 which reaches the random floor). Live results: https://bettervoting.com/fp62p2/results
 Lesson: bv2180_fp62p2_ice_cream_ladder.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2180
-```
 
 ## Ballots
 

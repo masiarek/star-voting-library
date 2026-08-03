@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Cash
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7f4f7q) · **[results ↗](https://bettervoting.com/7f4f7q/results)** (election `7f4f7q`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7f4f7q) · **[results ↗](https://bettervoting.com/7f4f7q/results)** (election `7f4f7q` · test `BV2194`).
 
 ## Scenario
 
@@ -26,12 +26,6 @@ repo's own.
 Live on BetterVoting (Test ID BV2194): https://bettervoting.com/7f4f7q/results
 — with RCV-IRV and Ranked Robin races: on the bullet ballots all three
 methods elect Cash.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2194
-```
 
 ## Ballots
 

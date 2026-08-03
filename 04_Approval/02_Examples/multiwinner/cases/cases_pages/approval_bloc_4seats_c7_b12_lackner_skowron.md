@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../../01_Learn) · **4 seats** · **Expected winners:** A, B, C, D
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jt6r76) · **[results ↗](https://bettervoting.com/jt6r76/results)** (election `jt6r76`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/jt6r76) · **[results ↗](https://bettervoting.com/jt6r76/results)** (election `jt6r76` · test `BV27`).
 
 ## Scenario
 
@@ -29,12 +29,6 @@ Live on BetterVoting (BV27, election jt6r76): BV's Approval engine seats
 A,B,C,F — its random draw broke the D/F tie for F, the book's other AV
 committee. Two-view page: bv27_jt6r76_lackner_approval_committee.md.
 Live results: https://bettervoting.com/jt6r76/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV27
-```
 
 ## Ballots
 

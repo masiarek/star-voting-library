@@ -9,19 +9,13 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Amos
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr` · test `BV2153`).
 
 ## Scenario
 
 Race 2 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 7 — see bv2153_pcttmr_approval.yaml for the setup.
 The same 100 voters' full rankings under instant runoff: Amos holds 51 first choices — an absolute majority — and wins in the first round. The contrast with the approval race (Bella, 100 approvals) is the whole point: a top-two approval cutoff erases the majority's first-vs-second distinction.
 Live results: https://bettervoting.com/pcttmr/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2153
-```
 
 ## Ballots
 

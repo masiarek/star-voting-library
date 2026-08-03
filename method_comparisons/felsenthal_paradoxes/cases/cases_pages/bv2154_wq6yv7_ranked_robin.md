@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Bruce
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7` · test `BV2154`).
 
 ## Scenario
 
 Race 3 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 8 — see bv2154_wq6yv7_approval.yaml for the setup.
 The same 15 voters' full rankings counted by Ranked Robin (Copeland): Bruce wins both head-to-heads (April 8–7, Clara 10–5) — the Condorcet winner, elected. The three races of this election return three different winners (Approval → April, IRV → Clara, Ranked Robin → Bruce): the tabulation, not the ballot, decides.
 Live results: https://bettervoting.com/wq6yv7/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2154
-```
 
 ## Ballots
 

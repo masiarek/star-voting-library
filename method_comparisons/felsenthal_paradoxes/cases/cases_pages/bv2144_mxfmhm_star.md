@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Bo
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm` · test `BV2144`).
 
 ## Scenario
 
 Race 2 of 2 in the Felsenthal plurality-paradoxes election (BV2144, bvid mxfmhm; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010 (Leverhulme Trust "Voting Power in Practice" workshop, Château du Baffy, Normandy); Appendix A1, Example 1.
 The same 7 voters, rankings mapped to 0–5 scores with the house map (N=3: top=5, mid=3, bottom=1). Scores: Bo 25, Ana 19, Cal 19 — a scoring-round tie for the second finalist slot, broken head-to-head (Cal beats Ana 4–3, so Cal advances); Bo then wins the automatic runoff 5–2. STAR elects the Condorcet winner Bo, while Choose-One (race 1) elects Ana, the Condorcet-and-absolute loser. The tabulation, not the ballot, decides.
 Live results: https://bettervoting.com/mxfmhm/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2144
-```
 
 ## Ballots
 

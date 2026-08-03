@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **4 seats** · **Expected winners:** First, Second, Third, Fourth
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx` · test `BV1525`).
 
 **Official tie-break (lot) order:** First > Condorcet Loser > Second > Third > Fourth — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -33,12 +33,6 @@ The lot matters: if Condorcet Loser had won the seat-1 coin toss, the outcome
 would be Condorcet Loser, First, Second, Third — the ONLY other valid ordering.
 A pre-published lot makes which of the two happens reproducible; a random draw
 (as in STAR Vote 2.0) does not, and picks different winners on each run.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV1525
-```
 
 ## Ballots
 

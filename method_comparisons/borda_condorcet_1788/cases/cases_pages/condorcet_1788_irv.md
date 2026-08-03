@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Peter
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4` · test `BV2250`).
 
 ## Scenario
 
@@ -32,12 +32,6 @@ would have shown their strength. This profile does not contain one: Peter is
 not squeezed, he leads the first-choice count among the two finalists' bloc
 and simply starts second. Citing this election as an IRV failure would be
 wrong, and the repo says so on the folder page.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2250
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Cherry
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywqhq4) · **[results ↗](https://bettervoting.com/ywqhq4/results)** (election `ywqhq4`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywqhq4) · **[results ↗](https://bettervoting.com/ywqhq4/results)** (election `ywqhq4` · test `BV2191`).
 
 ## Scenario
 
@@ -27,12 +27,6 @@ cast are this repo's own.
 Live on BetterVoting (Test ID BV2191): https://bettervoting.com/ywqhq4/results
 — one election, five races (Choose-One, RCV-IRV, Approval, STAR, Ranked
 Robin), all five verdicts live; BV agrees with LH on every race.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2191
-```
 
 ## Ballots
 

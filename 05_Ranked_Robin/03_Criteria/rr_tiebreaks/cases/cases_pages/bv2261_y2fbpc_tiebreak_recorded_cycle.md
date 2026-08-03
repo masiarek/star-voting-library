@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Anika
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y2fbpc) · **[results ↗](https://bettervoting.com/y2fbpc/results)** (election `y2fbpc`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y2fbpc) · **[results ↗](https://bettervoting.com/y2fbpc/results)** (election `y2fbpc` · test `BV2261`).
 
 **Official tie-break (lot) order:** Anika > Cleo > Beto — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -19,12 +19,6 @@ The same six voters and the same three candidates as race 1, arranged the other 
 THE POINT OF THE PAIR is that BetterVoting's rung of last resort is deterministic and fully published. Its "random" tiebreak seeds TinyRand with (rawVoteCount + hash(raceId)) >>> 0, shuffles once, and reports the resulting order as `perm` with each candidate's index as tieBreakOrder — so the export records the entire sequence, not just the winner, and re-tallying returns the same answer.
 Note what the raceId term in that seed buys: this race and race 1 have identical candidates and identical ballot counts, yet BV drew a DIFFERENT order — [Anika, Cleo, Beto] here against [Anika, Beto, Cleo] there. Without the per-race offset every race on a multi-method poll would share one tiebreak order.
 This file pins lot_numbers to this race's recorded perm, so LH's lot rung replays BV's draw exactly. Companion race (every pair draws): bv2261_y2fbpc_tiebreak_recorded_draws.yaml. Lesson: 05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md Live results: https://bettervoting.com/y2fbpc/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2261
-```
 
 ## Ballots
 

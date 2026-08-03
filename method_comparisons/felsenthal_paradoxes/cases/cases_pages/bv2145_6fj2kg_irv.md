@@ -9,19 +9,13 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ben
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6fj2kg) · **[results ↗](https://bettervoting.com/6fj2kg/results)** (election `6fj2kg`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6fj2kg) · **[results ↗](https://bettervoting.com/6fj2kg/results)** (election `6fj2kg` · test `BV2145`).
 
 ## Scenario
 
 Race 1 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bvid 6fj2kg; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A2, Example 2 (plurality with runoff).
 17 voters, three candidates. Ada is the Condorcet winner (beats Ben 9–8 and Cleo 9–8; social ordering Ada>Ben>Cleo) but has the FEWEST first choices (Ada 5, Ben 6, Cleo 6). Plurality-with-runoff — run here as IRV, which is identical for three candidates — eliminates Ada first, and Ben beats Cleo 9–8. The Condorcet winner paradox, plus Felsenthal's SCC note: had Cleo withdrawn, Ada would have won the first round outright (9 of 17). The non-monotonicity half of the lesson is the paired election BV2146.
 Live results: https://bettervoting.com/6fj2kg/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2145
-```
 
 ## Ballots
 

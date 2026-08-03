@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Melenchon
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2hqmrd) · **[results ↗](https://bettervoting.com/2hqmrd/results)** (election `2hqmrd`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2hqmrd) · **[results ↗](https://bettervoting.com/2hqmrd/results)** (election `2hqmrd` · test `BV2230`).
 
 ## Scenario
 
@@ -24,12 +24,6 @@ faction to bury Macron AND rate their enemies 4 (a risky, implausible conspiracy
 honest STAR elects Macron; and RCV-IRV on these same strategic ballots elects Le Pen
 (the far right) — a worse miss. STAR squeezes the center only under STRATEGY; IRV
 center-squeezes under HONESTY (Burlington, Alaska). Concept: ../README.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2230
-```
 
 ## Ballots
 

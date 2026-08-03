@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** April
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dhv8y) · **[results ↗](https://bettervoting.com/9dhv8y/results)** (election `9dhv8y`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dhv8y) · **[results ↗](https://bettervoting.com/9dhv8y/results)** (election `9dhv8y` · test `BV2175`).
 
 ## Scenario
 
@@ -35,12 +35,6 @@ margin tiebreak: April, +6 — shown in this file's mirror).
 
 LIVE on BetterVoting as BV2175 (three races: STAR, RCV-IRV, Choose-One).
 Live results: https://bettervoting.com/9dhv8y/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2175
-```
 
 ## Ballots
 

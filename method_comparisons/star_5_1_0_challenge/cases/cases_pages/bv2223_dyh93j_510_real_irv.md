@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ana
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyh93j) · **[results ↗](https://bettervoting.com/dyh93j/results)** (election `dyh93j`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyh93j) · **[results ↗](https://bettervoting.com/dyh93j/results)** (election `dyh93j` · test `BV2223`).
 
 ## Scenario
 
@@ -18,12 +18,6 @@ still has the fewest first-choices (25) and is eliminated first, her ballots
 flow to Ana, who wins 65–35. IRV fails the Condorcet winner regardless of
 moderate base — because it only ever counts first choices. Contrast s4: the
 SAME electorate under strategic-5-1-0 STAR elects Beth, the Condorcet winner.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2223
-```
 
 ## Ballots
 

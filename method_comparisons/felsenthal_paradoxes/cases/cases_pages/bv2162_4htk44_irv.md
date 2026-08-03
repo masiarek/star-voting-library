@@ -9,19 +9,13 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** A
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44` · test `BV2162`).
 
 ## Scenario
 
 Race 2 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2162_4htk44_star.yaml for the setup.
 The same 103 full rankings under instant runoff: no first-count majority (33/29/24/17), D is eliminated and transfers to C (41), then B (29) is eliminated — and A wins 62. Sincere, complete ballots elect A over the Condorcet winner B; and part 2 (BV2163) shows the 17 D-first voters doing BETTER by ranking only D. Their reward for ranking honestly and fully is their third choice.
 Live results: https://bettervoting.com/4htk44/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2162
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Bree
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t` · test `BV2164`).
 
 ## Scenario
 
 Race 2 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A7, Example 17 — see bv2164_xbqq8t_star.yaml for the setup.
 The same 33 voters under Choose-One: first choices Arlo 11, Bree 14, Cole 4, Dana 4 → Bree (a plurality, not a majority). Choose-One happens to agree with Coombs' paper result here — both miss the Condorcet winner Arlo, whom STAR and Ranked Robin elect.
 Live results: https://bettervoting.com/xbqq8t/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2164
-```
 
 ## Ballots
 

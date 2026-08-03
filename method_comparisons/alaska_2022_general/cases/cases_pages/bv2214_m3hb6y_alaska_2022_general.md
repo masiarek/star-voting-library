@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Peltola
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/m3hb6y) · **[results ↗](https://bettervoting.com/m3hb6y/results)** (election `m3hb6y`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/m3hb6y) · **[results ↗](https://bettervoting.com/m3hb6y/results)** (election `m3hb6y` · test `BV2214`).
 
 ## Scenario
 
@@ -30,12 +30,6 @@ rank->score overlay (favorite 5, 2nd 4, unranked 0). Source: Equal Vote's Real R
 realrcv.equal.vote/alaska22general. Live results (BV2214, all four races):
 https://bettervoting.com/m3hb6y/results
 Lesson: README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2214
-```
 
 ## Ballots
 

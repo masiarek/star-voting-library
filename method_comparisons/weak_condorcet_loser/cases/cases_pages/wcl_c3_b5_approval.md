@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Ben
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw` · test `BV2249`).
 
 ## Scenario
 
@@ -44,12 +44,6 @@ loser as lose the information that would have identified one.
 The cutoff caveat applies as always: "approve everything 3 or higher" is one
 modeling choice among several, and a different threshold gives a different
 election. That is Approval's standing ambiguity, not a quirk of this case.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2249
-```
 
 ## Ballots
 

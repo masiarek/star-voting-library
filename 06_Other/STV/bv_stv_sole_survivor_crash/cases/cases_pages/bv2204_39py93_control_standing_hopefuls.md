@@ -9,7 +9,7 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Angelou, Cummings
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/39py93) · **[results ↗](https://bettervoting.com/39py93/results)** (election `39py93`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/39py93) · **[results ↗](https://bettervoting.com/39py93/results)** (election `39py93` · test `BV2204`).
 
 ## Scenario
 
@@ -28,12 +28,6 @@ this convicts the ENDGAME — electing the last remaining hopeful at
 quota — and acquits the shape and every config key. Full lab notebook:
 README.md in this folder.
 Live on BetterVoting (Test ID BV2204): https://bettervoting.com/39py93
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2204
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44` · test `BV2162`).
 
 ## Scenario
 
 Race 3 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2162_4htk44_star.yaml for the setup.
 The same 103 full rankings counted by Ranked Robin (Copeland): B wins every head-to-head (A 70–33, C 62–41, D 86–17) — the Condorcet winner, elected directly, agreeing with STAR and disagreeing with the IRV race's A.
 Live results: https://bettervoting.com/4htk44/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2162
-```
 
 ## Ballots
 

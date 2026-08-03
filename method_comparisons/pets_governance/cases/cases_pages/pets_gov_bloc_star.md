@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Dog, Fish, Cat
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 
 ## Scenario
 
@@ -19,12 +19,6 @@ Bird, Rabbit, Hamster). This race fills a 3-seat Council by Bloc STAR — a
 MAJORITARIAN method. The majority's top three sweep every seat: Dog, Fish, Cat.
 The minority gets nothing. Contrast with the STAR-PR and STV races on the same
 ballots, where the minority earns a seat (proportional).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2134
-```
 
 ## Ballots
 

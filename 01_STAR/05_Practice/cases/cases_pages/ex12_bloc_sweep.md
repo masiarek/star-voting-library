@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Asa, Bram
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr` · test `BV2199`).
 
 ## Scenario
 
@@ -28,12 +28,6 @@ repo's own.
 Live on BetterVoting (Test ID BV2199): https://bettervoting.com/89wwvr/results
 — one election, both races (Bloc STAR + STAR-PR); BV agrees on both
 seat pairs.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2199
-```
 
 ## Ballots
 

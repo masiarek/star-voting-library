@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** None of the Above
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/26khr3) · **[results ↗](https://bettervoting.com/26khr3/results)** (election `26khr3`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/26khr3) · **[results ↗](https://bettervoting.com/26khr3/results)** (election `26khr3` · test `BV215`).
 
 ## Scenario
 
@@ -32,12 +32,6 @@ Three teaching points in one ballot set:
    ballot an abstention (BetterVoting reported nAbstentions = 0).
 3. **BV vs LH agree.** Both elect None of the Above with identical score/runoff
    numbers.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV215
-```
 
 ## Ballots
 

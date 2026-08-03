@@ -9,7 +9,7 @@ search:
 
 **Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Amir, Bree
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdh9qp) · **[results ↗](https://bettervoting.com/qdh9qp/results)** (election `qdh9qp`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdh9qp) · **[results ↗](https://bettervoting.com/qdh9qp/results)** (election `qdh9qp` · test `BV2246`).
 
 ## Scenario
 
@@ -50,12 +50,6 @@ then rendered through each voter's ballot style. Per
 'stress-test the tabulator' job (with human-shaped renderings), not a
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit quota_circus
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2246
-```
 
 ## Ballots
 

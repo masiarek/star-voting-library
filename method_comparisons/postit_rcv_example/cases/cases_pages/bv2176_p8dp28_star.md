@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Blue
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/p8dp28) · **[results ↗](https://bettervoting.com/p8dp28/results)** (election `p8dp28`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/p8dp28) · **[results ↗](https://bettervoting.com/p8dp28/results)** (election `p8dp28` · test `BV2176`).
 
 ## Scenario
 
@@ -30,12 +30,6 @@ tieBreakType head_to_head on the scoring tie.
 Live results: https://bettervoting.com/p8dp28/results
 Companion races: bv2176_p8dp28_irv.yaml, bv2176_p8dp28_ranked_robin.yaml.
 Overview page: bv2176_p8dp28_postit_rcv_example.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2176
-```
 
 ## Ballots
 

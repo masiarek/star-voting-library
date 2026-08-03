@@ -9,7 +9,7 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Austen, Camus
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvtg2h) · **[results ↗](https://bettervoting.com/gvtg2h/results)** (election `gvtg2h`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvtg2h) · **[results ↗](https://bettervoting.com/gvtg2h/results)** (election `gvtg2h` · test `BV2203`).
 
 ## Scenario
 
@@ -28,12 +28,6 @@ Full lab notebook: README.md in this folder. Seats below are the LH
 engine's (BV errors until fixed).
 Live on BetterVoting (Test ID BV2203): https://bettervoting.com/gvtg2h
 — results page errors by design of the probe.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2203
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Beige
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gyv2qt) · **[results ↗](https://bettervoting.com/gyv2qt/results)** (election `gyv2qt`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gyv2qt) · **[results ↗](https://bettervoting.com/gyv2qt/results)** (election `gyv2qt` · test `BV2239`).
 
 ## Scenario
 
@@ -50,12 +50,6 @@ then rendered through each voter's ballot style. Per
 'stress-test the tabulator' job (with human-shaped renderings), not a
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit narrow_bands
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2239
-```
 
 ## Ballots
 

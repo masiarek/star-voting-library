@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Edinburgh
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr` · test `BV2253`).
 
 **Official tie-break (lot) order:** Athens > Bergen > Cork > Dublin > Edinburgh — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 Zwicker's profile P3 (Handbook of Computational Social Choice ch. 2, Definition 2.3), 7 voters and 5 candidates, cast SINCERELY. Edinburgh goes 3-1 head-to-head and is the Copeland/Ranked Robin winner with a symmetric Copeland score of +2; Bergen is -2 and the rest are 0, exactly the numbers the book prints. There is NO Condorcet winner (Dublin beats Edinburgh 5-2, so nobody beats everybody). This is the baseline: the two Athens-first voters are about to see their LAST choice, Edinburgh, win — which is precisely the pressure the book uses to define single-voter manipulability. The manipulated counterparts are p3_manip_reversal_rr.yaml and p3_manip_compromise_rr.yaml.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2253
-```
 
 ## Ballots
 

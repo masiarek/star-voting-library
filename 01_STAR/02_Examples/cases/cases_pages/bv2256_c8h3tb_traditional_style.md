@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Ella
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c8h3tb) · **[results ↗](https://bettervoting.com/c8h3tb/results)** (election `c8h3tb`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c8h3tb) · **[results ↗](https://bettervoting.com/c8h3tb/results)** (election `c8h3tb` · test `BV2256`).
 
 ## Scenario
 
@@ -36,12 +36,6 @@ the choose-one ballot it is imitating.
 
 Live results (BV2256): https://bettervoting.com/c8h3tb/results
 Lesson: 01_STAR/01_Learn/voting_styles/traditional.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2256
-```
 
 ## Ballots
 

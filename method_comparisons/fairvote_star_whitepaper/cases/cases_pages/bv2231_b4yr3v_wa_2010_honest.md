@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Berkey
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b4yr3v) · **[results ↗](https://bettervoting.com/b4yr3v/results)** (election `b4yr3v`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b4yr3v) · **[results ↗](https://bettervoting.com/b4yr3v/results)** (election `b4yr3v` · test `BV2231`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ and Rieger too), scoring round Berkey 385, runoff 60-40. RCV-IRV also elects Ber
 The companion wa_2010_strategic shows the burial FairVote describes (Harper voters
 score Harper 5, Rieger 4, Berkey 0) squeezing Berkey out under STAR — conceded — while,
 notably, RCV-IRV on those same strategic ballots STILL elects Berkey. Concept: ../README.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2231
-```
 
 ## Ballots
 

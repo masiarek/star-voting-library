@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ada
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dfw8rj) · **[results ↗](https://bettervoting.com/dfw8rj/results)** (election `dfw8rj`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dfw8rj) · **[results ↗](https://bettervoting.com/dfw8rj/results)** (election `dfw8rj` · test `BV2183`).
 
 ## Scenario
 
@@ -28,12 +28,6 @@ discarded — MORE than the winner's own 15 votes. Ada's "majority" is 15 of 50
 in single-winner IRV, the forced exhaustion vanishes entirely — this is a
 property of the ballot design, not the voters. See forced_vs_voluntary
 exhaustion.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2183
-```
 
 ## Ballots
 

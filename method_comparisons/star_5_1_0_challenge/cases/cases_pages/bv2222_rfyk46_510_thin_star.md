@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ana
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46` · test `BV2222`).
 
 ## Scenario
 
@@ -19,12 +19,6 @@ lesser-evil 1, hated 0. Now Beth's scoring total collapses to 120 (75 ones +
 pole) wins. STAR fails to elect the Condorcet winner, exactly as rb-j argues:
 under coordinated 5-1-0 with a thin moderate base, STAR center-squeezes like
 IRV. Confirmed identical to RCV-IRV on this electorate (s3).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2222
-```
 
 ## Ballots
 

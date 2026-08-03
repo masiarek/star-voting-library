@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Ann
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6xhfp8) · **[results ↗](https://bettervoting.com/6xhfp8/results)** (election `6xhfp8`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6xhfp8) · **[results ↗](https://bettervoting.com/6xhfp8/results)** (election `6xhfp8` · test `BV11`).
 
 ## Scenario
 
@@ -26,12 +26,6 @@ genuine tie, resolved to Ann by lot (CSV column order). Same winner, opposite
 reasoning: BetterVoting says "everyone abstained," LH says "everyone tied." LH's
 treatment matches the view that full, equal support is a cast vote, not an
 abstention — the #884 dispute.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV11
-```
 
 ## Ballots
 

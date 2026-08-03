@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv` · test `BV2163`).
 
 ## Scenario
 
 Race 3 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.
 The same rankings with the 17 truncated ballots (only D ranked; the unranked candidates count as tied-last, Equal Support among themselves): B still wins every head-to-head (A 53–33 among voters with a preference, C 62–24, D 86–17) — the Condorcet winner, elected with full ballots and with truncated ones. Pairwise counting gives these 17 voters no truncation incentive; the elimination order (the IRV race) is what their truncation exploits.
 Live results: https://bettervoting.com/74j6vv/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2163
-```
 
 ## Ballots
 

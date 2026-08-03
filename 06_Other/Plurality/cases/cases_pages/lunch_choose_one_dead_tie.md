@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Sushi
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q2rkfm) · **[results ↗](https://bettervoting.com/q2rkfm/results)** (election `q2rkfm`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q2rkfm) · **[results ↗](https://bettervoting.com/q2rkfm/results)** (election `q2rkfm` · test `BV2257`).
 
 **Official tie-break (lot) order:** Sushi > Tacos > Pizza — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -34,12 +34,6 @@ is the honest state of a tied choose-one election, not an engine disagreement.
 
 Live results (BV2257): https://bettervoting.com/q2rkfm/results
 Lesson: 06_Other/Plurality/README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2257
-```
 
 ## Ballots
 

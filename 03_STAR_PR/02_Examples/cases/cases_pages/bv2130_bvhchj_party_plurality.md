@@ -9,17 +9,11 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Democrat
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bvhchj) · **[results ↗](https://bettervoting.com/bvhchj/results)** (election `bvhchj`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bvhchj) · **[results ↗](https://bettervoting.com/bvhchj/results)** (election `bvhchj` · test `BV2130`).
 
 ## Scenario
 
 The second race of the Presidential Board election (BetterVoting bvhchj) — a choose-one Plurality poll of party alignment, alongside the 7-seat STAR-PR board race in the same election. 102 voters, 8 parties; Democrat leads with 39 first-choices and wins. Companion to bv2130_presidential_board_star_pr.yaml (the STAR-PR board seats). BV also elects Democrat. Live results: https://bettervoting.com/bvhchj/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2130
-```
 
 ## Ballots
 

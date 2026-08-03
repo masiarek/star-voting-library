@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Rock
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mmcmpy) · **[results ↗](https://bettervoting.com/mmcmpy/results)** (election `mmcmpy`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/mmcmpy) · **[results ↗](https://bettervoting.com/mmcmpy/results)** (election `mmcmpy` · test `BV2157`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ methods still finish: STAR elects Rock (271 vs Paper 270 — razor thin), Approv
 Paper. Sincere ballots. The whole point is that 'majority rule' can be intransitive.
 Level 301. Lesson: bv2157_mmcmpy_condorcet_cycle_rps.md
 Live on BetterVoting: https://bettervoting.com/mmcmpy/results (BV-confirmed; STAR is race 1).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2157
-```
 
 ## Ballots
 

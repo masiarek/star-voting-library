@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cleo
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2p33qq) · **[results ↗](https://bettervoting.com/2p33qq/results)** (election `2p33qq`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2p33qq) · **[results ↗](https://bettervoting.com/2p33qq/results)** (election `2p33qq` · test `BV2215`).
 
 ## Scenario
 
@@ -28,12 +28,6 @@ bigger field, Choose-One winners can take office on 10-20%. A third is just the
 most common, most believable version.)
 Live results (BV2215): https://bettervoting.com/2p33qq/results
 Lesson: 07_Concepts/topics/plurality.md · README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2215
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Ada
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6fj2kg) · **[results ↗](https://bettervoting.com/6fj2kg/results)** (election `6fj2kg`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6fj2kg) · **[results ↗](https://bettervoting.com/6fj2kg/results)** (election `6fj2kg` · test `BV2145`).
 
 ## Scenario
 
 Race 2 of 3 in the Felsenthal runoff-paradoxes election, part 1 of 2 (BV2145, bvid 6fj2kg; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 2 — see bv2145_6fj2kg_irv.yaml for the full citation and setup.
 The same 17 ranked ballots counted by Ranked Robin (Copeland): Ada wins both her head-to-heads (Ben 9–8, Cleo 9–8) — 2 pairwise wins, the Condorcet winner, elected directly. What the runoff procedure's elimination order threw away, the round-robin count keeps.
 Live results: https://bettervoting.com/6fj2kg/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2145
-```
 
 ## Ballots
 

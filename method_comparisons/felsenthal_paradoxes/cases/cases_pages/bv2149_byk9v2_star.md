@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Bruno
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/byk9v2) · **[results ↗](https://bettervoting.com/byk9v2/results)** (election `byk9v2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/byk9v2) · **[results ↗](https://bettervoting.com/byk9v2/results)** (election `byk9v2` · test `BV2149`).
 
 ## Scenario
 
 Race 2 of 2 in the Combined stage of the Felsenthal Reinforcement-paradox trio (BV2149, bvid byk9v2; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2149_byk9v2_irv.yaml for the setup.
 The same 32 ballots with ranks mapped 5/3/1. Scores: Alma 88, Bruno 98, Cora 102 — Cora and Bruno advance, and Bruno wins the automatic runoff 18–14. STAR elects Bruno in District I, District II, AND the combined electorate — consistent where the runoff procedure flips to Alma. (Honesty note: STAR is consistent in THIS election, but methods with a runoff stage are not reinforcement-proof in general.)
 Live results: https://bettervoting.com/byk9v2/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2149
-```
 
 ## Ballots
 

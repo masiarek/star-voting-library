@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Moderate
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6w2gq7) · **[results ↗](https://bettervoting.com/6w2gq7/results)** (election `6w2gq7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6w2gq7) · **[results ↗](https://bettervoting.com/6w2gq7/results)** (election `6w2gq7` · test `BV2168`).
 
 ## Scenario
 
@@ -41,12 +41,6 @@ cast, electorate shifts left — the "strong liberal" becomes the Condorcet
 winner).
 Full claim-by-claim reading of the article:
 07_Concepts/topics/condorcet/fairvote_condorcet_claim_check.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2168
-```
 
 ## Ballots
 

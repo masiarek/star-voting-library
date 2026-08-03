@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Alba
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/93gjx6) · **[results ↗](https://bettervoting.com/93gjx6/results)** (election `93gjx6`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/93gjx6) · **[results ↗](https://bettervoting.com/93gjx6/results)** (election `93gjx6` · test `BV2198`).
 
 ## Scenario
 
@@ -31,12 +31,6 @@ ex11_recruit_a_spoiler.md. Ballots and cast are this repo's own.
 Live on BetterVoting (Test ID BV2198): https://bettervoting.com/93gjx6/results
 — four races: Choose-One falls for the clone (Brett); RCV-IRV, STAR,
 and Ranked Robin all hold (Alba).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2198
-```
 
 ## Ballots
 

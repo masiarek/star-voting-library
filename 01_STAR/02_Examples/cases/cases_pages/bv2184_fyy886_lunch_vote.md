@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Pizza
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fyy886) · **[results ↗](https://bettervoting.com/fyy886/results)** (election `fyy886`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fyy886) · **[results ↗](https://bettervoting.com/fyy886/results)** (election `fyy886` · test `BV2184`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ the team is stuck with something they rated 0. STAR reads the whole ballot:
 Pizza tops the Scoring Round (17) and wins the runoff 3-2. The compromise
 everyone can live with wins, and no one had to vote strategically. (Choose-One
 and RCV-IRV both elect Sushi here; STAR elects Pizza.)
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2184
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** A1
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9pr3wr) · **[results ↗](https://bettervoting.com/9pr3wr/results)** (election `9pr3wr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9pr3wr) · **[results ↗](https://bettervoting.com/9pr3wr/results)** (election `9pr3wr` · test `BV2143`).
 
 **Official tie-break (lot) order:** A1 > A2 > B > C > D > E > F — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 The electowiki clone-independence example, part 2 (teaming), BV-backed. Same election as BV2142 but the A-faction runs clones A1, A2. The two engines reach OPPOSITE winners from identical ballots: A1 and C tie at 5 wins. LH breaks it by total margin — A1 +134 beats C +104 — so LH elects A1, and the teaming attack SUCCEEDS (this file pins lot but margin already decides). BetterVoting breaks the 2-way tie by head-to-head instead, and C beats A1 21-12, so BV elects C (tieBreakType "none", log "C preferred over A1 in runoff") — the teaming attack FAILS on BV. Same ballots, different tiebreak, different winner: the clone failure is a property of the margin rule, not of Ranked Robin as such. LH-only clean pair: clone_teaming_02_post.yaml. Lesson: 05_Ranked_Robin/01_Learn/rr_clone_independence.md Live results: https://bettervoting.com/9pr3wr/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2143
-```
 
 ## Ballots
 

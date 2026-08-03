@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Blue
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8kg698) · **[results ↗](https://bettervoting.com/8kg698/results)** (election `8kg698`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8kg698) · **[results ↗](https://bettervoting.com/8kg698/results)** (election `8kg698` · test `BV2178`).
 
 **Official tie-break (lot) order:** Purple > Green > Blue > Pink — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -31,12 +31,6 @@ postit_video_fair_and_balanced.md.
 Live results: https://bettervoting.com/8kg698/results
 Companion races: bv2178_8kg698_star.yaml, bv2178_8kg698_irv.yaml.
 Overview page: bv2178_8kg698_switch_made_real.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2178
-```
 
 ## Ballots
 

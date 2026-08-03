@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Blair
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh` · test `BV2258`).
 
 ## Scenario
 
@@ -32,12 +32,6 @@ pairwise; part (b) is ex15_score_profile.yaml.
 Exercise page: ../ex15_read_the_ballot.md
 Live results: https://bettervoting.com/d4v2dh/results (BV2258, race 1 of 2 —
 BetterVoting's own Approval count agrees: Blair.)
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2258
-```
 
 ## Ballots
 

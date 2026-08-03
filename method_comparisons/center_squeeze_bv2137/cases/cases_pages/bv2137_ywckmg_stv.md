@@ -9,17 +9,11 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **1 seat** · **Expected winner:** Carter
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywckmg) · **[results ↗](https://bettervoting.com/ywckmg/results)** (election `ywckmg`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywckmg) · **[results ↗](https://bettervoting.com/ywckmg/results)** (election `ywckmg` · test `BV2137`).
 
 ## Scenario
 
 One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confirmed). 100 voters, three candidates, ONE ranked electorate tabulated four ways. Anderson is the Condorcet winner (beats Reagan 55–45, Carter 65–35) but holds the fewest first-choices (20). Single-seat STV is IRV: Anderson eliminated first, Carter wins. STV → Carter.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2137
-```
 
 ## Ballots
 

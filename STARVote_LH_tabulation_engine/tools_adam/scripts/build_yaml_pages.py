@@ -316,10 +316,14 @@ def render(yaml_path, siblings):
     if not bv_id and isinstance(data, dict):
         m = re.match(r"^bv\w+_([a-z0-9]{6})_", os.path.basename(yaml_path))
         bv_id = m.group(1) if m else None
+    # The test id rides along in the same parenthetical: it identifies this case
+    # in the BV tracker, and a section of its own for one machine id was thin.
+    bv_test = data.get("bv_test_id") if isinstance(data, dict) else None
     if bv_id:
+        ids = f"election `{bv_id}`" + (f" · test `{bv_test}`" if bv_test else "")
         L.append("")
         L.append(f"**▶ Live on BetterVoting:** [vote](https://bettervoting.com/{bv_id}) · "
-                 f"**[results ↗](https://bettervoting.com/{bv_id}/results)** (election `{bv_id}`).")
+                 f"**[results ↗](https://bettervoting.com/{bv_id}/results)** ({ids}).")
     if lot:
         L.append("")
         L.append(f"**Official tie-break (lot) order:** {' > '.join(str(c) for c in lot)} "
@@ -337,8 +341,10 @@ def render(yaml_path, siblings):
     # id each have their own bolded line. Re-printing those as YAML was pure
     # restatement — on 43% of the cases it was the *entire* block — and the echo
     # is what made the page read as two halves rather than one file. What's left
-    # here is the part no sentence above covers (bv_test_id, blocs,
-    # eligible_voters, quorum); the raw `.yaml` is one click away in the byline.
+    # here is the part no sentence above covers (blocs, eligible_voters, quorum,
+    # and a test id whose BV line never fired); the raw `.yaml` is one click away
+    # in the byline. Each key is dropped only when the line that would carry it
+    # actually rendered, so a case that lacks the BV line keeps its ids here.
     said_in_prose = {"voting_method", "num_winners"}
     if isinstance(ew, list) and ew:      # the metadata line is showing this list
         said_in_prose.add("expected_winners")
@@ -346,6 +352,8 @@ def render(yaml_path, siblings):
         said_in_prose.add("lot_numbers")
     if bv_id:
         said_in_prose.add("bv_election_id")
+        if bv_test:
+            said_in_prose.add("bv_test_id")
     params = {}
     if isinstance(data, dict):
         for key in ("voting_method", "num_winners", "expected_winners",

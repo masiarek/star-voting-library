@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vb3xv2) · **[results ↗](https://bettervoting.com/vb3xv2/results)** (election `vb3xv2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vb3xv2) · **[results ↗](https://bettervoting.com/vb3xv2/results)** (election `vb3xv2` · test `BV830`).
 
 ## Scenario
 
@@ -26,12 +26,6 @@ LH and BetterVoting agree deterministically. The lesson: within a Condorcet tie
 the ordinal (head-to-head) method is silent, and STAR's score intensity is the
 stronger tiebreak. Live results: https://bettervoting.com/vb3xv2/results
 Lesson: bv830_vb3xv2_no_condorcet_tie_score.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV830
-```
 
 ## Ballots
 

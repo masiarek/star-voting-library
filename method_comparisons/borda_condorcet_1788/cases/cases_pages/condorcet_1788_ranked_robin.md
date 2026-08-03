@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Peter
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4` · test `BV2250`).
 
 ## Scenario
 
@@ -31,12 +31,6 @@ Ranked Robin reads only the ORDER on each ballot, never the rank numbers, so it
 cannot be led astray by positional points the way Borda is. That distinction —
 same ranked ballot, different tabulation — is the whole reason "RCV" names a
 ballot and not a count.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2250
-```
 
 ## Ballots
 

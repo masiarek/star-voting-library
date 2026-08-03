@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** D
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gr72hd) · **[results ↗](https://bettervoting.com/gr72hd/results)** (election `gr72hd`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gr72hd) · **[results ↗](https://bettervoting.com/gr72hd/results)** (election `gr72hd` · test `BV2158`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ Source: https://www.rangevoting.org/rangeVirv.html (section 12).
 Live results: https://bettervoting.com/gr72hd/results (all races LH<->BV confirmed).
 Lesson: bv2158_gr72hd_ossipoff_centrist_irv.md
 Live on BetterVoting: https://bettervoting.com/gr72hd/results (BV-confirmed; STAR is race 1).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2158
-```
 
 ## Ballots
 

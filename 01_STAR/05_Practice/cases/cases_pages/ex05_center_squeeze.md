@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Brook
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6bry7c) · **[results ↗](https://bettervoting.com/6bry7c/results)** (election `6bry7c`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6bry7c) · **[results ↗](https://bettervoting.com/6bry7c/results)** (election `6bry7c` · test `BV2192`).
 
 ## Scenario
 
@@ -24,12 +24,6 @@ ballots and cast are this repo's own. Exercise: ex05_center_squeeze.md.
 Live on BetterVoting (Test ID BV2192): https://bettervoting.com/6bry7c/results
 — three races on the same opinions: STAR (Brook), RCV-IRV (Avi — the
 squeeze, live), Ranked Robin (Brook).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2192
-```
 
 ## Ballots
 

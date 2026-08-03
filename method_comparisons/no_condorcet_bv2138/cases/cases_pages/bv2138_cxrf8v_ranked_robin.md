@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Abby
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v` · test `BV2138`).
 
 **Official tie-break (lot) order:** Dave > Cora > Abby > Brad > Erin — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Copeland ties Abby and Brad. LH breaks the tie by total margin → Abby; BetterVoting breaks it head-to-head (Brad beats Abby 463–458) → Brad. A documented LH-vs-BV tiebreak DIVERGENCE: expected_winners is LH's Abby; BV's live result is Brad.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2138
-```
 
 ## Ballots
 

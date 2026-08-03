@@ -9,19 +9,13 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Bella
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr` · test `BV2153`).
 
 ## Scenario
 
 Race 1 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A3, Example 7.
 100 voters, rankings 51×(Amos>Bella>Chad), 48×(Bella>Chad>Amos), 1×(Chad>Bella>Amos). Amos is ranked FIRST by an absolute majority (51 of 100) and is the Condorcet winner. But when every voter approves their top TWO preferences, the approval totals are Amos 51, Bella 100, Chad 49 — APPROVAL ELECTS BELLA, approved by literally everyone, over a candidate an absolute majority ranked first. Felsenthal's Absolute Majority paradox. The companion ranked races (IRV, Ranked Robin) elect Amos.
 Live results: https://bettervoting.com/pcttmr/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2153
-```
 
 ## Ballots
 

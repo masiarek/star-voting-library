@@ -9,19 +9,13 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv` · test `BV2163`).
 
 ## Scenario
 
 Race 2 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6, Example 16, due to Nurmi (1999: 63).
 Identical to BV2162 except one datum, ceteris paribus: the 17 voters whose full ordering is D>C>B>A TRUNCATE and rank only D. D is eliminated first exactly as before — but the truncated ballots EXHAUST instead of transferring to C, so C (24) is eliminated instead of B, C's transfers flow to B, and B wins. The truncators prefer B to A (the sincere-IRV winner of BV2162), so ranking FEWER candidates got them a BETTER result: the Truncation paradox, live. It also accidentally repairs IRV's Condorcet failure — B, the Condorcet winner, now wins.
 Live results: https://bettervoting.com/74j6vv/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2163
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Comet
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (election `36f4v2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (election `36f4v2` · test `BV2219`).
 
 ## Scenario
 
@@ -18,12 +18,6 @@ elects Comet — highest score total (14) and winner of the automatic runoff
 over Echo, 2–1. This is the "before" half of the Equally Weighted Vote
 demonstration: its twin adds two voters with exact-opposite ballots and shows
 the winner never moves. See the lesson: equal_and_opposite/README.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2219
-```
 
 ## Ballots
 

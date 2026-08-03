@@ -9,7 +9,7 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Austen, Camus
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) · **[results ↗](https://bettervoting.com/tk776t/results)** (election `tk776t`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tk776t) · **[results ↗](https://bettervoting.com/tk776t/results)** (election `tk776t` · test `BV2201`).
 
 ## Scenario
 
@@ -37,12 +37,6 @@ bisection (BV2203-2205) and ready-to-file issue:
 06_Other/STV/bv_stv_sole_survivor_crash/. The seats above are the LH
 engine's; BV STV races whose endgame leaves a hopeful standing
 (ywckmg, kcf8vf, 39py93) compute fine.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2201
-```
 
 ## Ballots
 

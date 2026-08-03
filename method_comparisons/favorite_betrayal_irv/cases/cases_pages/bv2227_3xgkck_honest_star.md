@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Center
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck` · test `BV2227`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ RCV-IRV = Right. That is the whole lesson: under RCV-IRV the Left voters had to 
 their favorite second to get a good outcome (fb_irv_betray); under STAR and Ranked
 Robin they simply vote their honest preferences and the compromise wins. Honesty is
 the best ballot. Concept: favorite_betrayal_voting_301.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2227
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **3 seats** · **Expected winners:** Ada, Ben, Uma
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv` · test `BV2135`).
 
 **Official tie-break (lot) order:** Ada > Ben > Cal > Uma > Val > Wren — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -27,12 +27,6 @@ Uma (bullet — using just one of its two votes). The top three are Ada, Ben (6)
 and Uma (4) — a clean 2-1 split, no tie. Limited Voting sits between Block Voting
 (majority sweeps 3-0) and SNTV (minority tops the poll): capping votes-per-voter
 below the seat count is what opens space for a concentrated minority.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2135
-```
 
 ## Ballots
 

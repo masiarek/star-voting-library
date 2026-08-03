@@ -9,17 +9,11 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Beryl
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7q6by8) · **[results ↗](https://bettervoting.com/7q6by8/results)** (election `7q6by8`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7q6by8) · **[results ↗](https://bettervoting.com/7q6by8/results)** (election `7q6by8` · test `BV2208`).
 
 ## Scenario
 
 The sincere half of the repo's worked BURIAL pair — Ranked Robin's signature strategic wart, shown honestly (burial is to Condorcet methods what center squeeze is to IRV). A design club of 42 ranks four gemstones. Beryl is the Condorcet winner: 27-15 over Amber, 33-9 over Coral, 27-15 over Diamond — a clean 3-0 record, no cycle, no tie. Amber runs second at 2-1. Look at WHO builds Beryl's three wins: her 33-9 over Coral and 27-15 over Diamond both contain the 15 Amber-first ballots — support those voters can withdraw — while her 27-15 over Amber contains none of them (they already rank Amber first). Part 2 (bv2209_fxhw6g_burial_pays.yaml) is exactly that withdrawal: rank Beryl LAST, flip the two wins she borrowed, keep the one she owns. Triple-checked: LH native, pref_voting Copeland (unique winner), BetterVoting live (Beryl, no tiebreak). (The live BV description's slim-vs-blowout aside mischaracterizes which wins flip — this file and the case README are the corrected analysis.) Live results: https://bettervoting.com/7q6by8/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2208
-```
 
 ## Ballots
 

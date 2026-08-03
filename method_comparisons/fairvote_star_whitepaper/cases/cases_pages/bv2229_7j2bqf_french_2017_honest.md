@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Macron
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7j2bqf) · **[results ↗](https://bettervoting.com/7j2bqf/results)** (election `7j2bqf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7j2bqf) · **[results ↗](https://bettervoting.com/7j2bqf/results)** (election `7j2bqf` · test `BV2229`).
 
 ## Scenario
 
@@ -25,12 +25,6 @@ burial (everyone scores Macron 0 and inflates the other wings) knocking Macron o
 which STAR concedes is possible, but which requires implausible coordinated dishonesty
 and is not STAR's sincere behavior. Simplified 100-voter model of the ~20%-each field.
 Concept: ../README.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2229
-```
 
 ## Ballots
 

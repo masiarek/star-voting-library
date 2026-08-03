@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Tom Steyer (D)
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvdy42) · **[results ↗](https://bettervoting.com/gvdy42/results)** (election `gvdy42`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvdy42) · **[results ↗](https://bettervoting.com/gvdy42/results)** (election `gvdy42` · test `BV2181`).
 
 ## Scenario
 
@@ -26,12 +26,6 @@ reporting bug — BV's "Distribution of Equal Support" graph showed only 5 of th
 ballots; fixed by coercing skipped scores to 0 in PR #1431. Winner: Tom Steyer (D).
 Live results: https://bettervoting.com/gvdy42/results
 Lesson: Runoff_08_ca_governor_reversal_gvdy42.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2181
-```
 
 ## Ballots
 

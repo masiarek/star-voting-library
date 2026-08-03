@@ -9,19 +9,13 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** C
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q3h4fk) · **[results ↗](https://bettervoting.com/q3h4fk/results)** (election `q3h4fk`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q3h4fk) · **[results ↗](https://bettervoting.com/q3h4fk/results)** (election `q3h4fk` · test `BV2161`).
 
 ## Scenario
 
 Race 2 of 2 in the Borda-SCC election (BV2161, bvid q3h4fk; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A5, Example 15 — see bv2161_q3h4fk_star.yaml for the setup and the profile note (the paper's printed C>A>B bloc is arithmetic-corrected to C>B>A).
 The same 7 voters under Choose-One: first choices A 2, B 2, C 3 → C. All three live counts (STAR, Plurality) and Borda's paper count pick C; the paradox on the case page is Borda's SCC instability — B's exit flips Borda (and, honestly, any two-candidate count, since A beats C 4–3) to A.
 Live results: https://bettervoting.com/q3h4fk/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2161
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Nashville
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cphxpt) · **[results ↗](https://bettervoting.com/cphxpt/results)** (election `cphxpt`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/cphxpt) · **[results ↗](https://bettervoting.com/cphxpt/results)** (election `cphxpt` · test `BV2155`).
 
 ## Scenario
 
@@ -21,12 +21,6 @@ geographic-distance spatial model. Level 201. Fairness note in the lesson.
 Live results: https://bettervoting.com/cphxpt/results (all races LH<->BV confirmed).
 Lesson: bv2155_cphxpt_tennessee_four_ways.md
 Live on BetterVoting: https://bettervoting.com/cphxpt/results (BV-confirmed; STAR is race 1).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2155
-```
 
 ## Ballots
 

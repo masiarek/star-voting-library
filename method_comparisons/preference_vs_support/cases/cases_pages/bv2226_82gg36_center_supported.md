@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Blair
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/82gg36) · **[results ↗](https://bettervoting.com/82gg36/results)** (election `82gg36`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/82gg36) · **[results ↗](https://bettervoting.com/82gg36/results)** (election `82gg36` · test `BV2226`).
 
 ## Scenario
 
@@ -24,12 +24,6 @@ finds him the Condorcet winner (-> Blair). But STAR reads the support — Blair'
 Blair (supported). Two elections, identical ranks, and only the score-reading method
 can tell that in one Blair is merely tolerated and in the other he is genuinely backed.
 Live results: https://bettervoting.com/82gg36/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2226
-```
 
 ## Ballots
 

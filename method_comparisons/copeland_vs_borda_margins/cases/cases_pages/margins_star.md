@@ -9,17 +9,11 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Almond
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq` · test `BV2251`).
 
 ## Scenario
 
 The same twelve gelato voters, with each ranking converted to scores on an even 5/3/0 spacing so a SCORE method can run on a RANKED profile. Under a uniform spacing the STAR scoring round IS a Borda count, so round one reproduces Borda's answer — Berry first — and then the automatic runoff runs the head-to-head Borda never runs: Almond beats Berry 7-5, and Almond wins. Honest caveat, stated on the page: unlike Condorcet's 1788 profile, this outcome is NOT robust to the spacing. 5/3/0, 5/4/0, 5/2/0 and 4/2/0 all give Almond, but a polarized 5/1/0 makes Cocoa a finalist instead of Berry and elects Cocoa. With no Condorcet winner to anchor it (the pairwise contests cycle), the rank-to-score mapping is doing real work — which is exactly the objection the Borda page raises against inventing intensities.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2251
-```
 
 ## Ballots
 

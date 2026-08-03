@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy` · test `BV2159`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ Source: https://www.rangevoting.org/rangeVirv.html (section 12); Brams 1982.
 Live results: https://bettervoting.com/f4cjpy/results (all races LH<->BV confirmed).
 Lesson: bv2159_f4cjpy_brams_irv_pathologies.md
 Live on BetterVoting: https://bettervoting.com/f4cjpy/results (BV-confirmed; STAR is race 1).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2159
-```
 
 ## Ballots
 

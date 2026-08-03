@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Arlo
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbqq8t) · **[results ↗](https://bettervoting.com/xbqq8t/results)** (election `xbqq8t` · test `BV2164`).
 
 ## Scenario
 
 Race 1 of 3 in the Coombs Condorcet-failure election (BV2164, bvid xbqq8t; BV-confirmed). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7 (Coombs' procedure: eliminate whoever is ranked LAST by the most voters), Example 17.
 33 voters, four candidates: 11×(Arlo>Bree>Cole>Dana), 12×(Bree>Cole>Dana>Arlo), 2×(Bree>Arlo>Dana>Cole), 4×(Cole>Arlo>Dana>Bree), 4×(Dana>Arlo>Bree>Cole). Arlo is the Condorcet winner (beats Bree 19–14, Cole 17–16, Dana 17–16). Coombs — worked on the case page; no tabulator on BetterVoting or in the LH engine — deletes ARLO first (ranked last by 12, the most) and elects Bree. This STAR race (ranks mapped 5/4/2/1): Arlo 107, Bree 126, Cole 96, Dana 67 — Bree tops the scoring round, but Arlo wins the automatic runoff 19–14. No IRV race: its first elimination is a random Cole/Dana 4–4 tie on BV.
 Live results: https://bettervoting.com/xbqq8t/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2164
-```
 
 ## Ballots
 

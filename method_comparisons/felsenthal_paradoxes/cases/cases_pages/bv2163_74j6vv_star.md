@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/74j6vv) · **[results ↗](https://bettervoting.com/74j6vv/results)** (election `74j6vv` · test `BV2163`).
 
 ## Scenario
 
 Race 1 of 3 in the RCV-IRV truncation pair, part 2 of 2 (BV2163, bvid 74j6vv; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A6, Example 16, due to Nurmi (1999: 63) — see bv2163_74j6vv_irv.yaml for the setup.
 The same electorate with the 17 truncated ballots scoring only D (everything else 0): A 329, B 373, C 244, D 171 — B still wins the automatic runoff. STAR elects the Condorcet winner B with full ballots (BV2162: 346/407/312/171) and with truncated ones: no truncation incentive on this profile, while the IRV race's winner flips A → B on the same change.
 Live results: https://bettervoting.com/74j6vv/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2163
-```
 
 ## Ballots
 

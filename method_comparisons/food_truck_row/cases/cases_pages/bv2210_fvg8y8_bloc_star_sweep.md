@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Arepa, Bao
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8` · test `BV2210`).
 
 ## Scenario
 
@@ -21,7 +21,6 @@ One 100-voter electorate, two food-truck spots, five counts — this file is the
 blocs:
   Savory: [Arepa, Bao, Churro]
   Sweet: [Donut, Eclair]
-bv_test_id: BV2210
 ```
 
 ## Ballots

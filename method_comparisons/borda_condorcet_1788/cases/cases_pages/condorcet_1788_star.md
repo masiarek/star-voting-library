@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Peter
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4` · test `BV2250`).
 
 ## Scenario
 
@@ -39,12 +39,6 @@ it reproduces Borda's answer and puts Paul first with 37 points. Then the
 automatic runoff runs exactly the direct majority contest Condorcet demanded,
 and Peter wins it 6-5. STAR is Borda's scoring step followed by Condorcet's
 check, and on Condorcet's own counterexample it returns Condorcet's answer.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2250
-```
 
 ## Ballots
 

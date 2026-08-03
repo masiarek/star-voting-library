@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Casey
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h93tm4) · **[results ↗](https://bettervoting.com/h93tm4/results)** (election `h93tm4`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h93tm4) · **[results ↗](https://bettervoting.com/h93tm4/results)** (election `h93tm4` · test `BV2171`).
 
 ## Scenario
 
@@ -19,12 +19,6 @@ Seven methods, one electorate. Whole-ballot methods — STAR, STAR-PR (1 seat), 
 
 Live results: https://bettervoting.com/h93tm4/results
 Overview: bv2171_h93tm4_all_methods.md · Full 100-voter version: bv2172_bkwfjr_star.yaml (BV2172) · Original 4-method cut: ../symmetric_centrist_bv2170/
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2171
-```
 
 ## Ballots
 

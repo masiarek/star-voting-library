@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Someone I Like, Santa Claus, The Lesser Evil
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yhxy7q) · **[results ↗](https://bettervoting.com/yhxy7q/results)** (election `yhxy7q`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yhxy7q) · **[results ↗](https://bettervoting.com/yhxy7q/results)** (election `yhxy7q` · test `BV130`).
 
 ## Scenario
 
@@ -25,12 +25,6 @@ Winners (both engines): Someone I Like, Santa Claus, The Lesser Evil.
 
 NOTE: do not confuse this with BV130-r2 (election 9ff9jk), a separate 4-ballot
 retest built around a dead-rung lot tie — see bv130r2_dead_rung_bloc.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV130
-```
 
 ## Ballots
 

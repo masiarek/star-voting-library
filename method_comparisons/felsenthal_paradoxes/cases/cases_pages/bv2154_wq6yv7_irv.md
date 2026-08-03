@@ -9,19 +9,13 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Clara
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7` · test `BV2154`).
 
 ## Scenario
 
 Race 2 of 3 in the three-winners election (BV2154, bvid wq6yv7; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 8 — see bv2154_wq6yv7_approval.yaml for the setup.
 The same 15 voters' full rankings under instant runoff: first choices April 6, Bruce 4, Clara 5, so BRUCE — the Condorcet winner — is deleted first, and Clara beats April 9–6. IRV elects Clara: neither the approval race's April (the absolute loser) nor the pairwise winner Bruce. One electorate, three winners across the three races.
 Live results: https://bettervoting.com/wq6yv7/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2154
-```
 
 ## Ballots
 

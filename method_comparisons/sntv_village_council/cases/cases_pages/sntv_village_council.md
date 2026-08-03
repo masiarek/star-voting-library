@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../07_Concepts) · **2 seats** · **Expected winners:** Priya, Nora
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y3tvxm) · **[results ↗](https://bettervoting.com/y3tvxm/results)** (election `y3tvxm`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/y3tvxm) · **[results ↗](https://bettervoting.com/y3tvxm/results)** (election `y3tvxm` · test `BV2136`).
 
 **Official tie-break (lot) order:** Nora > Omar > Priya — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -29,12 +29,6 @@ districts (Japan, Taiwan) before STV.
 Reproduced on BetterVoting as multi-winner Plurality (BV2136) — BV elects the same
 two. Companion: the full Block / Limited / SNTV family in
 method_comparisons/multi_member_plurality.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2136
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Amos
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pcttmr) · **[results ↗](https://bettervoting.com/pcttmr/results)** (election `pcttmr` · test `BV2153`).
 
 ## Scenario
 
 Race 3 of 3 in the Absolute-Majority-paradox election (BV2153, bvid pcttmr; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A3, Example 7 — see bv2153_pcttmr_approval.yaml for the setup.
 The same 100 voters' full rankings counted by Ranked Robin (Copeland): Amos wins both head-to-heads (Bella 51–49, Chad 51–49) — the Condorcet winner, elected. A majority's first choice survives any pairwise count; it is the approval cutoff, not the ballots, that loses him.
 Live results: https://bettervoting.com/pcttmr/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2153
-```
 
 ## Ballots
 

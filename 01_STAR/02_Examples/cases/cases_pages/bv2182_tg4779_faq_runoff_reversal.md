@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Almond
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (election `tg4779`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (election `tg4779` · test `BV2182`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ clean Runoff Reversal that shows why the second step exists. One voter scores
 both finalists 5 (Equal Support) — counted, but expressing no preference between
 the two, so it lands in neither finalist's runoff column.
 Live results: https://bettervoting.com/tg4779/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2182
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Ash
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2` · test `BV2200`).
 
 ## Scenario
 
@@ -22,12 +22,6 @@ question the ballot cannot ask precisely — where the approval line
 sits decides the election. Exercise: ex13_draw_the_line.md.
 Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
 — this is the "approve 3 and up" race; BV agrees: Ash 7.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2200
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Beth
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/97hbpw) · **[results ↗](https://bettervoting.com/97hbpw/results)** (election `97hbpw`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/97hbpw) · **[results ↗](https://bettervoting.com/97hbpw/results)** (election `97hbpw` · test `BV2151`).
 
 ## Scenario
 
 Race 3 of 3 in the No-Show-paradox pair, part 2 of 2 (BV2151, bvid 97hbpw; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 4 — see bv2151_97hbpw_irv.yaml for the setup.
 The same 9 voters with ranks mapped 5/3/1. Scores: Andy 19, Beth 31, Carl 31 — Beth and Carl both clear Andy and advance (no advancement tie), and Beth wins the automatic runoff 5–4. STAR elects Beth with 11 voters (BV2150: 29/37/33, runoff 7–4) and with 9: same winner either way, so the Andy voters' participation never backfired under STAR in this pair.
 Live results: https://bettervoting.com/97hbpw/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2151
-```
 
 ## Ballots
 

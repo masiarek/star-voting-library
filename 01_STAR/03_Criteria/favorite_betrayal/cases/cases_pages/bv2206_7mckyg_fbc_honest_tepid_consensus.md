@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Clover
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7mckyg) · **[results ↗](https://bettervoting.com/7mckyg/results)** (election `7mckyg`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7mckyg) · **[results ↗](https://bettervoting.com/7mckyg/results)** (election `7mckyg` · test `BV2206`).
 
 ## Scenario
 
@@ -32,12 +32,6 @@ and here it is not enough).
 Live on BetterVoting (Test ID BV2206): https://bettervoting.com/7mckyg
 Live results: https://bettervoting.com/7mckyg/results (BV agrees:
 Clover, no tiebreaks).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2206
-```
 
 ## Ballots
 

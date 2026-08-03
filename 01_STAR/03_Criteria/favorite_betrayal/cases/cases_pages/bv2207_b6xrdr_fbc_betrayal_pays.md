@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Bluebell
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b6xrdr) · **[results ↗](https://bettervoting.com/b6xrdr/results)** (election `b6xrdr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/b6xrdr) · **[results ↗](https://bettervoting.com/b6xrdr/results)** (election `b6xrdr` · test `BV2207`).
 
 ## Scenario
 
@@ -35,12 +35,6 @@ favorite_betrayal_voting_301.md and 06_Other/simulations/).
 Live on BetterVoting (Test ID BV2207): https://bettervoting.com/b6xrdr
 Live results: https://bettervoting.com/b6xrdr/results (BV agrees:
 Bluebell, no tiebreaks).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2207
-```
 
 ## Ballots
 

@@ -9,7 +9,7 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Boris
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2gvwr9) · **[results ↗](https://bettervoting.com/2gvwr9/results)** (election `2gvwr9`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2gvwr9) · **[results ↗](https://bettervoting.com/2gvwr9/results)** (election `2gvwr9` · test `BV2262`).
 
 **Official tie-break (lot) order:** Boris > Felix > Greta > Dmitri > Carmen > Alice > Ivan > Elena > Hugo — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -18,12 +18,6 @@ search:
 The scale check on BV2261. Nine club members sit around a table and all nine are candidates for chair; each member ranks themselves first and then continues clockwise, so the nine ballots are nine rotations of one order. That construction makes the deadlock exact rather than fiddled: for two candidates at cyclic distance d, exactly 9-d voters prefer the earlier one, so every member beats the four who follow them and loses to the four who precede them. All nine finish 4-4-0 on a Copeland score of 4, and every one of them nets a margin of exactly zero (+7, +5, +3, +1 against -7, -5, -3, -1). It is a nine-way Condorcet cycle — no drawn matchup anywhere, and nothing in the ballots that separates anybody.
 So every deterministic rung ties, and BetterVoting's head-to-head rung cannot even apply (it is 2-way only, and nine are tied). Both engines reach their rung of last resort, and the question is what survives in the export. Answer: the whole nine-deep order. BV recorded tieBreakType "random", a nine-long `perm`, tieBreakOrder 0..8 on the nine tied candidates, and `other[]` listing the eight losers in that same order. Its winner, Boris, is sixth in the candidate list — this shuffle is not a no-op.
 This file pins lot_numbers to that recorded perm, so LH's lot rung replays BV's draw and elects Boris too. Independently, tools_adam/bv_replay_tiebreak.py recomputes the same perm from (9 ballots + raceId) alone — no ballot content — which is the sharp version of the point: BV's order is RECORDED and reproducible, but never DERIVABLE from how anyone voted. Companion at three candidates: bv2261_y2fbpc_tiebreak_recorded_{draws,cycle}.yaml. Lesson: 05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2262_2gvwr9_nine_way_dead_heat.md Live results: https://bettervoting.com/2gvwr9/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2262
-```
 
 ## Ballots
 

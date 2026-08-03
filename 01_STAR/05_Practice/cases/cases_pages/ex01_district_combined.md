@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Carmen
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/923q3d) · **[results ↗](https://bettervoting.com/923q3d/results)** (election `923q3d`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/923q3d) · **[results ↗](https://bettervoting.com/923q3d/results)** (election `923q3d` · test `BV2190`).
 
 ## Scenario
 
@@ -27,12 +27,6 @@ the Math of Voting Methods" (2022), ch. 5.
 Live on BetterVoting (Test ID BV2190): https://bettervoting.com/923q3d/results
 — the election carries a second, Ranked Robin race on the same opinions
 (equal ranks allowed): Elena, the citywide Condorcet winner, wins it 4-0.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2190
-```
 
 ## Ballots
 

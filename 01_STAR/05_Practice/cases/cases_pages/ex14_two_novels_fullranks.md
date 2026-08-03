@@ -9,7 +9,7 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Austen, Camus
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bj8dfc) · **[results ↗](https://bettervoting.com/bj8dfc/results)** (election `bj8dfc`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bj8dfc) · **[results ↗](https://bettervoting.com/bj8dfc/results)** (election `bj8dfc` · test `BV2202`).
 
 ## Scenario
 
@@ -33,12 +33,6 @@ and ready-to-file issue: 06_Other/STV/bv_stv_sole_survivor_crash/;
 narrative: ex14_transfer_machine.md.
 Live on BetterVoting (Test ID BV2202): https://bettervoting.com/bj8dfc
 — the vote page works; /results currently errors (the bug above).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2202
-```
 
 ## Ballots
 

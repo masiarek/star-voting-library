@@ -9,17 +9,11 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Dublin
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr` · test `BV2253`).
 
 ## Scenario
 
 The same seven sincere voters under STAR, with each ranking converted to scores on a 5/4/3/2/0 spacing (five candidates will not fit 0-5 evenly, so some spacing must be chosen; this outcome is robust — 5/4/3/1/0 and 5/3/2/1/0 also elect Dublin). Scoring round: Dublin 23, Edinburgh 22, Cork 20, Bergen 17, Athens 16. Finalists Dublin and Edinburgh; the runoff goes to Dublin 5-2, because Dublin beats Edinburgh head-to-head. So STAR and plurality agree on Dublin here while Copeland/Ranked Robin and Borda both say Edinburgh. The manipulated counterpart is p3_manip_star.yaml — STAR is manipulable on this profile too.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2253
-```
 
 ## Ballots
 

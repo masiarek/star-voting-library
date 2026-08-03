@@ -9,7 +9,7 @@ search:
 
 **Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Asa, Cleo
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr` · test `BV2199`).
 
 ## Scenario
 
@@ -30,12 +30,6 @@ race "Tied!" — a systemic quirk of BV's STAR_PR serializer, which
 echoes the elected pair as "tied" with no round detail on every
 STAR_PR election, e.g. the older jwxr3j; the underlying scores here
 are a clean 30, then 20/16/4.)
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2199
-```
 
 ## Ballots
 

@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Bruno
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h87k6v) · **[results ↗](https://bettervoting.com/h87k6v/results)** (election `h87k6v`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/h87k6v) · **[results ↗](https://bettervoting.com/h87k6v/results)** (election `h87k6v` · test `BV2148`).
 
 ## Scenario
 
 Race 2 of 2 in District II of the Felsenthal Reinforcement-paradox trio (BV2148, bvid h87k6v; BV-confirmed). Source: Dan S. Felsenthal (2010), Appendix A2, Example 3 — see bv2148_h87k6v_irv.yaml for the setup.
 The same 15 ballots with ranks mapped 5/3/1. Scores: Alma 41, Bruno 47, Cora 47 — Bruno and Cora advance (both clear of Alma; no advancement tie), and Bruno wins the automatic runoff 8–7. Same winner as the runoff procedure; the reinforcement contrast appears at the combined stage (BV2149).
 Live results: https://bettervoting.com/h87k6v/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2148
-```
 
 ## Ballots
 

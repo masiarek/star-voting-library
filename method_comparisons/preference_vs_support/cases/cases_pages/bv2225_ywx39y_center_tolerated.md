@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Alex
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywx39y) · **[results ↗](https://bettervoting.com/ywx39y/results)** (election `ywx39y`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywx39y) · **[results ↗](https://bettervoting.com/ywx39y/results)** (election `ywx39y` · test `BV2225`).
 
 ## Scenario
 
@@ -26,12 +26,6 @@ with Blair at a thin 1 he misses the runoff, and STAR elects the candidate with 
 real base, Alex. Flip the wings' Blair score to 4 (the companion) and STAR alone
 moves to Blair. That is the whole preference-vs-support lesson as a live election.
 Live results: https://bettervoting.com/ywx39y/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2225
-```
 
 ## Ballots
 

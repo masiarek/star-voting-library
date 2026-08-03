@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Begich
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/k3fmwv) · **[results ↗](https://bettervoting.com/k3fmwv/results)** (election `k3fmwv`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/k3fmwv) · **[results ↗](https://bettervoting.com/k3fmwv/results)** (election `k3fmwv` · test `BV2213`).
 
 ## Scenario
 
@@ -29,12 +29,6 @@ overlay (favorite 5, then 4/3, unranked 0). Real ballots & every headline figure
 the paper above; Equal Vote's Real RCV visualizer: realrcv.equal.vote/alaska22.
 Live results (BV2213, all four races): https://bettervoting.com/k3fmwv/results
 Lesson: README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2213
-```
 
 ## Ballots
 

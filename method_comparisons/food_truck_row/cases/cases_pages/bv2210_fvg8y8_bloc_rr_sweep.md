@@ -9,17 +9,11 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **2 seats** · **Expected winners:** Arepa, Bao
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fvg8y8) · **[results ↗](https://bettervoting.com/fvg8y8/results)** (election `fvg8y8` · test `BV2210`).
 
 ## Scenario
 
 One 100-voter electorate, two food-truck spots, five counts — this file is the Bloc Ranked Robin count (ranked ballots, top-2 by win-loss record). The savory side is a 57-voter OUTRIGHT MAJORITY split across three trucks (Arepa 20 first choices, Bao 19, Churro 18); the sweet side is a disciplined 43-voter minority on two (Donut 22, Eclair 21). Same opinions on every ballot; only the counting rule changes: SNTV hands the majority ZERO seats (Donut+Eclair), Bloc STAR and Bloc Ranked Robin hand it BOTH (Arepa+Bao), STAR-PR and STV share them one per side (Arepa+Donut). THE HEADLINE HERE: switching to ranked ballots does not create proportionality — every savory truck beats every sweet truck 57-43 head-to-head, so the record's top two are both savory (Arepa 4-0, Bao 3-1). Proportionality comes from the COUNT (quotas and transfers), not the ballot shape. Full lesson: README.md in this folder. Live on BetterVoting (Test ID BV2210): https://bettervoting.com/fvg8y8 — all five races agree with the LH engine, no genuine tie anywhere. Live results: https://bettervoting.com/fvg8y8/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2210
-```
 
 ## Ballots
 

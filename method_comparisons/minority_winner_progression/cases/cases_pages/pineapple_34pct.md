@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cheese
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ht2c3g) · **[results ↗](https://bettervoting.com/ht2c3g/results)** (election `ht2c3g`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/ht2c3g) · **[results ↗](https://bettervoting.com/ht2c3g/results)** (election `ht2c3g` · test `BV2216`).
 
 ## Scenario
 
@@ -21,12 +21,6 @@ takes it with 34% — even though 65 of 99 diners would happily eat Cheese and o
 34 actually want Pineapple. STAR, Ranked Robin, and Approval all read the whole
 ballot and pick Cheese, the Condorcet winner (it beats every topping head-to-head).
 Next rung adds a topping and the winner's share shrinks. Lesson: README.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2216
-```
 
 ## Ballots
 

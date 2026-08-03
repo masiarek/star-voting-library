@@ -9,7 +9,7 @@ search:
 
 **Method:** [STV (proportional, ranked ballots)](../../../../../03_STAR_PR/01_Learn) · **1 seat** · **Expected winner:** Ash
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8xwx43) · **[results ↗](https://bettervoting.com/8xwx43/results)** (election `8xwx43`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8xwx43) · **[results ↗](https://bettervoting.com/8xwx43/results)** (election `8xwx43` · test `BV2205`).
 
 ## Scenario
 
@@ -29,12 +29,6 @@ elects Ash (the LH count below). Full lab notebook: README.md in this
 folder.
 Live on BetterVoting (Test ID BV2205): https://bettervoting.com/8xwx43
 — results page errors by design of the probe.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2205
-```
 
 ## Ballots
 

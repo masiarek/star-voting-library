@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Nashville
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vqyqkr) · **[results ↗](https://bettervoting.com/vqyqkr/results)** (election `vqyqkr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vqyqkr) · **[results ↗](https://bettervoting.com/vqyqkr/results)** (election `vqyqkr` · test `BV2131`).
 
 **Official tie-break (lot) order:** Memphis > Nashville > Chattanooga > Knoxville — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 The textbook Tennessee example, and the first BV-backed Ranked Robin case. Four cities; each voter ranks by geographic distance; blocs weighted by population (Memphis 42, Nashville 26, Chattanooga 15, Knoxville 17). On ONE ranked ballot set the three methods split three ways: plurality would elect Memphis (largest first-choice bloc), RCV-IRV elects Knoxville (Nashville is squeezed out in round 2), and Ranked Robin elects the geographic-center consensus, Nashville — who beats every rival head-to-head, the Condorcet winner. Cross-verified: LH native run_ranked_robin, BetterVoting RankedRobin.ts, and pref_voting's Copeland all elect Nashville (Copeland 3, no tiebreak needed). Live results: https://bettervoting.com/vqyqkr/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2131
-```
 
 ## Ballots
 

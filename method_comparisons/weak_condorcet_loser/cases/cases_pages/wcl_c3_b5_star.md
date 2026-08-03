@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ben
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/c73pfw) · **[results ↗](https://bettervoting.com/c73pfw/results)** (election `c73pfw` · test `BV2249`).
 
 ## Scenario
 
@@ -47,12 +47,6 @@ Honest framing: this is a knife-edge construction. It needs an exact pairwise
 tie between the two finalists, which is vanishingly rare in any electorate
 large enough to matter. Read it as "the criterion is failed" (a possibility
 result), not as "this happens in practice."
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2249
-```
 
 ## Ballots
 

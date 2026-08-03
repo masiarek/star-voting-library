@@ -9,7 +9,7 @@ search:
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **2 seats** · **Expected winners:** Dog, Cat
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 
 ## Scenario
 
@@ -19,12 +19,6 @@ Hamster). This race fills a 2-seat Committee by multi-winner Approval (each vote
 approves their own party's pets). Bloc Approval is MAJORITARIAN: the two most-
 approved are Dog and Cat (13 each), both majority — the minority is shut out
 again. Compare with the proportional STAR-PR / STV races on the same electorate.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2134
-```
 
 ## Ballots
 

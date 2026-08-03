@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **4 seats** · **Expected winners:** Dogwood, Aspen, Elm, Cedar
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/v9rhhr) · **[results ↗](https://bettervoting.com/v9rhhr/results)** (election `v9rhhr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/v9rhhr) · **[results ↗](https://bettervoting.com/v9rhhr/results)** (election `v9rhhr` · test `BV2247`).
 
 ## Scenario
 
@@ -50,12 +50,6 @@ through each voter's ballot style. Per
 'stress-test the tabulator' job (with human-shaped renderings), not a
 method-welfare comparison. Regenerate byte-identically: python
 generate_ballot_styles.py --emit park_bloc
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2247
-```
 
 ## Ballots
 

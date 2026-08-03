@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Avery
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q` · test `BV2170`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ Random tiebreak — NOT freezable, and the two engines split it differently. Bec
 Live results: https://bettervoting.com/pp2q4q/results
 Companion races: bv2170_pp2q4q_star.yaml, bv2170_pp2q4q_ranked_robin.yaml, bv2170_pp2q4q_plurality.yaml.
 Overview page: bv2170_pp2q4q_symmetric_centrist.md
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2170
-```
 
 ## Ballots
 

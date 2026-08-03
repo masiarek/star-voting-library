@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Comet
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (election `q8q9m7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (election `q8q9m7` · test `BV2220`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ Dune 1+4, Echo 5+0, Flux 4+1). Every candidate's score total rises by exactly
 automatic runoff. STAR still elects Comet: an equally weighted vote,
 demonstrated — any ballot can be perfectly cancelled by its exact opposite,
 which is why STAR has no forced vote-splitting. See equal_and_opposite/README.md.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2220
-```
 
 ## Ballots
 

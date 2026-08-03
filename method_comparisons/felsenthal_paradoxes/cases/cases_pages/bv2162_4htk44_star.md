@@ -9,19 +9,13 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4htk44) · **[results ↗](https://bettervoting.com/4htk44/results)** (election `4htk44` · test `BV2162`).
 
 ## Scenario
 
 Race 1 of 3 in the RCV-IRV truncation pair, part 1 of 2 (BV2162, bvid 4htk44; BV-confirmed; the pair is BV2162/63). Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A6 (instant-runoff — Felsenthal's "Alternative Vote" is the British name for RCV-IRV), Example 16, due to Nurmi (1999: 63).
 103 voters, four candidates, everyone ranking all four: 33×(A>B>C>D), 29×(B>A>C>D), 24×(C>B>A>D), 17×(D>C>B>A). B is the Condorcet winner (beats A 70–33, C 62–41, D 86–17). This STAR race (ranks mapped 5/4/2/1) scores A 346, B 407, C 312, D 171 — B wins the automatic runoff 70–33. The IRV race elects A instead (a Condorcet winner failure); part 2 (BV2163) shows 17 voters improving their result by TRUNCATING.
 Live results: https://bettervoting.com/4htk44/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2162
-```
 
 ## Ballots
 

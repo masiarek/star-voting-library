@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Bruno
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yyhr66) · **[results ↗](https://bettervoting.com/yyhr66/results)** (election `yyhr66`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yyhr66) · **[results ↗](https://bettervoting.com/yyhr66/results)** (election `yyhr66` · test `BV2174`).
 
 ## Scenario
 
@@ -31,12 +31,6 @@ LIVE on BetterVoting as BV2174 (three races: STAR, RCV-IRV, Choose-One).
 Live results: https://bettervoting.com/yyhr66/results
 Matched file: bv2175_9dhv8y_noshow_showup.yaml (the 8 fans vote — and
 RCV-IRV hands them their LAST choice).
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2174
-```
 
 ## Ballots
 

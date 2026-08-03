@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Amir
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/g6q42v) · **[results ↗](https://bettervoting.com/g6q42v/results)** (election `g6q42v`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/g6q42v) · **[results ↗](https://bettervoting.com/g6q42v/results)** (election `g6q42v` · test `BV2195`).
 
 ## Scenario
 
@@ -27,12 +27,6 @@ Live on BetterVoting (Test ID BV2195): https://bettervoting.com/g6q42v/results
 — with an RCV-IRV race (also Amir). No Ranked Robin race on purpose:
 the rank conversion of these sparse ballots yields a Condorcet cycle
 whose 3-way tie BV resolves at random — not freezable.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2195
-```
 
 ## Ballots
 

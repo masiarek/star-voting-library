@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Bob
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qrw6wb) · **[results ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qrw6wb) · **[results ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb` · test `BV2187`).
 
 ## Scenario
 
@@ -37,12 +37,6 @@ PROCEDURE is the whole lesson. (Bob is also the Condorcet winner.)
 
 CANONICAL = FROZEN: never edit these ballots. A lesson needing different
 ballots gets a new scenario with a new cast of names.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2187
-```
 
 ## Ballots
 

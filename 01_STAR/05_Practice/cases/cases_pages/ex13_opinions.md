@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Cora
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qdtqf2) · **[results ↗](https://bettervoting.com/qdtqf2/results)** (election `qdtqf2` · test `BV2200`).
 
 ## Scenario
 
@@ -27,12 +27,6 @@ ex13_draw_the_line.md. Ballots and cast are this repo's own.
 Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
 — one election, four races (STAR + the three approval thresholds); BV
 agrees on all four winners.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2200
-```
 
 ## Ballots
 

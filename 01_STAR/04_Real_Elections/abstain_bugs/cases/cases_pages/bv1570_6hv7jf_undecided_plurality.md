@@ -9,7 +9,7 @@ search:
 
 **Method:** [plurality](../../../../../07_Concepts) · **1 seat** · **Expected winner:** Approve
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6hv7jf) · **[results ↗](https://bettervoting.com/6hv7jf/results)** (election `6hv7jf`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6hv7jf) · **[results ↗](https://bettervoting.com/6hv7jf/results)** (election `6hv7jf` · test `BV1570`).
 
 ## Scenario
 
@@ -26,12 +26,6 @@ an explicit `0` are real tally votes (both options score 0), so LH sees
 nTallyVotes = 2, nAbstentions = 1, a 0-0 tie, resolved to Approve by lot. Same
 winner, different count — LH counts an explicit 0 as a cast vote, per the #884
 dispute.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV1570
-```
 
 ## Ballots
 

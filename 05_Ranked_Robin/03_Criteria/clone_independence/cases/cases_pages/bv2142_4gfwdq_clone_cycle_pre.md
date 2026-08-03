@@ -9,19 +9,13 @@ search:
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** A
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq` · test `BV2142`).
 
 **Official tie-break (lot) order:** A > B > C > D > E > F — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
 
 The electowiki clone-independence example, part 1 (before cloning), BV-backed. 33 voters; A, B, C are in a cycle (no Condorcet winner) and tie at 4 wins. The engines DIVERGE on the tie: LH ranks by total margin — A and B tie at +101, C is lower (+95) — so LH drops C and coin-flips A/B by lot (this file pins A). But BetterVoting has no margin rung for a 3-way tie: it picks at RANDOM among A, B, C, and its log says so ("C picked in random tie-breaker, more robust tiebreaker not yet implemented") — this draw elected C, a candidate LH's margin rung would eliminate. Part 2 (BV2143) adds the clones. LH-only clean pair: clone_teaming_01_pre.yaml. Lesson: 05_Ranked_Robin/01_Learn/rr_clone_independence.md Live results: https://bettervoting.com/4gfwdq/results
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2142
-```
 
 ## Ballots
 

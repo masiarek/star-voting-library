@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Avery
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rhbfj7) · **[results ↗](https://bettervoting.com/rhbfj7/results)** (election `rhbfj7`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rhbfj7) · **[results ↗](https://bettervoting.com/rhbfj7/results)** (election `rhbfj7` · test `BV2189`).
 
 ## Scenario
 
@@ -25,12 +25,6 @@ RangeVoting.org example, posed as an exercise in Brendan W. Sullivan,
 Live on BetterVoting (Test ID BV2189): https://bettervoting.com/rhbfj7/results
 — the election carries a second, Ranked Robin race on the same opinions
 (equal ranks allowed): Elena, the district's Condorcet winner, wins it 4-0.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2189
-```
 
 ## Ballots
 

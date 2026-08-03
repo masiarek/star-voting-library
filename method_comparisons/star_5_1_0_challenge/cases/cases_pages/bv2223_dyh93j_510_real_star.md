@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Beth
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyh93j) · **[results ↗](https://bettervoting.com/dyh93j/results)** (election `dyh93j`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dyh93j) · **[results ↗](https://bettervoting.com/dyh93j/results)** (election `dyh93j` · test `BV2223`).
 
 ## Scenario
 
@@ -20,12 +20,6 @@ and into the runoff — and she wins as the Condorcet winner. Under the identica
 strategic ballot, STAR elects the CW here while RCV-IRV does not (s5): the "1"s
 carry real weight, so 5-1-0 STAR is strictly more moderate-friendly than IRV.
 So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2223
-```
 
 ## Ballots
 

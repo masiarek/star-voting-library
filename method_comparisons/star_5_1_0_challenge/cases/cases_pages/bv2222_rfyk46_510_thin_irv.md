@@ -9,7 +9,7 @@ search:
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ana
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rfyk46) · **[results ↗](https://bettervoting.com/rfyk46/results)** (election `rfyk46` · test `BV2222`).
 
 ## Scenario
 
@@ -18,12 +18,6 @@ fewest first-choices (5) and is eliminated first; her ballots flow to Ana, who
 wins 53–47. IRV fails to elect the Condorcet winner (Beth). This matches the
 strategic-5-1-0 STAR result (s2): under 5-1-0 with a thin moderate base, STAR
 and IRV fail the SAME way — rb-j's core point, confirmed.
-
-## Parameters (from the YAML)
-
-```yaml
-bv_test_id: BV2222
-```
 
 ## Ballots
 
