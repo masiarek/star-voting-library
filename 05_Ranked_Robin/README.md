@@ -11,8 +11,8 @@
 | Layer | What it really is | Since | New? |
 |---|---|---|:--:|
 | Compare every pair head-to-head; whoever wins the most matchups wins | **Copeland's method** — the count itself | first described **1299** (Ramon Llull), rediscovered by Condorcet in the 1780s, formalised by Copeland in 1951 | no |
-| Ties broken by summing win margins | **Copeland//Borda** — a standard, long-known construction | — | no |
-| The words *"Ranked Robin"* | **Equal Vote's branding**, coined by Sara Wolk | **2021** | **yes — the name is the only new part** |
+| Ties broken by summing win margins | **Copeland//Borda** — a standard, long-known construction, proposed as Equal Vote's default by [Sass](https://electowiki.org/wiki/User:Sass) | construction long known; **2021** as the default | no |
+| The words *"Ranked Robin"* | **Equal Vote's branding**, coined by [Sara Wolk](https://electowiki.org/wiki/Talk:Ranked_Robin) | **2021** | **yes — the name is the only new part** |
 
 What it *does* is take the same **ranked** ballot RCV-IRV uses and count it a completely different way. Instead of eliminating candidates round by round, it runs a **round robin**: every candidate against every other, like a sports league. Because every ballot is read in *every* matchup, nothing is ever discarded — and whenever some candidate beats all rivals head-to-head (a [Condorcet winner](../07_Concepts/topics/condorcet/README.md)), Ranked Robin elects them.
 
