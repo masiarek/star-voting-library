@@ -70,7 +70,7 @@ Check: `lsof -i :5000`. Fix: **System Settings → General → AirDrop & Handoff
 
 **2. Keycloak login "Invalid username or password".**
 `admin` / `admin` is the Keycloak **master console** login — *not* a user in the app's **Dev** realm, so it always fails.
-Use the seeded Dev-realm user: **username `PlayWrightTest`, password `test`** (capital P/W/T). Or click **Register** (self-registration is on).
+Click **Register** (self-registration is on) and make your own Dev-realm user — that's the fastest way through. There is also a seeded Dev-realm test user, but its credentials aren't published here: [ask Adam](https://github.com/masiarek/star-voting-library/issues) if you need them.
 
 **3. `Uncaught TypeError: crypto.randomUUID is not a function` → Create-Election wizard does nothing.**
 `crypto.randomUUID()` (and most Web Crypto) is only exposed in a **secure context**: HTTPS, or `http://localhost` / `127.0.0.1`. Viewing the Docker stack at **`http://web:5000`** (plain HTTP, non-localhost host) is *insecure* → the API is missing → the wizard's `onClick` throws → nothing happens (and **no** network request fires — the tell is an empty Network tab + a red Console error).
