@@ -25,28 +25,42 @@ Two of those rules do most of the work on this page:
 
 Because each score stands alone, filling the ballot out is quick: give your favorite a 5, your least favorite a 0, then place everyone else relative to those two. You never have to hold the whole field in your head at once — even in a 20-candidate race you're only ever comparing a candidate against your two anchors. (Contrast a ranked ballot, where each slot means re-scanning everyone you haven't ranked yet.)
 
-## The style gallery — eight voters, eight legal ballots
+## The style gallery — thirteen voters, thirteen legal ballots
 
-Eight common ways people fill out that same ballot — same five candidates, every one legal, every one counted. **Click any style for its own page:** what the ballot says, when it fits, the honest trade-off, and how that exact ballot fared in a real election.
+Thirteen ways people fill out that same ballot — same five candidates, every one legal, every one counted. They're ordered so that styles you might mistake for each other sit side by side: a bullet vote next to the partial ballot that looks identical, a slate next to the threshold that marks the same bubbles, the full range next to the compressed one. **Click any style for its own page:** what the ballot says, when it fits, the honest trade-off, and how that exact ballot fared in a real election.
 
 | Ballot | Style | What the voter is saying |
 |---|---|---|
 | <img src="voting_styles/img/style_traditional.png" width="190" alt="Traditional-style ballot: Carmen 5, everything else blank"> | **[Traditional](voting_styles/traditional.md)** | "Carmen. Period." — the familiar single-choice vote, transplanted. |
+| <img src="voting_styles/img/style_partial_ballot.png" width="190" alt="Partial ballot: Carmen 5 and David 3, with Andre, Blake, and Ella left blank"> | **[Partial Ballot](voting_styles/partial_ballot.md)** | "I know these two. I've never heard of the other three." |
 | <img src="voting_styles/img/style_decent_backup.png" width="190" alt="Decent-backup ballot: Carmen 5, Ella 4, rest blank"> | **[Decent Backup](voting_styles/decent_backup.md)** | "Carmen — and if not her, Ella is nearly as good." |
 | <img src="voting_styles/img/style_not_much_of_a_backup.png" width="190" alt="Weak-backup ballot: Carmen 5, Ella 1, rest blank"> | **[Not Much of a Backup](voting_styles/not_much_of_a_backup.md)** | "Carmen — and Ella only over the rest, reluctantly." |
+| <img src="voting_styles/img/style_exaggerated_compromise.png" width="190" alt="Exaggerated-compromise ballot: Carmen 5 and Andre also 5, David 2, Blake 1, Ella 0"> | **[Exaggerated Compromise](voting_styles/exaggerated_compromise.md)** | "Carmen's my favorite — but the front-runner gets a 5 too, just in case." |
 | <img src="voting_styles/img/style_partisan.png" width="190" alt="Partisan ballot: Andre, Carmen, and David all 5, rest blank"> | **[Partisan](voting_styles/partisan.md)** | "My side's three, full support; nobody else." |
+| <img src="voting_styles/img/style_approval_style.png" width="190" alt="Approval-style ballot: Andre, Carmen, and David scored 5; Blake and Ella scored 0"> | **[Approval-style](voting_styles/approval_style.md)** | "These three are acceptable; those two aren't." — only 0s and 5s, no middle. |
 | <img src="voting_styles/img/style_ranked.png" width="190" alt="Ranked-style ballot: each score used once — Carmen 5, Blake 4, David 3, Andre 2, Ella 1"> | **[Ranked](voting_styles/ranked.md)** | "I'll use each score once, like a ranking: Carmen > Blake > David > Andre > Ella." |
 | <img src="voting_styles/img/style_nuanced.png" width="190" alt="Nuanced ballot: Carmen 5, Blake and Ella both 4, Andre 1, David blank"> | **[Nuanced](voting_styles/nuanced.md)** | "Full range — and Blake = Ella because I truly can't split them." |
+| <img src="voting_styles/img/style_compressed_middle.png" width="190" alt="Compressed-middle ballot: every score a 2 or a 3, no 5s and no 0s"> | **[Compressed Middle](voting_styles/compressed_middle.md)** | "They're all roughly fine — mild preferences, nothing extreme." |
+| <img src="voting_styles/img/style_null_ballot.png" width="190" alt="Null ballot: every candidate scored 3"> | **[Null Ballot](voting_styles/null_ballot.md)** | Nothing at all — legal, counted, and provably without effect. |
 | <img src="voting_styles/img/style_anyone_but.png" width="190" alt="Anyone-but ballot: everyone 5 except Blake, who is left blank"> | **[Anyone But…](voting_styles/anyone_but.md)** | "Anyone but Blake." |
 | <img src="voting_styles/img/style_protest_vote.png" width="190" alt="Protest ballot: Blake 1, everyone else blank"> | **[Protest Vote](voting_styles/protest_vote.md)** | "I dislike them all; Blake is the least bad." |
 
 *One page per style: [voting_styles/](voting_styles/).*
 
-Every one of these is legal, none can spoil the ballot, and none carries secret extra weight. Two things are worth knowing before you pick one. A **backup score can never hurt your favorite**: the 4 you give your second choice does nothing to your favorite's 5 in the scoring round, so honest rating is also the smart rating — you never have to exaggerate or hold back. And a ballot that scores *both* finalists the same lands as [Equal Support](the_count/STAR_Automatic_Runoff.md) in the runoff — it still helped choose the finalists, it just voices no preference between them. The per-style pages hold the full discussion: the fine print on backups, where equal scores land, why the ranked style volunteers a constraint the ballot doesn't impose, and how quiet a protest vote really is.
+Every one of these is legal, none can spoil the ballot, and none carries secret extra weight. Four things are worth knowing before you pick one:
 
-## All eight styles in one election
+- **A backup score can never hurt your favorite.** The 4 you give your second choice does nothing to your favorite's 5 in the scoring round, so honest rating is also the smart rating — you never have to exaggerate or hold back.
+- **Scoring both finalists the same forfeits the runoff.** That ballot lands as [Equal Support](the_count/STAR_Automatic_Runoff.md) — it still helped choose the finalists, it just voices no preference between them. It's the price the Exaggerated Compromise pays for its insurance, and the standing risk in Approval-style and Partisan ballots. The fix is one mark: favorite 5, next-best 4.
+- **A blank is a zero, not an abstention.** A Partial Ballot's empty rows count against candidates the voter may simply never have heard of. Score an unknown candidate in the middle if that's what you actually mean.
+- **A ballot with no gaps has no voice.** Give everyone the same score and you've cast the Null Ballot — the one style here that cannot affect any election, ever.
 
-The gallery above is a real, tabulatable election — one ballot per style, six candidates (**Allen, Bianca, Chris, Desi, Edith, Frank**): [reader page](../02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) · [`03c_c6_b8_style-gallery.yaml`](../02_Examples/cases/03c_c6_b8_style-gallery.yaml).
+None of that makes any of them *wrong* ballots; it makes them ballots whose consequences are worth knowing before you cast one. The per-style pages hold the full discussion: the fine print on backups, where equal scores land, why the ranked style volunteers a constraint the ballot doesn't impose, and how quiet a protest vote really is.
+
+## The gallery, run as real elections
+
+The styles above aren't hypothetical — they're two tabulatable elections, split so each one keeps a single cast of candidates. The first eight styles run together below; the last five have their own race, linked at the end of this section.
+
+One ballot per style, six candidates (**Allen, Bianca, Chris, Desi, Edith, Frank**): [reader page](../02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) · [`03c_c6_b8_style-gallery.yaml`](../02_Examples/cases/03c_c6_b8_style-gallery.yaml).
 
 | Style | Allen | Bianca | Chris | Desi | Edith | Frank |
 |---|--:|--:|--:|--:|--:|--:|
@@ -84,27 +98,7 @@ Automatic Runoff Round
 
 Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../02_Examples/cases/cases_tabulated/03c_c6_b8_style-gallery_tabulated.txt).
 
-## Five more the gallery leaves out
-
-The eight above are the styles voters *recognize*, and they all answer the same question: how much do you like these people? Five more come up constantly and aren't on that list, because they answer different questions — how do I play this, what do I do about the names I don't know, and how wide should my scale be at all. **Click any style for its own page**, same as above.
-
-| Ballot | Style | What the voter is saying |
-|---|---|---|
-| <img src="voting_styles/img/style_approval_style.png" width="190" alt="Approval-style ballot: Andre, Carmen, and David scored 5; Blake and Ella scored 0"> | **[Approval-style](voting_styles/approval_style.md)** | "These three are acceptable; those two aren't." — only 0s and 5s, no middle. |
-| <img src="voting_styles/img/style_exaggerated_compromise.png" width="190" alt="Exaggerated-compromise ballot: Carmen 5 and Andre also 5, David 2, Blake 1, Ella 0"> | **[Exaggerated Compromise](voting_styles/exaggerated_compromise.md)** | "Carmen's my favorite — but the front-runner gets a 5 too, just in case." |
-| <img src="voting_styles/img/style_partial_ballot.png" width="190" alt="Partial ballot: Carmen 5 and David 3, with Andre, Blake, and Ella left blank"> | **[Partial Ballot](voting_styles/partial_ballot.md)** | "I know these two. I've never heard of the other three." |
-| <img src="voting_styles/img/style_compressed_middle.png" width="190" alt="Compressed-middle ballot: every score a 2 or a 3, no 5s and no 0s"> | **[Compressed Middle](voting_styles/compressed_middle.md)** | "They're all roughly fine — mild preferences, nothing extreme." |
-| <img src="voting_styles/img/style_null_ballot.png" width="190" alt="Null ballot: every candidate scored 3"> | **[Null Ballot](voting_styles/null_ballot.md)** | Nothing at all — legal, counted, and provably without effect. |
-
-These five are a runnable election too — one ballot per style, five candidates (**Alice, Bruno, Clara, Diego, Erin**): [reader page](../02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) · [`03d_c5_b5_style-gallery-five-more.yaml`](../02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml). It is deliberately the awkward counterpart to the gallery above: **three of its five ballots are [Equal Support](the_count/STAR_Automatic_Runoff.md) in the runoff**, so the race is settled by the two voters who left themselves something to say.
-
-That's the thread running through this second table. Unlike the first eight, four of these five come with a warning attached — three warnings, in fact, and they're the only genuinely cautionary things on this page:
-
-- **Equal top scores forfeit the runoff.** Approval-style and the Exaggerated Compromise both risk landing as Equal Support in exactly the final they cared most about. The fix is one mark — favorite 5, next-best 4 — and it costs nothing in the scoring round.
-- **A blank is a zero, not an abstention.** The Partial Ballot's empty rows count against candidates the voter had no opinion about at all. Score an unknown candidate in the middle if that's what you actually mean.
-- **A ballot with no gaps has no voice.** The Null Ballot is the one style here that cannot affect any election, ever.
-
-None of that makes them *wrong* ballots — every one is legal, counted, and carries exactly the weight any other ballot carries. It makes them ballots whose consequences are worth knowing before you cast one.
+**The other five styles** — Partial Ballot, Exaggerated Compromise, Approval-style, Compressed Middle, Null Ballot — run as their own race, five candidates (**Alice, Bruno, Clara, Diego, Erin**): [reader page](../02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) · [`03d_c5_b5_style-gallery-five-more.yaml`](../02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml). It's the awkward counterpart to the one above: **three of its five ballots land as Equal Support**, so the race is settled by the two voters who left themselves something to say — and deleting the null ballot entirely changes the finalists, the winner and both runoff tallies not at all.
 
 ## Is that all of them?
 
