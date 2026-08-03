@@ -48,7 +48,6 @@ preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: 4h89vj
 bv_test_id: BV15
 ```
 

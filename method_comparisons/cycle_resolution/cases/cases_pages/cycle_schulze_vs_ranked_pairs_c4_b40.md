@@ -49,15 +49,6 @@ margin then lot, and BV breaks the same tie at random — so this one cannot be
 frozen on BV. The companion case where every rule agrees:
 cycle_copeland_ties_c4_b21.yaml
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ana]
-lot_numbers: [Ana, Bruno, Chloe, Diego]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

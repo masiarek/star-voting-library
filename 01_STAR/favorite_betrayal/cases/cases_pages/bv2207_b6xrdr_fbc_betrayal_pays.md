@@ -39,10 +39,6 @@ Bluebell, no tiebreaks).
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Bluebell]
-bv_election_id: b6xrdr
 bv_test_id: BV2207
 ```
 

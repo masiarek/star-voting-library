@@ -37,10 +37,6 @@ Live on BetterVoting (Test ID BV2202): https://bettervoting.com/bj8dfc
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STV
-num_winners: 2
-expected_winners: [Austen, Camus]
-bv_election_id: bj8dfc
 bv_test_id: BV2202
 ```
 

@@ -331,15 +331,27 @@ def render(yaml_path, siblings):
         L.append("")
         L.append(str(desc).strip())
         L.append("")
-    # Machine-readable parameters, verbatim from the YAML — the page's whole
-    # point is "one file a person reads and the engine runs", so show the exact
-    # keys the engine reads (ballots have their own section below).
+    # Machine-readable parameters, verbatim from the YAML — but only the keys the
+    # page hasn't already said in prose. Method, seats and the expected winners
+    # are in the metadata line under the title; the lot order and the BV election
+    # id each have their own bolded line. Re-printing those as YAML was pure
+    # restatement — on 43% of the cases it was the *entire* block — and the echo
+    # is what made the page read as two halves rather than one file. What's left
+    # here is the part no sentence above covers (bv_test_id, blocs,
+    # eligible_voters, quorum); the raw `.yaml` is one click away in the byline.
+    said_in_prose = {"voting_method", "num_winners"}
+    if isinstance(ew, list) and ew:      # the metadata line is showing this list
+        said_in_prose.add("expected_winners")
+    if lot:
+        said_in_prose.add("lot_numbers")
+    if bv_id:
+        said_in_prose.add("bv_election_id")
     params = {}
     if isinstance(data, dict):
         for key in ("voting_method", "num_winners", "expected_winners",
                     "lot_numbers", "eligible_voters", "quorum", "blocs",
                     "bv_election_id", "bv_test_id"):
-            if key in data:
+            if key in data and key not in said_in_prose:
                 params[key] = data[key]
     if params:
         L.append("## Parameters (from the YAML)")

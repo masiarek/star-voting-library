@@ -28,10 +28,6 @@ Cash even on the honest ballots — the squeeze cameo; RR confirms Bree).
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Bree]
-bv_election_id: x4dkfd
 bv_test_id: BV2193
 ```
 

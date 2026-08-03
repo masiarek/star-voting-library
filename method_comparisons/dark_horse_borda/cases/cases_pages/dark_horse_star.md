@@ -28,14 +28,6 @@ a score ballot you give BOTH your rival and D a 0, so D never rises. Quinn's own
 prescription: "don't force people to dishonestly support D merely to oppose someone."
 Concept: ../../07_Concepts/topics/strategic_pathologies.md.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [A]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

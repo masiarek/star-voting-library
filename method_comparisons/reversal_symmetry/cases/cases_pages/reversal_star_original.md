@@ -19,14 +19,6 @@ ballots; it is not a claim that STAR satisfies the reversal-symmetry criterion i
 is a hybrid — additive scoring round + pairwise runoff — and the rank->score mapping is a modeling
 choice). The electorate is a Condorcet cycle, so no winner is "correct."
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [B]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

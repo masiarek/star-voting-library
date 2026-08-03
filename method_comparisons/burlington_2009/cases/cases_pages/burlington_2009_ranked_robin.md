@@ -22,14 +22,6 @@ overvotes are not representable in this ranked syntax and are excluded —
 8,974 tabulated; every official figure reproduces within +/-1 and every
 margin is hundreds of votes.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Montroll]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

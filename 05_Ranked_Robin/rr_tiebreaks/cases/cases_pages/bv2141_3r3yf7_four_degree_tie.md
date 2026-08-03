@@ -20,11 +20,6 @@ The electowiki Ranked Robin "all four tie-breaking degrees" example (electowiki.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ava]
-lot_numbers: [Fabio, Eli, Cedric, Deegan, Ava, Bianca]
-bv_election_id: 3r3yf7
 bv_test_id: BV2141
 ```
 

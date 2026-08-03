@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/9gdrqg/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Bruno]
-bv_election_id: 9gdrqg
 bv_test_id: BV2147
 ```
 

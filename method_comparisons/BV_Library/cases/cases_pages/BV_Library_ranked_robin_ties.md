@@ -16,14 +16,6 @@ Alice and Bob split the head-to-head (3-3), tying on Copeland score; BetterVotin
 breaks the tie by tiebreak (lot) order and elects Alice. Rank ballots (1 = best)
 converted to scores for the LH engine (rank 1->4, 2->3, 3->2, 4->1).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Alice]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

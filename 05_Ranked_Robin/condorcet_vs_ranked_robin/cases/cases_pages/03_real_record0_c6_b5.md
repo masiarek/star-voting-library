@@ -16,15 +16,6 @@ search:
 STAR elects B; so does Ranked Robin. But NO candidate beats all five rivals head-to-head, so there is no Condorcet winner (the Condorcet column in the sweep CSV is blank). 
 Ranked Robin still produces a winner —  whoever wins the most matchups — and that is B.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: rr
-num_winners: 1
-expected_winners: [B]
-lot_numbers: [A, B, C, D, E, F]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

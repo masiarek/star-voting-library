@@ -15,15 +15,6 @@ search:
 
 The book's own printed manipulation. One of the two sincere Athens>Bergen>Cork>Dublin>Edinburgh voters completely REVERSES their ballot to Edinburgh>Dublin>Cork>Bergen>Athens. That single reversed ballot flips two knife-edge 4-3 contests (Athens vs Dublin and Cork vs Dublin), and Dublin goes from 2-2 to 4-0: a symmetric Copeland score of +4, the maximum possible for five candidates, and now an outright Condorcet winner. The manipulator has replaced their LAST choice (Edinburgh) with their 4th (Dublin) — a strict gain — by submitting a ballot that misrepresents every single pairwise preference they hold. IMPORTANT for this repo: Ranked Robin IS Copeland plus a tiebreak, so the book's showcase manipulation is a manipulation of a method this library advocates.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Dublin]
-lot_numbers: [Athens, Bergen, Cork, Dublin, Edinburgh]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

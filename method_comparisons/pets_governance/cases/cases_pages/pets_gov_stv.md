@@ -24,10 +24,6 @@ proportional methods differ only on the majority's third pick (Cat vs Fish).
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STV
-num_winners: 3
-expected_winners: [Dog, Bird, Cat]
-bv_election_id: kcf8vf
 bv_test_id: BV2134
 ```
 

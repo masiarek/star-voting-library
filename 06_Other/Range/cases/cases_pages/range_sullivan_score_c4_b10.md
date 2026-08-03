@@ -26,14 +26,6 @@ engine (pref_voting score_voting, cross-checked against a hand sum).
 Source: Brendan W. Sullivan, An Introduction to the Math of Voting Methods
 (2022), ISBN 978-1-958469-03-3.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Range
-num_winners: 1
-expected_winners: [C]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

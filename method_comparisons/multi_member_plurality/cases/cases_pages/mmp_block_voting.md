@@ -29,11 +29,6 @@ where the minority earns a seat.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Plurality
-num_winners: 3
-expected_winners: [Ada, Ben, Cal]
-lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
-bv_election_id: 3x4vrv
 bv_test_id: BV2135
 ```
 

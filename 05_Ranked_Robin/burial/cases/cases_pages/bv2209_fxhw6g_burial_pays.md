@@ -18,10 +18,6 @@ The burial. Same 42 voters as part 1 (bv2208_7q6by8_burial_sincere.yaml), except
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Amber]
-bv_election_id: fxhw6g
 bv_test_id: BV2209
 ```
 

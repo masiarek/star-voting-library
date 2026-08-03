@@ -20,15 +20,6 @@ second rung — most score-5 votes. But neither earned a 5, so five-star reads
 Contrast tie_break_04 (same tie, but a 5 exists -> five-star decides).
 See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Alice]
-lot_numbers: [Alice, Ben]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

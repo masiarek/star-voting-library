@@ -25,9 +25,6 @@ Choose-One overall, so no spoiler occurred.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [DarkChoco]
 blocs:
   Chocolate: [DarkChoco, MilkChoco]
 ```

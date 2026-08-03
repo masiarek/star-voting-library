@@ -29,15 +29,6 @@ give A,B,C,D — see lackner_skowron_shadow_star_pr_c7_b12.yaml and
 ../../02_STAR_Bloc/_main/lackner_skowron_shadow_bloc_star_c7_b12.yaml. Approval
 original: ../../04_Approval/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: rrv
-num_winners: 4
-expected_winners: [A, B, C, F]
-lot_numbers: [A, B, C, D, E, F, G]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

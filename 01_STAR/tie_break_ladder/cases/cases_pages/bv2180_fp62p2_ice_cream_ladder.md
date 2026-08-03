@@ -29,7 +29,6 @@ Lesson: bv2180_fp62p2_ice_cream_ladder.md
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: fp62p2
 bv_test_id: BV2180
 ```
 

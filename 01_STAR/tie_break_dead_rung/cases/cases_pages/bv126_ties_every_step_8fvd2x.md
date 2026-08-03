@@ -33,15 +33,6 @@ Two BV issues surface together:
      dropped flats (flat ballots never change a STAR result) — it's the lot order
      that decides.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Amy]
-lot_numbers: [Amy, Chuck, Brian]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

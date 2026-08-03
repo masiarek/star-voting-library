@@ -16,14 +16,6 @@ A degenerate but important edge case: 3 seats but only 2 ballots. The method sti
 every seat, electing in score order — Allison, then Bill, then Carmen — rather than erroring
 or leaving seats empty. LH's `allocated` method agrees with BetterVoting.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: allocated
-num_winners: 3
-expected_winners: [Allison, Bill, Carmen]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

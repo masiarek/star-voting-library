@@ -23,14 +23,6 @@ With a single voter, the winner is simply her highest-scored flavor (Choco);
 the automatic runoff can't change that. This is our baseline before we add
 more voters in the next example.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Choco]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

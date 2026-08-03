@@ -45,10 +45,6 @@ Full claim-by-claim reading of the article:
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Moderate]
-bv_election_id: 6w2gq7
 bv_test_id: BV2168
 ```
 

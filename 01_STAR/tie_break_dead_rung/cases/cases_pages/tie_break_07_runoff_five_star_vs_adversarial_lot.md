@@ -18,15 +18,6 @@ tied on total score (5-5). The runoff ladder's five-star rung decides —
 Ann has one 5, Ben none, so Ann wins. The lot order deliberately favors
 Ben: the expected winner (Ann) proves five-star outranks the lot.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ann]
-lot_numbers: [Ben, Ann]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -26,8 +26,6 @@ Live on BetterVoting: https://bettervoting.com/f4cjpy/results (BV-confirmed; STA
 ## Parameters (from the YAML)
 
 ```yaml
-expected_winners: [B]
-bv_election_id: f4cjpy
 bv_test_id: BV2159
 ```
 

@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/r6ctvy/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Bert]
-bv_election_id: r6ctvy
 bv_test_id: BV2152
 ```
 

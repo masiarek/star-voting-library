@@ -34,10 +34,6 @@ Lesson: README.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Peltola]
-bv_election_id: m3hb6y
 bv_test_id: BV2214
 ```
 

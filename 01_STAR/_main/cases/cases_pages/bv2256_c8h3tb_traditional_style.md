@@ -40,10 +40,6 @@ Lesson: 01_STAR/concepts/voting_styles/traditional.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ella]
-bv_election_id: c8h3tb
 bv_test_id: BV2256
 ```
 

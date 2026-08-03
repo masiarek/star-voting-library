@@ -28,9 +28,6 @@ Deep dive: 07_Concepts/residual_vote_splitting.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Cara]
 blocs:
   Allies: [Ada, Ben]
 ```

@@ -54,10 +54,6 @@ generate_ballot_styles.py --emit quota_circus
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: allocated
-num_winners: 2
-expected_winners: [Amir, Bree]
-bv_election_id: qdh9qp
 bv_test_id: BV2246
 ```
 

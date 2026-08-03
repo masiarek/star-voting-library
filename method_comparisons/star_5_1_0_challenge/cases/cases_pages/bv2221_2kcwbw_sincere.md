@@ -24,10 +24,6 @@ instead. Part of the rb-j "does STAR collapse to IRV under 5-1-0?" claim-check.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Beth]
-bv_election_id: 2kcwbw
 bv_test_id: BV2221
 ```
 

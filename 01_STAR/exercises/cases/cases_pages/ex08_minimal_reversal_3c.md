@@ -20,14 +20,6 @@ those three 4-givers all score A higher, so A wins the automatic runoff
 (many mid-high scores) and the runoff winner DEPTH (a majority that
 ranks them on top).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [A]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

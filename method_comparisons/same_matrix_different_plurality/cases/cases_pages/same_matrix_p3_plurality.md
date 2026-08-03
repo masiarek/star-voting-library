@@ -18,14 +18,6 @@ elects Ben, and all three electorates in this folder share one pairwise table
 while their plurality winners differ. Plurality's winner is not a function of
 the pairwise matrix.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Plurality
-num_winners: 1
-expected_winners: [Cal]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

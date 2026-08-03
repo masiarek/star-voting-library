@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/74j6vv/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [B]
-bv_election_id: 74j6vv
 bv_test_id: BV2163
 ```
 

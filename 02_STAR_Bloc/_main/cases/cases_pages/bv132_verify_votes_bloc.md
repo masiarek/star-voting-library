@@ -40,14 +40,6 @@ i.e. BV classifies the two flat ballots as abstentions and tallies only the two
 as abstention). The export also labels votingMethod "STAR" rather than "Bloc
 STAR" — cf. #904.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Bloc STAR
-num_winners: 2
-expected_winners: [C, B]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

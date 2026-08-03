@@ -17,14 +17,6 @@ irv_combined.yaml: B is eliminated first there). District winners, and even
 full district round-by-round tallies, cannot be summed into the combined
 result — the non-summability this trio demonstrates.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [B]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

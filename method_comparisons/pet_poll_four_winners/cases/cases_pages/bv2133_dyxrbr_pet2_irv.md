@@ -18,10 +18,6 @@ One of four races in the BV2133 "Pet poll II" (BetterVoting election dyxrbr). RC
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Fish]
-bv_election_id: dyxrbr
 bv_test_id: BV2133
 ```
 

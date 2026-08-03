@@ -20,11 +20,6 @@ One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confir
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Anderson]
-lot_numbers: [Anderson, Carter, Reagan]
-bv_election_id: ywckmg
 bv_test_id: BV2137
 ```
 

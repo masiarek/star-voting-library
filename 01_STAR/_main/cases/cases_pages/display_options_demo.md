@@ -18,9 +18,6 @@ the Condorcet line while hiding the score-distribution table — to show how the
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: star
-num_winners: 1
-expected_winners: [Don]
 blocs:
   faction1: [Ann, Don]
   faction2: [Bob, Cal]

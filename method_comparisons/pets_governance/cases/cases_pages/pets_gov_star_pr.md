@@ -25,10 +25,6 @@ side.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: allocated
-num_winners: 3
-expected_winners: [Bird, Dog, Fish]
-bv_election_id: kcf8vf
 bv_test_id: BV2134
 ```
 

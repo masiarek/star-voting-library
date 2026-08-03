@@ -24,10 +24,6 @@ method read the whole ballot. Lesson: README.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Cheese]
-bv_election_id: h34pp9
 bv_test_id: BV2218
 ```
 

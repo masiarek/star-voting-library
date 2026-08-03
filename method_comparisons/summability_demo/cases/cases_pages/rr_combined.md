@@ -19,14 +19,6 @@ cell-by-cell, and from it B beats A (11–9) and C (11–9) → B is the Condorc
 winner. The candidate who won both districts wins the merge, reached by adding
 precinct tables, never pooling ballots.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [B]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

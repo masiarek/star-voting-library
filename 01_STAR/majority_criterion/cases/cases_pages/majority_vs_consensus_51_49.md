@@ -42,14 +42,6 @@ costs (a candidate 100 out of 100 voters are content with, blocked by a bare
 sincere favorite of more than half the room, and "the majority should win"
 is a serious position, not a mistake. See the claim-check page for both sides.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Celia]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

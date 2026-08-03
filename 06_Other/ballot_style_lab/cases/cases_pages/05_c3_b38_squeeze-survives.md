@@ -53,10 +53,6 @@ generate_ballot_styles.py --emit squeeze_survives
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ben]
-bv_election_id: td7jfy
 bv_test_id: BV2238
 ```
 

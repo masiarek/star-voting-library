@@ -26,9 +26,6 @@ the bloc can live with — over the spoiler Vanilla.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [MilkChoco]
 blocs:
   Chocolate: [DarkChoco, MilkChoco, ChocoChip]
 ```

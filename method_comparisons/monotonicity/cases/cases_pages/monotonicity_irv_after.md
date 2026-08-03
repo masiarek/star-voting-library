@@ -18,14 +18,6 @@ ballots feed Z, and Z beats X 18-16. More support made the winner lose —
 IRV's non-monotonicity. STAR cannot do this (more points never hurt); see
 the monotonicity_star_* pair and the monotonicity topic hub.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Z]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

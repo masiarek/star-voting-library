@@ -13,14 +13,6 @@ search:
 
 Auto-generated STAR-vs-Ranked-Robin divergence. 7 candidates, 15 voters, ungrouped (independent random ballots). STAR elects D; Ranked Robin elects A. CAUSE = CONDORCET CYCLE: no candidate beats all others (B>E>C>B), so there is no 'right' winner. RR falls back on Copeland/margin (A); STAR runs its two score-leaders off (D). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [D]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

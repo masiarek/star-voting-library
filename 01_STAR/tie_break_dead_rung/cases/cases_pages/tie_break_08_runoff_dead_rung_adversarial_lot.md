@@ -20,15 +20,6 @@ This is the "cautious electorate" edge case: the ladder is effectively one
 rung shorter, and the lot decides more often than the ladder's length
 suggests. Strange-looking, but perfectly legal ballots.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ben]
-lot_numbers: [Ben, Ann]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

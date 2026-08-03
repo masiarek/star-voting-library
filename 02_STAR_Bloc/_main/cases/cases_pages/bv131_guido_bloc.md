@@ -36,15 +36,6 @@ Two findings worth flagging:
      own round-0 `tieBreakType` is "random". A reader of the summary can't tell
      that seat 1 was a coin toss.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Bloc STAR
-num_winners: 2
-expected_winners: [Cand2, Cand3]
-lot_numbers: [Cand2, Cand1, Cand3]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -20,14 +20,6 @@ This is exactly the "why isn't the top-scoring candidate the winner?" moment STA
 is built to answer: the scoring round finds the two finalists; the runoff lets each
 voter's full vote back the finalist they actually prefer.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [ChocoAlm]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

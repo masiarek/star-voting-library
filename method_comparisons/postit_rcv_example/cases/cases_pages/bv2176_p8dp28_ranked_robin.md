@@ -37,11 +37,6 @@ Overview page: bv2176_p8dp28_postit_rcv_example.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Blue]
-lot_numbers: [Purple, Green, Blue, Pink]
-bv_election_id: p8dp28
 bv_test_id: BV2176
 ```
 

@@ -22,14 +22,6 @@ to C, so A wins 60% to 40% — the score leader C is overturned.
 See the plain-language explainer (and the fix for BetterVoting's popover wording)
 in explaining_to_voters.md.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [A]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

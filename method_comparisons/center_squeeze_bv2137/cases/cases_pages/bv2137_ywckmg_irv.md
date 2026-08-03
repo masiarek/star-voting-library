@@ -18,10 +18,6 @@ One of four races in the Center Squeeze election (BV2137, bvid ywckmg; BV-confir
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: IRV
-num_winners: 1
-expected_winners: [Carter]
-bv_election_id: ywckmg
 bv_test_id: BV2137
 ```
 

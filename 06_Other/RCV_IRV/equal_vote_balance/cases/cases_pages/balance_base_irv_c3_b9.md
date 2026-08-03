@@ -19,14 +19,6 @@ under Condorcet / Ranked Robin / STAR (Bruno stays the winner) but under RCV-IRV
 they squeeze Bruno out and elect Ada — so RCV-IRV fails the Equal Vote / Test of
 Balance. Lesson: 06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Bruno]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

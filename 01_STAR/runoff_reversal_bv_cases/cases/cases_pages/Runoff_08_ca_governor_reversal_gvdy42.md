@@ -30,7 +30,6 @@ Lesson: Runoff_08_ca_governor_reversal_gvdy42.md
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: gvdy42
 bv_test_id: BV2181
 ```
 

@@ -28,10 +28,6 @@ squeeze, live), Ranked Robin (Brook).
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Brook]
-bv_election_id: 6bry7c
 bv_test_id: BV2192
 ```
 

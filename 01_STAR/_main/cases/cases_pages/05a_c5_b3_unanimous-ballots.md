@@ -15,14 +15,6 @@ Every voter casts an identical ballot, so the outcome is unanimous and the
 finalists are never in doubt. A simple sanity check / smallest-contrast case
 for the five-candidate display.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Andre]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

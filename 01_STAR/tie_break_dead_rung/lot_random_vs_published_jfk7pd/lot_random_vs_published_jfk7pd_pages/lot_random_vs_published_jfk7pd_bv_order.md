@@ -25,16 +25,6 @@ LH engine reproduces BV's winner, Ben. Its twin (…published_order) uses a
 deterministic pre-published order and elects Ada instead — same ballots, other
 winner, decided only by the lot. See the lesson md and BV #1063.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ben]
-lot_numbers: [Ben, Ada]
-bv_election_id: jfk7pd
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

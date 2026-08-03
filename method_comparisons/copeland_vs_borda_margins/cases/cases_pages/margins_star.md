@@ -18,10 +18,6 @@ The same twelve gelato voters, with each ranking converted to scores on an even 
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Almond]
-bv_election_id: kdjjkq
 bv_test_id: BV2251
 ```
 

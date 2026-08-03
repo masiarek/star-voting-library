@@ -19,15 +19,6 @@ pairwise matrix — can be published as-is and simply ADDED. See
 star_combined.yaml, where this district's tallies and district B's sum,
 cell by cell, to the combined result with no ballot-level recount.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Maple]
-lot_numbers: [Maple, Oak, Pine]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

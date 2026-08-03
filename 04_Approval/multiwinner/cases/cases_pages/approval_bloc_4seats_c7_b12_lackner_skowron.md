@@ -33,10 +33,6 @@ Live results: https://bettervoting.com/jt6r76/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Approval_Multi_Winner
-num_winners: 4
-expected_winners: [A, B, C, D]
-bv_election_id: jt6r76
 bv_test_id: BV27
 ```
 

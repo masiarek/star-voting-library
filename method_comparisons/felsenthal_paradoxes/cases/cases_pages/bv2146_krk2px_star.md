@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/krk2px/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ada]
-bv_election_id: krk2px
 bv_test_id: BV2146
 ```
 

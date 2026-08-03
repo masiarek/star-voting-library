@@ -18,10 +18,6 @@ The same twelve gelato ballots, counted by instant runoff. First choices are Alm
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: IRV
-num_winners: 1
-expected_winners: [Cocoa]
-bv_election_id: kdjjkq
 bv_test_id: BV2251
 ```
 

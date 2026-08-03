@@ -28,14 +28,6 @@ the scoring, but now faces Z in the runoff and loses. Raising X made X lose:
 STAR fails mono-raise-delete. The soft spot is finalist selection, not X's own
 score. See 01_STAR/concepts/properties_and_limits/STAR_monotonicity.md.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [X]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

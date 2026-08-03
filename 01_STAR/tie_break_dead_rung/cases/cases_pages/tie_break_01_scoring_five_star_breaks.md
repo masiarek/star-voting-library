@@ -18,14 +18,6 @@ second rung — most score-5 votes. Ben has one 5, Cara has none, so Ben advance
 Contrast with tie_break_02 (same shape, capped so no 5 exists -> the lot decides).
 See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Alice]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

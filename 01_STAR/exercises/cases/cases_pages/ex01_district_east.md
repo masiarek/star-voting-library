@@ -29,10 +29,6 @@ Live on BetterVoting (Test ID BV2189): https://bettervoting.com/rhbfj7/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Avery]
-bv_election_id: rhbfj7
 bv_test_id: BV2189
 ```
 

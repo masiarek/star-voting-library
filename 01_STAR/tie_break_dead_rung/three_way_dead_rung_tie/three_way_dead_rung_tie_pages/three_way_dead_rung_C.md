@@ -21,15 +21,6 @@ B): three candidates, three possible winners, chosen entirely by the lot order.
 A random tie-break would pick one at 1-in-3; a published lot fixes it. See the
 lesson md and BV #1063.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [C]
-lot_numbers: [C, A, B]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

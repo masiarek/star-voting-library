@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/r6qc8h/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [B]
-bv_election_id: r6qc8h
 bv_test_id: BV2160
 ```
 

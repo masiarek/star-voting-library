@@ -18,14 +18,6 @@ STV — the proportional method for RANKED ballots — fills 3 seats from a
 hand the majority a 3-0 sweep. Score-ballot counterpart: 03_STAR_PR/
 (same electorate logic under sss / allocated / rrv).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STV
-num_winners: 3
-expected_winners: [Housing, Schools, SmallBiz]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

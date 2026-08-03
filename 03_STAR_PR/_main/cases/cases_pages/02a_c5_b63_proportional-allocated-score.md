@@ -16,14 +16,6 @@ Allocated Score (canonical Proportional STAR) gives the minority a seat, while
 Bloc STAR would sweep all three to the majority. Switch voting_method to bloc
 to see the contrast.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: allocated
-num_winners: 3
-expected_winners: [Alice, Ben, Dan]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

@@ -21,9 +21,6 @@ actually flips a Choose-One winner, see method_comparisons/split_voting/.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [DarkChoco]
 blocs:
   Chocolate: [DarkChoco, MilkChoco]
 ```

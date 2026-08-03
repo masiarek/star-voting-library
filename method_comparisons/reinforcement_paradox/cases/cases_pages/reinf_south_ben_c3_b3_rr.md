@@ -37,15 +37,6 @@ way the cycle is resolved; that is the whole content of the proposition.
 Branch companions: reinf_south_c3_b3_rr.yaml (Ada branch → combined elects Cara),
 reinf_south_cara_c3_b3_rr.yaml (Cara branch → combined elects Ben).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ben]
-lot_numbers: [Ada, Ben, Cara]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

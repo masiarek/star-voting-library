@@ -18,10 +18,6 @@ One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STV
-num_winners: 1
-expected_winners: [Dave]
-bv_election_id: cxrf8v
 bv_test_id: BV2138
 ```
 

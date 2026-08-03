@@ -18,14 +18,6 @@ A and C, so B is the Condorcet winner here. Combine with rr_district_B by
 ADDING the matrices cell-by-cell (see rr_combined) — the sum recovers the true
 winner without pooling ballots, the summability property IRV's count lacks.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [B]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

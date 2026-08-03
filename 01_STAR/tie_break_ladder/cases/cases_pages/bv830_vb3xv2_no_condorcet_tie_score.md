@@ -30,7 +30,6 @@ Lesson: bv830_vb3xv2_no_condorcet_tie_score.md
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: vb3xv2
 bv_test_id: BV830
 ```
 

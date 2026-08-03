@@ -33,10 +33,6 @@ Live on BetterVoting (Test ID BV2205): https://bettervoting.com/8xwx43
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STV
-num_winners: 1
-expected_winners: [Ash]
-bv_election_id: 8xwx43
 bv_test_id: BV2205
 ```
 

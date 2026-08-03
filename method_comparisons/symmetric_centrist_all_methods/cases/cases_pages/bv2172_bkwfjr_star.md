@@ -23,10 +23,6 @@ Overview: bv2172_bkwfjr_all_methods.md · Minimal 8-voter version: bv2171_h93tm4
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Casey]
-bv_election_id: bkwfjr
 bv_test_id: BV2172
 ```
 

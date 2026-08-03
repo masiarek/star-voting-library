@@ -36,10 +36,6 @@ BetterVoting's own Approval count agrees: Blair.)
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Approval
-num_winners: 1
-expected_winners: [Blair]
-bv_election_id: d4v2dh
 bv_test_id: BV2258
 ```
 

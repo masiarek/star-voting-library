@@ -48,10 +48,6 @@ election. That is Approval's standing ambiguity, not a quirk of this case.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Approval
-num_winners: 1
-expected_winners: [Ben]
-bv_election_id: c73pfw
 bv_test_id: BV2249
 ```
 

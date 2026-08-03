@@ -20,11 +20,6 @@ Twelve gelato voters, three flavours, a rock-paper-scissors cycle: Almond beats 
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Berry]
-lot_numbers: [Almond, Berry, Cocoa]
-bv_election_id: kdjjkq
 bv_test_id: BV2251
 ```
 

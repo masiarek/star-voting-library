@@ -25,14 +25,6 @@ split. No vote vanished: equal scores are counted in full in the
 scoring round and then have no preference to give between equals.
 Exercise: ex07_vanishing_votes.md. Ballots and cast are this repo's own.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Aspen]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

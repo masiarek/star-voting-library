@@ -13,14 +13,6 @@ search:
 
 Auto-generated STAR-vs-Ranked-Robin divergence. 10 candidates, 29 voters, grouped (a few voter factions/blocs). STAR elects C; Ranked Robin elects B. CAUSE = CONDORCET CYCLE: no candidate beats all others (A>I>G>A), so there is no 'right' winner. RR falls back on Copeland/margin (B); STAR runs its two score-leaders off (C). TIE-HEAVY, so read the rungs: A, C and F all tie at 107 in the scoring round, and C and F are exact clones (identical score columns, 0-29-0 head-to-head), so the lot that seats C over F does not change the outcome. The A-vs-C runoff is then tied 9-9, and the ballots do break it — on the five-star count (C 9, A 0). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [C]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

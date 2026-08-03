@@ -17,14 +17,6 @@ votes. Alice has one 5, Ben has none, so Alice wins WITHOUT reaching the lot.
 Contrast tie_break_03 (same tie, no 5 exists -> the lot decides).
 See 01_STAR/concepts/Tie_Breaking_STAR/tie_breaking.md.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Alice]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

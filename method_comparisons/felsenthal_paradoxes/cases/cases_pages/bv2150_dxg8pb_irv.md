@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/dxg8pb/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: IRV
-num_winners: 1
-expected_winners: [Carl]
-bv_election_id: dxg8pb
 bv_test_id: BV2150
 ```
 

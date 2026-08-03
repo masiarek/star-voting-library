@@ -32,15 +32,6 @@ version would resolve its ties at random, so the result can't be frozen).
 The 81-voter live case this bloc embeds into:
 bv2173_gmfv4c_edelman_saari_cancellation.yaml
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ada]
-lot_numbers: [Ada, Ben, Cara]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

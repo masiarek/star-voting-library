@@ -16,14 +16,6 @@ Dave has the most approvals and wins. In the original two rows carried out-of-bo
 marks (a 2 and a -1) that BetterVoting counts as 0/not-approved; here they are written
 as plain 0 so the file validates under this engine while preserving every approval total.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Approval
-num_winners: 1
-expected_winners: [Dave]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

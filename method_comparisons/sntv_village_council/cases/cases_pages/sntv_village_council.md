@@ -33,11 +33,6 @@ method_comparisons/multi_member_plurality.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Plurality
-num_winners: 2
-expected_winners: [Priya, Nora]
-lot_numbers: [Nora, Omar, Priya]
-bv_election_id: y3tvxm
 bv_test_id: BV2136
 ```
 

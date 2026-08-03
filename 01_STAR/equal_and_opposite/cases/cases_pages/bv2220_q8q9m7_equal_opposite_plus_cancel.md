@@ -24,10 +24,6 @@ which is why STAR has no forced vote-splitting. See equal_and_opposite/README.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Comet]
-bv_election_id: q8q9m7
 bv_test_id: BV2220
 ```
 

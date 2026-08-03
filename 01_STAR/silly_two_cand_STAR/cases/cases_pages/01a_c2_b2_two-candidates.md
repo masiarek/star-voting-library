@@ -18,13 +18,6 @@ both scoring Chocolate 5 and Vanilla 3. Nothing changes but the totals
 (10 vs 6) — a first look at how the report scales counts. Compare the two
 files line by line to see exactly which numbers one added ballot moves.
 
-## Parameters (from the YAML)
-
-```yaml
-expected_winners: [Chocolate]
-bv_election_id: my82v6
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

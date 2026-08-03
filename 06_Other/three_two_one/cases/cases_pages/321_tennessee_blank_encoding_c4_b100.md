@@ -22,13 +22,6 @@ eliminated at the finalist step. The consensus capital, Nashville — never
 rated Bad by anyone — wins the runoff. This is the same "centrist consensus
 winner" result most non-plurality methods give on this electorate.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: 3-2-1
-expected_winners: [Nashville]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

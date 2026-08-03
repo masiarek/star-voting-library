@@ -17,14 +17,6 @@ Z's ballots transfer to X). This is the baseline for the paradox — in part 2
 choice, change nothing else, and X LOSES. Keep both files side by side; the
 ballots differ only in those four voters.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [X]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

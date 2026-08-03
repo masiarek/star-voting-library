@@ -21,14 +21,6 @@ Companion cases: approval_bloc_2seats_c4_b6 (majority sweep + tie-break)
 and approval_bloc_4seats_c7_b12_lackner_skowron (AV vs PAV on the
 literature's running example).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Approval_Multi_Winner
-num_winners: 3
-expected_winners: [Adams, Brown, Clark]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).

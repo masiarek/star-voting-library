@@ -41,10 +41,6 @@ ballots gets a new scenario with a new cast of names.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Bob]
-bv_election_id: qrw6wb
 bv_test_id: BV2187
 ```
 

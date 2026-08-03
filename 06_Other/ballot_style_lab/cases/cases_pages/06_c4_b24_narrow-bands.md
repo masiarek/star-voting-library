@@ -54,10 +54,6 @@ generate_ballot_styles.py --emit narrow_bands
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Beige]
-bv_election_id: gyv2qt
 bv_test_id: BV2239
 ```
 

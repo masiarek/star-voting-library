@@ -30,10 +30,6 @@ abstention — the #884 dispute.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Ann]
-bv_election_id: 6xhfp8
 bv_test_id: BV11
 ```
 

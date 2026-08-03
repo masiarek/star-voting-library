@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/97hbpw/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Beth]
-bv_election_id: 97hbpw
 bv_test_id: BV2151
 ```
 

@@ -30,10 +30,6 @@ dispute.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Plurality
-num_winners: 1
-expected_winners: [Approve]
-bv_election_id: 6hv7jf
 bv_test_id: BV1570
 ```
 

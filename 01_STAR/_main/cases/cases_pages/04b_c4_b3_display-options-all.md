@@ -15,14 +15,6 @@ Reference example that sets every supported field and display option, so you
 can see exactly what each one does. Single-winner STAR over four candidates;
 the finalists-only matrix, Condorcet line, and score distribution are all on.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Strawberry]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

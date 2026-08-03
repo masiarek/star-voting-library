@@ -24,10 +24,6 @@ So "everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general claim.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Beth]
-bv_election_id: dyh93j
 bv_test_id: BV2223
 ```
 

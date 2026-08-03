@@ -49,10 +49,6 @@ generate_ballot_styles.py --emit graders_divide
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Clara]
-bv_election_id: 4jmgrd
 bv_test_id: BV2234
 ```
 

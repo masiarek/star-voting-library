@@ -36,14 +36,6 @@ Claim-check page: ../../../04_Approval/concepts/hamlin_hua_2023.md
 Companion set: ../../black_curtain/condorcet_compression.md
 Set overview: ../README.md
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [B]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

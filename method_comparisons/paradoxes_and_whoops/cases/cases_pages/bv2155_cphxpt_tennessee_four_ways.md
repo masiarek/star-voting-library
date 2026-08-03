@@ -25,7 +25,6 @@ Live on BetterVoting: https://bettervoting.com/cphxpt/results (BV-confirmed; STA
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: cphxpt
 bv_test_id: BV2155
 ```
 

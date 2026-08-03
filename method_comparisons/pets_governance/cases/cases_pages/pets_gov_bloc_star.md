@@ -23,10 +23,6 @@ ballots, where the minority earns a seat (proportional).
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Bloc STAR
-num_winners: 3
-expected_winners: [Dog, Fish, Cat]
-bv_election_id: kcf8vf
 bv_test_id: BV2134
 ```
 

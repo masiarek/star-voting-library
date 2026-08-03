@@ -26,8 +26,6 @@ Live on BetterVoting: https://bettervoting.com/gr72hd/results (BV-confirmed; STA
 ## Parameters (from the YAML)
 
 ```yaml
-expected_winners: [D]
-bv_election_id: gr72hd
 bv_test_id: BV2158
 ```
 

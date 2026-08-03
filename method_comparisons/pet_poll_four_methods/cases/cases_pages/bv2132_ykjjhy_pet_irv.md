@@ -18,10 +18,6 @@ One of the four races in the BV2132 "Pet poll" (BetterVoting election ykjjhy). T
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Fish]
-bv_election_id: ykjjhy
 bv_test_id: BV2132
 ```
 

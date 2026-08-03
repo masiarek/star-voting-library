@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/byk9v2/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: IRV
-num_winners: 1
-expected_winners: [Alma]
-bv_election_id: byk9v2
 bv_test_id: BV2149
 ```
 

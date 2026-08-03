@@ -36,10 +36,6 @@ Three teaching points in one ballot set:
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [None of the Above]
-bv_election_id: 26khr3
 bv_test_id: BV215
 ```
 

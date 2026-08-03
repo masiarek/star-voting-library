@@ -14,14 +14,6 @@ search:
 LH-only companion to felsenthal_ex6_pareto_approval.yaml (no BetterVoting election — see that file for why). Source: Dan S. Felsenthal (2010), Appendix A3, Example 6, due to Felsenthal & Maoz (1988: 123, Example 4).
 The same 3 voters' full rankings counted by Ranked Robin (Copeland): Aria wins every head-to-head — Beau 3–0 (every single voter prefers Aria to Beau: Pareto dominance), Cole 2–1, Dean 2–1 — the Condorcet winner, elected outright. The approval count in the companion file loses this information because the top-three approval cutoff puts Aria and Beau in the same bucket on every ballot.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Aria]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

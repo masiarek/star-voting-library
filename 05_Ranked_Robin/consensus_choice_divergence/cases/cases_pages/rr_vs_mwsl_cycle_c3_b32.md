@@ -13,14 +13,6 @@ search:
 
 32 ranked ballots, 3 candidates, one Condorcet cycle: Ana beats Bruno by 20, Bruno beats Celia by 4, Celia beats Ana by 8. Everyone finishes 1-1, so Copeland ties all three and the CYCLE RULE alone decides the election. The two rival "consensus" brands answer differently on these very same ballots. Equal Vote's Ranked Robin breaks the tie by net win margin and elects ANA (+12). Better Choices for Democracy's Consensus Choice breaks it by "Most Wins, Smallest Loss" and elects CELIA, whose single defeat is the mildest at 4 votes (Ana's is 8, Bruno's is 20). The engine below computes the Ranked Robin answer; the Consensus Choice answer is read straight off the same pairwise matrix.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ana]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

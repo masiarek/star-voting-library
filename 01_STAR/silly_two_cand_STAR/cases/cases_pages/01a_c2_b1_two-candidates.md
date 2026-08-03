@@ -18,12 +18,6 @@ learn the report layout (ballots, Scoring Round, Automatic Runoff) before
 anything interesting happens. With two candidates STAR always agrees with
 Choose-One; the interesting cases start at three.
 
-## Parameters (from the YAML)
-
-```yaml
-expected_winners: [Chocolate]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

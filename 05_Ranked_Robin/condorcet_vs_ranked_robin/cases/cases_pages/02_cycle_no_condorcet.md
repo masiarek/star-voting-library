@@ -15,15 +15,6 @@ search:
 
 7 ranked ballots, 3 candidates, in a rock-paper-scissors cycle: Ada beats Ben, Ben beats Cara, Cara beats Ada. NO candidate beats both others, so there is NO Condorcet winner. Ranked Robin still produces a winner: everyone has a 1-1 record, so it breaks the tie by total margin — Ada (strongest margins) wins. This is where Ranked Robin and "the Condorcet winner" PART WAYS: the Condorcet winner is undefined, Ranked Robin is not.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ada]
-lot_numbers: [Ada, Ben, Cara]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

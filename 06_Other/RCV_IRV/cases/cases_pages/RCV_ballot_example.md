@@ -18,14 +18,6 @@ round-by-round report before the pathology cases (center_squeeze,
 monotonicity, summability in method_comparisons/) show what elimination
 order can do.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [A]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

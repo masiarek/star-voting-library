@@ -27,10 +27,6 @@ Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Approval
-num_winners: 1
-expected_winners: [Beck]
-bv_election_id: qdtqf2
 bv_test_id: BV2200
 ```
 

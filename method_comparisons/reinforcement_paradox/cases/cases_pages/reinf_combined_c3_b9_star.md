@@ -33,10 +33,6 @@ Full discussion: the folder README.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Cara]
-bv_election_id: t4by6x
 bv_test_id: BV2254
 ```
 

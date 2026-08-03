@@ -28,14 +28,6 @@ Takeaway: an Equal Support ballot is a voter who DECLARED A TIE between the
 finalists, not a voter who lost their voice. It counted in the scoring round
 and is simply neutral in a tie-break it has no preference in.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [A]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

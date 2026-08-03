@@ -26,10 +26,6 @@ preferences — no betrayal needed). Concept: favorite_betrayal_voting_301.md.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Right]
-bv_election_id: 3xgkck
 bv_test_id: BV2227
 ```
 

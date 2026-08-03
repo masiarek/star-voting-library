@@ -14,14 +14,6 @@ search:
 Ported from BetterVoting's tabulator unit tests (Star.test.ts :: "Runoff").
 Bill wins the automatic runoff despite a simple two-ballot field.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Bill]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

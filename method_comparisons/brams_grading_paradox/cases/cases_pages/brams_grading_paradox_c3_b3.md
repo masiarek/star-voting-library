@@ -23,14 +23,6 @@ cut elects Adams, Brams' own top-grades cut elects Baker, and two other
 reasonable cuts produce ties. Grades {0..3} as in the original slide.
 LH-only for now (no BetterVoting election).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Baker]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

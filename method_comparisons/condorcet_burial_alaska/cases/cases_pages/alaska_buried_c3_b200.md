@@ -21,14 +21,6 @@ Top-Two-Runoff (= RCV-IRV in a 3-way cycle) elects Peltola — the burial SUCCEE
 rb-j's point: even Condorcet methods can be gamed by burial, and margin-based
 completion resists it far better than a runoff/Hare completion.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Peltola]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

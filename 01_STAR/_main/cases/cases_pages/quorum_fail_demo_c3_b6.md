@@ -30,8 +30,6 @@ vote" and "being elected" are different things when a quorum isn't met.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
 eligible_voters: 12
 ```
 

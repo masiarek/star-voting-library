@@ -27,15 +27,6 @@ folder README.
 Companion cases: reinf_north_c3_b6_rr.yaml (a 3-way tie),
 reinf_combined_c3_b9_rr.yaml and reinf_combined_c3_b9_star.yaml (Cara wins).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ada]
-lot_numbers: [Ada, Ben, Cara]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

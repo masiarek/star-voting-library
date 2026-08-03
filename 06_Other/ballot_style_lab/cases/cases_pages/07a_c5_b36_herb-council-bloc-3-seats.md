@@ -55,10 +55,6 @@ generate_ballot_styles.py --emit herb_council
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Bloc STAR
-num_winners: 3
-expected_winners: [Basil, Chive, Dill]
-bv_election_id: 9dx494
 bv_test_id: BV2244
 ```
 

@@ -32,14 +32,6 @@ apart needs preference data — exactly what a one-mark ballot never collects.
 Compare 01_political_left_split.yaml, where the same 41%-ish arithmetic DOES
 hide a flipped result.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Aspen]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

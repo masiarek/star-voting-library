@@ -32,10 +32,6 @@ exhaustion.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Ada]
-bv_election_id: dfw8rj
 bv_test_id: BV2183
 ```
 

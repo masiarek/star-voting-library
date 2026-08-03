@@ -53,10 +53,6 @@ generate_ballot_styles.py --emit cliff_city
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Churro]
-bv_election_id: fm8cbv
 bv_test_id: BV2235
 ```
 

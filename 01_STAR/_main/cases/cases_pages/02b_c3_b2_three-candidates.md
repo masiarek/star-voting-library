@@ -23,14 +23,6 @@ Watch the winner change. Choco flavor candidate is polarizing (Caroline 5, David
 Vanilla has broad support (Caroline 3, David 5) - so Vanilla now wins. 
 STAR rewards the broadly-liked compromise over a candidate that half the voters reject.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Vanilla]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

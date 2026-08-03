@@ -20,11 +20,6 @@ The electowiki clone-independence example, part 2 (teaming), BV-backed. Same ele
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [A1]
-lot_numbers: [A1, A2, B, C, D, E, F]
-bv_election_id: 9pr3wr
 bv_test_id: BV2143
 ```
 

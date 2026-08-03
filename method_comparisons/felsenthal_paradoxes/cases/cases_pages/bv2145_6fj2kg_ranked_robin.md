@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/6fj2kg/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ada]
-bv_election_id: 6fj2kg
 bv_test_id: BV2145
 ```
 

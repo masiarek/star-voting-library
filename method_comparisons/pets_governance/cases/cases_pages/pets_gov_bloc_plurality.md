@@ -27,11 +27,6 @@ seats). BV also elects Dog, Bird.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Plurality
-num_winners: 2
-expected_winners: [Dog, Bird]
-lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]
-bv_election_id: kcf8vf
 bv_test_id: BV2134
 ```
 

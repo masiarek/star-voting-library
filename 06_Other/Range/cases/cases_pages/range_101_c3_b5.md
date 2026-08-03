@@ -17,14 +17,6 @@ no elimination. Beth has broad, strong support across both camps and wins on
 total score (21), ahead of Cole (15) and Amy (11). Tabulated by the range
 engine (pref_voting score_voting, cross-checked against a hand sum).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Range
-num_winners: 1
-expected_winners: [Beth]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

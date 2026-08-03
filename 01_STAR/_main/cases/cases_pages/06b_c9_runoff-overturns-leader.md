@@ -25,14 +25,6 @@ Discussion (Larry):
  - Contrast 06a_c9_b3_large-field-equal-support.yaml, where the runoff merely
    CONFIRMS the scoring leader. Same method, two different jobs the runoff does.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Carmen]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

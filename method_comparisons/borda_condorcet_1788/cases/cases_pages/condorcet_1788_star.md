@@ -43,10 +43,6 @@ check, and on Condorcet's own counterexample it returns Condorcet's answer.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Peter]
-bv_election_id: khcwm4
 bv_test_id: BV2250
 ```
 

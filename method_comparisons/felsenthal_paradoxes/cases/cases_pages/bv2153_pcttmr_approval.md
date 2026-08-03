@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/pcttmr/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Approval
-num_winners: 1
-expected_winners: [Bella]
-bv_election_id: pcttmr
 bv_test_id: BV2153
 ```
 

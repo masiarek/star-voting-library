@@ -26,10 +26,6 @@ notably, RCV-IRV on those same strategic ballots STILL elects Berkey. Concept: .
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Berkey]
-bv_election_id: b4yr3v
 bv_test_id: BV2231
 ```
 

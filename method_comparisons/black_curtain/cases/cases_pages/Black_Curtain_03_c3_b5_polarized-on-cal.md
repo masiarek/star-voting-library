@@ -23,14 +23,6 @@ Notes doc: https://docs.google.com/document/d/1ntOS5PQ_kkPnaZpDeqLShGv2pz_k6Zom9
 BetterVoting template: https://bettervoting.com/p9gwc3/vote
 This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Cal]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

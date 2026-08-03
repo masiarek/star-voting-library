@@ -51,15 +51,6 @@ LH-only (no BetterVoting election): neither BV nor the LH engine implements
 Schulze or Split Cycle, and the LH Copeland result here is a tie. Lesson page:
 07_Concepts/topics/condorcet/split_cycle.md
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Cascade]
-lot_numbers: [Arches, Bryce, Cascade, Denali, Everglade]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

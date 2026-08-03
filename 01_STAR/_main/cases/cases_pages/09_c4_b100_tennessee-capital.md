@@ -16,14 +16,6 @@ far from everyone else; Nashville, the central consensus choice, wins both the
 score round and the runoff. Shows why STAR rewards broad support over a large
 but isolated faction.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Nashville]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

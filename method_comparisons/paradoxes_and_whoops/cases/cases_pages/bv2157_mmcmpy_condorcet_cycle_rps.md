@@ -24,7 +24,6 @@ Live on BetterVoting: https://bettervoting.com/mmcmpy/results (BV-confirmed; STA
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: mmcmpy
 bv_test_id: BV2157
 ```
 

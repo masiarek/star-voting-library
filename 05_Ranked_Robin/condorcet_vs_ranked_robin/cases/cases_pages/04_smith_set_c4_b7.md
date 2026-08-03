@@ -15,15 +15,6 @@ search:
 
 The 02_cycle election (Ada beats Ben, Ben beats Cara, Cara beats Ada — no Condorcet winner) with ONE change: a fourth candidate, Dave, whom every voter ranks last. All three cycle members beat Dave 7-0, and no smaller group beats everyone outside it — so the SMITH SET is exactly {Ada, Ben, Cara}. Dave is outside the club. Ranked Robin (Copeland) is Smith-efficient: its winner (Ada, on margins) comes from inside the set.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ada]
-lot_numbers: [Ada, Ben, Cara, Dave]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

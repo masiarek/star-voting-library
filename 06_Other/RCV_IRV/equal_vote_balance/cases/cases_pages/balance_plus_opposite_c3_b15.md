@@ -21,14 +21,6 @@ wins 10-5. Balanced ballots that should cancel instead flip the winner — RCV-I
 fails the Test of Balance, by the center-squeeze mechanism. Lesson:
 06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Ada]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

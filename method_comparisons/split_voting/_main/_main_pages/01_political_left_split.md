@@ -27,9 +27,6 @@ Conservative. Watch the [Vote-splitting check] confirm it.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Labour]
 blocs:
   Coalition: [Green, Labour, SocialDem]
 ```

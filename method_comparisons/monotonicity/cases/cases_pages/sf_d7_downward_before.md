@@ -28,14 +28,6 @@ Melgar's own second-preference split (not published in the quoted table) is
 reconstructed to complete the three-way, chosen consistent with the paper's stated
 AFTER outcome (Engardio wins once Melgar is eliminated).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Melgar]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

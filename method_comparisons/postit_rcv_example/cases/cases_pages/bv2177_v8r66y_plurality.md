@@ -33,10 +33,6 @@ Overview page: bv2177_v8r66y_seven_methods.md
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: Plurality
-num_winners: 1
-expected_winners: [Purple]
-bv_election_id: v8r66y
 bv_test_id: BV2177
 ```
 

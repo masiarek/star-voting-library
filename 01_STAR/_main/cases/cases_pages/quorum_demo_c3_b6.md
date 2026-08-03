@@ -27,9 +27,6 @@ no candidate's score, but their presence made the election valid.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Anna]
 eligible_voters: 10
 ```
 

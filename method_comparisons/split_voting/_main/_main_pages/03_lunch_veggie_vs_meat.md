@@ -27,9 +27,6 @@ can agree on — instead of the spoiler BeefBurger.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [VeggieCurry]
 blocs:
   Veggie: [VeggieCurry, TofuStirFry, GardenSalad]
 ```

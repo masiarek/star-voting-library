@@ -25,7 +25,6 @@ Live on BetterVoting: https://bettervoting.com/3grpbb/results (BV-confirmed; STA
 ## Parameters (from the YAML)
 
 ```yaml
-bv_election_id: 3grpbb
 bv_test_id: BV2156
 ```
 

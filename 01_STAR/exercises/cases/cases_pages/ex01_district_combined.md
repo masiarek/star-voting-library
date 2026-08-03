@@ -31,10 +31,6 @@ Live on BetterVoting (Test ID BV2190): https://bettervoting.com/923q3d/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Carmen]
-bv_election_id: 923q3d
 bv_test_id: BV2190
 ```
 

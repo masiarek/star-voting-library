@@ -26,11 +26,6 @@ races (STAR-PR, STV) seat the minority.
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Dog]
-lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]
-bv_election_id: kcf8vf
 bv_test_id: BV2134
 ```
 

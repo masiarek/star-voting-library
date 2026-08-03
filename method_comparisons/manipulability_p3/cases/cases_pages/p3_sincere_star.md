@@ -18,10 +18,6 @@ The same seven sincere voters under STAR, with each ranking converted to scores 
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Dublin]
-bv_election_id: 4w96tr
 bv_test_id: BV2253
 ```
 

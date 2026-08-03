@@ -19,14 +19,6 @@ center_squeeze_star.yaml scores the same profile 0-5 and elects Center.
 See center_squeeze_voteline_1d.yaml for the spectrum picture and the
 center-squeeze topic hub for the cross-method view.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RCV_IRV
-num_winners: 1
-expected_winners: [Left]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

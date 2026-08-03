@@ -32,15 +32,6 @@ reinforcing, at any number of candidates from three up.
 Branch companions: reinf_combined_c3_b9_rr.yaml (Ada branch → Cara wins),
 reinf_combined_ben_c3_b9_rr.yaml (Ben branch → Ada wins).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Ben]
-lot_numbers: [Ada, Ben, Cara]
-```
-
 ## Ballots
 
 Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).

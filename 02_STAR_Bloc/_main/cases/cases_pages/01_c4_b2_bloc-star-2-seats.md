@@ -15,14 +15,6 @@ A basic multi-winner example with 4 candidates and 2 seats. It demonstrates how
 Bloc STAR fills each seat sequentially through a dedicated scoring round and
 automatic runoff.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: Bloc STAR
-num_winners: 2
-expected_winners: [Don, Cal]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

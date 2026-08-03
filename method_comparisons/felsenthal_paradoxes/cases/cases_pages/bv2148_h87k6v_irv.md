@@ -20,10 +20,6 @@ Live results: https://bettervoting.com/h87k6v/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: IRV
-num_winners: 1
-expected_winners: [Bruno]
-bv_election_id: h87k6v
 bv_test_id: BV2148
 ```
 

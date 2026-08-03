@@ -19,14 +19,6 @@ One original out-of-bounds mark (rank -1 for Dave) becomes a blank. Alice wins e
 head-to-head (Condorcet winner); Copeland scores match BetterVoting (Alice 3, Bob 2,
 Carol 1, Dave 0).
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: RankedRobin
-num_winners: 1
-expected_winners: [Alice]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

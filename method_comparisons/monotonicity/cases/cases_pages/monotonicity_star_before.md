@@ -19,14 +19,6 @@ In the _after file, 4 voters RAISE X to the top. RCV-IRV flips X from winner to
 loser (the non-monotonicity paradox); STAR still elects X. See
 07_Concepts/monotonicity.md.
 
-## Parameters (from the YAML)
-
-```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [X]
-```
-
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).

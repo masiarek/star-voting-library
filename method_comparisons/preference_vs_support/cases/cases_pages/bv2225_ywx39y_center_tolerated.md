@@ -30,10 +30,6 @@ Live results: https://bettervoting.com/ywx39y/results
 ## Parameters (from the YAML)
 
 ```yaml
-voting_method: STAR
-num_winners: 1
-expected_winners: [Alex]
-bv_election_id: ywx39y
 bv_test_id: BV2225
 ```
 
