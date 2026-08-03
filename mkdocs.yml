@@ -27,15 +27,41 @@ site_dir: site
 # shift every page one level deeper and 404 the folder-style links.
 use_directory_urls: false
 
-# Built and linkable, but hidden from the auto-generated left sidebar — internal
-# or duplicate pages that would otherwise greet a newcomer at the very top of
-# the nav: CLAUDE.md (house conventions), the license inventory, and readme.md
-# (whose content already IS the homepage — index.md inlines it at build time).
+# Built and linkable, but hidden from the auto-generated left sidebar.
+#
+# Two groups. First, internal or duplicate pages that would otherwise greet a
+# newcomer at the very top of the nav: CLAUDE.md (house conventions), the
+# license inventory, and readme.md (whose content already IS the homepage —
+# index.md inlines it at build time).
+#
+# Second, and much larger: the GENERATED per-election pages in `*_pages/`. There
+# are 456 of them against ~650 hand-written pages, so left in the sidebar they
+# are the clear majority of it — and they are the one part of the library nobody
+# navigates by scrolling. You reach a case from its folder README (every one is
+# index-complete, enforced by check_repo_hygiene) or from CATALOG.md, both of
+# which say what each case *teaches*; the sidebar can only offer the filename.
+# The pages are still BUILT, still linked, still at the same URLs — only absent
+# from the nav tree, exactly as they are already absent from the search index
+# (`search: exclude: true`, stamped by build_yaml_pages.py for the same reason:
+# they were 44% of a 9 MB index).
+#
+# The one thing this costs: MkDocs derives the footer's prev/next arrows from
+# the nav, so a case page no longer has them. That loss is already covered in
+# the page body — build_yaml_pages.py ends every generated page with a "More
+# cases in this set" list naming every sibling, above "See also" links to the
+# folder README, the topic hubs, the glossary and the by-method index. Sibling
+# traversal moved from the chrome into the content; it did not disappear. If
+# that footer block is ever dropped from the generator, revisit this exclusion.
+#
+# Keep the nav and search exclusions in sync. If a future generator writes pages
+# somewhere other than `*_pages/`, it needs a pattern here too, or 400-odd
+# filenames reappear in the sidebar.
 not_in_nav: |
   /CLAUDE.md
   /CONTRIBUTING.md
   /THIRD_PARTY_LICENSES.md
   /readme.md
+  *_pages/
 
 theme:
   name: material
