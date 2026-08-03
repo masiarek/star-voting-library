@@ -1,6 +1,6 @@
 # What should we call this method? — the naming options, weighed
 
-*One method, roughly seven centuries old, and at least six names in circulation. This page is not the [naming decoder](condorcet_naming_decoder.md) — that one maps which word **means** what. This one argues about which word we should **use**, and what each choice costs. It is a live dispute, including among the people who coined the names, so it is laid out as pros and cons rather than a ruling.*
+*One method, first described in 1299, and at least seven names in circulation. This page is not the [naming decoder](condorcet_naming_decoder.md) — that one maps which word **means** what. This one argues about which word we should **use**, and what each choice costs. It is a live dispute, including among the people who coined the names, so it is laid out as pros and cons rather than a ruling.*
 
 **Level: reference** (a 201/301 aid). The teaching page for the method is [Ranked Robin](ranked_robin.md).
 
@@ -64,7 +64,15 @@ That last comparison should sting for us in particular, because **this repo's en
 
 ### "Llull voting"
 
-Occasionally floated, honest about the history, and used by essentially nobody. Worth a footnote, not a label.
+**Better attested than this page used to claim.** Wikipedia's Copeland article *opens* "The Copeland or Llull method," so the label is not merely floated in forums — the neutral reference work leads with it. It is also the most honest name about the history: it credits 1299 rather than 1951.
+
+**For.** Historically correct, and it sidesteps the awkwardness of naming a 700-year-old idea after the man who rediscovered it in a 1951 lecture.
+
+**Against.** Outside that one article almost nobody says it, it teaches a newcomer nothing about the mechanic, and it swaps one person's surname for another's — so it does not answer the objection that drove the rebrand in the first place. Worth knowing when you meet it in a source; not a label to lead with.
+
+### "Instant Round-Robin Voting" (IRRV)
+
+A separate friendly-tournament rebrand with the same ambiguity problem as ours: [electowiki](https://electowiki.org/wiki/Instant-Round-Robin_Voting) defines it as one specific method, the [Condorcet Canada Initiative](https://condorcet.ca/) flies it as a banner for Condorcet voting generally, and Wikipedia just redirects it to the family. Not a candidate for our prose — nobody in this orbit uses it — but it belongs on the list, because it is direct evidence that the annexation Schulze objected to is a *pattern* in this family rather than a one-off by Equal Vote. *(Advocacy and community-wiki sources; cited for their own usage, not as referees.)*
 
 ## What is not negotiable
 
@@ -96,7 +104,8 @@ What is *not* a judgement call is the underlying fact, and it belongs in front o
 
 - [Ranked Robin (electowiki)](https://electowiki.org/wiki/Ranked_Robin) and [its talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) — the canonical definition of the name, and the naming argument itself, including Schulze's objection and Wolk's 2025 clarification. *Community wiki, Equal-Vote-adjacent: good for definitions, weak for verdicts.*
 - [Equal Vote — Ranked Robin](https://www.equal.vote/ranked_robin) and the [superseded version](https://www.equal.vote/ranked_robin_old). *Advocacy; cite for their position, not for verdicts.*
-- [Copeland's method (Wikipedia)](https://en.wikipedia.org/wiki/Copeland%27s_method) · [Round-robin voting (Wikipedia)](https://en.wikipedia.org/wiki/Round-robin_voting) — the neutral family and algorithm articles.
+- [Copeland's method (Wikipedia)](https://en.wikipedia.org/wiki/Copeland%27s_method) · [Round-robin voting (Wikipedia)](https://en.wikipedia.org/wiki/Round-robin_voting) — the neutral family and algorithm articles. The first is also the source for *"The Copeland or Llull method"*; the second is where *paired comparison* and *tournament voting* are listed as family names.
+- [Instant-Round-Robin Voting (electowiki)](https://electowiki.org/wiki/Instant-Round-Robin_Voting) and the [Condorcet Canada Initiative](https://condorcet.ca/), which uses the term as its banner. *Community wiki and advocacy respectively; cited for the fact that the name is in use and for whose usage it is — not as referees on the method.*
 - [Better Choices for Democracy — Consensus Choice](https://www.betterchoices.vote/faqs) and their [method page](https://www.betterchoices.vote/consensus-choice), titled *"Consensus Choice Voting"*. *Advocacy; the sibling brand with a different cycle rule, and the likely source of the phantom "Consensus Voting".*
 - [Better Choices for Democracy (electowiki)](https://electowiki.org/wiki/Better_Choices_for_Democracy) — the third-party description that names the underlying method (Condorcet, Copeland variants) where BC4D's own pages do not, and notes board member Wes Holliday, co-author of [Split Cycle](../../method_comparisons/split_cycle/). *Community wiki; better here than the org's own copy precisely because it is not theirs.*
 

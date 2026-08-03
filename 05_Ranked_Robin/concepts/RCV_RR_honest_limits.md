@@ -4,6 +4,8 @@
 
 → Companion critical pages (parity across methods): [STAR's limits](../../01_STAR/concepts/properties_and_limits/STAR_honest_limits.md) · [Approval's limits](../../04_Approval/concepts/approval_honest_limits.md) · [RCV-IRV fails the Equal Vote](../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md). What RCV-RR *is*: [Ranked Robin](ranked_robin.md). Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
 
+**Also called — and why it matters here.** These limits belong to the *method*, not to the brand, so they follow it under every name it travels under. The algorithm is **Copeland's method** (**Copeland//Borda** once the margins tiebreak is attached), and after the man who described it in 1299 it is also the **Llull method** — Wikipedia's article opens "The Copeland or Llull method." The family it sits in answers to **Condorcet methods**, **round-robin voting**, **paired comparison**, and **tournament voting**. Two campaigns brand it further: **Consensus Choice** (Better Choices for Democracy — a genuinely different cycle rule, so not a straight synonym) and **Instant Round-Robin Voting (IRRV)**, the banner of the Condorcet Canada Initiative, though that term is used loosely enough — sometimes for the whole family, sometimes for Schulze — to be worth pinning down before you rely on it. If you arrived here from any of those words, §1–§5 are still about your method. Which word means what: [the naming decoder](condorcet_naming_decoder.md) · which one we should lead with: [what to call this method](what_to_call_this_method.md).
+
 ---
 
 ## 1. Condorcet cycles (no clear winner)
