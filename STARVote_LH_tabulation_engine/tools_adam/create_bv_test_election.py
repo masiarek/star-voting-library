@@ -383,8 +383,16 @@ def _finish_create(spec, eid):
     # Per-bloc summary keyed by the voter's cross-race signature.
     want_by_sig = Counter(_sig(i) for i in voters)
     ok_by_sig = Counter(_sig(i) for i in voters if i in ok_idx)
-    for sig in sorted(want_by_sig, key=lambda s: [-x for row in s for x in row]):
-        label = " | ".join("[" + ",".join(map(str, row)) + "]" for row in sig)
+    # A blank score slot is None (JSON null), not 0 — so this key cannot just
+    # negate. It sorts blanks last within a rung and leaves scored slots in
+    # descending order. Crashed the BV2105-r2 mint (w3vvff, 2026-08-04) with
+    # "bad operand type for unary -: 'NoneType'" AFTER the ballots were already
+    # cast, which reads like a failed mint when nothing was actually wrong.
+    for sig in sorted(want_by_sig,
+                      key=lambda s: [(x is None, -x if x is not None else 0)
+                                     for row in s for x in row]):
+        label = " | ".join("[" + ",".join("-" if x is None else str(x) for x in row) + "]"
+                           for row in sig)
         mark = "✓" if ok_by_sig[sig] == want_by_sig[sig] else "⚠"
         print(f"    {ok_by_sig[sig]:>3}/{want_by_sig[sig]} × {label}  {mark}")
     print(f"  cast {len(ok_idx)}/{nb} ballots OK.")

@@ -4775,7 +4775,85 @@ OVER_50_PERCENT_SPEC = {
 }
 
 
+# ---------------------------------------------------------------------------
+# BV2105-r2 — the ice cream abstention re-check.
+#
+# A deliberate RE-RUN of BV2105 (r4dqvd, minted 2025-10-31) on the SAME four
+# ballots. That election reported nTallyVotes 2 / nAbstentions 2: it filed the
+# partial ballot "Vanilla 1, rest blank" as an abstention alongside the genuinely
+# blank one, and Vanilla's score came out as an average over 2 ballots instead of
+# 3. Reported as bettervoting#1056, CLOSED as completed on 2025-11-06.
+#
+# Why a new election rather than a re-fetch: re-fetching r4dqvd today still
+# returns nTallyVotes 2 / nAbstentions 2, but that election is `closed` and its
+# stored ElectionResult may simply be the tally computed back in 2025 — a
+# re-fetch cannot distinguish "the bug is still live" from "we are reading a
+# 2025 result." Only ballots cast through TODAY's tabulator can.
+#
+# Why the repo's other exports cannot answer it either: the discriminating shape
+# is a ballot whose non-blank marks are ALL EQUAL (here a single "1"), because
+# that is what #884's all-equal rule mistakes for an abstention. The only other
+# 2026-minted export with a partial ballot is BV215 (26khr3), whose partial is
+# "Ada 5, Bruno 1, blank" — two DISTINCT marks, so it counts under the buggy
+# rule and the fixed one alike. It proves nothing about #1056.
+#
+# Reads as a real election on its own terms (a 3-flavour ice cream vote, 2 seats),
+# so the permanent public title stands up without needing the bug context.
+# ---------------------------------------------------------------------------
+ICE_CREAM_ABSTENTION_RECHECK_SPEC = {
+    "test_id": "BV2105-r2",
+    "title": "Favorite ice cream (Bloc STAR): the partial ballot re-check",
+    "description": (
+        "Three flavours, two seats, four voters, scored 0-5. This is a deliberate re-run of "
+        "an earlier election (bettervoting.com/r4dqvd/results) on exactly the same four "
+        "ballots, cast again so they are counted by today's tabulator. "
+        "The ballots are chosen so that each one is a different KIND of ballot. One voter "
+        "scores everything 5. One leaves the whole ballot blank — a true abstention, nobody "
+        "scored. One scores Vanilla 1 and leaves the other two blank — a real vote, cast by "
+        "a voter who rated exactly one flavour. One fills the ballot out normally: Vanilla 2, "
+        "Chocolate 5, Strawberry 4. "
+        "The winners are not in question and do not depend on any of this: Chocolate takes "
+        "the first seat, and the second seat is a Vanilla/Strawberry runoff tie broken by "
+        "score, 9 to 8, for Strawberry. "
+        "What the election actually measures is the COUNT rather than the winner — whether "
+        "that third ballot is recorded as a vote or as an abstention. It is the smallest "
+        "ballot that can tell the difference, because its only mark is a single 1: a rule "
+        "that treats an all-equal ballot as an abstention cannot tell that ballot apart from "
+        "an empty one, while a voter plainly did rate a flavour. Read it off the tallied-ballot "
+        "and abstention counts on the results page: 3 and 1 if the partial ballot is counted, "
+        "2 and 2 if it is not. Vanilla's reported average is the corroborating figure — it is "
+        "taken over three ballots (5, 1 and 2) once the single point is added, and over only "
+        "two (5 and 2) if that ballot is dropped. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/index.html"),
+    "method": "STAR",          # BV has no separate "Bloc STAR" string: STAR + num_winners > 1
+    "num_winners": 2,
+    "candidates": ["Vanilla", "Chocolate", "Strawberry"],
+    # `None` serialises to JSON null — a blank score slot, NOT a zero. That
+    # distinction is the entire experiment; do not "clean up" these to 0.
+    "ballots": [
+        [5, 5, 5],              # loves everything
+        [None, None, None],     # fully blank — a TRUE abstention
+        [1, None, None],        # Vanilla=1, rest blank — a REAL partial vote (the probe)
+        [2, 5, 4],              # an ordinary full ballot
+    ],
+    "enable_write_in": False,   # a write-in would add a fourth column to the probe ballot
+    "expected": (
+        "Winners Chocolate, Strawberry either way — seat 1 to Chocolate, seat 2 by score "
+        "tiebreak, Strawberry 9 > Vanilla 8. The count is the probe. FIXED looks like "
+        "nTallyVotes 3 / nAbstentions 1, Vanilla averaged over 3 ballots (8/3). STILL BROKEN "
+        "looks like nTallyVotes 2 / nAbstentions 2, Vanilla over 2 ballots (7/2) — the exact "
+        "shape BV2105 recorded in 2025, where BV displayed that as `score: 3` (it floors the "
+        "average: Strawberry's 9/2 displayed as 4). LH counts 4 ballots, 1 abstention, "
+        "Vanilla total 8. "
+        "Test ID BV2105-r2; re-run of BV2105 (r4dqvd) for bettervoting#1056."),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [ICE_CREAM_ABSTENTION_RECHECK_SPEC]   # BV2105-r2 — ice cream partial-ballot
+#   re-check (created -> w3vvff). Result: the #1056 miscount STILL REPRODUCES on today's
+#   tabulator — nTallyVotes 2 / nAbstentions 2, identical to BV2105 (r4dqvd) in 2025.
 # Previously: [TIE_EVERY_RUNG_BLOC_SPEC]   # tie at every rung (created -> 484mbm). NOTE: minted
 #   concurrently with OVER_50_PERCENT_SPEC below and both went out titled BV2263 — see that
 #   spec's note. 484mbm is filed by bvid, with no bv_test_id.

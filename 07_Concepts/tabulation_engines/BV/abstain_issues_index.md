@@ -46,6 +46,7 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 |---|---|---|
 | [#894](https://github.com/Equal-Vote/bettervoting/issues/894) | Plurality "undecided" election (all abstentions) still **claims a winner**; **voter count wrong** (2 vs 3); CSV abstain/blank/zero | BV1570 · [6hv7jf](https://bettervoting.com/6hv7jf) · **closed (#952)** |
 | [#1421](https://github.com/Equal-Vote/bettervoting/issues/1421) | **None of the Above** (a real `c-nota` candidate) wins → seated with no special handling | BV215 · [26khr3](https://bettervoting.com/26khr3) |
+| [#1056](https://github.com/Equal-Vote/bettervoting/issues/1056) | A **partial ballot whose marks are all equal** (`1` + two blanks) filed as an abstention; its score never enters the average. **Closed as completed 2025-11-06 — but still reproduces on a fresh election (2026-08-04)** | BV2105 · [r4dqvd](https://bettervoting.com/r4dqvd) · re-check BV2105-r2 · [w3vvff](https://bettervoting.com/w3vvff) |
 
 ## How this library relates
 
@@ -69,4 +70,6 @@ The "BetterVoting has no explicit abstain/spoiled mark distinct from 0/blank" id
 ## Gaps / opportunities
 
 - #1053, #1090, and #894 now have reproductions (see `abstain_bugs/` above). ✅
+- **#1056 needs re-opening.** It is closed as completed, but [BV2105-r2](../../../02_STAR_Bloc/02_Examples/bv2105r2_w3vvff_ice_cream_recheck.md) (`w3vvff`, minted 2026-08-04) re-casts the original four ballots through the live tabulator and gets the same wrong counts — `nTallyVotes 2 / nAbstentions 2`. The frozen export is ready-made evidence for the comment.
+- **A closed BV election cannot verify a fix.** Its stored `ElectionResult` may be the tally from when it closed, so re-fetching proves nothing; only a fresh mint on the same ballots does. Worth remembering before trusting any re-fetch in this index.
 - The **spoiled** / **spoiled-and-reissued** states (LH `?` / `%`) have no BetterVoting equivalent at all — not currently ticketed.

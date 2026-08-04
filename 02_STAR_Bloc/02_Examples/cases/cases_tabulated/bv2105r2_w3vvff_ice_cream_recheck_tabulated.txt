@@ -1,0 +1,228 @@
+======================================================================
+SOURCE FILE:     bv2105r2_w3vvff_ice_cream_recheck.yaml
+TABULATED FILE:  bv2105r2_w3vvff_ice_cream_recheck_tabulated.txt
+======================================================================
+
+election_title: "BV2105-r2 — Favorite ice cream (Bloc STAR, 2 seats): the partial ballot, re-counted a year later"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV2105-r2 (election w3vvff), a deliberate
+  RE-RUN of BV2105 (r4dqvd) on exactly the same four ballots — cast again so they
+  are counted by today's tabulator rather than by the one that ran in 2025.
+  Live results: https://bettervoting.com/w3vvff/results
+  Frozen raw export: bv2105r2_w3vvff_ice_cream_recheck_bv_export.json.
+
+  The four ballots — one of each KIND of ballot:
+
+    Vanilla,Chocolate,Strawberry
+    5,5,5     an all-5s ballot (loves everything)
+    -,-,-     fully blank — a TRUE abstention
+    1,-,-     Vanilla=1, the rest blank — a REAL (partial) vote
+    2,5,4     a full ballot
+
+  Winners: Chocolate, Strawberry — unchanged, and never in question. Chocolate
+  takes seat 1; seat 2 is a Vanilla/Strawberry runoff tie broken by score,
+  Strawberry 9 > Vanilla 8.
+
+  WHY THIS ELECTION EXISTS. BV2105 reported nTallyVotes = 2 and nAbstentions = 2:
+  it filed the partial "1,-,-" ballot as an abstention alongside the genuinely
+  blank one. That was reported as bettervoting#1056, which GitHub shows CLOSED as
+  completed on 2025-11-06.
+
+  THE RESULT: THE MISCOUNT STILL REPRODUCES. Ballots cast through the live API on
+  2026-08-04 come back nTallyVotes 2 / nAbstentions 2 — byte-identical counts to
+  the 2025 run, with Vanilla's score again averaged over 2 ballots instead of 3.
+  So the ticket is closed but the behavior is not fixed. This file is the pinned
+  correct count.
+
+  WHY A NEW ELECTION WAS NEEDED (rather than re-fetching r4dqvd). Re-fetching the
+  2025 election also returns 2/2, but r4dqvd is `closed` and its stored
+  ElectionResult may simply be the tally computed back in 2025 — a re-fetch cannot
+  tell "the bug is live" from "we are reading an old result." Only ballots cast
+  through today's tabulator can, which is what w3vvff is.
+
+  WHY NO OTHER CASE IN THE LIBRARY ANSWERS IT. The discriminating shape is a
+  ballot whose non-blank marks are ALL EQUAL — here a single "1" — because that
+  is what bettervoting#884's all-equal rule mistakes for an abstention. The only
+  other 2026-minted export carrying a partial ballot is BV215 (26khr3), whose
+  partial is "Ada 5, Bruno 1, blank": two DISTINCT marks, so it is counted under
+  the buggy rule and a fixed one alike, and proves nothing about #1056.
+
+  LH counts it correctly: 4 ballots, 1 abstention (only the fully-blank row),
+  Vanilla total 8 (5 + 1 + 2). The dropped ballot only helped Vanilla, the seat-2
+  loser, so the winners survive — this is a REPORTING/counting defect, not a wrong
+  result. But a discarded cast ballot can flip a closer election.
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV2105-r2
+bv_election_id: w3vvff
+bv_results_url: https://bettervoting.com/w3vvff/results
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true    # the count is the whole point — show the per-score + Abs column
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false    # only 4 ballots, each a distinct teaching case — one row per voter
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Vanilla,Chocolate,Strawberry
+  5,5,5
+  -,-,-
+  1,-,-
+  2,5,4
+
+expected_winners:
+  - Chocolate
+  - Strawberry
+
+# file: bv2105r2_w3vvff_ice_cream_recheck.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV2105-r2 — Favorite ice cream (Bloc STAR, 2 seats): the partial ballot, re-counted a year later ===
+  The LH reference for BetterVoting test BV2105-r2 (election w3vvff), a deliberate
+  RE-RUN of BV2105 (r4dqvd) on exactly the same four ballots — cast again so they
+  are counted by today's tabulator rather than by the one that ran in 2025.
+  Live results: https://bettervoting.com/w3vvff/results
+  Frozen raw export: bv2105r2_w3vvff_ice_cream_recheck_bv_export.json.
+
+  The four ballots — one of each KIND of ballot:
+
+    Vanilla,Chocolate,Strawberry
+    5,5,5     an all-5s ballot (loves everything)
+    -,-,-     fully blank — a TRUE abstention
+    1,-,-     Vanilla=1, the rest blank — a REAL (partial) vote
+    2,5,4     a full ballot
+
+  Winners: Chocolate, Strawberry — unchanged, and never in question. Chocolate
+  takes seat 1; seat 2 is a Vanilla/Strawberry runoff tie broken by score,
+  Strawberry 9 > Vanilla 8.
+
+  WHY THIS ELECTION EXISTS. BV2105 reported nTallyVotes = 2 and nAbstentions = 2:
+  it filed the partial "1,-,-" ballot as an abstention alongside the genuinely
+  blank one. That was reported as bettervoting#1056, which GitHub shows CLOSED as
+  completed on 2025-11-06.
+
+  THE RESULT: THE MISCOUNT STILL REPRODUCES. Ballots cast through the live API on
+  2026-08-04 come back nTallyVotes 2 / nAbstentions 2 — byte-identical counts to
+  the 2025 run, with Vanilla's score again averaged over 2 ballots instead of 3.
+  So the ticket is closed but the behavior is not fixed. This file is the pinned
+  correct count.
+
+  WHY A NEW ELECTION WAS NEEDED (rather than re-fetching r4dqvd). Re-fetching the
+  2025 election also returns 2/2, but r4dqvd is `closed` and its stored
+  ElectionResult may simply be the tally computed back in 2025 — a re-fetch cannot
+  tell "the bug is live" from "we are reading an old result." Only ballots cast
+  through today's tabulator can, which is what w3vvff is.
+
+  WHY NO OTHER CASE IN THE LIBRARY ANSWERS IT. The discriminating shape is a
+  ballot whose non-blank marks are ALL EQUAL — here a single "1" — because that
+  is what bettervoting#884's all-equal rule mistakes for an abstention. The only
+  other 2026-minted export carrying a partial ballot is BV215 (26khr3), whose
+  partial is "Ada 5, Bruno 1, blank": two DISTINCT marks, so it is counted under
+  the buggy rule and a fixed one alike, and proves nothing about #1056.
+
+  LH counts it correctly: 4 ballots, 1 abstention (only the fully-blank row),
+  Vanilla total 8 (5 + 1 + 2). The dropped ballot only helped Vanilla, the seat-2
+  loser, so the winners survive — this is a REPORTING/counting defect, not a wrong
+  result. But a discarded cast ballot can flip a closer election.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                   |     Vanilla    | * Chocolate   | * Strawberry  |
+---------------------------------------------------------------------
+         Vanilla > |      ---       |  1 - 2 - 1    |  1 - 2 - 1    |
+     * Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
+    * Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Vanilla, Chocolate (pairwise ties)
+
+[Condorcet Loser]
+  No strict Condorcet loser; jointly weak Condorcet losers: Vanilla, Strawberry (winless — pairwise ties) — Vanilla elected by Choose-One (Plurality)!
+
+[Divergence from STAR]
+  STAR                   = Chocolate
+  Choose-One (Plurality) = Vanilla   (differs from STAR)
+  RCV-IRV                = Vanilla   (differs from STAR)
+  Note: 1 of 4 ballots (25%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2105r2_w3vvff_ice_cream_recheck_RCV-IRV_tabulated.txt
+
+--- Bloc STAR Voting Method (2 winners) ---
+[Bloc STAR]
+ Tabulating 4 ballots to fill 2 seats. Note: 1 of 4 ballots is marked as an abstention.
+Vanilla,Chocolate,Strawberry
+      5,        5,         5
+      -,        -,         -
+      1,        -,         -
+      2,        5,         4
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[Score Distribution] (how many ballots gave each star rating)
+                 Score
+Candidate   5  4  3  2  1  0  Abs  | Total   Avg
+Vanilla     1  0  0  1  1  0    1  |     8   2.7
+Chocolate   2  0  0  0  0  0    2  |    10   5.0
+Strawberry  1  1  0  0  0  0    2  |     9   4.5
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Chocolate     -- 10 -- First place
+   Strawberry    --  9 -- Second place
+   Vanilla       --  8
+ Chocolate and Strawberry advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Chocolate     -- 1 -- First place
+   Strawberry    -- 0
+   Equal Support -- 3
+ Chocolate wins.
+   Runoff math:
+     4  ballots cast
+   − 3  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Chocolate 1 (100%)  ·  Strawberry 0 (0%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Strawberry    -- 9 -- First place
+   Vanilla       -- 8 -- Second place
+ Strawberry and Vanilla advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Strawberry    -- 1 -- Tied for first place
+   Vanilla       -- 1 -- Tied for first place
+   Equal Support -- 2
+ There's a two-way tie for first.
+
+[Bloc STAR: Round 2: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Strawberry    -- 9 -- First place
+   Vanilla       -- 8
+ Strawberry wins.
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Chocolate
+ Strawberry

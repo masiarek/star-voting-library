@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**472 election files** (410 single-winner, 62 multi-winner) across 16 method(s).
+**473 election files** (410 single-winner, 63 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -22,7 +22,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 11 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
-| BLOC STAR | 28 |
+| BLOC STAR | 29 |
 | IRV | 19 |
 | PLURALITY | 26 |
 | RANGE | 2 |
@@ -474,7 +474,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (28)
+## BLOC STAR  (29)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -489,6 +489,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv132_verify_votes_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv132_verify_votes_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV132 — verify number of votes cast (Bloc STAR, 2 seats) → _C, B_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv132_verify_votes_bloc.yaml) |
 | [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv1815_bloc_3c2s_basic.yaml) |
 | [`bv2105_r4dqvd_ice_cream_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention → _Chocolate, Strawberry_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv2105_r4dqvd_ice_cream_bloc.yaml) |
+| [`bv2105r2_w3vvff_ice_cream_recheck`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv2105r2_w3vvff_ice_cream_recheck.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV2105-r2 — Favorite ice cream (Bloc STAR, 2 seats): the partial ballot, re-counted a year later → _Chocolate, Strawberry_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv2105r2_w3vvff_ice_cream_recheck.yaml) |
 | [`bv750_tie_breaking_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv750_tie_breaking_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family) → _c, a_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv750_tie_breaking_bloc.yaml) |
 | [`race_nobody_can_lose_two_seat_control`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/race_nobody_can_lose_two_seat_control.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | A race nobody can lose — the two-seat control → _Abby, Bruno_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/race_nobody_can_lose_two_seat_control.yaml) |
 | [`bv2267_my9jd9_council_before_dane`](../../02_STAR_Bloc/03_Criteria/committee_spoiler/cases/cases_pages/bv2267_my9jd9_council_before_dane.md) | `02_STAR_Bloc/03_Criteria/committee_spoiler/cases/` | 2 | BV2267 — Committee spoiler (1 of 2): three candidates, before a fourth runs → _Cyrus, Ari_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/committee_spoiler/cases/bv2267_my9jd9_council_before_dane.yaml) |

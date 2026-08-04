@@ -4,7 +4,7 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md)
 <!-- case-meta:end -->
 
-*BetterVoting test **BV2105** (`r4dqvd`, "Favorite ice cream (Bloc STAR) - without end date"). Bloc STAR, 3 flavors, 2 seats, 4 ballots. The winners are right (**Chocolate, Strawberry**) and the seat-2 score tiebreak matches LH exactly — but BetterVoting's count is wrong: it files a **real partial ballot as an abstention**, reporting `nTallyVotes 2 / nAbstentions 2` where the truth is 3 tallied + 1 abstention. Guards the (closed) bug [bettervoting#1056](https://github.com/Equal-Vote/bettervoting/issues/1056).*
+*BetterVoting test **BV2105** (`r4dqvd`, "Favorite ice cream (Bloc STAR) - without end date"). Bloc STAR, 3 flavors, 2 seats, 4 ballots. This page reads the **export frozen on 2025-10-31**. In that count the winners were right (**Chocolate, Strawberry**) and the seat-2 score tiebreak matched LH exactly — but the tally was wrong: BetterVoting filed a **real partial ballot as an abstention**, reporting `nTallyVotes 2 / nAbstentions 2` where the truth is 3 tallied + 1 abstention. Reported as [bettervoting#1056](https://github.com/Equal-Vote/bettervoting/issues/1056), **closed as completed 2025-11-06 — but still reproducing:** re-running the same ballots on 2026-08-04 returned the same wrong counts. See [BV2105-r2](bv2105r2_w3vvff_ice_cream_recheck.md).*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd`).
 
@@ -30,7 +30,9 @@ BetterVoting's `summaryData` reports **`nTallyVotes: 2`, `nAbstentions: 2`** —
 
 The LH engine counts it correctly: **4 ballots, 1 abstention** (only the fully-blank row), Vanilla total **8** (5 + 1 + 2). Same winners here — the discarded ballot only helped Vanilla, the seat-2 loser — so this is a **reporting/counting** regression rather than a wrong result. But a dropped cast ballot can flip a closer election, which is why it earns a guard.
 
-This is the **opposite-direction sibling of [BV15](../../01_STAR/04_Real_Elections/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) / bettervoting#740**: #740 *drops* abstentions from the displayed turnout; BV2105 mis-classifies a *real* partial ballot **as** an abstention. Both are abstention-accounting defects. Since **#1056 is closed/fixed**, this case is a **regression guard** — the frozen export preserves the buggy counts, and this LH reference pins the correct ones for a future re-check.
+This is the **opposite-direction sibling of [BV15](../../01_STAR/04_Real_Elections/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) / bettervoting#740**: #740 *drops* abstentions from the displayed turnout; BV2105 mis-classifies a *real* partial ballot **as** an abstention. Both are abstention-accounting defects.
+
+**#1056 is closed on the tracker but the behavior is not fixed.** The re-check ran on 2026-08-04: the same four ballots, cast fresh so today's tabulator counts them, come back `nTallyVotes 2 / nAbstentions 2` — identical to the numbers frozen here. That re-run is its own case, [**BV2105-r2** (`w3vvff`)](bv2105r2_w3vvff_ice_cream_recheck.md), which also explains why re-fetching *this* election couldn't have answered the question (a closed election may serve a stored 2025 result). So this page is the **2025 baseline**; BV2105-r2 is the live evidence.
 
 ## The LH report (the correct count)
 
@@ -69,7 +71,7 @@ Full audit copy: [`_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt`](
 | Abstentions | `nAbstentions` 2 | **1** (blank only) | ✗ |
 | Vanilla total | 3 (avg over 2 ballots) | **8** (5 + 1 + 2) | ✗ |
 
-The winner path matches; the **count** is where BV's (now-fixed) bug shows — it drops the `1,-,-` ballot as an abstention.
+The winner path matches; the **count** is where the bug shows — BV drops the `1,-,-` ballot as an abstention. Still true today, on a fresh election: [BV2105-r2](bv2105r2_w3vvff_ice_cream_recheck.md).
 
 ## Related
 

@@ -3,22 +3,23 @@ search:
   exclude: true
 ---
 
-# BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention
+# BV2105-r2 — Favorite ice cream (Bloc STAR, 2 seats): the partial ballot, re-counted a year later
 
-*Generated from [`bv2105_r4dqvd_ice_cream_bloc.yaml`](../bv2105_r4dqvd_ice_cream_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2105r2_w3vvff_ice_cream_recheck.yaml`](../bv2105r2_w3vvff_ice_cream_recheck.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Chocolate, Strawberry
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd` · test `BV2105`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/w3vvff) · **[results ↗](https://bettervoting.com/w3vvff/results)** (election `w3vvff` · test `BV2105-r2`).
 
 ## Scenario
 
-The LH reference for BetterVoting test BV2105 (election r4dqvd, "Favorite ice
-cream (Bloc STAR) - without end date"). Bloc STAR, 3 flavors, 2 seats, 4 ballots.
-Live results: https://bettervoting.com/r4dqvd/results
-Frozen raw export: bv2105_r4dqvd_ice_cream_bloc_bv_export.json.
+The LH reference for BetterVoting test BV2105-r2 (election w3vvff), a deliberate
+RE-RUN of BV2105 (r4dqvd) on exactly the same four ballots — cast again so they
+are counted by today's tabulator rather than by the one that ran in 2025.
+Live results: https://bettervoting.com/w3vvff/results
+Frozen raw export: bv2105r2_w3vvff_ice_cream_recheck_bv_export.json.
 
-The four ballots:
+The four ballots — one of each KIND of ballot:
 
   Vanilla,Chocolate,Strawberry
   5,5,5     an all-5s ballot (loves everything)
@@ -26,36 +27,38 @@ The four ballots:
   1,-,-     Vanilla=1, the rest blank — a REAL (partial) vote
   2,5,4     a full ballot
 
-Winners (both engines): Chocolate, Strawberry. Chocolate takes seat 1; seat 2
-is a Vanilla/Strawberry runoff TIE (1-1) broken by score — Strawberry 9 >
-Vanilla 8 — so BetterVoting's tieBreakType "score" and LH agree exactly.
+Winners: Chocolate, Strawberry — unchanged, and never in question. Chocolate
+takes seat 1; seat 2 is a Vanilla/Strawberry runoff tie broken by score,
+Strawberry 9 > Vanilla 8.
 
-THE REGRESSION (counting, not tabulation). BetterVoting's summaryData reports
-nTallyVotes = 2 and nAbstentions = 2, i.e. it counts only the two FULL ballots
-and files BOTH the blank ballot AND the partial "1,-,-" ballot as abstentions.
-The LH engine counts 4 ballots with just 1 abstention (only the fully-blank
-row); the "1,-,-" ballot is a cast vote — LH's Score Distribution shows Vanilla
-with a real "1" and a total of 8. You can see BV dropped it: its per-candidate
-"score" is the average over 2 ballots (Vanilla (5+2)/2 = 3, not (5+2+1)/3), so
-the partial ballot never entered the tally.
+WHY THIS ELECTION EXISTS. BV2105 reported nTallyVotes = 2 and nAbstentions = 2:
+it filed the partial "1,-,-" ballot as an abstention alongside the genuinely
+blank one. That was reported as bettervoting#1056, which GitHub shows CLOSED as
+completed on 2025-11-06.
 
-Same winners here (the dropped ballot only helped Vanilla, the seat-2 loser), so
-this is a REPORTING/counting regression rather than a wrong result — but a
-discarded cast ballot can flip closer elections. It is the opposite-direction
-sibling of BV15 / bettervoting#740: #740 DROPS abstentions from the displayed
-turnout; BV2105 mis-classifies a real partial ballot AS an abstention.
+THE RESULT: THE MISCOUNT STILL REPRODUCES. Ballots cast through the live API on
+2026-08-04 come back nTallyVotes 2 / nAbstentions 2 — byte-identical counts to
+the 2025 run, with Vanilla's score again averaged over 2 ballots instead of 3.
+So the ticket is closed but the behavior is not fixed. This file is the pinned
+correct count.
 
-Related bug: bettervoting#1056 — CLOSED as completed on 2025-11-06, but NOT
-fixed in the product. The re-check ran on 2026-08-04: the same four ballots,
-cast fresh through the live API so today's tabulator counts them, come back
-nTallyVotes 2 / nAbstentions 2 — identical to the numbers frozen here. That
-re-run is its own case, BV2105-r2 (election w3vvff,
-bv2105r2_w3vvff_ice_cream_recheck.yaml), which also explains why re-fetching
-THIS election could not have answered the question: r4dqvd is closed, so its
-stored ElectionResult may just be the 2025 tally.
+WHY A NEW ELECTION WAS NEEDED (rather than re-fetching r4dqvd). Re-fetching the
+2025 election also returns 2/2, but r4dqvd is `closed` and its stored
+ElectionResult may simply be the tally computed back in 2025 — a re-fetch cannot
+tell "the bug is live" from "we are reading an old result." Only ballots cast
+through today's tabulator can, which is what w3vvff is.
 
-This file is therefore the 2025 BASELINE, and this LH reference pins the
-correct count (4 ballots, 1 abstention, 3 tallied, Vanilla total 8).
+WHY NO OTHER CASE IN THE LIBRARY ANSWERS IT. The discriminating shape is a
+ballot whose non-blank marks are ALL EQUAL — here a single "1" — because that
+is what bettervoting#884's all-equal rule mistakes for an abstention. The only
+other 2026-minted export carrying a partial ballot is BV215 (26khr3), whose
+partial is "Ada 5, Bruno 1, blank": two DISTINCT marks, so it is counted under
+the buggy rule and a fixed one alike, and proves nothing about #1056.
+
+LH counts it correctly: 4 ballots, 1 abstention (only the fully-blank row),
+Vanilla total 8 (5 + 1 + 2). The dropped ballot only helped Vanilla, the seat-2
+loser, so the winners survive — this is a REPORTING/counting defect, not a wrong
+result. But a discarded cast ballot can flip a closer election.
 
 ## Ballots
 
@@ -88,7 +91,7 @@ The count, step by step — the rounds and how the winner is reached:
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2105r2_w3vvff_ice_cream_recheck_RCV-IRV_tabulated.txt
 
 --- Bloc STAR Voting Method (2 winners) ---
 
@@ -175,20 +178,19 @@ Chocolate   2  0  0  0  0  0    2  |    10   5.0
 Strawberry  1  1  0  0  0  0    2  |     9   4.5
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2105r2_w3vvff_ice_cream_recheck_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/02_Examples/cases/bv2105_r4dqvd_ice_cream_bloc.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/02_Examples/cases/bv2105r2_w3vvff_ice_cream_recheck.yaml
 ```
 
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
-- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [00_c3_b3_bloc-baseline-2-seats](00_c3_b3_bloc-baseline-2-seats.md) · [01_c4_b2_bloc-star-2-seats](01_c4_b2_bloc-star-2-seats.md) · [b484mbm_tie_every_rung](b484mbm_tie_every_rung.md) · [bloc_lot_path_dependence_a_c3_b5](bloc_lot_path_dependence_a_c3_b5.md) · [bloc_lot_path_dependence_b_c3_b5](bloc_lot_path_dependence_b_c3_b5.md) · [bv129_score_tiebreak_bloc](bv129_score_tiebreak_bloc.md) · [bv130_bloc_pagination_731](bv130_bloc_pagination_731.md) · [bv130r2_dead_rung_bloc](bv130r2_dead_rung_bloc.md) · [bv131_guido_bloc](bv131_guido_bloc.md) · [bv132_verify_votes_bloc](bv132_verify_votes_bloc.md) · [bv1525_condorcet_loser_bloc](bv1525_condorcet_loser_bloc.md) · [bv1815_bloc_3c2s_basic](bv1815_bloc_3c2s_basic.md) · [bv1835_8h3yrx_score_leader_no_seat](bv1835_8h3yrx_score_leader_no_seat.md) · [bv2105r2_w3vvff_ice_cream_recheck](bv2105r2_w3vvff_ice_cream_recheck.md) · [bv2269_t488h9_race_nobody_can_lose](bv2269_t488h9_race_nobody_can_lose.md) · [bv750_tie_breaking_bloc](bv750_tie_breaking_bloc.md) · [lackner_skowron_shadow_bloc_star_c7_b12](lackner_skowron_shadow_bloc_star_c7_b12.md) · [race_nobody_can_lose_two_seat_control](race_nobody_can_lose_two_seat_control.md)
+More cases in this set: [00_c3_b3_bloc-baseline-2-seats](00_c3_b3_bloc-baseline-2-seats.md) · [01_c4_b2_bloc-star-2-seats](01_c4_b2_bloc-star-2-seats.md) · [b484mbm_tie_every_rung](b484mbm_tie_every_rung.md) · [bloc_lot_path_dependence_a_c3_b5](bloc_lot_path_dependence_a_c3_b5.md) · [bloc_lot_path_dependence_b_c3_b5](bloc_lot_path_dependence_b_c3_b5.md) · [bv129_score_tiebreak_bloc](bv129_score_tiebreak_bloc.md) · [bv130_bloc_pagination_731](bv130_bloc_pagination_731.md) · [bv130r2_dead_rung_bloc](bv130r2_dead_rung_bloc.md) · [bv131_guido_bloc](bv131_guido_bloc.md) · [bv132_verify_votes_bloc](bv132_verify_votes_bloc.md) · [bv1525_condorcet_loser_bloc](bv1525_condorcet_loser_bloc.md) · [bv1815_bloc_3c2s_basic](bv1815_bloc_3c2s_basic.md) · [bv1835_8h3yrx_score_leader_no_seat](bv1835_8h3yrx_score_leader_no_seat.md) · [bv2105_r4dqvd_ice_cream_bloc](bv2105_r4dqvd_ice_cream_bloc.md) · [bv2269_t488h9_race_nobody_can_lose](bv2269_t488h9_race_nobody_can_lose.md) · [bv750_tie_breaking_bloc](bv750_tie_breaking_bloc.md) · [lackner_skowron_shadow_bloc_star_c7_b12](lackner_skowron_shadow_bloc_star_c7_b12.md) · [race_nobody_can_lose_two_seat_control](race_nobody_can_lose_two_seat_control.md)
