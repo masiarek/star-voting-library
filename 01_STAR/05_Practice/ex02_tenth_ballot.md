@@ -39,26 +39,7 @@ The **tenth ballot**, found after the count: **Alex 5 · Chris 2 · Bella, Dana,
 
 Score totals: Alex 9×3 = **27**, Bella 4×2+3×5+2×1 = **25**, Chris 4×4+2×4 = **24**, Eli 3×4+2×5 = **22**, Dana 4×5 = **20**. Alex and Bella advance; six voters score Alex above Bella (the ×4 and ×2 blocs), three the reverse.
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Alex          -- 27 -- First place
-   Bella         -- 25 -- Second place
-   Chris         -- 24
-   Eli           -- 22
-   Dana          -- 20
- Alex and Bella advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Alex          -- 6 -- First place
-   Bella         -- 3
-   Equal Support -- 0
- Alex wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Alex 6 (67%) vs Bella 3 (33%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex02_nine_ballots.md:report"
 **Winner: Alex** — and yes, plain Score agrees (Alex leads the totals, 27).
 
 </details>
@@ -95,22 +76,7 @@ Automatic Runoff Round
 
 Remove Bella's column from the original nine ballots and nothing else moves: Alex **27**, Chris **24**, Eli 22, Dana 20. Chris inherits the second runoff slot — and beats Alex head-to-head 6–3.
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Alex          -- 27 -- First place
-   Chris         -- 24 -- Second place
-   Eli           -- 22
-   Dana          -- 20
- Alex and Chris advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Chris         -- 6 -- First place
-   Alex          -- 3
- Chris wins.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex02_bella_exits.md:report"
 **Winner: Chris.** Bella was never going to win, yet her *presence* decided who does — she occupied the runoff slot that Chris wins from. The familiar spoiler is a loser whose presence *hurts* a similar candidate; Bella is the mirror image, a loser whose presence *protected* the winner. Same family: the outcome depended on an (irrelevant) alternative.
 
 </details>

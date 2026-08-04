@@ -40,6 +40,7 @@ Ada,Ben,Cal,Uma,Val,Wren
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/mmp_block_voting_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Block Voting (plurality-at-large) — 3 winners ---
  Tabulating 10 ballots (3 votes/voter).
@@ -57,6 +58,7 @@ Winners — Block Voting (plurality-at-large), 3 seats:
    2. Ben   (6 votes)
    3. Cal   (6 votes)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

@@ -42,24 +42,7 @@ Baiul: 5×5 + 2×3 + 2×1 = **33**. Kerrigan: 5×3 + 2×5 + 2×5 = **35**. Lu: 7
 <details>
 <summary><b>(b) STAR — Baiul, 5–4</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Kerrigan      -- 35 -- First place
-   Baiul         -- 33 -- Second place
-   Lu            -- 13
- Kerrigan and Baiul advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Baiul         -- 5 -- First place
-   Kerrigan      -- 4
-   Equal Support -- 0
- Baiul wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Baiul 5 (56%) vs Kerrigan 4 (44%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex04_olympics_1994.md:report"
 The engine also prints its `[Runoff Reversal]` block — Kerrigan topped the scores, **Baiul wins the runoff** — plus a divergence note that a per-judge approval reading would side with Kerrigan too. The reversal is the whole exercise: the scoring round finds the finalists, then the majority decides between them.
 
 </details>

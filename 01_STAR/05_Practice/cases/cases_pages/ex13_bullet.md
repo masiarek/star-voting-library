@@ -44,6 +44,7 @@ Ash,Beck,Cora
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/ex13_bullet_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 9 ballots (any non-zero score = approval).
@@ -73,6 +74,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Cora
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

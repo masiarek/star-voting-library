@@ -31,6 +31,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (2 winners) ---
  Tabulating 100 ballots (ranked ballots).
@@ -77,6 +78,7 @@ Winners — Ranked Robin (RCV-RR), 2 seats (Bloc — the top 2 by record):
    1. Arepa   (4–0–0, Copeland 4, margin +68)
    2. Bao   (3–1–0, Copeland 3, margin +30)
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

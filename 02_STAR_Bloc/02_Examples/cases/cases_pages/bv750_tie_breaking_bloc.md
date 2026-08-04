@@ -46,6 +46,7 @@ a,b,c
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Bloc STAR Voting Method (2 winners) ---
 
@@ -165,6 +166,7 @@ Count × a,b,c
  c
  a
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

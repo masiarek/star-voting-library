@@ -49,6 +49,7 @@ Aster,Bluebell,Clover
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Clover
@@ -106,6 +107,7 @@ Count × Aster,Bluebell,Clover
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Clover
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

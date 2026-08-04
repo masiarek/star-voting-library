@@ -47,6 +47,7 @@ Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Apocalypse 
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Someone I Like
@@ -137,6 +138,7 @@ Count × Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Ap
  Santa Claus
  The Lesser Evil
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

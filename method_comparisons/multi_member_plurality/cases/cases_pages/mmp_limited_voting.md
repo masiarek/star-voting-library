@@ -42,6 +42,7 @@ Ada,Ben,Cal,Uma,Val,Wren
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/mmp_limited_voting_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Multi-winner Plurality — 3 winners ---
  Tabulating 10 ballots (mixed votes/voter).
@@ -59,6 +60,7 @@ Winners — Multi-winner Plurality, 3 seats:
    2. Ben   (6 votes)
    3. Uma   (4 votes)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

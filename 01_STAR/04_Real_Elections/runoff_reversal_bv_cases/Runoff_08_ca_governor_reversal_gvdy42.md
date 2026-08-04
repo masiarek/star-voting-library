@@ -46,33 +46,7 @@ Note BV's **Equal Support bar — 41%** (124 / 302 = 41.1%) — the tallied deno
 
 ## View 2 — the LH engine (reference)
 
-```
-[Divergence from STAR]
-  STAR                   = Tom Steyer (D)
-  Choose-One (Plurality) = Alicia Olivia Lapp (R)   (differs from STAR)
-
-[Runoff Reversal]
- - Score Round Winner(s) = (Alicia Olivia Lapp (R))
- - Runoff Round Winner   = (Tom Steyer (D))
-
- Tabulating 319 ballots. Note: 17 of 319 ballots are marked as abstentions.
-
-[STAR Voting: Scoring Round]  (top of a 61-candidate field)
-   Alicia Olivia Lapp (R)  -- 395 -- First place
-   Tom Steyer (D)          -- 390 -- Second place
- → Lapp and Steyer advance.
-
-[STAR Voting: Automatic Runoff Round]
-   Tom Steyer (D)          -- 98 -- First place
-   Alicia Olivia Lapp (R)  -- 80
-   Equal Support           -- 141
- Tom Steyer (D) wins.
-
- Runoff math:
-   178  voters with a preference  (majority = 90)
-         Tom Steyer (D) 98 (55%)  ·  Alicia Olivia Lapp (R) 80 (45%)
-```
-
+--8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_08_ca_governor_reversal_gvdy42.md:report"
 Full audit copy: [`_tabulated`](cases/cases_tabulated/Runoff_08_ca_governor_reversal_gvdy42_tabulated.txt) · frozen BV data: [`_bv_export.json`](cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json).
 
 ## BV vs LH

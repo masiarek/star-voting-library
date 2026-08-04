@@ -47,6 +47,7 @@ Count:VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = VeggieCurry
@@ -94,6 +95,7 @@ Count × VeggieCurry,TofuStirFry,GardenSalad,BeefBurger
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  VeggieCurry
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

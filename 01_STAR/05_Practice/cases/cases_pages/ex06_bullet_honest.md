@@ -46,6 +46,7 @@ Ari,Bree,Cash
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Bree
@@ -90,6 +91,7 @@ Count × Ari,Bree,Cash
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Bree
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

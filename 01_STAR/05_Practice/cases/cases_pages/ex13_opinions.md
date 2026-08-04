@@ -49,6 +49,7 @@ Ash,Beck,Cora
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR     = Cora
@@ -97,6 +98,7 @@ Count × Ash,Beck,Cora
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Cora
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

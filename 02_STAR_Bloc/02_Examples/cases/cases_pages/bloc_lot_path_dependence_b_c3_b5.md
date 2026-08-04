@@ -50,6 +50,7 @@ Nadia,Omar,Priya
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR   = Omar
@@ -132,6 +133,7 @@ Count × Nadia,Omar,Priya
  Omar
  Nadia
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

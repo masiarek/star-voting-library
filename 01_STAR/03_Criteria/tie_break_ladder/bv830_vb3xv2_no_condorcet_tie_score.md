@@ -65,47 +65,7 @@ BetterVoting runs the same STAR protocol and, because no random rung is reached,
 
 ## View 2 — the LH engine (reference)
 
-```
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |      A     |   * B     |   * C     |
------------------------------------------------------
-           A > |    ---     |0 - 1 - 2  |0 - 1 - 2  |
-         * B > | 2 - 1 - 0  |   ---     |1 - 1 - 1  |
-         * C > | 2 - 1 - 0  |1 - 1 - 1  |   ---     |
-
-[Condorcet Winner]
-  No strict Condorcet winner; unbeaten candidates: B, C (pairwise ties)
-
---- STAR Voting Method (single winner) ---
- Tabulating 3 ballots.
-
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   B             -- 7 -- First place
-   C             -- 3 -- Second place
-   A             -- 0
- B and C advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   B             -- 1 -- Tied for first place
-   C             -- 1 -- Tied for first place
-   Equal Support -- 1
- There's a two-way tie for first.
-
-Automatic Runoff Round: First tiebreaker
- The highest-scoring candidate wins.
-   B             -- 7 -- First place
-   C             -- 3
- B wins.
-
-Winner — STAR Voting Method (single winner)
- B
-```
-
+--8<-- "01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md:report"
 Note the B > C row of the matrix: `1 - 1 - 1` — one For, one Against, one Equal Support. That single Equal Support ballot (voter 2, who scored B and C both 2) is *why* the head-to-head can't break the deadlock, and why the score rung has to. Full audit copy: [`_tabulated`](cases/cases_tabulated/bv830_vb3xv2_no_condorcet_tie_score_tabulated.txt).
 
 ## BV vs LH

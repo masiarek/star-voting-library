@@ -30,6 +30,7 @@ Athens,Bergen,Cork,Dublin,Edinburgh
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR     = Dublin
@@ -72,6 +73,7 @@ Count × Athens,Bergen,Cork,Dublin,Edinburgh
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Dublin
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

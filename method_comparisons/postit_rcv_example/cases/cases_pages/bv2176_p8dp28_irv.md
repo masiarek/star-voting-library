@@ -60,6 +60,7 @@ Pink
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
   The Post-it RCV example (20 voters) — RCV-IRV: Purple wins the video's whiteboard count
@@ -95,6 +96,7 @@ Blank Votes        3  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Purple
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

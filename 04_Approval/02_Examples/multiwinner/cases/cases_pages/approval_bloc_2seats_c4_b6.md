@@ -42,6 +42,7 @@ Amy,Ben,Cora,Doug
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/approval_bloc_2seats_c4_b6_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (2 winners) ---
  Tabulating 6 ballots (any non-zero score = approval).
@@ -77,6 +78,7 @@ Ballots:
 Winners — Approval Voting (2 winners)
   Amy, Ben
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

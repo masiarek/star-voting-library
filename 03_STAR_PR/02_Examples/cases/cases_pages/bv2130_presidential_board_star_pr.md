@@ -140,6 +140,7 @@ Al Gore (Democrat), Barack Obama (Democrat), Bernie Sanders (Democrat), Hillary 
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Allocated Score Voting Method (7 winners) ---
 
@@ -1015,6 +1016,7 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
  Cornel West (Independent)
  Kamala Harris (Democrat)
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

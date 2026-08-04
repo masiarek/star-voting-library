@@ -44,31 +44,7 @@ Aspen leads the Scoring Round (12) and wins the Automatic Runoff 2–1; the dash
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) mirror adds the funnel):
 
-```
---- Runoff (Preference) Matrix ---
-Legend: For - Equal Support - Against        * indicates Top 2 Finalist
-               |  * Aspen   | * Birch   |
-     * Aspen > |    ---     |2 - 0 - 1  |
-     * Birch > | 1 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Aspen — matches the STAR winner
-
-Scoring Round
-   Aspen         -- 12 -- First place
-   Birch         -- 10 -- Second place
-   Cedar         --  1
- Aspen and Birch advance.
-
-Automatic Runoff Round
-   Aspen         -- 2 -- First place
-   Birch         -- 1
-   Equal Support -- 0
- Aspen wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   Aspen 2 (67%) vs Birch 1 (33%); majority = 2.
-```
-
+--8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_01_confirms_leader_r2pvc9.md:report"
 > **BV ↔ LH wording.** The line `Aspen 2 (67%) vs Birch 1 (33%)` is BetterVoting's *Runoff Votes* (2 / 1) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The point

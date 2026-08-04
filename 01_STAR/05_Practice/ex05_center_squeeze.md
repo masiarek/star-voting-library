@@ -43,24 +43,7 @@ First choices: Avi 4, Cole 3, **Brook 2** — the candidate everyone accepts is 
 <details>
 <summary><b>(b) STAR — Brook, 5–4</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Brook         -- 31 -- First place
-   Avi           -- 23 -- Second place
-   Cole          -- 18
- Brook and Avi advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Brook         -- 5 -- First place
-   Avi           -- 4
-   Equal Support -- 0
- Brook wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Brook 5 (56%) vs Avi 4 (44%).
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex05_center_squeeze.md:report"
 The scoring round is exactly where those invisible 3s count: Brook 31 (from *all nine* voters), Avi 23, Cole 18. In the runoff, Cole's whole wing prefers Brook over Avi — **Brook wins 5–4.**
 
 </details>

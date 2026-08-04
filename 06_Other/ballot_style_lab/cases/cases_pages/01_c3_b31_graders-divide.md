@@ -89,6 +89,7 @@ Abby, Bruno, Clara
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Clara
@@ -139,6 +140,7 @@ Count × Abby,Bruno,Clara
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Clara
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

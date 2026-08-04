@@ -65,6 +65,7 @@ Purple,Green,Blue,Pink
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv2177_v8r66y_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 20 ballots (any non-zero score = approval).
@@ -102,6 +103,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Pink
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

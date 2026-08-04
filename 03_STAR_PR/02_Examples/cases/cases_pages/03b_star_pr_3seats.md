@@ -40,6 +40,7 @@ Count:Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Sequentially Spent Score Voting Method (3 winners) ---
 
@@ -108,6 +109,7 @@ Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
  Schools
  SmallBiz
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

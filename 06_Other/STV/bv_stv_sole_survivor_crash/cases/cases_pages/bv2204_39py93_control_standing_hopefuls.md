@@ -44,6 +44,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- STV / Single Transferable Vote (multi-winner — 2 seats) ---
   BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)
@@ -63,6 +64,7 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 2 seats)
   Angelou
   Cummings
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

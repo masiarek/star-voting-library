@@ -53,6 +53,7 @@ Ada,Bruno,None of the Above
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- STAR Voting Method (single winner) ---
 
@@ -86,6 +87,7 @@ Count × Ada,Bruno,None of the Above
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  None of the Above
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

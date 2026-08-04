@@ -22,29 +22,7 @@ The only difference from BV95a is the majority's `Cleo` score: **3 instead of 0*
 
 ## The STAR tabulation (LH)
 
-```
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        3  0  0  0  0  2  |    15   3.0
-Bruno      2  3  0  0  0  0  |    22   4.4
-Cleo       2  0  3  0  0  0  |    19   3.8
-
-Scoring Round — the two highest scores advance:
-   Bruno  -- 22 -- First place
-   Cleo   -- 19 -- Second place
-   Ada    -- 15                 ← Ada is now THIRD — eliminated before the runoff
- Bruno and Cleo advance.
-
-Automatic Runoff:
-   Bruno  -- 3 -- First place
-   Cleo   -- 0
-   Equal Support -- 2
- Bruno wins.
-
-Winner — STAR Voting Method (single winner):  Bruno
-```
-
+--8<-- "01_STAR/03_Criteria/majority_criterion/cases/cases_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md:report"
 Full audit copy: [`majority_criterion_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt`](cases/cases_tabulated/bv95b_7pdq3r_favorite_loses_two_rivals_tabulated.txt).
 
 ## Why Ada loses — and why it's mild

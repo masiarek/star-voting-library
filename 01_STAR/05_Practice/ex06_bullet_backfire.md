@@ -38,24 +38,7 @@ Nine voters, three speakers, scores 0–5 (rows are candidates, columns are vote
 <details>
 <summary><b>(a) Honest — Bree wins, 5–4; Ari's fans get their second choice</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Bree          -- 25 -- First place
-   Cash          -- 21 -- Second place
-   Ari           -- 20
- Bree and Cash advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Bree          -- 5 -- First place
-   Cash          -- 4
-   Equal Support -- 0
- Bree wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Bree 5 (56%) vs Cash 4 (44%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex06_bullet_honest.md:report"
 Ari misses the runoff by one point (20 vs Cash's 21), and the broad compromise **Bree beats Cash 5–4** — the Ari fans' 3s are precisely what put her there. Their honest ballots bought their second choice. (A side note the engine's divergence block volunteers: on these same honest opinions, *RCV-IRV elects Cash* — Bree is squeezed out on first choices, [exercise 5](ex05_center_squeeze.md)'s lesson making a cameo. The honest STAR outcome these fans are about to gamble away is one other methods wouldn't even have found.)
 
 </details>
@@ -70,24 +53,7 @@ The fans' theory: zeroing Bree drops her below Ari, Ari reaches the runoff, and 
 <details>
 <summary><b>(c) Strategic — Cash wins; the plan works halfway, then detonates</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Cash          -- 21 -- First place
-   Ari           -- 20 -- Second place
-   Bree          -- 13
- Cash and Ari advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Cash          -- 5 -- First place
-   Ari           -- 4
-   Equal Support -- 0
- Cash wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Cash 5 (56%) vs Ari 4 (44%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex06_bullet_backfire.md:report"
 The first half works perfectly: Bree crashes 25 → 13, out of the runoff; Ari is a finalist. Then the trap: **the runoff Ari inherits is against Cash**, and zeroing Bree never created a single Ari-over-Cash preference — those are still 4 (Ari's fans) versus 5 (Cash's fans plus the Bree fan, who scored Cash 1 > Ari 0). **Cash wins 5–4.** The fans demoted their sure second choice and elected their zero. Under the honest count they got Bree; the "clever" ballots got them their nightmare.
 
 </details>

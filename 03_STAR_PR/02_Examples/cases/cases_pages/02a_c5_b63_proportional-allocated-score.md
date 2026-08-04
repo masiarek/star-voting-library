@@ -33,6 +33,7 @@ Alice,Ben,Cara,Dan,Eve
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Ben
@@ -110,6 +111,7 @@ Count × Alice,Ben,Cara,Dan,Eve
  Ben
  Dan
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

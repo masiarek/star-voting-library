@@ -101,6 +101,7 @@ The question to ask is **what the body is for**, not how it feels to the losing 
 ## See also
 
 - [Bloc STAR](bloc_star.md) — the count itself
+- [Over 50% — what a landslide actually buys](over_50_percent.md) — this page's mirror image: the same majoritarian logic when the majority runs only *one* candidate, and the second seat goes to a candidate most of them scored 0
 - [The score leader can win no seat](score_leader_no_seat.md) — the *other* surprise, and not this one
 - [Honest limits](bloc_honest_limits.md) — the sweep, plus everything else worth disclosing
 - [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/) — quota and reweighting, the machinery that prevents a sweep

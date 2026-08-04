@@ -34,6 +34,7 @@ Amy,Beth,Cole
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Range / Score Voting (single winner) ---
   Range / Score Voting 101 — highest total score wins
@@ -64,6 +65,7 @@ Cross-check — pref_voting score_voting: Beth  (✓ agrees with the hand count)
 Winner — Range / Score Voting (single winner)
   Beth
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

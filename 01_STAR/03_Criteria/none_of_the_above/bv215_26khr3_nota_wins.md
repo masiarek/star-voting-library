@@ -33,32 +33,7 @@ Candidates: **Ada, Bruno, None of the Above**. `&` = candidate abstention (Bette
 
 **None of the Above is elected.** It tops the score round (20 vs Ada 10 vs Bruno 2), then wins the automatic runoff 4–2 over Ada.
 
-```text
-[Score Distribution] (how many ballots gave each star rating)
-                        Score
-Candidate          5  4  3  2  1  0  Abs  | Total   Avg
-Ada                2  0  0  0  0  4    0  |    10   1.7
-Bruno              0  0  0  0  2  4    0  |     2   0.3
-None of the Above  4  0  0  0  0  1    1  |    20   4.0
-
-Scoring Round
-   None of the Above -- 20 -- First place
-   Ada               -- 10 -- Second place
-   Bruno             --  2
- None of the Above and Ada advance.
-
-Automatic Runoff Round
-   None of the Above -- 4 -- First place
-   Ada               -- 2
-   Equal Support     -- 0
- None of the Above wins.
-   Voters with a preference: 6 of 6 (no Equal Support).
-   None of the Above 4 (67%) vs Ada 2 (33%); majority = 4.
-
-Winner — STAR Voting Method (single winner)
- None of the Above
-```
-
+--8<-- "01_STAR/03_Criteria/none_of_the_above/cases/cases_pages/bv215_26khr3_nota_wins.md:report"
 (Note the `Abs` column: None of the Above shows `1` abstention — ballot 2's `&` — kept distinct from the `0` scores.)
 
 Full engine detail: [`bv215_26khr3_nota_wins_tabulated.txt`](cases/cases_tabulated/bv215_26khr3_nota_wins_tabulated.txt). Frozen BetterVoting export: [`bv215_26khr3_nota_wins_bv_export.json`](cases/bv215_26khr3_nota_wins_bv_export.json). Tabulatable source: [`bv215_26khr3_nota_wins.yaml`](cases/bv215_26khr3_nota_wins.yaml).

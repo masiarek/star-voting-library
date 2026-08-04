@@ -56,6 +56,7 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Orange5
@@ -133,6 +134,7 @@ Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Orange5
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

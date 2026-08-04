@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**462 election files** (408 single-winner, 54 multi-winner) across 16 method(s).
+**463 election files** (409 single-winner, 54 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 247 |
+| STAR | 248 |
 | RCV-IRV (Hare) | 28 |
 | Ranked Robin (RCV-RR / Copeland) | 70 |
 | Approval | 18 |
@@ -29,7 +29,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (247)
+## STAR  (248)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -52,6 +52,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2256_c8h3tb_traditional_style`](../../01_STAR/02_Examples/cases/cases_pages/bv2256_c8h3tb_traditional_style.md) | `01_STAR/02_Examples/cases/` | 1 | Traditional voting style — one mark each (BV2256, c8h3tb) → _Ella_ | [`.yaml`](../../01_STAR/02_Examples/cases/bv2256_c8h3tb_traditional_style.yaml) |
 | [`display_options_demo`](../../01_STAR/02_Examples/cases/cases_pages/display_options_demo.md) | `01_STAR/02_Examples/cases/` | 1 | Display options demo → _Don_ | [`.yaml`](../../01_STAR/02_Examples/cases/display_options_demo.yaml) |
 | [`equal_support_runoff_demo`](../../01_STAR/02_Examples/cases/cases_pages/equal_support_runoff_demo.md) | `01_STAR/02_Examples/cases/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ | [`.yaml`](../../01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml) |
+| [`over_50_percent_star_c3_b3`](../../01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md) | `01_STAR/02_Examples/cases/` | 1 | Over 50% — single-winner STAR, a candidate with every point on every ballot → _A_ | [`.yaml`](../../01_STAR/02_Examples/cases/over_50_percent_star_c3_b3.yaml) |
 | [`quorum_demo_c3_b6`](../../01_STAR/02_Examples/cases/cases_pages/quorum_demo_c3_b6.md) | `01_STAR/02_Examples/cases/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ | [`.yaml`](../../01_STAR/02_Examples/cases/quorum_demo_c3_b6.yaml) |
 | [`quorum_fail_demo_c3_b6`](../../01_STAR/02_Examples/cases/cases_pages/quorum_fail_demo_c3_b6.md) | `01_STAR/02_Examples/cases/` | 1 | Quorum FAILS — won the count, but not elected | [`.yaml`](../../01_STAR/02_Examples/cases/quorum_fail_demo_c3_b6.yaml) |
 | [`star_ala_approval`](../../01_STAR/02_Examples/cases/cases_pages/star_ala_approval.md) | `01_STAR/02_Examples/cases/` | 1 | STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot → _D_ | [`.yaml`](../../01_STAR/02_Examples/cases/star_ala_approval.yaml) |

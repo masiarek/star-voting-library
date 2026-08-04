@@ -42,6 +42,7 @@ Arlo,Bree,Cole,Dana
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Arlo
@@ -91,6 +92,7 @@ Count × Arlo,Bree,Cole,Dana
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Arlo
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

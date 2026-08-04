@@ -38,6 +38,7 @@ Memphis,Nashville,Chattanooga,Knoxville
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/321_tennessee_blank_encoding_c4_b100_321_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- 3-2-1 Voting ---
  Tabulating 4 candidates, Good=2 / OK=1 / Bad=0 (blank = Bad).
@@ -54,6 +55,7 @@ Step 3 — Runoff: Nashville 68 vs Knoxville 17 (15 rated equal)
 
 Winner — 3-2-1 Voting: Nashville
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

@@ -71,6 +71,7 @@ Andre,Blake
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 12 ballots.
@@ -95,6 +96,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv15_4h89vj_plural
 Winner — Choose-One / Plurality Voting Method (single winner)
  Andre   (5 of 12 marks)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

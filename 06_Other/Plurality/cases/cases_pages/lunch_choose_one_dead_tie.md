@@ -52,6 +52,7 @@ Sushi,Tacos,Pizza
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/lunch_choose_one_dead_tie_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 5 ballots.
@@ -75,6 +76,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/lunch_choose_one_d
 Winner — Choose-One / Plurality Voting Method (single winner)
  Sushi   (2 of 5 marks, by lot)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

@@ -47,6 +47,7 @@ Alice,Bob,Carol,Dave
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/BV_Library_plurality_single_winner_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 14 ballots.
@@ -73,6 +74,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/BV_Library_plurali
 Winner — Choose-One / Plurality Voting Method (single winner)
  Dave   (5 of 14 marks)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

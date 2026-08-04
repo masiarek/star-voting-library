@@ -262,6 +262,19 @@ def _divergence_case(stem):
     return None
 
 
+# The engine-report fence is wrapped in pymdownx.snippets section markers so a
+# hand-authored companion page can include exactly this block:
+#
+#     --8<-- "<set>/cases/cases_pages/<stem>.md:report"
+#
+# written bare (not inside a fence — the include brings its own). That is how a
+# companion shows the count without pasting it: same idiom readme.md uses to
+# feed index.md. Including the `_tabulated` mirror instead would drag in the
+# ~50-line YAML echo and, on a big field like the CA governor case, 785 lines of
+# audit. HTML comments render as nothing, so the generated page is unchanged.
+SNIPPET_START = "<!-- --8<-- [start:report] -->"
+SNIPPET_END = "<!-- --8<-- [end:report] -->"
+
 # --------------------------------------------------------------------------- #
 # Case facts — one source of truth for the metadata line
 # --------------------------------------------------------------------------- #
@@ -414,9 +427,11 @@ def render(yaml_path, siblings):
             L.append("The count, step by step — the rounds and how the winner is "
                      "reached:")
             L.append("")
+            L.append(SNIPPET_START)
             L.append("```text")
             L.append(lead)
             L.append("```")
+            L.append(SNIPPET_END)
             L.append("")
             L.append("### Full audit — preference matrix, Condorcet, and score distribution")
             L.append("")
@@ -430,9 +445,11 @@ def render(yaml_path, siblings):
             L.append(f"Full report from the [`_tabulated` mirror]({mirror_rel}) "
                      f"(regenerated on every run; every analysis forced on):")
             L.append("")
+            L.append(SNIPPET_START)
             L.append("```text")
             L.append(report)
             L.append("```")
+            L.append(SNIPPET_END)
     else:
         L.append("*(No `_tabulated` mirror found — run the file once to generate it.)*")
     L.append("")

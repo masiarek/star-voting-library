@@ -32,6 +32,7 @@ Count:A,B,C
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR     = A
@@ -77,6 +78,7 @@ Count × A,B,C
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  A
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

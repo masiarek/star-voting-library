@@ -52,6 +52,7 @@ A,B,C,D,E,F,G
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Allocated Score Voting Method (4 winners) ---
 
@@ -160,6 +161,7 @@ Count × A,B,C,D,E,F,G
  C
  D
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

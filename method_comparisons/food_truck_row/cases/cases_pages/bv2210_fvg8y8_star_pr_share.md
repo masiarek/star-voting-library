@@ -32,6 +32,7 @@ Arepa,Bao,Churro,Donut,Eclair
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Arepa
@@ -84,6 +85,7 @@ Count × Arepa,Bao,Churro,Donut,Eclair
  Arepa
  Donut
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

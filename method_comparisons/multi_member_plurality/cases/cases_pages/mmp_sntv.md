@@ -41,6 +41,7 @@ Ada,Ben,Cal,Uma,Val,Wren
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/mmp_sntv_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- SNTV (single non-transferable vote) — 3 winners ---
  Tabulating 10 ballots (1 vote/voter).
@@ -59,6 +60,7 @@ Winners — SNTV (single non-transferable vote), 3 seats:
    3. Ben   (2 votes)
    *** the last seat tied on votes (Ben and Cal) — decided by lot order.
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

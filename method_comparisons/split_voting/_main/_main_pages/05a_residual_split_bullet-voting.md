@@ -47,6 +47,7 @@ Count:Ada,Ben,Cara
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Vote-splitting check]
   Choose-One first choices: Cara 40, Ada 35, Ben 25
@@ -88,6 +89,7 @@ Count × Ada,Ben,Cara
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Cara
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

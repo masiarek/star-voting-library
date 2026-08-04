@@ -31,7 +31,7 @@ Scores separate everyone cleanly — Someone I Like 37, Santa Claus 34, The Less
 
 ## The LH report (the correct tabulation)
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 [Score Distribution] (how many ballots gave each star rating)
                       Score
 Candidate        5  4  3  2  1  0  | Total   Avg
@@ -51,7 +51,6 @@ Winners — Bloc STAR Voting Method (3 winners)
  Santa Claus
  The Lesser Evil
 ```
-
 Full audit copy: [`_main_tabulated/bv130_bloc_pagination_731_tabulated.txt`](cases/cases_tabulated/bv130_bloc_pagination_731_tabulated.txt).
 
 ## Related

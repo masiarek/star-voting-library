@@ -38,6 +38,7 @@ Memphis, Nashville, Chattanooga, Knoxville
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Nashville
@@ -84,6 +85,7 @@ Count × Memphis,Nashville,Chattanooga,Knoxville
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Nashville
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

@@ -117,6 +117,7 @@ NAV_ORDER: dict[str, list[str]] = {
     "02_STAR_Bloc/01_Learn": [
         "bloc_star.md",
         "majority_sweep.md",
+        "over_50_percent.md",
         "score_leader_no_seat.md",
         "bloc_tiebreaks.md",
         SPINE_BREAK,

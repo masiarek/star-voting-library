@@ -40,6 +40,7 @@ Alice,Bob,Carol,Dave
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/BV_Library_approval_single_winner_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 10 ballots (any non-zero score = approval).
@@ -78,6 +79,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Dave
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

@@ -47,35 +47,7 @@ Dakota leads the Scoring Round (22) but **loses** the Automatic Runoff 2–3. So
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_03_enthusiasts_vs_majority_rkgtpk_tabulated.txt) mirror adds the funnel):
 
-```
-[Condorcet Winner]
-  Condorcet Winner: Eden — matches the STAR winner
-
-[Runoff Reversal]
- - Score Round Winner(s) = (Dakota)
- - Runoff Round Winner   = (Eden)
-  Candidate Dakota earned the highest total score, but
-  Candidate Eden won the automatic runoff — not a malfunction,
-  STAR working as designed: the runoff elects the finalist preferred
-  by the majority (of voters with a preference).
-
-Scoring Round
-   Dakota        -- 22 -- First place
-   Eden          -- 15 -- Second place
-   Flynn         --  2
-   Gale          --  2
-   Hazel         --  1
- Dakota and Eden advance.
-
-Automatic Runoff Round
-   Eden          -- 3 -- First place
-   Dakota        -- 2
-   Equal Support -- 0
- Eden wins.
-   Voters with a preference: 5 of 5 (no Equal Support).
-   Eden 3 (60%) vs Dakota 2 (40%); majority = 3.
-```
-
+--8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_03_enthusiasts_vs_majority_rkgtpk.md:report"
 > **BV ↔ LH wording.** The line `Eden 3 (60%) vs Dakota 2 (40%)` is BetterVoting's *Runoff Votes* (3 / 2) and *% Between Finalists* (60% / 40%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway

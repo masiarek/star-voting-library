@@ -32,6 +32,7 @@ Ada,Ben,Cara
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 4 ballots (score ballots).
@@ -65,6 +66,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Ada
    *** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

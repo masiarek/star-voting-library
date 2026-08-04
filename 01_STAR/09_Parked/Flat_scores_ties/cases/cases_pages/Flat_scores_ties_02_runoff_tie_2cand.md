@@ -30,6 +30,7 @@ Almond, Brownie
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- STAR Voting Method (single winner) ---
 
@@ -81,6 +82,7 @@ Count × Almond,Brownie
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Almond
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

@@ -34,6 +34,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
   Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole
@@ -57,6 +58,7 @@ Cora               0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Alma
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

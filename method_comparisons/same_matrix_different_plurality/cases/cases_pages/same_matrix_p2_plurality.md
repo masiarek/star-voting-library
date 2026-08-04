@@ -33,6 +33,7 @@ Count:Ada,Ben,Cal
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/same_matrix_p2_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 12 ballots.
@@ -47,6 +48,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/same_matrix_p2_plu
 Winner — Choose-One / Plurality Voting Method (single winner)
  Ben   (5 of 12 marks)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

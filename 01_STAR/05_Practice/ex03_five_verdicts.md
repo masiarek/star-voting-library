@@ -66,24 +66,7 @@ Apple 4×5 = **20**, Banana 3×5 + 2×1 = **17**, Cherry 4×3 + 3×4 + 2×5 = **
 <details>
 <summary><b>(e) STAR — Cherry, 5–4</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Cherry        -- 34 -- First place
-   Apple         -- 20 -- Second place
-   Banana        -- 17
- Cherry and Apple advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Cherry        -- 5 -- First place
-   Apple         -- 4
-   Equal Support -- 0
- Cherry wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Cherry 5 (56%) vs Apple 4 (44%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex03_five_verdicts.md:report"
 **Cherry wins** — and unlike Score's bare total, the runoff line shows Cherry beating the Choose-One winner head-to-head, 5 voters to 4.
 
 </details>

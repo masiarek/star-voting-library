@@ -109,6 +109,7 @@ Aspen, Birch, Cedar, Dogwood, Elm, Fir, Ginkgo
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Dogwood
@@ -269,6 +270,7 @@ Count × Aspen,Birch,Cedar,Dogwood,Elm,Fir,Ginkgo
  Elm
  Cedar
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

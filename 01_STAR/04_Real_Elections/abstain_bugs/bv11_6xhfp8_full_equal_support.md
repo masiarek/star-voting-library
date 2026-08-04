@@ -26,18 +26,7 @@ Three voters each give **both** candidates the maximum score (`5,5`) — full, e
 
 **Ann is elected** — but as a **tie broken by lot** (Ann 15 = Bob 15), not off zero votes.
 
-```text
-Scoring Round
-   Ann -- 15 -- First place
-   Bob -- 15 -- Second place
- Ann and Bob advance.
-Automatic Runoff Round  (tie 0-0 → score tie 15-15 → five-star tie 3-3 → lot)
-   Resolved: ['Ann'] (selected by lot-number priority: CSV column order).
-
-Winner — STAR Voting Method (single winner)
- Ann
-```
-
+--8<-- "01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md:report"
 BetterVoting result: `elected: ["Ann"]`, `nTallyVotes: 0`, `nAbstentions: 3`.
 
 Full engine detail: [`bv11_6xhfp8_full_equal_support_tabulated.txt`](cases/cases_tabulated/bv11_6xhfp8_full_equal_support_tabulated.txt) · source [`.yaml`](cases/bv11_6xhfp8_full_equal_support.yaml). Part of the [BV abstain issue index](../../../07_Concepts/tabulation_engines/BV/abstain_issues_index.md).

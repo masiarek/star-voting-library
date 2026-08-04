@@ -40,6 +40,7 @@ Arlo,Bree,Cole,Dana
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv2164_xbqq8t_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 33 ballots.
@@ -55,6 +56,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2164_xbqq8t_plur
 Winner — Choose-One / Plurality Voting Method (single winner)
  Bree   (14 of 33 marks)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

@@ -36,6 +36,7 @@ Dog,Cat,Fish,Bird,Rabbit,Hamster
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Allocated Score Voting Method (3 winners) ---
 
@@ -97,6 +98,7 @@ Count × Dog,Cat,Fish,Bird,Rabbit,Hamster
  Dog
  Fish
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

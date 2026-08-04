@@ -29,7 +29,7 @@ Elected **c, a**, `tieBreakType: "random"`, `perm` = [c, a, b] (the draw picks t
 
 LH counts every ballot; each candidate really totals 15, and the tie is genuine at every rung, so the lot decides both seats:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 --- Bloc STAR Voting Method (2 winners) ---
  Tabulating 3 ballots.
 
@@ -57,7 +57,6 @@ Winners — Bloc STAR Voting Method (2 winners)
  c
  a
 ```
-
 Full audit copy: [`_main_tabulated/bv750_tie_breaking_bloc_tabulated.txt`](cases/cases_tabulated/bv750_tie_breaking_bloc_tabulated.txt).
 
 ## Two findings

@@ -40,39 +40,7 @@ Austin leads the Scoring Round (13) but **loses** the Automatic Runoff 1–2; Be
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt) mirror adds the funnel):
 
-```
---- Runoff (Preference) Matrix ---
-Legend: For - Equal Support - Against        * indicates Top 2 Finalist
-               |  * Austin  | * Boston  |
-    * Austin > |    ---     |1 - 0 - 2  |
-    * Boston > | 2 - 0 - 1  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Boston — matches the STAR winner
-
-[Runoff Reversal]
- - Score Round Winner(s) = (Austin)
- - Runoff Round Winner   = (Boston)
-  Candidate Austin earned the highest total score, but
-  Candidate Boston won the automatic runoff — not a malfunction,
-  STAR working as designed: the runoff elects the finalist preferred
-  by the majority (of voters with a preference).
-
-Scoring Round
-   Austin        -- 13 -- First place
-   Boston        -- 11 -- Second place
-   Cairo         --  2
- Austin and Boston advance.
-
-Automatic Runoff Round
-   Boston        -- 2 -- First place
-   Austin        -- 1
-   Equal Support -- 0
- Boston wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   Boston 2 (67%) vs Austin 1 (33%); majority = 2.
-```
-
+--8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_02_atom_reversal_yx9447.md:report"
 > **BV ↔ LH wording.** The line `Boston 2 (67%) vs Austin 1 (33%)` is BetterVoting's *Runoff Votes* (2 / 1) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway

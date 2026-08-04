@@ -39,7 +39,7 @@ First and Condorcet Loser **tie at 24** for the top score; nothing reaches 5, so
 
 The two top scorers advance, tie 8–8 in the runoff, tie again on score (24–24) and five-star (0–0), and the pre-published permutation `[First, Condorcet Loser, Second, Third, Fourth]` breaks it for **First**:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Round 1: Scoring Round — Condorcet Loser (24) and First (24) advance.
 Round 1: Automatic Runoff — Condorcet Loser 8 ; First 8   ← tied
 Round 1: First tiebreaker (score)   — 24 ; 24             ← tied
@@ -57,7 +57,6 @@ Winners — Bloc STAR Voting Method (4 winners)
  Third
  Fourth
 ```
-
 Full audit copy: [`_main_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt`](cases/cases_tabulated/bv1525_condorcet_loser_bloc_tabulated.txt).
 
 ## The finding

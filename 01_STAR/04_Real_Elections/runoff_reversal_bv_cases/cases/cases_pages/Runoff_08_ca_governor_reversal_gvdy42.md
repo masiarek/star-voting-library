@@ -360,6 +360,7 @@ Akinyemi Agbede (D), Mohammad Arif (D), Larry Azevedo (D), Xavier Becerra (D), C
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Tom Steyer (D)
@@ -633,6 +634,7 @@ Count × Akinyemi Agbede (D),Mohammad Arif (D),Larry Azevedo (D),Xavier Becerra 
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Tom Steyer (D)
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

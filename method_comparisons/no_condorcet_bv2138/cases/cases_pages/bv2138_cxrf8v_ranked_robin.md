@@ -41,6 +41,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 921 ballots (ranked ballots).
@@ -94,6 +95,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Abby
    *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

@@ -41,6 +41,7 @@ Count:Macron,LePen,Fillon,Melenchon
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Melenchon
@@ -90,6 +91,7 @@ Count × Macron,LePen,Fillon,Melenchon
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Melenchon
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

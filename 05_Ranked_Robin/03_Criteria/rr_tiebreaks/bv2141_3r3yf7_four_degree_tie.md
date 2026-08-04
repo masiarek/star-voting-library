@@ -60,35 +60,7 @@ The frozen export ([`bv2141_3r3yf7_four_degree_tie_bv_export.json`](cases/bv2141
 
 LH agrees on every Copeland score (Ava/Bianca 3.5, Cedric/Deegan 2.5, Eli 2, Fabio 1) and, with `lot_numbers` pinned to BV's `perm`, reproduces BV's frozen instance (Ava) — but deterministically, via its wins → margin → lot ladder:
 
-```
---- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
- Tabulating 81 ballots (ranked ballots).
-
---- Pairwise (Round-Robin) Matrix ---
-Head-to-head / pairwise comparison — the Ranked Robin tally
-Legend: For - Equal Support - Against   (row vs column)
-           |     Eli      |   Deegan    |    Ava      |   Cedric    |   Fabio     |   Bianca    |
--------------------------------------------------------------------------------------------------
-     Eli > |     ---      |19 - 32 - 30 |33 -  2 - 46 |41 -  8 - 32 |45 -  4 - 32 |31 -  0 - 50 |
-  Deegan > | 30 - 32 - 19 |    ---      |38 -  0 - 43 |32 - 17 - 32 |38 -  4 - 39 |37 -  9 - 35 |
-     Ava > | 46 -  2 - 33 |43 -  0 - 38 |    ---      |30 - 18 - 33 |56 -  9 - 16 |29 - 23 - 29 |
-  Cedric > | 32 -  8 - 41 |32 - 17 - 32 |33 - 18 - 30 |    ---      |42 -  0 - 39 |28 - 14 - 39 |
-   Fabio > | 32 -  4 - 45 |39 -  4 - 38 |16 -  9 - 56 |39 -  0 - 42 |    ---      |24 -  6 - 51 |
-  Bianca > | 50 -  0 - 31 |35 -  9 - 37 |29 - 23 - 29 |39 - 14 - 28 |51 -  6 - 24 |    ---      |
-
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ava        3–1–1       3.5     +55  Deegan, Eli, Fabio
-    2  Bianca     3–1–1       3.5     +55  Cedric, Eli, Fabio
-    3  Deegan     2–2–1       2.5      +7  Bianca, Eli
-    4  Cedric     2–2–1       2.5     -14  Ava, Fabio
-    5  Eli        2–3–0         2     -21  Cedric, Fabio
-    6  Fabio      1–4–0         1     -82  Deegan
-
-Winner — Ranked Robin (RCV-RR): Ava
-   *** 2 candidates tie on the highest Copeland score (3.5): Ava, Bianca — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
-```
-
+--8<-- "05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md:report"
 Full detail: [`bv2141_3r3yf7_four_degree_tie_tabulated.txt`](cases/cases_tabulated/bv2141_3r3yf7_four_degree_tie_tabulated.txt).
 
 ## The Ava–Bianca head-to-head is itself a tie

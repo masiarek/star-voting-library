@@ -45,6 +45,7 @@ Nora,Omar,Priya
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/sntv_village_council_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- SNTV (single non-transferable vote) — 2 winners ---
  Tabulating 9 ballots (1 vote/voter).
@@ -58,6 +59,7 @@ Winners — SNTV (single non-transferable vote), 2 seats:
    1. Priya   (4 votes)
    2. Nora   (3 votes)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

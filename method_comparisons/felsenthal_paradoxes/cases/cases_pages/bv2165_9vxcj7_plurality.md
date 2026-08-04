@@ -44,6 +44,7 @@ Amy,Boone,Cass
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv2165_9vxcj7_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 15 ballots.
@@ -70,6 +71,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2165_9vxcj7_plur
 Winner — Choose-One / Plurality Voting Method (single winner)
  Cass   (7 of 15 marks)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

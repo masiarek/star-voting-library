@@ -53,6 +53,7 @@ Asa,Bram,Cleo,Dane
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Allocated Score Voting Method (2 winners) ---
 
@@ -91,6 +92,7 @@ Count × Asa,Bram,Cleo,Dane
  Asa
  Cleo
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

@@ -34,6 +34,7 @@ Dog,Cat,Fish,Bird,Rabbit,Hamster
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/pets_gov_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (2 winners) ---
  Tabulating 22 ballots (any non-zero score = approval).
@@ -70,6 +71,7 @@ Ballots:
 Winners — Approval Voting (2 winners)
   Dog, Cat
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

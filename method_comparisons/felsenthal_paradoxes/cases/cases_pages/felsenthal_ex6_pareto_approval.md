@@ -31,6 +31,7 @@ Aria,Beau,Cole,Dean
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/felsenthal_ex6_pareto_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 3 ballots (any non-zero score = approval).
@@ -63,6 +64,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Beau
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

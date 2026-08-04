@@ -30,6 +30,7 @@ Dog,Cat,Fish,Bird
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv2133_dyxrbr_pet2_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 32 ballots (any non-zero score = approval).
@@ -62,6 +63,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Bird
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

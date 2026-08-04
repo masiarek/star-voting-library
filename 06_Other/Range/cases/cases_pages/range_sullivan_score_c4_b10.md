@@ -48,6 +48,7 @@ A,B,C,D
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/range_sullivan_score_c4_b10_RANGE_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Range / Score Voting (single winner) ---
   Range / Score Voting — Sullivan's Example 5.2 (0–10 scale)
@@ -93,6 +94,7 @@ Cross-check — pref_voting score_voting: C  (✓ agrees with the hand count)
 Winner — Range / Score Voting (single winner)
   C
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

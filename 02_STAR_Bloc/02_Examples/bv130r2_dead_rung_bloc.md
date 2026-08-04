@@ -40,7 +40,7 @@ Dan sits ahead of Ada in that draw, so the seat-1 Ada/Dan tie broke for **Dan**.
 
 Pinning `lot_numbers` to BV's drawn sequence `[Finn, Ben, Dan, Eve, Ada, Cara]` reproduces **Dan, Ada, Eve** exactly. Every deterministic rung in seat 1 ties, the lot decides, and the engine flags it:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 [Score Distribution] (how many ballots gave each star rating)
                 Score
 Candidate  5  4  3  2  1  0  | Total   Avg
@@ -77,7 +77,6 @@ Winners — Bloc STAR Voting Method (3 winners)
  Ada
  Eve
 ```
-
 Full audit copy: [`_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt`](cases/cases_tabulated/bv130r2_dead_rung_bloc_tabulated.txt).
 
 ## Two findings

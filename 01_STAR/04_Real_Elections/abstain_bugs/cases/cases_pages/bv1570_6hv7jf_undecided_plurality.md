@@ -44,6 +44,7 @@ Approve,Reject
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv1570_6hv7jf_undecided_plurality_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 3 ballots.
@@ -66,6 +67,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv1570_6hv7jf_unde
 Winner — Choose-One / Plurality Voting Method (single winner)
  Approve   (0 of 3 marks, by lot)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

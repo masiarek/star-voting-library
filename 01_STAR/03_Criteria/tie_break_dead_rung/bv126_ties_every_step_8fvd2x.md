@@ -44,7 +44,7 @@ runoff_random -> Amy                                   ← lot picks the winner
 
 LH counts every ballot (the five flat ones register as Equal Support), yet still lands on the lot because the tie is genuine at every rung:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 --- STAR Voting Method (single winner) ---
  Tabulating 7 ballots.
 
@@ -75,7 +75,6 @@ Automatic Runoff Round
 Winner — STAR Voting Method (single winner)
  Amy
 ```
-
 Full audit copy: [`tie_break_dead_rung_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt`](cases/cases_tabulated/bv126_ties_every_step_8fvd2x_tabulated.txt).
 
 ## Two findings

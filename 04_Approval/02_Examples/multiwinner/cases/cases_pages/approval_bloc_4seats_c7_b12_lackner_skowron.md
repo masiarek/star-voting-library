@@ -54,6 +54,7 @@ A,B,C,D,E,F,G
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/approval_bloc_4seats_c7_b12_lackner_skowron_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (4 winners) ---
  Tabulating 12 ballots (any non-zero score = approval).
@@ -99,6 +100,7 @@ Ballots:
 Winners — Approval Voting (4 winners)
   A, B, C, D
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

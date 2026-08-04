@@ -38,6 +38,7 @@ Adams,Brown,Clark,Davis,Evans,Foster
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/approval_bloc_3seats_c6_b5_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (3 winners) ---
  Tabulating 5 ballots (any non-zero score = approval).
@@ -76,6 +77,7 @@ Ballots:
 Winners — Approval Voting (3 winners)
   Adams, Brown, Clark
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

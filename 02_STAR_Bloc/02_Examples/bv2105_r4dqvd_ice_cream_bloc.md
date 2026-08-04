@@ -34,7 +34,7 @@ This is the **opposite-direction sibling of [BV15](../../01_STAR/04_Real_Electio
 
 ## The LH report (the correct count)
 
-```text
+```text title="Abridged for the lesson — not verbatim engine output"
 --- Bloc STAR Voting Method (2 winners) ---
  Tabulating 4 ballots to fill 2 seats. Note: 1 of 4 ballots is marked as an abstention.
 Vanilla,Chocolate,Strawberry
@@ -57,7 +57,6 @@ Winners — Bloc STAR Voting Method (2 winners)
  Chocolate
  Strawberry
 ```
-
 Full audit copy: [`_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt`](cases/cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt).
 
 ## LH ↔ BetterVoting

@@ -41,6 +41,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
   Upward monotonicity (Alaska 2022) — BEFORE: Peltola wins
@@ -65,6 +66,7 @@ Blank Votes       12  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Peltola
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

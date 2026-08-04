@@ -62,6 +62,7 @@ Ada,Ben,Cora
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/wcl_c3_b5_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 5 ballots (any non-zero score = approval).
@@ -92,6 +93,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Ben
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

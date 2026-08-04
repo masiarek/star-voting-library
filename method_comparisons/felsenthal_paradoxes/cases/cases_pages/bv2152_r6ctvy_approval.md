@@ -76,6 +76,7 @@ Anna,Bert,Carla
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv2152_r6ctvy_approval_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 47 ballots (any non-zero score = approval).
@@ -108,6 +109,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   Anna
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

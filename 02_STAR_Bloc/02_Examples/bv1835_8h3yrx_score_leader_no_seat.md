@@ -47,46 +47,7 @@ Result: **Bianca, Cedric, Deegan, Eli** — elected in that seat order. `nTallyV
 
 ## View 2 — the LH report (inline)
 
-```
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Ava         0   0  98   0   0   2  |   294   2.9
-Bianca     27  24   0   0   0  49  |   231   2.3
-Cedric     24  27   0   0   0  49  |   228   2.3
-Deegan     25  24   2   0   0  49  |   227   2.3
-Eli        24  25   0   2   0  49  |   224   2.2
-
-[Bloc STAR: Round 1: Scoring Round]
-   Ava           -- 294 -- First place
-   Bianca        -- 231 -- Second place
-   Cedric        -- 228
-   Deegan        -- 227
-   Eli           -- 224
- Ava and Bianca advance.
-
-[Bloc STAR: Round 1: Automatic Runoff Round]
-   Bianca        -- 51 -- First place
-   Ava           -- 49
-   Equal Support --  0
- Bianca wins.
-   Runoff math:
-     100  ballots cast
-   −   0  Equal Support (no preference between the two finalists)
-     ───
-     100  voters with a preference  (majority = 51)
-           Bianca 51 (51%)  ·  Ava 49 (49%)
-
-[Condorcet Loser]
-  Condorcet Loser: Ava — loses every head-to-head matchup — elected by Approval!
-
-Winners — Bloc STAR Voting Method (4 winners)
- Bianca
- Cedric
- Deegan
- Eli
-```
-
+--8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md:report"
 Rounds 2, 3 and 4 are the same shape: Ava leads the scoring round, meets the next candidate in the runoff, and loses it 51–49. Full audit copy: [`cases_tabulated/bv1835_8h3yrx_score_leader_no_seat_tabulated.txt`](cases/cases_tabulated/bv1835_8h3yrx_score_leader_no_seat_tabulated.txt).
 
 ## Cross-check against EPR

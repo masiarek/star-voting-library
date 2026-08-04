@@ -28,7 +28,7 @@ Every top-N at-large method — Bloc Approval, SNTV, Bloc Ranked Robin — confi
 
 ## 4. It rewards slate discipline
 
-Follow the incentive the sweep creates. A faction large enough to sweep only sweeps if it stays **cohesive** — so the rational move for an organized side is to publish a slate and ask supporters to score it uniformly high and everything else 0. That works, and it is available to organized groups in a way it is not available to unorganized voters.
+Follow the incentive the sweep creates. A faction large enough to sweep only sweeps if it stays **cohesive** — so the rational move for an organized side is to publish a slate and ask supporters to score it uniformly high and everything else 0. That works, and it is available to organized groups in a way it is not available to unorganized voters. The cost of *not* doing it is [Over 50% — what a landslide actually buys](over_50_percent.md): three voters unanimous about one candidate elect them to seat 1 and then hand seat 2 to a candidate two of the three scored 0.
 
 Two honest caveats on how far to push this claim:
 

@@ -72,51 +72,5 @@ Live results: **[bettervoting.com/g3f7r2/results](https://bettervoting.com/g3f7r
 
 ## View 2 — the LH tabulation (on-screen report)
 
-```
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Alice    |   * Ben     |    Carla    |
--------------------------------------------------------------
-       * Alice > |     ---      |17 -  0 -  6 |10 -  0 - 13 |
-         * Ben > |  6 -  0 - 17 |    ---      |16 -  0 -  7 |
-         Carla > | 13 -  0 - 10 | 7 -  0 - 16 |    ---      |
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: Alice > Ben > Carla > Alice)
-
-[Divergence from STAR]
-  STAR    = Alice
-  RCV-IRV = Carla   (differs from STAR)
-  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
-        method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-
---- STAR Voting Method (single winner) ---
- Tabulating 23 ballots.
-Count × Alice,Ben,Carla
-   10 ×     5,  3,    0
-    7 ×     3,  0,    5
-    6 ×     0,  5,    3
-
-Scoring Round
-   Alice         -- 71 -- First place
-   Ben           -- 60 -- Second place
-   Carla         -- 53
- Alice and Ben advance.
-
-Automatic Runoff Round
-   Alice         -- 17 -- First place
-   Ben           --  6
-   Equal Support --  0
- Alice wins.
-   Voters with a preference: 23 of 23 (no Equal Support).
-   Alice 17 (74%) vs Ben 6 (26%); majority = 12.
-
-Winner — STAR Voting Method (single winner)
- Alice
-```
-
+--8<-- "01_STAR/03_Criteria/iia_cycle_spoiler/cases/cases_pages/bv2212_g3f7r2_cycle_spoiler.md:report"
 Full engine detail: [`iia_cycle_spoiler_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt`](cases/cases_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt) · run it: [`bv2212_g3f7r2_cycle_spoiler.yaml`](cases/bv2212_g3f7r2_cycle_spoiler.yaml).

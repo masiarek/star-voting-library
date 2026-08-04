@@ -35,6 +35,7 @@ Choco,Vanilla
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- STAR Voting Method (single winner) ---
 
@@ -66,6 +67,7 @@ Choco,Vanilla
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Choco
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

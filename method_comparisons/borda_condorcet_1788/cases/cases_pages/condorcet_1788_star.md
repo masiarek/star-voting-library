@@ -56,6 +56,7 @@ Count:Peter,Paul,James
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Peter
@@ -103,6 +104,7 @@ Count × Peter,Paul,James
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Peter
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

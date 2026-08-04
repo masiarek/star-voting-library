@@ -414,6 +414,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
   Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third)
@@ -455,6 +456,7 @@ Blank Votes      602  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Kiss
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

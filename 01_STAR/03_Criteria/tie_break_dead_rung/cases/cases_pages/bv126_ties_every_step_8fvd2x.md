@@ -52,6 +52,7 @@ Amy,Brian,Chuck
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- STAR Voting Method (single winner) ---
 
@@ -133,6 +134,7 @@ Count × Amy,Brian,Chuck
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Amy
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

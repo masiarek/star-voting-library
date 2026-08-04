@@ -52,6 +52,7 @@ Count:A,B,C
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/hh41_01_approval_as_printed_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 100 ballots (any non-zero score = approval).
@@ -80,6 +81,7 @@ Ballots:
 Winner — Approval Voting (single winner)
   B
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

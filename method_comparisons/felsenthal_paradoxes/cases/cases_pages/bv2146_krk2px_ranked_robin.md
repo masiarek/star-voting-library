@@ -34,6 +34,7 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 17 ballots (ranked ballots).
@@ -68,6 +69,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Ada
    beats every opponent head-to-head — the Condorcet winner.
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

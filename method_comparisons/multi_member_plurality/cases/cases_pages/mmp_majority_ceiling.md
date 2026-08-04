@@ -48,6 +48,7 @@ Alice,Bruno,Cleo,Dev,Esme
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/mmp_majority_ceiling_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Block Voting (plurality-at-large) — 3 winners ---
  Tabulating 30 ballots (3 votes/voter).
@@ -64,6 +65,7 @@ Winners — Block Voting (plurality-at-large), 3 seats:
    2. Bruno   (22 votes)
    3. Cleo   (20 votes)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

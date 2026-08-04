@@ -58,6 +58,7 @@ Avery,Blake,Carmen,Diego,Elena
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR                   = Carmen
@@ -120,6 +121,7 @@ Count × Avery,Blake,Carmen,Diego,Elena
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Carmen
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

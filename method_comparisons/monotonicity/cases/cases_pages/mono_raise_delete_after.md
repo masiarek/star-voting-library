@@ -40,6 +40,7 @@ X,Y,Z
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR     = Z
@@ -85,6 +86,7 @@ Count × X,Y,Z
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Z
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

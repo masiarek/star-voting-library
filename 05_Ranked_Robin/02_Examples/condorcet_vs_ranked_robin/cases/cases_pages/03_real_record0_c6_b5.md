@@ -33,6 +33,7 @@ A,B,C,D,E,F
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 5 ballots (score ballots).
@@ -86,6 +87,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): B
    the highest Copeland score (3.5 = wins + ½·ties).
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 

@@ -10,6 +10,7 @@ Not sure you want a majoritarian method at all? That's the bigger decision, and 
 
 - [**Bloc STAR**](bloc_star.md) — the count, the removal step, and what it does *not* do (start here)
 - [The majority sweep](majority_sweep.md) — a cohesive majority can take *every* seat: why it happens, when that's the right answer, and when it means you wanted proportional
+- [Over 50% — what a landslide actually buys](over_50_percent.md) — the sweep's mirror image: a majority that runs *one* candidate wins *one* seat, and the next one goes to a candidate most voters scored 0
 - [The score leader can win no seat](score_leader_no_seat.md) — Bloc STAR is not "top N by points"; the runoff decides every seat, so the point leader can be shut out entirely
 - [Ties in Bloc STAR](bloc_tiebreaks.md) — the STAR ladder once per seat, plus the wrinkle no top-N method has: a tie at seat 1 can change *who* wins seat 2
 - [Bloc STAR among the at-large methods](bloc_star_vs_other_bloc_methods.md) — SNTV, Limited, Block Plurality, Bloc Approval, Bloc Ranked Robin, and why ranked ballots don't buy proportionality

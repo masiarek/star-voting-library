@@ -46,37 +46,7 @@ Maple leads the Scoring Round (39) but **loses** the Automatic Runoff 3–6. Sou
 
 Same ballots (collapsed as `count × scores`), the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt) mirror adds the funnel):
 
-```
-[Condorcet Winner]
-  Condorcet Winner: Olive — matches the STAR winner
-
-[Runoff Reversal]
- - Score Round Winner(s) = (Maple)
- - Runoff Round Winner   = (Olive)
-  Candidate Maple earned the highest total score, but
-  Candidate Olive won the automatic runoff — not a malfunction,
-  STAR working as designed: the runoff elects the finalist preferred
-  by the majority (of voters with a preference).
-
-Count × Maple,Olive,Pine
-    6 ×     4,    5,   0
-    3 ×     5,    1,   2
-
-Scoring Round
-   Maple         -- 39 -- First place
-   Olive         -- 33 -- Second place
-   Pine          --  6
- Maple and Olive advance.
-
-Automatic Runoff Round
-   Olive         -- 6 -- First place
-   Maple         -- 3
-   Equal Support -- 0
- Olive wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Olive 6 (67%) vs Maple 3 (33%); majority = 5.
-```
-
+--8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_04_reversal_at_scale_bfjqmg.md:report"
 > **BV ↔ LH wording.** The line `Olive 6 (67%) vs Maple 3 (33%)` is BetterVoting's *Runoff Votes* (6 / 3) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway

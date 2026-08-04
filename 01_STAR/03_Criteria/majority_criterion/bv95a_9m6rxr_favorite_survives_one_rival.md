@@ -20,29 +20,7 @@ Ada,Bruno,Cleo
 
 ## The STAR tabulation (LH)
 
-```
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-Ada        3  0  0  0  0  2  |    15   3.0
-Bruno      2  3  0  0  0  0  |    22   4.4
-Cleo       2  0  0  0  0  3  |    10   2.0
-
-Scoring Round — the two highest scores advance:
-   Bruno  -- 22 -- First place
-   Ada    -- 15 -- Second place
-   Cleo   -- 10
- Bruno and Ada advance.
-
-Automatic Runoff — who do more voters prefer, head to head?
-   Ada    -- 3 -- First place
-   Bruno  -- 2
-   Equal Support -- 0
- Ada wins.  (Voters with a preference: 5 of 5.  Ada 3 (60%) vs Bruno 2 (40%).)
-
-Winner — STAR Voting Method (single winner):  Ada
-```
-
+--8<-- "01_STAR/03_Criteria/majority_criterion/cases/cases_pages/bv95a_9m6rxr_favorite_survives_one_rival.md:report"
 Full audit copy: [`majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt`](cases/cases_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt).
 
 ## Why Ada wins

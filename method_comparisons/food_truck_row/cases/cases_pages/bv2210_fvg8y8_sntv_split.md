@@ -32,6 +32,7 @@ Arepa,Bao,Churro,Donut,Eclair
 
 Full report from the [`_tabulated` mirror](../cases_tabulated/bv2210_fvg8y8_sntv_split_tabulated.txt) (regenerated on every run; every analysis forced on):
 
+<!-- --8<-- [start:report] -->
 ```text
 --- SNTV (single non-transferable vote) — 2 winners ---
  Tabulating 100 ballots (1 vote/voter).
@@ -47,6 +48,7 @@ Winners — SNTV (single non-transferable vote), 2 seats:
    1. Donut   (22 votes)
    2. Eclair   (21 votes)
 ```
+<!-- --8<-- [end:report] -->
 
 Run it yourself:
 

@@ -30,6 +30,10 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 - [Equal Support — counted in both rounds](cases/cases_pages/equal_support_runoff_demo.md) · [Abstentions — blank & abstaining ballots](cases/cases_pages/abstentions.md) · [Unanimous ballots](cases/cases_pages/05a_c5_b3_unanimous-ballots.md)
 
+**Majorities & denominators.** What "over 50%" turns out to mean once you ask *of what*.
+
+- [Over 50% — every point on every ballot](cases/cases_pages/over_50_percent_star_c3_b3.md) — the ceiling case: score share, ballot share and decided-voter share all agree, and the runoff still runs. Its two-seat twin, where the same dominance buys exactly one seat: [Over 50% — what a landslide actually buys](../../02_STAR_Bloc/01_Learn/over_50_percent.md)
+
 **Larger fields & the runoff.** Where the scoring round has to choose two finalists.
 
 - [Large field (9 candidates) — Equal Support decides](cases/cases_pages/06a_c9_b3_large-field-equal-support.md) · [Large field — the runoff overturns the leader](cases/cases_pages/06b_c9_runoff-overturns-leader.md) · [Tennessee capital (the classic)](cases/cases_pages/09_c4_b100_tennessee-capital.md) · [When Condorcet, Score & Runoff disagree](cases/cases_pages/three_winners_cw_score_runoff.md)

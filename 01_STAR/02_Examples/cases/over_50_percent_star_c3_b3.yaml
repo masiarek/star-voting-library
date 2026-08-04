@@ -1,0 +1,52 @@
+election_title: "Over 50% — single-winner STAR, a candidate with every point on every ballot"
+
+scenario_description: |-
+  The ceiling case, and the control for reading every other STAR result: what a
+  landslide looks like when it is as large as a landslide can get.
+
+  Three voters, three candidates. A is scored 5 by all three; one voter gives B
+  a single point; nobody scores C at all.
+    - Scoring round: A = 15 of a possible 15 (100% of the maximum, average 5.0),
+      B = 1, C = 0. A and B advance.
+    - Automatic runoff: all three ballots prefer A. A 3, B 0, Equal Support 0.
+  A wins on every denominator there is — 100% of the maximum score, 100% of the
+  ballots, 100% of the voters with a preference between the finalists.
+
+  Two things this case is here to show, both easier to see at the ceiling than
+  in a close race:
+    1. STAR does not stop early. Even a unanimous max-score candidate is put
+       through the automatic runoff; there is no "wins outright in round 1"
+       shortcut the way a majority of first choices ends an RCV-IRV count in
+       its first round. The scoring round chooses finalists, never the winner.
+    2. "Over 50%" is three different questions. Score share, ballot share and
+       decided-voter share coincide here and only here; they come apart as soon
+       as a ballot rates the two finalists equally.
+
+  The multi-seat twin is BV1815 (02_STAR_Bloc), whose three ballots hand A 12 of
+  15 and still buy exactly one seat: the second goes to C on 2 points, after a
+  runoff nobody wins. Read the pair together — 02_STAR_Bloc/01_Learn/over_50_percent.md.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  A,B,C
+  5,0,0
+  5,1,0
+  5,0,0
+
+expected_winners:
+  - A
+
+# file: over_50_percent_star_c3_b3.yaml

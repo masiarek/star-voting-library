@@ -67,28 +67,7 @@ The Runoff Table seals it: **Total 3** (not 4) and **Equal Support 0** — the `
 
 All four ballots counted; the `3,3,3` is Equal Support, not an abstention (the saved [`_tabulated`](cases/cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) mirror adds the funnel):
 
-```
-[Score Distribution] (number of ballots giving each score)
-       5  4  3  2  1  0  | Total   Avg
-Alex   1  2  1  0  0  0  |    16   4.0
-Blair  2  0  1  0  1  0  |    14   3.5
-Cleo   0  0  1  1  0  2  |     5   1.2
-
-Scoring Round
-   Alex          -- 16 -- First place
-   Blair         -- 14 -- Second place
-   Cleo          --  5
- Alex and Blair advance.
-
-Automatic Runoff Round
-   Blair         -- 2 -- First place
-   Alex          -- 1
-   Equal Support -- 1
- Blair wins.
-   Voters with a preference: 3 of 4 (1 Equal Support).
-   Blair 2 (67%) vs Alex 1 (33%); majority = 2.
-```
-
+--8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_07_flat_ballot_bv_bug_tf73v9.md:report"
 Note the **`3` column** in the Score Distribution: every candidate has one — that's the flat ballot, counted. BetterVoting drops exactly those three stars.
 
 ## The takeaway

@@ -157,6 +157,7 @@ Ava,Bianca,Cedric,Deegan,Eli
 
 The count, step by step — the rounds and how the winner is reached:
 
+<!-- --8<-- [start:report] -->
 ```text
 [Divergence from STAR]
   STAR     = Bianca
@@ -275,6 +276,7 @@ Count × Ava,Bianca,Cedric,Deegan,Eli
  Deegan
  Eli
 ```
+<!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 
