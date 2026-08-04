@@ -9,9 +9,9 @@ hide:
 
      The page opens on what the library IS, beside the official EVC ballot image — the
      one graphic that earns its place above the fold (styled by
-     07_Concepts/about_this_repo/site_extra.css). The pitch headline and the four-stop
-     "New to STAR?" path used to live up here; they now sit in their own section further
-     down, so a visitor meets the library before the sales copy.
+     07_Concepts/about_this_repo/site_extra.css). A pitch headline and a four-stop
+     "New to STAR?" path used to live up here; both are gone (removed 2026-08-04), so a
+     visitor meets the library rather than the sales copy.
 
      Both halves are inlined from readme.md via its snippet-section markers — the hero
      paragraph from [start:what-this-is], everything below it from [start:below-hero] —

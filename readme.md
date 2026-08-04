@@ -28,30 +28,6 @@ Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larr
 
 ---
 
-## New to STAR? Your four-stop path
-
-**Vote your heart. No more spoilers.** Score every candidate **0–5**; the two highest-scoring meet in an **automatic runoff**; whichever finalist more voters scored higher **wins**. One better ballot — and a winner the majority actually likes.
-
-<div class="star-path" markdown="1">
-
-⭐ **[1 · What is STAR? — the five-minute intro](01_STAR/01_Learn/STAR_start_here.md)**<br>
-Watch "pick one" ruin a team lunch, then watch STAR fix it. No background needed, not a word of politics.
-
-🚀 **[2 · The benefits — why people switch](01_STAR/01_Learn/getting_started/STAR_benefits.md)**<br>
-Vote your heart, no spoilers, majority winners, one election instead of two. The quick, exciting wins — *the proponents' pitch, and proudly so.*
-
-🗳️ **[3 · Try it for real ↗](https://bettervoting.com/pet/vote)**<br>
-Cast a STAR ballot in *What Makes the Best Pet?* — a live public election, no sign-in, seven pets, about a minute. (It's the same election this repo takes apart in [04_Real_Elections](01_STAR/04_Real_Elections/pet_real_bv_election/README.md).) Then [run your own free election ↗](https://bettervoting.com/new_election) on BetterVoting — or [print real paper ballots](01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md) and count them by hand.
-
-🤨 **[4 · Skeptical? Good.](01_STAR/01_Learn/getting_started/star_for_skeptics.md)**<br>
-"What's the catch?" answered without cheerleading — including [what STAR *doesn't* fix](01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
-
-</div>
-
-**Want the whole argument, every objection answered? → [Why STAR Voting](07_Concepts/topics/Why_STAR_Voting.md).** Prefer ranked ballots? → **[Why Ranked Robin](05_Ranked_Robin/01_Learn/why_ranked_robin.md)**, the friendly upgrade that counts them so the consensus candidate wins. Ready for the full course? → [Voting 101 / 201 / 301](07_Concepts/CURRICULUM.md).
-
----
-
 ## The YAML election file
 
 Every claim in this library is backed by one of these — a whole election in a file a person can read and the engine can count:
