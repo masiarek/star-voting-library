@@ -34,7 +34,9 @@ What YAML adds on top of the grid:
 2. **`#` comments survive in the file.** A ballot row can say what it demonstrates, right where it sits, and the engine ignores it.
 3. **It's plain text.** Diffable, reviewable in a pull request, permanently linkable, and readable in any editor for the next twenty years.
 
-> **YAML isn't the only ballot format.** The election-methods world has a dedicated ballot *interchange* format, **ABIF**, which packs ranks and scores into one dense line (`Allie/5 =Billy/5 >Candace/4`). It maps onto just our `ballots:` block — our file wraps method, options, and an enforced answer key around it. Honest side-by-side: [ABIF vs. our YAML grid](../07_Concepts/scores_and_ranks/abif_format.md).
+**The engine's own author reached the same conclusion — by a different route.** Larry Hastings gave `starvote` a native text format for exactly the reason above; his note at the bottom of the parser says he "got tired of CSV files." His answer, `.starvote`, is INI-like, and every ballot line *names* the candidate it scores, so nothing is positional. Ours is YAML, chosen because the same file also has to carry the scenario prose, the display options, and an enforced answer key. Both are doors into the same engine — and, worth knowing, they don't share a tie-break default: [The `.starvote` ballot file format](../07_Concepts/tabulation_engines/LH_starvote/starvote_file_format.md).
+
+> **Nor is either one the standard.** The election-methods world has a dedicated ballot *interchange* format, **ABIF**, which packs ranks and scores into one dense line (`Allie/5 =Billy/5 >Candace/4`). It maps onto just our `ballots:` block — our file wraps method, options, and the answer key around it. Honest side-by-side: [ABIF vs. our YAML grid](../07_Concepts/scores_and_ranks/abif_format.md).
 
 ---
 
