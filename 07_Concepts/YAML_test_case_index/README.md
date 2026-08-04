@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**463 election files** (409 single-winner, 54 multi-winner) across 16 method(s).
+**468 election files** (409 single-winner, 59 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -22,7 +22,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 11 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
-| BLOC STAR | 20 |
+| BLOC STAR | 25 |
 | IRV | 19 |
 | PLURALITY | 26 |
 | RANGE | 2 |
@@ -473,7 +473,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (20)
+## BLOC STAR  (25)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -488,6 +488,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv1815_bloc_3c2s_basic`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1815_bloc_3c2s_basic.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak) → _A, C_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv1815_bloc_3c2s_basic.yaml) |
 | [`bv2105_r4dqvd_ice_cream_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV2105 — Favorite ice cream (Bloc STAR, 2 seats): a partial ballot mis-filed as an abstention → _Chocolate, Strawberry_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv2105_r4dqvd_ice_cream_bloc.yaml) |
 | [`bv750_tie_breaking_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv750_tie_breaking_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV750 — Bloc STAR tie-breaking, every ballot identical (#1052 family) → _c, a_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv750_tie_breaking_bloc.yaml) |
+| [`bv2267_my9jd9_council_before_dane`](../../02_STAR_Bloc/03_Criteria/committee_spoiler/cases/cases_pages/bv2267_my9jd9_council_before_dane.md) | `02_STAR_Bloc/03_Criteria/committee_spoiler/cases/` | 2 | BV2267 — Committee spoiler (1 of 2): three candidates, before a fourth runs → _Cyrus, Ari_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/committee_spoiler/cases/bv2267_my9jd9_council_before_dane.yaml) |
+| [`bv2268_6m3gxq_spoiler_changes_council`](../../02_STAR_Bloc/03_Criteria/committee_spoiler/cases/cases_pages/bv2268_6m3gxq_spoiler_changes_council.md) | `02_STAR_Bloc/03_Criteria/committee_spoiler/cases/` | 2 | BV2268 — Committee spoiler (2 of 2): a fourth candidate wins nothing and changes who does → _Cyrus, Bea_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/committee_spoiler/cases/bv2268_6m3gxq_spoiler_changes_council.yaml) |
+| [`bv2264_j3hqvb_council_before_joiner`](../../02_STAR_Bloc/03_Criteria/participation/cases/cases_pages/bv2264_j3hqvb_council_before_joiner.md) | `02_STAR_Bloc/03_Criteria/participation/cases/` | 2 | BV2264 — Participation (1 of 2): the council six voters elect → _Ada, Bruno_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/participation/cases/bv2264_j3hqvb_council_before_joiner.yaml) |
+| [`bv2265_th3pbp_joiner_council_worse`](../../02_STAR_Bloc/03_Criteria/participation/cases/cases_pages/bv2265_th3pbp_joiner_council_worse.md) | `02_STAR_Bloc/03_Criteria/participation/cases/` | 2 | BV2265 — Participation (2 of 2): one more honest voter, and the council gets worse for them → _Ada, Dov_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/participation/cases/bv2265_th3pbp_joiner_council_worse.yaml) |
+| [`bv2266_k7pfqt_condorcet_winner_seated_second`](../../02_STAR_Bloc/03_Criteria/seat_order/cases/cases_pages/bv2266_k7pfqt_condorcet_winner_seated_second.md) | `02_STAR_Bloc/03_Criteria/seat_order/cases/` | 2 | BV2266 — Seat order: the candidate who beats every rival is seated second → _Dev, Anika_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/seat_order/cases/bv2266_k7pfqt_condorcet_winner_seated_second.yaml) |
 | [`bv2210_fvg8y8_bloc_star_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_star_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc STAR: the same majority sweeps both seats → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_star_sweep.yaml) |
 | [`bv130_bloc_pagination_731`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130_bloc_pagination_731.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv130_bloc_pagination_731.yaml) |
 | [`bv130r2_dead_rung_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130r2_dead_rung_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv130r2_dead_rung_bloc.yaml) |

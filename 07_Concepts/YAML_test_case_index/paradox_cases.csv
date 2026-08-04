@@ -101,6 +101,8 @@ Absolute loser paradox,Simple,Felsenthal Ex.8 — Approval: the absolute loser w
 Absolute loser paradox,Simple,Felsenthal Ex.8 — Ranked Robin: the Condorcet winner Bruce,RankedRobin,Bruce,BV2154,wq6yv7,method_comparisons/felsenthal_paradoxes/cases/bv2154_wq6yv7_ranked_robin.yaml
 Absolute loser paradox,Simple,"Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D",Plurality,D,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_plurality.yaml
 Absolute loser paradox,Simple,"Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser",STAR,B,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml
+SCC / spoiler,Conditional,"BV2267 — Committee spoiler (1 of 2): three candidates, before a fourth runs",Bloc STAR,"Cyrus, Ari",BV2267,my9jd9,02_STAR_Bloc/03_Criteria/committee_spoiler/cases/bv2267_my9jd9_council_before_dane.yaml
+SCC / spoiler,Conditional,BV2268 — Committee spoiler (2 of 2): a fourth candidate wins nothing and changes who does,Bloc STAR,"Cyrus, Bea",BV2268,6m3gxq,02_STAR_Bloc/03_Criteria/committee_spoiler/cases/bv2268_6m3gxq_spoiler_changes_council.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — Choose-One (Plurality): the absolute loser wins,Plurality,Ana,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_plurality.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the Condorcet winner,STAR,Bo,BV2144,mxfmhm,method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_star.yaml
 SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_irv.yaml
@@ -154,6 +156,8 @@ Non-monotonicity,Conditional,Monotonicity — STAR counterpart (BEFORE — X win
 Non-monotonicity,Conditional,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",RCV_IRV,Engardio,,,method_comparisons/monotonicity/cases/sf_d7_downward_after.yaml
 Non-monotonicity,Conditional,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,RCV_IRV,Melgar,,,method_comparisons/monotonicity/cases/sf_d7_downward_before.yaml
 Non-monotonicity,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
+No-show paradox,Conditional,BV2264 — Participation (1 of 2): the council six voters elect,Bloc STAR,"Ada, Bruno",BV2264,j3hqvb,02_STAR_Bloc/03_Criteria/participation/cases/bv2264_j3hqvb_council_before_joiner.yaml
+No-show paradox,Conditional,"BV2265 — Participation (2 of 2): one more honest voter, and the council gets worse for them",Bloc STAR,"Ada, Dov",BV2265,th3pbp,02_STAR_Bloc/03_Criteria/participation/cases/bv2265_th3pbp_joiner_council_worse.yaml
 No-show paradox,Conditional,"Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses",RCV_IRV,Montroll,,,method_comparisons/burlington_2009/cases/burlington_2009_raise_kiss_nonmono.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_irv.yaml
 No-show paradox,Conditional,Felsenthal Ex.4 full electorate — Ranked Robin: the Condorcet winner Beth,RankedRobin,Beth,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_ranked_robin.yaml
