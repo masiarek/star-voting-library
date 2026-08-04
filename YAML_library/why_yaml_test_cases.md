@@ -39,19 +39,13 @@ The same tiny format holds every method in the repo: swap `voting_method:` to `A
 
 ## Everything else is *generated* from it
 
-The YAML is the **one source of truth**; every other surface is derived from it and never hand-maintained in parallel:
+The YAML is the **one source of truth**. The on-screen report, the full-detail `_tabulated.txt` audit copy, the browsable `.md` page, and the sortable registry are all derived from it and never hand-maintained in parallel — so they can't drift from the source. Edit the YAML, regenerate, done.
 
-- the **on-screen tabulation report** (what you show live),
-- the full-detail **`_tabulated.txt`** record (the audit copy),
-- the browsable **`.md` page** (the reader-facing surface, built by `build_yaml_pages.py`),
-- the sortable **registry** (`BV_registry.md` / `bv_cases.csv`, built by `build_bv_registry.py` from the `bv_*` fields).
-
-Because these are generated, they can't drift from the source. Edit the YAML, regenerate, done.
+→ The five stages that do the deriving, from writing the file to publishing it: [YAML election files — why, what, how](README.md)
 
 ## The companion ideas
 
 - **Store rich, display clean.** Keep all the context *in* the YAML; control what appears on screen with `options:` (e.g. `show_description: false`). You never delete information to get a clean demo. → [ORGANIZATION.md — storage ≠ display](ORGANIZATION.md) The sharpest example is the **marker vocabulary** (`-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued): all tabulate as `0`, yet the file records *why* each line is zero — a distinction a flat CSV of scores would flatten away. → [Abstention vs. a zero vs. "None of the Above"](../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md)
-- **The pipeline.** author → validate → tabulate → verify → publish, all wrapped around the one file. → [readme.md — one YAML file, a pipeline around it](../readme.md)
 - **The shape of a case.** Which fields are for humans vs the engine, ready to copy. → [YAML authoring template](YAML_authoring_template.md)
 
 ## The payoff

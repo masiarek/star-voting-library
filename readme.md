@@ -63,9 +63,7 @@ Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larr
 
 ## The YAML election file
 
-Want to author a case? The fill-in guide is [YAML Test Case — Authoring Template](YAML_library/YAML_authoring_template.md).
-
-The schema is **flat**: a voting method, a seat count, and a ballot grid (a header row of candidate names, then one row of 0–5 scores per voter). Hand-written files add a top-level **`expected_winners:`** list — the key the positive pytest suite discovers and checks:
+Every claim in this library is backed by one of these — a whole election in a file a person can read and the engine can count:
 
 ```yaml
 voting_method: STAR
@@ -81,5 +79,5 @@ expected_winners:
 
 This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](07_Concepts/tips/TIPS_canonical_elections.md).
 
-The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](YAML_library/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](07_Concepts/tips/TIPS_choosing_voter_counts.md).
+**Why the format is YAML, what every field does, and what happens to the file once you run it → [YAML election files — why, what, how](YAML_library/README.md)** — the format's front door, with the [fill-in authoring template](YAML_library/YAML_authoring_template.md) one click further. House style keeps examples **small** ([how many voters?](07_Concepts/tips/TIPS_choosing_voter_counts.md)), and the ladder that settles a dead heat is [STAR Tie-Breaking — The Full Chain](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md).
 <!-- --8<-- [end:below-hero] -->
