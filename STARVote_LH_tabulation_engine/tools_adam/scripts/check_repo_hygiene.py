@@ -738,48 +738,13 @@ _REPORT_SIGNS = [r"Scoring Round", r"Automatic Runoff Round", r"\[Score Distribu
 _REPORT_MIN_LINES = 8
 _ABRIDGED = re.compile(r"abridged", re.I)
 
-# Pages that predate the gate. Each still shows a hand-pasted report, and 28 of
-# them have already drifted from what the engine emits today — mostly the switch
-# to bracketed `[STAR Voting: Scoring Round]` headers and the `Runoff math:`
-# block. They are listed rather than auto-converted because the fix differs per
-# page: some want the mirror embedded, some are part-abridgement and want the
-# label. Burn this list down; do not add to it.
-PASTED_REPORT_GRANDFATHERED = {
-    "01_STAR/03_Criteria/iia_cycle_spoiler/bv2212_g3f7r2_cycle_spoiler.md",
-    "01_STAR/03_Criteria/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md",
-    "01_STAR/03_Criteria/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md",
-    "01_STAR/03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md",
-    "01_STAR/03_Criteria/tie_break_dead_rung/bv126_ties_every_step_8fvd2x.md",
-    "01_STAR/03_Criteria/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.md",
-    "01_STAR/03_Criteria/tie_break_ladder/bv830_vb3xv2_no_condorcet_tie_score.md",
-    "01_STAR/04_Real_Elections/abstain_bugs/bv11_6xhfp8_full_equal_support.md",
-    "01_STAR/04_Real_Elections/abstain_bugs/bv655_jfrk9t_equal_opposition.md",
-    "01_STAR/04_Real_Elections/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_01_confirms_leader_r2pvc9.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_04_reversal_at_scale_bfjqmg.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_06_confirms_at_scale_d664xw.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md",
-    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_08_ca_governor_reversal_gvdy42.md",
-    "01_STAR/05_Practice/ex02_tenth_ballot.md",
-    "01_STAR/05_Practice/ex03_five_verdicts.md",
-    "01_STAR/05_Practice/ex04_olympics_1994.md",
-    "01_STAR/05_Practice/ex05_center_squeeze.md",
-    "01_STAR/05_Practice/ex06_bullet_backfire.md",
-    "02_STAR_Bloc/02_Examples/bv129_score_tiebreak_bloc.md",
-    "02_STAR_Bloc/02_Examples/bv130_bloc_pagination_731.md",
-    "02_STAR_Bloc/02_Examples/bv130r2_dead_rung_bloc.md",
-    "02_STAR_Bloc/02_Examples/bv131_guido_bloc.md",
-    "02_STAR_Bloc/02_Examples/bv132_verify_votes_bloc.md",
-    "02_STAR_Bloc/02_Examples/bv1525_condorcet_loser_bloc.md",
-    "02_STAR_Bloc/02_Examples/bv1835_8h3yrx_score_leader_no_seat.md",
-    "02_STAR_Bloc/02_Examples/bv2105_r4dqvd_ice_cream_bloc.md",
-    "02_STAR_Bloc/02_Examples/bv750_tie_breaking_bloc.md",
-    "05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/bv2140_48hjkv_most_pairwise_wins.md",
-    "05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2141_3r3yf7_four_degree_tie.md",
-}
+# Empty, and meant to stay that way. It briefly held the 34 pages that predated
+# this gate — 28 of them showing output the engine had stopped emitting, mostly
+# from the switch to bracketed `[STAR Voting: Scoring Round]` headers. All 34
+# were converted (30 to `:report` includes, 6 relabelled as the deliberate
+# abridgements they always were), so no page exists that this rule can't be
+# applied to. Adding an entry is not the fix — embed the report, or say abridged.
+PASTED_REPORT_GRANDFATHERED = set()
 
 
 def _companion_pages():

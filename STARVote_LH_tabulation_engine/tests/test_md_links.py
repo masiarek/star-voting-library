@@ -56,10 +56,15 @@ def test_no_new_hand_pasted_engine_reports():
     )
 
 
-def test_grandfather_list_only_shrinks():
-    """The pre-existing pasted reports are a burn-down list, not a parking lot."""
+def test_grandfather_list_stays_empty():
+    """The burn-down finished; the exemption list is not a parking lot.
+
+    All 34 pre-existing pasted reports were converted, so there is no page this
+    rule can't be applied to. Re-populating the list would mean a new page
+    pasted a report and the exemption was widened instead of the report embedded.
+    """
     mod = _load_hygiene()
-    assert len(mod.PASTED_REPORT_GRANDFATHERED) <= 34, (
-        "PASTED_REPORT_GRANDFATHERED grew — a new page pasted a report and was "
-        "added to the exemption list instead of embedding the mirror."
+    assert not mod.PASTED_REPORT_GRANDFATHERED, (
+        "PASTED_REPORT_GRANDFATHERED is non-empty: "
+        + ", ".join(sorted(mod.PASTED_REPORT_GRANDFATHERED))
     )

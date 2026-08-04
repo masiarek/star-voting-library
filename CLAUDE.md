@@ -399,15 +399,28 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
     illustrations*** (invented candidates with no backing case file) — a "full report" link there
     is a dead end. Prefer the generated page over pasting the long report inline on a teaching
     page, which buries the lesson (e.g. the runoff page is *about* the reversal, not the matrix).
-  - **Long reports get EMBEDDED, never pasted — `pymdownx.snippets` is on.** Write
-    `--8<-- "<repo-relative path>"` inside the fence (paths resolve from the repo root, and
-    `title="…"` on the fence names the file). The file is read at build time, so the page
-    tracks the engine; a pasted copy does not, and 28 companion pages proved it by sitting
-    on output the engine had stopped emitting. `check_repo_hygiene.py::check_pasted_reports`
-    (gated by `tests/test_md_links.py`) fails on a new ≥8-line engine-shaped fence that is
-    neither an embed nor marked ```text abridged. **Deliberate compressions are legitimate**
-    — mark the fence `abridged` rather than converting them; `bv750_tie_breaking_bloc.md`'s
-    `a 15 ; b 15 ; c 15  ← three-way tie` is the lesson, not stale output.
+  - **Engine reports get EMBEDDED, never pasted — `pymdownx.snippets` is on.** To show a
+    case's count, write this **bare** (not inside a fence — the include brings its own):
+
+    ```
+    --8<-- "<set>/cases/cases_pages/<stem>.md:report"
+    ```
+
+    `build_yaml_pages.py` wraps each generated page's report fence in `[start:report]` /
+    `[end:report]` markers for exactly this. **Include the generated page, not the
+    `_tabulated` mirror** — the mirror drags in its ~50-line YAML echo and, for a big field
+    like `Runoff_08_ca_governor_reversal_gvdy42`, 785 lines of audit. To embed a whole file
+    (a `.yaml`, say), use `--8<-- "<repo-relative path>"` *inside* a fence; paths resolve
+    from the repo root and `title="…"` names the file. Reach for a *different* case's stem
+    when the block is a different election — a page can show several (`ex06_bullet_backfire.md`
+    embeds `ex06_bullet_honest` for its honest-ballot half).
+    `check_repo_hygiene.py::check_pasted_reports` (gated by `tests/test_md_links.py`) fails
+    on a new ≥8-line engine-shaped fence that is neither an include nor labelled abridged.
+  - **Deliberate compressions stay — label them, don't convert them.** Put
+    `title="Abridged for the lesson — not verbatim engine output"` on the fence: it renders as
+    a visible caption and satisfies the gate. `bv750_tie_breaking_bloc.md`'s
+    `a 15 ; b 15 ; c 15  ← three-way tie` is the lesson, not stale output. Six pages are
+    legitimately in this bucket; the other 28 were stale copies and are now includes.
 - **Companion pages carry a generated `case-meta` block.** A case with both a generated page
   (`<set>/cases/cases_pages/<stem>.md`) and a hand-authored companion (`<set>/<stem>.md`) gets a
   method / seats / expected-winners line plus a full-count link under the companion's H1,
