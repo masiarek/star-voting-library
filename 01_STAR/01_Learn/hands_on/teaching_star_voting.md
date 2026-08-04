@@ -6,15 +6,17 @@
 
 ## The one rule that matters most: problem before mechanics
 
-The single biggest mistake is opening with the ballot ("so you score everyone 0 to 5…"). People don't care *how* until they feel *why*. **Lead with the failure of the way we vote now**, let them feel it, *then* introduce STAR as the fix. The proven arc (it's exactly how [STAR — start here](../STAR_start_here.md) is built — use it as your script):
+The single biggest mistake is opening with the ballot ("so you score everyone 0 to 5…"). People don't care *how* until they feel *why*. **Lead with the failure of the way we vote now**, let them feel it, *then* introduce STAR as the fix. The proven arc:
 
-1. **A problem they already know** — vote-splitting. The [team-lunch story](../STAR_start_here.md#first-a-problem-you-already-know-the-team-lunch): everyone's happy with Pizza, but "pick one" splits the vote and buries it. *Now* they want a fix.
+1. **A problem they already know** — vote-splitting. The [team-lunch story](../STAR_start_here.md#so-why-not-just-pick-one): everyone's happy with Pizza, but "pick one" splits the vote and buries it. *Now* they want a fix.
 2. **STAR in one breath** — score 0–5 (like Yelp), then the top two have an automatic runoff.
 3. **Watch it fix the same problem** — re-run the lunch; the compromise wins.
 4. **The ballot** — show a real one; "there's no wrong way to fill it out."
 5. **Why two rounds** — the one idea worth pausing on (scores find the contenders; the runoff picks the winner).
 
 Everything else (criteria, comparisons, theory) is optional depth for the audience that wants it.
+
+**Why the written page is ordered the other way.** [STAR — start here](../STAR_start_here.md) puts STAR first and saves the Choose-One contrast for the end — deliberately, and it is *not* a contradiction of the rule above. A room full of people didn't ask to be there; you have to earn their attention with a problem. A reader who clicked "learn about STAR" already opted in and wants the *what*, immediately — open with a plurality lesson and you've answered a question they didn't ask. Same material, same contrast, opposite order, because the audiences arrive differently. Use the arc above when you're the one talking; use the page as a handout, not a script.
 
 ## Terms to make sure you cover (and how to say them)
 

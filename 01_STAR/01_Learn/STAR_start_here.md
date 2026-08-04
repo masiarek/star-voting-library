@@ -1,33 +1,16 @@
 # Welcome to STAR Voting 👋
 
-**New here? You're in exactly the right place.** No background needed, about five minutes, and not a word of politics. By the end you'll know what STAR Voting is — and *feel* why it picks winners people actually like.
+**New here? You're in exactly the right place.** No background needed, about five minutes, and nothing partisan. By the end you'll know what STAR Voting is — and *feel* why it picks winners people actually like.
 
-Here's the plan: we'll start with a small, familiar problem, watch the usual way of voting get it wrong, then meet the fix. That's it. Ready?
+Here's the plan: a small, familiar problem, then the ballot, then the count — and at the end, for contrast, what the *usual* way of voting does with the very same five people. That's it. Ready?
 
 ---
 
-## First, a problem you already know: the team lunch
+## The problem: the team lunch
 
 Five coworkers are picking lunch. Two of them love **Sushi**, two love **Tacos**, one likes **Pizza** best — and everyone, every single person, is perfectly happy with Pizza.
 
-They vote the usual way: **everyone names one favorite.** Five ballots, each just one X:
-
-```
-                  Sushi   Tacos   Pizza
-  Sushi-lover       X       -       -
-  Sushi-lover       X       -       -
-  Taco-lover        -       X       -
-  Taco-lover        -       X       -
-  Pizza-fan         -       -       X
-
-  Count the marks:  Sushi 2 · Tacos 2 · Pizza 1
-```
-
-The two adventurous camps *split*, so lunch comes down to a coin flip between Sushi and Tacos — and **Pizza, the one option nobody objected to, finishes last.** Half the team ends up with something they didn't want.
-
-That's **vote-splitting**, and it isn't just about lunch. It's the same thing that makes people vote for the "lesser evil" in real elections instead of who they actually like — a similar candidate enters, the vote splits, and someone the majority *didn't* want can win. (The formal name is the [spoiler effect](../../07_Concepts/topics/spoiler_effect.md).)
-
-The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite — every dash in that grid is a real opinion the ballot never asked about.
+Who should win? Hold that question for a minute — because the answer turns out to depend almost entirely on what the ballot lets people *say*.
 
 ## Meet STAR — in one breath
 
@@ -55,9 +38,9 @@ Here's the whole thing on paper — one voter's finished ballot:
 
 → Every legal way to fill it out — bullet votes, backups, equal scores, "anyone but…", protest votes, eight styles with a worked election: [The STAR ballot & voting styles](voting_styles/README.md).
 
-## Watch STAR fix the lunch
+## Watch STAR count the lunch
 
-Same five people, same feelings — but now each of them **scores all three** (5 = love it, 3 = fine, 0 = no):
+Same five people, same feelings — now each of them **scores all three** (5 = love it, 3 = fine, 0 = no):
 
 Run it yourself: [`bv2184_fyy886_lunch_vote.yaml`](../02_Examples/cases/bv2184_fyy886_lunch_vote.yaml) · [reader page](../02_Examples/cases/cases_pages/bv2184_fyy886_lunch_vote.md) · **[see it live on BetterVoting ↗](https://bettervoting.com/fyy886/results)**.
 
@@ -84,9 +67,7 @@ In plain English:
 - **Round 1 just adds up the stars.** Pizza collects 17 (a 3 or a 5 from *everyone*), the most — so Pizza and Sushi become the two finalists, and Tacos is out.
 - **Round 2 is a simple head-to-head between those two finalists.** Each person's ballot counts as **one vote**, for whichever finalist they scored higher. **Three** people scored Pizza above Sushi; **two** scored Sushi above Pizza. So **Pizza wins the final, 3 to 2** — an actual majority.
 
-**Pizza wins** — the option *everyone* was happy with. It got only one first-place vote, so "pick one" buried it; but because STAR reads the *whole* ballot, the broad, quiet support shows up. Nobody had to vote strategically, and nobody's stuck with a 0.
-
-*(For contrast: Choose-One and Instant-Runoff both pick Sushi here. Same voters, same feelings — the method decides.)*
+**Pizza wins** — the option *everyone* was happy with. It was only one person's outright favorite; because STAR reads the *whole* ballot, that broad, quiet support shows up anyway. Nobody had to vote strategically, and nobody's stuck with a 0.
 
 ## The one idea worth pausing on: why *two* rounds?
 
@@ -108,6 +89,29 @@ And notice how Sofia's story ends: her runoff vote went to Sushi, and Sushi stil
 Why not just add up the stars and stop? Because then you'd be tempted to game it — give your favorite 5 and everyone else 0, so your ballot "shouts" loudest. The runoff quietly removes that temptation: in the final, your big scores and small scores count the same (one vote for whichever finalist you preferred). So **an honest score is also the smart score** — you never have to exaggerate or hold back.
 
 One nuance you can now name: if you score the **two finalists** the *same*, your ballot counts as **"no preference"** between them (this tool calls it **Equal Support**) — a 5/5 means "either is great," a 0/0 means "I dislike both equally." Either way your scores still counted fully in Round 1, where they helped choose the finalists.
+
+## So why not just pick one?
+
+Now the promised contrast. Same five coworkers, same feelings — but the usual ballot, the one you've filled out your whole life: **name a single favorite.**
+
+```
+                  Sushi   Tacos   Pizza
+  Sushi-lover       X       -       -
+  Sushi-lover       X       -       -
+  Taco-lover        -       X       -
+  Taco-lover        -       X       -
+  Pizza-fan         -       -       X
+
+  Count the marks:  Sushi 2 · Tacos 2 · Pizza 1
+```
+
+The two adventurous camps *split*, so lunch comes down to a coin flip between Sushi and Tacos — and **Pizza, the one option nobody objected to, finishes last.** Half the team ends up with something they didn't want. Nothing changed but the ballot.
+
+That method has a name — **[Choose-One, also called plurality or First-Past-The-Post](../../07_Concepts/topics/plurality.md)** — and so does its failure: **vote splitting**, whose better-known cousin is the **[spoiler effect](../../07_Concepts/topics/spoiler_effect.md)**, where an option that can't win still decides who does. It's the same machinery that pushes people toward the "lesser evil" instead of who they actually like.
+
+The trouble isn't the voters. It's the *ballot*: "pick one" throws away everything except your single favorite — **every dash in that grid is a real opinion the ballot never asked about.** STAR asked about all of them, which is the whole difference.
+
+*(And it isn't only Choose-One: [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) picks Sushi here too, for its own reasons. Same voters, same feelings — the method decides.)*
 
 ## What this means for you
 
