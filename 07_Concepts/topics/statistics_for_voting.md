@@ -2,7 +2,7 @@
 
 *Voting papers lean on a small, specific set of statistical ideas — and in this field several of them aren't background maths at all: **they are the thing being argued about.** Whether you total scores or take their median isn't a technical detail, it's the difference between two voting methods. This page covers only the concepts that **change a voting answer**, and points at where each one bites. It is not a statistics course; every entry is here because you'll misread a paper without it.*
 
-**Level: 201 → 301.** Companion: [election simulation models](election_simulation_models.md) (the model-building subset) · [simulate utilities, not ballots](simulate_utilities_not_ballots.md).
+**Level: 201 → 301 · deep dive** Companion: [election simulation models](election_simulation_models.md) (the model-building subset) · [simulate utilities, not ballots](simulate_utilities_not_ballots.md).
 
 ---
 

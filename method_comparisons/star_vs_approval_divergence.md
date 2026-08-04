@@ -2,7 +2,7 @@
 
 *A common question with a deceptively honest answer: **there is no single number** — and the reason *why* is the actual lesson. This page measures the divergence rate (with a runnable, seeded simulation), explains why the two methods split, and links the worked elections where you can watch it happen on real ballots.*
 
-**Level: 301.** Companion: [What makes a good winner?](../07_Concepts/topics/what_makes_a_good_winner.md) · [election simulation models](../07_Concepts/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
+**Level: 301 · deep dive** Companion: [What makes a good winner?](../07_Concepts/topics/what_makes_a_good_winner.md) · [election simulation models](../07_Concepts/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
 
 ## Why there's no single rate
 

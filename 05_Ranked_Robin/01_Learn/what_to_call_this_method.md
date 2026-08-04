@@ -2,7 +2,7 @@
 
 *One method, first described in 1299, and at least seven names in circulation. This page is not the [naming decoder](condorcet_naming_decoder.md) — that one maps which word **means** what. This one argues about which word we should **use**, and what each choice costs. It is a live dispute, including among the people who coined the names, so it is laid out as pros and cons rather than a ruling.*
 
-**Level: reference** (a 201/301 aid). The teaching page for the method is [Ranked Robin](ranked_robin.md).
+**Level: reference · deep dive** (a 201/301 aid). The teaching page for the method is [Ranked Robin](ranked_robin.md).
 
 ---
 

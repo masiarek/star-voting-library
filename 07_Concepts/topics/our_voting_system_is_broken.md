@@ -43,7 +43,7 @@ Under Choose-One you *can't know*. Under STAR you *read it off the result.* That
 
 ## Where this fits in the overall teaching
 
-- **Level:** Voting 101 — **foundational**. This is the *diagnosis*; read it before the spoiler-effect mechanism and the STAR pitch.
+- **Level: 101 · for voters** — **foundational**. This is the *diagnosis*; read it before the spoiler-effect mechanism and the STAR pitch.
 - **Pairs with:** the [spoiler effect](spoiler_effect.md) and the [`split_voting/`](../../method_comparisons/split_voting/) demos — this page argues *that* the system is broken; those show *how*. Then [What's so good about STAR](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) delivers the fix.
 - **Terminology:** keep it `Choose-One` / `Plurality` for a public audience; the point is method-accurate for Plurality specifically. (Reworked from a classic pro-reform passage that originally leaned on IRV; here the resolution is STAR's majority runoff + preference matrix, which answer "is the plurality winner the real winner?" directly, on one ballot.)
 

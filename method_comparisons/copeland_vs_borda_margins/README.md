@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kdjjkq) · **[results ↗](https://bettervoting.com/kdjjkq/results)** (election `kdjjkq`, Test ID **BV2251** — four races on the same 12 ballots: Choose-One, STAR, RCV-IRV, Ranked Robin).
 
-→ **Level: Voting 301.** See also: [the cycle–cocycle decomposition](../../07_Concepts/topics/cycle_cocycle_decomposition.md) (the theorem behind this page) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [the minimal tilted cycle](../minimal_tilted_cycle/README.md) (five voters — the smallest lopsided cycle) · [Condorcet's 1788 rebuttal to Borda](../borda_condorcet_1788/README.md) (the mirror image: Borda's *sincere* failure) · [the social welfare function](../../07_Concepts/topics/social_welfare_function.md)
+→ **Level: 301 · deep dive** See also: [the cycle–cocycle decomposition](../../07_Concepts/topics/cycle_cocycle_decomposition.md) (the theorem behind this page) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [the minimal tilted cycle](../minimal_tilted_cycle/README.md) (five voters — the smallest lopsided cycle) · [Condorcet's 1788 rebuttal to Borda](../borda_condorcet_1788/README.md) (the mirror image: Borda's *sincere* failure) · [the social welfare function](../../07_Concepts/topics/social_welfare_function.md)
 
 ---
 

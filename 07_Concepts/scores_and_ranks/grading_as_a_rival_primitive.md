@@ -2,7 +2,7 @@
 
 *A 301 theory page. Most of the ranked-vs-rated debate accepts one shared assumption: that a voter's real opinion **is** an ordering, and the only question is how much of it a ballot captures. Michel Balinski and Rida Laraki's **Majority Judgment** (MIT Press, 2011) attacks that assumption directly. Their claim is not "rankings are lossy" — it is that the **preference order is the wrong primitive**, a modeling error inherited from Arrow, and that what voters actually have (and can reliably report) are **absolute grades in a common language**. This page lays out the argument, its strongest evidence, and the recent experiment that undercuts its load-bearing premise.*
 
-**Level: 301.** Companions: [Preference vs. support](preference_vs_support.md) — the same gap, shown on two ballots · [Scores vs. ranks](scores_vs_ranks.md) — the general distinction · [Distortion](../topics/distortion.md) — the *other* academic assault on ordinal ballots, from computer science · [Majority Judgment's paradoxes](../voting_paradoxes/majority_judgment.md) — the case against, worked · ["Preference" — the word that causes half the confusion](../topics/preference.md).
+**Level: 301 · deep dive** Companions: [Preference vs. support](preference_vs_support.md) — the same gap, shown on two ballots · [Scores vs. ranks](scores_vs_ranks.md) — the general distinction · [Distortion](../topics/distortion.md) — the *other* academic assault on ordinal ballots, from computer science · [Majority Judgment's paradoxes](../voting_paradoxes/majority_judgment.md) — the case against, worked · ["Preference" — the word that causes half the confusion](../topics/preference.md).
 
 ---
 

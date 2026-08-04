@@ -2,7 +2,7 @@
 
 *The peer-reviewed paper that introduced the two metrics this library leans on — **Voter Satisfaction Efficiency (VSE)** and **Pivotal Voter Strategic Incentive (PVSI)** — and made the academic case for STAR. Because the authors are STAR advocates, this page runs it through the same [claim-check recipe](../../../method_comparisons/fairvote_star_whitepaper/) we apply to every camp: concede the kernel, test what's testable, flag the overreach, disclose the lean — and let the fairness cut against STAR too.*
 
-**Level: 301 → 401.** · Full text (open access): **[DOI 10.1007/s10602-022-09389-3](https://doi.org/10.1007/s10602-022-09389-3)** · local copy [`wolk_quinn_ogren_2023_star_vse.pdf`](wolk_quinn_ogren_2023_star_vse.pdf).
+**Level: 301 → 401 · deep dive** · Full text (open access): **[DOI 10.1007/s10602-022-09389-3](https://doi.org/10.1007/s10602-022-09389-3)** · local copy [`wolk_quinn_ogren_2023_star_vse.pdf`](wolk_quinn_ogren_2023_star_vse.pdf).
 
 > **Wolk, S., Quinn, J. & Ogren, M. (2023).** "STAR Voting, equality of voice, and voter satisfaction: considerations for voting method reform." *Constitutional Political Economy* **34(3): 310–334.** Accepted 24 Dec 2022, published 20 Mar 2023. Open access (CC BY). Correction notice: 10.1007/s10602-023-09426-9.
 

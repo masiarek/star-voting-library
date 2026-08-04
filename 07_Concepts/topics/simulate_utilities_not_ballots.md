@@ -2,7 +2,7 @@
 
 *A 301 methodology note. When you run simulations to **compare** voting methods, the single most consequential decision is **where you inject the randomness**. Sampling random ballots (e.g. scores drawn uniformly from {0,1,2,3,4,5}) quietly rigs the comparison. Sampling random **utilities** and then *deriving* each ballot is the defensible approach — and it's what this repo's simulations already do.*
 
-**Level: 301.** Companion: [Election simulation models](election_simulation_models.md) (which *utility* model to use, once you're sampling utilities) · [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) (a worked application).
+**Level: 301 · deep dive** Companion: [Election simulation models](election_simulation_models.md) (which *utility* model to use, once you're sampling utilities) · [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) (a worked application).
 
 ## The question: what is the random *primitive*?
 

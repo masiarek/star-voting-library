@@ -2,7 +2,7 @@
 
 *Explaining STAR to a class, a club, a city council, or a skeptical uncle? This page collects what actually works — the order to teach it in, the terms to cover (and how to phrase them), which examples to reach for, the misconceptions to head off, and how to run a live demo. It's the presenter's companion to the learner-facing [STAR — start here](../STAR_start_here.md).*
 
-**Level: reference (a teaching aid).**
+**Level: reference · for presenters**
 
 ## Where to start depends on who's in the room
 
@@ -69,7 +69,7 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 
   (Hand your audience the full set: [Common misunderstandings about STAR](../getting_started/common_misunderstandings.md).)
 - **Concede a limit — on purpose.** "No method is perfect ([that's a theorem](../../../07_Concepts/topics/gibbard_satterthwaite_theorem.md))" and naming one honest [limit](../properties_and_limits/STAR_honest_limits.md) *builds* trust; overselling loses the skeptics.
-- **Match depth to the audience** (see [curriculum pacing](../../../07_Concepts/CURRICULUM.md#suggested-pacing-by-audience)): a 15-min public talk = the arc above and stop; officials = add [summability & audits](../properties_and_limits/STAR_summability.md); skeptics/debaters = [honest limits](../properties_and_limits/STAR_honest_limits.md) + [the criteria](../../../07_Concepts/topics/criteria_at_a_glance.md).
+- **Match depth to the audience** (see [curriculum pacing](../../../07_Concepts/CURRICULUM.md#suggested-pacing-by-audience)): a 15-min public talk = the problem-first arc and stop; officials = add [summability & audits](../properties_and_limits/STAR_summability.md); skeptics/debaters = [honest limits](../properties_and_limits/STAR_honest_limits.md) + [the criteria](../../../07_Concepts/topics/criteria_at_a_glance.md).
 - **End with a call to action** — have them cast a real STAR ballot or run their own poll before they leave.
 
 ## Print your own paper ballots (the hands-on loop)

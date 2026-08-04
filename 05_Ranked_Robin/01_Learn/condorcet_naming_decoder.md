@@ -2,7 +2,7 @@
 
 *One family of voting methods, half a dozen names, and two Wikipedia articles that overlap so much they look redundant. If "the Condorcet family" has ever left you unsure whether **round-robin voting**, **Copeland's method**, and **Ranked Robin** are the same thing or different things — you're not confused, the names genuinely blur. This page maps them, links where each is defined, and flags the sources to read critically.*
 
-**Level: reference** (a 201/301 aid). The teaching page for the method itself is [Ranked Robin](ranked_robin.md); this is just the terminology map.
+**Level: reference · deep dive** (a 201/301 aid). The teaching page for the method itself is [Ranked Robin](ranked_robin.md); this is just the terminology map.
 
 *This page maps what each word **means**. For the argument about which one we should **use** — and what each choice costs — see [What should we call this method?](what_to_call_this_method.md).*
 

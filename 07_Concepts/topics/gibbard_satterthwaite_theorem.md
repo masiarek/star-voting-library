@@ -2,7 +2,7 @@
 
 *The formal reason "just vote honestly" can never be guaranteed. Proved independently by [Allan Gibbard](whos_who_voting_reform.md) (1973) and Mark Satterthwaite (1975), it is — with [Arrow's theorem](what_makes_a_good_winner.md) — one of the two impossibility results that anchor voting theory. This page states it plainly, lists the escape hatches, and explains why it reframes the whole strategy debate (including STAR's).*
 
-**Level: 301.** Companion: [Strategic voting across the Equal Vote methods](strategic_voting.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md).
+**Level: 301 · deep dive** Companion: [Strategic voting across the Equal Vote methods](strategic_voting.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md).
 
 ## The statement, in plain terms
 

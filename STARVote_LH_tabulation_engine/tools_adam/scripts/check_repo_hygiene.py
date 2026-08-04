@@ -435,6 +435,44 @@ def check_terminology():
 
 
 # --------------------------------------------------------------------------- #
+# **Level:** tags — one shape, so the audience token stays pickable-from and the
+# voice rule in CLAUDE.md is enforceable rather than remembered. Canonical:
+#     **Level: <rung> · <audience>**
+# rung = 101|201|301|401, an arrow range (201 → 301), or `reference`
+# audience = for voters | for presenters | for debaters | deep dive
+# Untagged pages are fine (the 101 spine mostly is); a *malformed* tag is not.
+# Elaboration goes AFTER the closing `**`, never inside the token.
+# --------------------------------------------------------------------------- #
+_LEVEL_TOKEN = re.compile(r"\*\*Level:.*?\*\*|\*\*Level:\*\*")
+_LEVEL_RUNG = r"(?:101|201|301|401)(?:\s*→\s*(?:101|201|301|401))?|reference"
+_LEVEL_AUD = r"for voters|for presenters|for debaters|deep dive"
+_LEVEL_OK = re.compile(rf"^\*\*Level: (?:{_LEVEL_RUNG}) · (?:{_LEVEL_AUD})\*\*$")
+
+
+def check_levels():
+    """Return [(file, lineno, found)] for malformed **Level:** tags."""
+    hits = []
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        for fn in filenames:
+            if not fn.endswith(".md"):
+                continue
+            path = os.path.join(dirpath, fn)
+            rel = os.path.relpath(path, REPO)
+            if _skip(rel) or rel == "CLAUDE.md":   # CLAUDE.md documents the shape
+                continue
+            try:
+                lines = open(path, encoding="utf-8").read().splitlines()
+            except OSError:
+                continue
+            for i, ln in enumerate(lines, 1):
+                for m in _LEVEL_TOKEN.finditer(ln):
+                    if not _LEVEL_OK.match(m.group(0)):
+                        hits.append((rel, i, m.group(0)))
+    return sorted(hits)
+
+
+# --------------------------------------------------------------------------- #
 # BV-case completeness: every BV-backed election YAML should have a sibling .md
 # (its write-up page). The registry TRACKS the md path but leaves it blank when
 # absent — this gate makes that self-verifying, so a promoted case can't ship
@@ -741,6 +779,18 @@ def main(argv):
         print(f"repo-hygiene: ⚠️  terminology violations ({len(terms)}):")
         for rel, ln, msg in terms:
             print(f"   • {rel}:{ln}  {msg}")
+    bad_levels = check_levels()
+    if not bad_levels:
+        print("repo-hygiene: ✓ every **Level:** tag uses the canonical shape.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  malformed **Level:** tags ({len(bad_levels)}) — "
+              "want `**Level: <101|201|301|401|range|reference> · "
+              "<for voters|for presenters|for debaters|deep dive>**`, with any")
+        print("              elaboration AFTER the closing `**` (see CLAUDE.md, "
+              "'Voice' + 'Level'):")
+        for rel, ln, found in bad_levels:
+            print(f"   • {rel}:{ln}  {found}")
     no_md = check_bv_case_md()
     if not no_md:
         print("repo-hygiene: ✓ every BV-backed case has a sibling .md page.")

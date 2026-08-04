@@ -2,7 +2,7 @@
 
 *The "graduate seminar" companion to [STAR-PR](README.md). None of this is needed to run or advocate for proportional STAR — you mainly need the **quota** and the **spend-a-quota / reweighting** intuition. But if you want to know **why** it's provably fair, you walk into apportionment theory, optimization, and fair-division (cooperative game) theory. This is a different branch of math than [Condorcet](../../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) — that's graph theory; this is apportionment + optimization.*
 
-→ The method pages: [STAR-PR](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · Glossary: [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · **Level: Voting 301** — Curriculum [301.1](../../../07_Concepts/CURRICULUM.md) (proportional STAR), [301.4](../../../07_Concepts/CURRICULUM.md) (limits & theory)
+→ The method pages: [STAR-PR](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · Glossary: [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · **Level: 301 · deep dive** — Curriculum [301.1](../../../07_Concepts/CURRICULUM.md) (proportional STAR), [301.4](../../../07_Concepts/CURRICULUM.md) (limits & theory)
 
 ---
 

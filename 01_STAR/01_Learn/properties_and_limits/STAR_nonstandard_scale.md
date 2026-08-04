@@ -91,7 +91,7 @@ Rarely, and only on purpose. The honest ledger:
 
 ## Where this fits
 
-- **Level:** Voting 301 — advanced / "what if." Read after the [scoring round](../the_count/STAR_Scoring_Round.md) and [automatic runoff](../the_count/STAR_Automatic_Runoff.md) are second nature.
+- **Level: 301 · deep dive** — advanced / "what if." Read after the [scoring round](../the_count/STAR_Scoring_Round.md) and [automatic runoff](../the_count/STAR_Automatic_Runoff.md) are second nature.
 - **Pairs with:** [Scale granularity can flip the winner](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md) (the case where the scale *does* change the outcome) and the [Range/Score worked comparison](../../../06_Other/Range/concepts/range_voting.md) (the same 0–10 electorate as pure Score).
 - **Engine note:** the 0–5 cap is the fork's teaching guardrail, not a limit of Larry's engine — see the Engines section of the repo's working notes.
 

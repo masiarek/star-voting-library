@@ -2,7 +2,7 @@
 
 *A single pass/fail map of the four single-winner methods this library covers, across the criteria voting theorists argue about — with, wherever we have one, a **runnable election** you can open to watch the failure happen. A linked ✗ has a worked demo behind it.*
 
-**Level: 201 → 301.** Read the caveat first — it's the whole point.
+**Level: 201 → 301 · for debaters** Read the caveat first — it's the whole point.
 
 ## Read this before the table: pass/fail is a *starting point*, not a verdict
 

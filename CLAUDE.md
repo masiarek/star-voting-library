@@ -301,6 +301,35 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   up top, then the **ballots**, then the **results** — with the full engine detail (the
   same content as the `_tabulated` mirror, or the mirror embedded) at the **bottom** of
   the page, so the reader gets the lesson before the numbers.
+- **Voice — learner by default; "how to teach it" is a folder, not a mode.**
+  The asymmetry decides it: a learner page serves a presenter fine (they read
+  *"you score every candidate 0–5"* and say *"you all score…"*), but a presenter
+  page **fails** a learner — someone who lands on *"explain to your audience
+  that…"* has been handed a script for a job they didn't take. Traffic runs one
+  way too: every inbound link from the wild delivers a learner; presenters are a
+  small group who deliberately walk into `hands_on/`. So:
+  - **learner-you** — the default. The `01_Learn` spine, `getting_started/`,
+    `voting_styles/`, every `start_here`.
+  - **reference-neutral** (third person, the `**One line:** …` openers) — the
+    201/301 property and theory pages: `properties_and_limits/`, `the_count/`,
+    most of `07_Concepts/topics/`.
+  - **presenter-you** — `hands_on/` and slide decks **only**.
+  - **Never two voices in one page.** If a learner page needs a presenter aside,
+    *link* to `hands_on/`; don't switch person mid-page. (This is the drift that
+    let `teaching_star_voting.md` claim it owned `STAR_start_here.md`'s
+    structure.)
+  - **Titles name the subject, not the reader's task** — "The STAR ballot &
+    voting styles", not "How to learn the ballot". The exception is `hands_on/`,
+    where the task *is* the subject ("Count a STAR election by hand").
+- **`**Level:**` — one shape, machine-checked** (`check_repo_hygiene.py`):
+  `**Level: <rung> · <audience>**`, where **rung** is `101` / `201` / `301` /
+  `401`, an arrow range (`201 → 301`), or `reference`; and **audience** is
+  `for voters` · `for presenters` · `for debaters` · `deep dive`. No "Voting"
+  prefix, no trailing period inside the bold, no parenthetical inside the token —
+  put any elaboration *after* the closing `**`. The audience token is what makes
+  the voice rule above enforceable, so pick it before you write the page, not
+  after. Untagged pages are fine (the 101 spine mostly is); a *malformed* tag is
+  not.
 - **External sourcing — match the source to the claim, and disclose the lean.**
   Cite by tier: **electowiki** for *niche/branded method definitions & mechanics*
   (Ranked Robin, STAR variants, exotic methods — where Wikipedia is thin, it's the

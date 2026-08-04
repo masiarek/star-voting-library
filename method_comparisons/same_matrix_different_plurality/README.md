@@ -2,7 +2,7 @@
 
 *Three 12-ballot electorates. **Identical** pairwise results — every head-to-head count, every margin, the same Condorcet winner, the same Borda scores. Ranked Robin, Minimax, Ranked Pairs and Kemeny cannot tell them apart, and must all return the same winner on all three. **Choose-One returns a different winner on each — one per candidate.** That is the whole of [what a method reads](../../07_Concepts/topics/what_a_method_reads.md), demonstrated in ballots you can count by hand.*
 
-**Level: 301.** Concept: [what a method reads](../../07_Concepts/topics/what_a_method_reads.md) · [summability](../../07_Concepts/topics/summability/) · [the C1/C2/C3 tiers](../../07_Concepts/topics/condorcet/condorcet_reading_list.md). **LH-only** — the lesson is the *contrast across three electorates*, which a single BetterVoting election cannot show.
+**Level: 301 · deep dive** Concept: [what a method reads](../../07_Concepts/topics/what_a_method_reads.md) · [summability](../../07_Concepts/topics/summability/) · [the C1/C2/C3 tiers](../../07_Concepts/topics/condorcet/condorcet_reading_list.md). **LH-only** — the lesson is the *contrast across three electorates*, which a single BetterVoting election cannot show.
 
 ---
 

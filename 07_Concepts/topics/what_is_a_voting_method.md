@@ -83,7 +83,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 ## Where this fits in the overall teaching
 
-- **Level:** Voting 101 — **the foundation.** Play it before the "is the system broken?" diagnosis and the spoiler-effect mechanism; both assume ballot-vs-count and plurality-vs-majority are already clear.
+- **Level: 101 · for voters** — **the foundation.** Play it before the "is the system broken?" diagnosis and the spoiler-effect mechanism; both assume ballot-vs-count and plurality-vs-majority are already clear.
 - **Pairs with:** `our_voting_system_is_broken.md` (the diagnosis that builds on this) and `whats_so_good_about_STAR_Voting.md` (the fix). This episode is purely definitional — no STAR pitch yet beyond showing the runoff as "the majority step."
 - **Terminology:** keep `Choose-One` / `Plurality` for a public audience. Hold the ballot-vs-tabulation distinction precisely — it's the spine of the whole curriculum.
 

@@ -2,7 +2,7 @@
 
 *One of STAR's quiet superpowers: you can tally it with a pencil, paper, and grade-school arithmetic — no computer required. This page walks you through counting a real STAR election by hand, start to finish, so "STAR is simple and hand-countable" stops being a claim and becomes something you've actually done.*
 
-**Level: 101.** You'll need only the [two rounds](../STAR_start_here.md): add the stars, then count the runoff.
+**Level: 101 · for voters** You'll need only the [two rounds](../STAR_start_here.md): add the stars, then count the runoff.
 
 ## What you're counting
 

@@ -2,7 +2,7 @@
 
 *[electowiki](https://electowiki.org/wiki/Cardinal_voting)'s cardinal-voting article is the best short map of the score-ballot family anywhere — the taxonomy tables alone are worth the visit. It also contains **two outright logical errors** and one comparison that quietly reads two different studies off the same ruler. This page separates the three.*
 
-**Level: 301.** Companions: [scores vs. ranks](scores_vs_ranks.md) · [scale granularity can flip the winner](scale_granularity_flips_the_winner.md) · [what makes a good winner?](../topics/what_makes_a_good_winner.md) · [criteria at a glance](../topics/criteria_at_a_glance.md)
+**Level: 301 · for debaters** Companions: [scores vs. ranks](scores_vs_ranks.md) · [scale granularity can flip the winner](scale_granularity_flips_the_winner.md) · [what makes a good winner?](../topics/what_makes_a_good_winner.md) · [criteria at a glance](../topics/criteria_at_a_glance.md)
 
 > **Source lean, disclosed** (house rule): electowiki is the election-reform community's own encyclopedia — excellent for *branded method mechanics* where Wikipedia is thin, [advocacy-adjacent for *verdicts*](../topics/how_to_learn_about_voting_methods.md). This article argues **for** cardinal methods, which is the same side this library is on. That is exactly why it's worth auditing: a source that flatters your conclusion is the one you check hardest.
 

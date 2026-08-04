@@ -2,7 +2,7 @@
 
 *The Condorcet literature is genuinely hard to enter, and the reason is almost never the math — it's the names. "Condorcet method," "pairwise method," "round-robin voting," "tournament solution," "Copeland," "Ranked Robin," "Consensus Choice" all show up in the first ten minutes of reading, at four different levels of generality, from four camps with four agendas. This page is the way in: one taxonomy that makes the names stop sliding, then the sources worth your time, each with its lean marked.*
 
-**Level: reference** (a 201/301 aid). Start with the [naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) if you just need the brands untangled; come here for the literature behind it.
+**Level: reference · deep dive** (a 201/301 aid). Start with the [naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) if you just need the brands untangled; come here for the literature behind it.
 
 ---
 

@@ -170,7 +170,7 @@ The claim you'll actually meet isn't a neutral question — it's a reassurance. 
 
 ## Where this fits in the overall teaching
 
-- **Level:** Voting 301 — pairs with `favorite_betrayal_voting_301.md` (the *other* IRV-internals deep dive) and `are_equal_score_votes_discounted.md` (the STAR no-preference side of this exact contrast).
+- **Level: 301 · deep dive** — pairs with `favorite_betrayal_voting_301.md` (the *other* IRV-internals deep dive) and `are_equal_score_votes_discounted.md` (the STAR no-preference side of this exact contrast).
 - **Terminology:** strictly **RCV-IRV / IRV** here — exhaustion is IRV-specific; Ranked Robin and the Condorcet methods read every ranking.
 
 Cross-references:

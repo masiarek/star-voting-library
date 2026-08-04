@@ -2,7 +2,7 @@
 
 *Several reform packages are two-stage: an open qualifying election narrows a crowded field to the top few, then a good method runs the general. That design has a quiet assumption baked into it — that the primary won't discard the very candidate the reform exists to elect. This page measures whether that assumption holds, and finds that **it depends almost entirely on a design choice most proposals leave unspecified.***
 
-**Level: 301.** Companions: [election simulation models](../07_Concepts/topics/election_simulation_models.md) · [simulate utilities, not ballots](../07_Concepts/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/01_Learn/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
+**Level: 301 · deep dive** Companions: [election simulation models](../07_Concepts/topics/election_simulation_models.md) · [simulate utilities, not ballots](../07_Concepts/topics/simulate_utilities_not_ballots.md) · [Ranked Robin vs. Consensus Choice](../05_Ranked_Robin/01_Learn/ranked_robin_vs_consensus_choice.md) · runnable: [`primary_method_simulation.py`](../06_Other/simulations/primary_method_simulation.py)
 
 ## The question, and why it isn't rhetorical
 

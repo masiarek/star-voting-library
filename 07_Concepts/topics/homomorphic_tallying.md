@@ -2,7 +2,7 @@
 
 *Yes — and the reason is worth understanding, because it is a genuine structural advantage of score methods over elimination methods. But STAR has one wrinkle that nobody mentions: **the scoring round is the easy case; the automatic runoff is not.** This page explains why, and how the wrinkle is resolved.*
 
-**Level: 301 → 401.** Companion: [summability](summability/) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
+**Level: 301 → 401 · deep dive** Companion: [summability](summability/) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
 ---
 

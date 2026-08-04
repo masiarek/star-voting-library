@@ -2,7 +2,7 @@
 
 *The one idea from the [tournament-solutions](tournament_solutions.md) literature that survives contact with a normal audience. Forget cycles and axioms for a moment and ask a much smaller question: **is this candidate redundant?** If somebody beats them head-to-head, and also beats everyone they beat, then yes — strictly, on the pairwise evidence alone. That candidate is **covered**. The **uncovered set** is everybody left. It is the weakest structural filter in the field, it has three completely different definitions that turn out to be the same thing, and it is exactly the line between electing a Pareto-optimal candidate and not.*
 
-→ Related: [tournament solutions](tournament_solutions.md) — the family this belongs to · [the Smith set](smith_set.md) — the *other* generalized Condorcet winner, and a **coarser** one · [what a method reads](what_a_method_reads.md) · [pairwise counting](pairwise_counting.md) · **Level: Voting 301**
+→ Related: [tournament solutions](tournament_solutions.md) — the family this belongs to · [the Smith set](smith_set.md) — the *other* generalized Condorcet winner, and a **coarser** one · [what a method reads](what_a_method_reads.md) · [pairwise counting](pairwise_counting.md) · **Level: 301 · deep dive**
 
 **Runnable:** [STAR elects a covered candidate](../../method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md) — five ballots, four cities, and the filter that most candidates pass.
 

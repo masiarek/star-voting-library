@@ -2,7 +2,7 @@
 
 *STAR is simple, but a handful of things trip almost everyone up on first hearing. Here are the honest, plain-language answers to the gut reactions — the ones that start with "wait, but isn't it…". (For the step-by-step mechanics, see the [FAQ](STAR_FAQ.md); this page is for the doubts.)*
 
-**Level: 101.**
+**Level: 101 · for voters**
 
 ## About filling out the ballot
 

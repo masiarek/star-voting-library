@@ -2,7 +2,7 @@
 
 *Two organizations promote what is essentially the same Condorcet method under two friendly brand names. People often summarize this as "the difference is purely branding." That's **nearly** right, and the two places it's wrong are the two places worth understanding: **the cycle rule**, and **what else comes bundled with the method**.*
 
-**Level: reference** (a 201/301 aid). The method itself: [Ranked Robin](ranked_robin.md). The wider terminology map: [the naming decoder](condorcet_naming_decoder.md).
+**Level: reference · deep dive** (a 201/301 aid). The method itself: [Ranked Robin](ranked_robin.md). The wider terminology map: [the naming decoder](condorcet_naming_decoder.md).
 
 ## The short version
 

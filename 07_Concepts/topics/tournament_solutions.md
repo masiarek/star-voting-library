@@ -2,7 +2,7 @@
 
 *Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), [STAR](../../01_STAR/01_Learn/) and [Approval](../../04_Approval/01_Learn/).*
 
-→ Related: [what a method reads](what_a_method_reads.md) — the C1/C2/C3 tiers this page is the C1 half of · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [the Smith set](smith_set.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — what the **C2** methods do with the margins tournament solutions discard · **Level: Voting 301**
+→ Related: [what a method reads](what_a_method_reads.md) — the C1/C2/C3 tiers this page is the C1 half of · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [the Smith set](smith_set.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — what the **C2** methods do with the margins tournament solutions discard · **Level: 301 · deep dive**
 
 **Runnable:** [Tournament solutions, counted](../../method_comparisons/tournament_solutions/) — five defensible winners from a three-ballot election, both engines agreeing.
 

@@ -2,7 +2,7 @@
 
 *The "graduate seminar" companion to Ranked Robin. None of this is needed to run or advocate for a Condorcet election — [Ranked Robin](ranked_robin.md) ("most head-to-head wins") is the practical, explainable method. But once you ask **what is the structure of the pairwise results**, you walk straight into graph theory, game theory, and a few famous impossibility theorems. Here's the map.*
 
-→ Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../../07_Concepts/topics/condorcet/) · **Level: Voting 301** — Curriculum [301.4](../../07_Concepts/CURRICULUM.md) (limits & theory), [301.6](../../07_Concepts/CURRICULUM.md) (Condorcet/Score/Runoff disagree)
+→ Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../../07_Concepts/topics/condorcet/) · **Level: 301 · deep dive** — Curriculum [301.4](../../07_Concepts/CURRICULUM.md) (limits & theory), [301.6](../../07_Concepts/CURRICULUM.md) (Condorcet/Score/Runoff disagree)
 
 ---
 

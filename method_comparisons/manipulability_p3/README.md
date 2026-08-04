@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4w96tr) · **[results ↗](https://bettervoting.com/4w96tr/results)** (election `4w96tr`, Test ID **BV2253** — the **sincere** baseline only, three races: Choose-One, STAR, Ranked Robin). The manipulated ballots below are counterfactual and stay LH-only; casting deliberate lies as a real public election would misrepresent what this profile is.
 
-→ **Level: Voting 301.** The theorem behind it: [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) · the taxonomy: [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [strategic pathologies scorecard](../../07_Concepts/topics/strategic_pathologies.md) · same chapter, different profile: [margins matter](../copeland_vs_borda_margins/README.md) · [the social welfare function](../../07_Concepts/topics/social_welfare_function.md) · related failures: [monotonicity](../monotonicity/README.md) · [reversal symmetry](../reversal_symmetry/README.md)
+→ **Level: 301 · deep dive** The theorem behind it: [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) · the taxonomy: [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [strategic pathologies scorecard](../../07_Concepts/topics/strategic_pathologies.md) · same chapter, different profile: [margins matter](../copeland_vs_borda_margins/README.md) · [the social welfare function](../../07_Concepts/topics/social_welfare_function.md) · related failures: [monotonicity](../monotonicity/README.md) · [reversal symmetry](../reversal_symmetry/README.md)
 
 ---
 

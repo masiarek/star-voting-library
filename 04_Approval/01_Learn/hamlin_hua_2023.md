@@ -2,7 +2,7 @@
 
 *The companion article to [the foundational STAR paper](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) — same journal, same issue, the next ten pages. Approval's advocacy organisation makes its case in an academic venue, and section 4 answers the four critiques it expects: the majority criterion, later-no-harm, bullet voting, expressiveness. This page runs it through the same [claim-check recipe](../../method_comparisons/fairvote_star_whitepaper/) used on every camp — concede the kernel, test what's testable, flag the overreach, disclose the lean. The §4.1 example is fully runnable, so most of this page is engine output rather than argument.*
 
-**Level: 301.** · [DOI 10.1007/s10602-022-09381-x](https://doi.org/10.1007/s10602-022-09381-x) · runnable companions: [Approval and the majority criterion](../../method_comparisons/approval_majority_criterion/README.md).
+**Level: 301 · deep dive** · [DOI 10.1007/s10602-022-09381-x](https://doi.org/10.1007/s10602-022-09381-x) · runnable companions: [Approval and the majority criterion](../../method_comparisons/approval_majority_criterion/README.md).
 
 > **Hamlin, A. & Hua, W. (2023).** "The case for approval voting." *Constitutional Political Economy* **34(3): 335–345.**
 

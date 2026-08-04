@@ -1,6 +1,6 @@
 # Condorcet efficiency, measured
 
-→ Topic hub: [Condorcet efficiency](README.md) · the simulation: [`condorcet_efficiency_simulation.py`](../../../06_Other/simulations/condorcet_efficiency_simulation.py) ([folder README](../../../06_Other/simulations/README.md)) · glossary: [`Condorcet efficiency`](../../GLOSSARY.md#properties-criteria) · **Level: Voting 301** — Curriculum [301.6](../../curriculum/CURRICULUM_301.md)
+→ Topic hub: [Condorcet efficiency](README.md) · the simulation: [`condorcet_efficiency_simulation.py`](../../../06_Other/simulations/condorcet_efficiency_simulation.py) ([folder README](../../../06_Other/simulations/README.md)) · glossary: [`Condorcet efficiency`](../../GLOSSARY.md#properties-criteria) · **Level: 301 · deep dive** — Curriculum [301.6](../../curriculum/CURRICULUM_301.md)
 
 "STAR's Condorcet efficiency is very high" is one of the most-repeated claims in voting reform — and, until this page existed, one this repo made in four places without a number anyone could reproduce. This page fixes that by **measuring** it, under the folder rule that governs every simulation here: *always report the model and the parameters with the number.*
 

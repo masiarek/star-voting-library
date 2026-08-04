@@ -2,7 +2,7 @@
 
 *The complete hands-on loop for a teacher, workshop leader, or anyone running a demo election. **One route:** create the election on **BetterVoting**, export its JSON, and print matching **paper ballots** (a print-ready PDF) from that export — then the room votes on paper and/or via the QR, you **hand-count**, and check it against BetterVoting's official tally. Two independent counts (paper + platform) that agree. (Everything the ballot needs — title, candidates, id, descriptions — comes from the BV export, so the ballot's QR and results link are always real.)*
 
-**Level: reference (a teaching tool).** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
+**Level: reference · for presenters** Companions: [Teaching STAR Voting](teaching_star_voting.md) · [Count a STAR election by hand](count_star_by_hand.md).
 
 ![A generated STAR paper ballot (this image predates the 2026-07-25 single-QR layout) — a "scan to vote" QR (left) and "scan for results" QR (right) flanking the STAR VOTING logo, the four instruction bullets, a Worst→Best 0–5 scale with star column headers, one 0–5 bubble row per candidate (zebra-striped), the finalist explanation, and the election id + results link once in the footer.](../img/star_paper_ballot_example.png)
 

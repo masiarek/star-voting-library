@@ -2,7 +2,7 @@
 
 *The names you'll keep running into in social-choice theory and electoral reform, grouped by the tradition or method they're associated with. This is **a reference, not a ranking** — no one here is presented as more correct than anyone else. Where a person advocates a particular method, that's stated plainly as **disclosure** (so you can read their work knowing where they stand), not as endorsement or criticism. The companion page [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) explains why that disclosure matters: the most-cited "measurers" are frequently also advocates — on every side.*
 
-**Level: reference** (a 201/301 companion). See also: [advocacy organizations](advocacy_organizations.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md).
+**Level: reference · for debaters** (a 201/301 companion). See also: [advocacy organizations](advocacy_organizations.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md).
 
 > Facts below are sourced and were current as of mid-2026; roles and affiliations change — verify on the linked pages. Living people are described strictly by verifiable role and contribution.
 

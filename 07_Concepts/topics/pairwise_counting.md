@@ -2,7 +2,7 @@
 
 *How the preference matrix actually gets built: one ballot at a time. Once you see that each ballot is already a little head-to-head table, the matrix — and why it's precinct-summable — stops being mysterious.*
 
-→ **Level: Voting 201** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · Glossary: [`preference matrix`](../GLOSSARY.md) · the summability payoff: [Summability topic hub](summability/)
+→ **Level: 201 · deep dive** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · Glossary: [`preference matrix`](../GLOSSARY.md) · the summability payoff: [Summability topic hub](summability/)
 
 ---
 

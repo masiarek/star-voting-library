@@ -103,7 +103,7 @@ Every point above draws objections. Here they are grouped by how solid your foot
 
 ## Where this fits in the overall teaching
 
-- **Level:** spans Voting 101 (the problem, the two rounds), 201 (majority finish, summability, usability), and 301 (the FBC / later-no-harm deep dive in point 12).
+- **Level: 101 → 301 · for debaters** — spans 101 (the problem, the two rounds), 201 (majority finish, summability, usability), and 301 (the FBC / later-no-harm deep dive in point 12).
 - **Pairs with:** [Our voting system is broken](our_voting_system_is_broken.md) (the diagnosis) and [What's so good about STAR](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) (the narrated pitch). For the limits argued the other way, see [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 - **Terminology:** public-facing copy can say "RCV" (clarified once as ranked ballots counted by instant runoff); the technical passages here use `RCV-IRV` / `IRV` on purpose — center squeeze, exhausted ballots, and later-no-harm are IRV-specific, not properties of every ranked method.
 

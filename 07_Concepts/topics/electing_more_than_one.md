@@ -2,7 +2,7 @@
 
 *Sometimes you're not picking a single winner — a board, a committee, a top-4. The instant there's more than one seat, a fork appears that trips almost everyone up: do you want the **N best** candidates, or a body that **mirrors** the whole electorate? Those are different goals, and they need different methods. This page is the plain-language fork; the machinery lives in [proportional representation](../../03_STAR_PR/01_Learn).*
 
-**Level: 201.** Prerequisite: you know [single-winner STAR](../../01_STAR/01_Learn/STAR_start_here.md).
+**Level: 201 · for voters** Prerequisite: you know [single-winner STAR](../../01_STAR/01_Learn/STAR_start_here.md).
 
 ## The fork: two different questions
 

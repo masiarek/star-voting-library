@@ -2,7 +2,7 @@
 
 *One of the most repeated arguments in electoral reform is that the **voting-science community** — mathematicians, game theorists, statisticians — is critical of instant-runoff voting (RCV-IRV) and favors **cardinal** methods (Approval, Score, STAR), while the general public wrongly treats RCV-IRV as the ultimate fix. This page takes that argument seriously and grades it: what's solidly true, what's overstated, and what it leaves out. It is **not** a verdict that RCV-IRV is "bad" — it's about how strong the popular version of the claim actually is.*
 
-**Level: Voting 201 → 301.** Prerequisites: [What makes a "good" winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) · [advocacy organizations](advocacy_organizations.md).
+**Level: 201 → 301 · for debaters** Prerequisites: [What makes a "good" winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) · [advocacy organizations](advocacy_organizations.md).
 
 ## The claim, in its forceful form
 

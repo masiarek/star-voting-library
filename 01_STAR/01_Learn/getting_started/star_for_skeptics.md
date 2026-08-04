@@ -2,7 +2,7 @@
 
 *You think scoring candidates sounds gimmicky, you're not convinced anything's really broken, and "sounds too good" makes you suspicious. Fair — good instincts. This page meets you there: no cheerleading, just the fast honest path, and every claim below is backed by an election you can re-count yourself in this repo.*
 
-**Level: 201.** If you came from the RCV camp specifically, jump to [STAR vs RCV-IRV](../../../07_Concepts/topics/rcv_irv_vs_star.md).
+**Level: 201 · for debaters** If you came from the RCV camp specifically, jump to [STAR vs RCV-IRV](../../../07_Concepts/topics/rcv_irv_vs_star.md).
 
 **"This looks like a gimmick."**
 It's two steps of grade-school arithmetic: add up the 0–5 scores, then the top two have a runoff. You can [count it by hand](../hands_on/count_star_by_hand.md) — it's *simpler* to tally than most reforms, including RCV.

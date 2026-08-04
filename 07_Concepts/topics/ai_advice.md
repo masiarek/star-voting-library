@@ -2,7 +2,7 @@
 
 *Every evaluation page in this library is deliberately neutral: [What makes a good winner?](what_makes_a_good_winner.md) lays out four rival ideals and refuses to rank them; the [EVC tradeoff triangle](choosing_among_evc_methods.md) opens with "this page is **not** 'which one is best.'" This page is the complement. Adam asked the library's AI assistant point-blank: **assume you're all-knowing and all-powerful — which voting method would you recommend, and why?** Under those rules, "it depends" is against the spirit of the question. So here is a straight answer with the reasoning shown — offered the way the triangle page offers its [practitioner's testimony](choosing_among_evc_methods.md#a-practitioners-perspective): as one reasoned verdict on the record, not a revision of the repo's neutrality.*
 
-**Level: Voting 201 → 301.** Prerequisites: [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) · [Do the experts really think RCV-IRV is bad?](expert_consensus_and_irv.md)
+**Level: 201 → 301 · for debaters** Prerequisites: [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) · [Do the experts really think RCV-IRV is bad?](expert_consensus_and_irv.md)
 
 ## Grade the witness first — three disclosures
 
