@@ -118,7 +118,8 @@ _Last full review: 2026-06-21._
 | **Beyond RCV zine** | "Beyond Ranked Choice Voting" | [equal.vote/beyond_rcv_zine ↗](https://equal.vote/beyond_rcv_zine) |
 | **STAR Voting org** | Campaign / get involved | [starvoting.org ↗](https://starvoting.org) |
 | **STAR-PR (starvoting.org)** | Proportional STAR explainer — what PR is, pros/cons, the case for STAR-PR (advocacy framing; our mechanics page is [03_STAR_PR/01_Learn/STAR_PR/](../03_STAR_PR/01_Learn/STAR_PR/README.md)) | [starvoting.org/star-pr ↗](https://www.starvoting.org/star-pr) |
-| **BetterVoting** | Cast a STAR ballot / run a poll (audience CTA) | [bettervoting.com ↗](https://bettervoting.com) |
+| **BetterVoting — live ballot** | Cast a real STAR ballot in one click, no sign-in: the featured public *What Makes the Best Pet?* election (BV id `pet`), which is also this repo's [worked example](../01_STAR/04_Real_Elections/pet_real_bv_election/README.md). The four-method twin is [`meta_pets`](https://bettervoting.com/meta_pets). | [bettervoting.com/pet/vote ↗](https://bettervoting.com/pet/vote) |
+| **BetterVoting** | Run your own election or poll — the homepage is a *create an election* wizard, not a ballot (audience CTA) | [bettervoting.com ↗](https://bettervoting.com) |
 | **BetterVoting Docs** | Help & FAQ — paper ballots, hand count, ties, security options, preliminary results | [docs.bettervoting.com ↗](https://docs.bettervoting.com) |
 | **Better elections (video)** | Equal Vote intro; STV / proportional 3-seat example (basis for 03a/03b) | [youtu.be ↗](https://youtu.be/C_27pYcjsJs) |
 | **FairVote: displaying RCV results** | Best practices for showing RCV-IRV results (round-by-round table / bar series); basis for the display notes in [tabulation_star_vs_irv.md](topics/tabulation_star_vs_irv.md) | [fairvote.org ↗](https://fairvote.org/how-to-display-rcv-election-results/) |
