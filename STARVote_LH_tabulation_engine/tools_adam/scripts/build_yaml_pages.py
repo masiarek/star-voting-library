@@ -202,13 +202,16 @@ def _art_width(n_cast):
 MAX_CANDIDATE_COLUMNS = 6
 
 
-def _ballot_art(yaml_path, ballots_text, page_dir):
+def _ballot_art(yaml_path, ballots_text, page_dir, kind="score"):
     """(caption, table lines, text lead-in) for this case's art, or None.
 
     The table is the point: one row per ballot, the marked-up picture beside the
     very numbers the file records, under a column per candidate. A beginner can
     read a filled bubble straight across into its column instead of being asked
     to hold the CSV and the picture in their head at once.
+
+    `kind` picks which ballot was drawn ("score" or "approval") so the caption
+    and the alt text describe the paper the voter actually held.
     """
     stem = os.path.splitext(os.path.basename(yaml_path))[0]
     img_dir = os.path.join(os.path.dirname(yaml_path), "img")
@@ -229,8 +232,9 @@ def _ballot_art(yaml_path, ballots_text, page_dir):
     weighted = any(r.weight > 1 for r in rows)
     by_candidate = len(cast) <= MAX_CANDIDATE_COLUMNS
     width = _art_width(len(cast))
+    spill = "Approvals" if kind == "approval" else "Scores"
     header = (["Ballot as marked"] + (["Voters"] if weighted else [])
-              + (list(cast) if by_candidate else [f"Scores ({', '.join(cast)})"]))
+              + (list(cast) if by_candidate else [f"{spill} ({', '.join(cast)})"]))
     align = [":--"] + [":--:"] * (len(header) - 1)
     lines = ["| " + " | ".join(header) + " |", "|" + "|".join(align) + "|"]
     for n, path in found:
@@ -239,7 +243,7 @@ def _ballot_art(yaml_path, ballots_text, page_dir):
         row = rows[n - 1]
         alt = ballot_art.alt_text(ballot_art.Ballot(
             ballot_art.row_title(n, row.weight, row.note), cast, row.scores,
-            img_dir, quoted=False))
+            img_dir, quoted=False, kind=kind))
         src = os.path.relpath(path, page_dir).replace(os.sep, "/")
         img = (f'<img src="{src}" width="{width}" style="min-width:{width}px" '
                f'alt="{_esc_attr(alt)}">')
@@ -258,7 +262,10 @@ def _ballot_art(yaml_path, ballots_text, page_dir):
         # Never let a partial set read as the whole electorate.
         caption += f" (the first {shown} of {len(rows)} ballot rows)"
         lead = "Every ballot in the file, as text:"
-    caption += " — the filled bubble is the score given, and the score is the number in its column:"
+    caption += (" — a filled **Yes** is a `1` in that candidate's column, a filled "
+                "**No** a `0`:" if kind == "approval" else
+                " — the filled bubble is the score given, and the score is the "
+                "number in its column:")
     return caption, lines, lead
 
 
@@ -391,6 +398,30 @@ SNIPPET_END = "<!-- --8<-- [end:report] -->"
 BALLOT_BLOCK_RE = re.compile(
     r"<!-- ballots:([A-Za-z0-9_.\-]+) -->\n?(.*?)<!-- /ballots -->", re.S)
 
+# The engine report on a hand-authored page turned out to have the same problem,
+# reached from the other side. Writing the include bare —
+#
+#     --8<-- "<set>/cases/cases_pages/<stem>.md:report"
+#
+# renders the count on the MkDocs site and NOTHING on GitHub, which has never
+# heard of pymdownx.snippets and prints the directive itself as a line of
+# literal text. Since this repo is read on both surfaces, 82 pages were showing
+# a "What the engine says" heading followed by `--8<-- "…"` and no report.
+#
+# So the report gets the ballot-art treatment: the lesson marks the spot,
+#
+#     <!-- report:bv2105r2_w3vvff_ice_cream_recheck -->
+#     <!-- /report -->
+#
+# and this script pastes in exactly what the include used to pull — the fence
+# between SNIPPET_START/SNIPPET_END on that case's generated page. One source of
+# truth still (the generated page, itself built from the `_tabulated` mirror),
+# drift still fails a test, and now it renders on both surfaces. The marker
+# names a bare stem because generated-page stems are unique repo-wide; a
+# collision drops the stem from the index rather than guessing between them.
+REPORT_BLOCK_RE = re.compile(
+    r"<!-- report:([A-Za-z0-9_.\-]+) -->\n?(.*?)<!-- /report -->", re.S)
+
 # --------------------------------------------------------------------------- #
 # Case facts — one source of truth for the metadata line
 # --------------------------------------------------------------------------- #
@@ -522,7 +553,7 @@ def render(yaml_path, siblings):
         L.append("")
     L.append("## Ballots")
     L.append("")
-    art = _ballot_art(yaml_path, ballots_text, page_dir)
+    art = _ballot_art(yaml_path, ballots_text, page_dir, kind)
     if art:
         caption, table, lead = art
         L.append(caption)
@@ -774,13 +805,30 @@ def _case_for_stem(page_path, stem):
     Looked up beside the page (`cases/<stem>.yaml`, the repo-standard layout)
     and in the page's own folder (flat case folders), then one level up — a
     lesson often sits above the folder that holds its cases.
+
+    Failing that, searched *downward* through the page's own subtree, so a
+    method's front door (`04_Approval/README.md`) can show a ballot from a case
+    two levels below it (`02_Examples/cases/…`). That front door is where a
+    beginner actually lands, which makes it the page that most needs a picture.
+    The search stays inside the method folder and only accepts a unique hit —
+    two same-named cases mean the marker is ambiguous, so it gets nothing rather
+    than a coin flip.
     """
     here = os.path.dirname(page_path)
-    for base in (here, os.path.dirname(here)):
+    up = os.path.dirname(here)
+    for base in (here, up):
         for cand in (os.path.join(base, "cases", stem + ".yaml"),
                      os.path.join(base, stem + ".yaml")):
             if os.path.isfile(cand):
                 return cand
+    for base in (here, up):
+        # Never widen to the repo root: a bare stem there could match anything.
+        if not base or os.path.abspath(base) == REPO:
+            continue
+        hits = sorted(glob.glob(os.path.join(glob.escape(base), "**", stem + ".yaml"),
+                                recursive=True))
+        if len(hits) == 1:
+            return hits[0]
     return None
 
 
@@ -804,7 +852,11 @@ def ballot_blocks_for(page_path, text=None):
         if src:
             data = yaml.safe_load(open(src, encoding="utf-8").read())
             ballots = _find_first(data, ["ballots"]) if isinstance(data, (dict, list)) else None
-            art = _ballot_art(src, str(ballots).rstrip("\n"), page_dir) if ballots is not None else None
+            art = None
+            if ballots is not None:
+                text = str(ballots).rstrip("\n")
+                kind = _ballot_kind(text, _norm_method(_find_first(data, ["voting_method"])))
+                art = _ballot_art(src, text, page_dir, kind)
             if art:
                 caption, table, _lead = art
                 body = "\n".join([caption, "", *table]) + "\n"
@@ -848,6 +900,113 @@ def check_ballot_blocks():
     return stale
 
 
+# --------------------------------------------------------------------------- #
+# Engine reports on hand-authored pages — the placeable managed block
+# --------------------------------------------------------------------------- #
+_PAGES_BY_STEM = None
+
+# Hand-authored pages that ask for a report live all over the repo, not just
+# under ROOTS — 07_Concepts/, YAML_library/ and the method folders all use the
+# marker — so this walk starts at the repo root. `_notes/` and CLAUDE.md are
+# skipped because they DOCUMENT the marker; filling in a doc's example would
+# turn the documentation into a report.
+_REPORT_SKIP_DIRS = ("site", "node_modules", "_notes", "img")
+_REPORT_SKIP_FILES = ("CLAUDE.md", "AGENTS.md")
+
+
+def _generated_pages_by_stem():
+    """{stem: absolute generated page path}, built once.
+
+    A stem that appears twice is dropped rather than resolved by guesswork —
+    `report_blocks_for` then leaves a visible note, which is the honest answer
+    to an ambiguous marker.
+    """
+    global _PAGES_BY_STEM
+    if _PAGES_BY_STEM is None:
+        idx, dupes = {}, set()
+        for dirpath, dirnames, filenames in os.walk(REPO):
+            dirnames[:] = [d for d in dirnames
+                           if not d.startswith(".") and d not in _REPORT_SKIP_DIRS]
+            if not os.path.basename(dirpath).endswith("_pages"):
+                continue
+            for fn in filenames:
+                if not fn.endswith(".md"):
+                    continue
+                stem = fn[:-3]
+                if stem in idx:
+                    dupes.add(stem)
+                idx[stem] = os.path.join(dirpath, fn)
+        for stem in dupes:
+            idx.pop(stem, None)
+        _PAGES_BY_STEM = idx
+    return _PAGES_BY_STEM
+
+
+def _generated_report(stem):
+    """The report fence from `<stem>`'s generated page, or None."""
+    page = _generated_pages_by_stem().get(stem)
+    if not page or not os.path.isfile(page):
+        return None
+    text = open(page, encoding="utf-8").read()
+    if SNIPPET_START not in text or SNIPPET_END not in text:
+        return None
+    return text.split(SNIPPET_START, 1)[1].split(SNIPPET_END, 1)[0].strip("\n")
+
+
+def report_blocks_for(page_path, text=None):
+    """The filled-in report blocks this page asks for: {marker text: new text}.
+
+    Returns None when the page has no marker. The body is the generated page's
+    report fence verbatim — the same bytes the `--8<--` include used to pull, so
+    converting a page changes what GitHub shows and not what the site shows.
+    """
+    text = open(page_path, encoding="utf-8").read() if text is None else text
+    if not REPORT_BLOCK_RE.search(text):
+        return None
+    out = {}
+    for m in REPORT_BLOCK_RE.finditer(text):
+        stem = m.group(1)
+        report = _generated_report(stem)
+        body = (f"{report}\n" if report else
+                f"*(No generated report for `{stem}` — run the case once, then "
+                f"`build_yaml_pages.py`.)*\n")
+        out[m.group(0)] = f"<!-- report:{stem} -->\n{body}<!-- /report -->"
+    return out
+
+
+def apply_report_blocks(text, blocks):
+    for old, new in blocks.items():
+        text = text.replace(old, new)
+    return text
+
+
+def pages_with_report_blocks():
+    """{page path: {marker: filled block}} for every page that asks for a report."""
+    found = {}
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames
+                       if not d.startswith(".") and d not in _REPORT_SKIP_DIRS
+                       and not d.endswith(GENERATED_SUFFIXES)]
+        for fn in sorted(filenames):
+            if not fn.endswith(".md") or fn in _REPORT_SKIP_FILES:
+                continue
+            path = os.path.join(dirpath, fn)
+            blocks = report_blocks_for(path)
+            if blocks:
+                found[path] = blocks
+    return found
+
+
+def check_report_blocks():
+    """Pages whose report block drifted from the generated page behind it."""
+    stale = []
+    for path, blocks in pages_with_report_blocks().items():
+        cur = open(path, encoding="utf-8").read()
+        if apply_report_blocks(cur, blocks) != cur:
+            stale.append(path)
+    return stale
+
+
 def main():
     want = expected_pages()
     written = 0
@@ -882,6 +1041,17 @@ def main():
             open(p, "w", encoding="utf-8").write(new)
             drawn += 1
     print(f"ballot blocks: {len(art_pages)} hand-authored page(s) ({drawn} updated)")
+
+    # Last: the generated pages above are what these blocks copy from.
+    report_pages = pages_with_report_blocks()
+    embedded = 0
+    for p, blocks in sorted(report_pages.items()):
+        cur = open(p, encoding="utf-8").read()
+        new = apply_report_blocks(cur, blocks)
+        if new != cur:
+            open(p, "w", encoding="utf-8").write(new)
+            embedded += 1
+    print(f"report blocks: {len(report_pages)} hand-authored page(s) ({embedded} updated)")
     return 0
 
 

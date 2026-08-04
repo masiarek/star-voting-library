@@ -32,7 +32,21 @@ An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**
 
 ## Reading an Approval result
 
-An approval count is more than "who got the most marks." Three numbers tell the story — here they are for the [`approval_101` example](../02_Examples/cases/cases_pages/approval_101_c3_b5.md) (5 voters, candidates Ann/Bob/Cal):
+Take the [`approval_101` example](../02_Examples/cases/cases_pages/approval_101_c3_b5.md) — 5 voters, candidates Ann/Bob/Cal. Every ballot, as the voter marked the paper and as the count reads it:
+
+<!-- ballots:approval_101_c3_b5 -->
+The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
+
+| Ballot as marked | Ann | Bob | Cal |
+|:--|:--:|:--:|:--:|
+| <img src="../02_Examples/cases/img/approval_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 1 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
+| <img src="../02_Examples/cases/img/approval_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 2 — approves Bob and Cal: Ann No, Bob Yes, Cal Yes."> | 0 | 1 | 1 |
+| <img src="../02_Examples/cases/img/approval_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 3 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
+| <img src="../02_Examples/cases/img/approval_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 4 — approves only Bob: Ann No, Bob Yes, Cal No."> | 0 | 1 | 0 |
+| <img src="../02_Examples/cases/img/approval_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 5 — approves Ann and Cal: Ann Yes, Bob No, Cal Yes."> | 1 | 0 | 1 |
+<!-- /ballots -->
+
+An approval count is then more than "who got the most marks." Three numbers tell the story:
 
 ```text
    Bob -- 4 (80%) -- Elected
@@ -84,6 +98,16 @@ Several of Approval's advantages are logistical rather than mathematical — the
 - **Pairs well with a top-two general.** An Approval primary feeding a top-two general election is a minimal-change package that yields notably representative results — the package St. Louis adopted in 2020, and the direct ancestor of STAR. Full page: [Approval + Top-Two](approval_top_two.md).
 - **Scales to multiple seats.** The same ballot handles multi-winner races (bloc counting) and can be adapted for proportional representation — see [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md).
 
+## Where it has actually been used
+
+Approval's record is longer and stranger than the reform-campaign framing suggests, and it cuts both ways. The history and the adoption list below are as [Wikipedia's Approval voting article](https://en.wikipedia.org/wiki/Approval_voting) records them — the neutral tier, deliberately, since this is where an advocacy source would be weakest.
+
+**Before anyone named it.** Papal conclaves used a form of it from **1294 to 1621**; the Republic of **Venice** built approval rounds into the Doge's famously baroque election from the 13th to the 18th century; **Greece** elected legislators by approval from **1864 to 1923** before switching to party-list PR. The UN Security Council still selects a Secretary-General by approve/disapprove straw polls. So the "five independent groups in the 1970s" above rediscovered a rule several republics had already worn in.
+
+**Modern jurisdictions — and a reversal.** **Fargo, North Dakota** adopted approval by ballot initiative in **2018**, the first US city to do so; **St. Louis** passed Proposition D with **70%** in November 2020, adopting the [Approval + Top-Two](approval_top_two.md) unified primary. Then, in **April 2025**, North Dakota's governor signed a bill banning both ranked-choice and approval voting statewide, **ending the practice in Fargo**. **Latvia's** parliament uses a modified approval within open-list PR, where a voter may cast a positive vote, a negative vote, or neither on any number of candidates.
+
+**Organizations.** The Mathematical Association of America (1986), the American Mathematical Society, the American Statistical Association (1987) and the IEEE (1987–2002) all ran internal elections by approval; so do the Libertarian National Committee, several state Green parties and the Czech and German Pirate parties. Two of these are worth remembering *because* they ended: Dartmouth's Alumni Association dropped approval for traditional runoffs in **2009** by an alumni vote of **82% to 18%**, and the Independent Party of Oregon's **2016** presidential preference primary failed to identify a nominee at all — no candidate cleared **32%** approval. A method's adoption list is only half the evidence; its repeal list is the other half, and [honest limits](approval_honest_limits.md) picks these two up.
+
 ## The stepping-stone argument
 
 Equal Vote's case for Approval is worth stating in its own terms: for a jurisdiction on Choose-One (or a Choose-One primary + top-two runoff), there is little reason *not* to switch to Approval immediately — the logistical change is near zero and the improvement is real. In their assessment, with expected voter behavior Approval also outperforms RCV-IRV at electing representative winners, especially in large or competitive fields. And because Approval is transparent about what it does and doesn't offer (no strength, no order — see [honest limits](approval_honest_limits.md)), voters who live with it learn firsthand that vote-splitting isn't a necessary evil — which builds the appetite to upgrade to a fuller method like STAR later. A good stepping stone is easy to reach, stable in its own right, and on the way to the next step. The counterpoint, which Equal Vote also concedes: education-and-adoption work is expensive even for Approval, so in many places going *directly* to STAR is the quicker path. Either way, the urgent step is off Choose-One.
@@ -95,6 +119,8 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 - [Approval + Top-Two](approval_top_two.md) — the two-round package (St. Louis; Oregon's Unified Primary) and why its runoff can't be automatic — the gap STAR closes
 - [Approval — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md) — bloc counting, SPAV/PAV
 - [the Approval examples](../) — the method's example folder
+- [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) — Approval's pass/fail row beside STAR, Ranked Robin and RCV-IRV, each ✗ linked to a runnable failure (read its caveat first)
+- [Approval voting — Wikipedia](https://en.wikipedia.org/wiki/Approval_voting) — the neutral reference: pre-modern history, the full adoption *and repeal* list, and the criteria table this repo cross-checks against. Cited here rather than a campaign page precisely because adoption records and criteria claims are where an advocacy source is weakest
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/) — a joint STAR + Approval essay (authors lead STAR Voting Action and Utah Approves — advocacy lean disclosed); cites the 2021 St. Louis Approval primary
 - [Black Curtain](../../method_comparisons/black_curtain/) — Approval vs STAR vs RCV-IRV vs Score

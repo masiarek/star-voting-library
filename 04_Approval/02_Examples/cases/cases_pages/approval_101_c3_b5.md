@@ -28,15 +28,27 @@ voters counted by Approval vs STAR vs RCV-IRV).
 
 ## Ballots
 
+The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
+
+| Ballot as marked | Ann | Bob | Cal |
+|:--|:--:|:--:|:--:|
+| <img src="../img/approval_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 1 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
+| <img src="../img/approval_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 2 — approves Bob and Cal: Ann No, Bob Yes, Cal Yes."> | 0 | 1 | 1 |
+| <img src="../img/approval_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 3 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
+| <img src="../img/approval_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 4 — approves only Bob: Ann No, Bob Yes, Cal No."> | 0 | 1 | 0 |
+| <img src="../img/approval_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 5 — approves Ann and Cal: Ann Yes, Bob No, Cal Yes."> | 1 | 0 | 1 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).
 
 ```text
 Ann,Bob,Cal
-1,1,0   # voter 1 — approves Ann and Bob
-0,1,1   # voter 2 — approves Bob and Cal
-1,1,0   # voter 3 — approves Ann and Bob
-0,1,0   # voter 4 — approves only Bob
-1,0,1   # voter 5 — approves Ann and Cal
+1,1,0   # Voter 1 — approves Ann and Bob
+0,1,1   # Voter 2 — approves Bob and Cal
+1,1,0   # Voter 3 — approves Ann and Bob
+0,1,0   # Voter 4 — approves only Bob
+1,0,1   # Voter 5 — approves Ann and Cal
 ```
 
 ## What the engine says

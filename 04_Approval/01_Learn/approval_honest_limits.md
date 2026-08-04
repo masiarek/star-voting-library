@@ -34,6 +34,15 @@ Approving a second choice can help that candidate beat your favorite. (STAR and 
 
 Because *every* combination of marks is a valid Approval ballot, filling in **extra** bubbles on someone else's ballot is undetectable — there's no overvote to flag. (On a Choose-One ballot the same tampering voids the ballot, which is at least visible.) Poll workers should never be alone with ballots under any method, but Approval warrants extra chain-of-custody care. A known mitigation, noted on the [Equal Vote Approval page](https://www.equal.vote/approval): print an explicit **Yes / No** bubble pair per candidate, so a blank is distinguishable from a deliberate "No" — see the [ballot mockups](approval_voting.md#the-ballot) on the overview page ([double-bubble image](img/approval_ballot_yes_no_double_bubble.png)).
 
+## 7. Two places it under-delivered in practice
+
+The bullet-voting worry in §3 is an empirical claim, and the Approval camp answers it with real numbers — 2.3 marks per ballot in Fargo 2020, ~1.6 in St. Louis 2021 ([Hamlin & Hua §4.3, claim-checked](hamlin_hua_2023.md)). Those hold up. But they are the campaigns' own successful elections, so the other half of the record belongs on the page too — both from [Wikipedia's Approval voting article](https://en.wikipedia.org/wiki/Approval_voting), the neutral tier:
+
+- **Dartmouth's Alumni Association used approval and voted it out.** In **2009**, after controversy over trustee elections, alumni replaced it with traditional runoffs by **82% to 18%** — a rare case of an electorate that had *lived under* approval choosing to leave.
+- **The Independent Party of Oregon's 2016 presidential primary produced no nominee.** No candidate cleared **32%** approval. With a binary ballot and a fragmented field, "most approvals" can be a number too small to mean anything — there is no runoff, and no second round of information to consult.
+
+Neither is fatal, and neither generalizes on its own: one is a small, contested electorate, the other a minor-party primary. But an adoption list (§Where it has actually been used on the [overview page](approval_voting.md#where-it-has-actually-been-used)) that omits the repeals is an advertisement, not evidence — and the same standard is what this repo applies to [RCV-IRV](../../06_Other/RCV_IRV/) and to STAR.
+
 ## Keep it in perspective
 
 Approval's limits are the flip side of real strengths: it passes the **Equal Vote**, is trivially easy to explain and to tabulate (add the approvals; precinct-summable), and it already ends *forced* vote-splitting. STAR keeps Approval's equal-vote guarantee while adding the missing **strength + order** (a 0–5 score) and a **majority runoff** to answer the threshold dilemma — which is precisely the gap the Equal Vote Coalition set out to close when STAR was designed. Every method trades something away (Gibbard); Approval trades expressiveness for simplicity.

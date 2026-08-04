@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the repo's 0-5 ballot art: the voting-style thumbnails and one-off figures.
+"""Render the repo's ballot art: the voting-style thumbnails and one-off figures.
 
 The original eight `style_*.png` files were captured by hand from Adam's slides.
 This script reproduces that design as SVG so new ballots can be added without
@@ -18,6 +18,11 @@ Three families share the drawing code:
     python3 build_style_ballot_images.py            # write SVG + PNG for every ballot
     python3 build_style_ballot_images.py --svg-only # skip rasterizing
     python3 build_style_ballot_images.py --from-yaml 01_STAR/02_Examples/cases/02a_*.yaml
+
+Two ballots are drawn, chosen by the case's `voting_method` — the 0-5 STAR grid
+(six bubbles a row) and the Approval Yes/No double bubble (two). They are
+different pieces of paper, so they get different drawings rather than one
+drawing with a setting; a method in neither family gets no art at all.
 
 The PNG is what the docs embed (the repo's other ballot art is PNG, and GitHub's
 Markdown renderer is unreliable with relative-path SVG); the .svg is written
@@ -54,6 +59,10 @@ class Ballot(NamedTuple):
     scores: list[int | None]
     out_dir: Path
     quoted: bool = True  # gallery titles are shown in quotes; figures are not
+    # Which piece of paper this is. "score" = the 0–5 STAR ballot (six bubbles a
+    # row); "approval" = the Yes/No double-bubble Approval ballot (two). They are
+    # different ballots, not two settings of one — hence separate renderers.
+    kind: str = "score"
 
 
 # Scores are 0-5; None means the row was left blank (which STAR counts as 0, but
@@ -113,10 +122,15 @@ BALLOTS.update({
 # distinction is half the reason to show the picture at all.
 # Methods whose voters are handed the 0–5 score ballot this art draws. Bloc STAR
 # and the proportional variants (allocated / sss / rrv) use the same ballot; only
-# the count differs. Everything else — Plurality, Approval, any ranked method —
-# is a different piece of paper and gets no picture.
+# the count differs.
 SCORE_METHODS = {"star", "starr", "bloc_star", "star_pr", "score", "range",
                  "allocated", "sss", "rrv", "bloc"}
+# Approval voters get a *different* piece of paper — approve or don't, one bit —
+# so it gets its own drawing (Yes/No bubbles) rather than a 0–5 grid with four
+# columns nobody was offered. Everything still outside both sets — Plurality, any
+# ranked method — has no art at all: a ballot we can't draw beats a wrong one.
+APPROVAL_METHODS = {"approval", "approval_multi_winner", "approval_multiwinner",
+                    "bloc_approval"}
 MARKER_CHARS = set("-~&?%")
 WEIGHT_RE = re.compile(r"\s*(\d+)\s*[:xX×]\s*(.*)")  # "42: 5, 4" / "9x5" / "9×5"
 MAX_SCORE = 5
@@ -153,22 +167,25 @@ def _find_ballots(node):
     return None
 
 
-def _cell_to_score(cell: str) -> int | None:
-    """0–5 → int; blank or any marker → None (drawn as an unmarked row)."""
+def _cell_to_score(cell: str, max_score: int = MAX_SCORE) -> int | None:
+    """0–max → int; blank or any marker → None (drawn as an unmarked row)."""
     cell = cell.strip()
     if cell == "" or cell in MARKER_CHARS:
         return None
-    if not cell.isdigit() or not 0 <= int(cell) <= MAX_SCORE:
-        raise CaseBallotError(f"cell {cell!r} is not a 0–{MAX_SCORE} score")
+    if not cell.isdigit() or not 0 <= int(cell) <= max_score:
+        raise CaseBallotError(f"cell {cell!r} is not a 0–{max_score} score")
     return int(cell)
 
 
-def parse_ballot_block(text: str):
+def parse_ballot_block(text: str, max_score: int = MAX_SCORE):
     """(cast, [BallotRow, …]) from a `ballots:` block.
 
     Mirrors the engine's parser: `#` starts a comment, row 1 is the candidate
     header, an optional `Count:` label rides on the first header cell, and a
     leading `N:` / `Nx` / `N×` on a row is that ballot's weight.
+
+    `max_score` is 5 for the STAR ballot and 1 for an Approval one — an Approval
+    file holding a `3` is a file the Yes/No art cannot honestly draw.
     """
     rows = []
     for raw in str(text).strip().splitlines():
@@ -194,7 +211,7 @@ def parse_ballot_block(text: str):
             weight = int(wmatch.group(1))
             parts[0] = wmatch.group(2)
         cells = [p.strip() for p in parts]
-        scores = [_cell_to_score(c) for c in cells]
+        scores = [_cell_to_score(c, max_score) for c in cells]
         if len(scores) != len(cast):
             raise CaseBallotError(
                 f"row {body!r} has {len(scores)} cells, header has {len(cast)}"
@@ -223,21 +240,29 @@ def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
     block = _find_ballots(data)
     if block is None:
         raise CaseBallotError("no `ballots:` block")
-    # Allowlist, not a blocklist: this art IS the 0–5 STAR ballot, so anything
-    # whose voters saw a different ballot (choose-one, approve/don't, a ranking)
-    # must be refused. Drawing a Plurality race as six bubbles per candidate
-    # shows a ballot nobody was handed.
+    # Allowlist, not a blocklist: each drawing IS a particular piece of paper, so
+    # a method is drawn only when we know which paper its voters were handed —
+    # the 0–5 grid for the score family, Yes/No bubbles for Approval. Anything
+    # else (choose-one, any ranking) is refused. Drawing a Plurality race as six
+    # bubbles per candidate shows a ballot nobody was given.
     method = str(_find_first_method(data) or "STAR").split("#")[0].strip().lower()
-    if method.replace("-", "_").replace(" ", "_") not in SCORE_METHODS:
+    method = method.replace("-", "_").replace(" ", "_")
+    if method in APPROVAL_METHODS:
+        kind, max_score = "approval", 1
+    elif method in SCORE_METHODS:
+        kind, max_score = "score", MAX_SCORE
+    else:
         raise CaseBallotError(
-            f"{method or 'this method'} isn't a 0–5 score ballot — the STAR art would mislead")
+            f"{method or 'this method'} is neither a 0–5 score nor an approval "
+            f"ballot — drawing one would mislead")
 
-    cast, rows = parse_ballot_block(block)
+    cast, rows = parse_ballot_block(block, max_score)
     stem = yaml_path.stem
     out_dir = yaml_path.parent / "img"
     return [
         (f"{stem}_ballot_{n}",
-         Ballot(row_title(n, r.weight, r.note), cast, r.scores, out_dir, quoted=False))
+         Ballot(row_title(n, r.weight, r.note), cast, r.scores, out_dir,
+                quoted=False, kind=kind))
         for n, r in enumerate(rows[:limit], start=1)
     ], len(rows)
 
@@ -297,6 +322,14 @@ def prune_art(out_dir: Path, stem: str, keep: int) -> list[Path]:
 
 def alt_text(ballot: Ballot) -> str:
     """Screen-reader text: the same marks, read out row by row."""
+    if ballot.kind == "approval":
+        marks = [
+            f"{name} Yes" if mark == 1
+            else f"{name} No" if mark == 0
+            else f"{name} left blank (not approved)"
+            for name, mark in zip(ballot.cast, ballot.scores)
+        ]
+        return f"A Yes/No Approval ballot — {ballot.title}: " + ", ".join(marks) + "."
     marks = [
         f"{name} {score}" if score is not None else f"{name} left blank (counts as 0)"
         for name, score in zip(ballot.cast, ballot.scores)
@@ -330,21 +363,43 @@ NAME_X = 118
 BOTTOM_PAD = 18
 
 
+# The Approval ballot: two bubbles a row under Yes / No, after the Equal Vote
+# "double bubble" mockup in 04_Approval/01_Learn/img/. Narrower canvas than the
+# 0–5 grid because two columns don't need six columns' room — and a ballot that
+# is nearly square is what an Approval ballot actually looks like.
+APPROVAL_W = 1180
+APPROVAL_COL0_X = 700
+APPROVAL_COL_DX = 260
+APPROVAL_HEADERS = ("Yes", "No")
+APPROVAL_INSTRUCTION = "Vote for ALL candidates you approve of."
+APPROVAL_INSTRUCTION_SIZE = 42
+
+
 def col_x(i: int) -> float:
     return COL0_X + i * COL_DX
 
 
-def title_font_size(shown: str) -> int:
+def approval_col_x(i: int) -> float:
+    return APPROVAL_COL0_X + i * APPROVAL_COL_DX
+
+
+def canvas_width(ballot: Ballot) -> int:
+    return APPROVAL_W if ballot.kind == "approval" else W
+
+
+def title_font_size(shown: str, width: int = W) -> int:
     """Shrink a long title until it fits the canvas.
 
     Both renderers call this, so the SVG and the PNG stay the same drawing. A
     style name always fits at the full size; a case's title is whatever the
-    author wrote next to that ballot row, which can run long.
+    author wrote next to that ballot row, which can run long. The floor scales
+    with the canvas, so the narrower Approval ballot can take the same titles.
     """
     if not shown:
         return TITLE_SIZE
-    fits = (W - 2 * TITLE_X) / (TITLE_CHAR_W * len(shown))
-    return int(max(TITLE_MIN_SIZE, min(TITLE_SIZE, fits)))
+    floor = TITLE_MIN_SIZE * width / W
+    fits = (width - 2 * TITLE_X) / (TITLE_CHAR_W * len(shown))
+    return int(max(floor, min(TITLE_SIZE, fits)))
 
 
 # Longest title that still fits on one line at the smallest size.
@@ -372,6 +427,8 @@ def star_path(cx: float, cy: float, r: float) -> str:
 
 
 def render_svg(ballot: Ballot) -> str:
+    if ballot.kind == "approval":
+        return render_approval_svg(ballot)
     title, cast, scores = ballot.title, ballot.cast, ballot.scores
     H = height_for(cast)
     plain = f'"{title}"' if ballot.quoted else title
@@ -433,6 +490,73 @@ def render_svg(ballot: Ballot) -> str:
     return "\n".join(out)
 
 
+def approval_filled(mark: int | None, col: int) -> bool:
+    """Is column `col` (0 = Yes, 1 = No) filled in for this mark?
+
+    `1` fills Yes and `0` fills No — an Approval file records "not approved" as a
+    real 0, which on a double-bubble ballot is a real No. A blank or a marker
+    fills neither: the tally counts it as not approved, but the voter left the
+    row alone, and the picture should say so.
+    """
+    if mark is None:
+        return False
+    return (mark == 1) == (col == 0)
+
+
+def render_approval_svg(ballot: Ballot) -> str:
+    title, cast, marks = ballot.title, ballot.cast, ballot.scores
+    width = APPROVAL_W
+    H = height_for(cast)
+    plain = f'"{title}"' if ballot.quoted else title
+    shown = f"&quot;{title}&quot;" if ballot.quoted else title
+    out: list[str] = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {H}" '
+        f'width="{width}" height="{H}">',
+        f'<rect width="{width}" height="{H}" fill="#FFFFFF"/>',
+        f'<text x="{TITLE_X}" y="{TITLE_Y}" font-family="{FONT}" '
+        f'font-size="{title_font_size(plain, width)}" font-weight="bold" '
+        f'fill="{RUST}">{shown}</text>',
+        f'<text x="{TITLE_X}" y="{HDR_WORST_Y}" font-family="{FONT}" '
+        f'font-size="{APPROVAL_INSTRUCTION_SIZE}" font-weight="bold" '
+        f'fill="{INK}">{APPROVAL_INSTRUCTION}</text>',
+    ]
+
+    for i, label in enumerate(APPROVAL_HEADERS):
+        out.append(
+            f'<text x="{approval_col_x(i)}" y="{STAR_ROW_Y}" font-family="{FONT}" '
+            f'font-size="60" font-weight="bold" fill="{INK}" '
+            f'text-anchor="middle">{label}</text>'
+        )
+
+    for r, name in enumerate(cast):
+        top = GRID_TOP + r * ROW_H
+        mid = top + ROW_H / 2
+        if r % 2 == 0:
+            out.append(f'<rect x="0" y="{top}" width="{width}" height="{ROW_H}" fill="{ROW_TINT}"/>')
+        out.append(
+            f'<line x1="0" y1="{top}" x2="{width}" y2="{top}" stroke="{RULE}" stroke-width="7"/>'
+        )
+        out.append(
+            f'<text x="{NAME_X}" y="{mid + 22}" font-family="{FONT}" font-size="62" '
+            f'font-weight="bold" fill="{INK}">{name}</text>'
+        )
+        for i in range(len(APPROVAL_HEADERS)):
+            cx = approval_col_x(i)
+            if approval_filled(marks[r], i):
+                out.append(f'<ellipse cx="{cx}" cy="{mid}" rx="42" ry="36" fill="{INK}"/>')
+            else:
+                out.append(
+                    f'<ellipse cx="{cx}" cy="{mid}" rx="42" ry="36" fill="#FFFFFF" '
+                    f'stroke="{BUBBLE_STROKE}" stroke-width="5"/>'
+                )
+    bottom = GRID_TOP + len(cast) * ROW_H
+    out.append(
+        f'<line x1="0" y1="{bottom}" x2="{width}" y2="{bottom}" stroke="{RULE}" stroke-width="7"/>'
+    )
+    out.append("</svg>")
+    return "\n".join(out)
+
+
 # Heavy grotesque, to match the slide art the original eight were captured from.
 FONT_CANDIDATES = [
     "/System/Library/Fonts/Supplemental/Arial Black.ttf",
@@ -452,9 +576,28 @@ def _font(size: int):
     return ImageFont.load_default(size)
 
 
+def _save_png(img, width: int, height: int, png_path: Path) -> None:
+    """Downscale for antialiasing, then quantize, then write.
+
+    This is flat art in a handful of colors, and the LANCZOS pass is the only
+    thing that invents more. Pages show these at 220–330 px, so 900 px still
+    leaves ~2.7x for retina while cutting the file to ~14 kB — which is what
+    makes one image per ballot affordable across a whole teaching set. The .svg
+    beside it stays the full-resolution master.
+    """
+    from PIL import Image
+
+    out_w = min(width, PNG_MAX_W)
+    small = img.resize((out_w, round(height * out_w / width)), Image.LANCZOS)
+    small.convert("P", palette=Image.ADAPTIVE, colors=64).save(png_path, optimize=True)
+
+
 def rasterize(ballot: Ballot, png_path: Path) -> None:
     """Draw the ballot straight to a bitmap, mirroring render_svg's geometry."""
     from PIL import Image, ImageDraw
+
+    if ballot.kind == "approval":
+        return rasterize_approval(ballot, png_path)
 
     def s(v: float) -> float:
         return v * SS
@@ -498,15 +641,52 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
 
     bottom = GRID_TOP + len(cast) * ROW_H
     d.line([0, s(bottom), s(W), s(bottom)], fill=RULE, width=int(s(7)))
+    _save_png(img, W, H, png_path)
 
-    # Downscale for antialiasing, then quantize: this is flat art in six colors,
-    # and the LANCZOS pass is the only thing that invents more. Pages show these
-    # at 260–330 px, so 900 px still leaves ~2.7x for retina while cutting the
-    # file to ~14 kB — which is what makes one image per ballot affordable across
-    # a whole teaching set. The .svg beside it stays the full-resolution master.
-    out_w = min(W, PNG_MAX_W)
-    small = img.resize((out_w, round(H * out_w / W)), Image.LANCZOS)
-    small.convert("P", palette=Image.ADAPTIVE, colors=64).save(png_path, optimize=True)
+
+def rasterize_approval(ballot: Ballot, png_path: Path) -> None:
+    """The Yes/No ballot as a bitmap — mirrors render_approval_svg exactly."""
+    from PIL import Image, ImageDraw
+
+    def s(v: float) -> float:
+        return v * SS
+
+    title, cast, marks = ballot.title, ballot.cast, ballot.scores
+    width = APPROVAL_W
+    H = height_for(cast)
+    img = Image.new("RGB", (width * SS, H * SS), "#FFFFFF")
+    d = ImageDraw.Draw(img)
+    f_instr = _font(APPROVAL_INSTRUCTION_SIZE * SS)
+    f_hdr, f_name = _font(60 * SS), _font(62 * SS)
+
+    shown = f'"{title}"' if ballot.quoted else title
+    f_title = _font(title_font_size(shown, width) * SS)
+    d.text((s(TITLE_X), s(TITLE_Y)), shown, font=f_title, fill=RUST, anchor="ls")
+    d.text((s(TITLE_X), s(HDR_WORST_Y)), APPROVAL_INSTRUCTION,
+           font=f_instr, fill=INK, anchor="ls")
+
+    for i, label in enumerate(APPROVAL_HEADERS):
+        d.text((s(approval_col_x(i)), s(STAR_ROW_Y)), label,
+               font=f_hdr, fill=INK, anchor="ms")
+
+    for r, name in enumerate(cast):
+        top = GRID_TOP + r * ROW_H
+        mid = top + ROW_H / 2
+        if r % 2 == 0:
+            d.rectangle([0, s(top), s(width), s(top + ROW_H)], fill=ROW_TINT)
+        d.line([0, s(top), s(width), s(top)], fill=RULE, width=int(s(7)))
+        d.text((s(NAME_X), s(mid + 22)), name, font=f_name, fill=INK, anchor="ls")
+        for i in range(len(APPROVAL_HEADERS)):
+            cx = approval_col_x(i)
+            box = [s(cx - 42), s(mid - 36), s(cx + 42), s(mid + 36)]
+            if approval_filled(marks[r], i):
+                d.ellipse(box, fill=INK)
+            else:
+                d.ellipse(box, fill="#FFFFFF", outline=BUBBLE_STROKE, width=int(s(5)))
+
+    bottom = GRID_TOP + len(cast) * ROW_H
+    d.line([0, s(bottom), s(width), s(bottom)], fill=RULE, width=int(s(7)))
+    _save_png(img, width, H, png_path)
 
 
 def _write(slug: str, ballot: Ballot, want_png: bool) -> None:

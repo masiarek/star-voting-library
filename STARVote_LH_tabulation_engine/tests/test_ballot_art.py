@@ -59,10 +59,11 @@ def test_count_label_is_not_a_candidate():
     assert rows == [art.BallotRow(15, [5, 2], "", ["5", "2"])]
 
 
-@pytest.mark.parametrize("method", ["Plurality", "Approval", "RankedRobin", "STV"])
-def test_non_score_methods_are_refused(tmp_path, method):
-    """The art IS the 0–5 STAR ballot. A choose-one or ranked race handed its
-    voters a different piece of paper, so drawing one would be a lie."""
+@pytest.mark.parametrize("method", ["Plurality", "RankedRobin", "STV"])
+def test_unknown_ballot_methods_are_refused(tmp_path, method):
+    """Each drawing IS a particular piece of paper. A choose-one or ranked race
+    handed its voters neither the 0–5 grid nor Yes/No bubbles, so drawing either
+    would be a lie — and no picture beats a wrong one."""
     case = tmp_path / "case.yaml"
     case.write_text(f"voting_method: {method}\nballots: |-\n  Ada,Ben\n  5,0\n")
     with pytest.raises(art.CaseBallotError):
@@ -74,6 +75,39 @@ def test_star_family_is_drawn(tmp_path):
     case.write_text("voting_method: Bloc STAR\nballots: |-\n  Ada,Ben\n  5,0\n")
     drawn, total = art.ballots_from_yaml(case)
     assert total == 1 and drawn[0][0] == "case_ballot_1"
+    assert drawn[0][1].kind == "score"
+
+
+@pytest.mark.parametrize("method", ["Approval", "Approval_Multi_Winner"])
+def test_approval_is_drawn_as_a_yes_no_ballot(tmp_path, method):
+    """Approval voters get their own paper, not a 0–5 grid with four unused
+    columns — single- and multi-winner alike (bloc changes the count, not the
+    ballot)."""
+    case = tmp_path / "case.yaml"
+    case.write_text(f"voting_method: {method}\nballots: |-\n  Ada,Ben\n  1,0\n")
+    drawn, _ = art.ballots_from_yaml(case)
+    ballot = drawn[0][1]
+    assert ballot.kind == "approval"
+    svg = art.render_svg(ballot)
+    assert ">Yes<" in svg and ">No<" in svg
+    assert "Worst" not in svg               # the 0–5 header has no business here
+
+
+def test_approval_file_with_a_real_score_is_refused(tmp_path):
+    """A `3` under `voting_method: Approval` is a file the Yes/No art cannot
+    honestly draw — better to fail loudly than to round it to a bubble."""
+    case = tmp_path / "case.yaml"
+    case.write_text("voting_method: Approval\nballots: |-\n  Ada,Ben\n  3,0\n")
+    with pytest.raises(art.CaseBallotError):
+        art.ballots_from_yaml(case)
+
+
+def test_approval_blanks_fill_neither_bubble():
+    """`1` is a Yes and `0` is a real No, but a blank is what the voter left
+    alone — the tally counts it as not approved, the picture says nothing."""
+    assert art.approval_filled(1, 0) and not art.approval_filled(1, 1)
+    assert art.approval_filled(0, 1) and not art.approval_filled(0, 0)
+    assert not art.approval_filled(None, 0) and not art.approval_filled(None, 1)
 
 
 @pytest.mark.parametrize("block, why", [
@@ -110,6 +144,16 @@ def test_alt_text_names_every_row():
     alt = art.alt_text(ballot)
     assert "Ada 5" in alt
     assert "Ben left blank (counts as 0)" in alt
+
+
+def test_alt_text_reads_an_approval_ballot_as_yes_and_no():
+    ballot = art.Ballot("Voter 1", ["Ada", "Ben", "Cara"], [1, 0, None], Path("."),
+                        quoted=False, kind="approval")
+    alt = art.alt_text(ballot)
+    assert alt.startswith("A Yes/No Approval ballot")
+    assert "Ada Yes" in alt and "Ben No" in alt
+    assert "Cara left blank (not approved)" in alt
+    assert "0–5" not in alt
 
 
 def _art_files():

@@ -25,12 +25,12 @@ num_winners: 2
 
 ballots: |-
   Amy,Ben,Cora,Doug
-  1,0,0,0   # voter 1 — majority faction: bullet-approves Amy
-  1,1,0,0   # voter 2 — majority faction: Amy and Ben
-  1,1,0,0   # voter 3 — majority faction: Amy and Ben
-  1,0,0,0   # voter 4 — majority faction: bullet-approves Amy
-  0,0,1,1   # voter 5 — minority faction: Cora and Doug
-  0,0,1,0   # voter 6 — minority faction: bullet-approves Cora
+  1,0,0,0   # Voter 1 — majority faction: bullet-approves Amy
+  1,1,0,0   # Voter 2 — majority faction: Amy and Ben
+  1,1,0,0   # Voter 3 — majority faction: Amy and Ben
+  1,0,0,0   # Voter 4 — majority faction: bullet-approves Amy
+  0,0,1,1   # Voter 5 — minority faction: Cora and Doug
+  0,0,1,0   # Voter 6 — minority faction: bullet-approves Cora
 
 expected_winners:
   - Amy

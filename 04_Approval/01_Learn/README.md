@@ -2,6 +2,10 @@
 
 Everything explaining **Approval** (mark every candidate you approve — **1** — leave the rest **0**; most approvals wins). New here? Start with **[Approval Voting](approval_voting.md)** — how the ballot and the count work. Approval is Score voting at **one-bit resolution**: the simplest equal-vote upgrade to Choose-One, and the natural stepping-stone to STAR.
 
+<img src="img/approval_ballot_single_bubble.png" width="420" alt="An Approval ballot: one bubble per candidate — Andre, Blake, Carmen, David, Erin — under the instruction 'Vote for ALL candidates you approve of'. This voter has filled the bubbles for Andre, Carmen and David."> <img src="img/approval_ballot_yes_no_double_bubble.png" width="420" alt="The Yes/No variant of the same Approval ballot: an explicit Yes and No bubble for each of Andre, Blake, Carmen, David and Erin. This voter marks Yes for Andre, Carmen and David, No for Blake and Erin.">
+
+*The two Approval ballots ([Equal Vote](https://www.equal.vote/approval)): the plain **single bubble** — mark everyone you approve — and the **Yes / No "double bubble"**, where a blank is distinguishable from a deliberate No (the ballot-security hardening in [honest limits §6](approval_honest_limits.md)). Either way the count is the same: add up the approvals. The repo's own case art draws the Yes/No form — see the ballots on [Approval Voting](approval_voting.md#reading-an-approval-result) and on [the folder front door](../README.md).*
+
 **Run it:** the 101 case lives in [the Approval examples](../) — and the [Black Curtain set](../../method_comparisons/black_curtain/) counts the *same* five voters by Approval vs STAR vs RCV-IRV vs Score (Approval flips the winner in election 1).
 
 ## Single-winner Approval
@@ -24,5 +28,7 @@ The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multi
 ## Reference
 
 - Glossary: [Approval terms](glossary_approval.md)
+- [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) — Approval's pass/fail row beside STAR, Ranked Robin and RCV-IRV, with the ✗s linked to runnable elections
+- [Approval voting — Wikipedia](https://en.wikipedia.org/wiki/Approval_voting) — the neutral reference for the history (papal conclaves, Venice, Greece), the adoption **and repeal** record, and the criteria table. Where a campaign source would be weakest, this is the one to cite
 
 *(Parallel method hub: [STAR Voting](../../01_STAR/01_Learn/README.md). Up: the docs hub [`00_START_HERE`](../../07_Concepts/00_START_HERE.md).)*

@@ -10,7 +10,58 @@ Three cases, in teaching order:
 
 The flagship case, [`approval_bloc_2seats_c4_b6.yaml`](cases/approval_bloc_2seats_c4_b6.yaml), teaches the one thing that matters about bloc counting: it is **majoritarian**. Six voters, four candidates, two seats — a 4-voter majority (all approve Amy, two also Ben) takes **both** seats; the 2-voter minority behind Cora and Doug gets nothing. Bonus lesson: Ben and Cora tie 2–2 for the last seat, and the engine's tie note shows candidate priority order breaking it for Ben:
 
---8<-- "04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_2seats_c4_b6.md:report"
+The six ballots, as marked and as counted — note that the same Yes/No paper fills two seats as easily as one; only the count changes:
+
+<!-- ballots:approval_bloc_2seats_c4_b6 -->
+The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
+
+| Ballot as marked | Amy | Ben | Cora | Doug |
+|:--|:--:|:--:|:--:|:--:|
+| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_1.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 1 — majority faction: bullet-approves Amy: Amy Yes, Ben No, Cora No, Doug No."> | 1 | 0 | 0 | 0 |
+| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_2.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 2 — majority faction: Amy and Ben: Amy Yes, Ben Yes, Cora No, Doug No."> | 1 | 1 | 0 | 0 |
+| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_3.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 3 — majority faction: Amy and Ben: Amy Yes, Ben Yes, Cora No, Doug No."> | 1 | 1 | 0 | 0 |
+| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_4.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 4 — majority faction: bullet-approves Amy: Amy Yes, Ben No, Cora No, Doug No."> | 1 | 0 | 0 | 0 |
+| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_5.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 5 — minority faction: Cora and Doug: Amy No, Ben No, Cora Yes, Doug Yes."> | 0 | 0 | 1 | 1 |
+| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_6.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 6 — minority faction: bullet-approves Cora: Amy No, Ben No, Cora Yes, Doug No."> | 0 | 0 | 1 | 0 |
+<!-- /ballots -->
+
+<!-- report:approval_bloc_2seats_c4_b6 -->
+```text
+--- Approval Voting (2 winners) ---
+ Tabulating 6 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+     2 × 1,0,0,0
+     2 × 1,1,0,0
+     1 × 0,0,1,1
+     1 × 0,0,1,0
+
+   Amy  -- 4 (67%) -- Elected
+   Ben  -- 2 (33%) -- Elected
+   Cora -- 2 (33%)
+   Doug -- 1 (17%)
+  Note: Ben, Cora each have 2 approvals and tie for the last 1 seat.
+        Candidate priority order (Ben > Cora) broke the tie: Ben elected, Cora not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 6 ballots — average 1.5 of 4 (range 1–2).
+     approved 1: 3 ballots
+     approved 2: 3 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Amy   |  Ben   |  Cora  |  Doug  |
+   -------------------------------------------
+   Amy   |   --   |  50%   |   0%   |   0%   |
+   Ben   |  100%  |   --   |   0%   |   0%   |
+   Cora  |   0%   |   0%   |   --   |  50%   |
+   Doug  |   0%   |   0%   |  100%  |   --   |
+
+Winners — Approval Voting (2 winners)
+  Amy, Ben
+```
+<!-- /report -->
 Run it yourself:
 
 ```bash
