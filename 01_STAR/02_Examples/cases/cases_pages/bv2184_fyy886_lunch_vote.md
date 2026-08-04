@@ -25,6 +25,18 @@ and RCV-IRV both elect Sushi here; STAR elects Pizza.)
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Sushi | Tacos | Pizza |
+|:--|:--:|:--:|:--:|
+| <img src="../img/bv2184_fyy886_lunch_vote_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Sushi 5, Tacos 0, Pizza 3."> | 5 | 0 | 3 |
+| <img src="../img/bv2184_fyy886_lunch_vote_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Sushi 5, Tacos 0, Pizza 3."> | 5 | 0 | 3 |
+| <img src="../img/bv2184_fyy886_lunch_vote_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Sushi 0, Tacos 5, Pizza 3."> | 0 | 5 | 3 |
+| <img src="../img/bv2184_fyy886_lunch_vote_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Sushi 0, Tacos 5, Pizza 3."> | 0 | 5 | 3 |
+| <img src="../img/bv2184_fyy886_lunch_vote_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Sushi 3, Tacos 1, Pizza 5."> | 3 | 1 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

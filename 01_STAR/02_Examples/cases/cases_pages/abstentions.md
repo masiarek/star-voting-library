@@ -20,6 +20,19 @@ the percentages never look like votes went missing.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Dog | Cat |
+|:--|:--:|:--:|
+| <img src="../img/abstentions_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Dog  — a clear preference (decides the runoff): Dog 5, Cat 0."> | 5 | 0 |
+| <img src="../img/abstentions_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Dog  — a clear preference (decides the runoff): Dog 4, Cat 0."> | 4 | 0 |
+| <img src="../img/abstentions_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cat  — a clear preference (decides the runoff): Dog 0, Cat 5."> | 0 | 5 |
+| <img src="../img/abstentions_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — a CAST ballot that rates both finalists the same: Dog 5, Cat 5."> | 5 | 5 |
+| <img src="../img/abstentions_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-zero — a CAST ballot that supports neither (an explicit zero): Dog 0, Cat 0."> | 0 | 0 |
+| <img src="../img/abstentions_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — a true ABSTENTION: no score recorded for anyone: Dog left blank (counts as 0), Cat left blank (counts as 0)."> | - | - |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 Markers on these ballots: `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all tabulate as 0 (reported honestly).

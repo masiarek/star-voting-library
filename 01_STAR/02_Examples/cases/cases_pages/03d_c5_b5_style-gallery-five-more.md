@@ -31,6 +31,18 @@ Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Alice | Bruno | Clara | Diego | Erin |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_1.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — approval-style: a yes/no threshold, only 0s and 5s: Alice 5, Bruno 0, Clara 5, Diego 0, Erin 0."> | 5 | 0 | 5 | 0 | 0 |
+| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_2.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — exaggerated compromise: Clara is the favorite, Alice a fearful 5: Alice 5, Bruno 1, Clara 5, Diego 2, Erin 0."> | 5 | 1 | 5 | 2 | 0 |
+| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_3.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — partial ballot: only knows Clara and Diego; blanks count as 0: Alice left blank (counts as 0), Bruno left blank (counts as 0), Clara 5, Diego 3, Erin left blank (counts as 0)."> | - | - | 5 | 3 | - |
+| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_4.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — compressed middle: everything 2s and 3s, nothing extreme: Alice 2, Bruno 2, Clara 3, Diego 2, Erin 3."> | 2 | 2 | 3 | 2 | 3 |
+| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_5.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — null ballot: same score for everyone — no preference anywhere: Alice 3, Bruno 3, Clara 3, Diego 3, Erin 3."> | 3 | 3 | 3 | 3 | 3 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 Markers on these ballots: `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all tabulate as 0 (reported honestly).

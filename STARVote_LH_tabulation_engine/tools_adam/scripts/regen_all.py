@@ -44,8 +44,13 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
-# (filename, one-line what-it-writes) — ORDER IS LOAD-BEARING for the first three.
+# (command, one-line what-it-writes) — ORDER IS LOAD-BEARING for the first four:
+# the ballot art has to be on disk before build_yaml_pages decides which pages
+# show a picture. `--refresh` only redraws cases that already have art, so this
+# never invents pictures for the other 300 cases.
 GENERATORS = [
+    ("build_style_ballot_images.py --refresh",
+                                  "ballot art for cases that already have it"),
     ("build_divergence_index.py", "method_comparisons/divergence_review/ (INDEX, csv, cases/*.md)"),
     ("build_yaml_pages.py",       "per-election <set>_pages/*.md"),
     ("build_yaml_index.py",       "YAML_test_case_index/README.md (by-method index)"),
@@ -64,14 +69,16 @@ CHECKERS = [
 
 def _run(script: str, desc: str, quiet: bool) -> tuple[str, bool, float]:
     """Run one sibling script with the SAME interpreter running us. Returns
-    (script, ok, seconds). Streams the child's output unless --quiet."""
-    path = HERE / script
+    (script, ok, seconds). Streams the child's output unless --quiet.
+    An entry may carry flags ("build_x.py --refresh"); they're passed through."""
+    name, *flags = script.split()
+    path = HERE / name
     if not path.is_file():
-        print(f"  ! {script}: not found — skipping", file=sys.stderr)
+        print(f"  ! {name}: not found — skipping", file=sys.stderr)
         return (script, False, 0.0)
     t0 = time.monotonic()
     stdout = subprocess.DEVNULL if quiet else None
-    proc = subprocess.run([sys.executable, str(path)], stdout=stdout)
+    proc = subprocess.run([sys.executable, str(path), *flags], stdout=stdout)
     return (script, proc.returncode == 0, time.monotonic() - t0)
 
 
@@ -105,7 +112,7 @@ def main() -> int:
         flag = "ok " if ok else "FAIL"
         if not ok:
             gen_failed += 1
-        print(f"  [{flag}] {script:<28} {secs:5.1f}s")
+        print(f"  [{flag}] {script:<40} {secs:5.1f}s")
     for script, ok, secs in check_results:
         print(f"  [{'ok ' if ok else 'warn'}] {script:<28} {secs:5.1f}s  (checker)")
     print("─" * 60)

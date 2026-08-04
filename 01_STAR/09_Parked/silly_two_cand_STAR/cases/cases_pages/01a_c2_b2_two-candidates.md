@@ -20,6 +20,15 @@ files line by line to see exactly which numbers one added ballot moves.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Chocolate | Vanilla |
+|:--|:--:|:--:|
+| <img src="../img/01a_c2_b2_two-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline — Chocolate (5) over Vanilla (3): Chocolate 5, Vanilla 3."> | 5 | 3 |
+| <img src="../img/01a_c2_b2_two-candidates_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Bob — same: Chocolate 5, Vanilla 3."> | 5 | 3 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

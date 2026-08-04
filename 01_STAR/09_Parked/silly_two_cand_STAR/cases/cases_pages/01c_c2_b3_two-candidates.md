@@ -17,6 +17,16 @@ Because she scores the two finalists the same, her ballot counts as
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Choco | Vanilla |
+|:--|:--:|:--:|
+| <img src="../img/01c_c2_b3_two-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline — Choco (5) over Vanilla (3): Choco 5, Vanilla 3."> | 5 | 3 |
+| <img src="../img/01c_c2_b3_two-candidates_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — George - he likes only one flavor (Choco): Choco 5, Vanilla 0."> | 5 | 0 |
+| <img src="../img/01c_c2_b3_two-candidates_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Julia - she likes both flavors equally: Choco 5, Vanilla 5."> | 5 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

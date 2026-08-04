@@ -23,6 +23,21 @@ Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Allen | Bianca | Chris | Desi | Edith | Frank |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|
+| <img src="../img/03c_c6_b8_style-gallery_ballot_1.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — traditional choose-one: 5 for Bianca, nothing else: Allen 0, Bianca 5, Chris 0, Desi 0, Edith 0, Frank 0."> | 0 | 5 | 0 | 0 | 0 | 0 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_2.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — strong backup: Bianca 5, Frank close behind at 4: Allen 0, Bianca 5, Chris 0, Desi 0, Edith 0, Frank 4."> | 0 | 5 | 0 | 0 | 0 | 4 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_3.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — weak backup: Bianca 5, Frank a reluctant 1: Allen 0, Bianca 5, Chris 0, Desi 0, Edith 0, Frank 1."> | 0 | 5 | 0 | 0 | 0 | 1 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_4.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — partisan slate: 5s for my party (A, B, F), 0s for the rest: Allen 5, Bianca 5, Chris 0, Desi 0, Edith 0, Frank 5."> | 5 | 5 | 0 | 0 | 0 | 5 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_5.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — ranked-style: each score used once, like a ranking: Allen 2, Bianca 5, Chris 0, Desi 3, Edith 1, Frank 4."> | 2 | 5 | 0 | 3 | 1 | 4 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_6.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — nuanced: full range, equal 3s where truly equal: Allen 3, Bianca 4, Chris 0, Desi 3, Edith 1, Frank 5."> | 3 | 4 | 0 | 3 | 1 | 5 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_7.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — &quot;anyone but Chris&quot;: max support for everyone else: Allen 5, Bianca 5, Chris 0, Desi 5, Edith 5, Frank 5."> | 5 | 5 | 0 | 5 | 5 | 5 |
+| <img src="../img/03c_c6_b8_style-gallery_ballot_8.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — protest / least-bad: dislikes everyone, Frank least: Allen 0, Bianca 0, Chris 0, Desi 0, Edith 0, Frank 1."> | 0 | 0 | 0 | 0 | 0 | 1 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

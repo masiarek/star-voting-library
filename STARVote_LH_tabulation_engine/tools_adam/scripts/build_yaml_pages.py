@@ -35,6 +35,15 @@ try:
 except ImportError:  # pragma: no cover
     sys.exit("PyYAML is required: pip install pyyaml")
 
+# Sibling script: it owns the ballot-art geometry AND the ballot-row parsing, so
+# the alt text under an image is derived from the same read of the YAML that
+# drew it. (Path-inserted rather than package-imported because the tests load
+# this file by path, which leaves the script's own directory off sys.path.)
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+if _SCRIPT_DIR not in sys.path:
+    sys.path.insert(0, _SCRIPT_DIR)
+import build_style_ballot_images as ballot_art  # noqa: E402
+
 def _find_repo(start):
     p = os.path.dirname(os.path.abspath(start))
     while p != os.path.dirname(p):
@@ -158,6 +167,99 @@ HOW_TO_READ = {
     "ranked":   "Each row is one voter's ranking, most-preferred first "
                 "(`N:` prefix = N identical ballots).",
 }
+
+
+# --------------------------------------------------------------------------- #
+# Ballot art — the picture of the ballot, when a case has one
+# --------------------------------------------------------------------------- #
+# Convention, not configuration: if `<yaml dir>/img/<stem>_ballot_<n>.png` exists
+# it goes on the page. Draw it with
+#
+#     python STARVote_LH_tabulation_engine/tools_adam/scripts/build_style_ballot_images.py --from-yaml <case.yaml>
+#
+# A CSV row says what the engine read; the ballot art says what the voter did —
+# for a 101 case that picture is the lesson, and the CSV is the receipt.
+_ART_RE = re.compile(r"_ballot_(\d+)\.png$")
+
+
+def _esc_attr(text):
+    return str(text).replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
+
+
+# A table cell will happily crush an image to 68px: `max-width: 100%` (both
+# Material's CSS and GitHub's) makes the picture's min-content width ~0, so the
+# auto table layout hands the column whatever the score columns don't want. The
+# `min-width` is what keeps the ballot legible; the table scrolls inside its own
+# container instead. Wider casts get a smaller picture so the table still fits.
+def _art_width(n_cast):
+    if n_cast <= 3:
+        return 330
+    return 260 if n_cast <= 6 else 220
+
+
+# Past this many candidates, a column per candidate stops being a ballot you can
+# read across and becomes a spreadsheet — one Scores column instead.
+MAX_CANDIDATE_COLUMNS = 6
+
+
+def _ballot_art(yaml_path, ballots_text, page_dir):
+    """(caption, table lines, text lead-in) for this case's art, or None.
+
+    The table is the point: one row per ballot, the marked-up picture beside the
+    very numbers the file records, under a column per candidate. A beginner can
+    read a filled bubble straight across into its column instead of being asked
+    to hold the CSV and the picture in their head at once.
+    """
+    stem = os.path.splitext(os.path.basename(yaml_path))[0]
+    img_dir = os.path.join(os.path.dirname(yaml_path), "img")
+    found = []
+    for path in glob.glob(os.path.join(glob.escape(img_dir), glob.escape(stem) + "_ballot_*.png")):
+        m = _ART_RE.search(path)
+        if m:
+            found.append((int(m.group(1)), path))
+    if not found:
+        return None
+    found.sort()
+
+    try:
+        cast, rows = ballot_art.parse_ballot_block(ballots_text)
+    except ballot_art.CaseBallotError:
+        return None                  # art we can't line up with the numbers
+
+    weighted = any(r.weight > 1 for r in rows)
+    by_candidate = len(cast) <= MAX_CANDIDATE_COLUMNS
+    width = _art_width(len(cast))
+    header = (["Ballot as marked"] + (["Voters"] if weighted else [])
+              + (list(cast) if by_candidate else [f"Scores ({', '.join(cast)})"]))
+    align = [":--"] + [":--:"] * (len(header) - 1)
+    lines = ["| " + " | ".join(header) + " |", "|" + "|".join(align) + "|"]
+    for n, path in found:
+        if not 1 <= n <= len(rows):
+            continue
+        row = rows[n - 1]
+        alt = ballot_art.alt_text(ballot_art.Ballot(
+            ballot_art.row_title(n, row.weight, row.note), cast, row.scores,
+            img_dir, quoted=False))
+        src = os.path.relpath(path, page_dir).replace(os.sep, "/")
+        img = (f'<img src="{src}" width="{width}" style="min-width:{width}px" '
+               f'alt="{_esc_attr(alt)}">')
+        cells = [c if c else "-" for c in row.cells]
+        lines.append("| " + " | ".join(
+            [img] + ([str(row.weight)] if weighted else [])
+            + (cells if by_candidate else ["`" + ", ".join(cells) + "`"])) + " |")
+    if len(lines) == 2:              # art on disk, but none of it matched a row
+        return None
+
+    shown = len(lines) - 2
+    caption = "The ballot as marked" if shown == 1 else "The ballots as marked"
+    lead = ("The same ballot as the file records it:" if shown == 1
+            else "The same ballots as the file records them:")
+    if shown < len(rows):
+        # Never let a partial set read as the whole electorate.
+        caption += f" (the first {shown} of {len(rows)} ballot rows)"
+        lead = "Every ballot in the file, as text:"
+    caption += " — the filled bubble is the score given, and the score is the number in its column:"
+    return caption, lines, lead
 
 
 def _mirror_path(yaml_path):
@@ -406,6 +508,15 @@ def render(yaml_path, siblings):
         L.append("")
     L.append("## Ballots")
     L.append("")
+    art = _ballot_art(yaml_path, ballots_text, page_dir)
+    if art:
+        caption, table, lead = art
+        L.append(caption)
+        L.append("")
+        L += table
+        L.append("")
+        L.append(lead)
+        L.append("")
     L.append(HOW_TO_READ[kind])
     if has_markers:
         L.append("")

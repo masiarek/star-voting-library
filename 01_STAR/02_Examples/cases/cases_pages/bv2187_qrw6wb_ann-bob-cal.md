@@ -40,6 +40,16 @@ ballots gets a new scenario with a new cast of names.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Ann | Bob | Cal |
+|:--|:--:|:--:|:--:|
+| <img src="../img/bv2187_qrw6wb_ann-bob-cal_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ann 5, Bob 4, Cal 0."> | 5 | 4 | 0 |
+| <img src="../img/bv2187_qrw6wb_ann-bob-cal_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ann 3, Bob 5, Cal 2."> | 3 | 5 | 2 |
+| <img src="../img/bv2187_qrw6wb_ann-bob-cal_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Ann 0, Bob 3, Cal 5."> | 0 | 3 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

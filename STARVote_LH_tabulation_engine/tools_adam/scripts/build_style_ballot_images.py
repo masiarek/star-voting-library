@@ -6,13 +6,18 @@ This script reproduces that design as SVG so new ballots can be added without
 going back to the deck: a title, a Worst..Best header, one row per candidate,
 and six bubbles (0-5) with the marked one filled in.
 
-Two families share the drawing code:
+Three families share the drawing code:
   * the style gallery (01_STAR/01_Learn/voting_styles/), one thumbnail per style;
   * page figures, which bring their own cast and their own img/ folder — a ballot
-    drawn as a ballot beats a box of ★ glyphs, which no two fonts align the same.
+    drawn as a ballot beats a box of ★ glyphs, which no two fonts align the same;
+  * case art, drawn straight from an election YAML's `ballots:` block, one image
+    per ballot row, into `<yaml dir>/img/<stem>_ballot_<n>.png`. `build_yaml_pages.py`
+    embeds whatever it finds there, so a case page shows the ballots as marked
+    before it shows them as CSV.
 
     python3 build_style_ballot_images.py            # write SVG + PNG for every ballot
     python3 build_style_ballot_images.py --svg-only # skip rasterizing
+    python3 build_style_ballot_images.py --from-yaml 01_STAR/02_Examples/cases/02a_*.yaml
 
 The PNG is what the docs embed (the repo's other ballot art is PNG, and GitHub's
 Markdown renderer is unreliable with relative-path SVG); the .svg is written
@@ -24,6 +29,8 @@ from __future__ import annotations
 
 import argparse
 import math
+import os
+import re
 import sys
 from pathlib import Path
 from typing import NamedTuple
@@ -95,6 +102,197 @@ BALLOTS.update({
     ),
 })
 
+# --------------------------------------------------------------------------- #
+# Case art — ballots drawn from an election YAML
+# --------------------------------------------------------------------------- #
+# The gallery above is hand-listed because each thumbnail illustrates a *style*.
+# A case file already says exactly what each voter marked, so its art is derived,
+# not authored: parse the `ballots:` block the same way the engine does and draw
+# one ballot per row. Blanks and markers stay blank here — the engine counts them
+# as 0, but a ballot with no mark is what the voter actually handed in, and that
+# distinction is half the reason to show the picture at all.
+MARKER_CHARS = set("-~&?%")
+WEIGHT_RE = re.compile(r"\s*(\d+)\s*[:xX×]\s*(.*)")  # "42: 5, 4" / "9x5" / "9×5"
+MAX_SCORE = 5
+DEFAULT_LIMIT = 8  # rows drawn per case before we stop and say so
+
+
+class CaseBallotError(ValueError):
+    """The YAML can't be drawn as 0–5 ballot art (ranked ballots, bad cells…)."""
+
+
+class BallotRow(NamedTuple):
+    """One parsed ballot line: what it means, and what it literally said."""
+
+    weight: int                 # a `42:` prefix = 42 identical ballots
+    scores: list[int | None]    # None = blank/marker, drawn as an unmarked row
+    note: str                   # the trailing `#` comment, if the author left one
+    cells: list[str]            # cell text verbatim ("5", "-", "~") for display
+
+
+def _find_ballots(node):
+    """The `ballots:` block, top-level or nested (BV-import schemas nest it)."""
+    if isinstance(node, dict):
+        if node.get("ballots") is not None:
+            return node["ballots"]
+        for v in node.values():
+            found = _find_ballots(v)
+            if found is not None:
+                return found
+    elif isinstance(node, list):
+        for v in node:
+            found = _find_ballots(v)
+            if found is not None:
+                return found
+    return None
+
+
+def _cell_to_score(cell: str) -> int | None:
+    """0–5 → int; blank or any marker → None (drawn as an unmarked row)."""
+    cell = cell.strip()
+    if cell == "" or cell in MARKER_CHARS:
+        return None
+    if not cell.isdigit() or not 0 <= int(cell) <= MAX_SCORE:
+        raise CaseBallotError(f"cell {cell!r} is not a 0–{MAX_SCORE} score")
+    return int(cell)
+
+
+def parse_ballot_block(text: str):
+    """(cast, [BallotRow, …]) from a `ballots:` block.
+
+    Mirrors the engine's parser: `#` starts a comment, row 1 is the candidate
+    header, an optional `Count:` label rides on the first header cell, and a
+    leading `N:` / `Nx` / `N×` on a row is that ballot's weight.
+    """
+    rows = []
+    for raw in str(text).strip().splitlines():
+        body, _, note = raw.partition("#")
+        body = body.strip()
+        if body:
+            rows.append((body, note.strip()))
+    if len(rows) < 2:
+        raise CaseBallotError("need a candidate header and at least one ballot")
+    if ">" in rows[0][0] or any(">" in r for r, _ in rows[1:]):
+        raise CaseBallotError("ranked ballots — the 0–5 ballot art doesn't apply")
+
+    cast = [c.strip() for c in re.split(r"[,\t]+", rows[0][0]) if c.strip()]
+    if cast and re.match(r"(?i)^count\s*:", cast[0]):
+        cast[0] = cast[0].split(":", 1)[1].strip()
+
+    out = []
+    for body, note in rows[1:]:
+        parts = re.split(r"[,\t]", body)
+        weight = 1
+        wmatch = WEIGHT_RE.match(parts[0])
+        if wmatch:
+            weight = int(wmatch.group(1))
+            parts[0] = wmatch.group(2)
+        cells = [p.strip() for p in parts]
+        scores = [_cell_to_score(c) for c in cells]
+        if len(scores) != len(cast):
+            raise CaseBallotError(
+                f"row {body!r} has {len(scores)} cells, header has {len(cast)}"
+            )
+        out.append(BallotRow(weight, scores, note, cells))
+    return cast, out
+
+
+def row_title(index: int, weight: int, note: str) -> str:
+    """What the drawn ballot calls itself: the author's note beats a bare count."""
+    if note:
+        return (note if len(note) <= TITLE_MAX_CHARS
+                else note[:TITLE_MAX_CHARS - 1].rstrip() + "…")
+    return f"{weight} voters" if weight > 1 else f"Voter {index}"
+
+
+def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
+    """[(slug, Ballot)] for a case file — one per ballot row, capped at `limit`."""
+    try:
+        import yaml as _yaml
+    except ImportError as exc:  # pragma: no cover - environment problem
+        raise CaseBallotError("PyYAML is required to read case files") from exc
+
+    yaml_path = Path(yaml_path)
+    data = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    block = _find_ballots(data)
+    if block is None:
+        raise CaseBallotError("no `ballots:` block")
+    method = str(_find_first_method(data) or "STAR").split("#")[0].strip().lower()
+    if method.replace("-", "_") in {"approval", "approval_multi_winner"}:
+        raise CaseBallotError("approval ballots are 0/1 — the 0–5 art would mislead")
+
+    cast, rows = parse_ballot_block(block)
+    stem = yaml_path.stem
+    out_dir = yaml_path.parent / "img"
+    return [
+        (f"{stem}_ballot_{n}",
+         Ballot(row_title(n, r.weight, r.note), cast, r.scores, out_dir, quoted=False))
+        for n, r in enumerate(rows[:limit], start=1)
+    ], len(rows)
+
+
+def _find_first_method(node):
+    if isinstance(node, dict):
+        if node.get("voting_method") is not None:
+            return node["voting_method"]
+        for v in node.values():
+            found = _find_first_method(v)
+            if found is not None:
+                return found
+    elif isinstance(node, list):
+        for v in node:
+            found = _find_first_method(v)
+            if found is not None:
+                return found
+    return None
+
+
+# Drawn art is derived from a `ballots:` block, so it can go stale the moment
+# someone edits one. `--refresh` (wired into regen_all.py) redraws every case
+# that ALREADY has art — never picking new cases, so "which cases get pictures"
+# stays an editorial decision and only the pictures themselves are automatic.
+REFRESH_SKIP_DIRS = {"site", "node_modules", "__pycache__", "venv"}
+
+
+def refresh_targets(root: Path = REPO_ROOT) -> dict[Path, int]:
+    """{case yaml: highest ballot index drawn} for every case with art on disk."""
+    targets: dict[Path, int] = {}
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames[:] = [d for d in dirnames
+                       if d not in REFRESH_SKIP_DIRS and not d.startswith(".")]
+        here = Path(dirpath)
+        if here.name != "img":
+            continue
+        for name in filenames:
+            m = re.match(r"^(.*)_ballot_(\d+)\.png$", name)
+            if not m:
+                continue
+            src = here.parent / f"{m.group(1)}.yaml"
+            if src.is_file():
+                targets[src] = max(targets.get(src, 0), int(m.group(2)))
+    return dict(sorted(targets.items()))
+
+
+def prune_art(out_dir: Path, stem: str, keep: int) -> list[Path]:
+    """Delete art for ballot rows that no longer exist (the case lost voters)."""
+    gone = []
+    for path in sorted(out_dir.glob(f"{stem}_ballot_*")):
+        m = re.match(rf"^{re.escape(stem)}_ballot_(\d+)\.(png|svg)$", path.name)
+        if m and int(m.group(1)) > keep:
+            path.unlink()
+            gone.append(path)
+    return gone
+
+
+def alt_text(ballot: Ballot) -> str:
+    """Screen-reader text: the same marks, read out row by row."""
+    marks = [
+        f"{name} {score}" if score is not None else f"{name} left blank (counts as 0)"
+        for name, score in zip(ballot.cast, ballot.scores)
+    ]
+    return f"A 0–5 STAR ballot — {ballot.title}: " + ", ".join(marks) + "."
+
+
 # Palette sampled from the existing hand-made thumbnails.
 RUST = "#C0504D"          # title
 ROW_TINT = "#DCE6F1"      # alternating row background
@@ -106,6 +304,10 @@ INK = "#000000"
 FONT = "Arial Black, Arial Bold, Helvetica, sans-serif"
 
 W = 1600
+TITLE_X = 30
+TITLE_SIZE = 66       # gallery titles are short and all render at this size
+TITLE_MIN_SIZE = 34   # …a case's title is the author's ballot note, so it shrinks
+TITLE_CHAR_W = 0.66   # Arial Black advance ≈ 0.66 em — wide, so estimate wide
 TITLE_Y = 78
 HDR_WORST_Y = 168
 STAR_ROW_Y = 292
@@ -119,6 +321,23 @@ BOTTOM_PAD = 18
 
 def col_x(i: int) -> float:
     return COL0_X + i * COL_DX
+
+
+def title_font_size(shown: str) -> int:
+    """Shrink a long title until it fits the canvas.
+
+    Both renderers call this, so the SVG and the PNG stay the same drawing. A
+    style name always fits at the full size; a case's title is whatever the
+    author wrote next to that ballot row, which can run long.
+    """
+    if not shown:
+        return TITLE_SIZE
+    fits = (W - 2 * TITLE_X) / (TITLE_CHAR_W * len(shown))
+    return int(max(TITLE_MIN_SIZE, min(TITLE_SIZE, fits)))
+
+
+# Longest title that still fits on one line at the smallest size.
+TITLE_MAX_CHARS = int((W - 2 * TITLE_X) / (TITLE_CHAR_W * TITLE_MIN_SIZE))
 
 
 def height_for(cast: list[str]) -> int:
@@ -144,11 +363,13 @@ def star_path(cx: float, cy: float, r: float) -> str:
 def render_svg(ballot: Ballot) -> str:
     title, cast, scores = ballot.title, ballot.cast, ballot.scores
     H = height_for(cast)
+    plain = f'"{title}"' if ballot.quoted else title
     shown = f"&quot;{title}&quot;" if ballot.quoted else title
     out: list[str] = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">',
         f'<rect width="{W}" height="{H}" fill="#FFFFFF"/>',
-        f'<text x="30" y="{TITLE_Y}" font-family="{FONT}" font-size="66" font-weight="bold" '
+        f'<text x="{TITLE_X}" y="{TITLE_Y}" font-family="{FONT}" '
+        f'font-size="{title_font_size(plain)}" font-weight="bold" '
         f'fill="{RUST}">{shown}</text>',
         f'<text x="{col_x(0) + 40}" y="{HDR_WORST_Y}" font-family="{FONT}" font-size="58" '
         f'font-weight="bold" fill="{INK}" text-anchor="middle">Worst</text>',
@@ -230,11 +451,12 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
     H = height_for(cast)
     img = Image.new("RGB", (W * SS, H * SS), "#FFFFFF")
     d = ImageDraw.Draw(img)
-    f_title, f_hdr, f_scale = _font(66 * SS), _font(58 * SS), _font(60 * SS)
+    f_hdr, f_scale = _font(58 * SS), _font(60 * SS)
     f_name, f_bubble = _font(62 * SS), _font(44 * SS)
 
     shown = f'"{title}"' if ballot.quoted else title
-    d.text((s(30), s(TITLE_Y)), shown, font=f_title, fill=RUST, anchor="ls")
+    f_title = _font(title_font_size(shown) * SS)
+    d.text((s(TITLE_X), s(TITLE_Y)), shown, font=f_title, fill=RUST, anchor="ls")
     d.text((s(col_x(0) + 40), s(HDR_WORST_Y)), "Worst", font=f_hdr, fill=INK, anchor="ms")
     d.text((s(col_x(5)), s(HDR_WORST_Y)), "Best", font=f_hdr, fill=INK, anchor="ms")
 
@@ -265,13 +487,44 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
     bottom = GRID_TOP + len(cast) * ROW_H
     d.line([0, s(bottom), s(W), s(bottom)], fill=RULE, width=int(s(7)))
 
-    img.resize((W, H), Image.LANCZOS).save(png_path, optimize=True)
+    # Downscale for antialiasing, then quantize: this is flat art in six colors,
+    # and the LANCZOS pass is the only thing that invents more. 64 keeps every
+    # edge smooth at a third of the file size (125 kB -> 39 kB on a 3-row ballot),
+    # which matters once a whole teaching set carries one image per ballot.
+    small = img.resize((W, H), Image.LANCZOS)
+    small.convert("P", palette=Image.ADAPTIVE, colors=64).save(png_path, optimize=True)
+
+
+def _write(slug: str, ballot: Ballot, want_png: bool) -> None:
+    ballot.out_dir.mkdir(parents=True, exist_ok=True)
+    svg_path = ballot.out_dir / f"{slug}.svg"
+    svg_path.write_text(render_svg(ballot))
+    print(f"wrote {_show(svg_path)}")
+    if want_png:
+        png_path = ballot.out_dir / f"{slug}.png"
+        rasterize(ballot, png_path)
+        print(f"wrote {_show(png_path)}")
+
+
+def _show(path: Path) -> str:
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:  # a case file outside the repo (tmp dirs, tests)
+        return str(path)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--svg-only", action="store_true", help="write .svg but skip the .png")
     ap.add_argument("--only", help="render just this slug (e.g. style_null_ballot)")
+    ap.add_argument("--from-yaml", nargs="+", metavar="CASE.yaml",
+                    help="draw one ballot per row of these election YAMLs into "
+                         "<yaml dir>/img/ (instead of the gallery)")
+    ap.add_argument("--refresh", action="store_true",
+                    help="redraw the art of every case that already has some "
+                         "(keeps pictures in step with edited ballots)")
+    ap.add_argument("--limit", type=int, default=DEFAULT_LIMIT,
+                    help=f"max ballots drawn per case file (default {DEFAULT_LIMIT})")
     args = ap.parse_args()
 
     if args.only and args.only not in BALLOTS:
@@ -286,17 +539,35 @@ def main() -> int:
             print("! Pillow not installed -- writing SVG only", file=sys.stderr)
             want_png = False
 
+    if args.from_yaml or args.refresh:
+        # --refresh keeps each case's existing depth; --from-yaml takes --limit.
+        jobs = {Path(p): args.limit for p in (args.from_yaml or [])}
+        if args.refresh:
+            for src, drawn_to in refresh_targets().items():
+                jobs.setdefault(src, drawn_to)
+        failed = False
+        for path, limit in jobs.items():
+            try:
+                drawn, total = ballots_from_yaml(path, limit=limit)
+            except CaseBallotError as exc:
+                print(f"! {path}: {exc}", file=sys.stderr)
+                failed = True
+                continue
+            for slug, ballot in drawn:
+                _write(slug, ballot, want_png)
+            for stale in prune_art(path.parent / "img", path.stem, len(drawn)):
+                print(f"removed {_show(stale)} (that ballot row is gone)")
+            if total > len(drawn):
+                # Never cap silently: a page that shows 8 of 40 ballots reads as
+                # if it showed them all.
+                print(f"  ({total - len(drawn)} more ballot rows not drawn — "
+                      f"limit {limit}); raise --limit to draw them")
+        return 1 if failed else 0
+
     for slug, ballot in BALLOTS.items():
         if args.only and slug != args.only:
             continue
-        ballot.out_dir.mkdir(parents=True, exist_ok=True)
-        svg_path = ballot.out_dir / f"{slug}.svg"
-        svg_path.write_text(render_svg(ballot))
-        print(f"wrote {svg_path.relative_to(REPO_ROOT)}")
-        if want_png:
-            png_path = ballot.out_dir / f"{slug}.png"
-            rasterize(ballot, png_path)
-            print(f"wrote {png_path.relative_to(REPO_ROOT)}")
+        _write(slug, ballot, want_png)
     return 0
 
 

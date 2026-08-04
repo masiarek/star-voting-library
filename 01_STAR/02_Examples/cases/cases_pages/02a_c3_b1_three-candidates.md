@@ -25,6 +25,14 @@ more voters in the next example.
 
 ## Ballots
 
+The ballot as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Choco | Vanilla | Almond |
+|:--|:--:|:--:|:--:|
+| <img src="../img/02a_c3_b1_three-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline loves Choco flavor: Choco 5, Vanilla 3, Almond 0."> | 5 | 3 | 0 |
+
+The same ballot as the file records it:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

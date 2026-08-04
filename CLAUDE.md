@@ -433,6 +433,11 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   written by `build_yaml_pages.py` between `<!-- case-meta:start -->` / `<!-- case-meta:end -->`.
   **Don't hand-edit inside the markers or restate those facts alongside them** — change the YAML
   and rerun the generator. `tests/test_yaml_pages_current.py` fails when a block drifts.
+- **Ballot art on a case page is drawn, not hand-embedded** (added 2026-08-04). `tools_adam/scripts/build_style_ballot_images.py --from-yaml <case.yaml>` draws the repo's 0–5 ballot — the same art as the voting-style gallery — one image per ballot row, into `<yaml dir>/img/<stem>_ballot_<n>.png` (+ `.svg`, kept so the art stays editable). `build_yaml_pages.py` then puts whatever art it finds into the page's **Ballots** section as a table: the marked-up ballot beside the very numbers the file records, **one column per candidate**, so a beginner reads a filled bubble straight across into its column. Three things to know:
+  - **Which cases get pictures is editorial; keeping them current is not.** `regen_all.py` runs `--refresh`, which redraws (and prunes) art **only for cases that already have some** — so edit a `ballots:` block and the pictures follow, but the other ~300 cases stay text. Worth drawing for the small 101 rungs (2–3 candidates, a handful of ballots) and the ballot-style sets; pointless for a 100-ballot field.
+  - **Blanks and markers (`-` `~` `&` `?` `%`) draw as no mark at all.** The engine counts them 0; the voter marked nothing. That gap is the whole reason the abstention cases have pictures. Ranked and Approval cases are refused outright — 0–5 bubbles would misrepresent them.
+  - **The title on each ballot is that row's `#` comment** (else "Voter N" / "N voters"), and the alt text is generated from the same parse — so a good trailing comment in the YAML *is* the figure caption. Long titles shrink to fit; they don't wrap.
+  Covered by `tests/test_ballot_art.py` (parser + "every drawn ballot appears on its page").
 - **Cross-reference slides by title** via `07_Concepts/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
 - **Case-file naming.** **LH-only** cases (no BV election) → descriptive name, no bvid
