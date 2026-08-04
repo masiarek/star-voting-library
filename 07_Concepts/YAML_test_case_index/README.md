@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**474 election files** (411 single-winner, 63 multi-winner) across 16 method(s).
+**476 election files** (413 single-winner, 63 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 248 |
+| STAR | 250 |
 | RCV-IRV (Hare) | 28 |
 | Ranked Robin (RCV-RR / Copeland) | 72 |
 | Approval | 18 |
@@ -29,7 +29,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (248)
+## STAR  (250)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -236,6 +236,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2165_9vxcj7_star`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2165_9vxcj7_star.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.19 full — STAR: Boone wins the runoff 8–7 → _Boone_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2165_9vxcj7_star.yaml) |
 | [`bv2166_b7b8dv_star`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2166_b7b8dv_star.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too) → _Cass_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml) |
 | [`bv2167_f3dxq9_star`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2167_f3dxq9_star.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml) |
+| [`hillinger_t4_affine`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t4_affine.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 4, rescaled — what 'cardinal' actually guarantees → _Ana_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_affine.yaml) |
+| [`hillinger_t4_ev3`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t4_ev3.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 4 — three methods, three winners (EV-3 scale) → _Ana_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml) |
 | [`p3_manip_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — two voters bury their 4th choice and STAR elects their favourite → _Edinburgh_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_star.yaml) |
 | [`p3_sincere_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_sincere_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0) → _Dublin_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_sincere_star.yaml) |
 | [`bv2215_2p33qq_minority_winner`](../../method_comparisons/minority_winner/cases/cases_pages/bv2215_2p33qq_minority_winner.md) | `method_comparisons/minority_winner/cases/` | 1 | Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the majority's real choice (BV2215, 2p33qq) → _Cleo_ | [`.yaml`](../../method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml) |

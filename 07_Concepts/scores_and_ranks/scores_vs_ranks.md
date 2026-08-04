@@ -56,7 +56,7 @@ Four things this diagram is careful about, because popular versions of it usuall
 |---|---|---|
 | The question | "Which do you prefer?" | "How much do you like each?" |
 | Captures | Order only | Order **+ strength** |
-| Utility type | Ordinal utility | Cardinal utility (interval scale) |
+| Utility type | [Ordinal utility](../topics/cardinal_utility.md) | [Cardinal utility](../topics/cardinal_utility.md) (interval scale) |
 | Differences meaningful? | No — 1st vs. 2nd ≠ 2nd vs. 3rd | Yes — a 5 vs. a 3 is a real gap |
 | Familiar from | A race: 1st, 2nd, 3rd | Amazon / movie **five-star** reviews |
 | Methods | RCV-IRV, STV, Condorcet (Ranked Robin), Borda | STAR, Score, Approval (0/1) |

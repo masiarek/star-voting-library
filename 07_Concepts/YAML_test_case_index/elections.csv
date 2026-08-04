@@ -260,6 +260,8 @@ LH:hh41_02_preferences_ranked_robin,"Hamlin & Hua §4.1 — the assumed preferen
 LH:hh41_03_marks_read_pairwise,Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference,1,single-race,100,STAR,LH-only
 LH:hh41_04_stipulated_utilities_star,"Hamlin & Hua §4.1 — their own utility stipulation, on a 0-5 ballot: A 380, B 370, A wins",1,single-race,100,STAR,LH-only
 LH:hh41_05_majority_bullet_votes,"Hamlin & Hua §4.1 — the majority bullet-votes instead: A wins, same electorate",1,single-race,100,Approval,LH-only
+LH:hillinger_t4_affine,"Hillinger Table 4, rescaled — what 'cardinal' actually guarantees",1,single-race,30,STAR,LH-only
+LH:hillinger_t4_ev3,"Hillinger Table 4 — three methods, three winners (EV-3 scale)",1,single-race,30,STAR,LH-only
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
 LH:irv_district_A,Summability demo — RCV-IRV district A (B wins),1,single-race,13,IRV,LH-only
 LH:irv_district_B,Summability demo — RCV-IRV district B (B wins),1,single-race,13,IRV,LH-only

@@ -1,0 +1,42 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Hillinger Table 4, rescaled — what 'cardinal' actually guarantees
+ Tabulating 30 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ana, Bruno, Chloe
+     9 ×   Ana > Bruno > Chloe      (5, 3, 1)
+    10 ×   Bruno > Ana > Chloe      (3, 5, 1)
+    11 ×   Chloe > Ana > Bruno      (3, 1, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Chloe             11  Hopeful
+Bruno             10  Hopeful
+Ana                9  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bruno             19  Elected
+Chloe             11  Rejected
+Ana                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bruno
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Ana
+   Outside (2):        Bruno, Chloe
+   One member ⇒ Ana is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Bruno is OUTSIDE the Smith set. ✗
+      Every member of the set (Ana) beats Bruno head-to-head, yet
+      RCV-IRV elected Bruno anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

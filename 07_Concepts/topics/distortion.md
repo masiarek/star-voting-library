@@ -4,7 +4,7 @@
 
 **Level: 301 · deep dive** Builds on the [spatial model](spatial_voting_model.md) (201→301) and pairs with [VSE](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) — the average-case cousin of this worst-case metric.
 
-Companions: [What makes a good winner?](what_makes_a_good_winner.md) · [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — the same "utility is the ground truth" move, in code · [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the ballot-level distinction this measures · [Does Arrow apply to STAR?](arrow_theorem_and_star.md) — the *other* place the ordinal/cardinal line is load-bearing · [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — the assault on ordinal ballots from the economics side.
+Companions: [Cardinal utility](cardinal_utility.md) — what the "utilities" assumed below actually *are*, and whether they can be added up · [What makes a good winner?](what_makes_a_good_winner.md) · [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — the same "utility is the ground truth" move, in code · [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the ballot-level distinction this measures · [Does Arrow apply to STAR?](arrow_theorem_and_star.md) — the *other* place the ordinal/cardinal line is load-bearing · [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — the assault on ordinal ballots from the economics side.
 
 ---
 

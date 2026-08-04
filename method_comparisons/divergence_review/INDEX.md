@@ -6,12 +6,12 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **217** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **129** (59%) diverge from STAR under at least one method; **88** agree across the board.
+- Scanned **219** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **131** (60%) diverge from STAR under at least one method; **88** agree across the board.
 
 | Bucket | Count |
 |---|---:|
-| IRV_OUTLIER_RR_WITH_STAR | 28 |
+| IRV_OUTLIER_RR_WITH_STAR | 30 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
 | IRV_DIFFERS_ARTIFACT | 11 |
 | CYCLE_OR_THREE_WAY | 37 |
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (126 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (128 cases; identical library copies merged).
 
-### IRV_OUTLIER_RR_WITH_STAR — 27
+### IRV_OUTLIER_RR_WITH_STAR — 29
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
@@ -62,6 +62,10 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Beth** · IRV=Carl · RR=Beth · Approval=Beth · Score=Beth · Condorcet=Beth
 - **[bv2162_4htk44_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2162_4htk44_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml` (4c/103b)  
     STAR=**B** · IRV=A · RR=B · Approval=B · Score=B · Condorcet=B
+- **[hillinger_t4_affine](cases/IRV_OUTLIER_RR_WITH_STAR/hillinger_t4_affine.md)** — `method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_affine.yaml` (3c/30b)  
+    STAR=**Ana** · IRV=Bruno · RR=Ana · Approval=Ana · Score=Ana · Condorcet=Ana
+- **[hillinger_t4_ev3](cases/IRV_OUTLIER_RR_WITH_STAR/hillinger_t4_ev3.md)** — `method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml` (3c/30b)  
+    STAR=**Ana** · IRV=Bruno · RR=Ana · Approval=Ana · Score=Ana · Condorcet=Ana
 - **[pineapple_11pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_11pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_11pct.yaml` (11c/100b)  
     STAR=**Cheese** · IRV=Pineapple · RR=Cheese · Approval=Cheese · Score=Cheese · Condorcet=Cheese
 - **[pineapple_25pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_25pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_25pct.yaml` (5c/100b)  
