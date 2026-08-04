@@ -6,14 +6,14 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **215** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **128** (60%) diverge from STAR under at least one method; **87** agree across the board.
+- Scanned **216** single-winner STAR elections (skipped 155 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **129** (60%) diverge from STAR under at least one method; **87** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 28 |
 | STAR_OUTLIER_RR_WITH_IRV | 9 |
-| IRV_DIFFERS_ARTIFACT | 10 |
+| IRV_DIFFERS_ARTIFACT | 11 |
 | CYCLE_OR_THREE_WAY | 37 |
 | APPROVAL_OR_MINOR | 44 |
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (125 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (126 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 27
 
@@ -117,10 +117,13 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
     _flags: 1 tied-score ballot(s)_
 
-### IRV_DIFFERS_ARTIFACT — 10
+### IRV_DIFFERS_ARTIFACT — 11
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
+- **[03d_c5_b5_style-gallery-five-more](cases/IRV_DIFFERS_ARTIFACT/03d_c5_b5_style-gallery-five-more.md)** — `01_STAR/02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml` (5c/5b)  
+    STAR=**Clara** · IRV=Alice · RR=Clara · Approval=Clara · Score=Clara · Condorcet=Clara  
+    _flags: 4 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Clara, strict=Alice)_
 - **[display_options_demo](cases/IRV_DIFFERS_ARTIFACT/display_options_demo.md)** — `01_STAR/02_Examples/cases/display_options_demo.yaml` (4c/4b)  
     STAR=**Don** · IRV=Bob · RR=Don · Approval=Ann · Score=Bob · Condorcet=Don  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Don, strict=Bob)_
