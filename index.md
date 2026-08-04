@@ -7,15 +7,17 @@ hide:
      GitHub's repo view renders readme.md and ignores this file; MkDocs needs an index.md
      and doesn't recognize the lowercase readme.md as one.
 
-     This page adds the SITE-ONLY graphical hero (big headline, CTA buttons, the official
-     EVC ballot image — styled by 07_Concepts/about_this_repo/site_extra.css), then
-     inlines everything below readme.md's own text hero via the snippet-section markers
-     inside readme.md ([start:below-hero] … [end:below-hero]) — so the shared body still
-     has one source and the repo front page and site homepage can't drift.
+     The page opens on what the library IS, beside the official EVC ballot image — the
+     one graphic that earns its place above the fold (styled by
+     07_Concepts/about_this_repo/site_extra.css). The pitch headline and the four-stop
+     "New to STAR?" path used to live up here; they now sit in their own section further
+     down, so a visitor meets the library before the sales copy.
 
-     The two CTA buttons deliberately repeat stops 1 and 3 of the path below (that's what
-     an above-the-fold CTA is for). Keep their labels naming the SAME destination the stop
-     names — a button called something else reads as a second, different page. -->
+     Both halves are inlined from readme.md via its snippet-section markers — the hero
+     paragraph from [start:what-this-is], everything below it from [start:below-hero] —
+     so the repo front page and the site homepage share one source and can't drift.
+     Keep the two includes adjacent in that order: together they are readme.md read
+     straight through. -->
 
 <div class="star-hero" markdown="1">
 
@@ -23,12 +25,9 @@ hide:
 
 <p class="star-hero-kicker">⭐ STAR Voting — Score, Then Automatic Runoff</p>
 
-# Vote your heart. No more spoilers.
+# What this library is
 
-Score every candidate **0–5**; the two highest-scoring meet in an **automatic runoff**; whichever finalist more voters scored higher **wins**. One better ballot — and a winner the majority actually likes.
-
-[⭐ Start here — the five-minute intro](01_STAR/01_Learn/STAR_start_here.md){ .md-button .md-button--primary }
-[🗳️ Cast a ballot ↗](https://bettervoting.com/pet/vote){ .md-button }
+--8<-- "readme.md:what-this-is"
 
 </div>
 
