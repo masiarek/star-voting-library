@@ -1,0 +1,75 @@
+election_title: "BV2270 — a two-way Copeland tie where LH and BetterVoting elect DIFFERENT candidates"
+scenario_description: >-
+  Nine voters rank four trees for a street-planting commission, and the count lands on the
+  middle rung of the Ranked Robin tiebreak ladder — the rung the other cases in this folder
+  fall straight past. Alder and Birch finish level on pairwise wins: Alder beats Birch and
+  Cedar but loses to Dogwood; Birch beats Cedar and Dogwood but loses to Alder. Two wins
+  each, Copeland 2. Cedar and Dogwood take one each.
+
+  A tie of exactly two is where LH and BetterVoting part company, and this file is the case
+  that makes the parting visible. Neither engine reaches for a lot here — both have a
+  deterministic rung available, and the rungs disagree:
+
+    LH  rung 2 = TOTAL MARGIN.   Birch +3 (6-3 over Cedar, 5-4 over Dogwood, 4-5 to Alder)
+                                 beats Alder +1 (5-4, 5-4, 4-5). LH elects BIRCH.
+    BV  rung 2 = HEAD-TO-HEAD.   Alder and Birch played each other and Alder won it 5-4,
+                                 so BetterVoting elects ALDER.
+
+  Same ballots, same Copeland table, two derivable winners. This is a sharper divergence
+  than dead_heat_lot_tiebreak.yaml, where the ladders differ but both engines still end up
+  at a rung of last resort: here BOTH answers are computable from the ballots and they are
+  simply not the same answer. pref_voting's independent Copeland agrees with the tally and
+  declines to break the tie at all, returning the leader set {Alder, Birch} — which is the
+  honest position, since the disagreement is about the RULE, not about the count.
+
+  Note also that the whole field is one Smith set: Alder>Birch>Dogwood>Alder cycles, so
+  there is no Condorcet winner and the Copeland leaders understate how wide the contention
+  really is.
+
+  The election was minted to expose a BetterVoting DISPLAY defect, and it does: the results
+  page reads "Alder wins!" while the star and the gold table row sit on Birch, because the
+  page highlights by row position while the winner is decided by the ladder. Filed as
+  bettervoting#1480. Do not read the star on that page as BV's answer — BV's answer is
+  Alder, stated in the heading and in the export's `elected`.
+
+  Lesson: 05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md
+  Live results: https://bettervoting.com/8h4bvh/results
+
+# Machine-readable BV fields — build_bv_registry.py reads these.
+bv_test_id: BV2270
+bv_election_id: 8h4bvh
+bv_results_url: https://bettervoting.com/8h4bvh/results
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+# No lot_numbers: neither engine reaches a lot rung here. LH separates the two leaders on
+# total margin; BV separates them head-to-head. The tiebreak ORDER BV recorded
+# (tieBreakOrder: Cedar 0, Birch 1, Dogwood 2, Alder 3) decides nothing about the winner —
+# it only decides the ROW ORDER on the results page, which is what makes the display defect
+# visible. tieBreakType in the export is "none".
+options:
+  show_matrix: true
+  matrix_finalists_only: false
+  show_smith_set: true
+  brief: true
+  count_separator: "×"
+# Records: Birch 2-1-0 Copeland 2 margin +3; Alder 2-1-0 Copeland 2 margin +1;
+#   Dogwood 1-2-0 Copeland 1 margin -1; Cedar 1-2-0 Copeland 1 margin -3.
+#   Pairwise: Alder>Birch 5-4, Alder>Cedar 5-4, Dogwood>Alder 5-4, Birch>Cedar 6-3,
+#   Birch>Dogwood 5-4, Cedar>Dogwood 5-4. Smith set = all four.
+#   LH -> Birch (margin). BV -> Alder (head-to-head). pref_voting -> {Alder, Birch}.
+#
+# The three mirror-pair ballots (Alder>Birch>Cedar>Dogwood plus its exact reverse) were
+# cast on the live election to re-roll BV's display shuffle, which re-seeds on every vote.
+# They cancel on all six matchups, so the tally below is identical to the three-ballot
+# original: every margin, every Copeland score and both engines' winners are unchanged.
+ballots: |-
+  4:Alder>Birch>Cedar>Dogwood
+  3:Dogwood>Cedar>Birch>Alder
+  1:Birch>Cedar>Dogwood>Alder
+  1:Dogwood>Alder>Birch>Cedar
+
+expected_winners:
+  - Birch
+
+# file: bv2270_8h4bvh_head_to_head_vs_margin.yaml

@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**473 election files** (410 single-winner, 63 multi-winner) across 16 method(s).
+**474 election files** (411 single-winner, 63 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 248 |
 | RCV-IRV (Hare) | 28 |
-| Ranked Robin (RCV-RR / Copeland) | 71 |
+| Ranked Robin (RCV-RR / Copeland) | 72 |
 | Approval | 18 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -315,7 +315,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (71)
+## Ranked Robin (RCV-RR / Copeland)  (72)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -341,6 +341,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2261_y2fbpc_tiebreak_recorded_cycle`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2261_y2fbpc_tiebreak_recorded_cycle.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | BV2261 race 2 — a Condorcet cycle: every pair has a winner, and the tiebreak is still recorded → _Anika_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_cycle.yaml) |
 | [`bv2261_y2fbpc_tiebreak_recorded_draws`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2261_y2fbpc_tiebreak_recorded_draws.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | BV2261 race 1 — a perfectly balanced electorate: every pair draws, the tiebreak is recorded → _Anika_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/bv2261_y2fbpc_tiebreak_recorded_draws.yaml) |
 | [`bv2262_2gvwr9_nine_way_dead_heat`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2262_2gvwr9_nine_way_dead_heat.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | BV2262 — nine candidates, a nine-way dead heat: the recorded tiebreak still pins the winner → _Boris_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/bv2262_2gvwr9_nine_way_dead_heat.yaml) |
+| [`bv2270_8h4bvh_head_to_head_vs_margin`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | BV2270 — a two-way Copeland tie where LH and BetterVoting elect DIFFERENT candidates → _Birch_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/bv2270_8h4bvh_head_to_head_vs_margin.yaml) |
 | [`dead_heat_lot_tiebreak`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/dead_heat_lot_tiebreak.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/dead_heat_lot_tiebreak.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_ties.yaml) |
