@@ -8,7 +8,7 @@
 <!-- Invisible marker: the website homepage (index.md) inlines the paragraph below
      into its hero, beside the ballot image, under its own "What this library is"
      headline. Don't delete these comment lines. -->
-A library for learning, teaching, and debating **[STAR Voting](01_STAR/01_Learn/STAR_start_here.md)** (Score Then Automatic Runoff). It puts STAR first — and earns your trust by testing STAR honestly against every method it's compared to, with a real tabulation engine and runnable example elections behind every claim. The even-handedness *is* the argument: the STAR case is stronger because you can check it yourself.
+A library for learning, teaching, and debating **better voting methods** — [STAR](01_STAR/01_Learn/STAR_start_here.md) and its [bloc](02_STAR_Bloc/README.md) and [proportional](03_STAR_PR/README.md) forms, [Approval](04_Approval/README.md), [Ranked Robin](05_Ranked_Robin/01_Learn/ranked_robin.md) — with [choose-one, RCV-IRV and STV](06_Other/README.md) taught alongside them for honest comparison. STAR gets the most shelf space; no method here gets a free pass. Every claim is backed by a runnable example election, counted by real tabulation engines — including ones nobody here wrote, so a result is never just this library agreeing with itself. The even-handedness *is* the argument: you can check every claim yourself.
 <!-- --8<-- [end:what-this-is] -->
 
 <!-- --8<-- [start:below-hero] -->

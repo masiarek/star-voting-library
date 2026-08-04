@@ -12,7 +12,7 @@
 # them keep working.
 
 site_name: STAR Voting — Education & Test-Case Library
-site_description: Learn, teach, and debate STAR Voting — every claim backed by a runnable YAML election.
+site_description: Learn, teach, and debate better voting methods — STAR, Approval, Ranked Robin and more, every claim backed by a runnable YAML election.
 site_url: https://masiarek.github.io/star-voting-library/
 repo_url: https://github.com/masiarek/star-voting-library
 repo_name: masiarek/star-voting-library
