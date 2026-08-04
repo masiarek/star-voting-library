@@ -37,3 +37,29 @@ def test_all_relative_md_links_resolve():
         "\n(Fix the path, or use the img/REPLACE_*.png placeholder convention "
         "for screenshots not yet captured.)"
     )
+
+
+def test_no_new_hand_pasted_engine_reports():
+    """A long engine report on a companion page must be embedded, not pasted.
+
+    Pasted output has nothing behind it, so it silently stops matching the
+    engine — which is how the BV1815 page ended up showing a report format the
+    engine had stopped emitting. Embedding the `_tabulated` mirror tracks the
+    engine for free; a deliberate compression is fine but has to say `abridged`
+    on the fence so a reader knows it isn't verbatim.
+    """
+    mod = _load_hygiene()
+    pasted = mod.check_pasted_reports()
+    assert not pasted, (
+        f"{len(pasted)} companion page(s) with a hand-pasted engine report:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in pasted)
+    )
+
+
+def test_grandfather_list_only_shrinks():
+    """The pre-existing pasted reports are a burn-down list, not a parking lot."""
+    mod = _load_hygiene()
+    assert len(mod.PASTED_REPORT_GRANDFATHERED) <= 34, (
+        "PASTED_REPORT_GRANDFATHERED grew — a new page pasted a report and was "
+        "added to the exemption list instead of embedding the mirror."
+    )

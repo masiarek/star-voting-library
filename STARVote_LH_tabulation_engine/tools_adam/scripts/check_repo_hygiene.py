@@ -720,6 +720,119 @@ def check_pages_indexed():
     return sorted(missing)
 
 
+# --------------------------------------------------------------------------- #
+# Pasted engine reports on companion pages
+# --------------------------------------------------------------------------- #
+# CLAUDE.md already says it ("a pasted long report would go stale"), and it did:
+# the BV1815 companion page sat for months showing a pre-`[Bloc STAR: …]` report
+# the engine no longer emits. A pasted report has no test behind it, so nothing
+# notices. This gate makes the choice explicit — a long engine-shaped block on a
+# companion page is either an embed of the `_tabulated` mirror, which tracks the
+# engine for free, or it is labelled as an abridgement, which several pages
+# legitimately are (bv750's `a 15 ; b 15 ; c 15  ← three-way tie` is Adam's
+# compression for the lesson, not output, and should not be "fixed" into one).
+_REPORT_FENCE = re.compile(r"^([ \t]*)(```+|~~~+)([^\n]*)\n(.*?)^\1\2\s*$", re.S | re.M)
+_REPORT_SIGNS = [r"Scoring Round", r"Automatic Runoff Round", r"\[Score Distribution\]",
+                 r"^---.*Voting Method", r"^\s*Winners?\s*[—-]", r"Tabulating \d+ ballots",
+                 r"Runoff \(Preference\) Matrix", r"Condorcet Winner\]", r"tiebreaker"]
+_REPORT_MIN_LINES = 8
+_ABRIDGED = re.compile(r"abridged", re.I)
+
+# Pages that predate the gate. Each still shows a hand-pasted report, and 28 of
+# them have already drifted from what the engine emits today — mostly the switch
+# to bracketed `[STAR Voting: Scoring Round]` headers and the `Runoff math:`
+# block. They are listed rather than auto-converted because the fix differs per
+# page: some want the mirror embedded, some are part-abridgement and want the
+# label. Burn this list down; do not add to it.
+PASTED_REPORT_GRANDFATHERED = {
+    "01_STAR/03_Criteria/iia_cycle_spoiler/bv2212_g3f7r2_cycle_spoiler.md",
+    "01_STAR/03_Criteria/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md",
+    "01_STAR/03_Criteria/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md",
+    "01_STAR/03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md",
+    "01_STAR/03_Criteria/tie_break_dead_rung/bv126_ties_every_step_8fvd2x.md",
+    "01_STAR/03_Criteria/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.md",
+    "01_STAR/03_Criteria/tie_break_ladder/bv830_vb3xv2_no_condorcet_tie_score.md",
+    "01_STAR/04_Real_Elections/abstain_bugs/bv11_6xhfp8_full_equal_support.md",
+    "01_STAR/04_Real_Elections/abstain_bugs/bv655_jfrk9t_equal_opposition.md",
+    "01_STAR/04_Real_Elections/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_01_confirms_leader_r2pvc9.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_02_atom_reversal_yx9447.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_04_reversal_at_scale_bfjqmg.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_05_reversal_with_equal_support_xgkw3w.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_06_confirms_at_scale_d664xw.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_07_flat_ballot_bv_bug_tf73v9.md",
+    "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/Runoff_08_ca_governor_reversal_gvdy42.md",
+    "01_STAR/05_Practice/ex02_tenth_ballot.md",
+    "01_STAR/05_Practice/ex03_five_verdicts.md",
+    "01_STAR/05_Practice/ex04_olympics_1994.md",
+    "01_STAR/05_Practice/ex05_center_squeeze.md",
+    "01_STAR/05_Practice/ex06_bullet_backfire.md",
+    "02_STAR_Bloc/02_Examples/bv129_score_tiebreak_bloc.md",
+    "02_STAR_Bloc/02_Examples/bv130_bloc_pagination_731.md",
+    "02_STAR_Bloc/02_Examples/bv130r2_dead_rung_bloc.md",
+    "02_STAR_Bloc/02_Examples/bv131_guido_bloc.md",
+    "02_STAR_Bloc/02_Examples/bv132_verify_votes_bloc.md",
+    "02_STAR_Bloc/02_Examples/bv1525_condorcet_loser_bloc.md",
+    "02_STAR_Bloc/02_Examples/bv1835_8h3yrx_score_leader_no_seat.md",
+    "02_STAR_Bloc/02_Examples/bv2105_r4dqvd_ice_cream_bloc.md",
+    "02_STAR_Bloc/02_Examples/bv750_tie_breaking_bloc.md",
+    "05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/bv2140_48hjkv_most_pairwise_wins.md",
+    "05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2141_3r3yf7_four_degree_tie.md",
+}
+
+
+def _companion_pages():
+    """Hand-authored pages that shadow a generated case page: {path: mirror dir}."""
+    found = {}
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS and d != "site"]
+        if os.path.basename(dirpath) != "cases_pages":
+            continue
+        ydir = os.path.dirname(dirpath)
+        parent = os.path.dirname(ydir)
+        for fn in filenames:
+            if not fn.endswith(".md"):
+                continue
+            comp = os.path.join(parent, fn)
+            if os.path.isfile(comp):
+                found[comp] = os.path.join(ydir, "cases_tabulated",
+                                           fn[:-3] + "_tabulated.txt")
+    return found
+
+
+def check_pasted_reports():
+    """Return [(rel, problem)] for un-embedded, unlabelled engine reports."""
+    bad = []
+    for comp, mirror in sorted(_companion_pages().items()):
+        rel = os.path.relpath(comp, REPO).replace(os.sep, "/")
+        if rel in PASTED_REPORT_GRANDFATHERED:
+            continue
+        try:
+            text = open(comp, encoding="utf-8").read()
+        except OSError:
+            continue
+        for m in _REPORT_FENCE.finditer(text):
+            info, body = m.group(3), m.group(4)
+            if "--8<--" in body or _ABRIDGED.search(info):
+                continue
+            lines = [l for l in body.splitlines() if l.strip()]
+            if len(lines) < _REPORT_MIN_LINES:
+                continue          # short teaching snippets are fine (CLAUDE.md)
+            if sum(1 for s in _REPORT_SIGNS if re.search(s, body, re.M)) < 2:
+                continue
+            line_no = text[:m.start()].count("\n") + 1
+            how = (f"embed it — ```text\\n--8<-- \"{os.path.relpath(mirror, REPO)}\"\\n```"
+                   if os.path.isfile(mirror)
+                   else "embed the case's _tabulated mirror")
+            bad.append((f"{rel}:{line_no}",
+                        f"{len(lines)}-line engine report pasted by hand — {how}, "
+                        "or mark the fence ```text abridged if the compression is "
+                        "deliberate"))
+            break                 # one finding per page is enough to act on
+    return bad
+
+
 def main(argv):
     rc = 0
     hits = scan()
@@ -808,6 +921,20 @@ def main(argv):
         print(f"repo-hygiene: ⚠️  cases missing from an index README ({len(unlisted)}) — "
               "add them to the README (or move the folder off INDEX_COMPLETE_DIRS):")
         for rel, msg in unlisted:
+            print(f"   • {rel}\n       {msg}")
+    pasted = check_pasted_reports()
+    grandfathered = len(PASTED_REPORT_GRANDFATHERED)
+    if not pasted:
+        print("repo-hygiene: ✓ no hand-pasted engine reports on companion pages"
+              + (f" ({grandfathered} grandfathered — burn the list down)."
+                 if grandfathered else "."))
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  hand-pasted engine reports ({len(pasted)}) — nothing "
+              "tests a pasted report, so it goes stale the next time the engine's")
+        print("              output format changes (see CLAUDE.md, 'Route the short "
+              "snippet to the full report'):")
+        for rel, msg in pasted:
             print(f"   • {rel}\n       {msg}")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.
