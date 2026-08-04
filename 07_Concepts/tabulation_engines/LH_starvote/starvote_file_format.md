@@ -175,7 +175,7 @@ The fix is two characters (`"…"` → `f"…"`) and changes no winner: the mess
 UnbreakableTieError: Round 1: Scoring Round: three-way tie in Scoring Round
 ```
 
-Reproduce the *upstream* behaviour with a stock `pip install starvote==2.1.6`; it is unchanged on upstream `main` too (the same two lines, there numbered 1690 and 1717). See [`FORK_NOTES.md`](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) for the fork's record of the edit.
+Reproduce the *upstream* behaviour with a stock `pip install starvote==2.1.6`; it is unchanged on upstream `main` too (the same two lines, there numbered 1690 and 1717). Reported to Larry as [larryhastings/starvote#18](https://github.com/larryhastings/starvote/issues/18), separately from [#17](https://github.com/larryhastings/starvote/issues/17) (the SSS verbosity bug) because that one changes winners and this one cannot. See [`FORK_NOTES.md`](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) for the fork's record of the edit.
 
 ## The same election as repo YAML
 
