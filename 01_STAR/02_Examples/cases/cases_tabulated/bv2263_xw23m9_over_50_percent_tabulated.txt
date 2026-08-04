@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     over_50_percent_star_c3_b3.yaml
-TABULATED FILE:  over_50_percent_star_c3_b3_tabulated.txt
+SOURCE FILE:     bv2263_xw23m9_over_50_percent.yaml
+TABULATED FILE:  bv2263_xw23m9_over_50_percent_tabulated.txt
 ======================================================================
 
 election_title: "BV2263 — Over 50%: single-winner STAR, a candidate with every point on every ballot"
@@ -64,7 +64,7 @@ ballots: |-
 expected_winners:
   - A
 
-# file: over_50_percent_star_c3_b3.yaml
+# file: bv2263_xw23m9_over_50_percent.yaml
 
 ======================================================================
 TABULATION RESULTS

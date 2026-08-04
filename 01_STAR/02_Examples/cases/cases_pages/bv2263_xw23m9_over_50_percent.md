@@ -5,7 +5,7 @@ search:
 
 # BV2263 — Over 50%: single-winner STAR, a candidate with every point on every ballot
 
-*Generated from [`over_50_percent_star_c3_b3.yaml`](../over_50_percent_star_c3_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2263_xw23m9_over_50_percent.yaml`](../bv2263_xw23m9_over_50_percent.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** A
 
@@ -115,12 +115,12 @@ B          0  0  0  0  1  2  |     1   0.3
 C          0  0  0  0  0  3  |     0   0.0
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/over_50_percent_star_c3_b3_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2263_xw23m9_over_50_percent_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/02_Examples/cases/over_50_percent_star_c3_b3.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/02_Examples/cases/bv2263_xw23m9_over_50_percent.yaml
 ```
 
 ## See also

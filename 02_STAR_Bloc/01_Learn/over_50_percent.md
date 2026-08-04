@@ -10,9 +10,9 @@
 
 ## The ceiling case — over 50% of everything
 
-Start where there is nothing to argue about. Three voters, three candidates; every ballot gives A five stars, one voter gives B a single point, nobody scores C at all ([full count →](../../01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md) · [yaml](../../01_STAR/02_Examples/cases/over_50_percent_star_c3_b3.yaml) · **[live on BetterVoting ↗](https://bettervoting.com/xw23m9/results)** — BV2263 `xw23m9`, where BV's tally agrees line for line):
+Start where there is nothing to argue about. Three voters, three candidates; every ballot gives A five stars, one voter gives B a single point, nobody scores C at all ([full count →](../../01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md) · [yaml](../../01_STAR/02_Examples/cases/bv2263_xw23m9_over_50_percent.yaml) · **[live on BetterVoting ↗](https://bettervoting.com/xw23m9/results)** — BV2263 `xw23m9`, where BV's tally agrees line for line):
 
---8<-- "01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md:report"
+--8<-- "01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md:report"
 A wins on every denominator a STAR result has:
 
 | "Over 50%" of what? | A | how it's counted |

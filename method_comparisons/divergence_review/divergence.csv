@@ -9,8 +9,8 @@ AGREE,01_STAR/02_Examples/cases/06b_c9_runoff-overturns-leader.yaml,9,3,Carmen,C
 AGREE,01_STAR/02_Examples/cases/abstentions.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml,3,3,Bob,Bob,Bob,Bob,Bob,Bob,Bob,Bob,Bob,0,False,False,False
 AGREE,01_STAR/02_Examples/cases/bv2256_c8h3tb_traditional_style.yaml,5,3,Ella,Ella,Ella,Ella,Ella,Ella,Ella,Ella,Ella,0,False,False,False
+AGREE,01_STAR/02_Examples/cases/bv2263_xw23m9_over_50_percent.yaml,3,3,A,A,A,A,A,A,A,A,A,0,False,False,False
 AGREE,01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml,3,100,A,A,B,A,A,A,A,A,A,40,True,False,False
-AGREE,01_STAR/02_Examples/cases/over_50_percent_star_c3_b3.yaml,3,3,A,A,A,A,A,A,A,A,A,0,False,False,False
 AGREE,01_STAR/02_Examples/cases/quorum_demo_c3_b6.yaml,3,6,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,0,False,False,False
 AGREE,01_STAR/02_Examples/cases/quorum_fail_demo_c3_b6.yaml,3,6,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,Anna,0,False,False,False
 AGREE,01_STAR/02_Examples/cases/vote_splitting.yaml,3,36,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,DarkChoco,0,False,False,False

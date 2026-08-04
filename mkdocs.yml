@@ -829,6 +829,15 @@ plugins:
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/darkhorse_C10_largeV598_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/darkhorse_C10_largeV598_bloc_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/darkhorse_C10_largeV599_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/darkhorse_C10_largeV599_bloc_2.md
 
+        # --- A case renamed when it stopped being LH-only. The over-50% control
+        # was written without a BetterVoting election, published under its
+        # descriptive name, and then minted as BV2263 (xw23m9) an hour later — at
+        # which point the house rule (BV-backed cases lead with the bvid) applies.
+        # The old page URL is quoted in the PERMANENT description of xw23m9 and in
+        # a comment on bettervoting#1471, so this entry is load-bearing forever:
+        # deleting it 404s a link no one can edit. Verified live after the rename.
+        01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md: 01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md
+
 markdown_extensions:
   - admonition
   - attr_list
