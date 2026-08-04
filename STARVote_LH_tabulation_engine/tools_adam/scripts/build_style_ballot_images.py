@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-"""Render the voting-style ballot thumbnails used by 01_STAR/01_Learn/voting_styles/.
+"""Render the repo's 0-5 ballot art: the voting-style thumbnails and one-off figures.
 
 The original eight `style_*.png` files were captured by hand from Adam's slides.
-This script reproduces that design as SVG so new styles can be added without
+This script reproduces that design as SVG so new ballots can be added without
 going back to the deck: a title, a Worst..Best header, one row per candidate,
 and six bubbles (0-5) with the marked one filled in.
 
-    python3 build_style_ballot_images.py            # write SVG + PNG for every style
+Two families share the drawing code:
+  * the style gallery (01_STAR/01_Learn/voting_styles/), one thumbnail per style;
+  * page figures, which bring their own cast and their own img/ folder — a ballot
+    drawn as a ballot beats a box of ★ glyphs, which no two fonts align the same.
+
+    python3 build_style_ballot_images.py            # write SVG + PNG for every ballot
     python3 build_style_ballot_images.py --svg-only # skip rasterizing
 
 The PNG is what the docs embed (the repo's other ballot art is PNG, and GitHub's
@@ -21,12 +26,28 @@ import argparse
 import math
 import sys
 from pathlib import Path
+from typing import NamedTuple
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 IMG_DIR = REPO_ROOT / "01_STAR" / "01_Learn" / "voting_styles" / "img"
+LIMITS_IMG_DIR = REPO_ROOT / "01_STAR" / "01_Learn" / "properties_and_limits" / "img"
 
 # The five-candidate cast used by every style thumbnail on the hub page.
 CANDIDATES = ["Andre", "Blake", "Carmen", "David", "Ella"]
+
+# The six-candidate cast of the Test of Balance figure.
+BALANCE_CAST = ["Abby", "Ben", "Carmen", "DeAndre", "Eric", "Freya"]
+
+
+class Ballot(NamedTuple):
+    """One rendered ballot: who is on it, what was marked, and where it lands."""
+
+    title: str
+    cast: list[str]
+    scores: list[int | None]
+    out_dir: Path
+    quoted: bool = True  # gallery titles are shown in quotes; figures are not
+
 
 # Scores are 0-5; None means the row was left blank (which STAR counts as 0, but
 # the ballot shows no mark at all -- that distinction is the whole point of the
@@ -53,6 +74,27 @@ STYLES: dict[str, tuple[str, list[int | None]]] = {
     "style_protest_vote": ("Protest Vote", [None, 1, None, None, None]),
 }
 
+BALLOTS: dict[str, Ballot] = {
+    slug: Ballot(title, CANDIDATES, scores, IMG_DIR)
+    for slug, (title, scores) in STYLES.items()
+}
+
+# Page figures. The Test of Balance pair is one ballot and its exact opposite:
+# every row sums to 5, so the two together move no score total and cancel 1-1 in
+# the runoff. Keep them mirrors -- second = 5 - first, row for row.
+BALLOTS.update({
+    "balance_voter1": Ballot(
+        "Voter 1", BALANCE_CAST, [2, 1, 0, 1, 5, 4], LIMITS_IMG_DIR, quoted=False
+    ),
+    "balance_voter2": Ballot(
+        "Voter 2 — the exact opposite",
+        BALANCE_CAST,
+        [3, 4, 5, 4, 0, 1],
+        LIMITS_IMG_DIR,
+        quoted=False,
+    ),
+})
+
 # Palette sampled from the existing hand-made thumbnails.
 RUST = "#C0504D"          # title
 ROW_TINT = "#DCE6F1"      # alternating row background
@@ -63,7 +105,7 @@ INK = "#000000"
 
 FONT = "Arial Black, Arial Bold, Helvetica, sans-serif"
 
-W, H = 1600, 1160
+W = 1600
 TITLE_Y = 78
 HDR_WORST_Y = 168
 STAR_ROW_Y = 292
@@ -72,10 +114,16 @@ ROW_H = 158
 COL0_X = 630           # centre of the "0" column
 COL_DX = 174           # spacing between bubble columns
 NAME_X = 118
+BOTTOM_PAD = 18
 
 
 def col_x(i: int) -> float:
     return COL0_X + i * COL_DX
+
+
+def height_for(cast: list[str]) -> int:
+    """Canvas height: the grid grows a row at a time, the margins don't."""
+    return GRID_TOP + len(cast) * ROW_H + BOTTOM_PAD
 
 
 def star_points(cx: float, cy: float, r: float) -> list[tuple[float, float]]:
@@ -93,12 +141,15 @@ def star_path(cx: float, cy: float, r: float) -> str:
     return "M" + "L".join(pts) + "Z"
 
 
-def render_svg(title: str, scores: list[int | None]) -> str:
+def render_svg(ballot: Ballot) -> str:
+    title, cast, scores = ballot.title, ballot.cast, ballot.scores
+    H = height_for(cast)
+    shown = f"&quot;{title}&quot;" if ballot.quoted else title
     out: list[str] = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">',
         f'<rect width="{W}" height="{H}" fill="#FFFFFF"/>',
         f'<text x="30" y="{TITLE_Y}" font-family="{FONT}" font-size="66" font-weight="bold" '
-        f'fill="{RUST}">&quot;{title}&quot;</text>',
+        f'fill="{RUST}">{shown}</text>',
         f'<text x="{col_x(0) + 40}" y="{HDR_WORST_Y}" font-family="{FONT}" font-size="58" '
         f'font-weight="bold" fill="{INK}" text-anchor="middle">Worst</text>',
         f'<text x="{col_x(5)}" y="{HDR_WORST_Y}" font-family="{FONT}" font-size="58" '
@@ -118,7 +169,7 @@ def render_svg(title: str, scores: list[int | None]) -> str:
             f'font-weight="bold" fill="{INK}" text-anchor="middle">{i}</text>'
         )
 
-    for r, name in enumerate(CANDIDATES):
+    for r, name in enumerate(cast):
         top = GRID_TOP + r * ROW_H
         mid = top + ROW_H / 2
         if r % 2 == 0:
@@ -144,7 +195,7 @@ def render_svg(title: str, scores: list[int | None]) -> str:
                     f'<text x="{cx}" y="{mid + 16}" font-family="{FONT}" font-size="44" '
                     f'font-weight="bold" fill="{INK}" text-anchor="middle">{i}</text>'
                 )
-    bottom = GRID_TOP + len(CANDIDATES) * ROW_H
+    bottom = GRID_TOP + len(cast) * ROW_H
     out.append(f'<line x1="0" y1="{bottom}" x2="{W}" y2="{bottom}" stroke="{RULE}" stroke-width="7"/>')
     out.append("</svg>")
     return "\n".join(out)
@@ -168,19 +219,22 @@ def _font(size: int):
     return ImageFont.load_default(size)
 
 
-def rasterize(title: str, scores: list[int | None], png_path: Path) -> None:
+def rasterize(ballot: Ballot, png_path: Path) -> None:
     """Draw the ballot straight to a bitmap, mirroring render_svg's geometry."""
     from PIL import Image, ImageDraw
 
     def s(v: float) -> float:
         return v * SS
 
+    title, cast, scores = ballot.title, ballot.cast, ballot.scores
+    H = height_for(cast)
     img = Image.new("RGB", (W * SS, H * SS), "#FFFFFF")
     d = ImageDraw.Draw(img)
     f_title, f_hdr, f_scale = _font(66 * SS), _font(58 * SS), _font(60 * SS)
     f_name, f_bubble = _font(62 * SS), _font(44 * SS)
 
-    d.text((s(30), s(TITLE_Y)), f'"{title}"', font=f_title, fill=RUST, anchor="ls")
+    shown = f'"{title}"' if ballot.quoted else title
+    d.text((s(30), s(TITLE_Y)), shown, font=f_title, fill=RUST, anchor="ls")
     d.text((s(col_x(0) + 40), s(HDR_WORST_Y)), "Worst", font=f_hdr, fill=INK, anchor="ms")
     d.text((s(col_x(5)), s(HDR_WORST_Y)), "Best", font=f_hdr, fill=INK, anchor="ms")
 
@@ -191,7 +245,7 @@ def rasterize(title: str, scores: list[int | None], png_path: Path) -> None:
             d.polygon(pts, outline=STAR_OUTLINE, width=int(s(6)))
         d.text((s(cx), s(STAR_ROW_Y)), str(i), font=f_scale, fill=INK, anchor="ms")
 
-    for r, name in enumerate(CANDIDATES):
+    for r, name in enumerate(cast):
         top = GRID_TOP + r * ROW_H
         mid = top + ROW_H / 2
         if r % 2 == 0:
@@ -208,7 +262,7 @@ def rasterize(title: str, scores: list[int | None], png_path: Path) -> None:
                 d.ellipse(box, fill="#FFFFFF", outline=BUBBLE_STROKE, width=int(s(5)))
                 d.text((s(cx), s(mid + 16)), str(i), font=f_bubble, fill=INK, anchor="ms")
 
-    bottom = GRID_TOP + len(CANDIDATES) * ROW_H
+    bottom = GRID_TOP + len(cast) * ROW_H
     d.line([0, s(bottom), s(W), s(bottom)], fill=RULE, width=int(s(7)))
 
     img.resize((W, H), Image.LANCZOS).save(png_path, optimize=True)
@@ -220,6 +274,10 @@ def main() -> int:
     ap.add_argument("--only", help="render just this slug (e.g. style_null_ballot)")
     args = ap.parse_args()
 
+    if args.only and args.only not in BALLOTS:
+        print(f"! unknown slug {args.only!r}; known: {', '.join(BALLOTS)}", file=sys.stderr)
+        return 2
+
     want_png = not args.svg_only
     if want_png:
         try:
@@ -228,16 +286,16 @@ def main() -> int:
             print("! Pillow not installed -- writing SVG only", file=sys.stderr)
             want_png = False
 
-    IMG_DIR.mkdir(parents=True, exist_ok=True)
-    for slug, (title, scores) in STYLES.items():
+    for slug, ballot in BALLOTS.items():
         if args.only and slug != args.only:
             continue
-        svg_path = IMG_DIR / f"{slug}.svg"
-        svg_path.write_text(render_svg(title, scores))
+        ballot.out_dir.mkdir(parents=True, exist_ok=True)
+        svg_path = ballot.out_dir / f"{slug}.svg"
+        svg_path.write_text(render_svg(ballot))
         print(f"wrote {svg_path.relative_to(REPO_ROOT)}")
         if want_png:
-            png_path = IMG_DIR / f"{slug}.png"
-            rasterize(title, scores, png_path)
+            png_path = ballot.out_dir / f"{slug}.png"
+            rasterize(ballot, png_path)
             print(f"wrote {png_path.relative_to(REPO_ROOT)}")
     return 0
 

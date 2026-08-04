@@ -14,19 +14,12 @@ Pass that **Test of Balance** and you satisfy the **Equal Vote Criterion** (a.k.
 
 ## The picture: two exactly opposite ballots
 
-Two voters who disagree on *every* candidate, on a 0–5 ballot. Here are their two actual ballots — filled stars are the score given (★ = 1, out of 5). Voter 2's ballot is the mirror of Voter 1's: wherever one fills *s* stars, the other fills `5 − s`.
+Two voters who disagree on *every* candidate, on a 0–5 ballot. Here are their two actual ballots — the filled bubble is the score given. Voter 2's ballot is the mirror of Voter 1's: wherever one marks *s*, the other marks `5 − s`.
 
-```
-        VOTER 1                              VOTER 2  (the exact opposite)
-  ┌─────────────────────────┐          ┌─────────────────────────┐
-  │ Abby     ★★☆☆☆   2 │          │ Abby     ★★★☆☆   3 │
-  │ Ben      ★☆☆☆☆   1 │          │ Ben      ★★★★☆   4 │
-  │ Carmen   ☆☆☆☆☆   0 │          │ Carmen   ★★★★★   5 │
-  │ DeAndre  ★☆☆☆☆   1 │          │ DeAndre  ★★★★☆   4 │
-  │ Eric     ★★★★★   5 │          │ Eric     ☆☆☆☆☆   0 │
-  │ Freya    ★★★★☆   4 │          │ Freya    ★☆☆☆☆   1 │
-  └─────────────────────────┘          └─────────────────────────┘
-```
+<p>
+<img src="img/balance_voter1.png" width="330" alt="Voter 1's 0–5 ballot: Abby 2, Ben 1, Carmen 0, DeAndre 1, Eric 5, Freya 4.">
+<img src="img/balance_voter2.png" width="330" alt="Voter 2's ballot, the exact opposite: Abby 3, Ben 4, Carmen 5, DeAndre 4, Eric 0, Freya 1.">
+</p>
 
 Line them up and every row sums to 5 (an opposite score is `5 − s`):
 
