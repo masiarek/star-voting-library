@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**469 election files** (410 single-winner, 59 multi-winner) across 16 method(s).
+**470 election files** (410 single-winner, 60 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -22,7 +22,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 11 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
-| BLOC STAR | 25 |
+| BLOC STAR | 26 |
 | IRV | 19 |
 | PLURALITY | 26 |
 | RANGE | 2 |
@@ -474,13 +474,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (25)
+## BLOC STAR  (26)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex12_bloc_sweep`](../../01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md) | `01_STAR/05_Practice/cases/` | 2 | Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps → _Asa, Bram_ | [`.yaml`](../../01_STAR/05_Practice/cases/ex12_bloc_sweep.yaml) |
 | [`00_c3_b3_bloc-baseline-2-seats`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) → _Alice, Bruno_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/00_c3_b3_bloc-baseline-2-seats.yaml) |
 | [`01_c4_b2_bloc-star-2-seats`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | Bloc STAR Voting: 2-Seat Committee Election → _Don, Cal_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/01_c4_b2_bloc-star-2-seats.yaml) |
+| [`b484mbm_tie_every_rung`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | 3 candidates / 2 seats, Bloc STAR — tie at every rung (484mbm) → _Blythe, Arden_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/b484mbm_tie_every_rung.yaml) |
 | [`bloc_lot_path_dependence_a_c3_b5`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bloc_lot_path_dependence_a_c3_b5.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first) → _Nadia, Priya_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bloc_lot_path_dependence_a_c3_b5.yaml) |
 | [`bloc_lot_path_dependence_b_c3_b5`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bloc_lot_path_dependence_b_c3_b5.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | Bloc STAR — a seat-1 lot decides who wins seat 2 (lot B: Omar first) → _Omar, Nadia_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bloc_lot_path_dependence_b_c3_b5.yaml) |
 | [`bv129_score_tiebreak_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv129_score_tiebreak_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | BV129 — Bloc STAR, 3 cand / 2 winners: seat 2 by the score tiebreaker → _Carmen, Andre_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv129_score_tiebreak_bloc.yaml) |

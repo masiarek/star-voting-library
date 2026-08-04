@@ -103,51 +103,70 @@ Note `tiebreaker = none`. That is the point of the file: it tells the engine **n
 
 ### The report
 
-Run with `print averages` and `print maximum score` switched on, so it matches stock upstream output:
+`python -m starvote bloc_three_way.starvote`, with `print averages` and `print maximum score` switched on so it matches stock upstream output. It opens by restating the parameters it parsed out of `[options]` — a free check that the file said what you meant:
 
 ```text
 [Bloc STAR]
  Tabulating 3 ballots.
  Maximum score is 5.
  Want to fill 2 seats.
+```
 
+**Scoring round.** Every candidate collects one 3, one 4 and one 5:
+
+```text
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    a -- 12 (average 4) -- Tied for first place
    b -- 12 (average 4) -- Tied for first place
    c -- 12 (average 4) -- Tied for first place
  There's a three-way tie for first.
+```
 
+**First tiebreaker — the pairwise rung.** Read the number carefully: it is not matchups won, it is the count of **ballot-level preferences** each candidate collects across all its head-to-head matchups:
+
+```text
 [Bloc STAR: Round 1: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
    a             -- 3 -- Tied for first place
    b             -- 3 -- Tied for first place
    c             -- 3 -- Tied for first place
    No Preference -- 0
- There's still a three-way tie for first.
+```
 
+Each candidate also wins exactly one matchup 2–1 (b beats a, c beats b, a beats c — the cycle), so the rung ties on either reading: 3 + 3 + 3 = 9, which is 3 matchups × 3 ballots. `No Preference` is 0 because no ballot ever scores two candidates equally. (The repo's wrapper renders that bucket as **Equal Support**; upstream's own report keeps the older label.)
+
+**Second tiebreaker — the five-star rung**, which counts votes equal to the scale maximum. One each:
+
+```text
 [Bloc STAR: Round 1: Scoring Round: Second tiebreaker]
  The two candidates with the most votes of score 5 advance.
    a -- 1 -- Tied for first place
    b -- 1 -- Tied for first place
    c -- 1 -- Tied for first place
  There's still a three-way tie for first.
+```
 
+**And then it stops.** Every deterministic rung is exhausted and `tiebreaker = none` forbids a draw, so the engine declines to name a winner — the one outcome no other front door will give you:
+
+```text
 [Bloc STAR: Round 1: Scoring Round: Unbreakable Tie]
  Tie between a, b, and c.
 ```
 
-### Reading it
+Through the Python API the same election raises `UnbreakableTieError`; the CLI prints the block above and exits 0.
 
-**Scoring round — 12 each.** Every candidate collects one 3, one 4 and one 5. Nothing separates them.
+### The same election through the repo's wrapper
 
-**First tiebreaker — 3 each.** Read this line carefully: it is *not* a count of matchups won. It is the number of **ballot-level preferences** each candidate collects across all its head-to-head matchups. Each candidate does win exactly one matchup 2–1 (b beats a, c beats b, a beats c — the cycle), and the ballot tally ties too: 3 + 3 + 3 = 9, which is 3 matchups × 3 ballots. `No Preference` is 0 because no ballot ever scores two candidates equally. (The wrapper renders that bucket as **Equal Support**; upstream's own report keeps the older label.)
+The house `.yaml` door runs the identical ballots through the presentation layer, and because it supplies a lot-order tiebreaker it *does* seat two candidates. This is the full LH report, embedded from the generated case page so it tracks the engine rather than going stale (candidates renamed for the public BetterVoting election: a → Arden, b → Blythe, c → Corin):
 
-**Second tiebreaker — 1 each.** The five-star rung counts votes *equal to the scale maximum*. Each candidate holds exactly one 5. Tied again. This is the neighbour of the ["dead rung"](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) cases, where the rung reads 0–0 because nobody scored a 5 at all — here it fires and still cannot separate anyone.
+--8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md:report"
 
-**Unbreakable tie.** With every deterministic rung exhausted and `tiebreaker = none`, the engine stops. Through the Python API the same election raises `UnbreakableTieError`; the CLI prints the block above and exits 0.
+Same three rungs, same three ties — then the matrix, the Condorcet check, the `⚠ Lot-decided tie` warning, and the two seats filled by the lot. Side by side, the two reports are the clearest statement of what a tiebreak policy actually decides.
 
-### The same ballots, three different answers
+Two footnotes on the rungs. The five-star rung here is the neighbour of the ["dead rung"](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) cases, where it reads 0–0 because nobody scored a 5 at all — here it fires and *still* cannot separate anyone. And `tiebreaker = none` is what makes the refusal visible: every other setting would have quietly produced two winners from a ballot set that does not contain them.
+
+### The same ballots, four different answers
 
 Change nothing but the door, and the winners change:
 
@@ -156,8 +175,17 @@ Change nothing but the door, and the winners change:
 | `tiebreaker = none` (above) | refuses | **none — unbreakable tie** |
 | `.starvote` with `tiebreaker` omitted | `hashed_ballots` (deterministic from ballot content) | **a, c** |
 | the same election as repo `.yaml` | lot order, falling back to CSV column order `[a, b, c]` | **b, a** |
+| the same election [live on BetterVoting](https://bettervoting.com/484mbm/results) | seeded random draw | **b, a** |
 
 None of these is more correct than the others. When the ballots genuinely do not distinguish the candidates, the winner is decided by whatever tiebreak policy was configured *before* the count — which is the argument for publishing that policy in advance, and the reason the wrapper prints a `⚠ Lot-decided tie — rare` warning naming the fallback it used. See [Bloc STAR tiebreaks](../../../02_STAR_Bloc/01_Learn/bloc_tiebreaks.md) and [the full tie-breaking chain](../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md).
+
+### The same election on BetterVoting
+
+This election is live as **[`484mbm`](https://bettervoting.com/484mbm/results)** so the two engines can be read side by side, with the cast renamed for the public page: **a → Arden, b → Blythe, c → Corin**.
+
+BetterVoting elects **Blythe and Arden** — the same pair the repo wrapper picks, but by a different route, and its ladder is genuinely shorter: it **skips the pairwise rung whenever more than two candidates are tied** (`pairwise_too_many_candidates`) and goes straight from score to five-star to a seeded random draw. The LH engine computes that rung and reports it tied 3–3–3. Here the shortcut costs nothing; on ballots where pairwise *would* separate three tied candidates, the two engines would disagree.
+
+Worth knowing before citing a BV results page as evidence of a tie: round 0 records `tieBreakType: "random"`, but the **top-level `tieBreakType` reads `"none"` and `tied` is `[]`**, so the public page shows a flat 12/12/12 followed by a Blythe-vs-Arden runoff with nothing saying the finalists were drawn rather than earned. The two-view write-up — screenshot, BV's round logs, and the LH report with BV's draw pinned so the two reproduce each other — is [a three-way tie no rung can break](../../../02_STAR_Bloc/02_Examples/b484mbm_tie_every_rung.md).
 
 ## Errata — the unbreakable-tie message leaks a placeholder
 

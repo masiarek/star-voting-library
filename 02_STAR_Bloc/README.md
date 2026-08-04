@@ -73,6 +73,7 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 | BV1525 | 5c/4w — **Condorcet-loser ties for seat 1** (electowiki) | 4 | lot (seat 1) | LH reproduces First–Fourth; STAR 2.0 random-tie non-reproducible | [lesson](02_Examples/bv1525_condorcet_loser_bloc.md) · [count](02_Examples/cases/cases_pages/bv1525_condorcet_loser_bloc.md) · [yaml](02_Examples/cases/bv1525_condorcet_loser_bloc.yaml) |
 | BV2105 | Favorite ice cream demo | 2 | — | Failed (regression) | [lesson](02_Examples/bv2105_r4dqvd_ice_cream_bloc.md) · [count](02_Examples/cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md) · [yaml](02_Examples/cases/bv2105_r4dqvd_ice_cream_bloc.yaml) |
 | BV1835 | 5c/4w, **100 voters** — the score leader is the Condorcet loser and wins nothing (all four runoffs 51–49) | 4 | none | Passed (`8h3yrx`); LH and BV agree exactly | [lesson](02_Examples/bv1835_8h3yrx_score_leader_no_seat.md) · [count](02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md) · [yaml](02_Examples/cases/bv1835_8h3yrx_score_leader_no_seat.yaml) |
+| — (`484mbm`) | 3c/2s — **every rung ties** (score, pairwise, five-star) on rotating ballots | 2 | lot (seat 1) | LH reproduces BV once the perm is pinned; BV skips pairwise on 3-way ties and its top-level `tieBreakType` reads `none` | [lesson](02_Examples/b484mbm_tie_every_rung.md) · [count](02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md) · [yaml](02_Examples/cases/b484mbm_tie_every_rung.yaml) |
 
 ## Related
 

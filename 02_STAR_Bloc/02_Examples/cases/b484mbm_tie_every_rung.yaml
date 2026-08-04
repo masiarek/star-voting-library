@@ -1,0 +1,63 @@
+election_title: "3 candidates / 2 seats, Bloc STAR — tie at every rung (484mbm)"
+
+# BV tracker fields (read by tools_adam/scripts/build_bv_registry.py; engine ignores).
+# No bv_test_id on purpose: this case is named by its bvid, which is unique by
+# construction. The election's PERMANENT BetterVoting title reads "BV2263 — …",
+# which is wrong — BV2263 was minted concurrently for the over-50% control
+# (xw23m9) and a BV title cannot be edited or deleted. `484mbm` is the id to
+# quote; the number on the BV page should be ignored.
+bv_election_id: 484mbm
+bv_results_url: https://bettervoting.com/484mbm/results
+
+scenario_description: |-
+  The smallest election that ties all the way down. Three voters, three
+  candidates, two seats; the ballots rotate, so each voter's 3 / 4 / 5 lands on a
+  different candidate (Arden > Blythe > Corin > Arden, rock-paper-scissors).
+
+  Every deterministic rung comes back level. Scores: 12 = 12 = 12. Pairwise: each
+  candidate is preferred on 3 of the 9 matchup-ballots, and each wins exactly one
+  head-to-head 2-1, so the cycle ties on either reading. Five-star: one score-5
+  vote each. Nothing in the ballots separates the three, so the two seats are
+  filled entirely by whatever tie-breaking policy was published before the count.
+
+  That makes it a clean divergence probe, and the two engines take different
+  paths to the same pair. BetterVoting SKIPS the pairwise rung whenever more than
+  two candidates are tied (log `pairwise_too_many_candidates`), falls through
+  five-star, and settles seat 1 with its seeded random draw
+  perm = [Blythe, Arden, Corin] -> Blythe, then Arden. The LH engine DOES compute
+  the pairwise rung, finds it tied 3-3-3, and only then reaches its own
+  tiebreaker. Pinning lot_numbers to BV's perm reproduces BV exactly.
+
+  Also a live repro of the tieBreakType reporting gap already seen on BV130-r2:
+  round 0 carries `tieBreakType: "random"` and the logs name both draws, but the
+  top-level `tieBreakType` is `"none"` and `tied` is `[]` — so the summary a
+  reader sees does not say a seat was decided by lot.
+
+  Backs the .starvote input-format page, which runs the same election through
+  Larry Hastings' own CLI with the tiebreaker switched off, where it refuses to
+  pick anyone at all:
+  07_Concepts/tabulation_engines/LH_starvote/starvote_file_format.md
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: true
+  show_runoff_percent: true
+  brief: true
+
+num_winners: 2
+voting_method: Bloc STAR
+lot_numbers: [Blythe, Arden, Corin]   # BV's drawn perm — reproduces Blythe, Arden
+ballots: |-
+  Arden,Blythe,Corin
+  3,4,5
+  5,3,4
+  4,5,3
+
+expected_winners:
+  - Blythe
+  - Arden
+
+# file: b484mbm_tie_every_rung.yaml

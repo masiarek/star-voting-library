@@ -84,6 +84,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 3r3yf7,BV2141 — Ranked Robin — a Copeland tie that needs all four Equal-Vote tiebreak degrees,1,single-race,81,RankedRobin,BV
 3w6v4b,"Equal Support vs Abstention — minimal STAR test (A/B, 6 ballots)",1,single-race,5,STAR,BV
 3yr2qd,Block STAR,1,single-race,3,STAR,BV
+484mbm,"BV2263 — Bloc STAR — a three-way tie no rung can break (3 candidates, 2 seats)",1,single-race,3,STAR,BV
 48hjkv,"BV2140 — Ranked Robin worked example — most pairwise wins, with no Condorcet winner",1,single-race,35,RankedRobin,BV
 4gfwdq,BV2142 — Ranked Robin clone independence (1 of 2) — a no-Condorcet-winner cycle before cloning,1,single-race,33,RankedRobin,BV
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV

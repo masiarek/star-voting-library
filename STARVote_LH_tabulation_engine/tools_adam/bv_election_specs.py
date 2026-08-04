@@ -4776,6 +4776,9 @@ OVER_50_PERCENT_SPEC = {
 
 
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [TIE_EVERY_RUNG_BLOC_SPEC]   # tie at every rung (created -> 484mbm). NOTE: minted
+#   concurrently with OVER_50_PERCENT_SPEC below and both went out titled BV2263 — see that
+#   spec's note. 484mbm is filed by bvid, with no bv_test_id.
 # Previously: [OVER_50_PERCENT_SPEC]   # BV2263 — the over-50% ceiling case (created -> xw23m9)
 # Previously: [BLOC_SASS_100_SPEC]   # BV1835 — 100 voters, 4 seats, score leader shut out
 # Previously: [RANDOM_TIEBREAK_NINE_SPEC]   # BV2262 — nine-way dead heat, scale check
@@ -4810,3 +4813,49 @@ def spec_names(module=None):
         if val.get("title") and (val.get("candidates") or val.get("races")):
             out[name] = val
     return out
+
+
+# --- Tie at every rung — Bloc STAR, 3 candidates / 2 seats (created -> 484mbm) ---
+# Backs 02_STAR_Bloc/02_Examples/b484mbm_tie_every_rung.md and the .starvote
+# input-format page. Three rotating ballots (rock-paper-scissors): every candidate
+# totals 12, collects 3 pairwise ballot-preferences, and holds exactly one score-5
+# vote, so the scoring round, the pairwise rung and the five-star rung ALL tie and
+# the two seats are filled purely by tie-break policy.
+#
+# ⚠ NUMBERING COLLISION — DO NOT "FIX" THE TITLE. This election was minted in a
+# session whose collision gate could only see committed YAMLs (the _demo_dropbox
+# ledger was on an unmounted volume), concurrently with OVER_50_PERCENT_SPEC. Both
+# went out titled "BV2263 — …" and BV titles are permanent, so BV2263 names two
+# elections: xw23m9 (over-50% control) and 484mbm (this one). The repo resolves it
+# by giving BV2263 to xw23m9 and filing this case under its bvid with NO
+# bv_test_id — the bvid is unique by construction. Nothing here is re-runnable:
+# the spec is kept as the record of what was sent.
+TIE_EVERY_RUNG_BLOC_SPEC = {
+    "test_id": "BV2263",       # as sent — permanently on the election title; see the note above
+    "title": "Bloc STAR — a three-way tie no rung can break (3 candidates, 2 seats)",
+    "description": (
+        "Three voters, three candidates, two seats, scored 0-5. The ballots rotate: "
+        "one voter scores Arden 3 / Blythe 4 / Corin 5, the next Arden 5 / Blythe 3 / Corin 4, "
+        "the last Arden 4 / Blythe 5 / Corin 3. Every candidate therefore totals 12 stars, is "
+        "preferred on 3 ballots across the head-to-head matchups, and holds exactly one "
+        "score-5 vote — so the scoring round, the pairwise rung and the five-star rung all "
+        "come back tied. Nothing in the ballots distinguishes the three, and the two seats can "
+        "only be filled by whatever tie-breaking policy was published before the count. Run "
+        "through Larry Hastings' starvote engine with the tiebreaker switched off, it declines "
+        "to pick a winner at all. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/07_Concepts/tabulation_engines/"
+        "LH_starvote/starvote_file_format.html"
+    ),
+    "method": "STAR",          # BV has no separate "Bloc STAR" string: STAR + num_winners > 1
+    "num_winners": 2,
+    "enable_write_in": False,  # a write-in would destroy the tie this election exists to show
+    "candidates": ["Arden", "Blythe", "Corin"],
+    "ballots": [
+        [3, 4, 5],
+        [5, 3, 4],
+        [4, 5, 3],
+    ],
+    "expected": ("a perfect three-way tie; LH with tiebreaker=none refuses to decide, "
+                 "hashed_ballots gives Arden+Corin, the wrapper's lot order gives Blythe+Arden"),
+}
