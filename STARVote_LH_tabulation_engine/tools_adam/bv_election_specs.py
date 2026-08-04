@@ -4853,7 +4853,85 @@ ICE_CREAM_ABSTENTION_RECHECK_SPEC = {
 }
 
 
+# --- BV2270 — the head-to-head rung, and where the two tied candidates SIT --------
+# Purpose: a display-layer probe, not a tabulation probe. The WINNER here is fully
+# determined by the ballots — no lot, no shuffle — because the Copeland tie at the
+# top is exactly two candidates with a decisive match between them, which is BV's
+# rung 2 (head-to-head). What is NOT determined by the ballots is the ORDER the two
+# tied candidates appear in on the results page: `getSummaryData` sorts by
+# copelandScore then `tieBreakOrder`, and `tieBreakOrder` is the seeded shuffle
+# (rawVoteCount + hash(raceId)), which knows nothing about who beat whom.
+#
+# BetterVoting's results page stars/gold-highlights by ROW POSITION, so when the
+# shuffle puts the head-to-head LOSER first, the heading names one candidate and the
+# star sits on the other. That is the defect this election is minted to exhibit;
+# see bettervoting-qa issues/rr-winner-highlight-positional-vs-elected.md and #1166.
+#
+# Three voters, four candidates. Pairwise: Alder>Birch 2-1, Alder>Cedar 2-1,
+# Dogwood>Alder 2-1, Birch>Cedar 3-0, Birch>Dogwood 2-1, Cedar>Dogwood 2-1.
+# Copeland: Alder 2, Birch 2, Cedar 1, Dogwood 1 -> tie {Alder, Birch}, Alder wins
+# the runoff. NOTE: the shuffle re-rolls on every ballot cast ("the tiebreak priority
+# is reset after every vote"), so a MIRROR PAIR of ballots (one ranking + its exact
+# reverse) re-rolls the display order while leaving every pairwise winner and every
+# Copeland score untouched — that is the intended way to re-roll this election if the
+# first draw happens to agree with the head-to-head result.
+_HHT_CANDS = ["Alder", "Birch", "Cedar", "Dogwood"]
+#  ranks per candidate slot, 1 = top:  Alder>Birch>Cedar>Dogwood, etc.
+_HHT_BALLOTS = [[1, 2, 3, 4],   # Alder  > Birch  > Cedar   > Dogwood
+                [4, 1, 2, 3],   # Birch  > Cedar  > Dogwood > Alder
+                [2, 3, 4, 1]]   # Dogwood > Alder > Birch   > Cedar
+HEAD_TO_HEAD_ROW_ORDER_SPEC = {
+    "test_id": "BV2270",
+    "title": "Ranked Robin: two candidates tie on pairwise wins, and the head-to-head settles it",
+    "description": (
+        "Three voters rank four trees for a street-planting commission, and the count "
+        "lands on the middle rung of Ranked Robin's tiebreak ladder — the one that is "
+        "usually skipped past. Alder and Birch finish level on pairwise wins: Alder "
+        "beats Birch and Cedar but loses to Dogwood; Birch beats Cedar and Dogwood but "
+        "loses to Alder. Two wins each. Cedar and Dogwood have one each. "
+        "A three-way tie would fall through to a random draw, but a tie of exactly two "
+        "does not have to: Alder and Birch played each other, and Alder won that match "
+        "2-1, so BetterVoting settles it head-to-head and elects Alder. Nothing here "
+        "rests on chance — the winner follows from the ballots alone, and any reader "
+        "can check it by hand from the six matchups. "
+        "What does NOT follow from the ballots is the ORDER the two tied candidates "
+        "appear in on the results page. Candidates are sorted by pairwise wins and "
+        "then by BetterVoting's tiebreak order, which is a shuffle seeded from the "
+        "ballot count and the race id — deterministic, published in the results export, "
+        "and carrying no information at all about who beat whom. So the head-to-head "
+        "winner may be listed second. This election exists to make that visible. "
+        "Display-layer analysis and follow-up: "
+        "https://github.com/masiarek/bettervoting-qa/blob/master/issues/rr-winner-highlight-positional-vs-elected.md "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/05_Ranked_Robin/03_Criteria/rr_tiebreaks/index.html"),
+    "method": "RankedRobin",
+    "num_winners": 1,
+    "max_rankings": 4,
+    "enable_write_in": False,  # a write-in would add a fifth candidate and break the tie by 3
+    "candidates": _HHT_CANDS,
+    "ballots": _HHT_BALLOTS,
+    "expected": (
+        "Copeland: Alder 2, Birch 2, Cedar 1, Dogwood 1. Exactly two tied at the top "
+        "with a decisive match between them, so tieBreakType stays 'none' and the log "
+        "should read 'Alder preferred over Birch in runoff.' Winner: ALDER, derivable "
+        "from the ballots. The open variable is `tieBreakOrder`: if Birch draws the "
+        "lower value, Birch is row 0 and the results page will star and gold-highlight "
+        "BIRCH while the heading says Alder wins — the defect under test. If Alder "
+        "draws it, the page looks correct and the election needs a mirror pair of "
+        "ballots to re-roll the seed. Test ID BV2270."),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [HEAD_TO_HEAD_ROW_ORDER_SPEC]   # BV2270 — head-to-head rung vs row order
+#   (created -> 8h4bvh). Result as designed: Copeland Alder 2, Birch 2, Cedar 1, Dogwood 1;
+#   tieBreakType 'none'; log "Alder preferred over Birch in runoff."; winner ALDER.
+#   The first draw put Alder in row 0, so the page looked correct — THREE MIRROR PAIRS were
+#   then cast (a ranking plus its exact reverse: they cancel on every pairwise, so Copeland
+#   and the winner are untouched) to re-roll the seed, which resets on every vote. The third
+#   landed on a disagreeing order: 9 ballots, row 0 = Birch, winner still Alder. The results
+#   page then reads "Alder wins!" with the star AND the gold table row on Birch — filed as
+#   bettervoting#1480. (The sibling defect, the hard-coded single winner, is #1166 / PR #1479.)
 # Previously: [ICE_CREAM_ABSTENTION_RECHECK_SPEC]   # BV2105-r2 — ice cream partial-ballot
 #   re-check (created -> w3vvff). Result: the miscount STILL REPRODUCES on today's
 #   tabulator — nTallyVotes 2 / nAbstentions 2, identical to BV2105 (r4dqvd) in 2025.
