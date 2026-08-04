@@ -29,7 +29,7 @@ Follow the examples roughly in this order. The levels (101 → 201 → 301) matc
 
 6. **Read the full audit report.** The minimal on-screen report vs the complete `_tabulated.txt` (preference matrix + score distribution + the runoff/Condorcet blocks) → the `_tabulated/` siblings in [Runoff Reversal](02_Examples/runoff_overturns_leader/).
 7. **A real election, end to end.** A real 461-ballot BetterVoting STAR race, raw ballots → winner, read section by section → **["What Makes the Best Pet?"](04_Real_Elections/pet_real_bv_election/)**.
-8. **Edge cases & trust.** How ties resolve, and where BetterVoting's display diverges from the engine → [Flat scores, ties & tie-breaking](03_Criteria/Flat_scores_ties/) · [abstain / blank / zero handling](04_Real_Elections/abstain_bugs/).
+8. **Edge cases & trust.** How ties resolve → [the tie-break ladder](03_Criteria/tie_break_ladder/) · [abstain / blank / zero handling](04_Real_Elections/abstain_bugs/).
 
 ### Voting 301 — criteria & edge behavior
 
@@ -61,7 +61,6 @@ Five numbered buckets, in reading order. **Every method folder in the library us
 | [The teaching progression](02_Examples/) | 02 | 101 | The core sequence: the team-lunch example → three candidates → ballot styles → abstentions → quorum → vote-splitting → display options (one idea at a time). |
 | [Runoff Reversal — top scorer ≠ winner](02_Examples/runoff_overturns_leader/) | 02 | 101→301 | Real BetterVoting elections where the runoff **confirms** or **overturns** the score leader — STAR's headline lesson, plus the convincing-vs-jarring reversal pair. |
 | [Equal and opposite](03_Criteria/equal_and_opposite/) | 03 | 201 | The Test of Balance: two exact-opposite ballots cancel completely, and the winner never moves. |
-| [Flat scores, ties & tie-breaking](03_Criteria/Flat_scores_ties/) | 03 | 201 | Flat/tied scores meet the tiebreak cascade meet reporting — two-view cases exposing one tie behavior each (and BV bugs). |
 | [The tie-break ladder](03_Criteria/tie_break_ladder/) | 03 | 201 | The happy path: ties the deterministic rungs settle before the lot is ever reached. |
 | [The Majority Criterion](03_Criteria/majority_criterion/) | 03 | 301 | Two 5-voter elections isolating STAR's Majority-Criterion behavior (and the Relaxed Majority Criterion). |
 | [Favorite betrayal](03_Criteria/favorite_betrayal/) | 03 | 301 | The rare construction where STAR's FBC leak shows with numbers — and scoring your favorite lower pays. |
@@ -73,7 +72,7 @@ Five numbered buckets, in reading order. **Every method folder in the library us
 | [Abstain, blank & zero handling](04_Real_Elections/abstain_bugs/) | 04 | 201 | BetterVoting's abstain/blank/zero handling reproduced and cross-checked — the "0 tallied votes yet a winner" divergence. |
 | [Exercises — predict, then peek](05_Practice/README.md) | 05 | 201→301 | Fourteen worked problems with collapsible solutions: district consistency, the tenth-ballot participation paradox, five-verdicts-one-electorate, the 1994 Olympics ballots, center squeeze, bullet-vote backfire, the Equal Support reading drill, build-your-own reversal, a Ranked Robin cycle ladder, later-no-harm both ways, recruit-a-spoiler, Bloc-vs-proportional seats, the Approval threshold dilemma, and the STV transfer machine. |
 
-*Parked, not on the learning path: [two-candidate STAR](09_Parked/silly_two_cand_STAR/) — deliberately-trivial two-candidate cases. With only two candidates the runoff just echoes the scores, so there's nothing distinctive to learn; kept for completeness and as engine test fixtures.*
+*Parked, not on the learning path: [two-candidate STAR](09_Parked/silly_two_cand_STAR/) — deliberately-trivial two-candidate cases. With only two candidates the runoff just echoes the scores, so there's nothing distinctive to learn; kept for completeness and as engine test fixtures. And [flat scores & ties](09_Parked/Flat_scores_ties/) — eight ballots engineered to tie at every locus, swept on one page; the tie-breaking that teaches is [the ladder](03_Criteria/tie_break_ladder/) and [the dead rung](03_Criteria/tie_break_dead_rung/).*
 
 ---
 

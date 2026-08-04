@@ -2,7 +2,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2`).
 
-> 🪜 **The happy-path tiebreak.** This is the worked example from **[the STAR tie-breaking ladder](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)**, now a live election. It ties in **both** rounds — a three-way tie for the second finalist, then a two-way tie in the runoff — and settles **both with deterministic rungs** (five-star, then score). The pre-published **lot order is never consulted**, so LH and BetterVoting agree and the result is fully reproducible. It's the deliberate contrast to **[BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md)**, where every rung ties down to the random floor.
+> 🪜 **The happy-path tiebreak.** This is the worked example from **[the STAR tie-breaking ladder](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)**, now a live election. It ties in **both** rounds — a three-way tie for the second finalist, then a two-way tie in the runoff — and settles **both with deterministic rungs** (five-star, then score). The pre-published **lot order is never consulted**, so LH and BetterVoting agree and the result is fully reproducible. It's the deliberate contrast to **[BV555/`xmyf7k`](../../09_Parked/Flat_scores_ties/README.md#case-05)**, where every rung ties down to the random floor.
 
 **Level 201/301.** Two voters, six ice-cream flavors. Winner: **Strawberry**.
 
@@ -97,10 +97,10 @@ Full audit copy: [`_tabulated`](cases/cases_tabulated/bv2180_fp62p2_ice_cream_la
 
 ## BV vs LH
 
-Both engines elect **Strawberry** — confirmed against BetterVoting's frozen export ([`_bv_export.json`](cases/bv2180_fp62p2_ice_cream_ladder_bv_export.json)), whose Results record `tieBreakType: five_star` for the scoring round: BV broke the three-way tie by the five-star count, exactly as LH does. Unlike the 3-way dead heat, they *must* agree here: every tie is broken by a deterministic rung (five-star, then score), so no random shuffle is reached. That's what makes this case **freezable / BV-backable** where [BV555/`xmyf7k`](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) is LH-only.
+Both engines elect **Strawberry** — confirmed against BetterVoting's frozen export ([`_bv_export.json`](cases/bv2180_fp62p2_ice_cream_ladder_bv_export.json)), whose Results record `tieBreakType: five_star` for the scoring round: BV broke the three-way tie by the five-star count, exactly as LH does. Unlike the 3-way dead heat, they *must* agree here: every tie is broken by a deterministic rung (five-star, then score), so no random shuffle is reached. That's what makes this case **freezable / BV-backable** where [BV555/`xmyf7k`](../../09_Parked/Flat_scores_ties/README.md#case-05) is LH-only.
 
 ## See also
 
 - [The STAR tie-breaking ladder (full chain)](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md) — this is its worked example
-- [BV555 / `xmyf7k` — the 3-way tie that reaches the random floor](../Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) (the contrast case)
+- [BV555 / `xmyf7k` — the 3-way tie that reaches the random floor](../../09_Parked/Flat_scores_ties/README.md#case-05) (the contrast case)
 - [Dead-rung tie-breaks](../tie_break_dead_rung/) — when five-star has no 5s to weigh

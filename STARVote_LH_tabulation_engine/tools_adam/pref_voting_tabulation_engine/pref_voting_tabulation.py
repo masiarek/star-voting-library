@@ -308,7 +308,7 @@ if __name__ == "__main__":
         dirs = [os.path.join(REPO, "01_STAR", "02_Examples", "cases"),
                 os.path.join(REPO, "01_STAR", "02_Examples", "runoff_overturns_leader", "cases"),
                 os.path.join(REPO, "method_comparisons", "paradoxes_and_whoops", "cases"),
-                os.path.join(REPO, "01_STAR", "03_Criteria", "Flat_scores_ties", "cases"),
+                os.path.join(REPO, "01_STAR", "09_Parked", "Flat_scores_ties", "cases"),
                 os.path.join(REPO, "method_comparisons", "summability_demo", "cases"),
                 os.path.join(REPO, "YAML_library", "1_positive")]
         args = discover(dirs)

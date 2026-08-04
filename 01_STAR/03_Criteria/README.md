@@ -16,13 +16,14 @@ Levels follow the [curriculum](../../07_Concepts/CURRICULUM.md): 🟢 101 · �
 
 ## Ties & tie-breaking
 
-STAR resolves ties with a deterministic cascade (pairwise → five-star → lot). These three sets walk it from the happy path to the case where it runs out.
+STAR resolves ties with a deterministic cascade (pairwise → five-star → lot). These two sets walk it from the happy path to the case where it runs out.
 
 | Set | Level | What it shows |
 |---|:--:|---|
 | [The tie-break ladder](tie_break_ladder/) | 🟡 201 | The **happy path**: elections that tie but never reach the lot, because the deterministic rungs settle it. The live companion to [the tie-breaking doc](../01_Learn/Tie_Breaking_STAR/tie_breaking.md). |
 | [The dead rung](tie_break_dead_rung/) | 🔴 301 | When no tied candidate holds a 5, the five-star rung reads 0–0, the cascade has nothing left, and the **lot** decides. |
-| [Flat scores, ties & reporting](Flat_scores_ties/) | 🟡 201 | Where flat scores meet the cascade meet the result screen — two-view cases (BetterVoting's display beside the engine's report), each exposing one tie behavior. |
+
+The exhaustive sweep behind these two — eight ballots engineered to tie at every locus, including the fully-flat degenerate shapes — is kept off the path in [09_Parked](../09_Parked/Flat_scores_ties/README.md).
 
 ---
 

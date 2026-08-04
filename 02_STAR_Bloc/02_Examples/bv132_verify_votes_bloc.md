@@ -84,4 +84,4 @@ The frozen export localizes the defect precisely:
 - [#1407](https://github.com/Equal-Vote/bettervoting/issues/1407) — flat ballot mis-filed as abstention (the same root cause).
 - [#1035](https://github.com/Equal-Vote/bettervoting/issues/1035) — `NaN` on equal ties/preferences (same ballot family).
 - [#904](https://github.com/Equal-Vote/bettervoting/issues/904) — the export also labels `votingMethod: "STAR"` rather than "Bloc STAR".
-- Concept: [Flat scores, ties & tie-breaking](../../01_STAR/03_Criteria/Flat_scores_ties/README.md) · [why flat ballots don't change the winner](../../07_Concepts/topics/ties/why_contrived_tie_cases.md).
+- Concept: [Flat scores, ties & tie-breaking](../../01_STAR/09_Parked/Flat_scores_ties/README.md) · [why flat ballots don't change the winner](../../07_Concepts/topics/ties/why_contrived_tie_cases.md).

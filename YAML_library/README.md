@@ -32,6 +32,6 @@ voting_method: STAR
 
 ## History note
 
-Until 2026-07 this folder also held flattened copies of the `Runoff_*`, `Flat_scores_ties_*`, `Whoops_*`, and `center_squeeze_voteline_1d` teaching cases. They had already diverged from their canonical siblings and the test harness runs the canonical files directly, so the copies were removed. If you need one of those cases, use the canonical copies in their current homes: `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/`, `01_STAR/03_Criteria/Flat_scores_ties/cases/`, `method_comparisons/paradoxes_and_whoops/cases/`, and `method_comparisons/center_squeeze/cases/`.
+Until 2026-07 this folder also held flattened copies of the `Runoff_*`, `Flat_scores_ties_*`, `Whoops_*`, and `center_squeeze_voteline_1d` teaching cases. They had already diverged from their canonical siblings and the test harness runs the canonical files directly, so the copies were removed. If you need one of those cases, use the canonical copies in their current homes: `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/`, `01_STAR/09_Parked/Flat_scores_ties/cases/`, `method_comparisons/paradoxes_and_whoops/cases/`, and `method_comparisons/center_squeeze/cases/`.
 
 # file: README.md

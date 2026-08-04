@@ -75,7 +75,7 @@ Here is the payoff, and it is the whole reason this is a **third** protocol: on 
 
 ## Worked example 2 — even this reaches the floor
 
-No deterministic protocol can break a **perfectly symmetric** tie, and the Condorcet Tiebreaker is no exception. Take the repo's real three-way scoring tie, [Flat scores 05 (BV555, `xmyf7k`)](../../03_Criteria/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md) — two identical ballots, `A=B=C=5, D=E=4`:
+No deterministic protocol can break a **perfectly symmetric** tie, and the Condorcet Tiebreaker is no exception. Take the repo's real three-way scoring tie, [Flat scores 05 (BV555, `xmyf7k`)](../../09_Parked/Flat_scores_ties/README.md#case-05) — two identical ballots, `A=B=C=5, D=E=4`:
 
 ```
 Scoring Round

@@ -406,23 +406,44 @@ plugins:
         # their keys are untouched, but destinations that pointed into a
         # moved folder now name the new location, so the old published
         # URLs still resolve in one hop.
-        01_STAR/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_02_runoff_tie_2cand.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_02_runoff_tie_2cand.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_03_runoff_tie_split.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_03_runoff_tie_split.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_04_scoring_tie_2way.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_04_scoring_tie_2way.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_06_scoring_tie_4way.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_06_scoring_tie_4way.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_07_fully_flat.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_07_fully_flat.md
-        01_STAR/Flat_scores_ties/Flat_scores_ties_08_all_flat_zero_count.md: 01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_08_all_flat_zero_count.md
-        01_STAR/Flat_scores_ties/README.md: 01_STAR/03_Criteria/Flat_scores_ties/README.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_01_baseline_clean.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_01_baseline_clean.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_02_runoff_tie_2cand.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_02_runoff_tie_2cand.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_03_runoff_tie_split.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_03_runoff_tie_split.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_04_scoring_tie_2way.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_04_scoring_tie_2way.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md
-        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_08_all_flat_zero_count.md: 01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_08_all_flat_zero_count.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_02_runoff_tie_2cand.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_03_runoff_tie_split.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_04_scoring_tie_2way.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_06_scoring_tie_4way.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_07_fully_flat.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/Flat_scores_ties_08_all_flat_zero_count.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/README.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_01_baseline_clean.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_01_baseline_clean.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_02_runoff_tie_2cand.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_02_runoff_tie_2cand.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_03_runoff_tie_split.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_03_runoff_tie_split.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_04_scoring_tie_2way.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_04_scoring_tie_2way.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md
+        01_STAR/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_08_all_flat_zero_count.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_08_all_flat_zero_count.md
+        # --- Flat scores & ties moved off the criteria path (2026-08-03):
+        # eight one-per-case lessons collapsed into a single parked page, so
+        # every old per-case URL lands on that page. Same permanence rule as
+        # above: never delete these.
+        01_STAR/03_Criteria/Flat_scores_ties/README.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_01_baseline_clean.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_02_runoff_tie_2cand.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_03_runoff_tie_split.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_04_scoring_tie_2way.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_06_scoring_tie_4way.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_07_fully_flat.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/Flat_scores_ties_08_all_flat_zero_count.md: 01_STAR/09_Parked/Flat_scores_ties/README.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_01_baseline_clean.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_01_baseline_clean.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_02_runoff_tie_2cand.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_02_runoff_tie_2cand.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_03_runoff_tie_split.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_03_runoff_tie_split.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_04_scoring_tie_2way.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_04_scoring_tie_2way.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md
+        01_STAR/03_Criteria/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_08_all_flat_zero_count.md: 01_STAR/09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_08_all_flat_zero_count.md
         01_STAR/_main/README.md: 01_STAR/02_Examples/README.md
         01_STAR/_main/cases/cases_pages/02a_c3_b1_three-candidates.md: 01_STAR/02_Examples/cases/cases_pages/02a_c3_b1_three-candidates.md
         01_STAR/_main/cases/cases_pages/02b_c3_b2_three-candidates.md: 01_STAR/02_Examples/cases/cases_pages/02b_c3_b2_three-candidates.md

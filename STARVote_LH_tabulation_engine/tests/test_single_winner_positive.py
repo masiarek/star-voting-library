@@ -46,7 +46,7 @@ SINGLE_WINNER_DIRS = [
     REPO_ROOT / "01_STAR" / "03_Criteria" / "tie_break_dead_rung" / "lot_random_vs_published_jfk7pd",
     REPO_ROOT / "01_STAR" / "03_Criteria" / "tie_break_dead_rung" / "three_way_dead_rung_tie",
     REPO_ROOT / "01_STAR" / "05_Practice",
-    REPO_ROOT / "01_STAR" / "03_Criteria" / "Flat_scores_ties",
+    REPO_ROOT / "01_STAR" / "09_Parked" / "Flat_scores_ties",
     REPO_ROOT / "01_STAR" / "03_Criteria" / "iia_cycle_spoiler",
     REPO_ROOT / "01_STAR" / "04_Real_Elections" / "pet_real_bv_election",
     REPO_ROOT / "01_STAR" / "03_Criteria" / "tie_break_ladder",

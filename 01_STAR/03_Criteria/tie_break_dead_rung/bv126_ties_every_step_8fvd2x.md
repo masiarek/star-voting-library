@@ -83,4 +83,4 @@ Full audit copy: [`tie_break_dead_rung_tabulated/bv126_ties_every_step_8fvd2x_ta
 
 - [BV `jfk7pd`](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) and [BV131](../../../02_STAR_Bloc/02_Examples/bv131_guido_bloc.md) — the same random-tie phenomenon (single-winner and Bloc).
 - [BV132](../../../02_STAR_Bloc/02_Examples/bv132_verify_votes_bloc.md) — the flat-ballot-drop bug in Bloc.
-- [The "dead rung" case set](README.md) · [Flat scores, ties & tie-breaking](../Flat_scores_ties/README.md) — this case is the real-election version of both.
+- [The "dead rung" case set](README.md) · [Flat scores, ties & tie-breaking](../../09_Parked/Flat_scores_ties/README.md) — this case is the real-election version of both.

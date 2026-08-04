@@ -35,7 +35,7 @@ from pref_voting_tabulation import crosscheck, discover  # noqa: E402
 CROSS_DIRS = [
     str(REPO_ROOT / "01_STAR" / "02_Examples"),
     str(REPO_ROOT / "01_STAR" / "02_Examples" / "runoff_overturns_leader"),
-    str(REPO_ROOT / "01_STAR" / "03_Criteria" / "Flat_scores_ties"),
+    str(REPO_ROOT / "01_STAR" / "09_Parked" / "Flat_scores_ties"),
     str(REPO_ROOT / "method_comparisons" / "paradoxes_and_whoops"),
     str(REPO_ROOT / "method_comparisons" / "summability_demo"),
     str(REPO_ROOT / "method_comparisons" / "BV_Library"),

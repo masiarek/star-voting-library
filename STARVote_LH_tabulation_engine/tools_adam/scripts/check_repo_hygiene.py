@@ -526,7 +526,7 @@ def check_bv_case_md():
 # --------------------------------------------------------------------------- #
 INDEX_COMPLETE_DIRS = {
     # --- 01_STAR
-    "01_STAR/03_Criteria/Flat_scores_ties": None,
+    "01_STAR/09_Parked/Flat_scores_ties": None,
     "01_STAR/02_Examples": None,
     "01_STAR/04_Real_Elections/abstain_bugs": None,
     "01_STAR/03_Criteria/equal_and_opposite": None,

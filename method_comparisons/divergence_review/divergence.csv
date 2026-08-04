@@ -20,14 +20,14 @@ AGREE,01_STAR/02_Examples/cases/vote_splitting_scenario2_bloc_leads.yaml,3,36,Da
 AGREE,01_STAR/02_Examples/cases/vote_splitting_scenario3_outsider_wins.yaml,3,62,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,Vanilla,0,False,False,False
 AGREE,01_STAR/02_Examples/runoff_overturns_leader/cases/04_c4_b3_runoff-confirms-leader.yaml,4,3,Blue,Blue,Blue,Blue,Blue,Blue,Blue,Blue,Blue,0,False,False,False
 AGREE,01_STAR/02_Examples/runoff_overturns_leader/cases/reversal_convincing_c3_b100.yaml,3,100,Nora,Nora,Nora,Nora,Nora,Nora,Max,Nora,Nora,0,False,False,False
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_01_baseline_clean.yaml,3,2,Apple,Apple,Apple,Apple,Apple,Apple,Apple,Apple,Apple,0,False,False,False
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_02_runoff_tie_2cand.yaml,2,2,Almond,Almond,Brownie,Almond,Almond,Almond,Almond,,Almond,2,True,False,True
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_03_runoff_tie_split.yaml,3,2,Athens,Athens,Athens,Athens,Athens,Athens,Athens,,,0,False,False,True
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_04_scoring_tie_2way.yaml,3,3,Aral,Aral,Aral,Aral,Aral,Aral,Aral,Aral,Aral,2,False,False,False
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml,5,2,A,A,C,A,A,A,A,,A,2,True,False,True
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_06_scoring_tie_4way.yaml,5,2,Ava,Ava,Dan,Ava,Ava,Ava,Ava,,Ava,2,True,False,True
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_07_fully_flat.yaml,3,2,Ararat,Ararat,Cook,Ararat,Ararat,Ararat,Ararat,,Ararat,2,True,False,True
-AGREE,01_STAR/03_Criteria/Flat_scores_ties/cases/Flat_scores_ties_08_all_flat_zero_count.yaml,3,5,Anchovy,Anchovy,Caper,Anchovy,Anchovy,Anchovy,Anchovy,,Anchovy,5,True,False,True
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_01_baseline_clean.yaml,3,2,Apple,Apple,Apple,Apple,Apple,Apple,Apple,Apple,Apple,0,False,False,False
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_02_runoff_tie_2cand.yaml,2,2,Almond,Almond,Brownie,Almond,Almond,Almond,Almond,,Almond,2,True,False,True
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_03_runoff_tie_split.yaml,3,2,Athens,Athens,Athens,Athens,Athens,Athens,Athens,,,0,False,False,True
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_04_scoring_tie_2way.yaml,3,3,Aral,Aral,Aral,Aral,Aral,Aral,Aral,Aral,Aral,2,False,False,False
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_05_scoring_tie_3way_xmyf7k.yaml,5,2,A,A,C,A,A,A,A,,A,2,True,False,True
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_06_scoring_tie_4way.yaml,5,2,Ava,Ava,Dan,Ava,Ava,Ava,Ava,,Ava,2,True,False,True
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_07_fully_flat.yaml,3,2,Ararat,Ararat,Cook,Ararat,Ararat,Ararat,Ararat,,Ararat,2,True,False,True
+AGREE,01_STAR/09_Parked/Flat_scores_ties/cases/Flat_scores_ties_08_all_flat_zero_count.yaml,3,5,Anchovy,Anchovy,Caper,Anchovy,Anchovy,Anchovy,Anchovy,,Anchovy,5,True,False,True
 AGREE,01_STAR/03_Criteria/equal_and_opposite/cases/bv2219_36f4v2_equal_opposite_base.yaml,6,3,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,1,False,False,False
 AGREE,01_STAR/03_Criteria/equal_and_opposite/cases/bv2220_q8q9m7_equal_opposite_plus_cancel.yaml,6,5,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,Comet,3,False,False,False
 AGREE,01_STAR/03_Criteria/none_of_the_above/cases/bv215_26khr3_nota_wins.yaml,3,6,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,None of the Above,0,False,False,False

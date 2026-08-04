@@ -21,7 +21,7 @@
 ## 201.2 — Edge cases & trust
 
 - **Key terms:** unanimous ballots, ties / tiebreaker, abstention, equal-max ballot.
-- **See it:** [unanimous ballots](../../01_STAR/02_Examples/cases/cases_pages/05a_c5_b3_unanimous-ballots.md); the tie-break cascade in [Flat scores, ties & tie-breaking](../../01_STAR/03_Criteria/Flat_scores_ties/) and the [dead-rung](../../01_STAR/03_Criteria/tie_break_dead_rung/) set; abstention handling in [abstain_bugs](../../01_STAR/04_Real_Elections/abstain_bugs/).
+- **See it:** [unanimous ballots](../../01_STAR/02_Examples/cases/cases_pages/05a_c5_b3_unanimous-ballots.md); the tie-break cascade in [Flat scores, ties & tie-breaking](../../01_STAR/09_Parked/Flat_scores_ties/) and the [dead-rung](../../01_STAR/03_Criteria/tie_break_dead_rung/) set; abstention handling in [abstain_bugs](../../01_STAR/04_Real_Elections/abstain_bugs/).
 
 ## 201.3 — Nomenclature: RCV vs IRV vs RCV-IRV
 
