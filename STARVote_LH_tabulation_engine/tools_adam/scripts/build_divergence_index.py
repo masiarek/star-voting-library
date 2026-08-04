@@ -591,7 +591,7 @@ def main():
             "Condorcet_strict", "tie_ballots", "irv_fragile",
             "rr_conv_sensitive", "cycle"]
     with (OUT_DIR / "divergence.csv").open("w", newline="", encoding="utf-8-sig") as fh:
-        wri = csv.DictWriter(fh, fieldnames=cols)
+        wri = csv.DictWriter(fh, fieldnames=cols, lineterminator="\n")  # LF, not csv's default CRLF
         wri.writeheader()
         for r in sorted(rows, key=lambda x: (x["bucket"], x["file"])):
             wri.writerow({k: r.get(k, "") for k in cols})

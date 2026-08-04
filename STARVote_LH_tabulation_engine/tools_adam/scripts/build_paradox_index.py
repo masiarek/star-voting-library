@@ -198,7 +198,7 @@ def main():
     with open(OUT_MD, "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
     with open(OUT_CSV, "w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")  # LF, not csv's default CRLF
         w.writerow(["paradox", "kind", "case_title", "method", "expected_winners",
                     "bv_test_id", "bv_election_id", "yaml_path"])
         for tag in sorted(by_tag, key=lambda t: list(VOCAB).index(t)):
