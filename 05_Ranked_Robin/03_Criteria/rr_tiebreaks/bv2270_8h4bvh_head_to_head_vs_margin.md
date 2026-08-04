@@ -71,6 +71,8 @@ Worth saying plainly, because the win–loss table hides it: this field is a **[
 
 So the top two rows of the record understate the contention. Ranked Robin is Smith-efficient, so whichever of Alder or Birch is picked is inside the set and the method has done its job; but "who *should* win a cycle" is exactly the question [Minimax, Ranked Pairs and Schulze answer differently](../../01_Learn/cycle_resolution.md), and rung 2 of a Copeland ladder is a very thin place to be answering it.
 
+(The count embedded below is the lead section only. The engine's Smith-set analysis is one click away, in the folded audit on the [full page](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md).)
+
 ## Why this election exists — and a warning about its results page
 
 BV2270 was minted to demonstrate a **display** defect in BetterVoting, reported as [bettervoting#1480](https://github.com/Equal-Vote/bettervoting/issues/1480). The results page highlights winners by **row position**, but the winner comes from the ladder — and here those disagree:
