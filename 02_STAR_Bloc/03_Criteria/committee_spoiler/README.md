@@ -6,7 +6,7 @@
 
 → The method: [Bloc STAR](../../01_Learn/bloc_star.md) · the single-winner version: [IIA & the cycle spoiler](../../../01_STAR/03_Criteria/iia_cycle_spoiler/README.md)
 
-**Level: 301 · deep dive.** Two elections, 2 seats each, seven voters who never change their minds about anyone.
+**Level: 301 · deep dive** Two elections, 2 seats each, seven voters who never change their minds about anyone.
 
 ---
 

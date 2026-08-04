@@ -6,7 +6,7 @@
 
 → The method: [Bloc STAR](../../01_Learn/bloc_star.md) · the concession list this belongs on: [honest limits](../../01_Learn/bloc_honest_limits.md) · the single-winner paradox page: [no-show](../../../07_Concepts/voting_paradoxes/no_show.md)
 
-**Level: 301 · deep dive.** Two elections, same 4 candidates, 2 seats. The second is the first plus one ballot.
+**Level: 301 · deep dive** Two elections, same 4 candidates, 2 seats. The second is the first plus one ballot.
 
 ---
 

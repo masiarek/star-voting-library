@@ -6,7 +6,7 @@
 
 → The method: [Bloc STAR](../../01_Learn/bloc_star.md) · the single-winner version of the same tension: [three notions of "winner"](../../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)
 
-**Level: 201.** One election, 4 candidates, 7 voters, 2 seats — small enough to check the pairwise table by hand.
+**Level: 201 · for debaters** One election, 4 candidates, 7 voters, 2 seats — small enough to check the pairwise table by hand.
 
 ---
 
