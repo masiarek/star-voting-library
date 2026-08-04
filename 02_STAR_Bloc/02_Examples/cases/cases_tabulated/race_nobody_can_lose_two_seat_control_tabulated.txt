@@ -1,0 +1,152 @@
+======================================================================
+SOURCE FILE:     race_nobody_can_lose_two_seat_control.yaml
+TABULATED FILE:  race_nobody_can_lose_two_seat_control_tabulated.txt
+======================================================================
+
+election_title: "A race nobody can lose — the two-seat control"
+
+scenario_description: |-
+  The control for BV2269 (bv2269_t488h9_race_nobody_can_lose.yaml): the SAME
+  seven ballots and the same three candidates, with one seat removed. Two
+  seats from three candidates is an ordinary Bloc STAR election, so the LH
+  engine counts it without complaint — which is what isolates the degenerate
+  ingredient in the other file. Nothing about these ballots is malformed; the
+  only thing wrong there is the seat count.
+
+  Scoring round Abby 28, Bruno 23, Celia 16. Seat 1 runoff Abby 5 - Bruno 2,
+  seat 2 runoff Bruno 5 - Celia 2, with every voter expressing a preference in
+  both. Celia, the candidate who takes the third seat by default when there is
+  a third seat, wins nothing here.
+
+  LH-only: this control was never minted on BetterVoting. The BV half of the
+  pair is the three-seat file.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+
+ballots: |-
+  Abby,Bruno,Celia
+  5,3,1
+  5,4,0
+  4,3,2
+  5,2,3
+  3,5,1
+  2,5,4
+  4,1,5
+
+expected_winners:
+  - Abby
+  - Bruno
+
+# file: race_nobody_can_lose_two_seat_control.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== A race nobody can lose — the two-seat control ===
+  The control for BV2269 (bv2269_t488h9_race_nobody_can_lose.yaml): the SAME
+  seven ballots and the same three candidates, with one seat removed. Two
+  seats from three candidates is an ordinary Bloc STAR election, so the LH
+  engine counts it without complaint — which is what isolates the degenerate
+  ingredient in the other file. Nothing about these ballots is malformed; the
+  only thing wrong there is the seat count.
+
+  Scoring round Abby 28, Bruno 23, Celia 16. Seat 1 runoff Abby 5 - Bruno 2,
+  seat 2 runoff Bruno 5 - Celia 2, with every voter expressing a preference in
+  both. Celia, the candidate who takes the third seat by default when there is
+  a third seat, wins nothing here.
+
+  LH-only: this control was never minted on BetterVoting. The BV half of the
+  pair is the three-seat file.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |   * Abby   | * Bruno   |   Celia   |
+-----------------------------------------------------
+      * Abby > |    ---     |5 - 0 - 2  |5 - 0 - 2  |
+     * Bruno > | 2 - 0 - 5  |   ---     |5 - 0 - 2  |
+       Celia > | 2 - 0 - 5  |2 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Abby — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Celia — loses every head-to-head matchup
+
+--- Bloc STAR Voting Method (2 winners) ---
+[Bloc STAR]
+ Tabulating 7 ballots to fill 2 seats.
+Abby,Bruno,Celia
+   5,    3,    1
+   5,    4,    0
+   4,    3,    2
+   5,    2,    3
+   3,    5,    1
+   2,    5,    4
+   4,    1,    5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Abby       3  2  1  1  0  0  |    28   4.0
+Bruno      2  1  2  1  1  0  |    23   3.3
+Celia      1  1  1  1  2  1  |    16   2.3
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Abby          -- 28 -- First place
+   Bruno         -- 23 -- Second place
+   Celia         -- 16
+ Abby and Bruno advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Abby          -- 5 -- First place
+   Bruno         -- 2
+   Equal Support -- 0
+ Abby wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Abby 5 (71%)  ·  Bruno 2 (29%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 23 -- First place
+   Celia         -- 16 -- Second place
+ Bruno and Celia advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 5 -- First place
+   Celia         -- 2
+   Equal Support -- 0
+ Bruno wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Bruno 5 (71%)  ·  Celia 2 (29%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Abby
+ Bruno

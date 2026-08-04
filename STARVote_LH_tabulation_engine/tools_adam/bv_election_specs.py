@@ -4859,3 +4859,60 @@ TIE_EVERY_RUNG_BLOC_SPEC = {
     "expected": ("a perfect three-way tie; LH with tiebreaker=none refuses to decide, "
                  "hashed_ballots gives Arden+Corin, the wrapper's lot order gives Blythe+Arden"),
 }
+
+
+# --- Degenerate seat count — 3 candidates for 3 seats (§2.4 of the Bloc scenario list) ---
+# A behaviour PROBE, not a lesson: the LH engine refuses this election outright
+# ("cannot fill 3 seats from 3 candidate(s)", exit 1), and the only way to learn
+# whether BetterVoting refuses it too is to create one. Adam authorised the mint
+# on 2026-08-04 after it was held back on 2026-08-04 as his call to make.
+#
+# The ballots are deliberately decisive on their own terms — totals 28/23/16, and
+# each runoff won 5-2 — so nothing here rests on a tie-break and the SEAT ORDER
+# stays reproducible even though the membership is a foregone conclusion.
+# Write-ins MUST stay off: one write-in supplies the fourth candidate the whole
+# premise excludes.
+DEGENERATE_SEATS_SPEC = {
+    "test_id": "BV2269",
+    "title": "Three candidates, three seats — a race nobody can lose",
+    "description": (
+        "Three candidates for three seats, scored 0-5 by seven voters. There are exactly as "
+        "many seats as candidates, so every candidate is seated no matter how anyone votes — "
+        "the membership of this board is settled before a single ballot is cast. "
+        "The election exists to ask a question about tabulators rather than to teach a result. "
+        "Larry Hastings' starvote engine refuses an election of this shape outright: it stops "
+        "with 'cannot fill 3 seats from 3 candidate(s) — num_winners must be smaller than the "
+        "number of candidates' and counts nothing. BetterVoting's bloc tabulator takes a seat "
+        "count and runs rounds until the candidates are used up, so the question is whether it "
+        "accepts the race, seats all three, and prints a scoring round and an automatic runoff "
+        "for a contest that cannot decide anything. Whatever it does is recorded on the lesson "
+        "page linked below. "
+        "The ballots are ordinary and fully decisive on their own terms — Abby totals 28 stars, "
+        "Bruno 23, Celia 16, and each automatic runoff is won 5-2 with no voter at Equal "
+        "Support — so the SEAT ORDER carries real information even though the membership does "
+        "not, and no part of the result rests on a tie-break. Write-ins are off, because a "
+        "single write-in would supply the fourth candidate the premise excludes. "
+        "This shape is not exotic: an organisation creates it by accident every time "
+        "nominations exactly fill the board. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/index.html"
+    ),
+    "method": "STAR",          # BV has no separate "Bloc STAR" string: STAR + num_winners > 1
+    "num_winners": 3,
+    "enable_write_in": False,  # a write-in would give the race a loser and void the probe
+    "candidates": ["Abby", "Bruno", "Celia"],
+    "ballots": [
+        [5, 3, 1],
+        [5, 4, 0],
+        [4, 3, 2],
+        [5, 2, 3],
+        [3, 5, 1],
+        [2, 5, 4],
+        [4, 1, 5],
+    ],
+    "expected": (
+        "LH refuses the file (exit 1, no tally). BetterVoting: unknown before the mint — that "
+        "is the probe. If it accepts, expect all three seated in score order Abby, Bruno, "
+        "Celia, with round 1 Abby 5 - Bruno 2, round 2 Bruno 5 - Celia 2, and a third round "
+        "with a single candidate and nothing to run against. Test ID BV2269."),
+}

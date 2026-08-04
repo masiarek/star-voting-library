@@ -1,0 +1,48 @@
+election_title: "A race nobody can lose — the two-seat control"
+
+scenario_description: |-
+  The control for BV2269 (bv2269_t488h9_race_nobody_can_lose.yaml): the SAME
+  seven ballots and the same three candidates, with one seat removed. Two
+  seats from three candidates is an ordinary Bloc STAR election, so the LH
+  engine counts it without complaint — which is what isolates the degenerate
+  ingredient in the other file. Nothing about these ballots is malformed; the
+  only thing wrong there is the seat count.
+
+  Scoring round Abby 28, Bruno 23, Celia 16. Seat 1 runoff Abby 5 - Bruno 2,
+  seat 2 runoff Bruno 5 - Celia 2, with every voter expressing a preference in
+  both. Celia, the candidate who takes the third seat by default when there is
+  a third seat, wins nothing here.
+
+  LH-only: this control was never minted on BetterVoting. The BV half of the
+  pair is the three-seat file.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+
+ballots: |-
+  Abby,Bruno,Celia
+  5,3,1
+  5,4,0
+  4,3,2
+  5,2,3
+  3,5,1
+  2,5,4
+  4,1,5
+
+expected_winners:
+  - Abby
+  - Bruno
+
+# file: race_nobody_can_lose_two_seat_control.yaml

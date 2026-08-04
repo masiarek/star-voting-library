@@ -1,0 +1,71 @@
+election_title: "BV2269 — Three candidates, three seats: a race nobody can lose"
+
+scenario_description: |-
+  A behaviour probe, not a lesson with a winner. Three candidates stand for
+  three seats, so every candidate is seated no matter how anyone votes — the
+  membership of the board is settled before a single ballot is cast. The
+  question is what a tabulator does with a contest that cannot decide anything.
+
+  THIS FILE DOES NOT TABULATE, AND THAT IS THE POINT. The LH engine refuses an
+  election of this shape outright:
+
+      Error: cannot fill 3 seats from 3 candidate(s).
+        num_winners must be smaller than the number of candidates.
+
+  It exits 1 and counts nothing. There is no _tabulated mirror and no
+  expected_winners, because the engine never produces winners. The sibling
+  file race_nobody_can_lose_two_seat_control.yaml holds the SAME seven ballots
+  with one seat removed, and counts normally — that is the control.
+
+  BetterVoting answers the other way: it accepts the race (BV2269, t488h9) and
+  seats all three, in score order Abby, Bruno, Celia. Seats 1 and 2 run real
+  STAR rounds — scoring round 28 / 23 / 16, then runoffs won 5-2 and 5-2, no
+  voter at Equal Support, tieBreakType "none" throughout — so the SEAT ORDER
+  carries real information even though the membership does not. The third
+  round has one candidate and nothing to run against, and BV neither prints a
+  phantom runoff nor leaves a silent gap: the results page reads "Celia is the
+  only candidate, and wins by default", and the round's JSON carries an empty
+  runner_up and an empty logs array.
+
+  Neither engine is wrong. LH treats "seats >= candidates" as a spoiled
+  premise and refuses to pretend; BV accepts it and degrades gracefully into
+  saying so. The shape is not exotic — an organisation creates it by accident
+  every time nominations exactly fill the board.
+
+  Write-ins were disabled on the BV election on purpose: a single write-in
+  would supply the fourth candidate the premise excludes.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 3
+voting_method: Bloc STAR
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV2269
+bv_election_id: t488h9
+bv_results_url: https://bettervoting.com/t488h9/results
+# Live results: https://bettervoting.com/t488h9/results  (Bloc STAR, k=3; no tie, no lot)
+
+ballots: |-
+  Abby,Bruno,Celia
+  5,3,1
+  5,4,0
+  4,3,2
+  5,2,3
+  3,5,1
+  2,5,4
+  4,1,5
+
+# No expected_winners: the LH engine refuses this file by design (exit 1), so it
+# has no winners to expect. BV's three are recorded in scenario_description and
+# frozen in bv2269_t488h9_race_nobody_can_lose_bv_export.json.

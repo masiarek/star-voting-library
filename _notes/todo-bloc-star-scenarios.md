@@ -11,8 +11,12 @@ Built 2026-08-04 by inventorying [`02_STAR_Bloc/`](../02_STAR_Bloc/README.md) ag
 > BetterVoting elections minted the same day — BV2264 `j3hqvb` / BV2265 `th3pbp`
 > (participation), BV2266 `k7pfqt` (seat order), BV2267 `my9jd9` / BV2268 `6m3gxq`
 > (committee spoiler). BV reproduces the LH count exactly in all five, with
-> `tieBreakType: none` at every seat. **§2.4 was deliberately NOT minted** — see the
-> note at the end of that section. §3 is untouched and still the live list.
+> `tieBreakType: none` at every seat. §3 is untouched and still the live list.
+>
+> **Update 2026-08-04 (later) — §2.4 is DONE too.** Adam authorised the mint, so the
+> probe was run: BV2269 [`t488h9`](https://bettervoting.com/t488h9/results), written up
+> as [a race nobody can lose](../02_STAR_Bloc/02_Examples/bv2269_t488h9_race_nobody_can_lose.md).
+> **All of §2 is now closed.**
 
 ---
 
@@ -78,12 +82,28 @@ LH behaviour, confirmed:
 
 Checking it means minting a BV election, and BV titles/descriptions are permanent — **ask before minting**, then follow the nine-step loop in the `bettervoting` skill. The LH half needs no permission and can be written today.
 
-> **Held back on purpose (2026-08-04).** When the other three were minted, this one was
-> not. It is a *behaviour probe*, not a lesson: the whole question is whether BV accepts a
-> race nobody can lose, and the only way to ask is to create a permanent, undeletable
-> election whose public title would have to describe a degenerate contest. That is Adam's
-> call, not a default. If the answer is yes, mint it as its own case ("what happens if you
-> post a race nobody can lose") — the LH half above is already settled and needs nothing.
+> **~~Held back on purpose~~ — ANSWERED 2026-08-04.** This was held back when the other
+> three were minted, because asking the question meant creating a permanent, undeletable
+> election whose public title had to describe a degenerate contest — Adam's call, not a
+> default. He authorised it the same day, and the probe ran as **BV2269**
+> [`t488h9`](https://bettervoting.com/t488h9/results).
+>
+> **The answer: BetterVoting accepts it, and reports it honestly.** All three candidates
+> are seated in score order; seats 1 and 2 run genuine STAR rounds (28/23/16, then runoffs
+> won 5–2 and 5–2, `tieBreakType: none` throughout); and seat 3 — the round with one
+> candidate and nothing to run against — prints **"Celia is the only candidate, and wins
+> by default"**, with an empty `runner_up` and an empty `logs` array in the JSON.
+>
+> So the prediction above was wrong in the informative direction: BV does *not* print a
+> meaningless scoring round and runoff for the undecidable seat. It degrades into saying
+> so. Written up as
+> [a race nobody can lose](../02_STAR_Bloc/02_Examples/bv2269_t488h9_race_nobody_can_lose.md),
+> with a two-seat control on the same ballots.
+>
+> One thing worth carrying forward: the mint nearly went out as a **duplicate BV2264**.
+> The collision gate read case YAMLs only as far as their `ballots:` block, and
+> BV2264–BV2268 carry `bv_test_id:` *below* the ballots, so it could not see any of the
+> five it had just handed out. Fixed in `create_bv_test_election.py` before minting.
 
 ---
 
