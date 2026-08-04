@@ -44,7 +44,7 @@ An all-blank ballot removes your weight from the room. A `0,0,0,…,5-for-NOTA` 
 | `?` | spoiled ballot |
 | `%` | spoiled **and** re-issued |
 
-See [STAR ballot voting styles](../voting_styles/README.md) and [Ballot & Terminology Basics](../../../07_Concepts/topics/ballot_and_terminology_basics.md). That the file can carry these distinct markers at all — instead of collapsing every non-vote into a bare `0` — is a direct payoff of the [one legible-*and*-runnable YAML](../../../07_Concepts/about_this_repo/why_yaml_test_cases.md) design: the format stores the *intent* behind a zero, which a flat CSV of scores can't.
+See [STAR ballot voting styles](../voting_styles/README.md) and [Ballot & Terminology Basics](../../../07_Concepts/topics/ballot_and_terminology_basics.md). That the file can carry these distinct markers at all — instead of collapsing every non-vote into a bare `0` — is a direct payoff of the [one legible-*and*-runnable YAML](../../../YAML_library/why_yaml_test_cases.md) design: the format stores the *intent* behind a zero, which a flat CSV of scores can't.
 
 ## The gap: BetterVoting can't capture *intent* behind a non-score
 

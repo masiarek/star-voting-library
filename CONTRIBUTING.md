@@ -17,7 +17,7 @@ git config core.hooksPath STARVote_LH_tabulation_engine/tools_adam/scripts/git-h
 1. **Find your way around** — the [Repository & Engine Guide](07_Concepts/about_this_repo/repository_guide.md)
    has the repo map, quick-start commands, and how the voting methods dispatch.
 2. **Adding or editing an election case?** Copy from the
-   [YAML authoring template](07_Concepts/about_this_repo/YAML_authoring_template.md) —
+   [YAML authoring template](YAML_library/YAML_authoring_template.md) —
    it documents every allowed key (a schema lint enforces the list). After
    editing a case's YAML, re-run it through the engine so its `_tabulated`
    mirror stays fresh, then regenerate the derived pages:

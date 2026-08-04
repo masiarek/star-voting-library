@@ -38,7 +38,7 @@ A library for learning, teaching, and debating **[STAR Voting](01_STAR/01_Learn/
 Under the hood it does three things:
 
 1. **Teaches** — concept pages and worked examples, organized by level: [Voting 101](07_Concepts/curriculum/CURRICULUM_101.md) (the basics) · [201](07_Concepts/curriculum/CURRICULUM_201.md) (reading results & comparisons) · [301](07_Concepts/curriculum/CURRICULUM_301.md) (proportional, criteria, theory).
-2. **Proves** — every claim is backed by a runnable election: a single [YAML file a person reads and the engine runs](07_Concepts/about_this_repo/why_yaml_test_cases.md).
+2. **Proves** — every claim is backed by a runnable election: a single [YAML file a person reads and the engine runs](YAML_library/why_yaml_test_cases.md).
 3. **Cross-verifies with BetterVoting** — import a real election from [BetterVoting](https://bettervoting.com) (the Equal Vote Coalition's free STAR platform), re-tabulate it independently, and confirm the official winner — turning real elections into regression cases that catch and guard BetterVoting's bugs (turnout undercounts, tie mislabels, abstention miscounts).
 
 Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larryhastings/starvote) engine.
@@ -63,7 +63,7 @@ Built on a vendored fork of Larry Hastings' [`starvote`](https://github.com/larr
 
 ## The YAML election file
 
-Want to author a case? The fill-in guide is [YAML Test Case — Authoring Template](07_Concepts/about_this_repo/YAML_authoring_template.md).
+Want to author a case? The fill-in guide is [YAML Test Case — Authoring Template](YAML_library/YAML_authoring_template.md).
 
 The schema is **flat**: a voting method, a seat count, and a ballot grid (a header row of candidate names, then one row of 0–5 scores per voter). Hand-written files add a top-level **`expected_winners:`** list — the key the positive pytest suite discovers and checks:
 
@@ -81,5 +81,5 @@ expected_winners:
 
 This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](07_Concepts/tips/TIPS_canonical_elections.md).
 
-The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](07_Concepts/about_this_repo/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](07_Concepts/tips/TIPS_choosing_voter_counts.md).
+The full field-by-field guide — every option, the marker table, weighted rows, and the `lot_numbers` tie-break order — is the **[YAML Test Case — Authoring Template](YAML_library/YAML_authoring_template.md)**; the tie-break ladder in depth is [STAR Tie-Breaking — The Full Chain](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md). House style keeps examples **small** — see [Choosing the Number of Voters in STAR Examples](07_Concepts/tips/TIPS_choosing_voter_counts.md).
 <!-- --8<-- [end:below-hero] -->

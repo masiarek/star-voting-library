@@ -288,7 +288,7 @@ def _find_key(node, keys):
 
 
 # The documented top-level schema for election YAMLs (field reference:
-# 07_Concepts/about_this_repo/YAML_authoring_template.md). A key outside this
+# YAML_library/YAML_authoring_template.md). A key outside this
 # set is almost always a typo — and a typo in a load-bearing key (say
 # `expected_winers:`) silently removes the file from test discovery, which is
 # exactly the failure class this check exists to catch.

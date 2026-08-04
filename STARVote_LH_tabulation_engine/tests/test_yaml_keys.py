@@ -33,7 +33,7 @@ def test_every_election_yaml_uses_documented_keys():
         + "\n".join(f"  {f}: {msg}" for f, msg in bad)
         + "\n(Fix the typo, or add a genuinely new key to ELECTION_KEYS in "
         "check_repo_hygiene.py AND to the field reference in "
-        "07_Concepts/about_this_repo/YAML_authoring_template.md.)"
+        "YAML_library/YAML_authoring_template.md.)"
     )
 
 

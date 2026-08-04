@@ -50,7 +50,7 @@ Group by **teaching role**, not by file type.
 
 Before this, `01_STAR/` had sixteen sibling folders that mixed four different axes at one level — kinds of material (`concepts`, `exercises`), criteria (`majority_criterion`), mechanisms (`tie_break_ladder`) and single artifacts (`pet_real_bv_election`) — sorted alphabetically, which is what the sidebar showed. The buckets exist so a reader learns the shape once and can then navigate every method.
 
-**Difficulty is deliberately NOT in the folder names.** A case is often 101 for its basic idea and 301 for the deep dive; levels live in [CURRICULUM.md](../CURRICULUM.md) and in per-set tables, so a case can appear at two levels without being duplicated or moved. The numeric prefix orders the sidebar (MkDocs derives nav order and labels straight from folder names); capitalize the word after the number, or MkDocs renders the label lowercase.
+**Difficulty is deliberately NOT in the folder names.** A case is often 101 for its basic idea and 301 for the deep dive; levels live in [CURRICULUM.md](../07_Concepts/CURRICULUM.md) and in per-set tables, so a case can appear at two levels without being duplicated or moved. The numeric prefix orders the sidebar (MkDocs derives nav order and labels straight from folder names); capitalize the word after the number, or MkDocs renders the label lowercase.
 
 Prefixed folders are also why every rename here is expensive: see the redirect rule below.
 
@@ -121,4 +121,4 @@ That leaves just the title banner, the ballots, and the tabulation. The full con
 
 > Tip: keep `scenario_description` to 1–3 short paragraphs (the audience-facing "what"), and put longer staging notes in `video_script` — it never prints, so it can be as detailed as you like without ever cluttering a demo.
 
-See also: [TIPS_choosing_voter_counts.md](../tips/TIPS_choosing_voter_counts.md) · [CURRICULUM.md](../CURRICULUM.md).
+See also: [TIPS_choosing_voter_counts.md](../07_Concepts/tips/TIPS_choosing_voter_counts.md) · [CURRICULUM.md](../07_Concepts/CURRICULUM.md).

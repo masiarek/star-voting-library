@@ -51,7 +51,7 @@ The thing that makes every claim above checkable.
 
 - [Repository & Engine Guide](about_this_repo/repository_guide.md) — how to tabulate a file, import a BetterVoting export, run the tests
 - [The YAML test-case index](YAML_test_case_index/) — every example election, grouped by method · [BetterVoting-backed cases](YAML_test_case_index/BV_registry.md)
-- [Why YAML?](about_this_repo/why_yaml_test_cases.md) — one file a person reads and a computer runs
+- [Why YAML?](../YAML_library/why_yaml_test_cases.md) — one file a person reads and a computer runs
 
 ## Reference
 

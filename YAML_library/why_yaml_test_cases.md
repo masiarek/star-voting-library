@@ -33,9 +33,9 @@ Same file. Two readers. Never out of sync — because there's nothing to keep in
 
 Richer files keep more *human* context in the same file — an `election_title`, a `scenario_description`, inline per-voter notes on the ballot rows, and `options:` to shape the report — all stored in the one artifact and never shown on screen unless you ask. → [YAML authoring template](YAML_authoring_template.md)
 
-The same tiny format holds every method in the repo: swap `voting_method:` to `Approval`, `RankedRobin`, or a multi-winner count and only that line and the ballot rows change. What the methods *do differently* — and when to reach for each — is [Voting 201](../curriculum/CURRICULUM_201.md), not this page's job.
+The same tiny format holds every method in the repo: swap `voting_method:` to `Approval`, `RankedRobin`, or a multi-winner count and only that line and the ballot rows change. What the methods *do differently* — and when to reach for each — is [Voting 201](../07_Concepts/curriculum/CURRICULUM_201.md), not this page's job.
 
-**Not the only ballot format.** The election-methods world has a dedicated ballot-*interchange* format, **ABIF**, that packs ranks and scores into one dense line (`Allie/5 =Billy/5 >Candace/4`). It maps to just our **`ballots:` block** — our file wraps method, options, and an enforced answer key around that. The full decode and an honest side-by-side: [ABIF vs. our YAML grid](../scores_and_ranks/abif_format.md).
+**Not the only ballot format.** The election-methods world has a dedicated ballot-*interchange* format, **ABIF**, that packs ranks and scores into one dense line (`Allie/5 =Billy/5 >Candace/4`). It maps to just our **`ballots:` block** — our file wraps method, options, and an enforced answer key around that. The full decode and an honest side-by-side: [ABIF vs. our YAML grid](../07_Concepts/scores_and_ranks/abif_format.md).
 
 ## Everything else is *generated* from it
 
@@ -50,8 +50,8 @@ Because these are generated, they can't drift from the source. Edit the YAML, re
 
 ## The companion ideas
 
-- **Store rich, display clean.** Keep all the context *in* the YAML; control what appears on screen with `options:` (e.g. `show_description: false`). You never delete information to get a clean demo. → [ORGANIZATION.md — storage ≠ display](ORGANIZATION.md) The sharpest example is the **marker vocabulary** (`-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued): all tabulate as `0`, yet the file records *why* each line is zero — a distinction a flat CSV of scores would flatten away. → [Abstention vs. a zero vs. "None of the Above"](../../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md)
-- **The pipeline.** author → validate → tabulate → verify → publish, all wrapped around the one file. → [readme.md — one YAML file, a pipeline around it](../../readme.md)
+- **Store rich, display clean.** Keep all the context *in* the YAML; control what appears on screen with `options:` (e.g. `show_description: false`). You never delete information to get a clean demo. → [ORGANIZATION.md — storage ≠ display](ORGANIZATION.md) The sharpest example is the **marker vocabulary** (`-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued): all tabulate as `0`, yet the file records *why* each line is zero — a distinction a flat CSV of scores would flatten away. → [Abstention vs. a zero vs. "None of the Above"](../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md)
+- **The pipeline.** author → validate → tabulate → verify → publish, all wrapped around the one file. → [readme.md — one YAML file, a pipeline around it](../readme.md)
 - **The shape of a case.** Which fields are for humans vs the engine, ready to copy. → [YAML authoring template](YAML_authoring_template.md)
 
 ## The payoff

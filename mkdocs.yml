@@ -199,12 +199,16 @@ plugins:
         00_start_here/YAML_test_case_index/PARADOX_index.md: 07_Concepts/YAML_test_case_index/PARADOX_index.md
         00_start_here/YAML_test_case_index/README.md: 07_Concepts/YAML_test_case_index/README.md
         00_start_here/YAML_test_case_index/multirace_elections.md: 07_Concepts/YAML_test_case_index/multirace_elections.md
-        00_start_here/about_this_repo/ORGANIZATION.md: 07_Concepts/about_this_repo/ORGANIZATION.md
-        00_start_here/about_this_repo/YAML_authoring_template.md: 07_Concepts/about_this_repo/YAML_authoring_template.md
+        # These three moved a SECOND time, on to YAML_library/ (see the entry near
+        # the bottom of this map). Redirects cannot chain, so the target has to be
+        # the page's current home, not its previous one — the source key stays the
+        # historical URL, as always.
+        00_start_here/about_this_repo/ORGANIZATION.md: YAML_library/ORGANIZATION.md
+        00_start_here/about_this_repo/YAML_authoring_template.md: YAML_library/YAML_authoring_template.md
         00_start_here/about_this_repo/conversation_scripts.md: 07_Concepts/about_this_repo/conversation_scripts.md
         00_start_here/about_this_repo/repository_guide.md: 07_Concepts/about_this_repo/repository_guide.md
         00_start_here/about_this_repo/website_build.md: 07_Concepts/about_this_repo/website_build.md
-        00_start_here/about_this_repo/why_yaml_test_cases.md: 07_Concepts/about_this_repo/why_yaml_test_cases.md
+        00_start_here/about_this_repo/why_yaml_test_cases.md: YAML_library/why_yaml_test_cases.md
         00_start_here/books/README.md: 07_Concepts/books/README.md
         00_start_here/books/electoral_systems_and_pr.md: 07_Concepts/books/electoral_systems_and_pr.md
         00_start_here/books/popular_introductions.md: 07_Concepts/books/popular_introductions.md
@@ -837,6 +841,16 @@ plugins:
         # a comment on bettervoting#1471, so this entry is load-bearing forever:
         # deleting it 404s a link no one can edit. Verified live after the rename.
         01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md: 01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md
+
+        # --- The three YAML-format pages moved out of "About this repo" and into
+        # YAML_library/, so the format has ONE door instead of two: the folder's
+        # own README is the why/what/how front page, and these are its depth.
+        # Same "one door per subject" reasoning as the method reorganization
+        # above. about_this_repo/ keeps what is genuinely about the *repo* (the
+        # repository guide, the website build, the conversation-script index).
+        07_Concepts/about_this_repo/why_yaml_test_cases.md: YAML_library/why_yaml_test_cases.md
+        07_Concepts/about_this_repo/YAML_authoring_template.md: YAML_library/YAML_authoring_template.md
+        07_Concepts/about_this_repo/ORGANIZATION.md: YAML_library/ORGANIZATION.md
 
 markdown_extensions:
   - admonition

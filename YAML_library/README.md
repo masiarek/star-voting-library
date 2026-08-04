@@ -16,7 +16,7 @@ The design goal is a single artifact that is **human-readable and machine-runnab
 
 The usual alternative splits a test case in two — prose for humans (a doc describing the scenario) and data for machines (a fixture the code runs). The two **drift apart**: the doc says one thing, the fixture does another, and nobody notices until a count is wrong. You can't *read* the machine copy or *run* the human copy. This library refuses that split. There is one artifact, and it is legible both ways.
 
-→ The argument in full, with the payoff: **[Why YAML? One file a person reads and a computer runs](../07_Concepts/about_this_repo/why_yaml_test_cases.md)**
+→ The argument in full, with the payoff: **[Why YAML? One file a person reads and a computer runs](why_yaml_test_cases.md)**
 
 ### Why YAML specifically, and not CSV or JSON
 
@@ -68,7 +68,9 @@ expected_winners:       # the answer key: the pytest suite finds this key and ch
 
 Everything else in the file is optional and additive: an `election_title`, a printable `scenario_description`, `options:` controlling how much of the report appears on screen, `lot_numbers:` pinning the official tie-break order, `eligible_voters` / `quorum` for turnout reporting, `blocs:` for the vote-splitting check.
 
-→ Every field, every option, the full marker table, and the house style rules: **[YAML Test Case — Authoring Template](../07_Concepts/about_this_repo/YAML_authoring_template.md)**
+That optional half follows one rule — **store rich, display clean**. Keep the context *in* the file and let `options:` decide what reaches the screen; you never have to delete information to get a tidy demo. → [Organizing the YAML files](ORGANIZATION.md)
+
+→ Every field, every option, the full marker table, and the house style rules: **[YAML Test Case — Authoring Template](YAML_authoring_template.md)**
 
 ---
 
@@ -78,7 +80,7 @@ Five stages. The same file carries through all of them.
 
 ### 1. Author, or import
 
-Write the file by hand from the [template](../07_Concepts/about_this_repo/YAML_authoring_template.md) — or import a real election. [`1_positive/01_convert_json_yaml.py`](1_positive/01_convert_json_yaml.py) turns a BetterVoting JSON export into a canonical YAML: real candidate names, aligned columns, the election's official lot order, and an embedded answer key. That's how a live public election becomes a permanent, re-countable case here. → [BetterVoting and the engine](../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md)
+Write the file by hand from the [template](YAML_authoring_template.md) — or import a real election. [`1_positive/01_convert_json_yaml.py`](1_positive/01_convert_json_yaml.py) turns a BetterVoting JSON export into a canonical YAML: real candidate names, aligned columns, the election's official lot order, and an embedded answer key. That's how a live public election becomes a permanent, re-countable case here. → [BetterVoting and the engine](../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md)
 
 ### 2. Validate — the engine is the validator
 

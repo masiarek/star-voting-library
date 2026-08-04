@@ -1,6 +1,6 @@
 # STAR Voting — Curriculum (Voting 101 / 201 / 301)
 
-The **learning-path map**, in three levels. Difficulty lives *here*, not in the folder names or in every file — so a single example can be 101 for its basic idea and reappear at 301 for the deep dive, without being duplicated or moved. (The "curriculum map, keep folders" approach; see [ORGANIZATION.md](about_this_repo/ORGANIZATION.md).)
+The **learning-path map**, in three levels. Difficulty lives *here*, not in the folder names or in every file — so a single example can be 101 for its basic idea and reappear at 301 for the deep dive, without being duplicated or moved. (The "curriculum map, keep folders" approach; see [ORGANIZATION.md](../YAML_library/ORGANIZATION.md).)
 
 Each level is its **own page** so it can stand alone; this page is just the hub. (Keeping the content in one place per level — not copied here — is what keeps them from drifting out of sync.)
 
@@ -51,4 +51,4 @@ Each level is its **own page** so it can stand alone; this page is just the hub.
 
 ## Designing your own examples
 
-See [TIPS_choosing_voter_counts.md](tips/TIPS_choosing_voter_counts.md) (voter counts) and [ORGANIZATION.md](about_this_repo/ORGANIZATION.md) (where scenario text lives, clean-demo flags). Term definitions: [GLOSSARY.md](GLOSSARY.md).
+See [TIPS_choosing_voter_counts.md](tips/TIPS_choosing_voter_counts.md) (voter counts) and [ORGANIZATION.md](../YAML_library/ORGANIZATION.md) (where scenario text lives, clean-demo flags). Term definitions: [GLOSSARY.md](GLOSSARY.md).
