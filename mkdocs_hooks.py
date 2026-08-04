@@ -161,6 +161,10 @@ TERMS = {
     "borda": "Borda",
     "iia": "IIA",
     "sntv": "SNTV",
+    # The library spells itself all-lowercase, but the ABC is an acronym
+    # (approval-based committee rules), and MkDocs' sentence-casing turns the
+    # folder into "Abcvoting", which reads as a word nobody can pronounce.
+    "abcvoting": "ABCvoting",
 }
 
 # Whole labels that no casing rule can reach, keyed by the title MkDocs derives.

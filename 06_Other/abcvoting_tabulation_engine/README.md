@@ -1,4 +1,4 @@
-# abcvoting Tabulation Engine (multi-winner Approval / ABC rules)
+# ABCvoting Tabulation Engine (multi-winner Approval / ABC rules)
 
 Runs **approval-based committee (ABC)** rules from Martin Lackner's [`abcvoting`](https://github.com/martinlackner/abcvoting) library — the standard peer-reviewed toolkit for this family (companion to Lackner & Skowron's book *Multi-Winner Voting with Approval Preferences*) — on this repo's approval YAML files.
 
