@@ -6,6 +6,14 @@ Built 2026-08-04 by inventorying [`02_STAR_Bloc/`](../02_STAR_Bloc/README.md) ag
 
 **Headline: four items are build-now, not research** — §2 carries engine-verified profiles, paste-ready. The one worth *thinking* about rather than building is monotonicity (§3.1): the search found no failure, and the 2-seat case looks provable, which would be a positive result the folder can state instead of a gap.
 
+> **Update 2026-08-04 — §2.1, §2.2 and §2.3 are DONE.** All three shipped as
+> [`02_STAR_Bloc/03_Criteria/`](../02_STAR_Bloc/03_Criteria/README.md), backed by five
+> BetterVoting elections minted the same day — BV2264 `j3hqvb` / BV2265 `th3pbp`
+> (participation), BV2266 `k7pfqt` (seat order), BV2267 `my9jd9` / BV2268 `6m3gxq`
+> (committee spoiler). BV reproduces the LH count exactly in all five, with
+> `tieBreakType: none` at every seat. **§2.4 was deliberately NOT minted** — see the
+> note at the end of that section. §3 is untouched and still the live list.
+
 ---
 
 ## 1. Already covered — do not rebuild
@@ -70,6 +78,13 @@ LH behaviour, confirmed:
 
 Checking it means minting a BV election, and BV titles/descriptions are permanent — **ask before minting**, then follow the nine-step loop in the `bettervoting` skill. The LH half needs no permission and can be written today.
 
+> **Held back on purpose (2026-08-04).** When the other three were minted, this one was
+> not. It is a *behaviour probe*, not a lesson: the whole question is whether BV accepts a
+> race nobody can lose, and the only way to ask is to create a permanent, undeletable
+> election whose public title would have to describe a degenerate contest. That is Adam's
+> call, not a default. If the answer is yes, mint it as its own case ("what happens if you
+> post a race nobody can lose") — the LH half above is already settled and needs nothing.
+
 ---
 
 ## 3. Open — needs a search, a proof, or a decision
@@ -124,6 +139,8 @@ The folder says Bloc STAR is not proportional and shows a sweep. The modern stat
 ---
 
 ## 4. The verified profiles (paste-ready)
+
+**Superseded 2026-08-04** — all three are now real cases with real candidate names and frozen BV exports, under [`02_STAR_Bloc/03_Criteria/`](../02_STAR_Bloc/03_Criteria/README.md). What follows is the letter-named originals, kept because they are the record of what the search actually returned and are quicker to re-run than the case files.
 
 Ballot headers are the first line of the `ballots:` block; no separate `candidates:` key. Options shown are the house multi-winner minimal block.
 
@@ -223,10 +240,10 @@ Names: these are placeholder letters. Rename to the folder's convention (Nadia/O
 
 ## 5. Structure and indexing chores
 
-- **`02_STAR_Bloc/03_Criteria/` does not exist.** Everything in §2 and §3.1–3.3 is a criterion case with nowhere to live; they would currently land in `02_Examples/` next to the BV reproductions and dilute both. Mirror [01_STAR/03_Criteria](../01_STAR/03_Criteria/README.md): one sub-folder per criterion, `cases/` inside, a README table with levels.
-- **No Bloc YAML carries `paradoxes:` tags** — the folder contributes **zero** rows to [PARADOX_index.md](../07_Concepts/YAML_test_case_index/PARADOX_index.md) (164 tagged cases, none of them Bloc). Tagging the *existing* cases is a 20-minute job independent of everything above: BV1525 → `condorcet_loser_paradox`, the lot pair → tie/lot, BV1835 → `condorcet_winner_paradox` (check first — Ava is described there as the Condorcet loser, so it may be `absolute_loser_paradox` instead or as well).
+- ~~**`02_STAR_Bloc/03_Criteria/` does not exist.**~~ **Done 2026-08-04** — created with `participation/`, `seat_order/` and `committee_spoiler/`, each mirroring [01_STAR/03_Criteria](../01_STAR/03_Criteria/README.md) (README table with levels, `cases/` inside). §3.1–3.3 now have somewhere to land.
+- **Tag the *existing* Bloc YAMLs with `paradoxes:`.** Partly done: the four new cases carry `no-show` / `spoiler-scc`, so the folder finally has rows in [PARADOX_index.md](../07_Concepts/YAML_test_case_index/PARADOX_index.md) (168 tagged cases now, up from 164). The older ones are still bare — BV1525 → `condorcet-loser`, BV1835 → check first (Ava is described there as the Condorcet *loser*, so `absolute-loser` may be the right tag, or both). Note the tag vocabulary is hyphenated (`condorcet-winner`, `spoiler-scc`, `no-show`), and BV2266 was left **untagged** on purpose: `condorcet-winner` means the Condorcet winner is *not elected*, and Anika is elected — just second.
 - **Glossary gaps** for the terms these pages would bold: "justified representation" (absent), and check that "participation / no-show," "clone," and "reinforcement" have entries that say what they mean *for multi-winner* rather than only single-winner.
-- **`01_Learn/` will need one new page**, not more sections bolted onto [honest limits](../02_STAR_Bloc/01_Learn/bloc_honest_limits.md) — that page is already at its useful length. Suggested: *"What Bloc STAR keeps and what it drops"* — monotonicity (§3.1, likely kept), participation (§2.1, dropped), IIA (§2.3, dropped), summability (kept) — with each claim linked to its case.
+- **`01_Learn/` will need one new page**, not more sections bolted onto [honest limits](../02_STAR_Bloc/01_Learn/bloc_honest_limits.md) — that page is already at its useful length. Suggested: *"What Bloc STAR keeps and what it drops"* — monotonicity (§3.1, likely kept), participation (§2.1, dropped), IIA (§2.3, dropped), summability (kept) — with each claim linked to its case. The [`03_Criteria/` index](../02_STAR_Bloc/03_Criteria/README.md) sketches this list already; the prose page is still owed, and `01_Learn/README.md` does not yet link the new folder (the folder README does).
 
 ---
 
