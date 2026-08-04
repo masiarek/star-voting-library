@@ -285,6 +285,7 @@ LH:p3_manip_reversal_rr,P3 manipulated — Zwicker's complete reversal makes Dub
 LH:p3_manip_star,P3 manipulated — two voters bury their 4th choice and STAR elects their favourite,1,single-race,7,STAR,LH-only
 LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
+LH:race_nobody_can_lose_two_seat_control,A race nobody can lose — the two-seat control,1,single-race,7,STAR,LH-only
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
 LH:range_sullivan_score_c4_b10,Range / Score Voting — Sullivan's Example 5.2 (0–10 scale),1,single-race,10,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
@@ -381,6 +382,7 @@ qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,si
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
+t488h9,"BV2269 — Three candidates, three seats — a race nobody can lose",1,single-race,7,STAR,BV
 td7jfy,"BV2238 — Does the squeeze survive noise? Two poles, one consensus middle",1,single-race,38,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
 tfm64p,"BV2259 — Read the ballot, name the method: four voters score four candidates 0 to 5",1,single-race,4,STAR,BV

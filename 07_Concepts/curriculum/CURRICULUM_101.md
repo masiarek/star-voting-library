@@ -36,7 +36,9 @@
 
 **What clicks:** there's no "wrong" way to fill it in — give your favorite 5, your worst 0 (or blank), and everyone else where they honestly land. Equal scores are allowed.
 
-**See it:** [the eight-style gallery](../../01_STAR/02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) (bullet vote, backup, "anyone but…", protest — all valid) · [five more](../../01_STAR/02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) (approval-style, partial, compressed, null) · a [bullet vote](../../01_STAR/02_Examples/cases/cases_pages/03a_c3_b3_style-bullet-vote.md) · [low-score ballots](../../01_STAR/02_Examples/cases/cases_pages/03b_c3_b3_1_style-protest-vote.md). Concept page: [the STAR ballot & voting styles](../../01_STAR/01_Learn/voting_styles/README.md).
+**See it:** [the STAR ballot & voting styles](../../01_STAR/01_Learn/voting_styles/README.md) — the ballot itself, then thirteen legal ways to fill it out, each with a picture and a page of its own. This is the 101 destination for this rung: the *lesson* here is what a ballot may say, not who won.
+
+**Run it:** the same styles as tabulatable elections — [the eight-style gallery](../../01_STAR/02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md) (bullet vote, backup, "anyone but…", protest — all valid) · [five more](../../01_STAR/02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) (approval-style, partial, compressed, null) · a [bullet vote](../../01_STAR/02_Examples/cases/cases_pages/03a_c3_b3_style-bullet-vote.md) · [low-score ballots](../../01_STAR/02_Examples/cases/cases_pages/03b_c3_b3_1_style-protest-vote.md).
 
 **Ballot note:** "equal scores = no preference" means no preference *in the runoff* — those ballots still count fully in the scoring round ([Equal Support](../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md)).
 
