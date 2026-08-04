@@ -42,8 +42,11 @@ Two runnable counter-examples make the gap concrete.
 
 44 residents choose a street tree. First choices: **Aspen 18 (41%)**, Birch 14, Cedar 12. The winner is under half and the losers combined (26) are a majority, so this race counts as a "vote split election." Read the whole ballot and nothing was split:
 
-```text title="Abridged for the lesson — not verbatim engine output"
+```text title="Abridged — the matrix, the Condorcet line and the two rounds, lifted verbatim from the full report"
 --- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
                  |   * Aspen    |  * Birch    |    Cedar    |
 -------------------------------------------------------------
        * Aspen > |     ---      |30 -  0 - 14 |32 -  0 - 12 |
@@ -53,17 +56,25 @@ Two runnable counter-examples make the gap concrete.
 [Condorcet Winner]
   Condorcet Winner: Aspen — matches the STAR winner
 
-Scoring Round
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
    Aspen         -- 180 -- First place
    Birch         -- 142 -- Second place
    Cedar         --  74
+ Aspen and Birch advance.
 
-Automatic Runoff Round
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
    Aspen         -- 30 -- First place
    Birch         -- 14
+   Equal Support --  0
  Aspen wins.
-   Voters with a preference: 44 of 44 (no Equal Support).
-   Aspen 30 (68%) vs Birch 14 (32%); majority = 23.
+   Runoff math:
+     44  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     44  voters with a preference  (majority = 23)
+           Aspen 30 (68%)  ·  Birch 14 (32%)
 ```
 [STAR](../../01_STAR/01_Learn/STAR_start_here.md), [Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) (Aspen 18 → 30 after Cedar's transfers) all elect Aspen — the same candidate Choose-One elected on 41%. The race was *exposed* to vote splitting; the outcome was not *changed* by it.
 
