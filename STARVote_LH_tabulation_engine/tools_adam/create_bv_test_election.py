@@ -495,7 +495,17 @@ def _minted_test_ids():
     session on this filesystem the instant the election exists.
 
     Also folds in `bv_test_id:` from the repo's case YAMLs, which covers older
-    elections whose export predates the dropbox convention."""
+    elections whose export predates the dropbox convention.
+
+    That YAML scan reads every line of the file, and must keep doing so. It used
+    to stop at the `ballots:` block on the assumption that the registry fields
+    come first — but house style puts them either side, and BV2264-BV2268 carry
+    `bv_test_id:` *below* their ballots. Those five were also minted from a
+    standalone driver that never wrote to the dropbox, so both evidence sources
+    missed them at once and this function reported BV2264 — already live on
+    j3hqvb — as the next free number (caught 2026-08-04, before the mint). A
+    duplicate BV<n> cannot be undone, so the scan buys correctness with a few
+    milliseconds and does not shortcut."""
     used: dict = {}
     for title, ids in _existing_titles().items():
         m = re.match(r"^\s*(BV\w+)\s*[—–-]", title)
@@ -514,8 +524,6 @@ def _minted_test_ids():
                         m = re.match(r"^\s*bv_test_id:\s*(\S+)", line)
                         if m:
                             used.setdefault(m.group(1).strip('"\''), []).append(fn)
-                            break
-                        if line.startswith("ballots:"):
                             break
             except Exception:
                 continue
