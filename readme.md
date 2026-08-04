@@ -18,7 +18,7 @@ Watch "pick one" ruin a team lunch, then watch STAR fix it. No background needed
 Vote your heart, no spoilers, majority winners, one election instead of two. The quick, exciting wins — *the proponents' pitch, and proudly so.*
 
 🗳️ **[3 · Try it for real ↗](https://bettervoting.com/pet/vote)**<br>
-Cast a STAR ballot in *What Makes the Best Pet?* — a live public election, no sign-in, seven pets, about a minute. (It's the same election this repo takes apart in [04_Real_Elections](01_STAR/04_Real_Elections/pet_real_bv_election/README.md).) Then [run your own free election ↗](https://bettervoting.com) on BetterVoting — or [print real paper ballots](01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md) and count them by hand.
+Cast a STAR ballot in *What Makes the Best Pet?* — a live public election, no sign-in, seven pets, about a minute. (It's the same election this repo takes apart in [04_Real_Elections](01_STAR/04_Real_Elections/pet_real_bv_election/README.md).) Then [run your own free election ↗](https://bettervoting.com/new_election) on BetterVoting — or [print real paper ballots](01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md) and count them by hand.
 
 🤨 **[4 · Skeptical? Good.](01_STAR/01_Learn/getting_started/star_for_skeptics.md)**<br>
 "What's the catch?" answered without cheerleading — including [what STAR *doesn't* fix](01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
