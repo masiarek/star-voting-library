@@ -1,0 +1,166 @@
+election_title: "BV1835 — Bloc STAR, 100 voters, 4 seats: the score leader wins no seat"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV1835 (a real election, id 8h3yrx).
+  Sass's Bloc STAR example at 100 voters — the first case in this folder at a
+  realistic electorate; every other one here is 2-16 ballots.
+
+  Bloc STAR, 5 candidates, 4 seats, 100 ballots.
+  Totals: Ava=294, Bianca=231, Cedric=228, Deegan=227, Eli=224.
+
+  Ava is the compromise candidate: 98 of the 100 voters score her 3, and she
+  leads the SCORING round of all four rounds by a wide margin (294 against a
+  best rival of 231). She wins NO seat. Each round she reaches the automatic
+  runoff and loses it 51-49.
+
+  Why: the electorate is two mirror-image camps of 49 that share no candidates.
+  One camp scores Bianca and Cedric 5/4 and zeroes Deegan and Eli; the other
+  does the reverse. Both camps score Ava 3 — above the pair they zeroed, below
+  their own two. So on Ava-vs-anyone the camps split 49-49, and the 2-ballot
+  swing bloc (which scores Ava 0 and everyone else 5/4/3/2) turns every one of
+  those into 51-49.
+
+  Winners: Bianca, Cedric, Deegan, Eli. BetterVoting agrees exactly — elected in
+  that seat order, tieBreakType "none" in all four rounds, nTallyVotes 100,
+  nAbstentions 0. No tie, no lot; the whole result is deterministic.
+
+  The lesson is the runoff step. Bloc STAR seats whoever is PREFERRED head to
+  head, not whoever accumulates the most points, so a broadly acceptable
+  candidate who is nobody's favourite can be shut out of the entire body. Note
+  this is NOT the usual Bloc complaint: no majority sweeps here — the two camps
+  split the seats 2-2. It is the score leader alone who is excluded.
+
+  (Aside: the BV export labels votingMethod "STAR" with num_winners 4 — "Bloc
+  STAR" is never written down; #1086.)
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 4
+voting_method: Bloc STAR
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV1835
+bv_election_id: 8h3yrx
+bv_results_url: https://bettervoting.com/8h3yrx/results
+# Live results: https://bettervoting.com/8h3yrx/results  (Bloc STAR, k=4; clean, no tie)
+
+ballots: |-
+  Ava,Bianca,Cedric,Deegan,Eli
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  0,5,4,3,2
+  0,5,4,3,2
+
+expected_winners:
+  - Bianca
+  - Cedric
+  - Deegan
+  - Eli
+
+# file: bv1835_8h3yrx_score_leader_no_seat.yaml

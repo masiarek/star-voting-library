@@ -1,0 +1,349 @@
+======================================================================
+SOURCE FILE:     bv1835_8h3yrx_score_leader_no_seat.yaml
+TABULATED FILE:  bv1835_8h3yrx_score_leader_no_seat_tabulated.txt
+======================================================================
+
+election_title: "BV1835 — Bloc STAR, 100 voters, 4 seats: the score leader wins no seat"
+
+scenario_description: |-
+  The LH reference for BetterVoting test BV1835 (a real election, id 8h3yrx).
+  Sass's Bloc STAR example at 100 voters — the first case in this folder at a
+  realistic electorate; every other one here is 2-16 ballots.
+
+  Bloc STAR, 5 candidates, 4 seats, 100 ballots.
+  Totals: Ava=294, Bianca=231, Cedric=228, Deegan=227, Eli=224.
+
+  Ava is the compromise candidate: 98 of the 100 voters score her 3, and she
+  leads the SCORING round of all four rounds by a wide margin (294 against a
+  best rival of 231). She wins NO seat. Each round she reaches the automatic
+  runoff and loses it 51-49.
+
+  Why: the electorate is two mirror-image camps of 49 that share no candidates.
+  One camp scores Bianca and Cedric 5/4 and zeroes Deegan and Eli; the other
+  does the reverse. Both camps score Ava 3 — above the pair they zeroed, below
+  their own two. So on Ava-vs-anyone the camps split 49-49, and the 2-ballot
+  swing bloc (which scores Ava 0 and everyone else 5/4/3/2) turns every one of
+  those into 51-49.
+
+  Winners: Bianca, Cedric, Deegan, Eli. BetterVoting agrees exactly — elected in
+  that seat order, tieBreakType "none" in all four rounds, nTallyVotes 100,
+  nAbstentions 0. No tie, no lot; the whole result is deterministic.
+
+  The lesson is the runoff step. Bloc STAR seats whoever is PREFERRED head to
+  head, not whoever accumulates the most points, so a broadly acceptable
+  candidate who is nobody's favourite can be shut out of the entire body. Note
+  this is NOT the usual Bloc complaint: no majority sweeps here — the two camps
+  split the seats 2-2. It is the score leader alone who is excluded.
+
+  (Aside: the BV export labels votingMethod "STAR" with num_winners 4 — "Bloc
+  STAR" is never written down; #1086.)
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+num_winners: 4
+voting_method: Bloc STAR
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV1835
+bv_election_id: 8h3yrx
+bv_results_url: https://bettervoting.com/8h3yrx/results
+# Live results: https://bettervoting.com/8h3yrx/results  (Bloc STAR, k=4; clean, no tie)
+
+ballots: |-
+  Ava,Bianca,Cedric,Deegan,Eli
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,5,4,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,4,5,0,0
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,5,4
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  3,0,0,4,5
+  0,5,4,3,2
+  0,5,4,3,2
+
+expected_winners:
+  - Bianca
+  - Cedric
+  - Deegan
+  - Eli
+
+# file: bv1835_8h3yrx_score_leader_no_seat.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV1835 — Bloc STAR, 100 voters, 4 seats: the score leader wins no seat ===
+  The LH reference for BetterVoting test BV1835 (a real election, id 8h3yrx).
+  Sass's Bloc STAR example at 100 voters — the first case in this folder at a
+  realistic electorate; every other one here is 2-16 ballots.
+
+  Bloc STAR, 5 candidates, 4 seats, 100 ballots.
+  Totals: Ava=294, Bianca=231, Cedric=228, Deegan=227, Eli=224.
+
+  Ava is the compromise candidate: 98 of the 100 voters score her 3, and she
+  leads the SCORING round of all four rounds by a wide margin (294 against a
+  best rival of 231). She wins NO seat. Each round she reaches the automatic
+  runoff and loses it 51-49.
+
+  Why: the electorate is two mirror-image camps of 49 that share no candidates.
+  One camp scores Bianca and Cedric 5/4 and zeroes Deegan and Eli; the other
+  does the reverse. Both camps score Ava 3 — above the pair they zeroed, below
+  their own two. So on Ava-vs-anyone the camps split 49-49, and the 2-ballot
+  swing bloc (which scores Ava 0 and everyone else 5/4/3/2) turns every one of
+  those into 51-49.
+
+  Winners: Bianca, Cedric, Deegan, Eli. BetterVoting agrees exactly — elected in
+  that seat order, tieBreakType "none" in all four rounds, nTallyVotes 100,
+  nAbstentions 0. No tie, no lot; the whole result is deterministic.
+
+  The lesson is the runoff step. Bloc STAR seats whoever is PREFERRED head to
+  head, not whoever accumulates the most points, so a broadly acceptable
+  candidate who is nobody's favourite can be shut out of the entire body. Note
+  this is NOT the usual Bloc complaint: no majority sweeps here — the two camps
+  split the seats 2-2. It is the score leader alone who is excluded.
+
+  (Aside: the BV export labels votingMethod "STAR" with num_winners 4 — "Bloc
+  STAR" is never written down; #1086.)
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |    * Ava     |  * Bianca   |    Cedric   |    Deegan   |     Eli     |
+-----------------------------------------------------------------------------------------
+         * Ava > |     ---      |49 -  0 - 51 |49 -  0 - 51 |49 -  0 - 51 |49 -  0 - 51 |
+      * Bianca > | 51 -  0 - 49 |    ---      |27 - 49 - 24 |51 -  0 - 49 |51 -  0 - 49 |
+        Cedric > | 51 -  0 - 49 |24 - 49 - 27 |    ---      |51 -  0 - 49 |51 -  0 - 49 |
+        Deegan > | 51 -  0 - 49 |49 -  0 - 51 |49 -  0 - 51 |    ---      |27 - 49 - 24 |
+           Eli > | 51 -  0 - 49 |49 -  0 - 51 |49 -  0 - 51 |24 - 49 - 27 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Bianca — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Ava — loses every head-to-head matchup — elected by Approval!
+
+[Divergence from STAR]
+  STAR     = Bianca
+  Approval = Ava   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ava)
+ - Runoff Round Winner   = (Bianca)
+  Candidate Ava earned the highest total score, but
+  Candidate Bianca won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- Bloc STAR Voting Method (4 winners) ---
+[Bloc STAR]
+ Tabulating 100 ballots to fill 4 seats.
+Count × Ava,Bianca,Cedric,Deegan,Eli
+   25 ×   3,     5,     4,     0,  0
+   25 ×   3,     0,     0,     5,  4
+   24 ×   3,     4,     5,     0,  0
+   24 ×   3,     0,     0,     4,  5
+    2 ×   0,     5,     4,     3,  2
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ava         0   0  98   0   0   2  |   294   2.9
+Bianca     27  24   0   0   0  49  |   231   2.3
+Cedric     24  27   0   0   0  49  |   228   2.3
+Deegan     25  24   2   0   0  49  |   227   2.3
+Eli        24  25   0   2   0  49  |   224   2.2
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Bianca        -- 231 -- Second place
+   Cedric        -- 228
+   Deegan        -- 227
+   Eli           -- 224
+ Ava and Bianca advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bianca        -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Bianca wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Bianca 51 (51%)  ·  Ava 49 (49%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Cedric        -- 228 -- Second place
+   Deegan        -- 227
+   Eli           -- 224
+ Ava and Cedric advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cedric        -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Cedric wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Cedric 51 (51%)  ·  Ava 49 (49%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 3: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Deegan        -- 227 -- Second place
+   Eli           -- 224
+ Ava and Deegan advance.
+
+[Bloc STAR: Round 3: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Deegan        -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Deegan wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Deegan 51 (51%)  ·  Ava 49 (49%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 4: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Eli           -- 224 -- Second place
+ Ava and Eli advance.
+
+[Bloc STAR: Round 4: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Eli           -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Eli wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Eli 51 (51%)  ·  Ava 49 (49%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (4 winners)]
+ Bianca
+ Cedric
+ Deegan
+ Eli

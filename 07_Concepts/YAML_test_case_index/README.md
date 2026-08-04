@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**459 election files** (408 single-winner, 51 multi-winner) across 16 method(s).
+**460 election files** (408 single-winner, 52 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -22,7 +22,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 11 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
-| BLOC STAR | 17 |
+| BLOC STAR | 18 |
 | IRV | 19 |
 | PLURALITY | 26 |
 | RANGE | 2 |
@@ -472,7 +472,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (17)
+## BLOC STAR  (18)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -491,6 +491,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`07a_c5_b36_herb-council-bloc-3-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/07a_c5_b36_herb-council-bloc-3-seats.md) | `06_Other/ballot_style_lab/cases/` | 3 | The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep) → _Basil, Chive, Dill_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/07a_c5_b36_herb-council-bloc-3-seats.yaml) |
 | [`pets_gov_bloc_star`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_bloc_star.md) | `method_comparisons/pets_governance/cases/` | 3 | Pets Governance — Council by Bloc STAR (3 seats): majority sweeps → _Dog, Fish, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_bloc_star.yaml) |
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv1525_condorcet_loser_bloc.yaml) |
+| [`bv1835_8h3yrx_score_leader_no_seat`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | BV1835 — Bloc STAR, 100 voters, 4 seats: the score leader wins no seat → _Bianca, Cedric, Deegan, Eli_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv1835_8h3yrx_score_leader_no_seat.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 | [`09_c7_b44_park-bloc-4-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/09_c7_b44_park-bloc-4-seats.md) | `06_Other/ballot_style_lab/cases/` | 4 | Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards → _Dogwood, Aspen, Elm, Cedar_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/09_c7_b44_park-bloc-4-seats.yaml) |
 

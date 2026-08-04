@@ -31,8 +31,9 @@ This tension is the whole reason proportional methods exist. Gentle intro to the
 
 1. **The baseline** — the smallest Bloc election that decides something: [Bloc STAR baseline — 3 candidates, 2 seats](02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md).
 2. **A basic two-seat race** — see the elect-remove-rerun loop on a slightly bigger field: [Bloc STAR — a 2-seat committee election](02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) (4 candidates; the CURRICULUM 201.5 file).
-3. **Watch a majority sweep** — internalize why Bloc is majoritarian, then contrast with the same electorate under [STAR-PR](../03_STAR_PR/) and [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/).
-4. **Edge cases & trust (201/301)** — how ties resolve seat-by-seat, and where BetterVoting's display diverges: the reference cases below.
+3. **The compromise candidate, shut out** — the first case here at a realistic electorate (100 voters, 4 seats): [BV1835 — the score leader wins no seat](02_Examples/bv1835_8h3yrx_score_leader_no_seat.md). Ava leads every scoring round by sixty-three points and takes nothing, losing all four runoffs 51–49. Read it for what the **runoff** step does: Bloc seats whoever is *preferred*, not whoever accumulates points.
+4. **Watch a majority sweep** — internalize why Bloc is majoritarian, then contrast with the same electorate under [STAR-PR](../03_STAR_PR/) and [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/). (Still no case file of our own for a sweep — BV1835 above is the *opposite* configuration, two even camps splitting the seats 2–2.)
+5. **Edge cases & trust (201/301)** — how ties resolve seat-by-seat, and where BetterVoting's display diverges: the reference cases below.
 
 Curriculum context: [201.5 — Multi-winner intro: Bloc STAR](../07_Concepts/CURRICULUM.md).
 
@@ -66,6 +67,7 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 | BV130-r2 | 6c/3w — **dead-rung lot tie** (seat 1) | 3 | lot (seat 1) | Passed (`9ff9jk`); lot-decided seat, `tieBreakType` reads `none` | [lesson](02_Examples/bv130r2_dead_rung_bloc.md) · [count](02_Examples/cases/cases_pages/bv130r2_dead_rung_bloc.md) · [yaml](02_Examples/cases/bv130r2_dead_rung_bloc.yaml) |
 | BV1525 | 5c/4w — **Condorcet-loser ties for seat 1** (electowiki) | 4 | lot (seat 1) | LH reproduces First–Fourth; STAR 2.0 random-tie non-reproducible | [lesson](02_Examples/bv1525_condorcet_loser_bloc.md) · [count](02_Examples/cases/cases_pages/bv1525_condorcet_loser_bloc.md) · [yaml](02_Examples/cases/bv1525_condorcet_loser_bloc.yaml) |
 | BV2105 | Favorite ice cream demo | 2 | — | Failed (regression) | [lesson](02_Examples/bv2105_r4dqvd_ice_cream_bloc.md) · [count](02_Examples/cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md) · [yaml](02_Examples/cases/bv2105_r4dqvd_ice_cream_bloc.yaml) |
+| BV1835 | 5c/4w, **100 voters** — the score leader is the Condorcet loser and wins nothing (all four runoffs 51–49) | 4 | none | Passed (`8h3yrx`); LH and BV agree exactly | [lesson](02_Examples/bv1835_8h3yrx_score_leader_no_seat.md) · [count](02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md) · [yaml](02_Examples/cases/bv1835_8h3yrx_score_leader_no_seat.yaml) |
 
 ## Related
 
