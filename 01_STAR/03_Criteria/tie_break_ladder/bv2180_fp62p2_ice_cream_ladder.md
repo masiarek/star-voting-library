@@ -1,5 +1,9 @@
 # Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, `fp62p2`)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Strawberry · [full count →](cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2`).
 
 > 🪜 **The happy-path tiebreak.** This is the worked example from **[the STAR tie-breaking ladder](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)**, now a live election. It ties in **both** rounds — a three-way tie for the second finalist, then a two-way tie in the runoff — and settles **both with deterministic rungs** (five-star, then score). The pre-published **lot order is never consulted**, so LH and BetterVoting agree and the result is fully reproducible. It's the deliberate contrast to **[BV555/`xmyf7k`](../../09_Parked/Flat_scores_ties/README.md#case-05)**, where every rung ties down to the random floor.

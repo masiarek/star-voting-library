@@ -1,5 +1,9 @@
 # BV2105 — Favorite ice cream (Bloc STAR): a partial ballot mis-filed as an abstention
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md)
+<!-- case-meta:end -->
+
 *BetterVoting test **BV2105** (`r4dqvd`, "Favorite ice cream (Bloc STAR) - without end date"). Bloc STAR, 3 flavors, 2 seats, 4 ballots. The winners are right (**Chocolate, Strawberry**) and the seat-2 score tiebreak matches LH exactly — but BetterVoting's count is wrong: it files a **real partial ballot as an abstention**, reporting `nTallyVotes 2 / nAbstentions 2` where the truth is 3 tallied + 1 abstention. Guards the (closed) bug [bettervoting#1056](https://github.com/Equal-Vote/bettervoting/issues/1056).*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/r4dqvd) · **[results ↗](https://bettervoting.com/r4dqvd/results)** (election `r4dqvd`).

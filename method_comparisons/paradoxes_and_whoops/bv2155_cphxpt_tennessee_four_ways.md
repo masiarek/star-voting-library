@@ -1,5 +1,9 @@
 # BV2155 — Tennessee capital, four ways — same ballots; Memphis, Knoxville or Nashville by count
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Nashville · [full count →](cases/cases_pages/bv2155_cphxpt_tennessee_four_ways.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/cphxpt) · **[results ↗](https://bettervoting.com/cphxpt/results)** (election `cphxpt`, Test ID BV2155; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 201 · the headline whoops.** The classic Tennessee state-capital puzzle. Four cities, one set of sincere ballots — and **three different methods crown three different cities.** It's the cleanest demonstration that "the winner" isn't a property of the voters; it's a property of the *rule*.

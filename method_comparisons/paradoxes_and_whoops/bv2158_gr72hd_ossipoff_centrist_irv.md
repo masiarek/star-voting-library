@@ -1,5 +1,9 @@
 # BV2158 — IRV buries the centrist — Ossipoff's 303-voter one-dimensional example
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** D · [full count →](cases/cases_pages/bv2158_gr72hd_ossipoff_centrist_irv.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gr72hd) · **[results ↗](https://bettervoting.com/gr72hd/results)** (election `gr72hd`, Test ID BV2158; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 301 · the "core support" defense, demolished.** IRV defenders excuse center squeeze by saying the eliminated moderate "lacked core support" (first-choice votes). This example (Mike Ossipoff, via [rangevoting.org §12](https://www.rangevoting.org/rangeVirv.html)) kills that defense: candidate **C has the *most* first choices of anyone *and* beats every rival head-to-head — and IRV eliminates C anyway**, electing D.

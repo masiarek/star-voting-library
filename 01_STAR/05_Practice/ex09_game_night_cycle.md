@@ -1,5 +1,9 @@
 # Exercise 9 — Game night: nobody is unbeatable
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Azul · [full count →](cases/cases_pages/ex09_game_night_cycle.md)
+<!-- case-meta:end -->
+
 *Ten friends rank four board games for the club's game night. When the count is done, every one of the top three games loses some head-to-head matchup — rock, paper, scissors, with a fourth game everyone ranks last. If nobody beats everybody, who deserves to win? Predict what Ranked Robin does before you peek — including every rung of its ladder.*
 
 **You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../07_Concepts/GLOSSARY.md) exists** · walking [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → total margin) to a *deterministic* answer inside a cycle.

@@ -1,5 +1,9 @@
 # BV126 — ties at every step (single-winner STAR) · issue [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Amy · [full count →](cases/cases_pages/bv126_ties_every_step_8fvd2x.md)
+<!-- case-meta:end -->
+
 *The worst case for the tie-break ladder: three candidates tie at **every** step, so the lot decides — and BetterVoting also drops the five flat ballots as abstentions. LH and BV agree on the winner (**Amy**), but only because the flat ballots can't change it.*
 
 Reference files: [`bv126_ties_every_step_8fvd2x.yaml`](cases/bv126_ties_every_step_8fvd2x.yaml) (`expected_winners: [Amy]`) · frozen export [`bv126_ties_every_step_8fvd2x_bv_export.json`](cases/bv126_ties_every_step_8fvd2x_bv_export.json) (BV `8fvd2x`). Backs sheet row **BV126** (single-winner STAR, despite the sheet's "STAR Bloc" label).

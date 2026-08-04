@@ -1,5 +1,9 @@
 # Runoff 07 (WIP) — a flat ballot exposes the BetterVoting abstention bug
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Blair · [full count →](cases/cases_pages/Runoff_07_flat_ballot_bv_bug_tf73v9.md)
+<!-- case-meta:end -->
+
 > ⚠️ **Work in progress — illustration pending a BetterVoting fix.** This is the **one case in the set where the two reports do *not* fully agree.** They agree on the *winner* (Blair), but BetterVoting mis-files a flat ballot as an *abstention*, so the abstention count, the Equal-Support count, and the score totals differ. Tracked as **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**; kept here as a teaching illustration until it's fixed.
 
 A reversal (Alex leads the scoring round, **Blair** wins the runoff) that *also* contains a **flat ballot** (`3,3,3` — every candidate equal). That one ballot is where the two engines part ways.

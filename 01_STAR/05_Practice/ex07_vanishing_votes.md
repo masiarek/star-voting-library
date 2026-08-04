@@ -1,5 +1,9 @@
 # Exercise 7 — The vanishing votes that never vanished
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../01_Learn) · **1 seat** · **Expected winner:** Aspen · [full count →](cases/cases_pages/ex07_vanishing_votes.md)
+<!-- case-meta:end -->
+
 *A park board votes on which tree to plant. Nine ballot papers come back — two score the top pair equal, one bullet-votes Cedar, one is all zeros, one is completely blank. The runoff summary then announces: "Voters with a preference: 3 of 9." A board member stands up: "Six votes just vanished!" Your job: predict every number on that summary line before you see it — and then answer the board member.*
 
 **You practice:** reading STAR's two-line runoff summary — the **decided-voters denominator**, **[Equal Support](../../07_Concepts/GLOSSARY.md)**, and the difference between a *zero*, an *equal score*, and a *blank* (see [Two Denominators, One Winner](../01_Learn/the_count/runoff_percentages.md)).

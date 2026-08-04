@@ -1,5 +1,9 @@
 # STAR's runoff is spoiler-sensitive under a Condorcet cycle
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Alice · [full count →](cases/cases_pages/bv2212_g3f7r2_cycle_spoiler.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/g3f7r2) · **[results ↗](https://bettervoting.com/g3f7r2/results)** (election `g3f7r2`, Test ID BV2212).
 
 **One line:** when the head-to-head results form a Condorcet cycle, a candidate who *cannot win* can still decide *who does* — because their presence changes which two candidates meet in STAR's automatic runoff. This is STAR's honest Independence-of-Irrelevant-Alternatives (IIA) limit, shown mechanically, on perfectly sincere ballots.

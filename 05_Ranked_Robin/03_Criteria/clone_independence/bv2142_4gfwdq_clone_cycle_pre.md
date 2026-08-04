@@ -1,5 +1,9 @@
 # BV2142 — clone independence (1/2): a no-Condorcet cycle, and where LH and BV part ways
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** A · [full count →](cases/cases_pages/bv2142_4gfwdq_clone_cycle_pre.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq`).
 
 Part 1 of the electowiki clone-independence pair (the "before"). It sets up the teaming attack in [BV2143](bv2143_9pr3wr_teaming_fails.md), and on its own it already shows LH and BetterVoting breaking a tie **differently**. Full lesson: [rr_clone_independence.md](../../01_Learn/rr_clone_independence.md).

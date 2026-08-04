@@ -1,5 +1,9 @@
 # BV2140 — Ranked Robin: most pairwise wins, with no Condorcet winner
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Ava · [full count →](cases/cases_pages/bv2140_48hjkv_most_pairwise_wins.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/48hjkv) · **[results ↗](https://bettervoting.com/48hjkv/results)** (election `48hjkv`).
 
 The [electowiki Ranked Robin worked example](https://electowiki.org/wiki/Ranked_Robin), reproduced end-to-end. It is the repo's first case built on **equal-rank ballots** (voters tie candidates, e.g. `Ava=Bianca=Cedric`). It teaches the core Ranked Robin idea — *elect whoever wins the most head-to-head matchups* — in the interesting case where **no candidate beats everyone** (there is no Condorcet winner), yet Ranked Robin still names a clear winner.

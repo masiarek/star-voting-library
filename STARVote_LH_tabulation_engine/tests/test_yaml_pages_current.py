@@ -42,6 +42,23 @@ def test_pages_exist_and_are_current():
     )
 
 
+def test_companion_meta_blocks_are_current():
+    """Hand-authored pages that shadow a case carry an up-to-date `case-meta` block.
+
+    The prose on those pages is the author's; the block under the H1 is not — it
+    is rebuilt from the YAML, so changing `num_winners` or `voting_method` there
+    can't leave a companion page quietly stating the old value.
+    """
+    mod = _load()
+    stale = mod.check_companions()
+    assert not stale, (
+        f"{len(stale)} companion page(s) with a missing/outdated case-meta block:\n"
+        + "\n".join(f"  {Path(p).relative_to(REPO_ROOT)}" for p in stale[:10])
+        + "\nRegenerate with: python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py"
+    )
+
+
 def test_discovery_not_vacuous():
     mod = _load()
     assert len(mod.expected_pages()) >= 50, "page discovery collapsed"
+    assert len(mod.expected_companions()) >= 40, "companion discovery collapsed"

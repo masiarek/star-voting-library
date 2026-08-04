@@ -1,5 +1,9 @@
 # Runoff 01 — Runoff confirms the leader (control)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Aspen · [full count →](cases/cases_pages/Runoff_01_confirms_leader_r2pvc9.md)
+<!-- case-meta:end -->
+
 **Level 101 · the baseline.** Before showing a reversal, show the ordinary case: the Scoring-Round leader is *also* the candidate more voters prefer, so the Automatic Runoff **confirms** the leader. This proves the runoff isn't rigged against whoever has the most stars — it only *checks* them. (Winner is also the Condorcet winner.)
 
 Two views of the **same election** (BV id [`r2pvc9`](https://bettervoting.com/r2pvc9/results)): BetterVoting's display and the LH engine's text report. Same ballots, same result.

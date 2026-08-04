@@ -1,5 +1,9 @@
 # BV2157 — A Condorcet cycle — rock, paper, scissors: no pairwise winner exists
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Rock · [full count →](cases/cases_pages/bv2157_mmcmpy_condorcet_cycle_rps.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/mmcmpy) · **[results ↗](https://bettervoting.com/mmcmpy/results)** (election `mmcmpy`, Test ID BV2157; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 301 · the paradox of voting itself.** The most famous anomaly in the field, and the one that humbles the *Condorcet* ideal: a majority can prefer **Rock over Paper, Paper over Scissors, and Scissors over Rock** — a loop with no top. When that happens there is **no Condorcet winner at all**, so Condorcet / Ranked Robin can't name one without an extra cycle-breaking rule. This is *their* whoops.

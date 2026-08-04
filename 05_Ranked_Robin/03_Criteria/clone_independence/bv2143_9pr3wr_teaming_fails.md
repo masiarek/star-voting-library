@@ -1,5 +1,9 @@
 # BV2143 — clone independence (2/2): teaming succeeds on LH, fails on BetterVoting
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** A1 · [full count →](cases/cases_pages/bv2143_9pr3wr_teaming_fails.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9pr3wr) · **[results ↗](https://bettervoting.com/9pr3wr/results)** (election `9pr3wr`).
 
 Part 2 of the electowiki clone-independence pair (the "after"). Same electorate as [BV2142](bv2142_4gfwdq_clone_cycle_pre.md), but the A-faction runs clones — and **the two engines elect different winners from identical ballots.** Full lesson: [rr_clone_independence.md](../../01_Learn/rr_clone_independence.md).

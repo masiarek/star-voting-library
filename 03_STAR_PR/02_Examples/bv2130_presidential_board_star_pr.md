@@ -1,5 +1,9 @@
 # BV2130 — Presidential Board Election (Proportional STAR = Allocated Score)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Allocated Score (proportional STAR)](../01_Learn) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation) · [full count →](cases/cases_pages/bv2130_presidential_board_star_pr.md)
+<!-- case-meta:end -->
+
 *A real 7-seat Proportional STAR election on BetterVoting (`bvhchj`): 51 candidates, 102 sparse ballots. LH's `allocated` engine reproduces BetterVoting's **first six seats exactly**; the **seventh diverges** (LH → Claudia De La Cruz, BV → Karina Garcia — both Socialism & Liberation).*
 
 Reference files: [`bv2130_presidential_board_star_pr.yaml`](cases/bv2130_presidential_board_star_pr.yaml) (`voting_method: allocated`, 7 winners) · frozen export [`bv2130_presidential_board_star_pr_bv_export.json`](cases/bv2130_presidential_board_star_pr_bv_export.json) (BV `bvhchj`). Backs sheet row **BV2130**. The election also has a second race (party-alignment **Plurality**) that elects **Democrat**.

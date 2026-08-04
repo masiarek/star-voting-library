@@ -1,5 +1,9 @@
 # Runoff 04 — the reversal holds at scale (67/33)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Olive · [full count →](cases/cases_pages/Runoff_04_reversal_at_scale_bfjqmg.md)
+<!-- case-meta:end -->
+
 **Level 101 · the atom, blown up to a crowd.** Same shape as [Runoff 02](Runoff_02_atom_reversal_yx9447.md), now with nine voters: three love **Maple** (5s) and push Maple's total to the top of the Scoring Round (39), but six prefer **Olive**, who wins the Automatic Runoff **6–3** — a clean **2-to-1 majority** (67 / 33). Proof a reversal isn't a small-numbers fluke. (Olive is the Condorcet winner.)
 
 → teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../../02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../01_Learn/the_count/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../../07_Concepts/GLOSSARY.md).

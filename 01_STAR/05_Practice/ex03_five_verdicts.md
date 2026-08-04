@@ -1,5 +1,9 @@
 # Exercise 3 — One electorate, five verdicts
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../01_Learn) · **1 seat** · **Expected winner:** Cherry · [full count →](cases/cases_pages/ex03_five_verdicts.md)
+<!-- case-meta:end -->
+
 *An office votes on the snack to stock: Apple, Banana, or Cherry. Nine people fill in one score ballot each — and then the count is run five different ways. How many different winners can one small electorate produce? Commit to a number before you start.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/ywqhq4) · **[results ↗](https://bettervoting.com/ywqhq4/results)** (election `ywqhq4`, Test ID BV2191 — one election, **five races**, all five verdicts live; BV agrees with the LH engine on every race).

@@ -1,5 +1,9 @@
 # BV2159 — Many IRV pathologies in one election — Brams' 21-voter sampler
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** B · [full count →](cases/cases_pages/bv2159_f4cjpy_brams_irv_pathologies.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy`, Test ID BV2159; STAR is race 1, and every race matches the LH tabulation below).
 
 **Level 301 · the sampler platter.** Steven Brams' famous example (*Notices of the AMS*, 1982; via [rangevoting.org §12](https://www.rangevoting.org/rangeVirv.html)) packs **several** IRV anomalies into one 21-voter election. IRV elects **B**, but **G is the Condorcet winner** — and the same ballots demonstrate a no-show paradox, a truncation incentive, favorite-betrayal, and non-monotonicity.

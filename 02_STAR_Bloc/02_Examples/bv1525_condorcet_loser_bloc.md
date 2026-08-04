@@ -1,5 +1,9 @@
 # BV1525 — 5 candidates / 4 winners, Bloc STAR: a Condorcet loser ties for seat 1
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **4 seats** · **Expected winners:** First, Second, Third, Fourth · [full count →](cases/cases_pages/bv1525_condorcet_loser_bloc.md)
+<!-- case-meta:end -->
+
 *Larry Hastings' electowiki Bloc-STAR test election, reproduced as the LH reference for BetterVoting test BV1525 (4 winners, 16 ballots). The candidates are named for their intended finish — First, Condorcet Loser, Second, Third, Fourth. The twist: a **Score co-leader can be a near-Condorcet loser** (loses every head-to-head). Here "Condorcet Loser" ties "First" for the top score and so ties for the seat-1 runoff; the lot alone separates them. Winners: **First, Second, Third, Fourth**.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx`). On this run BetterVoting drew **First** for seat 1 — matching this file's published-lot outcome. Note the reporting quirk: BV flags the seat-1 round `tieBreakType: random` (correct — its logs walk `runoff_tied → runoff_score_tie → runoff_five_star_tie → runoff_random`), but the **top-level summary still reads `tieBreakType: none`**, the same under-report seen in [BV130-r2](bv130r2_dead_rung_bloc.md) and [BV131](bv131_guido_bloc.md).

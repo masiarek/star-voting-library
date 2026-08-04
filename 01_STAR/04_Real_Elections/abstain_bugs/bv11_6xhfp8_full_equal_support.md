@@ -1,5 +1,9 @@
 # BV11 — full & equal support (5,5) counted as abstentions
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Ann · [full count →](cases/cases_pages/bv11_6xhfp8_full_equal_support.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6xhfp8) · **[results ↗](https://bettervoting.com/6xhfp8/results)** (election `6xhfp8`) · issue [Equal-Vote/bettervoting#1053](https://github.com/Equal-Vote/bettervoting/issues/1053)
 
 Three voters each give **both** candidates the maximum score (`5,5`) — full, equal support. A valid STAR ballot. BetterVoting counts every one of them as an **abstention**.

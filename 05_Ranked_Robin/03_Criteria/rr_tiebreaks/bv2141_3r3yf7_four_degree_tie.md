@@ -1,5 +1,9 @@
 # BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Ava · [full count →](cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3r3yf7) · **[results ↗](https://bettervoting.com/3r3yf7/results)** (election `3r3yf7`).
 
 The [electowiki Ranked Robin "all four tie-breaking degrees" example](https://electowiki.org/wiki/Ranked_Robin) — the hardest tie the method defines a rule for. **Ava and Bianca tie so thoroughly** that the first three degrees of the Equal Vote Coalition's tiebreak protocol all fail to separate them; only the 4th-degree beatpath does. It's the perfect stress test of *what each engine actually does when Ranked Robin ties*, and the answer is: **they disagree, and BetterVoting admits it isn't finished.**

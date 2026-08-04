@@ -1,5 +1,9 @@
 # BV1835 — Bloc STAR, 100 voters, 4 seats: the score leader wins no seat
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **4 seats** · **Expected winners:** Bianca, Cedric, Deegan, Eli · [full count →](cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md)
+<!-- case-meta:end -->
+
 *Sass's Bloc STAR example, run as a real BetterVoting election (id `8h3yrx`, 100 ballots). Ava leads the scoring round of **all four** rounds by sixty-three points and takes **no seat**, losing every automatic runoff 51–49. LH and BetterVoting agree exactly: winners **Bianca, Cedric, Deegan, Eli**.*
 
 Reference files: [`bv1835_8h3yrx_score_leader_no_seat.yaml`](cases/bv1835_8h3yrx_score_leader_no_seat.yaml) (`expected_winners: [Bianca, Cedric, Deegan, Eli]`) · frozen export [`bv1835_8h3yrx_score_leader_no_seat_bv_export.json`](cases/bv1835_8h3yrx_score_leader_no_seat_bv_export.json) (BV `8h3yrx`) · full count [`bv1835_8h3yrx_score_leader_no_seat.md`](cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md). Backs sheet row **BV1835**.

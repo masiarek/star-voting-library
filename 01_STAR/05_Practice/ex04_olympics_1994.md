@@ -1,5 +1,9 @@
 # Exercise 4 — Lillehammer 1994: nine judges, two winners
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../01_Learn) · **1 seat** · **Expected winner:** Baiul · [full count →](cases/cases_pages/ex04_olympics_1994.md)
+<!-- case-meta:end -->
+
 *The ladies figure-skating final at the 1994 Winter Olympics came down to nine judges ranking Oksana Baiul, Nancy Kerrigan, and Chen Lu. History records a 5–4 split for Baiul's gold. Rerun those nine real ballots as a scored election and something odd happens: **Score voting and STAR disagree** — on real data, no construction needed.*
 
 **You practice:** converting ranks to scores with an order-preserving map · Score vs STAR on the same ballots · why the runoff verdict survives the conversion but the score totals don't · a Pareto-dominance impossibility argument.

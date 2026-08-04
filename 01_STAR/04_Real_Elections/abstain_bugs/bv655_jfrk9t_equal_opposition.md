@@ -1,5 +1,9 @@
 # BV655 — "equal opposition" (all-0) mislabeled as Abstained
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Option 1 · [full count →](cases/cases_pages/bv655_jfrk9t_equal_opposition.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfrk9t) · **[results ↗](https://bettervoting.com/jfrk9t/results)** (election `jfrk9t`) · issue [Equal-Vote/bettervoting#1090](https://github.com/Equal-Vote/bettervoting/issues/1090)
 
 Reproduces the bug where an explicit **all-zero ("equal opposition")** ballot is treated and labeled the same as a true **abstention**. The BetterVoting election has two races built to contrast the two:

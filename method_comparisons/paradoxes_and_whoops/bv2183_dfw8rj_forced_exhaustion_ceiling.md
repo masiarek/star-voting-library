@@ -1,5 +1,9 @@
 # Forced Exhaustion Ceiling — when a ranking cap discards more ballots than the winner gets
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dfw8rj) · **[results ↗](https://bettervoting.com/dfw8rj/results)** (BV2183, election `dfw8rj`).
 
 > **Read this fairly.** This is a *deliberately constructed* worst case, built to show the **ceiling** of RCV-IRV ballot exhaustion under a ranking cap — **not** a claim that real elections look like this. Real exhaustion runs milder (roughly 10–27%; see the [real rates](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md#how-common-is-it-real-elections)). The point is what the *mechanism permits*, and that the cause is the **ballot cap**, not the voters. It sits in [`paradoxes_and_whoops/`](README.md) under the same [reading-these-fairly](reading_these_fairly.md) discipline as the Felsenthal/Nurmi cases.

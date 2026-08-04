@@ -1,5 +1,9 @@
 # BV2131 — Tennessee capital: Ranked Robin elects the Condorcet center (Nashville)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Nashville · [full count →](cases/cases_pages/bv2131_tennessee_condorcet_center_vqyqkr.md)
+<!-- case-meta:end -->
+
 *The textbook Tennessee example, and the first BV-backed **Ranked Robin** case. Four cities; each voter ranks by geographic distance; blocs weighted by population. On **one** ranked ballot set the three methods split three ways — plurality → **Memphis**, RCV-IRV → **Knoxville**, Ranked Robin / Condorcet → **Nashville** — so it's the cleanest single illustration of why "most first-choices" and "last one standing" can both miss the candidate a majority actually prefers.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vqyqkr) · **[results ↗](https://bettervoting.com/vqyqkr/results)** (election `vqyqkr`).

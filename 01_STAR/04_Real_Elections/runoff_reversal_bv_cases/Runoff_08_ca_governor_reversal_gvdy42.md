@@ -1,5 +1,9 @@
 # Runoff 08 — CA Governor, a real STAR field of 61 (BV2181, `gvdy42`)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Tom Steyer (D) · [full count →](cases/cases_pages/Runoff_08_ca_governor_reversal_gvdy42.md)
+<!-- case-meta:end -->
+
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gvdy42) · **[results ↗](https://bettervoting.com/gvdy42/results)** (election `gvdy42`).
 
 > 🗳️ **A real, crowded STAR election that teaches three things at once.** The "2026 California Governor Election" — **61 candidates, 319 ballots** (302 tallied, 17 abstentions). It's the largest field in the Runoff-Reversal set, and it happens to also be the live example behind a BetterVoting reporting bug.

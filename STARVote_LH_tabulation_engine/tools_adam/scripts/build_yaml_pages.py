@@ -13,8 +13,15 @@ auto cross-references: the folder README, topic hubs matched from the content,
 the divergence-review case when methods disagree on this election, sibling
 cases in the same set, the glossary, and the by-method index.
 
+A case may also have a HAND-AUTHORED companion at `<set>/<stem>.md`, alongside
+the generated `<set>/cases/cases_pages/<stem>.md`. Those stay the author's, with
+one exception: a small `case-meta` block under the H1 — method, seats, expected
+winners, and a link to the full generated count — which this script owns and
+rebuilds from the YAML. Prose outside the markers is never touched.
+
 Pages are GENERATED — do not edit by hand. `tests/test_yaml_pages_current.py`
-fails if a page drifts from its YAML/mirror. Regenerate with:
+fails if a page (or a companion's `case-meta` block) drifts from its
+YAML/mirror. Regenerate with:
 
     python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py
 """
@@ -256,6 +263,38 @@ def _divergence_case(stem):
 
 
 # --------------------------------------------------------------------------- #
+# Case facts — one source of truth for the metadata line
+# --------------------------------------------------------------------------- #
+# Both the generated page and the managed block on its hand-authored companion
+# print the same "Method · seats · expected winners" line, so it is built once
+# here. Deriving it twice is exactly how the companion pages drifted in the
+# first place.
+def _case_facts(data):
+    """(display name, docs path, seats, winners|None, expected_winners|None, lot)."""
+    method = _norm_method(_find_first(data, ["voting_method"]))
+    seats = _find_first(data, ["num_winners", "seats"]) or 1
+    winners = None
+    ew = data.get("expected_winners") if isinstance(data, dict) else None
+    if isinstance(ew, list) and ew:
+        winners = [str(w) for w in ew]
+    else:
+        er = _find_first(data, ["expected_results"])
+        w = _find_first(er, ["winners", "elected"]) if er is not None else None
+        if isinstance(w, list) and w:
+            winners = [str(x) for x in w]
+    lot = data.get("lot_numbers") if isinstance(data, dict) else None
+    disp, docs = METHOD_DOCS.get(method, (str(method), "07_Concepts"))
+    return disp, docs, seats, winners, ew, lot
+
+
+def _meta_line(disp, docs, seats, winners, from_dir):
+    seat_txt = "1 seat" if str(seats) == "1" else f"{seats} seats"
+    return (f"**Method:** [{disp}]({_rel(docs, from_dir)}) · **{seat_txt}**"
+            + (f" · **Expected winner{'s' if winners and len(winners) > 1 else ''}:** "
+               + ", ".join(winners) if winners else ""))
+
+
+# --------------------------------------------------------------------------- #
 # Page rendering
 # --------------------------------------------------------------------------- #
 def render(yaml_path, siblings):
@@ -273,21 +312,8 @@ def render(yaml_path, siblings):
     title = _find_first(data, ["election_title", "title"]) or stem
     desc = _find_first(data, ["scenario_description", "election_description",
                               "race_description"])
-    method = _norm_method(_find_first(data, ["voting_method"]))
-    seats = _find_first(data, ["num_winners", "seats"]) or 1
-    winners = None
-    ew = data.get("expected_winners") if isinstance(data, dict) else None
-    if isinstance(ew, list) and ew:
-        winners = [str(w) for w in ew]
-    else:
-        er = _find_first(data, ["expected_results"])
-        w = _find_first(er, ["winners", "elected"]) if er is not None else None
-        if isinstance(w, list) and w:
-            winners = [str(x) for x in w]
-    lot = data.get("lot_numbers") if isinstance(data, dict) else None
-
-    disp, docs = METHOD_DOCS.get(method, (str(method), "07_Concepts"))
-    kind = _ballot_kind(ballots, method)
+    disp, docs, seats, winners, ew, lot = _case_facts(data)
+    kind = _ballot_kind(ballots, _norm_method(_find_first(data, ["voting_method"])))
     ballots_text = str(ballots).rstrip("\n")
     has_markers = bool(re.search(r"[~&?%]|(^|,)\s*-\s*(,|$)", ballots_text, re.M))
 
@@ -307,10 +333,7 @@ def render(yaml_path, siblings):
     L.append(f"*Generated from [`{os.path.basename(yaml_path)}`](../{os.path.basename(yaml_path)}) "
              f"— do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*")
     L.append("")
-    seat_txt = "1 seat" if str(seats) == "1" else f"{seats} seats"
-    L.append(f"**Method:** [{disp}]({_rel(docs, page_dir)}) · **{seat_txt}**"
-             + (f" · **Expected winner{'s' if winners and len(winners) > 1 else ''}:** "
-                + ", ".join(winners) if winners else ""))
+    L.append(_meta_line(disp, docs, seats, winners, page_dir))
     # BV-backed case -> the house live-results lead line (CLAUDE.md rule).
     bv_id = data.get("bv_election_id") if isinstance(data, dict) else None
     if not bv_id and isinstance(data, dict):
@@ -502,6 +525,104 @@ def check():
     return stale, orphans
 
 
+# --------------------------------------------------------------------------- #
+# Companion pages — the managed metadata block
+# --------------------------------------------------------------------------- #
+# A case may have TWO pages: the generated one under `<set>/cases/cases_pages/`,
+# and a hand-authored narrative page at `<set>/<stem>.md`. Only the generated one
+# ever carried the method/seats/winners line, so a reader who landed on the
+# companion saw prose and no parameters — and had no link to the page that had
+# them. Rather than retype the facts into 50 hand-authored files (where they go
+# stale the first time a YAML changes), the companion gets a small block that
+# this script owns, delimited by HTML comments. Everything outside the markers
+# is the author's; everything inside is regenerated from the YAML.
+COMPANION_START = ("<!-- case-meta:start — managed by build_yaml_pages.py; "
+                   "edit the YAML, not these lines -->")
+COMPANION_END = "<!-- case-meta:end -->"
+_COMPANION_RE = re.compile(re.escape("<!-- case-meta:start") + r".*?"
+                           + re.escape(COMPANION_END) + r"\n?", re.S)
+
+
+def _companion_path(yaml_path):
+    """The hand-authored page shadowing this case (`<set>/<stem>.md`), if any."""
+    folder = os.path.dirname(yaml_path)
+    stem = os.path.splitext(os.path.basename(yaml_path))[0]
+    p = os.path.join(os.path.dirname(folder), stem + ".md")
+    return p if os.path.isfile(p) else None
+
+
+def companion_block(yaml_path):
+    """(companion path, managed block) for a case with a companion, else None."""
+    comp = _companion_path(yaml_path)
+    if not comp:
+        return None
+    data = yaml.safe_load(open(yaml_path, encoding="utf-8").read())
+    if not isinstance(data, (dict, list)) or _find_first(data, ["ballots"]) is None:
+        return None
+    disp, docs, seats, winners, _ew, _lot = _case_facts(data)
+    folder = os.path.dirname(yaml_path)
+    stem = os.path.splitext(os.path.basename(yaml_path))[0]
+    comp_dir = os.path.dirname(comp)
+    page = os.path.relpath(os.path.join(folder, os.path.basename(folder) + "_pages",
+                                        stem + ".md"), comp_dir).replace(os.sep, "/")
+    line = _meta_line(disp, docs, seats, winners, comp_dir) + f" · [full count →]({page})"
+    return comp, "\n".join([COMPANION_START, line, COMPANION_END])
+
+
+def apply_companion_block(text, block):
+    """Insert or refresh the managed block directly under the page's H1."""
+    if _COMPANION_RE.search(text):
+        return _COMPANION_RE.sub(lambda _m: block + "\n", text, count=1)
+    lines = text.split("\n")
+    for i, line in enumerate(lines):
+        if line.startswith("# "):
+            j = i + 1
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            return "\n".join(lines[:i + 1] + ["", block, ""] + lines[j:])
+    return block + "\n\n" + text          # no H1: put it up top rather than skip
+
+
+def expected_companions():
+    """{absolute companion path: managed block} for every case that has one."""
+    blocks, seen = {}, {}
+    for root in ROOTS:
+        base = os.path.join(REPO, root)
+        if not os.path.isdir(base):
+            continue
+        for dirpath, dirnames, filenames in os.walk(base):
+            dirnames[:] = [d for d in dirnames
+                           if not d.endswith(GENERATED_SUFFIXES) and d != "img"
+                           and not d.endswith("_tabulation_engine")]
+            for fn in sorted(filenames):
+                if not fn.endswith((".yaml", ".yml")):
+                    continue
+                path = os.path.join(dirpath, fn)
+                try:
+                    got = companion_block(path)
+                except Exception as e:                     # unparsable: skip, warn
+                    print(f"  ! skipped companion for {os.path.relpath(path, REPO)}: {e}")
+                    continue
+                if not got:
+                    continue
+                comp, block = got
+                if comp in seen:                           # two cases, one companion
+                    print(f"  ! {os.path.relpath(comp, REPO)} is claimed by both "
+                          f"{os.path.basename(seen[comp])} and {fn}; left alone")
+                    blocks.pop(comp, None)
+                    continue
+                seen[comp] = path
+                blocks[comp] = block
+    return blocks
+
+
+def check_companions():
+    """Companion pages whose managed block is missing or out of date."""
+    return [p for p, block in expected_companions().items()
+            if apply_companion_block(open(p, encoding="utf-8").read(), block)
+            != open(p, encoding="utf-8").read()]
+
+
 def main():
     want = expected_pages()
     written = 0
@@ -516,6 +637,16 @@ def main():
             os.remove(p)
             removed += 1
     print(f"yaml-pages: {len(want)} pages ({written} written/updated, {removed} orphan(s) removed)")
+
+    companions = expected_companions()
+    touched = 0
+    for p, block in sorted(companions.items()):
+        cur = open(p, encoding="utf-8").read()
+        new = apply_companion_block(cur, block)
+        if new != cur:
+            open(p, "w", encoding="utf-8").write(new)
+            touched += 1
+    print(f"case-meta blocks: {len(companions)} companion page(s) ({touched} updated)")
     return 0
 
 

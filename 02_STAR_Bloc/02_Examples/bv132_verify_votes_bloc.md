@@ -1,5 +1,9 @@
 # BV132 — verify number of votes cast (Bloc STAR) · issue [#1073](https://github.com/Equal-Vote/bettervoting/issues/1073)
 
+<!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** C, B · [full count →](cases/cases_pages/bv132_verify_votes_bloc.md)
+<!-- case-meta:end -->
+
 *BetterVoting reports the wrong number of voters on a Bloc STAR election: it drops the two "flat" ballots (every candidate scored the same) as abstentions. The winners are still correct — the bug is the vote count / turnout, not the result.*
 
 Reference files: [`bv132_verify_votes_bloc.yaml`](cases/bv132_verify_votes_bloc.yaml) (LH, `expected_winners: [C, B]`) · frozen export [`bv132_verify_votes_bloc_bv_export.json`](cases/bv132_verify_votes_bloc_bv_export.json) (BV election `3494cb`). Backs sheet row **BV132**.
