@@ -4680,7 +4680,61 @@ RANDOM_TIEBREAK_NINE_SPEC = {
 }
 
 
-ELECTIONS: list = [RANDOM_TIEBREAK_NINE_SPEC]   # BV2262 — nine-way dead heat, scale check
+# --- BV1835 — 100 voters, 4 seats: the score leader wins nothing ------------------
+# Sass's Bloc STAR example, the first case in 02_STAR_Bloc at a realistic electorate
+# (every other case there is 2-16 ballots). Two camps of 49 mirror each other, and a
+# 2-ballot swing bloc decides all four seats.
+#
+# Ava is scored 3 by 98 of the 100 voters and leads the score round in EVERY round
+# (294, sixty-three clear of the runner-up) — and takes NO seat, losing all four
+# automatic runoffs 51-49. Each camp of 49 prefers Ava to the other camp's people, so
+# the 2 swing ballots (who score Ava 0) are what turns 49-49 into 51-49, four times.
+# The lesson is the runoff step: Bloc STAR fills seats by who is PREFERRED, and a
+# broadly-liked compromise who is nobody's first choice can be shut out completely.
+# LH-verified pre-creation: winners Bianca, Cedric, Deegan, Eli; all four runoffs 51-49.
+_SASS_CANDS = ["Ava", "Bianca", "Cedric", "Deegan", "Eli"]
+_SASS_BLOCS = [(25, [3, 5, 4, 0, 0]), (24, [3, 4, 5, 0, 0]),
+               (25, [3, 0, 0, 5, 4]), (24, [3, 0, 0, 4, 5]),
+               (2,  [0, 5, 4, 3, 2])]
+BLOC_SASS_100_SPEC = {
+    "test_id": "BV1835",
+    "title": "Committee election, 100 voters, 4 seats: the highest-scoring candidate wins no seat",
+    "description": (
+        "A hundred voters fill four committee seats by Bloc STAR — the same 0-5 STAR "
+        "ballot, counted once per seat, removing each winner before the next round. "
+        "The electorate splits into two even camps of 49 who share no candidates, plus "
+        "two voters who break every tie. "
+        "Ava is the compromise: 98 of the 100 voters give her a 3, and she leads the "
+        "score round of all four rounds by a wide margin (294 against 231, 228, 227, "
+        "224). She wins nothing. In each round she reaches the automatic runoff and "
+        "loses it 51-49, because 'scored well by nearly everyone' is not the same as "
+        "'preferred head to head' — each camp of 49 ranks its own two candidates above "
+        "her, and the two swing voters score her 0. "
+        "The point is what the runoff step does: Bloc STAR awards a seat to whoever is "
+        "PREFERRED by more voters, not to whoever accumulates the most points, so a "
+        "broadly acceptable candidate who is nobody's favourite can be shut out of a "
+        "four-seat body entirely. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/02_STAR_Bloc/index.html"),
+    "method": "STAR",
+    "num_winners": 4,
+    "candidates": _SASS_CANDS,
+    "ballots": _rows(_SASS_BLOCS),
+    "enable_write_in": False,
+    "expected": (
+        "Winners Bianca, Cedric, Deegan, Eli — in that seat order. Scores: Ava 294, "
+        "Bianca 231, Cedric 228, Deegan 227, Eli 224. Ava is the score leader in all "
+        "four scoring rounds and loses all four automatic runoffs 51-49 (100 of 100 "
+        "voters express a preference each time; no Equal Support). No ties, no lot — "
+        "the whole result is deterministic. BV stores this as voting_method 'STAR' "
+        "with num_winners 4, i.e. 'Bloc STAR' appears nowhere in the export (#1086). "
+        "Cross-check: Stevan Leonard ran the same 100 ballots through EPRv3 in Sep 2023 "
+        "and got the same four winners in the order B, D, C, E. Test ID BV1835."),
+}
+
+
+ELECTIONS: list = [BLOC_SASS_100_SPEC]   # BV1835 — 100 voters, 4 seats, score leader shut out
+# Previously: [RANDOM_TIEBREAK_NINE_SPEC]   # BV2262 — nine-way dead heat, scale check
 # Previously: [RANDOM_TIEBREAK_RECORDED_SPEC]   # BV2261 — random tiebreak is recorded (created -> y2fbpc)
 # Previously: [MOST_WINS_NOT_CONDORCET_SPEC]   # BV2260 — most wins ≠ Condorcet winner (created -> gg9qh9)
 # Previously: [EX15A_SPEC, EX15B_SPEC]   # BV2258/BV2259 — exercise 15, read the ballot
