@@ -37,7 +37,15 @@ Seat 1 is a clean win for A. Seat 2 is **not** clean: with A removed, B and C ea
 
 Result: **A and C win** (2 seats). `nAbstentions: 0`, `nTallyVotes: 3` (all ballots counted), `tieBreakType: "score"`. *(Aside: the export labels `votingMethod: "STAR"` rather than "Bloc STAR" — [#904](https://github.com/Equal-Vote/bettervoting/issues/904).)*
 
-*(Drop a BV screenshot into `img/` as `img/fk38pk_result.png` to add it here.)*
+The results page paginates one card per seat. **Seat 1** — A takes 12 of the 15 available points and wins the runoff 3–0, so the runoff bar reads 100% and the dashed *majority threshold* line falls at 50% of the same axis (with no Equal Support, both are measured against the same 3 voters):
+
+<img alt="BetterVoting seat 1 for fk38pk: scoring round A 12, C 2, B 1; runoff A 100% with the majority threshold line at mid-bar" src="img/fk38pk_result.png" width="640">
+
+**Seat 2** — the tie. C and B each hold one preference and one ballot rates them equally, so all three bars read **33%** while the *majority threshold* line lands at **1 vote** — the exact height of both candidate bars. Two bars touching a line labelled "majority" in a runoff neither of them won:
+
+<img alt="BetterVoting seat 2 for fk38pk: runoff C 33%, B 33%, Equal Support 33%, both bars reaching the majority threshold line" src="img/fk38pk_seat2_runoff.png" width="640">
+
+The gap between those two readings is the denominator mismatch filed as [#1471](https://github.com/Equal-Vote/bettervoting/issues/1471) — the labels divide by all three bars, the marker by the two finalists only. It changes nothing about the count (both engines elect A and C); it's what the picture says about it. What the three denominators are worth in a Bloc race: [Over 50% — what a landslide actually buys](../01_Learn/over_50_percent.md).
 
 ## View 2 — the LH report
 
