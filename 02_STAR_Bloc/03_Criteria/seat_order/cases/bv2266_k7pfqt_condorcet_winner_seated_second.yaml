@@ -1,0 +1,62 @@
+election_title: "BV2266 — Seat order: the candidate who beats every rival is seated second"
+
+scenario_description: |-
+  Seven voters, four candidates, two seats, counted by Bloc STAR.
+
+  Anika beats every rival head to head — over Bo 4-2, over Cora 5-2, over Dev
+  4-3 — so she is the Condorcet winner of this electorate. She is seated SECOND.
+
+    - Seat 1: scores Dev 24, Bo 22, Anika 21, Cora 15. Anika misses the
+      automatic runoff by a single point; Dev beats Bo 2-1 (four voters express
+      no preference between them) and takes the seat.
+    - Seat 2: Dev is removed and the same ballots are re-counted. Bo 22,
+      Anika 21, Cora 15; Anika beats Bo 4-2.
+
+  The lesson is what seat order means: under Bloc STAR it is the order the
+  runoffs finish in, not a ranking of how much the electorate wants each winner.
+  That matters wherever the first seat carries something extra — a chair, a
+  longer term, a tie-breaking vote.
+
+  The honest other half: counted for ONE seat these same ballots elect Dev and
+  Anika loses outright (an ordinary STAR Condorcet failure — she is third by
+  score and never reaches the runoff). The second seat is what rescues the
+  majority-preferred candidate. No tie-break is used anywhere in this election.
+
+  Reproduced on BetterVoting (election k7pfqt): BV elects Dev then Anika,
+  nTallyVotes 7, tieBreakType none — an exact match with the LH count. Frozen
+  export: bv2266_k7pfqt_condorcet_winner_seated_second_bv_export.json.
+  Live results: https://bettervoting.com/k7pfqt/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Anika,Bo,Cora,Dev
+  4,2,3,2
+  1,5,5,5
+  4,3,0,3
+  5,4,0,3
+  4,2,2,3
+  1,1,4,3
+  2,5,1,5
+
+bv_test_id: BV2266
+bv_election_id: k7pfqt
+bv_results_url: https://bettervoting.com/k7pfqt/results
+
+expected_winners:
+  - Dev
+  - Anika
+
+# file: bv2266_k7pfqt_condorcet_winner_seated_second.yaml

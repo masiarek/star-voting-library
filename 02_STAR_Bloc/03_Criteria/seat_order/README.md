@@ -2,6 +2,8 @@
 
 **One line:** in this two-seat election **Anika** beats every other candidate head-to-head — including **Dev**, who takes seat 1 — and is seated **second**. Under Bloc STAR "first seated" means *won the first runoff*, not *most preferred*, and the difference is visible on the same seven ballots.
 
+**▶ Live on BetterVoting:** BV2266 [vote](https://bettervoting.com/k7pfqt) · **[results ↗](https://bettervoting.com/k7pfqt/results)** (election `k7pfqt`).
+
 → The method: [Bloc STAR](../../01_Learn/bloc_star.md) · the single-winner version of the same tension: [three notions of "winner"](../../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)
 
 **Level: 201.** One election, 4 candidates, 7 voters, 2 seats — small enough to check the pairwise table by hand.
@@ -45,6 +47,14 @@ Anika is the **Condorcet winner** — preferred by a majority to every rival, on
 **It is not a scandal because both of them win.** Run these same ballots for **one** seat and it is an ordinary [STAR Condorcet failure](../../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md): Anika misses the top two by a point and loses outright. The second seat *rescues* her. Multi-winner elections are more forgiving of a narrow scoring-round miss than single-winner ones — a genuinely good thing to be able to show, and the honest other half of this page.
 
 What the case pins down is the precise claim: **Bloc STAR seats winners in the order its runoffs finish, and that order is not a preference ranking.** Announce the council as a set, not a podium, unless your rules really mean the podium.
+
+## Run it yourself
+
+| Case | Voters | Council | Read · run |
+|---|:--:|---|---|
+| **BV2266** | 7 | Dev (seat 1), **Anika** (seat 2) | [count](cases/cases_pages/bv2266_k7pfqt_condorcet_winner_seated_second.md) · [yaml](cases/bv2266_k7pfqt_condorcet_winner_seated_second.yaml) · [results ↗](https://bettervoting.com/k7pfqt/results) |
+
+Live on BetterVoting and reproduced independently in the LH engine; **BV and LH agree exactly** — Dev then Anika, `nTallyVotes 7`, `tieBreakType: none`. The frozen export sits beside the yaml. The yaml turns the full pairwise grid on (`show_matrix: true`, `matrix_finalists_only: false`, `show_condorcet: true`) because the head-to-head table is the whole point here.
 
 ## Related
 

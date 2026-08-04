@@ -1,0 +1,52 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 7 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Anika, Bo, Cora, Dev
+     1 × Anika > Cora > Bo=Dev      (4, 2, 3, 2)
+     1 × Bo=Cora=Dev > Anika      (1, 5, 5, 5)
+     1 × Anika > Bo=Dev > Cora      (4, 3, 0, 3)
+     1 × Anika > Bo > Dev > Cora      (5, 4, 0, 3)
+     1 × Anika > Dev > Bo=Cora      (4, 2, 2, 3)
+     1 × Cora > Dev > Anika=Bo      (1, 1, 4, 3)
+     1 × Bo=Dev > Anika > Cora      (2, 5, 1, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Anika  beats Bo      4 – 2
+   Anika  beats Cora    5 – 2
+   Anika  beats Dev     4 – 3
+   Bo     beats Cora    3 – 2
+   Dev    beats Bo      2 – 1
+   Dev    beats Cora    4 – 2
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |   Anika   |   Bo     |  Cora    |   Dev    |
+--------------------------------------------------------
+  Anika > |    ---    |4 - 1 - 2 |5 - 0 - 2 |4 - 0 - 3 |
+     Bo > | 2 - 1 - 4 |   ---    |3 - 2 - 2 |1 - 4 - 2 |
+   Cora > | 2 - 0 - 5 |2 - 2 - 3 |   ---    |2 - 1 - 4 |
+    Dev > | 3 - 0 - 4 |2 - 4 - 1 |4 - 1 - 2 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Anika      3–0–0         3      +6  Dev, Bo, Cora
+    2  Dev        2–1–0         2      +2  Bo, Cora
+    3  Bo         1–2–0         1      -2  Cora
+    4  Cora       0–3–0         0      -6  —
+
+Winner — Ranked Robin (RCV-RR): Anika
+   beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Anika
+   Outside (3):        Bo, Cora, Dev
+   One member ⇒ Anika is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Anika is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md

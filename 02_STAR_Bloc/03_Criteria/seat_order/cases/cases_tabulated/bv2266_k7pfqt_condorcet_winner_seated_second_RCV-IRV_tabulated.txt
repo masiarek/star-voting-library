@@ -1,0 +1,38 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2266 — Seat order: the candidate who beats every rival is seated second
+ Tabulating 7 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Anika, Bo, Cora, Dev
+     1 ×   Anika > Cora > Bo > Dev      (4, 2, 3, 2)
+     1 ×   Bo > Cora > Dev > Anika      (1, 5, 5, 5)
+     1 ×   Anika > Bo > Dev      (4, 3, 0, 3)
+     1 ×   Anika > Bo > Dev      (5, 4, 0, 3)
+     1 ×   Anika > Dev > Bo > Cora      (4, 2, 2, 3)
+     1 ×   Cora > Dev > Anika > Bo      (1, 1, 4, 3)
+     1 ×   Bo > Dev > Anika > Cora      (2, 5, 1, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Anika              4  Elected
+Bo                 2  Rejected
+Cora               1  Rejected
+Dev                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Anika
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Anika
+   Outside (3):        Bo, Cora, Dev
+   One member ⇒ Anika is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Anika is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

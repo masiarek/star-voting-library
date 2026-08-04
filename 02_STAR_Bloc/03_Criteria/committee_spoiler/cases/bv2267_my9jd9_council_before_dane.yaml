@@ -1,0 +1,56 @@
+election_title: "BV2267 — Committee spoiler (1 of 2): three candidates, before a fourth runs"
+
+scenario_description: |-
+  The CONTROL half of a spoiler pair. Seven voters fill two seats from three
+  candidates by Bloc STAR.
+
+    - Seat 1: scores Cyrus 17, Bea 16, Ari 11; Cyrus beats Bea in the automatic
+      runoff 4-2 (one voter expresses no preference).
+    - Seat 2: Cyrus is removed and the same ballots are re-counted. Bea 16,
+      Ari 11; Ari beats Bea 4-3.
+
+  Council: Cyrus and Ari. No rung of the tie-break ladder is consulted.
+
+  Pair with BV2268 (6m3gxq): the very same seven ballots with a fourth candidate,
+  Dane, added. Dane wins no seat and the council changes anyway.
+
+  Reproduced on BetterVoting (election my9jd9): BV elects Cyrus then Ari,
+  nTallyVotes 7, tieBreakType none — an exact match with the LH count. Frozen
+  export: bv2267_my9jd9_council_before_dane_bv_export.json.
+  Live results: https://bettervoting.com/my9jd9/results
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Ari,Bea,Cyrus
+  5,3,3
+  0,3,4
+  1,0,1
+  0,5,2
+  4,2,4
+  1,0,1
+  0,3,2
+
+paradoxes: [spoiler-scc]
+
+bv_test_id: BV2267
+bv_election_id: my9jd9
+bv_results_url: https://bettervoting.com/my9jd9/results
+
+expected_winners:
+  - Cyrus
+  - Ari
+
+# file: bv2267_my9jd9_council_before_dane.yaml

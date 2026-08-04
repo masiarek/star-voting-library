@@ -1,0 +1,55 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2268 — Committee spoiler (2 of 2): a fourth candidate wins nothing and changes who does
+ Tabulating 7 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ari, Bea, Cyrus, Dane
+     1 ×   Ari > Bea > Cyrus      (5, 3, 3, 0)
+     1 ×   Cyrus > Bea > Dane      (0, 3, 4, 2)
+     2 ×   Dane > Ari > Cyrus      (1, 0, 1, 5)
+     1 ×   Bea > Cyrus > Dane      (0, 5, 2, 1)
+     1 ×   Ari > Cyrus > Bea > Dane      (4, 2, 4, 1)
+     1 ×   Bea > Dane > Cyrus      (0, 3, 2, 3)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bea                2  Hopeful
+Ari                2  Hopeful
+Dane               2  Hopeful
+Cyrus              1  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Bea                3  Hopeful
+Dane               2  Hopeful
+Ari                2  Rejected
+Cyrus              0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bea                5  Elected
+Dane               2  Rejected
+Ari                0  Rejected
+Cyrus              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bea
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Cyrus
+   Outside (3):        Ari, Bea, Dane
+   One member ⇒ Cyrus is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Bea is OUTSIDE the Smith set. ✗
+      Every member of the set (Cyrus) beats Bea head-to-head, yet
+      RCV-IRV elected Bea anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

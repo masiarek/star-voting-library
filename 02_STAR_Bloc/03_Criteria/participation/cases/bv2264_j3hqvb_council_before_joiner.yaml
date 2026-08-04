@@ -1,0 +1,57 @@
+election_title: "BV2264 — Participation (1 of 2): the council six voters elect"
+
+scenario_description: |-
+  The CONTROL half of a participation pair. Six voters fill a two-seat board by
+  Bloc STAR — the 0-5 STAR ballot counted once per seat: elect a winner, remove
+  them, re-run the same count on who is left.
+
+    - Seat 1: scores Ada 21, Dov 18, Bruno 13, Cleo 11. Ada and Dov advance;
+      Ada wins the automatic runoff 2-0, with four of the six voters expressing
+      no preference between them.
+    - Seat 2: Ada is removed and the same ballots are re-counted. Dov 18,
+      Bruno 13, Cleo 11; Bruno beats Dov in the runoff 3-2.
+
+  Council: Ada and Bruno. No rung of the tie-break ladder is consulted.
+
+  Pair with BV2265 (th3pbp), which is these six ballots plus one honest seventh
+  voter — and that voter ends up with a council their own ballot rates LOWER.
+
+  Reproduced on BetterVoting (election j3hqvb): BV elects Ada then Bruno,
+  nTallyVotes 6, tieBreakType none — an exact match with the LH count. Frozen
+  export: bv2264_j3hqvb_council_before_joiner_bv_export.json.
+  Live results: https://bettervoting.com/j3hqvb/results
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Ada,Bruno,Cleo,Dov
+  3,5,1,3
+  4,5,2,4
+  4,0,1,4
+  2,2,5,1
+  3,1,1,1
+  5,0,1,5
+
+paradoxes: [no-show]
+
+bv_test_id: BV2264
+bv_election_id: j3hqvb
+bv_results_url: https://bettervoting.com/j3hqvb/results
+
+expected_winners:
+  - Ada
+  - Bruno
+
+# file: bv2264_j3hqvb_council_before_joiner.yaml

@@ -1,0 +1,38 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2267 — Committee spoiler (1 of 2): three candidates, before a fourth runs
+ Tabulating 7 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ari, Bea, Cyrus
+     1 ×   Ari > Bea > Cyrus      (5, 3, 3)
+     1 ×   Cyrus > Bea      (0, 3, 4)
+     2 ×   Ari > Cyrus      (1, 0, 1)
+     1 ×   Bea > Cyrus      (0, 5, 2)
+     1 ×   Ari > Cyrus > Bea      (4, 2, 4)
+     1 ×   Bea > Cyrus      (0, 3, 2)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ari                4  Elected
+Bea                2  Rejected
+Cyrus              1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ari
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Cyrus
+   Outside (2):        Ari, Bea
+   One member ⇒ Cyrus is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Ari is OUTSIDE the Smith set. ✗
+      Every member of the set (Cyrus) beats Ari head-to-head, yet
+      RCV-IRV elected Ari anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

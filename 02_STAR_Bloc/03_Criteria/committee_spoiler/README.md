@@ -2,6 +2,8 @@
 
 **One line:** the same seven ballots elect **Cyrus and Ari** with three candidates on the ballot, and **Cyrus and Bea** once **Dane** is added — and Dane wins no seat. A candidate who cannot win still decides who sits in the second chair.
 
+**▶ Live on BetterVoting:** BV2267 [vote](https://bettervoting.com/my9jd9) · **[results ↗](https://bettervoting.com/my9jd9/results)** (election `my9jd9`) — three candidates · BV2268 [vote](https://bettervoting.com/6m3gxq) · **[results ↗](https://bettervoting.com/6m3gxq/results)** (election `6m3gxq`) — the same ballots with Dane added.
+
 → The method: [Bloc STAR](../../01_Learn/bloc_star.md) · the single-winner version: [IIA & the cycle spoiler](../../../01_STAR/03_Criteria/iia_cycle_spoiler/README.md)
 
 **Level: 301 · deep dive.** Two elections, 2 seats each, seven voters who never change their minds about anyone.
@@ -56,6 +58,17 @@ Two things make the Bloc version different from the [single-winner one](../../..
 - **The spoiler gets N chances, not one.** A candidate eliminated from contention for seat 1 is still on the ballot for seat 2, and every subsequent seat. The more seats, the more finalist pairs there are to disturb.
 
 The practical reading, for anyone choosing rules rather than studying them: **who else runs changes the composition of a Bloc STAR body, even when those candidates lose.** That is true of nearly every method — it is worth knowing which shape it takes here, and knowing that it does not require anything exotic like a cycle to happen.
+
+## Run them yourself
+
+Both are live on BetterVoting and reproduced independently in the LH engine; **BV and LH agree exactly**, `nTallyVotes 7` on both, `tieBreakType: none` at every seat.
+
+| Case | Candidates | Council | Read · run |
+|---|:--:|---|---|
+| **BV2267** — the control | 3 | Cyrus, **Ari** | [count](cases/cases_pages/bv2267_my9jd9_council_before_dane.md) · [yaml](cases/bv2267_my9jd9_council_before_dane.yaml) · [results ↗](https://bettervoting.com/my9jd9/results) |
+| **BV2268** — Dane runs | 4 | Cyrus, **Bea** | [count](cases/cases_pages/bv2268_6m3gxq_spoiler_changes_council.md) · [yaml](cases/bv2268_6m3gxq_spoiler_changes_council.yaml) · [results ↗](https://bettervoting.com/6m3gxq/results) |
+
+Frozen exports sit beside each yaml as `…_bv_export.json`.
 
 ## Related
 
