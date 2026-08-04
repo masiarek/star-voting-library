@@ -42,7 +42,7 @@ Two runnable counter-examples make the gap concrete.
 
 44 residents choose a street tree. First choices: **Aspen 18 (41%)**, Birch 14, Cedar 12. The winner is under half and the losers combined (26) are a majority, so this race counts as a "vote split election." Read the whole ballot and nothing was split:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 --- Runoff (Preference) Matrix ---
                  |   * Aspen    |  * Birch    |    Cedar    |
 -------------------------------------------------------------
@@ -65,7 +65,6 @@ Automatic Runoff Round
    Voters with a preference: 44 of 44 (no Equal Support).
    Aspen 30 (68%) vs Birch 14 (32%); majority = 23.
 ```
-
 [STAR](../../01_STAR/01_Learn/STAR_start_here.md), [Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) (Aspen 18 → 30 after Cedar's transfers) all elect Aspen — the same candidate Choose-One elected on 41%. The race was *exposed* to vote splitting; the outcome was not *changed* by it.
 
 → Source: [`06_sub_majority_not_spoiled.yaml`](_main/06_sub_majority_not_spoiled.yaml) · full report: [page](_main/_main_pages/06_sub_majority_not_spoiled.md) · [`_tabulated`](_main/_main_tabulated/06_sub_majority_not_spoiled_tabulated.txt)

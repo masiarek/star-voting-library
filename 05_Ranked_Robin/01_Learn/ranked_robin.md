@@ -123,7 +123,7 @@ ballots: |-
 
 The **on-screen report** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
 
-```text
+```text title="Abridged for the lesson — not verbatim engine output"
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 7 ballots (ranked ballots).
 
@@ -146,7 +146,6 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Ben
    beats every opponent head-to-head — the Condorcet winner.
 ```
-
 The **`_tabulated` mirror** is identical *plus* the full N×N pairwise matrix — the Ranked Robin tally itself — inserted before the win-loss record (each cell reads `For - Equal Support - Against`, row vs column; the middle column is `0` here because these are strict ranks with no equal support):
 
 ```text

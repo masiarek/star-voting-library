@@ -31,7 +31,7 @@ The four whole-ballot methods elect the candidate a majority actually prefers; t
 
 ## LH engine — the STAR race (the divergence, on one screen)
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 [Condorcet Winner]
   Condorcet Winner: Casey — matches the STAR winner
 
@@ -44,7 +44,6 @@ The four whole-ballot methods elect the candidate a majority actually prefers; t
 Scoring Round:  Casey 28 · Avery 22 · Blake 22   (Casey advances; poles tie for 2nd)
 Automatic Runoff:  Casey 5 vs Avery/Blake 3      (Casey wins)
 ```
-
 (LH's RCV-IRV breaks the 4–4 tie with a stable seed → Avery; BetterVoting breaks it at random. Same profile, same conclusion — only the coin lands differently.)
 
 ## Files

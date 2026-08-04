@@ -77,7 +77,7 @@ Here is the payoff, and it is the whole reason this is a **third** protocol: on 
 
 No deterministic protocol can break a **perfectly symmetric** tie, and the Condorcet Tiebreaker is no exception. Take the repo's real three-way scoring tie, [Flat scores 05 (BV555, `xmyf7k`)](../../09_Parked/Flat_scores_ties/README.md#case-05) — two identical ballots, `A=B=C=5, D=E=4`:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Scoring Round
    A -- 10 -- Tied for first place
    B -- 10 -- Tied for first place
@@ -90,7 +90,6 @@ Scoring Round: Second tiebreaker (five-star)
    A -- 2 · B -- 2 · C -- 2                            # still tied
 → LH: resolved by LOT order → A, B advance (A wins)
 ```
-
 Every voter scored A, B and C **equally**, so in every matchup among them the tally is 0–0. Run the Condorcet Tiebreaker on that matrix: **matches won** 0/0/0, **preference votes** 0/0/0, **win margin** 0/0/0 — all three deterministic rungs tie, and it drops to **step 4, random**. The three protocols therefore agree on the *verdict that the ballots cannot decide this*: LH uses its pre-published **lot** (→ A), BetterVoting uses a **random shuffle** (that run → C), and Equal Vote's Condorcet Tiebreaker would draw at random too. When voters are perfectly indifferent, there is simply nothing for any rung to weigh.
 
 ---

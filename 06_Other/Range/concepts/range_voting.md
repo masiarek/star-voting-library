@@ -84,7 +84,7 @@ The lesson: **the cardinal ballot's *resolution* can change the winner.** Collap
 
 Range files here are tabulated by [Range / Score voting tabulation engine](../Range_tabulation_engine/), which wraps **pref_voting**'s `score_voting` and cross-checks it against a hand sum. Full report for the 101 case: [`range_101_c3_b5_RANGE_tabulated.txt`](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt).
 
-```text
+```text title="Abridged for the lesson — not verbatim engine output"
 --- Range / Score Voting (single winner) ---
   Range / Score Voting 101 — highest total score wins
  Tabulating 5 ballots on a 0–5 scale (range/score: highest total wins, no runoff).
@@ -99,5 +99,4 @@ Cross-check — pref_voting score_voting: Beth  (✓ agrees with the hand count)
 Winner — Range / Score Voting (single winner)
   Beth
 ```
-
 # file: range_voting.md

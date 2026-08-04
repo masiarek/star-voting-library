@@ -419,8 +419,14 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   - **Deliberate compressions stay — label them, don't convert them.** Put
     `title="Abridged for the lesson — not verbatim engine output"` on the fence: it renders as
     a visible caption and satisfies the gate. `bv750_tie_breaking_bloc.md`'s
-    `a 15 ; b 15 ; c 15  ← three-way tie` is the lesson, not stale output. Six pages are
-    legitimately in this bucket; the other 28 were stale copies and are now includes.
+    `a 15 ; b 15 ; c 15  ← three-way tie` is the lesson, not stale output.
+  - **An annotated fence is NEVER convertible.** If a block carries `←` margin notes
+    (`Ada -- 15  ← Ada is now THIRD`), a `#` aside, or `·`-joined tallies, it is a rendition
+    the author built for the lesson — replacing it with an include deletes the annotation that
+    was the entire point. Nine were destroyed that way before this was written down; they are
+    restored and labelled. **Annotation ⇒ abridged, always.** The same goes for a *curated
+    excerpt* (just the matrix, just the divergence block): the selection is authorial, so
+    label it rather than swapping in the whole report.
 - **Companion pages carry a generated `case-meta` block.** A case with both a generated page
   (`<set>/cases/cases_pages/<stem>.md`) and a hand-authored companion (`<set>/<stem>.md`) gets a
   method / seats / expected-winners line plus a full-count link under the companion's H1,
