@@ -1,0 +1,64 @@
+election_title: "Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first)"
+
+scenario_description: |-
+  Three candidates for a two-seat arts council, five ballots. Nadia and Omar
+  tie at 15 points; Priya trails at 12, so Nadia and Omar are the seat-1
+  finalists. Their runoff is a dead heat (2 - 2, with 1 Equal Support), and
+  every deterministic rung ties behind it: score 15 - 15, five-star 3 - 3.
+  The five-star rung is LIVE here (both hold three 5s) and still cannot
+  separate them, so seat 1 falls to the published lot.
+
+  This file pins the lot to [Nadia, Omar, Priya], so Nadia takes seat 1. Omar
+  then meets Priya for seat 2 and LOSES that runoff 2 - 1 (two ballots score
+  them both 5). Winners: Nadia, Priya.
+
+  The companion file bloc_lot_path_dependence_b_c3_b5.yaml is the identical
+  election with the lot reversed: Omar takes seat 1, Nadia then meets Priya
+  and BEATS her 3 - 2. Winners: Omar, Nadia.
+
+  The point is that the two runs differ in WHO WINS, not merely in the order
+  the seats were filled. Priya is on the council in one and absent from the
+  other, and no ballot changed. Bloc STAR is sequential - each seat is decided
+  in the field the previous seat left behind - so a tie broken at seat 1
+  propagates into every later seat. In a top-N method (Bloc Approval, SNTV,
+  Bloc Ranked Robin) a tie can only ever swap the last seat.
+
+  Why the two head-to-heads differ: Omar and Priya are scored 5/5 by the two
+  ballots that would otherwise separate them, so Omar wins only 1 of the 3
+  decided ballots; Nadia and Priya are never tied on any ballot, and Nadia
+  takes 3 of 5. Same pair of near-identical candidates, opposite results
+  against the same third one.
+
+  LH-only (no BetterVoting election): the winner turns on the lot, and only
+  LH's published lot_numbers let a reader derive the result from the file.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+
+lot_numbers: [Nadia, Omar, Priya]
+
+ballots: |-
+  Nadia,Omar,Priya
+  5,0,1
+  5,0,1
+  5,5,0
+  0,5,5
+  0,5,5
+
+expected_winners:
+  - Nadia
+  - Priya
+
+# file: bloc_lot_path_dependence_a_c3_b5.yaml

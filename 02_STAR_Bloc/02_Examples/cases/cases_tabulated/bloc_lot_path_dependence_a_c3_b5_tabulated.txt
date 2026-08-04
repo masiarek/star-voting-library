@@ -1,0 +1,201 @@
+======================================================================
+SOURCE FILE:     bloc_lot_path_dependence_a_c3_b5.yaml
+TABULATED FILE:  bloc_lot_path_dependence_a_c3_b5_tabulated.txt
+======================================================================
+
+election_title: "Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first)"
+
+scenario_description: |-
+  Three candidates for a two-seat arts council, five ballots. Nadia and Omar
+  tie at 15 points; Priya trails at 12, so Nadia and Omar are the seat-1
+  finalists. Their runoff is a dead heat (2 - 2, with 1 Equal Support), and
+  every deterministic rung ties behind it: score 15 - 15, five-star 3 - 3.
+  The five-star rung is LIVE here (both hold three 5s) and still cannot
+  separate them, so seat 1 falls to the published lot.
+
+  This file pins the lot to [Nadia, Omar, Priya], so Nadia takes seat 1. Omar
+  then meets Priya for seat 2 and LOSES that runoff 2 - 1 (two ballots score
+  them both 5). Winners: Nadia, Priya.
+
+  The companion file bloc_lot_path_dependence_b_c3_b5.yaml is the identical
+  election with the lot reversed: Omar takes seat 1, Nadia then meets Priya
+  and BEATS her 3 - 2. Winners: Omar, Nadia.
+
+  The point is that the two runs differ in WHO WINS, not merely in the order
+  the seats were filled. Priya is on the council in one and absent from the
+  other, and no ballot changed. Bloc STAR is sequential - each seat is decided
+  in the field the previous seat left behind - so a tie broken at seat 1
+  propagates into every later seat. In a top-N method (Bloc Approval, SNTV,
+  Bloc Ranked Robin) a tie can only ever swap the last seat.
+
+  Why the two head-to-heads differ: Omar and Priya are scored 5/5 by the two
+  ballots that would otherwise separate them, so Omar wins only 1 of the 3
+  decided ballots; Nadia and Priya are never tied on any ballot, and Nadia
+  takes 3 of 5. Same pair of near-identical candidates, opposite results
+  against the same third one.
+
+  LH-only (no BetterVoting election): the winner turns on the lot, and only
+  LH's published lot_numbers let a reader derive the result from the file.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+
+lot_numbers: [Nadia, Omar, Priya]
+
+ballots: |-
+  Nadia,Omar,Priya
+  5,0,1
+  5,0,1
+  5,5,0
+  0,5,5
+  0,5,5
+
+expected_winners:
+  - Nadia
+  - Priya
+
+# file: bloc_lot_path_dependence_a_c3_b5.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first) ===
+  Three candidates for a two-seat arts council, five ballots. Nadia and Omar
+  tie at 15 points; Priya trails at 12, so Nadia and Omar are the seat-1
+  finalists. Their runoff is a dead heat (2 - 2, with 1 Equal Support), and
+  every deterministic rung ties behind it: score 15 - 15, five-star 3 - 3.
+  The five-star rung is LIVE here (both hold three 5s) and still cannot
+  separate them, so seat 1 falls to the published lot.
+
+  This file pins the lot to [Nadia, Omar, Priya], so Nadia takes seat 1. Omar
+  then meets Priya for seat 2 and LOSES that runoff 2 - 1 (two ballots score
+  them both 5). Winners: Nadia, Priya.
+
+  The companion file bloc_lot_path_dependence_b_c3_b5.yaml is the identical
+  election with the lot reversed: Omar takes seat 1, Nadia then meets Priya
+  and BEATS her 3 - 2. Winners: Omar, Nadia.
+
+  The point is that the two runs differ in WHO WINS, not merely in the order
+  the seats were filled. Priya is on the council in one and absent from the
+  other, and no ballot changed. Bloc STAR is sequential - each seat is decided
+  in the field the previous seat left behind - so a tie broken at seat 1
+  propagates into every later seat. In a top-N method (Bloc Approval, SNTV,
+  Bloc Ranked Robin) a tie can only ever swap the last seat.
+
+  Why the two head-to-heads differ: Omar and Priya are scored 5/5 by the two
+  ballots that would otherwise separate them, so Omar wins only 1 of the 3
+  decided ballots; Nadia and Priya are never tied on any ballot, and Nadia
+  takes 3 of 5. Same pair of near-identical candidates, opposite results
+  against the same third one.
+
+  LH-only (no BetterVoting election): the winner turns on the lot, and only
+  LH's published lot_numbers let a reader derive the result from the file.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Nadia   |  * Omar   |   Priya   |
+-----------------------------------------------------
+     * Nadia > |    ---     |2 - 1 - 2  |3 - 0 - 2  |
+      * Omar > | 2 - 1 - 2  |   ---     |1 - 2 - 2  |
+       Priya > | 2 - 0 - 3  |2 - 2 - 1  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; weak Condorcet winner: Nadia — matches the STAR winner
+
+[Condorcet Loser]
+  No strict Condorcet loser; weak Condorcet loser: Omar (never wins a matchup)
+
+--- Bloc STAR Voting Method (2 winners) ---
+[Bloc STAR]
+ Tabulating 5 ballots to fill 2 seats.
+Count × Nadia,Omar,Priya
+    2 ×     5,   0,    1
+    2 ×     0,   5,    5
+    1 ×     5,   5,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Nadia      3  0  0  0  0  2  |    15   3.0
+Omar       3  0  0  0  0  2  |    15   3.0
+Priya      2  0  0  0  2  1  |    12   2.4
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Nadia         -- 15 -- First place
+   Omar          -- 15 -- Second place
+   Priya         -- 12
+ Nadia and Omar advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Nadia         -- 2 -- Tied for first place
+   Omar          -- 2 -- Tied for first place
+   Equal Support -- 1
+ There's a two-way tie for first.
+
+[Bloc STAR: Round 1: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Nadia         -- 15 -- Tied for first place
+   Omar          -- 15 -- Tied for first place
+ There's still a two-way tie for first.
+
+[Bloc STAR: Round 1: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   Nadia         -- 3 -- Tied for first place
+   Omar          -- 3 -- Tied for first place
+ There's still a two-way tie for first.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Nadia', 'Omar', 'Priya']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Nadia', 'Omar']
+  Resolved: ['Nadia'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Omar          -- 15 -- First place
+   Priya         -- 12 -- Second place
+ Omar and Priya advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Priya         -- 2 -- First place
+   Omar          -- 1
+   Equal Support -- 2
+ Priya wins.
+   Runoff math:
+     5  ballots cast
+   − 2  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Priya 2 (67%)  ·  Omar 1 (33%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Nadia
+ Priya

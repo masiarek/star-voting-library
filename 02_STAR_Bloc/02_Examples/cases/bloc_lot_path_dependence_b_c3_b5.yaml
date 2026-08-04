@@ -1,0 +1,53 @@
+election_title: "Bloc STAR — a seat-1 lot decides who wins seat 2 (lot B: Omar first)"
+
+scenario_description: |-
+  The same five ballots as bloc_lot_path_dependence_a_c3_b5.yaml, with one
+  thing changed: the published lot order is reversed to [Omar, Nadia, Priya].
+
+  Seat 1 is the same dead heat - Nadia and Omar tie 15 - 15 on score, 2 - 2 in
+  the runoff, 3 - 3 on five-star - and the lot now hands it to Omar. Nadia
+  then meets Priya for seat 2 and WINS that runoff 3 - 2. Winners: Omar, Nadia.
+
+  Run file A and this one side by side:
+
+    lot [Nadia, Omar, Priya]  ->  Nadia, Priya
+    lot [Omar, Nadia, Priya]  ->  Omar,  Nadia
+
+  Priya wins a seat in one and nothing in the other, on identical ballots. The
+  lot did not just reorder the winners; it changed the council. That is what
+  "Bloc STAR is sequential" costs: seat 2 is decided in whatever field seat 1
+  left behind, so a coin toss at seat 1 is not confined to seat 1.
+
+  LH-only (no BetterVoting election): the winner turns on the lot, and only
+  LH's published lot_numbers let a reader derive the result from the file.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+num_winners: 2
+voting_method: Bloc STAR
+
+lot_numbers: [Omar, Nadia, Priya]
+
+ballots: |-
+  Nadia,Omar,Priya
+  5,0,1
+  5,0,1
+  5,5,0
+  0,5,5
+  0,5,5
+
+expected_winners:
+  - Omar
+  - Nadia
+
+# file: bloc_lot_path_dependence_b_c3_b5.yaml

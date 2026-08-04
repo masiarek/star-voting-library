@@ -1,0 +1,51 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 5 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Nadia, Omar, Priya
+     2 × Nadia > Priya > Omar      (5, 0, 1)
+     1 × Nadia=Omar > Priya      (5, 5, 0)
+     2 × Omar=Priya > Nadia      (0, 5, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Nadia  ties  Omar    2 – 2
+   Nadia  beats Priya   3 – 2
+   Priya  beats Omar    2 – 1
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |   Nadia   |  Omar    |  Priya   |
+---------------------------------------------
+  Nadia > |    ---    |2 - 1 - 2 |3 - 0 - 2 |
+   Omar > | 2 - 1 - 2 |   ---    |1 - 2 - 2 |
+  Priya > | 2 - 0 - 3 |2 - 2 - 1 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Nadia      1–0–1       1.5      +1  Priya
+    2  Priya      1–1–0         1      +0  Omar
+    3  Omar       0–1–1       0.5      -1  —
+
+Winner — Ranked Robin (RCV-RR): Nadia
+   unbeaten, but draws Omar — a *weak* Condorcet winner, not a strict one (highest Copeland score, 1.5).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): Nadia, Priya, Omar
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Nadia) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Nadia is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md

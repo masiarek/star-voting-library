@@ -109,6 +109,21 @@ NAV_ORDER: dict[str, list[str]] = {
         "reference",
         "STAR_history.md",
     ],
+    # The Bloc lesson tree. Spine: the count → the sweep that defines the
+    # method → the surprise that is NOT the sweep → how a tie travels between
+    # seats. Then the shelf: the family comparison, the limits, the glossary.
+    # Alphabetical order would open the folder on "honest limits", which is
+    # the last thing a newcomer should meet.
+    "02_STAR_Bloc/01_Learn": [
+        "bloc_star.md",
+        "majority_sweep.md",
+        "score_leader_no_seat.md",
+        "bloc_tiebreaks.md",
+        SPINE_BREAK,
+        "bloc_star_vs_other_bloc_methods.md",
+        "bloc_honest_limits.md",
+        "glossary_bloc_star.md",
+    ],
 }
 
 # Runs before TERMS, so "ranked robin" is settled before the single-word pass

@@ -13,7 +13,7 @@ A proportional method shares the seats among coalitions in proportion to their s
 1. **A quota** — the share of support that earns one seat. With *k* seats, the **Droop quota** is `votes / (k + 1)`, rounded up (for 3 seats, just over 25%).
 2. **Reweighting** — once a candidate is seated, the ballots that scored them highly have "spent" some of their weight, so they count for less when the next seat is decided. That is what stops a 58% majority from sweeping all the seats.
 
-This is the whole difference from **Bloc STAR**, which just elects the top *N* score-leaders with no reweighting — and is therefore *majoritarian*, not proportional (see the contrast below).
+This is the whole difference from **[Bloc STAR](../../../02_STAR_Bloc/01_Learn/bloc_star.md)**, which runs the ordinary STAR count once per seat with no reweighting — and is therefore *majoritarian*, not proportional (see the contrast below). (It is *not* "the top N score-leaders": each seat is settled by its own runoff, so the point leader can [win no seat at all](../../../02_STAR_Bloc/01_Learn/score_leader_no_seat.md).)
 
 ## The three STAR-PR methods
 

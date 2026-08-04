@@ -9,7 +9,7 @@
 The moment you fill more than one seat, "fair" splits into two meanings:
 
 **1. Majoritarian / at-large — "pick the N best."**
-Everyone scores the candidates; the top **N** by the STAR count win. Simple, and exactly right when you genuinely want the *best few*, factions aside — a club choosing its 3 favorite logos, a shortlist of finalists. Its catch: a **cohesive majority can sweep every seat**, so a large minority can end up with *nothing*. Great for "best options," wrong for "represent us."
+Everyone scores the candidates, and the STAR count runs once per seat — elect a winner, remove them, re-run — until **N** seats are filled. Simple, and exactly right when you genuinely want the *best few*, factions aside — a club choosing its 3 favorite logos, a shortlist of finalists. Its catch: a **cohesive majority can sweep every seat**, so a large minority can end up with *nothing*. Great for "best options," wrong for "represent us."
 
 **2. Proportional — "mirror the electorate."**
 Seats are shared in proportion to support: a group that's ~40% of voters wins about **40% of the seats**. Right when the body is meant to *represent a diverse population* — a city council, a legislature, a union board. It deliberately gives a minority its fair share instead of letting the majority take everything.
