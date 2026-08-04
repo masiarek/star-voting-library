@@ -116,6 +116,7 @@ NAV_ORDER: dict[str, list[str]] = {
     # the last thing a newcomer should meet.
     "02_STAR_Bloc/01_Learn": [
         "bloc_star.md",
+        "bloc_ballot_language.md",
         "majority_sweep.md",
         "over_50_percent.md",
         "score_leader_no_seat.md",
@@ -123,6 +124,7 @@ NAV_ORDER: dict[str, list[str]] = {
         SPINE_BREAK,
         "bloc_star_vs_other_bloc_methods.md",
         "bloc_honest_limits.md",
+        "at_large_and_the_vra.md",
         "glossary_bloc_star.md",
     ],
 }

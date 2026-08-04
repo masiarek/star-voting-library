@@ -14,6 +14,8 @@ You score every candidate **0 to 5**, exactly as in single-winner STAR. There is
 
 That matters more than it sounds. Under [SNTV / Bloc Plurality](bloc_star_vs_other_bloc_methods.md) the ballot itself changes with the seat count and forces you to spend a scarce mark; here your score for one candidate never costs another candidate anything.
 
+The published voter instructions say all of that in four sentences, the second of which is a complete description of the count. Read line by line, with the naming rules that go with them: [the ballot and the official definitions](bloc_ballot_language.md).
+
 ## The count: elect, remove, re-run
 
 To fill **N** seats:
@@ -27,51 +29,7 @@ Each seat is a complete little STAR election. Nothing is reweighted, spent, or t
 
 **Worked — the baseline case.** 3 candidates, 2 seats, 3 ballots (the smallest Bloc election that actually decides anything: with 2 candidates for 2 seats nobody can lose):
 
-```text
---- Bloc STAR Voting Method (2 winners) ---
- Tabulating 3 ballots to fill 2 seats.
-Alice,Bruno,Clara
-    5,    3,    1
-    4,    5,    2
-    5,    4,    0
-
-Round 1: Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Alice         -- 14 -- First place
-   Bruno         -- 12 -- Second place
-   Clara         --  3
- Alice and Bruno advance.
-
-Round 1: Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Alice         -- 2 -- First place
-   Bruno         -- 1
-   Equal Support -- 0
- Alice wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   Alice 2 (67%) vs Bruno 1 (33%); majority = 2.
-
-──────────────────────────────────────────────────
-Round 2: Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Bruno         -- 12 -- First place
-   Clara         --  3 -- Second place
- Bruno and Clara advance.
-
-Round 2: Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Bruno         -- 3 -- First place
-   Clara         -- 0
-   Equal Support -- 0
- Bruno wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   Bruno 3 (100%) vs Clara 0 (0%); majority = 2.
-
-Winners — Bloc STAR Voting Method (2 winners)
- Alice
- Bruno
-```
-
+--8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md:report"
 Want the whole count? See the full LH report → [`00_c3_b3_bloc-baseline-2-seats`](../02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) ([yaml](../02_Examples/cases/00_c3_b3_bloc-baseline-2-seats.yaml)).
 
 ## What "remove" does — and what it doesn't

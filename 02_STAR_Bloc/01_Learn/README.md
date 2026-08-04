@@ -9,12 +9,14 @@ Not sure you want a majoritarian method at all? That's the bigger decision, and 
 ## The method
 
 - [**Bloc STAR**](bloc_star.md) — the count, the removal step, and what it does *not* do (start here)
+- [The ballot and the official definitions](bloc_ballot_language.md) — the published voter instructions read line by line, and why an unqualified "Multi-Winner STAR Voting" means *this* method
 - [The majority sweep](majority_sweep.md) — a cohesive majority can take *every* seat: why it happens, when that's the right answer, and when it means you wanted proportional
 - [Over 50% — what a landslide actually buys](over_50_percent.md) — the sweep's mirror image: a majority that runs *one* candidate wins *one* seat, and the next one goes to a candidate most voters scored 0
 - [The score leader can win no seat](score_leader_no_seat.md) — Bloc STAR is not "top N by points"; the runoff decides every seat, so the point leader can be shut out entirely
 - [Ties in Bloc STAR](bloc_tiebreaks.md) — the STAR ladder once per seat, plus the wrinkle no top-N method has: a tie at seat 1 can change *who* wins seat 2
 - [Bloc STAR among the at-large methods](bloc_star_vs_other_bloc_methods.md) — SNTV, Limited, Block Plurality, Bloc Approval, Bloc Ranked Robin, and why ranked ballots don't buy proportionality
 - [Honest limits](bloc_honest_limits.md) — the four limits it adds to STAR's own, and the three properties it keeps
+- [At-large elections and the Voting Rights Act](at_large_and_the_vra.md) — the one place the sweep stops being a design choice and becomes vote dilution, what Section 2 and *Gingles* actually say, and why a scored ballot doesn't change the analysis
 
 ## Worked examples — run them yourself
 

@@ -12,41 +12,7 @@
 
 Start where there is nothing to argue about. Three voters, three candidates; every ballot gives A five stars, one voter gives B a single point, nobody scores C at all ([full count →](../../01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md) · [yaml](../../01_STAR/02_Examples/cases/over_50_percent_star_c3_b3.yaml)):
 
-```text
---- STAR Voting Method (single winner) ---
- Tabulating 3 ballots.
-A,B,C
-5,0,0
-5,1,0
-5,0,0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-A          3  0  0  0  0  0  |    15   5.0
-B          0  0  0  0  1  2  |     1   0.3
-C          0  0  0  0  0  3  |     0   0.0
-
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   A             -- 15 -- First place
-   B             --  1 -- Second place
-   C             --  0
- A and B advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   A             -- 3 -- First place
-   B             -- 0
-   Equal Support -- 0
- A wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   A 3 (100%) vs B 0 (0%); majority = 2.
-
-Winner — STAR Voting Method (single winner)
- A
-```
-
+--8<-- "01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.md:report"
 A wins on every denominator a STAR result has:
 
 | "Over 50%" of what? | A | how it's counted |
@@ -63,62 +29,7 @@ That is the whole reason this tiny election is worth keeping: it is the one case
 
 [BV1815](../02_Examples/bv1815_bloc_3c2s_basic.md) is the multi-seat twin — three ballots again, A dominant again, but two seats to fill ([full count →](../02_Examples/cases/cases_pages/bv1815_bloc_3c2s_basic.md) · [yaml](../02_Examples/cases/bv1815_bloc_3c2s_basic.yaml)):
 
-```text
---- Bloc STAR Voting Method (2 winners) ---
- Tabulating 3 ballots to fill 2 seats.
-A,B,C
-4,1,0
-3,0,2
-5,0,0
-
-[Score Distribution] (how many ballots gave each star rating)
-                Score
-Candidate  5  4  3  2  1  0  | Total   Avg
-A          1  1  1  0  0  0  |    12   4.0
-B          0  0  0  0  1  2  |     1   0.3
-C          0  0  0  1  0  2  |     2   0.7
-
-Round 1: Scoring Round
- The two highest-scoring candidates advance to the next round.
-   A             -- 12 -- First place
-   C             --  2 -- Second place
-   B             --  1
- A and C advance.
-
-Round 1: Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   A             -- 3 -- First place
-   C             -- 0
-   Equal Support -- 0
- A wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   A 3 (100%) vs C 0 (0%); majority = 2.
-
-──────────────────────────────────────────────────
-Round 2: Scoring Round
- The two highest-scoring candidates advance to the next round.
-   C             -- 2 -- First place
-   B             -- 1 -- Second place
- C and B advance.
-
-Round 2: Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   B             -- 1 -- Tied for first place
-   C             -- 1 -- Tied for first place
-   Equal Support -- 1
- There's a two-way tie for first.
-
-Round 2: Automatic Runoff Round: First tiebreaker
- The highest-scoring candidate wins.
-   C             -- 2 -- First place
-   B             -- 1
- C wins.
-
-Winners — Bloc STAR Voting Method (2 winners)
- A
- C
-```
-
+--8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv1815_bloc_3c2s_basic.md:report"
 Seat 1 is the ceiling case again in all but the last decimal: A holds **12 of 15** points (80% of the maximum), is the top-scored candidate on every ballot, and wins the runoff **3–0**. Seat 2 is a different election entirely — and this is what the same three denominators say about its winner:
 
 | "Over 50%" of what? | C, at seat 2 | |
@@ -129,7 +40,7 @@ Seat 1 is the ceiling case again in all but the last decimal: A holds **12 of 15
 
 **Nobody won that runoff.** STAR's runoff guarantees the winner is preferred to the other finalist by more voters — and when that guarantee can't be met, the seat falls to [the tie-break ladder](../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md), whose first rung is the score total: C's 2 beats B's 1. So the second seat on this board is held by a candidate a majority of the electorate gave zero points, seated by a rung rather than by a majority. Both engines agree on that — this is a real BetterVoting election ([results ↗](https://bettervoting.com/fk38pk/results), id `fk38pk`), and BV reports the same winners with `tieBreakType: "score"`.
 
-It is also the clearest place to watch the denominators disagree in the wild. BetterVoting's results page paginates one card per seat, and on the seat-2 card all three runoff bars are labelled **33%** while the dashed *majority threshold* line is drawn at **1 vote** — level with the top of both candidate bars. On the seat-1 card, where nobody rated the finalists equally, the same line sits at 50% of the same axis and reads correctly. Both screenshots, side by side: [BV1815](../02_Examples/bv1815_bloc_3c2s_basic.md#view-1--bettervoting). The mismatch is [bettervoting#1471](https://github.com/Equal-Vote/bettervoting/issues/1471) and is presentation only — the count is right on both cards.
+It is also the clearest place to watch the denominators disagree in the wild. BetterVoting's results page paginates one card per seat, and on the seat-2 card all three runoff bars are labelled **33%** while the dashed *majority threshold* line is drawn at **1 vote** — level with the top of both candidate bars. On the seat-1 card, where nobody rated the finalists equally, the same line sits at 50% of the same axis and reads correctly. Both screenshots, side by side: [BV1815](../02_Examples/bv1815_bloc_3c2s_basic.md#view-1-bettervoting). The mismatch is [bettervoting#1471](https://github.com/Equal-Vote/bettervoting/issues/1471) and is presentation only — the count is right on both cards.
 
 ## Why the majority doesn't carry over
 

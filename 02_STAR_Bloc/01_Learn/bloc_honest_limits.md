@@ -14,6 +14,8 @@ A cohesive majority can take every seat: 55% of the electorate can hold a counci
 
 Stated as a limit it sounds damning; stated as a design goal it is simply what "majoritarian" means. The failure mode isn't the sweep, it's **using Bloc STAR for a body that was supposed to represent people.** If a 45% minority holding zero seats would read as a broken election, the method was chosen wrong — go to [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/) or [STV](../../06_Other/STV/README.md). That decision is made when the rules are written and cannot be repaired by the count.
 
+In one class of jurisdiction that is not merely a design mistake but a legal exposure: where a racial or language minority is concentrated in one sector of a multi-seat district, an at-large majoritarian count is the mechanism §2 of the Voting Rights Act calls vote dilution, and the scored ballot does nothing to change the analysis. The law, the *Gingles* test, and what a scored ballot does and does not fix: [at-large elections and the Voting Rights Act](at_large_and_the_vra.md).
+
 ## 2. The score leader can win nothing
 
 Every seat is decided by the runoff, so the candidate who leads *every* scoring round can lose *every* runoff and take no seat at all. [BV1835](../02_Examples/bv1835_8h3yrx_score_leader_no_seat.md) is the worked case: Ava leads by 63 points, reaches all four runoffs, loses all four 51–49, and finishes with nothing while the two rival camps split the seats 2–2.

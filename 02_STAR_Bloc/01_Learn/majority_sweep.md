@@ -26,47 +26,7 @@ Two qualifiers keep this honest:
 
 A neighborhood association elects a **two-seat** board. The north side is 6 of 10 voters and runs Asa and Bram; the south side is 4 of 10 and runs Cleo and Dane. Every voter scores their own side 5 and 4, and the other side 0:
 
-```text
---- Bloc STAR Voting Method (2 winners) ---
- Tabulating 10 ballots to fill 2 seats.
-Count × Asa,Bram,Cleo,Dane
-    6 ×   5,   4,   0,   0
-    4 ×   0,   0,   5,   4
-
-Round 1: Scoring Round
-   Asa           -- 30 -- First place
-   Bram          -- 24 -- Second place
-   Cleo          -- 20
-   Dane          -- 16
- Asa and Bram advance.
-
-Round 1: Automatic Runoff Round
-   Asa           -- 6 -- First place
-   Bram          -- 0
-   Equal Support -- 4
- Asa wins.
-   Voters with a preference: 6 of 10 (4 Equal Support).
-   Asa 6 (100%) vs Bram 0 (0%); majority = 4.
-
-──────────────────────────────────────────────────
-Round 2: Scoring Round
-   Bram          -- 24 -- First place
-   Cleo          -- 20 -- Second place
-   Dane          -- 16
- Bram and Cleo advance.
-
-Round 2: Automatic Runoff Round
-   Bram          -- 6 -- First place
-   Cleo          -- 4
-   Equal Support -- 0
- Bram wins.
-   Voters with a preference: 10 of 10 (no Equal Support).
-   Bram 6 (60%) vs Cleo 4 (40%); majority = 6.
-
-Winners — Bloc STAR Voting Method (2 winners)
- Asa, Bram
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md:report"
 The 60% takes 100% of the board. Note *where* the south side loses: not in round 1 — Cleo was never going to out-score Asa — but in **round 2**, where she reaches the runoff and loses it 6–4. The seat was close enough to be visible and never close enough to be winnable, which is the texture of a sweep. Run it yourself: [`ex12_bloc_sweep`](../../01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md) ([yaml](../../01_STAR/05_Practice/cases/ex12_bloc_sweep.yaml)); the exercise that pairs it against a proportional count of the *same ten ballots* is [Exercise 12 — bloc vs. proportional](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md), where the south side's 40% earns one of the two seats.
 
 ## The same electorate, counted five ways
@@ -94,7 +54,8 @@ The question to ask is **what the body is for**, not how it feels to the losing 
 **Don't use it when the body is meant to represent people:**
 
 - a legislature, a school board, a diverse committee, a union executive — anywhere a 45% minority holding zero seats would read as a failure of the election rather than a verdict of it;
-- anywhere the winners will be understood as *delegates* of the groups that elected them.
+- anywhere the winners will be understood as *delegates* of the groups that elected them;
+- and, as a matter of law rather than taste, anywhere a racial or language minority is **clustered in one part of the jurisdiction** — there the sweep is what federal courts call vote dilution, and the seats being filled at-large is what makes it actionable ([at-large elections and the Voting Rights Act](at_large_and_the_vra.md)).
 
 **The tell:** picture the cohesive-majority sweep and ask whether the result would look legitimate. If yes, Bloc STAR is doing its job. If it makes you wince, you wanted [proportional representation](../../03_STAR_PR/01_Learn/) and should say so before the ballots are printed — this is a decision about the *rules*, and it cannot be fixed afterward by the count.
 
