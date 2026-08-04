@@ -1,20 +1,151 @@
-# YAML_library — the import pipeline & validation fixtures
+# YAML election files — why, what, how
 
-Two jobs live here. **Teaching elections do not** — those live in [`01_STAR/`](../01_STAR), [`02_STAR_Bloc/`](../02_STAR_Bloc), [`03_STAR_PR/`](../03_STAR_PR), and [`method_comparisons/`](../method_comparisons), one canonical copy each.
+Every claim in this library is backed by a **runnable election**: one small text file that a person can read and a tabulation engine can count. That file is YAML. This page explains **why** the format is YAML, **what** is actually in one of these files, and **how** a file travels from the moment you write it to the result you see on this website.
 
-## `1_positive/` — the BetterVoting import pipeline
+The folder you're standing in holds the two *ends* of that journey — the importer that brings real BetterVoting elections **in**, and the deliberately-broken files that prove bad input fails **politely**. Both are described [at the bottom](#whats-in-this-folder).
+
+> **Teaching elections don't live here.** They live next to the lessons they teach — [`01_STAR/`](../01_STAR), [`02_STAR_Bloc/`](../02_STAR_Bloc), [`03_STAR_PR/`](../03_STAR_PR), [`method_comparisons/`](../method_comparisons) — one canonical copy each. Browse them all in the [test-case catalog](../07_Concepts/YAML_test_case_index/README.md).
+
+---
+
+## Why YAML
+
+### One file, two readers
+
+The design goal is a single artifact that is **human-readable and machine-runnable at the same time**. A person reads the scenario and the ballots and understands the election; the engine parses the very same file, tabulates it, and a test asserts the winner. No translation step, no second copy.
+
+The usual alternative splits a test case in two — prose for humans (a doc describing the scenario) and data for machines (a fixture the code runs). The two **drift apart**: the doc says one thing, the fixture does another, and nobody notices until a count is wrong. You can't *read* the machine copy or *run* the human copy. This library refuses that split. There is one artifact, and it is legible both ways.
+
+→ The argument in full, with the payoff: **[Why YAML? One file a person reads and a computer runs](../07_Concepts/about_this_repo/why_yaml_test_cases.md)**
+
+### Why YAML specifically, and not CSV or JSON
+
+"One file, two readers" is the *goal*; YAML is the format that actually delivers it. Three of its features are doing the work — and each is exactly what the alternatives lack:
+
+| Format | Why not |
+|---|---|
+| **CSV** | Holds the ballot grid beautifully and *nothing else* — no voting method, no seat count, no expected winner, no explanation. You'd end up with a CSV plus a sidecar file describing it, which is the drift problem again. |
+| **JSON** | Machine-perfect, human-hostile. **No comments at all**, so a ballot row can never explain itself. The ballot grid becomes either an escaped one-line string or hundreds of nested objects — unreadable either way, and a nightmare to diff. |
+| **Spreadsheet / database** | Not plain text: no meaningful `git diff`, no line-by-line review, no stable public URL, and it needs an application to open. |
+
+What YAML adds on top of the grid:
+
+1. **The literal block (`|-`) keeps a grid a grid.** Everything indented under `ballots: |-` is preserved *verbatim*, so the ballots stay aligned columns you can read down — not an escaped string, not nested objects.
+2. **`#` comments survive in the file.** A ballot row can say what it demonstrates, right where it sits, and the engine ignores it.
+3. **It's plain text.** Diffable, reviewable in a pull request, permanently linkable, and readable in any editor for the next twenty years.
+
+> **YAML isn't the only ballot format.** The election-methods world has a dedicated ballot *interchange* format, **ABIF**, which packs ranks and scores into one dense line (`Allie/5 =Billy/5 >Candace/4`). It maps onto just our `ballots:` block — our file wraps method, options, and an enforced answer key around it. Honest side-by-side: [ABIF vs. our YAML grid](../07_Concepts/scores_and_ranks/abif_format.md).
+
+---
+
+## What it is
+
+The schema is **flat**. Only three keys are required: how to count, how many seats, and the ballots. A fourth — `expected_winners` — is what turns an election into a *test case*.
+
+Here is a complete, real file. This is the repo's canonical leading example, [`bv2187_qrw6wb_ann-bob-cal.yaml`](../01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml), stripped to its essential keys:
+
+```yaml
+voting_method: STAR     # STAR | Approval | RankedRobin | RCV_IRV | bloc | sss | rrv | allocated
+num_winners: 1          # seats to fill (1 = single-winner)
+ballots: |-             # header row of candidate names, then one row per voter
+  Ann,Bob,Cal
+  5,4,0                 # this voter likes BOTH Ann and Bob — no vote-splitting fear
+  3,5,2
+  0,3,5
+expected_winners:       # the answer key: the pytest suite finds this key and checks it
+  - Bob
+```
+
+**The ballot grid, in five rules:**
+
+- **Row 1 is the candidate names**, comma-separated. There is no separate `candidates:` key — the header row *is* the candidate list. Every voter row must have the same number of columns.
+- **Scores are `0`–`5`.** (Approval ballots take only `0`/`1`. A file whose rows are written as *ranks* instead — `A>C>B` — routes to RCV-IRV automatically.)
+- **Markers** record *why* a score is zero: `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled and re-issued. All five tabulate as 0, but the file remembers the difference — a distinction a flat grid of numbers would flatten away. → [Abstention vs. a zero vs. "None of the Above"](../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md)
+- **Weighted rows** prefix a count: `42 × 0,3,5`. House rule: weights must be **≥ 6**, so a count is never mistaken for a 0–5 score.
+- **`# comments`** are allowed at the end of any row.
+
+Everything else in the file is optional and additive: an `election_title`, a printable `scenario_description`, `options:` controlling how much of the report appears on screen, `lot_numbers:` pinning the official tie-break order, `eligible_voters` / `quorum` for turnout reporting, `blocs:` for the vote-splitting check.
+
+→ Every field, every option, the full marker table, and the house style rules: **[YAML Test Case — Authoring Template](../07_Concepts/about_this_repo/YAML_authoring_template.md)**
+
+---
+
+## How it works
+
+Five stages. The same file carries through all of them.
+
+### 1. Author, or import
+
+Write the file by hand from the [template](../07_Concepts/about_this_repo/YAML_authoring_template.md) — or import a real election. [`1_positive/01_convert_json_yaml.py`](1_positive/01_convert_json_yaml.py) turns a BetterVoting JSON export into a canonical YAML: real candidate names, aligned columns, the election's official lot order, and an embedded answer key. That's how a live public election becomes a permanent, re-countable case here. → [BetterVoting and the engine](../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md)
+
+### 2. Validate — the engine is the validator
+
+There is no separate lint step. Run the file, and every realistic mistake comes back as a **plain-language message with no traceback**, and a non-zero exit code:
+
+```
+Error: the number of scores per ballot doesn't match the number of candidates. There are 3 candidate(s) (Austin, Boston, Cairo), so each ballot row needs exactly 3 comma-separated score(s).
+  Offending ballot(s)  [Austin,Boston,Cairo]:
+    ballot 2: 4, 5   (has 2 value(s), expected 3)
+  Tip: use the SAME separator for the header and every row — commas
+       (or tabs), e.g. 'A, B, C' then '5, 4, 0'. Mixing commas and
+       spaces is the usual cause of a wrong value count.
+```
+
+Every one of those messages is pinned by a deliberately-broken fixture in `2_negative/` — the safety net described below.
+
+### 3. Tabulate
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml
+```
+
+The engine prints an annotated, round-by-round count — the Scoring Round picks two finalists, the Automatic Runoff decides between them:
+
+--8<-- "01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md:report"
+
+Notice what the file never had to state: the totals, the finalists, the head-to-head count, the majority threshold. All of it is *derived* from those three ballot rows. **How much of it lands on screen** is the one thing the file does control — that's the optional `options:` block, which can hide the description, show the full pairwise grid, add the score-distribution table, and so on. It never changes the winner or the numbers.
+
+→ The whole count for this election, every section forced on, plus the preference matrix and the score distribution: [`bv2187_qrw6wb_ann-bob-cal.md`](../01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)
+
+### 4. Verify
+
+The same run writes a full-detail **`_tabulated.txt`** sibling — the audit copy, which ignores `options:` and always prints everything, headed by the name of the source file it came from. Meanwhile `expected_winners:` is the enforced answer key: the pytest suite discovers every file that has one and fails if the engine elects somebody else. A regression can't sneak in quietly.
+
+```bash
+cd STARVote_LH_tabulation_engine && pytest tests/test_single_winner_positive.py tests/test_negative_validation.py
+```
+
+### 5. Publish
+
+Everything a reader sees is **generated from the YAML** and never hand-maintained in parallel:
+
+- the **on-screen report** (what you show live),
+- the full-detail **`_tabulated.txt`** record (the audit copy),
+- the browsable **`.md` page** in `cases_pages/` (the reader-facing surface, built by [`build_yaml_pages.py`](../STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py)),
+- the sortable **[registry and catalog](../07_Concepts/YAML_test_case_index/README.md)** of every case in the library.
+
+Because they're generated, they can't drift from the source. Edit the YAML, regenerate, done. That's the whole point: one file that **teaches**, **runs**, **verifies**, and **audits**.
+
+---
+
+## What's in this folder
+
+Two jobs, at opposite ends of the pipeline above.
+
+### `1_positive/` — the BetterVoting import pipeline
 
 - `01_convert_json_yaml.py` — converts a real BetterVoting JSON export into a canonical election YAML (real candidate names, aligned columns, the election's official lot order, embedded `expected_results`).
 - Converter input: the frozen real BetterVoting export lives at
   `01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/…_bv_export.json`
   (the test copies it into a temp dir; nothing here is mutated).
+- [`lot_tiebreak_bv_order.yaml`](1_positive/lot_tiebreak_bv_order.yaml) / [`lot_tiebreak_published_order.yaml`](1_positive/lot_tiebreak_published_order.yaml) — a matched pair, and a neat demonstration of why the tie-break order belongs *in the file*. Identical ballots (`4,0` and `0,4` — a dead-tied two-candidate race); the only difference is `lot_numbers:`, and it decides the election: BetterVoting's drawn order elects **Ben**, the pre-published deterministic order elects **Ada**.
 - `_generated/` + `_generated_tabulated/` — converter output and its tabulation mirror.
 
-Guarded by `tests/test_json_to_yaml_conversion.py` and `tests/test_lot_number_tiebreak.py` (converter → YAML → engine, end to end).
+Guarded end to end by [`tests/test_json_to_yaml_conversion.py`](../STARVote_LH_tabulation_engine/tests/test_json_to_yaml_conversion.py) and [`tests/test_lot_number_tiebreak.py`](../STARVote_LH_tabulation_engine/tests/test_lot_number_tiebreak.py) (export → converter → YAML → engine).
 
-## `2_negative/` — the manual-authoring validation library
+### `2_negative/` — the validation safety net
 
-Every file here is a deliberately broken election that must make the engine **reject it with a plain-language, user-friendly error and no traceback**. This is the safety net for people writing YAML elections **by hand**: every realistic mistake gets a fixture, and the fixture pins the exact message the author will see.
+Every file here is a deliberately broken election that must make the engine **reject it with a plain-language, user-friendly error and no traceback** — which is what makes stage 2 above trustworthy for anyone writing YAML by hand. Every realistic mistake gets a fixture, and the fixture pins the exact message the author will see.
 
 **Self-describing contract** — each fixture declares its expected message as comments, so adding a case never touches the test suite:
 
@@ -26,9 +157,13 @@ voting_method: STAR
 ...
 ```
 
-`tests/test_negative_validation.py` auto-discovers every `*.yaml` here and asserts: non-zero exit, no traceback, an Error message, and every declared `# expect:` substring. A fixture that tabulates "successfully" is a bug.
+[`tests/test_negative_validation.py`](../STARVote_LH_tabulation_engine/tests/test_negative_validation.py) auto-discovers every `*.yaml` here and asserts: non-zero exit, no traceback, an `Error:` message, and every declared `# expect:` substring. A fixture that tabulates "successfully" is a bug.
 
 **Covered mistake catalog** (each has a fixture): bad YAML syntax · missing / empty ballots · ballots written as a YAML list instead of a `|-` block · wrong / extra columns · out-of-range, negative, decimal, and two-digit scores · invalid characters and the removed `^` marker · ranked ballots under a score method (STAR and Approval) · mixed ranked + score rows · 0–5 scores under Approval · unknown `voting_method` (typos get a "did you mean" suggestion) · `num_winners` zero / non-numeric / exceeding the candidate count · single-winner method asked for multiple seats · duplicate candidate names · `lot_numbers` naming a candidate not on the ballot · header with no voter rows · a completely blank file, comments-only file, and empty ballots block · multiple races in one YAML (one election per file; multi-race BV *JSON* exports are legitimate — the converter splits them into one YAML per race) · duplicate top-level keys (YAML silently keeps the last!) · two `---` YAML documents in one file · multiple errors reported together.
+
+→ The reasoning behind failing this loudly: [Validation philosophy](../07_Concepts/about_this_repo/repository_guide.md#validation-philosophy)
+
+---
 
 ## History note
 
