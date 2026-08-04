@@ -37,7 +37,7 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 
 ## Current divergence from upstream 2.1.6
 
-**The engine algorithm is essentially unchanged.** `git diff --stat` against the tag reports a large line count (≈ +725 / −299 even with `-w`), but that is almost entirely **line-reflow** (signatures and long calls re-wrapped): the two files are ~97 % character-identical once whitespace is removed, `__version__` is still `2.1.6`, no functions were removed, and exactly **one** helper was added (`bool_converter`). The *functional* edits are two optional output toggles plus two **bug fixes** (see below):
+**The engine algorithm is essentially unchanged.** `git diff --stat` against the tag reports a large line count (≈ +725 / −299 even with `-w`), but that is almost entirely **line-reflow** (signatures and long calls re-wrapped): the two files are ~97 % character-identical once whitespace is removed, `__version__` is still `2.1.6`, no functions were removed, and exactly **one** helper was added (`bool_converter`). The *functional* edits are two optional output toggles plus three **bug fixes** (see below):
 
 - **`print_averages`** option (default `False`) + CLI flag `-a` / `--print-averages` and config key `print averages = <bool>`. Suppresses the averages line unless asked.
 - **`print_maximum_score`** option (default `False`) + CLI flag `-M` / `--print-maximum-score` and config key `print maximum score = <bool>`. Suppresses the "Maximum score is …" line unless asked.
@@ -59,6 +59,14 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 - **Effect:** at the engine's default `verbosity=0`, no ballots were ever spent or reweighted, so SSS silently degenerated into repeated bloc score voting and could return **different winners** than the same election run verbosely — the defining proportionality of the method vanished in quiet runs. Reported upstream as [larryhastings/starvote#17](https://github.com/larryhastings/starvote/issues/17) (open; latest release 2.1.6 affected). Full analysis: [BUG_sss_verbosity.md](BUG_sss_verbosity.md).
 - **Why upstream:** it's the voting algorithm's allocation mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Offer it to Larry via issue #17.
 - **Regression guard:** `tests/test_verbosity_invariance.py` asserts verbosity-invariant winners for `sss` / `allocated` / `rrv` / `bloc` plus the exact proportional SSS outcome.
+
+### Bug fix — unbreakable-tie message never interpolated (2026-08)
+
+- **File/location:** `starvote/__init__.py`, `_star_round()`, both `options.break_tie(...)` calls (the Scoring Round and Automatic Runoff Round dead ends).
+- **What changed:** two characters. `"{int_to_words(len(tie), flowery=False)}-way tie in …"` → `f"…"`. The strings were plain literals, so the placeholder was never interpolated.
+- **Effect:** presentation only, and only through the Python API — the `UnbreakableTieError` message read `{int_to_words(len(tie), flowery=False)}-way tie in Scoring Round` instead of `three-way tie in Scoring Round`. Because `_star_round()` serves **both** single-winner STAR and Bloc STAR, both methods raised the raw source text; the equivalent strings in `allocated_score_voting()` and `sequentially_spent_score()` already carried the `f` prefix, which is why the proportional methods looked fine. The printed report and the CLI are unaffected (the CLI prints its own `[Unbreakable Tie]` block and exits 0), and **no winner anywhere changes** — the exception is raised only when a tie is already unbreakable.
+- **Why upstream:** it is inside the engine's tiebreak mechanics, so it lives in `starvote/` (per the table above). Present in upstream 2.1.6 *and* on upstream `main` (lines 1690 / 1717 there). Reported to Larry — see the [errata note](../07_Concepts/tabulation_engines/LH_starvote/starvote_file_format.md#errata-the-unbreakable-tie-message-leaks-a-placeholder) for the repro.
+- **Regression guard:** `tests/test_unbreakable_tie_message.py` pins the wording for the three reachable `_star_round()` ties and `ast`-parses the engine so no `break_tie()` description can carry an uninterpolated `{placeholder}` again (including the allocated / SSS sites, whose ties are awkward to provoke).
 
 > **Note on `example.py` and the vendored README's transcripts.** `example.py`
 > here is NOT upstream's 3-ballot Amy/Brian/Chuck example — it was repurposed as

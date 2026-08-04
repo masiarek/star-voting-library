@@ -1877,7 +1877,7 @@ def _star_round(options, ballots, candidates=None):
                 if tie:
                     needed = 1 if first else 2
                     winners = options.break_tie(
-                        "{int_to_words(len(tie), flowery=False)}-way tie in Scoring Round",
+                        f"{int_to_words(len(tie), flowery=False)}-way tie in Scoring Round",
                         tie,
                         needed,
                     )
@@ -1910,7 +1910,7 @@ def _star_round(options, ballots, candidates=None):
 
                 if tie:
                     winners = options.break_tie(
-                        "{int_to_words(len(tie), flowery=False)}-way tie in Automatic Runoff Round",
+                        f"{int_to_words(len(tie), flowery=False)}-way tie in Automatic Runoff Round",
                         tie,
                         1,
                     )

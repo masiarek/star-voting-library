@@ -161,13 +161,21 @@ None of these is more correct than the others. When the ballots genuinely do not
 
 ## Errata — the unbreakable-tie message leaks a placeholder
 
-Reproduced against vendored `starvote 2.1.6`. Ask for the tie through the API and the exception message arrives unformatted:
+**Fixed in this repo's vendored engine (2026-08); still present upstream.** Originally found against `starvote 2.1.6`: ask for the tie through the API rather than the CLI, and the exception message arrived unformatted.
 
 ```
-UnbreakableTieError: Bloc STAR: Round 1: Scoring Round: {int_to_words(len(tie), flowery=False)}-way tie in Scoring Round
+UnbreakableTieError: Round 1: Scoring Round: {int_to_words(len(tie), flowery=False)}-way tie in Scoring Round
 ```
 
-Both `UnbreakableTieError` strings in `_star_round()` are missing their `f` prefix, so the placeholder is never interpolated. `allocated_score_voting()` and `sequentially_spent_score()` build the same message correctly, which is why only STAR and Bloc STAR show it. The printed report is unaffected — this is the exception text only — but any tool that surfaces the exception to a user shows the raw source. Upstream, not a fork regression.
+Both `UnbreakableTieError` strings in `_star_round()` were missing their `f` prefix, so the placeholder was never interpolated. `allocated_score_voting()` and `sequentially_spent_score()` build the same message correctly, which is why only STAR and Bloc STAR showed it — `_star_round()` serves both. The printed report was never affected — this is the exception text only, and the CLI prints its own `[Unbreakable Tie]` block and exits 0 — but any tool that surfaces the exception to a user showed the raw source. Upstream, not a fork regression.
+
+The fix is two characters (`"…"` → `f"…"`) and changes no winner: the message is built only once a tie is already unbreakable. The vendored engine now reports it properly, and `tests/test_unbreakable_tie_message.py` keeps it that way:
+
+```
+UnbreakableTieError: Round 1: Scoring Round: three-way tie in Scoring Round
+```
+
+Reproduce the *upstream* behaviour with a stock `pip install starvote==2.1.6`; it is unchanged on upstream `main` too (the same two lines, there numbered 1690 and 1717). See [`FORK_NOTES.md`](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) for the fork's record of the edit.
 
 ## The same election as repo YAML
 

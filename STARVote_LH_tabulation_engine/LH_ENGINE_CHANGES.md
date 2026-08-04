@@ -14,7 +14,7 @@ Scope note — three related docs feed this one; this page is the union:
 
 ## 1. Edits to the vendored upstream algorithm (`starvote/`) — kept minimal
 
-The vendored `starvote 2.1.6` package is ~97% character-identical to PyPI (the rest is line-reflow). Only four functional edits exist; all are candidates to offer upstream:
+The vendored `starvote 2.1.6` package is ~97% character-identical to PyPI (the rest is line-reflow). Only five functional edits exist — two output toggles and three bug fixes; all are candidates to offer upstream:
 
 | Change | Where | Note |
 |--------|-------|------|
@@ -22,6 +22,7 @@ The vendored `starvote 2.1.6` package is ~97% character-identical to PyPI (the r
 | `print_maximum_score` toggle (default off) + CLI `-M` / config `print maximum score` | `starvote/__init__.py` | Suppresses the "Maximum score is …" line. |
 | **Five-star tiebreak default-score fix** (`ballot_get(candidate1, 1)` → `…, 0`) | `starvote/__init__.py`, `_maximum_score_count_round()` 2-candidate fast path | Latent correctness bug: a ballot omitting candidate1 contributed a phantom score of 1. Dormant for 0–5 STAR; now agrees with the general path. Guard: `01_STAR/03_Criteria/tie_break_dead_rung/`. |
 | **SSS verbosity fix** — ballot allocation dedented out of `if options.verbosity:` | `starvote/__init__.py`, `sequentially_spent_score()` "Ballot allocation round" | Real correctness bug (upstream [issue #17](https://github.com/larryhastings/starvote/issues/17), still open): at the default `verbosity=0` no ballots were ever spent/reweighted, so SSS degenerated into repeated bloc score voting and returned different winners than verbose runs. Only the printing stays guarded now. Details: [BUG_sss_verbosity.md](BUG_sss_verbosity.md). Guard: `tests/test_verbosity_invariance.py`. |
+| **Unbreakable-tie message fix** (`"{int_to_words(…)}…"` → `f"…"`, 2 chars) | `starvote/__init__.py`, `_star_round()` — both `options.break_tie()` calls | Cosmetic, not a winner change: the two `UnbreakableTieError` strings lacked their `f` prefix, so the message read `{int_to_words(len(tie), flowery=False)}-way tie in Scoring Round` instead of `three-way tie…`. `_star_round()` serves STAR *and* Bloc STAR, so both raised it; `allocated_score_voting()` / `sequentially_spent_score()` already had the prefix. Printed reports were never affected — API callers only. Errata: [`.starvote` file format](../07_Concepts/tabulation_engines/LH_starvote/starvote_file_format.md#errata-the-unbreakable-tie-message-leaks-a-placeholder). Guard: `tests/test_unbreakable_tie_message.py`. |
 
 Everything else people call "the LH engine's improvements" is **not** an algorithm edit — it's the wrapper (§2–§4).
 
@@ -69,6 +70,7 @@ All in `starvote_larry_hastings.py`; none touch the algorithm. On-screen **on-sc
 
 ## 5. Bug fixes (chronological, newest first)
 
+- **2026-08 — Unbreakable-tie message placeholder** (upstream `starvote/`, see §1). Exception text only; no winner ever changed.
 - **2026-07 — Approval tiebreak now honors `lot_numbers`.** The Approval dispatcher never passed the file's `lot_numbers` into `tabulate_approval` (whose `priority` parameter already existed), so an approval-count tie always fell back to ballot **column order** and a pre-published lot was silently ignored. One-line fix: the dispatcher now passes `priority=election.get("lot_numbers")`. Files without `lot_numbers` are byte-for-byte unchanged (fallback stays column order). Found building Felsenthal Ex.6 (`felsenthal_ex6_pareto_approval.yaml`), which pins an adversarial lot to exhibit Approval electing a Pareto-dominated candidate on a 3–3 tie.
 - **2026-07 — Ranked Robin equal-rankings parser.** `run_ranked_robin`'s ranked-ballot reader split only on `>`, so an equal-rank level like `Ava=Bianca=Cedric` was mis-read as a **single phantom candidate** by that literal name — inflating the field and electing the wrong winner. Now each `>` level is split on `=` so tied candidates share a rank (scored Equal Support head-to-head). Strict ballots (all singletons) are byte-for-byte unchanged. Equal ranking is a core Ranked Robin feature, so the engine now reads the weak orders RR is defined on natively (e.g. the [electowiki worked example](https://electowiki.org/wiki/Ranked_Robin) tabulates correctly to Ava, 3 pairwise wins). Guard: `tests/test_ranked_robin.py::test_equal_rankings_are_ties`.
 - **2025 — Five-star tiebreak default score** (upstream `starvote/`, see §1).

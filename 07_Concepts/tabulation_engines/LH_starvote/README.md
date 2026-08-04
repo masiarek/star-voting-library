@@ -12,7 +12,7 @@
 
 The tabulation core is **[`starvote`](https://github.com/larryhastings/starvote)**, written and maintained by **Larry Hastings** ([PyPI](https://pypi.org/project/starvote/), MIT-licensed). It's a mature, well-tested Python implementation of **STAR Voting** *and* the whole family of related score methods — single-winner STAR, multi-winner **Bloc STAR**, and three proportional methods (**Allocated Score**, **Sequentially Spent Score**, **Reweighted Range Voting**) — with a pluggable tiebreaker system, a CLI, and its own `.starvote`/CSV file format. All the *correctness* of our results rests on Larry's engine; everything this repo adds sits **on top of** it, never replacing its math. When this page says "the LH engine," it means *Larry Hastings' starvote* with our presentation layer wrapped around it — full credit for the tabulation belongs upstream.
 
-We use it as a **vendored fork** (a copy committed into this repo) only so the teaching examples are reproducible against a known version; we don't patch the algorithm. See [Fork Notes — starvote (vendored fork)](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) for the exact upstream baseline (tag `starvote-upstream-2.1.6`) and how to re-pull a future release.
+We use it as a **vendored fork** (a copy committed into this repo) only so the teaching examples are reproducible against a known version. We don't change the *method* — the handful of edits we do carry are two output toggles and three upstream bug fixes, all itemized below and offered back to Larry. See [Fork Notes — starvote (vendored fork)](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) for the exact upstream baseline (tag `starvote-upstream-2.1.6`) and how to re-pull a future release.
 
 ## Two layers (so you know what's "ours")
 
@@ -29,13 +29,17 @@ So when we say the LH engine "reports better than upstream," we almost always me
 
 The vendored `starvote/` package is kept **as close to pristine as possible.** Compared to upstream `starvote 2.1.6` (`git diff` against tag `starvote-upstream-2.1.6`):
 
-- **Algorithm: unchanged.** Same `__version__` (`2.1.6`), no functions added or removed except one small helper, and the two files are **~97 % character-identical** once whitespace is ignored. The large raw line count in `git diff --stat` is almost all **line-reflow** (long signatures/calls re-wrapped), not logic.
-- **Two new optional output toggles** (the only functional edits):
+- **Method and count: unchanged.** Same `__version__` (`2.1.6`), no functions added or removed except one small helper, and the two files are **~97 % character-identical** once whitespace is ignored. The large raw line count in `git diff --stat` is almost all **line-reflow** (long signatures/calls re-wrapped), not logic. Nothing below is a *rule* change: we have not altered how a ballot is scored, how finalists are chosen, or how the runoff is decided.
+- **Two new optional output toggles:**
   - `print_averages` — default `False`; CLI `-a` / `--print-averages`; config key `print averages`. Suppresses the per-candidate averages line unless asked.
   - `print_maximum_score` — default `False`; CLI `-M` / `--print-maximum-score`; config key `print maximum score`. Suppresses the "Maximum score is …" line.
   - a `bool_converter` helper to parse those two config keys. Both options are only forwarded to method functions when they differ from the default, so reference method implementations don't break.
+- **Three upstream bug fixes** — each one restores the behaviour the code already intended, and each is itemized with its repro and regression guard in [`FORK_NOTES.md`](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md):
+  - **SSS ballot allocation gated on verbosity** (2026-08) — the one that *did* change winners: at the default `verbosity=0` Sequentially Spent Score never spent or reweighted ballots, quietly degenerating into repeated bloc score voting. Reported upstream as [issue #17](https://github.com/larryhastings/starvote/issues/17) (open).
+  - **Five-star tiebreak default score** (2025) — a `.get()` default of `1` instead of `0` for the second candidate in the two-candidate fast path; latent, and dormant on a 0–5 scale.
+  - **Unbreakable-tie message placeholder** (2026-08) — two missing `f` prefixes in `_star_round()`, so `UnbreakableTieError` echoed its own source text instead of "three-way tie in Scoring Round". Cosmetic, API-only, and no winner changes; see the [errata note](starvote_file_format.md#errata-the-unbreakable-tie-message-leaks-a-placeholder).
 
-**What is *not* an engine edit** (a common misconception — these are all in the wrapper): the `No Preference → Equal Support` relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent`. The vendored package still prints "No Preference" internally; our wrapper renders "Equal Support" on screen. Keeping the engine pristine-but-for-the- two-toggles is deliberate — re-pulling a future upstream release stays trivial.
+**What is *not* an engine edit** (a common misconception — these are all in the wrapper): the `No Preference → Equal Support` relabel, the Runoff (Preference) Matrix, `[Divergence from STAR]`, the `[Runoff Reversal]` summary, and `show_runoff_percent`. The vendored package still prints "No Preference" internally; our wrapper renders "Equal Support" on screen. Keeping the engine pristine but for these few documented edits is deliberate — re-pulling a future upstream release stays trivial.
 
 To reproduce this list precisely at any time:
 
