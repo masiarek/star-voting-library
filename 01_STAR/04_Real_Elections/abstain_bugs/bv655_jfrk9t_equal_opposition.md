@@ -42,7 +42,39 @@ Ballot 1 marked both zeros deliberately; ballot 2 left Option 2 untouched. On th
 
 **Option 1 is elected** (score 5 vs 0; runoff 1–0). In LH, Ballot 1 (`0,0`) is a tally vote that shows as **Equal Support** in the runoff — *not* an abstention. (BetterVoting instead reports it as `nAbstentions = 1`.)
 
---8<-- "01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md:report"
+<!-- report:bv655_jfrk9t_equal_opposition -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 2 ballots.
+Option 1,Option 2
+       0,       0
+       5,       &
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Option 1      -- 5 -- First place
+   Option 2      -- 0 -- Second place
+ Option 1 and Option 2 advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Option 1      -- 1 -- First place
+   Option 2      -- 0
+   Equal Support -- 1
+ Option 1 wins.
+   Runoff math:
+     2  ballots cast
+   − 1  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Option 1 1 (100%)  ·  Option 2 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Option 1
+```
+<!-- /report -->
 (The `Abs = 1` on Option 2 is Ballot 2's `&` — a *per-candidate* blank — not a whole-ballot abstention. LH's whole-ballot abstention count here is 0; BetterVoting's is 1.)
 
 Full engine detail: [`bv655_jfrk9t_equal_opposition_tabulated.txt`](cases/cases_tabulated/bv655_jfrk9t_equal_opposition_tabulated.txt). Tabulatable source: [`bv655_jfrk9t_equal_opposition.yaml`](cases/bv655_jfrk9t_equal_opposition.yaml).

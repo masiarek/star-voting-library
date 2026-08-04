@@ -52,7 +52,54 @@ Watch the Runoff Table here: **% Between Finalists** is out of 3 (67% / 33%), bu
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_05_reversal_with_equal_support_xgkw3w_tabulated.txt) mirror adds the funnel):
 
---8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_05_reversal_with_equal_support_xgkw3w.md:report"
+<!-- report:Runoff_05_reversal_with_equal_support_xgkw3w -->
+```text
+[Divergence from STAR]
+  STAR     = Sage
+  Approval = Rosa   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Rosa)
+ - Runoff Round Winner   = (Sage)
+  Candidate Rosa earned the highest total score, but
+  Candidate Sage won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Rosa,Sage,Tulip
+    2 ×    4,   5,    0
+    1 ×    5,   1,    0
+    1 ×    3,   3,    1
+    1 ×    5,   5,    2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Rosa          -- 21 -- First place
+   Sage          -- 19 -- Second place
+   Tulip         --  3
+ Rosa and Sage advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Sage          -- 2 -- First place
+   Rosa          -- 1
+   Equal Support -- 2
+ Sage wins.
+   Runoff math:
+     5  ballots cast
+   − 2  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Sage 2 (67%)  ·  Rosa 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Sage
+```
+<!-- /report -->
 > **BV ↔ LH wording.** `3 of 5 (2 Equal Support). Sage 2 (67%) vs Rosa 1 (33%)` packs BetterVoting's *Runoff Votes* (2 / 1), *% Between Finalists* (67% / 33%), and the Equal-Support count (2) into one line that names its denominator. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway

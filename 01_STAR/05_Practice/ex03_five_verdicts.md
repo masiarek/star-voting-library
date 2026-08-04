@@ -66,7 +66,52 @@ Apple 4×5 = **20**, Banana 3×5 + 2×1 = **17**, Cherry 4×3 + 3×4 + 2×5 = **
 <details>
 <summary><b>(e) STAR — Cherry, 5–4</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex03_five_verdicts.md:report"
+<!-- report:ex03_five_verdicts -->
+```text
+[Divergence from STAR]
+  STAR                   = Cherry
+  Choose-One (Plurality) = Apple   (differs from STAR)
+  RCV-IRV                = Banana   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex03_five_verdicts_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Apple,Banana,Cherry
+    4 ×     5,     0,     3
+    3 ×     0,     5,     4
+    2 ×     0,     1,     5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cherry        -- 34 -- First place
+   Apple         -- 20 -- Second place
+   Banana        -- 17
+ Cherry and Apple advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cherry        -- 5 -- First place
+   Apple         -- 4
+   Equal Support -- 0
+ Cherry wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Cherry 5 (56%)  ·  Apple 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cherry
+```
+<!-- /report -->
 **Cherry wins** — and unlike Score's bare total, the runoff line shows Cherry beating the Choose-One winner head-to-head, 5 voters to 4.
 
 </details>

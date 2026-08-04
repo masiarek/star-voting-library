@@ -59,7 +59,45 @@ So the loser here isn't only "the candidate a majority ranked first." It is the 
 
 **1. The defence needs data the ballot cannot produce.** To argue "the utility discrepancy is small," you need utilities. §4.4's own claim 5 concedes what an approval ballot records: *a threshold*, not a degree of preference. So §4.1's rebuttal is sound reasoning that can only be *checked* on a score ballot — the ballot type the paper is arguing against. [Case 04](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_04_stipulated_utilities_star.md) performs that check on the paper's own stipulation, and it splits: the gap is tiny (they're right), and the majority favorite still wins (they're wrong that this rescues the result) —
 
---8<-- "method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_04_stipulated_utilities_star.md:report"
+<!-- report:hh41_04_stipulated_utilities_star -->
+```text
+[Divergence from STAR]
+  STAR     = A
+  Approval = B   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × A,B,C
+   60 × 5,3,0
+   30 × 2,5,4
+   10 × 2,4,5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 380 -- First place
+   B             -- 370 -- Second place
+   C             -- 170
+ A and B advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 60 -- First place
+   B             -- 40
+   Equal Support --  0
+ A wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           A 60 (60%)  ·  B 40 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A
+```
+<!-- /report -->
 **2. Compression doesn't just lose the gap — it inverts and magnifies it.** Same voters, same opinions. At full resolution: A 380, B 370, a coin flip. Compressed to checkmarks: **B 100, A 60** — a landslide the other way. A method that reports a 40-point margin where the underlying opinions differ by 2% is not merely failing to see a small difference; it is confidently reporting a large one that isn't there. That is a sharper statement of the expressivity critique than [our own limits page](approval_honest_limits.md#1-no-preference-strength-or-order) makes.
 
 **3. The frequency leg of their own test goes unargued.** §4.1 proposes judging violations by frequency *and* severity, then argues only severity. The frequency question here is: how often does a majority approve a second candidate? Their §4.3 answers it — **1.6 to 3.15 approvals per ballot** — which is to say, usually. The paper's bullet-voting section is a good answer to one critique and, unremarked, the frequency estimate that undercuts its answer to another.

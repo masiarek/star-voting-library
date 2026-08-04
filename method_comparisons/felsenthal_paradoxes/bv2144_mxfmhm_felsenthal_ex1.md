@@ -46,12 +46,102 @@ Live results: **[bettervoting.com/mxfmhm/results ↗](https://bettervoting.com/m
 
 Choose-One race ([bv2144_mxfmhm_plurality.yaml](cases/bv2144_mxfmhm_plurality.yaml)):
 
---8<-- "method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2144_mxfmhm_star.md:report"
+<!-- report:bv2144_mxfmhm_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Bo
+  Choose-One (Plurality) = Ana   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × Ana,Bo,Cal
+    3 ×   5, 3,  1
+    2 ×   1, 5,  3
+    2 ×   1, 3,  5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bo            -- 25 -- First place
+   Ana           -- 19 -- Tied for second place
+   Cal           -- 19 -- Tied for second place
+ Bo advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Cal           -- 4 -- Second place
+   Ana           -- 3
+   Equal Support -- 0
+ Bo and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bo            -- 5 -- First place
+   Cal           -- 2
+   Equal Support -- 0
+ Bo wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Bo 5 (71%)  ·  Cal 2 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bo
+```
+<!-- /report -->
 (The Bo/Cal tie for the *second finalist slot* runs down LH's tie ladder to the pre-published lot — irrelevant to the winner: Ana beats either finalist. Full ladder in the [tabulated mirror](cases/cases_tabulated/bv2144_mxfmhm_plurality_tabulated.txt).)
 
 STAR race ([bv2144_mxfmhm_star.yaml](cases/bv2144_mxfmhm_star.yaml)):
 
---8<-- "method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2144_mxfmhm_star.md:report"
+<!-- report:bv2144_mxfmhm_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Bo
+  Choose-One (Plurality) = Ana   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 7 ballots.
+Count × Ana,Bo,Cal
+    3 ×   5, 3,  1
+    2 ×   1, 5,  3
+    2 ×   1, 3,  5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bo            -- 25 -- First place
+   Ana           -- 19 -- Tied for second place
+   Cal           -- 19 -- Tied for second place
+ Bo advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Cal           -- 4 -- Second place
+   Ana           -- 3
+   Equal Support -- 0
+ Bo and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bo            -- 5 -- First place
+   Cal           -- 2
+   Equal Support -- 0
+ Bo wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Bo 5 (71%)  ·  Cal 2 (29%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bo
+```
+<!-- /report -->
 ## Agreement
 
 | Race | BetterVoting | LH engine | Agree? |

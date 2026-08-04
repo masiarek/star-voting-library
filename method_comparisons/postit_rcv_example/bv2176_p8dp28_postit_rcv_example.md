@@ -52,7 +52,74 @@ Both ladders are deterministic on this profile, so the race is freezable — mak
 
 ### STAR — Blue (the runoff the video asked for)
 
---8<-- "method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_star.md:report"
+<!-- report:bv2176_p8dp28_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Blue
+  Choose-One (Plurality) = Purple   (differs from STAR)
+  RCV-IRV                = Purple   (differs from STAR)
+  Approval               = Pink   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2176_p8dp28_star_RCV-IRV_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Purple)
+ - Runoff Round Winner   = (Blue)
+  Candidate Purple earned the highest total score, but
+  Candidate Blue won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 20 ballots.
+Count × Purple,Green,Blue,Pink
+    7 ×      5,    0,   0,   0
+    6 ×      0,    5,   4,   3
+    2 ×      0,    0,   5,   4
+    1 ×      0,    4,   5,   3
+    1 ×      4,    0,   5,   0
+    1 ×      3,    4,   0,   5
+    1 ×      4,    0,   0,   5
+    1 ×      0,    0,   0,   5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Purple        -- 46 -- First place
+   Blue          -- 44 -- Tied for second place
+   Pink          -- 44 -- Tied for second place
+   Green         -- 38
+ Purple advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Blue          -- 10 -- Second place
+   Pink          --  3
+   Equal Support --  7
+ Purple and Blue advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blue          -- 10 -- First place
+   Purple        --  9
+   Equal Support --  1
+ Blue wins.
+   Runoff math:
+     20  ballots cast
+   −  1  Equal Support (no preference between the two finalists)
+     ──
+     19  voters with a preference  (majority = 10)
+           Blue 10 (53%)  ·  Purple 9 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Blue
+```
+<!-- /report -->
 ### RCV-IRV — Purple (the video's whiteboard rounds)
 
 ```

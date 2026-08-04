@@ -20,7 +20,52 @@ Ada,Bruno,Cleo
 
 ## The STAR tabulation (LH)
 
---8<-- "01_STAR/03_Criteria/majority_criterion/cases/cases_pages/bv95a_9m6rxr_favorite_survives_one_rival.md:report"
+<!-- report:bv95a_9m6rxr_favorite_survives_one_rival -->
+```text
+[Divergence from STAR]
+  STAR     = Ada
+  Approval = Bruno   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Bruno)
+ - Runoff Round Winner   = (Ada)
+  Candidate Bruno earned the highest total score, but
+  Candidate Ada won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Ada,Bruno,Cleo
+    3 ×   5,    4,   0
+    2 ×   0,    5,   5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 22 -- First place
+   Ada           -- 15 -- Second place
+   Cleo          -- 10
+ Bruno and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 3 -- First place
+   Bruno         -- 2
+   Equal Support -- 0
+ Ada wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Ada 3 (60%)  ·  Bruno 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ada
+```
+<!-- /report -->
 Full audit copy: [`majority_criterion_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt`](cases/cases_tabulated/bv95a_9m6rxr_favorite_survives_one_rival_tabulated.txt).
 
 ## Why Ada wins

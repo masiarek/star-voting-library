@@ -40,7 +40,52 @@ Almond, Brownie, Cocoa
      4,       5,     0
      4,       5,     0
 ```
---8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md:report"
+<!-- report:01a_c3_b3_more-stars-fewer-voters -->
+```text
+[Divergence from STAR]
+  STAR     = Brownie
+  Approval = Almond   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Almond)
+ - Runoff Round Winner   = (Brownie)
+  Candidate Almond earned the highest total score, but
+  Candidate Brownie won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Almond,Brownie,Cocoa
+    2 ×      4,      5,    0
+    1 ×      5,      1,    2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Almond        -- 13 -- First place
+   Brownie       -- 11 -- Second place
+   Cocoa         --  2
+ Almond and Brownie advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Brownie       -- 2 -- First place
+   Almond        -- 1
+   Equal Support -- 0
+ Brownie wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Brownie 2 (67%)  ·  Almond 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Brownie
+```
+<!-- /report -->
 Talking point: Almond's 13 is real — it *is* broadly liked. But when each voter must pick between the two finalists, the majority chose Brownie. Stars found the finalists; the runoff picked the winner.
 
 ### Step 2 — the control (same machinery, leader CONFIRMED): [`04`](cases/04_c4_b3_runoff-confirms-leader.yaml)
@@ -53,7 +98,42 @@ Amber, Blue, Coral, Dune
     2,    5,     0,    1
     5,    4,     0,    0
 ```
---8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/04_c4_b3_runoff-confirms-leader.md:report"
+<!-- report:04_c4_b3_runoff-confirms-leader -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Amber,Blue,Coral,Dune
+    2,   5,    1,   0
+    2,   5,    0,   1
+    5,   4,    0,   0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Blue          -- 14 -- First place
+   Amber         --  9 -- Second place
+   Coral         --  1
+   Dune          --  1
+ Blue and Amber advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blue          -- 2 -- First place
+   Amber         -- 1
+   Equal Support -- 0
+ Blue wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Blue 2 (67%)  ·  Amber 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Blue
+```
+<!-- /report -->
 Talking point: the runoff isn't biased against the leader — it just *checks* the leader. Here Blue leads **and** is preferred, so Blue wins. The reversal only happens when intensity and majority preference point at different candidates.
 
 ### Step 3 — it holds at scale, and it's real

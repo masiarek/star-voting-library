@@ -32,7 +32,57 @@ Every majoritarian count elects **Ada**; every positional/summation count elects
 
 STAR is the one method that shows **both counts in one election** — its scoring round *is* a proper-cancelling summation (a Condorcet component adds the same total to every candidate, so it cancels exactly, like Borda), and its runoff *is* the majoritarian step. The engine's `[Runoff Reversal]` block narrates the handoff:
 
---8<-- "method_comparisons/edelman_condorcet_myth/cases/cases_pages/bv2173_gmfv4c_edelman_saari_cancellation.md:report"
+<!-- report:bv2173_gmfv4c_edelman_saari_cancellation -->
+```text
+[Divergence from STAR]
+  STAR                   = Ada
+  Choose-One (Plurality) = Ben   (differs from STAR)
+  Approval               = Ben   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ben)
+ - Runoff Round Winner   = (Ada)
+  Candidate Ben earned the highest total score, but
+  Candidate Ada won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 81 ballots.
+Count × Ada,Ben,Cara
+   30 ×   5,  2,   0
+   29 ×   2,  5,   0
+   10 ×   0,  5,   2
+   10 ×   2,  0,   5
+    1 ×   5,  0,   2
+    1 ×   0,  2,   5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ben           -- 257 -- First place
+   Ada           -- 233 -- Second place
+   Cara          --  77
+ Ben and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 41 -- First place
+   Ben           -- 40
+   Equal Support --  0
+ Ada wins.
+   Runoff math:
+     81  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     81  voters with a preference  (majority = 41)
+           Ada 41 (51%)  ·  Ben 40 (49%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ada
+```
+<!-- /report -->
 So "who should win Edelman's election?" is precisely the repo's [majoritarian-vs-utilitarian split](../what_makes_a_good_winner.md), with a 240-year pedigree: Condorcet built the example to embarrass Borda's count; Saari — Borda's great modern champion — reversed the polarity and used the same example to embarrass Condorcet's criterion. Neither side ever "won," because the two ideals genuinely disagree here, 41 voters to 40.
 
 ## The component on its own — everything ties, and the engine says so

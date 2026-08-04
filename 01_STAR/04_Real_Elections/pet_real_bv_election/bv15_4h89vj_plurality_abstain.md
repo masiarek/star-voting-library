@@ -35,7 +35,32 @@ This file uses `voting_method: Plurality` — the method BV actually ran. Single
 
 ## The LH report (the accounting #740 wants)
 
---8<-- "01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/bv15_4h89vj_plurality_abstain.md:report"
+<!-- report:bv15_4h89vj_plurality_abstain -->
+```text
+--- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 12 ballots.
+
+                   Andre  Blake 
+                     X      -   
+                     X      -   
+                     X      -   
+                     X      -   
+                     X      -   
+                     -      X   
+                     -      X   
+                     -      -   
+                     -      -   
+                     -      -   
+                     -      -   
+                     -      -   
+
+  Count the marks:  Andre 5 · Blake 2
+  (5 ballot(s) marked nobody.)
+
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Andre   (5 of 12 marks)
+```
+<!-- /report -->
 The `Abs` column (5 for each candidate = the 5 blank ballots) and the runoff line **`7 of 12 (5 Equal Support)`** are precisely the "stats for nerds" turnout breakdown #740 asks BetterVoting to add — LH reconciles `12 = 7 + 5` on the page. Full audit copy: [`_tabulated` mirror](cases/cases_tabulated/bv15_4h89vj_plurality_abstain_tabulated.txt).
 
 ## LH ↔ BetterVoting

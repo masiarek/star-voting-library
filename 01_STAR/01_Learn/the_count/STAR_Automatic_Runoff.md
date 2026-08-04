@@ -92,7 +92,52 @@ This is exactly why the common criticism that STAR "**discounts**" equal-score b
 
 Usually the score leader also wins the runoff. **Sometimes it doesn't** — and that's the most important thing to understand about STAR. Leading the Scoring Round only makes you a *finalist*; the winner is whichever finalist **more voters prefer**:
 
---8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md:report"
+<!-- report:01a_c3_b3_more-stars-fewer-voters -->
+```text
+[Divergence from STAR]
+  STAR     = Brownie
+  Approval = Almond   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Almond)
+ - Runoff Round Winner   = (Brownie)
+  Candidate Almond earned the highest total score, but
+  Candidate Brownie won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Almond,Brownie,Cocoa
+    2 ×      4,      5,    0
+    1 ×      5,      1,    2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Almond        -- 13 -- First place
+   Brownie       -- 11 -- Second place
+   Cocoa         --  2
+ Almond and Brownie advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Brownie       -- 2 -- First place
+   Almond        -- 1
+   Equal Support -- 0
+ Brownie wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Brownie 2 (67%)  ·  Almond 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Brownie
+```
+<!-- /report -->
 **Almond** has the most stars (13) but **Brownie** wins — more voters prefer Brownie head-to-head. This is **not a malfunction**: the runoff is enforcing majority preference between the finalists. (BetterVoting itself pops up *"Why is the top-scoring candidate different from the winner?"* here.)
 
 *Want the whole count — the preference matrix, the Condorcet line, the score distribution? This is a real election: [see the full LH report](../../02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md) (or run [`01a_c3_b3_more-stars-fewer-voters.yaml`](../../02_Examples/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml)).*

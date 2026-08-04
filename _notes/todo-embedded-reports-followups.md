@@ -22,6 +22,26 @@ To show a count, write this **bare** — not inside a fence, the include brings 
 
 Scale: 98 fences became includes (87 of them were showing output the engine had stopped emitting, mostly pre-dating the bracketed `[STAR Voting: …]` headers); 20 were labelled as the deliberate abridgements they always were.
 
+> **SUPERSEDED the same day.** The include block above is history — don't write a new one.
+> `pymdownx.snippets` is a **MkDocs** extension, so `--8<-- "…:report"` renders the count on
+> the site and prints as a **line of literal text on GitHub**. Adam hit it from the GitHub
+> side on `bv2105r2_w3vvff_ice_cream_recheck.md`: heading, then `--8<-- "…"`, then no report.
+> All 96 includes across 77 pages became generated blocks instead —
+>
+> ```
+> <!-- report:<stem> -->
+> <!-- /report -->
+> ```
+>
+> — filled by `build_yaml_pages.py` with the very bytes the include used to pull (the fence
+> between `SNIPPET_START`/`SNIPPET_END` on the generated page), so the site renders exactly
+> what it did before and GitHub now renders it too. Drift is gated by
+> `test_report_blocks_are_current`; a new include fails `test_no_snippet_report_includes_remain`;
+> `check_pasted_reports` skips fences inside the markers. Everything the original work bought
+> — one source of truth, no stale copies — is kept; only the delivery mechanism changed.
+> Snippets **remain correct** for whole-file embeds inside a fence (`.yaml`, `_tabulated`),
+> where GitHub degrades to a visible placeholder in a code block rather than to broken prose.
+
 ## 1. Three malformed `**Level:**` tags in `02_STAR_Bloc/03_Criteria/`
 
 `check_repo_hygiene.py` reports these and nothing else:

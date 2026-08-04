@@ -115,7 +115,45 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/02_Examp
 
 No flag says which method to use twice: `voting_method:` alone dispatches STAR (single / Bloc / PR), Approval, Ranked Robin, or RCV-IRV, and ranked ballots route themselves. The engine prints an annotated, round-by-round count — here the Scoring Round picks two finalists and the Automatic Runoff decides between them:
 
---8<-- "01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md:report"
+<!-- report:bv2187_qrw6wb_ann-bob-cal -->
+```text
+[Divergence from STAR]
+  STAR                   = Bob
+  Choose-One (Plurality) = Ann   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Ann,Bob,Cal
+  5,  4,  0
+  3,  5,  2
+  0,  3,  5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bob           -- 12 -- First place
+   Ann           --  8 -- Second place
+   Cal           --  7
+ Bob and Ann advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bob           -- 2 -- First place
+   Ann           -- 1
+   Equal Support -- 0
+ Bob wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Bob 2 (67%)  ·  Ann 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bob
+```
+<!-- /report -->
 
 Notice what the file never had to state: the totals, the finalists, the head-to-head count, the majority threshold. All of it is *derived* from those three ballot rows. **How much of it lands on screen** is the one thing the file does control — that's the optional `options:` block, which can hide the description, show the full pairwise grid, add the score-distribution table, and so on. It never changes the winner or the numbers.
 

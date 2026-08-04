@@ -29,7 +29,63 @@ Each seat is a complete little STAR election. Nothing is reweighted, spent, or t
 
 **Worked — the baseline case.** 3 candidates, 2 seats, 3 ballots (the smallest Bloc election that actually decides anything: with 2 candidates for 2 seats nobody can lose):
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md:report"
+<!-- report:00_c3_b3_bloc-baseline-2-seats -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 3 ballots to fill 2 seats.
+Alice,Bruno,Clara
+    5,    3,    1
+    4,    5,    2
+    5,    4,    0
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alice         -- 14 -- First place
+   Bruno         -- 12 -- Second place
+   Clara         --  3
+ Alice and Bruno advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Alice         -- 2 -- First place
+   Bruno         -- 1
+   Equal Support -- 0
+ Alice wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Alice 2 (67%)  ·  Bruno 1 (33%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 12 -- First place
+   Clara         --  3 -- Second place
+ Bruno and Clara advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 3 -- First place
+   Clara         -- 0
+   Equal Support -- 0
+ Bruno wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Bruno 3 (100%)  ·  Clara 0 (0%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Alice
+ Bruno
+```
+<!-- /report -->
 Want the whole count? See the full LH report → [`00_c3_b3_bloc-baseline-2-seats`](../02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) ([yaml](../02_Examples/cases/00_c3_b3_bloc-baseline-2-seats.yaml)).
 
 ## What "remove" does — and what it doesn't

@@ -160,7 +160,93 @@ Through the Python API the same election raises `UnbreakableTieError`; the CLI p
 
 The house `.yaml` door runs the identical ballots through the presentation layer, and because it supplies a lot-order tiebreaker it *does* seat two candidates. This is the full LH report, embedded from the generated case page so it tracks the engine rather than going stale (candidates renamed for the public BetterVoting election: a → Arden, b → Blythe, c → Corin):
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md:report"
+<!-- report:b484mbm_tie_every_rung -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 3 ballots to fill 2 seats.
+Arden,Blythe,Corin
+    3,     4,    5
+    5,     3,    4
+    4,     5,    3
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Arden         -- 12 -- Tied for first place
+   Blythe        -- 12 -- Tied for first place
+   Corin         -- 12 -- Tied for first place
+ There's a three-way tie for first.
+
+[Bloc STAR: Round 1: Scoring Round: First tiebreaker]
+ The two candidates preferred in the most head-to-head matchups advance.
+   Arden         -- 3 -- Tied for first place
+   Blythe        -- 3 -- Tied for first place
+   Corin         -- 3 -- Tied for first place
+   Equal Support -- 0
+ There's still a three-way tie for first.
+
+[Bloc STAR: Round 1: Scoring Round: Second tiebreaker]
+ The two candidates with the most votes of score 5 advance.
+   Arden         -- 1 -- Tied for first place
+   Blythe        -- 1 -- Tied for first place
+   Corin         -- 1 -- Tied for first place
+ There's still a three-way tie for first.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Blythe', 'Arden', 'Corin']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Arden', 'Blythe', 'Corin']
+  Resolved: ['Blythe', 'Arden'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blythe        -- 2 -- First place
+   Arden         -- 1
+   Equal Support -- 0
+ Blythe wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Blythe 2 (67%)  ·  Arden 1 (33%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Arden         -- 12 -- First place
+   Corin         -- 12 -- Second place
+ Arden and Corin advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Arden         -- 2 -- First place
+   Corin         -- 1
+   Equal Support -- 0
+ Arden wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Arden 2 (67%)  ·  Corin 1 (33%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Blythe
+ Arden
+```
+<!-- /report -->
 
 Same three rungs, same three ties — then the matrix, the Condorcet check, the `⚠ Lot-decided tie` warning, and the two seats filled by the lot. Side by side, the two reports are the clearest statement of what a tiebreak policy actually decides.
 

@@ -38,7 +38,52 @@ Nine voters, three speakers, scores 0–5 (rows are candidates, columns are vote
 <details>
 <summary><b>(a) Honest — Bree wins, 5–4; Ari's fans get their second choice</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex06_bullet_honest.md:report"
+<!-- report:ex06_bullet_honest -->
+```text
+[Divergence from STAR]
+  STAR                   = Bree
+  Choose-One (Plurality) = Ari   (differs from STAR)
+  RCV-IRV                = Cash   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex06_bullet_honest_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Ari,Bree,Cash
+    4 ×   5,   3,   0
+    4 ×   0,   2,   5
+    1 ×   0,   5,   1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bree          -- 25 -- First place
+   Cash          -- 21 -- Second place
+   Ari           -- 20
+ Bree and Cash advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bree          -- 5 -- First place
+   Cash          -- 4
+   Equal Support -- 0
+ Bree wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Bree 5 (56%)  ·  Cash 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bree
+```
+<!-- /report -->
 Ari misses the runoff by one point (20 vs Cash's 21), and the broad compromise **Bree beats Cash 5–4** — the Ari fans' 3s are precisely what put her there. Their honest ballots bought their second choice. (A side note the engine's divergence block volunteers: on these same honest opinions, *RCV-IRV elects Cash* — Bree is squeezed out on first choices, [exercise 5](ex05_center_squeeze.md)'s lesson making a cameo. The honest STAR outcome these fans are about to gamble away is one other methods wouldn't even have found.)
 
 </details>
@@ -53,7 +98,46 @@ The fans' theory: zeroing Bree drops her below Ari, Ari reaches the runoff, and 
 <details>
 <summary><b>(c) Strategic — Cash wins; the plan works halfway, then detonates</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex06_bullet_backfire.md:report"
+<!-- report:ex06_bullet_backfire -->
+```text
+[Divergence from STAR]
+  STAR                   = Cash
+  Choose-One (Plurality) = Ari   (differs from STAR)
+  Approval               = Ari   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Ari,Bree,Cash
+    4 ×   5,   0,   0
+    4 ×   0,   2,   5
+    1 ×   0,   5,   1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cash          -- 21 -- First place
+   Ari           -- 20 -- Second place
+   Bree          -- 13
+ Cash and Ari advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cash          -- 5 -- First place
+   Ari           -- 4
+   Equal Support -- 0
+ Cash wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Cash 5 (56%)  ·  Ari 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cash
+```
+<!-- /report -->
 The first half works perfectly: Bree crashes 25 → 13, out of the runoff; Ari is a finalist. Then the trap: **the runoff Ari inherits is against Cash**, and zeroing Bree never created a single Ari-over-Cash preference — those are still 4 (Ari's fans) versus 5 (Cash's fans plus the Bree fan, who scored Cash 1 > Ari 0). **Cash wins 5–4.** The fans demoted their sure second choice and elected their zero. Under the honest count they got Bree; the "clever" ballots got them their nightmare.
 
 </details>

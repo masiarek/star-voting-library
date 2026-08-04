@@ -21,7 +21,53 @@ Adams has the best grades. But head-to-head, **Baker beats Adams 2–1** (voters
 - **Head-to-head (Condorcet):** **Baker**.
 - **STAR:** finalists Adams & Baker (the two best grade totals) → runoff **Baker, 2–1**. **STAR elects the Condorcet winner here.** The critique names STAR, but the construction can't reach it: STAR is not "highest average grade" — the automatic runoff is a head-to-head majority check on the two finalists, and it catches exactly the discrepancy the critique warns about. The engine's report, in full:
 
---8<-- "method_comparisons/brams_grading_paradox/cases/cases_pages/brams_grading_paradox_c3_b3.md:report"
+<!-- report:brams_grading_paradox_c3_b3 -->
+```text
+[Divergence from STAR]
+  STAR     = Baker
+  Approval = Adams   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Adams)
+ - Runoff Round Winner   = (Baker)
+  Candidate Adams earned the highest total score, but
+  Candidate Baker won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Adams,Baker,Chen
+    3,    0,   0
+    2,    3,   3
+    1,    2,   1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Adams         -- 6 -- First place
+   Baker         -- 5 -- Second place
+   Chen          -- 4
+ Adams and Baker advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Baker         -- 2 -- First place
+   Adams         -- 1
+   Equal Support -- 0
+ Baker wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Baker 2 (67%)  ·  Adams 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Baker
+```
+<!-- /report -->
 Note the engine's own `[Divergence from STAR]` block: `Approval = Adams (differs from STAR)`. Hold that thought.
 
 ## "Approval prevents this" — where the theorem is true, and what it costs

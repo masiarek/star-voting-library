@@ -12,7 +12,40 @@
 
 Start where there is nothing to argue about. Three voters, three candidates; every ballot gives A five stars, one voter gives B a single point, nobody scores C at all ([full count →](../../01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md) · [yaml](../../01_STAR/02_Examples/cases/bv2263_xw23m9_over_50_percent.yaml) · **[live on BetterVoting ↗](https://bettervoting.com/xw23m9/results)** — BV2263 `xw23m9`, where BV's tally agrees line for line):
 
---8<-- "01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md:report"
+<!-- report:bv2263_xw23m9_over_50_percent -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × A,B,C
+    2 × 5,0,0
+    1 × 5,1,0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 15 -- First place
+   B             --  1 -- Second place
+   C             --  0
+ A and B advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 3 -- First place
+   B             -- 0
+   Equal Support -- 0
+ A wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           A 3 (100%)  ·  B 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A
+```
+<!-- /report -->
 A wins on every denominator a STAR result has:
 
 | "Over 50%" of what? | A | how it's counted |
@@ -29,7 +62,63 @@ That is the whole reason this tiny election is worth keeping: it is the one case
 
 [BV1815](../02_Examples/bv1815_bloc_3c2s_basic.md) is the multi-seat twin — three ballots again, A dominant again, but two seats to fill ([full count →](../02_Examples/cases/cases_pages/bv1815_bloc_3c2s_basic.md) · [yaml](../02_Examples/cases/bv1815_bloc_3c2s_basic.yaml)):
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv1815_bloc_3c2s_basic.md:report"
+<!-- report:bv1815_bloc_3c2s_basic -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 3 ballots to fill 2 seats.
+A,B,C
+4,1,0
+3,0,2
+5,0,0
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 12 -- First place
+   C             --  2 -- Second place
+   B             --  1
+ A and C advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 3 -- First place
+   C             -- 0
+   Equal Support -- 0
+ A wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           A 3 (100%)  ·  C 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 2 -- First place
+   B             -- 1 -- Second place
+ C and B advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   B             -- 1 -- Tied for first place
+   C             -- 1 -- Tied for first place
+   Equal Support -- 1
+ There's a two-way tie for first.
+
+[Bloc STAR: Round 2: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   C             -- 2 -- First place
+   B             -- 1
+ C wins.
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ A
+ C
+```
+<!-- /report -->
 Seat 1 is the ceiling case again in all but the last decimal: A holds **12 of 15** points (80% of the maximum), is the top-scored candidate on every ballot, and wins the runoff **3–0**. Seat 2 is a different election entirely — and this is what the same three denominators say about its winner:
 
 | "Over 50%" of what? | C, at seat 2 | |

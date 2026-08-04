@@ -49,7 +49,40 @@ Symmetry does the rest: any permutation of `{a, b, c}` can be undone by a permut
 
 **That profile is already a case file here.** [`reinf_north_c3_b6_rr.yaml`](../../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md) is exactly it, with `k = 2`:
 
---8<-- "method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md:report"
+<!-- report:reinf_north_c3_b6_rr -->
+```text
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 6 ballots (ranked ballots).
+
+Ballots:
+     2 × Ada > Ben > Cara
+     2 × Ben > Cara > Ada
+     2 × Cara > Ada > Ben
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ada   beats Ben    4 – 2
+   Cara  beats Ada    4 – 2
+   Ben   beats Cara   4 – 2
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |    Ada    |   Ben    |  Cara    |
+--------------------------------------------
+   Ada > |    ---    |4 - 0 - 2 |2 - 0 - 4 |
+   Ben > | 2 - 0 - 4 |   ---    |4 - 0 - 2 |
+  Cara > | 4 - 0 - 2 |2 - 0 - 4 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Ada        1–1–0         1      +0  Ben
+    2  Ben        1–1–0         1      +0  Cara
+    3  Cara       1–1–0         1      +0  Ada
+
+Winner — Ranked Robin (RCV-RR): Ada
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+```
+<!-- /report -->
 `n = 6`, `m = 3`; 2 and 3 both divide 6 and both sit in `(1, 3]`. The theorem says a tie is unavoidable here, and the engine lands on one: three candidates, identical records, identical margins. Ada wins **only** because the lot order says so. Full report: [the generated page](../../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md).
 
 **The score-ballot analogue is here too.** [`three_way_dead_rung_A`](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_A.md) is the same rotation on a STAR ballot — `4,0,0 / 0,4,0 / 0,0,4`, with `n = 3`, `m = 3` — and STAR ties at every rung it has: totals 4–4–4, pairwise 2–2–2, five-star `0–0–0` (the [dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md)), then the lot.

@@ -123,7 +123,42 @@ Full report: [`ex15_score_profile`](cases/cases_pages/ex15_score_profile.md).
 
 Read the same 35 ballots pairwise ([`ex15_approval_pairwise`](cases/cases_pages/ex15_approval_pairwise.md) writes each approval as a 5 and each non-approval as a 0, which changes no head-to-head count — only the two-class order matters):
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex15_approval_pairwise.md:report"
+<!-- report:ex15_approval_pairwise -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 35 ballots.
+Count × Ada,Blair,Cosmo
+   15 ×   0,    5,    5
+    8 ×   5,    5,    0
+    7 ×   5,    0,    5
+    5 ×   0,    5,    0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Blair         -- 140 -- First place
+   Cosmo         -- 110 -- Second place
+   Ada           --  75
+ Blair and Cosmo advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blair         -- 13 -- First place
+   Cosmo         --  7
+   Equal Support -- 15
+ Blair wins.
+   Runoff math:
+     35  ballots cast
+   − 15  Equal Support (no preference between the two finalists)
+     ──
+     20  voters with a preference  (majority = 11)
+           Blair 13 (65%)  ·  Cosmo 7 (35%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Blair
+```
+<!-- /report -->
 Blair beats Ada 20–7 and Cosmo 13–7; Cosmo beats Ada 15–8. **Blair > Cosmo > Ada — exactly the order of the approval totals 28 > 22 > 15.**
 
 Not luck. On a dichotomous profile, "more voters strictly prefer x to y" reduces to **"more voters approve x than approve y"** — so the head-to-head order *is* the approval order, a Condorcet winner is guaranteed to exist, and no cycle is possible. (Approval also coincides with [Borda](../../06_Other/other_ranked_methods/borda.md) on this domain, which is why the result is sometimes stated as *approval voting reconciles Borda and Condorcet*.)

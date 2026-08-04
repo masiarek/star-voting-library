@@ -22,7 +22,52 @@
 | **B** | 4 | 5 |
 | **C** | 0 | 1 |
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex08_minimal_reversal_3c.md:report"
+<!-- report:ex08_minimal_reversal_3c -->
+```text
+[Divergence from STAR]
+  STAR     = A
+  Approval = B   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (B)
+ - Runoff Round Winner   = (A)
+  Candidate B earned the highest total score, but
+  Candidate A won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × A,B,C
+    3 × 5,4,0
+    2 × 0,5,1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   B             -- 22 -- First place
+   A             -- 15 -- Second place
+   C             --  2
+ B and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 3 -- First place
+   B             -- 2
+   Equal Support -- 0
+ A wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           A 3 (60%)  ·  B 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A
+```
+<!-- /report -->
 B piles up 22 points — every single voter gives B a 4 or 5 — yet a 3-of-5 **majority scores A above B**, so A wins the runoff. The engine prints its `[Runoff Reversal]` block and the standard "not a malfunction" note. (Runnable: [ex08_minimal_reversal_3c.yaml](cases/ex08_minimal_reversal_3c.yaml).)
 
 </details>

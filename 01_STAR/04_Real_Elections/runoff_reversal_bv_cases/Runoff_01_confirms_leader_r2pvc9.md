@@ -44,7 +44,41 @@ Aspen leads the Scoring Round (12) and wins the Automatic Runoff 2–1; the dash
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_01_confirms_leader_r2pvc9_tabulated.txt) mirror adds the funnel):
 
---8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_01_confirms_leader_r2pvc9.md:report"
+<!-- report:Runoff_01_confirms_leader_r2pvc9 -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Aspen,Birch,Cedar
+    5,    2,    1
+    2,    5,    0
+    5,    3,    0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Aspen         -- 12 -- First place
+   Birch         -- 10 -- Second place
+   Cedar         --  1
+ Aspen and Birch advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Aspen         -- 2 -- First place
+   Birch         -- 1
+   Equal Support -- 0
+ Aspen wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Aspen 2 (67%)  ·  Birch 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Aspen
+```
+<!-- /report -->
 > **BV ↔ LH wording.** The line `Aspen 2 (67%) vs Birch 1 (33%)` is BetterVoting's *Runoff Votes* (2 / 1) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The point

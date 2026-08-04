@@ -40,7 +40,64 @@ BetterVoting runs the same protocol; because no random rung is reached, it elect
 
 ## View 2 — the LH engine (reference)
 
---8<-- "01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md:report"
+<!-- report:bv2180_fp62p2_ice_cream_ladder -->
+```text
+[Divergence from STAR]
+  STAR                   = Strawberry
+  Choose-One (Plurality) = Chocolate Chip   (differs from STAR)
+  Approval               = Chocolate   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 2 ballots.
+Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
+        4,             5,            4,      1,         2,    -
+        1,             0,            0,      4,         5,    4
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Strawberry     -- 7 -- First place
+   Chocolate      -- 5 -- Tied for second place
+   Chocolate Chip -- 5 -- Tied for second place
+   Vanilla        -- 5 -- Tied for second place
+   Fudge Brownie  -- 4
+   Mango          -- 4
+ Strawberry advances, but there's a three-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Chocolate      -- 2 -- Tied for second place
+   Chocolate Chip -- 2 -- Tied for second place
+   Vanilla        -- 2 -- Tied for second place
+   Equal Support  -- 0
+ There's still a three-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   Chocolate Chip -- 1 -- Second place
+   Chocolate      -- 0
+   Vanilla        -- 0
+ Strawberry and Chocolate Chip advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Chocolate Chip -- 1 -- Tied for first place
+   Strawberry     -- 1 -- Tied for first place
+   Equal Support  -- 0
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Strawberry     -- 7 -- First place
+   Chocolate Chip -- 5
+ Strawberry wins.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Strawberry
+```
+<!-- /report -->
 Full audit copy: [`_tabulated`](cases/cases_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt).
 
 ## BV vs LH

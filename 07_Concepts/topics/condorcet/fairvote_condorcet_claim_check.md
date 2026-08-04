@@ -18,7 +18,42 @@ So an article arguing "Condorcet isn't everything" *could* be making a legitimat
 
 **The countable check:** [same three candidates, electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) — the "strong liberal" pole candidate takes 56% of first choices and *is* the Condorcet winner (56–44 over the moderate, 62–38 over the conservative). Every method agrees. Live on BetterVoting as BV2169: **[results ↗](https://bettervoting.com/2jrfpg/results)**.
 
---8<-- "method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md:report"
+<!-- report:bv2169_2jrfpg_fairvote_shifted_left_liberal_cw -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Liberal,Moderate,Conservative
+   56 ×       5,       2,           0
+   32 ×       0,       2,           5
+    6 ×       2,       5,           0
+    6 ×       0,       5,           2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Liberal       -- 292 -- First place
+   Moderate      -- 236 -- Second place
+   Conservative  -- 172
+ Liberal and Moderate advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Liberal       -- 56 -- First place
+   Moderate      -- 44
+   Equal Support --  0
+ Liberal wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Liberal 56 (56%)  ·  Moderate 44 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Liberal
+```
+<!-- /report -->
 ### Claim 2 — "Condorcet winners are centrist by nature, regardless of the preferences of the electorate."
 
 **Self-contradictory as written.** The Condorcet winner is *defined by* the preferences of the electorate — there is nothing else in the definition. The defensible version of this claim is the median voter theorem: under single-peaked preferences on one dimension, the Condorcet winner sits at the *median voter's* position. But the median moves with the electorate — if the electorate shifts left, so does the Condorcet winner (the demo above). "Centrist relative to the actual distribution of voters" is not "centrist in absolute political terms," and "regardless of preferences" is exactly backwards.
@@ -45,7 +80,62 @@ A minor structural slip: an undefeated *schedule* is a round-robin argument (eve
 
 The article's scenario: *"a strong liberal who commands between 40% to 50% of the vote, a moderate with about 10% to 15%, and a strong conservative between 40% and 50%."* We tabulated exactly that — Liberal 45, Moderate 12, Conservative 43, poles ranking the moderate second: [FairVote's own hypothetical, counted](../../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md). It's also **live on BetterVoting as BV2168** — the same 100 voters, a STAR race *and* an RCV-IRV race: **[results ↗](https://bettervoting.com/6w2gq7/results)**.
 
---8<-- "method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md:report"
+<!-- report:bv2168_6w2gq7_fairvote_40_15_40_moderate_cw -->
+```text
+[Divergence from STAR]
+  STAR                   = Moderate
+  Choose-One (Plurality) = Liberal   (differs from STAR)
+  RCV-IRV                = Liberal   (differs from STAR)
+  Approval               = Liberal   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw_RCV-IRV_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Liberal)
+ - Runoff Round Winner   = (Moderate)
+  Candidate Liberal earned the highest total score, but
+  Candidate Moderate won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Liberal,Moderate,Conservative
+   45 ×       5,       2,           0
+   43 ×       0,       2,           5
+    6 ×       2,       5,           0
+    6 ×       0,       5,           2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Liberal       -- 237 -- First place
+   Moderate      -- 236 -- Second place
+   Conservative  -- 227
+ Liberal and Moderate advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Moderate      -- 55 -- First place
+   Liberal       -- 45
+   Equal Support --  0
+ Moderate wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Moderate 55 (55%)  ·  Liberal 45 (45%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Moderate
+```
+<!-- /report -->
 Two things the article doesn't mention:
 
 1. **The moderate is elected by majorities, not by the 12%.** 55 of 100 voters prefer Moderate over Liberal; 57 of 100 prefer Moderate over Conservative. "The moderate with 10–15%" wins *because most voters said so, twice.*

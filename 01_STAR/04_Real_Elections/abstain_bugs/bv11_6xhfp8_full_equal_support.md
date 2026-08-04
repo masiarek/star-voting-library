@@ -32,7 +32,60 @@ Every bubble that could be filled *is* filled — maximum support, three times o
 
 **Ann is elected** — but as a **tie broken by lot** (Ann 15 = Bob 15), not off zero votes.
 
---8<-- "01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md:report"
+<!-- report:bv11_6xhfp8_full_equal_support -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Ann,Bob
+    3 ×   5,  5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 15 -- First place
+   Bob           -- 15 -- Second place
+ Ann and Bob advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ann           -- 0 -- Tied for first place
+   Bob           -- 0 -- Tied for first place
+   Equal Support -- 3
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Ann           -- 15 -- Tied for first place
+   Bob           -- 15 -- Tied for first place
+ There's still a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   Ann           -- 3 -- Tied for first place
+   Bob           -- 3 -- Tied for first place
+ There's still a two-way tie for first.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['Ann', 'Bob']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ann', 'Bob']
+  Resolved: ['Ann'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ann
+```
+<!-- /report -->
 BetterVoting result: `elected: ["Ann"]`, `nTallyVotes: 0`, `nAbstentions: 3`.
 
 Full engine detail: [`bv11_6xhfp8_full_equal_support_tabulated.txt`](cases/cases_tabulated/bv11_6xhfp8_full_equal_support_tabulated.txt) · source [`.yaml`](cases/bv11_6xhfp8_full_equal_support.yaml). Part of the [BV abstain issue index](../../../07_Concepts/tabulation_engines/BV/abstain_issues_index.md).

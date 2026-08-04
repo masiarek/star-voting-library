@@ -32,7 +32,53 @@ tieBreakType : "random"                       ← the draw seated F (tieBreakOrd
 
 The same profile through the LH Approval engine, which breaks ties by a **published candidate priority order** (A>B>…>G) rather than a random draw:
 
---8<-- "04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md:report"
+<!-- report:approval_bloc_4seats_c7_b12_lackner_skowron -->
+```text
+--- Approval Voting (4 winners) ---
+ Tabulating 12 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = A, B, C, D, E, F, G      (1 = approve; 0 / blank / marker = not approved)
+     3 × 1,1,0,0,0,0,0
+     3 × 1,0,1,0,0,0,0
+     2 × 1,0,0,1,0,0,0
+     1 × 0,1,1,0,0,1,0
+     1 × 0,0,0,0,1,0,0
+     1 × 0,0,0,0,0,1,0
+     1 × 0,0,0,0,0,0,1
+
+   A -- 8 (67%) -- Elected
+   B -- 4 (33%) -- Elected
+   C -- 4 (33%) -- Elected
+   D -- 2 (17%) -- Elected
+   F -- 2 (17%)
+   E -- 1 (8%)
+   G -- 1 (8%)
+  Note: D, F each have 2 approvals and tie for the last 1 seat.
+        Candidate priority order (D > F) broke the tie: D elected, F not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   22 approvals across 12 ballots — average 1.8 of 7 (range 1–3).
+     approved 1: 3 ballots
+     approved 2: 8 ballots
+     approved 3: 1 ballot
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+      |   A    |   B    |   C    |   D    |   F    |   E    |   G    |
+   -------------------------------------------------------------------
+   A  |   --   |  38%   |  38%   |  25%   |   0%   |   0%   |   0%   |
+   B  |  75%   |   --   |  25%   |   0%   |  25%   |   0%   |   0%   |
+   C  |  75%   |  25%   |   --   |   0%   |  25%   |   0%   |   0%   |
+   D  |  100%  |   0%   |   0%   |   --   |   0%   |   0%   |   0%   |
+   F  |   0%   |  50%   |  50%   |   0%   |   --   |   0%   |   0%   |
+   E  |   0%   |   0%   |   0%   |   0%   |   0%   |   --   |   0%   |
+   G  |   0%   |   0%   |   0%   |   0%   |   0%   |   0%   |   --   |
+
+Winners — Approval Voting (4 winners)
+  A, B, C, D
+```
+<!-- /report -->
 ## The finding
 
 Both engines agree on the tabulation — `a,b,c` plus a **genuine 2–2 tie for seat 4**. They differ only in *how the tie is broken*: BetterVoting draws at **random** (here → F, the book's committee `W₂ = {a,b,c,f}`), while LH uses a **pre-published priority order** (→ D, the book's `W₁ = {a,b,c,d}`). This is the multi-winner on-screen report of the single-winner random-vs-published-lot theme ([BV `jfk7pd`](../../../01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md)): the *committee* is reproducible only once the tiebreak order is fixed.

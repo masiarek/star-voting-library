@@ -33,7 +33,43 @@ Sum the columns; the top 3 win — Adams, Brown, Clark (3 approvals each). Runna
 
 What bloc Approval does *not* do is represent minorities. Every voter influences every seat with full weight, so 51% of voters who agree on a slate take 100% of the seats. The worked example makes it concrete — 6 voters, 4 candidates, 2 seats; a 4-voter majority (all approve Amy, two also Ben), a 2-voter minority behind Cora (one also Doug):
 
---8<-- "04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_2seats_c4_b6.md:report"
+<!-- report:approval_bloc_2seats_c4_b6 -->
+```text
+--- Approval Voting (2 winners) ---
+ Tabulating 6 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+     2 × 1,0,0,0
+     2 × 1,1,0,0
+     1 × 0,0,1,1
+     1 × 0,0,1,0
+
+   Amy  -- 4 (67%) -- Elected
+   Ben  -- 2 (33%) -- Elected
+   Cora -- 2 (33%)
+   Doug -- 1 (17%)
+  Note: Ben, Cora each have 2 approvals and tie for the last 1 seat.
+        Candidate priority order (Ben > Cora) broke the tie: Ben elected, Cora not elected.
+
+[Approval Distribution] (how many candidates each ballot approved)
+   9 approvals across 6 ballots — average 1.5 of 4 (range 1–2).
+     approved 1: 3 ballots
+     approved 2: 3 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+         |  Amy   |  Ben   |  Cora  |  Doug  |
+   -------------------------------------------
+   Amy   |   --   |  50%   |   0%   |   0%   |
+   Ben   |  100%  |   --   |   0%   |   0%   |
+   Cora  |   0%   |   0%   |   --   |  50%   |
+   Doug  |   0%   |   0%   |  100%  |   --   |
+
+Winners — Approval Voting (2 winners)
+  Amy, Ben
+```
+<!-- /report -->
 One third of the electorate ends up with zero seats. Sometimes that's the design goal (an executive slate that should reflect the majority); for a representative body it usually isn't. This is the **same trade-off** as Bloc STAR vs Proportional STAR — see [Bloc STAR](../../../02_STAR_Bloc/) and [proportional STAR](../../../03_STAR_PR/).
 
 ## Proportional adaptations: SPAV and PAV

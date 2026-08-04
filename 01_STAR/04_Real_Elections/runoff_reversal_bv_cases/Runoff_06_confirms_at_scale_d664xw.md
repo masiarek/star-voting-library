@@ -51,7 +51,42 @@ Wren leads the Scoring Round (21) **and** wins the Automatic Runoff 4–1. Sourc
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_06_confirms_at_scale_d664xw_tabulated.txt) mirror adds the funnel):
 
---8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_06_confirms_at_scale_d664xw.md:report"
+<!-- report:Runoff_06_confirms_at_scale_d664xw -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Wren,Yarrow,Zinnia
+    2 ×    5,     2,     0
+    1 ×    5,     3,     1
+    1 ×    4,     5,     0
+    1 ×    2,     1,     5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Wren          -- 21 -- First place
+   Yarrow        -- 13 -- Second place
+   Zinnia        --  6
+ Wren and Yarrow advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Wren          -- 4 -- First place
+   Yarrow        -- 1
+   Equal Support -- 0
+ Wren wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Wren 4 (80%)  ·  Yarrow 1 (20%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Wren
+```
+<!-- /report -->
 (No `[Runoff Reversal]` block here — it only prints when the score winner and the runoff winner *differ*. They agree, so it stays silent.)
 
 > **BV ↔ LH wording.** The line `Wren 4 (80%) vs Yarrow 1 (20%)` is BetterVoting's *Runoff Votes* (4 / 1) and *% Between Finalists* (80% / 20%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)

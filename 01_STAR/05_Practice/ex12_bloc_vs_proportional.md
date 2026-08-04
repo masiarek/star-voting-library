@@ -32,7 +32,64 @@ Ten voters, four candidates, two seats, scores 0–5:
 <details>
 <summary><b>(a) Seat 1 — Asa, with a 6–0 runoff</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md:report"
+<!-- report:ex12_bloc_sweep -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 10 ballots to fill 2 seats.
+Count × Asa,Bram,Cleo,Dane
+    6 ×   5,   4,   0,   0
+    4 ×   0,   0,   5,   4
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Asa           -- 30 -- First place
+   Bram          -- 24 -- Second place
+   Cleo          -- 20
+   Dane          -- 16
+ Asa and Bram advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Asa           -- 6 -- First place
+   Bram          -- 0
+   Equal Support -- 4
+ Asa wins.
+   Runoff math:
+     10  ballots cast
+   −  4  Equal Support (no preference between the two finalists)
+     ──
+      6  voters with a preference  (majority = 4)
+           Asa 6 (100%)  ·  Bram 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bram          -- 24 -- First place
+   Cleo          -- 20 -- Second place
+   Dane          -- 16
+ Bram and Cleo advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bram          -- 6 -- First place
+   Cleo          -- 4
+   Equal Support -- 0
+ Bram wins.
+   Runoff math:
+     10  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     10  voters with a preference  (majority = 6)
+           Bram 6 (60%)  ·  Cleo 4 (40%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Asa
+ Bram
+```
+<!-- /report -->
 Both finalists are north-siders, so the runoff is an intramural affair: all six northerners prefer Asa 5 > 4, and the four southerners — who scored the finalists 0–0 — stand aside as Equal Support ([exercise 7](ex07_vanishing_votes.md)'s lesson again). **Asa takes seat 1.**
 
 </details>
@@ -40,7 +97,64 @@ Both finalists are north-siders, so the runoff is an intramural affair: all six 
 <details>
 <summary><b>(b) Seat 2 — Bram. The board is a sweep</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md:report"
+<!-- report:ex12_bloc_sweep -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 10 ballots to fill 2 seats.
+Count × Asa,Bram,Cleo,Dane
+    6 ×   5,   4,   0,   0
+    4 ×   0,   0,   5,   4
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Asa           -- 30 -- First place
+   Bram          -- 24 -- Second place
+   Cleo          -- 20
+   Dane          -- 16
+ Asa and Bram advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Asa           -- 6 -- First place
+   Bram          -- 0
+   Equal Support -- 4
+ Asa wins.
+   Runoff math:
+     10  ballots cast
+   −  4  Equal Support (no preference between the two finalists)
+     ──
+      6  voters with a preference  (majority = 4)
+           Asa 6 (100%)  ·  Bram 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bram          -- 24 -- First place
+   Cleo          -- 20 -- Second place
+   Dane          -- 16
+ Bram and Cleo advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bram          -- 6 -- First place
+   Cleo          -- 4
+   Equal Support -- 0
+ Bram wins.
+   Runoff math:
+     10  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     10  voters with a preference  (majority = 6)
+           Bram 6 (60%)  ·  Cleo 4 (40%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Asa
+ Bram
+```
+<!-- /report -->
 With Asa removed, the north's second choice Bram (24) still outpolls the south's first choice Cleo (20), and the runoff is the neighborhood's raw 6–4 split. **Board: Asa and Bram — the 60% side holds 100% of the seats.** That is Bloc STAR working exactly as specified: every seat answers to the same majority.
 
 </details>

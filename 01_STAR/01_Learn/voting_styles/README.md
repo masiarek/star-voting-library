@@ -73,7 +73,49 @@ One ballot per style, six candidates (**Allen, Bianca, Chris, Desi, Edith, Frank
 
 Bianca and Frank reach the runoff on scores; Bianca wins it 4–2, with the Partisan and Anyone-But voters counted as Equal Support (they scored both finalists 5):
 
---8<-- "01_STAR/02_Examples/cases/cases_pages/03c_c6_b8_style-gallery.md:report"
+<!-- report:03c_c6_b8_style-gallery -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 8 ballots.
+Allen,Bianca,Chris,Desi,Edith,Frank
+    0,     5,    0,   0,    0,    0
+    0,     5,    0,   0,    0,    4
+    0,     5,    0,   0,    0,    1
+    5,     5,    0,   0,    0,    5
+    2,     5,    0,   3,    1,    4
+    3,     4,    0,   3,    1,    5
+    5,     5,    0,   5,    5,    5
+    0,     0,    0,   0,    0,    1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bianca        -- 34 -- First place
+   Frank         -- 25 -- Second place
+   Allen         -- 15
+   Desi          -- 11
+   Edith         --  7
+   Chris         --  0
+ Bianca and Frank advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bianca        -- 4 -- First place
+   Frank         -- 2
+   Equal Support -- 2
+ Bianca wins.
+   Runoff math:
+     8  ballots cast
+   − 2  Equal Support (no preference between the two finalists)
+     ─
+     6  voters with a preference  (majority = 4)
+           Bianca 4 (67%)  ·  Frank 2 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bianca
+```
+<!-- /report -->
 Full report: [`03c_c6_b8_style-gallery_tabulated.txt`](../../02_Examples/cases/cases_tabulated/03c_c6_b8_style-gallery_tabulated.txt).
 
 **The other five styles** — Partial Ballot, Exaggerated Compromise, Approval-style, Compressed Middle, Null Ballot — run as their own race, five candidates (**Alice, Bruno, Clara, Diego, Erin**): [reader page](../../02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) · [`03d_c5_b5_style-gallery-five-more.yaml`](../../02_Examples/cases/03d_c5_b5_style-gallery-five-more.yaml). It's the awkward counterpart to the one above: **three of its five ballots land as Equal Support**, so the race is settled by the two voters who left themselves something to say — and deleting the null ballot entirely changes the finalists, the winner and both runoff tallies not at all.

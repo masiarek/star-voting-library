@@ -29,7 +29,126 @@ Count × Ava,Bianca,Cedric,Deegan,Eli
 
 **Ava is the compromise.** 98 of the 100 voters score her a 3 — above the pair they zeroed out, below their own two. Nobody's favorite, almost nobody's enemy. She leads the scoring round by 63 points:
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md:report"
+<!-- report:bv1835_8h3yrx_score_leader_no_seat -->
+```text
+[Divergence from STAR]
+  STAR     = Bianca
+  Approval = Ava   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Ava)
+ - Runoff Round Winner   = (Bianca)
+  Candidate Ava earned the highest total score, but
+  Candidate Bianca won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- Bloc STAR Voting Method (4 winners) ---
+
+[Bloc STAR]
+ Tabulating 100 ballots to fill 4 seats.
+Count × Ava,Bianca,Cedric,Deegan,Eli
+   25 ×   3,     5,     4,     0,  0
+   25 ×   3,     0,     0,     5,  4
+   24 ×   3,     4,     5,     0,  0
+   24 ×   3,     0,     0,     4,  5
+    2 ×   0,     5,     4,     3,  2
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Bianca        -- 231 -- Second place
+   Cedric        -- 228
+   Deegan        -- 227
+   Eli           -- 224
+ Ava and Bianca advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bianca        -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Bianca wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Bianca 51 (51%)  ·  Ava 49 (49%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Cedric        -- 228 -- Second place
+   Deegan        -- 227
+   Eli           -- 224
+ Ava and Cedric advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cedric        -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Cedric wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Cedric 51 (51%)  ·  Ava 49 (49%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 3: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Deegan        -- 227 -- Second place
+   Eli           -- 224
+ Ava and Deegan advance.
+
+[Bloc STAR: Round 3: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Deegan        -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Deegan wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Deegan 51 (51%)  ·  Ava 49 (49%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 4: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ava           -- 294 -- First place
+   Eli           -- 224 -- Second place
+ Ava and Eli advance.
+
+[Bloc STAR: Round 4: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Eli           -- 51 -- First place
+   Ava           -- 49
+   Equal Support --  0
+ Eli wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Eli 51 (51%)  ·  Ava 49 (49%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (4 winners)]
+ Bianca
+ Cedric
+ Deegan
+ Eli
+```
+<!-- /report -->
 Then it happens again. And again. And again:
 
 | Seat | Scoring round | Runoff | Seat goes to |

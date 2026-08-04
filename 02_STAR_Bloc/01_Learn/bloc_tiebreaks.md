@@ -26,7 +26,90 @@ Each round breaks its tie with the *other* round's yardstick, because the measur
 
 Here is the part that has no single-winner analogue. Three candidates, two seats, five ballots. Nadia and Omar tie at 15 points; Priya trails at 12. The seat-1 runoff is a dead heat and *every* deterministic rung ties behind it:
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bloc_lot_path_dependence_b_c3_b5.md:report"
+<!-- report:bloc_lot_path_dependence_b_c3_b5 -->
+```text
+[Divergence from STAR]
+  STAR   = Omar
+  RCV-RR = Nadia   (differs from STAR)
+  Full round-by-round reports (generated for review):
+  RCV-RR round-robin: cases_tabulated/bloc_lot_path_dependence_b_c3_b5_RCV-RR_tabulated.txt
+
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 5 ballots to fill 2 seats.
+Count × Nadia,Omar,Priya
+    2 ×     5,   0,    1
+    2 ×     0,   5,    5
+    1 ×     5,   5,    0
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Nadia         -- 15 -- First place
+   Omar          -- 15 -- Second place
+   Priya         -- 12
+ Nadia and Omar advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Nadia         -- 2 -- Tied for first place
+   Omar          -- 2 -- Tied for first place
+   Equal Support -- 1
+ There's a two-way tie for first.
+
+[Bloc STAR: Round 1: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Nadia         -- 15 -- Tied for first place
+   Omar          -- 15 -- Tied for first place
+ There's still a two-way tie for first.
+
+[Bloc STAR: Round 1: Automatic Runoff Round: Second tiebreaker]
+ The candidate with the most votes of score 5 wins.
+   Nadia         -- 3 -- Tied for first place
+   Omar          -- 3 -- Tied for first place
+ There's still a two-way tie for first.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Omar', 'Nadia', 'Priya']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Nadia', 'Omar']
+  Resolved: ['Omar'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Nadia         -- 15 -- First place
+   Priya         -- 12 -- Second place
+ Nadia and Priya advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Nadia         -- 3 -- First place
+   Priya         -- 2
+   Equal Support -- 0
+ Nadia wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Nadia 3 (60%)  ·  Priya 2 (40%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Omar
+ Nadia
+```
+<!-- /report -->
 So the lot decides seat 1. Run the same five ballots under the two possible lot orders:
 
 | Published lot | Seat 1 | Seat 2 | **Council** |

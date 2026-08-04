@@ -74,8 +74,50 @@ def test_ballot_blocks_are_current():
     )
 
 
+def test_report_blocks_are_current():
+    """Hand-authored pages that embed a count show the current count.
+
+    The page marks the spot with `<!-- report:<stem> -->` and the generator
+    pastes in that case's generated report. Pasting (rather than a `--8<--`
+    include) is what makes the report visible on GitHub as well as on the site;
+    this test is what keeps the paste from going stale, which is the failure
+    mode the include was adopted to avoid.
+    """
+    mod = _load()
+    stale = mod.check_report_blocks()
+    assert not stale, (
+        f"{len(stale)} page(s) with an outdated report block:\n"
+        + "\n".join(f"  {Path(p).relative_to(REPO_ROOT)}" for p in stale[:10])
+        + "\nRegenerate with: python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py"
+    )
+
+
+def test_no_snippet_report_includes_remain():
+    """No page falls back to the site-only `--8<-- "…:report"` include.
+
+    It renders on MkDocs and prints as a literal line of text on GitHub, so a
+    page using it shows no report at all to a GitHub reader. `_notes/` is
+    exempt: it documents the old idiom.
+    """
+    offenders = []
+    for p in REPO_ROOT.rglob("*.md"):
+        parts = set(p.relative_to(REPO_ROOT).parts)
+        if parts & {"site", "_notes"} or any(s.startswith(".") for s in parts):
+            continue
+        if p.name in ("CLAUDE.md", "AGENTS.md"):
+            continue
+        for line in p.read_text(encoding="utf-8").splitlines():
+            if line.startswith("--8<--") and line.rstrip().endswith(':report"'):
+                offenders.append(f"{p.relative_to(REPO_ROOT)}: {line.strip()}")
+    assert not offenders, (
+        "site-only report include(s) — replace with <!-- report:<stem> --> / "
+        "<!-- /report --> and regenerate:\n" + "\n".join(offenders[:10])
+    )
+
+
 def test_discovery_not_vacuous():
     mod = _load()
     assert len(mod.expected_pages()) >= 50, "page discovery collapsed"
     assert len(mod.expected_companions()) >= 40, "companion discovery collapsed"
     assert len(mod.pages_with_ballot_blocks()) >= 4, "ballot-block discovery collapsed"
+    assert len(mod.pages_with_report_blocks()) >= 60, "report-block discovery collapsed"

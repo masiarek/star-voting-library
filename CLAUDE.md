@@ -399,23 +399,37 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
     illustrations*** (invented candidates with no backing case file) — a "full report" link there
     is a dead end. Prefer the generated page over pasting the long report inline on a teaching
     page, which buries the lesson (e.g. the runoff page is *about* the reversal, not the matrix).
-  - **Engine reports get EMBEDDED, never pasted — `pymdownx.snippets` is on.** To show a
-    case's count, write this **bare** (not inside a fence — the include brings its own):
+  - **Engine reports get GENERATED into the page, never hand-pasted.** To show a case's
+    count, mark the spot and let `build_yaml_pages.py` fill it:
 
     ```
-    --8<-- "<set>/cases/cases_pages/<stem>.md:report"
+    <!-- report:<stem> -->
+    <!-- /report -->
     ```
 
-    `build_yaml_pages.py` wraps each generated page's report fence in `[start:report]` /
-    `[end:report]` markers for exactly this. **Include the generated page, not the
-    `_tabulated` mirror** — the mirror drags in its ~50-line YAML echo and, for a big field
-    like `Runoff_08_ca_governor_reversal_gvdy42`, 785 lines of audit. To embed a whole file
-    (a `.yaml`, say), use `--8<-- "<repo-relative path>"` *inside* a fence; paths resolve
-    from the repo root and `title="…"` names the file. Reach for a *different* case's stem
-    when the block is a different election — a page can show several (`ex06_bullet_backfire.md`
-    embeds `ex06_bullet_honest` for its honest-ballot half).
+    The generator copies in the report fence from that case's generated page
+    (`<set>/cases/cases_pages/<stem>.md`, wrapped there in `[start:report]` / `[end:report]`
+    markers for exactly this), so there is still one source of truth and
+    `tests/test_yaml_pages_current.py::test_report_blocks_are_current` fails on drift.
+    Same contract as `case-meta` and `ballots:` — inside the markers is generated, outside
+    is yours. The `<stem>` is a bare case stem, no path: generated-page stems are unique
+    repo-wide. Reach for a *different* case's stem when the block is a different election —
+    a page can show several (`ex06_bullet_backfire.md` embeds `ex06_bullet_honest` for its
+    honest-ballot half).
+    **Do NOT use `--8<-- "…:report"` for this** (the idiom this replaced, 2026-08-04).
+    `pymdownx.snippets` is a MkDocs extension, so the include renders on the site and
+    prints as a **line of literal text on GitHub** — 82 pages showed a "the LH report"
+    heading followed by `--8<-- "…"` and no report at all to anyone reading the repo on
+    GitHub. `test_no_snippet_report_includes_remain` now fails on a new one. Snippets are
+    still right for whole-file embeds *inside* a fence (a `.yaml`, say):
+    `--8<-- "<repo-relative path>"`, paths resolving from the repo root, `title="…"` naming
+    the file — those degrade to a visible placeholder inside a code block rather than to
+    broken prose. **Never embed the `_tabulated` mirror** — it drags in its ~50-line YAML
+    echo and, for a big field like `Runoff_08_ca_governor_reversal_gvdy42`, 785 lines of
+    audit; link it instead.
     `check_repo_hygiene.py::check_pasted_reports` (gated by `tests/test_md_links.py`) fails
-    on a new ≥8-line engine-shaped fence that is neither an include nor labelled abridged.
+    on a new ≥8-line engine-shaped fence that is outside a `report:` block and not labelled
+    abridged.
   - **Deliberate compressions stay — label them, don't convert them.** Put
     `title="Abridged for the lesson — not verbatim engine output"` on the fence: it renders as
     a visible caption and satisfies the gate. `bv750_tie_breaking_bloc.md`'s

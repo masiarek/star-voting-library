@@ -36,7 +36,81 @@ STAR and Ranked Robin agree on Casey. IRV and Choose-One eliminate the centrist 
 
 ### STAR — Casey (the Condorcet winner)
 
---8<-- "method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_star.md:report"
+<!-- report:bv2170_pp2q4q_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Casey
+  Choose-One (Plurality) = Blake   (differs from STAR)
+  RCV-IRV                = Avery   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2170_pp2q4q_star_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Avery,Blake,Casey
+   47 ×     5,    1,    3
+   47 ×     1,    5,    3
+    3 ×     3,    1,    5
+    3 ×     1,    3,    5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Casey         -- 312 -- First place
+   Avery         -- 294 -- Tied for second place
+   Blake         -- 294 -- Tied for second place
+ Casey advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Avery         -- 50 -- Tied for second place
+   Blake         -- 50 -- Tied for second place
+   Equal Support --  0
+ There's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   Avery         -- 47 -- Tied for second place
+   Blake         -- 47 -- Tied for second place
+ There's still a two-way tie for second.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Blake', 'Casey', 'Avery']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Avery', 'Blake']
+  Resolved: ['Blake'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Casey         -- 53 -- First place
+   Blake         -- 47
+   Equal Support --  0
+ Casey wins.
+   Runoff math:
+     100  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     100  voters with a preference  (majority = 51)
+           Casey 53 (53%)  ·  Blake 47 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Casey
+```
+<!-- /report -->
 ### Ranked Robin — Casey (2–0)
 
 ```

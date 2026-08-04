@@ -76,7 +76,57 @@ And it gives Ranked Robin a clean guarantee: since RR elects the candidate with 
 
 ### STAR — the tie is the loophole
 
---8<-- "method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md:report"
+<!-- report:wcl_c3_b5_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Ben
+  Choose-One (Plurality) = Ada   (differs from STAR)
+  RCV-IRV                = Ada   (differs from STAR)
+  RCV-RR (Condorcet)     = Ada   (differs from STAR)
+  Note: 1 of 5 ballots (20%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/wcl_c3_b5_star_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/wcl_c3_b5_star_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Ada,Ben,Cora
+    2 ×   0,  3,   4
+    1 ×   5,  4,   4
+    1 ×   5,  4,   1
+    1 ×   5,  4,   3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ben           -- 18 -- First place
+   Cora          -- 16 -- Second place
+   Ada           -- 15
+ Ben and Cora advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ben           -- 2 -- Tied for first place
+   Cora          -- 2 -- Tied for first place
+   Equal Support -- 1
+ There's a two-way tie for first.
+
+[STAR Voting: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Ben           -- 18 -- First place
+   Cora          -- 16
+ Ben wins.
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ben
+```
+<!-- /report -->
 Two things had to go wrong together, and both are visible above.
 
 **The Condorcet winner was eliminated in the scoring round.** Ada's 5/5/5/0/0 profile totals 15 — less than either moderate. That part is ordinary STAR behavior and has its own page ([three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)).

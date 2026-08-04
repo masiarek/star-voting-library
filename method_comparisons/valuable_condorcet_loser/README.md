@@ -42,7 +42,54 @@ One electorate, three defensible winners, all from the same arithmetic:
 
 The embedded LH report, with the engine calling all of it:
 
---8<-- "method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md:report"
+<!-- report:vcl_c4_b9_score_vs_runoff -->
+```text
+[Divergence from STAR]
+  STAR     = Ben
+  Approval = Amy   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Amy)
+ - Runoff Round Winner   = (Ben)
+  Candidate Amy earned the highest total score, but
+  Candidate Ben won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Amy,Ben,Cora,Dan
+    4 ×   5,  0,   0,  0
+    4 ×   0,  2,   2,  2
+    1 ×   0,  3,   2,  1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Amy           -- 20 -- First place
+   Ben           -- 11 -- Second place
+   Cora          -- 10
+   Dan           --  9
+ Amy and Ben advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ben           -- 5 -- First place
+   Amy           -- 4
+   Equal Support -- 0
+ Ben wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Ben 5 (56%)  ·  Amy 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ben
+```
+<!-- /report -->
 Want the whole count? see the full LH report → [`cases_pages/vcl_c4_b9_score_vs_runoff.md`](cases/cases_pages/vcl_c4_b9_score_vs_runoff.md).
 
 (That `elected by Approval!` line is itself a τ lesson: LH's approval conversion approves scores ≥ 3, so Amy wins approval 4:1 — while a voter approving everything ≥ 1 would elect Ben 5:4. The winner flips on the threshold, which is finding 2 in miniature.)

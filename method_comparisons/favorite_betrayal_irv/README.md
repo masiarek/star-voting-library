@@ -55,7 +55,53 @@ Now **Left** is squeezed out, their ballots flow to Center, and **Center wins 21
 
 Score the **same honest preferences** 0–5 (favorite 5, compromise 3, worst 0) — no strategy:
 
---8<-- "method_comparisons/favorite_betrayal_irv/cases/cases_pages/bv2227_3xgkck_honest_star.md:report"
+<!-- report:bv2227_3xgkck_honest_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Center
+  Choose-One (Plurality) = Right   (differs from STAR)
+  RCV-IRV                = Right   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2227_3xgkck_honest_star_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 34 ballots.
+Count × Left,Center,Right
+   13 ×    0,     3,    5
+   12 ×    5,     3,    0
+    5 ×    0,     5,    3
+    4 ×    3,     5,    0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Center        -- 120 -- First place
+   Right         --  80 -- Second place
+   Left          --  72
+ Center and Right advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Center        -- 21 -- First place
+   Right         -- 13
+   Equal Support --  0
+ Center wins.
+   Runoff math:
+     34  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     34  voters with a preference  (majority = 18)
+           Center 21 (62%)  ·  Right 13 (38%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Center
+```
+<!-- /report -->
 **STAR → Center. Ranked Robin → Center. RCV-IRV → Right.** On the *identical honest preferences*, the two methods that read the whole ballot elect the compromise the electorate actually prefers; only instant-runoff needed the betrayal. Under STAR you score your honest favorite a 5 and your compromise a 3, and the compromise still wins — no games, no regret.
 
 ## The takeaway

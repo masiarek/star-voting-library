@@ -24,7 +24,52 @@ That is the whole election. Everything below is the same five rows, written down
 
 Every voter has a strict opinion about every pair, so the pairwise matrix has **no Equal Support anywhere**, and Cal wins all three of his matchups:
 
---8<-- "method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md:report"
+<!-- report:Black_Curtain_01_c3_b5_hidden-consensus -->
+```text
+[Divergence from STAR]
+  STAR     = Cal
+  Approval = Bob   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Bob)
+ - Runoff Round Winner   = (Cal)
+  Candidate Bob earned the highest total score, but
+  Candidate Cal won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Ann,Bob,Cal
+    3 ×   0,  4,  5
+    2 ×   5,  4,  0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bob           -- 20 -- First place
+   Cal           -- 15 -- Second place
+   Ann           -- 10
+ Bob and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cal           -- 3 -- First place
+   Bob           -- 2
+   Equal Support -- 0
+ Cal wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Cal 3 (60%)  ·  Bob 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cal
+```
+<!-- /report -->
 Cal is the Condorcet winner and the STAR winner — the 3-voter majority's favorite, and their preference for Cal over Bob (5 vs 4) is what the runoff reads. Full report: [Black Curtain #1](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md).
 
 ## Reading 2 — the approval count
@@ -46,7 +91,40 @@ Now the same voters mark an approval ballot. Following the source video's thresh
 
 Here is the step that makes the lesson precise. Take those approval marks and read them as a *ballot* — approved above not-approved, nothing said within either group — then ask the head-to-head questions again ([case 01b](cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md)):
 
---8<-- "method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md:report"
+<!-- report:Black_Curtain_01b_c3_b5_dichotomous -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Ann,Bob,Cal
+    3 ×   0,  5,  5
+    2 ×   5,  5,  0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bob           -- 25 -- First place
+   Cal           -- 15 -- Second place
+   Ann           -- 10
+ Bob and Cal advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bob           -- 2 -- First place
+   Cal           -- 0
+   Equal Support -- 3
+ Bob wins.
+   Runoff math:
+     5  ballots cast
+   − 3  Equal Support (no preference between the two finalists)
+     ─
+     2  voters with a preference  (majority = 2)
+           Bob 2 (100%)  ·  Cal 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bob
+```
+<!-- /report -->
 **Bob is now the Condorcet winner**, and honestly so: he beats Cal 2–0 and Ann 3–0 on these ballots. Nobody prefers Cal to Bob any more — not because anyone changed their mind, but because the three voters who prefer Cal approved *both* of them, and an approval ballot has no way to say which one they like better.
 
 ## Where the information went

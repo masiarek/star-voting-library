@@ -40,7 +40,52 @@ Austin leads the Scoring Round (13) but **loses** the Automatic Runoff 1–2; Be
 
 Same ballots, the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_02_atom_reversal_yx9447_tabulated.txt) mirror adds the funnel):
 
---8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_02_atom_reversal_yx9447.md:report"
+<!-- report:Runoff_02_atom_reversal_yx9447 -->
+```text
+[Divergence from STAR]
+  STAR     = Boston
+  Approval = Austin   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Austin)
+ - Runoff Round Winner   = (Boston)
+  Candidate Austin earned the highest total score, but
+  Candidate Boston won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Austin,Boston,Cairo
+    2 ×      4,     5,    0
+    1 ×      5,     1,    2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Austin        -- 13 -- First place
+   Boston        -- 11 -- Second place
+   Cairo         --  2
+ Austin and Boston advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Boston        -- 2 -- First place
+   Austin        -- 1
+   Equal Support -- 0
+ Boston wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Boston 2 (67%)  ·  Austin 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Boston
+```
+<!-- /report -->
 > **BV ↔ LH wording.** The line `Boston 2 (67%) vs Austin 1 (33%)` is BetterVoting's *Runoff Votes* (2 / 1) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway

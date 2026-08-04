@@ -68,7 +68,47 @@ BetterVoting's own result, from the export:
 
 ## What the LH engine prints
 
---8<-- "01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/flat_scores_abstention_c3_b8.md:report"
+<!-- report:flat_scores_abstention_c3_b8 -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 8 ballots. Note: 1 of 8 ballots is marked as an abstention.
+Apple,Banana,Cherry
+    0,     5,     1
+    -,     -,     -
+    5,     4,     1
+    4,     5,     2
+    0,     0,     0
+    3,     3,     3
+    3,     5,     0
+    5,     5,     0
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Banana        -- 27 -- First place
+   Apple         -- 20 -- Second place
+   Cherry        --  7
+ Banana and Apple advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Banana        -- 3 -- First place
+   Apple         -- 1
+   Equal Support -- 4
+ Banana wins.
+   Runoff math:
+     8  ballots cast
+   − 4  Equal Support (no preference between the two finalists)
+     ─
+     4  voters with a preference  (majority = 3)
+           Banana 3 (75%)  ·  Apple 1 (25%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Banana
+```
+<!-- /report -->
 and in the saved `_tabulated` copy, the same as a funnel that adds up:
 
 ```
@@ -86,7 +126,47 @@ Cherry's low scores still **counted** (they're inside the 7) — they just didn'
 
 This is a small election, so here is the **on-screen report** in full (the saved [`flat_scores_abstention_c3_b8_tabulated.txt`](cases/cases_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) mirror additionally forces the full N×N matrix, the Condorcet line, and the "Runoff math" funnel):
 
---8<-- "01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/flat_scores_abstention_c3_b8.md:report"
+<!-- report:flat_scores_abstention_c3_b8 -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 8 ballots. Note: 1 of 8 ballots is marked as an abstention.
+Apple,Banana,Cherry
+    0,     5,     1
+    -,     -,     -
+    5,     4,     1
+    4,     5,     2
+    0,     0,     0
+    3,     3,     3
+    3,     5,     0
+    5,     5,     0
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Banana        -- 27 -- First place
+   Apple         -- 20 -- Second place
+   Cherry        --  7
+ Banana and Apple advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Banana        -- 3 -- First place
+   Apple         -- 1
+   Equal Support -- 4
+ Banana wins.
+   Runoff math:
+     8  ballots cast
+   − 4  Equal Support (no preference between the two finalists)
+     ─
+     4  voters with a preference  (majority = 3)
+           Banana 3 (75%)  ·  Apple 1 (25%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Banana
+```
+<!-- /report -->
 ## Why it matters
 
 A ballot that scores everyone the same is a **vote**, not a missing one:

@@ -51,10 +51,114 @@ BetterVoting and an independent open-source count agree on all four, every race 
 
 *The same ballots, re-counted by the open-source engine this repo runs — **Larry Hastings' `starvote`, extended here** (hence "LH" elsewhere in the repo) — so the result is verifiable, not taken on trust.*
 
---8<-- "method_comparisons/alaska_2022_general/cases/cases_pages/bv2214_m3hb6y_alaska_2022_general.md:report"
+<!-- report:bv2214_m3hb6y_alaska_2022_general -->
+```text
+[Divergence from STAR]
+  STAR     = Peltola
+  Approval = Begich   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Begich)
+ - Runoff Round Winner   = (Peltola)
+  Candidate Begich earned the highest total score, but
+  Candidate Peltola won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 200 ballots.
+Count × Peltola,Begich,Palin
+   50 ×       5,     0,    0
+   42 ×       5,     4,    0
+   33 ×       0,     5,    4
+   32 ×       0,     4,    5
+   17 ×       0,     0,    5
+   11 ×       0,     5,    0
+    6 ×       5,     0,    4
+    6 ×       4,     5,    0
+    3 ×       4,     0,    5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Begich        -- 546 -- First place
+   Peltola       -- 526 -- Second place
+   Palin         -- 416
+ Begich and Peltola advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Peltola       -- 101 -- First place
+   Begich        --  82
+   Equal Support --  17
+ Peltola wins.
+   Runoff math:
+     200  ballots cast
+   −  17  Equal Support (no preference between the two finalists)
+     ───
+     183  voters with a preference  (majority = 92)
+           Peltola 101 (55%)  ·  Begich 82 (45%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Peltola
+```
+<!-- /report -->
 **A nice nuance — STAR self-correcting.** Begich actually *leads* the STAR scoring round (546) as everyone's broad second choice, just like in the special. But this time the runoff overturns him:
 
---8<-- "method_comparisons/alaska_2022_general/cases/cases_pages/bv2214_m3hb6y_alaska_2022_general.md:report"
+<!-- report:bv2214_m3hb6y_alaska_2022_general -->
+```text
+[Divergence from STAR]
+  STAR     = Peltola
+  Approval = Begich   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Begich)
+ - Runoff Round Winner   = (Peltola)
+  Candidate Begich earned the highest total score, but
+  Candidate Peltola won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 200 ballots.
+Count × Peltola,Begich,Palin
+   50 ×       5,     0,    0
+   42 ×       5,     4,    0
+   33 ×       0,     5,    4
+   32 ×       0,     4,    5
+   17 ×       0,     0,    5
+   11 ×       0,     5,    0
+    6 ×       5,     0,    4
+    6 ×       4,     5,    0
+    3 ×       4,     0,    5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Begich        -- 546 -- First place
+   Peltola       -- 526 -- Second place
+   Palin         -- 416
+ Begich and Peltola advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Peltola       -- 101 -- First place
+   Begich        --  82
+   Equal Support --  17
+ Peltola wins.
+   Runoff math:
+     200  ballots cast
+   −  17  Equal Support (no preference between the two finalists)
+     ───
+     183  voters with a preference  (majority = 92)
+           Peltola 101 (55%)  ·  Begich 82 (45%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Peltola
+```
+<!-- /report -->
 Begich is the *most-approved* candidate (that's why [Approval](../../04_Approval/01_Learn/README.md) elects him), but Peltola is the *majority-preferred* one — and STAR's runoff, like every majority method here, picks Peltola. In the special, that same runoff step is what let STAR reach the Condorcet winner Begich; here it keeps STAR aligned with the majority. The runoff is doing its job in both.
 
 Full engine detail: [the full report](cases/cases_tabulated/bv2214_m3hb6y_alaska_2022_general_tabulated.txt) · run it: [`bv2214_m3hb6y_alaska_2022_general.yaml`](cases/bv2214_m3hb6y_alaska_2022_general.yaml).

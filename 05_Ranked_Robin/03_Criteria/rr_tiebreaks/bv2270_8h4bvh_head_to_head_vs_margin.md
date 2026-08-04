@@ -92,7 +92,46 @@ Two things fall out of that, both useful:
 
 ## The full count
 
---8<-- "05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md:report"
+<!-- report:bv2270_8h4bvh_head_to_head_vs_margin -->
+```text
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 9 ballots (ranked ballots).
+
+Ballots:
+     4 × Alder > Birch > Cedar > Dogwood
+     3 × Dogwood > Cedar > Birch > Alder
+     1 × Birch > Cedar > Dogwood > Alder
+     1 × Dogwood > Alder > Birch > Cedar
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Alder    beats Birch     5 – 4
+   Alder    beats Cedar     5 – 4
+   Dogwood  beats Alder     5 – 4
+   Birch    beats Cedar     6 – 3
+   Birch    beats Dogwood   5 – 4
+   Cedar    beats Dogwood   5 – 4
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+            |   Alder   |  Birch   |  Cedar   | Dogwood  |
+----------------------------------------------------------
+    Alder > |    ---    |5 - 0 - 4 |5 - 0 - 4 |4 - 0 - 5 |
+    Birch > | 4 - 0 - 5 |   ---    |6 - 0 - 3 |5 - 0 - 4 |
+    Cedar > | 4 - 0 - 5 |3 - 0 - 6 |   ---    |5 - 0 - 4 |
+  Dogwood > | 5 - 0 - 4 |4 - 0 - 5 |4 - 0 - 5 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Birch      2–1–0         2      +3  Dogwood, Cedar
+    2  Alder      2–1–0         2      +1  Birch, Cedar
+    3  Dogwood    1–2–0         1      -1  Alder
+    4  Cedar      1–2–0         1      -3  Dogwood
+
+Winner — Ranked Robin (RCV-RR): Birch
+   *** 2 candidates tie for the most wins (Alder, Birch) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+```
+<!-- /report -->
 
 → page: [`bv2270_8h4bvh_head_to_head_vs_margin.md`](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md) · src: [`.yaml`](cases/bv2270_8h4bvh_head_to_head_vs_margin.yaml) · frozen: [`_bv_export.json`](cases/bv2270_8h4bvh_head_to_head_vs_margin_bv_export.json)
 

@@ -72,5 +72,49 @@ Live results: **[bettervoting.com/g3f7r2/results](https://bettervoting.com/g3f7r
 
 ## View 2 — the LH tabulation (on-screen report)
 
---8<-- "01_STAR/03_Criteria/iia_cycle_spoiler/cases/cases_pages/bv2212_g3f7r2_cycle_spoiler.md:report"
+<!-- report:bv2212_g3f7r2_cycle_spoiler -->
+```text
+[Divergence from STAR]
+  STAR    = Alice
+  RCV-IRV = Carla   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2212_g3f7r2_cycle_spoiler_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 23 ballots.
+Count × Alice,Ben,Carla
+   10 ×     5,  3,    0
+    7 ×     3,  0,    5
+    6 ×     0,  5,    3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alice         -- 71 -- First place
+   Ben           -- 60 -- Second place
+   Carla         -- 53
+ Alice and Ben advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Alice         -- 17 -- First place
+   Ben           --  6
+   Equal Support --  0
+ Alice wins.
+   Runoff math:
+     23  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     23  voters with a preference  (majority = 12)
+           Alice 17 (74%)  ·  Ben 6 (26%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Alice
+```
+<!-- /report -->
 Full engine detail: [`iia_cycle_spoiler_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt`](cases/cases_tabulated/bv2212_g3f7r2_cycle_spoiler_tabulated.txt) · run it: [`bv2212_g3f7r2_cycle_spoiler.yaml`](cases/bv2212_g3f7r2_cycle_spoiler.yaml).

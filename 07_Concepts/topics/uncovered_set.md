@@ -66,7 +66,66 @@ That is a genuine, citable virtue of [Ranked Robin](../../05_Ranked_Robin/01_Lea
 
 **STAR can too — and here it is.** Five ballots, four cities, every ballot using four distinct scores so nothing is a tie-breaking artifact ([full case](../../method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md)):
 
---8<-- "method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md:report"
+<!-- report:star_elects_a_covered_candidate_c4_b5 -->
+```text
+[Divergence from STAR]
+  STAR                   = Denver
+  Choose-One (Plurality) = Chicago   (differs from STAR)
+  RCV-IRV                = Chicago   (differs from STAR)
+  Approval               = Austin   (differs from STAR)
+  RCV-RR                 = Chicago   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/star_elects_a_covered_candidate_c4_b5_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/star_elects_a_covered_candidate_c4_b5_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Austin)
+ - Runoff Round Winner   = (Denver)
+  Candidate Austin earned the highest total score, but
+  Candidate Denver won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Austin,Boston,Chicago,Denver
+     0,     4,      2,     1
+     2,     1,      3,     0
+     4,     1,      0,     5
+     5,     2,      0,     1
+     3,     1,      5,     4
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Austin        -- 14 -- First place
+   Denver        -- 11 -- Second place
+   Chicago       -- 10
+   Boston        --  9
+ Austin and Denver advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Denver        -- 3 -- First place
+   Austin        -- 2
+   Equal Support -- 0
+ Denver wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Denver 3 (60%)  ·  Austin 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Denver
+```
+<!-- /report -->
 Read the grid for Denver. **Chicago beats Denver** — and Austin, the only city Denver beats, **is also beaten by Chicago**. Chicago does everything Denver does and more, so Denver is covered, and the uncovered set is `{Austin, Boston, Chicago}`. Three of four cities clear the bar. STAR elects the fourth.
 
 Both halves of that, because the repo doesn't get to keep only the flattering one:

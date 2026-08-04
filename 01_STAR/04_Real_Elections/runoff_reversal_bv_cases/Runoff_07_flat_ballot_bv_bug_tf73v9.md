@@ -67,7 +67,53 @@ The Runoff Table seals it: **Total 3** (not 4) and **Equal Support 0** — the `
 
 All four ballots counted; the `3,3,3` is Equal Support, not an abstention (the saved [`_tabulated`](cases/cases_tabulated/Runoff_07_flat_ballot_bv_bug_tf73v9_tabulated.txt) mirror adds the funnel):
 
---8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_07_flat_ballot_bv_bug_tf73v9.md:report"
+<!-- report:Runoff_07_flat_ballot_bv_bug_tf73v9 -->
+```text
+[Divergence from STAR]
+  STAR     = Blair
+  Approval = Alex   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Alex)
+ - Runoff Round Winner   = (Blair)
+  Candidate Alex earned the highest total score, but
+  Candidate Blair won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 4 ballots.
+Count × Alex,Blair,Cleo
+    2 ×    4,    5,   0
+    1 ×    5,    1,   2
+    1 ×    3,    3,   3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alex          -- 16 -- First place
+   Blair         -- 14 -- Second place
+   Cleo          --  5
+ Alex and Blair advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blair         -- 2 -- First place
+   Alex          -- 1
+   Equal Support -- 1
+ Blair wins.
+   Runoff math:
+     4  ballots cast
+   − 1  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Blair 2 (67%)  ·  Alex 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Blair
+```
+<!-- /report -->
 Note the **`3` column** in the Score Distribution: every candidate has one — that's the flat ballot, counted. BetterVoting drops exactly those three stars.
 
 ## The takeaway

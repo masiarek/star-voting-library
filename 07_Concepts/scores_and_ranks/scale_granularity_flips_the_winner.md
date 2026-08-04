@@ -20,7 +20,85 @@ The example is BetterVoting.org's **Reweighted Range Voting sample election** �
 
 Mapping the source 0–9 scores to 0–5 with `round(x·5/9)`, the LH engine reports:
 
---8<-- "03_STAR_PR/02_Examples/cases/cases_pages/rrv_sample_c15_b13_three-parties.md:report"
+<!-- report:rrv_sample_c15_b13_three-parties -->
+```text
+[Divergence from STAR]
+  STAR                   = Orange5
+  Choose-One (Plurality) = Orange1   (differs from STAR)
+  RCV-IRV                = Orange1   (differs from STAR)
+  Approval               = Orange1   (differs from STAR)
+  Note: 13 of 13 ballots (100%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/rrv_sample_c15_b13_three-parties_RCV-IRV_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Orange1)
+ - Runoff Round Winner   = (Orange5)
+  Candidate Orange1 earned the highest total score, but
+  Candidate Orange5 won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 13 ballots.
+Purple1,Purple2,Purple3,Purple4,Purple5,Orange1,Orange2,Orange3,Orange4,Orange5,Yellow1,Yellow2,Yellow3,Yellow4,Yellow5
+      5,      4,      5,      4,      5,      1,      1,      1,      1,      1,      0,      0,      0,      0,      0
+      5,      4,      4,      5,      5,      1,      0,      1,      0,      1,      0,      1,      0,      1,      0
+      4,      5,      5,      2,      4,      1,      1,      1,      1,      2,      1,      0,      0,      1,      0
+      0,      0,      0,      0,      0,      5,      5,      4,      5,      5,      0,      0,      0,      0,      0
+      0,      0,      0,      0,      0,      5,      1,      4,      4,      4,      0,      0,      1,      0,      0
+      0,      0,      0,      0,      0,      5,      3,      4,      4,      2,      0,      1,      0,      0,      1
+      0,      0,      0,      0,      0,      5,      4,      4,      4,      4,      0,      0,      0,      0,      0
+      0,      0,      0,      0,      0,      4,      5,      5,      5,      5,      0,      1,      0,      0,      1
+      0,      0,      0,      0,      0,      4,      5,      5,      5,      5,      0,      0,      0,      0,      0
+      1,      1,      1,      1,      1,      0,      0,      0,      0,      0,      5,      5,      2,      5,      5
+      1,      1,      1,      1,      0,      0,      0,      0,      0,      0,      4,      4,      4,      4,      4
+      1,      1,      1,      1,      1,      0,      0,      0,      0,      1,      5,      4,      4,      5,      4
+      2,      0,      2,      2,      1,      0,      0,      0,      0,      0,      5,      5,      4,      4,      5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Orange1       -- 31 -- First place
+   Orange5       -- 30 -- Second place
+   Orange3       -- 29
+   Orange4       -- 29
+   Orange2       -- 25
+   Yellow2       -- 21
+   Yellow1       -- 20
+   Yellow4       -- 20
+   Yellow5       -- 20
+   Purple1       -- 19
+   Purple3       -- 19
+   Purple5       -- 17
+   Purple2       -- 16
+   Purple4       -- 16
+   Yellow3       -- 15
+ Orange1 and Orange5 advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Orange5       -- 4 -- First place
+   Orange1       -- 3
+   Equal Support -- 6
+ Orange5 wins.
+   Runoff math:
+     13  ballots cast
+   −  6  Equal Support (no preference between the two finalists)
+     ──
+      7  voters with a preference  (majority = 4)
+           Orange5 4 (57%)  ·  Orange1 3 (43%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Orange5
+```
+<!-- /report -->
 Note how tight the score round is: **Orange1 31, Orange5 30, Orange3 29, Orange4 29** — four co-partisans inside a two-point band. Orange5 edges into the second finalist slot, then wins the runoff 4–3.
 
 ## On the original 0–9 scale → **Orange1**

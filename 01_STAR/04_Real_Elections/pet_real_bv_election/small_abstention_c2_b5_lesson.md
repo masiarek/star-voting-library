@@ -52,7 +52,43 @@ With only two candidates, a `5,5` ballot *is* flat (every candidate equal), so B
 
 ## What the LH engine prints
 
---8<-- "01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/small_abstention_c2_b5.md:report"
+<!-- report:small_abstention_c2_b5 -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots. Note: 1 of 5 ballots is marked as an abstention.
+A,B
+0,5
+4,0
+5,5
+5,0
+-,-
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 14 -- First place
+   B             -- 10 -- Second place
+ A and B advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 2 -- First place
+   B             -- 1
+   Equal Support -- 2
+ A wins.
+   Runoff math:
+     5  ballots cast
+   − 2  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           A 2 (67%)  ·  B 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A
+```
+<!-- /report -->
 and in the saved `_tabulated` copy, the same as a funnel that adds up:
 
 ```

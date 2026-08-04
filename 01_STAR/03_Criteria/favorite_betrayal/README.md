@@ -25,7 +25,65 @@ A garden club of 57 picks the town flower: **Aster**, **Bluebell**, **Clover**.
 
 ## Half 1 — honest ballots elect Clover
 
---8<-- "01_STAR/03_Criteria/favorite_betrayal/cases/cases_pages/bv2206_7mckyg_fbc_honest_tepid_consensus.md:report"
+<!-- report:bv2206_7mckyg_fbc_honest_tepid_consensus -->
+```text
+[Divergence from STAR]
+  STAR                   = Clover
+  Choose-One (Plurality) = Bluebell   (differs from STAR)
+  RCV-IRV                = Bluebell   (differs from STAR)
+  RCV-RR (Condorcet)     = Bluebell   (differs from STAR)
+  Note: 9 of 57 ballots (16%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/bv2206_7mckyg_fbc_honest_tepid_consensus_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Aster)
+ - Runoff Round Winner   = (Clover)
+  Candidate Aster earned the highest total score, but
+  Candidate Clover won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 57 ballots.
+Count × Aster,Bluebell,Clover
+   24 ×     0,       1,     0
+   18 ×     0,       0,     4
+    9 ×     5,       5,     0
+    6 ×     5,       0,     0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Aster         -- 75 -- First place
+   Clover        -- 72 -- Second place
+   Bluebell      -- 69
+ Aster and Clover advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Clover        -- 18 -- First place
+   Aster         -- 15
+   Equal Support -- 24
+ Clover wins.
+   Runoff math:
+     57  ballots cast
+   − 24  Equal Support (no preference between the two finalists)
+     ──
+     33  voters with a preference  (majority = 17)
+           Clover 18 (55%)  ·  Aster 15 (45%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Clover
+```
+<!-- /report -->
 The pairwise matrix behind it (the engine's full view — note Bluebell's row):
 
 ```text
@@ -46,7 +104,54 @@ The compromise a majority prefers to *everyone* misses the runoff by three point
 
 The nine double-fans see the standings. Notice what they **cannot** do: raise Bluebell. She's already at 5 on their ballots — STAR let them equal-top the compromise for free, and it wasn't enough, because the problem is *Aster's own total* keeping Bluebell out of the runoff. The only move left is scoring their true favorite **lower** — Aster 5 → 4, strictly below Bluebell. That is the definition of favorite betrayal.
 
---8<-- "01_STAR/03_Criteria/favorite_betrayal/cases/cases_pages/bv2207_b6xrdr_fbc_betrayal_pays.md:report"
+<!-- report:bv2207_b6xrdr_fbc_betrayal_pays -->
+```text
+[Divergence from STAR]
+  STAR     = Bluebell
+  Approval = Clover   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Clover)
+ - Runoff Round Winner   = (Bluebell)
+  Candidate Clover earned the highest total score, but
+  Candidate Bluebell won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 57 ballots.
+Count × Aster,Bluebell,Clover
+   24 ×     0,       1,     0
+   18 ×     0,       0,     4
+    9 ×     4,       5,     0
+    6 ×     5,       0,     0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Clover        -- 72 -- First place
+   Bluebell      -- 69 -- Second place
+   Aster         -- 66
+ Clover and Bluebell advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bluebell      -- 33 -- First place
+   Clover        -- 18
+   Equal Support --  6
+ Bluebell wins.
+   Runoff math:
+     57  ballots cast
+   −  6  Equal Support (no preference between the two finalists)
+     ──
+     51  voters with a preference  (majority = 26)
+           Bluebell 33 (65%)  ·  Clover 18 (35%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bluebell
+```
+<!-- /report -->
 The runoff pairing flips from Aster-vs-Clover to Clover-vs-Bluebell, and the Condorcet winner wins it 33–18. The nine turned their outcome from **Clover (their 0)** into **Bluebell (their 5)** by lowering their favorite. STAR failed the Favorite Betrayal Criterion, exactly as its ❌ on the criteria chart says it can.
 
 ## Why this is a lab specimen, not a strategy

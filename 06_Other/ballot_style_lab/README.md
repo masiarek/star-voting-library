@@ -49,7 +49,58 @@ The multi-winner files follow the house multi-winner options (`show_matrix: fals
 
 Two camps that never touch each other's half of the scale. Look at the Score Distribution: Abby's column is *nothing but* 2s and 3s (all 31 voters!), Bruno's is *nothing but* 5s and 0s — and the totals land 80–80–78:
 
---8<-- "06_Other/ballot_style_lab/cases/cases_pages/01_c3_b31_graders-divide.md:report"
+<!-- report:01_c3_b31_graders-divide -->
+```text
+[Divergence from STAR]
+  STAR                   = Clara
+  Choose-One (Plurality) = Bruno   (differs from STAR)
+  RCV-IRV                = Bruno   (differs from STAR)
+  Approval               = Abby   (differs from STAR)
+  Note: 9 of 31 ballots (29%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/01_c3_b31_graders-divide_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 31 ballots.
+Count × Abby,Bruno,Clara
+   12 ×    2,    0,    1
+    8 ×    3,    5,    4
+    5 ×    3,    5,    5
+    3 ×    3,    5,    3
+    2 ×    2,    0,    0
+    1 ×    2,    0,    2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 80 -- First place
+   Clara         -- 80 -- Second place
+   Abby          -- 78
+ Bruno and Clara advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Clara         -- 13 -- First place
+   Bruno         -- 11
+   Equal Support --  7
+ Clara wins.
+   Runoff math:
+     31  ballots cast
+   −  7  Equal Support (no preference between the two finalists)
+     ──
+     24  voters with a preference  (majority = 13)
+           Clara 13 (54%)  ·  Bruno 11 (46%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Clara
+```
+<!-- /report -->
 The Scoring Round can't tell a harsh 2 from a gentle enthusiasm — but the Automatic Runoff only asks *which finalist each ballot scored higher*, and on that question the grading cultures cancel out. Full detail (matrix, divergence block, the Condorcet wobble): [the `_tabulated` report](cases/cases_tabulated/01_c3_b31_graders-divide_tabulated.txt).
 
 ## The style menu

@@ -29,7 +29,41 @@ One is missing data; the other is present data that happens to be neutral. Treat
 
 Run [`equal_support_runoff_demo.yaml`](../../02_Examples/cases/equal_support_runoff_demo.yaml) ([reader page](../../02_Examples/cases/cases_pages/equal_support_runoff_demo.md)). 100 voters: 40 score **both A and B a 5** (love both, C = 0), 35 prefer A over B (5 vs 3), 25 want only C.
 
---8<-- "01_STAR/02_Examples/cases/cases_pages/equal_support_runoff_demo.md:report"
+<!-- report:equal_support_runoff_demo -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × A,B,C
+   40 × 5,5,0
+   35 × 5,3,0
+   25 × 0,0,5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   A             -- 375 -- First place
+   B             -- 305 -- Second place
+   C             -- 125
+ A and B advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 35 -- First place
+   B             --  0
+   Equal Support -- 65
+ A wins.
+   Runoff math:
+     100  ballots cast
+   −  65  Equal Support (no preference between the two finalists)
+     ───
+      35  voters with a preference  (majority = 18)
+           A 35 (100%)  ·  B 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A
+```
+<!-- /report -->
 Read the two rounds against the objection:
 
 - **Scoring Round:** A and B top the totals *because of* the 40 equal-A-B ballots — those 5/5s are what pushed both finalists past C. The "ignored" ballots literally chose who is in the final.

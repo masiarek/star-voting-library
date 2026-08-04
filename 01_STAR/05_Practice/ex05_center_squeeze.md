@@ -43,7 +43,53 @@ First choices: Avi 4, Cole 3, **Brook 2** — the candidate everyone accepts is 
 <details>
 <summary><b>(b) STAR — Brook, 5–4</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex05_center_squeeze.md:report"
+<!-- report:ex05_center_squeeze -->
+```text
+[Divergence from STAR]
+  STAR                   = Brook
+  Choose-One (Plurality) = Avi   (differs from STAR)
+  RCV-IRV                = Avi   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex05_center_squeeze_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Avi,Brook,Cole
+    4 ×   5,    3,   0
+    3 ×   0,    3,   5
+    1 ×   3,    5,   0
+    1 ×   0,    5,   3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Brook         -- 31 -- First place
+   Avi           -- 23 -- Second place
+   Cole          -- 18
+ Brook and Avi advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Brook         -- 5 -- First place
+   Avi           -- 4
+   Equal Support -- 0
+ Brook wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Brook 5 (56%)  ·  Avi 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Brook
+```
+<!-- /report -->
 The scoring round is exactly where those invisible 3s count: Brook 31 (from *all nine* voters), Avi 23, Cole 18. In the runoff, Cole's whole wing prefers Brook over Avi — **Brook wins 5–4.**
 
 </details>

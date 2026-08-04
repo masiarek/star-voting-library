@@ -83,7 +83,67 @@ This is why the case YAML carries **no `expected_winners`**: the engine never pr
 
 Remove a seat and the objection disappears entirely. [`race_nobody_can_lose_two_seat_control.yaml`](cases/race_nobody_can_lose_two_seat_control.yaml) is the same seven ballots at **two** seats, and the LH engine counts it without complaint:
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/race_nobody_can_lose_two_seat_control.md:report"
+<!-- report:race_nobody_can_lose_two_seat_control -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 7 ballots to fill 2 seats.
+Abby,Bruno,Celia
+   5,    3,    1
+   5,    4,    0
+   4,    3,    2
+   5,    2,    3
+   3,    5,    1
+   2,    5,    4
+   4,    1,    5
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Abby          -- 28 -- First place
+   Bruno         -- 23 -- Second place
+   Celia         -- 16
+ Abby and Bruno advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Abby          -- 5 -- First place
+   Bruno         -- 2
+   Equal Support -- 0
+ Abby wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Abby 5 (71%)  ·  Bruno 2 (29%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 23 -- First place
+   Celia         -- 16 -- Second place
+ Bruno and Celia advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 5 -- First place
+   Celia         -- 2
+   Equal Support -- 0
+ Bruno wins.
+   Runoff math:
+     7  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     7  voters with a preference  (majority = 4)
+           Bruno 5 (71%)  ·  Celia 2 (29%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Abby
+ Bruno
+```
+<!-- /report -->
 
 Seat 1 goes to Abby 5–2 over Bruno, seat 2 to Bruno 5–2 over Celia — the same numbers BetterVoting produced for *its* first two seats. The two engines agree completely about the part of this election that is actually a contest.
 

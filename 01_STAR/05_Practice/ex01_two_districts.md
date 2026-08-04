@@ -48,7 +48,58 @@ Eighteen voters, nine per district, scores 0–5. Each district has three ballot
 
 Score totals: Avery 5×3+3×5+1×5 = **35**, Blake 5×3+3×5+1×3 = **33**, Carmen 5×4+3×3+1×3 = **32**, Elena 5×5 = **25**, Diego **0**. Avery and Blake advance — and eight of the nine ballots score them *identically* (3-3 or 5-5), so the runoff is decided by the one voter who told them apart:
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex01_district_west.md:report"
+<!-- report:ex01_district_west -->
+```text
+[Divergence from STAR]
+  STAR                   = Avery
+  Choose-One (Plurality) = Elena   (differs from STAR)
+  RCV-IRV                = Elena   (differs from STAR)
+  RCV-RR (Condorcet)     = Elena   (differs from STAR)
+  Note: 9 of 9 ballots (100%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex01_district_west_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/ex01_district_west_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Avery,Blake,Carmen,Diego,Elena
+    5 ×     3,    3,     4,    0,    5
+    3 ×     5,    5,     3,    0,    0
+    1 ×     5,    3,     3,    0,    0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Avery         -- 35 -- First place
+   Blake         -- 33 -- Second place
+   Carmen        -- 32
+   Elena         -- 25
+   Diego         --  0
+ Avery and Blake advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Avery         -- 1 -- First place
+   Blake         -- 0
+   Equal Support -- 8
+ Avery wins.
+   Runoff math:
+     9  ballots cast
+   − 8  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Avery 1 (100%)  ·  Blake 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Avery
+```
+<!-- /report -->
 **West District: Avery.**
 
 </details>

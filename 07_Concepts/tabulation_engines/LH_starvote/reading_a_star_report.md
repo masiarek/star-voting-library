@@ -23,7 +23,54 @@ Everything below is *computed from these five rows* — nothing else goes in.
 
 ## The full report
 
---8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/05_c3_b5_low-scores-bv1265.md:report"
+<!-- report:05_c3_b5_low-scores-bv1265 -->
+```text
+[Divergence from STAR]
+  STAR     = A
+  Approval = C   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (C)
+ - Runoff Round Winner   = (A)
+  Candidate C earned the highest total score, but
+  Candidate A won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × A,B,C
+    2 × 2,0,0
+    1 × 0,0,4
+    1 × 0,2,3
+    1 × 2,2,0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 7 -- First place
+   A             -- 6 -- Second place
+   B             -- 4
+ C and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   A             -- 3 -- First place
+   C             -- 2
+   Equal Support -- 0
+ A wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           A 3 (60%)  ·  C 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ A
+```
+<!-- /report -->
 ## Reading it, section by section
 
 **1. Runoff (Preference) Matrix.** The head-to-head table — the summable, auditable heart of the count (see [STAR is summable](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md)). Each cell reads **For – Equal Support – Against** for the *row* candidate vs the *column* candidate. So `A > … | 3 - 0 - 2` means: in A-vs-C, **3** ballots scored A over C, **0** scored them equal, **2** scored C over A. The `*` marks the two **Finalists** (A and C). Read the winner's row: A beats C 3–2, so A wins their head-to-head.

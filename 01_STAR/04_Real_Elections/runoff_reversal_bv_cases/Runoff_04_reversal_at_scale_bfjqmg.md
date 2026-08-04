@@ -46,7 +46,52 @@ Maple leads the Scoring Round (39) but **loses** the Automatic Runoff 3–6. Sou
 
 Same ballots (collapsed as `count × scores`), the full text report (the saved [`_tabulated`](cases/cases_tabulated/Runoff_04_reversal_at_scale_bfjqmg_tabulated.txt) mirror adds the funnel):
 
---8<-- "01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_04_reversal_at_scale_bfjqmg.md:report"
+<!-- report:Runoff_04_reversal_at_scale_bfjqmg -->
+```text
+[Divergence from STAR]
+  STAR     = Olive
+  Approval = Maple   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Maple)
+ - Runoff Round Winner   = (Olive)
+  Candidate Maple earned the highest total score, but
+  Candidate Olive won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Maple,Olive,Pine
+    6 ×     4,    5,   0
+    3 ×     5,    1,   2
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Maple         -- 39 -- First place
+   Olive         -- 33 -- Second place
+   Pine          --  6
+ Maple and Olive advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Olive         -- 6 -- First place
+   Maple         -- 3
+   Equal Support -- 0
+ Olive wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Olive 6 (67%)  ·  Maple 3 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Olive
+```
+<!-- /report -->
 > **BV ↔ LH wording.** The line `Olive 6 (67%) vs Maple 3 (33%)` is BetterVoting's *Runoff Votes* (6 / 3) and *% Between Finalists* (67% / 33%) folded into one line — LH names its denominator (`Voters with a preference`) instead of using table columns. [Why the words differ →](../../01_Learn/reporting/reporting_diff_BV_LH.md#same-numbers-different-words)
 
 ## The takeaway

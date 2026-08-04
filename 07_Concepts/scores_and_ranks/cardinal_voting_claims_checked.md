@@ -55,7 +55,54 @@ We built it and ran it. **The claim holds, and the threshold is tight.**
 
 100 voters. **Alma** is the 51% bloc's champion, **Bruno** the 49% bloc's, **Celia** is nobody's favorite and everybody's good outcome — with **3 of Alma's 51** honestly rating Alma and Celia equally.
 
---8<-- "01_STAR/03_Criteria/majority_criterion/cases/cases_pages/majority_vs_consensus_51_49.md:report"
+<!-- report:majority_vs_consensus_51_49 -->
+```text
+[Divergence from STAR]
+  STAR                   = Celia
+  Choose-One (Plurality) = Alma   (differs from STAR)
+  RCV-IRV                = Alma   (differs from STAR)
+  Note: 3 of 100 ballots (3%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/majority_vs_consensus_51_49_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 100 ballots.
+Count × Alma,Bruno,Celia
+   49 ×    0,    5,    4
+   48 ×    5,    0,    4
+    3 ×    5,    0,    5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Celia         -- 403 -- First place
+   Alma          -- 255 -- Second place
+   Bruno         -- 245
+ Celia and Alma advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Celia         -- 49 -- First place
+   Alma          -- 48
+   Equal Support --  3
+ Celia wins.
+   Runoff math:
+     100  ballots cast
+   −   3  Equal Support (no preference between the two finalists)
+     ───
+      97  voters with a preference  (majority = 49)
+           Celia 49 (51%)  ·  Alma 48 (49%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Celia
+```
+<!-- /report -->
 **Alma is max-scored by an outright majority**, so [Choose-One](../topics/plurality.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) — both of which satisfy the majority criterion — elect Alma, IRV in the first round. **Score, STAR and [Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md) all elect Celia.**
 
 Drop the indifferent voters from three to two and Alma–Celia becomes a **49–49 pairwise tie**, Celia is no longer the Condorcet winner, and Ranked Robin flips to Alma. So the crossover sits just above 2 voters in 100 — **above 3.92% of the 51-voter majority bloc**, which is what "4% or more of the majority" claims. Verified.

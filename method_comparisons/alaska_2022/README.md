@@ -63,7 +63,58 @@ Four races on the one electorate, live: **[bettervoting.com/k3fmwv/results](http
 
 The score model tabulates STAR and auto-derives the other three counts (the `[Divergence from STAR]` block):
 
---8<-- "method_comparisons/alaska_2022/cases/cases_pages/bv2213_k3fmwv_alaska_2022.md:report"
+<!-- report:bv2213_k3fmwv_alaska_2022 -->
+```text
+[Divergence from STAR]
+  STAR                   = Begich
+  Choose-One (Plurality) = Peltola   (differs from STAR)
+  RCV-IRV                = Peltola   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2213_k3fmwv_alaska_2022_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 200 ballots.
+Count × Peltola,Begich,Palin
+   50 ×       5,     4,    0
+   36 ×       0,     4,    5
+   29 ×       0,     5,    4
+   25 ×       5,     0,    0
+   23 ×       0,     0,    5
+   16 ×       4,     5,    0
+   12 ×       0,     5,    0
+    5 ×       5,     0,    4
+    4 ×       4,     3,    5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Begich        -- 641 -- First place
+   Peltola       -- 480 -- Second place
+   Palin         -- 451
+ Begich and Peltola advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Begich        -- 93 -- First place
+   Peltola       -- 84
+   Equal Support -- 23
+ Begich wins.
+   Runoff math:
+     200  ballots cast
+   −  23  Equal Support (no preference between the two finalists)
+     ───
+     177  voters with a preference  (majority = 89)
+           Begich 93 (53%)  ·  Peltola 84 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Begich
+```
+<!-- /report -->
 And the RCV-IRV rounds show the squeeze and the exhaustion directly:
 
 ```

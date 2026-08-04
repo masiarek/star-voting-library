@@ -39,7 +39,41 @@ Voters 1 and 2 marked the same opinion of the candidates; they differ only on wh
 
 **None of the Above is elected.** It tops the score round (20 vs Ada 10 vs Bruno 2), then wins the automatic runoff 4–2 over Ada.
 
---8<-- "01_STAR/03_Criteria/none_of_the_above/cases/cases_pages/bv215_26khr3_nota_wins.md:report"
+<!-- report:bv215_26khr3_nota_wins -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 6 ballots.
+Count × Ada,Bruno,None of the Above
+    4 ×   0,    0,                5
+    1 ×   5,    1,                0
+    1 ×   5,    1,                &
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   None of the Above -- 20 -- First place
+   Ada               -- 10 -- Second place
+   Bruno             --  2
+ None of the Above and Ada advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   None of the Above -- 4 -- First place
+   Ada               -- 2
+   Equal Support     -- 0
+ None of the Above wins.
+   Runoff math:
+     6  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     6  voters with a preference  (majority = 4)
+           None of the Above 4 (67%)  ·  Ada 2 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ None of the Above
+```
+<!-- /report -->
 (Note the `Abs` column: None of the Above shows `1` abstention — ballot 2's `&` — kept distinct from the `0` scores.)
 
 Full engine detail: [`bv215_26khr3_nota_wins_tabulated.txt`](cases/cases_tabulated/bv215_26khr3_nota_wins_tabulated.txt). Frozen BetterVoting export: [`bv215_26khr3_nota_wins_bv_export.json`](cases/bv215_26khr3_nota_wins_bv_export.json). Tabulatable source: [`bv215_26khr3_nota_wins.yaml`](cases/bv215_26khr3_nota_wins.yaml).

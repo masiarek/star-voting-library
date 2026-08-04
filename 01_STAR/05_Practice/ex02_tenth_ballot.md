@@ -39,7 +39,54 @@ The **tenth ballot**, found after the count: **Alex 5 · Chris 2 · Bella, Dana,
 
 Score totals: Alex 9×3 = **27**, Bella 4×2+3×5+2×1 = **25**, Chris 4×4+2×4 = **24**, Eli 3×4+2×5 = **22**, Dana 4×5 = **20**. Alex and Bella advance; six voters score Alex above Bella (the ×4 and ×2 blocs), three the reverse.
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex02_nine_ballots.md:report"
+<!-- report:ex02_nine_ballots -->
+```text
+[Divergence from STAR]
+  STAR                   = Alex
+  Choose-One (Plurality) = Dana   (differs from STAR)
+  RCV-IRV                = Bella   (differs from STAR)
+  RCV-RR                 = Eli   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex02_nine_ballots_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/ex02_nine_ballots_RCV-RR_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Alex,Bella,Chris,Dana,Eli
+    4 ×    3,    2,    4,   5,  0
+    3 ×    3,    5,    0,   0,  4
+    2 ×    3,    1,    4,   0,  5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alex          -- 27 -- First place
+   Bella         -- 25 -- Second place
+   Chris         -- 24
+   Eli           -- 22
+   Dana          -- 20
+ Alex and Bella advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Alex          -- 6 -- First place
+   Bella         -- 3
+   Equal Support -- 0
+ Alex wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Alex 6 (67%)  ·  Bella 3 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Alex
+```
+<!-- /report -->
 **Winner: Alex** — and yes, plain Score agrees (Alex leads the totals, 27).
 
 </details>
@@ -76,7 +123,64 @@ Automatic Runoff Round
 
 Remove Bella's column from the original nine ballots and nothing else moves: Alex **27**, Chris **24**, Eli 22, Dana 20. Chris inherits the second runoff slot — and beats Alex head-to-head 6–3.
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex02_bella_exits.md:report"
+<!-- report:ex02_bella_exits -->
+```text
+[Divergence from STAR]
+  STAR                   = Chris
+  Choose-One (Plurality) = Eli   (differs from STAR)
+  RCV-IRV                = Eli   (differs from STAR)
+  Approval               = Alex   (differs from STAR)
+  RCV-RR (Condorcet)     = Eli   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex02_bella_exits_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/ex02_bella_exits_RCV-RR_tabulated.txt
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Alex)
+ - Runoff Round Winner   = (Chris)
+  Candidate Alex earned the highest total score, but
+  Candidate Chris won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Alex,Chris,Dana,Eli
+    4 ×    3,    4,   5,  0
+    3 ×    3,    0,   0,  4
+    2 ×    3,    4,   0,  5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alex          -- 27 -- First place
+   Chris         -- 24 -- Second place
+   Eli           -- 22
+   Dana          -- 20
+ Alex and Chris advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Chris         -- 6 -- First place
+   Alex          -- 3
+   Equal Support -- 0
+ Chris wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Chris 6 (67%)  ·  Alex 3 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Chris
+```
+<!-- /report -->
 **Winner: Chris.** Bella was never going to win, yet her *presence* decided who does — she occupied the runoff slot that Chris wins from. The familiar spoiler is a loser whose presence *hurts* a similar candidate; Bella is the mirror image, a loser whose presence *protected* the winner. Same family: the outcome depended on an (irrelevant) alternative.
 
 </details>

@@ -55,7 +55,78 @@ The argument that it is nonetheless wrong: **BetterVoting's own tally treats a b
 
 ## The LH report (the correct count)
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv2105r2_w3vvff_ice_cream_recheck.md:report"
+<!-- report:bv2105r2_w3vvff_ice_cream_recheck -->
+```text
+[Divergence from STAR]
+  STAR                   = Chocolate
+  Choose-One (Plurality) = Vanilla   (differs from STAR)
+  RCV-IRV                = Vanilla   (differs from STAR)
+  Note: 1 of 4 ballots (25%) had equal non-zero scores, so their ranks were
+        decided by candidate priority order. The RCV-IRV result may be an
+        artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2105r2_w3vvff_ice_cream_recheck_RCV-IRV_tabulated.txt
+
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 4 ballots to fill 2 seats. Note: 1 of 4 ballots is marked as an abstention.
+Vanilla,Chocolate,Strawberry
+      5,        5,         5
+      -,        -,         -
+      1,        -,         -
+      2,        5,         4
+  ('-' = left blank / abstained; '0' = scored zero — both count as 0 stars.)
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Chocolate     -- 10 -- First place
+   Strawberry    --  9 -- Second place
+   Vanilla       --  8
+ Chocolate and Strawberry advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Chocolate     -- 1 -- First place
+   Strawberry    -- 0
+   Equal Support -- 3
+ Chocolate wins.
+   Runoff math:
+     4  ballots cast
+   − 3  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Chocolate 1 (100%)  ·  Strawberry 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Strawberry    -- 9 -- First place
+   Vanilla       -- 8 -- Second place
+ Strawberry and Vanilla advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Strawberry    -- 1 -- Tied for first place
+   Vanilla       -- 1 -- Tied for first place
+   Equal Support -- 2
+ There's a two-way tie for first.
+
+[Bloc STAR: Round 2: Automatic Runoff Round: First tiebreaker]
+ The highest-scoring candidate wins.
+   Strawberry    -- 9 -- First place
+   Vanilla       -- 8
+ Strawberry wins.
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Chocolate
+ Strawberry
+```
+<!-- /report -->
 
 LH counts **4 ballots, 1 abstention** — only the fully-blank row — and gives Vanilla a real `1`, for a total of 8.
 

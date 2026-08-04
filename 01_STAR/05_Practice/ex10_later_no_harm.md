@@ -31,7 +31,41 @@ Nine voters, scores 0–5. Only the first column changes between the two runs:
 <details>
 <summary><b>(a) Reticent — Amir wins, 6–3, over Cato</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex10_reticent.md:report"
+<!-- report:ex10_reticent -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Amir,Bess,Cato
+    4 ×    5,   0,   0
+    3 ×    0,   1,   5
+    2 ×    2,   5,   0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Amir          -- 24 -- First place
+   Cato          -- 15 -- Second place
+   Bess          -- 13
+ Amir and Cato advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Amir          -- 6 -- First place
+   Cato          -- 3
+   Equal Support -- 0
+ Amir wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Amir 6 (67%)  ·  Cato 3 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Amir
+```
+<!-- /report -->
 With the fans silent below the top, Bess limps in third at 13 and the runoff is Amir vs Cato — **Amir in a walk**. The fans' favorite holds the trophy.
 
 </details>
@@ -46,7 +80,52 @@ The soothing intuition: "your 3 for Bess can't hurt Amir — Amir still has your
 <details>
 <summary><b>(c) Generous — Bess wins, 5–4, over Amir: a later-no-harm failure</b></summary>
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex10_generous.md:report"
+<!-- report:ex10_generous -->
+```text
+[Divergence from STAR]
+  STAR                   = Bess
+  Choose-One (Plurality) = Amir   (differs from STAR)
+  RCV-IRV                = Amir   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/ex10_generous_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 9 ballots.
+Count × Amir,Bess,Cato
+    4 ×    5,   3,   0
+    3 ×    0,   1,   5
+    2 ×    2,   5,   0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bess          -- 25 -- First place
+   Amir          -- 24 -- Second place
+   Cato          -- 15
+ Bess and Amir advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bess          -- 5 -- First place
+   Amir          -- 4
+   Equal Support -- 0
+ Bess wins.
+   Runoff math:
+     9  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     9  voters with a preference  (majority = 5)
+           Bess 5 (56%)  ·  Amir 4 (44%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Bess
+```
+<!-- /report -->
 The twelve honest points lift Bess 13 → 25, past Cato and into the runoff — where the Bess-first pair and the Cato bloc (who score Bess 1 > Amir 0) outvote Amir's fans **5–4**. Adding a *later* (lower) preference cost the fans' *earlier* (higher) one the win: that is precisely a **later-no-harm violation**, and it is a real property of STAR — the fans' 3s changed *who Amir had to face*, exactly the runoff-slot mechanism of [exercise 2](ex02_tenth_ballot.md).
 
 </details>

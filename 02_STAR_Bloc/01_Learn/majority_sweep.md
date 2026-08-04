@@ -26,7 +26,64 @@ Two qualifiers keep this honest:
 
 A neighborhood association elects a **two-seat** board. The north side is 6 of 10 voters and runs Asa and Bram; the south side is 4 of 10 and runs Cleo and Dane. Every voter scores their own side 5 and 4, and the other side 0:
 
---8<-- "01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md:report"
+<!-- report:ex12_bloc_sweep -->
+```text
+--- Bloc STAR Voting Method (2 winners) ---
+
+[Bloc STAR]
+ Tabulating 10 ballots to fill 2 seats.
+Count × Asa,Bram,Cleo,Dane
+    6 ×   5,   4,   0,   0
+    4 ×   0,   0,   5,   4
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Asa           -- 30 -- First place
+   Bram          -- 24 -- Second place
+   Cleo          -- 20
+   Dane          -- 16
+ Asa and Bram advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Asa           -- 6 -- First place
+   Bram          -- 0
+   Equal Support -- 4
+ Asa wins.
+   Runoff math:
+     10  ballots cast
+   −  4  Equal Support (no preference between the two finalists)
+     ──
+      6  voters with a preference  (majority = 4)
+           Asa 6 (100%)  ·  Bram 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bram          -- 24 -- First place
+   Cleo          -- 20 -- Second place
+   Dane          -- 16
+ Bram and Cleo advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bram          -- 6 -- First place
+   Cleo          -- 4
+   Equal Support -- 0
+ Bram wins.
+   Runoff math:
+     10  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     10  voters with a preference  (majority = 6)
+           Bram 6 (60%)  ·  Cleo 4 (40%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Asa
+ Bram
+```
+<!-- /report -->
 The 60% takes 100% of the board. Note *where* the south side loses: not in round 1 — Cleo was never going to out-score Asa — but in **round 2**, where she reaches the runoff and loses it 6–4. The seat was close enough to be visible and never close enough to be winnable, which is the texture of a sweep. Run it yourself: [`ex12_bloc_sweep`](../../01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md) ([yaml](../../01_STAR/05_Practice/cases/ex12_bloc_sweep.yaml)); the exercise that pairs it against a proportional count of the *same ten ballots* is [Exercise 12 — bloc vs. proportional](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md), where the south side's 40% earns one of the two seats.
 
 ## The same electorate, counted five ways
