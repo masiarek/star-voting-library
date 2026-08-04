@@ -21,14 +21,26 @@ scenario_description: |-
 
   WHY THIS ELECTION EXISTS. BV2105 reported nTallyVotes = 2 and nAbstentions = 2:
   it filed the partial "1,-,-" ballot as an abstention alongside the genuinely
-  blank one. That was reported as bettervoting#1056, which GitHub shows CLOSED as
-  completed on 2025-11-06.
+  blank one.
+
+  CITATION CORRECTION (2026-08-04). The library used to attribute that miscount
+  to bettervoting#1056. Wrong: #1056 is a DIFFERENT defect on the same demo
+  election — a 401 blocking JSON/CSV download and Race Details, introduced by the
+  Editable Ballots work (#979) and correctly closed via #1058. They share only
+  the BV2105 test-document name. The counting defect has never been filed.
 
   THE RESULT: THE MISCOUNT STILL REPRODUCES. Ballots cast through the live API on
-  2026-08-04 come back nTallyVotes 2 / nAbstentions 2 — byte-identical counts to
-  the 2025 run, with Vanilla's score again averaged over 2 ballots instead of 3.
-  So the ticket is closed but the behavior is not fixed. This file is the pinned
-  correct count.
+  2026-08-04 come back nTallyVotes 2 / nAbstentions 2 — identical counts to the
+  2025 run, with Vanilla's score again averaged over 2 ballots instead of 3.
+  This file is the pinned correct count.
+
+  IS IT A BUG OR THE POLICY? Stated fairly: bettervoting#884 made an ALL-EQUAL
+  ballot an abstention, and a ballot bearing a SINGLE mark is trivially all-equal,
+  so this may be that policy working as written. The counter-argument is that BV's
+  own tally treats a blank as 0 — so "Vanilla 1, blank, blank" is really
+  "Vanilla 1, Chocolate 0, Strawberry 0", which is NOT all-equal and strictly
+  prefers Vanilla. Scope: partial ballots whose non-blank marks are all equal.
+  Partial ballots with two or more distinct marks count correctly.
 
   WHY A NEW ELECTION WAS NEEDED (rather than re-fetching r4dqvd). Re-fetching the
   2025 election also returns 2/2, but r4dqvd is `closed` and its stored
@@ -38,10 +50,10 @@ scenario_description: |-
 
   WHY NO OTHER CASE IN THE LIBRARY ANSWERS IT. The discriminating shape is a
   ballot whose non-blank marks are ALL EQUAL — here a single "1" — because that
-  is what bettervoting#884's all-equal rule mistakes for an abstention. The only
+  is what bettervoting#884's all-equal rule treats as an abstention. The only
   other 2026-minted export carrying a partial ballot is BV215 (26khr3), whose
-  partial is "Ada 5, Bruno 1, blank": two DISTINCT marks, so it is counted under
-  the buggy rule and a fixed one alike, and proves nothing about #1056.
+  partial is "Ada 5, Bruno 1, blank": two DISTINCT marks, so it is counted either
+  way and settles nothing.
 
   LH counts it correctly: 4 ballots, 1 abstention (only the fully-blank row),
   Vanilla total 8 (5 + 1 + 2). The dropped ballot only helped Vanilla, the seat-2

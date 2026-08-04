@@ -45,14 +45,26 @@ discarded cast ballot can flip closer elections. It is the opposite-direction
 sibling of BV15 / bettervoting#740: #740 DROPS abstentions from the displayed
 turnout; BV2105 mis-classifies a real partial ballot AS an abstention.
 
-Related bug: bettervoting#1056 — CLOSED as completed on 2025-11-06, but NOT
-fixed in the product. The re-check ran on 2026-08-04: the same four ballots,
-cast fresh through the live API so today's tabulator counts them, come back
-nTallyVotes 2 / nAbstentions 2 — identical to the numbers frozen here. That
-re-run is its own case, BV2105-r2 (election w3vvff,
+CITATION CORRECTION (2026-08-04). This file used to credit the miscount to
+bettervoting#1056 and call it fixed. Both were wrong. #1056 is a DIFFERENT
+defect on the same demo election — a 401 blocking JSON/CSV download and Race
+Details, introduced by the Editable Ballots work (#979) and correctly closed
+via #1058. The two share only the BV2105 test-document name. The counting
+defect described above has never been filed.
+
+The behavior is unchanged a year on. The re-check ran on 2026-08-04: the same
+four ballots, cast fresh through the live API so today's tabulator counts them,
+come back nTallyVotes 2 / nAbstentions 2 — identical to the numbers frozen
+here. That re-run is its own case, BV2105-r2 (election w3vvff,
 bv2105r2_w3vvff_ice_cream_recheck.yaml), which also explains why re-fetching
 THIS election could not have answered the question: r4dqvd is closed, so its
 stored ElectionResult may just be the 2025 tally.
+
+Likely root: bettervoting#884's rule that an all-equal ballot is an abstention.
+A ballot bearing ONE mark is trivially all-equal, so it falls through the same
+test — which would make this intended behavior rather than a coding slip. The
+counter-argument is that a voter who scores Vanilla 1 and leaves the rest blank
+HAS expressed a preference, because BV's own tally treats those blanks as 0.
 
 This file is therefore the 2025 BASELINE, and this LH reference pins the
 correct count (4 ballots, 1 abstention, 3 tallied, Vanilla total 8).

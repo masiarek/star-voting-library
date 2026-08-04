@@ -4,7 +4,9 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105r2_w3vvff_ice_cream_recheck.md)
 <!-- case-meta:end -->
 
-*A deliberate re-run of [BV2105](bv2105_r4dqvd_ice_cream_bloc.md) (`r4dqvd`) on **exactly the same four ballots**, cast again on 2026-08-04 so they are counted by **today's** tabulator. The question it settles: [bettervoting#1056](https://github.com/Equal-Vote/bettervoting/issues/1056) is closed as completed — is the miscount actually gone? **It is not.** The fresh election returns `nTallyVotes 2 / nAbstentions 2`, identical to 2025.*
+*A deliberate re-run of [BV2105](bv2105_r4dqvd_ice_cream_bloc.md) (`r4dqvd`) on **exactly the same four ballots**, cast again on 2026-08-04 so they are counted by **today's** tabulator. The question it settles: a year on, does BetterVoting still file a real partial ballot as an abstention? **It does.** The fresh election returns `nTallyVotes 2 / nAbstentions 2`, identical to 2025.*
+
+> **What this case is NOT about.** The library used to attribute this miscount to [bettervoting#1056](https://github.com/Equal-Vote/bettervoting/issues/1056). That was a mis-citation, corrected 2026-08-04. **#1056 is a different defect on the same demo election** — a `401` blocking JSON/CSV download and Race Details, introduced by the Editable Ballots work ([#979](https://github.com/Equal-Vote/bettervoting/issues/979)) and correctly closed via [#1058](https://github.com/Equal-Vote/bettervoting/issues/1058). They share only the BV2105 test-document name. **The counting defect on this page has never been filed** — this election is the evidence for doing so.
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/w3vvff) · **[results ↗](https://bettervoting.com/w3vvff/results)** (election `w3vvff`).
 
@@ -16,7 +18,7 @@ The obvious move is to re-fetch `r4dqvd` and read its numbers. That doesn't work
 
 **`r4dqvd` is `closed`.** Re-fetching it today does return `nTallyVotes 2 / nAbstentions 2` — but a closed election's stored `ElectionResult` may simply be the tally computed back in 2025. The re-fetch cannot distinguish *"the bug is still live"* from *"we are reading a year-old result."* Only ballots cast **through today's tabulator** can.
 
-**No other case in the library answers it either.** The discriminating ballot is one whose non-blank marks are **all equal** — here a single `1` — because that is exactly what [#884](https://github.com/Equal-Vote/bettervoting/issues/884)'s all-equal rule mistakes for an abstention. Sweeping every frozen export in the repo turns up only one other 2026-minted election with a partial ballot, [BV215](../../01_STAR/03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md) (`26khr3`), and its partial is `Ada 5, Bruno 1, blank` — **two distinct marks**, so it counts under the buggy rule and a fixed one alike. It proves nothing about #1056.
+**No other case in the library answers it either.** The discriminating ballot is one whose non-blank marks are **all equal** — here a single `1` — because that is exactly what [#884](https://github.com/Equal-Vote/bettervoting/issues/884)'s all-equal rule treats as an abstention. Sweeping every frozen export in the repo turns up only one other 2026-minted election with a partial ballot, [BV215](../../01_STAR/03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md) (`26khr3`), and its partial is `Ada 5, Bruno 1, blank` — **two distinct marks**, so it is counted either way and settles nothing.
 
 Hence a fresh mint, same ballots.
 
@@ -45,7 +47,11 @@ Winners **Chocolate, Strawberry**, and they were never in question — Chocolate
 
 The two BetterVoting columns are identical. The `1,-,-` ballot is still filed as an abstention alongside the genuinely blank one, and Vanilla's reported figure is still an average over **2** ballots rather than 3 — the single `1` never enters the sum. (BV floors the average for display: Strawberry's 9/2 shows as `4`, Vanilla's 7/2 as `3`.)
 
-So **#1056 is closed on the tracker but not fixed in the product.** That is a statement about *this* ballot shape only — a partial ballot whose marks are all equal. It says nothing about the many partial ballots with two or more distinct marks, which count correctly.
+### Is this a bug, or the documented policy?
+
+Worth stating fairly, because it cuts against the simple reading. [#884](https://github.com/Equal-Vote/bettervoting/issues/884) established that a ballot whose marks are **all equal** counts as an abstention. A ballot bearing a *single* mark is **trivially** all-equal, so it falls through the same test — meaning this may be the policy working exactly as written, not a coding slip.
+
+The argument that it is nonetheless wrong: **BetterVoting's own tally treats a blank as 0.** So `Vanilla 1, blank, blank` is not a ballot with one mark and two unknowns — it is a ballot reading Vanilla 1, Chocolate 0, Strawberry 0, which strictly prefers Vanilla to both. Under the all-equal rule *as applied to the scores it actually counts*, that ballot is not all-equal at all, and it plainly expresses a preference. Note the scope: this concerns partial ballots whose non-blank marks are all equal. Partial ballots with two or more distinct marks count correctly.
 
 ## The LH report (the correct count)
 
@@ -61,6 +67,6 @@ Not here. The discarded ballot only helped Vanilla, who loses seat 2 either way,
 
 - [BV2105 — the original (2025)](bv2105_r4dqvd_ice_cream_bloc.md) — same ballots, the run this one re-checks.
 - [BV15 — Plurality abstain (bettervoting#740)](../../01_STAR/04_Real_Elections/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) — the mirror-image defect: abstentions *dropped from* displayed turnout.
-- [The BV abstain / blank / zero issue index](../../07_Concepts/tabulation_engines/BV/abstain_issues_index.md) — how #884, #1053, #1090 and #1056 fit together.
+- [The BV abstain / blank / zero issue index](../../07_Concepts/tabulation_engines/BV/abstain_issues_index.md) — how #884, #1053, #1090 and this one fit together.
 - [Abstention vs a zero vs "None of the Above"](../../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md) — the concept behind all of them.
 - [02_STAR_Bloc README](README.md) · [BV registry](../../07_Concepts/YAML_test_case_index/BV_registry.md).

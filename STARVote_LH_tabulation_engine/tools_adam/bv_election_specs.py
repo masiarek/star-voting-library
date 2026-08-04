@@ -4782,7 +4782,9 @@ OVER_50_PERCENT_SPEC = {
 # ballots. That election reported nTallyVotes 2 / nAbstentions 2: it filed the
 # partial ballot "Vanilla 1, rest blank" as an abstention alongside the genuinely
 # blank one, and Vanilla's score came out as an average over 2 ballots instead of
-# 3. Reported as bettervoting#1056, CLOSED as completed on 2025-11-06.
+# 3. That counting defect has NEVER been filed upstream. (It is not #1056 —
+# the library mis-cited it for a year; #1056 is a demo-election 401 on ballot
+# download, closed via #1058. They share only the BV2105 test-doc name.)
 #
 # Why a new election rather than a re-fetch: re-fetching r4dqvd today still
 # returns nTallyVotes 2 / nAbstentions 2, but that election is `closed` and its
@@ -4795,7 +4797,7 @@ OVER_50_PERCENT_SPEC = {
 # that is what #884's all-equal rule mistakes for an abstention. The only other
 # 2026-minted export with a partial ballot is BV215 (26khr3), whose partial is
 # "Ada 5, Bruno 1, blank" — two DISTINCT marks, so it counts under the buggy
-# rule and the fixed one alike. It proves nothing about #1056.
+# rule and a fixed one alike. It settles nothing.
 #
 # Reads as a real election on its own terms (a 3-flavour ice cream vote, 2 seats),
 # so the permanent public title stands up without needing the bug context.
@@ -4846,13 +4848,13 @@ ICE_CREAM_ABSTENTION_RECHECK_SPEC = {
         "shape BV2105 recorded in 2025, where BV displayed that as `score: 3` (it floors the "
         "average: Strawberry's 9/2 displayed as 4). LH counts 4 ballots, 1 abstention, "
         "Vanilla total 8. "
-        "Test ID BV2105-r2; re-run of BV2105 (r4dqvd) for bettervoting#1056."),
+        "Test ID BV2105-r2; re-run of BV2105 (r4dqvd). The counting defect is unfiled."),
 }
 
 
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
 # Previously: [ICE_CREAM_ABSTENTION_RECHECK_SPEC]   # BV2105-r2 — ice cream partial-ballot
-#   re-check (created -> w3vvff). Result: the #1056 miscount STILL REPRODUCES on today's
+#   re-check (created -> w3vvff). Result: the miscount STILL REPRODUCES on today's
 #   tabulator — nTallyVotes 2 / nAbstentions 2, identical to BV2105 (r4dqvd) in 2025.
 # Previously: [TIE_EVERY_RUNG_BLOC_SPEC]   # tie at every rung (created -> 484mbm). NOTE: minted
 #   concurrently with OVER_50_PERCENT_SPEC below and both went out titled BV2263 — see that
