@@ -35,24 +35,7 @@ Then the 5-star ballot has nothing left to work with. Here is that election, liv
 | 2 — *"Ella. Period."* | – | – | – | – | **5** |
 | 3 — *"Ella. Period."* | – | – | – | – | **5** |
 
-```
-Scoring Round
-   Ella          -- 10 -- First place
-   Carmen        --  5 -- Second place
-   Andre         --  0
-   Blake         --  0
-   David         --  0
- Ella and Carmen advance.
-
-Automatic Runoff Round
-   Ella          -- 2 -- First place
-   Carmen        -- 1
-   Equal Support -- 0
- Ella wins.
-   Voters with a preference: 3 of 3 (no Equal Support).
-   Ella 2 (67%) vs Carmen 1 (33%); majority = 2.
-```
-
+--8<-- "01_STAR/02_Examples/cases/cases_pages/bv2256_c8h3tb_traditional_style.md:report"
 The scoring round has become nothing but a first-choice tally, and the runoff has nothing left to add — the two finalists were already the only candidates anyone said anything about. Andre, Blake and David finish on zero having had *nothing* said about them: not "we considered them and rated them last," simply nothing. A ballot carrying one bit per voter gives the method one bit to read, so this count could not have done better than the choose-one ballot it is imitating.
 
 **Said plainly: as an approach and as a strategy, this is a poor use of a STAR ballot** — *unless* one candidate really is your only acceptable choice, period, in which case it is exactly honest and you should vote it. Everything on this page still holds: nothing is penalized, nothing can be spoiled, and a backup score can never hurt your favorite. You are simply choosing not to use the ballot. (Full count: [`bv2256_c8h3tb_traditional_style.md`](../../02_Examples/cases/cases_pages/bv2256_c8h3tb_traditional_style.md).)

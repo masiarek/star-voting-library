@@ -42,27 +42,7 @@ One electorate, three defensible winners, all from the same arithmetic:
 
 The embedded LH report, with the engine calling all of it:
 
-```
-[Condorcet Winner]
-  Condorcet Winner: Ben — matches the STAR winner
-
-[Condorcet Loser]
-  Condorcet Loser: Amy — loses every head-to-head matchup — elected by Approval!
-
-[Runoff Reversal]
- - Score Round Winner(s) = (Amy)
- - Runoff Round Winner   = (Ben)
-
-Scoring Round
-   Amy           -- 20 -- First place
-   Ben           -- 11 -- Second place
-Automatic Runoff Round
-   Ben           -- 5 -- First place
-   Amy           -- 4
-Winner — STAR Voting Method (single winner)
- Ben
-```
-
+--8<-- "method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md:report"
 Want the whole count? see the full LH report → [`cases_pages/vcl_c4_b9_score_vs_runoff.md`](cases/cases_pages/vcl_c4_b9_score_vs_runoff.md).
 
 (That `elected by Approval!` line is itself a τ lesson: LH's approval conversion approves scores ≥ 3, so Amy wins approval 4:1 — while a voter approving everything ≥ 1 would elect Ben 5:4. The winner flips on the threshold, which is finding 2 in miniature.)

@@ -48,26 +48,7 @@ Eighteen voters, nine per district, scores 0–5. Each district has three ballot
 
 Score totals: Avery 5×3+3×5+1×5 = **35**, Blake 5×3+3×5+1×3 = **33**, Carmen 5×4+3×3+1×3 = **32**, Elena 5×5 = **25**, Diego **0**. Avery and Blake advance — and eight of the nine ballots score them *identically* (3-3 or 5-5), so the runoff is decided by the one voter who told them apart:
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Avery         -- 35 -- First place
-   Blake         -- 33 -- Second place
-   Carmen        -- 32
-   Elena         -- 25
-   Diego         --  0
- Avery and Blake advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Avery         -- 1 -- First place
-   Blake         -- 0
-   Equal Support -- 8
- Avery wins.
-   Voters with a preference: 1 of 9 (8 Equal Support).
-   Avery 1 (100%) vs Blake 0 (0%); majority = 1.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex01_district_west.md:report"
 **West District: Avery.**
 
 </details>

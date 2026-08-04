@@ -92,20 +92,7 @@ This is exactly why the common criticism that STAR "**discounts**" equal-score b
 
 Usually the score leader also wins the runoff. **Sometimes it doesn't** — and that's the most important thing to understand about STAR. Leading the Scoring Round only makes you a *finalist*; the winner is whichever finalist **more voters prefer**:
 
-```
-Scoring Round
-   Almond        -- 13 -- First place
-   Brownie       -- 11 -- Second place
-   Cocoa         --  2
- Almond and Brownie advance.
-
-Automatic Runoff Round
-   Brownie       -- 2 -- First place
-   Almond        -- 1
-   Equal Support -- 0
- Brownie wins.
-```
-
+--8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md:report"
 **Almond** has the most stars (13) but **Brownie** wins — more voters prefer Brownie head-to-head. This is **not a malfunction**: the runoff is enforcing majority preference between the finalists. (BetterVoting itself pops up *"Why is the top-scoring candidate different from the winner?"* here.)
 
 *Want the whole count — the preference matrix, the Condorcet line, the score distribution? This is a real election: [see the full LH report](../../02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md) (or run [`01a_c3_b3_more-stars-fewer-voters.yaml`](../../02_Examples/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml)).*

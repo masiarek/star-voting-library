@@ -30,7 +30,48 @@ BetterVoting's result page shows **"2 voters"** and scoring totals **A=2, B=4, C
 
 The same ballots through the reference engine. Note **"Tabulating 4 ballots,"** the score distribution (each candidate's real total), and — the key line — the runoff denominator **"2 of 4 (2 Equal Support)"**: LH keeps the two flat ballots in the count as *Equal Support* (no preference) rather than discarding them.
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv132_verify_votes_bloc.md:report"
+```text title="Abridged for the lesson — not verbatim engine output"
+--- Bloc STAR Voting Method (2 winners) ---
+ Tabulating 4 ballots.
+A,B,C
+1,1,1
+5,5,5
+1,2,3
+1,2,3
+
+[Score Distribution] (number of ballots giving each score)
+   5  4  3  2  1  0  | Total   Avg
+A  1  0  0  0  3  0  |     8   2.0
+B  1  0  0  2  1  0  |    10   2.5
+C  1  0  2  0  1  0  |    12   3.0
+ Want to fill 2 seats.
+
+Round 1: Scoring Round
+   C  -- 12 -- First place
+   B  -- 10 -- Second place
+   A  --  8
+ C and B advance.
+Round 1: Automatic Runoff Round
+   C  -- 2 -- First place
+   B  -- 0
+   Equal Support -- 2
+ C wins.
+   Voters with a preference: 2 of 4 (2 Equal Support).   ← all 4 ballots counted
+
+Round 2: Scoring Round
+   B  -- 10 -- First place
+   A  --  8 -- Second place
+ B and A advance.
+Round 2: Automatic Runoff Round
+   B  -- 2 -- First place
+   A  -- 0
+   Equal Support -- 2
+ B wins.
+
+Winners — Bloc STAR Voting Method (2 winners)
+ C
+ B
+```
 Full audit copy: [`_main_tabulated/bv132_verify_votes_bloc_tabulated.txt`](cases/cases_tabulated/bv132_verify_votes_bloc_tabulated.txt).
 
 ## The diagnostic (where the ballots go)

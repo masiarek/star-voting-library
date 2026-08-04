@@ -36,36 +36,7 @@ STAR and Ranked Robin agree on Casey. IRV and Choose-One eliminate the centrist 
 
 ### STAR — Casey (the Condorcet winner)
 
-```
---- Runoff (Preference) Matrix ---
-                 |     Avery    |  * Blake    |  * Casey    |
--------------------------------------------------------------
-         Avery > |     ---      |50 -  0 - 50 |47 -  0 - 53 |
-       * Blake > | 50 -  0 - 50 |    ---      |47 -  0 - 53 |
-       * Casey > | 53 -  0 - 47 |53 -  0 - 47 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Casey — matches the STAR winner
-
-[Divergence from STAR]
-  STAR                   = Casey
-  Choose-One (Plurality) = Blake   (differs from STAR)
-  RCV-IRV                = Avery   (differs from STAR)
-
-Scoring Round
-   Casey         -- 312 -- First place
-   Avery         -- 294 -- Tied for second place
-   Blake         -- 294 -- Tied for second place
- Casey advances, but there's a two-way tie for second.
- (pairwise 50–50, five-star 47–47 — the second finalist is lot-decided; Casey wins regardless.)
-
-Automatic Runoff Round
-   Casey         -- 53 -- First place
-   Blake         -- 47
- Casey wins.
-   Casey 53 (53%) vs Blake 47 (47%); majority = 51.
-```
-
+--8<-- "method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_star.md:report"
 ### Ranked Robin — Casey (2–0)
 
 ```

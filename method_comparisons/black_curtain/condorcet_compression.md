@@ -24,21 +24,7 @@ That is the whole election. Everything below is the same five rows, written down
 
 Every voter has a strict opinion about every pair, so the pairwise matrix has **no Equal Support anywhere**, and Cal wins all three of his matchups:
 
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Ann    |  * Bob    |  * Cal    |
------------------------------------------------------
-         Ann > |    ---     |2 - 0 - 3  |2 - 0 - 3  |
-       * Bob > | 3 - 0 - 2  |   ---     |2 - 0 - 3  |
-       * Cal > | 3 - 0 - 2  |3 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Cal — matches the STAR winner
-```
-
+--8<-- "method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md:report"
 Cal is the Condorcet winner and the STAR winner — the 3-voter majority's favorite, and their preference for Cal over Bob (5 vs 4) is what the runoff reads. Full report: [Black Curtain #1](cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md).
 
 ## Reading 2 — the approval count
@@ -60,21 +46,7 @@ Now the same voters mark an approval ballot. Following the source video's thresh
 
 Here is the step that makes the lesson precise. Take those approval marks and read them as a *ballot* — approved above not-approved, nothing said within either group — then ask the head-to-head questions again ([case 01b](cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md)):
 
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Ann    |  * Bob    |  * Cal    |
------------------------------------------------------
-         Ann > |    ---     |0 - 2 - 3  |2 - 0 - 3  |
-       * Bob > | 3 - 2 - 0  |   ---     |2 - 3 - 0  |
-       * Cal > | 3 - 0 - 2  |0 - 3 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Bob — matches the STAR winner
-```
-
+--8<-- "method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md:report"
 **Bob is now the Condorcet winner**, and honestly so: he beats Cal 2–0 and Ann 3–0 on these ballots. Nobody prefers Cal to Bob any more — not because anyone changed their mind, but because the three voters who prefer Cal approved *both* of them, and an approval ballot has no way to say which one they like better.
 
 ## Where the information went

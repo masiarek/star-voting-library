@@ -42,7 +42,7 @@ The point isn't "STAR wins the argument." It's that **support is real informatio
 
 ## The engine says so — TOLERATED (Blair = 1) → STAR elects Alex
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Scoring Round
    Alex          -- 81 -- First place
    Cole          -- 75 -- Second place
@@ -62,7 +62,7 @@ Automatic Runoff Round
 
 ## The engine says so — SUPPORTED (Blair = 4) → STAR elects Blair
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Scoring Round
    Blair         -- 150 -- First place   ← real support: Blair now leads
    Alex          --  81 -- Second place

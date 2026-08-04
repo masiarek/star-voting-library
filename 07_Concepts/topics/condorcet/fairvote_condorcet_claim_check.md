@@ -18,19 +18,7 @@ So an article arguing "Condorcet isn't everything" *could* be making a legitimat
 
 **The countable check:** [same three candidates, electorate shifts left](../../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) — the "strong liberal" pole candidate takes 56% of first choices and *is* the Condorcet winner (56–44 over the moderate, 62–38 over the conservative). Every method agrees. Live on BetterVoting as BV2169: **[results ↗](https://bettervoting.com/2jrfpg/results)**.
 
-```
---- Runoff (Preference) Matrix ---
-Legend: For - Equal Support - Against
-                     |    * Liberal     |   * Moderate    |   Conservative  |
------------------------------------------------------------------------------
-         * Liberal > |       ---        |  56 -  0 - 44   |  62 -  0 - 38   |
-        * Moderate > |   44 -  0 - 56   |      ---        |  68 -  0 - 32   |
-      Conservative > |   38 -  0 - 62   |  32 -  0 - 68   |      ---        |
-
-[Condorcet Winner]
-  Condorcet Winner: Liberal — matches the STAR winner
-```
-
+--8<-- "method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md:report"
 ### Claim 2 — "Condorcet winners are centrist by nature, regardless of the preferences of the electorate."
 
 **Self-contradictory as written.** The Condorcet winner is *defined by* the preferences of the electorate — there is nothing else in the definition. The defensible version of this claim is the median voter theorem: under single-peaked preferences on one dimension, the Condorcet winner sits at the *median voter's* position. But the median moves with the electorate — if the electorate shifts left, so does the Condorcet winner (the demo above). "Centrist relative to the actual distribution of voters" is not "centrist in absolute political terms," and "regardless of preferences" is exactly backwards.
@@ -57,26 +45,7 @@ A minor structural slip: an undefeated *schedule* is a round-robin argument (eve
 
 The article's scenario: *"a strong liberal who commands between 40% to 50% of the vote, a moderate with about 10% to 15%, and a strong conservative between 40% and 50%."* We tabulated exactly that — Liberal 45, Moderate 12, Conservative 43, poles ranking the moderate second: [FairVote's own hypothetical, counted](../../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md). It's also **live on BetterVoting as BV2168** — the same 100 voters, a STAR race *and* an RCV-IRV race: **[results ↗](https://bettervoting.com/6w2gq7/results)**.
 
-```
---- Runoff (Preference) Matrix ---
-Legend: For - Equal Support - Against
-                     |    * Liberal     |   * Moderate    |   Conservative  |
------------------------------------------------------------------------------
-         * Liberal > |       ---        |  45 -  0 - 55   |  51 -  0 - 49   |
-        * Moderate > |   55 -  0 - 45   |      ---        |  57 -  0 - 43   |
-      Conservative > |   49 -  0 - 51   |  43 -  0 - 57   |      ---        |
-
-[Condorcet Winner]
-  Condorcet Winner: Moderate — matches the STAR winner
-
-[Divergence from STAR]
-  STAR                   = Moderate
-  Choose-One (Plurality) = Liberal   (differs from STAR)
-  RCV-IRV                = Liberal   (differs from STAR)
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-```
-
+--8<-- "method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md:report"
 Two things the article doesn't mention:
 
 1. **The moderate is elected by majorities, not by the 12%.** 55 of 100 voters prefer Moderate over Liberal; 57 of 100 prefer Moderate over Conservative. "The moderate with 10–15%" wins *because most voters said so, twice.*

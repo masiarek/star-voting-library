@@ -25,22 +25,7 @@ A garden club of 57 picks the town flower: **Aster**, **Bluebell**, **Clover**.
 
 ## Half 1 — honest ballots elect Clover
 
-```text
-Scoring Round
-   Aster         -- 75 -- First place
-   Clover        -- 72 -- Second place
-   Bluebell      -- 69
- Aster and Clover advance.
-
-Automatic Runoff Round
-   Clover        -- 18 -- First place
-   Aster         -- 15
-   Equal Support -- 24
- Clover wins.
-   Voters with a preference: 33 of 57 (24 Equal Support).
-   Clover 18 (55%) vs Aster 15 (45%); majority = 17.
-```
-
+--8<-- "01_STAR/03_Criteria/favorite_betrayal/cases/cases_pages/bv2206_7mckyg_fbc_honest_tepid_consensus.md:report"
 The pairwise matrix behind it (the engine's full view — note Bluebell's row):
 
 ```text
@@ -61,22 +46,7 @@ The compromise a majority prefers to *everyone* misses the runoff by three point
 
 The nine double-fans see the standings. Notice what they **cannot** do: raise Bluebell. She's already at 5 on their ballots — STAR let them equal-top the compromise for free, and it wasn't enough, because the problem is *Aster's own total* keeping Bluebell out of the runoff. The only move left is scoring their true favorite **lower** — Aster 5 → 4, strictly below Bluebell. That is the definition of favorite betrayal.
 
-```text
-Scoring Round
-   Clover        -- 72 -- First place
-   Bluebell      -- 69 -- Second place
-   Aster         -- 66
- Clover and Bluebell advance.
-
-Automatic Runoff Round
-   Bluebell      -- 33 -- First place
-   Clover        -- 18
-   Equal Support --  6
- Bluebell wins.
-   Voters with a preference: 51 of 57 (6 Equal Support).
-   Bluebell 33 (65%) vs Clover 18 (35%); majority = 26.
-```
-
+--8<-- "01_STAR/03_Criteria/favorite_betrayal/cases/cases_pages/bv2207_b6xrdr_fbc_betrayal_pays.md:report"
 The runoff pairing flips from Aster-vs-Clover to Clover-vs-Bluebell, and the Condorcet winner wins it 33–18. The nine turned their outcome from **Clover (their 0)** into **Bluebell (their 5)** by lowering their favorite. STAR failed the Favorite Betrayal Criterion, exactly as its ❌ on the criteria chart says it can.
 
 ## Why this is a lab specimen, not a strategy

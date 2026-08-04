@@ -63,38 +63,7 @@ Four races on the one electorate, live: **[bettervoting.com/k3fmwv/results](http
 
 The score model tabulates STAR and auto-derives the other three counts (the `[Divergence from STAR]` block):
 
-```
---- Runoff (Preference) Matrix ---
-                    |    * Peltola    |   * Begich     |      Palin     |
-        * Peltola > |       ---       | 84 -  23 -  93 | 96 -  12 -  92 |
-         * Begich > |  93 -  23 -  84 |      ---       |107 -  25 -  68 |
-            Palin > |  92 -  12 -  96 | 68 -  25 - 107 |      ---       |
-
-[Condorcet Winner]
-  Condorcet Winner: Begich — matches the STAR winner
-
-[Divergence from STAR]
-  STAR                   = Begich
-  Choose-One (Plurality) = Peltola   (differs from STAR)
-  RCV-IRV                = Peltola   (differs from STAR)
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
-
-Scoring Round
-   Begich        -- 641 -- First place
-   Peltola       -- 480 -- Second place
-   Palin         -- 451
- Begich and Peltola advance.
-
-Automatic Runoff Round
-   Begich        -- 93 -- First place
-   Peltola       -- 84
-   Equal Support -- 23
- Begich wins.
-   Voters with a preference: 177 of 200 (23 Equal Support).
-   Begich 93 (53%) vs Peltola 84 (47%); majority = 89.
-```
-
+--8<-- "method_comparisons/alaska_2022/cases/cases_pages/bv2213_k3fmwv_alaska_2022.md:report"
 And the RCV-IRV rounds show the squeeze and the exhaustion directly:
 
 ```

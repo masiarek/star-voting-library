@@ -31,24 +31,7 @@ Nine voters, scores 0–5. Only the first column changes between the two runs:
 <details>
 <summary><b>(a) Reticent — Amir wins, 6–3, over Cato</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Amir          -- 24 -- First place
-   Cato          -- 15 -- Second place
-   Bess          -- 13
- Amir and Cato advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Amir          -- 6 -- First place
-   Cato          -- 3
-   Equal Support -- 0
- Amir wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Amir 6 (67%) vs Cato 3 (33%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex10_reticent.md:report"
 With the fans silent below the top, Bess limps in third at 13 and the runoff is Amir vs Cato — **Amir in a walk**. The fans' favorite holds the trophy.
 
 </details>
@@ -63,24 +46,7 @@ The soothing intuition: "your 3 for Bess can't hurt Amir — Amir still has your
 <details>
 <summary><b>(c) Generous — Bess wins, 5–4, over Amir: a later-no-harm failure</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Bess          -- 25 -- First place
-   Amir          -- 24 -- Second place
-   Cato          -- 15
- Bess and Amir advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Bess          -- 5 -- First place
-   Amir          -- 4
-   Equal Support -- 0
- Bess wins.
-   Voters with a preference: 9 of 9 (no Equal Support).
-   Bess 5 (56%) vs Amir 4 (44%); majority = 5.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex10_generous.md:report"
 The twelve honest points lift Bess 13 → 25, past Cato and into the runoff — where the Bess-first pair and the Cato bloc (who score Bess 1 > Amir 0) outvote Amir's fans **5–4**. Adding a *later* (lower) preference cost the fans' *earlier* (higher) one the win: that is precisely a **later-no-harm violation**, and it is a real property of STAR — the fans' 3s changed *who Amir had to face*, exactly the runoff-slot mechanism of [exercise 2](ex02_tenth_ballot.md).
 
 </details>

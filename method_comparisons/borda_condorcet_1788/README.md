@@ -60,7 +60,7 @@ Ranks carry no intensity, so running this ranked profile under STAR means conver
 
 That conversion makes the point sharper rather than weaker: **under a uniform spacing, STAR's scoring round is a Borda count.** So STAR's first round reproduces Borda's answer exactly — Paul first — and then the automatic runoff runs the direct majority contest Condorcet demanded:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Scoring Round
    Paul          -- 37 -- First place       ← Borda's winner
    Peter         -- 32 -- Second place
@@ -87,7 +87,6 @@ Automatic Runoff Round
   Choose-One (Plurality) = Paul   (differs from STAR)
   Approval               = Paul   (differs from STAR)
 ```
-
 **STAR is Borda's scoring step followed by Condorcet's check** — and on Condorcet's own counterexample to Borda, it returns Condorcet's answer. That two-step shape is STAR's [hybrid nature](../../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md) in one election: the reversal is not a malfunction, it is a 238-year-old objection being answered on screen by the [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md).
 
 Want the whole count? See the full LH reports → [`condorcet_1788_star.md`](cases/cases_pages/condorcet_1788_star.md) · [`condorcet_1788_ranked_robin.md`](cases/cases_pages/condorcet_1788_ranked_robin.md).

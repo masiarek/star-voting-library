@@ -14,7 +14,7 @@ Most of the runoff questions below are really the same question. Here's a 10-vot
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/tg4779) · **[results ↗](https://bettervoting.com/tg4779/results)** (BV2182, election `tg4779`). Reader page: [Almond vs Berry — a runoff reversal](../../02_Examples/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md) · run it locally: [`bv2182_tg4779_faq_runoff_reversal.yaml`](../../02_Examples/cases/bv2182_tg4779_faq_runoff_reversal.yaml).
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Count × Almond,Berry,Cocoa
     4 ×      5,    4,    1
     3 ×      0,    5,    2
@@ -35,7 +35,6 @@ Automatic Runoff Round
    Voters with a preference: 9 of 10 (1 Equal Support).
    Almond 6 (67%) vs Berry 3 (33%); majority = 5.
 ```
-
 ---
 
 ## Q: Why bother with the automatic runoff? Why not just elect the highest scorer?

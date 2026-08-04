@@ -47,24 +47,7 @@ First choices after Axl enters: **Alba 3, Axl 2, Brett 4 — Brett wins** with t
 <details>
 <summary><b>(c) Under STAR, the memo dies in the scoring round</b></summary>
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Alba          -- 23 -- First place
-   Axl           -- 22 -- Second place
-   Brett         -- 20
- Alba and Axl advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Alba          -- 3 -- First place
-   Axl           -- 2
-   Equal Support -- 4
- Alba wins.
-   Voters with a preference: 5 of 9 (4 Equal Support).
-   Alba 3 (60%) vs Axl 2 (40%); majority = 3.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex11_spoiler_added.md:report"
 The camp's 4s and 5s pile onto *both* clones — Alba 23, Axl 22, **Brett 20 and third**. The runoff isn't even Alba-vs-Brett: **the camp keeps both finalist slots**, and the election finishes as an intramural Alba-vs-Axl vote, 3–2, with Brett's four voters standing aside as Equal Support (they scored the clones 0–0 — the line `5 of 9 (4 Equal Support)` is [exercise 7](ex07_vanishing_votes.md)'s lesson making a cameo). The memo's premise — "splitting first choices splits *power*" — is false on a ballot where support isn't exclusive.
 
 </details>

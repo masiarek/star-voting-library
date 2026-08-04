@@ -66,19 +66,7 @@ That is a genuine, citable virtue of [Ranked Robin](../../05_Ranked_Robin/01_Lea
 
 **STAR can too — and here it is.** Five ballots, four cities, every ballot using four distinct scores so nothing is a tie-breaking artifact ([full case](../../method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md)):
 
-```text
---- Runoff (Preference) Matrix ---
-                |  * Austin   |   Boston   |   Chicago  | * Denver   |
-----------------------------------------------------------------------
-     * Austin > |     ---     | 4 - 0 - 1  | 2 - 0 - 3  | 2 - 0 - 3  |
-       Boston > |  1 - 0 - 4  |    ---     | 3 - 0 - 2  | 3 - 0 - 2  |
-      Chicago > |  3 - 0 - 2  | 2 - 0 - 3  |    ---     | 3 - 0 - 2  |
-     * Denver > |  3 - 0 - 2  | 2 - 0 - 3  | 2 - 0 - 3  |    ---     |
-
-Scoring Round:  Austin 14 · Denver 11 · Chicago 10 · Boston 9
-Automatic Runoff:  Denver 3 — Austin 2  →  Denver wins.
-```
-
+--8<-- "method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md:report"
 Read the grid for Denver. **Chicago beats Denver** — and Austin, the only city Denver beats, **is also beaten by Chicago**. Chicago does everything Denver does and more, so Denver is covered, and the uncovered set is `{Austin, Boston, Chicago}`. Three of four cities clear the bar. STAR elects the fourth.
 
 Both halves of that, because the repo doesn't get to keep only the flattering one:

@@ -32,21 +32,7 @@ tieBreakType : "random"                       ← the draw seated F (tieBreakOrd
 
 The same profile through the LH Approval engine, which breaks ties by a **published candidate priority order** (A>B>…>G) rather than a random draw:
 
-```
---- Approval Voting (4 winners) ---
- Tabulating 12 ballots (any non-zero score = approval).
-   A -- 8 -- Elected
-   B -- 4 -- Elected
-   C -- 4 -- Elected
-   D -- 2 -- Elected
-   F -- 2
-   E -- 1
-   G -- 1
-  Note: D, F each have 2 approvals and tie for the last seat.
-        Candidate priority order (D > F) broke the tie: D elected, F not elected.
- Winners — Approval Voting (4 winners):  A, B, C, D
-```
-
+--8<-- "04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md:report"
 ## The finding
 
 Both engines agree on the tabulation — `a,b,c` plus a **genuine 2–2 tie for seat 4**. They differ only in *how the tie is broken*: BetterVoting draws at **random** (here → F, the book's committee `W₂ = {a,b,c,f}`), while LH uses a **pre-published priority order** (→ D, the book's `W₁ = {a,b,c,d}`). This is the multi-winner on-screen report of the single-winner random-vs-published-lot theme ([BV `jfk7pd`](../../../01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md)): the *committee* is reproducible only once the tiebreak order is fixed.

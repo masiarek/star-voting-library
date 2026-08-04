@@ -123,19 +123,7 @@ Full report: [`ex15_score_profile`](cases/cases_pages/ex15_score_profile.md).
 
 Read the same 35 ballots pairwise ([`ex15_approval_pairwise`](cases/cases_pages/ex15_approval_pairwise.md) writes each approval as a 5 and each non-approval as a 0, which changes no head-to-head count — only the two-class order matters):
 
-```text
---- Runoff (Preference) Matrix ---
-Legend: For - Equal Support - Against
-                 |      Ada     |  * Blair    |  * Cosmo    |
--------------------------------------------------------------
-           Ada > |     ---      | 7 -  8 - 20 | 8 - 12 - 15 |
-       * Blair > | 20 -  8 -  7 |    ---      |13 - 15 -  7 |
-       * Cosmo > | 15 - 12 -  8 | 7 - 15 - 13 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Blair — matches the STAR winner
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex15_approval_pairwise.md:report"
 Blair beats Ada 20–7 and Cosmo 13–7; Cosmo beats Ada 15–8. **Blair > Cosmo > Ada — exactly the order of the approval totals 28 > 22 > 15.**
 
 Not luck. On a dichotomous profile, "more voters strictly prefer x to y" reduces to **"more voters approve x than approve y"** — so the head-to-head order *is* the approval order, a Condorcet winner is guaranteed to exist, and no cycle is possible. (Approval also coincides with [Borda](../../06_Other/other_ranked_methods/borda.md) on this domain, which is why the result is sometimes stated as *approval voting reconciles Borda and Condorcet*.)

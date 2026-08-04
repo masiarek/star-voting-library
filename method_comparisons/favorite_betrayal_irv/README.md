@@ -55,22 +55,7 @@ Now **Left** is squeezed out, their ballots flow to Center, and **Center wins 21
 
 Score the **same honest preferences** 0–5 (favorite 5, compromise 3, worst 0) — no strategy:
 
-```
-Scoring Round
-   Center  -- 120 -- First place
-   Right   --  80
-   Left    --  72
-Automatic Runoff Round
-   Center  -- 21 -- First place
-   Right   -- 13
- Center wins.
-
-[Divergence from STAR]
-  STAR          = Center
-  RCV-IRV       = Right   (differs from STAR)
-  Ranked Robin (RCV-RR) agrees with STAR — RCV-IRV is the lone outlier.
-```
-
+--8<-- "method_comparisons/favorite_betrayal_irv/cases/cases_pages/bv2227_3xgkck_honest_star.md:report"
 **STAR → Center. Ranked Robin → Center. RCV-IRV → Right.** On the *identical honest preferences*, the two methods that read the whole ballot elect the compromise the electorate actually prefers; only instant-runoff needed the betrayal. Under STAR you score your honest favorite a 5 and your compromise a 3, and the compromise still wins — no games, no regret.
 
 ## The takeaway

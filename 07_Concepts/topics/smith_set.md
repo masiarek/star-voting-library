@@ -30,34 +30,7 @@ One set, several names — the literature is messy: **Smith set** (after mathema
 
 Take the [Ada/Ben/Cara cycle](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/02_cycle_no_condorcet.md) and change one thing: add a fourth candidate, **Dave**, whom every voter ranks last ([`04_smith_set_c4_b7`](../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md), counted by [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)):
 
-```text
---- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
- Tabulating 7 ballots (ranked ballots).
-
-Ballots:
-     3 × Ada > Ben > Cara > Dave
-     2 × Ben > Cara > Ada > Dave
-     2 × Cara > Ada > Ben > Dave
-
-Round-Robin — every pair, head-to-head (For – Against):
-   Ada   beats Ben    5 – 2
-   Cara  beats Ada    4 – 3
-   Ada   beats Dave   7 – 0
-   Ben   beats Cara   5 – 2
-   Ben   beats Dave   7 – 0
-   Cara  beats Dave   7 – 0
-
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ada        2–1–0         2      +9  Ben, Dave
-    2  Ben        2–1–0         2      +7  Cara, Dave
-    3  Cara       2–1–0         2      +5  Ada, Dave
-    4  Dave       0–3–0         0     -21  —
-
-Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others).
-```
-
+--8<-- "05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/04_smith_set_c4_b7.md:report"
 Now run the club-membership check, smallest group first:
 
 1. **`{Ada}`?** Not dominating — Cara beats Ada (4–3). A club member can't be losing to an outsider.

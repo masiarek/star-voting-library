@@ -52,45 +52,7 @@ Both ladders are deterministic on this profile, so the race is freezable — mak
 
 ### STAR — Blue (the runoff the video asked for)
 
-```
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Purple        -- 46 -- First place
-   Blue          -- 44 -- Tied for second place
-   Pink          -- 44 -- Tied for second place
-   Green         -- 38
- Purple advances, but there's a two-way tie for second.
-
-Scoring Round: First tiebreaker
- The candidate preferred in the most head-to-head matchups advances.
-   Blue          -- 10 -- Second place
-   Pink          --  3
-   Equal Support --  7
- Purple and Blue advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Blue          -- 10 -- First place
-   Purple        --  9
-   Equal Support --  1
- Blue wins.
-   Voters with a preference: 19 of 20 (1 Equal Support).
-   Blue 10 (53%) vs Purple 9 (47%); majority = 10.
-
-[Runoff Reversal]
- - Score Round Winner(s) = (Purple)
- - Runoff Round Winner   = (Blue)
-
-[Condorcet Winner]
-  No Condorcet winner (majority cycle: Purple > Green > Pink > Purple)
-
-[Divergence from STAR]
-  STAR                   = Blue
-  Choose-One (Plurality) = Purple   (differs from STAR)
-  RCV-IRV                = Purple   (differs from STAR)
-  Approval               = Pink   (differs from STAR)
-```
-
+--8<-- "method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_star.md:report"
 ### RCV-IRV — Purple (the video's whiteboard rounds)
 
 ```

@@ -108,7 +108,7 @@ So the failure does not depend on a lucky lot draw. **Whichever candidate the cy
 
 STAR is a score ballot **plus** an automatic runoff, so it's half-and-half — and this case pins down exactly which half wins. On the combined 9 ballots:
 
-```
+```text title="Abridged for the lesson — not verbatim engine output"
 Scoring Round
    Ada   -- 29 -- First place     ← the pure Score result: Ada. Consistent. No paradox here.
    Cara  -- 27 -- Second place
@@ -122,7 +122,6 @@ Automatic Runoff Round
 [Condorcet Winner] Cara — matches the STAR winner
 [Divergence from STAR] Choose-One = Ada, Approval = Ada (both differ from STAR)
 ```
-
 STAR's **scoring round elects Ada** — the consistent, additive answer. But STAR's **runoff re-imports the very pairwise flip** that trips the Condorcet methods, and elects **Cara**. So STAR does *not* escape this paradox: it inherits it through the runoff. Saying so plainly is the point — STAR buys a majority-honest final round, and the price is that the final round can side with a merge-created majority against the additive winner. (Pure Score would have kept Ada; STAR's runoff is where consistency gives way.)
 
 Want the whole count? Full LH report → [`cases/cases_tabulated/reinf_combined_c3_b9_star_tabulated.txt`](cases/cases_tabulated/reinf_combined_c3_b9_star_tabulated.txt).

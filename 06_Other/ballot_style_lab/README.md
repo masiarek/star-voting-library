@@ -49,31 +49,7 @@ The multi-winner files follow the house multi-winner options (`show_matrix: fals
 
 Two camps that never touch each other's half of the scale. Look at the Score Distribution: Abby's column is *nothing but* 2s and 3s (all 31 voters!), Bruno's is *nothing but* 5s and 0s — and the totals land 80–80–78:
 
-```
-[Score Distribution] (how many ballots gave each star rating)
-                   Score
-Candidate   5   4   3   2   1   0  | Total   Avg
-Abby        0   0  16  15   0   0  |    78   2.5
-Bruno      16   0   0   0   0  15  |    80   2.6
-Clara       5   8   3   1  12   2  |    80   2.6
-
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Bruno         -- 80 -- First place
-   Clara         -- 80 -- Second place
-   Abby          -- 78
- Bruno and Clara advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   Clara         -- 13 -- First place
-   Bruno         -- 11
-   Equal Support --  7
- Clara wins.
-   Voters with a preference: 24 of 31 (7 Equal Support).
-   Clara 13 (54%) vs Bruno 11 (46%); majority = 13.
-```
-
+--8<-- "06_Other/ballot_style_lab/cases/cases_pages/01_c3_b31_graders-divide.md:report"
 The Scoring Round can't tell a harsh 2 from a gentle enthusiasm — but the Automatic Runoff only asks *which finalist each ballot scored higher*, and on that question the grading cultures cancel out. Full detail (matrix, divergence block, the Condorcet wobble): [the `_tabulated` report](cases/cases_tabulated/01_c3_b31_graders-divide_tabulated.txt).
 
 ## The style menu

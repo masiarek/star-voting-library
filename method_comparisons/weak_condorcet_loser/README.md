@@ -76,25 +76,7 @@ And it gives Ranked Robin a clean guarantee: since RR elects the candidate with 
 
 ### STAR — the tie is the loophole
 
-```
-Scoring Round
-   Ben           -- 18 -- First place
-   Cora          -- 16 -- Second place
-   Ada           -- 15
- Ben and Cora advance.
-
-Automatic Runoff Round
-   Ben           -- 2 -- Tied for first place
-   Cora          -- 2 -- Tied for first place
-   Equal Support -- 1
- There's a two-way tie for first.
-
-Automatic Runoff Round: First tiebreaker
- The highest-scoring candidate wins.
-   Ben           -- 18 -- First place
- Ben wins.
-```
-
+--8<-- "method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md:report"
 Two things had to go wrong together, and both are visible above.
 
 **The Condorcet winner was eliminated in the scoring round.** Ada's 5/5/5/0/0 profile totals 15 — less than either moderate. That part is ordinary STAR behavior and has its own page ([three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md)).

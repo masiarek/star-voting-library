@@ -32,22 +32,7 @@ Ten voters, four candidates, two seats, scores 0–5:
 <details>
 <summary><b>(a) Seat 1 — Asa, with a 6–0 runoff</b></summary>
 
-```text
-Round 1: Scoring Round
-   Asa           -- 30 -- First place
-   Bram          -- 24 -- Second place
-   Cleo          -- 20
-   Dane          -- 16
- Asa and Bram advance.
-
-Round 1: Automatic Runoff Round
-   Asa           -- 6 -- First place
-   Bram          -- 0
-   Equal Support -- 4
- Asa wins.
-   Voters with a preference: 6 of 10 (4 Equal Support).
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md:report"
 Both finalists are north-siders, so the runoff is an intramural affair: all six northerners prefer Asa 5 > 4, and the four southerners — who scored the finalists 0–0 — stand aside as Equal Support ([exercise 7](ex07_vanishing_votes.md)'s lesson again). **Asa takes seat 1.**
 
 </details>
@@ -55,19 +40,7 @@ Both finalists are north-siders, so the runoff is an intramural affair: all six 
 <details>
 <summary><b>(b) Seat 2 — Bram. The board is a sweep</b></summary>
 
-```text
-Round 2: Scoring Round
-   Bram          -- 24 -- First place
-   Cleo          -- 20 -- Second place
-   Dane          -- 16
- Bram and Cleo advance.
-
-Round 2: Automatic Runoff Round
-   Bram          -- 6 -- First place
-   Cleo          -- 4
- Bram wins.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md:report"
 With Asa removed, the north's second choice Bram (24) still outpolls the south's first choice Cleo (20), and the runoff is the neighborhood's raw 6–4 split. **Board: Asa and Bram — the 60% side holds 100% of the seats.** That is Bloc STAR working exactly as specified: every seat answers to the same majority.
 
 </details>

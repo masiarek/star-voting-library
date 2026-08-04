@@ -40,19 +40,7 @@ Almond, Brownie, Cocoa
      4,       5,     0
      4,       5,     0
 ```
-```
-Scoring Round
-   Almond        -- 13 -- First place      <- most stars (everyone rates it high)
-   Brownie       -- 11 -- Second place
-   Cocoa         --  2
- Almond and Brownie advance.
-Automatic Runoff Round
-   Brownie       -- 2 -- First place       <- 2 of 3 voters prefer Brownie
-   Almond        -- 1
-   Equal Support -- 0
- Brownie wins.
-```
-
+--8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md:report"
 Talking point: Almond's 13 is real — it *is* broadly liked. But when each voter must pick between the two finalists, the majority chose Brownie. Stars found the finalists; the runoff picked the winner.
 
 ### Step 2 — the control (same machinery, leader CONFIRMED): [`04`](cases/04_c4_b3_runoff-confirms-leader.yaml)
@@ -65,17 +53,7 @@ Amber, Blue, Coral, Dune
     2,    5,     0,    1
     5,    4,     0,    0
 ```
-```
-Scoring Round
-   Blue          -- 14 -- First place
-   Amber         --  9 -- Second place
- Blue and Amber advance.
-Automatic Runoff Round
-   Blue          -- 2 -- First place
-   Amber         -- 1
- Blue wins.
-```
-
+--8<-- "01_STAR/02_Examples/runoff_overturns_leader/cases/cases_pages/04_c4_b3_runoff-confirms-leader.md:report"
 Talking point: the runoff isn't biased against the leader — it just *checks* the leader. Here Blue leads **and** is preferred, so Blue wins. The reversal only happens when intensity and majority preference point at different candidates.
 
 ### Step 3 — it holds at scale, and it's real

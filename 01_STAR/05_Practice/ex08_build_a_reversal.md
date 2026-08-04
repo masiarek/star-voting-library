@@ -22,24 +22,7 @@
 | **B** | 4 | 5 |
 | **C** | 0 | 1 |
 
-```text
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   B             -- 22 -- First place
-   A             -- 15 -- Second place
-   C             --  2
- B and A advance.
-
-Automatic Runoff Round
- The candidate preferred in the most head-to-head matchups wins.
-   A             -- 3 -- First place
-   B             -- 2
-   Equal Support -- 0
- A wins.
-   Voters with a preference: 5 of 5 (no Equal Support).
-   A 3 (60%) vs B 2 (40%); majority = 3.
-```
-
+--8<-- "01_STAR/05_Practice/cases/cases_pages/ex08_minimal_reversal_3c.md:report"
 B piles up 22 points — every single voter gives B a 4 or 5 — yet a 3-of-5 **majority scores A above B**, so A wins the runoff. The engine prints its `[Runoff Reversal]` block and the standard "not a malfunction" note. (Runnable: [ex08_minimal_reversal_3c.yaml](cases/ex08_minimal_reversal_3c.yaml).)
 
 </details>

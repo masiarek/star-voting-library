@@ -46,67 +46,12 @@ Live results: **[bettervoting.com/mxfmhm/results ↗](https://bettervoting.com/m
 
 Choose-One race ([bv2144_mxfmhm_plurality.yaml](cases/bv2144_mxfmhm_plurality.yaml)):
 
-```
---- Choose-One / Plurality Voting Method (single winner) ---
- Tabulating 7 ballots.
-Count × Ana,Bo,Cal
-    3 ×   1, 0,  0
-    2 ×   0, 1,  0
-    2 ×   0, 0,  1
-
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Ana           -- 3 -- First place
-   Bo            -- 2 -- Tied for second place
-   Cal           -- 2 -- Tied for second place
-
-Automatic Runoff Round
-   Ana           -- 3 -- First place
-   Cal           -- 2
-   Equal Support -- 2
- Ana wins.
-   Voters with a preference: 5 of 7 (2 Equal Support).
-   Ana 3 (60%) vs Cal 2 (40%); majority = 3.
-
-Winner — Choose-One / Plurality Voting Method (single winner)
- Ana
-```
-
+--8<-- "method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2144_mxfmhm_star.md:report"
 (The Bo/Cal tie for the *second finalist slot* runs down LH's tie ladder to the pre-published lot — irrelevant to the winner: Ana beats either finalist. Full ladder in the [tabulated mirror](cases/cases_tabulated/bv2144_mxfmhm_plurality_tabulated.txt).)
 
 STAR race ([bv2144_mxfmhm_star.yaml](cases/bv2144_mxfmhm_star.yaml)):
 
-```
---- STAR Voting Method (single winner) ---
- Tabulating 7 ballots.
-Count × Ana,Bo,Cal
-    3 ×   5, 3,  1
-    2 ×   1, 5,  3
-    2 ×   1, 3,  5
-
-Scoring Round
-   Bo            -- 25 -- First place
-   Ana           -- 19 -- Tied for second place
-   Cal           -- 19 -- Tied for second place
- Bo advances, but there's a two-way tie for second.
-
-Scoring Round: First tiebreaker
- The candidate preferred in the most head-to-head matchups advances.
-   Cal           -- 4 -- Second place
-   Ana           -- 3
- Bo and Cal advance.
-
-Automatic Runoff Round
-   Bo            -- 5 -- First place
-   Cal           -- 2
- Bo wins.
-   Voters with a preference: 7 of 7 (no Equal Support).
-   Bo 5 (71%) vs Cal 2 (29%); majority = 4.
-
-Winner — STAR Voting Method (single winner)
- Bo
-```
-
+--8<-- "method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2144_mxfmhm_star.md:report"
 ## Agreement
 
 | Race | BetterVoting | LH engine | Agree? |

@@ -40,21 +40,7 @@ Her 5 beats the 4, so this ballot is one vote **For Ann over Bob** — even thou
 
 That bottom row **is** the preference matrix. Here it is straight from the LH engine (the [full report](../../01_STAR/02_Examples/cases/cases_tabulated/bv2187_qrw6wb_ann-bob-cal_tabulated.txt) of [`bv2187_qrw6wb_ann-bob-cal.yaml`](../../01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml)):
 
-```text
---- Runoff (Preference) Matrix ---
-Head-to-head / pairwise comparison
-Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ann    |  * Bob    |    Cal    |
------------------------------------------------------
-       * Ann > |    ---     |1 - 0 - 2  |2 - 0 - 1  |
-       * Bob > | 2 - 0 - 1  |   ---     |2 - 0 - 1  |
-         Cal > | 1 - 0 - 2  |1 - 0 - 2  |   ---     |
-
-[Condorcet Winner]
-  Condorcet Winner: Bob — matches the STAR winner
-```
-
+--8<-- "01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md:report"
 Reading it: **Bob beats Ann 2–1 and beats Cal 2–1**, so Bob wins every head-to-head — the [Condorcet winner](condorcet/). And look at the Bob-vs-Ann cell: **2 – 0 – 1 is exactly STAR's Automatic Runoff** (Bob preferred on 2 ballots, Ann on 1). The runoff isn't a separate computation — it's **one cell of this matrix**.
 
 If a ballot puts a pair **equal** — the same score, or both blank — that ballot lands in the middle **Equal Support** bucket for that pair (none happen to occur here). No verdict is ever lost: every ballot counts For, Against, or Equal Support on every pair, which is what makes the matrix self-reconciling in an audit.

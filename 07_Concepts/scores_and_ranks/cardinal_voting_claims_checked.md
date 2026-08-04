@@ -55,33 +55,7 @@ We built it and ran it. **The claim holds, and the threshold is tight.**
 
 100 voters. **Alma** is the 51% bloc's champion, **Bruno** the 49% bloc's, **Celia** is nobody's favorite and everybody's good outcome — with **3 of Alma's 51** honestly rating Alma and Celia equally.
 
-```
-                 |    * Alma    |    Bruno    |  * Celia    |
--------------------------------------------------------------
-        * Alma > |     ---      |51 -  0 - 49 |48 -  3 - 49 |
-         Bruno > | 49 -  0 - 51 |    ---      |49 -  0 - 51 |
-       * Celia > | 49 -  3 - 48 |51 -  0 - 49 |    ---      |
-
-[Condorcet Winner]
-  Condorcet Winner: Celia — matches the STAR winner
-
-[Divergence from STAR]
-  STAR                   = Celia
-  Choose-One (Plurality) = Alma   (differs from STAR)
-  RCV-IRV                = Alma   (differs from STAR)
-
-Scoring Round
-   Celia         -- 403 -- First place
-   Alma          -- 255 -- Second place
-   Bruno         -- 245
-
-Automatic Runoff Round
-   Celia         -- 49 -- First place
-   Alma          -- 48
-   Equal Support --  3
- Celia wins.
-```
-
+--8<-- "01_STAR/03_Criteria/majority_criterion/cases/cases_pages/majority_vs_consensus_51_49.md:report"
 **Alma is max-scored by an outright majority**, so [Choose-One](../topics/plurality.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) — both of which satisfy the majority criterion — elect Alma, IRV in the first round. **Score, STAR and [Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md) all elect Celia.**
 
 Drop the indifferent voters from three to two and Alma–Celia becomes a **49–49 pairwise tie**, Celia is no longer the Condorcet winner, and Ranked Robin flips to Alma. So the crossover sits just above 2 voters in 100 — **above 3.92% of the 51-voter majority bloc**, which is what "4% or more of the majority" claims. Verified.

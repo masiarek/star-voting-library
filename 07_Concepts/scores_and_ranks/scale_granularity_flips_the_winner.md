@@ -20,26 +20,7 @@ The example is BetterVoting.org's **Reweighted Range Voting sample election** �
 
 Mapping the source 0–9 scores to 0–5 with `round(x·5/9)`, the LH engine reports:
 
-```
-Scoring Round
- The two highest-scoring candidates advance to the next round.
-   Orange1       -- 31 -- First place
-   Orange5       -- 30 -- Second place
-   Orange3       -- 29
-   Orange4       -- 29
-   Orange2       -- 25
-   ... (Yellow and Purple candidates trail)
- Orange1 and Orange5 advance.
-
-Automatic Runoff Round
-   Orange5       -- 4 -- First place
-   Orange1       -- 3
-   Equal Support -- 6
- Orange5 wins.
-   Voters with a preference: 7 of 13 (6 Equal Support).
-   Orange5 4 (57%) vs Orange1 3 (43%); majority = 4.
-```
-
+--8<-- "03_STAR_PR/02_Examples/cases/cases_pages/rrv_sample_c15_b13_three-parties.md:report"
 Note how tight the score round is: **Orange1 31, Orange5 30, Orange3 29, Orange4 29** — four co-partisans inside a two-point band. Orange5 edges into the second finalist slot, then wins the runoff 4–3.
 
 ## On the original 0–9 scale → **Orange1**

@@ -46,17 +46,7 @@ With only two candidates, a `5,5` ballot *is* flat (every candidate equal), so B
 
 ## What the LH engine prints
 
-```
- Tabulating 5 ballots. Note: 1 of 5 ballots is marked as an abstention.
- Automatic Runoff Round
-   A             -- 2 -- First place
-   B             -- 1
-   Equal Support -- 2
- A wins.
-   Voters with a preference: 3 of 5 (2 Equal Support).
-   A 2 (67%) vs B 1 (33%); majority = 2.
-```
-
+--8<-- "01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/small_abstention_c2_b5.md:report"
 and in the saved `_tabulated` copy, the same as a funnel that adds up:
 
 ```

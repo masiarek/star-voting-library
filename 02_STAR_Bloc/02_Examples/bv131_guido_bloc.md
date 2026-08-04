@@ -37,7 +37,46 @@ runoff_random                  winner: Cand2          ← coin toss
 
 Pinning the lot order to BV's drawn sequence `[Cand2, Cand1, Cand3]` reproduces Cand2. Every deterministic rung ties; the lot decides; the engine flags it:
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv131_guido_bloc.md:report"
+```text title="Abridged for the lesson — not verbatim engine output"
+--- Bloc STAR Voting Method (2 winners) ---
+ Tabulating 3 ballots.
+
+[Score Distribution]
+       5  4  3  2  1  0  | Total
+Cand1  1  0  0  0  1  1  |   6
+Cand2  1  0  0  0  1  1  |   6
+Cand3  0  0  0  2  1  0  |   5
+
+Round 1: Scoring Round
+   Cand1  -- 6 -- First place
+   Cand2  -- 6 -- Second place
+ Cand1 and Cand2 advance.
+Round 1: Automatic Runoff Round
+   Cand1  -- 1 -- Tied for first place
+   Cand2  -- 1 -- Tied for first place
+   Equal Support -- 1              ← runoff tie
+Round 1: First tiebreaker (highest score)
+   Cand1  -- 6 ;  Cand2  -- 6      ← score tie
+Round 1: Second tiebreaker (most 5s)
+   Cand1  -- 1 ;  Cand2  -- 1      ← five-star tie
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Cand1', 'Cand2']  →  Resolved: ['Cand2']   (lot [Cand2, Cand1, Cand3])
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie ... the LOT order chose the winner.
+
+Round 2: Scoring Round
+   Cand1  -- 6 -- First place
+   Cand3  -- 5 -- Second place
+Round 2: Automatic Runoff Round
+   Cand3  -- 2 -- First place
+   Cand1  -- 1
+ Cand3 wins.
+
+Winners — Bloc STAR Voting Method (2 winners)
+ Cand2
+ Cand3
+```
 Full audit copy: [`_main_tabulated/bv131_guido_bloc_tabulated.txt`](cases/cases_tabulated/bv131_guido_bloc_tabulated.txt).
 
 ## Two findings

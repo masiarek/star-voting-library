@@ -26,26 +26,7 @@ Each round breaks its tie with the *other* round's yardstick, because the measur
 
 Here is the part that has no single-winner analogue. Three candidates, two seats, five ballots. Nadia and Omar tie at 15 points; Priya trails at 12. The seat-1 runoff is a dead heat and *every* deterministic rung ties behind it:
 
-```text
-Round 1: Automatic Runoff Round
-   Nadia         -- 2 -- Tied for first place
-   Omar          -- 2 -- Tied for first place
-   Equal Support -- 1
- There's a two-way tie for first.
-
-Round 1: Automatic Runoff Round: First tiebreaker
- The highest-scoring candidate wins.
-   Nadia         -- 15 -- Tied for first place
-   Omar          -- 15 -- Tied for first place
- There's still a two-way tie for first.
-
-Round 1: Automatic Runoff Round: Second tiebreaker
- The candidate with the most votes of score 5 wins.
-   Nadia         -- 3 -- Tied for first place
-   Omar          -- 3 -- Tied for first place
- There's still a two-way tie for first.
-```
-
+--8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bloc_lot_path_dependence_b_c3_b5.md:report"
 So the lot decides seat 1. Run the same five ballots under the two possible lot orders:
 
 | Published lot | Seat 1 | Seat 2 | **Council** |

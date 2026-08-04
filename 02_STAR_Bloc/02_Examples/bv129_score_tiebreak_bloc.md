@@ -31,7 +31,43 @@ Elected **Carmen, Andre**. Round-1 (seat 2) `tieBreakType: "score"`. The result 
 
 ## View 2 — the LH report (inline)
 
---8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv129_score_tiebreak_bloc.md:report"
+```text title="Abridged for the lesson — not verbatim engine output"
+--- Bloc STAR Voting Method (2 winners) ---
+ Tabulating 5 ballots.
+
+[Score Distribution]
+        5  4  3  2  1  0  | Total
+Andre   0  2  3  0  0  0  |   17
+Blake   0  3  1  0  1  0  |   16
+Carmen  5  0  0  0  0  0  |   25
+
+Round 1: Scoring Round
+   Carmen  -- 25 -- First place
+   Andre   -- 17 -- Second place
+   Blake   -- 16
+ Carmen and Andre advance.
+Round 1: Automatic Runoff Round
+   Carmen  -- 5 -- First place
+   Andre   -- 0
+ Carmen wins.   (5 of 5, no Equal Support)
+
+Round 2: Scoring Round
+   Andre   -- 17 -- First place
+   Blake   -- 16 -- Second place
+ Andre and Blake advance.
+Round 2: Automatic Runoff Round
+   Andre   -- 1 -- Tied for first place
+   Blake   -- 1 -- Tied for first place
+   Equal Support -- 3               ← runoff tie (1-1, 3 no-preference)
+Round 2: First tiebreaker (highest score)
+   Andre  -- 17 -- First place      ← score rung breaks it: Andre (17) > Blake (16)
+   Blake  -- 16
+ Andre wins.
+
+Winners — Bloc STAR Voting Method (2 winners)
+ Carmen
+ Andre
+```
 Full audit copy: [`_main_tabulated/bv129_score_tiebreak_bloc_tabulated.txt`](cases/cases_tabulated/bv129_score_tiebreak_bloc_tabulated.txt).
 
 ## The #1086 method-name issue — and why it's slippery

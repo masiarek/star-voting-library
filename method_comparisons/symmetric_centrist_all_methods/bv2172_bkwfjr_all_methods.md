@@ -31,20 +31,7 @@ The four whole-ballot methods elect the candidate a majority actually prefers; t
 
 ## LH engine — the STAR race (the divergence, on one screen)
 
-```
-[Condorcet Winner]
-  Condorcet Winner: Casey — matches the STAR winner
-
-[Divergence from STAR]
-  STAR                   = Casey
-  Choose-One (Plurality) = Avery   (differs from STAR)
-  RCV-IRV                = Avery   (differs from STAR)
-  Note: Ranked Robin (RCV-RR) agrees with STAR — RCV-IRV is the lone outlier.
-
-Scoring Round:  Casey 312 · Avery 294 · Blake 294   (Casey advances; poles tie for 2nd)
-Automatic Runoff:  Casey 53 vs Avery/Blake 47        (Casey wins)
-```
-
+--8<-- "method_comparisons/symmetric_centrist_all_methods/cases/cases_pages/bv2172_bkwfjr_star.md:report"
 (LH's RCV-IRV breaks the 50–50 tie with a stable seed → Avery; BetterVoting breaks it at random. Same profile, same conclusion — only the coin lands differently.)
 
 ## Why 47/47/3/3?

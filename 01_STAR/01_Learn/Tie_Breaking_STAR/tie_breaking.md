@@ -81,46 +81,7 @@ Runnable cases (all verified in the test suite): [the dead-rung tie-break cases]
 
 Two ballots, six flavors. This is the canonical "it tied twice" case — and, importantly, **the lot order is never reached**; deterministic tests settle everything. It is now a **live, BV-backed case:** **[Ice cream ladder — BV2180, `fp62p2`](../../03_Criteria/tie_break_ladder/bv2180_fp62p2_ice_cream_ladder.md)** ([results ↗](https://bettervoting.com/fp62p2/results)) — LH and BetterVoting agree, precisely because no random rung is reached.
 
-```
-Ballots:
-Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
-        4,             5,            4,      1,         2,    -
-        1,             0,            0,      4,         5,    4
-
-Tabulation:
-        
-[Scoring Round]  The two highest-scoring candidates advance.
-   Strawberry     -- 7 -- First place
-   Chocolate      -- 5 -- Tied for second place
-   Chocolate Chip -- 5 -- Tied for second place
-   Vanilla        -- 5 -- Tied for second place
-   Fudge Brownie  -- 4
-   Mango          -- 4
-   → Strawberry advances; three-way tie for second.
-
-[Scoring Round: First tiebreaker]  Most head-to-head matchups (PAIRWISE).
-   Chocolate      -- 2
-   Chocolate Chip -- 2
-   Vanilla        -- 2
-   → still a three-way tie.
-
-[Scoring Round: Second tiebreaker]  Most score-5 votes (FIVE-STAR).
-   Chocolate Chip -- 1 -- Second place
-   Chocolate      -- 0
-   Vanilla        -- 0
-   → Chocolate Chip advances. Finalists: Strawberry, Chocolate Chip.
-
-[Automatic Runoff Round]  Preferred head-to-head wins.
-   Chocolate Chip -- 1 -- Tied for first
-   Strawberry     -- 1 -- Tied for first
-   → two-way tie for first.
-
-[Automatic Runoff Round: First tiebreaker]  Highest total score (SCORE).
-   Strawberry     -- 7 -- First place
-   Chocolate Chip -- 5
-   → Strawberry wins.
-```
-
+--8<-- "01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md:report"
 So this election tied **twice** — a three-way tie for the second finalist slot, then a two-way tie in the runoff — and resolved both *without* the lot: five-star settled the first, total score settled the second. The file's `lot_numbers:` was present (carried over from BetterVoting) but **never consulted**. That is the normal case.
 
 The lot only decides when pairwise **and** score **and** five-star are *all* tied — e.g. a perfect symmetric election.

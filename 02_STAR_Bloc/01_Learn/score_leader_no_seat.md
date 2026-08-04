@@ -29,22 +29,7 @@ Count × Ava,Bianca,Cedric,Deegan,Eli
 
 **Ava is the compromise.** 98 of the 100 voters score her a 3 — above the pair they zeroed out, below their own two. Nobody's favorite, almost nobody's enemy. She leads the scoring round by 63 points:
 
-```text
-[Bloc STAR: Round 1: Scoring Round]
-   Ava           -- 294 -- First place
-   Bianca        -- 231 -- Second place
-   Cedric        -- 228
-   Deegan        -- 227
-   Eli           -- 224
- Ava and Bianca advance.
-
-[Bloc STAR: Round 1: Automatic Runoff Round]
-   Bianca        -- 51 -- First place
-   Ava           -- 49
-   Equal Support --  0
- Bianca wins.
-```
-
+--8<-- "02_STAR_Bloc/02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md:report"
 Then it happens again. And again. And again:
 
 | Seat | Scoring round | Runoff | Seat goes to |
