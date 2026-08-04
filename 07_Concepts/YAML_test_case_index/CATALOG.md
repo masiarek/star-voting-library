@@ -294,7 +294,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | monotonicity_star_before | Monotonicity — STAR counterpart (BEFORE — X wins) | 1 | single-race | 34 | STAR | LH-only |
 | omr_opposition_decides | Ordered majority rule — the opposition decides the A | 1 | single-race | 100 | IRV | LH-only |
 | options_examples | Display-options reference — every reporting toggle ( | 1 | single-race | 100 | STAR | LH-only |
-| over_50_percent_star_c3_b3 | Over 50% — single-winner STAR, a candidate with ever | 1 | single-race | 3 | STAR | LH-only |
 | p3_manip_compromise_rr | P3 manipulated — the mild version: three adjacent sw | 1 | single-race | 7 | RankedRobin | LH-only |
 | p3_manip_reversal_rr | P3 manipulated — Zwicker's complete reversal makes D | 1 | single-race | 7 | RankedRobin | LH-only |
 | p3_manip_star | P3 manipulated — two voters bury their 4th choice an | 1 | single-race | 7 | STAR | LH-only |
@@ -402,6 +401,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | vqyqkr | Tennessee capital — Ranked Robin (RR/Condorcet = Nas | 1 | single-race | 100 | RankedRobin | BV |
 | w9f4vd | BV2236 — Bullet Storm — a bullet-voting electorate a | 1 | single-race | 33 | STAR | BV |
 | xgkw3w | Runoff_05 - Reversal with Equal Support | 1 | single-race | 5 | STAR | BV |
+| xw23m9 | BV2263 — Over 50% — every point on every ballot | 1 | single-race | 3 | STAR | BV |
 | y3tvxm | BV2136 — Village Council by SNTV — a concentrated mi | 1 | single-race | 9 | Plurality | BV |
 | yhxy7q | BV130 - original steering committee (Bloc STAR, k=3; | 1 | single-race | 9 | STAR | BV |
 | yx9447 | Runoff_02 The atom — smallest runoff reversal | 1 | single-race | 3 | STAR | BV |
@@ -483,8 +483,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 237 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| BV | 227 | 24b623, 26khr3, 2gvwr9, 2hqmrd |
+| LH-only | 236 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| BV | 228 | 24b623, 26khr3, 2gvwr9, 2hqmrd |
 | BV (no yaml) | 78 | 2jrfpg, 2p33qq, 3grpbb, 3xgkck |
 | LH-only (exception) | 2 | copeland_half_credit_decides, dead_heat_lot_tiebreak |
 

@@ -4733,7 +4733,51 @@ BLOC_SASS_100_SPEC = {
 }
 
 
-ELECTIONS: list = [BLOC_SASS_100_SPEC]   # BV1835 — 100 voters, 4 seats, score leader shut out
+# BV2263 — the ceiling case, and the single-seat twin of BV1815 (fk38pk). One
+# candidate holds every point on every ballot, so score share, ballot share and
+# decided-voter share all read 100% — the one election where "over 50%" means the
+# same thing on every denominator, which is what makes it the control for reading
+# any other result. Backs 01_STAR/02_Examples/cases/over_50_percent_star_c3_b3.yaml
+# (LH-only until now; the file keeps its descriptive name, since its page URL is
+# already published in bettervoting#1471 and a rename would 404 it).
+OVER_50_PERCENT_SPEC = {
+    "test_id": "BV2263",
+    "title": "Over 50% — every point on every ballot",
+    "description": (
+        "Three voters, three candidates, and one candidate who takes everything on offer: "
+        "A is scored 5 by all three voters, one voter gives B a single point, and nobody "
+        "scores C at all. Scoring round: A 15 of a possible 15, B 1, C 0, so A and B "
+        "advance. Automatic runoff: all three ballots prefer A, 3-0, with nobody at Equal "
+        "Support. "
+        "The election exists to be the CONTROL, not a surprise. A STAR result can be read "
+        "against three different denominators — share of the maximum possible score, share "
+        "of all ballots in the runoff, and share of the voters who expressed a preference "
+        "between the two finalists — and this is the one case where all three give the same "
+        "answer: 100%. Anywhere else they come apart, and the moment a ballot rates the two "
+        "finalists equally they must. "
+        "Note also what did NOT happen: the count did not stop early. A held every point on "
+        "every ballot and was still put through the automatic runoff, because the scoring "
+        "round only ever picks the two finalists — it never elects anyone. "
+        "The multi-seat twin is BV1815 (bettervoting.com/fk38pk/results), where a candidate "
+        "with 12 of 15 points wins the first of two seats and the second goes to a candidate "
+        "on 2 points, after a runoff that ends in a tie. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.html"),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["A", "B", "C"],
+    "ballots": [[5, 0, 0], [5, 1, 0], [5, 0, 0]],
+    "enable_write_in": False,
+    "expected": (
+        "STAR -> A. Scoring round A 15 (average 5.0), B 1, C 0; automatic runoff A 3 - B 0 "
+        "with 0 Equal Support (3 of 3 voters express a preference; majority = 2). All three "
+        "denominators read 100%. No tie, no rung of the ladder consulted. Test ID BV2263."),
+}
+
+
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [OVER_50_PERCENT_SPEC]   # BV2263 — the over-50% ceiling case (created -> xw23m9)
+# Previously: [BLOC_SASS_100_SPEC]   # BV1835 — 100 voters, 4 seats, score leader shut out
 # Previously: [RANDOM_TIEBREAK_NINE_SPEC]   # BV2262 — nine-way dead heat, scale check
 # Previously: [RANDOM_TIEBREAK_RECORDED_SPEC]   # BV2261 — random tiebreak is recorded (created -> y2fbpc)
 # Previously: [MOST_WINS_NOT_CONDORCET_SPEC]   # BV2260 — most wins ≠ Condorcet winner (created -> gg9qh9)

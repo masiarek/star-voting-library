@@ -32,7 +32,7 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 **Majorities & denominators.** What "over 50%" turns out to mean once you ask *of what*.
 
-- [Over 50% — every point on every ballot](cases/cases_pages/over_50_percent_star_c3_b3.md) — the ceiling case: score share, ballot share and decided-voter share all agree, and the runoff still runs. Its two-seat twin, where the same dominance buys exactly one seat: [Over 50% — what a landslide actually buys](../../02_STAR_Bloc/01_Learn/over_50_percent.md)
+- [Over 50% — every point on every ballot](cases/cases_pages/over_50_percent_star_c3_b3.md) · **[live ↗](https://bettervoting.com/xw23m9/results)** — the ceiling case: score share, ballot share and decided-voter share all agree, and the runoff still runs. Its two-seat twin, where the same dominance buys exactly one seat: [Over 50% — what a landslide actually buys](../../02_STAR_Bloc/01_Learn/over_50_percent.md)
 
 **Larger fields & the runoff.** Where the scoring round has to choose two finalists.
 

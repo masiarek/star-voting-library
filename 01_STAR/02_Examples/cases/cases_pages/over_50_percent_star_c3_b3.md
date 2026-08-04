@@ -3,11 +3,13 @@ search:
   exclude: true
 ---
 
-# Over 50% — single-winner STAR, a candidate with every point on every ballot
+# BV2263 — Over 50%: single-winner STAR, a candidate with every point on every ballot
 
 *Generated from [`over_50_percent_star_c3_b3.yaml`](../over_50_percent_star_c3_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** A
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xw23m9) · **[results ↗](https://bettervoting.com/xw23m9/results)** (election `xw23m9` · test `BV2263`).
 
 ## Scenario
 

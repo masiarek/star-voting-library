@@ -1,0 +1,323 @@
+{
+  "Election": {
+    "election_id": "xw23m9",
+    "title": "BV2263 — Over 50% — every point on every ballot",
+    "description": "Three voters, three candidates, and one candidate who takes everything on offer: A is scored 5 by all three voters, one voter gives B a single point, and nobody scores C at all. Scoring round: A 15 of a possible 15, B 1, C 0, so A and B advance. Automatic runoff: all three ballots prefer A, 3-0, with nobody at Equal Support. The election exists to be the CONTROL, not a surprise. A STAR result can be read against three different denominators — share of the maximum possible score, share of all ballots in the runoff, and share of the voters who expressed a preference between the two finalists — and this is the one case where all three give the same answer: 100%. Anywhere else they come apart, and the moment a ballot rates the two finalists equally they must. Note also what did NOT happen: the count did not stop early. A held every point on every ballot and was still put through the automatic runoff, because the scoring round only ever picks the two finalists — it never elects anyone. The multi-seat twin is BV1815 (bettervoting.com/fk38pk/results), where a candidate with 12 of 15 points wins the first of two seats and the second goes to a candidate on 2 points, after a runoff that ends in a tie. Full lesson & tabulation: https://masiarek.github.io/star-voting-library/01_STAR/02_Examples/cases/cases_pages/over_50_percent_star_c3_b3.html",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2263 — Over 50% — every point on every ballot",
+        "race_id": "da39daa1-2a40-4734-b320-78d6b0851fec",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+            "candidate_name": "A"
+          },
+          {
+            "candidate_id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+            "candidate_name": "B"
+          },
+          {
+            "candidate_id": "73bb0508-960a-4aea-98b0-45b569296a34",
+            "candidate_name": "C"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-08-04T12:22:20.960Z",
+    "update_date": "1785846140960",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-ww93vxjd",
+      "election_id": "xw23m9",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "da39daa1-2a40-4734-b320-78d6b0851fec",
+          "scores": [
+            {
+              "candidate_id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+              "score": 5
+            },
+            {
+              "candidate_id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+              "score": 1
+            },
+            {
+              "candidate_id": "73bb0508-960a-4aea-98b0-45b569296a34",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-2twhjr6f",
+      "election_id": "xw23m9",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "da39daa1-2a40-4734-b320-78d6b0851fec",
+          "scores": [
+            {
+              "candidate_id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+              "score": 5
+            },
+            {
+              "candidate_id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+              "score": 0
+            },
+            {
+              "candidate_id": "73bb0508-960a-4aea-98b0-45b569296a34",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-79x2djqc",
+      "election_id": "xw23m9",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "da39daa1-2a40-4734-b320-78d6b0851fec",
+          "scores": [
+            {
+              "candidate_id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+              "score": 5
+            },
+            {
+              "candidate_id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+              "score": 0
+            },
+            {
+              "candidate_id": "73bb0508-960a-4aea-98b0-45b569296a34",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+          "name": "A",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "f1cfa798-bfa7-4882-8dc3-423f24353012": 3,
+            "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+            "73bb0508-960a-4aea-98b0-45b569296a34": 3
+          },
+          "winsAgainst": {
+            "f1cfa798-bfa7-4882-8dc3-423f24353012": true,
+            "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+            "73bb0508-960a-4aea-98b0-45b569296a34": true
+          },
+          "score": 15,
+          "fiveStarCount": 3
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+          "name": "B",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "f1cfa798-bfa7-4882-8dc3-423f24353012": 0,
+            "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+            "73bb0508-960a-4aea-98b0-45b569296a34": 1
+          },
+          "winsAgainst": {
+            "f1cfa798-bfa7-4882-8dc3-423f24353012": false,
+            "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+            "73bb0508-960a-4aea-98b0-45b569296a34": true
+          },
+          "score": 1,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "73bb0508-960a-4aea-98b0-45b569296a34",
+          "name": "C",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "f1cfa798-bfa7-4882-8dc3-423f24353012": 0,
+            "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+            "73bb0508-960a-4aea-98b0-45b569296a34": 0
+          },
+          "winsAgainst": {
+            "f1cfa798-bfa7-4882-8dc3-423f24353012": false,
+            "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+            "73bb0508-960a-4aea-98b0-45b569296a34": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+              "name": "A",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "f1cfa798-bfa7-4882-8dc3-423f24353012": 3,
+                "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+                "73bb0508-960a-4aea-98b0-45b569296a34": 3
+              },
+              "winsAgainst": {
+                "f1cfa798-bfa7-4882-8dc3-423f24353012": true,
+                "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+                "73bb0508-960a-4aea-98b0-45b569296a34": true
+              },
+              "score": 15,
+              "fiveStarCount": 3
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+              "name": "B",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "f1cfa798-bfa7-4882-8dc3-423f24353012": 0,
+                "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+                "73bb0508-960a-4aea-98b0-45b569296a34": 1
+              },
+              "winsAgainst": {
+                "f1cfa798-bfa7-4882-8dc3-423f24353012": false,
+                "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+                "73bb0508-960a-4aea-98b0-45b569296a34": true
+              },
+              "score": 1,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "A",
+                "B"
+              ],
+              "stars": [
+                "15",
+                "1"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "A",
+              "runner_up": "B",
+              "winner_votes": 3,
+              "runner_up_votes": 0,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "7ade807c-e8a7-4e91-b97d-76c30059838f",
+            "name": "A",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "f1cfa798-bfa7-4882-8dc3-423f24353012": 3,
+              "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+              "73bb0508-960a-4aea-98b0-45b569296a34": 3
+            },
+            "winsAgainst": {
+              "f1cfa798-bfa7-4882-8dc3-423f24353012": true,
+              "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+              "73bb0508-960a-4aea-98b0-45b569296a34": true
+            },
+            "score": 15,
+            "fiveStarCount": 3
+          },
+          {
+            "id": "f1cfa798-bfa7-4882-8dc3-423f24353012",
+            "name": "B",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "f1cfa798-bfa7-4882-8dc3-423f24353012": 0,
+              "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+              "73bb0508-960a-4aea-98b0-45b569296a34": 1
+            },
+            "winsAgainst": {
+              "f1cfa798-bfa7-4882-8dc3-423f24353012": false,
+              "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+              "73bb0508-960a-4aea-98b0-45b569296a34": true
+            },
+            "score": 1,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "73bb0508-960a-4aea-98b0-45b569296a34",
+            "name": "C",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "f1cfa798-bfa7-4882-8dc3-423f24353012": 0,
+              "7ade807c-e8a7-4e91-b97d-76c30059838f": 0,
+              "73bb0508-960a-4aea-98b0-45b569296a34": 0
+            },
+            "winsAgainst": {
+              "f1cfa798-bfa7-4882-8dc3-423f24353012": false,
+              "7ade807c-e8a7-4e91-b97d-76c30059838f": false,
+              "73bb0508-960a-4aea-98b0-45b569296a34": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 3
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "f1cfa798-bfa7-4882-8dc3-423f24353012",
+        "7ade807c-e8a7-4e91-b97d-76c30059838f",
+        "73bb0508-960a-4aea-98b0-45b569296a34"
+      ]
+    }
+  ]
+}

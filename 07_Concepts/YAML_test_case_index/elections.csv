@@ -278,7 +278,6 @@ LH:monotonicity_star_after,Monotonicity — STAR counterpart (AFTER — X still 
 LH:monotonicity_star_before,Monotonicity — STAR counterpart (BEFORE — X wins),1,single-race,34,STAR,LH-only
 LH:omr_opposition_decides,Ordered majority rule — the opposition decides the A-vs-B race (Toby Pereira's counterexample),1,single-race,100,IRV,LH-only
 LH:options_examples,Display-options reference — every reporting toggle (STAR),1,single-race,100,STAR,LH-only
-LH:over_50_percent_star_c3_b3,"Over 50% — single-winner STAR, a candidate with every point on every ballot",1,single-race,3,STAR,LH-only
 LH:p3_manip_compromise_rr,"P3 manipulated — the mild version: three adjacent swaps, no burial, same result",1,single-race,7,RankedRobin,LH-only
 LH:p3_manip_reversal_rr,P3 manipulated — Zwicker's complete reversal makes Dublin a 4-0 Condorcet winner,1,single-race,7,RankedRobin,LH-only
 LH:p3_manip_star,P3 manipulated — two voters bury their 4th choice and STAR elects their favourite,1,single-race,7,STAR,LH-only
@@ -386,6 +385,7 @@ vb3xv2,BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score,1
 vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
 w9f4vd,BV2236 — Bullet Storm — a bullet-voting electorate and the few who spread,1,single-race,33,STAR,BV
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
+xw23m9,BV2263 — Over 50% — every point on every ballot,1,single-race,3,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
 yx9447,Runoff_02 The atom — smallest runoff reversal,1,single-race,3,STAR,BV

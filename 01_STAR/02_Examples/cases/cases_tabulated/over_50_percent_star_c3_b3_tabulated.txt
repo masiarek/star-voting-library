@@ -3,7 +3,17 @@ SOURCE FILE:     over_50_percent_star_c3_b3.yaml
 TABULATED FILE:  over_50_percent_star_c3_b3_tabulated.txt
 ======================================================================
 
-election_title: "Over 50% — single-winner STAR, a candidate with every point on every ballot"
+election_title: "BV2263 — Over 50%: single-winner STAR, a candidate with every point on every ballot"
+
+election_description: |-
+  Live on BetterVoting (BV2263, election xw23m9).
+  Results: https://bettervoting.com/xw23m9/results
+  BV's STAR tally agrees with LH: winner A, scores 15 / 1 / 0, runoff 3-0,
+  nAbstentions 0, nTallyVotes 3, tieBreakType "none" (no rung consulted).
+
+bv_test_id: BV2263
+bv_election_id: xw23m9
+bv_results_url: https://bettervoting.com/xw23m9/results
 
 scenario_description: |-
   The ceiling case, and the control for reading every other STAR result: what a
@@ -60,7 +70,7 @@ expected_winners:
 TABULATION RESULTS
 ======================================================================
 
-=== Over 50% — single-winner STAR, a candidate with every point on every ballot ===
+=== BV2263 — Over 50%: single-winner STAR, a candidate with every point on every ballot ===
   The ceiling case, and the control for reading every other STAR result: what a
   landslide looks like when it is as large as a landslide can get.
 
