@@ -39,9 +39,11 @@ The LH-only **[dead-heat case](../03_Criteria/rr_tiebreaks/dead_heat_lot_tiebrea
 
 That's why the dead-heat case has **no BetterVoting election**: BV's answer here would be an accident of the seed rather than a consequence of the ballots, so there'd be nothing to *teach* from it. It documents the **LH** ladder specifically. (BetterVoting would agree Ada and Ben are co-leaders; it just wouldn't choose between them *on the evidence of the votes*.) If you want to see what BV records when it does land on that rung, [BV2261](../03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md) is the case built to show it.
 
-## Where they diverge — live (BV2176)
+## Where they diverge — live (BV2176, and the bench version BV2270)
 
 The **[Post-it RCV example (BV2176, `p8dp28`)](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md)** is the first **live** BetterVoting election to land on the divergence — a clean 2-way tie whose head-to-head is decisive, so *both* ladders stay deterministic and simply disagree. (The same race runs live a second time inside the seven-method sweep [BV2177 `v8r66y`](../../method_comparisons/postit_rcv_example/bv2177_v8r66y_seven_methods.md); and the companion [BV2178 `8kg698`](../../method_comparisons/postit_rcv_example/bv2178_8kg698_switch_made_real.md) shows how knife-edge the tie is — two flipped ballots dissolve the cycle into a clean Condorcet winner and both engines snap back to agreement.) Green and Blue each go 2–1 inside a genuine cycle. BetterVoting's rung 2 (head-to-head between the two tied) elects **Green**, who beats Blue 7–4 — confirmed on the live results page and freezable. LH's rung 2 (total margin) elects **Blue** (+5 vs Green's +4). Same ballots, same Copeland tie, two published rules, two winners — `pref_voting`'s independent Copeland reports the leader set {Blue, Green}, and each engine tie-broke inside it consistently with its own ladder.
+
+**[BV2270 `8h4bvh`](../03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md) is the same divergence built deliberately, and stripped to the bone** — four candidates, nine ballots, six matchups you can check by hand. Alder and Birch both finish on Copeland 2; BV's rung 2 elects **Alder** (who beat Birch 5–4), LH's elects **Birch** (margin +3 to Alder's +1), and `pref_voting` again returns the leader set and declines to choose. Use BV2176 when you want the divergence as it actually turned up; use BV2270 when you want to show someone the mechanism in a minute. (BV2270 was minted for an unrelated BetterVoting *display* bug — its results page stars the wrong candidate, [bettervoting#1480](https://github.com/Equal-Vote/bettervoting/issues/1480) — so read its winner off the heading, not off the star.)
 
 ## Practical guidance
 
@@ -76,6 +78,7 @@ Both lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop.
 | [BV2176 — Post-it RCV example](../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md) | RankedRobin | 2-way tie, decisive head-to-head: **Green (BV) vs Blue (LH)** | both deterministic — the ladder divergence, live |
 | [BV2261 — the tiebreak is recorded](../03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md) | RankedRobin ×2 | 3-way tie twice (by draws, then by cycle) → Anika both times | BV's `perm` replayed as LH's lot: winner **and full order** match; `pref_voting` returns the leader set |
 | [BV2262 — nine-way dead heat](../03_Criteria/rr_tiebreaks/bv2262_2gvwr9_nine_way_dead_heat.md) | RankedRobin | 9 candidates all 4–4–0, margin +0 → Boris (6th in list order) | the scale check: nine-deep `perm`, LH matches all nine positions, shuffle independently recomputed, `pref_voting` consistent |
+| [BV2270 — rung 2, on a bench](../03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md) | RankedRobin | 2-way tie, decisive head-to-head: **Alder (BV) vs Birch (LH)** | the same divergence as BV2176, built minimal — 4 candidates, 9 ballots, no lot on either side |
 
 ## Related
 

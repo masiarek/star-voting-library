@@ -50,9 +50,9 @@ Alder and Birch tie at the top on two wins each. Nothing in the Copeland column 
 
 Both are reasonable readings of "strongest". Total margin asks how a candidate did against the **whole field**; head-to-head asks the narrower question of what happened in the one match that is actually between the two of them. Birch's +3 is built on a 6–3 thrashing of Cedar — a win Alder never had the chance to match — while Alder's claim is that when the two tied candidates met, Alder won.
 
-This is a sharper divergence than [the dead-heat case](dead_heat_lot_tiebreak.md), where the ladders differ but both engines still fall through to a rung of last resort. Here **neither engine reaches for a lot**. Both stop on rung 2 with a computed answer, and the answers differ.
+This is a sharper divergence than [the dead-heat case](dead_heat_lot_tiebreak.md), the other case in this folder where the ladders part: there they differ but both engines still fall through to a rung of last resort, which is why it stays LH-only — its winner turns on a draw that can't be derived from the ballots. Here **neither engine reaches for a lot**. Both stop on rung 2 with a computed answer, and the answers differ.
 
-That also makes the case unusual for this folder in a second way: it is BV-backed *and* divergent. The dead-heat case stays LH-only precisely because its winner turns on a draw that can't be derived from the ballots. Nothing here turns on a draw.
+**This is not the first live case of that** — [BV2176, the Post-it RCV example](../../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md), got there first, with Green (BV) against Blue (LH) inside a genuine three-way cycle. What BV2270 adds is that it is **purpose-built and minimal**: four candidates, nine ballots, six matchups you can check by hand in a minute, and no other moving part. BV2176 is the divergence found in the wild; this is the divergence on a bench.
 
 ## What the neutral third engine says
 
