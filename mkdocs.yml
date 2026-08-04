@@ -311,7 +311,11 @@ plugins:
         00_start_here/topics/strategic_voting.md: 07_Concepts/topics/strategic_voting.md
         00_start_here/topics/summability/README.md: 07_Concepts/topics/summability/README.md
         00_start_here/topics/tabulation_star_vs_irv.md: 07_Concepts/topics/tabulation_star_vs_irv.md
-        00_start_here/topics/the_pipeline.md: 07_Concepts/topics/the_pipeline.md
+        # Retired: the page said the same five stages as YAML_library/README.md's
+        # "How it works". Its content was folded in there (diagram included) and
+        # the page deleted, so — redirects not chaining — this target skips the
+        # intermediate hop and names the surviving page directly.
+        00_start_here/topics/the_pipeline.md: YAML_library/README.md
         00_start_here/topics/three_two_one_voting.md: 07_Concepts/topics/three_two_one_voting.md
         00_start_here/topics/ties/README.md: 07_Concepts/topics/ties/README.md
         00_start_here/topics/ties/tiebreaking_star_vs_irv.md: 07_Concepts/topics/ties/tiebreaking_star_vs_irv.md
@@ -855,6 +859,12 @@ plugins:
         07_Concepts/about_this_repo/why_yaml_test_cases.md: YAML_library/why_yaml_test_cases.md
         07_Concepts/about_this_repo/YAML_authoring_template.md: YAML_library/YAML_authoring_template.md
         07_Concepts/about_this_repo/ORGANIZATION.md: YAML_library/ORGANIZATION.md
+
+        # --- And the topics hub's pipeline page, retired into the same README.
+        # It walked the identical five stages (author → validate → tabulate →
+        # verify → publish); keeping both meant two pages to update whenever the
+        # tooling changed, which is the drift this library exists to avoid.
+        07_Concepts/topics/the_pipeline.md: YAML_library/README.md
 
 markdown_extensions:
   - admonition

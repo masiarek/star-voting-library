@@ -76,11 +76,21 @@ That optional half follows one rule — **store rich, display clean**. Keep the 
 
 ## How it works
 
-Five stages. The same file carries through all of them.
+Five stages. The same file carries through all of them:
+
+```
+ author ──▶ validate ──▶ tabulate ──▶ verify ──▶ publish
+  │                         │                       │
+  │                         ├─▶ on-screen report    └─▶ a browsable <name>.md page
+  │                         └─▶ _tabulated.txt          (the reader-facing surface)
+  │                             (the full audit record)
+  ├─ hand-write the YAML, or
+  └─ import a BetterVoting JSON export (converter → canonical YAML)
+```
 
 ### 1. Author, or import
 
-Write the file by hand from the [template](YAML_authoring_template.md) — or import a real election. [`1_positive/01_convert_json_yaml.py`](1_positive/01_convert_json_yaml.py) turns a BetterVoting JSON export into a canonical YAML: real candidate names, aligned columns, the election's official lot order, and an embedded answer key. That's how a live public election becomes a permanent, re-countable case here. → [BetterVoting and the engine](../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md)
+Write the file by hand from the [template](YAML_authoring_template.md) — or import a real election. [`1_positive/01_convert_json_yaml.py`](1_positive/01_convert_json_yaml.py) turns a BetterVoting JSON export into a canonical YAML: real candidate names as IDs, aligned columns, the election's official tie-break (lot) order, and an embedded answer key. That's how a live public election becomes a permanent, re-countable case here. → [BetterVoting and the engine](../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md)
 
 ### 2. Validate — the engine is the validator
 
@@ -103,7 +113,7 @@ Every one of those messages is pinned by a deliberately-broken fixture in `2_neg
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml
 ```
 
-The engine prints an annotated, round-by-round count — the Scoring Round picks two finalists, the Automatic Runoff decides between them:
+No flag says which method to use twice: `voting_method:` alone dispatches STAR (single / Bloc / PR), Approval, Ranked Robin, or RCV-IRV, and ranked ballots route themselves. The engine prints an annotated, round-by-round count — here the Scoring Round picks two finalists and the Automatic Runoff decides between them:
 
 --8<-- "01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md:report"
 
@@ -113,7 +123,9 @@ Notice what the file never had to state: the totals, the finalists, the head-to-
 
 ### 4. Verify
 
-The same run writes a full-detail **`_tabulated.txt`** sibling — the audit copy, which ignores `options:` and always prints everything, headed by the name of the source file it came from. Meanwhile `expected_winners:` is the enforced answer key: the pytest suite discovers every file that has one and fails if the engine elects somebody else. A regression can't sneak in quietly.
+The same run writes a full-detail **`_tabulated.txt`** sibling — the audit copy, which ignores `options:` and always prints everything, headed by the name of the source file it came from.
+
+Meanwhile the file's own answer key is enforced: **`expected_winners:`** in a hand-written case, an **`expected_results:`** block (per-round detail) in a BetterVoting import. A pytest suite discovers every file that has one and fails if the engine elects somebody else — alongside tests for the negative fixtures, the JSON→YAML conversion, the tie-break ladder, Ranked Robin, and non-vacuous self-checks that prove the winner check isn't rubber-stamping. It's wired into a pre-commit hook, so a regression can't land quietly.
 
 ```bash
 cd STARVote_LH_tabulation_engine && pytest tests/test_single_winner_positive.py tests/test_negative_validation.py
@@ -128,7 +140,11 @@ Everything a reader sees is **generated from the YAML** and never hand-maintaine
 - the browsable **`.md` page** in `cases_pages/` (the reader-facing surface, built by [`build_yaml_pages.py`](../STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py)),
 - the sortable **[registry and catalog](../07_Concepts/YAML_test_case_index/README.md)** of every case in the library.
 
-Because they're generated, they can't drift from the source. Edit the YAML, regenerate, done. That's the whole point: one file that **teaches**, **runs**, **verifies**, and **audits**.
+Because they're generated, they can't drift from the source — and a pytest fails the suite if one does. Edit the YAML, regenerate, done.
+
+> **House rule — link the `.md` page, not the raw `.yaml`.** The generated page is the reader-first surface: lead with it in tables, navs, and cross-references, and link a `.yaml` only when the *runnable source* is genuinely the point (a "run this file" command). See [CLAUDE.md](../CLAUDE.md).
+
+None of this is a black box that prints a winner. The point of the whole chain is that the count stays **legible and reproducible** — one file that **teaches**, **runs**, **verifies**, and **audits**.
 
 ---
 
