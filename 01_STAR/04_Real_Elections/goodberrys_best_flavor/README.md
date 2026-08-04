@@ -38,18 +38,18 @@ That second step is what a plain star-rating poll lacks: the winner is the flavo
 
 ## Paper ballots
 
-`goodberrys_best_flavor_2026_ballots.pdf` — 30 print-ready STAR ballots, one per page, each with the 0–5 bubble grid and one big *Scan to vote online* QR pointing at `6tthfv` (the results URL prints as text in the footer). Built PDFs are generated artifacts (`*_ballots.pdf` is gitignored), so regenerate it from the frozen export with [`bv_ballot_sheet.py`](../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py):
+`goodberrys_best_flavor_2026_ballots.pdf` — 30 print-ready STAR ballots, one per page, each with the 0–5 bubble grid and one big *Scan to vote online* QR pointing at `6tthfv` (the results URL prints as text in the footer). Built PDFs are generated artifacts (`*_ballots.pdf` is gitignored), so regenerate it from the frozen export with [`bv_ballot_sheet.py`](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py):
 
 ```bash
-.venv/bin/python STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py --bv-export 06_Other/goodberrys_best_flavor/cases/goodberrys_best_flavor_2026_bv_export.json --logo STARVote_LH_tabulation_engine/tools_adam/assets/NC_STAR_Logo1.jpg --notice "UNOFFICIAL FLAVOR POLL — COUNTED WITH STAR VOTING." --cover --verify-bv --out 06_Other/goodberrys_best_flavor/goodberrys_best_flavor_2026_ballots.pdf
+.venv/bin/python STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py --bv-export 01_STAR/04_Real_Elections/goodberrys_best_flavor/cases/goodberrys_best_flavor_2026_bv_export.json --logo STARVote_LH_tabulation_engine/tools_adam/assets/NC_STAR_Logo1.jpg --notice "UNOFFICIAL FLAVOR POLL — COUNTED WITH STAR VOTING." --cover --verify-bv --out 01_STAR/04_Real_Elections/goodberrys_best_flavor/goodberrys_best_flavor_2026_ballots.pdf
 ```
 
-`--cover` prints a **preamble page** ahead of the 30 ballots. It matters here: anyone who scans the ballot's QR lands on BetterVoting and reads the full election description before voting, so without a cover the paper voter and the phone voter get briefed differently. The cover carries that same text plus *how to vote* and *how it is counted*, and says in its footer that it is not a ballot so it can't be hand-counted by mistake. Change `--copies` for a bigger or smaller table (default 30). Paper and platform stay linked: the QR voters and the bubble-fillers are casting the same ballot into the same count. The full workflow (print → vote → hand-count → compare to BetterVoting) is in [running a paper-ballot demo](../../01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md); the by-hand count is in [count STAR by hand](../../01_STAR/01_Learn/hands_on/count_star_by_hand.md).
+`--cover` prints a **preamble page** ahead of the 30 ballots. It matters here: anyone who scans the ballot's QR lands on BetterVoting and reads the full election description before voting, so without a cover the paper voter and the phone voter get briefed differently. The cover carries that same text plus *how to vote* and *how it is counted*, and says in its footer that it is not a ballot so it can't be hand-counted by mistake. Change `--copies` for a bigger or smaller table (default 30). Paper and platform stay linked: the QR voters and the bubble-fillers are casting the same ballot into the same count. The full workflow (print → vote → hand-count → compare to BetterVoting) is in [running a paper-ballot demo](../../01_Learn/hands_on/running_a_paper_ballot_demo.md); the by-hand count is in [count STAR by hand](../../01_Learn/hands_on/count_star_by_hand.md).
 
 ## What to watch for when the votes come in
 
-- **The score leader and the winner may differ.** With ten flavors, a polarizing one (Key Lime, Jamocha) can pile up 5s from its fans and 0s from everyone else, lead the scoring round, and then lose the runoff to a broadly-liked flavor. That reversal is the whole point of the "AR" in STAR — see [the runoff-reversal case](../../01_STAR/02_Examples/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md).
-- **Bullet voting costs you.** A ballot that scores one flavor 5 and leaves the rest blank has no say at all in a runoff between two other flavors — see [the bullet-vote case](../../01_STAR/02_Examples/cases/cases_pages/03a_c3_b3_style-bullet-vote.md).
+- **The score leader and the winner may differ.** With ten flavors, a polarizing one (Key Lime, Jamocha) can pile up 5s from its fans and 0s from everyone else, lead the scoring round, and then lose the runoff to a broadly-liked flavor. That reversal is the whole point of the "AR" in STAR — see [the runoff-reversal case](../../02_Examples/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md).
+- **Bullet voting costs you.** A ballot that scores one flavor 5 and leaves the rest blank has no say at all in a runoff between two other flavors — see [the bullet-vote case](../../02_Examples/cases/cases_pages/03a_c3_b3_style-bullet-vote.md).
 - **Ten candidates, no vote-splitting.** Unlike choose-one, adding a tenth flavor similar to the ninth cannot split their support, which is exactly why a long menu is safe on one ballot.
 
 ## Files
@@ -62,5 +62,5 @@ That second step is what a plain star-rating poll lacks: the winner is the flavo
 Re-freeze the export once real votes are in, and the results are tabulatable in this repo's engine:
 
 ```bash
-uv run STARVote_LH_tabulation_engine/tools_adam/fetch_bv_export.py 6tthfv -o 06_Other/goodberrys_best_flavor/cases/goodberrys_best_flavor_2026_bv_export.json --force
+uv run STARVote_LH_tabulation_engine/tools_adam/fetch_bv_export.py 6tthfv -o 01_STAR/04_Real_Elections/goodberrys_best_flavor/cases/goodberrys_best_flavor_2026_bv_export.json --force
 ```

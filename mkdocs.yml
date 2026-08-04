@@ -127,6 +127,10 @@ plugins:
         00_start_here/Range_Voting/range_voting.md: 06_Other/Range/concepts/range_voting.md
         00_start_here/other_ranked_methods/agenda_voting.md: 06_Other/other_ranked_methods/agenda_voting.md
         00_start_here/other_ranked_methods/borda.md: 06_Other/other_ranked_methods/borda.md
+        # Goodberry's is a real STAR election, not an "other method" — it was
+        # filed under 06_Other only because that is where it was minted from.
+        # Moved 2026-08-04 to the STAR real-elections shelf.
+        06_Other/goodberrys_best_flavor/README.md: 01_STAR/04_Real_Elections/goodberrys_best_flavor/README.md
         00_start_here/proportional_representation/README.md: 03_STAR_PR/01_Learn/README.md
         00_start_here/proportional_representation/STAR_PR/README.md: 03_STAR_PR/01_Learn/STAR_PR/README.md
         00_start_here/proportional_representation/STAR_PR/the_math_behind_proportional_star.md: 03_STAR_PR/01_Learn/STAR_PR/the_math_behind_proportional_star.md

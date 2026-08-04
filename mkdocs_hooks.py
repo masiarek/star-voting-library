@@ -138,6 +138,13 @@ PHRASES = {
     "split cycle": "Split Cycle",
     "hands on": "Hands-on",
     "postit": "Post-it",
+    # `06_Other` sits in the sidebar among five folders named for a method, and
+    # alone among them it names a leftover instead — "Other" reads as a junk
+    # drawer rather than "the other methods". The folder cannot be renamed:
+    # a published BetterVoting description points at 06_Other/Plurality and
+    # cannot be edited. Keyed on the number so the word "other" is left alone
+    # everywhere else (`other_ranked_methods` must stay as it is).
+    "06 other": "06 Other methods",
 }
 
 # Acronyms and proper nouns that folder names spell in lowercase. Whole words

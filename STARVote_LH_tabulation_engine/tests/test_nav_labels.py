@@ -74,6 +74,11 @@ def test_bucket_labels_match_the_generator():
         ("IRV OUTLIER RR WITH STAR", "RCV-IRV is the outlier (center squeeze)"),
         # Election IDs are not acronyms: bv2138 must survive intact.
         ("No condorcet bv2138", "No Condorcet bv2138"),
+        # A folder that cannot be renamed (a published BV description points
+        # into it), relabelled in place so it reads as a method shelf.
+        ("06 Other", "06 Other methods"),
+        # ...and the shelf inside it keeps its own name.
+        ("Other ranked methods", "Other ranked methods"),
         # Already correct, and must stay untouched.
         ("01 STAR", "01 STAR"),
         ("Cases pages", "Cases pages"),
