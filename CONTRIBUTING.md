@@ -27,6 +27,13 @@ git config core.hooksPath STARVote_LH_tabulation_engine/tools_adam/scripts/git-h
    uv run python STARVote_LH_tabulation_engine/tools_adam/scripts/regen_all.py
    ```
 
+   On a checkout you haven't edited, `regen_all.py` is a **no-op** — it should
+   leave `git status` clean. Anything it reports is either drift someone forgot
+   to commit or a bug in a generator; either way, don't commit around it. The
+   generated CSVs are stored **LF**, per `.gitattributes`, so every builder that
+   writes one passes `lineterminator="\n"` — Python's `csv` module defaults to
+   RFC 4180 CRLF, which git would then flag on every rebuild forever.
+
 3. **Follow the house conventions** — terminology, naming, options defaults,
    and the one-door-per-method rule are all in [CLAUDE.md](CLAUDE.md) (it
    doubles as the standing guidance for the repo's AI tooling; the conventions
