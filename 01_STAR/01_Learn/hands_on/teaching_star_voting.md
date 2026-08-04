@@ -4,9 +4,13 @@
 
 **Level: reference (a teaching aid).**
 
-## The one rule that matters most: problem before mechanics
+## Where to start depends on who's in the room
 
-The single biggest mistake is opening with the ballot ("so you score everyone 0 to 5…"). People don't care *how* until they feel *why*. **Lead with the failure of the way we vote now**, let them feel it, *then* introduce STAR as the fix. The proven arc:
+There are two orders. The dividing line is **not** how smart or informed the audience is — it's whether they showed up already wanting the answer.
+
+### Problem first — for people who didn't choose to be there
+
+A rally, a city council, a club meeting, a skeptical uncle over dinner. Nobody there asked for a lecture on voting methods, so until they *feel* a problem, ballot mechanics are trivia. Lead with the failure of the way we vote now, let it land, *then* produce STAR as the fix:
 
 1. **A problem they already know** — vote-splitting. The [team-lunch story](../STAR_start_here.md#so-why-not-just-pick-one): everyone's happy with Pizza, but "pick one" splits the vote and buries it. *Now* they want a fix.
 2. **STAR in one breath** — score 0–5 (like Yelp), then the top two have an automatic runoff.
@@ -14,9 +18,17 @@ The single biggest mistake is opening with the ballot ("so you score everyone 0 
 4. **The ballot** — show a real one; "there's no wrong way to fill it out."
 5. **Why two rounds** — the one idea worth pausing on (scores find the contenders; the runoff picks the winner).
 
+### Mechanics first — for people who opted in
+
+A class that signed up for it, someone who asked you how STAR works, a reader who clicked "learn about STAR." They arrived carrying the *why* already. Open with a plurality lesson and you've answered a question they didn't ask — spending your best minute on somebody else's method while they wait for yours. Give them STAR immediately (ballot → two rounds → one worked count), and save the Choose-One contrast for the end, where it lands as a payoff rather than a grievance. That's exactly how the learner-facing [STAR — start here](../STAR_start_here.md) is built, so use it as a **handout, not as a script** for the arc above.
+
+### Choosing, in the moment
+
+Mixed room, genuinely unsure? Ask them: *"Show of hands — who's ever watched a vote get split?"* Hands up means they own the problem; go problem-first. Blank looks mean they came for the mechanics; give them the mechanics.
+
 Everything else (criteria, comparisons, theory) is optional depth for the audience that wants it.
 
-**Why the written page is ordered the other way.** [STAR — start here](../STAR_start_here.md) puts STAR first and saves the Choose-One contrast for the end — deliberately, and it is *not* a contradiction of the rule above. A room full of people didn't ask to be there; you have to earn their attention with a problem. A reader who clicked "learn about STAR" already opted in and wants the *what*, immediately — open with a plurality lesson and you've answered a question they didn't ask. Same material, same contrast, opposite order, because the audiences arrive differently. Use the arc above when you're the one talking; use the page as a handout, not a script.
+**A caution that applies to both orders.** Opening with "the way you've always voted is broken" tells people their lifelong ballot was foolish, and frames STAR as a grievance product. STAR is unusual among reforms in being pleasant on its own terms — Yelp stars, then a final — so it doesn't need an enemy to be attractive. Even in the problem-first arc, the target is the *ballot*, never the voters who used it.
 
 ## Terms to make sure you cover (and how to say them)
 
@@ -98,7 +110,7 @@ The conceptual walkthrough is [Count a STAR election by hand](count_star_by_hand
 
 ## Audience quick-adaptations
 
-- **Classroom / kids** → the lunch, a live hand-count, colored-paper "candidates." Pure mechanics, no theory.
-- **Voters / general public** → the arc + [ways to vote](../voting_styles/README.md) ("no wrong ballot") + a live poll.
+- **Classroom / kids** → *mechanics first* (they're already signed up): the lunch, a live hand-count, colored-paper "candidates." Pure mechanics, no theory.
+- **Voters / general public** → *problem first*: the five-step arc + [ways to vote](../voting_styles/README.md) ("no wrong ballot") + a live poll.
 - **Officials / administrators** → [summability](../properties_and_limits/STAR_summability.md), [hand-count](count_star_by_hand.md), audits; skip the criteria theory.
 - **Skeptics / debaters / RCV advocates** → [honest limits](../properties_and_limits/STAR_honest_limits.md), [criteria at a glance](../../../07_Concepts/topics/criteria_at_a_glance.md), [STAR vs RCV-IRV](../../../07_Concepts/topics/rcv_irv_vs_star.md). Concede limits first — it's disarming.
