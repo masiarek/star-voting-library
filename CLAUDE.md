@@ -399,6 +399,21 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
     illustrations*** (invented candidates with no backing case file) — a "full report" link there
     is a dead end. Prefer the generated page over pasting the long report inline on a teaching
     page, which buries the lesson (e.g. the runoff page is *about* the reversal, not the matrix).
+  - **Long reports get EMBEDDED, never pasted — `pymdownx.snippets` is on.** Write
+    `--8<-- "<repo-relative path>"` inside the fence (paths resolve from the repo root, and
+    `title="…"` on the fence names the file). The file is read at build time, so the page
+    tracks the engine; a pasted copy does not, and 28 companion pages proved it by sitting
+    on output the engine had stopped emitting. `check_repo_hygiene.py::check_pasted_reports`
+    (gated by `tests/test_md_links.py`) fails on a new ≥8-line engine-shaped fence that is
+    neither an embed nor marked ```text abridged. **Deliberate compressions are legitimate**
+    — mark the fence `abridged` rather than converting them; `bv750_tie_breaking_bloc.md`'s
+    `a 15 ; b 15 ; c 15  ← three-way tie` is the lesson, not stale output.
+- **Companion pages carry a generated `case-meta` block.** A case with both a generated page
+  (`<set>/cases/cases_pages/<stem>.md`) and a hand-authored companion (`<set>/<stem>.md`) gets a
+  method / seats / expected-winners line plus a full-count link under the companion's H1,
+  written by `build_yaml_pages.py` between `<!-- case-meta:start -->` / `<!-- case-meta:end -->`.
+  **Don't hand-edit inside the markers or restate those facts alongside them** — change the YAML
+  and rerun the generator. `tests/test_yaml_pages_current.py` fails when a block drifts.
 - **Cross-reference slides by title** via `07_Concepts/LINKS.md`
   short names — never page numbers or `#slide=id…` deep links.
 - **Case-file naming.** **LH-only** cases (no BV election) → descriptive name, no bvid
