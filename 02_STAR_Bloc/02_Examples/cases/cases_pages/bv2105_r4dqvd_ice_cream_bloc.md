@@ -50,7 +50,7 @@ bettervoting#1056 and call it fixed. Both were wrong. #1056 is a DIFFERENT
 defect on the same demo election — a 401 blocking JSON/CSV download and Race
 Details, introduced by the Editable Ballots work (#979) and correctly closed
 via #1058. The two share only the BV2105 test-document name. The counting
-defect described above has never been filed.
+defect described above is a separate bug, filed 2026-08-04 as bettervoting#1478.
 
 The behavior is unchanged a year on. The re-check ran on 2026-08-04: the same
 four ballots, cast fresh through the live API so today's tabulator counts them,

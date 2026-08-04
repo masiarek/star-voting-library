@@ -1,7 +1,9 @@
 <!--
 Ready-to-paste GitHub issue for  github.com/Equal-Vote/bettervoting
 
-STATUS: DRAFT — not filed. Awaiting Adam's go-ahead.
+STATUS: FILED as Equal-Vote/bettervoting#1478 (2026-08-04).
+  https://github.com/Equal-Vote/bettervoting/issues/1478
+This file is the source/archive copy.
 
 Links point at the public masiarek/star-voting-library repo so the ballots,
 the frozen exports, and the independent tabulation are all inspectable.

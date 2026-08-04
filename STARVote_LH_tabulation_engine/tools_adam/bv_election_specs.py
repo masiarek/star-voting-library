@@ -4782,7 +4782,8 @@ OVER_50_PERCENT_SPEC = {
 # ballots. That election reported nTallyVotes 2 / nAbstentions 2: it filed the
 # partial ballot "Vanilla 1, rest blank" as an abstention alongside the genuinely
 # blank one, and Vanilla's score came out as an average over 2 ballots instead of
-# 3. That counting defect has NEVER been filed upstream. (It is not #1056 —
+# 3. That counting defect is filed as bettervoting#1478 (2026-08-04). (It is
+# NOT #1056 —
 # the library mis-cited it for a year; #1056 is a demo-election 401 on ballot
 # download, closed via #1058. They share only the BV2105 test-doc name.)
 #
@@ -4848,7 +4849,7 @@ ICE_CREAM_ABSTENTION_RECHECK_SPEC = {
         "shape BV2105 recorded in 2025, where BV displayed that as `score: 3` (it floors the "
         "average: Strawberry's 9/2 displayed as 4). LH counts 4 ballots, 1 abstention, "
         "Vanilla total 8. "
-        "Test ID BV2105-r2; re-run of BV2105 (r4dqvd). The counting defect is unfiled."),
+        "Test ID BV2105-r2; re-run of BV2105 (r4dqvd); evidence for bettervoting#1478."),
 }
 
 

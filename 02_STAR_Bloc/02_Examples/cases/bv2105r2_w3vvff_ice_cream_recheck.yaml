@@ -27,7 +27,8 @@ scenario_description: |-
   to bettervoting#1056. Wrong: #1056 is a DIFFERENT defect on the same demo
   election — a 401 blocking JSON/CSV download and Race Details, introduced by the
   Editable Ballots work (#979) and correctly closed via #1058. They share only
-  the BV2105 test-document name. The counting defect has never been filed.
+  the BV2105 test-document name. The counting defect is a separate bug, filed
+  2026-08-04 as bettervoting#1478.
 
   THE RESULT: THE MISCOUNT STILL REPRODUCES. Ballots cast through the live API on
   2026-08-04 come back nTallyVotes 2 / nAbstentions 2 — identical counts to the
