@@ -128,9 +128,13 @@ Confirmed live on [BV2261 `y2fbpc`](../../../../05_Ranked_Robin/03_Criteria/rr_t
 (9 candidates, a nine-deep order). Note what the seed inputs imply: the order is **recorded but
 not derivable** — it depends on the ballot *count* and the race id, never on how anyone voted.
 
-> This is exactly the surface area of open issue **#1417** — because the seed tracks the live
-> ballot count, the tie-break lot order isn't fixed until polls close. The issue proposes
-> deterministic **pre-published** lot numbers instead.
+> This is exactly the surface area of
+> **[#1417](https://github.com/Equal-Vote/bettervoting/issues/1417)** (closed as completed,
+> 2026-07-15) — because the seed tracks the live ballot count, the tie-break lot order isn't
+> fixed until polls close. What that issue got was the *recording* half (the order now ships in
+> the export, via [#1371](https://github.com/Equal-Vote/bettervoting/issues/1371)); the
+> **pre-published** lot numbers it asked for are still open as
+> [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063).
 
 ## Tests
 
