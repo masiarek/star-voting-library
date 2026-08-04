@@ -98,4 +98,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [rr_blank_is_last_c4_b3](rr_blank_is_last_c4_b3.md)
+More cases in this set: [ranked_robin_intro_c3_b7](ranked_robin_intro_c3_b7.md) · [rr_blank_is_last_c4_b3](rr_blank_is_last_c4_b3.md)

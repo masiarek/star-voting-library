@@ -111,4 +111,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [ranked_robin_consensus_center](ranked_robin_consensus_center.md)
+More cases in this set: [ranked_robin_consensus_center](ranked_robin_consensus_center.md) · [ranked_robin_intro_c3_b7](ranked_robin_intro_c3_b7.md)

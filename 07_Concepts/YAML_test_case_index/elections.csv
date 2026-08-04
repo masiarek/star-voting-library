@@ -89,6 +89,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 4h89vj,B15 - Basic - 2 candidates - Plurality - Abstain,1,single-race,12,Plurality,BV
 4jmgrd,BV2234 — The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp,1,single-race,31,STAR,BV
 6hv7jf,BV1570 - deactivate selection - plurality voting - CSV download,1,single-race,3,Plurality,BV
+6m3gxq,BV2268 — Two-seat board by Bloc STAR: a fourth candidate wins nothing and changes who does,1,single-race,7,STAR,BV
 6tthfv,"BV2252 — Goodberry's Frozen Custard, Cary NC — Best Flavor 2026",1,single-race,0,STAR,BV
 6xhfp8,BV11 - Valid Ballot - Full and Equal Support (2 Candidates),1,single-race,3,STAR,BV
 74pbyg,"BV2237 — Noise Soup — weak factions, cross-winds, flat-liners and static",1,single-race,47,STAR,BV
@@ -286,6 +287,7 @@ LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,si
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
 LH:range_sullivan_score_c4_b10,Range / Score Voting — Sullivan's Example 5.2 (0–10 scale),1,single-race,10,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only
+LH:ranked_robin_intro_c3_b7,Ranked Robin (RCV-RR) — the smallest round-robin that shows the report,1,single-race,7,RankedRobin,LH-only
 LH:reinf_combined_ben_c3_b9_rr,"Reinforcement — Combined, Ben branch (9 voters; both halves say Ben, the whole says Ada)",1,single-race,9,RankedRobin,LH-only
 LH:reinf_combined_cara_c3_b9_rr,"Reinforcement — Combined, Cara branch (9 voters; both halves say Cara, the whole says Ben)",1,single-race,9,RankedRobin,LH-only
 LH:reinf_north_c3_b6_rr,"Reinforcement — North district alone (6 voters, a perfect cycle)",1,single-race,6,RankedRobin,LH-only
@@ -362,10 +364,13 @@ gg9qh9,BV2260 — Winning the most head-to-head matchups is not the same as bein
 gmfv4c,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",1,single-race,81,STAR,BV
 gvtg2h,"BV2203 — The Transfer Machine, flag probe — same STV ballots, write-in key omitted",1,single-race,9,STV,BV
 gyv2qt,BV2239 — Narrow Bands — a paint-swatch election scored in slivers of the scale,1,single-race,24,STAR,BV
+j3hqvb,BV2264 — Two-seat board by Bloc STAR: the council six voters elect,1,single-race,6,STAR,BV
 jfk7pd,"The BV recipe (the ""crazy"" scenario)",1,single-race,2,STAR,BV
 jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-race,12,Approval,BV
+k7pfqt,BV2266 — Two-seat board by Bloc STAR: the candidate who beats every rival is seated second,1,single-race,7,STAR,BV
 kbh3d9,Guido example - bloc STAR,1,single-race,3,STAR,BV
 my82v6,"01a_c2_b2 — two candidates, two ballots (Chocolate/Vanilla)",1,single-race,2,STAR,BV
+my9jd9,"BV2267 — Two-seat board by Bloc STAR: three candidates, before a fourth runs",1,single-race,7,STAR,BV
 pet,What Makes the Best Pet?,1,single-race,461,STAR,BV
 pmrq4q,"BV2245 — The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone)",1,single-race,36,STAR_PR,BV
 q2rkfm,"BV2257 — Choose-One lunch vote: five coworkers, one box each, and a 2-2 tie",1,single-race,5,Plurality,BV
@@ -379,6 +384,7 @@ td7jfy,"BV2238 — Does the squeeze survive noise? Two poles, one consensus midd
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
 tfm64p,"BV2259 — Read the ballot, name the method: four voters score four candidates 0 to 5",1,single-race,4,STAR,BV
 tg4779,"BV2182 — Why STAR Has an Automatic Runoff — a Runoff Reversal, with an Equal-Support ballot",1,single-race,10,STAR,BV
+th3pbp,"BV2265 — Two-seat board by Bloc STAR: one more honest voter, and the council gets worse for them",1,single-race,7,STAR,BV
 tk776t,BV2201 — The Transfer Machine — a book club buys two novels by STV,1,single-race,9,STV,BV
 v9rhhr,"BV2247 — Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards",1,single-race,44,STAR,BV
 vb3xv2,BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score,1,single-race,3,STAR,BV

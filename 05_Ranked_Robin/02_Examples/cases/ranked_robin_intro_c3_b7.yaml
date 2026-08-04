@@ -1,0 +1,28 @@
+election_title: "Ranked Robin (RCV-RR) — the smallest round-robin that shows the report"
+
+scenario_description: |-
+  The three-candidate, seven-ballot election the Ranked Robin lesson opens with —
+  small enough that every pairwise comparison fits on one screen.
+
+  Ada leads on first choices (3 of 7) and finishes LAST. Ben never leads the first
+  count, yet beats Ada 4-3 and Cara 5-2, so he takes the round-robin 2-0 and is the
+  Condorcet winner. Cara beats Ada 4-3 and loses to Ben: 1-1.
+
+  Copeland scores (wins + 1/2*ties): Ben 2, Cara 1, Ada 0.
+
+  This case exists so the lesson can EMBED the report instead of pasting it — the
+  page shows exactly what the engine prints today, and the test suite notices if
+  that ever stops being true.
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+
+ballots: |-
+  3:Ada>Ben>Cara
+  2:Ben>Cara>Ada
+  2:Cara>Ben>Ada
+
+expected_winners:
+  - Ben
+
+# file: ranked_robin_intro_c3_b7.yaml
