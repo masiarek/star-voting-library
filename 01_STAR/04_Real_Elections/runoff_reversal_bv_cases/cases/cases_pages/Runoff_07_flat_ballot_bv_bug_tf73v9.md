@@ -23,6 +23,17 @@ Level 201/301. Full two-view lesson: Runoff_07_flat_ballot_bv_bug_tf73v9.md
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Alex | Blair | Cleo |
+|:--|:--:|:--:|:--:|
+| <img src="../img/Runoff_07_flat_ballot_bv_bug_tf73v9_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Alex 5, Blair 1, Cleo 2."> | 5 | 1 | 2 |
+| <img src="../img/Runoff_07_flat_ballot_bv_bug_tf73v9_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Alex 4, Blair 5, Cleo 0."> | 4 | 5 | 0 |
+| <img src="../img/Runoff_07_flat_ballot_bv_bug_tf73v9_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Alex 4, Blair 5, Cleo 0."> | 4 | 5 | 0 |
+| <img src="../img/Runoff_07_flat_ballot_bv_bug_tf73v9_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Alex 3, Blair 3, Cleo 3."> | 3 | 3 | 3 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

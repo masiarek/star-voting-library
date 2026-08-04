@@ -50,8 +50,8 @@ options:
 # Option 1, Option 2.  `&` = candidate abstention (BV null / left blank).
 ballots: |-
   Option 1,Option 2
-  0,0
-  5,&
+  0,0   # explicit equal opposition (rejects both)
+  5,&   # Option 1 = 5, Option 2 left blank
 
 expected_winners:
   - Option 1

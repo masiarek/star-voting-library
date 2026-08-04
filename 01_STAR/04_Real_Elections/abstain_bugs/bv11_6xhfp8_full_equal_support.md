@@ -16,11 +16,17 @@ Three voters each give **both** candidates the maximum score (`5,5`) — full, e
 
 ## The ballots
 
-| Voter | Ann | Bob |
-|---|:-:|:-:|
-| 1 | 5 | 5 |
-| 2 | 5 | 5 |
-| 3 | 5 | 5 |
+<!-- ballots:bv11_6xhfp8_full_equal_support -->
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Ann | Bob |
+|:--|:--:|:--:|
+| <img src="cases/img/bv11_6xhfp8_full_equal_support_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ann 5, Bob 5."> | 5 | 5 |
+| <img src="cases/img/bv11_6xhfp8_full_equal_support_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ann 5, Bob 5."> | 5 | 5 |
+| <img src="cases/img/bv11_6xhfp8_full_equal_support_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Ann 5, Bob 5."> | 5 | 5 |
+<!-- /ballots -->
+
+Every bubble that could be filled *is* filled — maximum support, three times over.
 
 ## The result
 

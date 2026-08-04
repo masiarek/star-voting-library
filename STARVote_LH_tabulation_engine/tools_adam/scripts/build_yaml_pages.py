@@ -377,6 +377,20 @@ def _divergence_case(stem):
 SNIPPET_START = "<!-- --8<-- [start:report] -->"
 SNIPPET_END = "<!-- --8<-- [end:report] -->"
 
+# Ballot art on a HAND-AUTHORED page can't use that include: the <img> paths in
+# the generated table are relative to the generated page, and a snippet is
+# pasted verbatim, so every picture would 404 from a page at a different depth.
+# Instead a lesson page marks the spot and this script fills it in, with paths
+# relative to THAT page:
+#
+#     <!-- ballots:small_abstention_c2_b5 -->
+#     <!-- /ballots -->
+#
+# Same contract as `case-meta`: everything between the markers is generated,
+# everything outside is the author's, and the staleness test fails on drift.
+BALLOT_BLOCK_RE = re.compile(
+    r"<!-- ballots:([A-Za-z0-9_.\-]+) -->\n?(.*?)<!-- /ballots -->", re.S)
+
 # --------------------------------------------------------------------------- #
 # Case facts — one source of truth for the metadata line
 # --------------------------------------------------------------------------- #
@@ -751,6 +765,89 @@ def check_companions():
             != open(p, encoding="utf-8").read()]
 
 
+# --------------------------------------------------------------------------- #
+# Ballot art on hand-authored pages — the placeable managed block
+# --------------------------------------------------------------------------- #
+def _case_for_stem(page_path, stem):
+    """The case YAML a `<!-- ballots:<stem> -->` marker refers to.
+
+    Looked up beside the page (`cases/<stem>.yaml`, the repo-standard layout)
+    and in the page's own folder (flat case folders), then one level up — a
+    lesson often sits above the folder that holds its cases.
+    """
+    here = os.path.dirname(page_path)
+    for base in (here, os.path.dirname(here)):
+        for cand in (os.path.join(base, "cases", stem + ".yaml"),
+                     os.path.join(base, stem + ".yaml")):
+            if os.path.isfile(cand):
+                return cand
+    return None
+
+
+def ballot_blocks_for(page_path, text=None):
+    """The filled-in ballot blocks this page asks for: {marker text: new text}.
+
+    Returns None when the page has no marker. A marker naming a case with no
+    art (or no case) is left with a visible note rather than silently empty —
+    a lesson that asked for pictures and got nothing should say so.
+    """
+    text = open(page_path, encoding="utf-8").read() if text is None else text
+    if not BALLOT_BLOCK_RE.search(text):
+        return None
+    out = {}
+    page_dir = os.path.dirname(page_path)
+    for m in BALLOT_BLOCK_RE.finditer(text):
+        stem = m.group(1)
+        src = _case_for_stem(page_path, stem)
+        body = f"*(No ballot art for `{stem}` — draw it with " \
+               f"`build_style_ballot_images.py --from-yaml <case.yaml>`.)*\n"
+        if src:
+            data = yaml.safe_load(open(src, encoding="utf-8").read())
+            ballots = _find_first(data, ["ballots"]) if isinstance(data, (dict, list)) else None
+            art = _ballot_art(src, str(ballots).rstrip("\n"), page_dir) if ballots is not None else None
+            if art:
+                caption, table, _lead = art
+                body = "\n".join([caption, "", *table]) + "\n"
+        out[m.group(0)] = f"<!-- ballots:{stem} -->\n{body}<!-- /ballots -->"
+    return out
+
+
+def apply_ballot_blocks(text, blocks):
+    for old, new in blocks.items():
+        text = text.replace(old, new)
+    return text
+
+
+def pages_with_ballot_blocks():
+    """{page path: {marker: filled block}} for every page that asks for art."""
+    found = {}
+    for root in ROOTS:
+        base = os.path.join(REPO, root)
+        if not os.path.isdir(base):
+            continue
+        for dirpath, dirnames, filenames in os.walk(base):
+            dirnames[:] = [d for d in dirnames
+                           if not d.endswith(GENERATED_SUFFIXES) and d != "img"]
+            for fn in sorted(filenames):
+                if not fn.endswith(".md"):
+                    continue
+                path = os.path.join(dirpath, fn)
+                blocks = ballot_blocks_for(path)
+                if blocks:
+                    found[path] = blocks
+    return found
+
+
+def check_ballot_blocks():
+    """Pages whose ballot block drifted from the art/YAML behind it."""
+    stale = []
+    for path, blocks in pages_with_ballot_blocks().items():
+        cur = open(path, encoding="utf-8").read()
+        if apply_ballot_blocks(cur, blocks) != cur:
+            stale.append(path)
+    return stale
+
+
 def main():
     want = expected_pages()
     written = 0
@@ -775,6 +872,16 @@ def main():
             open(p, "w", encoding="utf-8").write(new)
             touched += 1
     print(f"case-meta blocks: {len(companions)} companion page(s) ({touched} updated)")
+
+    art_pages = pages_with_ballot_blocks()
+    drawn = 0
+    for p, blocks in sorted(art_pages.items()):
+        cur = open(p, encoding="utf-8").read()
+        new = apply_ballot_blocks(cur, blocks)
+        if new != cur:
+            open(p, "w", encoding="utf-8").write(new)
+            drawn += 1
+    print(f"ballot blocks: {len(art_pages)} hand-authored page(s) ({drawn} updated)")
     return 0
 
 

@@ -39,6 +39,17 @@ ex15_approval_yes_no_bv_export.json — one export covers both races.)
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Voters | Ada | Blair | Cosmo |
+|:--|:--:|:--:|:--:|:--:|
+| <img src="../img/ex15_approval_pairwise_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 15 voters: Ada 0, Blair 5, Cosmo 5."> | 15 | 0 | 5 | 5 |
+| <img src="../img/ex15_approval_pairwise_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters: Ada 5, Blair 5, Cosmo 0."> | 8 | 5 | 5 | 0 |
+| <img src="../img/ex15_approval_pairwise_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 7 voters: Ada 5, Blair 0, Cosmo 5."> | 7 | 5 | 0 | 5 |
+| <img src="../img/ex15_approval_pairwise_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 5 voters: Ada 0, Blair 5, Cosmo 0."> | 5 | 0 | 5 | 0 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

@@ -32,6 +32,19 @@ eligible_voters: 10
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Anna | Ben | Cara |
+|:--|:--:|:--:|:--:|
+| <img src="../img/quorum_demo_c3_b6_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Anna 5, Ben 0, Cara 0."> | 5 | 0 | 0 |
+| <img src="../img/quorum_demo_c3_b6_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Anna 5, Ben 1, Cara 0."> | 5 | 1 | 0 |
+| <img src="../img/quorum_demo_c3_b6_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Anna 4, Ben 0, Cara 1."> | 4 | 0 | 1 |
+| <img src="../img/quorum_demo_c3_b6_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Anna 0, Ben 5, Cara 0."> | 0 | 5 | 0 |
+| <img src="../img/quorum_demo_c3_b6_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Anna 1, Ben 4, Cara 0."> | 1 | 4 | 0 |
+| <img src="../img/quorum_demo_c3_b6_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank ballot: an abstention — counts toward quorum, scores no one: Anna left blank (counts as 0), Ben left blank (counts as 0), Cara left blank (counts as 0)."> | - | - | - |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 Markers on these ballots: `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all tabulate as 0 (reported honestly).

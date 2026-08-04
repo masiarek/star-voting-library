@@ -42,11 +42,11 @@ election:
     voting_method: STAR
     ballots: |-
       A, B
-      0, 5
-      4, 0
-      5, 5
-      5, 0
-      -, -
+      0, 5   # prefers B
+      4, 0   # prefers A
+      5, 5   # Equal Support — loves BOTH equally (a cast vote, not an abstention)
+      5, 0   # prefers A
+      -, -   # blank — the one true abstention
     expected_results:
       winners:
       - A

@@ -40,9 +40,9 @@ options:
 # Approve, Reject.  `&` = candidate abstention (BV null / left blank).
 ballots: |-
   Approve,Reject
-  0,&
-  &,&
-  &,0
+  0,&   # deselected Approve
+  &,&   # fully blank (a true abstention)
+  &,0   # deselected Reject
 
 # 0-0 tie resolved to Approve by lot / CSV column order.
 expected_winners:

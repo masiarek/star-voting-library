@@ -16,6 +16,15 @@ Lesson: 01_STAR/01_Learn/the_count/STAR_second_round_FAQ.md
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Voters | Uma | Rye | Tao |
+|:--|:--:|:--:|:--:|:--:|
+| <img src="../img/reversal_jarring_c3_b100_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — love Rye, but Uma is a strong 4: Uma 4, Rye 5, Tao 0."> | 51 | 4 | 5 | 0 |
+| <img src="../img/reversal_jarring_c3_b100_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — love Uma, reject Rye: Uma 5, Rye 0, Tao 1."> | 49 | 5 | 0 | 1 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

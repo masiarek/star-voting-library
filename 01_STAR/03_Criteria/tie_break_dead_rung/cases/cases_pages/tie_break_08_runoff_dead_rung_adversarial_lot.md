@@ -22,6 +22,15 @@ suggests. Strange-looking, but perfectly legal ballots.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Ann | Ben |
+|:--|:--:|:--:|
+| <img src="../img/tie_break_08_runoff_dead_rung_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — tops out at 4: Ann 4, Ben 0."> | 4 | 0 |
+| <img src="../img/tie_break_08_runoff_dead_rung_adversarial_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — tops out at 4: Ann 0, Ben 4."> | 0 | 4 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

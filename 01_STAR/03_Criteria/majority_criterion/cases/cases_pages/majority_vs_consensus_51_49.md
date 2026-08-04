@@ -44,6 +44,16 @@ is a serious position, not a mistake. See the claim-check page for both sides.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Voters | Alma | Bruno | Celia |
+|:--|:--:|:--:|:--:|:--:|
+| <img src="../img/majority_vs_consensus_51_49_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma camp — prefer Alma, content with Celia: Alma 5, Bruno 0, Celia 4."> | 48 | 5 | 0 | 4 |
+| <img src="../img/majority_vs_consensus_51_49_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma camp — honestly no preference between Alma and Celia: Alma 5, Bruno 0, Celia 5."> | 3 | 5 | 0 | 5 |
+| <img src="../img/majority_vs_consensus_51_49_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Bruno camp — prefer Bruno, content with Celia: Alma 0, Bruno 5, Celia 4."> | 49 | 0 | 5 | 4 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

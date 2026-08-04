@@ -12,16 +12,22 @@
 
 A real BetterVoting STAR election (**BV id `dq2dmm`**, captured 2026-06-28), three candidates `Apple` / `Banana` / `Cherry`, eight ballots:
 
-| # | Apple | Banana | Cherry | What it is |
-|---|--:|--:|--:|---|
-| 1 | 0 | 5 | 1 | prefers Banana |
-| 2 | — | — | — | **blank** — a true abstention |
-| 3 | 5 | 4 | 1 | prefers Apple |
-| 4 | 4 | 5 | 2 | prefers Banana |
-| 5 | 0 | 0 | 0 | **all-zero** — cast, supports no one |
-| 6 | 3 | 3 | 3 | **all-3s** — flat, but fully engaged |
-| 7 | 3 | 5 | 0 | prefers Banana |
-| 8 | 5 | 5 | 0 | **Equal Support** — Apple = Banana (Cherry 0) |
+<!-- ballots:flat_scores_abstention_c3_b8 -->
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Apple | Banana | Cherry |
+|:--|:--:|:--:|:--:|
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 0, Banana 5, Cherry 1."> | 0 | 5 | 1 |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — a true abstention: Apple left blank (counts as 0), Banana left blank (counts as 0), Cherry left blank (counts as 0)."> | - | - | - |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Apple: Apple 5, Banana 4, Cherry 1."> | 5 | 4 | 1 |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 4, Banana 5, Cherry 2."> | 4 | 5 | 2 |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-zero — cast, supports no one: Apple 0, Banana 0, Cherry 0."> | 0 | 0 | 0 |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-3s — flat, but fully engaged: Apple 3, Banana 3, Cherry 3."> | 3 | 3 | 3 |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 3, Banana 5, Cherry 0."> | 3 | 5 | 0 |
+| <img src="cases/img/flat_scores_abstention_c3_b8_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — Apple = Banana (Cherry 0): Apple 5, Banana 5, Cherry 0."> | 5 | 5 | 0 |
+<!-- /ballots -->
+
+Three of these are what the dispute is about: the **blank** (ballot 2 — nothing marked, a real abstention), the **all-3s** (ballot 6 — every bubble filled, which BetterVoting drops), and the **`5,5,0`** (ballot 8 — a clear opinion about Cherry, no preference between the two finalists).
 
 - Frozen raw export: [`flat_scores_abstention_c3_b8_bv_export.json`](cases/flat_scores_abstention_c3_b8_bv_export.json)
 - Converted election (LH-tabulatable): [`flat_scores_abstention_c3_b8.yaml`](cases/flat_scores_abstention_c3_b8.yaml)

@@ -45,14 +45,14 @@ election:
     voting_method: STAR
     ballots: |-
       Apple, Banana, Cherry
-          0,      5,      1
-          -,      -,      -
-          5,      4,      1
-          4,      5,      2
-          0,      0,      0
-          3,      3,      3
-          3,      5,      0
-          5,      5,      0
+          0,      5,      1   # prefers Banana
+          -,      -,      -   # blank — a true abstention
+          5,      4,      1   # prefers Apple
+          4,      5,      2   # prefers Banana
+          0,      0,      0   # all-zero — cast, supports no one
+          3,      3,      3   # all-3s — flat, but fully engaged
+          3,      5,      0   # prefers Banana
+          5,      5,      0   # Equal Support — Apple = Banana (Cherry 0)
     lot_numbers: [Cherry, Banana, Apple]
     expected_results:
       winners:

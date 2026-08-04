@@ -35,9 +35,9 @@ Markers on these ballots: `-` blank · `~` race abstention · `&` candidate abst
 
 ```text
 Approve,Reject
-0,&
-&,&
-&,0
+0,&   # deselected Approve
+&,&   # fully blank (a true abstention)
+&,0   # deselected Reject
 ```
 
 ## What the engine says
@@ -49,10 +49,10 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv1570_6hv7jf_unde
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 3 ballots.
 
-                   Approve  Reject 
-                      -       -    
-                      -       -    
-                      -       -    
+                                  Approve  Reject 
+  deselected Approve                 -       -    
+  fully blank (a true abstention)    -       -    
+  deselected Reject                  -       -    
 
   Count the marks:  Approve 0 · Reject 0
   (3 ballot(s) marked nobody.)

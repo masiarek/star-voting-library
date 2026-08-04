@@ -25,6 +25,16 @@ three; a deterministic published lot fixes it. See the lesson md and BV #1063.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | A | B | C |
+|:--|:--:|:--:|:--:|
+| <img src="../img/three_way_dead_rung_A_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: A 4, B 0, C 0."> | 4 | 0 | 0 |
+| <img src="../img/three_way_dead_rung_A_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 0, B 4, C 0."> | 0 | 4 | 0 |
+| <img src="../img/three_way_dead_rung_A_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: A 0, B 0, C 4."> | 0 | 0 | 4 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

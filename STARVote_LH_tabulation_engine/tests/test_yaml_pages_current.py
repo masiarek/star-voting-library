@@ -58,7 +58,24 @@ def test_companion_meta_blocks_are_current():
     )
 
 
+def test_ballot_blocks_are_current():
+    """Hand-authored pages that ask for ballot art show the current art.
+
+    A lesson page marks the spot with `<!-- ballots:<stem> -->`; this script
+    fills it from the case YAML and the drawn images. Edit the ballots and the
+    pictures move — the block on the lesson has to move with them.
+    """
+    mod = _load()
+    stale = mod.check_ballot_blocks()
+    assert not stale, (
+        f"{len(stale)} page(s) with an outdated ballot block:\n"
+        + "\n".join(f"  {Path(p).relative_to(REPO_ROOT)}" for p in stale[:10])
+        + "\nRegenerate with: python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py"
+    )
+
+
 def test_discovery_not_vacuous():
     mod = _load()
     assert len(mod.expected_pages()) >= 50, "page discovery collapsed"
     assert len(mod.expected_companions()) >= 40, "companion discovery collapsed"
+    assert len(mod.pages_with_ballot_blocks()) >= 4, "ballot-block discovery collapsed"

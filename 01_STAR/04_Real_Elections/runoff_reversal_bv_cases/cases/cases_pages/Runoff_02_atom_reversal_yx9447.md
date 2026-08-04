@@ -20,6 +20,16 @@ Level 101. Full two-view lesson: Runoff_02_atom_reversal_yx9447.md
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Austin | Boston | Cairo |
+|:--|:--:|:--:|:--:|
+| <img src="../img/Runoff_02_atom_reversal_yx9447_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Austin 5, Boston 1, Cairo 2."> | 5 | 1 | 2 |
+| <img src="../img/Runoff_02_atom_reversal_yx9447_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Austin 4, Boston 5, Cairo 0."> | 4 | 5 | 0 |
+| <img src="../img/Runoff_02_atom_reversal_yx9447_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Austin 4, Boston 5, Cairo 0."> | 4 | 5 | 0 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

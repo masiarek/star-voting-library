@@ -16,6 +16,15 @@ Lesson: 01_STAR/01_Learn/the_count/STAR_second_round_FAQ.md
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Voters | Max | Nora | Cal |
+|:--|:--:|:--:|:--:|:--:|
+| <img src="../img/reversal_convincing_c3_b100_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Max's intense base — love Max, mildly prefer Nora to Cal: Max 5, Nora 2, Cal 0."> | 45 | 5 | 2 | 0 |
+| <img src="../img/reversal_convincing_c3_b100_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the majority — mildly prefer Nora: Max 2, Nora 3, Cal 1."> | 55 | 2 | 3 | 1 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

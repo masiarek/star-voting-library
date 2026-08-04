@@ -35,17 +35,29 @@ the single-ballot difference is the 5,5.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | A | B |
+|:--|:--:|:--:|
+| <img src="../img/small_abstention_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers B: A 0, B 5."> | 0 | 5 |
+| <img src="../img/small_abstention_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 4, B 0."> | 4 | 0 |
+| <img src="../img/small_abstention_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — loves BOTH equally (a cast vote, not an abstention): A 5, B 5."> | 5 | 5 |
+| <img src="../img/small_abstention_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 5, B 0."> | 5 | 0 |
+| <img src="../img/small_abstention_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — the one true abstention: A left blank (counts as 0), B left blank (counts as 0)."> | - | - |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 Markers on these ballots: `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all tabulate as 0 (reported honestly).
 
 ```text
 A, B
-0, 5
-4, 0
-5, 5
-5, 0
--, -
+0, 5   # prefers B
+4, 0   # prefers A
+5, 5   # Equal Support — loves BOTH equally (a cast vote, not an abstention)
+5, 0   # prefers A
+-, -   # blank — the one true abstention
 ```
 
 ## What the engine says

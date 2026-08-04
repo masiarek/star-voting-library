@@ -37,14 +37,23 @@ dispute; the UI/export mislabel is bettervoting#1090).
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Option 1 | Option 2 |
+|:--|:--:|:--:|
+| <img src="../img/bv655_jfrk9t_equal_opposition_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — explicit equal opposition (rejects both): Option 1 0, Option 2 0."> | 0 | 0 |
+| <img src="../img/bv655_jfrk9t_equal_opposition_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Option 1 = 5, Option 2 left blank: Option 1 5, Option 2 left blank (counts as 0)."> | 5 | & |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 Markers on these ballots: `-` blank · `~` race abstention · `&` candidate abstention · `?` spoiled · `%` spoiled+reissued — all tabulate as 0 (reported honestly).
 
 ```text
 Option 1,Option 2
-0,0
-5,&
+0,0   # explicit equal opposition (rejects both)
+5,&   # Option 1 = 5, Option 2 left blank
 ```
 
 ## What the engine says

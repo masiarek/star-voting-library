@@ -17,6 +17,15 @@ Lesson: 09_Parked/Flat_scores_ties/README.md#case-03  (BV id pending).
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Athens | Berlin | Cairo |
+|:--|:--:|:--:|:--:|
+| <img src="../img/Flat_scores_ties_03_runoff_tie_split_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Athens 5, Berlin 4, Cairo 0."> | 5 | 4 | 0 |
+| <img src="../img/Flat_scores_ties_03_runoff_tie_split_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Athens 4, Berlin 5, Cairo 0."> | 4 | 5 | 0 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

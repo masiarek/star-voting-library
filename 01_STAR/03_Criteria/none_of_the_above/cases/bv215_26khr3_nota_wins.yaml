@@ -50,12 +50,12 @@ options:
 # Column order: Ada, Bruno, None of the Above.  `&` = candidate abstention (BV null).
 ballots: |-
   Ada,Bruno,None of the Above
-  5,1,0
-  5,1,&
-  0,0,5
-  0,0,5
-  0,0,5
-  0,0,5
+  5,1,0   # Ada's supporter — scored NOTA an explicit 0
+  5,1,&   # Ada's supporter — left NOTA unscored
+  0,0,5   # rejects both candidates, wants NOTA
+  0,0,5   # rejects both candidates, wants NOTA
+  0,0,5   # rejects both candidates, wants NOTA
+  0,0,5   # rejects both candidates, wants NOTA
 
 expected_winners:
   - None of the Above

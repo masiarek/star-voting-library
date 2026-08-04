@@ -29,6 +29,18 @@ scoring round — a reminder STAR is not a Condorcet method, by design.)
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Ann | Bob | Carl |
+|:--|:--:|:--:|:--:|
+| <img src="../img/three_winners_cw_score_runoff_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ann 5, Bob 4, Carl 3."> | 5 | 4 | 3 |
+| <img src="../img/three_winners_cw_score_runoff_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ann 5, Bob 4, Carl 3."> | 5 | 4 | 3 |
+| <img src="../img/three_winners_cw_score_runoff_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Ann 5, Bob 4, Carl 3."> | 5 | 4 | 3 |
+| <img src="../img/three_winners_cw_score_runoff_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Ann 0, Bob 3, Carl 5."> | 0 | 3 | 5 |
+| <img src="../img/three_winners_cw_score_runoff_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Ann 0, Bob 3, Carl 5."> | 0 | 3 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

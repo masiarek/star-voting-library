@@ -24,6 +24,18 @@ in explaining_to_voters.md.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | A | B | C |
+|:--|:--:|:--:|:--:|
+| <img src="../img/05_c3_b5_low-scores-bv1265_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: A 0, B 0, C 4."> | 0 | 0 | 4 |
+| <img src="../img/05_c3_b5_low-scores-bv1265_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 2, B 0, C 0."> | 2 | 0 | 0 |
+| <img src="../img/05_c3_b5_low-scores-bv1265_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: A 0, B 2, C 3."> | 0 | 2 | 3 |
+| <img src="../img/05_c3_b5_low-scores-bv1265_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: A 2, B 0, C 0."> | 2 | 0 | 0 |
+| <img src="../img/05_c3_b5_low-scores-bv1265_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: A 2, B 2, C 0."> | 2 | 2 | 0 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

@@ -22,6 +22,16 @@ show_matrix is off per house style.)
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | A | B |
+|:--|:--:|:--:|
+| <img src="../img/ex08_minimal_reversal_2c_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — two voters: A first, B a friendly 4: A 5, B 4."> | 5 | 4 |
+| <img src="../img/ex08_minimal_reversal_2c_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 5, B 4."> | 5 | 4 |
+| <img src="../img/ex08_minimal_reversal_2c_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — one voter: B only: A 0, B 5."> | 0 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

@@ -19,6 +19,15 @@ See 01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md.
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Alice | Ben |
+|:--|:--:|:--:|
+| <img src="../img/tie_break_04_runoff_five_star_breaks_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Alice 5, Ben 1."> | 5 | 1 |
+| <img src="../img/tie_break_04_runoff_five_star_breaks_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Alice 0, Ben 4."> | 0 | 4 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

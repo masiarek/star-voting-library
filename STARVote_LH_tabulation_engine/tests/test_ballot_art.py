@@ -59,6 +59,23 @@ def test_count_label_is_not_a_candidate():
     assert rows == [art.BallotRow(15, [5, 2], "", ["5", "2"])]
 
 
+@pytest.mark.parametrize("method", ["Plurality", "Approval", "RankedRobin", "STV"])
+def test_non_score_methods_are_refused(tmp_path, method):
+    """The art IS the 0–5 STAR ballot. A choose-one or ranked race handed its
+    voters a different piece of paper, so drawing one would be a lie."""
+    case = tmp_path / "case.yaml"
+    case.write_text(f"voting_method: {method}\nballots: |-\n  Ada,Ben\n  5,0\n")
+    with pytest.raises(art.CaseBallotError):
+        art.ballots_from_yaml(case)
+
+
+def test_star_family_is_drawn(tmp_path):
+    case = tmp_path / "case.yaml"
+    case.write_text("voting_method: Bloc STAR\nballots: |-\n  Ada,Ben\n  5,0\n")
+    drawn, total = art.ballots_from_yaml(case)
+    assert total == 1 and drawn[0][0] == "case_ballot_1"
+
+
 @pytest.mark.parametrize("block, why", [
     ("Ada,Ben,Cara\nAda>Cara>Ben\n", "ranked ballots have no 0–5 bubbles"),
     ("Ada,Ben\n5,9\n", "9 is off the 0–5 scale"),

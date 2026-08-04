@@ -33,6 +33,16 @@ blocs:
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Voters | DarkChoco | MilkChoco | Vanilla |
+|:--|:--:|:--:|:--:|:--:|
+| <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — love dark, like milk, no vanilla: DarkChoco 5, MilkChoco 4, Vanilla 0."> | 12 | 5 | 4 | 0 |
+| <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — love milk, like dark, no vanilla: DarkChoco 4, MilkChoco 5, Vanilla 0."> | 10 | 4 | 5 | 0 |
+| <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — love vanilla, mild on chocolate: DarkChoco 1, MilkChoco 0, Vanilla 5."> | 40 | 1 | 0 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text

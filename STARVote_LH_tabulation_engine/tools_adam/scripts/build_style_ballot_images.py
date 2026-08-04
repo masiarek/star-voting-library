@@ -111,6 +111,12 @@ BALLOTS.update({
 # one ballot per row. Blanks and markers stay blank here — the engine counts them
 # as 0, but a ballot with no mark is what the voter actually handed in, and that
 # distinction is half the reason to show the picture at all.
+# Methods whose voters are handed the 0–5 score ballot this art draws. Bloc STAR
+# and the proportional variants (allocated / sss / rrv) use the same ballot; only
+# the count differs. Everything else — Plurality, Approval, any ranked method —
+# is a different piece of paper and gets no picture.
+SCORE_METHODS = {"star", "starr", "bloc_star", "star_pr", "score", "range",
+                 "allocated", "sss", "rrv", "bloc"}
 MARKER_CHARS = set("-~&?%")
 WEIGHT_RE = re.compile(r"\s*(\d+)\s*[:xX×]\s*(.*)")  # "42: 5, 4" / "9x5" / "9×5"
 MAX_SCORE = 5
@@ -217,9 +223,14 @@ def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
     block = _find_ballots(data)
     if block is None:
         raise CaseBallotError("no `ballots:` block")
+    # Allowlist, not a blocklist: this art IS the 0–5 STAR ballot, so anything
+    # whose voters saw a different ballot (choose-one, approve/don't, a ranking)
+    # must be refused. Drawing a Plurality race as six bubbles per candidate
+    # shows a ballot nobody was handed.
     method = str(_find_first_method(data) or "STAR").split("#")[0].strip().lower()
-    if method.replace("-", "_") in {"approval", "approval_multi_winner"}:
-        raise CaseBallotError("approval ballots are 0/1 — the 0–5 art would mislead")
+    if method.replace("-", "_").replace(" ", "_") not in SCORE_METHODS:
+        raise CaseBallotError(
+            f"{method or 'this method'} isn't a 0–5 score ballot — the STAR art would mislead")
 
     cast, rows = parse_ballot_block(block)
     stem = yaml_path.stem
@@ -429,6 +440,7 @@ FONT_CANDIDATES = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
 ]
 SS = 2  # supersampling factor: draw big, downscale -> antialiased edges
+PNG_MAX_W = 900  # saved PNG width; the SVG keeps the full 1600 (see rasterize)
 
 
 def _font(size: int):
@@ -488,10 +500,12 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
     d.line([0, s(bottom), s(W), s(bottom)], fill=RULE, width=int(s(7)))
 
     # Downscale for antialiasing, then quantize: this is flat art in six colors,
-    # and the LANCZOS pass is the only thing that invents more. 64 keeps every
-    # edge smooth at a third of the file size (125 kB -> 39 kB on a 3-row ballot),
-    # which matters once a whole teaching set carries one image per ballot.
-    small = img.resize((W, H), Image.LANCZOS)
+    # and the LANCZOS pass is the only thing that invents more. Pages show these
+    # at 260–330 px, so 900 px still leaves ~2.7x for retina while cutting the
+    # file to ~14 kB — which is what makes one image per ballot affordable across
+    # a whole teaching set. The .svg beside it stays the full-resolution master.
+    out_w = min(W, PNG_MAX_W)
+    small = img.resize((out_w, round(H * out_w / W)), Image.LANCZOS)
     small.convert("P", palette=Image.ADAPTIVE, colors=64).save(png_path, optimize=True)
 
 

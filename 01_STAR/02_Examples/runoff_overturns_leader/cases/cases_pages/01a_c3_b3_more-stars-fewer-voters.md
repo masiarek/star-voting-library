@@ -22,6 +22,16 @@ here so the runoff is picking finalists out of a real field, not a forced pair.)
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Almond | Brownie | Cocoa |
+|:--|:--:|:--:|:--:|
+| <img src="../img/01a_c3_b3_more-stars-fewer-voters_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Almond 5, Brownie 1, Cocoa 2."> | 5 | 1 | 2 |
+| <img src="../img/01a_c3_b3_more-stars-fewer-voters_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Almond 4, Brownie 5, Cocoa 0."> | 4 | 5 | 0 |
+| <img src="../img/01a_c3_b3_more-stars-fewer-voters_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Almond 4, Brownie 5, Cocoa 0."> | 4 | 5 | 0 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text
