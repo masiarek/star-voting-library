@@ -7,5 +7,6 @@ A basic runnable RCV-IRV election and the vendored `pyrankvote`-based engine tha
 | Case | Page | YAML |
 |---|---|---|
 | RCV-IRV — a basic ranked-ballot example (3 candidates) | [page](cases/cases_pages/RCV_ballot_example.md) | [`RCV_ballot_example.yaml`](cases/RCV_ballot_example.yaml) |
+| Parallel universes — one count, two legal answers (an elimination tie where PUT elects two) | [page](cases/cases_pages/put_two_universes_c3_b4.md) | [`put_two_universes_c3_b4.yaml`](cases/put_two_universes_c3_b4.yaml) |
 
 The engine lives in [`RCV_IRV_tabulation_engine/`](RCV_IRV_tabulation_engine/README.md); full audit mirrors are in `RCV_IRV_tabulated/`.

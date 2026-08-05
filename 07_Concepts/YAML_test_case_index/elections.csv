@@ -286,6 +286,7 @@ LH:options_examples,Display-options reference — every reporting toggle (STAR),
 LH:p3_manip_compromise_rr,"P3 manipulated — the mild version: three adjacent swaps, no burial, same result",1,single-race,7,RankedRobin,LH-only
 LH:p3_manip_reversal_rr,P3 manipulated — Zwicker's complete reversal makes Dublin a 4-0 Condorcet winner,1,single-race,7,RankedRobin,LH-only
 LH:p3_manip_star,P3 manipulated — two voters bury their 4th choice and STAR elects their favourite,1,single-race,7,STAR,LH-only
+LH:put_two_universes_c3_b4,"Parallel universes — one count, two legal answers",1,single-race,4,IRV,LH-only
 LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
 LH:race_nobody_can_lose_two_seat_control,A race nobody can lose — the two-seat control,1,single-race,7,STAR,LH-only

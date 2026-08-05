@@ -28,40 +28,36 @@ The first two produce exactly one winner and look decisive. That is precisely th
 
 ## Worked example — four voters, and a candidate who exists in only one universe
 
-Four voters, three candidates:
+Four voters, three candidates — the runnable case is [`put_two_universes_c3_b4`](../../../06_Other/RCV_IRV/cases/cases_pages/put_two_universes_c3_b4.md):
 
-```yaml
-title: PUT demo — the winner depends on which tie you break
-voting_method: RCV_IRV
-num_winners: 1
-ballots: |-
-  2:A>B>C
-  1:B>A>C
-  1:C>B>A
+| Voters | Ballot |
+|:--:|---|
+| 2 | Anna > Blake > Cora |
+| 1 | Blake > Anna > Cora |
+| 1 | Cora > Blake > Anna |
+
+First choices: **Anna 2, Blake 1, Cora 1.** Four voters, so a majority needs 3 — nobody has it. **Blake and Cora are tied for last**, and the rule must decide who goes.
+
+**Universe 1 — eliminate Cora.** Her ballot is `Cora>Blake>Anna`, so it transfers to Blake:
+
+```text title="Abridged for the lesson — not verbatim engine output"
+Anna ....  2
+Blake ...  2   ← 1 own + 1 transferred from Cora
+               no majority (needs 3); two candidates, four voters → tied
 ```
 
-First choices: **A 2, B 1, C 1.** Four voters, so a majority needs 3 — nobody has it. **B and C are tied for last**, and the rule must cut one.
+**Universe 2 — eliminate Blake.** His ballot is `Blake>Anna>Cora`, so it transfers to Anna:
 
-**Universe 1 — eliminate C.** C's ballot is `C>B>A`, so it transfers to B:
-
-```
-A ......  2
-B ......  2   ← 1 own + 1 transferred from C
-                no majority (needs 3); two candidates, four voters → tied
+```text title="Abridged for the lesson — not verbatim engine output"
+Anna ....  3   ← majority, elected
+Cora ....  1
 ```
 
-**Universe 2 — eliminate B.** B's ballot is `B>A>C`, so it transfers to A:
+So the two universes disagree: cut Cora and the election ends **tied between Anna and Blake**; cut Blake and **Anna wins outright**. PUT unions them:
 
-```
-A ......  3   ← majority, elected
-C ......  1
-```
+> **PUT winner set = {Anna, Blake}** — where standard RCV-IRV reports **Anna**, full stop.
 
-So the two universes disagree: cut C and the election ends **tied between A and B**; cut B and **A wins outright**. PUT unions them:
-
-> **PUT winner set = {A, B}** — where standard IRV reports **A**, full stop.
-
-B's claim is not a technicality. There is a legal, correct execution of the rules in which B ties for the win, and whether that execution happens turns on a coin flip two steps earlier that appears nowhere in the result.
+Blake's claim is not a technicality. There is a legal, correct execution of the rules in which he ties for the win, and nothing in a standard report records that the execution which erased him was one of two available.
 
 Note what is nested inside universe 1: two candidates and an even electorate, which is the [forced tie](ties_are_forced.md) of Moulin's proposition, arriving as a *sub-election* of a method that was supposed to have finished. The mid-count tie and the final tie are the same theorem wearing different clothes.
 
@@ -71,17 +67,42 @@ Consistent with this library's [rule for Ranked Robin](../../../05_Ranked_Robin/
 
 | Engine | Convention | Result |
 |---|---|---|
-| `pref_voting` `instant_runoff` | standard (pick one) | **{A}** |
-| `pref_voting` `instant_runoff_put` | PUT | **{A, B}** |
-| `pref_voting` `coombs_put` | PUT, Coombs elimination | **{A, B}** |
-| batch-elimination (SEP convention) | cut B *and* C together | **{A}** |
-| LH RCV-IRV engine | seeded pick-one | one winner, arbitrarily |
+| `pref_voting` `instant_runoff` | standard | **{Anna}** |
+| `pref_voting` `instant_runoff_put` | PUT | **{Anna, Blake}** |
+| `pref_voting` `coombs_put` | PUT, Coombs elimination | **{Anna, Blake}** |
+| batch-elimination (SEP convention) | cut Blake *and* Cora together | **{Anna}** |
+| LH RCV-IRV engine (vendored pyrankvote) | batch, in one round | **Anna**, seed-independent |
 
 ```bash
 uv run python -c "from pref_voting.profiles import Profile; from pref_voting.iterative_methods import instant_runoff, instant_runoff_put; p=Profile([[0,1,2],[0,1,2],[1,0,2],[2,1,0]]); print(instant_runoff(p), instant_runoff_put(p))"
 ```
 
-**Where this repo stands, stated plainly.** The vendored RCV-IRV engine takes the *pick-one* road, and says so in a comment at [`rcv_irv_tabulation.py`](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py): pyrankvote breaks elimination ties with `random.choice()`, which unseeded would elect different winners from identical ballots run to run, so the engine sets `random.seed(0)` to make the coin flip "arbitrary but stable." That is the honest engineering choice for a library whose counts must reproduce — but it is worth knowing exactly what it buys and what it costs. **It buys reproducibility, not correctness.** On the ballots above, our own report would name a single winner and give no sign that a second candidate had an equal claim in a different universe.
+And this is what our own engine prints for the same ballots:
+
+<!-- report:put_two_universes_c3_b4 -->
+```text
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Parallel universes — one count, two legal answers
+ Tabulating 4 ballots (ranked ballots).
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Anna               2  Elected
+Blake              1  Rejected
+Cora               1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Anna
+```
+<!-- /report -->
+
+**Where this repo stands, stated plainly — and it is not what you would guess.** You might expect our engine to flip a coin and hide the flip. It does not. Run [the case file](../../../06_Other/RCV_IRV/cases/cases_pages/put_two_universes_c3_b4.md) and the vendored `pyrankvote` removes **both** tied candidates in a single step and elects Anna in one round, listing Blake and Cora side by side as `Rejected`. Nothing in the output says a tie was ever resolved.
+
+The engine does seed its RNG — [`rcv_irv_tabulation.py`](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py) sets `random.seed(0)` because pyrankvote can break ties with `random.choice()`, which unseeded would elect different winners from identical ballots run to run. That is the right call for a library whose counts must reproduce. But **it is not what produces the answer here**: this result is seed-independent, verified at seeds 0, 1, 2, 7, 42 and 99, all Anna.
+
+So this is not a story about hidden randomness. It is a story about a **hidden assumption**. Batch-removing both candidates is justified by noting that Blake and Cora hold only 2 votes between them, which cannot exceed Anna's 2 — but that reasoning quietly treats a 2–2 tie as a *loss* for Blake, which is precisely the question at issue. The winner is perfectly reproducible and still incomplete. **Reproducibility is not correctness**, and determinism is not disclosure.
 
 ## What PUT actually costs
 

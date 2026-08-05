@@ -1,0 +1,60 @@
+election_title: "Parallel universes — one count, two legal answers"
+
+scenario_description: |-
+  Four voters, three candidates, and an elimination tie in the very first round.
+  Anna leads with 2 first choices; Blake and Cora have 1 each and are tied for
+  last, so the rule must decide who goes — and that decision decides the election.
+  Cut Blake, and his ballot (Blake>Anna>Cora) transfers to Anna: 3 of 4, elected
+  outright. Cut Cora, and her ballot (Cora>Blake>Anna) transfers to Blake: Anna 2,
+  Blake 2, no majority and nothing left to separate them — Blake shares the win.
+  Both are legal executions of the same rules on the same ballots. This engine
+  reports Anna, and it reports her cleanly: pyrankvote removes BOTH tied
+  candidates in one step and elects Anna in a single round, with Blake and Cora
+  listed side by side as Rejected. Nothing in the output says a tie was ever
+  resolved. That batch step is justified by the observation that Blake and Cora
+  hold only 2 votes between them, which cannot exceed Anna's 2 — but that
+  reasoning quietly treats a 2-2 tie as a loss for Blake, which is exactly the
+  question at issue. Parallel Universe Tiebreaking (PUT) refuses to assume it: it
+  runs every legal elimination order and elects the union, reporting
+  {Anna, Blake}. Cross-checked against pref_voting, an engine nobody here wrote:
+  instant_runoff = {Anna}, instant_runoff_put = {Anna, Blake}, coombs_put =
+  {Anna, Blake}. Worth noting what this case is NOT: the winner here does not turn
+  on a coin flip. The engine seeds its RNG (random.seed(0)) because pyrankvote can
+  break ties with random.choice, but this result is seed-independent — verified at
+  seeds 0, 1, 2, 7, 42 and 99, all Anna. The single winner is perfectly
+  reproducible and still incomplete, which is the whole lesson: reproducibility is
+  not the same thing as correctness.
+  Lesson: 07_Concepts/topics/ties/parallel_universe_tiebreaking.md
+
+video_script: |-
+  The smallest election I know where "who won?" has more than one honest answer.
+  Four voters. Anna has two first choices, Blake and Cora have one each. Somebody
+  has to be eliminated, and the two at the bottom are tied.
+  Cut Blake, and his ballot moves to Anna: three of four, Anna wins outright.
+  Cut Cora, and her ballot moves to Blake: two-two, and Blake shares the win.
+  Nothing about the ballots changed. The voters did not change their minds. Only
+  the order of elimination changed.
+  Now here is the part that surprised me. You might expect our engine to flip a
+  coin and hide the flip. It does not. It removes both tied candidates at once,
+  elects Anna in one round, and hands back a result that is the same every single
+  time you run it — same answer at every random seed I tried.
+  So this is not a story about hidden randomness. It is a story about a hidden
+  assumption. Dropping both candidates together is only safe if you have already
+  decided that Blake tying Anna two-two is not a win for Blake. That is a real
+  judgment call, and the report never mentions making it.
+  Parallel universe tiebreaking is what happens when you refuse to make that call
+  silently: run every legal elimination order, and report everyone who wins in
+  some universe. Here that is Anna AND Blake.
+  It does not give you a better winner. It gives you an honest count.
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  Anna>Blake>Cora
+  Anna>Blake>Cora
+  Blake>Anna>Cora
+  Cora>Blake>Anna
+
+expected_winners:
+- Anna
