@@ -21,6 +21,8 @@ Runnable tie cases (flat-score ballots engineered to tie) live in [`Flat_scores_
 
 **Why the contrived cases?** [Why Build "Silly" Tie Elections?](why_contrived_tie_cases.md) — the value of deliberately-degenerate probes (`5,5,5 / 4,4,4`, rotations), plus a flow-chart map of every single-winner STAR tie case and the test that covers it.
 
+**When the tie strikes mid-count:** [Parallel Universe Tiebreaking](parallel_universe_tiebreaking.md) — every method above resolves a tie at the *end* of the count, but an elimination method can tie over **who to eliminate**, and whichever candidate you cut changes every round after it. PUT refuses to choose: it runs every legal elimination order and elects the union of the winners. A four-voter case where standard RCV-IRV reports one winner and PUT reports two — cross-checked against `pref_voting` — plus what our own IRV engine's `random.seed(0)` really buys.
+
 **Why ties exist at all:** [Ties Are Forced](ties_are_forced.md) — the small impossibility theorem (Moulin 1983) proving that anonymity + neutrality + Pareto cannot coexist with always naming one winner, and that **every even electorate has a forced tie**. It supplies the theory the rest of this hub assumes: the four ways out, what each one costs, and why LH (fixed lot order), BetterVoting (random) and `pref_voting` (returns the tied set) are three defensible answers to a choice the theorem makes unavoidable.
 
 Glossary: [`lot numbers`](../../GLOSSARY.md) · [`dead rung`](../../GLOSSARY.md).
