@@ -69,6 +69,7 @@ METHOD_DOCS = {
     "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/01_Learn"),
     "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/01_Learn"),
     "stv":         ("STV (proportional, ranked ballots)", "03_STAR_PR/01_Learn"),
+    "cav":         ("Combined Approval Voting (CAV)", "06_Other/Combined_Approval"),
 }
 METHOD_ALIASES = {
     "rcv_rr": "rankedrobin", "copeland": "rankedrobin", "consensus": "rankedrobin",

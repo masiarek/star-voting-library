@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**478 election files** (415 single-winner, 63 multi-winner) across 16 method(s).
+**480 election files** (417 single-winner, 63 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -23,9 +23,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 4 |
 | BLOC STAR | 29 |
+| CAV | 1 |
 | IRV | 19 |
 | PLURALITY | 26 |
-| RANGE | 2 |
+| RANGE | 3 |
 | RCV-IRV | 1 |
 | RR | 1 |
 
@@ -513,6 +514,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 | [`09_c7_b44_park-bloc-4-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/09_c7_b44_park-bloc-4-seats.md) | `06_Other/ballot_style_lab/cases/` | 4 | Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards → _Dogwood, Aspen, Elm, Cedar_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/09_c7_b44_park-bloc-4-seats.yaml) |
 
+## CAV  (1)
+
+| Case (page) | Folder | Winners | Title / expected | src |
+|------|--------|:------:|------------------|:--:|
+| [`cav_library_board_c3_b12`](../../06_Other/Combined_Approval/cases/cases_pages/cav_library_board_c3_b12.md) | `06_Other/Combined_Approval/cases/` | 1 | Library board by Combined Approval Voting — the newcomer nobody dislikes → _Cleo_ | [`.yaml`](../../06_Other/Combined_Approval/cases/cav_library_board_c3_b12.yaml) |
+
 ## IRV  (19)
 
 | Case (page) | Folder | Winners | Title / expected | src |
@@ -568,10 +575,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`mmp_majority_ceiling`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_majority_ceiling.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33% → _Alice, Bruno, Cleo_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_majority_ceiling.yaml) |
 | [`mmp_sntv`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_sntv.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — SNTV (3 seats): the minority tops the poll → _Uma, Ada, Ben_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_sntv.yaml) |
 
-## RANGE  (2)
+## RANGE  (3)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`cav_library_board_blank_is_zero_c3_b12`](../../06_Other/Combined_Approval/cases/cases_pages/cav_library_board_blank_is_zero_c3_b12.md) | `06_Other/Combined_Approval/cases/` | 1 | Library board on a blank-is-zero score ballot — the same twelve voters → _Byron_ | [`.yaml`](../../06_Other/Combined_Approval/cases/cav_library_board_blank_is_zero_c3_b12.yaml) |
 | [`range_101_c3_b5`](../../06_Other/Range/cases/cases_pages/range_101_c3_b5.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) |
 | [`range_sullivan_score_c4_b10`](../../06_Other/Range/cases/cases_pages/range_sullivan_score_c4_b10.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | [`.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) |
 

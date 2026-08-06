@@ -102,6 +102,12 @@ def _cases():
             # engine — skip here; its own tool asserts expected_winners.
             if method in ("3-2-1", "321"):
                 continue
+            # Combined Approval Voting likewise has its own clean-room tool
+            # (06_Other/Combined_Approval/cav_tabulation.py) — the LH engine has
+            # no CAV path, and CAV's three-level scale means a blank would be
+            # read as a vote Against. Covered by test_cav_tabulation.py.
+            if method in ("cav", "combined approval", "combined_approval"):
+                continue
             # Leave plain single-winner STAR files in the covered folders to
             # test_single_winner_positive.py.
             if method == "star" and seats in (1, None) and p.parent in STAR_COVERED:

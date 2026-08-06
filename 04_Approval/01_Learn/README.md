@@ -17,6 +17,10 @@ Everything explaining **Approval** (mark every candidate you approve — **1** �
 - [Is Approval's outcome arbitrary? The Saari–Van Newenhizen critique (301)](approval_indeterminacy.md) — the sharpest academic attack on Approval (a voter who prefers `a > b > c` has no ballot that says so), why the Brams–Fishburn–Merrill defense conceded too much, and Hillinger's inversion — **one approval result, two opposite Borda winners**, runnable. Plus the popular-press version ("the whole election can become random"), split into the half that holds and the half that doesn't
 - [The case for approval voting — Hamlin & Hua (2023), claim-checked (301)](hamlin_hua_2023.md) — the Approval camp's own academic case, and the companion article to [the STAR paper](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) in the same journal issue. Section 4 answers four critiques (majority criterion, later-no-harm, bullet voting, expressiveness); its §4.1 example is fully runnable, so the page is mostly engine output — including the paper's own utility defence, written down and counted
 
+## The three-option variant
+
+- [Combined Approval Voting (CAV)](../../06_Other/Combined_Approval/README.md) — Approval plus an explicit **Against**: For (+1) / abstain (0) / Against (−1), highest net wins. Proposed by Dan Felsenthal in 1989 as the answer to the Approval failures [his own paradox examples](../../method_comparisons/felsenthal_paradoxes/) demonstrate. Lives in `06_Other/` because it isn't an EVC method, but it belongs to this family — and it carries the sharpest lesson about **what a blank means**: CAV reads an unmarked row as the middle grade, every other score ballot here reads it as the lowest, and a runnable pair of elections shows the same twelve voters reversing end-to-end on that one word
+
 ## Multi-winner & committees
 
 The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multiwinner_Approval/)** subfolder:
