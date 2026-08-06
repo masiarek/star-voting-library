@@ -9,6 +9,8 @@ search:
 
 **Method:** [Approval Voting](../../../../01_Learn) · **2 seats** · **Expected winners:** Ash, Bree
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dr6fmg) · **[results ↗](https://bettervoting.com/dr6fmg/results)** (election `dr6fmg` · test `BV2272`).
+
 ## Scenario
 
 Brams & Kilgour, Satisfaction Approval Voting (MPRA 22709, 2010) —
@@ -41,6 +43,12 @@ returns {Bree, Cole}. Spectrum:
 
 Concept page:
 04_Approval/01_Learn/Multiwinner_Approval/satisfaction_approval_voting.md
+
+Live on BetterVoting (BV2272, election dr6fmg): the SAME seventeen voters
+under Approval, STAR and Ranked Robin, all bloc at 2 seats. All three elect
+Ash and Bree — and none of them notices that three voters end up with no
+representative at all. Two-view page: bv2272_dr6fmg_sav_coverage.md
+Live results: https://bettervoting.com/dr6fmg/results
 
 ## Ballots
 

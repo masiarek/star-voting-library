@@ -722,6 +722,26 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2261 — Mural commission — a perfectly balanced electorate (every pair draws) | RankedRobin | 3 | **Anika** |
 | BV2261 — Mural commission — a Condorcet cycle (every pair has a winner) | RankedRobin | 3 | **Anika** |
 
+## BV2271 — Satisfaction Approval Voting, Proposition 2 — the committee with nothing in common
+
+**Election** [`4hfwqd`](https://bettervoting.com/4hfwqd/results) · **3 races** · **10 ballots** · [frozen export](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_disjoint_c4_b10_brams_kilgour_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2271 — Brams & Kilgour Prop. 2 — Approval (bloc, 2 seats) | Approval | 4 | **Ada, Ben** |
+| BV2271 — Brams & Kilgour Prop. 2 — STAR (bloc, 2 seats) | STAR | 4 | **Ada, Ben** |
+| BV2271 — Brams & Kilgour Prop. 2 — Ranked Robin (bloc, 2 seats) | RankedRobin | 4 | **Ada, Ben** |
+
+## BV2272 — Satisfaction Approval Voting, Proposition 5 — the most-approved candidate nobody needs to seat
+
+**Election** [`dr6fmg`](https://bettervoting.com/dr6fmg/results) · **3 races** · **17 ballots** · [frozen export](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_covers_everyone_c3_b17_brams_kilgour_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2272 — Brams & Kilgour Prop. 5 — Approval (bloc, 2 seats) | Approval | 3 | **Ash, Bree** |
+| BV2272 — Brams & Kilgour Prop. 5 — STAR (bloc, 2 seats) | STAR | 3 | **Ash, Bree** |
+| BV2272 — Brams & Kilgour Prop. 5 — Ranked Robin (bloc, 2 seats) | RankedRobin | 3 | **Ash, Bree** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -4922,7 +4922,139 @@ HEAD_TO_HEAD_ROW_ORDER_SPEC = {
 }
 
 
+# --- BV2271 / BV2272 — Satisfaction Approval Voting (Brams & Kilgour 2010) -----
+# SOURCE: Brams, S. J. & Kilgour, D. M., "Satisfaction Approval Voting", MPRA
+# Paper 22709 (Apr 2010), sections 2 and its Propositions 2 and 5. SAV gives each
+# voter ONE vote, split evenly among the candidates they approved (approve n, each
+# gets 1/n); the top k satisfaction scores win.
+#
+# BetterVoting does NOT implement SAV — these two elections carry the three
+# BV methods that DO read this ballot (Approval, STAR, Ranked Robin, all bloc at
+# 2 seats), so the lesson page can answer "do the real methods agree?" (they do,
+# within each election) against the SAV committee computed off-platform with
+# Lackner's abcvoting. Every race below is tie-free in its WINNER SET.
+#
+# Score encodings per race, aligned by voter index across all three races:
+#   Approval = 0/1 ; STAR = 0-5 ; RankedRobin = ranks 1..max_rankings (0 = unranked)
+# The STAR/ranked races REFINE the approval ballot (they add a within-slate
+# preference the approval ballot cannot express); the approval sets are exactly
+# the paper's. That refinement is stated on the lesson page.
+
+_SAV_P2_CANDS = ["Ada", "Ben", "Cleo", "Dev"]
+# 4 voters approve the Ada+Ben slate (3 prefer Ada, 1 prefers Ben), 3 bullet Cleo,
+# 3 bullet Dev.  AV -> Ada,Ben (4,4 vs 3,3).  SAV -> Cleo,Dev (2,2 vs 3,3).
+_SAV_P2_APPROVAL = ([[1, 1, 0, 0]] * 4 + [[0, 0, 1, 0]] * 3 + [[0, 0, 0, 1]] * 3)
+_SAV_P2_STAR = ([[5, 4, 0, 0]] * 3 + [[4, 5, 0, 0]] * 1
+                + [[0, 0, 5, 0]] * 3 + [[0, 0, 0, 5]] * 3)
+_SAV_P2_RANK = ([[1, 2, 0, 0]] * 3 + [[2, 1, 0, 0]] * 1
+                + [[0, 0, 1, 0]] * 3 + [[0, 0, 0, 1]] * 3)
+
+SAV_DISJOINT_SPEC = {
+    "test_id": "BV2271",
+    "title": ("Satisfaction Approval Voting, Proposition 2 — the committee with "
+              "nothing in common"),
+    "description": (
+        "Brams & Kilgour's own worked example (Satisfaction Approval Voting, MPRA "
+        "22709, 2010, section 2), the proof of their Proposition 2: AV and SAV can "
+        "elect DISJOINT committees from identical ballots. Ten voters, four "
+        "candidates, TWO seats. Four voters approve the Ada+Ben slate; three bullet-"
+        "vote Cleo; three bullet-vote Dev. Bloc Approval gives every mark a whole "
+        "vote — Ada 4, Ben 4, Cleo 3, Dev 3 — and seats Ada and Ben. SAV gives each "
+        "BALLOT one vote split among its marks, so the slate voters contribute a half "
+        "each: Ada 2, Ben 2, Cleo 3, Dev 3 — and it seats Cleo and Dev. Not one "
+        "candidate in common. BetterVoting has no SAV tabulator, so the three races "
+        "here are the methods that DO read this electorate: Approval, STAR and Ranked "
+        "Robin, all bloc at 2 seats. The question the lesson asks is whether they "
+        "agree with each other — they do, all three seating Ada and Ben, which makes "
+        "SAV the lone dissenter rather than AV the outlier. The STAR and ranked "
+        "ballots add a within-slate preference (3 of the 4 slate voters prefer Ada) "
+        "that the approval ballot cannot express; the approval sets are exactly the "
+        "paper's. Full lesson & tabulation: https://masiarek.github.io/star-voting-"
+        "library/04_Approval/01_Learn/Multiwinner_Approval/satisfaction_approval_voting.html"),
+    "races": [
+        {"title": "Brams & Kilgour Prop. 2 — Approval (bloc, 2 seats)",
+         "method": "Approval", "num_winners": 2,
+         "candidates": _SAV_P2_CANDS, "ballots": _SAV_P2_APPROVAL},
+        {"title": "Brams & Kilgour Prop. 2 — STAR (bloc, 2 seats)",
+         "method": "STAR", "num_winners": 2,
+         "candidates": _SAV_P2_CANDS, "ballots": _SAV_P2_STAR},
+        {"title": "Brams & Kilgour Prop. 2 — Ranked Robin (bloc, 2 seats)",
+         "method": "RankedRobin", "num_winners": 2,
+         "max_rankings": len(_SAV_P2_CANDS),
+         "candidates": _SAV_P2_CANDS, "ballots": _SAV_P2_RANK},
+    ],
+    "expected": (
+        "All three races -> Ada, Ben. Approval 4/4/3/3. Bloc STAR: seat 1 scoring "
+        "Ada 19, Ben 17, Cleo 15, Dev 15, runoff Ada 3 - Ben 1 (6 Equal Support); "
+        "seat 2 has a Cleo/Dev finalist tie at 15 that Ben beats either way (4-3), so "
+        "the WINNER is tiebreak-independent. Bloc RR: Ada 3-0-0, Ben 2-1-0, then a "
+        "Cleo/Dev tie for third that does not touch the seats. SAV (abcvoting, "
+        "off-platform) -> Cleo, Dev. PAV ties {Ada,Cleo}/{Ada,Dev}/{Ben,Cleo}/"
+        "{Ben,Dev}. LH-verified on all three. Test ID BV2271."),
+}
+
+_SAV_P5_CANDS = ["Ash", "Bree", "Cole"]
+# 5 approve Ash+Bree, 5 approve Ash+Cole, 4 bullet Bree, 3 bullet Cole.
+# AV -> Ash,Bree (10,9,8).  SAV -> Bree,Cole (5, 6 1/2, 5 1/2) — represents all 17.
+_SAV_P5_APPROVAL = ([[1, 1, 0]] * 5 + [[1, 0, 1]] * 5
+                    + [[0, 1, 0]] * 4 + [[0, 0, 1]] * 3)
+_SAV_P5_STAR = ([[5, 4, 0]] * 5 + [[5, 0, 4]] * 5
+                + [[0, 5, 0]] * 4 + [[0, 0, 5]] * 3)
+_SAV_P5_RANK = ([[1, 2, 0]] * 5 + [[1, 0, 2]] * 5
+                + [[0, 1, 0]] * 4 + [[0, 0, 1]] * 3)
+
+SAV_COVERAGE_SPEC = {
+    "test_id": "BV2272",
+    "title": ("Satisfaction Approval Voting, Proposition 5 — the most-approved "
+              "candidate nobody needs to seat"),
+    "description": (
+        "Brams & Kilgour, Satisfaction Approval Voting (MPRA 22709, 2010), "
+        "Proposition 5: SAV can find a minimal representative set where bloc Approval "
+        "cannot. Seventeen voters, three candidates, TWO seats. Five voters approve "
+        "Ash and Bree, five approve Ash and Cole, four bullet-vote Bree, three bullet-"
+        "vote Cole. Bloc Approval counts Ash 10, Bree 9, Cole 8 and seats Ash and "
+        "Bree — leaving the three Cole-only voters with no representative at all. SAV "
+        "splits each ballot's single vote among its marks, so Ash (approved by the ten "
+        "slate voters and nobody else) collects only 5, while Bree gets 6 1/2 and Cole "
+        "5 1/2 by combining half-votes with the WHOLE votes of bullet voters: SAV "
+        "seats Bree and Cole, the smallest pair that represents all seventeen voters. "
+        "The most-approved candidate in the field wins no seat, because every one of "
+        "Ash's supporters already has a second choice seated. BetterVoting has no SAV "
+        "tabulator; the three races here are Approval, STAR and Ranked Robin (all bloc "
+        "at 2 seats), so the lesson can show that the methods people actually use all "
+        "land on Ash and Bree. The STAR and ranked ballots add the within-slate "
+        "preference the approval ballot cannot express; the approval sets are exactly "
+        "the paper's. Full lesson & tabulation: https://masiarek.github.io/star-voting-"
+        "library/04_Approval/01_Learn/Multiwinner_Approval/satisfaction_approval_voting.html"),
+    "races": [
+        {"title": "Brams & Kilgour Prop. 5 — Approval (bloc, 2 seats)",
+         "method": "Approval", "num_winners": 2,
+         "candidates": _SAV_P5_CANDS, "ballots": _SAV_P5_APPROVAL},
+        {"title": "Brams & Kilgour Prop. 5 — STAR (bloc, 2 seats)",
+         "method": "STAR", "num_winners": 2,
+         "candidates": _SAV_P5_CANDS, "ballots": _SAV_P5_STAR},
+        {"title": "Brams & Kilgour Prop. 5 — Ranked Robin (bloc, 2 seats)",
+         "method": "RankedRobin", "num_winners": 2,
+         "max_rankings": len(_SAV_P5_CANDS),
+         "candidates": _SAV_P5_CANDS, "ballots": _SAV_P5_RANK},
+    ],
+    "expected": (
+        "All three races -> Ash, Bree. Approval 10/9/8. Bloc STAR: seat 1 scoring Ash "
+        "50, Bree 40, Cole 35, runoff Ash 10 - Bree 4; seat 2 runoff Bree 9 - Cole 8. "
+        "Bloc RR: Ash 2-0-0 (beats Bree 10-4, Cole 10-3), Bree 1-1-0 (beats Cole 9-8), "
+        "Cole 0-2-0 — no ties anywhere. SAV (abcvoting, off-platform) -> Bree, Cole, "
+        "representing all 17; PAV agrees with SAV here. LH-verified on all three. "
+        "Test ID BV2272."),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [SAV_DISJOINT_SPEC, SAV_COVERAGE_SPEC]   # BV2271 -> 4hfwqd, BV2272 -> dr6fmg
+#   Both created as designed. BV agrees with LH on all six races: BV2271 all three ->
+#   Ada, Ben (the STAR race reports tieBreakType 'random' for the Cleo/Dev FINALIST tie
+#   at 15, but Ben beats either finalist 4-3, so the winner set is tiebreak-independent);
+#   BV2272 all three -> Ash, Bree with tieBreakType 'none' everywhere. SAV — which BV does
+#   not implement — elects Cleo,Dev and Bree,Cole respectively (abcvoting, off-platform).
 # Previously: [HEAD_TO_HEAD_ROW_ORDER_SPEC]   # BV2270 — head-to-head rung vs row order
 #   (created -> 8h4bvh). Result as designed: Copeland Alder 2, Birch 2, Cedar 1, Dogwood 1;
 #   tieBreakType 'none'; log "Alder preferred over Birch in runoff."; winner ALDER.

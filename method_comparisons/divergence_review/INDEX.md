@@ -6,16 +6,16 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **219** single-winner STAR elections (skipped 156 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **131** (60%) diverge from STAR under at least one method; **88** agree across the board.
+- Scanned **223** single-winner STAR elections (skipped 156 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **133** (60%) diverge from STAR under at least one method; **90** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 30 |
-| STAR_OUTLIER_RR_WITH_IRV | 9 |
+| STAR_OUTLIER_RR_WITH_IRV | 10 |
 | IRV_DIFFERS_ARTIFACT | 11 |
 | CYCLE_OR_THREE_WAY | 37 |
-| APPROVAL_OR_MINOR | 44 |
+| APPROVAL_OR_MINOR | 45 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (128 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (130 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 29
 
@@ -92,7 +92,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey  
     _also at: `method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml`_
 
-### STAR_OUTLIER_RR_WITH_IRV — 9
+### STAR_OUTLIER_RR_WITH_IRV — 10
 
 _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for evenhandedness: STAR isn't always the Condorcet pick)_
 
@@ -115,6 +115,8 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     _flags: 9 tied-score ballot(s)_
 - **[ex02_bella_exits](cases/STAR_OUTLIER_RR_WITH_IRV/ex02_bella_exits.md)** — `01_STAR/05_Practice/cases/ex02_bella_exits.yaml` (4c/9b)  
     STAR=**Chris** · IRV=Eli · RR=Eli · Approval=Alex · Score=Alex · Condorcet=Eli
+- **[majority_illusion_c3_b41_two_rivals](cases/STAR_OUTLIER_RR_WITH_IRV/majority_illusion_c3_b41_two_rivals.md)** — `method_comparisons/ces_majority_illusion/cases/majority_illusion_c3_b41_two_rivals.yaml` (3c/41b)  
+    STAR=**Brian** · IRV=Alice · RR=Alice · Approval=Brian · Score=Brian · Condorcet=Alice
 - **[mono_raise_delete_before](cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md)** — `method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml` (3c/30b)  
     STAR=**X** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
 - **[wcl_c3_b5_star](cases/STAR_OUTLIER_RR_WITH_IRV/wcl_c3_b5_star.md)** — `method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml` (3c/5b)  
@@ -240,7 +242,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
 
-### APPROVAL_OR_MINOR — 44
+### APPROVAL_OR_MINOR — 45
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -315,6 +317,8 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
 - **[brams_grading_paradox_c3_b3](cases/APPROVAL_OR_MINOR/brams_grading_paradox_c3_b3.md)** — `method_comparisons/brams_grading_paradox/cases/brams_grading_paradox_c3_b3.yaml` (3c/3b)  
     STAR=**Baker** · IRV=Baker · RR=Baker · Approval=Adams · Score=Adams · Condorcet=Baker  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority_
+- **[majority_illusion_c3_b41_score_vs_star](cases/APPROVAL_OR_MINOR/majority_illusion_c3_b41_score_vs_star.md)** — `method_comparisons/ces_majority_illusion/cases/majority_illusion_c3_b41_score_vs_star.yaml` (3c/41b)  
+    STAR=**Alice** · IRV=Alice · RR=Alice · Approval=Brian · Score=Brian · Condorcet=Alice
 - **[bv2173_gmfv4c_edelman_saari_cancellation](cases/APPROVAL_OR_MINOR/bv2173_gmfv4c_edelman_saari_cancellation.md)** — `method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml` (3c/81b)  
     STAR=**Ada** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada
 - **[bv2148_h87k6v_star](cases/APPROVAL_OR_MINOR/bv2148_h87k6v_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_star.yaml` (3c/15b)  

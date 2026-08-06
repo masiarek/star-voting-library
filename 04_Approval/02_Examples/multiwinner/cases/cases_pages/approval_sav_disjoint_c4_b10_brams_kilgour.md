@@ -9,6 +9,8 @@ search:
 
 **Method:** [Approval Voting](../../../../01_Learn) · **2 seats** · **Expected winners:** Ada, Ben
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/4hfwqd) · **[results ↗](https://bettervoting.com/4hfwqd/results)** (election `4hfwqd` · test `BV2271`).
+
 ## Scenario
 
 Brams & Kilgour's own worked example (Satisfaction Approval Voting, MPRA
@@ -38,6 +40,13 @@ PAV splits the difference — it ties {Ada,Cleo}, {Ada,Dev}, {Ben,Cleo},
 {Ben,Dev}, one seat from each side, which is the proportional answer for a
 40% bloc holding 2 seats. Concept page:
 04_Approval/01_Learn/Multiwinner_Approval/satisfaction_approval_voting.md
+
+Live on BetterVoting (BV2271, election 4hfwqd): the SAME ten voters under the
+three methods BV can tabulate — Approval, STAR and Ranked Robin, all bloc at
+2 seats. All three elect Ada and Ben, so SAV is the lone dissenter rather
+than bloc Approval being the outlier. Two-view page:
+bv2271_4hfwqd_sav_disjoint.md
+Live results: https://bettervoting.com/4hfwqd/results
 
 ## Ballots
 

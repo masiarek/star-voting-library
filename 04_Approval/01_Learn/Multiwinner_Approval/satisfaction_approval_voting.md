@@ -143,8 +143,10 @@ The LH engine's `voting_method: Approval_Multi_Winner` is the **AV** half of eve
 
 | Case | Seats | The lesson | Live |
 |---|:--:|---|---|
-| [SAV vs AV — disjoint committees](../../02_Examples/multiwinner/cases/cases_pages/approval_sav_disjoint_c4_b10_brams_kilgour.md) | 2 | Proposition 2 on the paper's own ballots: AV elects `{Ada, Ben}`, SAV elects `{Cleo, Dev}`, no overlap. Bloc **STAR** and **Ranked Robin** both agree with AV — SAV is the lone dissenter | [BV2271](../../02_Examples/multiwinner/) |
-| [SAV covers everyone AV leaves out](../../02_Examples/multiwinner/cases/cases_pages/approval_sav_covers_everyone_c3_b17_brams_kilgour.md) | 2 | Proposition 5: AV's `{Ash, Bree}` strands three voters; SAV's `{Bree, Cole}` is the minimal set representing all 17 — and **PAV agrees with SAV here** | [BV2272](../../02_Examples/multiwinner/) |
+| [SAV vs AV — disjoint committees](../../02_Examples/multiwinner/bv2271_4hfwqd_sav_disjoint.md) | 2 | Proposition 2 on the paper's own ballots: AV elects `{Ada, Ben}`, SAV elects `{Cleo, Dev}`, no overlap. Bloc **STAR** and **Ranked Robin** both agree with AV — so SAV is the lone dissenter, not AV the outlier | **BV2271** · [results ↗](https://bettervoting.com/4hfwqd/results) |
+| [SAV covers everyone AV leaves out](../../02_Examples/multiwinner/bv2272_dr6fmg_sav_coverage.md) | 2 | Proposition 5: AV's `{Ash, Bree}` strands three voters; SAV's `{Bree, Cole}` is the minimal set representing all 17 — and **PAV agrees with SAV here**, while *sequential* PAV does not | **BV2272** · [results ↗](https://bettervoting.com/dr6fmg/results) |
+
+Each live election carries the same electorate under **Approval, STAR and Ranked Robin** (BetterVoting has no SAV tabulator). Within each election all three agree — which is the useful negative result: SAV's answer is not one that the methods in ordinary use ever reach.
 
 ## References
 
