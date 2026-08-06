@@ -1,5 +1,11 @@
 # 02_STAR_Bloc — Bloc STAR (multi-winner, majoritarian)
 
+*Score every candidate 0–5, exactly as in single-winner STAR. Then run that entire count once per seat.*
+
+<img src="01_Learn/img/ballot_bloc_star.png" width="460" alt="A Bloc STAR ballot. Heading: Bloc STAR Voting. Above the race: This election will elect 3 winners. Instructions: give your favorite candidate five stars; give your last choice zero stars or leave them blank; equal scores are allowed; score other candidates as desired. A 0-5 grid with one row per candidate, marked Andre 5, Blake 0, Carmen 1, David 4, Ella 4. Below the grid: This election will use Bloc STAR Voting to elect 3 winners. In Bloc STAR Voting, the two highest scoring candidates are finalists and your vote goes to the finalist you prefer. The finalist preferred by the most voters wins. This process repeats until all seats have been filled.">
+
+*The ballot — drawn here from the [STAR Voting technical specifications](https://www.starvoting.org/technical_specifications) §3.b–3.d rather than screenshotted, because BetterVoting's live one prints neither the right method name nor the sentence that explains multi-winner. Only two things on this page mark it as a multi-seat race: the **seat count above the grid**, and the **last sentence below it**. Nothing is rationed — three seats are up and you still score every candidate, once. Full treatment, beside its single-winner twin: [the Bloc STAR ballot](01_Learn/bloc_star_ballot.md).*
+
 Filling **several seats at once** — a city council, a board, a committee — with the same expressive STAR ballot. Bloc STAR is the *majoritarian* multi-winner method: it asks "who does the majority most want?" for every seat. Its proportional cousin, [STAR-PR](../03_STAR_PR/README.md), instead tries to give every faction its fair share. Which you want depends on the body you're electing — this folder teaches the majoritarian one and, just as importantly, **when not to use it**.
 
 New to STAR itself? Learn the single-winner method first — [STAR — start here](../01_STAR/01_Learn/STAR_start_here.md) — because Bloc STAR is just that method, run once per seat.
