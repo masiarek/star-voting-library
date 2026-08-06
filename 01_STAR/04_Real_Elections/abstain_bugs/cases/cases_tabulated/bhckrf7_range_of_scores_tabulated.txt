@@ -1,0 +1,151 @@
+======================================================================
+SOURCE FILE:     bhckrf7_range_of_scores.yaml
+TABULATED FILE:  bhckrf7_range_of_scores_tabulated.txt
+======================================================================
+
+election_title: "hckrf7 — Range of Scores counts 3 ballots on a page that says 1 voter"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/hckrf7 ·
+  results: https://bettervoting.com/hckrf7/results
+  A three-ballot STAR race where BetterVoting's "Range of Scores" chart (Stats for
+  Nerds) and the page headline disagree about how many ballots there are.
+
+bv_election_id: hckrf7
+bv_results_url: https://bettervoting.com/hckrf7/results
+
+scenario_description: |-
+  Three voters, three candidates. Two ballots are **flat all-zeros**; one ballot
+  scores Cal 2, Bob 1, Ann 0.
+
+  BetterVoting's tabulator applies its flat-ballot rule (bettervoting#884): an
+  all-equal ballot is an **abstention**, so it reports `nAbstentions: 2` and
+  `nTallyVotes: 1`, and the results page headline reads **"1 voters"**. Cal wins
+  the runoff 1–0.
+
+  The **"Range of Scores"** chart under *Stats for Nerds* then shows two bars —
+  range 2 at **33%** and range 0 at **67%**. Those are thirds: the chart is
+  computed over **all three** ballots, because its data source
+  (`ballotsForRace()`) drops only a *truly blank* ballot, not a flat one. So the
+  chart's 67% bar is made entirely of ballots the same page says did not vote —
+  and the number **3** appears nowhere on the page for the reader to divide by.
+
+  Nothing is miscounted: the winner, the scores and the runoff are all correct.
+  It is a **denominator/labelling** problem, and it is the mirror image of the
+  already-fixed "Distribution of Equal Support" chart (bettervoting#1390), which
+  dropped ballots the tabulator kept. Here the chart keeps ballots the tabulator
+  dropped.
+
+  LH states its denominator inline instead: `Voters with a preference: 1 of 3
+  (2 Equal Support)` — the 1, the 3 and the gap between them all on one line.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Ann Ambitious,Bob Bossy,Cal Creative
+  0,0,0   # flat ballot — range 0 (BetterVoting files this as an abstention)
+  0,1,2   # the only tallied ballot — range 2, on a 0-5 ballot
+  0,0,0   # flat ballot — range 0 (BetterVoting files this as an abstention)
+
+expected_winners:
+  - Cal Creative
+
+# file: bhckrf7_range_of_scores.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== hckrf7 — Range of Scores counts 3 ballots on a page that says 1 voter ===
+  Three voters, three candidates. Two ballots are **flat all-zeros**; one ballot
+  scores Cal 2, Bob 1, Ann 0.
+
+  BetterVoting's tabulator applies its flat-ballot rule (bettervoting#884): an
+  all-equal ballot is an **abstention**, so it reports `nAbstentions: 2` and
+  `nTallyVotes: 1`, and the results page headline reads **"1 voters"**. Cal wins
+  the runoff 1–0.
+
+  The **"Range of Scores"** chart under *Stats for Nerds* then shows two bars —
+  range 2 at **33%** and range 0 at **67%**. Those are thirds: the chart is
+  computed over **all three** ballots, because its data source
+  (`ballotsForRace()`) drops only a *truly blank* ballot, not a flat one. So the
+  chart's 67% bar is made entirely of ballots the same page says did not vote —
+  and the number **3** appears nowhere on the page for the reader to divide by.
+
+  Nothing is miscounted: the winner, the scores and the runoff are all correct.
+  It is a **denominator/labelling** problem, and it is the mirror image of the
+  already-fixed "Distribution of Equal Support" chart (bettervoting#1390), which
+  dropped ballots the tabulator kept. Here the chart keeps ballots the tabulator
+  dropped.
+
+  LH states its denominator inline instead: `Voters with a preference: 1 of 3
+  (2 Equal Support)` — the 1, the 3 and the gap between them all on one line.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                      |    Ann Ambitious  |   * Bob Bossy    | * Cal Creative   |
+---------------------------------------------------------------------------------
+      Ann Ambitious > |        ---        |    0 - 2 - 1     |    0 - 2 - 1     |
+        * Bob Bossy > |     1 - 2 - 0     |       ---        |    0 - 2 - 1     |
+     * Cal Creative > |     1 - 2 - 0     |    1 - 2 - 0     |       ---        |
+
+[Condorcet Winner]
+  Condorcet Winner: Cal Creative — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Ann Ambitious — loses every head-to-head matchup — elected by Approval!
+
+[Divergence from STAR]
+  STAR     = Cal Creative
+  Approval = Ann Ambitious   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 3 ballots.
+Count × Ann Ambitious,Bob Bossy,Cal Creative
+    2 ×             0,        0,           0
+    1 ×             0,        1,           2
+
+[Score Distribution] (how many ballots gave each star rating)
+                    Score
+Candidate      5  4  3  2  1  0  | Total   Avg
+Ann Ambitious  0  0  0  0  0  3  |     0   0.0
+Bob Bossy      0  0  0  0  1  2  |     1   0.3
+Cal Creative   0  0  0  1  0  2  |     2   0.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cal Creative  -- 2 -- First place
+   Bob Bossy     -- 1 -- Second place
+   Ann Ambitious -- 0
+ Cal Creative and Bob Bossy advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cal Creative  -- 1 -- First place
+   Bob Bossy     -- 0
+   Equal Support -- 2
+ Cal Creative wins.
+   Runoff math:
+     3  ballots cast
+   − 2  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Cal Creative 1 (100%)  ·  Bob Bossy 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Cal Creative

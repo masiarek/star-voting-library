@@ -1,0 +1,324 @@
+{
+  "Election": {
+    "election_id": "hckrf7",
+    "title": "Copy of BV210 - View / report - Distribution of Equal Preferences (3 cand)",
+    "description": "",
+    "frontend_url": "",
+    "start_time": "2025-02-27T13:54:16.493Z",
+    "end_time": "2025-02-28T13:54:16.493Z",
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "draft",
+    "races": [
+      {
+        "title": "BV210 - View / report - Distribution of Equal Preferences (3 cand)",
+        "description": "",
+        "race_id": "529cc24b-a6da-4a53-a949-19a05d0e7b97",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "4ad26dac-6e26-44cc-a6fd-3be75e213bd7",
+            "candidate_name": "Ann Ambitious"
+          },
+          {
+            "candidate_id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70",
+            "candidate_name": "Bob Bossy"
+          },
+          {
+            "candidate_id": "fe44b80b-0785-44f3-91b8-8418bd6621f1",
+            "candidate_name": "Cal Creative"
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "voter_authentication": {
+        "voter_id": false,
+        "email": false,
+        "ip_address": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/New_York",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": false,
+      "term_type": "election",
+      "voter_access": "open",
+      "contact_email": ""
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2025-02-27T13:58:51.956Z",
+    "update_date": "1740664731956",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "3698c23d-a1f2-4e1e-8027-85fe6c2e775f",
+      "election_id": "hckrf7",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "4ad26dac-6e26-44cc-a6fd-3be75e213bd7"
+            },
+            {
+              "score": 1,
+              "candidate_id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70"
+            },
+            {
+              "score": 2,
+              "candidate_id": "fe44b80b-0785-44f3-91b8-8418bd6621f1"
+            }
+          ],
+          "race_id": "529cc24b-a6da-4a53-a949-19a05d0e7b97"
+        }
+      ]
+    },
+    {
+      "ballot_id": "ece2c21a-fe71-4ca6-aca4-6e44a523ec4e",
+      "election_id": "hckrf7",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "4ad26dac-6e26-44cc-a6fd-3be75e213bd7"
+            },
+            {
+              "score": 0,
+              "candidate_id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70"
+            },
+            {
+              "score": 0,
+              "candidate_id": "fe44b80b-0785-44f3-91b8-8418bd6621f1"
+            }
+          ],
+          "race_id": "529cc24b-a6da-4a53-a949-19a05d0e7b97"
+        }
+      ]
+    },
+    {
+      "ballot_id": "143ecae0-946c-425a-b17c-fa97fe9176a7",
+      "election_id": "hckrf7",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "4ad26dac-6e26-44cc-a6fd-3be75e213bd7"
+            },
+            {
+              "score": 0,
+              "candidate_id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70"
+            },
+            {
+              "score": 0,
+              "candidate_id": "fe44b80b-0785-44f3-91b8-8418bd6621f1"
+            }
+          ],
+          "race_id": "529cc24b-a6da-4a53-a949-19a05d0e7b97"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "fe44b80b-0785-44f3-91b8-8418bd6621f1",
+          "name": "Cal Creative",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 1,
+            "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+            "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 1
+          },
+          "winsAgainst": {
+            "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": true,
+            "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+            "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": true
+          },
+          "score": 2,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70",
+          "name": "Bob Bossy",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 0,
+            "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+            "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 1
+          },
+          "winsAgainst": {
+            "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": false,
+            "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+            "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": true
+          },
+          "score": 1,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "4ad26dac-6e26-44cc-a6fd-3be75e213bd7",
+          "name": "Ann Ambitious",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 0,
+            "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+            "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 0
+          },
+          "winsAgainst": {
+            "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": false,
+            "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+            "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": false
+          },
+          "score": 0,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "fe44b80b-0785-44f3-91b8-8418bd6621f1",
+              "name": "Cal Creative",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 1,
+                "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+                "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 1
+              },
+              "winsAgainst": {
+                "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": true,
+                "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+                "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": true
+              },
+              "score": 2,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70",
+              "name": "Bob Bossy",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 0,
+                "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+                "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 1
+              },
+              "winsAgainst": {
+                "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": false,
+                "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+                "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": true
+              },
+              "score": 1,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Cal Creative",
+                "Bob Bossy"
+              ],
+              "stars": [
+                "2",
+                "1"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Cal Creative",
+              "runner_up": "Bob Bossy",
+              "winner_votes": 1,
+              "runner_up_votes": 0,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "fe44b80b-0785-44f3-91b8-8418bd6621f1",
+            "name": "Cal Creative",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 1,
+              "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+              "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 1
+            },
+            "winsAgainst": {
+              "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": true,
+              "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+              "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": true
+            },
+            "score": 2,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70",
+            "name": "Bob Bossy",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 0,
+              "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+              "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 1
+            },
+            "winsAgainst": {
+              "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": false,
+              "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+              "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": true
+            },
+            "score": 1,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "4ad26dac-6e26-44cc-a6fd-3be75e213bd7",
+            "name": "Ann Ambitious",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": 0,
+              "fe44b80b-0785-44f3-91b8-8418bd6621f1": 0,
+              "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": 0
+            },
+            "winsAgainst": {
+              "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70": false,
+              "fe44b80b-0785-44f3-91b8-8418bd6621f1": false,
+              "4ad26dac-6e26-44cc-a6fd-3be75e213bd7": false
+            },
+            "score": 0,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 2,
+        "nTallyVotes": 1
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "7108aaa5-aa6d-4b1e-a6ad-f506e7ac5f70",
+        "fe44b80b-0785-44f3-91b8-8418bd6621f1",
+        "4ad26dac-6e26-44cc-a6fd-3be75e213bd7"
+      ]
+    }
+  ]
+}

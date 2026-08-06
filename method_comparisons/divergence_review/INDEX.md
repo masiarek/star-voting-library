@@ -6,8 +6,8 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **233** single-winner STAR elections (skipped 165 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **137** (59%) diverge from STAR under at least one method; **96** agree across the board.
+- Scanned **235** single-winner STAR elections (skipped 165 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **139** (59%) diverge from STAR under at least one method; **96** agree across the board.
 
 | Bucket | Count |
 |---|---:|
@@ -15,7 +15,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 | STAR_OUTLIER_RR_WITH_IRV | 10 |
 | IRV_DIFFERS_ARTIFACT | 12 |
 | CYCLE_OR_THREE_WAY | 37 |
-| APPROVAL_OR_MINOR | 47 |
+| APPROVAL_OR_MINOR | 49 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (134 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (136 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -247,10 +247,13 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
 
-### APPROVAL_OR_MINOR — 47
+### APPROVAL_OR_MINOR — 49
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
+- **[same_total_different_shape_c3_b7](cases/APPROVAL_OR_MINOR/same_total_different_shape_c3_b7.md)** — `01_STAR/01_Learn/reporting/cases/same_total_different_shape_c3_b7.yaml` (3c/7b)  
+    STAR=**Avocado** · IRV=Avocado · RR=Avocado · Approval=Bacon · Score=Avocado · Condorcet=Avocado  
+    _flags: 1 tied-score ballot(s)_
 - **[03b_c3_b3_1_style-protest-vote](cases/APPROVAL_OR_MINOR/03b_c3_b3_1_style-protest-vote.md)** — `01_STAR/02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml` (3c/3b)  
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
 - **[03b_c3_b3_2_expand_style-protest-vote](cases/APPROVAL_OR_MINOR/03b_c3_b3_2_expand_style-protest-vote.md)** — `01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vote.yaml` (3c/3b)  
@@ -284,6 +287,8 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
 - **[bv2180_fp62p2_ice_cream_ladder](cases/APPROVAL_OR_MINOR/bv2180_fp62p2_ice_cream_ladder.md)** — `01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml` (6c/2b)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Chocolate · Score=Strawberry · Condorcet=none  
     _flags: 2 tied-score ballot(s)_
+- **[bhckrf7_range_of_scores](cases/APPROVAL_OR_MINOR/bhckrf7_range_of_scores.md)** — `01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml` (3c/3b)  
+    STAR=**Cal Creative** · IRV=Cal Creative · RR=Cal Creative · Approval=Ann Ambitious · Score=Cal Creative · Condorcet=Cal Creative
 - **[Runoff_02_atom_reversal_yx9447](cases/APPROVAL_OR_MINOR/Runoff_02_atom_reversal_yx9447.md)** — `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml` (3c/3b)  
     STAR=**Boston** · IRV=Boston · RR=Boston · Approval=Austin · Score=Austin · Condorcet=Boston
 - **[Runoff_03_enthusiasts_vs_majority_rkgtpk](cases/APPROVAL_OR_MINOR/Runoff_03_enthusiasts_vs_majority_rkgtpk.md)** — `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml` (5c/5b)  

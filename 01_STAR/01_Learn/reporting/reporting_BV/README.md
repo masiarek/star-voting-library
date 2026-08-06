@@ -16,6 +16,7 @@
   - **% Runoff Votes** — out of *all* ballots (includes the Equal Support share);
   - **% Between Finalists** — out of only the voters *with a preference*. This is the column that decides the race. (Same idea, named: [Runoff percentages](../../the_count/runoff_percentages.md).)
 - **Abstentions / tally** — the result data carries `nAbstentions` and `nTallyVotes`.
+- **Stats for Nerds** — a second expander below Race Details, with a dropdown of analysis widgets. For a STAR race that's *Voter Profile* (the average ballot of a chosen candidate's top-scorers, plus a head-to-head split), *Head-to-head*, *Voter Error Stats*, *Column Distribution* (how many candidates each voter scored, and which star columns got used at all), **Range of Scores** (`max − min` per ballot), *Name Recognition* (feature-flagged off by default), and the STAR-specific *Detailed Steps* / *Equal Preferences* panels. These are **per-voter** analyses; the LH engine's `[Score Distribution]` is the **per-candidate** one, and the two are not substitutes — see [Two views of the same scores](../score_matrix_two_views.md).
 
 ## The screenshots (the pet race)
 
@@ -36,6 +37,10 @@
 ## One thing to watch: what BetterVoting calls an "abstention"
 
 BetterVoting counts a ballot as an **abstention** when it is **flat** — every candidate scored the same — and excludes it from the tally. That includes an all-zeros ballot **and** an engaged ballot like all-5s or `3,3,3`. The LH engine instead counts every cast ballot and treats only a **blank** ballot as an abstention, filing flat ballots under **Equal Support**. Same winner, different tally and score totals — see [Where the two reports differ](../reporting_diff_BV_LH.md).
+
+### The same rule, one page over — "Range of Scores" (unfiled)
+
+The *Stats for Nerds* charts read the anonymized ballots directly, through a helper (`ballotsForRace()`) that drops only a **truly blank** ballot — i.e. **LH's** abstention rule, not BetterVoting's. So on an election with flat ballots the **Range of Scores** chart and the page headline divide by different numbers, and only one of them is printed. On [`hckrf7`](../../../04_Real_Elections/abstain_bugs/bhckrf7_range_of_scores.md) the chart reads `33% / 67%` (of **3** ballots) directly under the words *"1 voters"*. Nothing is miscounted; the denominator is just invisible.
 
 ### A related display bug — the "Distribution of Equal Support" graph (#1390)
 

@@ -95,6 +95,7 @@ AGREE,method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.ya
 AGREE,method_comparisons/split_voting/_main/06_sub_majority_not_spoiled.yaml,3,44,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,0,False,False,False
 AGREE,method_comparisons/summability_demo/cases/star_combined.yaml,3,6,Oak,Oak,Oak,Oak,Oak,Oak,Oak,,,0,False,False,True
 AGREE,method_comparisons/summability_demo/cases/star_district_A.yaml,3,3,Maple,Maple,Maple,Maple,Maple,Maple,Maple,Maple,Maple,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/01_Learn/reporting/cases/same_total_different_shape_c3_b7.yaml,3,7,Avocado,Avocado,Avocado,Avocado,Avocado,Bacon,Avocado,Avocado,Avocado,1,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/04b_c4_b3_display-options-all.yaml,4,3,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Vanilla,Strawberry,Strawberry,Strawberry,0,False,False,False
@@ -109,6 +110,7 @@ APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/reversal_jar
 APPROVAL_OR_MINOR,01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml,3,57,Bluebell,Bluebell,Bluebell,Bluebell,Bluebell,Clover,Clover,Bluebell,Bluebell,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/03_Criteria/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml,3,5,Ada,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
 APPROVAL_OR_MINOR,01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml,6,2,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Chocolate,Strawberry,,,2,False,False,True
+APPROVAL_OR_MINOR,01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml,3,3,Cal Creative,Cal Creative,Cal Creative,Cal Creative,Cal Creative,Ann Ambitious,Cal Creative,Cal Creative,Cal Creative,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml,3,3,Boston,Boston,Boston,Boston,Boston,Austin,Austin,Boston,Boston,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml,5,5,Eden,Eden,Eden,Eden,Eden,Dakota,Dakota,Eden,Eden,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_04_reversal_at_scale_bfjqmg.yaml,3,9,Olive,Olive,Olive,Olive,Olive,Maple,Maple,Olive,Olive,0,False,False,False
