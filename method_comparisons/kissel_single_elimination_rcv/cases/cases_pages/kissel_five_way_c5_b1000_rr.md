@@ -110,4 +110,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [kissel_five_way_c5_b1000_irv](kissel_five_way_c5_b1000_irv.md) · [kissel_five_way_c5_b1000_star](kissel_five_way_c5_b1000_star.md) · [mayor_c4_b100_streamlined_irv](mayor_c4_b100_streamlined_irv.md) · [mayor_c4_b100_streamlined_rr](mayor_c4_b100_streamlined_rr.md) · [mayor_c4_b100_streamlined_star](mayor_c4_b100_streamlined_star.md)
+More cases in this set: [bv2277_tqfdbg_mayor_irv](bv2277_tqfdbg_mayor_irv.md) · [bv2277_tqfdbg_mayor_plurality](bv2277_tqfdbg_mayor_plurality.md) · [bv2277_tqfdbg_mayor_rr](bv2277_tqfdbg_mayor_rr.md) · [bv2277_tqfdbg_mayor_star](bv2277_tqfdbg_mayor_star.md) · [kissel_five_way_c5_b1000_irv](kissel_five_way_c5_b1000_irv.md) · [kissel_five_way_c5_b1000_star](kissel_five_way_c5_b1000_star.md)

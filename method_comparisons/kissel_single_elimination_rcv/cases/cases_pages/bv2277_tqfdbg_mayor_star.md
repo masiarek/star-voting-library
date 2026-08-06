@@ -5,9 +5,11 @@ search:
 
 # The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31
 
-*Generated from [`mayor_c4_b100_streamlined_star.yaml`](../mayor_c4_b100_streamlined_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2277_tqfdbg_mayor_star.yaml`](../bv2277_tqfdbg_mayor_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Cora
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tqfdbg) · **[results ↗](https://bettervoting.com/tqfdbg/results)** (election `tqfdbg` · test `BV2277`).
 
 ## Scenario
 
@@ -100,12 +102,12 @@ Cora       20  16  64   0   0   0  |   356   3.6
 Dean       16   0   0   0   0  84  |    80   0.8
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/mayor_c4_b100_streamlined_star_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2277_tqfdbg_mayor_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_star.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_star.yaml
 ```
 
 ## See also
@@ -113,4 +115,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [kissel_five_way_c5_b1000_irv](kissel_five_way_c5_b1000_irv.md) · [kissel_five_way_c5_b1000_rr](kissel_five_way_c5_b1000_rr.md) · [kissel_five_way_c5_b1000_star](kissel_five_way_c5_b1000_star.md) · [mayor_c4_b100_streamlined_irv](mayor_c4_b100_streamlined_irv.md) · [mayor_c4_b100_streamlined_rr](mayor_c4_b100_streamlined_rr.md)
+More cases in this set: [bv2277_tqfdbg_mayor_irv](bv2277_tqfdbg_mayor_irv.md) · [bv2277_tqfdbg_mayor_plurality](bv2277_tqfdbg_mayor_plurality.md) · [bv2277_tqfdbg_mayor_rr](bv2277_tqfdbg_mayor_rr.md) · [kissel_five_way_c5_b1000_irv](kissel_five_way_c5_b1000_irv.md) · [kissel_five_way_c5_b1000_rr](kissel_five_way_c5_b1000_rr.md) · [kissel_five_way_c5_b1000_star](kissel_five_way_c5_b1000_star.md)

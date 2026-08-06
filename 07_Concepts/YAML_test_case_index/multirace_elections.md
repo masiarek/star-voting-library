@@ -775,6 +775,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2275 — Approval — intense second choices | Approval | 3 | **Berry** |
 | BV2275 — Ranked Robin — the ranking alone | RankedRobin | 3 | **Almond** |
 
+## BV2277 — The Mayor's Race — the third-place candidate who beats everyone head-to-head
+
+**Election** [`tqfdbg`](https://bettervoting.com/tqfdbg/results) · **4 races** · **100 ballots** · [frozen export](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2277 — Mayor's race - Choose-One (Plurality) | Plurality | 4 | **Ada** |
+| BV2277 — Mayor's race - IRV (Hare, full rounds) | IRV | 4 | **Cora** |
+| BV2277 — Mayor's race - Ranked Robin (Copeland) | RankedRobin | 4 | **Cora** |
+| BV2277 — Mayor's race - STAR | STAR | 4 | **Cora** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

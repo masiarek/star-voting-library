@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     mayor_c4_b100_streamlined_star.yaml
-TABULATED FILE:  mayor_c4_b100_streamlined_star_tabulated.txt
+SOURCE FILE:     bv2277_tqfdbg_mayor_star.yaml
+TABULATED FILE:  bv2277_tqfdbg_mayor_star_tabulated.txt
 ======================================================================
 
 election_title: "The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31"
@@ -12,6 +12,9 @@ scenario_description: >-
   STAR is one grid, one pass, and no elimination order — and on these ballots it finds
   the majority-preferred candidate that the paper's two-column model does not. Scores
   express the same preference order the ranked companions hold.
+bv_test_id: BV2277
+bv_election_id: tqfdbg
+bv_results_url: https://bettervoting.com/tqfdbg/results
 voting_method: STAR
 num_winners: 1
 options:
@@ -36,7 +39,7 @@ ballots: |-
 expected_winners:
   - Cora
 
-# file: mayor_c4_b100_streamlined_star.yaml
+# file: bv2277_tqfdbg_mayor_star.yaml
 
 ======================================================================
 TABULATION RESULTS
