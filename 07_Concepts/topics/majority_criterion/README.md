@@ -6,6 +6,8 @@ Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Har
 
 **This page is about the *criterion* — a property of a method.** For the *words* — what makes someone a "majority candidate" or a "minority winner," which of the five senses you're using, and why the bare winning percentage is the weakest form of the argument — see [Majority & minority candidates](majority_and_minority_candidates.md).
 
+**And before you read STAR's ✗ here next to its ✗ on Condorcet: those are one failure, not two.** The Condorcet criterion *implies* the majority criterion (a majority's strict favorite beats everyone head-to-head), so failing this one guarantees failing that one — there was never a version of STAR that failed one and passed the other. The proof, the five-ballot election showing both at once, and the score-ballot precondition that decides which of this folder's two cases triggers it: [Condorcet implies majority](condorcet_implies_majority.md).
+
 ---
 
 ## The plain-English version
