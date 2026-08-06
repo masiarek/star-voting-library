@@ -1,0 +1,58 @@
+election_title: Same ranks, polarized electorate — the ranked ballot's blind spot (profile 2 of 2)
+
+voting_method: STAR
+num_winners: 1
+
+scenario_description: |
+  The other half of Proposition 1 in Procaccia & Rosenschein, "The
+  Distortion of Cardinal Preferences in Voting" (CIA 2006). Same three
+  voters, same two candidates, same rankings as the companion file
+  same_ranks_lukewarm_c2_b3 — and a completely different electorate.
+
+  Here nobody is lukewarm: the two A voters score 5,0 and the B voter
+  scores 0,5. Every voter's scores still sum to 5 (the paper's unit-sum
+  normalization). The rankings are still A>B, B>A, A>B — identical, mark
+  for mark, to the companion file.
+
+  But the utility totals have flipped. There, B led 9 to 6 and was the
+  welfare-maximizing winner. Here A leads 10 to 5. A method that reads
+  only the order cannot tell these two elections apart, so it must return
+  the same winner in both — and no single answer is right in both. That
+  is the impossibility: distortion strictly greater than 1 for EVERY
+  social choice function, at three voters and two candidates.
+
+  STAR elects A in both files (with two candidates the automatic runoff
+  is plain majority rule). Here that happens to be the utility optimum
+  too, so this is the profile where the ranked answer is right — and the
+  only way to know which profile you are in is to read the scores, which
+  is exactly what the 0-5 ballot records and the ranking discards.
+
+video_script: |
+  Run this one second, straight after the lukewarm file. Same rankings
+  on screen. Different scoring round: A 10, B 5 instead of B 9, A 6.
+  The line: "identical ranked ballots, opposite right answers." Then the
+  payoff for the score ballot: it is not that scores are nicer, it is
+  that the two elections are genuinely different and only one ballot
+  format wrote the difference down.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  A,B
+  5,0   # voter 1 — all-in for A
+  0,5   # voter 2 — devoted to B
+  5,0   # voter 3 — all-in for A
+
+expected_winners: [A]
+
+# file: same_ranks_polarized_c2_b3_procaccia_rosenschein.yaml

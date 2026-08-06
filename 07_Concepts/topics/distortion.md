@@ -27,7 +27,18 @@ Distortion 1 = the rule always finds the welfare-maximizing winner. Distortion 3
 
 **Read what that construction assumes, because it is the whole ranked-vs-rated argument made formal:** the rule is *penalized for only seeing rankings*. The survey's own framing — the loss is "due to having access to preferences of limited expressiveness, particularly ordinal rankings."
 
-That premise sits at the center of mainstream computational social choice, not at its advocacy fringe — [Procaccia & Rosenschein (2006)](https://link.springer.com/chapter/10.1007/11888874_31) defined it, and it has fifteen-plus years of AAAI/IJCAI/FOCS results behind it. If you want a citation for *"academics increasingly treat utility as the thing elections are trying to find, and rankings as a compression of it,"* this is the one to reach for.
+That premise sits at the center of mainstream computational social choice, not at its advocacy fringe — [Procaccia & Rosenschein (2006)](https://www.cs.huji.ac.il/~jeff/papers/cia06procaccia.pdf) defined it, and it has fifteen-plus years of AAAI/IJCAI/FOCS results behind it. If you want a citation for *"academics increasingly treat utility as the thing elections are trying to find, and rankings as a compression of it,"* this is the one to reach for.
+
+### The founding paper, in four results
+
+Worth knowing on its own terms, because most citations of it stop at the definition — and because two of the four are small enough to run.
+
+1. **Nobody is perfect, and it takes three voters to prove it.** *Proposition 1:* every social choice function has distortion greater than 1 at **3 voters and 2 candidates**. The proof is a matched pair of electorates with identical rankings and opposite welfare-optimal winners — [reproduced here as two runnable ballot files](../../method_comparisons/same_ranks_different_utilities/), where you can watch STAR's scoring round report the difference and its runoff decline to act on it. This is the whole ranked-vs-rated argument at minimum scale, and it also collides productively with [May's theorem](mays_theorem.md).
+2. **Unit-sum normalization *is* one-person-one-vote.** *Proposition 3:* constraining every voter's utilities to the same total is equivalent, for distortion purposes, to leaving them unconstrained **but weighting each voter by their own total**. Read backwards, that's the formal case for a bounded ballot: refusing to normalize is identical to giving louder voters more votes. (Drop the constraint entirely and distortion is unbounded at 3 voters and 2 candidates — the paper's Remark 1.) The repo argues this from principle on [one person, one vote](one_person_one_vote.md) and the [equally weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md); this is the theorem underneath.
+3. **Distortion is NP-complete to compute.** *Proposition 4*, by reduction from Knapsack. Which is why this field proves bounds by hand instead of measuring them — and why the average-case instrument ([VSE](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret)) is simulated rather than solved.
+4. **The escape hatch, and its price.** The paper's second half restricts utilities to rank positions — Monroe's **misrepresentation** — and the impossibilities lift: every method gets a finite bound, Copeland (Ranked Robin) beats STV again, and Borda scores a perfect 1 *because the measure is the Borda count*. That's a page of its own: **[misrepresentation](misrepresentation.md)**.
+
+**And a caveat this page owes you, because the paper is explicit about it.** Distortion was defined for **multiagent systems** — software agents that genuinely compute exact utilities — not for human elections. The authors' own motivation concedes that a human would "probably find it impossible to evaluate each candidate precisely" in utility terms. So the founding paper does *not* establish that human voters have the utilities the framework assumes; it assumes them for agents and proves things about the assumption. What carries the framework over to real elections is the **metric** branch below, which replaces introspection with geometry. Anyone quoting distortion as proof that voters "really have" utilities is quoting past the source — see [cardinal utility](cardinal_utility.md) for that fight.
 
 ## Two models — and the model decides the verdict
 
@@ -43,8 +54,8 @@ The unit-sum model says ordinal ballots are catastrophic. The metric model says 
 
 | Result | Bound | Source |
 |---|---|---|
-| Borda | **unbounded** | Procaccia & Rosenschein 2006 |
-| Plurality | **Θ(m²)** | Caragiannis & Procaccia 2011 |
+| [Borda](ranked_ballot_methods_zoo.md) | **unbounded** | Procaccia & Rosenschein 2006 |
+| [Plurality](plurality.md) | **Θ(m²)** | Caragiannis & Procaccia 2011 |
 | **every deterministic ordinal rule** | **Ω(m²)** — Plurality's bound is *optimal* | Caragiannis et al. 2017 |
 | best randomized rule | O(√m · log\* m), with an Ω(√m) floor | Boutilier et al. 2015 |
 
@@ -54,17 +65,17 @@ Read the third row slowly. It is not "Plurality is bad." It is: **no determinist
 
 | Rule | Metric distortion | Source |
 |---|---|---|
-| **any Condorcet winner** (when one exists) | **≤ 3** | Anshelevich et al. 2015 |
+| **any [Condorcet winner](condorcet/README.md)** (when one exists) | **≤ 3** | Anshelevich et al. 2015 |
 | **any** deterministic rule reading only rankings | **≥ 3** (matching lower bound) | Anshelevich et al. 2015 |
 | Plurality Matching | **= 3** — optimal, conjecture resolved | [Gkatzelis, Halpern & Shah 2020 (FOCS)](https://arxiv.org/abs/2004.07447) |
 | Plurality Veto | **= 3** — same bound, far simpler rule | [Kizilkaya & Kempe 2022](https://arxiv.org/abs/2206.07098) |
 | **Copeland** — i.e. [**Ranked Robin**](../../05_Ranked_Robin/01_Learn/ranked_robin.md) | **≤ 5** | Anshelevich et al. 2015 |
 | Munagala & Wang's rule | 4.236 — first break below 5 | 2019 |
-| Ranked Pairs | **Θ(√m)** — *not* constant | Goel et al. 2017; Kempe 2020 |
+| [Ranked Pairs](ranked_ballot_methods_zoo.md) | **Θ(√m)** — *not* constant | Goel et al. 2017; Kempe 2020 |
 | **STV** (⇒ [**RCV-IRV**](../../06_Other/RCV_IRV/concepts/README.md) single-winner) | between Ω(√log m) and **O(log m)** — *not* constant | [Skowron & Elkind 2017](https://ojs.aaai.org/index.php/AAAI/article/view/10591) |
 | Plurality, Borda | **2m − 1** (linear in the field) | Anshelevich et al. 2015 |
 | k-approval, Veto | 2n − 1 (linear in the *electorate*) | Anshelevich et al. 2015 |
-| approval-style input | **unbounded** | Pierczyński & Skowron 2019 |
+| [approval-style input](../../04_Approval/README.md) | **unbounded** | Pierczyński & Skowron 2019 |
 
 Whether the 3 could actually be *attained* by a rule (Condorcet winners don't always exist) was open for years — the **optimal metric distortion conjecture** — until Gkatzelis, Halpern & Shah resolved it, and Kizilkaya & Kempe then found an almost embarrassingly simple optimal rule: **Plurality Veto** — give each candidate their first-place count as a score, then let voters in turn each decrement their *least* favorite remaining candidate; last one standing. Distortion exactly 3.
 
@@ -110,7 +121,9 @@ That is a mainstream-academic argument for **Condorcet over instant runoff, on t
 
 **Approval-only input is unbounded.** A cardinal ballot with too few levels is not automatically better than a ranking — it is, in the metric setting, *worse than every ranked rule in the table*. This is the cleanest available refutation of "cardinal ⇒ more information ⇒ better outcomes" as a blanket claim, and it belongs in any honest STAR-vs-Approval discussion (see [how often STAR and Approval disagree](../../method_comparisons/star_vs_approval_divergence.md), where the same fragility shows up empirically as the cutoff problem).
 
-Read all of it the repo's way ([severity × frequency](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md)): these are **worst cases**. On realistic electorates every serious method sits far below its bound most of the time — which is what the average-case metric measures. Distortion is the guarantee; VSE is the expectation.
+Read all of it the repo's way ([severity × frequency](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md)): these are **worst cases**. On realistic electorates every serious method sits far below its bound most of the time — which is what the average-case metric measures. Distortion is the guarantee; VSE is the expectation. *With one large caveat, proved in 2024: "average case" is not automatically the same thing as "realistic," and on the standard random model it rescues nothing at all — [below](#does-averaging-rescue-rankings-not-by-itself).*
+
+**Districts multiply all of it by k.** Everything above assumes one electorate counted once. Slice the voters into `k` districts that each elect a representative and then choose among the representatives, and every bound in both tables gains a factor of `k` — a cost that survives even when each district counts perfect cardinal utilities, because it is a property of the architecture rather than the ballot. That has its own page: [distributed voting — the measured price of counting by district](distributed_voting_distortion.md).
 
 ## Does STAR's runoff change the math? (Yes — it's where the lemma plugs in)
 
@@ -127,16 +140,42 @@ What *can* be said rigorously is conditional, and the machinery maps onto STAR's
 
 If you take one row out of the whole literature, take this one. Amanatidis, Birmpas, Filos-Ratsikas & Voudouris studied rules that read rankings **plus a few numeric queries** — "on a scale, how good is this one?" — asked of each voter:
 
-| Cardinal information per voter | Unit-sum distortion |
-|---|---|
-| none (rankings only) | Θ(m²) |
-| **one query** | **O(m)** |
-| O(log m) queries | O(√m) — matches the best *randomized* ordinal rule |
-| O(log² m) queries | **constant** |
+| Cardinal information per voter | Worst-case unit-sum distortion | Source |
+|---|---|---|
+| none (rankings only) | Θ(m²) | Caragiannis et al. 2017 |
+| **one query** | **O(m)** — and no *deterministic* 1-query rule beats **Ω(√m)**, even when values are 0/1 | Amanatidis et al. 2021; Caragiannis & Fehrs 2024 (Thm 18) |
+| **λ queries**, λ constant | **Θ(min{n, m}<sup>1/λ</sup>)** — optimal; each extra query takes another root off the bound | [Ebadian & Shah 2025](https://ojs.aaai.org/index.php/AAAI/article/view/33507) |
+| O(log m) queries | O(log m), randomized | Caragiannis & Fehrs 2024 (Thm 15) |
+| to reach a **constant** | **Ω(log m) queries are necessary**; O(log² m) suffice | Caragiannis & Fehrs 2024 (Thm 17); Amanatidis et al. 2021 |
 
 And — the part that matters most — these bounds **hold without any normalization assumptions**.
 
-That is the precise, defensible form of "scores are more powerful expression." Not *"cardinal ballots are better"* (Approval's unbounded row kills that), and not *"rankings are hopeless"* (the metric factor of 3 kills that). The defensible claim is: **a small amount of intensity information buys a large, provable reduction in worst-case welfare loss — quadratic to constant.** A 0–5 score ballot is, in effect, six buckets of exactly that kind of information — the theory's own escape hatch from the 3× floor, built into the ballot.
+The middle row is the one to memorize, and it is newer than the rest: **each additional query takes another root off the distortion.** One query buys you m, two buys √m, three buys ∛m, and the bound is now known to be optimal — Ebadian & Shah's AAAI-25 outstanding paper settled it against a matching lower bound. Reading the top and bottom rows together: the *first* scrap of intensity information is worth more than every clever thing you could do with the rankings.
+
+That is the precise, defensible form of "scores are more powerful expression." Not *"cardinal ballots are better"* (Approval's unbounded row kills that), and not *"rankings are hopeless"* (the metric factor of 3 kills that). The defensible claim is: **a small amount of intensity information buys a large, provable reduction in worst-case welfare loss.**
+
+*Don't over-map this onto the STAR ballot, though.* A "query" here is the mechanism asking one voter for one candidate's exact value; a 0–5 ballot instead collects a **coarsely quantized** value for **every** candidate. That is a different object — richer in coverage, poorer in precision — so these rows are not a distortion bound for STAR (there [still isn't one](#does-stars-runoff-change-the-math-yes-its-where-the-lemma-plugs-in)). What they establish is the direction and the steepness: intensity information is cheap to collect and pays out fast.
+
+## Does averaging rescue rankings? Not by itself
+
+The natural hope, once you've read the Θ(m²) row, is that it's a pathology — a construction an adversary builds, not a thing that happens. Take the average instead of the worst case and surely the ordinal rules look fine. Caragiannis & Fehrs (WINE 2024) went and checked, and the answer is **no**.
+
+Their model is the obvious one: each voter draws a value for each candidate independently from a common distribution, and ranks accordingly. That is exactly an **[impartial culture](election_simulation_models.md)** electorate. They then define **average distortion** as the ratio of the *expected* optimal welfare to the *expected* welfare of what the rule elects — a ratio of expectations, not an expectation of ratios, which is the choice that keeps rare events from swallowing the metric.
+
+> **Theorem 1.** For every voting rule — deterministic *or* randomized — average distortion on binary value distributions is **Ω(m)**.
+
+And the flip side, which is what makes it bite: the **trivial** rules — return a fixed candidate, or draw one uniformly at random while ignoring every ballot — have average distortion at most **m** for *any* distribution. Put those together:
+
+**On an impartial-culture electorate, picking the winner out of a hat is within a constant factor of the best that any voting rule can do on average.** Not Plurality-is-bad; *every rule*, including ones nobody has invented yet.
+
+This is the theorem underneath a caution this library was already printing from the empirical side. The [simulation ladder](election_simulation_models.md) warns that impartial culture manufactures near-ties so that "methods never get to show their skill at ferreting out the best candidate," and [simulate utilities, not ballots](simulate_utilities_not_ballots.md) files IC as *adversarial*, not realistic. Caragiannis & Fehrs prove the strong form: under IC there is no skill to show. **Anyone quoting a method-comparison statistic computed on impartial culture is quoting a number the theory says is nearly information-free** — which is why this repo's rule is [never quote a rate without the model](../curriculum/CURRICULUM_301.md).
+
+Read the negative result carefully, in both directions:
+
+- It does **not** say real elections are hopeless. IC is the adversarial end of the modelling spectrum, and the escape route for ordinal rules was never averaging — it is the **metric** assumption, which is a statement about structure, not about typicality. Structure is what saves ranked ballots; randomness doesn't.
+- It **does** kill the loose move of treating "worst case" as a synonym for "exotic corner." Averaging over a standard random model changes the exponent (m² → m) and nothing else that matters.
+
+**And then the same escape hatch appears, one section early.** Their positive results are queries again: a deterministic mechanism (**Mean**) making a **single** value query per voter achieves **constant** average distortion on binary distributions, and a randomized one-query mechanism (**RtMean**) achieves O(log m + log(σ²/μ²)) for a general distribution with mean μ and variance σ² — logarithmic in m for most distributions you'd actually write down. Worst case and average case, from opposite directions, arrive at the same sentence: **one question per voter is the difference between "no better than a coin flip" and "constant."**
 
 ## Distortion vs. VSE — same question, opposite instruments
 
@@ -151,6 +190,8 @@ That is the precise, defensible form of "scores are more powerful expression." N
 | Weak spot | worst cases may be exotic | assumptions are contestable, not proved |
 
 They are the same underlying commitment — *utility is the target, a ballot is a lossy channel* — measured from opposite ends. **That's the useful thing to know if someone dismisses VSE as reform-movement math:** the peer-reviewed literature made the identical modeling choice, and simply proved bounds instead of running simulations. VSE's *premise* is mainstream; only its *methodology* is advocacy-side.
+
+**The table's empty corner is no longer empty**, and that is the news from [the average-distortion section](#does-averaging-rescue-rankings-not-by-itself). Read the first two rows as a grid: worst-case-and-proved is distortion, average-case-and-simulated is VSE, and **average-case-and-proved** was, until recently, nobody's department. Caragiannis & Fehrs occupy it — and the first thing found there is that the two instruments do not simply meet in the middle. VSE's optimism comes from its *voter model* (spatial, structured, correlated), not from the mere act of averaging. Swap in an unstructured random electorate and the average-case verdict is nearly as bleak as the worst-case one. That's a caution for VSE too: the percentage you get out is a fact about the electorate you simulated.
 
 ## The fair reading, both directions
 
@@ -178,7 +219,7 @@ Don't say *"academics have shown scores are better"* — Approval's unbounded di
 **Academic — the right tier for theorems.**
 
 - Anshelevich, Filos-Ratsikas, Shah & Voudouris, [*Distortion in Social Choice Problems: The First 15 Years and Beyond*](https://www.ijcai.org/proceedings/2021/0589.pdf) (IJCAI 2021 survey; [arXiv:2103.00911](https://arxiv.org/abs/2103.00911)) — the single best entry point; every bound quoted above is in it.
-- Procaccia & Rosenschein, [*The Distortion of Cardinal Preferences in Voting*](https://link.springer.com/chapter/10.1007/11888874_31) (CIA 2006) — the founding paper.
+- Procaccia & Rosenschein, [*The Distortion of Cardinal Preferences in Voting*](https://www.cs.huji.ac.il/~jeff/papers/cia06procaccia.pdf) (CIA 2006, LNAI 4149, pp. 317–331; [Springer](https://link.springer.com/chapter/10.1007/11888874_31)) — the founding paper: §3 is summarized above and its Proposition 1 is [runnable](../../method_comparisons/same_ranks_different_utilities/); §4 is the [misrepresentation](misrepresentation.md) page.
 - Boutilier, Caragiannis, Haber, Lu, Procaccia & Sheffet, *Optimal Social Choice Functions: A Utilitarian View* (AIJ 2015) — the unit-sum randomized bounds.
 - Anshelevich, Bhardwaj, Elkind, Postl & Skowron, [*Approximating Optimal Social Choice under Metric Preferences*](https://www.cs.rpi.edu/~eanshel/papers/distortionFull.pdf) (AIJ 2018; [arXiv:1512.07590](https://arxiv.org/abs/1512.07590)) — Copeland ≤ 5, the ≤ 3 Condorcet lemma, the ≥ 3 lower bound, the scoring rules.
 - Skowron & Elkind, [*Social Choice under Metric Preferences: Scoring Rules and STV*](https://ojs.aaai.org/index.php/AAAI/article/view/10591) (AAAI 2017; [arXiv:1611.08549](https://arxiv.org/abs/1611.08549)) — STV's O(log m).
@@ -186,11 +227,17 @@ Don't say *"academics have shown scores are better"* — Approval's unbounded di
 - Kizilkaya & Kempe, [*Plurality Veto: A Simple Voting Rule Achieving Optimal Metric Distortion*](https://arxiv.org/abs/2206.07098) (IJCAI 2022).
 - Amanatidis, Birmpas, Filos-Ratsikas & Voudouris, [*Peeking Behind the Ordinal Curtain: Improving Distortion via Cardinal Queries*](https://arxiv.org/abs/1907.08165) (AIJ 2021) — the query results.
 - Ebadian et al., [*The Distortion of Approval Voting with Runoff*](https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1752.pdf) (AAMAS 2023) — the closest published analogue to STAR's shape; runnable companion: [the valuable Condorcet loser, counted](../../method_comparisons/valuable_condorcet_loser/).
+- Caragiannis & Fehrs, [*Beyond the Worst Case: Distortion in Impartial Culture Electorates*](https://arxiv.org/abs/2307.07350) (WINE 2024) — the average-distortion definition, the Ω(m) impossibility, the one-query Mean/RtMean mechanisms, and the Ω(log m) query lower bound.
+- Ebadian & Shah, [*Every Bit Helps: Achieving the Optimal Distortion with a Few Queries*](https://ojs.aaai.org/index.php/AAAI/article/view/33507) (AAAI 2025, outstanding paper) — Θ(min{n, m}<sup>1/λ</sup>) with λ queries; settles the fixed-query question.
+- Filos-Ratsikas & Voudouris, [*Revisiting the Distortion of Distributed Voting*](https://link.springer.com/article/10.1007/s00224-024-10171-1) (*Theory of Computing Systems* 2024, open access) — what districts cost; see [distributed voting](distributed_voting_distortion.md).
 
 **Lean disclosure:** this is peer-reviewed CS/economics with no stake in the US reform fight — the most neutral tier available on this question, and unusually so for voting-method material. Its blind spot is the opposite of advocacy's: it optimizes worst cases over models chosen for tractability, and says nothing about ballot usability, spoilage, or whether voters can actually fill the thing in.
 
 ## See also
 
+- [Misrepresentation](misrepresentation.md) — the rank-based restriction where possibility results live, and the measure that hands Borda the trophy
+- [Same ranks, different utilities](../../method_comparisons/same_ranks_different_utilities/) — the founding impossibility on three ballots · [The valuable Condorcet loser](../../method_comparisons/valuable_condorcet_loser/) — the runoff priced by theorem
+- [Distributed voting](distributed_voting_distortion.md) — the same metric turned on the *architecture*: what counting by district costs, and why no ballot reform touches it
 - [The spatial model](spatial_voting_model.md) — the geometry this whole theory runs on
 - [What makes a good winner?](what_makes_a_good_winner.md) — the utilitarian ideal, Tideman & Plassmann's center, and VSE · [What makes a voting *method* good?](what_makes_a_voting_method_good.md)
 - [Preference vs. support](../scores_and_ranks/preference_vs_support.md) — the intensity information rankings drop, on countable ballots

@@ -41,6 +41,14 @@ The confusion runs both directions:
 
 So the precise sentence is: **all these methods give one person one vote in the legal sense; they differ on whether every voter's vote carries equal *weight through the count*, which is the reformers' bar — and there, Choose-One and RCV-IRV fall short while Score, STAR, Approval, and Ranked Robin hold up.**
 
+## A third sense, from the theory side — and it explains the 0–5 cap
+
+There's a version of this principle that neither sense above quite reaches, and it answers a question score-ballot skeptics ask fairly: *why cap the ballot at 5? Why not let a voter who really cares say 100?*
+
+Because the theory says a cap and equal weight are **the same thing**. In the [distortion](distortion.md) literature, results are proved under **unit-sum normalization** — every voter's utilities sum to the same total (on a 0–5 ballot: everyone gets the same amount of ink). Procaccia & Rosenschein's Proposition 3 proves that model **equivalent** to one where utilities are unconstrained *but each voter is weighted by their own total*. The two are interchangeable, which means the converse is exact: **an uncapped ballot is a weighted vote**, and a voter's weight is whatever they claim to feel. Drop the constraint and the worst-case loss is unbounded at three voters.
+
+That's the [equally weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) argument arriving from computational social choice rather than from reform advocacy — worth having, since Sense 2's provenance is the caveat above. It also marks the limit of the analogy honestly: this is a statement about *utility scales*, not about districting or ballot counting, so it settles neither of the two senses above. It settles the design question they don't reach.
+
 ## Sources
 
 - *Gray v. Sanders* (1963), *Wesberry v. Sanders* (1964), *Reynolds v. Sims* (1964) — the reapportionment cases that established the legal principle.
