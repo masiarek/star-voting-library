@@ -52,6 +52,11 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: C and D tied at 1 in the Scoring Round, and the lot rung (the
+              ballots could not separate them) advanced C. The * marks who
+              advanced, not who scored highest. D is filtered out of this grid
+              — see the Scoring Round for how the tie was settled.
+
                |    * B     |   * C     |
 -----------------------------------------
          * B > |    ---     |3 - 4 - 1  |

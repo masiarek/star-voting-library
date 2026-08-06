@@ -119,6 +119,10 @@ Count × Amos,Bree,Cole
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Bree and Cole tied at 10 in the Scoring Round, and the
+              head-to-head rung advanced Cole. The * marks who advanced, not
+              who scored highest.
+
                |   * Amos   |    Bree   |  * Cole   |
 -----------------------------------------------------
       * Amos > |    ---     |4 - 2 - 3  |2 - 4 - 3  |

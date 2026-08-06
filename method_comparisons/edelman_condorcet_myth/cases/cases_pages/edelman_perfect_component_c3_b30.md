@@ -120,6 +120,10 @@ Count × Ada,Ben,Cara
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ada, Ben and Cara tied at 70 in the Scoring Round, and the lot
+              rung (the ballots could not separate them) advanced Ada and Ben.
+              The * marks who advanced, not who scored highest.
+
                  |    * Ada     |   * Ben     |     Cara    |
 -------------------------------------------------------------
          * Ada > |     ---      |20 -  0 - 10 |10 -  0 - 20 |

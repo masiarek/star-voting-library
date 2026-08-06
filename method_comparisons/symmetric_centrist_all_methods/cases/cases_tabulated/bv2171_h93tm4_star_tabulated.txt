@@ -55,6 +55,10 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Avery and Blake tied at 22 in the Scoring Round, and the lot
+              rung (the ballots could not separate them) advanced Avery. The *
+              marks who advanced, not who scored highest.
+
                |  * Avery   |   Blake   | * Casey   |
 -----------------------------------------------------
      * Avery > |    ---     |4 - 0 - 4  |3 - 0 - 5  |

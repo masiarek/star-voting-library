@@ -96,6 +96,10 @@ Alice,Ben,Cara
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ben and Cara tied at 6 in the Scoring Round, and the five-star
+              rung advanced Ben. The * marks who advanced, not who scored
+              highest.
+
                |  * Alice   |  * Ben    |    Cara   |
 -----------------------------------------------------
      * Alice > |    ---     |1 - 1 - 0  |2 - 0 - 0  |

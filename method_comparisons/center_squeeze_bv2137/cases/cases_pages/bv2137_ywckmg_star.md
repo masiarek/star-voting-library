@@ -91,6 +91,10 @@ Count × Reagan,Anderson,Carter
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Carter and Reagan tied at 280 in the Scoring Round, and the
+              head-to-head rung advanced Carter. The * marks who advanced, not
+              who scored highest.
+
                  |     Reagan   | * Anderson  |  * Carter   |
 -------------------------------------------------------------
         Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |

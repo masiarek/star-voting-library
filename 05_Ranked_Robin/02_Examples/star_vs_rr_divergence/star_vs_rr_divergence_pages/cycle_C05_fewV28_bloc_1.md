@@ -94,6 +94,10 @@ Count x A,B,C,D,E
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: A, C and E tied at 70 in the Scoring Round, and the head-to-head
+              rung advanced A and E. The * marks who advanced, not who scored
+              highest.
+
                  |     * A      |      B      |      C      |      D      |    * E      |
 -----------------------------------------------------------------------------------------
            * A > |     ---      |14 -  0 - 14 |14 -  0 - 14 |14 -  0 - 14 |14 -  0 - 14 |

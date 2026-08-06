@@ -54,6 +54,11 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ben and Cara tied at 9 in the Scoring Round, and the lot rung
+              (the ballots could not separate them) advanced Cara. The * marks
+              who advanced, not who scored highest. Ben is filtered out of
+              this grid — see the Scoring Round for how the tie was settled.
+
                |   * Ann    |  * Cara   |
 -----------------------------------------
        * Ann > |    ---     |3 - 1 - 1  |

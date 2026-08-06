@@ -127,6 +127,10 @@ A,B,C,D
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: C and D tied at 1 in the Scoring Round, and the lot rung (the
+              ballots could not separate them) advanced C. The * marks who
+              advanced, not who scored highest.
+
                |      A     |   * B     |   * C     |     D     |
 -----------------------------------------------------------------
            A > |    ---     |0 - 5 - 3  |0 - 7 - 1  |0 - 7 - 1  |

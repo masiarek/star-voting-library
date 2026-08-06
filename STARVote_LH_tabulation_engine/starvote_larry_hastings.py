@@ -1040,80 +1040,167 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
 def _pairwise_preference_count(cand, group, ballots):
     """Ballots on which `cand` outscores another member of `group`, summed over
     every other member — the tally STAR's FIRST scoring-round tiebreaker prints
-    ("the candidate preferred in the most head-to-head matchups advances")."""
-    return sum(
-        1
-        for other in group
-        if other != cand
-        for b in ballots
-        if b.get(cand, 0) > b.get(other, 0)
-    )
+    ("the candidate preferred in the most head-to-head matchups advances").
+
+    Delegates to starvote's own preference round rather than recounting, so
+    this can never disagree with the number the engine puts on screen.
+    """
+    return starvote._preference_round(ballots, list(group))[0].get(cand, 0)
 
 
 def _five_star_count(cand, ballots, max_score=5):
     """Ballots giving `cand` a top score — STAR's SECOND scoring-round
     tiebreaker ("the candidate with the most votes of score 5 advances")."""
-    return sum(1 for b in ballots if b.get(cand, 0) == max_score)
+    return starvote._maximum_score_count_round(ballots, max_score, [cand]).get(cand, 0)
 
 
-def get_top_two_finalists(ballots, order_map=None, max_score=5):
-    """The two candidates that actually reach the automatic runoff.
+def resolve_finalists(ballots, order_map=None, maximum_score=5):
+    """The candidates that actually advance to the Automatic Runoff, and why.
 
-    Walks STAR's real scoring-round ladder rather than the score total alone:
-    score, then — only within a group tied across the top-two cut — the
-    pairwise "preferred in the most head-to-head matchups" count, then the
-    five-star count, then lot-number priority (LotNumberTiebreaker's rule).
+    Replays starvote's OWN Scoring Round ladder — total score, then the
+    head-to-head preference round, then the five-star count, then lot — by
+    calling starvote's own round functions, so the matrix '*' markers and
+    `matrix_finalists_only` name the pair the runoff really used.
 
-    Ranking by score->lot alone was wrong whenever a DETERMINISTIC rung
-    advanced somebody other than the second-highest scorer: the matrix then
-    starred a candidate who never reached the runoff and left the real
-    finalist unstarred, and `matrix_finalists_only` filtered the grid down to
-    the wrong pair — hiding the very head-to-head that settled the race. See
-    01_STAR/03_Criteria/tie_break_ladder (bv2276_qhjyr2_second_finalist_tie:
-    Ben and Cora tie at 14, pairwise advances Cora, and Ben used to be
-    starred). Guarded by tests/test_matrix_finalists.py.
+    Ranking by total score alone (what this did before) stars the wrong
+    candidate whenever the second slot is decided by one of the later rungs:
+    with Ana 15, Ben 14, Cora 14, score order hands the slot to Ben while the
+    head-to-head rung advances Cora — so the matrix starred a candidate the
+    report had just eliminated, and `matrix_finalists_only` filtered the grid
+    down to a matchup that never happened. See
+    01_STAR/03_Criteria/tie_break_ladder (bv2276_qhjyr2_second_finalist_tie,
+    the case that exposed it; bv2180_fp62p2_ice_cream_ladder for a three-way
+    tie that runs all the way to the five-star rung).
+
+    Returns (finalists, tiebreak). `tiebreak` is None when the score alone
+    settled both slots; otherwise it records who was tied, at what score,
+    which rung broke it, and who advanced — everything the matrix needs to
+    say that its '*' followed the tiebreak rather than the score.
     """
     if order_map is None:
         order_map = {}
-    scores = defaultdict(int)
-    for b in ballots:
-        for c, s in b.items():
-            scores[c] += s
 
-    # Candidates grouped by identical total score, best first.
-    groups = []
-    for cand, total in sorted(scores.items(), key=lambda x: -x[1]):
-        if groups and groups[-1][0] == total:
-            groups[-1][1].append(cand)
-        else:
-            groups.append((total, [cand]))
+    scores = starvote._scoring_round(ballots)
+    if len(scores) <= 1:
+        return list(scores), None
 
-    finalists = []
-    for _total, group in groups:
-        if len(finalists) >= 2:
-            break
-        if len(finalists) + len(group) <= 2:
-            # The whole group fits in the remaining slot(s) — no rung needed.
-            finalists.extend(
-                sorted(group, key=lambda c: order_map.get(c, float("inf")))
-            )
-            continue
-        # More candidates tied here than slots left: walk the ladder.
-        finalists.extend(
-            sorted(
-                group,
-                key=lambda c: (
-                    -_pairwise_preference_count(c, group, ballots),
-                    -_five_star_count(c, ballots, max_score),
-                    order_map.get(c, float("inf")),
-                ),
-            )
+    first, second, tie = starvote._compute_first_and_second_from_score(scores, None)
+    if not tie:
+        # Two candidates tied at the top is NOT a tie to break — they are
+        # simply both finalists. Only a tie that overflows the two slots
+        # reaches the ladder below.
+        return [c for c in (first, second) if c is not None], None
+
+    tied = list(tie)
+    tied_score = scores[tied[0]]
+
+    # Rung 1: of the tied candidates, whoever wins the most head-to-head
+    # matchups. This is the rung that most often decides a real election.
+    preferences, _no_preference = starvote._preference_round(ballots, tie)
+    first, second, tie = starvote._compute_first_and_second_from_score(
+        preferences, first
+    )
+    rung = "head-to-head"
+
+    if tie:
+        # Rung 2: most ballots awarding them the maximum score.
+        fives = starvote._maximum_score_count_round(ballots, maximum_score, tie)
+        first, second, tie = starvote._compute_first_and_second_from_score(
+            fives, first
         )
-    return finalists[:2]
+        rung = "five-star"
+
+        if tie:
+            # Rung 3 (the "dead rung"): the pre-published lot order — the
+            # same order LotNumberTiebreaker applies, replayed silently
+            # here because this is an analysis pass, not the count.
+            needed = 1 if first else 2
+            picked = sorted(
+                tie, key=lambda c: order_map.get(c, float("inf"))
+            )[:needed]
+            if needed == 1:
+                second = picked[0]
+            else:
+                first, second = picked
+            rung = "lot"
+
+    finalists = [c for c in (first, second) if c is not None]
+    tiebreak = {
+        "tied": tied,
+        "score": tied_score,
+        "rung": rung,
+        "advanced": [c for c in tied if c in finalists],
+        "eliminated": [c for c in tied if c not in finalists],
+    }
+    return finalists, tiebreak
+
+
+def get_top_two_finalists(ballots, order_map=None, maximum_score=5):
+    """The finalists alone — see resolve_finalists() for how they were settled."""
+    return resolve_finalists(ballots, order_map, maximum_score)[0]
+
+
+def _names(candidates):
+    """'Ben and Cora' / 'Ada, Ben and Cora' — for prose, not for columns."""
+    names = list(candidates)
+    if len(names) <= 1:
+        return "".join(names)
+    return f"{', '.join(names[:-1])} and {names[-1]}"
+
+
+def finalist_tiebreak_note(tiebreak, finalists_only=False):
+    """Say that a '*' followed the Scoring Round tiebreak, not the score.
+
+    Without this the matrix silently contradicts itself for a reader who only
+    knows the scores: the candidate with the higher total is unstarred, and
+    under `matrix_finalists_only` they are missing from the grid altogether,
+    with nothing on the page explaining where they went.
+    """
+    rung_phrase = {
+        "head-to-head": "the head-to-head rung",
+        "five-star": "the five-star rung",
+        "lot": "the lot rung (the ballots could not separate them)",
+    }[tiebreak["rung"]]
+
+    sentences = [
+        f"{_names(tiebreak['tied'])} tied at {tiebreak['score']} in the Scoring "
+        f"Round, and {rung_phrase} advanced {_names(tiebreak['advanced'])}.",
+        "The * marks who advanced, not who scored highest.",
+    ]
+    if finalists_only and tiebreak["eliminated"]:
+        gone = _names(tiebreak["eliminated"])
+        if tiebreak["rung"] == "head-to-head":
+            sentences.append(
+                f"{gone} is filtered out of this grid, so the head-to-head that "
+                "settled it is not shown — see the Scoring Round."
+                if len(tiebreak["eliminated"]) == 1 else
+                f"{gone} are filtered out of this grid, so the head-to-head that "
+                "settled it is not shown — see the Scoring Round."
+            )
+        else:
+            sentences.append(
+                f"{gone} is filtered out of this grid — see the Scoring Round "
+                "for how the tie was settled."
+                if len(tiebreak["eliminated"]) == 1 else
+                f"{gone} are filtered out of this grid — see the Scoring Round "
+                "for how the tie was settled."
+            )
+
+    return textwrap.wrap(
+        " ".join(sentences),
+        width=78,
+        initial_indent="        Note: ",
+        subsequent_indent="              ",
+        # "head-to-head" and hyphenated candidate names must not be split
+        # across lines — the wrap would read as two different words.
+        break_on_hyphens=False,
+        break_long_words=False,
+    )
 
 
 def print_matrix(
-    candidates, matrix, finalists=None, star_winner=None, finalists_only=False
+    candidates, matrix, finalists=None, star_winner=None, finalists_only=False,
+    tiebreak=None,
 ):
     if not candidates or not matrix:
         return
@@ -1129,6 +1216,12 @@ def print_matrix(
         f"Legend: {COLOR_GREEN}For{COLOR_RESET} - {COLOR_BLUE}Equal Support{COLOR_RESET} - {COLOR_RED}Against{COLOR_RESET}"
     )
     print("        * indicates Top 2 Finalist")
+    # Only when a tie actually reached the ladder — which is rare, so the
+    # house "less is more" default is untouched for ordinary elections.
+    if tiebreak:
+        for line in finalist_tiebreak_note(tiebreak, finalists_only):
+            print(line)
+        print()   # keep the prose off the column header
 
     # +4 = 2 for the "* "/"  " finalist prefix + 2 for an even left/right margin,
     # so the longest name still centers instead of sitting flush to the divider.
@@ -2933,7 +3026,7 @@ def run_election(
     # Same priority rule the tiebreaker uses (falls back to CSV column order)
     priority = lot_numbers or candidates
     order_map = {c: i for i, c in enumerate(priority)}
-    finalists = get_top_two_finalists(ballots, order_map)
+    finalists, finalist_tiebreak = resolve_finalists(ballots, order_map)
 
     # Initialize the new deterministic tiebreakers
     tiebreaker_obj = LotNumberTiebreaker(lot_numbers=lot_numbers, silent=False)
@@ -2966,6 +3059,7 @@ def run_election(
                 finalists,
                 star_winner,
                 finalists_only=matrix_finalists_only,
+                tiebreak=finalist_tiebreak,
             )
         if show_condorcet:
             print_condorcet(candidates, matrix, star_winner, finalists,

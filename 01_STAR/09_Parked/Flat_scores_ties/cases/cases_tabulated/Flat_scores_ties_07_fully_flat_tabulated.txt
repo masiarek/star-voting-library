@@ -48,6 +48,10 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ararat, Blanc and Cook tied at 10 in the Scoring Round, and the
+              lot rung (the ballots could not separate them) advanced Ararat
+              and Blanc. The * marks who advanced, not who scored highest.
+
                |  * Ararat  | * Blanc   |    Cook   |
 -----------------------------------------------------
     * Ararat > |    ---     |0 - 2 - 0  |0 - 2 - 0  |

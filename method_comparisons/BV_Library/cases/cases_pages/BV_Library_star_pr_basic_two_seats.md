@@ -89,6 +89,10 @@ Count × Allison,Bill,Carmen,Doug
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Bill and Carmen tied at 24 in the Scoring Round, and the
+              five-star rung advanced Bill. The * marks who advanced, not who
+              scored highest.
+
                 |  * Allison  |  * Bill    |   Carmen   |    Doug    |
 ----------------------------------------------------------------------
     * Allison > |     ---     | 1 - 9 - 0  | 5 - 1 - 4  | 5 - 0 - 5  |

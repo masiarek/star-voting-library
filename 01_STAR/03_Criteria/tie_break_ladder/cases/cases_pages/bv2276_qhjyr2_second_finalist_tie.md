@@ -104,6 +104,10 @@ Ana,Ben,Cora,Dev
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ben and Cora tied at 14 in the Scoring Round, and the
+              head-to-head rung advanced Cora. The * marks who advanced, not
+              who scored highest.
+
                |   * Ana    |    Ben    |  * Cora   |    Dev    |
 -----------------------------------------------------------------
        * Ana > |    ---     |3 - 0 - 2  |2 - 2 - 1  |3 - 0 - 2  |

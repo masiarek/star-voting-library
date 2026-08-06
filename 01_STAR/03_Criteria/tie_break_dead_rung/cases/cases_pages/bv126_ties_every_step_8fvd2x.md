@@ -143,6 +143,10 @@ Count × Amy,Brian,Chuck
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Amy, Brian and Chuck tied at 29 in the Scoring Round, and the
+              lot rung (the ballots could not separate them) advanced Amy and
+              Chuck. The * marks who advanced, not who scored highest.
+
                |   * Amy    |   Brian   | * Chuck   |
 -----------------------------------------------------
        * Amy > |    ---     |1 - 5 - 1  |1 - 5 - 1  |

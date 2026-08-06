@@ -121,6 +121,10 @@ A,B,C,D,E,F,G,H,I,J
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: C and H tied at 44 in the Scoring Round, and the head-to-head
+              rung advanced C. The * marks who advanced, not who scored
+              highest.
+
                  |     * A      |      B      |    * C      |      D      |      E      |      F      |      G      |      H      |      I      |      J      |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
            * A > |     ---      |11 -  0 -  4 | 6 -  5 -  4 | 7 -  4 -  4 | 9 -  2 -  4 | 7 -  1 -  7 | 8 -  2 -  5 | 7 -  0 -  8 | 8 -  2 -  5 |10 -  3 -  2 |
