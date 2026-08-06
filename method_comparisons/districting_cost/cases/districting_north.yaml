@@ -1,0 +1,36 @@
+election_title: "Two chapters, one delegate — Northside chapter (5 members)"
+
+scenario_description: |-
+  Part of the districting-cost trio. Two chapters of one club elect a single
+  national delegate. Ana is adored in Northside and unknown in Southside; Beto
+  is the mirror image; Cleo is everybody's solid second. Counted chapter by
+  chapter, Cleo wins NEITHER — so a delegate chosen from the chapter winners is
+  Ana or Beto. Counted as one electorate, Cleo wins outright, and she is also
+  the highest-welfare candidate (33 points to Ana's 23 and Beto's 19) and the
+  Condorcet winner. That gap is the distortion of distributed voting, made
+  countable. Companion concept page:
+  07_Concepts/topics/distributed_voting_distortion.md
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Ana,Beto,Cleo
+  5,0,3
+  5,0,3
+  5,0,3
+  4,0,5
+  4,0,5
+expected_winners:
+  - Ana
+
+# file: districting_north.yaml
