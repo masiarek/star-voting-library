@@ -54,6 +54,8 @@ That contrast is invisible in the Scoring Round, which prints only the totals. I
 
 BetterVoting's *Stats for Nerds* panel offers a chart captioned *"Difference between maximum and minimum score on ballots."* For each ballot it computes `max − min`, then histograms the results across voters. On the grid above that would be:
 
+> **You probably can't see this panel.** `Results.tsx` gates it — along with *Column Distribution* and *Name Recognition* — behind the `ALL_STATS` feature flag, described in BetterVoting's own `flagDefinitions` as *"Show all work in progress widgets under 'Stats for Nerds'"*. A normal STAR results page shows four panels and this is not one of them; a screenshot of it means the flag was set. Treat what follows as a description of a **work-in-progress** widget. What's actually on a live results page, panel by panel: [How to read a BetterVoting results page](../../../07_Concepts/tabulation_engines/BV/reading_a_bv_results_page.md).
+
 | Range used | Ballots | Share |
 |:--:|:--:|--:|
 | 5 | 3 | 43% |
@@ -88,12 +90,14 @@ So the two views are **independent projections** of the grid. Reporting one and 
 | Is X polarizing or broadly liked? | the shape of that row | — (inferable only by eye from the Voter Profile widget) |
 | Total stars for X | `Total` column, and the Scoring Round | Scores Table |
 | Mean stars for X among voters who scored X | `Avg` column (blanks excluded) | — (the Voter Profile "average ballot" uses a *different* denominator: only that candidate's top-scorers) |
-| How many voters left X blank? | `Abs` column | Name Recognition widget — **behind the `ALL_STATS` feature flag**, so normally not shown |
-| Did each voter use the full 0–5 range? | — *nothing* | **Range of Scores** |
-| How many candidates did each voter bother to score? | — *nothing* | Column Distribution |
+| How many voters left X blank? | `Abs` column | Name Recognition widget — `ALL_STATS` only |
+| Did each voter use the full 0–5 range? | — *nothing* | **Range of Scores** — `ALL_STATS` only |
+| How many candidates did each voter bother to score? | — *nothing* | Column Distribution — `ALL_STATS` only |
 | How did the two frontrunners split a given candidate's supporters? | the [preference matrix](reporting_LH/matrix.md) (pairwise, not by supporter group) | Voter Profile / Head-to-head widgets |
 
 Read the table as a **division of labour, not a scoreboard**. LH is a text audit report built around candidates; BetterVoting's nerd stats are a visual panel built around voters. The honest summary is that **each has a hole exactly where the other has content**.
+
+With one caveat worth stating plainly: the three rows marked `ALL_STATS` only are **work-in-progress widgets a normal visitor never sees**. Counting only what ships today, BetterVoting answers *none* of the row-margin questions — so the per-ballot margin is currently unreported by both tools, and the LH-vs-BV division of labour above is the *potential* one, not the live one.
 
 ## One thing to watch: the chart's denominator
 

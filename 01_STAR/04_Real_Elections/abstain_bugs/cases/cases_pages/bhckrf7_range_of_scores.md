@@ -21,7 +21,9 @@ all-equal ballot is an **abstention**, so it reports `nAbstentions: 2` and
 `nTallyVotes: 1`, and the results page headline reads **"1 voters"**. Cal wins
 the runoff 1–0.
 
-The **"Range of Scores"** chart under *Stats for Nerds* then shows two bars —
+The **"Range of Scores"** chart under *Stats for Nerds* — a work-in-progress
+widget, rendered only when the `ALL_STATS` feature flag is set, so a normal
+visitor never sees it — then shows two bars —
 range 2 at **33%** and range 0 at **67%**. Those are thirds: the chart is
 computed over **all three** ballots, because its data source
 (`ballotsForRace()`) drops only a *truly blank* ballot, not a flat one. So the

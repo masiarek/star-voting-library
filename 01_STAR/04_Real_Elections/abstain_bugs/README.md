@@ -9,7 +9,7 @@ Full context and the wider ticket map: [BV abstain / blank / zero — issue inde
 | [BV11 — full & equal support (5,5)](bv11_6xhfp8_full_equal_support.md) | STAR | `5,5`×3 counted as 3 abstentions (`nTally=0`); UI warns "Abstained" on full support; LH sees a real 15-15 tie | [#1053](https://github.com/Equal-Vote/bettervoting/issues/1053) |
 | [BV655 — "equal opposition" (all-0)](bv655_jfrk9t_equal_opposition.md) | STAR | explicit `0,0` labeled "Abstained"; LH treats it as Equal Support, not an abstention | [#1090](https://github.com/Equal-Vote/bettervoting/issues/1090) |
 | [BV1570 — undecided plurality](bv1570_6hv7jf_undecided_plurality.md) | Plurality | all-undecided election still declares a winner + wrong voter count (2 vs 3) | [#894](https://github.com/Equal-Vote/bettervoting/issues/894) |
-| [hckrf7 — Range of Scores denominator](bhckrf7_range_of_scores.md) | STAR | the *Stats for Nerds* chart divides by 3 on a page whose headline says "1 voters" — the tabulator drops flat ballots, the chart keeps them | [#1487](https://github.com/Equal-Vote/bettervoting/issues/1487) |
+| [hckrf7 — Range of Scores denominator](bhckrf7_range_of_scores.md) | STAR | the *Stats for Nerds* chart divides by 3 on a page whose headline says "1 voters" — the tabulator drops flat ballots, the chart keeps them (WIP widget, `ALL_STATS` flag only) | [#1487](https://github.com/Equal-Vote/bettervoting/issues/1487) |
 
 Related NOTA case (a different flavor — a real "None of the Above" candidate): [`bv215_26khr3_nota_wins`](../../03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md) ([#1421](https://github.com/Equal-Vote/bettervoting/issues/1421)).
 

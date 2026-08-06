@@ -38,11 +38,13 @@ The headline, above the charts — **"1 voters"**, with Cal Creative taking 100%
 
 <img alt="BetterVoting result card for hckrf7: 'Cal Creative wins!', '1 voters', a Scoring Round bar chart (Cal Creative 2, Bob Bossy 1, Ann Ambitious no bar) and an Automatic Runoff bar chart with Cal Creative at 100%" src="cases/img/hckrf7_result.png" width="560">
 
-Scroll past *Race Details* into *Stats for Nerds*, pick **Range of Scores**, and the same page reports two bars — **33%** at range 2 and **67%** at range 0:
+Scroll past *Race Details* into *Stats for Nerds*, pick **Range of Scores**, and the same page reports two bars — **33%** at range 2 and **67%** at range 0.
+
+**You will not find that panel unless you turn it on.** `Results.tsx` renders `<ScoreRangeWidget/>` only under `flags.isSet('ALL_STATS')` — a localStorage override that BetterVoting's `flagDefinitions` calls *"Show all work in progress widgets under 'Stats for Nerds'"*. The dropdown on a normal STAR results page offers four panels and this is not one of them. So this page documents a **work-in-progress** widget: the defect is real, but it is one to fix before the widget ships rather than a bug a voter is hitting today.
 
 <!-- Screenshot wanted — the Stats for Nerds "Range of Scores" panel (bars at 33% / 67%).
-     bv_result_screenshot.py can't reach it: clicking the level-1 .detailExpander never
-     settles in headless Chrome, so this one has to be captured by hand. Save it as
+     Needs the ALL_STATS flag set in local storage; headless capture can't reach it
+     (bv_result_screenshot.py hangs on the level-1 .detailExpander). Save it as
      cases/img/hckrf7_range_of_scores.png and add a sized <img> here (the tag is left out
      on purpose — check_repo_hygiene reads src= even inside a comment). -->
 
@@ -51,7 +53,7 @@ Scroll past *Race Details* into *Stats for Nerds*, pick **Range of Scores**, and
 | Headline — "**1 voters**" | 1 | `nTallyVotes` — flat ballots removed |
 | Runoff Table — `Total` | 1 | `nTallyVotes` — flat ballots removed |
 | Scores Table (Cal 2, Bob 1, Ann 0) | — | flat ballots contribute 0 either way |
-| **Stats for Nerds → Range of Scores** | 33% / 67% | **3** — every non-blank ballot |
+| **Stats for Nerds → Range of Scores** (`ALL_STATS` only) | 33% / 67% | **3** — every non-blank ballot |
 
 The export agrees with the headline: `summaryData.nAbstentions = 2`, `nTallyVotes = 1`, and the frozen [`_bv_export.json`](cases/bhckrf7_range_of_scores_bv_export.json) carries all three ballots.
 
