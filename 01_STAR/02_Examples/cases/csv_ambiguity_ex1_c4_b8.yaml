@@ -1,0 +1,45 @@
+election_title: "The eight ambiguous CSV lines, disambiguated (BV issue #778 ex1)"
+
+scenario_description: |-
+  The eight-line CSV posted in BetterVoting issue #778 ("YAML File standard"),
+  rewritten in this library's schema so every line states what it means.
+  The bare CSV could not say whether a zero was a real low score, a blank, a
+  deliberate abstention, or a spoiled ballot — and it never said which method
+  to count it by. Here the method, the seat count, the candidate names and the
+  intent behind every zero are all in the one file, and the engine can run it.
+  Note line 7: four real zeros, cast on purpose. The engine reports 2 of 8
+  ballots as abstentions - the race abstention and the spoiled ballot - and
+  leaves the all-zero ballot in the count, where it belongs.
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  A,B,C,D
+  0,1,0,0   # line 1 - four real scores, nothing ambiguous
+  ~,~,~,~   # line 2 - race abstention: skipped the whole race
+  0,1,0,&   # line 3 - candidate-level abstention on D
+  0,0,1,1   # line 4 - four real scores
+  ?,?,?,?   # line 5 - spoiled ballot
+  0,1,0,-   # line 6 - D left blank
+  0,0,0,0   # line 7 - all zeros ON PURPOSE - this is NOT an abstention
+  0,-,0,-   # line 8 - B and D left blank
+
+lot_numbers: [A, B, C, D]
+
+expected_winners:
+  - B
+
+# file: csv_ambiguity_ex1_c4_b8.yaml

@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**501 election files** (436 single-winner, 65 multi-winner) across 17 method(s).
+**503 election files** (438 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 262 |
+| STAR | 264 |
 | RCV-IRV (Hare) | 31 |
 | Ranked Robin (RCV-RR / Copeland) | 75 |
 | Approval | 21 |
@@ -30,7 +30,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (262)
+## STAR  (264)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -52,6 +52,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2187_qrw6wb_ann-bob-cal`](../../01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) | `01_STAR/02_Examples/cases/` | 1 | Ann, Bob, Cal - the canonical leading example (single-winner STAR) → _Bob_ | [`.yaml`](../../01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml) |
 | [`bv2256_c8h3tb_traditional_style`](../../01_STAR/02_Examples/cases/cases_pages/bv2256_c8h3tb_traditional_style.md) | `01_STAR/02_Examples/cases/` | 1 | Traditional voting style — one mark each (BV2256, c8h3tb) → _Ella_ | [`.yaml`](../../01_STAR/02_Examples/cases/bv2256_c8h3tb_traditional_style.yaml) |
 | [`bv2263_xw23m9_over_50_percent`](../../01_STAR/02_Examples/cases/cases_pages/bv2263_xw23m9_over_50_percent.md) | `01_STAR/02_Examples/cases/` | 1 | BV2263 — Over 50%: single-winner STAR, a candidate with every point on every ballot → _A_ | [`.yaml`](../../01_STAR/02_Examples/cases/bv2263_xw23m9_over_50_percent.yaml) |
+| [`csv_ambiguity_ex1_c4_b8`](../../01_STAR/02_Examples/cases/cases_pages/csv_ambiguity_ex1_c4_b8.md) | `01_STAR/02_Examples/cases/` | 1 | The eight ambiguous CSV lines, disambiguated (BV issue #778 ex1) → _B_ | [`.yaml`](../../01_STAR/02_Examples/cases/csv_ambiguity_ex1_c4_b8.yaml) |
 | [`display_options_demo`](../../01_STAR/02_Examples/cases/cases_pages/display_options_demo.md) | `01_STAR/02_Examples/cases/` | 1 | Display options demo → _Don_ | [`.yaml`](../../01_STAR/02_Examples/cases/display_options_demo.yaml) |
 | [`equal_support_runoff_demo`](../../01_STAR/02_Examples/cases/cases_pages/equal_support_runoff_demo.md) | `01_STAR/02_Examples/cases/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ | [`.yaml`](../../01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml) |
 | [`quorum_demo_c3_b6`](../../01_STAR/02_Examples/cases/cases_pages/quorum_demo_c3_b6.md) | `01_STAR/02_Examples/cases/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ | [`.yaml`](../../01_STAR/02_Examples/cases/quorum_demo_c3_b6.yaml) |
@@ -100,6 +101,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`three_way_dead_rung_B`](../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_B.md) | `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order B,C,A elects B → _B_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml) |
 | [`three_way_dead_rung_C`](../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_C.md) | `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/` | 1 | Three-way dead-rung tie — published order C,A,B elects C → _C_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml) |
 | [`bv2180_fp62p2_ice_cream_ladder`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, fp62p2) → _Strawberry_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml) |
+| [`bv2276_qhjyr2_second_finalist_tie`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2276_qhjyr2_second_finalist_tie.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Tied for the second finalist — the head-to-head rung settles it (BV2276, qhjyr2) → _Ana_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv2276_qhjyr2_second_finalist_tie.yaml) |
 | [`bv830_vb3xv2_no_condorcet_tie_score`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2) → _B_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml) |

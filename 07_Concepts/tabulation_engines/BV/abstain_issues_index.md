@@ -18,12 +18,15 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 
 **[#884 — Update abstain behavior for STAR](https://github.com/Equal-Vote/bettervoting/issues/884)** is the source of the current behavior: STAR now counts a ballot as an abstention when its marks are **all equal** (all 3s, all 0s, a mix of 0s and nulls…), not only when it's all-null. Implemented via `makeAbstentionTest(markAllEqualAsAbstention=true)` in `Tabulators/Util.ts`. **Adam dissents on the record** ("all threes is not abstain though") — this is the open disagreement most of the UI-mislabel tickets below trace back to.
 
+**The dissent predates the ticket by eighteen months.** [#778 — "YAML File standard"](https://github.com/Equal-Vote/bettervoting/issues/778) (Feb 2025) annotates an all-zero ballot in its worked example with *"this voter marked all candidates as zero (this is not abstention!)"* — the same position, stated before #884 existed and in a ticket about the *file format* rather than the tabulator. Worth citing when the argument comes round again: it isn't a reaction to #884's implementation, it's the prior principle. The LH engine implements that principle — a ballot is an abstention when it is **marked** as one (`~ & ? % -`), never because its scores happen to be equal — and the two rules are put side by side in [Eight lines of CSV, eight questions](../../../YAML_library/csv_ambiguity.md).
+
 ## The tickets, by theme
 
 ### A. Policy — what counts as abstain
 | Issue | What | Status |
 |---|---|---|
 | [#884](https://github.com/Equal-Vote/bettervoting/issues/884) | Count **all-equal** ballots (all 3s/0s/mixed 0-null) as abstain | Implemented; **disputed** |
+| [#778](https://github.com/Equal-Vote/bettervoting/issues/778) | **File standard** — a bare CSV can't distinguish a real `0` from blank / abstained / spoiled, and never says which method counts it. Where the "all zeros is not abstention" principle was first stated | Open (Discussion) · [worked through here](../../../YAML_library/csv_ambiguity.md) |
 
 ### B. UI confirmation / receipt mislabels a real vote as "Abstained"
 | Issue | What | BV Test ID · election |
