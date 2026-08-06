@@ -1,0 +1,94 @@
+---
+search:
+  exclude: true
+---
+
+# The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins
+
+*Generated from [`mayor_c4_b100_streamlined_irv.yaml`](../mayor_c4_b100_streamlined_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** Cora
+
+## Scenario
+
+100 ballots, four candidates, one ordinary-looking mayoral race. Counted by FULL RCV-IRV: Dean is eliminated first and his ballots lift Cora from 20 to 36, past Blake; Blake is eliminated next and his ballots lift Cora to 67. Cora wins — and Cora is also the Condorcet winner (beats Ada 67-33, Blake 69-31, Dean 84-16). The paper's "single-elimination RCV" never holds those rounds: it keeps only the top two (Ada and Blake) and elects Blake. This is the case Kissel calls "quite rare" — the streamlined model eliminating a candidate who would win the fuller count — and it costs the Condorcet winner. Companion: …_rr.yaml, …_star.yaml, and the contingent / supplementary counts run by contingent_vote_report.py.
+
+## Ballots
+
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+33:Ada>Cora>Blake>Dean     # Ada's voters — Cora is their second choice
+31:Blake>Cora>Ada>Dean     # Blake's voters — Cora is their second choice too
+20:Cora>Blake>Ada>Dean     # the moderates, leaning Blake
+16:Dean>Cora>Blake>Ada     # Dean's voters — Cora again
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+<!-- --8<-- [start:report] -->
+```text
+--- RCV / Instant-Runoff Voting (single winner) ---
+  The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins
+ Tabulating 100 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ada               33  Hopeful
+Blake             31  Hopeful
+Cora              20  Hopeful
+Dean              16  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Cora              36  Hopeful
+Ada               33  Hopeful
+Blake             31  Rejected
+Dean               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cora              67  Elected
+Ada               33  Rejected
+Blake              0  Rejected
+Dean               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cora
+```
+<!-- --8<-- [end:report] -->
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Cora
+   Outside (3):        Ada, Blake, Dean
+   One member ⇒ Cora is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Cora is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/mayor_c4_b100_streamlined_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_irv.yaml
+```
+
+## See also
+
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [kissel_five_way_c5_b1000_irv](kissel_five_way_c5_b1000_irv.md) · [kissel_five_way_c5_b1000_rr](kissel_five_way_c5_b1000_rr.md) · [kissel_five_way_c5_b1000_star](kissel_five_way_c5_b1000_star.md) · [mayor_c4_b100_streamlined_rr](mayor_c4_b100_streamlined_rr.md) · [mayor_c4_b100_streamlined_star](mayor_c4_b100_streamlined_star.md)

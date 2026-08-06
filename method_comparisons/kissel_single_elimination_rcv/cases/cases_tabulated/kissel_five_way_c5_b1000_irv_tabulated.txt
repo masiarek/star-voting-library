@@ -1,0 +1,85 @@
+======================================================================
+SOURCE FILE:     kissel_five_way_c5_b1000_irv.yaml
+TABULATED FILE:  kissel_five_way_c5_b1000_irv_tabulated.txt
+======================================================================
+
+election_title: "Kissel's five-way example (RCV-IRV) — the compromise is eliminated third"
+scenario_description: >-
+  The five-candidate field printed on p.5 of Adam Kissel's "Can Ranked-Choice Voting
+  Work? A Conservative Approach" (Cardinal Institute for West Virginia Policy), given
+  ballots. The paper's shape: A >30%, B 30%, C 20%, D <19%, E <1%. Here A 306, B 300,
+  C 202, D 183, E 9 of 1000. C is the moderate — the SECOND choice of both A's and B's
+  voters — and beats every rival head-to-head (the Condorcet winner: 511-489 over A,
+  700-300 over B). RCV-IRV never finds that out. Round 1 eliminates E, round 2 D,
+  round 3 C, and A wins 609-391. The paper says C could only win "if a large majority
+  of the D voters choose C"; that is the wrong diagnosis. C's problem is not D's
+  transfers, it is that the A and B voters' second choices are never counted at all.
+  Same ballots under Ranked Robin (…_rr.yaml) and STAR (…_star.yaml) elect C.
+voting_method: RCV_IRV
+num_winners: 1
+# Round 1: A 306, B 300, C 202, D 183, E 9 — no majority; E eliminated -> D (194... 192).
+# Round 2: D lowest (192) -> D's 183 to A (489), E's 9 ride on to C (211).
+# Round 3: C lowest (211) -> 111 to A, 91 to B, 9 to A.  A 609, B 391. A wins.
+# The Condorcet winner C is eliminated one round before the end.
+ballots: |-
+  306:A>C>D>B>E     # A-partisans — moderate C is their second choice
+  300:B>C>D>A>E     # B-partisans — moderate C is their second choice too
+  111:C>A>B>D>E     # moderates leaning A
+   91:C>B>A>D>E     # moderates leaning B
+  183:D>A>C>B>E     # D's voters lean A
+    9:E>D>C>A>B     # the <1% candidate the paper says is eliminated first
+expected_winners:
+  - A
+
+# file: kissel_five_way_c5_b1000_irv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Kissel's five-way example (RCV-IRV) — the compromise is eliminated third
+ Tabulating 1000 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                306  Hopeful
+B                300  Hopeful
+C                202  Hopeful
+D                183  Rejected
+E                  9  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+A                489  Hopeful
+B                300  Hopeful
+C                211  Rejected
+D                  0  Rejected
+E                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                609  Elected
+B                391  Rejected
+C                  0  Rejected
+D                  0  Rejected
+E                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): C
+   Outside (4):        A, D, B, E
+   One member ⇒ C is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner A is OUTSIDE the Smith set. ✗
+      Every member of the set (C) beats A head-to-head, yet
+      RCV-IRV elected A anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md

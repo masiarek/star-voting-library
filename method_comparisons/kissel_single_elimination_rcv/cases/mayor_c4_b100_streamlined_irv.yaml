@@ -1,0 +1,25 @@
+election_title: "The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins"
+scenario_description: >-
+  100 ballots, four candidates, one ordinary-looking mayoral race. Counted by FULL
+  RCV-IRV: Dean is eliminated first and his ballots lift Cora from 20 to 36, past
+  Blake; Blake is eliminated next and his ballots lift Cora to 67. Cora wins — and
+  Cora is also the Condorcet winner (beats Ada 67-33, Blake 69-31, Dean 84-16). The
+  paper's "single-elimination RCV" never holds those rounds: it keeps only the top two
+  (Ada and Blake) and elects Blake. This is the case Kissel calls "quite rare" — the
+  streamlined model eliminating a candidate who would win the fuller count — and it
+  costs the Condorcet winner. Companion: …_rr.yaml, …_star.yaml, and the contingent /
+  supplementary counts run by contingent_vote_report.py.
+voting_method: RCV_IRV
+num_winners: 1
+# Round 1: Ada 33, Blake 31, Cora 20, Dean 16 — no majority; Dean eliminated -> Cora 36.
+# Round 2: Blake lowest (31) -> Blake>Cora, so Cora 67, Ada 33. Cora wins.
+# Batch-eliminating to the top two instead (the paper's model) drops Cora in step one.
+ballots: |-
+  33:Ada>Cora>Blake>Dean     # Ada's voters — Cora is their second choice
+  31:Blake>Cora>Ada>Dean     # Blake's voters — Cora is their second choice too
+  20:Cora>Blake>Ada>Dean     # the moderates, leaning Blake
+  16:Dean>Cora>Blake>Ada     # Dean's voters — Cora again
+expected_winners:
+  - Cora
+
+# file: mayor_c4_b100_streamlined_irv.yaml

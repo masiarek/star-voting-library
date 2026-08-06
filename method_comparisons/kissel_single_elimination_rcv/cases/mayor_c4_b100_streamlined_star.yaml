@@ -1,0 +1,34 @@
+election_title: "The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31"
+scenario_description: >-
+  The same 100-voter mayoral race as …_irv.yaml and …_rr.yaml, on a 0-5 score ballot.
+  Cora leads the scoring round (356 to Blake's 280) and wins the automatic runoff
+  69-31. The paper asks for a ballot that is "one grid for the first choice and a
+  separate one for the second choice" and for a count with no rounds to keep track of;
+  STAR is one grid, one pass, and no elimination order — and on these ballots it finds
+  the majority-preferred candidate that the paper's two-column model does not. Scores
+  express the same preference order the ranked companions hold.
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true       # Cora is the Condorcet winner the top-two model drops
+  show_score_counts: false
+  show_irv: true             # the divergence from RCV-IRV is the lesson
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+# Scores: Ada 216, Blake 280, Cora 356, Dean 80  -> finalists Cora and Blake.
+# Runoff: Cora 69, Blake 31.
+ballots: |-
+  Count:Ada,Blake,Cora,Dean
+  33:5,1,3,0     # Ada's voters — Cora is their second choice
+  31:1,5,3,0     # Blake's voters — Cora is their second choice too
+  20:1,3,5,0     # the moderates, leaning Blake
+  16:0,2,4,5     # Dean's voters — Cora again
+expected_winners:
+  - Cora
+
+# file: mayor_c4_b100_streamlined_star.yaml

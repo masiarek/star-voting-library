@@ -1,0 +1,58 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Kissel's five-way example (STAR) — the compromise reaches the runoff and wins
+ Tabulating 1000 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: A, B, C, D, E
+   306 ×   A > C > D      (5, 0, 3, 1, 0)
+   300 ×   B > C > D      (0, 5, 3, 1, 0)
+   111 ×   C > A > B      (3, 1, 5, 0, 0)
+    91 ×   C > B > A      (1, 3, 5, 0, 0)
+   183 ×   D > A > C      (4, 0, 2, 5, 0)
+     9 ×   E > D > C > A      (1, 0, 3, 4, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+A                306  Hopeful
+B                300  Hopeful
+C                202  Hopeful
+D                183  Rejected
+E                  9  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+A                489  Hopeful
+B                300  Hopeful
+C                211  Rejected
+D                  0  Rejected
+E                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                609  Elected
+B                391  Rejected
+C                  0  Rejected
+D                  0  Rejected
+E                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): C
+   Outside (4):        A, B, D, E
+   One member ⇒ C is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner A is OUTSIDE the Smith set. ✗
+      Every member of the set (C) beats A head-to-head, yet
+      RCV-IRV elected A anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

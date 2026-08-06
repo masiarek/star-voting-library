@@ -1,0 +1,38 @@
+election_title: "Kissel's five-way example (STAR) — the compromise reaches the runoff and wins"
+scenario_description: >-
+  The same electorate as …_irv.yaml and …_rr.yaml — the five-candidate field from p.5
+  of Adam Kissel's "Can Ranked-Choice Voting Work? A Conservative Approach" — on a 0-5
+  score ballot instead of a ranking. The paper concedes that no form of RCV counts the
+  A and B voters' second choices, and floats "an even more complicated point system"
+  as a possible fix while dismissing it as voter confusion. That fix is STAR, and it
+  is one grid on the ballot: the scoring round reads every ballot, C leads it (3221 to
+  A's 2695), and the automatic runoff confirms the head-to-head the paper says is
+  never revealed — C over A, 511-489. The scores are the paper's own preference order
+  expressed as strengths; the ranked files hold the identical order.
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true       # the Condorcet winner is what the elimination counts miss
+  show_score_counts: false
+  show_irv: true             # the divergence from RCV-IRV is the lesson
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+# Scores: A 2695, B 1884, C 3221, D 1557, E 45  -> finalists C and A.
+# Runoff: C 511, A 489 — the same head-to-head the pairwise matrix shows.
+ballots: |-
+  Count:A,B,C,D,E
+  306:5,0,3,1,0     # A-partisans — moderate C is their second choice
+  300:0,5,3,1,0     # B-partisans — moderate C is their second choice too
+  111:3,1,5,0,0     # moderates leaning A
+   91:1,3,5,0,0     # moderates leaning B
+  183:4,0,2,5,0     # D's voters lean A
+    9:1,0,3,4,5     # the <1% candidate the paper says is eliminated first
+expected_winners:
+  - C
+
+# file: kissel_five_way_c5_b1000_star.yaml

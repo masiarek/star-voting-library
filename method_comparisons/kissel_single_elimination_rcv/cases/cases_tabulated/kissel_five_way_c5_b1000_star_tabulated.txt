@@ -1,0 +1,124 @@
+======================================================================
+SOURCE FILE:     kissel_five_way_c5_b1000_star.yaml
+TABULATED FILE:  kissel_five_way_c5_b1000_star_tabulated.txt
+======================================================================
+
+election_title: "Kissel's five-way example (STAR) — the compromise reaches the runoff and wins"
+scenario_description: >-
+  The same electorate as …_irv.yaml and …_rr.yaml — the five-candidate field from p.5
+  of Adam Kissel's "Can Ranked-Choice Voting Work? A Conservative Approach" — on a 0-5
+  score ballot instead of a ranking. The paper concedes that no form of RCV counts the
+  A and B voters' second choices, and floats "an even more complicated point system"
+  as a possible fix while dismissing it as voter confusion. That fix is STAR, and it
+  is one grid on the ballot: the scoring round reads every ballot, C leads it (3221 to
+  A's 2695), and the automatic runoff confirms the head-to-head the paper says is
+  never revealed — C over A, 511-489. The scores are the paper's own preference order
+  expressed as strengths; the ranked files hold the identical order.
+voting_method: STAR
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true       # the Condorcet winner is what the elimination counts miss
+  show_score_counts: false
+  show_irv: true             # the divergence from RCV-IRV is the lesson
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+# Scores: A 2695, B 1884, C 3221, D 1557, E 45  -> finalists C and A.
+# Runoff: C 511, A 489 — the same head-to-head the pairwise matrix shows.
+ballots: |-
+  Count:A,B,C,D,E
+  306:5,0,3,1,0     # A-partisans — moderate C is their second choice
+  300:0,5,3,1,0     # B-partisans — moderate C is their second choice too
+  111:3,1,5,0,0     # moderates leaning A
+   91:1,3,5,0,0     # moderates leaning B
+  183:4,0,2,5,0     # D's voters lean A
+    9:1,0,3,4,5     # the <1% candidate the paper says is eliminated first
+expected_winners:
+  - C
+
+# file: kissel_five_way_c5_b1000_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Kissel's five-way example (STAR) — the compromise reaches the runoff and wins ===
+  The same electorate as …_irv.yaml and …_rr.yaml — the five-candidate field from p.5 of Adam Kissel's "Can Ranked-Choice Voting Work? A Conservative Approach" — on a 0-5 score ballot instead of a ranking. The paper concedes that no form of RCV counts the A and B voters' second choices, and floats "an even more complicated point system" as a possible fix while dismissing it as voter confusion. That fix is STAR, and it is one grid on the ballot: the scoring round reads every ballot, C leads it (3221 to A's 2695), and the automatic runoff confirms the head-to-head the paper says is never revealed — C over A, 511-489. The scores are the paper's own preference order expressed as strengths; the ranked files hold the identical order.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |       * A       |        B       |      * C       |        D       |        E       |
+-----------------------------------------------------------------------------------------------------------
+              * A > |       ---       |609 -   0 - 391 |489 -   0 - 511 |508 -   0 - 492 |691 - 300 -   9 |
+                B > | 391 -   0 - 609 |      ---       |300 -   0 - 700 |502 -   0 - 498 |502 - 489 -   9 |
+              * C > | 511 -   0 - 489 |700 -   0 - 300 |      ---       |808 -   0 - 192 |991 -   0 -   9 |
+                D > | 492 -   0 - 508 |498 -   0 - 502 |192 -   0 - 808 |      ---       |789 - 202 -   9 |
+                E > |   9 - 300 - 691 |  9 - 489 - 502 |  9 -   0 - 991 |  9 - 202 - 789 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: C — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: E — loses every head-to-head matchup
+
+[Divergence from STAR]
+  STAR                   = C
+  Choose-One (Plurality) = A   (differs from STAR)
+  RCV-IRV                = A   (differs from STAR)
+  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
+        method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/kissel_five_way_c5_b1000_star_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 1000 ballots.
+Count × A,B,C,D,E
+  306 × 5,0,3,1,0
+  300 × 0,5,3,1,0
+  183 × 4,0,2,5,0
+  111 × 3,1,5,0,0
+   91 × 1,3,5,0,0
+    9 × 1,0,3,4,5
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+A          306  183  111    0  100  300  |  2695   2.7
+B          300    0   91    0  111  498  |  1884   1.9
+C          202    0  615  183    0    0  |  3221   3.2
+D          183    9    0    0  606  202  |  1557   1.6
+E            9    0    0    0    0  991  |    45   0.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   C             -- 3221 -- First place
+   A             -- 2695 -- Second place
+   B             -- 1884
+   D             -- 1557
+   E             --   45
+ C and A advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   C             -- 511 -- First place
+   A             -- 489
+   Equal Support --   0
+ C wins.
+   Runoff math:
+     1000  ballots cast
+   −    0  Equal Support (no preference between the two finalists)
+     ────
+     1000  voters with a preference  (majority = 501)
+           C 511 (51%)  ·  A 489 (49%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ C
