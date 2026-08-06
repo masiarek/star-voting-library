@@ -41,9 +41,10 @@ except Exception:  # pragma: no cover
     ABCVOTING_AVAILABLE = False
 
 #: Default rule set. `av` = bloc Approval (the LH engine's method — the
-#: cross-check anchor); the rest are the proportional rules the concept
-#: page describes.
-DEFAULT_RULES = ("av", "seqpav", "pav", "seqphragmen")
+#: cross-check anchor); `sav` = Satisfaction Approval Voting (one vote per
+#: BALLOT, split among the marks — see the SAV concept page); the rest are the
+#: proportional rules the concept page describes.
+DEFAULT_RULES = ("av", "sav", "seqpav", "pav", "seqphragmen")
 
 #: Ballot markers that tabulate as "not approved" (house convention:
 #: blank / race abstention / candidate abstention / spoiled / reissued).

@@ -10,6 +10,7 @@ The same Yes/No ballot, more than one seat — and a genuinely new question: sho
 - [Electing a committee — making sure people have a voice](abc_rules_intro.md) — the gentle intro to approval-based committee rules.
 - [ABC rules and the utilitarian–egalitarian spectrum](abc_rules_spectrum.md) — AV, PAV, seq-Phragmén and friends, placed on one axis.
 - [Thiele methods](thiele_methods.md) — the one dial that turns AV into CC, and where STAR-PR fits.
+- [Satisfaction Approval Voting (SAV)](satisfaction_approval_voting.md) — the rule that sits *beside* the Thiele family: one vote per ballot, split among your marks. Disjoint from AV on the same ballots, clone-punishing where AV is clone-rewarding, and honest about its own failures..
 
 ## Related
 

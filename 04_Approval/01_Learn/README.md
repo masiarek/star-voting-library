@@ -29,6 +29,7 @@ The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multi
 - [Electing a committee — a gentle intro (101)](Multiwinner_Approval/abc_rules_intro.md) — "most approved" vs "cover everyone" vs proportional, counting only
 - [ABC rules & the utilitarian–egalitarian spectrum (301)](Multiwinner_Approval/abc_rules_spectrum.md) — the approval-committee formalism (AV / PAV / Chamberlin–Courant / Phragmén), verified with `abcvoting`
 - [Thiele methods (301)](Multiwinner_Approval/thiele_methods.md) — AV/PAV/CC as one parameterised family, and where STAR-PR (RRV) fits
+- [Satisfaction Approval Voting — SAV (301)](Multiwinner_Approval/satisfaction_approval_voting.md) — Brams & Kilgour's rule: one vote per **ballot**, split evenly among your marks, so approving four gives each ¼. Their own example elects a committee **disjoint** from bloc Approval's on identical ballots; it punishes clones where AV rewards them; and the authors prove the cases where it does *worse* than AV. Used for real in Peoria, Illinois, since 1991 — plus a claim-check of the mangled Wikipedia retelling
 
 ## Reference
 

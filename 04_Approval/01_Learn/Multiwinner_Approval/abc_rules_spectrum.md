@@ -44,6 +44,7 @@ PAV is a **Thiele method**: each voter's satisfaction from a committee giving th
 | **AV** | utilitarian | `{a,b,c,d}` \| `{a,b,c,f}` | **18** | 9 \| 10 | 3 \| 2 |
 | **seq-Phragmén** | proportional | `{a,b,c,d}` | 18 | 9 | 3 |
 | **PAV** | proportional | `{a,b,c,f}` | 18 | 10 | 2 |
+| **[SAV](satisfaction_approval_voting.md)** | *beside the family* | `{a,b,c,f}` | 18 | 10 | 2 |
 | **CC** | egalitarian | `{a,e,f,g}` | 12 | **12** | **0** |
 
 Reading down the table you trade **total satisfaction** (AV-score falls 18 → 12) for **coverage** (uncovered falls 3 → 0). AV sits at the utilitarian pole, CC at the egalitarian pole, and the proportional rules (PAV, Phragmén) live in between — exactly the spectrum the book uses this example to introduce.
@@ -67,13 +68,16 @@ Two lessons drop out: STAR's *runoff* adds nothing over AV on binary ballots (Bl
 pip install abcvoting
 python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
   04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml \
-  --rules av,pav,cc,seqphragmen
-# av -> {A,B,C,D}|{A,B,C,F} ; pav -> {A,B,C,F} ; cc -> {A,E,F,G} ; seqphragmen -> {A,B,C,D}
+  --rules av,sav,pav,cc,seqphragmen
+# av -> {A,B,C,D}|{A,B,C,F} ; sav -> {A,B,C,F} ; pav -> {A,B,C,F}
+# cc -> {A,E,F,G} ; seqphragmen -> {A,B,C,D}
 ```
 
 ## Going deeper
 
 AV, PAV, and CC are all one parameterised family — the **Thiele methods** — turned by a single satisfaction dial `w`. The formal treatment (the `w`-function spectrum, PAV's harmonic worked to `83/6`, welfare vectors, seq-/rev-seq-PAV, and **how RRV is the score-ballot cousin of seq-PAV**) is in **[Thiele methods](thiele_methods.md)**.
+
+Not every approval rule is on the dial. **[Satisfaction Approval Voting (SAV)](satisfaction_approval_voting.md)** aims at the same coverage goal as CC for a fraction of the computation — but weights each voter by how many candidates they *approved* rather than how many of theirs *won*, which puts it beside the family rather than on it. On this instance it lands on `{A,B,C,F}`, resolving AV's D/F tie the same way PAV does: `s(A)=4`, `s(B)=s(C)=11/6`, `s(F)=4/3`, ahead of `s(D)=s(E)=s(G)=1`. It takes the paper's *own* examples to separate SAV from AV cleanly — there it elects a committee with **no candidate in common**.
 
 ## References
 

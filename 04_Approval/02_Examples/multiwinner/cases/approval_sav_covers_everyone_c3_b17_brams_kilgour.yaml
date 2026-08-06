@@ -1,0 +1,74 @@
+election_title: SAV seats the pair that represents everybody; AV strands three voters
+
+scenario_description: |-
+  Brams & Kilgour, Satisfaction Approval Voting (MPRA 22709, 2010) —
+  Proposition 5: "SAV can find a minimal representative set when both AV and
+  the greedy algorithm fail to do so." Seventeen voters, three candidates, TWO
+  seats. The paper's a,b,c are named Ash, Bree, Cole here.
+
+    AV  (one vote per mark):  Ash 10, Bree 9, Cole 8   ->  Ash, Bree
+    SAV (one vote per ballot, split):
+        Ash  5x1/2 + 5x1/2       = 5
+        Bree 5x1/2 + 4x1         = 6 1/2
+        Cole 5x1/2 + 3x1         = 5 1/2                ->  Bree, Cole
+
+  AV's pair leaves the three Cole-only voters with nobody. SAV's pair
+  represents ALL SEVENTEEN voters, and is the smallest set that can — a
+  "minimal representative set" in the paper's terms.
+
+  Ash is the most-approved candidate and is elected by neither measure that
+  matters here: every one of Ash's supporters already has a second choice
+  seated. Note what did the work — the ten slate voters each SPLIT their vote,
+  so Ash (approved by all ten of them and nobody else) collected only 5, while
+  Bree and Cole combined half-votes with the WHOLE votes of bullet voters.
+
+  Unlike the companion disjointness case, PAV agrees with SAV here — it also
+  returns {Bree, Cole}. Spectrum:
+
+    python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
+      04_Approval/02_Examples/multiwinner/cases/approval_sav_covers_everyone_c3_b17_brams_kilgour.yaml \
+      --rules av,sav,pav,seqpav,cc,seqphragmen
+
+  Concept page:
+  04_Approval/01_Learn/Multiwinner_Approval/satisfaction_approval_voting.md
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+voting_method: Approval_Multi_Winner
+num_winners: 2
+
+ballots: |-
+  Ash,Bree,Cole
+  1,1,0   # 5 voters — Ash and Bree
+  1,1,0
+  1,1,0
+  1,1,0
+  1,1,0
+  1,0,1   # 5 voters — Ash and Cole
+  1,0,1
+  1,0,1
+  1,0,1
+  1,0,1
+  0,1,0   # 4 voters — Bree only
+  0,1,0
+  0,1,0
+  0,1,0
+  0,0,1   # 3 voters — Cole only
+  0,0,1
+  0,0,1
+
+expected_winners:
+  - Ash
+  - Bree
+
+# file: approval_sav_covers_everyone_c3_b17_brams_kilgour.yaml

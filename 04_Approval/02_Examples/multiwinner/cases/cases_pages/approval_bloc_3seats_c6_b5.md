@@ -91,4 +91,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 04_Approval/02_E
 - [The tie-breaking ladder (full chain)](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [approval_bloc_2seats_c4_b6](approval_bloc_2seats_c4_b6.md) · [approval_bloc_4seats_c7_b12_lackner_skowron](approval_bloc_4seats_c7_b12_lackner_skowron.md)
+More cases in this set: [approval_bloc_2seats_c4_b6](approval_bloc_2seats_c4_b6.md) · [approval_bloc_4seats_c7_b12_lackner_skowron](approval_bloc_4seats_c7_b12_lackner_skowron.md) · [approval_sav_covers_everyone_c3_b17_brams_kilgour](approval_sav_covers_everyone_c3_b17_brams_kilgour.md) · [approval_sav_disjoint_c4_b10_brams_kilgour](approval_sav_disjoint_c4_b10_brams_kilgour.md)
