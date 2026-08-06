@@ -650,20 +650,28 @@ reproduce loop is in the **`bettervoting` skill**.
   commit message: short imperative summary line, then a body listing what
   changed and why. Include regenerated `_tabulated`/`_pages`/index files in the
   same commit as their source changes.
-- **This checkout is often open in two sessions at once, and a pathspec commit does
-  NOT contain them.** Both sessions share one working tree, one index, and one HEAD.
-  The pre-commit hook *auto-stages* regenerated index/registry files (it runs `git add`
-  on them), and that staging is not scoped to your paths — so `git commit -F msg --
-  <your paths>` still sweeps in whatever the other session had staged or regenerated.
-  Observed three times on 2026-08-05: a 3-file commit landed as 18 files, another as 11.
-  **You cannot prevent this; the discipline is to check what you actually committed.**
-  Run `git show --stat HEAD` afterwards, and specifically `git show --diff-filter=D
-  --name-only HEAD` for deletions. Additions and coherent regenerations that rode along
-  are harmless — leave them and say so in your report. **Deletions are the dangerous
-  case:** if a swept-in deletion removes a file something still links to, don't push —
-  work out whether the other session's generator pruned it deliberately (check whether
-  it's also gone from *disk*, and whether anything still references it) or whether it's
-  a half-finished state you'd be freezing.
+- **This checkout is often open in two sessions at once, sharing one working tree,
+  one index, and one HEAD — so a pathspec commit is not as scoped as it looks.** The
+  mechanism is worth knowing, because it is not obvious: for `git commit -- <paths>`
+  git builds a **temporary** index and points `GIT_INDEX_FILE` at it, so anything the
+  pre-commit hook stages lands in *your* commit even though you scoped it. (`git
+  commit`, `-a` and `--amend` all get the main index instead.) The hook auto-stages the
+  four regenerated index/registry surfaces, and until 2026-08-06 it did so with a
+  folder-wide `git add` that adopted everything dirty in those directories: a 3-file
+  commit landed as 18, another as 11, once carrying a concurrent session's deletions.
+  **The hook now hashes its output paths before and after each generator and stages
+  only what that run actually changed**, so a colleague's untouched edits are left
+  alone (`stage_regenerated`, covered by `tests/test_precommit_staging.py` — which
+  tests *both* directions, since staging too little silently ships a stale index).
+  What still legitimately rides along is a regenerated index reflecting work the other
+  session has already **committed**; that is the hook doing its job. So keep the
+  verification habit: `git show --stat HEAD` afterwards, and specifically `git show
+  --diff-filter=D --name-only HEAD` for deletions. Additions and coherent
+  regenerations are harmless — leave them and say so in your report. **Deletions are
+  the case to stop on:** if one removes a file something still links to, don't push —
+  work out whether the other session's generator pruned it deliberately (is it also
+  gone from *disk*? does anything still reference it?) or whether it's a half-finished
+  state you'd be freezing.
 - **Don't rewrite history to unpick a sweep**, even unpushed. A `reset`/`rebase` in a
   shared checkout drops the other session's commits into the working tree. Report the
   muddled attribution instead — the content is what matters, and it's recoverable.
