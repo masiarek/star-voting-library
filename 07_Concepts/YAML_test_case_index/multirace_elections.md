@@ -762,6 +762,19 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2274 — Southside chapter (4 members) | STAR | 3 | **Beto** |
 | BV2274 — Both chapters together (9 members) | STAR | 3 | **Cleo** |
 
+## BV2275 — One Electorate, Six Ballots — what is your second choice worth?
+
+**Election** [`6mcgkq`](https://bettervoting.com/6mcgkq/results) · **6 races** · **36 ballots** · [frozen export](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_ab_scoring_6mcgkq_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2275 — A=0 — second choice worth nothing (Choose-One shaped) | STAR | 3 | **Cocoa** |
+| BV2275 — A=1/2 — second choice worth half (Borda) | STAR | 3 | **Almond** |
+| BV2275 — A=1 — second choice worth everything (Negative voting) | STAR | 3 | **Berry** |
+| BV2275 — Approval — lukewarm second choices | Approval | 3 | **Almond** |
+| BV2275 — Approval — intense second choices | Approval | 3 | **Berry** |
+| BV2275 — Ranked Robin — the ranking alone | RankedRobin | 3 | **Almond** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

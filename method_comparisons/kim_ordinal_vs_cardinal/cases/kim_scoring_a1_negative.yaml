@@ -35,10 +35,17 @@ scenario_description: |-
   incentive-compatible optimum hands it to the VOTER, which is what the two
   approval files in this folder show.
 
+  Live on BetterVoting: race 3 of BV2275 (six races, one
+  electorate) -> https://bettervoting.com/6mcgkq/results
+
   Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
 voting_method: STAR
 num_winners: 1
+
+bv_test_id: BV2275
+bv_election_id: 6mcgkq
+bv_results_url: https://bettervoting.com/6mcgkq/results
 
 options:
   show_description: false

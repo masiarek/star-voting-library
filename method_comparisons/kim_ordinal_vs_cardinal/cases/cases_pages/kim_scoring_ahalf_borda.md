@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Almond
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6mcgkq) · **[results ↗](https://bettervoting.com/6mcgkq/results)** (election `6mcgkq` · test `BV2275`).
+
 ## Scenario
 
 ONE electorate, marked three ways. This is file 2 of 3.
@@ -38,6 +40,9 @@ automatic runoff has real information to work with (no Equal Support at all).
 
 Cocoa led file 1 by 64 to 48 and finishes last here. Nobody changed their
 mind; the second-choice dial moved from 0 to 1/2.
+
+Live on BetterVoting: race 2 of BV2275 (six races, one
+electorate) -> https://bettervoting.com/6mcgkq/results
 
 Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
@@ -151,4 +156,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [kim_approval_intense_seconds](kim_approval_intense_seconds.md) · [kim_approval_lukewarm_seconds](kim_approval_lukewarm_seconds.md) · [kim_scoring_a0_plurality](kim_scoring_a0_plurality.md) · [kim_scoring_a1_negative](kim_scoring_a1_negative.md)
+More cases in this set: [kim_approval_intense_seconds](kim_approval_intense_seconds.md) · [kim_approval_lukewarm_seconds](kim_approval_lukewarm_seconds.md) · [kim_ranked_robin_reference](kim_ranked_robin_reference.md) · [kim_scoring_a0_plurality](kim_scoring_a0_plurality.md) · [kim_scoring_a1_negative](kim_scoring_a1_negative.md)

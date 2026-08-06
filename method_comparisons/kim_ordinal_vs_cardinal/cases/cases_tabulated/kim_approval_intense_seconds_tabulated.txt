@@ -49,10 +49,17 @@ scenario_description: |-
   best response. Approval as run here is the shape of the answer, not the
   answer.
 
+  Live on BetterVoting: race 5 of BV2275 (six races, one
+  electorate) -> https://bettervoting.com/6mcgkq/results
+
   Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
 voting_method: Approval
 num_winners: 1
+
+bv_test_id: BV2275
+bv_election_id: 6mcgkq
+bv_results_url: https://bettervoting.com/6mcgkq/results
 
 options:
   show_description: false

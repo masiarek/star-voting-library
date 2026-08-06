@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**500 election files** (435 single-winner, 65 multi-winner) across 17 method(s).
+**501 election files** (436 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 262 |
 | RCV-IRV (Hare) | 31 |
-| Ranked Robin (RCV-RR / Copeland) | 74 |
+| Ranked Robin (RCV-RR / Copeland) | 75 |
 | Approval | 21 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
@@ -333,7 +333,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (74)
+## Ranked Robin (RCV-RR / Copeland)  (75)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -383,6 +383,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2163_74j6vv_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2163_74j6vv_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_ranked_robin.yaml) |
 | [`bv2164_xbqq8t_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2164_xbqq8t_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.17 — Ranked Robin: the Condorcet winner Arlo → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_ranked_robin.yaml) |
 | [`felsenthal_ex6_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only) → _Aria_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_ranked_robin.yaml) |
+| [`kim_ranked_robin_reference`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_ranked_robin_reference.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring — the ranking alone (Ranked Robin reference) → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_ranked_robin_reference.yaml) |
 | [`kissel_five_way_c5_b1000_rr`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/kissel_five_way_c5_b1000_rr.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (Ranked Robin) — the same ballots elect C → _C_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/kissel_five_way_c5_b1000_rr.yaml) |
 | [`mayor_c4_b100_streamlined_rr`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/mayor_c4_b100_streamlined_rr.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (Ranked Robin) — Cora beats everyone head-to-head → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_rr.yaml) |
 | [`p3_manip_compromise_rr`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_compromise_rr.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — the mild version: three adjacent swaps, no burial, same result → _Dublin_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_compromise_rr.yaml) |

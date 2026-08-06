@@ -34,10 +34,17 @@ scenario_description: |-
   Cocoa led file 1 by 64 to 48 and finishes last here. Nobody changed their
   mind; the second-choice dial moved from 0 to 1/2.
 
+  Live on BetterVoting: race 2 of BV2275 (six races, one
+  electorate) -> https://bettervoting.com/6mcgkq/results
+
   Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
 voting_method: STAR
 num_winners: 1
+
+bv_test_id: BV2275
+bv_election_id: 6mcgkq
+bv_results_url: https://bettervoting.com/6mcgkq/results
 
 options:
   show_description: false
@@ -96,6 +103,9 @@ TABULATION RESULTS
 
   Cocoa led file 1 by 64 to 48 and finishes last here. Nobody changed their
   mind; the second-choice dial moved from 0 to 1/2.
+
+  Live on BetterVoting: race 2 of BV2275 (six races, one
+  electorate) -> https://bettervoting.com/6mcgkq/results
 
   Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 

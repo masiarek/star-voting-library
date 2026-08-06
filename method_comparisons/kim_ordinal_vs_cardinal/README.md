@@ -2,6 +2,8 @@
 
 **Level: 301 · deep dive**
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/6mcgkq) · **[results ↗](https://bettervoting.com/6mcgkq/results)** (election `6mcgkq`, **BV2275** — all six races on one ballot).
+
 Semin Kim's **"Ordinal versus cardinal voting rules: A mechanism design approach"** (*Games and Economic Behavior* 104, 2017, pp. 350–371, [DOI](https://doi.org/10.1016/j.geb.2017.04.012)) asks whether a ballot that records *how much* can beat a ballot that records only *which* — and, unusually, asks it while holding the voters to honesty constraints rather than assuming honesty. This folder runs the family of rules his answer lives in.
 
 The theory lives on the concept page → **[Ordinal vs. cardinal, as mechanism design](../../07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md)**.
@@ -37,8 +39,11 @@ One electorate throughout: **36 voters, three flavors, fixed rankings.**
 | [The middle is worth everything](cases/cases_pages/kim_scoring_a1_negative.md) | `(1,1)` | **Berry** | negative voting — fewest last places wins |
 | [Approval, lukewarm seconds](cases/cases_pages/kim_approval_lukewarm_seconds.md) | `(0,1)` | **Almond** | the voters set the dial — and one intensity pattern |
 | [Approval, intense seconds](cases/cases_pages/kim_approval_intense_seconds.md) | `(0,1)` | **Berry** | *identical rankings*, different intensities, different winner |
+| [The ranking alone](cases/cases_pages/kim_ranked_robin_reference.md) | — | **Almond** | the control: Ranked Robin has no dial to turn, and cannot tell the last two files apart either |
 
-Sources: [`kim_scoring_a0_plurality.yaml`](cases/kim_scoring_a0_plurality.yaml) · [`kim_scoring_ahalf_borda.yaml`](cases/kim_scoring_ahalf_borda.yaml) · [`kim_scoring_a1_negative.yaml`](cases/kim_scoring_a1_negative.yaml) · [`kim_approval_lukewarm_seconds.yaml`](cases/kim_approval_lukewarm_seconds.yaml) · [`kim_approval_intense_seconds.yaml`](cases/kim_approval_intense_seconds.yaml)
+Sources: [`kim_scoring_a0_plurality.yaml`](cases/kim_scoring_a0_plurality.yaml) · [`kim_scoring_ahalf_borda.yaml`](cases/kim_scoring_ahalf_borda.yaml) · [`kim_scoring_a1_negative.yaml`](cases/kim_scoring_a1_negative.yaml) · [`kim_approval_lukewarm_seconds.yaml`](cases/kim_approval_lukewarm_seconds.yaml) · [`kim_approval_intense_seconds.yaml`](cases/kim_approval_intense_seconds.yaml) · [`kim_ranked_robin_reference.yaml`](cases/kim_ranked_robin_reference.yaml) · frozen export: [`kim_ab_scoring_6mcgkq_bv_export.json`](cases/kim_ab_scoring_6mcgkq_bv_export.json)
+
+**The six cases are the six races of BV2275**, in order — one BetterVoting election, one set of 36 voters, each voting all six. BetterVoting agrees with the engine on every race, and reports `tieBreakType: none` throughout, so nothing here rests on a tie-break. The Ranked Robin race additionally clears the house [triple-check](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md): LH, BetterVoting and `pref_voting`'s independent Copeland all return Almond.
 
 ## Three winners, nobody changed their mind
 
@@ -105,6 +110,12 @@ Count × Almond,Berry,Cocoa
  Almond
 ```
 <!-- /report -->
+
+### The same count, on BetterVoting
+
+Race 1 of BV2275 — the `A = 0` ballot — as BetterVoting renders it. The Scoring Round is the plurality count (64 / 48 / 32), and the runoff line names the cost of that ballot out loud: **22% Equal Support**, the 8 voters whose paper marked both finalists 0 and who therefore have no say in the runoff at all.
+
+<img alt="BetterVoting results for BV2275 race 1: Cocoa wins; Scoring Round Cocoa 64, Almond 48, Berry 32; Automatic Runoff Cocoa 44%, Almond 33%, Equal Support 22%" src="img/6mcgkq_result.png" width="640">
 
 > **Read the divergence block in the `A = 1` file with care.** It reports `Choose-One (Plurality) = Almond`, which is *not* the plurality answer to this election — the plurality answer is Cocoa, and it is [file 1](cases/cases_pages/kim_scoring_a0_plurality.md). Every ballot in the negative-voting file has two candidates tied at 4, so "this ballot's top choice" is decided by candidate priority order rather than by the voter. The engine flags this itself ("36 of 36 ballots (100%) had equal non-zero scores"). It is an artifact of reading a Choose-One count off a ballot that was never a Choose-One ballot.
 

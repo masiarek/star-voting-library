@@ -1,0 +1,62 @@
+election_title: "Kim (A,B)-scoring — the ranking alone (Ranked Robin reference)"
+
+scenario_description: |-
+  THE SAME 36 VOTERS as every other file in this folder, with nothing but their
+  rankings — no score dial at all.
+
+    12 voters   Almond > Berry  > Cocoa
+     8 voters   Berry  > Almond > Cocoa
+     7 voters   Cocoa  > Almond > Berry
+     9 voters   Cocoa  > Berry  > Almond
+
+  The other five files change what a voter's SECOND choice is worth and get five
+  results out of one electorate. This file is the control. Ranked Robin reads the
+  rankings and nothing else, so there is no dial to turn:
+
+    Almond beats Berry  19 - 17
+    Almond beats Cocoa  20 - 16
+    Berry  beats Cocoa  20 - 16
+
+  Almond wins every matchup — the Condorcet winner — and that answer does not
+  move no matter where the (A,B) dial is set, because the dial is not an input to
+  it. Worth stating plainly rather than letting it read as a verdict: the reason
+  the pairwise answer is stable here is that it *ignores* the thing the rest of
+  the folder is about. Ranked Robin cannot tell the lukewarm electorate from the
+  intense one either — the two approval files have byte-identical rankings and
+  elect different candidates, and this file returns the same winner for both.
+  Stability and blindness are the same fact seen from two sides.
+
+  Race 6 of BV2275. LH, BetterVoting and pref_voting's independent Copeland all
+  agree on Almond.
+
+  Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
+
+voting_method: RankedRobin
+num_winners: 1
+
+bv_test_id: BV2275
+bv_election_id: 6mcgkq
+bv_results_url: https://bettervoting.com/6mcgkq/results
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_smith_set: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  12:Almond>Berry>Cocoa
+  8:Berry>Almond>Cocoa
+  7:Cocoa>Almond>Berry
+  9:Cocoa>Berry>Almond
+
+expected_winners:
+  - Almond
+
+# file: kim_ranked_robin_reference.yaml

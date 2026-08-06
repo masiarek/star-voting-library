@@ -42,10 +42,17 @@ scenario_description: |-
   with the two score vectors pulled in from (1, 0, 0) and (1, 1, 0) to a pair
   chosen so that answering honestly is a best response.
 
+  Live on BetterVoting: race 4 of BV2275 (six races, one
+  electorate) -> https://bettervoting.com/6mcgkq/results
+
   Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
 voting_method: Approval
 num_winners: 1
+
+bv_test_id: BV2275
+bv_election_id: 6mcgkq
+bv_results_url: https://bettervoting.com/6mcgkq/results
 
 options:
   show_description: false

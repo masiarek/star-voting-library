@@ -5407,7 +5407,125 @@ DISTRICTING_COST_SPEC = {
     ),
 }
 
+# --- BV2275 — Kim / Myerson (A,B)-scoring: one electorate, six ballots ---------
+# Backs method_comparisons/kim_ordinal_vs_cardinal/ and the concept page
+# 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md.
+#
+# 36 voters with FIXED rankings vote six times. Only what a voter's SECOND choice
+# is worth changes — Myerson's (A,B) dial, the subject of Semin Kim's "Ordinal
+# versus cardinal voting rules" (GEB 104, 2017). Races 1-3 set the dial for
+# everybody and produce THREE different winners; races 4-5 hand it to the voters
+# as Approval ballots and produce two more from the same rankings; race 6 is the
+# invariant reference. Every result is deterministic — LH-verified pre-creation,
+# no tie anywhere, so nothing in this election rests on a tie-break.
+_KIM_CANDS = ["Almond", "Berry", "Cocoa"]
+
+# (count, ranking, approves-two-when-LUKEWARM, approves-two-when-INTENSE)
+_KIM_BLOCS = [
+    (12, ["Almond", "Berry", "Cocoa"], False, True),
+    (8,  ["Berry", "Almond", "Cocoa"], False, False),
+    (7,  ["Cocoa", "Almond", "Berry"], True,  False),
+    (9,  ["Cocoa", "Berry", "Almond"], False, True),
+]
+
+
+def _kim_rows(build):
+    """Expand the blocs into one ballot row per voter, aligned across races."""
+    rows = []
+    for cnt, order, lukewarm, intense in _KIM_BLOCS:
+        rows += [build(order, lukewarm, intense)] * cnt
+    return rows
+
+
+def _kim_scores(middle):
+    """(1, A, 0) written x4 on the 0-5 scale: top 4, middle `middle`, bottom 0."""
+    def build(order, _lukewarm, _intense):
+        by_rank = [4, middle, 0]
+        sc = {c: by_rank[order.index(c)] for c in _KIM_CANDS}
+        return [sc[c] for c in _KIM_CANDS]
+    return build
+
+
+def _kim_approval(which):
+    """Approve your favorite; approve your second too only if it is a close one."""
+    def build(order, lukewarm, intense):
+        two = lukewarm if which == "lukewarm" else intense
+        approved = set(order[:2] if two else order[:1])
+        return [1 if c in approved else 0 for c in _KIM_CANDS]
+    return build
+
+
+def _kim_ranks(order, _lukewarm, _intense):
+    return [order.index(c) + 1 for c in _KIM_CANDS]
+
+
+KIM_AB_SCORING_SPEC = {
+    "test_id": "BV2275",
+    "title": "One Electorate, Six Ballots — what is your second choice worth?",
+    "description": (
+        "Thirty-six voters with FIXED rankings vote six times, and the only thing "
+        "that changes between the races is what a voter's SECOND choice is worth. "
+        "That one number is the dial Roger Myerson (2002) called A in the "
+        "(A,B)-scoring rules, and it is the subject of Semin Kim's 'Ordinal versus "
+        "cardinal voting rules: A mechanism design approach' (Games and Economic "
+        "Behavior 104, 2017). The electorate: 12 voters rank Almond > Berry > "
+        "Cocoa, 8 rank Berry > Almond > Cocoa, 7 rank Cocoa > Almond > Berry, and "
+        "9 rank Cocoa > Berry > Almond. Nobody changes their mind in any race. "
+        "RACES 1-3 set the dial for everybody. Worth nothing (a Choose-One shaped "
+        "ballot) elects COCOA. Worth half - the Borda count, which Kim proves is "
+        "the best an ordinal ballot can do in this setting - elects ALMOND. Worth "
+        "as much as your first choice (negative voting, where a ballot says only "
+        "who you left out) elects BERRY. Three winners, one electorate, and not "
+        "one change of heart: a designer turned a dial. "
+        "RACES 4-5 hand the dial to the VOTERS, as Approval ballots. Approval is "
+        "the corner of the same family where each voter decides for themselves "
+        "whether their second choice counts, and it is the one corner a ranking "
+        "cannot fill in. The same 36 rankings elect ALMOND when second choices are "
+        "lukewarm and BERRY when they are intense - decided by information that no "
+        "ranked ballot records. "
+        "RACE 6 is the reference: Ranked Robin reads the rankings alone and elects "
+        "Almond, the Condorcet winner, whatever the dial is doing. "
+        "Full lesson & tabulation: https://masiarek.github.io/star-voting-library/"
+        "method_comparisons/kim_ordinal_vs_cardinal/index.html"
+    ),
+    "races": [
+        {"title": "A=0 — second choice worth nothing (Choose-One shaped)",
+         "method": "STAR", "num_winners": 1, "candidates": _KIM_CANDS,
+         "ballots": _kim_rows(_kim_scores(0))},
+        {"title": "A=1/2 — second choice worth half (Borda)",
+         "method": "STAR", "num_winners": 1, "candidates": _KIM_CANDS,
+         "ballots": _kim_rows(_kim_scores(2))},
+        {"title": "A=1 — second choice worth everything (Negative voting)",
+         "method": "STAR", "num_winners": 1, "candidates": _KIM_CANDS,
+         "ballots": _kim_rows(_kim_scores(4))},
+        {"title": "Approval — lukewarm second choices",
+         "method": "Approval", "num_winners": 1, "candidates": _KIM_CANDS,
+         "ballots": _kim_rows(_kim_approval("lukewarm"))},
+        {"title": "Approval — intense second choices",
+         "method": "Approval", "num_winners": 1, "candidates": _KIM_CANDS,
+         "ballots": _kim_rows(_kim_approval("intense"))},
+        {"title": "Ranked Robin — the ranking alone",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 3,
+         "candidates": _KIM_CANDS, "ballots": _kim_rows(_kim_ranks)},
+    ],
+    "expected": (
+        "Race 1 (A=0) -> Cocoa (scores Cocoa 64 / Almond 48 / Berry 32; runoff "
+        "Cocoa 16 - Almond 12, 8 Equal Support). "
+        "Race 2 (A=1/2) -> Almond (78 / Berry 74 / Cocoa 64; runoff 19-17, no "
+        "Equal Support). "
+        "Race 3 (A=1) -> Berry (116 / Almond 108 / Cocoa 64; runoff Berry 9 - "
+        "Almond 7, 20 Equal Support). "
+        "Race 4 (Approval, lukewarm) -> Almond 19 / Cocoa 16 / Berry 8. "
+        "Race 5 (Approval, intense) -> Berry 29 / Cocoa 16 / Almond 12. "
+        "Race 6 (Ranked Robin) -> Almond, the Condorcet winner (beats Berry 19-17, "
+        "beats Cocoa 20-16). "
+        "No race turns on a tiebreak. Test ID BV2275."
+    ),
+}
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [KIM_AB_SCORING_SPEC]   # BV2275 -> 6mcgkq
+#   Created as designed, 36 ballots × 6 races.
 # Previously: [DISTRICTING_COST_SPEC]   # BV2274 -> 38b7fg
 #   Created as designed, 9 ballots x 3 races. BV agrees with LH on all three
 #   (Ana / Beto / Cleo) and reports tieBreakType 'none' everywhere — nothing in
