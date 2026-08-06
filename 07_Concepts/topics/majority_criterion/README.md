@@ -4,6 +4,8 @@
 
 Part of the [Concepts by topic](../README.md) hub. Closely tied to [Later-No-Harm](#the-same-fork-as-later-no-harm) and [STAR's honest limits #8](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
+**This page is about the *criterion* — a property of a method.** For the *words* — what makes someone a "majority candidate" or a "minority winner," which of the five senses you're using, and why the bare winning percentage is the weakest form of the argument — see [Majority & minority candidates](majority_and_minority_candidates.md).
+
 ---
 
 ## The plain-English version

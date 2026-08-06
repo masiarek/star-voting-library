@@ -23,6 +23,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 | **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) — and [how often, measured](condorcet/condorcet_efficiency_measured.md) | [Condorcet efficiency](condorcet/) |
 | **Ties & tie-breaking** | where ties arise and how the lot order settles them | [Ties & tie-breaking](ties/) |
 | **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [Majority Criterion](majority_criterion/) |
+| **"Majority" / "minority" candidate** | the *words*, not the criterion — five senses of "majority candidate", why "minority winner" is nearly automatic in a big field, and what makes it a real indictment | [Majority & minority candidates](majority_criterion/majority_and_minority_candidates.md) |
 | **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/) |
 | **Burial** | sinking a rival you actually like, so they lose a comparison they'd win (Ranked Robin/Copeland ❌ its named risk; Borda ❌ notoriously; STAR ⚠️ rarely pays; IRV ✅ later-no-harm) | [Burial](burial/) |
 

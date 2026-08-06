@@ -14,6 +14,12 @@ This folder runs his own worked example. The theory lives on the concept page �
 | [The same election, rescaled](cases/cases_pages/hillinger_t4_affine.md) | what "cardinal" guarantees: totals move under `u′ = 2u + 1`, the winner does not | [`hillinger_t4_affine.yaml`](cases/hillinger_t4_affine.yaml) |
 | [Table 3 — one approval result, two opposite Borda winners](cases/cases_pages/hillinger_t3_arbitrariness.md) | his §10 answer to Saari–Van Newenhizen: a coarse score under-determines the ranking exactly as a ranking under-determines the score | [`hillinger_t3_arbitrariness.yaml`](cases/hillinger_t3_arbitrariness.yaml) |
 
+### Table 1 is already in the library — do not mint it again
+
+Hillinger's **Table 1** ("Most Disliked Candidate Wins Under PV") is 3 voters `a > b > c`, 2 `b > c > a`, 2 `c > b > a`: **a** wins the plurality count 3–2–2 while **4 of the 7 rank a last**. That profile is *identical* to **Felsenthal's Example 1**, which this repo already runs and already has live on BetterVoting as **[BV2144 (`mxfmhm`)](../felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md)** — same seven ballots, cast as Ana / Bo / Cal, where it demonstrates four plurality paradoxes at once (Condorcet winner ignored, Condorcet loser elected, [absolute loser](../../07_Concepts/voting_paradoxes/absolute_loser_paradox.md) elected, and the spoiler/SCC effect).
+
+Two authors, two decades apart, reached for the same seven ballots because it is the smallest profile that makes the point. Cite it as Hillinger Table 1 *or* Felsenthal Example 1 — but there is one election, and it already exists. The definitional question Hillinger raises alongside that table — what *is* a majority or minority candidate, given that almost nobody wins an arithmetic majority in a real field — is answered at [Majority & minority candidates](../../07_Concepts/topics/majority_criterion/majority_and_minority_candidates.md).
+
 ## Table 4 — the mirror pathology
 
 Hillinger's §12 point: plurality's famous defect is that an **unpopular** candidate may win; IRV's mirror defect is that the **most popular** candidate may be eliminated in the very first round. Thirty voters, three candidates:

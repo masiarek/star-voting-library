@@ -102,6 +102,24 @@ And the invariance, stated as a physicist would: the voting scales "are arbitrar
 
 So the ballot mark stops pretending to be a reading of an inner state and becomes what it visibly is — **a report on a shared, bounded instrument**. The interpersonal-comparability objection was aimed at a claim about mental magnitudes; against a normed reporting convention it lands differently, because nobody claimed your 5 and my 5 are the same feeling. They are the same *allowance*. This is the same logic the library already runs under a different name — [the equally weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) and [one person, one vote](one_person_one_vote.md).
 
+## Where the "5 or 6 levels" figure comes from
+
+The claim-check below leans on Hillinger's "5–6 levels" limit, so it is worth showing what he actually rests it on. His §3 argument is **empirical, not theoretical**: societies already collect and aggregate cardinal judgments constantly, and have done so long enough for a house style to emerge.
+
+| Domain | The instrument | How it's aggregated |
+|---|---|---|
+| **Schooling** | letter or numeric grades — German universities run **1–5**, 1 = excellent, 5 = fail (with a 0.5 for exceptional work) | repeated **weighted averaging** — a quiz counts less than an exam, course grades average into a degree |
+| **Commerce** | quality ratings, usually verbal — *excellent / good / average / poor / unacceptable* — converted to **(2, 1, 0, −1, −2)** | mean across respondents |
+| **Opinion polling** | the *Politbarometer* (Forschungsgruppe Wahlen) rates politicians **+5 to −5**; Michigan's **feeling thermometer** runs 0–100 | mean per politician |
+
+Two things follow, and they pull in opposite directions for STAR.
+
+**The supportive one.** Whenever a discrete scale is chosen for judgments, it lands on roughly **five or six values** — which Hillinger reads as a practical ceiling on how finely people can discriminate along a cardinal scale. STAR's **0–5** is six levels. On this reading the STAR ballot is not a voting-reform invention at all; it is the same instrument that schooling, commerce and polling each arrived at independently. That is the strongest available answer to *"you're asking voters to do something unnatural"* — they already do it for films, restaurants and their children's report cards, and nobody calls that an unreasonable cognitive demand. It also reframes the [expressiveness argument](../scores_and_ranks/scores_vs_ranks.md): the question is not whether people *can* grade, but whether a ballot is allowed to record what they already do.
+
+**The awkward one.** His own recommendation is *narrower* than STAR's: **three levels `(−1, 0, +1)` for general elections**, five for committees of experts, on the grounds that scale fineness is a cost/benefit judgment rather than a matter of principle — you do not weigh a freighter on a precision balance. So the most-cited cardinal-voting advocate would hand a general electorate a **three-level** ballot, not a six-level one. STAR sits inside his stated limit, so this is a mild disagreement rather than an objection — but it is a disagreement, and the "fineness is pragmatic" premise behind it is the claim later evidence hits hardest ([see the claim-check](#claim-check)).
+
+> **Sourcing note.** Hillinger's own citations here are Duncan (1984) on the history of social measurement — whose first chapter treats **voting itself as an instance of social measurement**, the framing this whole page runs on — and Dawes (1972) on rating and attitude scales. Both are outside voting theory, which is what makes them useful: the 5–6 convergence is not a fact the cardinal-voting camp generated for its own use.
+
 ## How much a ballot can say, counted
 
 A small, sharp idea from §4 that the library did not previously have: **count the distinct votes a ballot format admits.** With `N` candidates (excluding the all-equal votes, which are abstentions):
