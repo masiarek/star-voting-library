@@ -400,8 +400,26 @@ def test_never_raises_on_degenerate_ballots(rows):
 REPO_ROOT = ENGINE_DIR.parent
 
 
+def _committed_mirrors():
+    """The mirrors git actually tracks.
+
+    The heading above says "every committed mirror", and `rglob` does not mean
+    that: it also walks `site/` (mkdocs build output, which CLAUDE.md says never
+    to commit) and `.claude/worktrees/*` (other branches' checkouts). Both hold
+    stale copies by definition, so on any machine that had run `mkdocs build`
+    once, or that has a worktree open, this test failed with 28 findings — 7 from
+    `site/`, 21 from worktrees, and zero from repo content. `check_repo_hygiene`
+    skips exactly these directories for the same reason; asking git is the
+    narrower way to say it, and it drops any other stray untracked mirror too.
+    """
+    out = subprocess.run(
+        ["git", "-C", str(REPO_ROOT), "ls-files", "-z", "*_tabulated.txt"],
+        capture_output=True, text=True, check=True).stdout
+    return [REPO_ROOT / p for p in out.split("\0") if p]
+
+
 def _mirrors_with_a_star_runoff():
-    for mirror in REPO_ROOT.rglob("*_tabulated.txt"):
+    for mirror in _committed_mirrors():
         try:
             text = mirror.read_text(errors="replace")
         except OSError:
