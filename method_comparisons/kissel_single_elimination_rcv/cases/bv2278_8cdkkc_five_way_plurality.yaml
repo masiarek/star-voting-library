@@ -1,0 +1,40 @@
+election_title: "BV2278 — Kissel's five-way example (Choose-One): A wins on 30.6%"
+scenario_description: >-
+  The Choose-One (Plurality) race of BV2278 (BetterVoting election 8cdkkc) — the same
+  1000-voter field as the IRV, Ranked Robin and STAR races, with every voter marking
+  only their first choice. A wins with 306, or 30.6%: the paper's own ">30%" line,
+  and the number the whole example is built around. Nearly 70% of the electorate
+  preferred someone else, and the candidate they actually agree on — C, the moderate
+  who beats A 511-489 and B 700-300 — finishes THIRD here with 202. This race is why
+  the paper is looking for a better count at all; the argument of the case is that
+  the count it proposes (batch-eliminate to the top two) still lands on A.
+  Live results: https://bettervoting.com/8cdkkc/results
+bv_test_id: BV2278
+bv_election_id: 8cdkkc
+bv_results_url: https://bettervoting.com/8cdkkc/results
+voting_method: Plurality
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: true       # A wins the pile; C wins every pairing
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+# One mark each: A 306, B 300, C 202, D 183, E 9. A wins with 30.6%.
+ballots: |-
+  Count:A,B,C,D,E
+  306:1,0,0,0,0     # A-partisans
+  300:0,1,0,0,0     # B-partisans
+  111:0,0,1,0,0     # moderates leaning A
+   91:0,0,1,0,0     # moderates leaning B
+  183:0,0,0,1,0     # D's voters
+    9:0,0,0,0,1     # the <1% candidate
+expected_winners:
+  - A
+
+# file: bv2278_8cdkkc_five_way_plurality.yaml

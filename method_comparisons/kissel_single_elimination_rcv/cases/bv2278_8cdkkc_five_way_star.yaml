@@ -9,6 +9,9 @@ scenario_description: >-
   A's 2695), and the automatic runoff confirms the head-to-head the paper says is
   never revealed — C over A, 511-489. The scores are the paper's own preference order
   expressed as strengths; the ranked files hold the identical order.
+bv_test_id: BV2278
+bv_election_id: 8cdkkc
+bv_results_url: https://bettervoting.com/8cdkkc/results
 voting_method: STAR
 num_winners: 1
 options:
@@ -35,4 +38,4 @@ ballots: |-
 expected_winners:
   - C
 
-# file: kissel_five_way_c5_b1000_star.yaml
+# file: bv2278_8cdkkc_five_way_star.yaml

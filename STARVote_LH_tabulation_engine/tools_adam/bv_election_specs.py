@@ -5649,7 +5649,89 @@ MAYOR_THIRD_PLACE_SPEC = {
 }
 
 
+# --- BV2278 — Kissel's five-way example: the moderate every elimination misses --
+# The second election behind method_comparisons/kissel_single_elimination_rcv —
+# the five-candidate field printed on p.5 of Adam Kissel's "Can Ranked-Choice
+# Voting Work? A Conservative Approach" (Cardinal Institute for West Virginia
+# Policy), given ballots that match its percentages: A >30%, B 30%, C 20%,
+# D <19%, E <1%  ->  A 306, B 300, C 202, D 183, E 9 of 1000.
+#
+# 1000 ballots is above the house "keep it small" default, and deliberately so:
+# the paper's own spec puts E BELOW 1%, which cannot be expressed under ~101
+# ballots, and the value of this case is fidelity to the printed numbers. BV2138
+# (921 voters) is the precedent that BV handles this size.
+#
+# The letters are kept instead of a named cast for the same reason — a reader
+# should be able to hold the paper and the results page side by side.
+#
+# C is the moderate: the SECOND choice of both A's and B's voters, and the
+# Condorcet winner (511-489 over A, 700-300 over B, 808-192 over D, 991-9 over E).
+# Every elimination count misses her; only the pairwise and scored counts find her.
+_K5_CANDS = ["A", "B", "C", "D", "E"]
+# count, ranked (1=top, aligned to _K5_CANDS), STAR 0-5, plurality 0/1
+_K5_BLOCS = [
+    (306, [1, 4, 2, 3, 5], [5, 0, 3, 1, 0], [1, 0, 0, 0, 0]),  # A>C>D>B>E
+    (300, [4, 1, 2, 3, 5], [0, 5, 3, 1, 0], [0, 1, 0, 0, 0]),  # B>C>D>A>E
+    (111, [2, 3, 1, 4, 5], [3, 1, 5, 0, 0], [0, 0, 1, 0, 0]),  # C>A>B>D>E
+    (91,  [3, 2, 1, 4, 5], [1, 3, 5, 0, 0], [0, 0, 1, 0, 0]),  # C>B>A>D>E
+    (183, [2, 4, 3, 1, 5], [4, 0, 2, 5, 0], [0, 0, 0, 1, 0]),  # D>A>C>B>E
+    (9,   [4, 5, 3, 2, 1], [1, 0, 3, 4, 5], [0, 0, 0, 0, 1]),  # E>D>C>A>B
+]
+_K5_RANKED = [r for c, r, s, p in _K5_BLOCS for _ in range(c)]
+_K5_STAR = [s for c, r, s, p in _K5_BLOCS for _ in range(c)]
+_K5_PLUR = [p for c, r, s, p in _K5_BLOCS for _ in range(c)]
+
+KISSEL_FIVE_WAY_SPEC = {
+    "test_id": "BV2278",
+    "title": "Five-Way Race — the moderate who beats both poles and loses every elimination count",
+    "description": (
+        "1000 voters, five candidates, and the compromise candidate is invisible to every "
+        "count that eliminates. First choices: A 306, B 300, C 202, D 183, E 9. C is the "
+        "moderate - the SECOND choice of both A's and B's voters - and she beats every "
+        "rival head-to-head: A 511-489, B 700-300, D 808-192, E 991-9. She is the Condorcet "
+        "winner. Yet Choose-One elects A, and Instant-Runoff also elects A: it drops E, then "
+        "D, then C, and A wins the final round 609-391. Ranked Robin elects C, 4-0. STAR "
+        "elects C, who leads the scoring round 3221-2695 and wins the runoff 511-489 - the "
+        "same head-to-head the pairwise table shows. "
+        "This is the five-candidate field printed on p.5 of a 2021 policy paper arguing that "
+        "such a candidate 'could only win if a large majority of the D voters choose C', and "
+        "that this is unlikely. The ballots say otherwise: C's problem is not D's transfers, "
+        "it is that the A and B voters' second choices are never counted by an elimination "
+        "count at all. The candidates are left as letters so the paper and this results page "
+        "can be read side by side. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/"
+        "kissel_single_elimination_rcv/index.html"
+    ),
+    "races": [
+        {"title": "Five-way - Choose-One (Plurality)", "method": "Plurality",
+         "num_winners": 1, "candidates": _K5_CANDS, "ballots": _K5_PLUR},
+        {"title": "Five-way - IRV (Hare, full rounds)", "method": "IRV",
+         "num_winners": 1, "max_rankings": 5,
+         "candidates": _K5_CANDS, "ballots": _K5_RANKED},
+        {"title": "Five-way - Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 5,
+         "candidates": _K5_CANDS, "ballots": _K5_RANKED},
+        {"title": "Five-way - STAR", "method": "STAR",
+         "num_winners": 1, "candidates": _K5_CANDS, "ballots": _K5_STAR},
+    ],
+    "expected": (
+        "Plurality -> A (306 of 1000). IRV -> A (E out, then D, then C; final round A 609 - "
+        "B 391). Ranked Robin -> C, 4-0 (A 511-489, B 700-300, D 808-192, E 991-9). STAR -> "
+        "C (scores C 3221, A 2695, B 1884, D 1557, E 45; runoff C 511 - A 489, no Equal "
+        "Support). E is the Condorcet loser. No tie at any rung in any race, so tieBreakType "
+        "should be 'none' throughout. LH agrees on every number. The Contingent / "
+        "Supplementary Vote (not a BV method) also elects A - 609-391 with full rankings, "
+        "600-391 with the paper's two-mark ballot and 9 exhausted. Test ID BV2278."
+    ),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [KISSEL_FIVE_WAY_SPEC]   # BV2278 -> 8cdkkc
+#   Created as designed, 1000 ballots x 4 races. BV agrees with LH on every race:
+#   Plurality -> A, IRV -> A, Ranked Robin -> C, STAR -> C, tieBreakType 'none'
+#   throughout. Backs method_comparisons/kissel_single_elimination_rcv. — point this at a spec only for the run that mints it
 # Previously: [MAYOR_THIRD_PLACE_SPEC]   # BV2277 -> tqfdbg
 #   Created as designed, 100 ballots x 4 races. BV agrees with LH on every race:
 #   Plurality -> Ada, IRV -> Cora, Ranked Robin -> Cora, STAR -> Cora, and no race

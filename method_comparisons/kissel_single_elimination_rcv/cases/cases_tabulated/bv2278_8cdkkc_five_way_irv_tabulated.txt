@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     kissel_five_way_c5_b1000_irv.yaml
-TABULATED FILE:  kissel_five_way_c5_b1000_irv_tabulated.txt
+SOURCE FILE:     bv2278_8cdkkc_five_way_irv.yaml
+TABULATED FILE:  bv2278_8cdkkc_five_way_irv_tabulated.txt
 ======================================================================
 
 election_title: "Kissel's five-way example (RCV-IRV) — the compromise is eliminated third"
@@ -15,6 +15,9 @@ scenario_description: >-
   of the D voters choose C"; that is the wrong diagnosis. C's problem is not D's
   transfers, it is that the A and B voters' second choices are never counted at all.
   Same ballots under Ranked Robin (…_rr.yaml) and STAR (…_star.yaml) elect C.
+bv_test_id: BV2278
+bv_election_id: 8cdkkc
+bv_results_url: https://bettervoting.com/8cdkkc/results
 voting_method: RCV_IRV
 num_winners: 1
 # Round 1: A 306, B 300, C 202, D 183, E 9 — no majority; E eliminated -> D (194... 192).
@@ -31,7 +34,7 @@ ballots: |-
 expected_winners:
   - A
 
-# file: kissel_five_way_c5_b1000_irv.yaml
+# file: bv2278_8cdkkc_five_way_irv.yaml
 
 ======================================================================
 TABULATION RESULTS

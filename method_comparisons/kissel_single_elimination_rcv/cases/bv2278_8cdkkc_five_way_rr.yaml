@@ -9,6 +9,9 @@ scenario_description: >-
   second choice is "essentially the same in all forms of RCV" — it is a property of
   ELIMINATION, not of the ranked ballot. Nothing about the ballots changed; only the
   count did.
+bv_test_id: BV2278
+bv_election_id: 8cdkkc
+bv_results_url: https://bettervoting.com/8cdkkc/results
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
 options:
@@ -27,4 +30,4 @@ ballots: |-
 expected_winners:
   - C
 
-# file: kissel_five_way_c5_b1000_rr.yaml
+# file: bv2278_8cdkkc_five_way_rr.yaml
