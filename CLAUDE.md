@@ -483,7 +483,15 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   `bv<testid>_<bvid>_<descriptor>` when a sheet Test ID already exists; details in the
   **`bettervoting` skill**. Applies to the whole case group — `.yaml`, `.md`, frozen
   `_bv_export.json`, `_tabulated` mirror. Older cases keep their names; re-align
-  only if you're already touching them.
+  only if you're already touching them. **Exception — one BV election backing SEVERAL
+  cases (a multirace set): keep the descriptive names** (Adam, 2026-08-05). The rule's
+  rationale is that the bvid is a *discriminating* id; when every file in the set would
+  carry the same one it discriminates nothing and buries the reading order that makes
+  the set legible (`…_a0_plurality` → `…_ahalf_borda` → `…_a1_negative`). Carry the link
+  in the `bv_test_id` / `bv_election_id` / `bv_results_url` fields instead — which is
+  what `build_bv_registry.py` actually reads, so the whole set indexes correctly either
+  way. Live example: the six cases of BV2275 (`6mcgkq`) in
+  `method_comparisons/kim_ordinal_vs_cardinal/`. **Don't "fix" these to bvid prefixes.**
 - **BetterVoting (BV) work → load the `bettervoting` skill.** Everything BV-specific lives
   there and loads on demand: minting with `create_bv_test_election.py` / `bv_election_specs.py`,
   fetching exports with `fetch_bv_export.py`, screenshots in `img/<bvid>_<what>.png`, the

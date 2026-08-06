@@ -52,6 +52,15 @@ only what is BV-specific, so non-BV sessions don't pay for it.
     assign one; lead with the bvid: `b<bvid>_<descriptor>` (e.g.
     `b26khr3_nota_wins`). The auto-generated repo registry indexes it either way.
   - **LH-only** reference (no BV election) → omit the bvid segment, descriptive name.
+  - **One election backing SEVERAL cases (a multirace set) → descriptive names**
+    (Adam, 2026-08-05). The bvid leads because it *discriminates*; when every
+    file in the set would carry the same one it discriminates nothing, and it
+    buries the reading order that makes the set legible. Put the linkage in the
+    `bv_test_id` / `bv_election_id` / `bv_results_url` fields — what
+    `build_bv_registry.py` actually reads — and the whole set still indexes and
+    appears in `multirace_elections.md` correctly. Live example: the six cases of
+    **BV2275** (`6mcgkq`) in `method_comparisons/kim_ordinal_vs_cardinal/`, one
+    per race. **Don't re-align these to bvid prefixes.**
 
   Applies to the whole case group — `.yaml`, two-view `.md`, frozen
   `_bv_export.json`, `_tabulated` mirror. Older cases keep their names; re-align
