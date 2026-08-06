@@ -1,0 +1,68 @@
+election_title: "Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are lukewarm"
+
+scenario_description: |-
+  THE SAME 36 VOTERS AND THE SAME RANKINGS as the three (A,B)-scoring files in
+  this folder — and a winner that neither the rankings nor any ordinal rule can
+  predict. This is file 1 of the approval pair.
+
+    12 voters   Almond > Berry  > Cocoa
+     8 voters   Berry  > Almond > Cocoa
+     7 voters   Cocoa  > Almond > Berry
+     9 voters   Cocoa  > Berry  > Almond
+
+  Approval voting is the (A,B)-scoring rule with A = 0 and B = 1: the two
+  permitted score vectors are (1, 0, 0) and (1, 1, 0), and — this is the whole
+  point — each VOTER chooses which one to hand in, rather than a designer
+  choosing for everybody. Semin Kim (Games and Economic Behavior 104, 2017)
+  singles this out: plurality, Borda and negative voting "are classified as
+  ordinal rules because information about ordinal preference is sufficient to
+  implement" them, while approval "requires more than information about ordinal
+  preferences."
+
+  This file makes that concrete. Second choices here are LUKEWARM: only the 7
+  Cocoa-first voters who put Almond second feel strongly enough to approve two.
+  Everyone else approves their favorite alone.
+
+    Almond  12 + 7 = 19
+    Cocoa    7 + 9 = 16
+    Berry            8
+
+  Almond wins. Now read kim_approval_intense_seconds.yaml, which is the same
+  36 rankings with a different intensity pattern and a different winner.
+
+  This is the cardinal information a ranking cannot hold. It is not "who do you
+  prefer" — every ranking in this file is unchanged from the others in the
+  folder — it is "is your second choice close to your first, or close to your
+  last?" Kim's Theorem 2 rule is exactly a softened version of this question,
+  with the two score vectors pulled in from (1, 0, 0) and (1, 1, 0) to a pair
+  chosen so that answering honestly is a best response.
+
+  Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
+
+voting_method: Approval
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# Each voter approves their favorite; only the 7-voter bloc also approves its second.
+ballots: |-
+  Count:Almond,Berry,Cocoa
+  12:1,0,0   # Almond > Berry  > Cocoa   — approves Almond only
+  8:0,1,0    # Berry  > Almond > Cocoa   — approves Berry only
+  7:1,0,1    # Cocoa  > Almond > Berry   — approves BOTH (Almond is a close second)
+  9:0,0,1    # Cocoa  > Berry  > Almond  — approves Cocoa only
+
+expected_winners:
+  - Almond
+
+# file: kim_approval_lukewarm_seconds.yaml

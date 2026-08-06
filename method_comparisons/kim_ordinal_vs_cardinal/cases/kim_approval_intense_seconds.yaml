@@ -1,0 +1,75 @@
+election_title: "Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are intense"
+
+scenario_description: |-
+  THE SAME 36 VOTERS AND THE SAME RANKINGS as every other file in this folder.
+  This is file 2 of the approval pair, and the one that makes the point.
+
+    12 voters   Almond > Berry  > Cocoa
+     8 voters   Berry  > Almond > Cocoa
+     7 voters   Cocoa  > Almond > Berry
+     9 voters   Cocoa  > Berry  > Almond
+
+  In kim_approval_lukewarm_seconds.yaml only the 7-voter bloc felt strongly
+  enough about its second choice to approve two candidates, and Almond won 19
+  to 16 to 8.
+
+  Here the intensity sits somewhere else. The 12 Almond-first voters and the 9
+  Cocoa-first voters who rank Berry second are the ones with a close second
+  choice, so they approve two; the other blocs bullet-vote.
+
+    Berry   8 + 12 + 9 = 29
+    Cocoa        7 +  9 = 16
+    Almond              12
+
+  Berry wins — and Berry finished LAST in the plurality file (8 first choices).
+
+  So across this folder, one fixed set of 36 rankings elects:
+
+    Cocoa   under plurality        (A = 0)
+    Almond  under Borda            (A = 1/2)
+    Berry   under negative voting  (A = 1)
+    Almond  under approval, lukewarm second choices
+    Berry   under approval, intense second choices
+
+  The first three winners were chosen by the DESIGNER's setting of one dial.
+  The last two were chosen by the VOTERS, using information that no ranked
+  ballot records. That is the substance of Kim's Theorem 2 — that an incentive
+  compatible CARDINAL rule can beat every ordinal rule — and of his Proposition
+  2, which locates that rule inside this same (A,B) family.
+
+  What this pair does NOT show: that approval is Kim's optimum. It is not.
+  (0, 1) is the extreme corner of the family; his rule pulls both vectors in
+  toward the middle, to a pair chosen so that a voter on the threshold is
+  exactly indifferent between the two — which is what makes honest reporting a
+  best response. Approval as run here is the shape of the answer, not the
+  answer.
+
+  Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
+
+voting_method: Approval
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# Same rankings as the lukewarm file; the 12- and 9-voter blocs are the intense ones.
+ballots: |-
+  Count:Almond,Berry,Cocoa
+  12:1,1,0   # Almond > Berry  > Cocoa   — approves BOTH (Berry is a close second)
+  8:0,1,0    # Berry  > Almond > Cocoa   — approves Berry only
+  7:0,0,1    # Cocoa  > Almond > Berry   — approves Cocoa only
+  9:0,1,1    # Cocoa  > Berry  > Almond  — approves BOTH (Berry is a close second)
+
+expected_winners:
+  - Berry
+
+# file: kim_approval_intense_seconds.yaml

@@ -1,0 +1,66 @@
+election_title: "Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting)"
+
+scenario_description: |-
+  ONE electorate, marked three ways. This is file 3 of 3.
+
+  Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
+  and kim_scoring_ahalf_borda.yaml. Only the middle mark moves.
+
+    12 voters   Almond > Berry  > Cocoa
+     8 voters   Berry  > Almond > Cocoa
+     7 voters   Cocoa  > Almond > Berry
+     9 voters   Cocoa  > Berry  > Almond
+
+  THIS FILE sets A = 1, written x4 as (4, 4, 0). When a voter's second choice
+  scores exactly as much as their first, the only thing a ballot still says is
+  which candidate the voter left OUT — so this is NEGATIVE VOTING (also called
+  anti-plurality), the rule where each voter effectively casts one vote against
+  somebody. The winner is whoever is ranked last least often.
+
+  The tally: Berry 116, Almond 108, Cocoa 64. Berry wins. Berry led NO file
+  before this one — 32 points and last place under A = 0, second under A = 1/2 —
+  and wins here on the strength of being almost nobody's last choice (7 of 36).
+
+  Note the mirror of file 1. There, the two Cocoa blocs handed in identical
+  papers. Here it is the Almond and Berry blocs that become indistinguishable —
+  12 voters ranking Almond > Berry and 8 ranking Berry > Almond both mark
+  (4, 4, 0), collapsing into one row of 20 — and those same 20 register as
+  Equal Support in the runoff, because their two marks are equal. Each end of
+  the dial destroys information; only the middle setting keeps all of it.
+
+  THE POINT OF THE THREE FILES: one electorate, three winners — Cocoa, Almond,
+  Berry — chosen entirely by a designer's decision about how much a second
+  choice is worth. No voter changed their mind, and no ranking moved. Kim's
+  answer is that the dial should not be the designer's to set at all: his
+  incentive-compatible optimum hands it to the VOTER, which is what the two
+  approval files in this folder show.
+
+  Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# (1, A, 0) with A = 1, written x4 on the 0-5 scale: top 4, middle 4, bottom 0.
+ballots: |-
+  Count:Almond,Berry,Cocoa
+  12:4,4,0   # Almond > Berry  > Cocoa
+  8:4,4,0    # Berry  > Almond > Cocoa
+  7:4,0,4    # Cocoa  > Almond > Berry
+  9:0,4,4    # Cocoa  > Berry  > Almond
+
+expected_winners:
+  - Berry
+
+# file: kim_scoring_a1_negative.yaml

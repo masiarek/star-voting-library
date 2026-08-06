@@ -1,0 +1,160 @@
+======================================================================
+SOURCE FILE:     kim_scoring_ahalf_borda.yaml
+TABULATED FILE:  kim_scoring_ahalf_borda_tabulated.txt
+======================================================================
+
+election_title: "Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda)"
+
+scenario_description: |-
+  ONE electorate, marked three ways. This is file 2 of 3.
+
+  Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
+  and kim_scoring_a1_negative.yaml. The only thing that changes is what a
+  voter's SECOND choice is worth — the dial Myerson (2002) calls A, and the one
+  Semin Kim's mechanism-design paper (Games and Economic Behavior 104, 2017) is
+  really about.
+
+    12 voters   Almond > Berry  > Cocoa
+     8 voters   Berry  > Almond > Cocoa
+     7 voters   Cocoa  > Almond > Berry
+     9 voters   Cocoa  > Berry  > Almond
+
+  THIS FILE sets A = 1/2, written x4 as (4, 2, 0). That is the BORDA COUNT, and
+  Borda is not an arbitrary pick here: Kim's Proposition 1 and Corollary 1 show
+  that the utilitarian-best ORDINAL rule is the scoring rule whose scores are
+  the expected values of the ranked positions given the voter's ranking. When a
+  voter's middle value is uniform on (0, 1) that expectation is 1/2, and the
+  optimal ordinal rule IS (1, 1/2, 0). So this file is not "one more scoring
+  rule" — within the ordinal world, in Kim's environment, it is the best one.
+
+  The tally: Almond 78, Berry 74, Cocoa 64. Almond wins, and this is the only
+  one of the three files where the ballot carries three distinct marks, so the
+  automatic runoff has real information to work with (no Equal Support at all).
+
+  Cocoa led file 1 by 64 to 48 and finishes last here. Nobody changed their
+  mind; the second-choice dial moved from 0 to 1/2.
+
+  Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
+
+voting_method: STAR
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# (1, A, 0) with A = 1/2, written x4 on the 0-5 scale: top 4, middle 2, bottom 0.
+ballots: |-
+  Count:Almond,Berry,Cocoa
+  12:4,2,0   # Almond > Berry  > Cocoa
+  8:2,4,0    # Berry  > Almond > Cocoa
+  7:2,0,4    # Cocoa  > Almond > Berry
+  9:0,2,4    # Cocoa  > Berry  > Almond
+
+expected_winners:
+  - Almond
+
+# file: kim_scoring_ahalf_borda.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda) ===
+  ONE electorate, marked three ways. This is file 2 of 3.
+
+  Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
+  and kim_scoring_a1_negative.yaml. The only thing that changes is what a
+  voter's SECOND choice is worth — the dial Myerson (2002) calls A, and the one
+  Semin Kim's mechanism-design paper (Games and Economic Behavior 104, 2017) is
+  really about.
+
+    12 voters   Almond > Berry  > Cocoa
+     8 voters   Berry  > Almond > Cocoa
+     7 voters   Cocoa  > Almond > Berry
+     9 voters   Cocoa  > Berry  > Almond
+
+  THIS FILE sets A = 1/2, written x4 as (4, 2, 0). That is the BORDA COUNT, and
+  Borda is not an arbitrary pick here: Kim's Proposition 1 and Corollary 1 show
+  that the utilitarian-best ORDINAL rule is the scoring rule whose scores are
+  the expected values of the ranked positions given the voter's ranking. When a
+  voter's middle value is uniform on (0, 1) that expectation is 1/2, and the
+  optimal ordinal rule IS (1, 1/2, 0). So this file is not "one more scoring
+  rule" — within the ordinal world, in Kim's environment, it is the best one.
+
+  The tally: Almond 78, Berry 74, Cocoa 64. Almond wins, and this is the only
+  one of the three files where the ballot carries three distinct marks, so the
+  automatic runoff has real information to work with (no Equal Support at all).
+
+  Cocoa led file 1 by 64 to 48 and finishes last here. Nobody changed their
+  mind; the second-choice dial moved from 0 to 1/2.
+
+  Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Almond   |  * Berry    |    Cocoa    |
+-------------------------------------------------------------
+      * Almond > |     ---      |19 -  0 - 17 |20 -  0 - 16 |
+       * Berry > | 17 -  0 - 19 |    ---      |20 -  0 - 16 |
+         Cocoa > | 16 -  0 - 20 |16 -  0 - 20 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Almond — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Cocoa — loses every head-to-head matchup — elected by Choose-One (Plurality), Approval!
+
+[Divergence from STAR]
+  STAR                   = Almond
+  Choose-One (Plurality) = Cocoa   (differs from STAR)
+  Approval               = Cocoa   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 36 ballots.
+Count × Almond,Berry,Cocoa
+   12 ×      4,    2,    0
+    9 ×      0,    2,    4
+    8 ×      2,    4,    0
+    7 ×      2,    0,    4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Almond      0  12   0  15   0   9  |    78   2.2
+Berry       0   8   0  21   0   7  |    74   2.1
+Cocoa       0  16   0   0   0  20  |    64   1.8
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Almond        -- 78 -- First place
+   Berry         -- 74 -- Second place
+   Cocoa         -- 64
+ Almond and Berry advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Almond        -- 19 -- First place
+   Berry         -- 17
+   Equal Support --  0
+ Almond wins.
+   Runoff math:
+     36  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     36  voters with a preference  (majority = 19)
+           Almond 19 (53%)  ·  Berry 17 (47%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Almond

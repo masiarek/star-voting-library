@@ -1,0 +1,35 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting)
+ Tabulating 36 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Almond, Berry, Cocoa
+    20 ×   Almond > Berry      (4, 4, 0)
+     7 ×   Almond > Cocoa      (4, 0, 4)
+     9 ×   Berry > Cocoa      (0, 4, 4)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Almond            27  Elected
+Berry              9  Rejected
+Cocoa              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Almond
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Berry
+   Outside (2):        Almond, Cocoa
+   One member ⇒ Berry is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Almond is OUTSIDE the Smith set. ✗
+      Every member of the set (Berry) beats Almond head-to-head, yet
+      RCV-IRV elected Almond anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -4,7 +4,7 @@
 
 **Level: 301 · deep dive** Builds on [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) (101) and [preference vs. support](../scores_and_ranks/preference_vs_support.md) (201).
 
-Companions: [Does Arrow apply to STAR?](arrow_theorem_and_star.md) — where the ordinal/cardinal line is load-bearing · [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — the attack on utility from *inside* the cardinal camp · [Social welfare function](social_welfare_function.md) — the object being maximized · [Distortion](distortion.md) — utility as the assumed ground truth.
+Companions: [Does Arrow apply to STAR?](arrow_theorem_and_star.md) — where the ordinal/cardinal line is load-bearing · [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md) — the attack on utility from *inside* the cardinal camp · [Social welfare function](social_welfare_function.md) — the object being maximized · [Distortion](distortion.md) — utility as the assumed ground truth · [Ordinal vs. cardinal as mechanism design](ordinal_vs_cardinal_mechanism_design.md) — the same question asked with an incentive constraint attached, and Kim's normed ballot reusing Hillinger's move.
 
 ---
 

@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**489 election files** (424 single-winner, 65 multi-winner) across 17 method(s).
+**494 election files** (429 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 257 |
+| STAR | 260 |
 | RCV-IRV (Hare) | 29 |
 | Ranked Robin (RCV-RR / Copeland) | 72 |
-| Approval | 19 |
+| Approval | 21 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
@@ -30,7 +30,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (257)
+## STAR  (260)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -244,6 +244,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2167_f3dxq9_star`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2167_f3dxq9_star.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml) |
 | [`hillinger_t4_affine`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t4_affine.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 4, rescaled — what 'cardinal' actually guarantees → _Ana_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_affine.yaml) |
 | [`hillinger_t4_ev3`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t4_ev3.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 4 — three methods, three winners (EV-3 scale) → _Ana_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml) |
+| [`kim_scoring_a0_plurality`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_scoring_a0_plurality.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0 — the middle choice is worth nothing (Plurality) → _Cocoa_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_a0_plurality.yaml) |
+| [`kim_scoring_a1_negative`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_scoring_a1_negative.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting) → _Berry_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_a1_negative.yaml) |
+| [`kim_scoring_ahalf_borda`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_scoring_ahalf_borda.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda) → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_ahalf_borda.yaml) |
 | [`p3_manip_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — two voters bury their 4th choice and STAR elects their favourite → _Edinburgh_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_star.yaml) |
 | [`p3_sincere_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_sincere_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0) → _Dublin_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_sincere_star.yaml) |
 | [`bv2215_2p33qq_minority_winner`](../../method_comparisons/minority_winner/cases/cases_pages/bv2215_2p33qq_minority_winner.md) | `method_comparisons/minority_winner/cases/` | 1 | Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the majority's real choice (BV2215, 2p33qq) → _Cleo_ | [`.yaml`](../../method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml) |
@@ -403,7 +406,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (19)
+## Approval  (21)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -422,6 +425,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2154_wq6yv7_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2154_wq6yv7_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot → _April_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2154_wq6yv7_approval.yaml) |
 | [`felsenthal_ex6_pareto_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_pareto_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only) → _Beau_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_pareto_approval.yaml) |
 | [`hillinger_t3_arbitrariness`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t3_arbitrariness.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 3 — one approval result, two opposite Borda winners → _Ada_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t3_arbitrariness.yaml) |
+| [`kim_approval_intense_seconds`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_approval_intense_seconds.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are intense → _Berry_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_approval_intense_seconds.yaml) |
+| [`kim_approval_lukewarm_seconds`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_approval_lukewarm_seconds.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are lukewarm → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_approval_lukewarm_seconds.yaml) |
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml) |
