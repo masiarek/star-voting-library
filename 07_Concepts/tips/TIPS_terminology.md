@@ -64,6 +64,7 @@ The single biggest source of confusion is that one method has many names. This t
 | "Copeland" | the win-minus-loss algorithm underneath Ranked Robin | **Copeland** |
 | "Llull method", "Llull voting" | the *same* algorithm as Copeland, credited to its 1299 author instead of its 1951 one | **Copeland** |
 | "Condorcet candidate", "pairwise champion", "beats-all winner" | **not a method at all** — these name the *candidate* who beats every other head-to-head | the **Condorcet winner** (which every Condorcet method elects when one exists) |
+| "majority winner", "majority-preferred candidate", "tournament winner" | also aliases for that same candidate, but **not safe swaps** — the first two lend a pairwise fact the word *majority* (a beats-all winner may hold no over-half majority), and "majority-preferred" is scope-ambiguous with STAR's *runoff* sense; "tournament winner" collides with tournament solutions, which return a set | **beats-all winner** for the field · **majority-preferred *finalist*** for a STAR runoff · **majority** only for over-half → [naming decoder](../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md#the-winner-has-aliases-too-and-they-are-not-the-methods) |
 | "Beatpath" → Schulze · "Tideman" → Ranked Pairs · "Grand Junction" → Bucklin | older / academic names | as named |
 
 Rule of thumb: when you mean the **family**, say "Condorcet" or "round-robin"; when you mean the **specific Equal-Vote method**, say "Ranked Robin." Reserve bare "**RCV**" for the *ballot*.
