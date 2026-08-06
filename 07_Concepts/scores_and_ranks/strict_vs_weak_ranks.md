@@ -11,6 +11,24 @@
 
 The standard data taxonomy (PrefLib) names the four combinations: **SOC/SOI** (strict, complete/incomplete) and **TOC/TOI** (ties allowed, complete/incomplete).
 
+## See it on the ballot
+
+One voter, one opinion — Andre best, then Carmen, then David, and **Blake and Ella equally last**. Here is that opinion on each kind of paper.
+
+**Strict** — one bubble per column, so the tie at the bottom is impossible to say. The voter has to pick an order for Blake and Ella they don't actually feel:
+
+<img src="img/ranks_strict.png" width="500" alt="A strict ranked ballot: five candidates on rows, bubble columns 1st through 5th, exactly one bubble filled per row and per column — Andre 1st, Carmen 2nd, David 3rd, Blake 4th, Ella 5th.">
+
+**Weak** — the same ballot with one mark moved. Ella joins Blake at 4th, and the 5th column empties out, because once two candidates share 4th there is no 5th place left to give:
+
+<img src="img/ranks_weak.png" width="500" alt="A weak ranked ballot: five candidates on rows, bubble columns 1st through 5th. Andre is marked 1st, Carmen 2nd, David 3rd, and both Blake and Ella are marked 4th — two filled bubbles in one column. The 5th column is empty.">
+
+That one bubble is the entire difference between the two ballot rules — and it is not a free choice. Put the *weak* marks on the *strict* paper and the ballot doesn't record a tie, it records an error:
+
+<img src="img/ranks_strict_overvote.png" width="500" alt="The same strict ballot, but Blake and Ella are both marked 4th; those two bubbles are shown in red. Two candidates in one column is an overvote on a strict ballot.">
+
+The voter did nothing different in the second and third pictures. Whether that hand movement is a vote or a spoiled rank is decided entirely by which method is counting.
+
 ## The key point about RCV-IRV (Hare)
 
 > **RCV-IRV uses *strict* ranks and is *not* pairwise.** You **cannot** give two candidates the same rank. And IRV never does head-to-head comparisons — each round it looks only at every ballot's *current top choice*, eliminates the candidate with the fewest first-place votes, and ignores all the down-ballot detail until a ballot's higher choice is eliminated. That's a plurality-style elimination rule, not a comparison of candidates against each other.

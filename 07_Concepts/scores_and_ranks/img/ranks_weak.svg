@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1608 1338" width="1608" height="1338">
+<rect width="1608" height="1338" fill="#FFFFFF"/>
+<text x="30" y="78" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="66" font-weight="bold" fill="#C0504D">Weak ranks — equal ranks allowed</text>
+<text x="30" y="168" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="42" fill="#000000">Rank the candidates. Two candidates may share a rank.</text>
+<text x="668" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#000000" text-anchor="middle">1st</text>
+<text x="878" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#000000" text-anchor="middle">2nd</text>
+<text x="1088" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#000000" text-anchor="middle">3rd</text>
+<text x="1298" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#000000" text-anchor="middle">4th</text>
+<text x="1508" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#000000" text-anchor="middle">5th</text>
+<rect x="0" y="352" width="1608" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="352" x2="1608" y2="352" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="453.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Andre</text>
+<ellipse cx="668" cy="431.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="878" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="878" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1088" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1088" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1298" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1298" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1508" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1508" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<line x1="0" y1="510" x2="1608" y2="510" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="611.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Blake</text>
+<ellipse cx="668" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="668" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="878" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="878" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1088" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1088" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1298" cy="589.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1508" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1508" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<rect x="0" y="668" width="1608" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="668" x2="1608" y2="668" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="769.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Carmen</text>
+<ellipse cx="668" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="668" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="878" cy="747.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1088" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1088" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1298" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1298" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1508" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1508" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<line x1="0" y1="826" x2="1608" y2="826" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="927.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">David</text>
+<ellipse cx="668" cy="905.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="668" y="921.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="878" cy="905.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="878" y="921.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1088" cy="905.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1298" cy="905.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1298" y="921.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1508" cy="905.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1508" y="921.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<rect x="0" y="984" width="1608" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="984" x2="1608" y2="984" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="1085.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Ella</text>
+<ellipse cx="668" cy="1063.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="668" y="1079.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="878" cy="1063.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="878" y="1079.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1088" cy="1063.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1088" y="1079.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1298" cy="1063.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1508" cy="1063.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1508" y="1079.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<line x1="0" y1="1142" x2="1608" y2="1142" stroke="#95B3D7" stroke-width="7"/>
+<text x="30" y="1204" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" fill="#000000">Blake and Ella share 4th, so nobody is 5th. One mark moved, and the</text>
+<text x="30" y="1262" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" fill="#000000">ballot now says what the voter actually thinks.</text>
+</svg>

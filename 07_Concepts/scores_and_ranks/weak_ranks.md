@@ -8,7 +8,13 @@
 
 ## What it means
 
-On a weak-ranked ballot you may give two (or more) candidates the **same** rank. You're never forced to invent a preference you don't feel — if two candidates are equally good to you, you say so. In the PrefLib data taxonomy these are the **TOC / TOI** types (Ties allowed, Complete or Incomplete).
+On a weak-ranked ballot you may give two (or more) candidates the **same** rank. You're never forced to invent a preference you don't feel — if two candidates are equally good to you, you say so.
+
+<img src="img/ranks_weak.png" width="500" alt="A weak ranked ballot: five candidates on rows, bubble columns 1st through 5th. Andre is marked 1st, Carmen 2nd, David 3rd, and both Blake and Ella are marked 4th — two filled bubbles in one column. The 5th column is empty.">
+
+That's the same voter as on the [strict ballot](strict_ranks.md), with exactly one mark moved: Ella slides from 5th up to 4th, joining Blake. Two filled bubbles in one column is the whole difference — and the 5th column empties out, because once two candidates share 4th there is no 5th place to give.
+
+In the PrefLib data taxonomy these are the **TOC / TOI** types (Ties allowed, Complete or Incomplete).
 
 Which ranked methods allow it? Condorcet methods — [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Schulze, Ranked Pairs, Minimax — allow equal ranks and compare candidates head-to-head. Borda and Bucklin usually allow ties too. **RCV-IRV (Hare) and STV do not** — on those a tie is an overvote.
 
