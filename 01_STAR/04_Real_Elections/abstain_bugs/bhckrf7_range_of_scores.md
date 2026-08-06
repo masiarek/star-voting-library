@@ -40,11 +40,11 @@ The headline, above the charts — **"1 voters"**, with Cal Creative taking 100%
 
 Scroll past *Race Details* into *Stats for Nerds*, pick **Range of Scores**, and the same page reports two bars — **33%** at range 2 and **67%** at range 0:
 
-<!-- Screenshot slot — the Stats for Nerds "Range of Scores" panel (bars at 33% / 67%).
+<!-- Screenshot wanted — the Stats for Nerds "Range of Scores" panel (bars at 33% / 67%).
      bv_result_screenshot.py can't reach it: clicking the level-1 .detailExpander never
-     settles headless, so this one has to be captured by hand.
-     Save as: cases/img/hckrf7_range_of_scores.png
-<img alt="BetterVoting Stats for Nerds panel for hckrf7: Range of Scores, a bar at 2 reading 33% and a bar at 0 reading 67%" src="cases/img/hckrf7_range_of_scores.png" width="560"> -->
+     settles in headless Chrome, so this one has to be captured by hand. Save it as
+     cases/img/hckrf7_range_of_scores.png and add a sized <img> here (the tag is left out
+     on purpose — check_repo_hygiene reads src= even inside a comment). -->
 
 | Panel on the results page | Number | Denominator actually used |
 |---|---:|---|
