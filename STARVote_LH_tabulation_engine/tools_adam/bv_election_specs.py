@@ -5523,7 +5523,69 @@ KIM_AB_SCORING_SPEC = {
     ),
 }
 
+SECOND_FINALIST_TIE_SPEC = {
+    "test_id": "BV2276",
+    "title": "Tied for the second finalist — the runoff pair settled without a coin toss",
+    "description": (
+        "Five voters score four candidates 0-5. Ana leads the scoring round with 15 stars, "
+        "but Ben and Cora BOTH finish on 14, so the scoring round names only one finalist "
+        "outright and the second seat in the runoff has to be settled some other way. "
+        "STAR's tiebreak ladder settles it on its first deterministic rung, the head-to-head: "
+        "Cora is preferred to Ben on three of the five ballots to Ben's two, so CORA advances "
+        "and the runoff is Ana vs Cora. No coin toss, no lot, no random rung — re-run the "
+        "count and you get the same pair every time, which is the point worth teaching here. "
+        "A tie for a finalist slot sounds alarming and usually is not; it has an ordinary "
+        "answer, and the answer does not depend on candidate order or on who happened to be "
+        "listed second. "
+        "In the runoff Ana beats Cora 2 to 1 with 2 of the 5 voters rating the two finalists "
+        "equally — one voter gives both 3 stars, one gives both 5 — so Equal Support is the "
+        "largest single group on the chart even though Ana wins. "
+        "The election is deliberately tiny so every number can be checked by hand, and it "
+        "doubles as a fixture for BetterVoting reporting issue #1484, which asks whether every "
+        "panel on the results page names the same second finalist once a tiebreak has moved "
+        "it. Write-ins are off, because one extra ballot line would break the exact 14-14 tie "
+        "the whole election is built around. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/01_STAR/03_Criteria/tie_break_ladder/index.html"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "enable_write_in": False,  # a write-in could disturb the exact 14-14 scoring tie
+    "candidates": ["Ana", "Ben", "Cora", "Dev"],
+    "ballots": [
+        [5, 3, 5, 0],
+        [3, 1, 3, 0],
+        [5, 4, 2, 1],
+        [1, 4, 0, 5],
+        [1, 2, 4, 5],
+    ],
+    "expected": (
+        "Scoring round Ana 15, Ben 14, Cora 14, Dev 11. Ben and Cora tie for the second "
+        "finalist slot; the head-to-head rung advances Cora (preferred on 3 ballots to Ben's "
+        "2), so the finalists are Ana and Cora and tieBreakType should be head_to_head, not "
+        "random. Automatic runoff Ana 2 - Cora 1 with 2 voters at Equal Support (one pair at "
+        "3 stars, one at 5), so Distribution of Equal Support is 3* 50% / 5* 50%. Ana wins. "
+        "LH agrees on every number and also advances Cora at its head-to-head rung. "
+        "Confirmed in the BV sandbox before minting: runoff chart reads Ana 40% / Cora 20% / "
+        "Equal Support 40%. "
+        "REGRESSION CHECK for issue #1484: the Scores Table highlight and the Runoff Table "
+        "must name CORA, not Ben. Naming Ben (with Equal Support collapsing to 0, since Ana "
+        "vs Ben is 3-2 with nobody equal) is the bug. Test ID BV2276."
+    ),
+}
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [SECOND_FINALIST_TIE_SPEC]   # BV2276 -> qhjyr2
+#   Created as designed, 5 ballots × 1 race. BV agrees with LH on every number:
+#   scores Ana 15 / Ben 14 / Cora 14 / Dev 11, the Ben-Cora tie resolved on the
+#   HEAD-TO-HEAD rung (Cora 3 - Ben 2, tieBreakType 'head_to_head' — no five-star,
+#   no random), runoff Ana 2 - Cora 1 with 2 voters at Equal Support. Ana wins.
+#   Minted as the regression fixture for BetterVoting issue #1484: the live results
+#   page's Race Details tables name BEN (the second-highest scorer) instead of Cora
+#   (the candidate the tiebreak advanced), and Equal Support collapses from 2 to 0,
+#   while the charts and Tabulation Steps on the same page correctly say Cora. The
+#   bug reproduces on this brand-new election, which rules out a stale stored
+#   payload. Case: 01_STAR/03_Criteria/tie_break_ladder/bv2276_qhjyr2_second_finalist_tie.md
 # Previously: [KIM_AB_SCORING_SPEC]   # BV2275 -> 6mcgkq
 #   Created as designed, 36 ballots × 6 races.
 # Previously: [DISTRICTING_COST_SPEC]   # BV2274 -> 38b7fg
