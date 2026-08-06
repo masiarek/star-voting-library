@@ -1,0 +1,55 @@
+election_title: The majority illusion, one score changed — the majority loses Alice
+voting_method: STAR
+num_winners: 1
+
+scenario_description: |
+  The counterfactual companion to majority_illusion_c3_b41_score_vs_star.
+  Same 41 voters, same cast, ONE number changed: Alice's 21-voter majority
+  now scores Colin a 3 instead of a 0. Nothing about their opinion of Alice
+  moved — she is still their 5, still the first choice of an outright
+  51.2% majority, and still the Condorcet winner.
+
+  That single act of generosity to a SECOND rival lifts Colin from 50 to
+  113 and pushes Alice (105, unchanged) out of the top two. The finalists
+  become Brian and Colin, Alice is never in the runoff, and Brian wins
+  31 to 10.
+
+  This is the Majority-Criterion failure and the Later-No-Harm failure in
+  the same move — and it is the exact hinge Equal Vote's Relaxed Majority
+  Criterion draws the line at. Supporting ONE rival at "max minus 1"
+  (Brian a 4, the other file) is safe; supporting a SECOND is not. STAR
+  passes RMC and fails the strict majority criterion, and this pair shows
+  what the gap between those two facts costs on a real published profile.
+
+  These ballots are counterfactual — nobody cast them — so this case is
+  deliberately LH-only and is not reproduced on BetterVoting.
+
+video_script: |
+  Put the two ballot blocks side by side and cover everything but Colin's
+  column. One number: 0 becomes 3. Ask what should change. Answer: nothing
+  about Alice — the majority still rates her top and still outnumbers the
+  rest. Then show the finalists. Alice isn't there. That is why "STAR fails
+  the majority criterion" is true and why "it takes two supported rivals"
+  is the part that has to be said in the same breath.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Alice,Brian,Colin
+  21:5,4,3
+  10:0,5,0
+  10:0,4,5
+
+expected_winners: [Brian]
+
+# file: majority_illusion_c3_b41_two_rivals.yaml

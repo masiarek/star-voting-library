@@ -1,0 +1,33 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  The majority illusion, one score changed — the majority loses Alice
+ Tabulating 41 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alice, Brian, Colin
+    21 ×   Alice > Brian > Colin      (5, 4, 3)
+    10 ×   Brian      (0, 5, 0)
+    10 ×   Colin > Brian      (0, 4, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alice             21  Elected
+Brian             10  Rejected
+Colin             10  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alice
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Alice
+   Outside (2):        Brian, Colin
+   One member ⇒ Alice is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Alice is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

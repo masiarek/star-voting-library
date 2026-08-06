@@ -1,0 +1,43 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 41 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alice, Brian, Colin
+    21 × Alice > Brian > Colin      (5, 4, 3)
+    10 × Brian > Alice=Colin      (0, 5, 0)
+    10 × Colin > Brian > Alice      (0, 4, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Alice  beats Brian   21 – 20
+   Alice  beats Colin   21 – 10
+   Brian  beats Colin   31 – 10
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    Alice     |   Brian     |   Colin     |
+------------------------------------------------------
+  Alice > |     ---      |21 -  0 - 20 |21 - 10 - 10 |
+  Brian > | 20 -  0 - 21 |    ---      |31 -  0 - 10 |
+  Colin > | 10 - 10 - 21 |10 -  0 - 31 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Alice      2–0–0         2     +12  Brian, Colin
+    2  Brian      1–1–0         1     +20  Colin
+    3  Colin      0–2–0         0     -32  —
+
+Winner — Ranked Robin (RCV-RR): Alice
+   beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Alice
+   Outside (2):        Brian, Colin
+   One member ⇒ Alice is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Alice is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md

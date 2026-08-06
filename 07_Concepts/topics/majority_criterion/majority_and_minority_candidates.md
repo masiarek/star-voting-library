@@ -30,6 +30,32 @@ Neither observation settles anything, and Hillinger's own conclusion is the righ
 
 **The trap is that rows 1 and 3 both get called "the majority winner."** They are different candidates in general: a beats-all winner may hold no absolute majority at all, and a candidate with an absolute majority is always the beats-all winner but is answering a different question. This library treats *majority winner* as an **unsafe alias** for the Condorcet winner for exactly that reason — the full alias table is in [the naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md#the-winner-has-aliases-too-and-they-are-not-the-methods).
 
+## What "majority" means on a score ballot
+
+On a ranked ballot the word has one obvious reading: over half the voters put X first. On a **score** ballot even that isn't obvious, because there is no "first" — there is a number in every box. Four readings are available, and they are not equivalent:
+
+| Reading | "X has a majority" means | The problem |
+|---|---|---|
+| **1. Half the scale** | X's average score is over half the maximum (above 2.5 on a 0–5 ballot) | **Several candidates can hold one at once.** It's a threshold on an average, not a majority *of* anybody |
+| **2. Share of all points** | X received over half of every point awarded in the election | **Almost nobody ever does.** With three candidates X would need more points than the other two combined; the denominator grows with the field |
+| **3. Majority favorite** | over half of ballots score X **strictly higher** than every other candidate | Well-defined and the right one — but need not exist, and a coarse scale produces ties at the top |
+| **4. Pairwise / runoff** | over half of the voters *with a preference* rate X above Y | Always exists between two candidates (barring a tie), and says nothing about the rest of the field |
+
+**The house answer:** this library uses **3** whenever it says *majority* about a candidate — it's the reading [the majority criterion](README.md) is stated in — and **4** whenever it says *majority* about [STAR's runoff](../../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md), where the phrase is always *"of voters with a preference"* and the [runoff-percentage line](../../../01_STAR/01_Learn/the_count/runoff_percentages.md) prints the denominator rather than leaving it to be inferred. **Readings 1 and 2 are never used**, and neither should be accepted from anyone else without a definition attached.
+
+**Why it matters — one election, three answers.** Take [the counterfactual half of the CES case](../../../method_comparisons/ces_majority_illusion/README.md#the-one-rival-two-rivals-hinge-on-this-profile), 41 voters on a 0–5 ballot:
+
+| | Alice | Brian | Colin |
+|---|--:|--:|--:|
+| average score | 2.56 | 4.24 | 2.76 |
+| **reading 1** — above half the scale? | ✅ | ✅ | ✅ |
+| **reading 3** — majority favorite? | ✅ (21 of 41) | ❌ | ❌ |
+| **reading 4** — wins the runoff? | not a finalist | ✅ | ❌ |
+
+Under reading 1 **all three candidates** have "an absolute majority" simultaneously. Under reading 3 only Alice does. Under reading 4 it's Brian. Same 41 ballots. This is why "did the majority winner win?" is not a question a score ballot answers until you say which majority you mean.
+
+*(The convention question underneath — should a score result be reported against the ballot count or the total points awarded? — is settled the same way by both engines this repo uses: **ballot count**. See [reading a STAR report](../../tabulation_engines/LH_starvote/reading_a_star_report.md).)*
+
 ## Why "minority winner" is weak on its own — and what makes it strong
 
 **The weak version.** Under [Choose-One](../plurality.md), the winner's share falls roughly as the field grows, because the ballot only ever counts one favourite per voter. The repo's [pineapple progression](../../../method_comparisons/minority_winner_progression/README.md) runs this deliberately: the same electorate, the same universally-liked compromise, and a winner who drops from **34% → 25% → 11%** as the menu grows from 3 toppings to 11. Pineapple's fan club never grew. The *menu* did.
@@ -59,6 +85,8 @@ Having noted that the literature repairs "majority candidate" with the Condorcet
 ## Related
 
 - [The Majority Criterion](README.md) — the method property, the Relaxed Majority Criterion, and the Later-No-Harm link
+- ["The Majority Illusion," claim-checked](the_majority_illusion_claim_checked.md) — the Approval camp's tour of these same senses, tested · [its example, counted](../../../method_comparisons/ces_majority_illusion/README.md)
+- [False majorities](../false_majorities.md) — the sixth sense, at legislature scale: over half the seats on under half the votes
 - [The naming decoder](../../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) — the same job for *Condorcet / Copeland / round-robin / Ranked Robin*
 - [Minority winner](../../../method_comparisons/minority_winner/README.md) — the canonical 34% case · [the pineapple progression](../../../method_comparisons/minority_winner_progression/README.md) — 34% → 25% → 11%
 - [The absolute loser paradox](../../voting_paradoxes/absolute_loser_paradox.md) · [the Condorcet loser paradox](../../voting_paradoxes/condorcet_loser_paradox.md)

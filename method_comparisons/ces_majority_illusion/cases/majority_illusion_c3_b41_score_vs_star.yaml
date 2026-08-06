@@ -1,0 +1,66 @@
+election_title: The majority illusion — Score elects Brian, STAR elects Alice
+voting_method: STAR
+num_winners: 1
+
+scenario_description: |
+  The centerpiece example from Aaron Hamlin's "The Majority Illusion: What
+  Voting Methods Can and Cannot Do" (Center for Election Science), scaled
+  from 41,000 voters to 41 countable ballots and rendered on the 0-5 STAR
+  ballot (the article uses a 0-10 utility scale).
+
+  The article prints it to make one point: the Condorcet winner is not
+  always the best winner. Alice beats both rivals head-to-head, yet Brian
+  has by far the highest average score — 4.2 against Alice's 2.6 — because
+  almost everyone likes Brian and 20 of 41 voters score Alice at rock
+  bottom. Score voting (and Approval) elect Brian. The article's conclusion
+  is that cardinal methods "target a different metric altogether."
+
+  Two things the article does not say about its own example.
+
+  FIRST: Alice does not merely beat everyone head-to-head. Twenty-one of
+  41 voters — an outright 51.2% ABSOLUTE MAJORITY — score her strictly
+  highest. So the example is not really an argument against the Condorcet
+  criterion; it is an argument against the MAJORITY CRITERION, the
+  strongest of the three senses of "majority" the article itself sorts.
+
+  SECOND: STAR does not follow Score here. Brian leads the scoring round
+  174 to 105 and Alice reaches the runoff second — then wins it 21 to 20.
+  STAR's automatic runoff re-imposes exactly the majoritarian check the
+  article is arguing against, and elects the absolute-majority winner.
+
+  The profile also sits precisely on Equal Vote's Relaxed Majority
+  Criterion boundary: Alice's majority gives ONE rival "max minus 1"
+  (Brian a 4) and their favorite survives. Give Colin a 3 as well and
+  Alice drops out of the finals and Brian wins — the same one-rival /
+  two-rivals hinge as the BV95a / BV95b pair.
+
+video_script: |
+  Show the score bars first: Brian 174, Alice 105 — not close. Say "so
+  Brian wins, right?" Then run the runoff: Alice 21, Brian 20. One vote.
+  Then the reveal — count how many ballots put Alice on top: 21 of 41.
+  She had a majority the whole time. The scoring round never asked.
+  Close on the article's own framing: this example was printed to argue
+  the majority winner isn't always best. Fair enough — but note which
+  method sided with the majority, and it wasn't the ranked one.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Alice,Brian,Colin
+  21:5,4,0
+  10:0,5,0
+  10:0,4,5
+
+expected_winners: [Alice]
+
+# file: majority_illusion_c3_b41_score_vs_star.yaml
