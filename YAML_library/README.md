@@ -34,7 +34,7 @@ What YAML adds on top of the grid:
 2. **`#` comments survive in the file.** A ballot row can say what it demonstrates, right where it sits, and the engine ignores it.
 3. **It's plain text.** Diffable, reviewable in a pull request, permanently linkable, and readable in any editor for the next twenty years.
 
-→ The same argument worked line by line, on eight real CSV ballots with eight different readings: **[Eight lines of CSV, eight questions](csv_ambiguity.md)**
+> **And declaring the method is what makes validation possible at all.** A ballot is not valid or invalid on its own — `0,0,1,1` is a perfectly good Approval or STAR ballot and an **invalid Plurality** one, two votes in a one-vote race. Until the file names the method, the seats and the candidates, there is nothing to check the ballots *against*, and every stray comma, out-of-range score or ranked row passes silently. → **[Eight lines of CSV, eight questions](csv_ambiguity.md)** works all of it through on eight real ballots.
 
 **The engine's own author reached the same conclusion — by a different route.** Larry Hastings gave `starvote` a native text format for exactly the reason above; his note at the bottom of the parser says he "got tired of CSV files." His answer, `.starvote`, is INI-like, and every ballot line *names* the candidate it scores, so nothing is positional. Ours is YAML, chosen because the same file also has to carry the scenario prose, the display options, and an enforced answer key. Both are doors into the same engine — and, worth knowing, they don't share a tie-break default: [The `.starvote` ballot file format](../07_Concepts/tabulation_engines/LH_starvote/starvote_file_format.md).
 
