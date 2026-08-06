@@ -130,6 +130,10 @@ Count x A,B,C,D,E,F,G,H,I,J
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: A, C and F tied at 107 in the Scoring Round, and the lot rung
+              (the ballots could not separate them) advanced A and C. The *
+              marks who advanced, not who scored highest.
+
                  |     * A      |      B      |    * C      |      D      |      E      |      F      |      G      |      H      |      I      |      J      |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
            * A > |     ---      | 9 -  0 - 20 | 9 - 11 -  9 |11 - 18 -  0 |20 -  0 -  9 | 9 - 11 -  9 | 9 -  9 - 11 |20 -  0 -  9 |11 -  9 -  9 |20 -  0 -  9 |

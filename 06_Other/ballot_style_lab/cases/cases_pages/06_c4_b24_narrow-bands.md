@@ -168,6 +168,10 @@ Count × Azure,Beige,Coral,Dune
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Azure, Beige and Coral tied at 61 in the Scoring Round, and the
+              head-to-head rung advanced Beige and Coral. The * marks who
+              advanced, not who scored highest.
+
                  |     Azure    |  * Beige    |  * Coral    |     Dune    |
 ---------------------------------------------------------------------------
          Azure > |     ---      |10 -  5 -  9 | 2 - 16 -  6 |11 -  4 -  9 |

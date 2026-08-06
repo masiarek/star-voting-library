@@ -123,6 +123,10 @@ Count × Ava,Ben,Cara,Dan,Eve
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ava, Ben, Cara and Dan tied at 10 in the Scoring Round, and the
+              lot rung (the ballots could not separate them) advanced Ava and
+              Ben. The * marks who advanced, not who scored highest.
+
                |   * Ava    |  * Ben    |    Cara   |    Dan    |    Eve    |
 -----------------------------------------------------------------------------
        * Ava > |    ---     |0 - 2 - 0  |0 - 2 - 0  |0 - 2 - 0  |2 - 0 - 0  |

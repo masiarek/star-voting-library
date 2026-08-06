@@ -111,6 +111,10 @@ Count × Aral,Baikal,Crater
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Baikal and Crater tied at 8 in the Scoring Round, and the lot
+              rung (the ballots could not separate them) advanced Baikal. The
+              * marks who advanced, not who scored highest.
+
                |   * Aral   | * Baikal  |   Crater  |
 -----------------------------------------------------
       * Aral > |    ---     |3 - 0 - 0  |3 - 0 - 0  |

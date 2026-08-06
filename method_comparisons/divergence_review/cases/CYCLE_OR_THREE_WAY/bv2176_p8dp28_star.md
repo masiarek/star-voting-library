@@ -57,6 +57,12 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Blue and Pink tied at 44 in the Scoring Round, and the
+              head-to-head rung advanced Blue. The * marks who advanced, not
+              who scored highest. Pink is filtered out of this grid, so the
+              head-to-head that settled it is not shown — see the Scoring
+              Round.
+
                  |   * Purple   |   * Blue    |
 -----------------------------------------------
       * Purple > |     ---      | 9 -  1 - 10 |

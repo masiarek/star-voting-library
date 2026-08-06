@@ -42,6 +42,10 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: C, D and F tied at 119 in the Scoring Round, and the lot rung
+              (the ballots could not separate them) advanced C and F. The *
+              marks who advanced, not who scored highest.
+
                  |       A      |      B      |    * C      |      D      |      E      |    * F      |      G      |      H      |      I      |      J      |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
              A > |     ---      | 0 - 14 - 14 | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  0 - 21 | 0 -  7 - 21 |14 -  0 - 14 | 0 -  7 - 21 | 0 -  7 - 21 | 0 -  7 - 21 |

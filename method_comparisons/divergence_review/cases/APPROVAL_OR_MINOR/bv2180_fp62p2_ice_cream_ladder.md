@@ -51,6 +51,12 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Chocolate, Chocolate Chip and Vanilla tied at 5 in the Scoring
+              Round, and the five-star rung advanced Chocolate Chip. The *
+              marks who advanced, not who scored highest. Chocolate and
+              Vanilla are filtered out of this grid — see the Scoring Round
+              for how the tie was settled.
+
                        |  * Chocolate Chip  |   * Strawberry    |
 -----------------------------------------------------------------
     * Chocolate Chip > |        ---         |    1 - 0 - 1      |

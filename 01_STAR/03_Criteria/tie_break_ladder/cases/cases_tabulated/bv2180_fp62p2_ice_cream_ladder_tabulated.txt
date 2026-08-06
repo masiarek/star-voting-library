@@ -59,6 +59,10 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Chocolate, Chocolate Chip and Vanilla tied at 5 in the Scoring
+              Round, and the five-star rung advanced Chocolate Chip. The *
+              marks who advanced, not who scored highest.
+
                        |      Chocolate     | * Chocolate Chip  |   Fudge Brownie   |      Vanilla      |   * Strawberry    |       Mango       |
 -------------------------------------------------------------------------------------------------------------------------------------------------
            Chocolate > |        ---         |    1 - 0 - 1      |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |

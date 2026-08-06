@@ -175,6 +175,10 @@ Count × a,b,c
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: a, b and c tied at 15 in the Scoring Round, and the lot rung
+              (the ballots could not separate them) advanced a and c. The *
+              marks who advanced, not who scored highest.
+
                |    * a     |     b     |   * c     |
 -----------------------------------------------------
          * a > |    ---     |0 - 3 - 0  |0 - 3 - 0  |

@@ -67,6 +67,12 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Azure, Beige and Coral tied at 61 in the Scoring Round, and the
+              head-to-head rung advanced Beige and Coral. The * marks who
+              advanced, not who scored highest. Azure is filtered out of this
+              grid, so the head-to-head that settled it is not shown — see the
+              Scoring Round.
+
                |  * Beige   | * Coral   |
 -----------------------------------------
      * Beige > |    ---     |9 - 7 - 8  |

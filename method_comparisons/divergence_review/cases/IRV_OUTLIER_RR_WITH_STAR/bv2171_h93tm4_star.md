@@ -53,6 +53,12 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Avery and Blake tied at 22 in the Scoring Round, and the lot
+              rung (the ballots could not separate them) advanced Avery. The *
+              marks who advanced, not who scored highest. Blake is filtered
+              out of this grid — see the Scoring Round for how the tie was
+              settled.
+
                |  * Avery   | * Casey   |
 -----------------------------------------
      * Avery > |    ---     |3 - 0 - 5  |

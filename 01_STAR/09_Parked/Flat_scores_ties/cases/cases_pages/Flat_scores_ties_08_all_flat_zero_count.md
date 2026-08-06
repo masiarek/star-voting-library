@@ -138,6 +138,11 @@ Anchovy,Basil,Caper
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Anchovy, Basil and Caper tied at 15 in the Scoring Round, and
+              the lot rung (the ballots could not separate them) advanced
+              Anchovy and Basil. The * marks who advanced, not who scored
+              highest.
+
                 |  * Anchovy  |  * Basil   |    Caper   |
 ---------------------------------------------------------
     * Anchovy > |     ---     | 0 - 5 - 0  | 0 - 5 - 0  |

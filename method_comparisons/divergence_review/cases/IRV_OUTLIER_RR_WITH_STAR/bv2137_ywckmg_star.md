@@ -52,6 +52,12 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Carter and Reagan tied at 280 in the Scoring Round, and the
+              head-to-head rung advanced Carter. The * marks who advanced, not
+              who scored highest. Reagan is filtered out of this grid, so the
+              head-to-head that settled it is not shown — see the Scoring
+              Round.
+
                  |  * Anderson  |  * Carter   |
 -----------------------------------------------
     * Anderson > |     ---      |65 -  0 - 35 |

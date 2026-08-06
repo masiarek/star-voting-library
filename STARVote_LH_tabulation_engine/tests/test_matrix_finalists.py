@@ -56,27 +56,36 @@ def _run_cli(path):
     )
 
 
-def _write(tmp_path, *, finalists_only):
-    d = tmp_path / ("only" if finalists_only else "full")
+def _write(tmp_path, *, finalists_only, ballots=BALLOTS, name="case"):
+    d = tmp_path / f"{name}-{'only' if finalists_only else 'full'}"
     d.mkdir()
-    p = d / "case.yaml"
+    p = d / f"{name}.yaml"
     p.write_text(
         "voting_method: STAR\n"
         "num_winners: 1\n"
         "options:\n"
         "  show_matrix: true\n"
         f"  matrix_finalists_only: {'true' if finalists_only else 'false'}\n"
-        "ballots: |-\n" + BALLOTS
+        "ballots: |-\n" + ballots
     )
     return p
 
 
 def _matrix_header(text):
-    """The matrix's column-header line (the one naming every column)."""
+    """The matrix's column-header line (the one naming every column).
+
+    Skips the optional tiebreak note, which sits between the legend and the
+    grid — so this stays anchored on the columns, not on whatever prose the
+    legend happens to carry.
+    """
     lines = text.splitlines()
     for i, line in enumerate(lines):
-        if "indicates Top 2 Finalist" in line:
-            return lines[i + 1]
+        if "indicates Top 2 Finalist" not in line:
+            continue
+        for candidate_line in lines[i + 1:]:
+            if "|" in candidate_line:
+                return candidate_line
+        break
     raise AssertionError("no matrix header found:\n" + text)
 
 
@@ -86,6 +95,22 @@ def _starred(header):
 
 def _columns(header):
     return {c.replace("*", "").strip() for c in header.split("|") if c.strip()}
+
+
+def _note(text):
+    """The matrix's tiebreak note, unwrapped back to one line ('' if absent)."""
+    lines = text.splitlines()
+    start = next((i + 1 for i, line in enumerate(lines)
+                  if "indicates Top 2 Finalist" in line), None)
+    assert start is not None, "no matrix legend found:\n" + text
+    if start >= len(lines) or not lines[start].lstrip().startswith("Note:"):
+        return ""
+    out = [lines[start].strip()[len("Note:"):].strip()]
+    for line in lines[start + 1:]:
+        if not line.startswith(" " * 14) or not line.strip():
+            break
+        out.append(line.strip())
+    return " ".join(out)
 
 
 def _runoff_pair(text):
@@ -150,6 +175,65 @@ def test_finalists_only_filters_to_the_advancing_pair(tmp_path):
     assert _starred(header) == ADVANCING, proc.stdout
 
 
+# --- the tiebreak note ------------------------------------------------------
+#
+# The stars alone still read as a contradiction to anyone who only has the
+# scores in front of them: the higher-scoring candidate is unstarred, and
+# under `matrix_finalists_only` they are gone from the grid entirely. The note
+# says which rung moved them.
+
+# Ben and Cora tie at 6; the head-to-head is 1-1; Ben holds the only five, so
+# the SECOND rung settles it. Exercises a rung the main fixture never reaches.
+FIVE_STAR_BALLOTS = "  Ana,Ben,Cora\n  5,5,3\n  5,1,3\n"
+
+# Nothing ties: the note must stay off, so ordinary reports are unchanged.
+NO_TIE_BALLOTS = "  Ada,Ben,Cal\n  5,3,0\n  4,2,1\n  5,1,0\n"
+
+
+def test_note_names_the_tie_the_rung_and_who_advanced(tmp_path):
+    proc = _run_cli(_write(tmp_path, finalists_only=False))
+    note = _note(proc.stdout)
+    assert "Ben and Cora tied at 14 in the Scoring Round" in note, note
+    assert "the head-to-head rung advanced Cora" in note, note
+    assert "The * marks who advanced, not who scored highest." in note, note
+
+
+def test_note_reports_the_five_star_rung(tmp_path):
+    proc = _run_cli(_write(tmp_path, finalists_only=False,
+                           ballots=FIVE_STAR_BALLOTS, name="fivestar"))
+    note = _note(proc.stdout)
+    assert "Ben and Cora tied at 6" in note, note
+    assert "the five-star rung advanced Ben" in note, note
+
+
+def test_note_absent_when_no_tie_reached_the_ladder(tmp_path):
+    # House "less is more": an ordinary election gains nothing on screen.
+    proc = _run_cli(_write(tmp_path, finalists_only=False,
+                           ballots=NO_TIE_BALLOTS, name="notie"))
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    assert "Note:" not in proc.stdout.split("Runoff (Preference) Matrix")[1], proc.stdout
+
+
+def test_note_explains_the_gap_when_the_grid_is_filtered(tmp_path):
+    # The case that motivated the note: `matrix_finalists_only` drops Ben, so
+    # the head-to-head that settled the slot is nowhere on the page.
+    proc = _run_cli(_write(tmp_path, finalists_only=True))
+    note = _note(proc.stdout)
+    assert "Ben is filtered out of this grid" in note, note
+    assert "see the Scoring Round" in note, note
+
+
+def test_note_agrees_with_the_stars(tmp_path):
+    # Belt and braces: the prose and the markers come from one resolver, so a
+    # future refactor cannot let them disagree.
+    proc = _run_cli(_write(tmp_path, finalists_only=False))
+    note = _note(proc.stdout)
+    starred = _starred(_matrix_header(proc.stdout))
+    advanced = re.search(r"rung advanced ([^.]+)\.", note).group(1)
+    named = {n.strip() for n in advanced.replace(" and ", ", ").split(",")}
+    assert named <= starred, f"note says {named}, matrix stars {starred}"
+
+
 # --- the same invariant, across every committed mirror ----------------------
 
 REPO_ROOT = ENGINE_DIR.parent
@@ -190,4 +274,37 @@ def test_every_mirror_stars_its_own_runoff_pair():
         f"{len(wrong)} report(s) star a candidate that did not reach the runoff:\n"
         + "\n".join(wrong)
         + "\nRe-run those YAMLs through the engine to refresh their mirrors."
+    )
+
+
+def test_every_mirror_note_agrees_with_its_own_runoff():
+    """Where a shipped report explains a tiebreak, the prose must be true.
+
+    A note that names the wrong candidate is worse than no note: it is a
+    confident sentence contradicting the tally three lines below it.
+    """
+    wrong = []
+    checked = 0
+    for mirror, text in _mirrors_with_a_star_runoff():
+        note = _note(text)
+        if not note:
+            continue
+        checked += 1
+        m = re.search(r"rung(?: \([^)]*\))? advanced ([^.]+)\.", note)
+        if not m:
+            wrong.append(f"  {mirror.relative_to(REPO_ROOT)}\n"
+                         f"      unparseable note: {note!r}")
+            continue
+        named = {n.strip() for n in m.group(1).replace(" and ", ", ").split(",")}
+        pair = _runoff_pair(text)
+        if not named <= pair:
+            wrong.append(
+                f"  {mirror.relative_to(REPO_ROOT)}\n"
+                f"      note says {sorted(named)} advanced, but the runoff was "
+                f"{sorted(pair)}"
+            )
+    assert checked, "no mirror carries a tiebreak note — is the note still wired up?"
+    assert not wrong, (
+        f"{len(wrong)} of {checked} tiebreak note(s) disagree with their own "
+        f"report:\n" + "\n".join(wrong)
     )

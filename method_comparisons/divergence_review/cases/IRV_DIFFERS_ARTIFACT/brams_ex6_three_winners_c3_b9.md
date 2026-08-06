@@ -52,6 +52,12 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Bree and Cole tied at 10 in the Scoring Round, and the
+              head-to-head rung advanced Cole. The * marks who advanced, not
+              who scored highest. Bree is filtered out of this grid, so the
+              head-to-head that settled it is not shown — see the Scoring
+              Round.
+
                |   * Amos   |  * Cole   |
 -----------------------------------------
       * Amos > |    ---     |2 - 4 - 3  |

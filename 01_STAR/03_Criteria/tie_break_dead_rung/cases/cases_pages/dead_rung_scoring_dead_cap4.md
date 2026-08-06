@@ -108,6 +108,10 @@ Ann,Ben,Cara
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ben and Cara tied at 4 in the Scoring Round, and the lot rung
+              (the ballots could not separate them) advanced Ben. The * marks
+              who advanced, not who scored highest.
+
                |   * Ann    |  * Ben    |    Cara   |
 -----------------------------------------------------
        * Ann > |    ---     |1 - 1 - 0  |2 - 0 - 0  |

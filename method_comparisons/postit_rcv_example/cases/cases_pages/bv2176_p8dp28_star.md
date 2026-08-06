@@ -139,6 +139,10 @@ Count × Purple,Green,Blue,Pink
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Blue and Pink tied at 44 in the Scoring Round, and the
+              head-to-head rung advanced Blue. The * marks who advanced, not
+              who scored highest.
+
                  |   * Purple   |    Green    |   * Blue    |     Pink    |
 ---------------------------------------------------------------------------
       * Purple > |     ---      | 9 -  3 -  8 | 9 -  1 - 10 | 8 -  0 - 12 |

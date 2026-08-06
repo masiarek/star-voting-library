@@ -90,6 +90,10 @@ Count × Ana,Bo,Cal
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ana and Cal tied at 19 in the Scoring Round, and the
+              head-to-head rung advanced Cal. The * marks who advanced, not
+              who scored highest.
+
                |     Ana    |   * Bo    |  * Cal    |
 -----------------------------------------------------
          Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
