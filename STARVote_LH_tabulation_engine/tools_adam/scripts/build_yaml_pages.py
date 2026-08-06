@@ -184,7 +184,11 @@ _ART_RE = re.compile(r"_ballot_(\d+)\.png$")
 
 
 def _esc_attr(text):
-    return str(text).replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
+    # ">" MUST be escaped too: a ballot row comment naturally contains one
+    # ("Almond > Berry > Cocoa"), and a Markdown inline-HTML parser ends the tag
+    # at the first ">", spilling the rest of the tag onto the page as text.
+    return (str(text).replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
 
 
 # A table cell will happily crush an image to 68px: `max-width: 100%` (both

@@ -752,6 +752,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2273 — Profile 2 — the polarized electorate (scores 0-5) | STAR | 2 | **A** |
 | BV2273 — The ranking BOTH profiles share (Ranked Robin) | RankedRobin | 2 | **A** |
 
+## BV2274 — The cost of districting — the best candidate wins no district at all
+
+**Election** [`38b7fg`](https://bettervoting.com/38b7fg/results) · **3 races** · **9 ballots** · [frozen export](../../method_comparisons/districting_cost/cases/b38b7fg_districting_combined_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2274 — Northside chapter (5 members) | STAR | 3 | **Ana** |
+| BV2274 — Southside chapter (4 members) | STAR | 3 | **Beto** |
+| BV2274 — Both chapters together (9 members) | STAR | 3 | **Cleo** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

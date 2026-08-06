@@ -1,6 +1,7 @@
 ﻿election_id,title,races,kind,voters,methods,backing
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
+38b7fg,BV2274 — The cost of districting — the best candidate wins no district at all,3,contested (multi-race),9,STAR,BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
 3xgkck,BV2227 — Favorite Betrayal — honest ballots (STAR & Ranked Robin elect the compromise; RCV-IRV elects a wing),3,contested (multi-race),34,"IRV, RankedRobin, STAR",BV
@@ -247,9 +248,6 @@ LH:dead_rung_scoring_dead_cap2,"Dead rung — scoring round, dead five-star rung
 LH:dead_rung_scoring_dead_cap3,"Dead rung — scoring round, dead five-star rung, cap 3",1,single-race,2,STAR,LH-only
 LH:dead_rung_scoring_dead_cap4,"Dead rung — scoring round, dead five-star rung, cap 4",1,single-race,2,STAR,LH-only
 LH:display_options_demo,Display options demo,1,single-race,4,STAR,LH-only
-LH:districting_combined,"Two chapters, one delegate — Both chapters together (9 members)",1,single-race,9,STAR,LH-only
-LH:districting_north,"Two chapters, one delegate — Northside chapter (5 members)",1,single-race,5,STAR,LH-only
-LH:districting_south,"Two chapters, one delegate — Southside chapter (4 members)",1,single-race,4,STAR,LH-only
 LH:edelman_perfect_component_c3_b30,A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact,1,single-race,30,STAR,LH-only
 LH:equal_support_runoff_demo,"Equal Support — counted in both rounds, neutral only in the tie-break",1,single-race,100,STAR,LH-only
 LH:ex02_bella_exits,Exercise 2 — The tenth ballot: Bella withdraws,1,single-race,9,STAR,LH-only

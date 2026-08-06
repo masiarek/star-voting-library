@@ -62,10 +62,10 @@ The ballots as marked — a filled **Yes** is a `1` in that candidate's column, 
 
 | Ballot as marked | Voters | Almond | Berry | Cocoa |
 |:--|:--:|:--:|:--:|:--:|
-| <img src="../img/kim_approval_intense_seconds_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Almond > Berry  > Cocoa   — approves BOTH (Berry is a close second): Almond Yes, Berry Yes, Cocoa No."> | 12 | 1 | 1 | 0 |
-| <img src="../img/kim_approval_intense_seconds_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Berry  > Almond > Cocoa   — approves Berry only: Almond No, Berry Yes, Cocoa No."> | 8 | 0 | 1 | 0 |
-| <img src="../img/kim_approval_intense_seconds_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  > Almond > Berry   — approves Cocoa only: Almond No, Berry No, Cocoa Yes."> | 7 | 0 | 0 | 1 |
-| <img src="../img/kim_approval_intense_seconds_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  > Berry  > Almond  — approves BOTH (Berry is a close second): Almond No, Berry Yes, Cocoa Yes."> | 9 | 0 | 1 | 1 |
+| <img src="../img/kim_approval_intense_seconds_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Almond &gt; Berry  &gt; Cocoa   — approves BOTH (Berry is a close second): Almond Yes, Berry Yes, Cocoa No."> | 12 | 1 | 1 | 0 |
+| <img src="../img/kim_approval_intense_seconds_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Berry  &gt; Almond &gt; Cocoa   — approves Berry only: Almond No, Berry Yes, Cocoa No."> | 8 | 0 | 1 | 0 |
+| <img src="../img/kim_approval_intense_seconds_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Almond &gt; Berry   — approves Cocoa only: Almond No, Berry No, Cocoa Yes."> | 7 | 0 | 0 | 1 |
+| <img src="../img/kim_approval_intense_seconds_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Berry  &gt; Almond  — approves BOTH (Berry is a close second): Almond No, Berry Yes, Cocoa Yes."> | 9 | 0 | 1 | 1 |
 
 The same ballots as the file records them:
 

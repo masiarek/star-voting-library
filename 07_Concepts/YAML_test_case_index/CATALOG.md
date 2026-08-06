@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 427 elections, 586 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 425 elections, 586 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -17,6 +17,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 |---|---|--:|---|--:|---|---|
 | 2jrfpg | BV2169 — FairVote's hypothetical, electorate shifted | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | 2p33qq | BV2215 — Minority winner — 34% wins Choose-One, but  | 3 | contested (multi-race) | 100 | Plurality, RankedRobin, STAR | BV |
+| 38b7fg | BV2274 — The cost of districting — the best candidat | 3 | contested (multi-race) | 9 | STAR | BV |
 | 3grpbb | BV2156 — STAR's own miss — the Condorcet winner scor | 2 | contested (multi-race) | 100 | RankedRobin, STAR | BV |
 | 3x4vrv | BV2135 — Block & Limited voting, reproduced as bloc  | 2 | contested (multi-race) | 10 | Plurality | BV |
 | 3xgkck | BV2227 — Favorite Betrayal — honest ballots (STAR &  | 3 | contested (multi-race) | 34 | IRV, RankedRobin, STAR | BV |
@@ -263,9 +264,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | dead_rung_scoring_dead_cap3 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
 | dead_rung_scoring_dead_cap4 | Dead rung — scoring round, dead five-star rung, cap  | 1 | single-race | 2 | STAR | LH-only |
 | display_options_demo | Display options demo | 1 | single-race | 4 | STAR | LH-only |
-| districting_combined | Two chapters, one delegate — Both chapters together  | 1 | single-race | 9 | STAR | LH-only |
-| districting_north | Two chapters, one delegate — Northside chapter (5 me | 1 | single-race | 5 | STAR | LH-only |
-| districting_south | Two chapters, one delegate — Southside chapter (4 me | 1 | single-race | 4 | STAR | LH-only |
 | edelman_perfect_component_c3_b30 | A perfect 'Condorcet component' (30 voters) — every  | 1 | single-race | 30 | STAR | LH-only |
 | equal_support_runoff_demo | Equal Support — counted in both rounds, neutral only | 1 | single-race | 100 | STAR | LH-only |
 | ex02_bella_exits | Exercise 2 — The tenth ballot: Bella withdraws | 1 | single-race | 9 | STAR | LH-only |
@@ -453,8 +451,8 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 350 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| contested (multi-race) | 236 | 2jrfpg, 2p33qq, 3grpbb, 3x4vrv |
+| single-race | 347 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| contested (multi-race) | 239 | 2jrfpg, 2p33qq, 38b7fg, 3grpbb |
 
 ### By seat class
 
@@ -520,8 +518,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 260 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
-| BV | 241 | 24b623, 26khr3, 2gvwr9, 2hqmrd |
+| LH-only | 257 | 00_c3_b3_bloc-baseline-2-seats, 00_plurality_vs_majority, 01_c4_b2_bloc-star-2-seats, 01_condorcet_winner |
+| BV | 244 | 24b623, 26khr3, 2gvwr9, 2hqmrd |
 | BV (no yaml) | 83 | 2jrfpg, 2p33qq, 3grpbb, 3xgkck |
 | LH-only (exception) | 2 | copeland_half_credit_decides, dead_heat_lot_tiebreak |
 

@@ -80,7 +80,7 @@ Because the two rounds measure two different things:
 
 The part that takes a moment to click is what happens to *your* ballot in the second round. Follow one voter's ballot all the way through — Sofia, one of the two Sushi-lovers from the lunch:
 
-<img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Sofia's ballot scores Sushi 5, Tacos 0, Pizza 3. Round 1 (Scoring Round): her stars are added to each option's total — Sushi +5, Pizza +3, Tacos +0 — and the two highest overall, Pizza and Sushi, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Sushi higher than Pizza (5 > 3), so her whole ballot becomes a single vote for Sushi. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
+<img src="img/runoff_one_ballot_two_rounds.svg" width="640" alt="One ballot, two rounds. Sofia's ballot scores Sushi 5, Tacos 0, Pizza 3. Round 1 (Scoring Round): her stars are added to each option's total — Sushi +5, Pizza +3, Tacos +0 — and the two highest overall, Pizza and Sushi, become the finalists. Round 2 (Automatic Runoff): only the two finalists matter; she scored Sushi higher than Pizza (5 &gt; 3), so her whole ballot becomes a single vote for Sushi. In the runoff her 5 and 3 collapse to one vote, for whichever finalist she preferred.">
 
 So your scores do two jobs: their *size* helps pick the two finalists, and then, in the runoff, they shrink to a single **vote for whichever finalist you scored higher**. A 5-vs-3 and a 5-vs-0 count exactly the same in that final step — one vote each. Once that lands, STAR makes sense.
 
