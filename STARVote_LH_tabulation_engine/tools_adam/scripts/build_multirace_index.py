@@ -20,17 +20,40 @@ import glob
 import json
 import os
 import re
+import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 OUT = os.path.join(REPO, "07_Concepts", "YAML_test_case_index", "multirace_elections.md")
 
 
+def _git_known():
+    """Repo-relative paths in git's index (tracked + staged), or None if unavailable.
+
+    Same contract as the sibling generators (build_yaml_index.py,
+    build_divergence_index.py, build_catalog.py): the pre-commit hook regenerates
+    this page and stages it, so anything read here can ship in a commit. A frozen
+    export that only exists in the working tree would put an election on this page
+    that the repo doesn't have. None outside a git checkout.
+    """
+    try:
+        out = subprocess.run(["git", "-C", REPO, "ls-files", "-z"],
+                             capture_output=True, timeout=30)
+    except Exception:
+        return None
+    if out.returncode != 0:
+        return None
+    return {p for p in out.stdout.decode("utf-8", "replace").split("\0") if p}
+
+
 def _find_exports():
     hits = []
+    known = _git_known()
     for p in glob.glob(os.path.join(REPO, "**", "*_bv_export.json"), recursive=True):
         if "/.venv/" in p or "/_demo_dropbox/" in p or "/site/" in p:
             continue  # /site/ = mkdocs build output (mirrors the whole repo)
+        if known is not None and os.path.relpath(p, REPO).replace(os.sep, "/") not in known:
+            continue  # not committed yet — see _git_known()
         hits.append(p)
     return sorted(hits)
 
