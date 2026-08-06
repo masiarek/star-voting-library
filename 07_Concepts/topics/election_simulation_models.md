@@ -16,11 +16,13 @@
 
 ### A. "Noise" / statistical models (no geometry)
 
-- **Impartial Culture (IC)** — every one of the `N!` rankings is equally likely (each voter is an independent die-roll, prob `1/N!`). Simplest and most common in the literature; "nothing up my sleeve." *Caveat below on cycles.*
-- **Impartial Anonymous Culture (IAC)** — every anonymous *tally* (vote-count profile) is equally likely, via "stars-and-bars" combinatorics. It weights unusual/close configurations more heavily, so it's favored for **stress-testing** edge cases and paradox rates.
-- **Mallows (φ-model)** — a *reference ("true") ranking* plus noise: the probability of a ballot decays exponentially in its Kendall-Tau distance from the reference. `φ=0` → everyone votes the reference; `φ=1` → pure IC; `0<φ<1` → clustered-with-noise. Good for "polarized but correlated" electorates.
-- **Plackett-Luce** — each candidate has a "strength" `γ`; `P(A ranked 1st) = γ_A / Σγ`, then repeat for 2nd place among the rest. Common in machine-learning "learning-to-rank."
-- **Pólya-Eggenberger (urn) models** — draw a ballot for A, return it *plus an extra* A: "the rich get richer." Produces heavy **bloc/clustering** correlation naturally, modeling social influence — no geometry needed.
+- **[Impartial Culture (IC)](https://en.wikipedia.org/wiki/Impartial_culture)** — every one of the `N!` rankings is equally likely (each voter is an independent die-roll, prob `1/N!`). Simplest and most common in the literature; "nothing up my sleeve." *Caveat below on cycles — and a [harder one on distortion](distortion.md#does-averaging-rescue-rankings-not-by-itself).*
+- **[Impartial Anonymous Culture (IAC)](https://en.wikipedia.org/wiki/Impartial_anonymous_culture)** — every anonymous *tally* (vote-count profile) is equally likely, via "stars-and-bars" combinatorics. It weights unusual/close configurations more heavily, so it's favored for **stress-testing** edge cases and paradox rates.
+- **[Mallows (φ-model)](https://doi.org/10.1093/biomet/44.1-2.114)** — a *reference ("true") ranking* plus noise: the probability of a ballot decays exponentially in its Kendall-Tau distance from the reference. `φ=0` → everyone votes the reference; `φ=1` → pure IC; `0<φ<1` → clustered-with-noise. Good for "polarized but correlated" electorates.
+- **[Plackett-Luce](https://en.wikipedia.org/wiki/Plackett%E2%80%93Luce_model)** — each candidate has a "strength" `γ`; `P(A ranked 1st) = γ_A / Σγ`, then repeat for 2nd place among the rest. Common in machine-learning ["learning-to-rank"](https://en.wikipedia.org/wiki/Learning_to_rank).
+- **[Pólya-Eggenberger (urn) models](https://en.wikipedia.org/wiki/P%C3%B3lya_urn_model)** — draw a ballot for A, return it *plus an extra* A: "the rich get richer." Produces heavy **bloc/clustering** correlation naturally, modeling social influence — no geometry needed.
+
+*You don't have to write any of these samplers: all five ship in [`pref_voting`'s profile generators](https://pref-voting.readthedocs.io/en/latest/generate_profiles.html) — the same library this repo already leans on for its [independent Copeland cross-check](../../05_Ranked_Robin/01_Learn/ranked_robin.md), so it's already a dependency.*
 
 ### B. Spatial (geometric / ideological) models — the realistic "gold standard"
 
@@ -32,7 +34,7 @@ Voters and candidates are **points in an N-dimensional space** (1-D left–right
 
 Different generators make different scenarios common or rare, which changes what a study concludes:
 
-- **Impartial Culture** produces many near-ties (all candidates ~equal quality), which some theorists (e.g. Regenwetter) call unrealistic — methods never get to show their skill at "ferreting out the best candidate."
+- **Impartial Culture** produces many near-ties (all candidates ~equal quality), which some theorists (e.g. Regenwetter) call unrealistic — methods never get to show their skill at "ferreting out the best candidate." **That objection is now a theorem, not just a worry:** under IC, *every* voting rule — deterministic or randomized — has average [distortion](distortion.md) Ω(m), while drawing a winner uniformly at random and ignoring the ballots achieves ≤ m. So on this model there is no skill to show, by proof ([Caragiannis & Fehrs 2024](https://arxiv.org/abs/2307.07350); worked through [here](distortion.md#does-averaging-rescue-rankings-not-by-itself)). Treat an IC-computed method comparison as close to information-free.
 - **Spatial / n-dimensional** models make central candidates genuinely stronger (more realistic), but can make hard cases like **Condorcet cycles nearly impossible**, so cycle-resolving methods never get tested.
 - **Hierarchical-cluster** models sit in between and produce cycles at a plausible ~5–15% rate — which is why the headline VSE numbers use them.
 
