@@ -52,11 +52,11 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-               |   * Ana    |   * Bo    |    Cal    |
+               |     Ana    |   * Bo    |  * Cal    |
 -----------------------------------------------------
-       * Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
+         Ana > |    ---     |3 - 0 - 4  |3 - 0 - 4  |
         * Bo > | 4 - 0 - 3  |   ---     |5 - 0 - 2  |
-         Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
+       * Cal > | 4 - 0 - 3  |2 - 0 - 5  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Bo — matches the STAR winner

@@ -1037,20 +1037,79 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
     return L
 
 
-def get_top_two_finalists(ballots, order_map=None):
-    """Top two by total score; score ties broken by lot-number priority
-    (same rule as LotNumberTiebreaker) so the matrix '*' markers match
-    the finalists starvote actually selects."""
+def _pairwise_preference_count(cand, group, ballots):
+    """Ballots on which `cand` outscores another member of `group`, summed over
+    every other member — the tally STAR's FIRST scoring-round tiebreaker prints
+    ("the candidate preferred in the most head-to-head matchups advances")."""
+    return sum(
+        1
+        for other in group
+        if other != cand
+        for b in ballots
+        if b.get(cand, 0) > b.get(other, 0)
+    )
+
+
+def _five_star_count(cand, ballots, max_score=5):
+    """Ballots giving `cand` a top score — STAR's SECOND scoring-round
+    tiebreaker ("the candidate with the most votes of score 5 advances")."""
+    return sum(1 for b in ballots if b.get(cand, 0) == max_score)
+
+
+def get_top_two_finalists(ballots, order_map=None, max_score=5):
+    """The two candidates that actually reach the automatic runoff.
+
+    Walks STAR's real scoring-round ladder rather than the score total alone:
+    score, then — only within a group tied across the top-two cut — the
+    pairwise "preferred in the most head-to-head matchups" count, then the
+    five-star count, then lot-number priority (LotNumberTiebreaker's rule).
+
+    Ranking by score->lot alone was wrong whenever a DETERMINISTIC rung
+    advanced somebody other than the second-highest scorer: the matrix then
+    starred a candidate who never reached the runoff and left the real
+    finalist unstarred, and `matrix_finalists_only` filtered the grid down to
+    the wrong pair — hiding the very head-to-head that settled the race. See
+    01_STAR/03_Criteria/tie_break_ladder (bv2276_qhjyr2_second_finalist_tie:
+    Ben and Cora tie at 14, pairwise advances Cora, and Ben used to be
+    starred). Guarded by tests/test_matrix_finalists.py.
+    """
     if order_map is None:
         order_map = {}
     scores = defaultdict(int)
     for b in ballots:
         for c, s in b.items():
             scores[c] += s
-    ranked = sorted(
-        scores.items(), key=lambda x: (-x[1], order_map.get(x[0], float("inf")))
-    )
-    return [c for c, _ in ranked[:2]]
+
+    # Candidates grouped by identical total score, best first.
+    groups = []
+    for cand, total in sorted(scores.items(), key=lambda x: -x[1]):
+        if groups and groups[-1][0] == total:
+            groups[-1][1].append(cand)
+        else:
+            groups.append((total, [cand]))
+
+    finalists = []
+    for _total, group in groups:
+        if len(finalists) >= 2:
+            break
+        if len(finalists) + len(group) <= 2:
+            # The whole group fits in the remaining slot(s) — no rung needed.
+            finalists.extend(
+                sorted(group, key=lambda c: order_map.get(c, float("inf")))
+            )
+            continue
+        # More candidates tied here than slots left: walk the ladder.
+        finalists.extend(
+            sorted(
+                group,
+                key=lambda c: (
+                    -_pairwise_preference_count(c, group, ballots),
+                    -_five_star_count(c, ballots, max_score),
+                    order_map.get(c, float("inf")),
+                ),
+            )
+        )
+    return finalists[:2]
 
 
 def print_matrix(

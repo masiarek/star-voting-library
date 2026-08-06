@@ -104,11 +104,11 @@ Ana,Ben,Cora,Dev
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-               |   * Ana    |  * Ben    |    Cora   |    Dev    |
+               |   * Ana    |    Ben    |  * Cora   |    Dev    |
 -----------------------------------------------------------------
        * Ana > |    ---     |3 - 0 - 2  |2 - 2 - 1  |3 - 0 - 2  |
-       * Ben > | 2 - 0 - 3  |   ---     |2 - 0 - 3  |3 - 0 - 2  |
-        Cora > | 1 - 2 - 2  |3 - 0 - 2  |   ---     |3 - 0 - 2  |
+         Ben > | 2 - 0 - 3  |   ---     |2 - 0 - 3  |3 - 0 - 2  |
+      * Cora > | 1 - 2 - 2  |3 - 0 - 2  |   ---     |3 - 0 - 2  |
          Dev > | 2 - 0 - 3  |2 - 0 - 3  |2 - 0 - 3  |   ---     |
 
 [Condorcet Winner]

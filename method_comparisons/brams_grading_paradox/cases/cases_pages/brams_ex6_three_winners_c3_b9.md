@@ -119,11 +119,11 @@ Count × Amos,Bree,Cole
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-               |   * Amos   |  * Bree   |    Cole   |
+               |   * Amos   |    Bree   |  * Cole   |
 -----------------------------------------------------
       * Amos > |    ---     |4 - 2 - 3  |2 - 4 - 3  |
-      * Bree > | 3 - 2 - 4  |   ---     |2 - 3 - 4  |
-        Cole > | 3 - 4 - 2  |4 - 3 - 2  |   ---     |
+        Bree > | 3 - 2 - 4  |   ---     |2 - 3 - 4  |
+      * Cole > | 3 - 4 - 2  |4 - 3 - 2  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Cole — matches the STAR winner

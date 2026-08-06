@@ -94,13 +94,13 @@ Count x A,B,C,D,E
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |     * A      |      B      |    * C      |      D      |      E      |
+                 |     * A      |      B      |      C      |      D      |    * E      |
 -----------------------------------------------------------------------------------------
            * A > |     ---      |14 -  0 - 14 |14 -  0 - 14 |14 -  0 - 14 |14 -  0 - 14 |
              B > | 14 -  0 - 14 |    ---      | 7 -  0 - 21 | 7 - 14 -  7 | 7 -  7 - 14 |
-           * C > | 14 -  0 - 14 |21 -  0 -  7 |    ---      |21 -  0 -  7 | 7 -  7 - 14 |
+             C > | 14 -  0 - 14 |21 -  0 -  7 |    ---      |21 -  0 -  7 | 7 -  7 - 14 |
              D > | 14 -  0 - 14 | 7 - 14 -  7 | 7 -  0 - 21 |    ---      |14 -  0 - 14 |
-             E > | 14 -  0 - 14 |14 -  7 -  7 |14 -  7 -  7 |14 -  0 - 14 |    ---      |
+           * E > | 14 -  0 - 14 |14 -  7 -  7 |14 -  7 -  7 |14 -  0 - 14 |    ---      |
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: A, E (pairwise ties)

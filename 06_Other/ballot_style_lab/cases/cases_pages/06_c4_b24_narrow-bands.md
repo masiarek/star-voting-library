@@ -168,11 +168,11 @@ Count × Azure,Beige,Coral,Dune
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |   * Azure    |  * Beige    |    Coral    |     Dune    |
+                 |     Azure    |  * Beige    |  * Coral    |     Dune    |
 ---------------------------------------------------------------------------
-       * Azure > |     ---      |10 -  5 -  9 | 2 - 16 -  6 |11 -  4 -  9 |
+         Azure > |     ---      |10 -  5 -  9 | 2 - 16 -  6 |11 -  4 -  9 |
        * Beige > |  9 -  5 - 10 |    ---      | 9 -  7 -  8 | 5 - 15 -  4 |
-         Coral > |  6 - 16 -  2 | 8 -  7 -  9 |    ---      | 9 -  7 -  8 |
+       * Coral > |  6 - 16 -  2 | 8 -  7 -  9 |    ---      | 9 -  7 -  8 |
           Dune > |  9 -  4 - 11 | 4 - 15 -  5 | 8 -  7 -  9 |    ---      |
 
 [Condorcet Winner]
