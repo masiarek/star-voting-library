@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2219_36f4v2_equal_opposite_base.yaml`](../bv2219_36f4v2_equal_opposite_base.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Comet
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Comet
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (election `36f4v2` · test `BV2219`).
 

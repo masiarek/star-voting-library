@@ -7,7 +7,7 @@ search:
 
 *Generated from [`03_c4_b33_bullet-storm.yaml`](../03_c4_b33_bullet-storm.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Carla
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Carla
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/w9f4vd) · **[results ↗](https://bettervoting.com/w9f4vd/results)** (election `w9f4vd` · test `BV2236`).
 

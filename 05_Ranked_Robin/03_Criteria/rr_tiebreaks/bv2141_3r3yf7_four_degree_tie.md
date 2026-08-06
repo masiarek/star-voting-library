@@ -1,7 +1,7 @@
 # BV2141 — a Copeland tie that needs all four Equal-Vote tiebreak degrees
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Ava · [full count →](cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md)
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ava · [full count →](cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3r3yf7) · **[results ↗](https://bettervoting.com/3r3yf7/results)** (election `3r3yf7`).

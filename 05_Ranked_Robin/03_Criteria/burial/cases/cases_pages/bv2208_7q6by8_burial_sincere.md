@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2208_7q6by8_burial_sincere.yaml`](../bv2208_7q6by8_burial_sincere.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Beryl
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Beryl
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/7q6by8) · **[results ↗](https://bettervoting.com/7q6by8/results)** (election `7q6by8` · test `BV2208`).
 

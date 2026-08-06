@@ -1,6 +1,6 @@
 # Electing more than one, simply — majoritarian vs. proportional
 
-*Sometimes you're not picking a single winner — a board, a committee, a top-4. The instant there's more than one seat, a fork appears that trips almost everyone up: do you want the **N best** candidates, or a body that **mirrors** the whole electorate? Those are different goals, and they need different methods. This page is the plain-language fork; the machinery lives in [proportional representation](../../03_STAR_PR/01_Learn).*
+*Sometimes you're not picking a single winner — a board, a committee, a top-4. The instant there's more than one seat, a fork appears that trips almost everyone up: do you want the **N best** candidates, or a body that **mirrors** the whole electorate? Those are different goals, and they need different methods. This page is the plain-language fork; the machinery lives in [proportional representation](../../03_STAR_PR/01_Learn/README.md).*
 
 **Level: 201 · for voters** Prerequisite: you know [single-winner STAR](../../01_STAR/01_Learn/STAR_start_here.md).
 
@@ -20,14 +20,14 @@ Neither is "better" — they answer different questions. The whole trick is know
 
 | You want… | Use | Because |
 |---|---|---|
-| the **N best** candidates, factions aside | **[Bloc STAR](../../02_STAR_Bloc)** | you're picking winners, not representatives |
-| a body that **mirrors** the electorate | **[Proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR)** or **[STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)** | a 40% group deserves ~40% of the seats |
+| the **N best** candidates, factions aside | **[Bloc STAR](../../02_STAR_Bloc/README.md)** | you're picking winners, not representatives |
+| a body that **mirrors** the electorate | **[Proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/README.md)** or **[STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)** | a 40% group deserves ~40% of the seats |
 
 **The tell:** *is this a body meant to represent people, or a shortlist of the best options?* Representation → proportional. Best-of → bloc. If a cohesive majority sweeping all the seats would feel *wrong*, you want proportional.
 
 ## See it — same ballots, different bodies
 
-The [Pets Governance set](../../method_comparisons/pets_governance) runs the **same electorate** under bloc vs. proportional and elects **different committees** — the concrete version of the fork, side by side.
+The [Pets Governance set](../../method_comparisons/pets_governance/README.md) runs the **same electorate** under bloc vs. proportional and elects **different committees** — the concrete version of the fork, side by side.
 
 ## How proportional actually shares the seats (the one idea)
 
@@ -35,7 +35,7 @@ Proportional methods all rest on a **quota** — roughly "how many votes buys on
 
 ## Go deeper
 
-- **[Bloc STAR](../../02_STAR_Bloc)** — majoritarian multi-winner (the top-N extension of STAR)
-- **[Proportional representation](../../03_STAR_PR/01_Learn)** — the proportional family (Allocated Score, SSS, RRV) and [STV vs STAR-PR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md) on the same electorate
+- **[Bloc STAR](../../02_STAR_Bloc/README.md)** — majoritarian multi-winner (the top-N extension of STAR)
+- **[Proportional representation](../../03_STAR_PR/01_Learn/README.md)** — the proportional family (Allocated Score, SSS, RRV) and [STV vs STAR-PR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md) on the same electorate
 - **[Electing a committee](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md)** — the same fork on the *approval* side, counting-only (a gentle companion)
 - Curriculum: [201.5 multi-winner intro](../curriculum/CURRICULUM_201.md) → [301.1 proportional STAR](../curriculum/CURRICULUM_301.md)

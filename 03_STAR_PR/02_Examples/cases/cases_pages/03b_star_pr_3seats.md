@@ -7,7 +7,7 @@ search:
 
 *Generated from [`03b_star_pr_3seats.yaml`](../03b_star_pr_3seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Sequentially Spent Score (proportional STAR)](../../../01_Learn) · **3 seats** · **Expected winners:** Housing, Schools, SmallBiz
+**Method:** [Sequentially Spent Score (proportional STAR)](../../../01_Learn/README.md) · **3 seats** · **Expected winners:** Housing, Schools, SmallBiz
 
 ## Scenario
 

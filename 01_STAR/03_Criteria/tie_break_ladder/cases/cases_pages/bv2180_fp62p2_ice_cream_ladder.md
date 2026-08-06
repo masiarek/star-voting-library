@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2180_fp62p2_ice_cream_ladder.yaml`](../bv2180_fp62p2_ice_cream_ladder.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Strawberry
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Strawberry
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2` · test `BV2180`).
 

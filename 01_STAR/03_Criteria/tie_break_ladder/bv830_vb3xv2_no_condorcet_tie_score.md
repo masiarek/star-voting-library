@@ -1,7 +1,7 @@
 # No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, `vb3xv2`)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** B · [full count →](cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** B · [full count →](cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vb3xv2) · **[results ↗](https://bettervoting.com/vb3xv2/results)** (election `vb3xv2`).

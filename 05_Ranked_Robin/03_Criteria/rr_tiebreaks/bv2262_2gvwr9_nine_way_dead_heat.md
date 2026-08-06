@@ -1,7 +1,7 @@
 # BV2262 — nine candidates, a nine-way dead heat
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Boris · [full count →](cases/cases_pages/bv2262_2gvwr9_nine_way_dead_heat.md)
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Boris · [full count →](cases/cases_pages/bv2262_2gvwr9_nine_way_dead_heat.md)
 <!-- case-meta:end -->
 
 *[BV2261](bv2261_y2fbpc_tiebreak_recorded.md) showed that BetterVoting's "random" tiebreak is recorded in full and replayable, on three candidates. This is the scale check: **nine** candidates, a nine-way deadlock where nothing in the ballots separates anybody, and a shuffle that genuinely scrambles the field. Same result — the export pins the winner, and four independent checks agree.*

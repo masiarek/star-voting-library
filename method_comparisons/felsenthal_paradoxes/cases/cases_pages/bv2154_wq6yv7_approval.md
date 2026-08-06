@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2154_wq6yv7_approval.yaml`](../bv2154_wq6yv7_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** April
+**Method:** [Approval Voting](../../../../04_Approval/01_Learn/README.md) · **1 seat** · **Expected winner:** April
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/wq6yv7) · **[results ↗](https://bettervoting.com/wq6yv7/results)** (election `wq6yv7` · test `BV2154`).
 

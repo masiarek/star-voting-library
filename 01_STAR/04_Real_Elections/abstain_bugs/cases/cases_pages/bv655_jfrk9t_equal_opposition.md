@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv655_jfrk9t_equal_opposition.yaml`](../bv655_jfrk9t_equal_opposition.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Option 1
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Option 1
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/jfrk9t) · **[results ↗](https://bettervoting.com/jfrk9t/results)** (election `jfrk9t` · test `BV655`).
 

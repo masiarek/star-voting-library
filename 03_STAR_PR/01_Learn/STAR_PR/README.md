@@ -38,7 +38,7 @@ voting_method: allocated   # or: sss | rrv   (proportional)
 num_winners: 3
 ```
 
-Worked examples in [`03_STAR_PR/`](../..):
+Worked examples in [`03_STAR_PR/`](../../README.md):
 
 - [Allocated Score](../../02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) — the same 63 ballots, seat by seat ([yaml](../../02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml))
 - [SSS](../../02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) — same ballots, budget-spending reweight ([yaml](../../02_Examples/cases/02b_c5_b63_proportional-sss.yaml))

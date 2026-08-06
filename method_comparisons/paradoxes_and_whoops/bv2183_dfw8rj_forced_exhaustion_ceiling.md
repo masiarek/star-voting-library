@@ -1,7 +1,7 @@
 # Forced Exhaustion Ceiling — when a ranking cap discards more ballots than the winner gets
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md)
+**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dfw8rj) · **[results ↗](https://bettervoting.com/dfw8rj/results)** (BV2183, election `dfw8rj`).

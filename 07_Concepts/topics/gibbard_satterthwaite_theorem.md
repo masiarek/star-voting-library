@@ -26,6 +26,12 @@ A method can dodge Gibbard–Satterthwaite only by giving up one of its premises
 
 Every *usable* method fails at least one escape condition — so every usable method is manipulable. That's the whole point.
 
+### The fifth hatch: change what you're asking for
+
+The four above all give up something about the *rule*. There is one more, and it gives up something about the *requirement*: **stop demanding a dominant strategy.** Strategy-proofness asks that honesty be best no matter what anyone else does. **Bayesian incentive compatibility** asks only that honesty be best when everyone else is honest, in expectation over a shared prior — a Bayes–Nash equilibrium rather than a dominant strategy.
+
+That is strictly weaker, so G–S no longer applies, and useful things become possible: [Kim (2017)](ordinal_vs_cardinal_mechanism_design.md) gets both an incentive-compatible ordinal rule that is Pareto efficient *and* an incentive-compatible cardinal rule that beats every ordinal rule. Whether the weakening is too generous is a fair fight — a common prior is exactly what a published poll destroys — but it is the hatch the mechanism-design literature actually uses, and it belongs on this list.
+
 ## Does it apply to STAR, Approval, and Score?
 
 Strictly, Gibbard–Satterthwaite is about **ranked (ordinal)** rules, so it doesn't *literally* cover cardinal ballots. But that's a technicality, not a loophole:
@@ -46,7 +52,7 @@ Those are exactly what [Voter Satisfaction Efficiency](election_simulation_model
 
 ## Allowing ties does not escape it (Duggan and Schwartz)
 
-G-S assumes every election has a **unique** winner. That looks like a loophole: could a rule that sometimes returns a *set* of tied winners be strategyproof? It's a fair question, since real methods do produce ties and need [tiebreakers](ties).
+G-S assumes every election has a **unique** winner. That looks like a loophole: could a rule that sometimes returns a *set* of tied winners be strategyproof? It's a fair question, since real methods do produce ties and need [tiebreakers](ties/README.md).
 
 **Duggan–Schwartz (2000) closes it.** For rules that may return a tied set: if the rule can elect at least three candidates and is strategyproof, then some single voter is a **nominator** — their top choice is *always* in the winning set. Not literally a dictator, but the same shape of failure, and no real method would accept it. Allowing ties buys indecisiveness, not honesty.
 

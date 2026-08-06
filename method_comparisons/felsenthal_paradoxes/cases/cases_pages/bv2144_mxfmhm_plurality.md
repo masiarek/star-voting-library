@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2144_mxfmhm_plurality.yaml`](../bv2144_mxfmhm_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Ana
+**Method:** [plurality](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Ana
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/mxfmhm) · **[results ↗](https://bettervoting.com/mxfmhm/results)** (election `mxfmhm` · test `BV2144`).
 

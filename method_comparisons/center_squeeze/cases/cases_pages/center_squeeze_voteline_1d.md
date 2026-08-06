@@ -7,7 +7,7 @@ search:
 
 *Generated from [`center_squeeze_voteline_1d.yaml`](../center_squeeze_voteline_1d.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Green
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Green
 
 ## Scenario
 

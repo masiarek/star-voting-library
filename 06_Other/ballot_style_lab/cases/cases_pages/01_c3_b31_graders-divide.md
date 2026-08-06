@@ -7,7 +7,7 @@ search:
 
 *Generated from [`01_c3_b31_graders-divide.yaml`](../01_c3_b31_graders-divide.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Clara
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Clara
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4jmgrd) · **[results ↗](https://bettervoting.com/4jmgrd/results)** (election `4jmgrd` · test `BV2234`).
 

@@ -1,7 +1,7 @@
 # Runoff 05 — reversal with Equal Support
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Sage · [full count →](cases/cases_pages/Runoff_05_reversal_with_equal_support_xgkw3w.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Sage · [full count →](cases/cases_pages/Runoff_05_reversal_with_equal_support_xgkw3w.md)
 <!-- case-meta:end -->
 
 **Level 201 · the first reversal where some voters have no preference.** Rosa leads the Scoring Round (21), but two voters scored **Rosa and Sage equally** — *Equal Support* — so they sit out the runoff. Of the **three** who did pick between the finalists, two prefer **Sage**, so Sage wins. The runoff is decided by **3 of 5** voters, not all five — the bridge to the two-denominator idea.

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2261_y2fbpc_tiebreak_recorded_draws.yaml`](../bv2261_y2fbpc_tiebreak_recorded_draws.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Anika
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Anika
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/y2fbpc) · **[results ↗](https://bettervoting.com/y2fbpc/results)** (election `y2fbpc` · test `BV2261`).
 

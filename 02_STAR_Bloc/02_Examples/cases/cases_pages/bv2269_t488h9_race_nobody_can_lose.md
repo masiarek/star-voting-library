@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2269_t488h9_race_nobody_can_lose.yaml`](../bv2269_t488h9_race_nobody_can_lose.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats**
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats**
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/t488h9) · **[results ↗](https://bettervoting.com/t488h9/results)** (election `t488h9` · test `BV2269`).
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`range_sullivan_score_c4_b10.yaml`](../range_sullivan_score_c4_b10.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [range](../../../../07_Concepts) · **1 seat** · **Expected winner:** C
+**Method:** [range](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** C
 
 ## Scenario
 

@@ -1,7 +1,7 @@
 # Runoff 03 — two enthusiasts vs the majority
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Eden · [full count →](cases/cases_pages/Runoff_03_enthusiasts_vs_majority_rkgtpk.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Eden · [full count →](cases/cases_pages/Runoff_03_enthusiasts_vs_majority_rkgtpk.md)
 <!-- case-meta:end -->
 
 **Level 201 · a reversal in a bigger field (the "narrow-but-deep" pattern).** Five candidates, five voters. Two voters are **Dakota enthusiasts** — their 5s push Dakota to the top of the Scoring Round (22 stars). But the other three prefer **Eden**, so Eden wins the Automatic Runoff 3–2. Dakota leads on *how much*; Eden wins on *how many*. (Eden is also the Condorcet winner — a calm case.)

@@ -1,7 +1,7 @@
 # Village Council by SNTV — a concentrated minority wins a seat
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [plurality](../../07_Concepts) · **2 seats** · **Expected winners:** Priya, Nora · [full count →](cases/cases_pages/sntv_village_council.md)
+**Method:** [plurality](../../07_Concepts/README.md) · **2 seats** · **Expected winners:** Priya, Nora · [full count →](cases/cases_pages/sntv_village_council.md)
 <!-- case-meta:end -->
 
 *A clean, standalone look at the one property that made SNTV famous: with a single vote per voter, a disciplined minority can win representation a majority would otherwise sweep. Nine residents, two council seats.*

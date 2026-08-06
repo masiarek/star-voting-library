@@ -1,7 +1,7 @@
 # BV1570 — undecided plurality election still declares a winner
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [plurality](../../../07_Concepts) · **1 seat** · **Expected winner:** Approve · [full count →](cases/cases_pages/bv1570_6hv7jf_undecided_plurality.md)
+**Method:** [plurality](../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Approve · [full count →](cases/cases_pages/bv1570_6hv7jf_undecided_plurality.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6hv7jf) · **[results ↗](https://bettervoting.com/6hv7jf/results)** (election `6hv7jf`) · issue [Equal-Vote/bettervoting#894](https://github.com/Equal-Vote/bettervoting/issues/894)

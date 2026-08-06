@@ -7,7 +7,7 @@ search:
 
 *Generated from [`mmp_block_voting.yaml`](../mmp_block_voting.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **3 seats** · **Expected winners:** Ada, Ben, Cal
+**Method:** [plurality](../../../../07_Concepts/README.md) · **3 seats** · **Expected winners:** Ada, Ben, Cal
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3x4vrv) · **[results ↗](https://bettervoting.com/3x4vrv/results)** (election `3x4vrv` · test `BV2135`).
 

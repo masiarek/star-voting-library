@@ -2,7 +2,7 @@
 
 *A **spoiler** is a candidate who can't win but still changes who does — by splitting another candidate's support. It's the single most-felt flaw of choose-one voting, the reason "don't waste your vote on a third party" is common advice, and the problem every reform on this site is partly trying to fix.*
 
-→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md) · where it sits among the other ways a vote loses its power: [the problem, in four causes](the_problem_in_four_causes.md)
+→ Glossary: [`spoiler effect`](../GLOSSARY.md) · the root cause: [vote splitting & the equally-weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) · runnable demos: [the split-voting set](../../method_comparisons/split_voting/README.md) · how often it happens for real: [the 2022 count, read honestly](../../method_comparisons/split_voting/how_often_does_vote_splitting_happen.md) · where it sits among the other ways a vote loses its power: [the problem, in four causes](the_problem_in_four_causes.md)
 
 ---
 
@@ -72,7 +72,7 @@ The most prominent recent example is **[Alaska's 2022 U.S. House special electio
 
 ## See it happen
 
-- [The split-voting set](../../method_comparisons/split_voting) — the spoiler progression from plurality through each reform, on the same ballots.
+- [The split-voting set](../../method_comparisons/split_voting/README.md) — the spoiler progression from plurality through each reform, on the same ballots.
 - [Star Wars vote split](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) — a compact worked example (Skywalker & Leia split the Rebel vote).
 - [Plurality vs. majority](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) — where the minority winner comes from.
 - Debate framing: [what's so good about STAR — Segment 1](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md)

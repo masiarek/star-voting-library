@@ -2,7 +2,7 @@
 
 *Every voter **grades each candidate** on a fixed scale (say 0–5); the candidate with the **highest total score wins**. No runoff, no elimination — just add up the grades. Range is the most expressive single-mark method: Approval with more than one bit, and STAR without the runoff.*
 
-→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/README.md) (pref_voting). · Family: [Approval](../../../04_Approval/01_Learn/approval_voting.md) · [STAR](../../../01_STAR/01_Learn) · [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
+→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/README.md) (pref_voting). · Family: [Approval](../../../04_Approval/01_Learn/approval_voting.md) · [STAR](../../../01_STAR/01_Learn/README.md) · [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches *about* it rather than promoting it — it lives in [other methods](../../README.md), not the numbered root folders. The honest comparison is the point.
 

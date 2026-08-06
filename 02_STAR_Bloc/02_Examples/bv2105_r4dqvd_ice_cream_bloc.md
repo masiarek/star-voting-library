@@ -1,7 +1,7 @@
 # BV2105 — Favorite ice cream (Bloc STAR): a partial ballot mis-filed as an abstention
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105_r4dqvd_ice_cream_bloc.md)
 <!-- case-meta:end -->
 
 *BetterVoting test **BV2105** (`r4dqvd`, "Favorite ice cream (Bloc STAR) - without end date"). Bloc STAR, 3 flavors, 2 seats, 4 ballots. This page reads the **export frozen on 2025-10-31**. In that count the winners were right (**Chocolate, Strawberry**) and the seat-2 score tiebreak matched LH exactly — but the tally was wrong: BetterVoting filed a **real partial ballot as an abstention**, reporting `nTallyVotes 2 / nAbstentions 2` where the truth is 3 tallied + 1 abstention. **Still reproducing** on a fresh election a year later — see [BV2105-r2](bv2105r2_w3vvff_ice_cream_recheck.md).*

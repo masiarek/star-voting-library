@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2264_j3hqvb_council_before_joiner.yaml`](../bv2264_j3hqvb_council_before_joiner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Ada, Bruno
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Ada, Bruno
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/j3hqvb) · **[results ↗](https://bettervoting.com/j3hqvb/results)** (election `j3hqvb` · test `BV2264`).
 

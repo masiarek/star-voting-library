@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml`](../bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Moderate
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Moderate
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6w2gq7) · **[results ↗](https://bettervoting.com/6w2gq7/results)** (election `6w2gq7` · test `BV2168`).
 

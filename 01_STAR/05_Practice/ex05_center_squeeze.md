@@ -1,7 +1,7 @@
 # Exercise 5 — The squeezed bridge-builder
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../01_Learn) · **1 seat** · **Expected winner:** Brook · [full count →](cases/cases_pages/ex05_center_squeeze.md)
+**Method:** [STAR (single winner)](../01_Learn/README.md) · **1 seat** · **Expected winner:** Brook · [full count →](cases/cases_pages/ex05_center_squeeze.md)
 <!-- case-meta:end -->
 
 *A club elects its president. Two wings can't stand each other's candidate — and there's Brook, whom everyone can live with. Every single voter scores Brook a 3 or better. Run the same nine opinions as ranked ballots under RCV-IRV and as score ballots under STAR: do both counts find the bridge-builder?*

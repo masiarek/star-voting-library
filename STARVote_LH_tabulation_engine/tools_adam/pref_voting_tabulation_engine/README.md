@@ -2,7 +2,7 @@
 
 A third tabulation engine for the repo — but with a job the other two don't have: it's the **independent referee.** It wraps Eric Pacuit's [`pref_voting`](https://github.com/voting-tools/pref_voting) library (a peer-reviewed Python social-choice package) and runs it on the *same* YAML elections as the LH and RCV-IRV engines, then **compares the results** so we know our winners are right, not just self-consistent.
 
-Unlike the [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine), `pref_voting` is **not vendored** — it's a large, actively-maintained PyPI package, so it's an optional dependency:
+Unlike the [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/README.md), `pref_voting` is **not vendored** — it's a large, actively-maintained PyPI package, so it's an optional dependency:
 
 ```bash
 pip install pref_voting        # or: pip install -e STARVote_LH_tabulation_engine[crosscheck]

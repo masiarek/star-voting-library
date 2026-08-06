@@ -79,5 +79,5 @@ So: your `[0,1]`-utility instinct is the correct, more-scientific one — "more 
 ## Related
 
 - [Election simulation models](election_simulation_models.md) — the menu of *utility* models (spatial, IC/IAC, Mallows, Plackett–Luce, Yee)
-- [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) · [the simulations folder](../../06_Other/simulations) — utility-first in practice
+- [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) · [the simulations folder](../../06_Other/simulations/README.md) — utility-first in practice
 - [What makes a good winner?](what_makes_a_good_winner.md) (VSE) · [What makes a voting method good?](what_makes_a_voting_method_good.md) (the stable-meaning debate) · [Curriculum 301](../curriculum/CURRICULUM_301.md)

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`321_tennessee_blank_encoding_c4_b100.yaml`](../321_tennessee_blank_encoding_c4_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [3-2-1](../../../../07_Concepts) · **1 seat** · **Expected winner:** Nashville
+**Method:** [3-2-1](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Nashville
 
 ## Scenario
 

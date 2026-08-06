@@ -1,7 +1,7 @@
 # BV2142 — clone independence (1/2): a no-Condorcet cycle, and where LH and BV part ways
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** A · [full count →](cases/cases_pages/bv2142_4gfwdq_clone_cycle_pre.md)
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** A · [full count →](cases/cases_pages/bv2142_4gfwdq_clone_cycle_pre.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4gfwdq) · **[results ↗](https://bettervoting.com/4gfwdq/results)** (election `4gfwdq`).

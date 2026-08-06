@@ -1,7 +1,7 @@
 # BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Someone I Like, Santa Claus, The Lesser Evil · [full count →](cases/cases_pages/bv130_bloc_pagination_731.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Someone I Like, Santa Claus, The Lesser Evil · [full count →](cases/cases_pages/bv130_bloc_pagination_731.md)
 <!-- case-meta:end -->
 
 *The original BV130: a clean, tie-free 3-seat Bloc STAR election (6 candidates, 9 ballots). It backs [star-server#731](https://github.com/Equal-Vote/bettervoting/issues/731) — a **reporting/UI** issue (Bloc results are shown as browser **tabs**, one per round, and should use **numbered pages** instead). The tabulation is correct; LH and BetterVoting agree on the winners. The bug is purely how the three rounds are displayed, not the math.*

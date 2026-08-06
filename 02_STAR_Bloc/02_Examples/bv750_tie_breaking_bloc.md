@@ -1,7 +1,7 @@
 # BV750 — Bloc STAR tie-breaking, every ballot identical · issue [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052) family
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** c, a · [full count →](cases/cases_pages/bv750_tie_breaking_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** c, a · [full count →](cases/cases_pages/bv750_tie_breaking_bloc.md)
 <!-- case-meta:end -->
 
 *The extreme flat case: a 2-seat Bloc STAR election where all three ballots are `5,5,5`. Nothing separates anyone, so the lot decides both seats — and BetterVoting drops **every** ballot as an abstention (`nTallyVotes: 0`, the "no ballots have been cast" bug). LH and BV both elect **c, a** (via the lot), but LH counts all three ballots.*

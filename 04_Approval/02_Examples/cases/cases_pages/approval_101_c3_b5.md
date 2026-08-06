@@ -7,7 +7,7 @@ search:
 
 *Generated from [`approval_101_c3_b5.yaml`](../approval_101_c3_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../01_Learn) · **1 seat** · **Expected winner:** Bob
+**Method:** [Approval Voting](../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Bob
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/ff6mk3) · **[results ↗](https://bettervoting.com/ff6mk3/results)** (election `ff6mk3` · test `BV135`).
 

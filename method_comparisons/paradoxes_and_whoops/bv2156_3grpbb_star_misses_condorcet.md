@@ -1,7 +1,7 @@
 # BV2156 — STAR misses the Condorcet winner — STAR's own signature failure
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv2156_3grpbb_star_misses_condorcet.md)
+**Method:** [STAR (single winner)](../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv2156_3grpbb_star_misses_condorcet.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3grpbb) · **[results ↗](https://bettervoting.com/3grpbb/results)** (election `3grpbb`, Test ID BV2156; STAR is race 1, and every race matches the LH tabulation below).

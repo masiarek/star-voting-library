@@ -127,7 +127,7 @@ This is also why the comparison in [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_s
 ## The honest limits
 
 1. **PUT is not "more correct."** It is a different definition of the method, and a defensible argument says a voting rule ought to name a winner rather than a set of might-have-beens. What PUT is unambiguously better at is **disclosure**.
-2. **It does not fix IRV's real problems.** [Center squeeze](../center_squeeze), [non-monotonicity](../monotonicity) and exhausted ballots are properties of the elimination *structure*, not of its tie convention. PUT changes nothing about any of them, and citing it as a repair would be exactly the overreach this library warns about elsewhere.
+2. **It does not fix IRV's real problems.** [Center squeeze](../center_squeeze/README.md), [non-monotonicity](../monotonicity/README.md) and exhausted ballots are properties of the elimination *structure*, not of its tie convention. PUT changes nothing about any of them, and citing it as a repair would be exactly the overreach this library warns about elsewhere.
 3. **The example here is engineered.** Four voters were chosen to make the branch visible on one screen. Do not read the size of the effect off the size of the example — see [why we build contrived tie cases](why_contrived_tie_cases.md).
 
 ## Sources

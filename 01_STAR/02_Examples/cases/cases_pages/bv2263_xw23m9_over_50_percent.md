@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2263_xw23m9_over_50_percent.yaml`](../bv2263_xw23m9_over_50_percent.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** A
+**Method:** [STAR (single winner)](../../../01_Learn/README.md) · **1 seat** · **Expected winner:** A
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/xw23m9) · **[results ↗](https://bettervoting.com/xw23m9/results)** (election `xw23m9` · test `BV2263`).
 

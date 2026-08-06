@@ -15,7 +15,7 @@
 
 **The "dead rung" gotcha (STAR).** STAR's ladder is *pairwise → five-star → lot*, and the **five-star** step counts only votes of score **5** (the scale max). If the tied candidates have no 5s (or equal 5s), that rung reads `0–0` — a **dead rung** — and the tie drops straight to the lot; it never steps down to the 4s. So on a low-scoring or coarse ballot the lot decides earlier and more often than the ladder's length suggests. Mnemonic: *"it counts fives, not fours."* → [The "dead rung"](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md).
 
-Runnable tie cases (flat-score ballots engineered to tie) live in [`Flat_scores_ties/`](../../../01_STAR/09_Parked/Flat_scores_ties) — useful for seeing exactly when each round produces a tie and how the lot order settles it — and the [dead-rung cases](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) isolate the five-star-vs-lot step (with a [generator](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md) for more).
+Runnable tie cases (flat-score ballots engineered to tie) live in [`Flat_scores_ties/`](../../../01_STAR/09_Parked/Flat_scores_ties/README.md) — useful for seeing exactly when each round produces a tie and how the lot order settles it — and the [dead-rung cases](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) isolate the five-star-vs-lot step (with a [generator](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md) for more).
 
 **Cross-method deep dive:** [Tie-Breaking: STAR vs. RCV-IRV — Fewer Ties, or Easier Ties?](tiebreaking_star_vs_irv.md) — why RCV-IRV's strict ranks make a tie *harder* to resolve deterministically (fewer signals, bigger consequence), not easier.
 

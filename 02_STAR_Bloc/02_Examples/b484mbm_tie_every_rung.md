@@ -1,7 +1,7 @@
 # Bloc STAR — a three-way tie no rung can break (`484mbm`)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Blythe, Arden · [full count →](cases/cases_pages/b484mbm_tie_every_rung.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Blythe, Arden · [full count →](cases/cases_pages/b484mbm_tie_every_rung.md)
 <!-- case-meta:end -->
 
 *Three voters, three candidates, rotating ballots — so scores, pairwise and five-star all come back level and the two seats are filled entirely by tie-break policy. Built to compare what the engines do when the ballots say nothing: BetterVoting skips the pairwise rung and draws lots; Larry Hastings' own CLI, with the tiebreaker switched off, declines to pick anyone at all.*

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bgg9qh9_most_wins_is_not_condorcet.yaml`](../bgg9qh9_most_wins_is_not_condorcet.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Cora
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Cora
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gg9qh9) · **[results ↗](https://bettervoting.com/gg9qh9/results)** (election `gg9qh9` · test `BV2260`).
 

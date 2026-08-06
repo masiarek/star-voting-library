@@ -7,7 +7,7 @@ search:
 
 *Generated from [`approval_bloc_3seats_c6_b5.yaml`](../approval_bloc_3seats_c6_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../01_Learn) · **3 seats** · **Expected winners:** Adams, Brown, Clark
+**Method:** [Approval Voting](../../../../01_Learn/README.md) · **3 seats** · **Expected winners:** Adams, Brown, Clark
 
 ## Scenario
 

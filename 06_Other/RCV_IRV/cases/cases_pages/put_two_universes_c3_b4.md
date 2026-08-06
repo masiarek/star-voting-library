@@ -7,7 +7,7 @@ search:
 
 *Generated from [`put_two_universes_c3_b4.yaml`](../put_two_universes_c3_b4.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [RCV-IRV (Instant Runoff)](../../concepts) · **1 seat** · **Expected winner:** Anna
+**Method:** [RCV-IRV (Instant Runoff)](../../concepts/README.md) · **1 seat** · **Expected winner:** Anna
 
 ## Scenario
 

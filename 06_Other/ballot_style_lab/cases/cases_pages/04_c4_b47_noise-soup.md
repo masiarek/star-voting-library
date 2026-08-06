@@ -7,7 +7,7 @@ search:
 
 *Generated from [`04_c4_b47_noise-soup.yaml`](../04_c4_b47_noise-soup.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Caleb
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Caleb
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/74pbyg) · **[results ↗](https://bettervoting.com/74pbyg/results)** (election `74pbyg` · test `BV2237`).
 

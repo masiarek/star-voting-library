@@ -13,12 +13,17 @@
 | **Approval** | ✅ | one approval count per candidate | [scoring methods](../scoring-methods-vs-ranked-voting.md) |
 | **Plurality** | ✅ | one vote count per candidate | — |
 | **RCV-IRV (Hare)** | ❌ | *none exists* — needs every ballot centrally | [IRV isn't summable](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) |
+| **Contingent / Supplementary Vote** | ✅ | first-choice counts **+** the pairwise matrix | [Contingent & SV](../../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-contingent-supplementary.md) |
+
+**The contingent-vote row is the one that surprises people, and it's worth understanding why.** It is an *instant-runoff* method — batch-eliminate everyone below the top two, then transfer — yet unlike [Hare](../../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-contingent-supplementary.md) it **is** summable, because it holds exactly **one** elimination step and that step's outcome is a function of two publishable tables. Precincts publish first-choice counts and the pairwise matrix; add them; the first-choice column names the top two, the single matrix cell for that pair gives the runoff totals, and ballots-cast minus those two numbers gives the exhausted count. Nothing else is needed and no ballot travels.
+
+So non-summability is not a property of "instant runoffs" as a family — it is a property of *iterating* them, because each round's elimination depends on the previous round's statewide totals and no fixed-size precinct table can anticipate the cascade. One round is summable; two or more are not. (The artifact is the same second-order pairwise matrix Ranked Robin and STAR publish — which is why a jurisdiction that builds the plumbing for a contingent vote has already built it for either of those. Worked through against a policy paper that wanted precisely this property: ["Single-elimination RCV," claim-checked](../../../method_comparisons/kissel_single_elimination_rcv/README.md#claim-7-the-transparency-argument-is-the-papers-best-and-it-argues-past-the-proposal).)  <!-- terminology-ok: quoting the paper's own name for its model -->
 
 What "needs every ballot centrally" costs in practice — the courier runs, the single point of failure, the heavier audit, and the real incidents (Maine's process, NYC 2021, Alameda 2022) — is its own page: [**Central tabulation — when every ballot must travel**](../central_tabulation.md).
 
 ## See it both ways (runnable)
 
-The same two-district example, counted two ways — [`summability_demo/`](../../../method_comparisons/summability_demo):
+The same two-district example, counted two ways — [`summability_demo/`](../../../method_comparisons/summability_demo/README.md):
 
 - **IRV (not summable):** B wins both districts, but is *eliminated* when they merge — no subtotal predicts it. → [worked example](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses)
 - **STAR (summable):** precinct score totals *and* the pairwise matrix add to the combined result. → [worked example](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md#worked-example-two-districts-subtotals-that-add-up)

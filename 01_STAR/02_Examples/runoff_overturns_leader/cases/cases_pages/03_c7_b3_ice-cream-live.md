@@ -7,7 +7,7 @@ search:
 
 *Generated from [`03_c7_b3_ice-cream-live.yaml`](../03_c7_b3_ice-cream-live.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** ChocoAlm
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** ChocoAlm
 
 ## Scenario
 

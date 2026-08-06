@@ -1,7 +1,7 @@
 # BV215 — None of the Above wins (STAR), with a null abstention
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** None of the Above · [full count →](cases/cases_pages/bv215_26khr3_nota_wins.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** None of the Above · [full count →](cases/cases_pages/bv215_26khr3_nota_wins.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/26khr3) · **[results ↗](https://bettervoting.com/26khr3/results)** (election `26khr3`)

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2170_pp2q4q_plurality.yaml`](../bv2170_pp2q4q_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Blake
+**Method:** [plurality](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Blake
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/pp2q4q) · **[results ↗](https://bettervoting.com/pp2q4q/results)** (election `pp2q4q` · test `BV2170`).
 

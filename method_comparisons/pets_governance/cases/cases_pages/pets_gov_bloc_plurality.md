@@ -7,7 +7,7 @@ search:
 
 *Generated from [`pets_gov_bloc_plurality.yaml`](../pets_gov_bloc_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **2 seats** · **Expected winners:** Dog, Bird
+**Method:** [plurality](../../../../07_Concepts/README.md) · **2 seats** · **Expected winners:** Dog, Bird
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 

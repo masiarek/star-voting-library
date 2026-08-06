@@ -7,7 +7,7 @@ search:
 
 *Generated from [`ex06_bullet_backfire.yaml`](../ex06_bullet_backfire.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Cash
+**Method:** [STAR (single winner)](../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Cash
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/7f4f7q) · **[results ↗](https://bettervoting.com/7f4f7q/results)** (election `7f4f7q` · test `BV2194`).
 

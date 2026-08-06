@@ -7,7 +7,7 @@ search:
 
 *Generated from [`three_way_dead_rung_C.yaml`](../three_way_dead_rung_C.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** C
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** C
 
 **Official tie-break (lot) order:** C > A > B — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bloc_lot_path_dependence_a_c3_b5.yaml`](../bloc_lot_path_dependence_a_c3_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Nadia, Priya
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Nadia, Priya
 
 **Official tie-break (lot) order:** Nadia > Omar > Priya — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

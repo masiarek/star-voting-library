@@ -1,7 +1,7 @@
 # BV15 — Plurality + abstentions: the turnout undercount
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [plurality](../../../07_Concepts) · **1 seat** · **Expected winner:** Andre · [full count →](cases/cases_pages/bv15_4h89vj_plurality_abstain.md)
+**Method:** [plurality](../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Andre · [full count →](cases/cases_pages/bv15_4h89vj_plurality_abstain.md)
 <!-- case-meta:end -->
 
 *BetterVoting test **BV15** (`4h89vj`, "Basic – 2 candidates – Plurality – Abstain"). The Plurality instance of **bettervoting#740** — a **reporting** gap, not a tabulation bug. BetterVoting elects the right winner (Andre) but its results widget reports only the **meaningful** ballots as "voters," dropping the fully-abstained ones from the headline turnout. The count is short by exactly the number of abstentions.*

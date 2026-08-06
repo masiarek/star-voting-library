@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv130_bloc_pagination_731.yaml`](../bv130_bloc_pagination_731.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Someone I Like, Santa Claus, The Lesser Evil
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Someone I Like, Santa Claus, The Lesser Evil
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/yhxy7q) · **[results ↗](https://bettervoting.com/yhxy7q/results)** (election `yhxy7q` · test `BV130`).
 

@@ -1,7 +1,7 @@
 # BV2270 — the rung where the two engines elect different people
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Birch · [full count →](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md)
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Birch · [full count →](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md)
 <!-- case-meta:end -->
 
 **Level: 301 · deep dive**

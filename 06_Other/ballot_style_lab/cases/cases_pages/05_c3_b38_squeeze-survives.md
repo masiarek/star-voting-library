@@ -7,7 +7,7 @@ search:
 
 *Generated from [`05_c3_b38_squeeze-survives.yaml`](../05_c3_b38_squeeze-survives.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Ben
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Ben
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/td7jfy) · **[results ↗](https://bettervoting.com/td7jfy/results)** (election `td7jfy` · test `BV2238`).
 

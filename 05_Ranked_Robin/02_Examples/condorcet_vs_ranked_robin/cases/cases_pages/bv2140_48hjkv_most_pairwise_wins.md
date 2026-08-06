@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2140_48hjkv_most_pairwise_wins.yaml`](../bv2140_48hjkv_most_pairwise_wins.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Ava
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ava
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/48hjkv) · **[results ↗](https://bettervoting.com/48hjkv/results)** (election `48hjkv` · test `BV2140`).
 

@@ -232,11 +232,11 @@ CAV is three-level [score voting](../Range/concepts/range_voting.md), so it inhe
 | Criterion | CAV | Note |
 |---|:--:|---|
 | [Favorite betrayal](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) | ✔ | Voting **For** your honest favorite is always safe — it never costs you |
-| [Monotonicity](../../07_Concepts/topics/monotonicity) | ✔ | Raising a candidate's mark never hurts them |
-| [Participation](../../07_Concepts/topics/participation) | ✔ | Additive: showing up and voting your opinion never backfires |
+| [Monotonicity](../../07_Concepts/topics/monotonicity/README.md) | ✔ | Raising a candidate's mark never hurts them |
+| [Participation](../../07_Concepts/topics/participation/README.md) | ✔ | Additive: showing up and voting your opinion never backfires |
 | [Independence of irrelevant alternatives](../../07_Concepts/topics/spoiler_effect.md) | ✔ | On fixed marks, adding or dropping a candidate leaves everyone else's total untouched |
-| [Independence of clones](../../05_Ranked_Robin/03_Criteria/clone_independence) | ✔ | No first-choice count to split |
-| [Summable](../../07_Concepts/topics/summability) | ✔ | One running total per candidate; precinct-summable, unlike [IRV](../RCV_IRV/concepts/RCV-IRV-Hare.md) |
+| [Independence of clones](../../05_Ranked_Robin/03_Criteria/clone_independence/README.md) | ✔ | No first-choice count to split |
+| [Summable](../../07_Concepts/topics/summability/README.md) | ✔ | One running total per candidate; precinct-summable, unlike [IRV](../RCV_IRV/concepts/RCV-IRV-Hare.md) |
 | [Majority favorite](../../07_Concepts/topics/majority_criterion/README.md) | ✘ | Fails, as all score methods do — a majority's favorite can lose to a broadly-tolerated rival |
 | [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) | ✘ | Not Condorcet-efficient |
 | [Later-no-harm](../../01_STAR/01_Learn/the_count/STAR_second_round_FAQ.md) | ✘ | Voting For a second candidate can beat your favorite |

@@ -1,7 +1,7 @@
 # Exercise 6 — Bullet voting backfires
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../01_Learn) · **1 seat** · **Expected winner:** Cash · [full count →](cases/cases_pages/ex06_bullet_backfire.md)
+**Method:** [STAR (single winner)](../01_Learn/README.md) · **1 seat** · **Expected winner:** Cash · [full count →](cases/cases_pages/ex06_bullet_backfire.md)
 <!-- case-meta:end -->
 
 *A club books a speaker. Ari's four fans genuinely like Bree too — their honest ballot is Ari 5, Bree 3, Cash 0. But the night before the vote, one of them argues: "scoring Bree helps Ari's rival — zero her, and Ari walks in." All four bullet vote. Predict what they wake up to.*

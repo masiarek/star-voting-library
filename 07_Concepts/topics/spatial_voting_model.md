@@ -18,7 +18,7 @@ The classic intuition is **[Hotelling's](https://en.wikipedia.org/wiki/Hotelling
 
 Put voters on a line and ask "is there a candidate who beats every other head-to-head?" The answer, under mild assumptions, is **yes, and it's the candidate nearest the *median* voter** — the [**median voter theorem**](https://en.wikipedia.org/wiki/Median_voter_theorem) (Duncan [Black](whos_who_voting_reform.md), 1948; central to Anthony Downs's *Economic Theory of Democracy*, 1957).
 
-Why: any candidate to the median's left is beaten by one just to their right (a majority — the median plus everyone to the right — is closer to the righter one), and vice versa. So in one dimension a **[Condorcet winner](condorcet) always exists**, and it's the center. That single fact drives most of what follows.
+Why: any candidate to the median's left is beaten by one just to their right (a majority — the median plus everyone to the right — is closer to the righter one), and vice versa. So in one dimension a **[Condorcet winner](condorcet/README.md) always exists**, and it's the center. That single fact drives most of what follows.
 
 ## Why it matters — the model *predicts* how methods behave
 

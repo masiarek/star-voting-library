@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2171_h93tm4_star.yaml`](../bv2171_h93tm4_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Casey
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Casey
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/h93tm4) · **[results ↗](https://bettervoting.com/h93tm4/results)** (election `h93tm4` · test `BV2171`).
 

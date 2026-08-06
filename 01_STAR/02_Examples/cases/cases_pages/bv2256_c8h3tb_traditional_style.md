@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2256_c8h3tb_traditional_style.yaml`](../bv2256_c8h3tb_traditional_style.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Ella
+**Method:** [STAR (single winner)](../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ella
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/c8h3tb) · **[results ↗](https://bettervoting.com/c8h3tb/results)** (election `c8h3tb` · test `BV2256`).
 

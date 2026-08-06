@@ -7,7 +7,7 @@ search:
 
 *Generated from [`darkhorse_C07_largeV598_bloc_2.yaml`](../darkhorse_C07_largeV598_bloc_2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** E
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** E
 
 ## Scenario
 

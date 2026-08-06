@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2268_6m3gxq_spoiler_changes_council.yaml`](../bv2268_6m3gxq_spoiler_changes_council.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Cyrus, Bea
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Cyrus, Bea
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/6m3gxq) · **[results ↗](https://bettervoting.com/6m3gxq/results)** (election `6m3gxq` · test `BV2268`).
 

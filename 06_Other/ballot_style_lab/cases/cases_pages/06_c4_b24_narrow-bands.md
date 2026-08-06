@@ -7,7 +7,7 @@ search:
 
 *Generated from [`06_c4_b24_narrow-bands.yaml`](../06_c4_b24_narrow-bands.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Beige
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Beige
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/gyv2qt) · **[results ↗](https://bettervoting.com/gyv2qt/results)** (election `gyv2qt` · test `BV2239`).
 

@@ -27,7 +27,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 | **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/README.md) |
 | **Burial** | sinking a rival you actually like, so they lose a comparison they'd win (Ranked Robin/Copeland ❌ its named risk; Borda ❌ notoriously; STAR ⚠️ rarely pays; IRV ✅ later-no-harm) | [Burial](burial/README.md) |
 
-*(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [the split-voting set](../../method_comparisons/split_voting) for the worked examples.)*
+*(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [the split-voting set](../../method_comparisons/split_voting/README.md) for the worked examples.)*
 
 ## Concept pages in this folder
 

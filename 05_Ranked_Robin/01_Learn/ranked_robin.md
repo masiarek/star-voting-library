@@ -2,7 +2,7 @@
 
 *A ranked method that compares every candidate head-to-head and elects whoever beats the most rivals. Same ranked ballot as IRV, but a completely different — and far more transparent — way of counting it.*
 
-→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../../07_Concepts/topics/summability/README.md).
+→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo/README.md) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../../07_Concepts/topics/summability/README.md).
 
 ---
 

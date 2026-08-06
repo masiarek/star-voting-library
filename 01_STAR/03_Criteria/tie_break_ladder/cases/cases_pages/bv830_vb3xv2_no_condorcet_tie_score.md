@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv830_vb3xv2_no_condorcet_tie_score.yaml`](../bv830_vb3xv2_no_condorcet_tie_score.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** B
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** B
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vb3xv2) · **[results ↗](https://bettervoting.com/vb3xv2/results)** (election `vb3xv2` · test `BV830`).
 

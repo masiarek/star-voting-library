@@ -7,7 +7,7 @@ search:
 
 *Generated from [`ex12_proportional_share.yaml`](../ex12_proportional_share.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Asa, Cleo
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Asa, Cleo
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/89wwvr) · **[results ↗](https://bettervoting.com/89wwvr/results)** (election `89wwvr` · test `BV2199`).
 

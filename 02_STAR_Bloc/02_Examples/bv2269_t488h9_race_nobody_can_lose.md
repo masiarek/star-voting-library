@@ -1,7 +1,7 @@
 # Three candidates, three seats — a race nobody can lose (`t488h9`)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **3 seats** · [full count →](cases/cases_pages/bv2269_t488h9_race_nobody_can_lose.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **3 seats** · [full count →](cases/cases_pages/bv2269_t488h9_race_nobody_can_lose.md)
 <!-- case-meta:end -->
 
 *Three candidates stand for three seats, so every one of them is seated no matter how anyone votes. The election exists to ask a question about tabulators rather than to teach a result: what does a counting engine do with a contest that cannot decide anything? Larry Hastings' engine refuses the file. BetterVoting accepts it, counts the two seats that are genuinely contested, and says of the last one, in plain English, that the candidate wins by default.*

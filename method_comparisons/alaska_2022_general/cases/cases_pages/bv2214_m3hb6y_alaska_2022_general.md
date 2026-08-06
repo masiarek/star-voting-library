@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2214_m3hb6y_alaska_2022_general.yaml`](../bv2214_m3hb6y_alaska_2022_general.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Peltola
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Peltola
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/m3hb6y) · **[results ↗](https://bettervoting.com/m3hb6y/results)** (election `m3hb6y` · test `BV2214`).
 

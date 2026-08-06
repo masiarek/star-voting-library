@@ -7,7 +7,7 @@ search:
 
 *Generated from [`02_c4_b40_cliff-city.yaml`](../02_c4_b40_cliff-city.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Churro
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Churro
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fm8cbv) · **[results ↗](https://bettervoting.com/fm8cbv/results)** (election `fm8cbv` · test `BV2235`).
 

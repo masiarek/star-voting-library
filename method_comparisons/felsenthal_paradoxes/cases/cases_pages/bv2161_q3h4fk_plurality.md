@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2161_q3h4fk_plurality.yaml`](../bv2161_q3h4fk_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** C
+**Method:** [plurality](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** C
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/q3h4fk) · **[results ↗](https://bettervoting.com/q3h4fk/results)** (election `q3h4fk` · test `BV2161`).
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`b484mbm_tie_every_rung.yaml`](../b484mbm_tie_every_rung.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Blythe, Arden
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Blythe, Arden
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/484mbm) · **[results ↗](https://bettervoting.com/484mbm/results)** (election `484mbm`).
 

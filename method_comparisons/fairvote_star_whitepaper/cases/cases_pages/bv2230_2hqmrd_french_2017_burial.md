@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2230_2hqmrd_french_2017_burial.yaml`](../bv2230_2hqmrd_french_2017_burial.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Melenchon
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Melenchon
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/2hqmrd) · **[results ↗](https://bettervoting.com/2hqmrd/results)** (election `2hqmrd` · test `BV2230`).
 

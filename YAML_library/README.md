@@ -4,7 +4,7 @@ Every claim in this library is backed by a **runnable election**: one small text
 
 The folder you're standing in holds the two *ends* of that journey — the importer that brings real BetterVoting elections **in**, and the deliberately-broken files that prove bad input fails **politely**. Both are described [at the bottom](#whats-in-this-folder).
 
-> **Teaching elections don't live here.** They live next to the lessons they teach — [`01_STAR/`](../01_STAR), [`02_STAR_Bloc/`](../02_STAR_Bloc), [`03_STAR_PR/`](../03_STAR_PR), [`method_comparisons/`](../method_comparisons) — one canonical copy each. Browse them all in the [test-case catalog](../07_Concepts/YAML_test_case_index/README.md).
+> **Teaching elections don't live here.** They live next to the lessons they teach — [`01_STAR/`](../01_STAR/README.md), [`02_STAR_Bloc/`](../02_STAR_Bloc/README.md), [`03_STAR_PR/`](../03_STAR_PR/README.md), [`method_comparisons/`](../method_comparisons/README.md) — one canonical copy each. Browse them all in the [test-case catalog](../07_Concepts/YAML_test_case_index/README.md).
 
 ---
 

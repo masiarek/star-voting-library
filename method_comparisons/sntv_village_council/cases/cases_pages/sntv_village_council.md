@@ -7,7 +7,7 @@ search:
 
 *Generated from [`sntv_village_council.yaml`](../sntv_village_council.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **2 seats** · **Expected winners:** Priya, Nora
+**Method:** [plurality](../../../../07_Concepts/README.md) · **2 seats** · **Expected winners:** Priya, Nora
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/y3tvxm) · **[results ↗](https://bettervoting.com/y3tvxm/results)** (election `y3tvxm` · test `BV2136`).
 

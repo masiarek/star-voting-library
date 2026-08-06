@@ -1,7 +1,7 @@
 # BV95b — Majority Criterion: the favorite LOSES (majority backs TWO rivals)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Bruno · [full count →](cases/cases_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Bruno · [full count →](cases/cases_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md)
 <!-- case-meta:end -->
 
 *The same 5-voter STAR election as [BV95a](bv95a_9m6rxr_favorite_survives_one_rival.md), changed in one spot: the 3-voter majority that scores **Ada** highest now *also* gives **Cleo** a 3 (a second honestly-liked candidate) instead of 0. That one change makes **Ada — the top choice of a clear majority — lose.** This is STAR's [Majority-Criterion](../../../07_Concepts/topics/majority_criterion/README.md) failure, and it shows exactly how narrow it is.*

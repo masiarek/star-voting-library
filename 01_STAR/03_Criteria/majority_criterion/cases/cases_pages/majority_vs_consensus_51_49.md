@@ -7,7 +7,7 @@ search:
 
 *Generated from [`majority_vs_consensus_51_49.yaml`](../majority_vs_consensus_51_49.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Celia
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Celia
 
 ## Scenario
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2206_7mckyg_fbc_honest_tepid_consensus.yaml`](../bv2206_7mckyg_fbc_honest_tepid_consensus.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Clover
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Clover
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/7mckyg) · **[results ↗](https://bettervoting.com/7mckyg/results)** (election `7mckyg` · test `BV2206`).
 

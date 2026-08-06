@@ -12,7 +12,7 @@ Ranked Robin's winner is read entirely from the **pairwise (For / Against / No-p
 
 ## Worked example — the same ballots IRV couldn't combine
 
-Take the [two districts IRV can't sum](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses) (B wins both, but is *eliminated* when merged). Here are the actual ranked ballots — 13 voters in each district ([`summability_demo/`](../../method_comparisons/summability_demo)):
+Take the [two districts IRV can't sum](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md#worked-example-two-districts-both-won-by-b-merged-b-loses) (B wins both, but is *eliminated* when merged). Here are the actual ranked ballots — 13 voters in each district ([`summability_demo/`](../../method_comparisons/summability_demo/README.md)):
 
 ```
 District A (13 voters)        District B (13 voters)

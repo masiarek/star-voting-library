@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv15_4h89vj_plurality_abstain.yaml`](../bv15_4h89vj_plurality_abstain.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../../07_Concepts) · **1 seat** · **Expected winner:** Andre
+**Method:** [plurality](../../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Andre
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4h89vj) · **[results ↗](https://bettervoting.com/4h89vj/results)** (election `4h89vj` · test `BV15`).
 

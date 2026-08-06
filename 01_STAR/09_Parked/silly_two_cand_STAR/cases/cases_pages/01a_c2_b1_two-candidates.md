@@ -7,7 +7,7 @@ search:
 
 *Generated from [`01a_c2_b1_two-candidates.yaml`](../01a_c2_b1_two-candidates.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Chocolate
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Chocolate
 
 ## Scenario
 

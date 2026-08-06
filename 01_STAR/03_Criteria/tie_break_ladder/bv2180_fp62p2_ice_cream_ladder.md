@@ -1,7 +1,7 @@
 # Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, `fp62p2`)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Strawberry · [full count →](cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Strawberry · [full count →](cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fp62p2) · **[results ↗](https://bettervoting.com/fp62p2/results)** (election `fp62p2`).

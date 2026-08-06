@@ -13,7 +13,7 @@ A consequence worth internalizing (Ka-Ping Yee): because *every* method must vio
 ## The criteria
 
 ### 1. Winner-selection quality
-Does it tend to elect a *good* winner (majority / consensus-Condorcet / high-support-utilitarian)? Measured empirically by [Voter Satisfaction Efficiency](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret). Sub-properties are the classic **criteria**: majority, [Condorcet](condorcet), [monotonicity](monotonicity), independence of irrelevant alternatives, later-no-harm, favorite-betrayal.
+Does it tend to elect a *good* winner (majority / consensus-Condorcet / high-support-utilitarian)? Measured empirically by [Voter Satisfaction Efficiency](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret). Sub-properties are the classic **criteria**: majority, [Condorcet](condorcet/README.md), [monotonicity](monotonicity/README.md), independence of irrelevant alternatives, later-no-harm, favorite-betrayal.
 
 ### 2. Simplicity & practicality
 How hard is it to **vote** and to **count**?
@@ -29,10 +29,10 @@ How hard is it to **vote** and to **count**?
 |---|---|---|
 | **Choose-One** | maximal — one mark | maximal — one pile per candidate |
 | **Approval** | maximal — mark any number | maximal — one sum per candidate |
-| **RCV-IRV** | high — just rank them | **low** — rounds of eliminate-and-transfer, [not summable](summability), needs central tabulation |
+| **RCV-IRV** | high — just rank them | **low** — rounds of eliminate-and-transfer, [not summable](summability/README.md), needs central tabulation |
 | **[3-2-1](three_two_one_voting.md)** | high — three words (Good/OK/Bad) | medium — three stages with a tuned threshold |
 | **STAR** | medium — 0–5 per candidate | high — add the scores, then one pairwise runoff |
-| **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** | high — just rank them | high — one pairwise matrix, which [adds across precincts](summability) |
+| **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** | high — just rank them | high — one pairwise matrix, which [adds across precincts](summability/README.md) |
 
 Three things follow:
 
@@ -41,7 +41,7 @@ Three things follow:
 3. **Simplicity isn't sufficient.** Choose-One is maximal on both axes and is still the method everything here exists to replace. Simplicity is a constraint to satisfy, not the objective to maximize.
 
 ### 3. Summability (precinct-level counting)
-Can each precinct publish a fixed-size tally that **adds up** to the national result, or must every ballot flow to one place? STAR and Approval are **summable** (a small matrix / totals per precinct); RCV-IRV and STV are **not** (transfers need the full ballot set centrally), which delays results and complicates audits. See [summability (topic hub)](summability).
+Can each precinct publish a fixed-size tally that **adds up** to the national result, or must every ballot flow to one place? STAR and Approval are **summable** (a small matrix / totals per precinct); RCV-IRV and STV are **not** (transfers need the full ballot set centrally), which delays results and complicates audits. See [summability (topic hub)](summability/README.md).
 
 ### 4. Transparency & auditability
 Can the public understand the process from ballots to result, and can it be checked? **Risk-limiting audits** are far easier on summable, single-round methods than on multi-round transfer methods.
@@ -50,7 +50,7 @@ Can the public understand the process from ballots to result, and can it be chec
 Does the method reward **sincere** voting, or punish it? A method that pressures voters to betray their favorite (or bury a strong rival) corrupts the very data it counts. Favorite-betrayal and later-no-harm pressures, and vulnerability to burial/compromising strategy, all live here. The VSE simulations put a number on it — a **strategy-incentive ratio** (how often strategy *works* vs. *backfires* for a voter): Plurality **17.8 : 1** (strategy almost always pays), IRV ~2.7 : 1, Approval ~2.6 : 1, STAR ~**1 : 1** (strategy is as likely to backfire as to help). Low is good: it means sincere voting is safe. This strategy-resistance is arguably STAR's strongest empirical claim — under *honest* voting the top methods (STAR, Smith/Minimax/Condorcet, Approval) are close; STAR's edge is that it barely moves when voters get strategic.
 
 ### 6. Competition & representation
-Does it let *all* candidates — including third parties and independents — get a clear, unpunished reflection of their support? A method with the **spoiler effect** / [vote-splitting](spoiler_effect.md) suppresses competition (voters abandon sincere favorites) and, in multi-winner form, the question becomes **proportionality** — does the elected body mirror the electorate? (see the [Pets Governance set](../../method_comparisons/pets_governance)).
+Does it let *all* candidates — including third parties and independents — get a clear, unpunished reflection of their support? A method with the **spoiler effect** / [vote-splitting](spoiler_effect.md) suppresses competition (voters abandon sincere favorites) and, in multi-winner form, the question becomes **proportionality** — does the elected body mirror the electorate? (see the [Pets Governance set](../../method_comparisons/pets_governance/README.md)).
 
 ### 7. Expressivity
 Does the ballot let voters say what they mean — degrees of support, equal preferences, honest rankings — rather than forcing a single mark? More expressive ballots capture better data (and are what voters say they want), but must be weighed against simplicity.
@@ -107,5 +107,5 @@ Almost every method comparison you'll read is written by someone with a preferre
 
 - [Criteria at a glance](criteria_at_a_glance.md) — the four methods' pass/fail across every criterion here, each failure linked to a runnable election (read *this page's* caveat first: a table is a map, not a verdict)
 - [What makes a good winner?](what_makes_a_good_winner.md) — the winner-selection half
-- Topic hubs: [Condorcet](condorcet) · [Summability](summability) · [Monotonicity](monotonicity) · [Center squeeze](center_squeeze) · [Ties](ties)
+- Topic hubs: [Condorcet](condorcet/README.md) · [Summability](summability/README.md) · [Monotonicity](monotonicity/README.md) · [Center squeeze](center_squeeze/README.md) · [Ties](ties/README.md)
 - [Why STAR Voting](Why_STAR_Voting.md) · [Scoring vs. ranked methods](scoring-methods-vs-ranked-voting.md) · [Glossary](../GLOSSARY.md)

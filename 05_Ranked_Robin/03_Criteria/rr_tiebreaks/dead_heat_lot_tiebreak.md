@@ -1,7 +1,7 @@
 # Dead heat — Ranked Robin runs the whole tiebreak ladder (LH-only)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/dead_heat_lot_tiebreak.md)
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/dead_heat_lot_tiebreak.md)
 <!-- case-meta:end -->
 
 *Four score ballots, three candidates, engineered so **every** deterministic rung ties. Ada and Ben tie each other head-to-head **and** tie on total margin, and both beat Cara — so Ranked Robin walks its full ladder (most wins → total margin → **lot order**) and only the pre-published lot settles it. This is the one case in the set that exercises the **Equal Support** column and the **+½ Copeland** credit — and the one case that is **LH-only on purpose**, because it's exactly where the LH and BetterVoting tiebreaks diverge.*

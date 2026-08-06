@@ -7,7 +7,7 @@ search:
 
 *Generated from [`approval_sav_covers_everyone_c3_b17_brams_kilgour.yaml`](../approval_sav_covers_everyone_c3_b17_brams_kilgour.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../01_Learn) · **2 seats** · **Expected winners:** Ash, Bree
+**Method:** [Approval Voting](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Ash, Bree
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dr6fmg) · **[results ↗](https://bettervoting.com/dr6fmg/results)** (election `dr6fmg` · test `BV2272`).
 

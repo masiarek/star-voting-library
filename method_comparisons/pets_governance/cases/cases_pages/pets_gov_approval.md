@@ -7,7 +7,7 @@ search:
 
 *Generated from [`pets_gov_approval.yaml`](../pets_gov_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **2 seats** · **Expected winners:** Dog, Cat
+**Method:** [Approval Voting](../../../../04_Approval/01_Learn/README.md) · **2 seats** · **Expected winners:** Dog, Cat
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kcf8vf) · **[results ↗](https://bettervoting.com/kcf8vf/results)** (election `kcf8vf` · test `BV2134`).
 

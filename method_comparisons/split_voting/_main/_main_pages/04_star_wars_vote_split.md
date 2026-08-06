@@ -7,7 +7,7 @@ search:
 
 *Generated from [`04_star_wars_vote_split.yaml`](../04_star_wars_vote_split.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Leia
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Leia
 
 ## Scenario
 

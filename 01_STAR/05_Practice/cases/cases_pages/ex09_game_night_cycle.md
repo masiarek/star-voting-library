@@ -7,7 +7,7 @@ search:
 
 *Generated from [`ex09_game_night_cycle.yaml`](../ex09_game_night_cycle.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn) · **1 seat** · **Expected winner:** Azul
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Azul
 
 **Official tie-break (lot) order:** Azul > Boggle > Catan > Dominion — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

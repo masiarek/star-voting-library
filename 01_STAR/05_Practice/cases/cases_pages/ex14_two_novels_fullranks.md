@@ -7,7 +7,7 @@ search:
 
 *Generated from [`ex14_two_novels_fullranks.yaml`](../ex14_two_novels_fullranks.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Austen, Camus
+**Method:** [STV (proportional, ranked ballots)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Austen, Camus
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/bj8dfc) · **[results ↗](https://bettervoting.com/bj8dfc/results)** (election `bj8dfc` · test `BV2202`).
 

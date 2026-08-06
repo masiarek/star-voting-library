@@ -7,7 +7,7 @@ search:
 
 *Generated from [`ex06_bullet_honest.yaml`](../ex06_bullet_honest.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../01_Learn) · **1 seat** · **Expected winner:** Bree
+**Method:** [STAR (single winner)](../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Bree
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/x4dkfd) · **[results ↗](https://bettervoting.com/x4dkfd/results)** (election `x4dkfd` · test `BV2193`).
 

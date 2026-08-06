@@ -1,7 +1,7 @@
 # Runoff 06 — the runoff confirms the leader at scale (control)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Wren · [full count →](cases/cases_pages/Runoff_06_confirms_at_scale_d664xw.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Wren · [full count →](cases/cases_pages/Runoff_06_confirms_at_scale_d664xw.md)
 <!-- case-meta:end -->
 
 **Level 101 · the closing control.** After four reversals, the reassurance: here the Scoring-Round leader **Wren** is *also* the candidate most voters prefer, so the Automatic Runoff **confirms** the leader, 4–1. *How much* and *how many* point at the same candidate — no reversal. (Wren is the Condorcet winner.)

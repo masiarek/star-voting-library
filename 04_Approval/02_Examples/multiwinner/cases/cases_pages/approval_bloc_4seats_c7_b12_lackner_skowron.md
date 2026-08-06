@@ -7,7 +7,7 @@ search:
 
 *Generated from [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](../approval_bloc_4seats_c7_b12_lackner_skowron.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../01_Learn) · **4 seats** · **Expected winners:** A, B, C, D
+**Method:** [Approval Voting](../../../../01_Learn/README.md) · **4 seats** · **Expected winners:** A, B, C, D
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/jt6r76) · **[results ↗](https://bettervoting.com/jt6r76/results)** (election `jt6r76` · test `BV27`).
 

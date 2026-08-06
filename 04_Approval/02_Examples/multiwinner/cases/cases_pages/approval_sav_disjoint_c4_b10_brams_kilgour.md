@@ -7,7 +7,7 @@ search:
 
 *Generated from [`approval_sav_disjoint_c4_b10_brams_kilgour.yaml`](../approval_sav_disjoint_c4_b10_brams_kilgour.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../01_Learn) · **2 seats** · **Expected winners:** Ada, Ben
+**Method:** [Approval Voting](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Ada, Ben
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/4hfwqd) · **[results ↗](https://bettervoting.com/4hfwqd/results)** (election `4hfwqd` · test `BV2271`).
 

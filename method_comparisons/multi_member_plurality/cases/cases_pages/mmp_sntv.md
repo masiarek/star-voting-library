@@ -7,7 +7,7 @@ search:
 
 *Generated from [`mmp_sntv.yaml`](../mmp_sntv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **3 seats** · **Expected winners:** Uma, Ada, Ben
+**Method:** [plurality](../../../../07_Concepts/README.md) · **3 seats** · **Expected winners:** Uma, Ada, Ben
 
 **Official tie-break (lot) order:** Ada > Ben > Cal > Uma > Val > Wren — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

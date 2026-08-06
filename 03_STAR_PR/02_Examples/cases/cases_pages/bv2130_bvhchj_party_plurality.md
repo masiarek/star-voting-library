@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2130_bvhchj_party_plurality.yaml`](../bv2130_bvhchj_party_plurality.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Democrat
+**Method:** [plurality](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Democrat
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/bvhchj) · **[results ↗](https://bettervoting.com/bvhchj/results)** (election `bvhchj` · test `BV2130`).
 

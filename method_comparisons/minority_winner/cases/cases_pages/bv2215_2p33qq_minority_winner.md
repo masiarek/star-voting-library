@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2215_2p33qq_minority_winner.yaml`](../bv2215_2p33qq_minority_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Cleo
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Cleo
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/2p33qq) · **[results ↗](https://bettervoting.com/2p33qq/results)** (election `2p33qq` · test `BV2215`).
 

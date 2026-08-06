@@ -1,7 +1,7 @@
 # BV95a — Majority Criterion: the favorite survives (majority backs ONE rival)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv95a_9m6rxr_favorite_survives_one_rival.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/bv95a_9m6rxr_favorite_survives_one_rival.md)
 <!-- case-meta:end -->
 
 *A 5-voter STAR election. A 3-voter majority scores **Ada** highest (5). They also honestly support **one** other candidate — Bruno gets a 4 — and leave Cleo at 0. Question: does supporting a compromise candidate cost the majority their favorite? **No — Ada wins.** This is the "safe" half of the [Majority Criterion](../../../07_Concepts/topics/majority_criterion/README.md) pair; its twin [BV95b](bv95b_7pdq3r_favorite_loses_two_rivals.md) shows what tips it over.*

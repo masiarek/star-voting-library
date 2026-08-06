@@ -7,7 +7,7 @@ search:
 
 *Generated from [`tie_break_06_scoring_dead_rung_adversarial_lot.yaml`](../tie_break_06_scoring_dead_rung_adversarial_lot.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Ann
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ann
 
 **Official tie-break (lot) order:** Cara > Ann > Ben — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2212_g3f7r2_cycle_spoiler.yaml`](../bv2212_g3f7r2_cycle_spoiler.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Alice
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Alice
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/g3f7r2) · **[results ↗](https://bettervoting.com/g3f7r2/results)** (election `g3f7r2` · test `BV2212`).
 

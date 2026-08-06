@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2207_b6xrdr_fbc_betrayal_pays.yaml`](../bv2207_b6xrdr_fbc_betrayal_pays.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Bluebell
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Bluebell
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/b6xrdr) · **[results ↗](https://bettervoting.com/b6xrdr/results)** (election `b6xrdr` · test `BV2207`).
 

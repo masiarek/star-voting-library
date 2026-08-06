@@ -1,7 +1,7 @@
 # BV129 — Bloc STAR, 3 cand / 2 winners: seat 2 by the score tiebreaker
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **2 seats** · **Expected winners:** Carmen, Andre · [full count →](cases/cases_pages/bv129_score_tiebreak_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Carmen, Andre · [full count →](cases/cases_pages/bv129_score_tiebreak_bloc.md)
 <!-- case-meta:end -->
 
 *A clean Bloc STAR result where the second seat is decided by the **score** tiebreaker (deterministic — no lot). LH and BetterVoting agree: **Carmen, Andre**. BV129's "Failed" is only the method-name label ([#1086](https://github.com/Equal-Vote/bettervoting/issues/1086)), not the count.*

@@ -1,7 +1,7 @@
 # Runoff 02 — the atom (smallest runoff reversal)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../../01_Learn) · **1 seat** · **Expected winner:** Boston · [full count →](cases/cases_pages/Runoff_02_atom_reversal_yx9447.md)
+**Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Boston · [full count →](cases/cases_pages/Runoff_02_atom_reversal_yx9447.md)
 <!-- case-meta:end -->
 
 **Level 101 · the smallest reversal there is.** Three voters. Everyone *likes* Austin (scores 5, 4, 4 — the most stars), but two of the three *prefer* Boston, so the Automatic Runoff hands it to **Boston**. The Scoring-Round leader **loses** — and that's the runoff doing its job. (Boston is also the Condorcet winner — no startling case.)

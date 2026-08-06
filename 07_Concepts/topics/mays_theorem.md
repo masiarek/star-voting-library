@@ -13,7 +13,7 @@ Two alternatives, `x` and `y`. Each voter reports a preference for `x`, a prefer
 1. **Decisiveness** — the rule always returns a result, for every possible profile of votes.
 2. **Anonymity** — permuting *who* cast which vote never changes the outcome. No voter counts more than another; the rule sees the tally, not the names. This is **one person, one vote** stated as mathematics.
 3. **Neutrality** — swapping the *names* of the two alternatives swaps the result. Neither option is the default; the rule has no thumb on the scale.
-4. **Positive responsiveness** — if the group is tied and one voter switches toward `x`, then `x` now wins outright. (Strictly stronger than [monotonicity](monotonicity), which only requires that extra support never *hurts*.)
+4. **Positive responsiveness** — if the group is tied and one voter switches toward `x`, then `x` now wins outright. (Strictly stronger than [monotonicity](monotonicity/README.md), which only requires that extra support never *hurts*.)
 
 May proved these conditions **independent** — drop any one and majority rule is no longer unique. That's the point of his title.
 
@@ -25,11 +25,11 @@ The list above is the version usually quoted, but the precise statement comes in
 >
 > **(b) For two alternatives and *any* number of voters,** it is the unique **anonymous, neutral, and *positively responsive*** SCF.
 
-The two forms trade the same thing in opposite directions. Form (a) assumes the *weaker* fourth axiom ([monotonicity](monotonicity)) and buys the difference back by assuming resoluteness outright and restricting to odd `n` — where no tie can arise. Form (b) assumes the *stronger* fourth axiom (positive responsiveness), which breaks every avoidable tie by itself, so resoluteness need not be assumed and every `n` is allowed. **Either you exclude ties by arithmetic, or you use an axiom strong enough to break them.**
+The two forms trade the same thing in opposite directions. Form (a) assumes the *weaker* fourth axiom ([monotonicity](monotonicity/README.md)) and buys the difference back by assuming resoluteness outright and restricting to odd `n` — where no tie can arise. Form (b) assumes the *stronger* fourth axiom (positive responsiveness), which breaks every avoidable tie by itself, so resoluteness need not be assumed and every `n` is allowed. **Either you exclude ties by arithmetic, or you use an axiom strong enough to break them.**
 
 The proof of uniqueness is short enough to carry: under any other rule, pick a profile where `x` wins with fewer votes than `y`; switch enough ballots from `y` to `x` to exactly reverse the two totals. Monotonicity says `x` still wins — but neutrality plus anonymity say the reversed profile must elect `y`. Contradiction. The positive-responsiveness form runs the same argument starting from a tie.
 
-**Why the fourth condition is the strong one.** Plain [monotonicity](monotonicity) is enough to exclude the frankly perverse — *elect whichever alternative receives an odd number of votes* is the textbook specimen it kills. **Positive responsiveness does strictly more: it also breaks every tie that isn't mathematically forced.** With an odd number of voters that's enough to make majority rule *resolute* — it always names one winner. With an even number it isn't, and can't be: the 50/50 split is a tie no axiom can dissolve. That single exception is the two-candidate face of a general result — **no anonymous, neutral, Pareto rule is resolute on an even electorate** — worked out in [Ties Are Forced](ties/ties_are_forced.md).
+**Why the fourth condition is the strong one.** Plain [monotonicity](monotonicity/README.md) is enough to exclude the frankly perverse — *elect whichever alternative receives an odd number of votes* is the textbook specimen it kills. **Positive responsiveness does strictly more: it also breaks every tie that isn't mathematically forced.** With an odd number of voters that's enough to make majority rule *resolute* — it always names one winner. With an even number it isn't, and can't be: the 50/50 split is a tie no axiom can dissolve. That single exception is the two-candidate face of a general result — **no anonymous, neutral, Pareto rule is resolute on an even electorate** — worked out in [Ties Are Forced](ties/ties_are_forced.md).
 
 ## What each condition rules out
 

@@ -1,7 +1,7 @@
 # BV130-r2 — 6 candidates / 3 winners, Bloc STAR: a dead-rung lot tie
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Dan, Ada, Eve · [full count →](cases/cases_pages/bv130r2_dead_rung_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Dan, Ada, Eve · [full count →](cases/cases_pages/bv130r2_dead_rung_bloc.md)
 <!-- case-meta:end -->
 
 *A real BetterVoting election (id `9ff9jk`) built directly from this repo's tuned dead-rung scenario: 6 candidates, 3 seats, 4 ballots, and nothing scored above 4. Seat 1 is a perfect Ada/Dan tie that dies at every deterministic rung and falls to the lot. BetterVoting's random draw elected **Dan, Ada, Eve**; a pre-published order would elect **Ada, Dan, Eve** — same three winners, the tied pair's seats swapped.*

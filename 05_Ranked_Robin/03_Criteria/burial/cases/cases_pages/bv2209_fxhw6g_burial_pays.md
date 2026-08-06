@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2209_fxhw6g_burial_pays.yaml`](../bv2209_fxhw6g_burial_pays.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Amber
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Amber
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fxhw6g) · **[results ↗](https://bettervoting.com/fxhw6g/results)** (election `fxhw6g` · test `BV2209`).
 

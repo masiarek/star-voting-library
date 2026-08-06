@@ -7,7 +7,7 @@ search:
 
 *Generated from [`cav_library_board_c3_b12.yaml`](../cav_library_board_c3_b12.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Combined Approval Voting (CAV)](../..) · **1 seat** · **Expected winner:** Cleo
+**Method:** [Combined Approval Voting (CAV)](../../README.md) · **1 seat** · **Expected winner:** Cleo
 
 ## Scenario
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`07a_c5_b36_herb-council-bloc-3-seats.yaml`](../07a_c5_b36_herb-council-bloc-3-seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn) · **3 seats** · **Expected winners:** Basil, Chive, Dill
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Basil, Chive, Dill
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9dx494) · **[results ↗](https://bettervoting.com/9dx494/results)** (election `9dx494` · test `BV2244`).
 

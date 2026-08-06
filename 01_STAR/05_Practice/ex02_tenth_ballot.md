@@ -1,7 +1,7 @@
 # Exercise 2 — The tenth ballot
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [STAR (single winner)](../01_Learn) · **1 seat** · **Expected winner:** Chris · [full count →](cases/cases_pages/ex02_tenth_ballot.md)
+**Method:** [STAR (single winner)](../01_Learn/README.md) · **1 seat** · **Expected winner:** Chris · [full count →](cases/cases_pages/ex02_tenth_ballot.md)
 <!-- case-meta:end -->
 
 *A small club elects its coordinator with STAR Voting. Nine ballots are counted and a winner is announced — and then a tenth ballot turns up, cast on time and mislaid in the envelope pile. The tenth voter's favorite is the announced winner. Recount with their ballot included: can anything change?*

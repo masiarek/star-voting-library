@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2157_mmcmpy_condorcet_cycle_rps.yaml`](../bv2157_mmcmpy_condorcet_cycle_rps.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** Rock
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Rock
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/mmcmpy) · **[results ↗](https://bettervoting.com/mmcmpy/results)** (election `mmcmpy` · test `BV2157`).
 

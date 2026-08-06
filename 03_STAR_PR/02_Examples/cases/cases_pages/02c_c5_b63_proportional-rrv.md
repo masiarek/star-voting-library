@@ -7,7 +7,7 @@ search:
 
 *Generated from [`02c_c5_b63_proportional-rrv.yaml`](../02c_c5_b63_proportional-rrv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Reweighted Range Voting (proportional STAR)](../../../01_Learn) · **3 seats** · **Expected winners:** Alice, Ben, Dan
+**Method:** [Reweighted Range Voting (proportional STAR)](../../../01_Learn/README.md) · **3 seats** · **Expected winners:** Alice, Ben, Dan
 
 ## Scenario
 

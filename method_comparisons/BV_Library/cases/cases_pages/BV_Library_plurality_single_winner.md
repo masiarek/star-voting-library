@@ -7,7 +7,7 @@ search:
 
 *Generated from [`BV_Library_plurality_single_winner.yaml`](../BV_Library_plurality_single_winner.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [plurality](../../../../07_Concepts) · **1 seat** · **Expected winner:** Dave
+**Method:** [plurality](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Dave
 
 ## Scenario
 

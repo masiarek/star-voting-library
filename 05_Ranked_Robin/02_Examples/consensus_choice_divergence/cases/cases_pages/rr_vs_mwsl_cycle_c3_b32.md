@@ -7,7 +7,7 @@ search:
 
 *Generated from [`rr_vs_mwsl_cycle_c3_b32.yaml`](../rr_vs_mwsl_cycle_c3_b32.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn) · **1 seat** · **Expected winner:** Ana
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ana
 
 ## Scenario
 

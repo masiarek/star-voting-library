@@ -1,7 +1,7 @@
 # BV2159 — Many IRV pathologies in one election — Brams' 21-voter sampler
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts) · **1 seat** · **Expected winner:** B · [full count →](cases/cases_pages/bv2159_f4cjpy_brams_irv_pathologies.md)
+**Method:** [RCV-IRV (Instant Runoff)](../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** B · [full count →](cases/cases_pages/bv2159_f4cjpy_brams_irv_pathologies.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/f4cjpy) · **[results ↗](https://bettervoting.com/f4cjpy/results)** (election `f4cjpy`, Test ID BV2159; STAR is race 1, and every race matches the LH tabulation below).

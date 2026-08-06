@@ -7,7 +7,7 @@ search:
 
 *Generated from [`felsenthal_ex6_pareto_approval.yaml`](../felsenthal_ex6_pareto_approval.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Approval Voting](../../../../04_Approval/01_Learn) · **1 seat** · **Expected winner:** Beau
+**Method:** [Approval Voting](../../../../04_Approval/01_Learn/README.md) · **1 seat** · **Expected winner:** Beau
 
 **Official tie-break (lot) order:** Beau > Aria > Cole > Dean — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

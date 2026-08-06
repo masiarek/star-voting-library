@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv126_ties_every_step_8fvd2x.yaml`](../bv126_ties_every_step_8fvd2x.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_Learn) · **1 seat** · **Expected winner:** Amy
+**Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Amy
 
 **Official tie-break (lot) order:** Amy > Chuck > Brian — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

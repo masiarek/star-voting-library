@@ -7,7 +7,7 @@ search:
 
 *Generated from [`cycle_C07_fewV28_bloc_2.yaml`](../cycle_C07_fewV28_bloc_2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** D
+**Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** D
 
 ## Scenario
 

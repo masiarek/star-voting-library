@@ -60,16 +60,16 @@ GENERATED_SUFFIXES = ("_tabulated", "_generated", "_pages")
 
 # --- method → (display name, concept-docs path relative to repo root) --------
 METHOD_DOCS = {
-    "star":        ("STAR (single winner)", "01_STAR/01_Learn"),
-    "approval":    ("Approval Voting", "04_Approval/01_Learn"),
-    "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "05_Ranked_Robin/01_Learn"),
-    "rcv_irv":     ("RCV-IRV (Instant Runoff)", "06_Other/RCV_IRV/concepts"),
-    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "03_STAR_PR/01_Learn"),
-    "sss":         ("Sequentially Spent Score (proportional STAR)", "03_STAR_PR/01_Learn"),
-    "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/01_Learn"),
-    "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/01_Learn"),
-    "stv":         ("STV (proportional, ranked ballots)", "03_STAR_PR/01_Learn"),
-    "cav":         ("Combined Approval Voting (CAV)", "06_Other/Combined_Approval"),
+    "star":        ("STAR (single winner)", "01_STAR/01_Learn/README.md"),
+    "approval":    ("Approval Voting", "04_Approval/01_Learn/README.md"),
+    "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "05_Ranked_Robin/01_Learn/README.md"),
+    "rcv_irv":     ("RCV-IRV (Instant Runoff)", "06_Other/RCV_IRV/concepts/README.md"),
+    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "03_STAR_PR/01_Learn/README.md"),
+    "sss":         ("Sequentially Spent Score (proportional STAR)", "03_STAR_PR/01_Learn/README.md"),
+    "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/01_Learn/README.md"),
+    "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/01_Learn/README.md"),
+    "stv":         ("STV (proportional, ranked ballots)", "03_STAR_PR/01_Learn/README.md"),
+    "cav":         ("Combined Approval Voting (CAV)", "06_Other/Combined_Approval/README.md"),
 }
 METHOD_ALIASES = {
     "rcv_rr": "rankedrobin", "copeland": "rankedrobin", "consensus": "rankedrobin",
@@ -444,7 +444,7 @@ def _case_facts(data):
         if isinstance(w, list) and w:
             winners = [str(x) for x in w]
     lot = data.get("lot_numbers") if isinstance(data, dict) else None
-    disp, docs = METHOD_DOCS.get(method, (str(method), "07_Concepts"))
+    disp, docs = METHOD_DOCS.get(method, (str(method), "07_Concepts/README.md"))
     return disp, docs, seats, winners, ew, lot
 
 
