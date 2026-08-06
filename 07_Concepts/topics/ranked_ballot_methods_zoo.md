@@ -75,7 +75,9 @@ Minimax (Simpson), Ranked Pairs (Tideman), and Schulze are the three cycle-resol
 
 ## Beyond single winners — the set-valued three
 
-**Smith**, **Schwartz**, and **Landau** are so *indecisive* they're usually treated as producing a **set** of candidates, not one winner. The **Smith set** (smallest set that beats everyone outside it) is the important one: a method is **"Smith-efficient"** if it always elects from it. It's the formal version of "the group of candidates any of whom has a legitimate claim."
+**Smith**, **Schwartz**, and **Landau** are usually treated as producing a **set** of candidates, not one winner — they're too *indecisive* to serve as a method on their own. The **Smith set** (smallest set that beats everyone outside it) is the important one: a method is **"Smith-efficient"** if it always elects from it. It's the formal version of "the group of candidates any of whom has a legitimate claim."
+
+**"Landau" is the graph theorist's name for the [uncovered set](uncovered_set.md)** (also seen as the *Fishburn set*) — worth flagging, because the name gives no hint of that. Despite sitting in this trio it is the *sharpest* of the three, not the vaguest: **uncovered ⊆ Smith**, always. It's also the one with a direct bearing on our methods — Ranked Robin can never elect a candidate outside it, and STAR [demonstrably can](uncovered_set.md#what-our-methods-do-with-it).
 
 ---
 
@@ -99,7 +101,7 @@ Minimax (Simpson), Ranked Pairs (Tideman), and Schulze are the three cycle-resol
 | Raynaud | pairwise | ✓ | ✓ | eliminate largest defeat |
 | Schulze | pairwise | ✓ | ✓ | **beatpaths**; clone-proof, monotonic |
 | Tideman | pairwise | ✓ | ✓ | **Ranked Pairs**; clone-proof, monotonic |
-| Smith / Schwartz / Landau | set-valued | — | — | dominant *sets*, not single winners |
+| Smith / Schwartz / Landau | set-valued | — | — | *sets*, not single winners; **Landau = [uncovered set](uncovered_set.md)** |
 
 *("Condorcet winner? ✓" means the method always elects the candidate who beats all others head-to-head, when one exists. The last two columns are exactly why the repo prefers Condorcet methods like Ranked Robin that **never** seat a candidate who would lose every duel — a guarantee IRV/Hare, Borda, and Bucklin do not give.)*
 

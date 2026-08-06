@@ -1,6 +1,6 @@
 # The uncovered set — "you're beaten by someone who beats everyone you beat"
 
-*The one idea from the [tournament-solutions](tournament_solutions.md) literature that survives contact with a normal audience. Forget cycles and axioms for a moment and ask a much smaller question: **is this candidate redundant?** If somebody beats them head-to-head, and also beats everyone they beat, then yes — strictly, on the pairwise evidence alone. That candidate is **covered**. The **uncovered set** is everybody left. It is the weakest structural filter in the field, it has three completely different definitions that turn out to be the same thing, and it is exactly the line between electing a Pareto-optimal candidate and not.*
+*The one idea from the [tournament-solutions](tournament_solutions.md) literature that survives contact with a normal audience. Forget cycles and axioms for a moment and ask a much smaller question: **is this candidate redundant?** If somebody beats them head-to-head, and also beats everyone they beat, then yes — strictly, on the pairwise evidence alone. That candidate is **covered**. The **uncovered set** is everybody left — graph theory and Wikipedia call it the **Landau set**, occasionally the **Fishburn set**. It is the weakest structural filter in the field, it has three completely different definitions that turn out to be the same thing, and it is exactly the line between electing a Pareto-optimal candidate and not.*
 
 → Related: [tournament solutions](tournament_solutions.md) — the family this belongs to · [the Smith set](smith_set.md) — the *other* generalized Condorcet winner, and a **coarser** one · [what a method reads](what_a_method_reads.md) · [pairwise counting](pairwise_counting.md) · **Level: 301 · deep dive**
 
@@ -22,6 +22,29 @@ Two properties make it well-behaved, and they are worth stating because most cyc
 - **It's never empty.** A cycle can destroy the Condorcet winner; it cannot destroy the uncovered set.
 
 And when a [Condorcet winner](condorcet/) exists, the uncovered set is just that one candidate — they beat everyone, so they cover everyone. Like every tournament solution, this only becomes interesting in a cycle.
+
+## Also called the Landau set and the Fishburn set
+
+Three names, one object — and if you meet either of the other two first, nothing about them tells you they mean this.
+
+| Name | Where you'll meet it | Why that name |
+|---|---|---|
+| **Uncovered set** | social choice; this repo's term | the covering relation above |
+| **Landau set** | graph theory; the title of Wikipedia's article | Landau's tournament work — below |
+| **Fishburn set** | occasional, following Wikipedia | Fishburn's independent 1977 definition |
+
+Wikipedia also names the two roles in a covering pair: the coverer is the **Fishburn winner**, the covered candidate the **Fishburn loser**. Nothing here uses that phrasing, for a reason worth stating — see the collision at the end of this section.
+
+**Where "Landau" comes from.** Wikipedia asserts the name and never explains it, and the explanation is the good part. H. G. Landau spent 1951–53 modelling dominance relations in flocks of chickens, and tournament theory has carried his name since. In that literature a **king** is a bird that pecks every other bird either directly or through one intermediary — two steps, which is exactly characterization (2) below. Landau's result: **a bird of maximum score is always a king.** Stephen Maurer's 1980 restatement, "The King Chicken Theorems," is the version people quote.
+
+Don't let that pass as trivia, because **it is a theorem this page already leans on**. "Maximum score ⇒ king" is precisely "Copeland winner ⇒ uncovered" — the guarantee that [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) never elects a covered candidate. The one-line proof further down and Landau's pecking-order theorem are the same argument, seventy years and one discipline apart.
+
+**Two cautions on the Wikipedia framing,** since that is where most readers arrive:
+
+- **"First discovered by Nicholas Miller"** is too clean. The Handbook credits **Fishburn (1977) and Miller (1980) independently**, building on a covering notion of Gillies (1959). Fishburn is three years earlier — which is *why* "Fishburn set" is a name at all. Miller's is the paper that carried it into voting theory, and the more cited one.
+- **"The Pareto frontier … determined by pairwise victories"** is a fair mnemonic and a poor definition. The precise claim is that it's the *coarsest Pareto-optimal* tournament solution, which is a different statement — and the difference is the thing that [gets fumbled constantly](#why-it-matters-the-pareto-line): **covered does not mean Pareto-dominated.**
+
+⚠️ **"Fishburn" is overloaded in this repo, and the two senses are unrelated.** Everywhere else here, *Fishburn* means the **[C1 / C2 / C3 informational basis](what_a_method_reads.md)** — which statistic a rule actually reads — and it comes out of the *same* 1977 paper. "Fishburn C1" is a **class of methods**; the "Fishburn set" is a **set of candidates**. Same author, same year, different objects. House usage: say **uncovered set**, and keep *Fishburn* for the informational tiers.
 
 ## Three definitions, one set
 
@@ -155,6 +178,8 @@ Four defensible answers to "who is redundant here," from one election. So: **"th
 - **Felix Brandt, Markus Brill & Paul Harrenstein, "Tournament Solutions,"** §3.3.2 of ch. 3 in the [Handbook of Computational Social Choice](https://procaccia.info/wp-content/uploads/2020/03/comsoc.pdf) (CUP 2016) — the definition, the two-step equivalence, the matrix algorithm, Theorem 3.6, and the Pareto result. **Lean:** neutral / academic.
 - Peter C. Fishburn, "Condorcet Social Choice Functions," *SIAM J. Appl. Math.* 33(3), 1977, and Nicholas R. Miller, "A New Solution Set for Tournaments and Majority Voting," *AJPS* 24(1), 1980 — the two independent origins. **Lean:** neutral.
 - Kenneth A. Shepsle & Barry R. Weingast, "Uncovered Sets and Sophisticated Voting Outcomes with Implications for Agenda Institutions," *AJPS* 28(1), 1984 — the two-step / kings characterization. **Lean:** neutral.
+- H. G. Landau, "On dominance relations and the structure of animal societies," *Bulletin of Mathematical Biophysics*, 1951–53 — the pecking-order work the name "Landau set" descends from; and [Stephen B. Maurer, "The King Chicken Theorems," *Mathematics Magazine* 53(2), 1980](https://www.tandfonline.com/doi/abs/10.1080/0025570X.1980.11976831) — the readable restatement of "a maximum-score bird is a king." **Lean:** neutral / academic.
+- [Wikipedia, "Landau set"](https://en.wikipedia.org/wiki/Landau_set) — cited **for the aliases only**, which is what it's good for. It is thin on the rest: it credits Miller alone, never explains the Landau name, and glosses the set as a Pareto frontier. **Lean:** neutral but underdeveloped; prefer the Handbook for anything load-bearing.
 - The choice sets, rates and counterexamples here were computed with Eric Pacuit & Wesley Holliday's `pref_voting` (its four covering variants) and cross-checked against the LH engine; the exhibit is reproducible via [`tournament_solutions_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/tournament_solutions_report.py). Nothing here is asserted from memory.
 
 ## Related
