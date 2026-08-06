@@ -77,13 +77,15 @@ Two things are wrong with the right-hand column, and they are not the same size.
 
 **The missing sentence.** BetterVoting's Bloc footer explains how **one** seat is decided and then stops. There is no "this process repeats until all seats have been filled" — the single sentence that distinguishes a multi-winner explanation from a single-winner one is simply absent, on a ballot that fills four seats. A voter reading it carefully is told the two highest scorers are finalists and one of them wins; they are never told what happens to the other three seats.
 
-Note also that the two footers are **different strings**, not one template with the seat count substituted in. The single-winner footer is not missing anything — it is a correct single-winner explanation. Someone wrote a separate multi-winner sentence and left the multi-winner part out of it.
+Note also that the two footers are **different strings**, not one template with the seat count substituted in. The single-winner footer is not missing anything — it is a correct single-winner explanation. Someone wrote a separate multi-winner sentence and left the multi-winner part out of it. You can read both in BetterVoting's own source: `packages/frontend/src/i18n/en.yaml`, under `ballot.methods.star`.
+
+Two things make it an oversight rather than a decision. BetterVoting's **own** paper-ballot documentation prescribes the sentence — [docs.bettervoting.com/help/paper_ballots.html](https://docs.bettervoting.com/help/paper_ballots.html) ends its Bloc STAR text with *"This process repeats with remaining candidates until all seats are filled."* And the proportional footer sitting immediately beside STAR's in that same YAML file is a near-verbatim port of the same documentation page, complete. The footers were clearly written from those docs; the Bloc STAR one is the one that lost its last sentence in transit. Filed 2026-08-06 as [#1488](https://github.com/Equal-Vote/bettervoting/issues/1488).
 
 The seat count is also folded into the instructions rather than placed above the race (§3.c). That one is cosmetic.
 
 ### The open tickets
 
-Bloc STAR is BetterVoting's least-maintained method surface, and this is the receipts table for that claim. All five are open as of 2026-08-06:
+Bloc STAR is BetterVoting's least-maintained method surface, and this is the receipts table for that claim. All six are open as of 2026-08-06:
 
 | Issue | Filed | What |
 |---|---|---|
@@ -92,6 +94,7 @@ Bloc STAR is BetterVoting's least-maintained method surface, and this is the rec
 | [#904](https://github.com/Equal-Vote/bettervoting/issues/904) | 2025-04-11 | The method name — "STAR Voting" where it should read "Bloc STAR Voting". Sized 2026-08-04 as display-only, roughly half a day. |
 | [#1086](https://github.com/Equal-Vote/bettervoting/issues/1086) | 2025-11-12 | The same name in the Edit Race modal and on the results page, plus a help link pointing at single-winner STAR. |
 | [#1478](https://github.com/Equal-Vote/bettervoting/issues/1478) | 2026-08-04 | A partial ballot whose marks are all equal is dropped from the tally as an abstention — a **count**-level defect, on a Bloc election. |
+| [#1488](https://github.com/Equal-Vote/bettervoting/issues/1488) | 2026-08-06 | The missing sentence above: the Bloc footer never says the count repeats. Filed from this page. |
 
 Two of those rhyme in a way worth noticing. #345's CSV complaint is that a scored **0** and an unmarked row both export as an empty cell, and #1478 is a ballot being discarded because of how its blanks are read. Three years apart, same underlying confusion: BetterVoting does not consistently distinguish *"scored zero"* from *"left blank"*. On the ballot above that distinction is visible — a blank row has no filled bubble — and the engine that counts this library's cases keeps them apart ([abstention vs. zero vs. NOTA](../../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md)).
 
