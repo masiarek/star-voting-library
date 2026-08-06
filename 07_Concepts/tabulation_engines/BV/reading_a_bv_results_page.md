@@ -117,7 +117,14 @@ For `qhjyr2`, Ana's panel reads *"Ana won 3 matchups, and lost 0"*:
 
 The other thing this panel does is answer the Condorcet question without naming it. Ana beats all three rivals, so Ana is the [Condorcet winner](../../topics/condorcet/README.md); Dev loses all three and is the Condorcet loser. Here the whole field orders cleanly — Ana 3 wins, Cora 2, Ben 1, Dev 0 — and note **Cora out-records Ben (2–1 vs 1–2) despite tying Ben on stars**, which is exactly the fact the scoring-round tiebreak used to advance her. Cycles show up here too, as a set of candidates who each beat the next with no one on top.
 
-The LH engine prints this same information as a single N×N grid rather than one candidate at a time: [preference matrix](../../../01_STAR/01_Learn/reporting/reporting_LH/matrix.md).
+The LH engine prints this same information as a single N×N grid rather than one candidate at a time: [preference matrix](../../../01_STAR/01_Learn/reporting/reporting_LH/matrix.md). **A matrix cell and a BetterVoting bar are literally the same three numbers.** LH's legend reads *For – Equal Support – Against*, so the Ana-vs-Cora cell is `2 - 2 - 1` — the 40% / 40% / 20% bar above, in counts instead of percentages:
+
+```text title="Abridged for the lesson — not verbatim engine output"
+               |   * Ana    |    Ben    |  * Cora   |
+       * Ana > |    ---     |3 - 0 - 2  |2 - 2 - 1  |   ← 2 for · 2 Equal Support · 1 against
+```
+
+Which is the most useful habit for reading either report: **when a panel confuses you, find the same fact in the other one.** They are computed independently, so agreement is real corroboration and disagreement localizes the problem.
 
 ### Distribution of Equal Support
 
@@ -183,6 +190,19 @@ Two of the deck-4 panels turn out to be useful witnesses here, which is a good a
 - The **Average Supporter Profile** names its two frontrunners on screen as **Ana and Ben** — so this panel sits on the same side of the split as the tables, and its "preferred frontrunner" bars answer a question about a pair that never ran.
 
 And the reflex from deck 3 pays off: the Runoff Table's two percent columns read **60/60 and 40/40**, identical, which asserts that no voter scored the two finalists equally. Two voters did.
+
+### The LH engine had the same bug, and no longer does
+
+Worth knowing because it makes the contrast exact. LH's Runoff (Preference) Matrix used to star the **top two by score** as well, so on this election it starred Ben — the candidate the report had just eliminated — and `matrix_finalists_only` filtered the grid down to a matchup that never happened. Fixed as of 2026-08-06: the `*` now marks whoever actually advanced, and where a scoring-round tie reached the ladder the legend says so outright.
+
+```text title="Abridged for the lesson — not verbatim engine output"
+        * indicates Top 2 Finalist
+        Note: Ben and Cora tied at 14 in the Scoring Round, and the
+              head-to-head rung advanced Cora. The * marks who advanced, not
+              who scored highest.
+```
+
+So the two reports now part company on precisely this point — LH stars **Ana and Cora** and names the tiebreak; BetterVoting's Scores Table still highlights **Ana and Ben**. Same defect, one report fixed and the other still open at [#1484](https://github.com/Equal-Vote/bettervoting/issues/1484). Which is an argument for the habit rather than for either engine: the bug was found by reading one report against the other.
 
 ## The cross-check — the same election in the other report
 
