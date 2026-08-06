@@ -13,7 +13,10 @@ Checked for duplicates before filing:
   * #699 "Election setting for requiring races" — the UI half of the RACE level,
     open since 2024-10, maintainer says "we don't have a use case for this yet".
     This issue is deliberately scoped to the RECORDING side and cites #699 rather
-    than restating it, and supplies the use case #699 asked for.
+    than restating it, and supplies the use case #699 asked for. A comment saying
+    so was left on #699 itself 2026-08-06 (conceding we have no strong case for
+    the SETTING, only for storing its value):
+    https://github.com/Equal-Vote/bettervoting/issues/699#issuecomment-5203410021
   * #627 (can't abstain from the last race) is a bug in the current behavior —
     cited as evidence that intended and actual policy already differ.
   * #778 / #1160 / #791 / #1090 / #884 are the format, export and policy
