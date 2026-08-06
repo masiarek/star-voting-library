@@ -88,6 +88,17 @@ _HTML_PATH = re.compile(
         [^>]*? \b (?: href | src ) \s* = \s* (["']) (.+?) \1""")
 _EXTERNAL = re.compile(r"(?i)^\s*(https?:|mailto:|data:|tel:|//|#)")
 _FENCED = re.compile(r"```.*?```", re.S)
+# An HTML comment is inert on every surface — GitHub, MkDocs and a local
+# viewer all render nothing — so a path inside one is not a link. The house
+# convention leans on this: the BV workflow says to comment out a screenshot
+# slot you have not captured yet rather than leave a REPLACE_ placeholder. Not
+# stripping it reported those inert slots as broken links, which reddened the
+# docs build on a commented-out `<img src=…>` (2026-08-06).
+# ORDER IS LOAD-BEARING: strip fences FIRST. A code sample that *shows* an HTML
+# comment leaves an unbalanced `<!--`, and stripping comments first eats across the
+# closing ``` — the fence then no longer matches, every example link inside it gets
+# checked as real, and the count jumps (1 -> 56 when tried the wrong way round).
+_HTML_COMMENT = re.compile(r"<!--.*?-->", re.S)
 _INLINE_CODE = re.compile(r"`[^`\n]*`")
 
 
@@ -111,7 +122,7 @@ def check_links():
             except OSError:
                 continue
             # Links inside code blocks / inline code are examples, not links.
-            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            text = _INLINE_CODE.sub("", _HTML_COMMENT.sub("", _FENCED.sub("", text)))
             raws = [m.group(1).strip() for m in MD_LINK.finditer(text)]
             raws += [m.group(2).strip() for m in _HTML_PATH.finditer(text)]
             for raw in raws:
@@ -186,7 +197,7 @@ def check_folder_links():
                 continue
             # Links inside code blocks / inline code are examples, not links —
             # and this page documents the bad form on purpose.
-            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            text = _INLINE_CODE.sub("", _HTML_COMMENT.sub("", _FENCED.sub("", text)))
             for m in _FOLDER_LINK.finditer(text):
                 target, frag = m.group(1), m.group(2) or ""
                 if _EXTERNAL.match(target) or target.startswith("/"):
@@ -222,6 +233,9 @@ def check_folder_links():
 # pointing at something that isn't published, which is why the page's own
 # tracked-ness is the trigger.
 # --------------------------------------------------------------------------- #
+_MAX_LISTED = 10   # per-check cap on printed findings before summarizing
+
+
 def _git_tracked_paths():
     """Repo-relative paths that the next commit's tree will contain: the union
     of the INDEX (`ls-files`) and the HEAD tree. Separators normalized.
@@ -279,7 +293,7 @@ def _iter_relative_links():
                 text = open(full, encoding="utf-8").read()
             except OSError:
                 continue
-            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            text = _INLINE_CODE.sub("", _HTML_COMMENT.sub("", _FENCED.sub("", text)))
             raws = [m.group(1).strip() for m in MD_LINK.finditer(text)]
             raws += [m.group(2).strip() for m in _HTML_PATH.finditer(text)]
             for raw in raws:
@@ -291,6 +305,31 @@ def _iter_relative_links():
                 p = os.path.normpath(
                     os.path.join(dirpath, unquote(target).replace("/", os.sep)))
                 yield rel, dirpath, raw, p
+
+
+def format_untracked_report(hits, max_listed=_MAX_LISTED):
+    """Render check_untracked_link_targets() findings as report lines, capped.
+
+    Capped because the usual trigger is a concurrent session mid-rename, where a
+    single uncommitted case is linked from a dozen generated pages: one run here
+    produced 48 findings naming the same handful of files, burying the other
+    eleven hygiene checks. The DISTINCT TARGETS are what you act on — the
+    per-page hits only say where they were spotted — so the overflow summarizes
+    by target ("commit these 3 files") instead of an unhelpful "and 38 more".
+    """
+    lines = [f"   • {rel}  →  ({raw})   [not tracked: {trel}]"
+             for rel, raw, trel in hits[:max_listed]]
+    extra = len(hits) - len(lines)
+    if extra:
+        targets = sorted({t for _rel, _raw, t in hits})
+        pages = len({r for r, _raw, _t in hits})
+        lines.append(f"   … and {extra} more, from {pages} page(s) in total.")
+        lines.append(f"   Commit these {len(targets)} file(s) and every one of "
+                     "them clears:")
+        lines += [f"       - {t}" for t in targets[:max_listed]]
+        if len(targets) > max_listed:
+            lines.append(f"       - … and {len(targets) - max_listed} more")
+    return lines
 
 
 def check_untracked_link_targets():
@@ -396,7 +435,7 @@ def check_anchors():
                 text = open(full, encoding="utf-8").read()
             except OSError:
                 continue
-            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            text = _INLINE_CODE.sub("", _HTML_COMMENT.sub("", _FENCED.sub("", text)))
             for m in MD_LINK.finditer(text):
                 raw = m.group(1).strip()
                 tgt = raw.split()[0].strip("<>")
@@ -861,8 +900,17 @@ def check_pages_indexed():
     because it looked for `01_STAR/02_Examples/_main_pages/` while the actual layout
     is `01_STAR/02_Examples/cases/cases_pages/`, so a missing directory silently meant
     "✓ nothing to check". A gate that cannot find its target is broken, not clean.
+
+    An untracked page is SKIPPED. This checkout is routinely open in several
+    sessions at once, and a case that is still being built — its page drawn but
+    its README row not written yet — is not an index the repo has committed.
+    Flagging it failed the pre-commit suite for every OTHER session too, which
+    is how one half-finished case blocked the whole repo's commits. Staging the
+    case (`git add`) brings it straight back under the gate, so the case you are
+    actually committing is still checked. See _git_tracked_paths().
     """
     missing = []
+    tracked = _git_tracked_paths()
     for rel_folder, rel_index in sorted(INDEX_COMPLETE_DIRS.items()):
         folder = os.path.join(REPO, rel_folder.replace("/", os.sep))
         readme = (os.path.join(REPO, rel_index.replace("/", os.sep)) if rel_index
@@ -882,7 +930,7 @@ def check_pages_indexed():
             missing.append((rel_folder, f"indexing README {rel_readme} is "
                                         "unreadable or missing"))
             continue
-        text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+        text = _INLINE_CODE.sub("", _HTML_COMMENT.sub("", _FENCED.sub("", text)))
         linked = {os.path.basename(m.group(1).split("#")[0].strip())
                   for m in MD_LINK.finditer(text)}
         for fn in sorted(os.listdir(pages_dir)):
@@ -892,6 +940,10 @@ def check_pages_indexed():
             if linked & {fn, stem + ".yaml", stem + ".yml",
                          stem + "_tabulated.txt"}:
                 continue
+            if tracked is not None and os.path.normpath(
+                    os.path.relpath(os.path.join(pages_dir, fn), REPO)
+            ) not in tracked:
+                continue        # still being built — not the committed index yet
             missing.append((rel_readme, f"{fn} — case in {rel_folder} is not "
                                         "linked from the index (not its page, "
                                         "its .yaml, or its _tabulated.txt)"))
@@ -1098,8 +1150,8 @@ def main(argv):
         print("              missing, and `mkdocs build --strict` fails the docs deploy "
               "on it. Commit the target alongside")
         print("              the page, or drop the link until it lands:")
-        for rel, raw, trel in untracked_targets:
-            print(f"   • {rel}  →  ({raw})   [not tracked: {trel}]")
+        for line in format_untracked_report(untracked_targets):
+            print(line)
     bad_anchors = check_anchors()
     if not bad_anchors:
         print("repo-hygiene: ✓ every #anchor link points at a real heading.")
