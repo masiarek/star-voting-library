@@ -650,6 +650,36 @@ reproduce loop is in the **`bettervoting` skill**.
   commit message: short imperative summary line, then a body listing what
   changed and why. Include regenerated `_tabulated`/`_pages`/index files in the
   same commit as their source changes.
+- **This checkout is often open in two sessions at once, and a pathspec commit does
+  NOT contain them.** Both sessions share one working tree, one index, and one HEAD.
+  The pre-commit hook *auto-stages* regenerated index/registry files (it runs `git add`
+  on them), and that staging is not scoped to your paths — so `git commit -F msg --
+  <your paths>` still sweeps in whatever the other session had staged or regenerated.
+  Observed three times on 2026-08-05: a 3-file commit landed as 18 files, another as 11.
+  **You cannot prevent this; the discipline is to check what you actually committed.**
+  Run `git show --stat HEAD` afterwards, and specifically `git show --diff-filter=D
+  --name-only HEAD` for deletions. Additions and coherent regenerations that rode along
+  are harmless — leave them and say so in your report. **Deletions are the dangerous
+  case:** if a swept-in deletion removes a file something still links to, don't push —
+  work out whether the other session's generator pruned it deliberately (check whether
+  it's also gone from *disk*, and whether anything still references it) or whether it's
+  a half-finished state you'd be freezing.
+- **Don't rewrite history to unpick a sweep**, even unpushed. A `reset`/`rebase` in a
+  shared checkout drops the other session's commits into the working tree. Report the
+  muddled attribution instead — the content is what matters, and it's recoverable.
+- **Transient breakage is normal while the other session is mid-operation.** A held
+  `.git/index.lock` (wait for it, never delete it), a `git ls-files` that reports
+  committed files as untracked, and hygiene/test runs that suddenly report huge numbers
+  of failures — 101 broken links and 4 failing tests in one run on 2026-08-05 — are
+  almost always someone else's half-applied rename, not your bug. Wait for the tree to
+  settle and re-run before "fixing" any of it. **Never `git stash`** here.
+- **`check_repo_hygiene.py` warns about links whose target isn't committed yet**
+  (`check_untracked_link_targets`) — the one failure the other checks structurally
+  cannot see, because `check_links()` resolves against the working tree where the file
+  exists, while CI builds the committed tree where it doesn't and `mkdocs build
+  --strict` then fails the whole docs deploy. If it fires on another session's
+  in-flight files, that's not noise: **wait for them to land before pushing**, or you
+  redden the build for everyone.
 
 ## When unsure
 Consistency matters more than cleverness here. If a terminology or convention
