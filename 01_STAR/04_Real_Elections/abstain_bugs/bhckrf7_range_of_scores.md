@@ -4,7 +4,7 @@
 **Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Cal Creative · [full count →](cases/cases_pages/bhckrf7_range_of_scores.md)
 <!-- case-meta:end -->
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/hckrf7) · **[results ↗](https://bettervoting.com/hckrf7/results)** (election `hckrf7`)
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/hckrf7) · **[results ↗](https://bettervoting.com/hckrf7/results)** (election `hckrf7`) · issue [Equal-Vote/bettervoting#1487](https://github.com/Equal-Vote/bettervoting/issues/1487)
 
 Three voters, three candidates, and a results page that quietly uses **two different denominators**. Nothing is miscounted — the winner, the score totals and the runoff are all correct. What's wrong is that one chart divides by a number the page never shows.
 
@@ -120,6 +120,8 @@ Count × Ann Ambitious,Bob Bossy,Cal Creative
 ```
 <!-- /report -->
 
-## Suggested fix (not yet filed)
+## The fix, as filed — [#1487](https://github.com/Equal-Vote/bettervoting/issues/1487)
 
 Print the denominator on the widget — `Difference between maximum and minimum score on ballots (3 ballots)` — and, when it differs from `nTallyVotes`, add one line saying the chart includes ballots the tabulator filed as abstentions. A one-string change plus a count; no tabulation change. The same audit is worth running across the other *Stats for Nerds* widgets, which all read the same `ballotsForRace()` helper.
+
+Two earlier issues on this same widget are about different things and stay separate: [#1186](https://github.com/Equal-Vote/bettervoting/issues/1186) (typos in its caption text) and [#1196](https://github.com/Equal-Vote/bettervoting/issues/1196) (a proposed *Ballots — Span and Differentiation* report built on the same measure).

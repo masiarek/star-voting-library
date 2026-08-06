@@ -32,7 +32,7 @@ Nothing is miscounted: the winner, the scores and the runoff are all correct.
 It is a **denominator/labelling** problem, and it is the mirror image of the
 already-fixed "Distribution of Equal Support" chart (bettervoting#1390), which
 dropped ballots the tabulator kept. Here the chart keeps ballots the tabulator
-dropped.
+dropped. Filed as bettervoting#1487.
 
 LH states its denominator inline instead: `Voters with a preference: 1 of 3
 (2 Equal Support)` — the 1, the 3 and the gap between them all on one line.

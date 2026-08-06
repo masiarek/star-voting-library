@@ -7,6 +7,7 @@ election_description: |-
 
 bv_election_id: hckrf7
 bv_results_url: https://bettervoting.com/hckrf7/results
+bv_github_issue: https://github.com/Equal-Vote/bettervoting/issues/1487
 
 scenario_description: |-
   Three voters, three candidates. Two ballots are **flat all-zeros**; one ballot
@@ -28,7 +29,7 @@ scenario_description: |-
   It is a **denominator/labelling** problem, and it is the mirror image of the
   already-fixed "Distribution of Equal Support" chart (bettervoting#1390), which
   dropped ballots the tabulator kept. Here the chart keeps ballots the tabulator
-  dropped.
+  dropped. Filed as bettervoting#1487.
 
   LH states its denominator inline instead: `Voters with a preference: 1 of 3
   (2 Equal Support)` — the 1, the 3 and the gap between them all on one line.

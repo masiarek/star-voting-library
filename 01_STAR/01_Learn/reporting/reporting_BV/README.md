@@ -2,7 +2,7 @@
 
 **One line:** BetterVoting (bettervoting.com) shows a **live, visual** result — interactive bar/pie charts plus "Race Details" tables — for the same STAR election the LH engine prints as text. Same method, same winner; a friendlier, less exhaustive view.
 
-→ Hub: [STAR Reporting](../README.md) · the mapping in full: [BetterVoting and the LH engine](../../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) · the percentages: [Runoff percentages](../../the_count/runoff_percentages.md).
+→ Hub: [STAR Reporting](../README.md) · **panel by panel: [How to read a BetterVoting results page](../../../../07_Concepts/tabulation_engines/BV/reading_a_bv_results_page.md)** · the mapping in full: [BetterVoting and the LH engine](../../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) · the percentages: [Runoff percentages](../../the_count/runoff_percentages.md).
 
 ---
 
@@ -38,9 +38,9 @@
 
 BetterVoting counts a ballot as an **abstention** when it is **flat** — every candidate scored the same — and excludes it from the tally. That includes an all-zeros ballot **and** an engaged ballot like all-5s or `3,3,3`. The LH engine instead counts every cast ballot and treats only a **blank** ballot as an abstention, filing flat ballots under **Equal Support**. Same winner, different tally and score totals — see [Where the two reports differ](../reporting_diff_BV_LH.md).
 
-### The same rule, one page over — "Range of Scores" (unfiled)
+### The same rule, one page over — "Range of Scores" (#1487)
 
-The *Stats for Nerds* charts read the anonymized ballots directly, through a helper (`ballotsForRace()`) that drops only a **truly blank** ballot — i.e. **LH's** abstention rule, not BetterVoting's. So on an election with flat ballots the **Range of Scores** chart and the page headline divide by different numbers, and only one of them is printed. On [`hckrf7`](../../../04_Real_Elections/abstain_bugs/bhckrf7_range_of_scores.md) the chart reads `33% / 67%` (of **3** ballots) directly under the words *"1 voters"*. Nothing is miscounted; the denominator is just invisible.
+The *Stats for Nerds* charts read the anonymized ballots directly, through a helper (`ballotsForRace()`) that drops only a **truly blank** ballot — i.e. **LH's** abstention rule, not BetterVoting's. So on an election with flat ballots the **Range of Scores** chart and the page headline divide by different numbers, and only one of them is printed. On [`hckrf7`](../../../04_Real_Elections/abstain_bugs/bhckrf7_range_of_scores.md) the chart reads `33% / 67%` (of **3** ballots) directly under the words *"1 voters"*. Nothing is miscounted; the denominator is just invisible. Filed as [Equal-Vote/bettervoting#1487](https://github.com/Equal-Vote/bettervoting/issues/1487).
 
 ### A related display bug — the "Distribution of Equal Support" graph (#1390)
 
