@@ -63,6 +63,18 @@ class Ballot(NamedTuple):
     # row); "approval" = the Yes/No double-bubble Approval ballot (two). They are
     # different ballots, not two settings of one — hence separate renderers.
     kind: str = "score"
+    # A *whole* ballot rather than a thumbnail: the seat count above the race
+    # (technical specifications §3.c), the voter instructions above the grid
+    # (§3.b), and the method explanation below it (§3.d). A style thumbnail is
+    # deliberately none of this — it crops to the marks, because the marks are
+    # its subject. A ballot page's subject is the paper, and on real paper the
+    # instructions and the explanation are *printed on the ballot itself*
+    # (§3.a requires it), so a picture without them is not a picture of a
+    # ballot. Both are pre-wrapped by the author: one string per printed line,
+    # so the art is deterministic and a bad line break is fixable by hand.
+    subtitle: str = ""
+    header: tuple[str, ...] = ()
+    footer: tuple[str, ...] = ()
 
 
 # Scores are 0-5; None means the row was left blank (which STAR counts as 0, but
@@ -108,6 +120,68 @@ BALLOTS.update({
         [3, 4, 5, 4, 0, 1],
         LIMITS_IMG_DIR,
         quoted=False,
+    ),
+})
+
+# --------------------------------------------------------------------------- #
+# The whole-ballot pair: single-winner STAR and Bloc STAR, side by side
+# --------------------------------------------------------------------------- #
+# These two exist to be compared, so they are deliberately the same drawing with
+# the same cast and the SAME MARKS — which is also how the technical
+# specifications present them (Figures A and B, identical bubbles). Everything a
+# voter does is identical; the differences are three lines of text, and being
+# able to point at exactly those three lines is the entire lesson. Keep the marks
+# in sync if either is ever redrawn.
+#
+# The wording is the specification's own (v1.3 §3.b instructions, §3.c seat count
+# above the race, §3.d method explanation) with one deliberate departure, argued
+# on the page: the method is named "Bloc STAR Voting" (§1.c) rather than the bare
+# "STAR Voting" of the §3.d template, which §3.e's paraphrase licence allows
+# because §1.e already defines the unqualified name to MEAN this method.
+BLOC_IMG_DIR = REPO_ROOT / "02_STAR_Bloc" / "01_Learn" / "img"
+
+# §3.b, verbatim. Shared, because the instructions are the one part that does not
+# change between the two ballots — there is nothing to ration on a Bloc ballot.
+SPEC_INSTRUCTIONS = (
+    "Give your favorite candidate five stars.",
+    "Give your last choice zero stars or leave them blank.",
+    "Equal scores are allowed.",
+    "Score other candidates as desired.",
+)
+
+# Figure A / Figure B marks: Andre 5, Blake 0, Carmen 1, David 4, Ella 4.
+SPEC_MARKS = [5, 0, 1, 4, 4]
+
+BALLOTS.update({
+    "ballot_star_single_winner": Ballot(
+        "STAR Voting",
+        CANDIDATES,
+        SPEC_MARKS,
+        BLOC_IMG_DIR,
+        quoted=False,
+        header=SPEC_INSTRUCTIONS,
+        footer=(
+            "This election will use STAR Voting to elect one winner. In STAR",
+            "Voting, the two highest scoring candidates are finalists and your",
+            "vote goes to the finalist you prefer. The finalist preferred by the",
+            "most voters wins.",
+        ),
+    ),
+    "ballot_bloc_star": Ballot(
+        "Bloc STAR Voting",
+        CANDIDATES,
+        SPEC_MARKS,
+        BLOC_IMG_DIR,
+        quoted=False,
+        subtitle="This election will elect 3 winners.",
+        header=SPEC_INSTRUCTIONS,
+        footer=(
+            "This election will use Bloc STAR Voting to elect 3 winners. In Bloc",
+            "STAR Voting, the two highest scoring candidates are finalists and",
+            "your vote goes to the finalist you prefer. The finalist preferred by",
+            "the most voters wins. This process repeats until all seats have",
+            "been filled.",
+        ),
     ),
 })
 
@@ -346,6 +420,10 @@ BUBBLE_STROKE = "#595959"
 INK = "#000000"
 
 FONT = "Arial Black, Arial Bold, Helvetica, sans-serif"
+# The prose blocks of a whole ballot — instructions and method explanation — are
+# set in a regular weight, as they are on a real ballot. Arial Black is for the
+# things you scan (names, the scale); the sentences you actually read are not.
+BODY_FONT = "Helvetica Neue, Helvetica, Arial, sans-serif"
 
 W = 1600
 TITLE_X = 30
@@ -361,6 +439,21 @@ COL0_X = 630           # centre of the "0" column
 COL_DX = 174           # spacing between bubble columns
 NAME_X = 118
 BOTTOM_PAD = 18
+
+# The whole-ballot blocks (see Ballot.header / .footer). Sizes are chosen so the
+# instructions read as instructions -- smaller than the candidate names, larger
+# than the bubble numerals -- and so a five-line footer still fits the width at
+# the wrap points the author picked.
+SUB_SIZE = 54          # the seat-count line, directly under the method name
+SUB_GAP = 74           # title baseline -> subtitle baseline
+HDR_SIZE = 46          # voter instructions
+HDR_LINE_H = 62
+HDR_GAP = 52           # last thing above -> first instruction line
+FTR_SIZE = 44          # the method explanation
+FTR_LINE_H = 58
+FTR_GAP = 62           # grid bottom rule -> first footer line
+BULLET_X = 44          # the "•" column; text hangs indented from BULLET_TEXT_X
+BULLET_TEXT_X = 84
 
 
 # The Approval ballot: two bubbles a row under Yes / No, after the Equal Vote
@@ -406,9 +499,37 @@ def title_font_size(shown: str, width: int = W) -> int:
 TITLE_MAX_CHARS = int((W - 2 * TITLE_X) / (TITLE_CHAR_W * TITLE_MIN_SIZE))
 
 
-def height_for(cast: list[str]) -> int:
+def top_block_h(ballot: Ballot) -> int:
+    """How far the grid is pushed down by a seat count and an instruction block.
+
+    Zero for a thumbnail, which is why every gallery ballot still renders at the
+    exact pixel geometry the hand-made originals were captured at.
+    """
+    dy = SUB_GAP if ballot.subtitle else 0
+    if ballot.header:
+        dy += HDR_GAP + len(ballot.header) * HDR_LINE_H
+    return dy
+
+
+def bottom_block_h(ballot: Ballot) -> int:
+    """Room under the grid's closing rule for the method explanation."""
+    return FTR_GAP + len(ballot.footer) * FTR_LINE_H if ballot.footer else 0
+
+
+def height_for(ballot: Ballot) -> int:
     """Canvas height: the grid grows a row at a time, the margins don't."""
-    return GRID_TOP + len(cast) * ROW_H + BOTTOM_PAD
+    return (
+        GRID_TOP
+        + top_block_h(ballot)
+        + len(ballot.cast) * ROW_H
+        + bottom_block_h(ballot)
+        + BOTTOM_PAD
+    )
+
+
+def esc(text: str) -> str:
+    """XML-escape a run of author-written ballot text."""
+    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 def star_points(cx: float, cy: float, r: float) -> list[tuple[float, float]]:
@@ -430,7 +551,8 @@ def render_svg(ballot: Ballot) -> str:
     if ballot.kind == "approval":
         return render_approval_svg(ballot)
     title, cast, scores = ballot.title, ballot.cast, ballot.scores
-    H = height_for(cast)
+    H = height_for(ballot)
+    dy = top_block_h(ballot)
     plain = f'"{title}"' if ballot.quoted else title
     shown = f"&quot;{title}&quot;" if ballot.quoted else title
     out: list[str] = [
@@ -439,9 +561,30 @@ def render_svg(ballot: Ballot) -> str:
         f'<text x="{TITLE_X}" y="{TITLE_Y}" font-family="{FONT}" '
         f'font-size="{title_font_size(plain)}" font-weight="bold" '
         f'fill="{RUST}">{shown}</text>',
-        f'<text x="{col_x(0) + 40}" y="{HDR_WORST_Y}" font-family="{FONT}" font-size="58" '
+    ]
+
+    # The seat count sits above the race, not inside the instructions (§3.c).
+    if ballot.subtitle:
+        out.append(
+            f'<text x="{TITLE_X}" y="{TITLE_Y + SUB_GAP}" font-family="{FONT}" '
+            f'font-size="{SUB_SIZE}" font-weight="bold" fill="{INK}">'
+            f'{esc(ballot.subtitle)}</text>'
+        )
+    for n, line in enumerate(ballot.header):
+        y = TITLE_Y + (SUB_GAP if ballot.subtitle else 0) + HDR_GAP + n * HDR_LINE_H
+        out.append(
+            f'<text x="{BULLET_X}" y="{y}" font-family="{BODY_FONT}" font-size="{HDR_SIZE}" '
+            f'fill="{INK}">•</text>'
+        )
+        out.append(
+            f'<text x="{BULLET_TEXT_X}" y="{y}" font-family="{BODY_FONT}" '
+            f'font-size="{HDR_SIZE}" fill="{INK}">{esc(line)}</text>'
+        )
+
+    out += [
+        f'<text x="{col_x(0) + 40}" y="{HDR_WORST_Y + dy}" font-family="{FONT}" font-size="58" '
         f'font-weight="bold" fill="{INK}" text-anchor="middle">Worst</text>',
-        f'<text x="{col_x(5)}" y="{HDR_WORST_Y}" font-family="{FONT}" font-size="58" '
+        f'<text x="{col_x(5)}" y="{HDR_WORST_Y + dy}" font-family="{FONT}" font-size="58" '
         f'font-weight="bold" fill="{INK}" text-anchor="middle">Best</text>',
     ]
 
@@ -450,16 +593,16 @@ def render_svg(ballot: Ballot) -> str:
         cx = col_x(i)
         if i:
             out.append(
-                f'<path d="{star_path(cx, STAR_ROW_Y - 18, 62)}" fill="none" '
+                f'<path d="{star_path(cx, STAR_ROW_Y + dy - 18, 62)}" fill="none" '
                 f'stroke="{STAR_OUTLINE}" stroke-width="6" stroke-linejoin="round"/>'
             )
         out.append(
-            f'<text x="{cx}" y="{STAR_ROW_Y}" font-family="{FONT}" font-size="60" '
+            f'<text x="{cx}" y="{STAR_ROW_Y + dy}" font-family="{FONT}" font-size="60" '
             f'font-weight="bold" fill="{INK}" text-anchor="middle">{i}</text>'
         )
 
     for r, name in enumerate(cast):
-        top = GRID_TOP + r * ROW_H
+        top = GRID_TOP + dy + r * ROW_H
         mid = top + ROW_H / 2
         if r % 2 == 0:
             out.append(f'<rect x="0" y="{top}" width="{W}" height="{ROW_H}" fill="{ROW_TINT}"/>')
@@ -484,8 +627,13 @@ def render_svg(ballot: Ballot) -> str:
                     f'<text x="{cx}" y="{mid + 16}" font-family="{FONT}" font-size="44" '
                     f'font-weight="bold" fill="{INK}" text-anchor="middle">{i}</text>'
                 )
-    bottom = GRID_TOP + len(cast) * ROW_H
+    bottom = GRID_TOP + dy + len(cast) * ROW_H
     out.append(f'<line x1="0" y1="{bottom}" x2="{W}" y2="{bottom}" stroke="{RULE}" stroke-width="7"/>')
+    for n, line in enumerate(ballot.footer):
+        out.append(
+            f'<text x="{TITLE_X}" y="{bottom + FTR_GAP + n * FTR_LINE_H}" '
+            f'font-family="{BODY_FONT}" font-size="{FTR_SIZE}" fill="{INK}">{esc(line)}</text>'
+        )
     out.append("</svg>")
     return "\n".join(out)
 
@@ -506,7 +654,7 @@ def approval_filled(mark: int | None, col: int) -> bool:
 def render_approval_svg(ballot: Ballot) -> str:
     title, cast, marks = ballot.title, ballot.cast, ballot.scores
     width = APPROVAL_W
-    H = height_for(cast)
+    H = height_for(ballot)
     plain = f'"{title}"' if ballot.quoted else title
     shown = f"&quot;{title}&quot;" if ballot.quoted else title
     out: list[str] = [
@@ -567,10 +715,17 @@ SS = 2  # supersampling factor: draw big, downscale -> antialiased edges
 PNG_MAX_W = 900  # saved PNG width; the SVG keeps the full 1600 (see rasterize)
 
 
-def _font(size: int):
+BODY_FONT_CANDIDATES = [
+    "/System/Library/Fonts/Supplemental/Arial.ttf",
+    "/System/Library/Fonts/Helvetica.ttc",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+]
+
+
+def _font(size: int, body: bool = False):
     from PIL import ImageFont
 
-    for path in FONT_CANDIDATES:
+    for path in BODY_FONT_CANDIDATES if body else FONT_CANDIDATES:
         if Path(path).exists():
             return ImageFont.truetype(path, size)
     return ImageFont.load_default(size)
@@ -603,27 +758,38 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
         return v * SS
 
     title, cast, scores = ballot.title, ballot.cast, ballot.scores
-    H = height_for(cast)
+    H = height_for(ballot)
     img = Image.new("RGB", (W * SS, H * SS), "#FFFFFF")
     d = ImageDraw.Draw(img)
     f_hdr, f_scale = _font(58 * SS), _font(60 * SS)
     f_name, f_bubble = _font(62 * SS), _font(44 * SS)
 
+    dy = top_block_h(ballot)
     shown = f'"{title}"' if ballot.quoted else title
     f_title = _font(title_font_size(shown) * SS)
     d.text((s(TITLE_X), s(TITLE_Y)), shown, font=f_title, fill=RUST, anchor="ls")
-    d.text((s(col_x(0) + 40), s(HDR_WORST_Y)), "Worst", font=f_hdr, fill=INK, anchor="ms")
-    d.text((s(col_x(5)), s(HDR_WORST_Y)), "Best", font=f_hdr, fill=INK, anchor="ms")
+
+    if ballot.subtitle:
+        d.text((s(TITLE_X), s(TITLE_Y + SUB_GAP)), ballot.subtitle,
+               font=_font(SUB_SIZE * SS), fill=INK, anchor="ls")
+    f_instr = _font(HDR_SIZE * SS, body=True)
+    for n, line in enumerate(ballot.header):
+        y = TITLE_Y + (SUB_GAP if ballot.subtitle else 0) + HDR_GAP + n * HDR_LINE_H
+        d.text((s(BULLET_X), s(y)), "•", font=f_instr, fill=INK, anchor="ls")
+        d.text((s(BULLET_TEXT_X), s(y)), line, font=f_instr, fill=INK, anchor="ls")
+
+    d.text((s(col_x(0) + 40), s(HDR_WORST_Y + dy)), "Worst", font=f_hdr, fill=INK, anchor="ms")
+    d.text((s(col_x(5)), s(HDR_WORST_Y + dy)), "Best", font=f_hdr, fill=INK, anchor="ms")
 
     for i in range(6):
         cx = col_x(i)
         if i:
-            pts = [(s(x), s(y)) for x, y in star_points(cx, STAR_ROW_Y - 18, 62)]
+            pts = [(s(x), s(y)) for x, y in star_points(cx, STAR_ROW_Y + dy - 18, 62)]
             d.polygon(pts, outline=STAR_OUTLINE, width=int(s(6)))
-        d.text((s(cx), s(STAR_ROW_Y)), str(i), font=f_scale, fill=INK, anchor="ms")
+        d.text((s(cx), s(STAR_ROW_Y + dy)), str(i), font=f_scale, fill=INK, anchor="ms")
 
     for r, name in enumerate(cast):
-        top = GRID_TOP + r * ROW_H
+        top = GRID_TOP + dy + r * ROW_H
         mid = top + ROW_H / 2
         if r % 2 == 0:
             d.rectangle([0, s(top), s(W), s(top + ROW_H)], fill=ROW_TINT)
@@ -639,8 +805,12 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
                 d.ellipse(box, fill="#FFFFFF", outline=BUBBLE_STROKE, width=int(s(5)))
                 d.text((s(cx), s(mid + 16)), str(i), font=f_bubble, fill=INK, anchor="ms")
 
-    bottom = GRID_TOP + len(cast) * ROW_H
+    bottom = GRID_TOP + dy + len(cast) * ROW_H
     d.line([0, s(bottom), s(W), s(bottom)], fill=RULE, width=int(s(7)))
+    f_ftr = _font(FTR_SIZE * SS, body=True)
+    for n, line in enumerate(ballot.footer):
+        d.text((s(TITLE_X), s(bottom + FTR_GAP + n * FTR_LINE_H)), line,
+               font=f_ftr, fill=INK, anchor="ls")
     _save_png(img, W, H, png_path)
 
 
@@ -653,7 +823,7 @@ def rasterize_approval(ballot: Ballot, png_path: Path) -> None:
 
     title, cast, marks = ballot.title, ballot.cast, ballot.scores
     width = APPROVAL_W
-    H = height_for(cast)
+    H = height_for(ballot)
     img = Image.new("RGB", (width * SS, H * SS), "#FFFFFF")
     d = ImageDraw.Draw(img)
     f_instr = _font(APPROVAL_INSTRUCTION_SIZE * SS)

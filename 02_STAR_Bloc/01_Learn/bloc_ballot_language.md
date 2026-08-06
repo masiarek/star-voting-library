@@ -2,7 +2,7 @@
 
 **One line:** the ballot does not change when a race fills several seats — same 0–5 stars, same instructions, nothing to ration — and this page is the official voter-facing wording for a Bloc race, what each sentence of it actually commits to, and the naming rule that makes an unqualified "Multi-Winner STAR Voting" mean *this* method.
 
-→ the count behind the instructions: [Bloc STAR](bloc_star.md) · every legal way to fill a STAR ballot in: [The STAR Ballot](../../01_STAR/01_Learn/voting_styles/README.md) · running one on paper: [Running a paper-ballot demo](../../01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md)
+→ the ballot as a picture, and what BetterVoting's live one gets wrong: [The Bloc STAR ballot](bloc_star_ballot.md) · the count behind the instructions: [Bloc STAR](bloc_star.md) · every legal way to fill a STAR ballot in: [The STAR Ballot](../../01_STAR/01_Learn/voting_styles/README.md) · running one on paper: [Running a paper-ballot demo](../../01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md)
 
 **Level: 201 · for voters**
 
@@ -92,6 +92,7 @@ The longer public version of this answer, written for a real 2021 multi-winner r
 
 ## See also
 
+- [The Bloc STAR ballot](bloc_star_ballot.md) — the same ballot as a picture, beside its single-winner twin, plus what BetterVoting's live form actually prints
 - [Bloc STAR](bloc_star.md) — the count these instructions describe
 - [The STAR Ballot — and every legal way to fill it out](../../01_STAR/01_Learn/voting_styles/README.md) — the single-winner gallery, all of which is legal here too
 - [Ties in Bloc STAR](bloc_tiebreaks.md) — what happens when a seat's runoff comes out level

@@ -9,6 +9,7 @@ Not sure you want a majoritarian method at all? That's the bigger decision, and 
 ## The method
 
 - [**Bloc STAR**](bloc_star.md) — the count, the removal step, and what it does *not* do (start here)
+- [The Bloc STAR ballot](bloc_star_ballot.md) — what the paper looks like; filling three seats changes three lines of text and nothing about how you mark it, and BetterVoting's live ballot prints neither the right name nor the sentence that explains multi-winner
 - [The ballot and the official definitions](bloc_ballot_language.md) — the published voter instructions read line by line, and why an unqualified "Multi-Winner STAR Voting" means *this* method
 - [The majority sweep](majority_sweep.md) — a cohesive majority can take *every* seat: why it happens, when that's the right answer, and when it means you wanted proportional
 - [Over 50% — what a landslide actually buys](over_50_percent.md) — the sweep's mirror image: a majority that runs *one* candidate wins *one* seat, and the next one goes to a candidate most voters scored 0

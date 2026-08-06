@@ -116,6 +116,7 @@ NAV_ORDER: dict[str, list[str]] = {
     # the last thing a newcomer should meet.
     "02_STAR_Bloc/01_Learn": [
         "bloc_star.md",
+        "bloc_star_ballot.md",
         "bloc_ballot_language.md",
         "majority_sweep.md",
         "over_50_percent.md",

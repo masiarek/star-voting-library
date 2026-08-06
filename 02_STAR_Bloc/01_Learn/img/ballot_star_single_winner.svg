@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1754" width="1600" height="1754">
+<rect width="1600" height="1754" fill="#FFFFFF"/>
+<text x="30" y="78" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="66" font-weight="bold" fill="#C0504D">STAR Voting</text>
+<text x="44" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">•</text>
+<text x="84" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">Give your favorite candidate five stars.</text>
+<text x="44" y="192" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">•</text>
+<text x="84" y="192" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">Give your last choice zero stars or leave them blank.</text>
+<text x="44" y="254" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">•</text>
+<text x="84" y="254" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">Equal scores are allowed.</text>
+<text x="44" y="316" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">•</text>
+<text x="84" y="316" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="46" fill="#000000">Score other candidates as desired.</text>
+<text x="670" y="468" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="58" font-weight="bold" fill="#000000" text-anchor="middle">Worst</text>
+<text x="1500" y="468" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="58" font-weight="bold" fill="#000000" text-anchor="middle">Best</text>
+<text x="630" y="592" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<path d="M804.0,512.0L819.3,552.9L863.0,554.8L828.8,582.0L840.4,624.2L804.0,600.0L767.6,624.2L779.2,582.0L745.0,554.8L788.7,552.9Z" fill="none" stroke="#A9C4D9" stroke-width="6" stroke-linejoin="round"/>
+<text x="804" y="592" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<path d="M978.0,512.0L993.3,552.9L1037.0,554.8L1002.8,582.0L1014.4,624.2L978.0,600.0L941.6,624.2L953.2,582.0L919.0,554.8L962.7,552.9Z" fill="none" stroke="#A9C4D9" stroke-width="6" stroke-linejoin="round"/>
+<text x="978" y="592" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<path d="M1152.0,512.0L1167.3,552.9L1211.0,554.8L1176.8,582.0L1188.4,624.2L1152.0,600.0L1115.6,624.2L1127.2,582.0L1093.0,554.8L1136.7,552.9Z" fill="none" stroke="#A9C4D9" stroke-width="6" stroke-linejoin="round"/>
+<text x="1152" y="592" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<path d="M1326.0,512.0L1341.3,552.9L1385.0,554.8L1350.8,582.0L1362.4,624.2L1326.0,600.0L1289.6,624.2L1301.2,582.0L1267.0,554.8L1310.7,552.9Z" fill="none" stroke="#A9C4D9" stroke-width="6" stroke-linejoin="round"/>
+<text x="1326" y="592" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<path d="M1500.0,512.0L1515.3,552.9L1559.0,554.8L1524.8,582.0L1536.4,624.2L1500.0,600.0L1463.6,624.2L1475.2,582.0L1441.0,554.8L1484.7,552.9Z" fill="none" stroke="#A9C4D9" stroke-width="6" stroke-linejoin="round"/>
+<text x="1500" y="592" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="60" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<rect x="0" y="652" width="1600" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="652" x2="1600" y2="652" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="753.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Andre</text>
+<ellipse cx="630" cy="731.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="630" y="747.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="804" cy="731.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="804" y="747.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="978" cy="731.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="978" y="747.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1152" cy="731.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1152" y="747.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1326" cy="731.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1326" y="747.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1500" cy="731.0" rx="42" ry="36" fill="#000000"/>
+<line x1="0" y1="810" x2="1600" y2="810" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="911.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Blake</text>
+<ellipse cx="630" cy="889.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="804" cy="889.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="804" y="905.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="978" cy="889.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="978" y="905.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1152" cy="889.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1152" y="905.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1326" cy="889.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1326" y="905.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1500" cy="889.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1500" y="905.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<rect x="0" y="968" width="1600" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="968" x2="1600" y2="968" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="1069.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Carmen</text>
+<ellipse cx="630" cy="1047.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="630" y="1063.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="804" cy="1047.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="978" cy="1047.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="978" y="1063.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1152" cy="1047.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1152" y="1063.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1326" cy="1047.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1326" y="1063.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1500" cy="1047.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1500" y="1063.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<line x1="0" y1="1126" x2="1600" y2="1126" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="1227.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">David</text>
+<ellipse cx="630" cy="1205.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="630" y="1221.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="804" cy="1205.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="804" y="1221.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="978" cy="1205.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="978" y="1221.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1152" cy="1205.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1152" y="1221.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1326" cy="1205.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1500" cy="1205.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1500" y="1221.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<rect x="0" y="1284" width="1600" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="1284" x2="1600" y2="1284" stroke="#95B3D7" stroke-width="7"/>
+<text x="118" y="1385.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Ella</text>
+<ellipse cx="630" cy="1363.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="630" y="1379.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="804" cy="1363.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="804" y="1379.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="978" cy="1363.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="978" y="1379.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="1152" cy="1363.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1152" y="1379.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1326" cy="1363.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1500" cy="1363.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1500" y="1379.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<line x1="0" y1="1442" x2="1600" y2="1442" stroke="#95B3D7" stroke-width="7"/>
+<text x="30" y="1504" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" fill="#000000">This election will use STAR Voting to elect one winner. In STAR</text>
+<text x="30" y="1562" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" fill="#000000">Voting, the two highest scoring candidates are finalists and your</text>
+<text x="30" y="1620" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" fill="#000000">vote goes to the finalist you prefer. The finalist preferred by the</text>
+<text x="30" y="1678" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="44" fill="#000000">most voters wins.</text>
+</svg>
