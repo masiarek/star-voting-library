@@ -67,10 +67,14 @@ This election is also the regression fixture for **[BetterVoting issue #1484](ht
 |---|---|---|:--:|
 | Automatic Runoff chart | **Cora** ✓ | 40% / 20% | **40%** |
 | Tabulation Steps | **Cora** ✓ | 2 to 1 | **2** |
+| *Stats for Nerds* → Distribution of Equal Support | — | — | **2 ballots** (one at 5★, one at 3★) |
+| *Stats for Nerds* → Average Supporter Profile | **Ben** ✗ | — | — |
 | Scores Table (highlight) | **Ben** ✗ | — | — |
 | Runoff Table | **Ben** ✗ | 3 / 2 | **0** |
 
 Both halves are arithmetically right *for their own pair* — Ana vs Cora really is 2–1 with 2 equal, and Ana vs Ben really is 3–2 with 0 equal. The tables are reading the **second-highest scorer** (Ben) instead of the candidate the tiebreak advanced (Cora), so the runoff gets recomputed against the wrong opponent and Equal Support collapses to zero.
+
+The split reaches two *Stats for Nerds* panels as well, in opposite directions. **Average Supporter Profile** labels its two frontrunners on screen as **Ana and Ben**, so its "preferred frontrunner" bars answer a question about a pair that never ran. **Distribution of Equal Support**, on the other hand, finds **two** equal-support ballots — one voter who scored both finalists 5, one who scored both 3, exactly the Ana/Cora ties on voters 1 and 2 — which contradicts the Runoff Table's `Equal Support 0` from a third place on the page. There is also a tell that needs no cross-checking at all: the Runoff Table's two percent columns read **60/60 and 40/40**, identical, and those columns can only agree when *nobody* scored the two finalists equally. (What each of those panels means: [How to read a BetterVoting results page](../../../07_Concepts/tabulation_engines/BV/reading_a_bv_results_page.md).)
 
 **The winner is not affected** — Ana wins either way, and the tabulation itself is correct. It's a reporting defect, and this election exists partly so there's a small, deterministic case to check a fix against.
 

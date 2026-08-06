@@ -38,6 +38,7 @@ A STAR result is a short funnel, and every report shows the same stages:
 ## Canonical deep-dives (linked, not duplicated)
 
 - [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) — the LH report, section by section.
+- [Reading a BetterVoting results page](../../../07_Concepts/tabulation_engines/BV/reading_a_bv_results_page.md) — the same walk-through for the live visual report: the four decks, and the four different denominators hiding in them.
 - [BetterVoting and the LH engine](../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) — why one election has two reports, and how they map.
 - [Runoff percentages](../the_count/runoff_percentages.md) — the two-denominator idea.
 - [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) — STAR's two steps vs IRV's rounds.

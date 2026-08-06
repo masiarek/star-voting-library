@@ -26,6 +26,11 @@ USAGE (uv-native, PEP 723 — no venv needed):
     uv run bv_result_screenshot.py 48hjkv --shot race-details \
         -o 05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/img/48hjkv_race_details.png
 
+    # a Stats for Nerds panel, by its dropdown label (both expanders opened for you)
+    uv run bv_result_screenshot.py qhjyr2 --list-panels          # what's in the dropdown?
+    uv run bv_result_screenshot.py qhjyr2 --panel "Head-to-Head Matchups" \
+        --candidate Ana -o img/qhjyr2_head_to_head_ana.png
+
     # anything else: clip to your own selector, optionally after running some JS
     uv run bv_result_screenshot.py 48hjkv -o img/48hjkv_matchups.png \
         --clip ".graph" --prep "document.querySelector('.detailExpander').click()"
@@ -34,7 +39,13 @@ Then embed it with a SIZED <img> (house style — a bare ![]() renders full-blee
 
     <img alt="BetterVoting result page for 48hjkv: …" src="img/48hjkv_result_bars.png" width="640">
 
-TWO GOTCHAS, both already handled here — don't "simplify" them back out:
+THREE GOTCHAS, all already handled here — don't "simplify" them back out:
+
+* **Stats for Nerds does not exist until Race Details is opened**, and MUI's
+  dropdown only opens on `mousedown`. Both are why `--panel` exists rather than
+  a hand-rolled `--prep`; the details are on `_nerd_panel_prep`. (An earlier
+  note in this repo said the panels were unreachable in headless Chrome — that
+  was a click-order problem, now fixed.)
 
 * **Never pass `captureBeyondViewport`.** It forces a relayout, which restarts
   recharts' bar animation, and the shot lands with every bar at zero width — a
@@ -103,6 +114,88 @@ SHOTS = {
     "chart": (".graph", _HIDE_EXPANDER),
     "page": (None, None),
 }
+
+
+# Open both expanders and report the Stats for Nerds dropdown, without shooting.
+# The site's own nav menus also use role=option, so the panel labels are the tail
+# of the list rather than the whole of it.
+_LIST_PANELS = """
+(async () => {
+  const nap = ms => new Promise(r => setTimeout(r, ms));
+  let xs = [...document.querySelectorAll('.detailExpander')];
+  if (!xs.length) return 'no expander';
+  xs[0].click();
+  await nap(4000);
+  xs = [...document.querySelectorAll('.detailExpander')];
+  if (!xs[1]) return 'Stats for Nerds never appeared';
+  xs[1].click();
+  await nap(5000);
+  const cb = document.querySelector('[role=combobox]');
+  if (!cb) return 'no combobox';
+  cb.dispatchEvent(new MouseEvent('mousedown',
+      {bubbles: true, cancelable: true, view: window}));
+  await nap(2500);
+  return JSON.stringify([...document.querySelectorAll('[role=option]')]
+      .map(e => e.textContent.trim()));
+})()
+"""
+
+
+def _nerd_panel_prep(panel: str, candidate: str | None) -> str:
+    """Open a *Stats for Nerds* panel and tag its card as #shotTarget.
+
+    Three things make this fiddly, and all three are load-bearing:
+
+    * **Stats for Nerds does not exist until Race Details is opened.** Before
+      that click there is exactly ONE `.detailExpander` in the DOM. So the
+      expanders must be opened in order, each exactly once — a loop that clicks
+      every expander it finds on each pass toggles Race Details back shut and
+      the second one vanishes again.
+    * **MUI Selects open on `mousedown`, not `click`.** `.click()` on the
+      combobox returns cleanly and does nothing; the option list never mounts.
+    * **Every wait is a bounded `setTimeout` promise.** The prep JS is evaluated
+      with `awaitPromise=True`, so anything that waits on a condition that never
+      arrives hangs the capture rather than failing it.
+    """
+    def js(s: str) -> str:
+        return json.dumps(s)
+
+    return """
+(async () => {
+  const nap = ms => new Promise(r => setTimeout(r, ms));
+  const pick = async (idx, label) => {
+    const cb = [...document.querySelectorAll('[role=combobox]')][idx];
+    if (!cb) return 'no combobox #' + idx;
+    cb.dispatchEvent(new MouseEvent('mousedown',
+        {bubbles: true, cancelable: true, view: window}));
+    await nap(2000);
+    const o = [...document.querySelectorAll('[role=option]')]
+        .find(e => e.textContent.trim() === label);
+    if (!o) return 'no option: ' + label;
+    o.click();
+    await nap(4000);
+    return 'picked ' + label;
+  };
+  let xs = [...document.querySelectorAll('.detailExpander')];
+  if (!xs.length) return 'no expander';
+  xs[0].click();                       // Race Details — Stats for Nerds mounts after it
+  await nap(4000);
+  xs = [...document.querySelectorAll('.detailExpander')];
+  if (!xs[1]) return 'Stats for Nerds never appeared';
+  xs[1].click();
+  await nap(5000);
+  const r1 = await pick(0, %(panel)s);
+  const r2 = %(cand)s ? await pick(1, %(cand)s) : 'n/a';
+  await nap(3000);
+  const h = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')]
+      .find(e => e.textContent.trim().startsWith(%(panel)s));
+  if (!h) return JSON.stringify({r1, r2, tag: 'panel heading not found'});
+  const card = h.closest('.MuiPaper-root');
+  if (!card) return JSON.stringify({r1, r2, tag: 'no MuiPaper around heading'});
+  card.id = 'shotTarget';
+  return JSON.stringify({r1, r2, tag: 'tagged'});
+})()
+""" % {"panel": js(panel), "cand": js(candidate) if candidate else "''"}
 
 
 def _launch(port: int, profile: Path) -> subprocess.Popen:
@@ -241,12 +334,25 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     ap.add_argument("bvid_or_url", help="BetterVoting election id, or a full URL")
-    ap.add_argument("-o", "--out", required=True, type=Path,
-                    help="output PNG (house naming: img/<bvid>_<what>.png)")
+    ap.add_argument("-o", "--out", type=Path,
+                    help="output PNG (house naming: img/<bvid>_<what>.png); "
+                         "required unless --list-panels")
     ap.add_argument("--shot", choices=sorted(SHOTS), default="result",
                     help="preset region (default: result)")
     ap.add_argument("--clip", help="CSS selector to clip to (overrides --shot)")
     ap.add_argument("--prep", help="JS to run before the shot (overrides --shot)")
+    ap.add_argument("--panel",
+                    help="a Stats for Nerds panel to open and clip to, by its exact "
+                         "dropdown label (e.g. 'Head-to-Head Matchups'). Opens both "
+                         "expanders for you and overrides --shot/--clip/--prep. The "
+                         "dropdown is short and its contents vary by election — run "
+                         "--list-panels first if you're unsure.")
+    ap.add_argument("--candidate",
+                    help="for a per-candidate panel (Head-to-Head Matchups, Average "
+                         "Supporter Profile), which candidate to select; default is "
+                         "whichever one the panel opens on")
+    ap.add_argument("--list-panels", action="store_true",
+                    help="print this election's Stats for Nerds dropdown and exit")
     ap.add_argument("--width", type=int, default=820, help="viewport width (default 820)")
     ap.add_argument("--height", type=int, default=2600,
                     help="viewport height; must exceed the clipped element (default 2600)")
@@ -257,17 +363,35 @@ def main() -> int:
     ap.add_argument("--force", action="store_true", help="overwrite an existing PNG")
     a = ap.parse_args()
 
-    if a.out.exists() and not a.force:
+    if a.list_panels:
+        # Nothing to keep — the answer is the prep JS's return value.
+        a.out = Path(tempfile.mkdtemp(prefix="bvshot-")) / "discard.png"
+    elif a.out is None:
+        ap.error("-o/--out is required (unless --list-panels)")
+    elif a.out.exists() and not a.force:
         raise SystemExit(f"{a.out} exists — pass --force to overwrite")
 
-    preset_clip, preset_prep = SHOTS[a.shot]
-    clip = a.clip if a.clip is not None else preset_clip
-    prep = a.prep if a.prep is not None else preset_prep
+    if a.panel or a.list_panels:
+        # A nerd panel sits far down the page, well past the default 2600px
+        # viewport. captureBeyondViewport is off (it restarts the chart
+        # animation — see the docstring), so anything below the emulated fold
+        # paints white; give it room unless the caller asked for a height.
+        if a.height == 2600:
+            a.height = 6000
+    if a.list_panels:
+        clip, prep = None, _LIST_PANELS
+    elif a.panel:
+        clip, prep = "#shotTarget", _nerd_panel_prep(a.panel, a.candidate)
+    else:
+        preset_clip, preset_prep = SHOTS[a.shot]
+        clip = a.clip if a.clip is not None else preset_clip
+        prep = a.prep if a.prep is not None else preset_prep
 
     target = a.bvid_or_url
     if not target.startswith("http"):
         target = f"https://bettervoting.com/{target}/results"
-    print(f"capturing {target}  (shot={a.shot})")
+    label = f"panel={a.panel!r}" if a.panel else f"shot={a.shot}"
+    print(f"capturing {target}  ({label})")
     asyncio.run(shoot(target, a.out, clip, prep, a.width, a.height, a.scale,
                       a.pad, a.settle))
     return 0
