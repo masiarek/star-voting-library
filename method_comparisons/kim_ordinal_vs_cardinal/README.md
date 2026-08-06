@@ -34,14 +34,14 @@ One electorate throughout: **36 voters, three flavors, fixed rankings.**
 
 | Case | (A, B) | Winner | What it shows |
 |---|:--:|:--:|---|
-| [The middle is worth nothing](cases/cases_pages/kim_scoring_a0_plurality.md) | `(0,0)` | **Cocoa** | plurality — and two blocs handing in identical papers | 
-| [The middle is worth half](cases/cases_pages/kim_scoring_ahalf_borda.md) | `(½,½)` | **Almond** | Borda — which Kim proves is the *optimal* ordinal rule here |
-| [The middle is worth everything](cases/cases_pages/kim_scoring_a1_negative.md) | `(1,1)` | **Berry** | negative voting — fewest last places wins |
-| [Approval, lukewarm seconds](cases/cases_pages/kim_approval_lukewarm_seconds.md) | `(0,1)` | **Almond** | the voters set the dial — and one intensity pattern |
-| [Approval, intense seconds](cases/cases_pages/kim_approval_intense_seconds.md) | `(0,1)` | **Berry** | *identical rankings*, different intensities, different winner |
-| [The ranking alone](cases/cases_pages/kim_ranked_robin_reference.md) | — | **Almond** | the control: Ranked Robin has no dial to turn, and cannot tell the last two files apart either |
+| [The middle is worth nothing](cases/cases_pages/bv2275_6mcgkq_a0_plurality.md) | `(0,0)` | **Cocoa** | plurality — and two blocs handing in identical papers | 
+| [The middle is worth half](cases/cases_pages/bv2275_6mcgkq_ahalf_borda.md) | `(½,½)` | **Almond** | Borda — which Kim proves is the *optimal* ordinal rule here |
+| [The middle is worth everything](cases/cases_pages/bv2275_6mcgkq_a1_negative.md) | `(1,1)` | **Berry** | negative voting — fewest last places wins |
+| [Approval, lukewarm seconds](cases/cases_pages/bv2275_6mcgkq_approval_lukewarm.md) | `(0,1)` | **Almond** | the voters set the dial — and one intensity pattern |
+| [Approval, intense seconds](cases/cases_pages/bv2275_6mcgkq_approval_intense.md) | `(0,1)` | **Berry** | *identical rankings*, different intensities, different winner |
+| [The ranking alone](cases/cases_pages/bv2275_6mcgkq_ranked_robin.md) | — | **Almond** | the control: Ranked Robin has no dial to turn, and cannot tell the last two files apart either |
 
-Sources: [`kim_scoring_a0_plurality.yaml`](cases/kim_scoring_a0_plurality.yaml) · [`kim_scoring_ahalf_borda.yaml`](cases/kim_scoring_ahalf_borda.yaml) · [`kim_scoring_a1_negative.yaml`](cases/kim_scoring_a1_negative.yaml) · [`kim_approval_lukewarm_seconds.yaml`](cases/kim_approval_lukewarm_seconds.yaml) · [`kim_approval_intense_seconds.yaml`](cases/kim_approval_intense_seconds.yaml) · [`kim_ranked_robin_reference.yaml`](cases/kim_ranked_robin_reference.yaml) · frozen export: [`kim_ab_scoring_6mcgkq_bv_export.json`](cases/kim_ab_scoring_6mcgkq_bv_export.json)
+Sources: [`bv2275_6mcgkq_a0_plurality.yaml`](cases/bv2275_6mcgkq_a0_plurality.yaml) · [`bv2275_6mcgkq_ahalf_borda.yaml`](cases/bv2275_6mcgkq_ahalf_borda.yaml) · [`bv2275_6mcgkq_a1_negative.yaml`](cases/bv2275_6mcgkq_a1_negative.yaml) · [`bv2275_6mcgkq_approval_lukewarm.yaml`](cases/bv2275_6mcgkq_approval_lukewarm.yaml) · [`bv2275_6mcgkq_approval_intense.yaml`](cases/bv2275_6mcgkq_approval_intense.yaml) · [`bv2275_6mcgkq_ranked_robin.yaml`](cases/bv2275_6mcgkq_ranked_robin.yaml) · frozen export: [`bv2275_6mcgkq_bv_export.json`](cases/bv2275_6mcgkq_bv_export.json)
 
 **The six cases are the six races of BV2275**, in order — one BetterVoting election, one set of 36 voters, each voting all six. BetterVoting agrees with the engine on every race, and reports `tieBreakType: none` throughout, so nothing here rests on a tie-break. The Ranked Robin race additionally clears the house [triple-check](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md): LH, BetterVoting and `pref_voting`'s independent Copeland all return Almond.
 
@@ -69,7 +69,7 @@ Worth watching in the ballot blocks, because it is the mechanism behind the tabl
 
 STAR's automatic runoff tracks that exactly. At both ends of the dial the ballot has already thrown the information away, so the runoff has nothing to add and simply confirms the scoring round (8 and 20 voters respectively register Equal Support). Only in the middle file does the runoff have real data, and there it agrees with the scoring round too — Almond beats Berry 19–17.
 
-<!-- report:kim_scoring_ahalf_borda -->
+<!-- report:bv2275_6mcgkq_ahalf_borda -->
 ```text
 [Divergence from STAR]
   STAR                   = Almond
@@ -117,7 +117,7 @@ Race 1 of BV2275 — the `A = 0` ballot — as BetterVoting renders it. The Scor
 
 <img alt="BetterVoting results for BV2275 race 1: Cocoa wins; Scoring Round Cocoa 64, Almond 48, Berry 32; Automatic Runoff Cocoa 44%, Almond 33%, Equal Support 22%" src="img/6mcgkq_result.png" width="640">
 
-> **Read the divergence block in the `A = 1` file with care.** It reports `Choose-One (Plurality) = Almond`, which is *not* the plurality answer to this election — the plurality answer is Cocoa, and it is [file 1](cases/cases_pages/kim_scoring_a0_plurality.md). Every ballot in the negative-voting file has two candidates tied at 4, so "this ballot's top choice" is decided by candidate priority order rather than by the voter. The engine flags this itself ("36 of 36 ballots (100%) had equal non-zero scores"). It is an artifact of reading a Choose-One count off a ballot that was never a Choose-One ballot.
+> **Read the divergence block in the `A = 1` file with care.** It reports `Choose-One (Plurality) = Almond`, which is *not* the plurality answer to this election — the plurality answer is Cocoa, and it is [file 1](cases/cases_pages/bv2275_6mcgkq_a0_plurality.md). Every ballot in the negative-voting file has two candidates tied at 4, so "this ballot's top choice" is decided by candidate priority order rather than by the voter. The engine flags this itself ("36 of 36 ballots (100%) had equal non-zero scores"). It is an artifact of reading a Choose-One count off a ballot that was never a Choose-One ballot.
 
 ## Why Borda is the one to beat
 
@@ -134,7 +134,7 @@ The two approval files are the payoff. They carry the **same 36 rankings** as ev
 | **Lukewarm seconds** — only the 7-voter bloc approves two | **19** | 8 | 16 | Almond |
 | **Intense seconds** — the 12- and 9-voter blocs approve two | 12 | **29** | 16 | Berry |
 
-<!-- report:kim_approval_intense_seconds -->
+<!-- report:bv2275_6mcgkq_approval_intense -->
 ```text
 --- Approval Voting (single winner) ---
  Tabulating 36 ballots (any non-zero score = approval).

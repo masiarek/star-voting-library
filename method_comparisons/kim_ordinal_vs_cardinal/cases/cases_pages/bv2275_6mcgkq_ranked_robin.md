@@ -5,7 +5,7 @@ search:
 
 # Kim (A,B)-scoring — the ranking alone (Ranked Robin reference)
 
-*Generated from [`kim_ranked_robin_reference.yaml`](../kim_ranked_robin_reference.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2275_6mcgkq_ranked_robin.yaml`](../bv2275_6mcgkq_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Almond
 
@@ -110,12 +110,12 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/kim_ranked_robin_reference_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2275_6mcgkq_ranked_robin_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kim_ordinal_vs_cardinal/cases/kim_ranked_robin_reference.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ranked_robin.yaml
 ```
 
 ## See also
@@ -123,4 +123,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [kim_approval_intense_seconds](kim_approval_intense_seconds.md) · [kim_approval_lukewarm_seconds](kim_approval_lukewarm_seconds.md) · [kim_scoring_a0_plurality](kim_scoring_a0_plurality.md) · [kim_scoring_a1_negative](kim_scoring_a1_negative.md) · [kim_scoring_ahalf_borda](kim_scoring_ahalf_borda.md)
+More cases in this set: [bv2275_6mcgkq_a0_plurality](bv2275_6mcgkq_a0_plurality.md) · [bv2275_6mcgkq_a1_negative](bv2275_6mcgkq_a1_negative.md) · [bv2275_6mcgkq_ahalf_borda](bv2275_6mcgkq_ahalf_borda.md) · [bv2275_6mcgkq_approval_intense](bv2275_6mcgkq_approval_intense.md) · [bv2275_6mcgkq_approval_lukewarm](bv2275_6mcgkq_approval_lukewarm.md)

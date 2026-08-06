@@ -5,7 +5,7 @@ search:
 
 # Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda)
 
-*Generated from [`kim_scoring_ahalf_borda.yaml`](../kim_scoring_ahalf_borda.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2275_6mcgkq_ahalf_borda.yaml`](../bv2275_6mcgkq_ahalf_borda.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Almond
 
@@ -15,8 +15,8 @@ search:
 
 ONE electorate, marked three ways. This is file 2 of 3.
 
-Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
-and kim_scoring_a1_negative.yaml. The only thing that changes is what a
+Same 36 voters, same opinions, same rankings as bv2275_6mcgkq_a0_plurality.yaml
+and bv2275_6mcgkq_a1_negative.yaml. The only thing that changes is what a
 voter's SECOND choice is worth — the dial Myerson (2002) calls A, and the one
 Semin Kim's mechanism-design paper (Games and Economic Behavior 104, 2017) is
 really about.
@@ -52,10 +52,10 @@ The ballots as marked — the filled bubble is the score given, and the score is
 
 | Ballot as marked | Voters | Almond | Berry | Cocoa |
 |:--|:--:|:--:|:--:|:--:|
-| <img src="../img/kim_scoring_ahalf_borda_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Almond &gt; Berry  &gt; Cocoa: Almond 4, Berry 2, Cocoa 0."> | 12 | 4 | 2 | 0 |
-| <img src="../img/kim_scoring_ahalf_borda_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Berry  &gt; Almond &gt; Cocoa: Almond 2, Berry 4, Cocoa 0."> | 8 | 2 | 4 | 0 |
-| <img src="../img/kim_scoring_ahalf_borda_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cocoa  &gt; Almond &gt; Berry: Almond 2, Berry 0, Cocoa 4."> | 7 | 2 | 0 | 4 |
-| <img src="../img/kim_scoring_ahalf_borda_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cocoa  &gt; Berry  &gt; Almond: Almond 0, Berry 2, Cocoa 4."> | 9 | 0 | 2 | 4 |
+| <img src="../img/bv2275_6mcgkq_ahalf_borda_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Almond &gt; Berry  &gt; Cocoa: Almond 4, Berry 2, Cocoa 0."> | 12 | 4 | 2 | 0 |
+| <img src="../img/bv2275_6mcgkq_ahalf_borda_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Berry  &gt; Almond &gt; Cocoa: Almond 2, Berry 4, Cocoa 0."> | 8 | 2 | 4 | 0 |
+| <img src="../img/bv2275_6mcgkq_ahalf_borda_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cocoa  &gt; Almond &gt; Berry: Almond 2, Berry 0, Cocoa 4."> | 7 | 2 | 0 | 4 |
+| <img src="../img/bv2275_6mcgkq_ahalf_borda_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cocoa  &gt; Berry  &gt; Almond: Almond 0, Berry 2, Cocoa 4."> | 9 | 0 | 2 | 4 |
 
 The same ballots as the file records them:
 
@@ -142,18 +142,17 @@ Berry       0   8   0  21   0   7  |    74   2.1
 Cocoa       0  16   0   0   0  20  |    64   1.8
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/kim_scoring_ahalf_borda_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2275_6mcgkq_ahalf_borda_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_ahalf_borda.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml
 ```
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/kim_scoring_ahalf_borda.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [kim_approval_intense_seconds](kim_approval_intense_seconds.md) · [kim_approval_lukewarm_seconds](kim_approval_lukewarm_seconds.md) · [kim_ranked_robin_reference](kim_ranked_robin_reference.md) · [kim_scoring_a0_plurality](kim_scoring_a0_plurality.md) · [kim_scoring_a1_negative](kim_scoring_a1_negative.md)
+More cases in this set: [bv2275_6mcgkq_a0_plurality](bv2275_6mcgkq_a0_plurality.md) · [bv2275_6mcgkq_a1_negative](bv2275_6mcgkq_a1_negative.md) · [bv2275_6mcgkq_approval_intense](bv2275_6mcgkq_approval_intense.md) · [bv2275_6mcgkq_approval_lukewarm](bv2275_6mcgkq_approval_lukewarm.md) · [bv2275_6mcgkq_ranked_robin](bv2275_6mcgkq_ranked_robin.md)

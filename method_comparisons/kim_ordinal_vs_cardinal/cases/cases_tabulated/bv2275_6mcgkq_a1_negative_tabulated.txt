@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     kim_scoring_a1_negative.yaml
-TABULATED FILE:  kim_scoring_a1_negative_tabulated.txt
+SOURCE FILE:     bv2275_6mcgkq_a1_negative.yaml
+TABULATED FILE:  bv2275_6mcgkq_a1_negative_tabulated.txt
 ======================================================================
 
 election_title: "Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting)"
@@ -8,8 +8,8 @@ election_title: "Kim (A,B)-scoring, A=1 — the middle choice is worth everythin
 scenario_description: |-
   ONE electorate, marked three ways. This is file 3 of 3.
 
-  Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
-  and kim_scoring_ahalf_borda.yaml. Only the middle mark moves.
+  Same 36 voters, same opinions, same rankings as bv2275_6mcgkq_a0_plurality.yaml
+  and bv2275_6mcgkq_ahalf_borda.yaml. Only the middle mark moves.
 
     12 voters   Almond > Berry  > Cocoa
      8 voters   Berry  > Almond > Cocoa
@@ -75,7 +75,7 @@ ballots: |-
 expected_winners:
   - Berry
 
-# file: kim_scoring_a1_negative.yaml
+# file: bv2275_6mcgkq_a1_negative.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -84,8 +84,8 @@ TABULATION RESULTS
 === Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting) ===
   ONE electorate, marked three ways. This is file 3 of 3.
 
-  Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
-  and kim_scoring_ahalf_borda.yaml. Only the middle mark moves.
+  Same 36 voters, same opinions, same rankings as bv2275_6mcgkq_a0_plurality.yaml
+  and bv2275_6mcgkq_ahalf_borda.yaml. Only the middle mark moves.
 
     12 voters   Almond > Berry  > Cocoa
      8 voters   Berry  > Almond > Cocoa
@@ -148,7 +148,7 @@ Legend: For - Equal Support - Against
   Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
         outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
-  RCV-IRV rounds: cases_tabulated/kim_scoring_a1_negative_RCV-IRV_tabulated.txt
+  RCV-IRV rounds: cases_tabulated/bv2275_6mcgkq_a1_negative_RCV-IRV_tabulated.txt
 
 --- STAR Voting Method (single winner) ---
 [STAR Voting]

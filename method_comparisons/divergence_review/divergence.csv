@@ -80,6 +80,7 @@ AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_star.yaml,3,7,
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_star.yaml,3,17,Ada,Ada,Ada,Ada,Ada,Ada,Ben,Ada,Ada,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2151_97hbpw_star.yaml,3,9,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_star.yaml,4,103,B,B,B,B,B,B,B,B,B,0,False,False,False
+AGREE,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a0_plurality.yaml,3,36,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,0,False,False,False
 AGREE,method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_star.yaml,4,100,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,0,False,False,False
 AGREE,method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml,3,100,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,B,A,A,0,False,False,False
@@ -131,6 +132,7 @@ APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_st
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml,3,7,C,C,C,C,C,B,C,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml,4,33,Arlo,Arlo,Arlo,Arlo,Arlo,Bree,Bree,Arlo,Arlo,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml,3,13,Cass,Cass,Cass,Cass,Cass,Amy,Cass,,,0,False,False,True
+APPROVAL_OR_MINOR,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml,3,36,Almond,Almond,Almond,Almond,Almond,Cocoa,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml,3,30,Z,Z,Z,Z,Z,X,X,Z,Z,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml,4,20,Blue,Blue,Blue,Blue,Blue,Pink,Purple,Blue,Blue,0,False,False,False
@@ -186,6 +188,7 @@ IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.
 IRV_DIFFERS_ARTIFACT,method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml,3,100,B,A,B,B,A,B,B,B,A,100,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml,4,100,Melenchon,LePen,Melenchon,Melenchon,Fillon,Fillon,Melenchon,Melenchon,,100,True,True,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml,3,36,Berry,Almond,Berry,Berry,Almond,Berry,Berry,Berry,Almond,36,True,True,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/05_Practice/cases/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False

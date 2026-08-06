@@ -3,8 +3,8 @@ election_title: "Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (B
 scenario_description: |-
   ONE electorate, marked three ways. This is file 2 of 3.
 
-  Same 36 voters, same opinions, same rankings as kim_scoring_a0_plurality.yaml
-  and kim_scoring_a1_negative.yaml. The only thing that changes is what a
+  Same 36 voters, same opinions, same rankings as bv2275_6mcgkq_a0_plurality.yaml
+  and bv2275_6mcgkq_a1_negative.yaml. The only thing that changes is what a
   voter's SECOND choice is worth — the dial Myerson (2002) calls A, and the one
   Semin Kim's mechanism-design paper (Games and Economic Behavior 104, 2017) is
   really about.
@@ -64,4 +64,4 @@ ballots: |-
 expected_winners:
   - Almond
 
-# file: kim_scoring_ahalf_borda.yaml
+# file: bv2275_6mcgkq_ahalf_borda.yaml

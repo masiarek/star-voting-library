@@ -5,7 +5,7 @@ search:
 
 # Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are lukewarm
 
-*Generated from [`kim_approval_lukewarm_seconds.yaml`](../kim_approval_lukewarm_seconds.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2275_6mcgkq_approval_lukewarm.yaml`](../bv2275_6mcgkq_approval_lukewarm.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Approval Voting](../../../../04_Approval/01_Learn/README.md) · **1 seat** · **Expected winner:** Almond
 
@@ -39,7 +39,7 @@ Everyone else approves their favorite alone.
   Cocoa    7 + 9 = 16
   Berry            8
 
-Almond wins. Now read kim_approval_intense_seconds.yaml, which is the same
+Almond wins. Now read bv2275_6mcgkq_approval_intense.yaml, which is the same
 36 rankings with a different intensity pattern and a different winner.
 
 This is the cardinal information a ranking cannot hold. It is not "who do you
@@ -60,10 +60,10 @@ The ballots as marked — a filled **Yes** is a `1` in that candidate's column, 
 
 | Ballot as marked | Voters | Almond | Berry | Cocoa |
 |:--|:--:|:--:|:--:|:--:|
-| <img src="../img/kim_approval_lukewarm_seconds_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Almond &gt; Berry  &gt; Cocoa   — approves Almond only: Almond Yes, Berry No, Cocoa No."> | 12 | 1 | 0 | 0 |
-| <img src="../img/kim_approval_lukewarm_seconds_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Berry  &gt; Almond &gt; Cocoa   — approves Berry only: Almond No, Berry Yes, Cocoa No."> | 8 | 0 | 1 | 0 |
-| <img src="../img/kim_approval_lukewarm_seconds_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Almond &gt; Berry   — approves BOTH (Almond is a close second): Almond Yes, Berry No, Cocoa Yes."> | 7 | 1 | 0 | 1 |
-| <img src="../img/kim_approval_lukewarm_seconds_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Berry  &gt; Almond  — approves Cocoa only: Almond No, Berry No, Cocoa Yes."> | 9 | 0 | 0 | 1 |
+| <img src="../img/bv2275_6mcgkq_approval_lukewarm_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Almond &gt; Berry  &gt; Cocoa   — approves Almond only: Almond Yes, Berry No, Cocoa No."> | 12 | 1 | 0 | 0 |
+| <img src="../img/bv2275_6mcgkq_approval_lukewarm_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Berry  &gt; Almond &gt; Cocoa   — approves Berry only: Almond No, Berry Yes, Cocoa No."> | 8 | 0 | 1 | 0 |
+| <img src="../img/bv2275_6mcgkq_approval_lukewarm_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Almond &gt; Berry   — approves BOTH (Almond is a close second): Almond Yes, Berry No, Cocoa Yes."> | 7 | 1 | 0 | 1 |
+| <img src="../img/bv2275_6mcgkq_approval_lukewarm_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Berry  &gt; Almond  — approves Cocoa only: Almond No, Berry No, Cocoa Yes."> | 9 | 0 | 0 | 1 |
 
 The same ballots as the file records them:
 
@@ -79,7 +79,7 @@ Count:Almond,Berry,Cocoa
 
 ## What the engine says
 
-Full report from the [`_tabulated` mirror](../cases_tabulated/kim_approval_lukewarm_seconds_tabulated.txt) (regenerated on every run; every analysis forced on):
+Full report from the [`_tabulated` mirror](../cases_tabulated/bv2275_6mcgkq_approval_lukewarm_tabulated.txt) (regenerated on every run; every analysis forced on):
 
 <!-- --8<-- [start:report] -->
 ```text
@@ -118,11 +118,11 @@ Winner — Approval Voting (single winner)
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kim_ordinal_vs_cardinal/cases/kim_approval_lukewarm_seconds.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_approval_lukewarm.yaml
 ```
 
 ## See also
 
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [kim_approval_intense_seconds](kim_approval_intense_seconds.md) · [kim_ranked_robin_reference](kim_ranked_robin_reference.md) · [kim_scoring_a0_plurality](kim_scoring_a0_plurality.md) · [kim_scoring_a1_negative](kim_scoring_a1_negative.md) · [kim_scoring_ahalf_borda](kim_scoring_ahalf_borda.md)
+More cases in this set: [bv2275_6mcgkq_a0_plurality](bv2275_6mcgkq_a0_plurality.md) · [bv2275_6mcgkq_a1_negative](bv2275_6mcgkq_a1_negative.md) · [bv2275_6mcgkq_ahalf_borda](bv2275_6mcgkq_ahalf_borda.md) · [bv2275_6mcgkq_approval_intense](bv2275_6mcgkq_approval_intense.md) · [bv2275_6mcgkq_ranked_robin](bv2275_6mcgkq_ranked_robin.md)

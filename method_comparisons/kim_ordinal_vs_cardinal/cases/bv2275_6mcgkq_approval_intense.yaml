@@ -9,7 +9,7 @@ scenario_description: |-
      7 voters   Cocoa  > Almond > Berry
      9 voters   Cocoa  > Berry  > Almond
 
-  In kim_approval_lukewarm_seconds.yaml only the 7-voter bloc felt strongly
+  In bv2275_6mcgkq_approval_lukewarm.yaml only the 7-voter bloc felt strongly
   enough about its second choice to approve two candidates, and Almond won 19
   to 16 to 8.
 
@@ -79,4 +79,4 @@ ballots: |-
 expected_winners:
   - Berry
 
-# file: kim_approval_intense_seconds.yaml
+# file: bv2275_6mcgkq_approval_intense.yaml

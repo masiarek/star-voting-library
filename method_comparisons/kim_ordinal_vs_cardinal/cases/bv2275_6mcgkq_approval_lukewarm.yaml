@@ -1,8 +1,3 @@
-======================================================================
-SOURCE FILE:     kim_approval_lukewarm_seconds.yaml
-TABULATED FILE:  kim_approval_lukewarm_seconds_tabulated.txt
-======================================================================
-
 election_title: "Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are lukewarm"
 
 scenario_description: |-
@@ -32,7 +27,7 @@ scenario_description: |-
     Cocoa    7 + 9 = 16
     Berry            8
 
-  Almond wins. Now read kim_approval_intense_seconds.yaml, which is the same
+  Almond wins. Now read bv2275_6mcgkq_approval_intense.yaml, which is the same
   36 rankings with a different intensity pattern and a different winner.
 
   This is the cardinal information a ranking cannot hold. It is not "who do you
@@ -77,38 +72,4 @@ ballots: |-
 expected_winners:
   - Almond
 
-# file: kim_approval_lukewarm_seconds.yaml
-
-======================================================================
-TABULATION RESULTS
-======================================================================
-
---- Approval Voting (single winner) ---
- Tabulating 36 ballots (any non-zero score = approval).
-
-Ballots:
-   columns = Almond, Berry, Cocoa      (1 = approve; 0 / blank / marker = not approved)
-    12 × 1,0,0
-     8 × 0,1,0
-     7 × 1,0,1
-     9 × 0,0,1
-
-   Almond -- 19 (53%) -- Elected
-   Cocoa  -- 16 (44%)
-   Berry  -- 8 (22%)
-
-[Approval Distribution] (how many candidates each ballot approved)
-   43 approvals across 36 ballots — average 1.2 of 3 (range 1–2).
-     approved 1: 29 ballots
-     approved 2: 7 ballots
-
-[Co-Approval Matrix]
- Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
-           | Almond | Cocoa  | Berry  |
-   ------------------------------------
-   Almond  |   --   |  37%   |   0%   |
-   Cocoa   |  44%   |   --   |   0%   |
-   Berry   |   0%   |   0%   |   --   |
-
-Winner — Approval Voting (single winner)
-  Almond
+# file: bv2275_6mcgkq_approval_lukewarm.yaml
