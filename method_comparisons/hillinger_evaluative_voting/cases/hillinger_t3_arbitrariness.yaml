@@ -1,0 +1,64 @@
+election_title: "Hillinger Table 3 — one approval result, two opposite Borda winners"
+
+scenario_description: |-
+  Claude Hillinger, "Voting and the Cardinal Aggregation of Judgments" (Munich
+  Discussion Paper 2004-9), section 10, Table 3 — his answer to the
+  Saari-van Newenhizen (1988) criticism of Approval Voting.
+
+  SVN's argument: a voter with the strict preference a > b > c cannot express it
+  on an approval ballot. They must arbitrarily pick (1,0,0) or (1,1,0), and one
+  can construct profiles where that arbitrary choice decides the election. So
+  Approval - and, SVN generalize, cardinal voting at large - is indeterminate.
+
+  Hillinger's inversion: the argument only bites if the STRICT ORDERINGS are the
+  true preferences. Assume instead that the approval marks are what the voters
+  actually mean, and it is the rankings that become arbitrary - because a coarse
+  score under-determines the ranking in exactly the same way.
+
+  These are the seven approval ballots of his Table 3. Ada 5, Ben 2, Cora 4;
+  Ada wins. Now complete each ballot to a strict ranking. TWO completions are
+  consistent with these very marks:
+
+    reading 1   3x Ada>Ben>Cora   2x Ben>Cora>Ada   2x Ada>Cora>Ben
+                Borda: Ada 10, Ben 7, Cora 4   ->  ADA wins
+    reading 2   3x Ada>Cora>Ben   2x Ben>Cora>Ada   2x Cora>Ada>Ben
+                Borda: Ada  8, Ben 2, Cora 11  ->  CORA wins
+
+  Same ballots, same voters, opposite Borda winners. The ordinal formalism is as
+  under-determined by the marks as the marks are by the formalism - which is
+  Hillinger's point, and it is a genuine standoff rather than a refutation.
+
+  Teaching page: 04_Approval/01_Learn/approval_indeterminacy.md
+  Concept page:  07_Concepts/topics/cardinal_utility.md
+
+voting_method: Approval
+num_winners: 1
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+# Hillinger (2004), Table 3, the AV row: (1,0,0) x3, (0,1,1) x2, (1,0,1) x2.
+# Written one row per voter; collapse_ballots regroups them as the paper does.
+ballots: |-
+  Ada,Ben,Cora
+  1,0,0    # approves Ada only
+  1,0,0    # approves Ada only
+  1,0,0    # approves Ada only
+  0,1,1    # approves Ben and Cora
+  0,1,1    # approves Ben and Cora
+  1,0,1    # approves Ada and Cora
+  1,0,1    # approves Ada and Cora
+
+expected_winners:
+  - Ada
+
+# file: hillinger_t3_arbitrariness.yaml

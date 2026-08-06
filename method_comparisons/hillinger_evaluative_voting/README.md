@@ -12,6 +12,7 @@ This folder runs his own worked example. The theory lives on the concept page �
 |---|---|---|
 | [Table 4 — three methods, three winners](cases/cases_pages/hillinger_t4_ev3.md) | his "mirror pathology" of IRV: the most popular candidate eliminated in round one | [`hillinger_t4_ev3.yaml`](cases/hillinger_t4_ev3.yaml) |
 | [The same election, rescaled](cases/cases_pages/hillinger_t4_affine.md) | what "cardinal" guarantees: totals move under `u′ = 2u + 1`, the winner does not | [`hillinger_t4_affine.yaml`](cases/hillinger_t4_affine.yaml) |
+| [Table 3 — one approval result, two opposite Borda winners](cases/cases_pages/hillinger_t3_arbitrariness.md) | his §10 answer to Saari–Van Newenhizen: a coarse score under-determines the ranking exactly as a ranking under-determines the score | [`hillinger_t3_arbitrariness.yaml`](cases/hillinger_t3_arbitrariness.yaml) |
 
 ## Table 4 — the mirror pathology
 
@@ -89,6 +90,7 @@ Count × Ana,Bruno,Chloe
 ## Related
 
 - [Cardinal utility](../../07_Concepts/topics/cardinal_utility.md) — the concept page this folder supports: what makes a scale cardinal, Sen's measurability/comparability axes, the vNM trap, Harsanyi's theorem, and a claim-check of Hillinger
+- [Is Approval's outcome arbitrary?](../../04_Approval/01_Learn/approval_indeterminacy.md) — the teaching page for §10 and Table 3: the Saari–Van Newenhizen criticism, why the Brams–Fishburn–Merrill defense fell short, and what the argument does to STAR
 - [Center squeeze](../center_squeeze/) — the same failure shape as a dedicated topic
 - [Condorcet efficiency](../../07_Concepts/topics/condorcet/) — how often the head-to-head winner actually wins
 - [Range / Score voting](../../06_Other/Range/concepts/range_voting.md) — EV without a runoff, which is what Hillinger actually proposes

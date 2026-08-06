@@ -140,4 +140,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [hillinger_t4_affine](hillinger_t4_affine.md)
+More cases in this set: [hillinger_t3_arbitrariness](hillinger_t3_arbitrariness.md) · [hillinger_t4_affine](hillinger_t4_affine.md)

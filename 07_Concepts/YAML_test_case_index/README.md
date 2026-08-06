@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**477 election files** (414 single-winner, 63 multi-winner) across 16 method(s).
+**478 election files** (415 single-winner, 63 multi-winner) across 16 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 250 |
 | RCV-IRV (Hare) | 29 |
 | Ranked Robin (RCV-RR / Copeland) | 72 |
-| Approval | 18 |
+| Approval | 19 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
@@ -395,7 +395,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (18)
+## Approval  (19)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -413,6 +413,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2153_pcttmr_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2153_pcttmr_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.7 — Approval: a majority's first choice loses → _Bella_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2153_pcttmr_approval.yaml) |
 | [`bv2154_wq6yv7_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2154_wq6yv7_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot → _April_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2154_wq6yv7_approval.yaml) |
 | [`felsenthal_ex6_pareto_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_pareto_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only) → _Beau_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_pareto_approval.yaml) |
+| [`hillinger_t3_arbitrariness`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t3_arbitrariness.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 3 — one approval result, two opposite Borda winners → _Ada_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t3_arbitrariness.yaml) |
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml) |
