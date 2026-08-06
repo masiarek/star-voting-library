@@ -277,9 +277,6 @@ LH:kim_approval_lukewarm_seconds,"Kim (A,B)-scoring, A=0/B=1 — Approval, when 
 LH:kim_scoring_a0_plurality,"Kim (A,B)-scoring, A=0 — the middle choice is worth nothing (Plurality)",1,single-race,36,STAR,LH-only
 LH:kim_scoring_a1_negative,"Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting)",1,single-race,36,STAR,LH-only
 LH:kim_scoring_ahalf_borda,"Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda)",1,single-race,36,STAR,LH-only
-LH:kissel_five_way_c5_b1000_irv,Kissel's five-way example (RCV-IRV) — the compromise is eliminated third,1,single-race,1000,IRV,LH-only
-LH:kissel_five_way_c5_b1000_rr,Kissel's five-way example (Ranked Robin) — the same ballots elect C,1,single-race,1000,RankedRobin,LH-only
-LH:kissel_five_way_c5_b1000_star,Kissel's five-way example (STAR) — the compromise reaches the runoff and wins,1,single-race,1000,STAR,LH-only
 LH:lackner_skowron_shadow_bloc_star_c7_b12,Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4),1,single-race,12,STAR,LH-only
 LH:lackner_skowron_shadow_star_pr_c7_b12,Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4),1,single-race,12,STAR_PR,LH-only
 LH:lackner_skowron_shadow_star_pr_rrv_c7_b12,Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV,1,single-race,12,STAR_PR,LH-only
@@ -290,9 +287,6 @@ LH:majority_illusion_c3_b41_score_vs_star,"The majority illusion — Score elect
 LH:majority_illusion_c3_b41_two_rivals,"The majority illusion, one score changed — the majority loses Alice",1,single-race,41,STAR,LH-only
 LH:majority_vs_consensus_51_49,Majority criterion vs. the consensus candidate — the 51/49 polarized electorate,1,single-race,100,STAR,LH-only
 LH:margins_paper_exact_304,"Margins matter — the textbook profile at its printed size (304 ballots, LH-only)",1,single-race,304,RankedRobin,LH-only
-LH:mayor_c4_b100_streamlined_irv,"The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins",1,single-race,100,IRV,LH-only
-LH:mayor_c4_b100_streamlined_rr,The mayor's race (Ranked Robin) — Cora beats everyone head-to-head,1,single-race,100,RankedRobin,LH-only
-LH:mayor_c4_b100_streamlined_star,"The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31",1,single-race,100,STAR,LH-only
 LH:mmp_majority_ceiling,Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%,1,single-race,30,Plurality,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:mono_raise_delete_after,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",1,single-race,30,STAR,LH-only

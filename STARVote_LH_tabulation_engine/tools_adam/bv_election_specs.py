@@ -5311,3 +5311,105 @@ DEGENERATE_SEATS_SPEC = {
         "Celia, with round 1 Abby 5 - Bruno 2, round 2 Bruno 5 - Celia 2, and a third round "
         "with a single candidate and nothing to run against. Test ID BV2269."),
 }
+
+
+# --------------------------------------------------------------------------
+# Districting cost — the best candidate wins no district at all.
+# Runnable companion to 07_Concepts/topics/distributed_voting_distortion.md and
+# the case set method_comparisons/districting_cost/.
+#
+# ONE election, THREE races. Districts hold DIFFERENT voters, but BV races are
+# aligned by voter index and must all carry the same ballot count — so each
+# chapter race carries all nine papers and the other chapter's members leave it
+# blank. Blank scores 0, which adds nothing to any total and lands in Equal
+# Support in the runoff, so every scoring total and every winner is identical to
+# the 5- and 4-ballot LH yamls. That is the only difference between the frozen
+# export and the case files, and it is by construction.
+#
+# Nothing here rests on a tie-break: no scoring round ties (23/19/0, 19/14/0,
+# 33/23/19) and every runoff is decisive.
+DISTRICTING_COST_SPEC = {
+    "test_id": "BV2274",   # from the create script's printed next-free line
+    "title": "The cost of districting — the best candidate wins no district at all",
+    "description": (
+        "Two chapters of one club elect a single national delegate, and the same nine "
+        "members are counted three ways. Ana is adored in Northside and unknown in "
+        "Southside; Beto is the exact mirror image; Cleo is everybody's solid second "
+        "choice. Race 1 counts Northside's five members and elects Ana. Race 2 counts "
+        "Southside's four and elects Beto. Race 3 counts all nine together and elects "
+        "CLEO — who won neither chapter. "
+        "Nothing about anyone's ballot changed between the races. Only the map did. "
+        "Ana's 23 points are concentrated in one chapter and Beto's 19 in the other, "
+        "while Cleo's 33 are spread evenly across both, so a chapter-by-chapter count "
+        "reads concentration and a combined count reads the total. Cleo also beats both "
+        "rivals head-to-head, so she is the Condorcet winner as well as the points "
+        "leader: both notions of 'best' agree, and the district map overrides both. "
+        "This is the distortion of DISTRIBUTED voting, made countable. Computational "
+        "social choice proves that splitting an electorate into k districts and then "
+        "choosing among the district winners multiplies the worst-case welfare loss by "
+        "k — and that the loss survives even when every district counts perfect "
+        "utilities. Here at k=2 you can check it by hand: every chapter ran a full 0-5 "
+        "score count and still discarded the best candidate, so no ballot reform "
+        "touches this. What costs the club is the requirement that the delegate be "
+        "somebody's chapter winner. Picking Ana costs 30% of the available "
+        "satisfaction; picking Beto costs 42%. "
+        "In the two chapter races every member of the OTHER chapter leaves the contest "
+        "blank, which is how a real districted election works — you get one ballot "
+        "paper and vote only your own district's contest. A blank adds zero to every "
+        "total, so the counts match the 5- and 4-member tallies exactly. "
+        "Read it fairly: this is a constructed example showing the mechanism, not a "
+        "claim about how often real district maps do this. Published experiments on "
+        "real-world data find the effect far milder than the worst-case bound, because "
+        "real electorates are homogeneous. The library's other districting case "
+        "(Exercise 1, two districts and one mayor) is the honest twin, where districting "
+        "costs nothing at all and the combined count is the one that gives ground. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/07_Concepts/topics/distributed_voting_distortion.html"
+    ),
+    "enable_write_in": False,   # a write-in would break the three-candidate construction
+    "races": [
+        {
+            "title": "Northside chapter (5 members)",
+            "method": "STAR", "num_winners": 1,
+            "candidates": ["Ana", "Beto", "Cleo"],
+            "ballots": [
+                [5, 0, 3], [5, 0, 3], [5, 0, 3],   # Northside: Ana loyalists
+                [4, 0, 5], [4, 0, 5],              # Northside: Cleo-leaning
+                [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],   # Southside: not their contest
+            ],
+        },
+        {
+            "title": "Southside chapter (4 members)",
+            "method": "STAR", "num_winners": 1,
+            "candidates": ["Ana", "Beto", "Cleo"],
+            "ballots": [
+                [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],   # Northside: not their contest
+                [0, 5, 3], [0, 5, 3], [0, 5, 3],   # Southside: Beto loyalists
+                [0, 4, 5],                          # Southside: Cleo-leaning
+            ],
+        },
+        {
+            "title": "Both chapters together (9 members)",
+            "method": "STAR", "num_winners": 1,
+            "candidates": ["Ana", "Beto", "Cleo"],
+            "ballots": [
+                [5, 0, 3], [5, 0, 3], [5, 0, 3], [4, 0, 5], [4, 0, 5],
+                [0, 5, 3], [0, 5, 3], [0, 5, 3], [0, 4, 5],
+            ],
+        },
+    ],
+    "expected": (
+        "Race 1 -> Ana (23 to Cleo's 19; runoff 3-2). "
+        "Race 2 -> Beto (19 to Cleo's 14; runoff 3-1). "
+        "Race 3 -> Cleo (33 to Ana's 23; runoff 6-3). "
+        "Cleo wins the combined race having won neither chapter, and is the "
+        "welfare optimum (33 vs 23 vs 19) and the Condorcet winner."
+    ),
+}
+
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [DISTRICTING_COST_SPEC]   # BV2274 -> 38b7fg
+#   Created as designed, 9 ballots x 3 races. BV agrees with LH on all three
+#   (Ana / Beto / Cleo) and reports tieBreakType 'none' everywhere — nothing in
+#   this election rests on a tie-break, which matters because the lesson is that
+#   the combined winner won neither district.

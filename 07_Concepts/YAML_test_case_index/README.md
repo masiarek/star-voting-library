@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**491 election files** (426 single-winner, 65 multi-winner) across 17 method(s).
+**494 election files** (429 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 257 |
+| STAR | 260 |
 | RCV-IRV (Hare) | 29 |
 | Ranked Robin (RCV-RR / Copeland) | 72 |
 | Approval | 21 |
@@ -30,7 +30,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (257)
+## STAR  (260)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -214,6 +214,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`chicken_star`](../../method_comparisons/chicken_dilemma/cases/cases_pages/chicken_star.md) | `method_comparisons/chicken_dilemma/cases/` | 1 | Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly) → _A_ | [`.yaml`](../../method_comparisons/chicken_dilemma/cases/chicken_star.yaml) |
 | [`margins_star`](../../method_comparisons/copeland_vs_borda_margins/cases/cases_pages/margins_star.md) | `method_comparisons/copeland_vs_borda_margins/cases/` | 1 | Margins matter — STAR on the same twelve ballots (rank converted 5/3/0) → _Almond_ | [`.yaml`](../../method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml) |
 | [`dark_horse_star`](../../method_comparisons/dark_horse_borda/cases/cases_pages/dark_horse_star.md) | `method_comparisons/dark_horse_borda/cases/` | 1 | Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D) → _A_ | [`.yaml`](../../method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml) |
+| [`b38b7fg_districting_combined`](../../method_comparisons/districting_cost/cases/cases_pages/b38b7fg_districting_combined.md) | `method_comparisons/districting_cost/cases/` | 1 | Two chapters, one delegate — Both chapters together (9 members) → _Cleo_ | [`.yaml`](../../method_comparisons/districting_cost/cases/b38b7fg_districting_combined.yaml) |
+| [`b38b7fg_districting_north`](../../method_comparisons/districting_cost/cases/cases_pages/b38b7fg_districting_north.md) | `method_comparisons/districting_cost/cases/` | 1 | Two chapters, one delegate — Northside chapter (5 members) → _Ana_ | [`.yaml`](../../method_comparisons/districting_cost/cases/b38b7fg_districting_north.yaml) |
+| [`b38b7fg_districting_south`](../../method_comparisons/districting_cost/cases/cases_pages/b38b7fg_districting_south.md) | `method_comparisons/districting_cost/cases/` | 1 | Two chapters, one delegate — Southside chapter (4 members) → _Beto_ | [`.yaml`](../../method_comparisons/districting_cost/cases/b38b7fg_districting_south.yaml) |
 | [`bv2173_gmfv4c_edelman_saari_cancellation`](../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/bv2173_gmfv4c_edelman_saari_cancellation.md) | `method_comparisons/edelman_condorcet_myth/cases/` | 1 | Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada → _Ada_ | [`.yaml`](../../method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml) |
 | [`edelman_perfect_component_c3_b30`](../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/edelman_perfect_component_c3_b30.md) | `method_comparisons/edelman_condorcet_myth/cases/` | 1 | A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact → _Ada_ | [`.yaml`](../../method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml) |
 | [`bv2168_6w2gq7_fairvote_40_15_40_moderate_cw`](../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md) | `method_comparisons/fairvote_condorcet_claims/cases/` | 1 | FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice → _Moderate_ | [`.yaml`](../../method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) |

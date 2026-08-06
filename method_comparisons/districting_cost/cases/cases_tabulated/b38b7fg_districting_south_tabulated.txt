@@ -1,7 +1,11 @@
 ======================================================================
-SOURCE FILE:     districting_south.yaml
-TABULATED FILE:  districting_south_tabulated.txt
+SOURCE FILE:     b38b7fg_districting_south.yaml
+TABULATED FILE:  b38b7fg_districting_south_tabulated.txt
 ======================================================================
+
+bv_test_id: BV2274
+bv_election_id: 38b7fg
+bv_results_url: https://bettervoting.com/38b7fg/results
 
 election_title: "Two chapters, one delegate — Southside chapter (4 members)"
 
@@ -15,6 +19,10 @@ scenario_description: |-
   Condorcet winner. That gap is the distortion of distributed voting, made
   countable. Companion concept page:
   07_Concepts/topics/distributed_voting_distortion.md
+  Live on BetterVoting (Test ID BV2274): https://bettervoting.com/38b7fg/results
+  — ONE election carries all three counts as three races. The chapter races
+  hold all nine papers, with the other chapter's members leaving the contest
+  blank; a blank scores 0, so every total matches this file exactly.
 voting_method: STAR
 options:
   show_description: false
@@ -37,7 +45,7 @@ ballots: |-
 expected_winners:
   - Beto
 
-# file: districting_south.yaml
+# file: b38b7fg_districting_south.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -53,6 +61,10 @@ TABULATION RESULTS
   Condorcet winner. That gap is the distortion of distributed voting, made
   countable. Companion concept page:
   07_Concepts/topics/distributed_voting_distortion.md
+  Live on BetterVoting (Test ID BV2274): https://bettervoting.com/38b7fg/results
+  — ONE election carries all three counts as three races. The chapter races
+  hold all nine papers, with the other chapter's members leaving the contest
+  blank; a blank scores 0, so every total matches this file exactly.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

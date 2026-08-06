@@ -69,6 +69,9 @@ AGREE,method_comparisons/black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous
 AGREE,method_comparisons/black_curtain/cases/Black_Curtain_04_c4_b5_four-candidates.yaml,4,5,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,0,False,False,False
 AGREE,method_comparisons/chicken_dilemma/cases/chicken_star.yaml,3,100,A,A,A,A,A,A,A,A,A,0,False,False,False
 AGREE,method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml,4,100,A,A,B,A,A,A,A,A,A,66,True,False,False
+AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_combined.yaml,3,9,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
+AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_north.yaml,3,5,Ana,Ana,Ana,Ana,Ana,Ana,Ana,Ana,Ana,0,False,False,False
+AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_south.yaml,3,4,Beto,Beto,Beto,Beto,Beto,Beto,Beto,Beto,Beto,0,False,False,False
 AGREE,method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml,3,30,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,method_comparisons/fairvote_condorcet_claims/cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml,3,100,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,0,False,False,False
 AGREE,method_comparisons/fairvote_star_whitepaper/cases/bv2229_7j2bqf_french_2017_honest.yaml,4,100,Macron,Macron,Macron,Macron,Macron,Macron,Macron,Macron,Macron,26,False,False,False

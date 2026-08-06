@@ -5,9 +5,11 @@ search:
 
 # Two chapters, one delegate — Both chapters together (9 members)
 
-*Generated from [`districting_combined.yaml`](../districting_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`b38b7fg_districting_combined.yaml`](../b38b7fg_districting_combined.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Cleo
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/38b7fg) · **[results ↗](https://bettervoting.com/38b7fg/results)** (election `38b7fg` · test `BV2274`).
 
 ## Scenario
 
@@ -20,6 +22,10 @@ the highest-welfare candidate (33 points to Ana's 23 and Beto's 19) and the
 Condorcet winner. That gap is the distortion of distributed voting, made
 countable. Companion concept page:
 07_Concepts/topics/distributed_voting_distortion.md
+Live on BetterVoting (Test ID BV2274): https://bettervoting.com/38b7fg/results
+— ONE election carries all three counts as three races. The chapter races
+hold all nine papers, with the other chapter's members leaving the contest
+blank; a blank scores 0, so every total matches this file exactly.
 
 ## Ballots
 
@@ -110,17 +116,18 @@ Beto       3  1  0  0  0  5  |    19   2.1
 Cleo       3  0  6  0  0  0  |    33   3.7
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/districting_combined_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/b38b7fg_districting_combined_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/districting_cost/cases/districting_combined.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/districting_cost/cases/b38b7fg_districting_combined.yaml
 ```
 
 ## See also
 
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [districting_north](districting_north.md) · [districting_south](districting_south.md)
+More cases in this set: [b38b7fg_districting_north](b38b7fg_districting_north.md) · [b38b7fg_districting_south](b38b7fg_districting_south.md)

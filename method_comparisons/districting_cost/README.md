@@ -2,6 +2,8 @@
 
 *Two chapters of one club elect a single national delegate. **Ana** is adored in Northside and unknown in Southside; **Beto** is the mirror image; **Cleo** is everybody's solid second. Count chapter by chapter and Cleo wins **neither** — so a delegate picked from the chapter winners is Ana or Beto. Count all nine members as one electorate and Cleo wins outright, and she is also the **highest-welfare** candidate in the race and the **Condorcet winner**. Nothing about the ballots changed. Only the map did.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/38b7fg) · **[results ↗](https://bettervoting.com/38b7fg/results)** (election `38b7fg`, BV2274) — one election carrying all three counts as three races; it elects **Ana**, **Beto**, **Cleo** exactly as below, with no tie-break anywhere. In the two chapter races the other chapter's members leave the contest blank, which is how a districted election actually works: one ballot paper, and you vote only your own district's contest. A blank scores 0, so every total matches the 5- and 4-member tallies here exactly.
+
 **Level: 301 · deep dive** The runnable companion to [distributed voting — the measured price of counting by district](../../07_Concepts/topics/distributed_voting_distortion.md), which is where the theorems live.
 
 → Its honest twin: [Exercise 1 — two districts, one mayor](../../01_STAR/05_Practice/ex01_two_districts.md), where districting costs **nothing** and the centralized count is the one that gives ground. Read the pair together or neither.
@@ -22,7 +24,7 @@ Cleo leads the combined field by ten points and wins neither half. That is not a
 
 ## The three counts
 
-**Northside (5 members) — Ana wins.** [full report → `cases/cases_tabulated/districting_north_tabulated.txt`](cases/cases_tabulated/districting_north_tabulated.txt)
+**Northside (5 members) — Ana wins.** [full report → `cases/cases_tabulated/b38b7fg_districting_north_tabulated.txt`](cases/cases_tabulated/b38b7fg_districting_north_tabulated.txt)
 
 ```text title="Abridged — scoring and runoff rounds only"
 Scoring Round
@@ -34,7 +36,7 @@ Automatic Runoff Round
    Cleo          -- 2
 ```
 
-**Southside (4 members) — Beto wins**, by the mirror image of the same shape. [full report → `cases/cases_tabulated/districting_south_tabulated.txt`](cases/cases_tabulated/districting_south_tabulated.txt)
+**Southside (4 members) — Beto wins**, by the mirror image of the same shape. [full report → `cases/cases_tabulated/b38b7fg_districting_south_tabulated.txt`](cases/cases_tabulated/b38b7fg_districting_south_tabulated.txt)
 
 ```text title="Abridged — scoring and runoff rounds only"
 Scoring Round
@@ -46,7 +48,7 @@ Automatic Runoff Round
    Cleo          -- 1
 ```
 
-**Both chapters together (9 members) — Cleo wins.** [full report → `cases/cases_tabulated/districting_combined_tabulated.txt`](cases/cases_tabulated/districting_combined_tabulated.txt)
+**Both chapters together (9 members) — Cleo wins.** [full report → `cases/cases_tabulated/b38b7fg_districting_combined_tabulated.txt`](cases/cases_tabulated/b38b7fg_districting_combined_tabulated.txt)
 
 ```text title="Abridged — scoring and runoff rounds only"
 Scoring Round
@@ -86,14 +88,14 @@ And this measures **welfare only**. Districts exist for representation, local ac
 ## Run it yourself
 
 ```bash
-.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/districting_cost/cases/districting_combined.yaml
+.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/districting_cost/cases/b38b7fg_districting_combined.yaml
 ```
 
 | Case | Ballots | Winner | Page | Source |
 |---|:--:|---|---|---|
-| Northside chapter | 5 | Ana | [page](cases/cases_pages/districting_north.md) | [yaml](cases/districting_north.yaml) |
-| Southside chapter | 4 | Beto | [page](cases/cases_pages/districting_south.md) | [yaml](cases/districting_south.yaml) |
-| Both together | 9 | **Cleo** | [page](cases/cases_pages/districting_combined.md) | [yaml](cases/districting_combined.yaml) |
+| Northside chapter | 5 | Ana | [page](cases/cases_pages/b38b7fg_districting_north.md) | [yaml](cases/b38b7fg_districting_north.yaml) |
+| Southside chapter | 4 | Beto | [page](cases/cases_pages/b38b7fg_districting_south.md) | [yaml](cases/b38b7fg_districting_south.yaml) |
+| Both together | 9 | **Cleo** | [page](cases/cases_pages/b38b7fg_districting_combined.md) | [yaml](cases/b38b7fg_districting_combined.yaml) |
 
 ## See also
 

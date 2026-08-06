@@ -1,4 +1,8 @@
-election_title: "Two chapters, one delegate — Both chapters together (9 members)"
+bv_test_id: BV2274
+bv_election_id: 38b7fg
+bv_results_url: https://bettervoting.com/38b7fg/results
+
+election_title: "Two chapters, one delegate — Northside chapter (5 members)"
 
 scenario_description: |-
   Part of the districting-cost trio. Two chapters of one club elect a single
@@ -10,6 +14,10 @@ scenario_description: |-
   Condorcet winner. That gap is the distortion of distributed voting, made
   countable. Companion concept page:
   07_Concepts/topics/distributed_voting_distortion.md
+  Live on BetterVoting (Test ID BV2274): https://bettervoting.com/38b7fg/results
+  — ONE election carries all three counts as three races. The chapter races
+  hold all nine papers, with the other chapter's members leaving the contest
+  blank; a blank scores 0, so every total matches this file exactly.
 voting_method: STAR
 options:
   show_description: false
@@ -30,11 +38,7 @@ ballots: |-
   5,0,3
   4,0,5
   4,0,5
-  0,5,3
-  0,5,3
-  0,5,3
-  0,4,5
 expected_winners:
-  - Cleo
+  - Ana
 
-# file: districting_combined.yaml
+# file: b38b7fg_districting_north.yaml

@@ -4,6 +4,8 @@
 
 **Level: 301 · deep dive** Builds on [distortion](distortion.md) (301). Reads naturally after the library's own two-district cases, which turn out to be exactly this model.
 
+**▶ Live on BetterVoting:** the cost of districting — [vote](https://bettervoting.com/38b7fg) · **[results ↗](https://bettervoting.com/38b7fg/results)** (election `38b7fg`, BV2274), one election counting the same nine members three ways, where the winner of the combined count wins **neither** district. The opposite outcome is live too, on the [Exercise 1](../../01_STAR/05_Practice/ex01_two_districts.md) ballots: West **[results ↗](https://bettervoting.com/d3b9wc/results)** · East **[results ↗](https://bettervoting.com/rhbfj7/results)** · Combined **[results ↗](https://bettervoting.com/923q3d/results)** (BV2188–90). Run both before deciding what districting costs.
+
 Companions: [Distortion](distortion.md) — the parent metric and its two models · [The reinforcement paradox, counted](../../method_comparisons/reinforcement_paradox/README.md) — the same slicing, as a criterion failure rather than a welfare ratio · [Exercise 1 — two districts, one mayor](../../01_STAR/05_Practice/ex01_two_districts.md) — the runnable companion used below · [Multiple districts / consistency](../voting_paradoxes/multiple_districts.md) · [Summability](summability/README.md) — the *other* thing precincts do to a count, and the one this is constantly confused with.
 
 ---
@@ -66,6 +68,20 @@ Scoring Round (all 18 ballots — this IS the utilitarian tally)
 (Both columns shown because distortion is defined on unit-sum-normalized values, not raw scores; here the ordering is the same either way, so nothing turns on the normalization. Elena's 1.57 is comfortably inside the [metric model's factor-of-3 guarantee](distortion.md#how-is-a-bound-of-3-even-possible-the-triangle-inequality-is-smuggled-in-cardinal-information) for a Condorcet winner, as it must be.)
 
 **And the districted mechanism wins this one outright.** It elects the utilitarian optimum; centralized STAR does not. That is the honest result on the library's own case, and it is worth more than a confirming example would be. The theorem says districting costs up to a factor of k *in the worst case*; it does not say districting costs you anything in particular on any given electorate, and here it cost nothing while the centralized count gave up 13%. The three winners are the [three defensible notions of "best"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md) pulling apart — score says Avery, majority logic says Elena, STAR's runoff says Carmen — and the districted procedure happened to land on the one distortion is scored against.
+
+### And the case where it does cost — built to order
+
+Because one example where the bill comes to zero proves nothing about the bill, the library carries the other half: **[the cost of districting](../../method_comparisons/districting_cost/README.md)** (BV2274, live above). Nine club members, three candidates, two chapters. Ana is adored in one chapter and unknown in the other, Beto is the mirror image, and **Cleo is everybody's solid second** — so Cleo wins *neither* chapter and wins the combined count outright:
+
+| Electorate | Ana | Beto | **Cleo** | STAR winner |
+|---|:--:|:--:|:--:|:--:|
+| Northside (5) | 23 | 0 | 19 | **Ana** |
+| Southside (4) | 0 | 19 | 14 | **Beto** |
+| **Both together** (9) | 23 | 19 | **33** | **Cleo** |
+
+Cleo is the welfare optimum *and* the Condorcet winner, so both notions of "best" agree and the map overrides both. A delegate taken from the chapter winners costs **1.43×** (Ana) or **1.74×** (Beto) the optimum. The mechanism in one line: Ana's points are concentrated in one chapter and Beto's in the other, while Cleo's are spread evenly — **a district count reads concentration; a combined count reads the total.** And every chapter there ran a full 0–5 score count and still discarded the best candidate, which is the architectural claim made checkable by hand.
+
+Read the two cases as a pair or not at all: one shows the cost at zero, one shows it real, and neither is the general rule.
 
 ## Reading this fairly
 
