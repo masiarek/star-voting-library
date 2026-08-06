@@ -1037,20 +1037,59 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
     return L
 
 
-def get_top_two_finalists(ballots, order_map=None):
-    """Top two by total score; score ties broken by lot-number priority
-    (same rule as LotNumberTiebreaker) so the matrix '*' markers match
-    the finalists starvote actually selects."""
+def get_top_two_finalists(ballots, order_map=None, maximum_score=5):
+    """The two candidates that actually advance to the Automatic Runoff.
+
+    Replays starvote's OWN Scoring Round ladder — total score, then the
+    head-to-head preference round, then the five-star count, then lot — by
+    calling starvote's own round functions, so the matrix '*' markers and
+    `matrix_finalists_only` name the pair the runoff really used.
+
+    Ranking by total score alone (what this did before) stars the wrong
+    candidate whenever the second slot is decided by one of the later rungs:
+    with Ana 15, Ben 14, Cora 14, score order hands the slot to Ben while the
+    head-to-head rung advances Cora — so the matrix starred a candidate the
+    report had just eliminated, and `matrix_finalists_only` filtered the grid
+    down to a matchup that never happened.
+    """
     if order_map is None:
         order_map = {}
-    scores = defaultdict(int)
-    for b in ballots:
-        for c, s in b.items():
-            scores[c] += s
-    ranked = sorted(
-        scores.items(), key=lambda x: (-x[1], order_map.get(x[0], float("inf")))
-    )
-    return [c for c, _ in ranked[:2]]
+
+    scores = starvote._scoring_round(ballots)
+    if len(scores) <= 1:
+        return list(scores)
+
+    first, second, tie = starvote._compute_first_and_second_from_score(scores, None)
+
+    if tie:
+        # Rung 1: of the tied candidates, whoever wins the most head-to-head
+        # matchups. This is the rung that most often decides a real election.
+        preferences, _no_preference = starvote._preference_round(ballots, tie)
+        first, second, tie = starvote._compute_first_and_second_from_score(
+            preferences, first
+        )
+
+        if tie:
+            # Rung 2: most ballots awarding them the maximum score.
+            fives = starvote._maximum_score_count_round(ballots, maximum_score, tie)
+            first, second, tie = starvote._compute_first_and_second_from_score(
+                fives, first
+            )
+
+            if tie:
+                # Rung 3 (the "dead rung"): the pre-published lot order — the
+                # same order LotNumberTiebreaker applies, replayed silently
+                # here because this is an analysis pass, not the count.
+                needed = 1 if first else 2
+                picked = sorted(
+                    tie, key=lambda c: order_map.get(c, float("inf"))
+                )[:needed]
+                if needed == 1:
+                    second = picked[0]
+                else:
+                    first, second = picked
+
+    return [c for c in (first, second) if c is not None]
 
 
 def print_matrix(

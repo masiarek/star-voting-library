@@ -52,10 +52,10 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-               |   * Amos   |  * Bree   |
+               |   * Amos   |  * Cole   |
 -----------------------------------------
-      * Amos > |    ---     |4 - 2 - 3  |
-      * Bree > | 3 - 2 - 4  |   ---     |
+      * Amos > |    ---     |2 - 4 - 3  |
+      * Cole > | 3 - 4 - 2  |   ---     |
 
 [Divergence from STAR]
   STAR                   = Cole

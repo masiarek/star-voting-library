@@ -44,11 +44,11 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |   * Reagan   | * Anderson  |    Carter   |
+                 |     Reagan   | * Anderson  |  * Carter   |
 -------------------------------------------------------------
-      * Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
+        Reagan > |     ---      |45 -  0 - 55 |45 -  0 - 55 |
     * Anderson > | 55 -  0 - 45 |    ---      |65 -  0 - 35 |
-        Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
+      * Carter > | 55 -  0 - 45 |35 -  0 - 65 |    ---      |
 
 [Condorcet Winner]
   Condorcet Winner: Anderson — matches the STAR winner

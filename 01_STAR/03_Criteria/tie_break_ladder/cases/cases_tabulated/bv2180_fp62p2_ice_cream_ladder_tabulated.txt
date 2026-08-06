@@ -59,10 +59,10 @@ TABULATION RESULTS
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                       |    * Chocolate     |   Chocolate Chip  |   Fudge Brownie   |      Vanilla      |   * Strawberry    |       Mango       |
+                       |      Chocolate     | * Chocolate Chip  |   Fudge Brownie   |      Vanilla      |   * Strawberry    |       Mango       |
 -------------------------------------------------------------------------------------------------------------------------------------------------
-         * Chocolate > |        ---         |    1 - 0 - 1      |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
-      Chocolate Chip > |     1 - 0 - 1      |       ---         |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
+           Chocolate > |        ---         |    1 - 0 - 1      |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
+    * Chocolate Chip > |     1 - 0 - 1      |       ---         |    1 - 1 - 0      |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
        Fudge Brownie > |     0 - 1 - 1      |    0 - 1 - 1      |       ---         |    1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |
              Vanilla > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |       ---         |    0 - 0 - 2      |    1 - 1 - 0      |
         * Strawberry > |     1 - 0 - 1      |    1 - 0 - 1      |    1 - 0 - 1      |    2 - 0 - 0      |       ---         |    2 - 0 - 0      |
