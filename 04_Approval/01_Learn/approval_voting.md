@@ -30,6 +30,8 @@ Because the ballot is binary, Approval forces exactly one genuinely hard call: *
 
 An Approval ballot is just a **Score (0–5) ballot restricted to the two ends**, `{0, max}`. That's the whole relationship: Approval keeps *who* you'd accept and throws away *how much* and *in what order*. It's also why approval-style `0/1` marks are perfectly legal on a STAR ballot — see [`star_ala_approval.yaml`](../../01_STAR/02_Examples/cases/star_ala_approval.yaml). STAR keeps the full 0–5 scale and adds the automatic runoff precisely to recover the intensity and threshold information Approval discards (the [fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md); [scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)).
 
+There is one rung in between, and it is worth knowing because it changes what a *blank* means. [**Combined Approval Voting**](../../06_Other/Combined_Approval/README.md) adds a third level — For (+1), abstain (0), **Against** (−1), highest net wins — so a voter can distinguish *"I'm not backing them"* from *"I'm against them."* Dan Felsenthal proposed it in 1989. Two things follow that don't from Approval: an unmarked candidate is scored in the **middle** rather than at the bottom, which can decide an election on its own; and under strategy the method collapses straight back into Approval, since a voter maximising influence never uses the middle option.
+
 ## Reading an Approval result
 
 Take the [`approval_101` example](../02_Examples/cases/cases_pages/approval_101_c3_b5.md) — 5 voters, candidates Ann/Bob/Cal. Every ballot, as the voter marked the paper and as the count reads it:
@@ -118,6 +120,7 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 - [Approval in the theory literature](approval_in_the_literature.md) — the arguments and criticisms as the academic surveys state them, the three readings of "approve," and *Approval = Borda = Condorcet* on dichotomous preferences
 - [Approval + Top-Two](approval_top_two.md) — the two-round package (St. Louis; Oregon's Unified Primary) and why its runoff can't be automatic — the gap STAR closes
 - [Approval — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md) — bloc counting, SPAV/PAV
+- [Combined Approval Voting (CAV)](../../06_Other/Combined_Approval/README.md) — the three-option variant: For / abstain / Against, highest net wins. Runnable, with the pair of elections showing the same twelve voters reversing end-to-end on what a blank is worth
 - [the Approval examples](../) — the method's example folder
 - [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) — Approval's pass/fail row beside STAR, Ranked Robin and RCV-IRV, each ✗ linked to a runnable failure (read its caveat first)
 - [Approval voting — Wikipedia](https://en.wikipedia.org/wiki/Approval_voting) — the neutral reference: pre-modern history, the full adoption *and repeal* list, and the criteria table this repo cross-checks against. Cited here rather than a campaign page precisely because adoption records and criteria claims are where an advocacy source is weakest

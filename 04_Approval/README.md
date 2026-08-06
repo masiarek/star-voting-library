@@ -107,6 +107,8 @@ The proportional approval rules the LH engine doesn't carry (SPAV, PAV, seq-Phra
 
 **Where it stands on the criteria** — Approval's pass/fail row beside STAR, Ranked Robin and RCV-IRV, each ✗ linked to a runnable election: [Criteria at a glance](../07_Concepts/topics/criteria_at_a_glance.md). **Where it has actually been used** — papal conclaves, Venice and Greece long before anyone named it; Fargo and St. Louis recently, and Fargo's repeal in 2025: [the record, from Wikipedia](01_Learn/approval_voting.md#where-it-has-actually-been-used).
 
+**The three-option variant** — [Combined Approval Voting (CAV)](../06_Other/Combined_Approval/README.md) adds an explicit **Against** to the ballot: For (+1) / abstain (0) / Against (−1), highest net wins. It lives in `06_Other/` because it isn't an EVC method, but it belongs to this family, and it carries the sharpest lesson about what a blank is worth — CAV reads an unmarked row as the *middle* grade where every other score ballot here reads it as the *lowest*, and a runnable pair of elections shows the same twelve voters reversing end-to-end on that one word.
+
 House rule: Approval ballots accept only `0`/`1` (blank / markers = not approved); the engine errors on 0–5 scores under `voting_method: Approval`.
 
 **Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../07_Concepts/about_this_repo/conversation_scripts.md).
