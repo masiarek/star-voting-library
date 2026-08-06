@@ -19,6 +19,7 @@
 93gjx6,"BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",4,contested (multi-race),9,"IRV, Plurality, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 9gdrqg,BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno,2,contested (multi-race),17,"IRV, STAR",BV
+9kffcv,"BV2273 — Same ranks, different utilities — two elections a ranked ballot cannot tell apart",3,contested (multi-race),3,"RankedRobin, STAR",BV
 9vxcj7,"BV2165 — Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass",2,contested (multi-race),15,"Plurality, STAR",BV
 LH:example_tennessee,Tennessee capital — RCV-IRV engine demo,2,contested (multi-race),100,"IRV, STAR",LH-only
 b7b8dv,BV2166 — Coombs' No-Show electorate (2 of 2) — two voters stay home and their favorite wins (STAR flips too),2,contested (multi-race),13,"Plurality, STAR",BV
@@ -325,8 +326,6 @@ LH:same_matrix_p2_plurality,"Same matrix, different plurality — electorate P2:
 LH:same_matrix_p2_ranked_robin,"Same matrix, different plurality — electorate P2: Ranked Robin",1,single-race,12,RankedRobin,LH-only
 LH:same_matrix_p3_plurality,"Same matrix, different plurality — electorate P3: Choose-One",1,single-race,12,Plurality,LH-only
 LH:same_matrix_p3_ranked_robin,"Same matrix, different plurality — electorate P3: Ranked Robin",1,single-race,12,RankedRobin,LH-only
-LH:same_ranks_lukewarm_c2_b3_procaccia_rosenschein,"Same ranks, lukewarm majority — the ranked ballot's blind spot (profile 1 of 2)",1,single-race,3,STAR,LH-only
-LH:same_ranks_polarized_c2_b3_procaccia_rosenschein,"Same ranks, polarized electorate — the ranked ballot's blind spot (profile 2 of 2)",1,single-race,3,STAR,LH-only
 LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
 LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only
 LH:split_cycle_schulze_spoiler_c5_b40,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",1,single-race,40,RankedRobin,LH-only

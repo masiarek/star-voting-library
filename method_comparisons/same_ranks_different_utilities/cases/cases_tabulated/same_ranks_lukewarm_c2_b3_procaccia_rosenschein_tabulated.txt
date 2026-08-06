@@ -8,6 +8,13 @@ election_title: Same ranks, lukewarm majority — the ranked ballot's blind spot
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2273
+bv_election_id: 9kffcv
+bv_results_url: https://bettervoting.com/9kffcv/results
+# Race 1 of BV2273 (one election, three races — the two score profiles plus the
+# single ranked race they share). The frozen export covering all three lives in
+# this folder as same_ranks_different_utilities_bv_export.json.
+
 scenario_description: |
   Half of the two-line proof of Proposition 1 in Procaccia & Rosenschein,
   "The Distortion of Cardinal Preferences in Voting" (CIA 2006) — the

@@ -5048,7 +5048,111 @@ SAV_COVERAGE_SPEC = {
 }
 
 
+# --- The founding distortion impossibility: two electorates, one ranked ballot ---
+# Procaccia & Rosenschein, "The Distortion of Cardinal Preferences in Voting"
+# (CIA 2006), Proposition 1: EVERY social choice function has distortion > 1 at
+# 3 voters and 2 candidates. The proof is a matched pair of utility profiles that
+# induce the SAME rankings and have OPPOSITE welfare-maximizing winners.
+#
+# Why this is one election with three races rather than two elections: the paper's
+# construction is the same three voters twice, and BV's multirace shape aligns
+# ballots by voter index — which is exactly the claim. Races 1 and 2 are the two
+# score profiles; race 3 is the ranking they share, and there is only ONE of it
+# because the rankings are identical. That asymmetry (two score races, one ranked
+# race) IS Proposition 1 rendered as a ballot.
+#
+# Every voter spends exactly 5 points in both score races — the paper's unit-sum
+# normalization, which on a 0-5 ballot reads as "everyone gets the same ink."
+# Nothing here rests on a tie-break: every race is decided 2-1.
+SAME_RANKS_DISTORTION_SPEC = {
+    "test_id": "BV2273",
+    "title": "Same ranks, different utilities — two elections a ranked ballot cannot tell apart",
+    "description": (
+        "Three voters, two candidates, and the smallest impossibility result in voting theory. "
+        "This election reproduces Proposition 1 of Procaccia & Rosenschein, 'The Distortion of "
+        "Cardinal Preferences in Voting' (2006) — the paper that defined 'distortion' — which "
+        "proves that NO voting rule reading only rankings can always elect the candidate who "
+        "maximizes total voter satisfaction, and needs only 3 voters and 2 candidates to prove it. "
+        "Races 1 and 2 are two different electorates. In race 1 the two A-voters are lukewarm "
+        "(A 3, B 2) and the B-voter is devoted (A 0, B 5); in race 2 nobody is lukewarm (A 5, B 0 "
+        "and A 0, B 5). Every voter spends exactly 5 points in both, so no voter has more "
+        "influence than another. Now read the rankings: both races are A>B, B>A, A>B — identical, "
+        "mark for mark. That is why race 3, the Ranked Robin race, appears only ONCE: a ranked "
+        "ballot cannot tell these two elections apart, so there is only one ranked contest to run. "
+        "The totals, however, point opposite ways. In race 1 candidate B carries 9 points to A's 6, "
+        "so B is the candidate who maximizes total satisfaction; in race 2 candidate A carries 10 "
+        "to B's 5. Any method that reads only order must return the same winner in both, and no "
+        "single answer is right in both. "
+        "DO NOT read this election for who won — all three races elect A, and that is the point "
+        "rather than the result. Watch the SCORING ROUNDS instead: race 1 shows B ahead 9 to 6 and "
+        "then the automatic runoff elects A anyway, because with only two candidates STAR's runoff "
+        "is plain majority rule and two of the three voters prefer A. STAR measures the intensity "
+        "and declines to elect on it — the majority guarantee is what it buys with that. Pure Score "
+        "voting, which elects the point leader outright, would split these two races (B, then A) "
+        "and match the utility optimum in both. "
+        "The lesson is not that one method failed. It is that two genuinely different electorates "
+        "produced the same three ranked ballots, so the loss lives in the ballot rather than in "
+        "the count — which is also why this result sits comfortably beside May's theorem, whose "
+        "conditions are stated over ranked input. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/same_ranks_different_utilities/index.html"
+    ),
+    "enable_write_in": False,   # a third candidate would void the 2-candidate construction
+    "races": [
+        {
+            "title": "Profile 1 — the lukewarm majority (scores 0-5)",
+            "method": "STAR",
+            "num_winners": 1,
+            "candidates": ["A", "B"],
+            "ballots": [
+                [3, 2],   # voter 1 — mildly prefers A
+                [0, 5],   # voter 2 — devoted to B
+                [3, 2],   # voter 3 — mildly prefers A
+            ],
+        },
+        {
+            "title": "Profile 2 — the polarized electorate (scores 0-5)",
+            "method": "STAR",
+            "num_winners": 1,
+            "candidates": ["A", "B"],
+            "ballots": [
+                [5, 0],   # voter 1 — all-in for A
+                [0, 5],   # voter 2 — devoted to B
+                [5, 0],   # voter 3 — all-in for A
+            ],
+        },
+        {
+            "title": "The ranking BOTH profiles share (Ranked Robin)",
+            "method": "RankedRobin",
+            "num_winners": 1,
+            "max_rankings": 2,
+            "candidates": ["A", "B"],
+            "ballots": [
+                [1, 2],   # voter 1 — A first, B second
+                [2, 1],   # voter 2 — B first, A second
+                [1, 2],   # voter 3 — A first, B second
+            ],
+        },
+    ],
+    "expected": (
+        "All three races elect A, decisively and with no tie-break anywhere. Race 1: scoring "
+        "round B 9, A 6 (B leads), automatic runoff A 2 - B 1 -> A, a Runoff Reversal on three "
+        "ballots. Race 2: scoring round A 10, B 5, runoff A 2 - B 1 -> A, no reversal. Race 3: "
+        "A beats B 2-1 head-to-head -> A. The teaching content is the CONTRAST between the two "
+        "scoring rounds against the single shared ranking, not the winner. LH agrees on all "
+        "three (STAR path for races 1-2, Ranked Robin for race 3). Test ID BV2273."),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [SAME_RANKS_DISTORTION_SPEC]   # BV2273 -> 9kffcv
+#   Created as designed, 3 ballots × 3 races. BV agrees with LH on all three races
+#   (all elect A) and reports tieBreakType 'none' everywhere — nothing in this
+#   election rests on a tie-break, which matters because the lesson is the contrast
+#   between the two scoring rounds, not the winner. BV's own results page renders it
+#   perfectly: race 1's Scoring Round shows B 9 / A 6 and the Automatic Runoff still
+#   elects A, and BV volunteers its "Why is the top scoring candidate different from
+#   the winner?" explainer unprompted.
 # Previously: [SAV_DISJOINT_SPEC, SAV_COVERAGE_SPEC]   # BV2271 -> 4hfwqd, BV2272 -> dr6fmg
 #   Both created as designed. BV agrees with LH on all six races: BV2271 all three ->
 #   Ada, Ben (the STAR race reports tieBreakType 'random' for the Cleo/Dev FINALIST tie

@@ -3,6 +3,14 @@ election_title: Same ranks, polarized electorate — the ranked ballot's blind s
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2273
+bv_election_id: 9kffcv
+bv_results_url: https://bettervoting.com/9kffcv/results
+# Race 2 of BV2273 — the SAME election as the lukewarm companion, because the
+# paper's construction is the same three voters twice. The frozen export covering
+# all three races lives in this folder as
+# same_ranks_different_utilities_bv_export.json.
+
 scenario_description: |
   The other half of Proposition 1 in Procaccia & Rosenschein, "The
   Distortion of Cardinal Preferences in Voting" (CIA 2006). Same three

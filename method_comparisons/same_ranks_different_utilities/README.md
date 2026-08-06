@@ -2,7 +2,9 @@
 
 *A runnable companion to **Proposition 1** of Procaccia & Rosenschein, ["The Distortion of Cardinal Preferences in Voting"](https://www.cs.huji.ac.il/~jeff/papers/cia06procaccia.pdf) (CIA 2006) — the paper that named [distortion](../../07_Concepts/topics/distortion.md) and started fifteen-plus years of work on it. The proposition is one of the smallest impossibility results in social choice: **no voting rule that reads only rankings is ever perfect**, and it takes **3 voters and 2 candidates** to prove. The proof is a matched pair of elections with identical rankings and opposite right answers — reproduced here as two YAML files whose ballots differ only in intensity. It cuts for scored ballots and against them in the same breath, which is why it's worth counting rather than quoting.*
 
-**Level: 301 · deep dive** Companions: [Distortion](../../07_Concepts/topics/distortion.md) — the umbrella · [Misrepresentation](../../07_Concepts/topics/misrepresentation.md) — the same paper's second half · [May's theorem](../../07_Concepts/topics/mays_theorem.md) — the result this collides with · [Preference vs. support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) · [The valuable Condorcet loser](../valuable_condorcet_loser/) — the other runnable distortion companion.
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9kffcv) · **[results ↗](https://bettervoting.com/9kffcv/results)** (election `9kffcv`, Test ID BV2273) — one election, **three races**: the two score profiles, plus the single ranked race they share. That asymmetry is the proposition: there is only one ranked contest to run, because a ranked ballot cannot tell the two profiles apart.
+
+**Level: 301 · deep dive** Companions: [Distortion](../../07_Concepts/topics/distortion.md) — the umbrella · [Misrepresentation](../../07_Concepts/topics/misrepresentation.md) — the same paper's second half · [May's theorem](../../07_Concepts/topics/mays_theorem.md) — the result this collides with · [Preference vs. support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) · [The valuable Condorcet loser](../valuable_condorcet_loser/README.md) — the other runnable distortion companion.
 
 ---
 
@@ -18,7 +20,7 @@ Both electorates obey the paper's **unit-sum** normalization: every voter's util
 
 ## The two electorates
 
-Both files use bare `A` / `B` rather than names, matching the paper's "candidate 1, candidate 2" so it can be read beside the tabulation — the same choice the [tournament solutions](../tournament_solutions/) cases make for the same reason.
+Both files use bare `A` / `B` rather than names, matching the paper's "candidate 1, candidate 2" so it can be read beside the tabulation — the same choice the [tournament solutions](../tournament_solutions/README.md) cases make for the same reason.
 
 | | [Profile 1 — lukewarm majority](cases/cases_pages/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.md) ([yaml](cases/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.yaml)) | [Profile 2 — polarized](cases/cases_pages/same_ranks_polarized_c2_b3_procaccia_rosenschein.md) ([yaml](cases/same_ranks_polarized_c2_b3_procaccia_rosenschein.yaml)) |
 |---|---|---|
@@ -141,11 +143,21 @@ Count × A,B
 
 Want the whole count? The full LH reports are one click away: [profile 1](cases/cases_pages/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.md) · [profile 2](cases/cases_pages/same_ranks_polarized_c2_b3_procaccia_rosenschein.md).
 
+## Counted again, by an engine nobody here wrote
+
+The pair is live on BetterVoting as **BV2273** (`9kffcv`) — and BV's own tabulator, on its own ballots, reaches the same result as the LH engine on all three races, with `tieBreakType: none` everywhere (nothing rests on a coin flip). Here is BV's rendering of **profile 1**, which makes the lesson visible without any commentary from us:
+
+<img alt="BetterVoting results for BV2273 race 1: Scoring Round shows A 6, B 9 — B ahead — then the Automatic Runoff Round shows A 67%, B 33%, and A wins." src="img/9kffcv_result.png" width="640">
+
+The scoring round says **B 9, A 6**. The runoff says **A**. BetterVoting even volunteers the explainer — *"Why is the top scoring candidate different from the winner?"* — which is the honest answer and also, in distortion terms, the exact moment the welfare-maximizing candidate is set aside. Run the same page on **race 2** and the scoring round reads **A 10, B 5**: a different electorate, plainly visible. Then open **race 3**, the ranked one, and there is nothing to compare — it exists once, because both profiles hand it identical ballots.
+
+Frozen export (all three races): [`same_ranks_different_utilities_bv_export.json`](cases/same_ranks_different_utilities_bv_export.json).
+
 ## Reading it fairly, both directions
 
 **For scored ballots — the strongest small version of the argument.** These two elections are *different*, and only one of the two ballot formats wrote the difference down. That's not a preference for scores; it's an information-theoretic fact you can verify on three rows. Pure [Score voting](../../07_Concepts/topics/scoring-methods-vs-ranked-voting.md) elects B in profile 1 and A in profile 2 — distortion exactly 1, because when the ballot *is* the utility vector there is nothing left to lose. Any ranked method is stuck at 1.5 on one of the two files.
 
-**Against — the same example prices STAR's runoff, and the bill is real.** With two candidates, STAR's [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) is plain majority rule, so STAR answers **A** in both files, exactly like every ranked method. It is not that STAR failed to notice: the scoring round *prints* B 9, A 6 and the engine *announces* the reversal — and then the majority check overrules it. That is the [hybrid bargain](../../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md) at its starkest: STAR measured the intensity and declined to elect on it. Whether that is a bug or the point is the [majoritarian-vs-utilitarian](../../07_Concepts/topics/what_makes_a_good_winner.md#the-deepest-split-majoritarian-vs-utilitarian) values question, not arithmetic — and the [valuable Condorcet loser](../valuable_condorcet_loser/) is the same trade in a four-candidate field.
+**Against — the same example prices STAR's runoff, and the bill is real.** With two candidates, STAR's [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) is plain majority rule, so STAR answers **A** in both files, exactly like every ranked method. It is not that STAR failed to notice: the scoring round *prints* B 9, A 6 and the engine *announces* the reversal — and then the majority check overrules it. That is the [hybrid bargain](../../01_STAR/01_Learn/the_count/STAR_hybrid_nature.md) at its starkest: STAR measured the intensity and declined to elect on it. Whether that is a bug or the point is the [majoritarian-vs-utilitarian](../../07_Concepts/topics/what_makes_a_good_winner.md#the-deepest-split-majoritarian-vs-utilitarian) values question, not arithmetic — and the [valuable Condorcet loser](../valuable_condorcet_loser/README.md) is the same trade in a four-candidate field.
 
 **And a genuine collision worth sitting with.** [May's theorem](../../07_Concepts/topics/mays_theorem.md) says that with two candidates, simple majority rule is the *unique* method satisfying anonymity, neutrality, and positive responsiveness. Proposition 1 says that with two candidates, every method — majority rule included — has distortion above 1. Both are proved. They collide because May's axioms are stated over **ordinal** input: given rankings, majority rule is unimprovable, and that is precisely why the loss here cannot be fixed by choosing a better rule. It is not in the tabulation. It is in the ballot. Anyone who tells you the answer is a smarter count has misread which of the two theorems they are standing on.
 

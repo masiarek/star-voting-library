@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn) · **1 seat** · **Expected winner:** A
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9kffcv) · **[results ↗](https://bettervoting.com/9kffcv/results)** (election `9kffcv` · test `BV2273`).
+
 ## Scenario
 
 The other half of Proposition 1 in Procaccia & Rosenschein, "The

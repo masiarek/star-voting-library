@@ -742,6 +742,16 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2272 — Brams & Kilgour Prop. 5 — STAR (bloc, 2 seats) | STAR | 3 | **Ash, Bree** |
 | BV2272 — Brams & Kilgour Prop. 5 — Ranked Robin (bloc, 2 seats) | RankedRobin | 3 | **Ash, Bree** |
 
+## BV2273 — Same ranks, different utilities — two elections a ranked ballot cannot tell apart
+
+**Election** [`9kffcv`](https://bettervoting.com/9kffcv/results) · **3 races** · **3 ballots** · [frozen export](../../method_comparisons/same_ranks_different_utilities/cases/same_ranks_different_utilities_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2273 — Profile 1 — the lukewarm majority (scores 0-5) | STAR | 2 | **A** |
+| BV2273 — Profile 2 — the polarized electorate (scores 0-5) | STAR | 2 | **A** |
+| BV2273 — The ranking BOTH profiles share (Ranked Robin) | RankedRobin | 2 | **A** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

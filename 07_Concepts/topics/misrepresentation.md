@@ -4,13 +4,13 @@
 
 **Level: 301 · deep dive** Builds on [distortion](distortion.md) (301) — read that first; this page assumes its vocabulary.
 
-Companions: [Same ranks, different utilities](../../method_comparisons/same_ranks_different_utilities/) — the same paper's impossibility, counted on three ballots · [Cardinal utility](cardinal_utility.md) — whether the numbers assumed here exist at all · [When a criterion is built to fit the method](condorcet/ordered_majority_rule_irv.md) — the pattern this page is a case study in · [ABC rules & the utilitarian–egalitarian spectrum](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_spectrum.md) — where Monroe's idea lives in this repo already.
+Companions: [Same ranks, different utilities](../../method_comparisons/same_ranks_different_utilities/README.md) — the same paper's impossibility, counted on three ballots · [Cardinal utility](cardinal_utility.md) — whether the numbers assumed here exist at all · [When a criterion is built to fit the method](condorcet/ordered_majority_rule_irv.md) — the pattern this page is a case study in · [ABC rules & the utilitarian–egalitarian spectrum](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_spectrum.md) — where Monroe's idea lives in this repo already.
 
 ---
 
 ## The move: restrict the utilities until answers exist
 
-The [distortion](distortion.md) framework asks what a ranked rule costs you when voters have arbitrary utilities that merely sum to a fixed total. The answer, in that unrestricted setting, is bleak: no rule is perfect ([even at 3 voters and 2 candidates](../../method_comparisons/same_ranks_different_utilities/)), several familiar rules are unbounded, and computing the loss is NP-complete.
+The [distortion](distortion.md) framework asks what a ranked rule costs you when voters have arbitrary utilities that merely sum to a fixed total. The answer, in that unrestricted setting, is bleak: no rule is perfect ([even at 3 voters and 2 candidates](../../method_comparisons/same_ranks_different_utilities/README.md)), several familiar rules are unbounded, and computing the loss is NP-complete.
 
 So restrict the utilities. **Misrepresentation** — Monroe's measure, from his 1995 work on fully proportional representation — says a voter's unhappiness with a candidate is just *where that candidate sits on their ballot*:
 
@@ -27,12 +27,12 @@ The paper is candid that this is a modelling convenience with a natural home: it
 | Voting protocol | Misrepresentation | In this library's terms |
 |---|---|---|
 | **[Borda](ranked_ballot_methods_zoo.md)** | **1** — optimal | The rank-sum rule; see the catch below |
-| Veto (vote against one) | **unbounded** | Not used in practice; the cautionary row |
+| [Veto](ranked_ballot_methods_zoo.md) (vote against one) | **unbounded** | Anti-plurality; not used in practice — the cautionary row |
 | **[Plurality](plurality.md)** | **= m − 1** | Choose-one — loss grows with the field |
-| Plurality with Runoff | **= m − 1** | Top-two runoff — *no better than plain plurality* |
+| [Plurality with Runoff](plurality.md) | **= m − 1** | Top-two runoff — *no better than plain plurality* |
 | **Copeland** — i.e. **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** | **≤ m − 1** | Best of the non-Borda rules here |
-| Bucklin | ≤ m | The graduated-majority method |
-| Maximin (Minimax) | ≤ 1.62 (m − 1) | |
+| [Bucklin](ranked_ballot_methods_zoo.md) | ≤ m | The graduated-majority method |
+| [Maximin (Minimax)](../voting_paradoxes/minimax.md) | ≤ 1.62 (m − 1) | Worst pairwise defeat, minimized |
 | **STV** ⇒ **[RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md)** single-winner | **≤ 1.5 (m − 1)** | Elimination is the costliest ranked count here |
 
 Two rows deserve a second look.
@@ -74,7 +74,7 @@ The complexity results run the opposite way from the general model, which is the
 
 - **"Studies show Borda is the best voting method."** No. Under a rank-sum measure of loss, the rank-sum rule is optimal by construction, it is one of the [most manipulable methods known](strategic_voting.md), and the paper says so on the same page.
 - **A misrepresentation number for STAR, Score, or Approval.** There isn't one. The framework analyzes rules that read **rankings**; STAR's winner is not a function of the ranked profile at all ([what a method reads](what_a_method_reads.md)). Same open gap as on the [distortion](distortion.md) page — don't paper over it.
-- **"Rankings are fine after all."** The possibility results here are bought by assuming every voter's intensities are 0, 1, …, m−1. That assumption is precisely what the [distortion](distortion.md) model refuses to make, and the [three-ballot impossibility](../../method_comparisons/same_ranks_different_utilities/) shows what it costs when it's false.
+- **"Rankings are fine after all."** The possibility results here are bought by assuming every voter's intensities are 0, 1, …, m−1. That assumption is precisely what the [distortion](distortion.md) model refuses to make, and the [three-ballot impossibility](../../method_comparisons/same_ranks_different_utilities/README.md) shows what it costs when it's false.
 
 ## Where Monroe's idea already lives in this repo
 
@@ -92,7 +92,7 @@ Misrepresentation was invented for **multiwinner** representation, and that's wh
 ## See also
 
 - [Distortion](distortion.md) — the umbrella page, and the model this one restricts
-- [Same ranks, different utilities](../../method_comparisons/same_ranks_different_utilities/) — the founding impossibility, runnable
-- [The valuable Condorcet loser](../../method_comparisons/valuable_condorcet_loser/) — the other runnable distortion companion
+- [Same ranks, different utilities](../../method_comparisons/same_ranks_different_utilities/README.md) — the founding impossibility, runnable
+- [The valuable Condorcet loser](../../method_comparisons/valuable_condorcet_loser/README.md) — the other runnable distortion companion
 - [What makes a good winner?](what_makes_a_good_winner.md) · [Criteria at a glance](criteria_at_a_glance.md) · [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md)
 - [Cardinal utility](cardinal_utility.md) · [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md)
