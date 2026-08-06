@@ -20,13 +20,13 @@
 
 The article argues that increasing a candidate's score can only help them, calls that monotonicity, and then says it is a stricter requirement than [independence of irrelevant alternatives](../topics/arrow_theorem_and_star.md), so IIA "is satisfied as well."
 
-**That implication is invalid.** Monotonicity and IIA are logically independent — neither entails the other. The counterexample is already in this repo: **the [Borda count](../../method_comparisons/dark_horse_borda/) is monotone and fails IIA spectacularly**, which is the whole dark-horse story. A method can also satisfy IIA and fail monotonicity; the article itself later cites **Ebert's method** as a cardinal rule that fails monotonicity, which contradicts its own reasoning two sections earlier.
+**That implication is invalid.** Monotonicity and IIA are logically independent — neither entails the other. The counterexample is already in this repo: **the [Borda count](../../method_comparisons/dark_horse_borda/README.md) is monotone and fails IIA spectacularly**, which is the whole dark-horse story. A method can also satisfy IIA and fail monotonicity; the article itself later cites **Ebert's method** as a cardinal rule that fails monotonicity, which contradicts its own reasoning two sections earlier.
 
 The **conclusion** is fine — Score and Approval do satisfy both. The **reason** is different: in a pure cardinal method each candidate's total is computed from the scores given to that candidate alone. That single property (separability) yields monotonicity *and* IIA independently. Neither is derived from the other, and the derivation matters, because it tells you exactly where the guarantee stops: at [STAR's runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md), which compares two candidates and is therefore not separable.
 
 ## Error 2 — the Bayesian Regret sign is backwards
 
-The article's own argument is that the [majority criterion](../topics/majority_criterion/) forces a polarizing majority favorite over a consensus candidate. It then concludes that satisfying the majority criterion "reduces incentive for compromise and lowers Bayesian Regret."
+The article's own argument is that the [majority criterion](../topics/majority_criterion/README.md) forces a polarizing majority favorite over a consensus candidate. It then concludes that satisfying the majority criterion "reduces incentive for compromise and lowers Bayesian Regret."
 
 **Bayesian Regret is avoidable unhappiness — lower is better.** If the criterion blocks the consensus winner, it *raises* regret. The sentence contradicts the paragraph it closes; "lowers" should read "raises."
 

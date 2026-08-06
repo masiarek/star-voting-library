@@ -2,7 +2,7 @@
 
 *Every other page in this hub answers the same question: the count has finished, the top is tied, who wins? **Parallel Universe Tiebreaking (PUT) answers a different one.** In a method that eliminates a candidate each round, a tie can strike while the count is still running — two candidates tied for last, and the rule must cut one. Whichever you cut changes every round that follows. PUT's answer is to refuse to choose: run **every** elimination order, and elect everyone who wins in **some** universe. It is the only tie convention in this library that treats an arbitrary mid-count coin flip as information to be reported rather than a detail to be settled and forgotten.*
 
-→ **Level: 301 · deep dive** — part of the [Ties & Tie-Breaking](README.md) hub · the theorem underneath it: [Ties Are Forced](ties_are_forced.md) · where it bites hardest: [RCV-IRV](../../../06_Other/RCV_IRV/concepts/) · Glossary: [`lot numbers`](../../GLOSSARY.md)
+→ **Level: 301 · deep dive** — part of the [Ties & Tie-Breaking](README.md) hub · the theorem underneath it: [Ties Are Forced](ties_are_forced.md) · where it bites hardest: [RCV-IRV](../../../06_Other/RCV_IRV/concepts/README.md) · Glossary: [`lot numbers`](../../GLOSSARY.md)
 
 ---
 
@@ -14,7 +14,7 @@ But a sequential-elimination method has a second, earlier tie, and none of the f
 
 > **The final tie asks "who wins?" The mid-count tie asks "which count do we even run?"**
 
-Only methods that eliminate have this problem. [RCV-IRV](../../../06_Other/RCV_IRV/concepts/) has it every round. Coombs has it. Baldwin and Nanson have it. [Ranked Robin](../../../05_Ranked_Robin/01_Learn/) does **not** — it compares every pair at once, so there is no round order to get wrong — and neither does the [STAR](../../../01_STAR/) runoff, though STAR has a near-miss worth its own section [below](#stars-version-of-the-same-problem).
+Only methods that eliminate have this problem. [RCV-IRV](../../../06_Other/RCV_IRV/concepts/README.md) has it every round. Coombs has it. Baldwin and Nanson have it. [Ranked Robin](../../../05_Ranked_Robin/01_Learn/README.md) does **not** — it compares every pair at once, so there is no round order to get wrong — and neither does the [STAR](../../../01_STAR/README.md) runoff, though STAR has a near-miss worth its own section [below](#stars-version-of-the-same-problem).
 
 ## Three answers, and what each conceals
 

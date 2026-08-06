@@ -27,14 +27,14 @@ These are properties of **IRV the tabulation**, not of ranked ballots in general
 
 ## Variants — other tabulations of the ranked ballot
 
-The [**variants/**](variants/) subfolder — same ranked ballot, different elimination rule:
+The [**variants/**](variants/README.md) subfolder — same ranked ballot, different elimination rule:
 
 - [Which RCV-IRV? — the variants & tie-breaks](variants/RCV_IRV_variants.md) · [family tree](variants/RCV_methods_family_tree.mermaid)
 - [BTR](variants/RCV-IRV-BTR.md) · [Baldwin & Nanson](variants/RCV-IRV-Baldwin-Nanson.md) (Borda-elimination, Condorcet-safe) · [Coombs](variants/RCV-IRV-Coombs.md) (eliminates on last choices) · [Contingent & Supplementary](variants/RCV-IRV-contingent-supplementary.md)
 
 ## Case studies — RCV-IRV in the wild
 
-The [**case_studies/**](case_studies/) subfolder — real elections:
+The [**case_studies/**](case_studies/README.md) subfolder — real elections:
 
 - [Alaska 2022](case_studies/RCV_IRV_alaska_2022.md) — spoiler + center squeeze + non-monotonicity in one federal race
 - [The Alternative Vote in Australia](case_studies/RCV_IRV_australia.md) — a century, assessed evenhandedly
@@ -44,4 +44,4 @@ The [**case_studies/**](case_studies/) subfolder — real elections:
 
 - Glossary: [RCV-IRV & ranked-ballot terms](glossary_rcv_irv.md)
 
-*(Other tabulations of the same ranked ballot: [Ranked Robin](../../../05_Ranked_Robin/01_Learn/README.md) (Condorcet/consensus), [STV](../../../03_STAR_PR/01_Learn/) (proportional). Up: the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*
+*(Other tabulations of the same ranked ballot: [Ranked Robin](../../../05_Ranked_Robin/01_Learn/README.md) (Condorcet/consensus), [STV](../../../03_STAR_PR/01_Learn/README.md) (proportional). Up: the docs hub [`00_START_HERE`](../../../07_Concepts/00_START_HERE.md).)*

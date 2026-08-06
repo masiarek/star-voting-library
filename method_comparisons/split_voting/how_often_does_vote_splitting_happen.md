@@ -109,7 +109,7 @@ And note this cuts *against* block voting too, not for it: the test is blind to 
 ## Two more things to keep straight
 
 - **The denominator is primaries, not all elections.** The 11.9% is 11.9% *of 2022 primaries*; the report's gloss "about one in ten national elections" quietly drops the qualifier. Primaries are the races **most** prone to splitting — crowded fields, no party label to guide voters — so this is close to an upper bound, not a general-election rate.
-- **Rarity cuts both ways, and we apply it symmetrically.** This library states rarity when it counts against our preferred conclusion — [2 Condorcet failures in 182 real IRV elections](../../06_Other/RCV_IRV/concepts/), [cycles at ~1–5%](../../07_Concepts/topics/strategic_pathologies.md). The same discipline applies here: report the honest measure and say what it measures.
+- **Rarity cuts both ways, and we apply it symmetrically.** This library states rarity when it counts against our preferred conclusion — [2 Condorcet failures in 182 real IRV elections](../../06_Other/RCV_IRV/concepts/README.md), [cycles at ~1–5%](../../07_Concepts/topics/strategic_pathologies.md). The same discipline applies here: report the honest measure and say what it measures.
 
 ## So what should we say?
 
@@ -117,7 +117,7 @@ Something narrower than the report, and more defensible:
 
 > In roughly **one in eight** 2022 US primaries, the winner had no majority and the losers combined did. Choose-One cannot tell us how many of those were genuinely spoiled, **because the ballot never asked.** Every method in this library can tell us — which is itself the argument.
 
-That last clause is the real finding. The reason "how often does vote splitting change results?" has no clean empirical answer is that the ballot in near-universal US use **destroys the evidence needed to answer it.** A [STAR](../../01_STAR/01_Learn/STAR_start_here.md) or ranked ballot produces a public record from which the counterfactual is directly checkable — as [Burlington 2009](../burlington_2009/) and [Alaska 2022](../alaska_2022/) both were, precisely because those elections collected more than one mark.
+That last clause is the real finding. The reason "how often does vote splitting change results?" has no clean empirical answer is that the ballot in near-universal US use **destroys the evidence needed to answer it.** A [STAR](../../01_STAR/01_Learn/STAR_start_here.md) or ranked ballot produces a public record from which the counterfactual is directly checkable — as [Burlington 2009](../burlington_2009/README.md) and [Alaska 2022](../alaska_2022/README.md) both were, precisely because those elections collected more than one mark.
 
 ---
 

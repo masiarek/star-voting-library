@@ -47,10 +47,10 @@ The engine computes the **Ranked Robin** answer (it implements Copeland plus the
 
 The Most Wins, Smallest Loss rule is stated in Wes Holliday's [*How to Make Every Voter Matter and Make Spoiler Effects Go Away*](https://www.betterchoices.vote/news/how-to-make-every-voter-matter-and-make-spoiler-effects-go-away) (Better Choices for Democracy, 2026), whose appendix works a cycle of its own: Amy beats Cat, Cat beats Ben, Ben beats Amy, with losses of 2,000 / 6,000 / 4,000. **On that example the two rules agree** — Amy has both the smallest loss and the best net margin, so Ranked Robin would elect her too. We had to construct the case above to make them come apart, which is a fair reflection of how close these two proposals are.
 
-Holliday's paper also argues the rule is **immune to spoilers** under a precise definition — if Ana would win without Bruno, and would beat Bruno head-to-head, then adding Bruno cannot make them both lose. That is a real and defensible property, and narrower than the everyday phrase "spoiler-proof" suggests; it is not [independence of irrelevant alternatives](../../../07_Concepts/topics/), which no ranked method can have. Worth reading rather than dismissing: he is the co-author of [Split Cycle](../../../method_comparisons/split_cycle/).
+Holliday's paper also argues the rule is **immune to spoilers** under a precise definition — if Ana would win without Bruno, and would beat Bruno head-to-head, then adding Bruno cannot make them both lose. That is a real and defensible property, and narrower than the everyday phrase "spoiler-proof" suggests; it is not [independence of irrelevant alternatives](../../../07_Concepts/topics/README.md), which no ranked method can have. Worth reading rather than dismissing: he is the co-author of [Split Cycle](../../../method_comparisons/split_cycle/README.md).
 
 ---
 
-*Concepts: [Ranked Robin vs. Consensus Choice](../../01_Learn/ranked_robin_vs_consensus_choice.md) (the brands compared) · [Cycle resolution](../../01_Learn/cycle_resolution.md) (why Minimax, Ranked Pairs and Schulze exist) · [What should we call this method?](../../01_Learn/what_to_call_this_method.md). Up: [05_Ranked_Robin](../../).*
+*Concepts: [Ranked Robin vs. Consensus Choice](../../01_Learn/ranked_robin_vs_consensus_choice.md) (the brands compared) · [Cycle resolution](../../01_Learn/cycle_resolution.md) (why Minimax, Ranked Pairs and Schulze exist) · [What should we call this method?](../../01_Learn/what_to_call_this_method.md). Up: [05_Ranked_Robin](../../README.md).*
 
 # file: README.md

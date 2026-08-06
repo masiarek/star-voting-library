@@ -13,15 +13,15 @@
 - **How that matrix is built:** [Pairwise counting — every ballot is a tiny matrix](../topics/pairwise_counting.md) — each ballot's pair verdicts add up to the election's preference matrix (on the canonical Ann/Bob/Cal ballots), the runoff as one cell of it, and why the whole thing sums by precinct.
 - **When the count *can't* sum:** [Central tabulation — when every ballot must travel](../topics/central_tabulation.md) — the operational price of a non-summable count (IRV/STV): every ballot gathered in one place, a single point of failure, and a heavier audit — with the real incidents (Maine's courier runs, NYC 2021's test-ballot tally, Alameda 2022's misconfigured tabulator).
 - **Two reports, one count:** the same election appears both as BetterVoting's visual display and the LH engine's text report — why there are two, how they map, and the convert→validate→test pipeline: [BetterVoting and the LH Engine — One Election, Two Reports](../tabulation_engines/bettervoting_and_the_engine.md).
-- **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (preference matrix + score distribution + the rounds). 101.4 showed the *minimal* on-screen view; reading the **full** report of those same elections (e.g. the `_tabulated` mirrors under [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/)) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
+- **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (preference matrix + score distribution + the rounds). 101.4 showed the *minimal* on-screen view; reading the **full** report of those same elections (e.g. the `_tabulated` mirrors under [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md)) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
 - **Worked walkthrough:** [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md) — a full LH report annotated section by section, with a "which parts to show at 101 / 201 / 301" table.
 - **Reading the runoff percentages:** [Two Denominators, One Winner](../../01_STAR/01_Learn/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. Enable in the engine with `options: { show_runoff_percent: true }`. Pairs with 301.3 (Equal Support).
-- **A real election, end to end:** [What Makes the Best Pet?](../../01_STAR/04_Real_Elections/pet_real_bv_election/) — a real 461-ballot BetterVoting STAR election, the actual export read section by section (scoring → runoff → runoff % → Condorcet), including the real-ballot difference between an abstention (blank) and an explicit-zero ballot.
+- **A real election, end to end:** [What Makes the Best Pet?](../../01_STAR/04_Real_Elections/pet_real_bv_election/README.md) — a real 461-ballot BetterVoting STAR election, the actual export read section by section (scoring → runoff → runoff % → Condorcet), including the real-ballot difference between an abstention (blank) and an explicit-zero ballot.
 
 ## 201.2 — Edge cases & trust
 
 - **Key terms:** unanimous ballots, ties / tiebreaker, abstention, equal-max ballot.
-- **See it:** [unanimous ballots](../../01_STAR/02_Examples/cases/cases_pages/05a_c5_b3_unanimous-ballots.md); the tie-break cascade in [Flat scores, ties & tie-breaking](../../01_STAR/09_Parked/Flat_scores_ties/) and the [dead-rung](../../01_STAR/03_Criteria/tie_break_dead_rung/) set; abstention handling in [abstain_bugs](../../01_STAR/04_Real_Elections/abstain_bugs/).
+- **See it:** [unanimous ballots](../../01_STAR/02_Examples/cases/cases_pages/05a_c5_b3_unanimous-ballots.md); the tie-break cascade in [Flat scores, ties & tie-breaking](../../01_STAR/09_Parked/Flat_scores_ties/README.md) and the [dead-rung](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) set; abstention handling in [abstain_bugs](../../01_STAR/04_Real_Elections/abstain_bugs/README.md).
 
 ## 201.3 — Nomenclature: RCV vs IRV vs RCV-IRV
 
@@ -39,7 +39,7 @@
 - **Start plain:** [Electing more than one, simply](../topics/electing_more_than_one.md) — the majoritarian-vs-proportional fork before any machinery ("do you want the N best, or a body that mirrors the electorate?").
 - **Objective:** electing several seats with a majoritarian / at-large method.
 - **Key terms:** Bloc STAR, seats, at-large.
-- **See it:** [Bloc STAR, 2 seats](../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../../02_STAR_Bloc/)).
+- **See it:** [Bloc STAR, 2 seats](../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) (in [`02_STAR_Bloc/`](../../02_STAR_Bloc/README.md)).
 - **The point:** a cohesive majority can *sweep* all seats — which is exactly what motivates 301's proportional methods.
 - **Gentle committee intro (approval side):** [Electing a committee — making sure people have a voice](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md) — a counting-only walk through "most approved" vs "cover everyone" vs proportional, on Lackner & Skowron's steering-committee example.
 
@@ -50,7 +50,7 @@
 - **Pages:** [What makes a good winner?](../topics/what_makes_a_good_winner.md) (four ideals; real Condorcet failures — Alaska '22, Burlington '09) and [What makes a voting method good?](../topics/what_makes_a_voting_method_good.md).
 - **The "experts reject RCV-IRV" claim, graded:** [Do the experts really think RCV-IRV is "bad"?](../topics/expert_consensus_and_irv.md) — the pro-cardinal talking point (Smith / Brams / Quinn, VSE) taken seriously and checked.
 - **Criteria side by side:** [Criteria at a glance](../topics/criteria_at_a_glance.md) — Approval / STAR / Ranked Robin / RCV-IRV pass/fail across every major criterion, each failure linked to a runnable election (with the "a table is a map, not a verdict" caveat up front).
-- **"Condorcet extension" — the family, made simple:** [the Condorcet topic hub](../topics/condorcet/) defines a Condorcet extension (elect the head-to-head winner when one exists; break cycles somehow) and — the calming fact — [at three candidates the famous ones all collapse into one rule](../topics/condorcet/three_candidate_collapse.md), so "which Condorcet method?" barely matters for a three-way race. The deep paradox theory (reinforcement, no-show) is **301.12–301.13**.
+- **"Condorcet extension" — the family, made simple:** [the Condorcet topic hub](../topics/condorcet/README.md) defines a Condorcet extension (elect the head-to-head winner when one exists; break cycles somehow) and — the calming fact — [at three candidates the famous ones all collapse into one rule](../topics/condorcet/three_candidate_collapse.md), so "which Condorcet method?" barely matters for a three-way race. The deep paradox theory (reinforcement, no-show) is **301.12–301.13**.
 - **The point:** this is the *map*; the deeper theory (VSE math, Arrow / Gibbard–Satterthwaite, simulation models) is **301**.
 
 ---

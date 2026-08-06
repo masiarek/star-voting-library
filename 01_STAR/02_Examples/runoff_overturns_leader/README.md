@@ -4,7 +4,7 @@ This is STAR's single most important lesson — the one BetterVoting itself asks
 
 **Teaching this?** The step-by-step presenter's guide — the order to teach it in, why it's a *good* thing, and the devil's-advocate questions with answers — is [Teaching Runoff Reversal — a step-by-step guide](teaching_runoff_reversal.md).
 
-**Real BetterVoting cases — the `Runoff_01`–`Runoff_08` two-view series** now live in a sibling folder: **[runoff_reversal_bv_cases/](../../04_Real_Elections/runoff_reversal_bv_cases/)** — real BV elections, each a two-view lesson (BetterVoting screenshots beside an independent count from Larry Hastings' open-source `starvote` engine, extended in this repo — the "LH" tabulator) walking the *how much vs how many* arc, from the smallest possible reversal to the 61-candidate CA-Governor field. The small teaching demos that have no live BetterVoting election stay **here** (below).
+**Real BetterVoting cases — the `Runoff_01`–`Runoff_08` two-view series** now live in a sibling folder: **[runoff_reversal_bv_cases/](../../04_Real_Elections/runoff_reversal_bv_cases/README.md)** — real BV elections, each a two-view lesson (BetterVoting screenshots beside an independent count from Larry Hastings' open-source `starvote` engine, extended in this repo — the "LH" tabulator) walking the *how much vs how many* arc, from the smallest possible reversal to the 61-candidate CA-Governor field. The small teaching demos that have no live BetterVoting election stay **here** (below).
 
 Concept hub for all of it: [The Automatic Runoff Round](../../01_Learn/the_count/STAR_Automatic_Runoff.md).
 

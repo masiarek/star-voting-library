@@ -2,7 +2,7 @@
 
 **One line:** STAR's second step. The Scoring Round picks the **two finalists**; the **Automatic Runoff** then looks *only* at those two and gives each ballot's full vote to whichever finalist it scored higher. **The finalist more voters prefer wins** — which is not always the one with the most stars. That second step is the whole point of STAR (**S**core **T**hen **A**utomatic **R**unoff).
 
-→ Round 1: [The Scoring Round](STAR_Scoring_Round.md) · the whole report, section by section: [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) · how it's displayed: [STAR Reporting](../reporting/).
+→ Round 1: [The Scoring Round](STAR_Scoring_Round.md) · the whole report, section by section: [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) · how it's displayed: [STAR Reporting](../reporting/README.md).
 
 > Pushback on the runoff (why not just the scores? isn't the reversal a bug? are equal-score votes wasted?) → [The second round — FAQ & how to answer twisted claims](STAR_second_round_FAQ.md).
 
@@ -28,7 +28,7 @@ It also keeps the ballot **honest**. Without a runoff, the smart way to vote in 
 
 A score total **can't tell your #1 from your strong #2** — a 4 looks the same either way. So a candidate who is *everyone's solid second choice* can pile up the most stars without being *anyone's* first choice. The runoff forces the question the total can't answer — "between these two, which is your #1?" — and the majority's pick wins.
 
-A **Runoff Reversal** is just *how much* and *how many* pointing at different candidates: the leader had more total support, but fewer voters prefer them head-to-head. It's the safeguard working, not a glitch. Worked examples, the voter patterns behind it, and how to teach it: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/).
+A **Runoff Reversal** is just *how much* and *how many* pointing at different candidates: the leader had more total support, but fewer voters prefer them head-to-head. It's the safeguard working, not a glitch. Worked examples, the voter patterns behind it, and how to teach it: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md).
 
 ## What the round does
 
@@ -142,7 +142,7 @@ Count × Almond,Brownie,Cocoa
 
 *Want the whole count — the preference matrix, the Condorcet line, the score distribution? This is a real election: [see the full LH report](../../02_Examples/runoff_overturns_leader/cases/cases_pages/01a_c3_b3_more-stars-fewer-voters.md) (or run [`01a_c3_b3_more-stars-fewer-voters.yaml`](../../02_Examples/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml)).*
 
-**The name:** the house term is **Runoff Reversal**; in technical/debate writing use the plain phrasing "**the runoff overturns the score leader**" (it avoids colliding with *reversal symmetry* in social-choice theory). Full walkthrough as a 3→9-candidate progression, plus a voter-facing explanation: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/). Teaching it (step-by-step, why it's good, devil's-advocate Q&A): [Teaching Runoff Reversal — a step-by-step guide](../../02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md). Why STAR is built to do this: [STAR's hybrid nature](STAR_hybrid_nature.md) · the three different "winners" (score / runoff / Condorcet): [three winner notions](../properties_and_limits/STAR_three_winner_notions.md).
+**The name:** the house term is **Runoff Reversal**; in technical/debate writing use the plain phrasing "**the runoff overturns the score leader**" (it avoids colliding with *reversal symmetry* in social-choice theory). Full walkthrough as a 3→9-candidate progression, plus a voter-facing explanation: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md). Teaching it (step-by-step, why it's good, devil's-advocate Q&A): [Teaching Runoff Reversal — a step-by-step guide](../../02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md). Why STAR is built to do this: [STAR's hybrid nature](STAR_hybrid_nature.md) · the three different "winners" (score / runoff / Condorcet): [three winner notions](../properties_and_limits/STAR_three_winner_notions.md).
 
 ## Variation 2 — exact ties
 
@@ -194,7 +194,7 @@ With only two candidates the Scoring Round is just a formality (both advance), s
 
 | Variation | What happens | Page |
 |---|---|---|
-| Runoff Reversal | score leader loses the runoff | [When the top-scoring candidate isn't the winner](../../02_Examples/runoff_overturns_leader/) |
+| Runoff Reversal | score leader loses the runoff | [When the top-scoring candidate isn't the winner](../../02_Examples/runoff_overturns_leader/README.md) |
 | Exact tie | even split → tie-break ladder | [Tie-Breaking](../Tie_Breaking_STAR/tie_breaking.md) |
 | Two candidates | runoff *is* the election | — |
 | Percentages | decided-voters denominator | [runoff percentages](runoff_percentages.md) |

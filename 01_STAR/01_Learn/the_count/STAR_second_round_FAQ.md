@@ -99,5 +99,5 @@ Uma is nearly everyone's near-favorite — a 4.5/5 average, *almost twice* Rye's
 - [The Automatic Runoff](STAR_Automatic_Runoff.md) · [runoff percentages / two denominators](runoff_percentages.md) · [STAR's hybrid nature](STAR_hybrid_nature.md)
 - [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md) (score / runoff / Condorcet) · [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md)
 - [Aren't equal-score votes discounted? (conversation)](../reference/are_equal_score_votes_discounted.md)
-- Runoff-reversal case files in the repo: [`01_STAR/02_Examples/runoff_overturns_leader/`](../../02_Examples/runoff_overturns_leader/)
+- Runoff-reversal case files in the repo: [`01_STAR/02_Examples/runoff_overturns_leader/`](../../02_Examples/runoff_overturns_leader/README.md)
 - Official: [Why bother with the automatic runoff?](https://www.starvoting.org/why_the_runoff) · [Equal preference votes](https://www.starvoting.org/equal_preference)

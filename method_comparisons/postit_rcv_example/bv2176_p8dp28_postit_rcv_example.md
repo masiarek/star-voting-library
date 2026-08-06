@@ -187,7 +187,7 @@ BetterVoting's live result for the same race: **Green** (Copeland 2, elected via
 
 Frozen BetterVoting export (Election + Ballots + Results): [bv2176_p8dp28_bv_export.json](cases/bv2176_p8dp28_bv_export.json) — BV's stored winners match every LH prediction (STAR Blue, RCV-IRV Purple, Ranked Robin **Green** — the ladder divergence, on the record).
 
-Related: [the video](https://youtu.be/Vte4nly_Neg) · [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · up: [method_comparisons](../)
+Related: [the video](https://youtu.be/Vte4nly_Neg) · [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · up: [method_comparisons](../README.md)
 
 *BetterVoting result screenshots (View 1) can be dropped into `img/` as `img/p8dp28_<what>.png` and linked here.*
 

@@ -76,7 +76,7 @@ This is the cleanest real-world proof. Three candidates, roughly on a spectrum:
 - Begich beats Peltola (~53–47).
 - Begich beats Palin (~61–39).
 
-So **Begich beats *both* others head-to-head — he's the candidate a majority actually preferred** (the [Condorcet winner](../../../07_Concepts/topics/condorcet/)). RCV-IRV eliminated him in the first round because few people ranked him *first*. That's the **[center squeeze](../../../07_Concepts/topics/center_squeeze/).**
+So **Begich beats *both* others head-to-head — he's the candidate a majority actually preferred** (the [Condorcet winner](../../../07_Concepts/topics/condorcet/README.md)). RCV-IRV eliminated him in the first round because few people ranked him *first*. That's the **[center squeeze](../../../07_Concepts/topics/center_squeeze/README.md).**
 
 **Now the favorite-betrayal part — the key move, read slowly:**
 

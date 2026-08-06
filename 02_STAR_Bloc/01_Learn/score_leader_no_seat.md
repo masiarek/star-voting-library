@@ -2,7 +2,7 @@
 
 **One line:** Bloc STAR is **not** "the top N by points." Every seat is settled by the **automatic runoff**, so seats go to whoever is *preferred* head-to-head — and a broadly acceptable compromise candidate can lead every scoring round by a wide margin, reach every runoff, lose every one of them narrowly, and end the night with nothing.
 
-→ The single-winner version of the same step: [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/) · the mechanics: [Bloc STAR](bloc_star.md) · not to be confused with [the majority sweep](majority_sweep.md)
+→ The single-winner version of the same step: [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md) · the mechanics: [Bloc STAR](bloc_star.md) · not to be confused with [the majority sweep](majority_sweep.md)
 
 **Level: 201 → 301 · deep dive**
 
@@ -183,7 +183,7 @@ So the point tally and the preference tally genuinely disagree here, and Bloc ST
 
 It depends on what you think the scoring round is *for*, and the honest answer is that both readings are coherent.
 
-**Reading 1 — working as designed.** This is [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/), STAR's signature step, repeated once per seat. The whole reason STAR appends a runoff to a score ballot is that raw point totals reward a candidate everybody tolerates over the candidate more voters actually prefer — and reward strategic minimization besides. The runoff asks the majority directly, and here the majority answered four times. A method that seated Ava would be Score voting, not STAR, and the repo's own [Approval / Score critique](../../04_Approval/01_Learn/approval_honest_limits.md) is exactly the argument for not doing that.
+**Reading 1 — working as designed.** This is [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md), STAR's signature step, repeated once per seat. The whole reason STAR appends a runoff to a score ballot is that raw point totals reward a candidate everybody tolerates over the candidate more voters actually prefer — and reward strategic minimization besides. The runoff asks the majority directly, and here the majority answered four times. A method that seated Ava would be Score voting, not STAR, and the repo's own [Approval / Score critique](../../04_Approval/01_Learn/approval_honest_limits.md) is exactly the argument for not doing that.
 
 **Reading 2 — the multi-winner sting.** In a single-winner race a runoff reversal costs the score leader *the* seat, and that is the deal you signed up for. Here it costs them **all four**, and there is no rung anywhere in Bloc STAR at which "led every round and lost every round" earns anything. A body that wanted its compromise figure in the room does not get her, no matter how many seats it has. If that is the goal, the fix is a different method — a Condorcet-flavored count like [Bloc Ranked Robin](bloc_star_vs_other_bloc_methods.md), or a proportional one — not a complaint about the tabulation.
 
@@ -200,5 +200,5 @@ What the case is **not** is [the majority sweep](majority_sweep.md). Nobody swee
 - [Bloc STAR](bloc_star.md) — elect, remove, re-run
 - [The majority sweep](majority_sweep.md) — the other, more famous surprise
 - [Honest limits](bloc_honest_limits.md)
-- [When the top-scoring candidate isn't the winner](../../01_STAR/02_Examples/runoff_overturns_leader/) — the single-winner worked set
+- [When the top-scoring candidate isn't the winner](../../01_STAR/02_Examples/runoff_overturns_leader/README.md) — the single-winner worked set
 - [The Condorcet loser paradox](../../07_Concepts/voting_paradoxes/condorcet_loser_paradox.md) · [Approval, honest limits](../../04_Approval/01_Learn/approval_honest_limits.md)

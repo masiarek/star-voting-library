@@ -99,7 +99,7 @@ Same ballots, and **Ranked Pairs stands alone at Ben** while every other rule le
 
 ## How often do cycles even happen?
 
-Rarely, but not never. Cycles get likelier in **small, sharply three-way-divided** races and much rarer as the electorate grows and preferences spread along a spectrum. As with the [runoff-reversal frequency](../../01_STAR/02_Examples/runoff_overturns_leader/) caveat: any rate you quote depends on the voter model, so state the assumptions rather than a bare number.
+Rarely, but not never. Cycles get likelier in **small, sharply three-way-divided** races and much rarer as the electorate grows and preferences spread along a spectrum. As with the [runoff-reversal frequency](../../01_STAR/02_Examples/runoff_overturns_leader/README.md) caveat: any rate you quote depends on the voter model, so state the assumptions rather than a bare number.
 
 ## Try it yourself / verify
 

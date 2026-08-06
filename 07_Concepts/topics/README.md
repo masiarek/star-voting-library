@@ -1,6 +1,6 @@
 # Concepts — by topic (cross-method view)
 
-This folder holds the library's **cross-method concept pages** — the ideas that don't belong to any single method — in two forms: the flat **concept pages** (below) and the **topic hubs** (subfolders): thin index pages that gather one cross-method idea and link out to each method's authoritative treatment. Method-specific concept pages stay in the per-method folders under [07_Concepts](../) (STAR_Voting/, RCV_IRV/, RCV_Ranked_Robin/…), because that's how most people arrive.
+This folder holds the library's **cross-method concept pages** — the ideas that don't belong to any single method — in two forms: the flat **concept pages** (below) and the **topic hubs** (subfolders): thin index pages that gather one cross-method idea and link out to each method's authoritative treatment. Method-specific concept pages stay in the per-method folders under [07_Concepts](../README.md) (STAR_Voting/, RCV_IRV/, RCV_Ranked_Robin/…), because that's how most people arrive.
 
 **The hubs don't duplicate content** — the detailed write-ups stay in the per-method folders. A hub is just the shared definition plus a "which methods, and where" table, so there's almost nothing to keep in sync. Browse by method *or* by topic, whichever fits.
 
@@ -17,15 +17,15 @@ Before the per-topic criteria: **what are we even optimizing for?**
 
 | Topic | What it compares | Hub |
 |-------|------------------|-----|
-| **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [Summability](summability/) |
-| **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [Monotonicity](monotonicity/) |
-| **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [Center squeeze](center_squeeze/) |
-| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) — and [how often, measured](condorcet/condorcet_efficiency_measured.md) | [Condorcet efficiency](condorcet/) |
-| **Ties & tie-breaking** | where ties arise and how the lot order settles them | [Ties & tie-breaking](ties/) |
-| **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [Majority Criterion](majority_criterion/) |
+| **Summability** | which counts add up from precinct subtotals (STAR ✅, Ranked Robin ✅, IRV ❌) | [Summability](summability/README.md) |
+| **Monotonicity** | where more support can backfire (all elimination methods ❌; STAR ✅, Ranked Robin ✅) | [Monotonicity](monotonicity/README.md) |
+| **Center squeeze** | who eliminates the moderate (Hare/Contingent ❌; whole-ballot methods ✅) | [Center squeeze](center_squeeze/README.md) |
+| **Condorcet efficiency** | who elects the head-to-head winner (Ranked Robin/BTR ✅, STAR ⚠️, IRV ❌) — and [how often, measured](condorcet/condorcet_efficiency_measured.md) | [Condorcet efficiency](condorcet/README.md) |
+| **Ties & tie-breaking** | where ties arise and how the lot order settles them | [Ties & tie-breaking](ties/README.md) |
+| **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [Majority Criterion](majority_criterion/README.md) |
 | **"Majority" / "minority" candidate** | the *words*, not the criterion — five senses of "majority candidate", what "majority" means on a *score* ballot, why "minority winner" is nearly automatic in a big field, and what makes it a real indictment | [Majority & minority candidates](majority_criterion/majority_and_minority_candidates.md) |
-| **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/) |
-| **Burial** | sinking a rival you actually like, so they lose a comparison they'd win (Ranked Robin/Copeland ❌ its named risk; Borda ❌ notoriously; STAR ⚠️ rarely pays; IRV ✅ later-no-harm) | [Burial](burial/) |
+| **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/README.md) |
+| **Burial** | sinking a rival you actually like, so they lose a comparison they'd win (Ranked Robin/Copeland ❌ its named risk; Borda ❌ notoriously; STAR ⚠️ rarely pays; IRV ✅ later-no-harm) | [Burial](burial/README.md) |
 
 *(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [the split-voting set](../../method_comparisons/split_voting) for the worked examples.)*
 

@@ -2,7 +2,7 @@
 
 *The four [Black Curtain](README.md) elections, tabulated by the **range voting engine** (pref_voting `score_voting`, cross-checked against a hand sum). Same ballots as the STAR pages — but counted as pure **Range**: highest total score wins, no runoff. Watch Range and STAR **part ways** exactly where the runoff matters.*
 
-→ Method overview: [Range / Score voting](../../06_Other/Range/concepts/range_voting.md) · Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/) · The set's STAR write-up: [The Black Curtain — one electorate, four "identical" landslides](README.md).
+→ Method overview: [Range / Score voting](../../06_Other/Range/concepts/range_voting.md) · Engine: [the Range engine](../../06_Other/Range/Range_tabulation_engine/README.md) · The set's STAR write-up: [The Black Curtain — one electorate, four "identical" landslides](README.md).
 
 ---
 

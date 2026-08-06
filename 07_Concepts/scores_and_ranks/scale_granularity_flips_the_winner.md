@@ -2,7 +2,7 @@
 
 *A score ballot's **resolution** — how many rungs the scale has — is a modeling choice, not a neutral detail. Compressing a 0–9 ballot down to STAR's 0–5 can change **who becomes a finalist**, and through that, **who wins**. This page works one real example where it does exactly that.*
 
-→ Companions: [the fidelity ladder](fidelity_ladder.md) · [scores vs. ranks](scores_vs_ranks.md) · Black Curtain lesson #5 (the 0–9 → 0–5 problem) in [The Black Curtain — one electorate, four "identical" landslides](../../method_comparisons/black_curtain/) · Curriculum: [301.1 (RRV/proportional)](../CURRICULUM.md) and [301.6 (when Score/Runoff/Condorcet disagree)](../CURRICULUM.md)
+→ Companions: [the fidelity ladder](fidelity_ladder.md) · [scores vs. ranks](scores_vs_ranks.md) · Black Curtain lesson #5 (the 0–9 → 0–5 problem) in [The Black Curtain — one electorate, four "identical" landslides](../../method_comparisons/black_curtain/README.md) · Curriculum: [301.1 (RRV/proportional)](../CURRICULUM.md) and [301.6 (when Score/Runoff/Condorcet disagree)](../CURRICULUM.md)
 
 Files: [`rrv_sample_c15_b13_three-parties.yaml`](../../03_STAR_PR/02_Examples/cases/rrv_sample_c15_b13_three-parties.yaml) · full report [`…_tabulated.txt`](../../03_STAR_PR/02_Examples/cases/cases_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt)
 

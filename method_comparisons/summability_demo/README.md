@@ -1,6 +1,6 @@
 # Summability demo — one example, three methods
 
-Runnable elections behind the **[Summability topic hub](../../07_Concepts/topics/summability/)**. The point: *summability is a property of the **count**, not the ballot.* The same two districts are summable under STAR and Ranked Robin, and **not** under RCV-IRV.
+Runnable elections behind the **[Summability topic hub](../../07_Concepts/topics/summability/README.md)**. The point: *summability is a property of the **count**, not the ballot.* The same two districts are summable under STAR and Ranked Robin, and **not** under RCV-IRV.
 
 ## Files
 

@@ -108,4 +108,4 @@ Both engines elect **Strawberry** — confirmed against BetterVoting's frozen ex
 
 - [The STAR tie-breaking ladder (full chain)](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md) — this is its worked example
 - [BV555 / `xmyf7k` — the 3-way tie that reaches the random floor](../../09_Parked/Flat_scores_ties/README.md#case-05) (the contrast case)
-- [Dead-rung tie-breaks](../tie_break_dead_rung/) — when five-star has no 5s to weigh
+- [Dead-rung tie-breaks](../tie_break_dead_rung/README.md) — when five-star has no 5s to weigh

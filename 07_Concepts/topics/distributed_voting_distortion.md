@@ -4,7 +4,7 @@
 
 **Level: 301 · deep dive** Builds on [distortion](distortion.md) (301). Reads naturally after the library's own two-district cases, which turn out to be exactly this model.
 
-Companions: [Distortion](distortion.md) — the parent metric and its two models · [The reinforcement paradox, counted](../../method_comparisons/reinforcement_paradox/) — the same slicing, as a criterion failure rather than a welfare ratio · [Exercise 1 — two districts, one mayor](../../01_STAR/05_Practice/ex01_two_districts.md) — the runnable companion used below · [Multiple districts / consistency](../voting_paradoxes/multiple_districts.md) · [Summability](summability/) — the *other* thing precincts do to a count, and the one this is constantly confused with.
+Companions: [Distortion](distortion.md) — the parent metric and its two models · [The reinforcement paradox, counted](../../method_comparisons/reinforcement_paradox/README.md) — the same slicing, as a criterion failure rather than a welfare ratio · [Exercise 1 — two districts, one mayor](../../01_STAR/05_Practice/ex01_two_districts.md) — the runnable companion used below · [Multiple districts / consistency](../voting_paradoxes/multiple_districts.md) · [Summability](summability/README.md) — the *other* thing precincts do to a count, and the one this is constantly confused with.
 
 ---
 
@@ -61,7 +61,7 @@ Scoring Round (all 18 ballots — this IS the utilitarian tally)
 |---|---|:--:|:--:|:--:|:--:|
 | **the districted mechanism** | Avery | **70** | **1.00** | 5.2168 | **1.00** |
 | centralized STAR | Carmen | 64 | 1.09 | 4.5967 | 1.13 |
-| the [Condorcet winner](condorcet/) | Elena | 50 | 1.40 | 3.3333 | 1.57 |
+| the [Condorcet winner](condorcet/README.md) | Elena | 50 | 1.40 | 3.3333 | 1.57 |
 
 (Both columns shown because distortion is defined on unit-sum-normalized values, not raw scores; here the ordering is the same either way, so nothing turns on the normalization. Elena's 1.57 is comfortably inside the [metric model's factor-of-3 guarantee](distortion.md#how-is-a-bound-of-3-even-possible-the-triangle-inequality-is-smuggled-in-cardinal-information) for a Condorcet winner, as it must be.)
 
@@ -78,12 +78,12 @@ Apply the usual [severity × frequency](../../method_comparisons/paradoxes_and_w
 
 ## The distinction that trips everyone
 
-**Districting is not [summability](summability/).** They both involve precincts and they are unrelated:
+**Districting is not [summability](summability/README.md).** They both involve precincts and they are unrelated:
 
 - **Summability** asks whether the *count* adds up from precinct subtotals. STAR's score totals and preference matrix both do; IRV's rounds don't. This is a property of the tabulation.
 - **Districting** asks what happens when each precinct declares a *winner* and you aggregate the winners. What you cannot add up is a declared winner — and that is true of every method, summable or not.
 
-[Exercise 1's own scenario note](../../01_STAR/05_Practice/ex01_two_districts.md) makes the point on the same ballots: the citywide result is a consistency failure, *not* a summability failure, because the score totals and the matrix added across the two districts perfectly well. What broke was the architecture. Distortion is just the price tag on the break. The criterion-shaped version of the same event is the [reinforcement paradox](../../method_comparisons/reinforcement_paradox/); this page is its welfare-shaped twin.
+[Exercise 1's own scenario note](../../01_STAR/05_Practice/ex01_two_districts.md) makes the point on the same ballots: the citywide result is a consistency failure, *not* a summability failure, because the score totals and the matrix added across the two districts perfectly well. What broke was the architecture. Distortion is just the price tag on the break. The criterion-shaped version of the same event is the [reinforcement paradox](../../method_comparisons/reinforcement_paradox/README.md); this page is its welfare-shaped twin.
 
 ## Sources
 
@@ -98,8 +98,8 @@ Apply the usual [severity × frequency](../../method_comparisons/paradoxes_and_w
 ## See also
 
 - [Distortion — the formal price of a ranked ballot](distortion.md) — the parent metric, both models, and the cardinal-query results
-- [The reinforcement paradox, counted](../../method_comparisons/reinforcement_paradox/) · [Multiple districts / consistency](../voting_paradoxes/multiple_districts.md)
+- [The reinforcement paradox, counted](../../method_comparisons/reinforcement_paradox/README.md) · [Multiple districts / consistency](../voting_paradoxes/multiple_districts.md)
 - [Exercise 1 — two districts, one mayor](../../01_STAR/05_Practice/ex01_two_districts.md) — the runnable companion
-- [Summability](summability/) · [Central tabulation](central_tabulation.md) — the two things this is confused with
+- [Summability](summability/README.md) · [Central tabulation](central_tabulation.md) — the two things this is confused with
 - [One person, one vote](one_person_one_vote.md) · [False majorities](false_majorities.md) — the political-science framing of the same architecture
 - [What makes a good winner?](what_makes_a_good_winner.md) · [Reading these fairly](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md)

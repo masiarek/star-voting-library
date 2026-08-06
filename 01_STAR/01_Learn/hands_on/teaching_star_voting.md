@@ -41,7 +41,7 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 | **[Equal Support](../reference/are_equal_score_votes_discounted.md)** | "If you rated the two finalists the same, you're saying 'either is fine' — your ballot still counted in the scoring round." |
 | **Vote-splitting / [spoiler](../../../07_Concepts/topics/spoiler_effect.md)** | "The problem STAR solves — where similar candidates split support and the wrong one wins." |
 
-*Reach for these only with an audience that wants depth:* [Condorcet winner](../../../07_Concepts/topics/condorcet/), [monotonicity](../properties_and_limits/STAR_monotonicity.md), [summability](../properties_and_limits/STAR_summability.md), the [honest limits](../properties_and_limits/STAR_honest_limits.md). **Skip them for a first-timer** — they're 201/301, not the on-ramp.
+*Reach for these only with an audience that wants depth:* [Condorcet winner](../../../07_Concepts/topics/condorcet/README.md), [monotonicity](../properties_and_limits/STAR_monotonicity.md), [summability](../properties_and_limits/STAR_summability.md), the [honest limits](../properties_and_limits/STAR_honest_limits.md). **Skip them for a first-timer** — they're 201/301, not the on-ramp.
 
 ## Which example, and when
 
@@ -49,7 +49,7 @@ Everything else (criteria, comparisons, theory) is optional depth for the audien
 |---|---|
 | **[The team lunch](../../02_Examples/cases/cases_pages/bv2184_fyy886_lunch_vote.md)** | your go-to intro — 5 voters, politics-free, relatable, and the compromise wins. |
 | **[Tennessee capital](../../02_Examples/cases/cases_pages/09_c4_b100_tennessee-capital.md)** | the classic textbook case — same shape as the lunch, at scale. |
-| **[Runoff reversal](../../02_Examples/runoff_overturns_leader/)** | the "aha" — the top scorer can *lose* the runoff. The most important single lesson; use it *after* the basics land. |
+| **[Runoff reversal](../../02_Examples/runoff_overturns_leader/README.md)** | the "aha" — the top scorer can *lose* the runoff. The most important single lesson; use it *after* the basics land. |
 | **[Ways to vote](../voting_styles/README.md)** | reassuring voters there's no wrong ballot (bullet, equal scores, "anyone but…"). |
 | **[Count by hand](count_star_by_hand.md)** | a hands-on demystifier — tally a tiny election live. |
 | **[Center squeeze](../../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)** | only when the room asks "why not RCV/IRV?" |
@@ -106,7 +106,7 @@ The conceptual walkthrough is [Count a STAR election by hand](count_star_by_hand
 - **The ballot image, the lunch diagram, and worked pages** in [STAR — start here](../STAR_start_here.md); the [FAQ](../getting_started/STAR_FAQ.md) and [second-round FAQ](../the_count/STAR_second_round_FAQ.md) for the questions that come up
 - **Videos & official guides:** [STAR resources](../reference/STAR_resources.md)
 - **Print paper ballots & run a hands-on demo:** [Run a paper-ballot STAR demo](running_a_paper_ballot_demo.md) (QR, serial receipts, write-ins) + [Count a STAR election by hand](count_star_by_hand.md)
-- **Teaching runoff reversal specifically:** [the step-by-step guide](../../02_Examples/runoff_overturns_leader/) with a devil's-advocate Q&A
+- **Teaching runoff reversal specifically:** [the step-by-step guide](../../02_Examples/runoff_overturns_leader/README.md) with a devil's-advocate Q&A
 
 ## Audience quick-adaptations
 

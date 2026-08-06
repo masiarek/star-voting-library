@@ -90,6 +90,6 @@ Full mirrors: [Bloc STAR sweep](cases/cases_tabulated/bv2210_fvg8y8_bloc_star_sw
 
 ---
 
-**Where this comes from.** Ballots and cast are this repo's own. Siblings: [sntv_village_council](../sntv_village_council/sntv_village_council.md) (the gentle SNTV intro this case escalates), [multi_member_plurality](../multi_member_plurality/) (block & limited voting), [pets_governance](../pets_governance/) (six methods, one electorate), [exercise 12](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) (Bloc-vs-PR at whiteboard scale), and the seat-family map at [electing more than one](../../07_Concepts/topics/electing_more_than_one.md).
+**Where this comes from.** Ballots and cast are this repo's own. Siblings: [sntv_village_council](../sntv_village_council/sntv_village_council.md) (the gentle SNTV intro this case escalates), [multi_member_plurality](../multi_member_plurality/README.md) (block & limited voting), [pets_governance](../pets_governance/README.md) (six methods, one electorate), [exercise 12](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) (Bloc-vs-PR at whiteboard scale), and the seat-family map at [electing more than one](../../07_Concepts/topics/electing_more_than_one.md).
 
 # file: README.md

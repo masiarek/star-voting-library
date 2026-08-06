@@ -10,10 +10,10 @@
 
 | Moloch | The game it is | Method it plagues | Runnable here |
 |---|---|---|---|
-| **Lesser Evil** | coordination trap (wasted-vote) | First-Past-the-Post | [vote-splitting / spoiler](../../method_comparisons/split_voting/) · [spoiler effect](spoiler_effect.md) |
-| **Center Squeeze** | premature elimination | RCV-IRV (Hare) | [center squeeze](../../method_comparisons/center_squeeze/) · [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/) |
-| **Dark Horse** | prisoner's dilemma | Borda / ranked-point | [the Dark Horse](../../method_comparisons/dark_horse_borda/) |
-| **Chicken / Burr** | chicken (snowdrift) | Approval / Score | [the chicken dilemma](../../method_comparisons/chicken_dilemma/) |
+| **Lesser Evil** | coordination trap (wasted-vote) | First-Past-the-Post | [vote-splitting / spoiler](../../method_comparisons/split_voting/README.md) · [spoiler effect](spoiler_effect.md) |
+| **Center Squeeze** | premature elimination | RCV-IRV (Hare) | [center squeeze](../../method_comparisons/center_squeeze/README.md) · [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/README.md) |
+| **Dark Horse** | prisoner's dilemma | Borda / ranked-point | [the Dark Horse](../../method_comparisons/dark_horse_borda/README.md) |
+| **Chicken / Burr** | chicken (snowdrift) | Approval / Score | [the chicken dilemma](../../method_comparisons/chicken_dilemma/README.md) |
 | **Condorcet Cycle** | Gibbard-universal | *every* method | [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) |
 
 ## The scorecard — STAR, Ranked Robin, and 3-2-1 on each
@@ -39,11 +39,11 @@
 
 **Lesser Evil (FPTP).** The one you already live under. When you can only pick one, voting your true favorite "wastes" your vote, so you're pushed to the least-bad *viable* option — and the field collapses toward two poles. Score and pairwise ballots remove the wasted-vote fear entirely. → [spoiler effect](spoiler_effect.md).
 
-**Center Squeeze (IRV).** Fix wasted votes with instant-runoff and you get a new trap: a broadly-liked centrist with few *first* choices is eliminated early, even though they'd beat either wing head-to-head — so their would-be supporters, by ranking them honestly, help elect the candidate they like least. This is the library's most-documented pathology. → [center squeeze](../../method_comparisons/center_squeeze/), [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/), and the real [Alaska 2022](../../method_comparisons/alaska_2022/) and [monotonicity](../../method_comparisons/monotonicity/) cases.
+**Center Squeeze (IRV).** Fix wasted votes with instant-runoff and you get a new trap: a broadly-liked centrist with few *first* choices is eliminated early, even though they'd beat either wing head-to-head — so their would-be supporters, by ranking them honestly, help elect the candidate they like least. This is the library's most-documented pathology. → [center squeeze](../../method_comparisons/center_squeeze/README.md), [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/README.md), and the real [Alaska 2022](../../method_comparisons/alaska_2022/README.md) and [monotonicity](../../method_comparisons/monotonicity/README.md) cases.
 
-**Dark Horse (Borda).** Under a strictly-ranked point method, the only way to oppose a rival is to rank *someone* above them — so factions bury their rivals behind a harmless nobody, and if everyone does it, the nobody wins with **zero honest support**. A prisoner's dilemma. A score ballot lets you oppose without being forced to support. → [the Dark Horse](../../method_comparisons/dark_horse_borda/).
+**Dark Horse (Borda).** Under a strictly-ranked point method, the only way to oppose a rival is to rank *someone* above them — so factions bury their rivals behind a harmless nobody, and if everyone does it, the nobody wins with **zero honest support**. A prisoner's dilemma. A score ballot lets you oppose without being forced to support. → [the Dark Horse](../../method_comparisons/dark_horse_borda/README.md).
 
-**Chicken / Burr (Approval).** Two allies must cooperate to beat a third, but honest cooperation leaves them tied, so each is tempted to bullet-vote — a slippery slope that can hand victory to the majority-opposed candidate. STAR's runoff converts the *slippery* slope to a *non-slippery* one (the same fix as Quinn's [3-2-1](three_two_one_voting.md)): support both allies honestly, and a few defectors can't start an avalanche. → [the chicken dilemma](../../method_comparisons/chicken_dilemma/).
+**Chicken / Burr (Approval).** Two allies must cooperate to beat a third, but honest cooperation leaves them tied, so each is tempted to bullet-vote — a slippery slope that can hand victory to the majority-opposed candidate. STAR's runoff converts the *slippery* slope to a *non-slippery* one (the same fix as Quinn's [3-2-1](three_two_one_voting.md)): support both allies honestly, and a few defectors can't start an avalanche. → [the chicken dilemma](../../method_comparisons/chicken_dilemma/README.md).
 
 **Condorcet Cycle (universal).** Sometimes a majority prefers A to B, B to C, *and* C to A — a rock-paper-scissors with no honest winner. This is at the heart of the proof that **no** method escapes strategy ([Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md)). Cycles are genuinely rare (~1–5% in realistic models and empirical data), and every method — STAR and Ranked Robin included — must simply resolve them somehow. → [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md).
 

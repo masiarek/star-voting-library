@@ -2,7 +2,7 @@
 
 *The sharpest academic attack on Approval Voting says the method is **indeterminate**: a voter with a real preference `a > b > c` has no way to say so, must arbitrarily pick a ballot, and — the criticism runs — those arbitrary picks can decide the election. It is a serious argument, it has a serious answer, and the answer is not the one Approval's defenders gave. This page works all three, plus the popular-press version of the same complaint.*
 
-**Level: 301 · for debaters** → Companions: [Approval Voting](approval_voting.md) (the ballot and the count) · [honest limits](approval_honest_limits.md) (the threshold, from the practical side) · [in the theory literature](approval_in_the_literature.md) (Zwicker's five criticisms, of which this is #1 and #2 sharpened) · [cardinal utility](../../07_Concepts/topics/cardinal_utility.md) (the framework the rebuttal comes from) · runnable: [Hillinger's paper](../../method_comparisons/hillinger_evaluative_voting/). Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
+**Level: 301 · for debaters** → Companions: [Approval Voting](approval_voting.md) (the ballot and the count) · [honest limits](approval_honest_limits.md) (the threshold, from the practical side) · [in the theory literature](approval_in_the_literature.md) (Zwicker's five criticisms, of which this is #1 and #2 sharpened) · [cardinal utility](../../07_Concepts/topics/cardinal_utility.md) (the framework the rebuttal comes from) · runnable: [Hillinger's paper](../../method_comparisons/hillinger_evaluative_voting/README.md). Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -156,6 +156,6 @@ The house rule is that [fairness has to cut both ways](../../07_Concepts/topics/
 - [Cardinal utility](../../07_Concepts/topics/cardinal_utility.md) — measurability vs. comparability, the vNM trap, and Hillinger's argument in full
 - [The fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md) — what each score↔rank conversion drops and what it invents; Table 3 is the rung the ladder doesn't cover
 - [When compression moves the Condorcet winner](../../method_comparisons/black_curtain/condorcet_compression.md) — the same loss, five ballots, fully worked
-- [Hillinger's paper, made runnable](../../method_comparisons/hillinger_evaluative_voting/) — Table 3 and Table 4 as case files
+- [Hillinger's paper, made runnable](../../method_comparisons/hillinger_evaluative_voting/README.md) — Table 3 and Table 4 as case files
 
 # file: approval_indeterminacy.md

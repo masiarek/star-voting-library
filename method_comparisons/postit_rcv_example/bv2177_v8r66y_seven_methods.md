@@ -43,6 +43,6 @@ The seven races use three ballot forms derived from one set of preferences — a
 
 Frozen BetterVoting export (Election + Ballots + Results): [bv2177_v8r66y_bv_export.json](cases/bv2177_v8r66y_bv_export.json) — BV's stored winners match every prediction across all seven races.
 
-Related: [the BV2176 case page](bv2176_p8dp28_postit_rcv_example.md) · [the switch, made real (BV2178)](bv2178_8kg698_switch_made_real.md) · [is the video fair and balanced?](postit_video_fair_and_balanced.md) · up: [method_comparisons](../)
+Related: [the BV2176 case page](bv2176_p8dp28_postit_rcv_example.md) · [the switch, made real (BV2178)](bv2178_8kg698_switch_made_real.md) · [is the video fair and balanced?](postit_video_fair_and_balanced.md) · up: [method_comparisons](../README.md)
 
 # file: bv2177_v8r66y_seven_methods.md

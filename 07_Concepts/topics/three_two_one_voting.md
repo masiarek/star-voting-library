@@ -2,7 +2,7 @@
 
 *A well-regarded rated method designed by **Jameson Quinn** (Center for Election Science). Voters rate every candidate **Good**, **OK**, or **Bad**; the winner is found in three steps — **3** semifinalists, then **2** finalists, then **1** winner. It dodges the same strategic traps STAR does (no center squeeze, a non-slippery chicken dilemma, a built-in dark-horse guard), which is why it keeps coming up as a serious reform option. This page explains it fairly and lays it next to STAR — they're close cousins, with real trade-offs either way.*
 
-→ Related: [the strategic pathologies (five Molochs)](strategic_pathologies.md) · [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [Approval voting](../../04_Approval/01_Learn/approval_voting.md).
+→ Related: [the strategic pathologies (five Molochs)](strategic_pathologies.md) · [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/README.md) · [scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) · [Approval voting](../../04_Approval/01_Learn/approval_voting.md).
 
 ---
 
@@ -17,11 +17,11 @@
 **Two guard rules on the *third* semifinalist** (they're what make 3-2-1 more than a toy):
 
 - **Clone guard:** the third semifinalist can't be a near-duplicate of the first two (not the same party as both, or — nonpartisan — don't count its "Good"s on ballots that also rated the first semifinalist Good). Stops a party from cloning its way into the finals.
-- **Dark-horse guard:** the third semifinalist must have at least **½ as many Good ratings** as the top semifinalist. If none qualifies, skip step 2. This is what keeps a [dark horse](../../method_comparisons/dark_horse_borda/) — a nobody with almost no real support — out of the finals.
+- **Dark-horse guard:** the third semifinalist must have at least **½ as many Good ratings** as the top semifinalist. If none qualifies, skip step 2. This is what keeps a [dark horse](../../method_comparisons/dark_horse_borda/README.md) — a nobody with almost no real support — out of the finals.
 
 ## Worked example — it resolves the chicken dilemma (usually)
 
-Take the [chicken/Burr scenario](../../method_comparisons/chicken_dilemma/): allies **A** and **B** must beat **C**, whom the majority opposes (35 prefer A>B, 25 prefer B>A, 40 back C). If the A/B voters use **OK** to separate their favorite from their ally (A-voters: A Good, B OK; B-voters: B Good, A OK; C-voters: C Good, both allies Bad):
+Take the [chicken/Burr scenario](../../method_comparisons/chicken_dilemma/README.md): allies **A** and **B** must beat **C**, whom the majority opposes (35 prefer A>B, 25 prefer B>A, 40 back C). If the A/B voters use **OK** to separate their favorite from their ally (A-voters: A Good, B OK; B-voters: B Good, A OK; C-voters: C Good, both allies Bad):
 
 ```
              Good   Bad
@@ -43,7 +43,7 @@ Step 3  → A beats B, 35 to 25   → A wins
 - **Non-slippery chicken** — like STAR, a few defectors can't start an avalanche (a final head-to-head means small defections don't snowball).
 - **Explicit dark-horse and clone guards** — where STAR resists dark horse *implicitly* (via support-reading), 3-2-1 bolts on rules that do it explicitly.
 - **Genuinely explainable** — "your worst candidate gets knocked out before the finals" is an intuitive, even chantable pitch; several people find it the easiest good method to explain across the aisle.
-- **[Summable](summability/)** — precincts can report Good tallies, Bad tallies, and the pairwise matrix; the winner is computable from those aggregates (no need to centralize raw ballots). Same virtue STAR has.
+- **[Summable](summability/README.md)** — precincts can report Good tallies, Bad tallies, and the pairwise matrix; the winner is computable from those aggregates (no need to centralize raw ballots). Same virtue STAR has.
 
 ## 3-2-1 vs. STAR — close cousins, real trade-offs
 
@@ -66,10 +66,10 @@ Neither is strictly better. **STAR** is finer-grained and structurally simpler (
 - **Not strategy-proof** — [Gibbard](gibbard_satterthwaite_theorem.md) forbids that for any method. Quinn notes 3-2-1 becomes tactical with **four or more** serious candidates.
 - **The guard rules are real complexity** — the "third semifinalist" clone and dark-horse conditions are fiddly to write into law and to explain in full, even if the top-line pitch is simple.
 - **Three levels can under-resolve** — the finalist tie above; a Good/OK/Bad ballot simply carries less information than 0–5.
-- **Not in public use** — 3-2-1 is a **proposed** method (no governmental adoption we know of) and is **not** offered by [BetterVoting](../tabulation_engines/BV/), so this library can't back a 3-2-1 case with a live election the way it does STAR / Approval / Ranked Robin / IRV. The example above is worked by hand; the LH engine does not tabulate 3-2-1.
+- **Not in public use** — 3-2-1 is a **proposed** method (no governmental adoption we know of) and is **not** offered by [BetterVoting](../tabulation_engines/BV/README.md), so this library can't back a 3-2-1 case with a live election the way it does STAR / Approval / Ranked Robin / IRV. The example above is worked by hand; the LH engine does not tabulate 3-2-1.
 
 ## Sources
 
 - [3-2-1 voting — electowiki](https://electowiki.org/wiki/3-2-1_voting) — the clearest mechanics reference for this niche/branded method (**advocacy-adjacent**: electowiki leans reformer, and 3-2-1 is a Center for Election Science proposal — cite it for *how it works*, not for verdicts).
-- Jameson Quinn, *The Six Voting Molochs* — where 3-2-1 is proposed as the non-slippery fix to the [chicken dilemma](../../method_comparisons/chicken_dilemma/); Quinn is CES-aligned (Approval/3-2-1), which is exactly why his praise of methods he *didn't* design carries weight.
+- Jameson Quinn, *The Six Voting Molochs* — where 3-2-1 is proposed as the non-slippery fix to the [chicken dilemma](../../method_comparisons/chicken_dilemma/README.md); Quinn is CES-aligned (Approval/3-2-1), which is exactly why his praise of methods he *didn't* design carries weight.
 - Contrast within this library: [STAR](../../01_STAR/01_Learn/STAR_start_here.md) · [Approval](../../04_Approval/01_Learn/approval_voting.md) · [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) · glossary [`3-2-1 voting`](../GLOSSARY.md).

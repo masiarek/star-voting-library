@@ -12,7 +12,7 @@ The Twin paradox is the same pair traversed the other way: start at BV2151, wher
 
 The paradox also lurks in [BV2159 (Brams' sampler)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md), packed alongside truncation and non-monotonicity in one 21-voter election.
 
-**The multi-method pair (BV2174/BV2175):** the [Participation topic hub](../topics/participation/) carries a second live pair built for cross-method comparison — three races per election, where the *same* 8 sincere ballots reward the voters under Choose-One and STAR but hand them their last choice under RCV-IRV ([case folder](../../method_comparisons/participation_no_show/)).
+**The multi-method pair (BV2174/BV2175):** the [Participation topic hub](../topics/participation/README.md) carries a second live pair built for cross-method comparison — three races per election, where the *same* 8 sincere ballots reward the voters under Choose-One and STAR but hand them their last choice under RCV-IRV ([case folder](../../method_comparisons/participation_no_show/README.md)).
 
 ## Where it comes from
 

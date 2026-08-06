@@ -21,8 +21,8 @@ The same 27-voter election runs through every method on the [RCV-IRV-Hare page](
 
 **And the critique is ~240 years old.** When the [Marquis de Condorcet](https://en.wikipedia.org/wiki/Marquis_de_Condorcet) — the man the Condorcet criterion is named for — considered the eliminate-the-fewest-first-choices idea in the 1780s, he **rejected it** for exactly this flaw: that *"the real wish of the plurality may be for a candidate who had none of the votes in the first ballot."* Center squeeze, diagnosed two centuries before Burlington and Alaska made it concrete. (Via [Wikipedia's IRV history](https://en.wikipedia.org/wiki/Instant-runoff_voting#History); surfaced in [Frohnmayer's *Demystifying STAR Voting*](https://nardopolo.medium.com/demystifying-star-voting-3ae6142a0d32).)
 
-Closely related: [monotonicity](../monotonicity/) and [Condorcet efficiency](../condorcet/). Glossary: [`center squeeze`](../../GLOSSARY.md).
+Closely related: [monotonicity](../monotonicity/README.md) and [Condorcet efficiency](../condorcet/README.md). Glossary: [`center squeeze`](../../GLOSSARY.md).
 
 ---
 
-*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../) for the other topic hubs.*
+*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*

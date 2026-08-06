@@ -1,6 +1,6 @@
 # rr_vs_irv_plurality — Ranked Robin vs. IRV vs. plurality (same ballots)
 
-Where the [Condorcet vs. Ranked Robin](../condorcet_vs_ranked_robin/) set asks *"is Ranked Robin the same as the Condorcet winner?"* (answer: yes, until a cycle), this set asks a different question: **on one ranked ballot set, do the common methods even agree on a winner?** They don't — and the gap is the lesson.
+Where the [Condorcet vs. Ranked Robin](../condorcet_vs_ranked_robin/README.md) set asks *"is Ranked Robin the same as the Condorcet winner?"* (answer: yes, until a cycle), this set asks a different question: **on one ranked ballot set, do the common methods even agree on a winner?** They don't — and the gap is the lesson.
 
 | Case (page) | What it shows | Plurality | RCV-IRV | Ranked Robin | src |
 |------|---------------|:---:|:---:|:---:|:--:|

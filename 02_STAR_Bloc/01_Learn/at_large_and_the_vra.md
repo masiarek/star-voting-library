@@ -2,7 +2,7 @@
 
 **One line:** the [majority sweep](majority_sweep.md) is not only a design property — in a jurisdiction where a racial or language minority is concentrated in one part of town, it is the exact mechanism federal courts call **vote dilution**, and a 0–5 ballot does nothing to change that, because the dilution comes from filling the seats **at-large**, not from how the ballot is marked.
 
-→ The mechanism, without the law: [the majority sweep](majority_sweep.md) · the family this applies to equally: [Bloc STAR among the at-large methods](bloc_star_vs_other_bloc_methods.md) · what to use instead: [STAR-PR](../../03_STAR_PR/01_Learn/) · the method itself: [Bloc STAR](bloc_star.md)
+→ The mechanism, without the law: [the majority sweep](majority_sweep.md) · the family this applies to equally: [Bloc STAR among the at-large methods](bloc_star_vs_other_bloc_methods.md) · what to use instead: [STAR-PR](../../03_STAR_PR/01_Learn/README.md) · the method itself: [Bloc STAR](bloc_star.md)
 
 **Level: 301 · deep dive**
 
@@ -53,7 +53,7 @@ The short version: the ballot is not the thing under challenge. **At-large count
 
 Most often, they stop electing at-large: the standard §2 remedy is single-member districts, which is what precondition 1 is measuring the possibility of in the first place.
 
-Where a body wants to stay at-large, courts and consent decrees have accepted **semi-proportional** at-large methods instead — limited voting and cumulative voting both appear in §2 settlements, the long-running example being Chilton County, Alabama, under a 1988 consent decree. That is the same move this library makes at [the multi-winner fork](../../07_Concepts/topics/electing_more_than_one.md), arrived at from the other direction: if you must fill the seats at-large, **stop filling them majoritarian-ly**. The scored and ranked versions of that answer are [STAR-PR](../../03_STAR_PR/01_Learn/) and [STV](../../06_Other/STV/README.md); the older at-large family, including the two remedies just named, is laid out in [Bloc STAR among the at-large methods](bloc_star_vs_other_bloc_methods.md).
+Where a body wants to stay at-large, courts and consent decrees have accepted **semi-proportional** at-large methods instead — limited voting and cumulative voting both appear in §2 settlements, the long-running example being Chilton County, Alabama, under a 1988 consent decree. That is the same move this library makes at [the multi-winner fork](../../07_Concepts/topics/electing_more_than_one.md), arrived at from the other direction: if you must fill the seats at-large, **stop filling them majoritarian-ly**. The scored and ranked versions of that answer are [STAR-PR](../../03_STAR_PR/01_Learn/README.md) and [STV](../../06_Other/STV/README.md); the older at-large family, including the two remedies just named, is laid out in [Bloc STAR among the at-large methods](bloc_star_vs_other_bloc_methods.md).
 
 ## California's version is stricter
 

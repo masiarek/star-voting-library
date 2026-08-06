@@ -1,6 +1,6 @@
 # Conversation scripts — index
 
-A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../../01_STAR/01_Learn/), RCV-IRV episodes in [`RCV_IRV/`](../../06_Other/RCV_IRV/concepts/), and the foundational ones here in `07_Concepts/` — and this page indexes them. The demos come from `07_Concepts/` and the method folders' `cases/` directories (mostly `01_STAR/` and `method_comparisons/`).
+A series of recorded **Larry (host) ↔ Adam (expert)** conversations that teach STAR Voting through Q&A plus live demos run from this repo. The scripts now live **beside their topics** — STAR episodes in [STAR Voting — concept pages](../../01_STAR/01_Learn/README.md), RCV-IRV episodes in [`RCV_IRV/`](../../06_Other/RCV_IRV/concepts/README.md), and the foundational ones here in `07_Concepts/` — and this page indexes them. The demos come from `07_Concepts/` and the method folders' `cases/` directories (mostly `01_STAR/` and `method_comparisons/`).
 
 Start here: [whats_so_good_about_STAR_Voting.md](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) — the flagship episode that introduces the whole arc.
 

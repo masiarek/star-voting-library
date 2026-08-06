@@ -150,15 +150,15 @@ What the runnable version adds: Hillinger reports only the STV failure, but this
 |---|---|---|
 | **Plurality** | **Chloe** | most first choices (11) — and last-ranked by 19 |
 | **RCV-IRV** | **Bruno** | Ana holds the fewest first choices (9), is eliminated first, her ballots transfer |
-| **STAR · Score · Ranked Robin** | **Ana** | highest score sum, and the [Condorcet winner](condorcet/) — beats Bruno 20–10, Chloe 19–11 |
+| **STAR · Score · Ranked Robin** | **Ana** | highest score sum, and the [Condorcet winner](condorcet/README.md) — beats Bruno 20–10, Chloe 19–11 |
 
-Ana is the one candidate **nobody ranks last**, and she is the first one IRV throws out. → **[the case, with the full count](../../method_comparisons/hillinger_evaluative_voting/)**
+Ana is the one candidate **nobody ranks last**, and she is the first one IRV throws out. → **[the case, with the full count](../../method_comparisons/hillinger_evaluative_voting/README.md)**
 
 *(One footnote from checking his arithmetic against the engine: the paper reports the Ana–Bruno pairwise as `ab(20/11)`, which sums to 31 of 30 voters. It is 20–10; the `ac(19/11)` beside it is correct. A typo, not an error in the argument — but it is the kind of thing a runnable companion catches.)*
 
 ## Claim-check
 
-Per [house practice](../../method_comparisons/fairvote_star_whitepaper/), an advocacy source gets tested rather than quoted. Hillinger is arguing for his own proposal, and the paper is a **discussion paper** — not peer reviewed. It shows: the axiom list in §11 skips **A4** and mislabels **A.5**, and footnote 8 dismisses proportional representation as "another terrible, though popular, idea" without a word of support. Take the ideas, not the polish.
+Per [house practice](../../method_comparisons/fairvote_star_whitepaper/README.md), an advocacy source gets tested rather than quoted. Hillinger is arguing for his own proposal, and the paper is a **discussion paper** — not peer reviewed. It shows: the axiom list in §11 skips **A4** and mislabels **A.5**, and footnote 8 dismisses proportional representation as "another terrible, though popular, idea" without a word of support. Take the ideas, not the polish.
 
 **What holds up:**
 
@@ -172,7 +172,7 @@ Per [house practice](../../method_comparisons/fairvote_star_whitepaper/), an adv
 - **The Harsanyi warrant does not transfer — and this is the paper's weakest joint.** Move 3 says the ballot numbers are arbitrary normed conventions, not utilities. But the theorem imported in §7 is about **vNM utilities**, and its conclusion is that maximizing their sum is what rational agents behind a veil of ignorance would choose. Maximize the sum of *normed reports* instead and you have a defensible voting rule — but not the utilitarian conclusion, because the objects being summed are no longer the objects the theorem is about. Hillinger wants the practicality of the convention **and** the moral authority of the theorem. The argument supports one or the other.
     > **Provenance — this one is the library's own, not a citation.** The other objections on this page trace to published work or to Hillinger's own admissions. This one was constructed here, by reading §6–§7 against §11, and no source is being leaned on for it. That is worth flagging in both directions: it is not backed by a literature that has vetted it, and it is not a criticism you can attribute to anyone but us. If it is wrong, the likeliest repair is that Hillinger means his normed reports to *stand in* for vNM utilities as a practical proxy — in which case the transfer needs an argument that the proxy preserves what the theorem uses, and the paper does not give one. **If you find this argument made (or refuted) in print, that citation belongs here.**
 - **"No paradoxes" is bought with a sincerity assumption.** §11's claim that unrestricted cardinal voting has no paradoxes holds "when voters cast sincere, non-strategic votes" — he says so, and admits it is "rather trivial from a formal point of view," since unrestricted cardinal voting is just addition. [Gibbard's theorem](gibbard_satterthwaite_theorem.md) still applies to EV, and §8 concedes strategy "cannot be ruled out."
-- **The Condorcet dismissal is asserted, not argued.** That an EV winner beating a [Condorcet winner](condorcet/) "need cause no concern" is exactly the contested question — and it is the question STAR answers the other way (see below).
+- **The Condorcet dismissal is asserted, not argued.** That an EV winner beating a [Condorcet winner](condorcet/README.md) "need cause no concern" is exactly the contested question — and it is the question STAR answers the other way (see below).
 - **"Fineness of the scale is a pragmatic issue" is the claim most exposed by later evidence.** [Delemazure et al. (2026)](../scores_and_ranks/grading_as_a_rival_primitive.md) found grade distributions shift substantially with the scale voters are handed — and this library has a [worked case where granularity flips the winner](../scores_and_ranks/scale_granularity_flips_the_winner.md). The scale is doing substantive work, not merely pragmatic work. **Note the asymmetry, though:** that same result is aimed at Balinski & Laraki's *common language of grades*, and it barely scratches Hillinger's move 3 — he never claimed the numbers carry absolute shared meaning. The finding spares his comparability argument and undercuts his scale-choice argument. Precision about which claim is hit matters here.
 
 ### Where he cuts against STAR
@@ -216,6 +216,6 @@ Added to the [glossary](../GLOSSARY.md) alongside the definitions above.
 - [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — the same premise as a methodology rule
 - [The equally weighted vote](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) · [one person, one vote](one_person_one_vote.md) — Hillinger's "equal power" argument, in the library's own words
 - [Scale granularity can flip the winner](../scores_and_ranks/scale_granularity_flips_the_winner.md) — why "how many levels" is not merely pragmatic
-- **The case:** [Hillinger's example, run](../../method_comparisons/hillinger_evaluative_voting/)
+- **The case:** [Hillinger's example, run](../../method_comparisons/hillinger_evaluative_voting/README.md)
 
 **Sources.** Hillinger, C. (2004), *Voting and the Cardinal Aggregation of Judgments*, Munich Discussion Paper 2004-9 ([DOI](https://doi.org/10.5282/ubm/epub.353)) · Fleming, M. (1952), "A cardinal concept of welfare," *QJE* 66 · Harsanyi, J. (1955), "Cardinal welfare, individualistic ethics, and the interpersonal comparisons of utility," *JPE* 63, and (1977) *Rational Behavior and Bargaining Equilibrium* · von Neumann, J. & Morgenstern, O. (1944), *Theory of Games and Economic Behavior* · Sen, A. (1970), *Collective Choice and Social Welfare* · Robbins, L. (1932), *An Essay on the Nature and Significance of Economic Science* · Arrow, K. (1951), *Social Choice and Individual Values*.

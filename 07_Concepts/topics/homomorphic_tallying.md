@@ -2,7 +2,7 @@
 
 *Yes — and the reason is worth understanding, because it is a genuine structural advantage of score methods over elimination methods. But STAR has one wrinkle that nobody mentions: **the scoring round is the easy case; the automatic runoff is not.** This page explains why, and how the wrinkle is resolved.*
 
-**Level: 301 → 401 · deep dive** Companion: [summability](summability/) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
+**Level: 301 → 401 · deep dive** Companion: [summability](summability/README.md) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
 ---
 
@@ -55,7 +55,7 @@ Trivial sizes for an organizational election.
 
 ## Why this is an argument for STAR
 
-The asymmetry with elimination methods is structural, and it is the [summability](summability/) property showing up again in cryptography:
+The asymmetry with elimination methods is structural, and it is the [summability](summability/README.md) property showing up again in cryptography:
 
 | | What the tally needs | Crypto required |
 |---|---|---|
@@ -76,7 +76,7 @@ Read these before repeating any of the above as a selling point:
 
 ## Related
 
-- [Summability](summability/) — the property this whole page rests on
+- [Summability](summability/README.md) — the property this whole page rests on
 - [Pairwise counting & the preference matrix](pairwise_counting.md) — what the indicator matrix *is*
 - [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) — ballot verifiability, and the cast-or-challenge mitigation
 - [What makes a voting method good?](what_makes_a_voting_method_good.md) — where auditability sits among the criteria

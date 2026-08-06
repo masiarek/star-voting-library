@@ -2,7 +2,7 @@
 
 *Three 12-ballot electorates. **Identical** pairwise results — every head-to-head count, every margin, the same Condorcet winner, the same Borda scores. Ranked Robin, Minimax, Ranked Pairs and Kemeny cannot tell them apart, and must all return the same winner on all three. **Choose-One returns a different winner on each — one per candidate.** That is the whole of [what a method reads](../../07_Concepts/topics/what_a_method_reads.md), demonstrated in ballots you can count by hand.*
 
-**Level: 301 · deep dive** Concept: [what a method reads](../../07_Concepts/topics/what_a_method_reads.md) · [summability](../../07_Concepts/topics/summability/) · [the C1/C2/C3 tiers](../../07_Concepts/topics/condorcet/condorcet_reading_list.md). **LH-only** — the lesson is the *contrast across three electorates*, which a single BetterVoting election cannot show.
+**Level: 301 · deep dive** Concept: [what a method reads](../../07_Concepts/topics/what_a_method_reads.md) · [summability](../../07_Concepts/topics/summability/README.md) · [the C1/C2/C3 tiers](../../07_Concepts/topics/condorcet/condorcet_reading_list.md). **LH-only** — the lesson is the *contrast across three electorates*, which a single BetterVoting election cannot show.
 
 ---
 
@@ -39,9 +39,9 @@ That is not a quirk of these particular ballots. It's the structural fact: **fir
 
 ## What this does and does not show
 
-**It shows** that Choose-One's winner is not a function of the pairwise data — the sense in which plurality sits outside the matrix ([Fishburn C3](../../07_Concepts/topics/what_a_method_reads.md)). It makes [vote splitting](../split_voting/) precise rather than rhetorical: in P1 and P3 the plurality winner isn't even the candidate a majority prefers head-to-head.
+**It shows** that Choose-One's winner is not a function of the pairwise data — the sense in which plurality sits outside the matrix ([Fishburn C3](../../07_Concepts/topics/what_a_method_reads.md)). It makes [vote splitting](../split_voting/README.md) precise rather than rhetorical: in P1 and P3 the plurality winner isn't even the candidate a majority prefers head-to-head.
 
-**It does not show** that plurality is "more complex," or that reading less is a defect in itself. Choose-One publishes the *smallest* possible precinct summary — one number per candidate — and is the cheapest method here to audit. The tiers classify *which* statistic a rule reads, not how big it is or how hard it is to count; the two ideas come apart at exactly this method ([summability](../../07_Concepts/topics/summability/)).
+**It does not show** that plurality is "more complex," or that reading less is a defect in itself. Choose-One publishes the *smallest* possible precinct summary — one number per candidate — and is the cheapest method here to audit. The tiers classify *which* statistic a rule reads, not how big it is or how hard it is to count; the two ideas come apart at exactly this method ([summability](../../07_Concepts/topics/summability/README.md)).
 
 **Note P2**, where plurality happens to agree with everyone else and elects Ben. Nothing forces the disagreement — the point is that plurality is *free* to differ, not that it always does.
 
@@ -62,5 +62,5 @@ The Choose-One files encode each ballot as a single `1` — which is exactly wha
 ## Related
 
 - [What a method reads](../../07_Concepts/topics/what_a_method_reads.md) — the concept page this case backs
-- [Copeland vs Borda margins](../copeland_vs_borda_margins/) — the C1-vs-C2 contrast (direction only, vs direction plus size)
-- [The cycle–cocycle decomposition](../../07_Concepts/topics/cycle_cocycle_decomposition.md) · [summability](../../07_Concepts/topics/summability/) · [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md)
+- [Copeland vs Borda margins](../copeland_vs_borda_margins/README.md) — the C1-vs-C2 contrast (direction only, vs direction plus size)
+- [The cycle–cocycle decomposition](../../07_Concepts/topics/cycle_cocycle_decomposition.md) · [summability](../../07_Concepts/topics/summability/README.md) · [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md)

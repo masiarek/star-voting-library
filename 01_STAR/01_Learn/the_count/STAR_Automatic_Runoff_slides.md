@@ -4,7 +4,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 
 - **Format:** one slide per `##` heading; bullets are the on-slide text, `> Notes:` is the speaker note (don't put it on the slide).
 - **Live results:** every example slide links the real **BetterVoting** result so you can show it on screen, plus the matching repo **lesson** (BV screenshots beside the LH text report).
-- **Concept hub backing this deck:** [The Automatic Runoff Round](STAR_Automatic_Runoff.md) · the worked teaching set: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/) · presenter's guide: [Teaching Runoff Reversal — a step-by-step guide](../../02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md).
+- **Concept hub backing this deck:** [The Automatic Runoff Round](STAR_Automatic_Runoff.md) · the worked teaching set: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md) · presenter's guide: [Teaching Runoff Reversal — a step-by-step guide](../../02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md).
 
 ---
 
@@ -212,7 +212,7 @@ A presentation deck for STAR's second step, built to **scale 101 → 201 → 301
 - LH folds BV's *Runoff Votes* + *% Between Finalists* + *Equal Support* into one self-reconciling line that **names its denominator**.
 - Every example in this deck has both views side by side in its lesson file.
 
-> Notes: For an audience that will actually run elections. Skip for a pure intro talk. Detail: [reporting_diff_BV_LH](../reporting/reporting_diff_BV_LH.md) · the full set: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/).
+> Notes: For an audience that will actually run elections. Skip for a pure intro talk. Detail: [reporting_diff_BV_LH](../reporting/reporting_diff_BV_LH.md) · the full set: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md).
 
 ---
 

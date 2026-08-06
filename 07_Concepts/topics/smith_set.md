@@ -8,7 +8,7 @@
 
 ## The problem: "beats everyone head-to-head" can come up empty
 
-A [Condorcet winner](condorcet/) beats every rival one-on-one, and when one exists it's a natural "correct answer" for majority rule. But majority preference isn't guaranteed to be transitive: a majority can prefer A over B, B over C, *and* C over A — a rock-paper-scissors **cycle**, and suddenly "the candidate who beats everyone" doesn't exist. That's the [Condorcet paradox](../../05_Ranked_Robin/01_Learn/cycle_resolution.md), and every Condorcet method needs an answer to it.
+A [Condorcet winner](condorcet/README.md) beats every rival one-on-one, and when one exists it's a natural "correct answer" for majority rule. But majority preference isn't guaranteed to be transitive: a majority can prefer A over B, B over C, *and* C over A — a rock-paper-scissors **cycle**, and suddenly "the candidate who beats everyone" doesn't exist. That's the [Condorcet paradox](../../05_Ranked_Robin/01_Learn/cycle_resolution.md), and every Condorcet method needs an answer to it.
 
 The Smith set is the *principled* part of that answer. Before asking "who wins the cycle?", it asks a more modest question with a provably clean answer: **who is even in contention?**
 
@@ -88,7 +88,7 @@ A method satisfies the **Smith criterion** (is **Smith-efficient**) if its winne
 | **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (margins, lot, or BV's random draw), the winner stays inside |
 | **Ranked Pairs, Schulze** | ✅ | the "serious" [cycle resolvers](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) are Smith-efficient by construction |
 | **Minimax** | ❌ | Condorcet-efficient, but in a 4+ candidate cycle its "least bad worst loss" pick can fall *outside* the Smith set — the classic fine-print failure |
-| **RCV-IRV (Hare)** | ❌ | not even Condorcet-efficient ([center squeeze](center_squeeze/)), so Smith is out of reach |
+| **RCV-IRV (Hare)** | ❌ | not even Condorcet-efficient ([center squeeze](center_squeeze/README.md)), so Smith is out of reach |
 | **Borda, Score, Approval, Plurality** | ❌ | point totals can crown a candidate the club collectively beats |
 | **STAR** | ❌ | not Condorcet-compliant *by design* — it trades the guarantee for counting preference strength; see [three notions of "winner"](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md) |
 
@@ -123,7 +123,7 @@ the honest answer to "who is even in contention?".
       Condorcet-efficient) — this is the shape a center squeeze leaves behind.
 ```
 
-Forty voters rank `A>C>B`, thirty-five `B>C>A`, twenty-five `C>A>B`. C beats A 60–40 and B 65–35 — the Condorcet winner — but holds only 25 first preferences, so C is eliminated in round one and A takes it 65–35. A textbook [center squeeze](center_squeeze/), and the Smith line is what makes it visible without hand-computing the matrix.
+Forty voters rank `A>C>B`, thirty-five `B>C>A`, twenty-five `C>A>B`. C beats A 60–40 and B 65–35 — the Condorcet winner — but holds only 25 first preferences, so C is eliminated in round one and A takes it 65–35. A textbook [center squeeze](center_squeeze/README.md), and the Smith line is what makes it visible without hand-computing the matrix.
 
 ## How big is the club in practice?
 

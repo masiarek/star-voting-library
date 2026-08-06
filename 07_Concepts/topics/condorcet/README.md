@@ -2,7 +2,7 @@
 
 **Topic hub — a cross-method view.** A **Condorcet winner** is a candidate who beats every other candidate one-on-one (by majority). A method is **Condorcet-efficient** if it elects that candidate whenever one exists. (Sometimes nobody qualifies — the pairwise results form a **cycle** — which is a separate, rarer problem.)
 
-> **The one idea to take away:** *the Condorcet winner is the "majority's head-to-head choice."* Some methods guarantee it, some get it almost always, and RCV-IRV (Hare) can miss it precisely because of [center squeeze](../center_squeeze/).
+> **The one idea to take away:** *the Condorcet winner is the "majority's head-to-head choice."* Some methods guarantee it, some get it almost always, and RCV-IRV (Hare) can miss it precisely because of [center squeeze](../center_squeeze/README.md).
 
 ## Which methods elect the Condorcet winner — and where each is treated
 
@@ -50,4 +50,4 @@ Glossary: [`Condorcet`](../../GLOSSARY.md).
 
 ---
 
-*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../) for the other topic hubs.*
+*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*

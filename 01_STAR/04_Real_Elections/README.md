@@ -8,10 +8,10 @@ Levels follow the [curriculum](../../07_Concepts/CURRICULUM.md): 🟢 101 · �
 
 | Set | Level | What it shows |
 |---|:--:|---|
-| ["What Makes the Best Pet?"](pet_real_bv_election/) | 🟡 201 | The whole pipeline on one race: 7 candidates, **461 ballots**, raw ballots → winner, read section by section. The worked example behind the [runoff percentages](../01_Learn/the_count/runoff_percentages.md) lesson. |
-| [Runoff reversals on BV](runoff_reversal_bv_cases/) | 🟡 201 | Real elections where the Scoring-Round leader **loses** the Automatic Runoff to the finalist more voters prefer — STAR's headline behavior, not a constructed one. Two-view: BV screenshots beside the engine report. |
-| [Abstain, blank & zero handling](abstain_bugs/) | 🟡 201 | Where BetterVoting and the engine **diverge**: BV counts an all-equal ballot (`0,0` *and* `5,5`) as an abstention, the engine counts an explicit score as a real vote. The visible symptom is BV's "0 tallied votes yet a winner" ([#884](https://github.com/Equal-Vote/bettervoting/issues/884)). |
-| [Goodberry's Best Flavor 2026](goodberrys_best_flavor/) | 🟢 101 | **Open now** — a live poll, not an import: ten frozen-custard flavors, paper ballots at the Cary NC shop plus a QR code, no seed ballots. The frozen export is the mint-time snapshot (zero votes), so this set is the *before* picture; re-freeze it when the poll closes and the reconciliation joins the rows above. |
+| ["What Makes the Best Pet?"](pet_real_bv_election/README.md) | 🟡 201 | The whole pipeline on one race: 7 candidates, **461 ballots**, raw ballots → winner, read section by section. The worked example behind the [runoff percentages](../01_Learn/the_count/runoff_percentages.md) lesson. |
+| [Runoff reversals on BV](runoff_reversal_bv_cases/README.md) | 🟡 201 | Real elections where the Scoring-Round leader **loses** the Automatic Runoff to the finalist more voters prefer — STAR's headline behavior, not a constructed one. Two-view: BV screenshots beside the engine report. |
+| [Abstain, blank & zero handling](abstain_bugs/README.md) | 🟡 201 | Where BetterVoting and the engine **diverge**: BV counts an all-equal ballot (`0,0` *and* `5,5`) as an abstention, the engine counts an explicit score as a real vote. The visible symptom is BV's "0 tallied votes yet a winner" ([#884](https://github.com/Equal-Vote/bettervoting/issues/884)). |
+| [Goodberry's Best Flavor 2026](goodberrys_best_flavor/README.md) | 🟢 101 | **Open now** — a live poll, not an import: ten frozen-custard flavors, paper ballots at the Cary NC shop plus a QR code, no seed ballots. The frozen export is the mint-time snapshot (zero votes), so this set is the *before* picture; re-freeze it when the poll closes and the reconciliation joins the rows above. |
 
 ---
 

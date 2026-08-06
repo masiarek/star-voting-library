@@ -62,10 +62,10 @@ That is a considerably stronger argument than "FPTP is broken," and a fairer one
 
 Worth checking, because it's easy to assume the methods differ everywhere:
 
-- **[STAR](../../01_STAR/01_Learn/)** — with two candidates both are automatically finalists, so the scoring round decides nothing and the [automatic runoff](../../01_STAR/01_Learn/the_count/) is a straight pairwise majority vote.
-- **[RCV-IRV](../../06_Other/RCV_IRV/concepts/)** — no one can be eliminated before someone has a majority; round one settles it.
-- **[Ranked Robin](../../05_Ranked_Robin/01_Learn/)** — one pairwise matchup *is* the whole round robin.
-- **[Approval](../../04_Approval/01_Learn/)** — among voters who distinguish the two, it is majority rule; approving both or neither abstains from the pair.
+- **[STAR](../../01_STAR/01_Learn/README.md)** — with two candidates both are automatically finalists, so the scoring round decides nothing and the [automatic runoff](../../01_STAR/01_Learn/the_count/README.md) is a straight pairwise majority vote.
+- **[RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md)** — no one can be eliminated before someone has a majority; round one settles it.
+- **[Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md)** — one pairwise matchup *is* the whole round robin.
+- **[Approval](../../04_Approval/01_Learn/README.md)** — among voters who distinguish the two, it is majority rule; approving both or neither abstains from the pair.
 
 So the repo's own convention that [two-candidate intro files suppress the finalists matrix](../../CLAUDE.md) — because it merely echoes the runoff — isn't a display quirk. It's May's Theorem showing up in the output: at two candidates there is only one thing any of these methods can be doing.
 
@@ -79,7 +79,7 @@ The obvious follow-up question, and it has a two-part answer worth keeping strai
 
 **On the full domain: nobody.** There is no completely satisfactory extension of May's Theorem to three or more alternatives for social choice functions defined on every profile. The conditions stop pinning anything down. And since essentially every method here reduces to majority rule at `m = 2` in some natural way, *all* of them can claim the mantle on that basis — which is another way of saying none of them can.
 
-**On a restricted domain: pairwise majority rule.** Give up answering *every* profile — restrict to those where a [Condorcet winner](condorcet/) exists — and a genuine uniqueness theorem returns. The **[Campbell–Kelly theorem](condorcet/campbell_kelly_theorem.md)** (2003) proves that on that domain, electing the Condorcet winner is resolute, anonymous, neutral and **strategyproof**, and for odd `n` is the *only* such rule.
+**On a restricted domain: pairwise majority rule.** Give up answering *every* profile — restrict to those where a [Condorcet winner](condorcet/README.md) exists — and a genuine uniqueness theorem returns. The **[Campbell–Kelly theorem](condorcet/campbell_kelly_theorem.md)** (2003) proves that on that domain, electing the Condorcet winner is resolute, anonymous, neutral and **strategyproof**, and for odd `n` is the *only* such rule.
 
 The substitution of **strategyproofness** for **monotonicity** is not a change of subject: **at two candidates the two axioms are equivalent** — with only two options the sole manipulation available is voting for the one you like less, and monotonicity is exactly what makes that pointless. So Campbell–Kelly keeps May's fourth condition and restates it in the form that still has teeth at three. That is what earns it the title "May's Theorem for three or more alternatives" — and its price, paid in full, is the restricted domain.
 
@@ -93,7 +93,7 @@ Read as a pair, the two theorems say something sharper than either alone:
 
 > **Majority rule is uniquely right for two alternatives (May), and cannot be coherently extended to three (Condorcet's paradox, then Arrow).**
 
-Everything else in voting theory — every method in this repo, every criterion in the [criteria table](criteria_at_a_glance.md) — is a proposal for what to do about that gap. There is no neutral extension waiting to be found; that's the theorem. So the choice among [STAR](../../01_STAR/01_Learn/), [Ranked Robin](../../05_Ranked_Robin/01_Learn/), [Approval](../../04_Approval/01_Learn/), and the rest is a choice about **which properties of majority rule you most want to preserve** once you've been told you can't keep them all.
+Everything else in voting theory — every method in this repo, every criterion in the [criteria table](criteria_at_a_glance.md) — is a proposal for what to do about that gap. There is no neutral extension waiting to be found; that's the theorem. So the choice among [STAR](../../01_STAR/01_Learn/README.md), [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md), [Approval](../../04_Approval/01_Learn/README.md), and the rest is a choice about **which properties of majority rule you most want to preserve** once you've been told you can't keep them all.
 
 ## Sources
 

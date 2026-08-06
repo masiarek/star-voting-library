@@ -1,10 +1,10 @@
 # 02_STAR_Bloc — Bloc STAR (multi-winner, majoritarian)
 
-Filling **several seats at once** — a city council, a board, a committee — with the same expressive STAR ballot. Bloc STAR is the *majoritarian* multi-winner method: it asks "who does the majority most want?" for every seat. Its proportional cousin, [STAR-PR](../03_STAR_PR/), instead tries to give every faction its fair share. Which you want depends on the body you're electing — this folder teaches the majoritarian one and, just as importantly, **when not to use it**.
+Filling **several seats at once** — a city council, a board, a committee — with the same expressive STAR ballot. Bloc STAR is the *majoritarian* multi-winner method: it asks "who does the majority most want?" for every seat. Its proportional cousin, [STAR-PR](../03_STAR_PR/README.md), instead tries to give every faction its fair share. Which you want depends on the body you're electing — this folder teaches the majoritarian one and, just as importantly, **when not to use it**.
 
 New to STAR itself? Learn the single-winner method first — [STAR — start here](../01_STAR/01_Learn/STAR_start_here.md) — because Bloc STAR is just that method, run once per seat.
 
-**The concept pages live in [`01_Learn/`](01_Learn/)** — the method, the majority sweep, the score leader who wins no seat, ties seat-by-seat, the at-large family, and the honest limits. This page is the folder's front door and the index of its runnable cases.
+**The concept pages live in [`01_Learn/`](01_Learn/README.md)** — the method, the majority sweep, the score leader who wins no seat, ties seat-by-seat, the at-large family, and the honest limits. This page is the folder's front door and the index of its runnable cases.
 
 ---
 
@@ -25,18 +25,18 @@ Because every seat is decided by the *same* electorate on the *same* ballots, **
 That is a **feature or a bug depending on what you're electing:**
 
 - **Use Bloc STAR** when you *want* the body to reflect the majority as a unit — e.g. a slate of officers who must govern together, or any at-large seat where "the candidates most voters prefer" is the goal.
-- **Don't use it** when you want minorities represented — a legislature, a diverse committee. There, a majority sweep is exactly the wrong outcome, and you want **[Proportional STAR (STAR-PR)](../03_STAR_PR/)** instead.
+- **Don't use it** when you want minorities represented — a legislature, a diverse committee. There, a majority sweep is exactly the wrong outcome, and you want **[Proportional STAR (STAR-PR)](../03_STAR_PR/README.md)** instead.
 
-This tension is the whole reason proportional methods exist. Gentle intro to the trade-off (approval side, counting only): [Electing a committee — making sure people have a voice](../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md). Concept hub: [proportional representation](../03_STAR_PR/01_Learn/).
+This tension is the whole reason proportional methods exist. Gentle intro to the trade-off (approval side, counting only): [Electing a committee — making sure people have a voice](../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md). Concept hub: [proportional representation](../03_STAR_PR/01_Learn/README.md).
 
 ## Learning path
 
 1. **The method** — the elect-remove-rerun loop, what the removal step does and doesn't do: [Bloc STAR](01_Learn/bloc_star.md). Its smallest runnable form is [the baseline case](02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) (3 candidates, 2 seats), then [a 2-seat committee election](02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) (4 candidates; the CURRICULUM 201.5 file).
-2. **Watch a majority sweep** — internalize why Bloc is majoritarian: [The majority sweep](01_Learn/majority_sweep.md). Worked at whiteboard scale in [exercise 12](../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) (60% takes both seats, then the same ten ballots counted proportionally), and against four other counts on one electorate in [Food-Truck Row](../method_comparisons/food_truck_row/). Contrast: [STAR-PR](../03_STAR_PR/) and [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/).
+2. **Watch a majority sweep** — internalize why Bloc is majoritarian: [The majority sweep](01_Learn/majority_sweep.md). Worked at whiteboard scale in [exercise 12](../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) (60% takes both seats, then the same ten ballots counted proportionally), and against four other counts on one electorate in [Food-Truck Row](../method_comparisons/food_truck_row/README.md). Contrast: [STAR-PR](../03_STAR_PR/README.md) and [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/README.md).
 3. **The compromise candidate, shut out** — [the score leader can win no seat](01_Learn/score_leader_no_seat.md), worked on the first case here at a realistic electorate (100 voters, 4 seats): [BV1835](02_Examples/bv1835_8h3yrx_score_leader_no_seat.md). Ava leads every scoring round by sixty-three points and takes nothing, losing all four runoffs 51–49. Read it for what the **runoff** step does: Bloc seats whoever is *preferred*, not whoever accumulates points. Note this is the *opposite* configuration to a sweep — two even camps splitting the seats 2–2.
 4. **Edge cases & trust (201/301)** — [ties, seat by seat](01_Learn/bloc_tiebreaks.md): how the STAR ladder runs once per seat, how a seat-1 coin toss can change *who* wins seat 2, and where BetterVoting's display diverges. The reference cases below are the receipts.
 5. **The honest version** — [what Bloc STAR concedes](01_Learn/bloc_honest_limits.md), and [how it sits among the other at-large methods](01_Learn/bloc_star_vs_other_bloc_methods.md).
-6. **The criteria, as runnable elections (201/301)** — [`03_Criteria/`](03_Criteria/README.md): the properties single-winner STAR is usually asked about, *checked* for the multi-winner version rather than inherited. [Participation](03_Criteria/participation/) — an honest joiner ends up with a worse council; [seat order](03_Criteria/seat_order/) — the candidate who beats everyone head-to-head is seated second; [the committee spoiler](03_Criteria/committee_spoiler/) — a candidate who wins nothing changes who does. Five BetterVoting elections, BV and LH agreeing exactly, no tie-break anywhere.
+6. **The criteria, as runnable elections (201/301)** — [`03_Criteria/`](03_Criteria/README.md): the properties single-winner STAR is usually asked about, *checked* for the multi-winner version rather than inherited. [Participation](03_Criteria/participation/README.md) — an honest joiner ends up with a worse council; [seat order](03_Criteria/seat_order/README.md) — the candidate who beats everyone head-to-head is seated second; [the committee spoiler](03_Criteria/committee_spoiler/README.md) — a candidate who wins nothing changes who does. Five BetterVoting elections, BV and LH agreeing exactly, no tie-break anywhere.
 
 Curriculum context: [201.5 — Multi-winner intro: Bloc STAR](../07_Concepts/CURRICULUM.md).
 
@@ -80,9 +80,9 @@ Every YAML carries `expected_winners` and is auto-checked by the test suite; BV-
 
 ## Related
 
-- **The concept pages for this method:** [`01_Learn/`](01_Learn/) — [the method](01_Learn/bloc_star.md) · [the majority sweep](01_Learn/majority_sweep.md) · [the score leader wins no seat](01_Learn/score_leader_no_seat.md) · [ties, seat by seat](01_Learn/bloc_tiebreaks.md) · [the at-large family](01_Learn/bloc_star_vs_other_bloc_methods.md) · [honest limits](01_Learn/bloc_honest_limits.md) · [glossary](01_Learn/glossary_bloc_star.md)
-- **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/) · concept: [proportional representation](../03_STAR_PR/01_Learn/)
-- **Other multi-winner methods:** [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/) · [a six-method governance election](../method_comparisons/pets_governance/)
+- **The concept pages for this method:** [`01_Learn/`](01_Learn/README.md) — [the method](01_Learn/bloc_star.md) · [the majority sweep](01_Learn/majority_sweep.md) · [the score leader wins no seat](01_Learn/score_leader_no_seat.md) · [ties, seat by seat](01_Learn/bloc_tiebreaks.md) · [the at-large family](01_Learn/bloc_star_vs_other_bloc_methods.md) · [honest limits](01_Learn/bloc_honest_limits.md) · [glossary](01_Learn/glossary_bloc_star.md)
+- **Proportional multi-winner** (the contrast): [Proportional STAR](../03_STAR_PR/README.md) · concept: [proportional representation](../03_STAR_PR/01_Learn/README.md)
+- **Other multi-winner methods:** [Bloc Plurality / SNTV](../method_comparisons/multi_member_plurality/README.md) · [a six-method governance election](../method_comparisons/pets_governance/README.md)
 - **Single-winner foundation:** [STAR — start here](../01_STAR/01_Learn/STAR_start_here.md) · [the benefits of STAR](../01_STAR/01_Learn/getting_started/STAR_benefits.md)
 - **Conversation scripts:** [What's so good about STAR](../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) · [full index](../07_Concepts/about_this_repo/conversation_scripts.md)
 

@@ -6,6 +6,6 @@ Cross-method comparison files that don't belong to one of the curated sets. Toda
 |---|---|:--:|
 | [STAR adds, IRV eliminates](cases/cases_pages/count_simplicity_star_vs_irv.md) | same winner, very different counts | [`.yaml`](cases/count_simplicity_star_vs_irv.yaml) |
 
-Up: [method_comparisons — same ballots, different methods](../)
+Up: [method_comparisons — same ballots, different methods](../README.md)
 
 # file: README.md

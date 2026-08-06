@@ -4,7 +4,7 @@ The **happy-path** side of STAR tie-breaking: elections that **tie but never rea
 
 Contrast the two neighbours:
 - **[Flat_scores_ties/…05 — BV555/`xmyf7k`](../../09_Parked/Flat_scores_ties/README.md#case-05)** — every rung ties down to the **random floor** (LH-only).
-- **[tie_break_dead_rung/](../tie_break_dead_rung/)** — five-star is a *dead rung* (no 5s to weigh), so the tie drops to the lot.
+- **[tie_break_dead_rung/](../tie_break_dead_rung/README.md)** — five-star is a *dead rung* (no 5s to weigh), so the tie drops to the lot.
 
 Here, five-star and score do their job, so LH and BetterVoting **agree deterministically**.
 

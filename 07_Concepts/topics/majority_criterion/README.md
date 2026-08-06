@@ -87,7 +87,7 @@ Here's the deep connection — the Majority-Criterion failure and STAR's **Later
 
 In Election B, the majority's honest 3 for Cleo (a *later* preference) is exactly what pushed Ada out of the finals. Their later support harmed their favorite — a Later-No-Harm failure — and *because* it did, the majority's favorite lost — a Majority-Criterion failure. **They are one phenomenon.** If Ada's voters had "bullet voted" (Ada 5, everyone else 0), both rules would hold — Ada would win. STAR's failures here happen *only because voters honestly expressed support they were told was safe to give.*
 
-This is a deliberate design fork, and it also explains [why STAR isn't Condorcet-compliant](../condorcet/) (honest limit #1):
+This is a deliberate design fork, and it also explains [why STAR isn't Condorcet-compliant](../condorcet/README.md) (honest limit #1):
 
 | | keeps Later-No-Harm + Majority Criterion | rewards broad / consensus support |
 |---|:--:|:--:|
@@ -104,7 +104,7 @@ You cannot have both columns at once — that's a theorem, not a preference (see
 | RCV-IRV | ✅ | ✅ | [rcv_irv_vs_star](../rcv_irv_vs_star.md) |
 | **STAR** | ❌ *(needs 2 rivals)* | ✅ | [STAR honest limits #8](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) |
 | Score | ❌ *(1 rival)* | ❌ | [range voting](../../../06_Other/Range/concepts/range_voting.md) |
-| Approval | ❌ *(1 rival)* | ❌ | [approval](../../../04_Approval/01_Learn/) — worked in [the Approval camp's own example](../../../method_comparisons/approval_majority_criterion/README.md) |
+| Approval | ❌ *(1 rival)* | ❌ | [approval](../../../04_Approval/01_Learn/README.md) — worked in [the Approval camp's own example](../../../method_comparisons/approval_majority_criterion/README.md) |
 
 Worked demonstrations in this repo — each with its own per-election page: [BV95a — favorite survives](../../../01_STAR/03_Criteria/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md) / [BV95b — favorite loses](../../../01_STAR/03_Criteria/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md), plus the [Black Curtain set](../../../method_comparisons/black_curtain/README.md) (a polarizing "winner" vs a hidden consensus).
 

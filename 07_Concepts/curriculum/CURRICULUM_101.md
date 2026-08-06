@@ -30,7 +30,7 @@
 
 **The point:** adding a candidate you love never splits your vote.
 
-**A name for the compromise:** the candidate who would beat *each* rival one-on-one is the **[Condorcet winner](../topics/condorcet/)** — "the majority's head-to-head choice." At 101 that's the whole idea; usually one exists and every good method (STAR, Ranked Robin) picks it. What happens when *no* such candidate exists is a 201/301 story.
+**A name for the compromise:** the candidate who would beat *each* rival one-on-one is the **[Condorcet winner](../topics/condorcet/README.md)** — "the majority's head-to-head choice." At 101 that's the whole idea; usually one exists and every good method (STAR, Ranked Robin) picks it. What happens when *no* such candidate exists is a 201/301 story.
 
 ## 101.3 — How you're allowed to vote
 
@@ -46,13 +46,13 @@
 
 **What clicks:** leading the scoring round only makes you a *finalist*; the winner is whichever finalist **more voters prefer**. Sometimes those differ — and that's the safeguard working, not a bug.
 
-**See it:** [the runoff overturns the score leader](../../01_STAR/02_Examples/cases/cases_pages/06b_c9_runoff-overturns-leader.md) · the live case [BV2182 — FAQ runoff reversal](../../01_STAR/02_Examples/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md) · the full progression, [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/). Concept: [the Automatic Runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md).
+**See it:** [the runoff overturns the score leader](../../01_STAR/02_Examples/cases/cases_pages/06b_c9_runoff-overturns-leader.md) · the live case [BV2182 — FAQ runoff reversal](../../01_STAR/02_Examples/cases/cases_pages/bv2182_tg4779_faq_runoff_reversal.md) · the full progression, [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md). Concept: [the Automatic Runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md).
 
 ## 101.5 — The payoff: the spoiler, in numbers
 
 **What clicks:** the whole case, in one race — a similar candidate enters and STAR *doesn't* break.
 
-**See it:** the [vote-splitting scenarios](../../01_STAR/02_Examples/cases/cases_pages/vote_splitting_scenario1_spoiler.md) (spoiler → bloc-leader → outsider) · cross-method on the same ballots: [the split-voting set](../../method_comparisons/split_voting/).
+**See it:** the [vote-splitting scenarios](../../01_STAR/02_Examples/cases/cases_pages/vote_splitting_scenario1_spoiler.md) (spoiler → bloc-leader → outsider) · cross-method on the same ballots: [the split-voting set](../../method_comparisons/split_voting/README.md).
 
 ## 101.6 — One idea that unlocks everything later
 
@@ -63,4 +63,4 @@
 ---
 
 *Up: [Curriculum hub](../CURRICULUM.md) · [Start Here](../00_START_HERE.md) · Next: [Voting 201 — reading results & comparisons](CURRICULUM_201.md).*
-*(Aside: the deliberately-trivial two-candidate demos — where STAR just equals ordinary voting — are parked in [`silly_two_cand_STAR`](../../01_STAR/09_Parked/silly_two_cand_STAR/); they're kept for completeness, not part of the learning path.)*
+*(Aside: the deliberately-trivial two-candidate demos — where STAR just equals ordinary voting — are parked in [`silly_two_cand_STAR`](../../01_STAR/09_Parked/silly_two_cand_STAR/README.md); they're kept for completeness, not part of the learning path.)*

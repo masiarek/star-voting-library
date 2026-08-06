@@ -42,7 +42,7 @@ A "whoops" is only worth teaching if it's an **honest** one. The full test is in
 
 All three cases here pass that test (Tennessee is canonical; the STAR miss and the Condorcet cycle are foundational, sincere-vote results) — which is itself the lesson: these aren't cheap gotchas.
 
-> **The opposite of this page, if you want it:** the [**Mudroom**](../mudroom/) is a per-method **criterion-failure gallery** written the *unfair* way on purpose — deliberately **mean and one-sided** hit-reels (IRV, STAR, Ranked Robin, more), the cheap gotchas that *don't* pass the honest test above, curated for sport. It's kept low-profile and clearly labeled for exactly that reason; every fact in it is still real, and every reel links back here to the fair version. Fun, not for citing.
+> **The opposite of this page, if you want it:** the [**Mudroom**](../mudroom/README.md) is a per-method **criterion-failure gallery** written the *unfair* way on purpose — deliberately **mean and one-sided** hit-reels (IRV, STAR, Ranked Robin, more), the cheap gotchas that *don't* pass the honest test above, curated for sport. It's kept low-profile and clearly labeled for exactly that reason; every fact in it is still real, and every reel links back here to the fair version. Fun, not for citing.
 
 ## Live on BetterVoting (BV2155–BV2159)
 

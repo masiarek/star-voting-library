@@ -3,7 +3,7 @@
 *A rigorous social-choice result, read for what it does and doesn't prove. **Felix Brandt, Chris Dong & Dominik Peters**, ["Condorcet-Consistent Choice Among Three Candidates"](https://arxiv.org/abs/2411.19857) (arXiv:2411.19857, Nov 2024; journal version 2025) asks: if you restrict to **exactly three candidates**, which [Condorcet extension](README.md) best resists the two nastiest variable-electorate paradoxes — the **[no-show paradox](../../voting_paradoxes/no_show.md)** and the **reinforcement paradox**? Their answer: **[maximin](../../voting_paradoxes/minimax.md)** and two of its refinements (**Nanson's rule** and **leximin**) occupy a uniquely defensible position. This is the theoretical backbone under the [Better Choices](better_choices_pairwise_ballot.md) proposal's minimax count — and, unlike advocacy literature, a neutral academic result (the authors are theorists, not campaigners). It cuts for a specific Condorcet rule, and this repo — which leans STAR, a method the theorem doesn't even cover — reports it straight.*
 
 → Runnable: the paper's Fig. 1 profile, with its minimality proved — [the minimal tilted cycle (5 voters)](../../../method_comparisons/minimal_tilted_cycle/README.md) · its Theorem 2 profile — [the reinforcement paradox](../../../method_comparisons/reinforcement_paradox/README.md).
-→ Related: [Minimax / Simpson-Kramer (Felsenthal paradoxes)](../../voting_paradoxes/minimax.md) · [the No-Show paradox](../../voting_paradoxes/no_show.md) · [Participation topic hub](../participation/) · [Better Choices — the pairwise-ballot method](better_choices_pairwise_ballot.md) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Condorcet reading list](condorcet_reading_list.md).
+→ Related: [Minimax / Simpson-Kramer (Felsenthal paradoxes)](../../voting_paradoxes/minimax.md) · [the No-Show paradox](../../voting_paradoxes/no_show.md) · [Participation topic hub](../participation/README.md) · [Better Choices — the pairwise-ballot method](better_choices_pairwise_ballot.md) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Condorcet reading list](condorcet_reading_list.md).
 
 ---
 
@@ -17,7 +17,7 @@ Two candidates are trivial: majority rule satisfies essentially every fairness p
 
 > **Finding:** with three candidates, the reinforcement paradox **must occur for *every* Condorcet extension once there are ≥ 8 voters** — no escape, for anyone. But **certain refinements of maximin are immune when there are ≤ 7 voters.**
 
-**No-show paradox** ([participation](../participation/) failure, Moulin 1988): a voter gets a *better* result by staying home than by voting sincerely — abstention beats participation.
+**No-show paradox** ([participation](../participation/README.md) failure, Moulin 1988): a voter gets a *better* result by staying home than by voting sincerely — abstention beats participation.
 
 > **Finding:** among **homogeneous** Condorcet extensions (rules unchanged when you scale the whole electorate up proportionally), **the *only* ones immune to the no-show paradox are refinements of maximin.**
 

@@ -89,6 +89,6 @@ Winner — Ranked Robin (RCV-RR): Blue
 
 Frozen BetterVoting export (Election + Ballots + Results): [bv2178_8kg698_bv_export.json](cases/bv2178_8kg698_bv_export.json) — BV's stored winners match every LH prediction (STAR / Ranked Robin / RCV-IRV all Blue; Choose-One Purple).
 
-Related: [the BV2176 case page](bv2176_p8dp28_postit_rcv_example.md) · [seven ways (BV2177)](bv2177_v8r66y_seven_methods.md) · [is the video fair and balanced?](postit_video_fair_and_balanced.md) · up: [method_comparisons](../)
+Related: [the BV2176 case page](bv2176_p8dp28_postit_rcv_example.md) · [seven ways (BV2177)](bv2177_v8r66y_seven_methods.md) · [is the video fair and balanced?](postit_video_fair_and_balanced.md) · up: [method_comparisons](../README.md)
 
 # file: bv2178_8kg698_switch_made_real.md

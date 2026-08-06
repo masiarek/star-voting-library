@@ -74,6 +74,6 @@ The single thing to internalize: **electing a winner "uses up" a quota of the ba
 
 ## Related
 
-- [STAR-PR (the methods)](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · [Proportional Representation overview](../)
+- [STAR-PR (the methods)](README.md) · [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · [Proportional Representation overview](../README.md)
 - Parallel deep-dive for single-winner: [The Math Behind Condorcet](../../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md)
 - Glossary: [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md)

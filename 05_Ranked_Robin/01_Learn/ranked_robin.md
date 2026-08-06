@@ -2,7 +2,7 @@
 
 *A ranked method that compares every candidate head-to-head and elects whoever beats the most rivals. Same ranked ballot as IRV, but a completely different — and far more transparent — way of counting it.*
 
-→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../../07_Concepts/topics/summability/).
+→ **Run it / tabulated example:** [`summability_demo/`](../../method_comparisons/summability_demo) shows the **pairwise matrix** (the Ranked Robin tally) computed and *added across precincts*; the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the **Copeland = Ranked Robin** winner on any election (`python pref_voting_tabulation.py example_tennessee.yaml`). · Topic hub: [Summability](../../07_Concepts/topics/summability/README.md).
 
 ---
 
@@ -94,7 +94,7 @@ That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked R
 
 ## Now you can tabulate it — the `pref_voting` engine
 
-The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) computes this method on any example election, under its **academic name, Copeland**.
+The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) computes this method on any example election, under its **academic name, Copeland**.
 
 > **The LH engine now tabulates Ranked Robin first-class.** Set `voting_method: RankedRobin` (aliases `RCV_RR` / `Copeland` / `Consensus`) and the engine prints the **round-robin report** — ballots, the full pairwise table, and each candidate's win-loss record — instead of the RCV-IRV elimination rounds: ``` python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/02_Examples/cases/ranked_robin_consensus_center.yaml ``` It flags a **cycle** (when the top candidates tie on wins) and points to [cycle resolution](cycle_resolution.md). For an *independent* Copeland cross-check, [`ranked_robin_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py) (in the `pref_voting` engine) computes the same result a second way.
 
@@ -205,19 +205,19 @@ Every claim on this page has a runnable election behind it. The case folders liv
 | Case folder | What it shows |
 |---|---|
 | [The worked intro](../02_Examples/cases/cases_pages/ranked_robin_consensus_center.md) | the election above: the consensus center wins 3–0 over the two poles that hold more first choices |
-| [Condorcet vs. Ranked Robin](../02_Examples/condorcet_vs_ranked_robin/) | a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record |
-| [RR vs. IRV vs. plurality](../02_Examples/rr_vs_irv_plurality/) | one ranked ballot set, three different winners — the Tennessee center squeeze, where RR and IRV genuinely part ways |
-| [The Copeland score — a draw is worth half a win](../02_Examples/copeland_score/) | why "most head-to-head wins" is a shorthand: the ½-credit elects a candidate who *lost* a matchup |
-| [Most matchups won ≠ Condorcet winner](../02_Examples/most_wins_vs_condorcet/) | its mirror image — strictly the most wins, and still beaten head-to-head; only Copeland decides |
-| [Tiebreaks](../03_Criteria/rr_tiebreaks/) | the Equal Support column and the full ladder down to lot order |
-| [Burial](../03_Criteria/burial/) | the signature wart, worked as a sincere/buried pair on both engines |
-| [STAR vs RR — 30 divergence samples](../02_Examples/star_vs_rr_divergence/) | 30 elections where STAR and RR elect different winners, each stating its own cause |
+| [Condorcet vs. Ranked Robin](../02_Examples/condorcet_vs_ranked_robin/README.md) | a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record |
+| [RR vs. IRV vs. plurality](../02_Examples/rr_vs_irv_plurality/README.md) | one ranked ballot set, three different winners — the Tennessee center squeeze, where RR and IRV genuinely part ways |
+| [The Copeland score — a draw is worth half a win](../02_Examples/copeland_score/README.md) | why "most head-to-head wins" is a shorthand: the ½-credit elects a candidate who *lost* a matchup |
+| [Most matchups won ≠ Condorcet winner](../02_Examples/most_wins_vs_condorcet/README.md) | its mirror image — strictly the most wins, and still beaten head-to-head; only Copeland decides |
+| [Tiebreaks](../03_Criteria/rr_tiebreaks/README.md) | the Equal Support column and the full ladder down to lot order |
+| [Burial](../03_Criteria/burial/README.md) | the signature wart, worked as a sincere/buried pair on both engines |
+| [STAR vs RR — 30 divergence samples](../02_Examples/star_vs_rr_divergence/README.md) | 30 elections where STAR and RR elect different winners, each stating its own cause |
 
 ---
 
 ## Related concept pages
 
-- [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../../07_Concepts/topics/summability/))
+- [Ranked Robin is summable](RCV_RR_summability.md) — the pairwise matrix adds across precincts (and the topic hub: [Summability](../../07_Concepts/topics/summability/README.md))
 - [Cycle resolution](cycle_resolution.md) — why Copeland is tie-prone, and why Minimax / Ranked Pairs / Schulze exist (they differ only on cycles)
 - [Clone independence — crowding, teaming, and the tiebreak](rr_clone_independence.md) — RR passes vote-splitting but can fail teaming in a no-Condorcet-winner cycle (and only under a margin tiebreak)
 - [Strict vs. weak ranks](../../07_Concepts/scores_and_ranks/strict_vs_weak_ranks.md) — Ranked Robin allows equal ranks; IRV doesn't

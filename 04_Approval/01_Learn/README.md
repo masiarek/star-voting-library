@@ -6,7 +6,7 @@ Everything explaining **Approval** (mark every candidate you approve — **1** �
 
 *The two Approval ballots ([Equal Vote](https://www.equal.vote/approval)): the plain **single bubble** — mark everyone you approve — and the **Yes / No "double bubble"**, where a blank is distinguishable from a deliberate No (the ballot-security hardening in [honest limits §6](approval_honest_limits.md)). Either way the count is the same: add up the approvals. The repo's own case art draws the Yes/No form — see the ballots on [Approval Voting](approval_voting.md#reading-an-approval-result) and on [the folder front door](../README.md).*
 
-**Run it:** the 101 case lives in [the Approval examples](../) — and the [Black Curtain set](../../method_comparisons/black_curtain/) counts the *same* five voters by Approval vs STAR vs RCV-IRV vs Score (Approval flips the winner in election 1).
+**Run it:** the 101 case lives in [the Approval examples](../README.md) — and the [Black Curtain set](../../method_comparisons/black_curtain/README.md) counts the *same* five voters by Approval vs STAR vs RCV-IRV vs Score (Approval flips the winner in election 1).
 
 ## Single-winner Approval
 
@@ -20,11 +20,11 @@ Everything explaining **Approval** (mark every candidate you approve — **1** �
 
 ## The three-option variant
 
-- [Combined Approval Voting (CAV)](../../06_Other/Combined_Approval/README.md) — Approval plus an explicit **Against**: For (+1) / abstain (0) / Against (−1), highest net wins. Proposed by Dan Felsenthal in 1989 as the answer to the Approval failures [his own paradox examples](../../method_comparisons/felsenthal_paradoxes/) demonstrate. Lives in `06_Other/` because it isn't an EVC method, but it belongs to this family — and it carries the sharpest lesson about **what a blank means**: CAV reads an unmarked row as the middle grade, every other score ballot here reads it as the lowest, and a runnable pair of elections shows the same twelve voters reversing end-to-end on that one word
+- [Combined Approval Voting (CAV)](../../06_Other/Combined_Approval/README.md) — Approval plus an explicit **Against**: For (+1) / abstain (0) / Against (−1), highest net wins. Proposed by Dan Felsenthal in 1989 as the answer to the Approval failures [his own paradox examples](../../method_comparisons/felsenthal_paradoxes/README.md) demonstrate. Lives in `06_Other/` because it isn't an EVC method, but it belongs to this family — and it carries the sharpest lesson about **what a blank means**: CAV reads an unmarked row as the middle grade, every other score ballot here reads it as the lowest, and a runnable pair of elections shows the same twelve voters reversing end-to-end on that one word
 
 ## Multi-winner & committees
 
-The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multiwinner_Approval/)** subfolder:
+The same 0/1 ballot fills several seats. See the **[Multiwinner_Approval/](Multiwinner_Approval/README.md)** subfolder:
 
 - [Approval — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md) — bloc (at-large) counting and the proportional adaptations (SPAV, PAV)
 - [Electing a committee — a gentle intro (101)](Multiwinner_Approval/abc_rules_intro.md) — "most approved" vs "cover everyone" vs proportional, counting only

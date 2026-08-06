@@ -113,7 +113,7 @@ Want the whole count — the full pairwise grid, the Smith-set audit, the ballot
 
 ## See also
 
-- [Tiebreaks — dead heat → lot](../../03_Criteria/rr_tiebreaks/) — the sibling case, where the ½-credit produces a *tie* instead of a decisive winner and the full ladder (wins → margin → lot) has to finish the job
+- [Tiebreaks — dead heat → lot](../../03_Criteria/rr_tiebreaks/README.md) — the sibling case, where the ½-credit produces a *tie* instead of a decisive winner and the full ladder (wins → margin → lot) has to finish the job
 - [Ranked Robin vs. "the Condorcet winner"](../../01_Learn/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
 - [Honest limits](../../01_Learn/RCV_RR_honest_limits.md) — where Ranked Robin is genuinely weak
 - [A naming decoder](../../01_Learn/condorcet_naming_decoder.md) — round-robin / Copeland / Condorcet / Ranked Robin, which word means what

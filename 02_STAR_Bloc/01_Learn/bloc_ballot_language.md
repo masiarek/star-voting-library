@@ -61,7 +61,7 @@ Walking the circulated version, since that is the one most readers will meet.
 
 **"The candidate with the most votes is elected."** The one sentence that misleads if read quickly: **"votes" here means runoff preferences, not stars.** The candidate with the most stars is not necessarily elected, and in a multi-seat race the point leader can be shut out of every seat — [the score leader can win no seat](score_leader_no_seat.md). This is the clause the specification words differently and better (§3.d: *the finalist preferred by the most voters wins*), which is the argument for printing the specification's text rather than this one.
 
-**"This process repeats with remaining candidates until all seats are filled."** The removal step, and the whole of the multi-winner machinery, in eleven words. "Remaining candidates" is doing quiet work: the *ballots* don't change between seats, the *field* does. Nothing is spent, reweighted, or transferred — that is [STAR-PR](../../03_STAR_PR/01_Learn/)'s job, and the reason the two methods answer different questions.
+**"This process repeats with remaining candidates until all seats are filled."** The removal step, and the whole of the multi-winner machinery, in eleven words. "Remaining candidates" is doing quiet work: the *ballots* don't change between seats, the *field* does. Nothing is spent, reweighted, or transferred — that is [STAR-PR](../../03_STAR_PR/01_Learn/README.md)'s job, and the reason the two methods answer different questions.
 
 ## What it is called, and by whom
 

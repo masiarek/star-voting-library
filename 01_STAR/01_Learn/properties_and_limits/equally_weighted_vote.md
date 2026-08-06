@@ -39,7 +39,7 @@ Add both ballots to *any* election and nothing moves:
 
 So if the race was tied before these two ballots, it is still tied after. Neither ballot outweighed the other. That is an equally weighted vote, demonstrated.
 
-**Run it:** [the equal & opposite case](../../03_Criteria/equal_and_opposite/) makes this tabulatable — a base election with a decisive winner, then the *same* election with two mirror ballots added, and STAR elects the same candidate either way (every score total just rises by 5, and the runoff cancels 1–1).
+**Run it:** [the equal & opposite case](../../03_Criteria/equal_and_opposite/README.md) makes this tabulatable — a base election with a decisive winner, then the *same* election with two mirror ballots added, and STAR elects the same candidate either way (every score total just rises by 5, and the runoff cancels 1–1).
 
 ## Why this is the root of vote-splitting
 

@@ -9,24 +9,24 @@
 
 ## 🥇 The criterion failures (STAR really does fail these)
 
-- **Not Condorcet-compliant.** STAR can decline to elect the candidate who beats everyone head-to-head — the score-leader can win the runoff over the pairwise winner. → [three notions of winner](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md), and the [Edelman / Condorcet-myth](../edelman_condorcet_myth/) and [FairVote](../fairvote_star_whitepaper/) cases.
+- **Not Condorcet-compliant.** STAR can decline to elect the candidate who beats everyone head-to-head — the score-leader can win the runoff over the pairwise winner. → [three notions of winner](../../01_STAR/01_Learn/properties_and_limits/STAR_three_winner_notions.md), and the [Edelman / Condorcet-myth](../edelman_condorcet_myth/README.md) and [FairVote](../fairvote_star_whitepaper/README.md) cases.
 - **Fails Later-No-Harm.** Scoring your second choice *can* help defeat your favorite. (STAR's camp calls this a feature, not a bug — but a critic gets to list it, and we're being the critic.) → [favorite betrayal 301](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md).
 - **Fails the majority-favorite and mutual-majority criteria.** In constructed electorates, a majority's first choice — or a majority-preferred *bloc* — can lose. → [honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 - **Fails mono-raise-delete.** STAR passes ordinary monotonicity, but the *stronger* Woodall variant it flunks: raise X and delete the now-lower loser, and X can lose. (Our own [monotonicity worked set](../monotonicity/README.md) demonstrates it on STAR — we didn't even make IRV do all the suffering.)
 
 ## 🥈 The strategy seams
 
-- **Coordinated burial can squeeze a centrist.** Give the strong compromise a 0 and inflate the wings, and STAR can drop the Condorcet winner out of the runoff — [French 2017 & Washington 2010](../fairvote_star_whitepaper/), and the [5-1-0 challenge](../star_5_1_0_challenge/). (Yes, it takes a conspiracy; the prosecution doesn't mention that.)
-- **The Chicken / Burr dilemma.** Two allies who must beat a third can still be nudged toward a defection standoff — STAR softens it but doesn't abolish it. → [chicken dilemma](../chicken_dilemma/).
+- **Coordinated burial can squeeze a centrist.** Give the strong compromise a 0 and inflate the wings, and STAR can drop the Condorcet winner out of the runoff — [French 2017 & Washington 2010](../fairvote_star_whitepaper/README.md), and the [5-1-0 challenge](../star_5_1_0_challenge/README.md). (Yes, it takes a conspiracy; the prosecution doesn't mention that.)
+- **The Chicken / Burr dilemma.** Two allies who must beat a third can still be nudged toward a defection standoff — STAR softens it but doesn't abolish it. → [chicken dilemma](../chicken_dilemma/README.md).
 - **Turkey-raising exists as a concept** even if STAR resists it — a critic will still put it on the slide.
 
 ## 🥉 The "your ballot" gotchas
 
 - **Equal Support = "your vote didn't count."** Score both finalists the same and you don't tip their runoff — which an opponent frames as *nullifying* your vote. → [are equal-score votes discounted?](../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md).
-- **Runoff reversal.** The candidate with the *most stars overall* can **lose** the automatic runoff. (It's the runoff doing its job — catching a polarizing score-leader — but "the top-scorer lost!" makes a fine attack line.) → [runoff-reversal cases](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/).
+- **Runoff reversal.** The candidate with the *most stars overall* can **lose** the automatic runoff. (It's the runoff doing its job — catching a polarizing score-leader — but "the top-scorer lost!" makes a fine attack line.) → [runoff-reversal cases](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/README.md).
 - **Scale granularity flips the winner.** The *same* opinions on a 0–5 vs. a wider scale can elect different candidates — so the ballot's resolution is part of the outcome. → [scale granularity](../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md).
-- **Ties and dead rungs.** STAR can land on genuine ties that need a tiebreak (lot). → [tie-break / dead-rung cases](../../01_STAR/03_Criteria/tie_break_dead_rung/).
-- **Participation / no-show.** In rare constructions, STAR can hand a voter a worse result for showing up. → [participation paradox set](../participation_no_show/).
+- **Ties and dead rungs.** STAR can land on genuine ties that need a tiebreak (lot). → [tie-break / dead-rung cases](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md).
+- **Participation / no-show.** In rare constructions, STAR can hand a voter a worse result for showing up. → [participation paradox set](../participation_no_show/README.md).
 
 ---
 

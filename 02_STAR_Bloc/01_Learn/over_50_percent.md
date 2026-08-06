@@ -144,7 +144,7 @@ Two failure modes get confused here, and they are opposites:
 - **[The majority sweep](majority_sweep.md)** — a cohesive majority that runs *several* candidates can take **every** seat, leaving a large minority with nothing. That is Bloc STAR's defining property and the reason to think hard before choosing it.
 - **This page** — a majority that runs *one* candidate wins exactly that one seat, and hands the rest to whoever the leftovers favor. Same method, same majoritarian logic; the difference is entirely in how many candidates the majority put on the ballot.
 
-Together they are one fact stated twice: Bloc STAR rewards **slate discipline** ([honest limits](bloc_honest_limits.md)). Winning big does not fill a board; running enough candidates does. If you want the second seat to reflect the second-largest group rather than the second-largest leftover, you want a proportional method — [STAR-PR](../../03_STAR_PR/01_Learn/) reweights the ballots that already won a seat so they count for less on the next one. That decision belongs before the ballots are printed: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md).
+Together they are one fact stated twice: Bloc STAR rewards **slate discipline** ([honest limits](bloc_honest_limits.md)). Winning big does not fill a board; running enough candidates does. If you want the second seat to reflect the second-largest group rather than the second-largest leftover, you want a proportional method — [STAR-PR](../../03_STAR_PR/01_Learn/README.md) reweights the ballots that already won a seat so they count for less on the next one. That decision belongs before the ballots are printed: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md).
 
 ## See also
 

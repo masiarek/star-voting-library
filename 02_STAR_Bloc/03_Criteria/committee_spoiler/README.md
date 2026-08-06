@@ -72,8 +72,8 @@ Frozen exports sit beside each yaml as `…_bv_export.json`.
 
 ## Related
 
-- [Participation](../participation/) — the other case on this folder where a change that cannot touch seat 1 decides seat 2
-- [Seat order](../seat_order/) — the council is a set, not a podium
+- [Participation](../participation/README.md) — the other case on this folder where a change that cannot touch seat 1 decides seat 2
+- [Seat order](../seat_order/README.md) — the council is a set, not a podium
 - [Residual vote-splitting](../../../01_STAR/01_Learn/properties_and_limits/residual_vote_splitting.md) — what STAR does and does not fix about extra candidates
 - [Honest limits](../../01_Learn/bloc_honest_limits.md) · [Bloc STAR among the at-large methods](../../01_Learn/bloc_star_vs_other_bloc_methods.md) — where SNTV's version of this problem is much worse
 

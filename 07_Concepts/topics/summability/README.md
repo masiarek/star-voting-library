@@ -63,4 +63,4 @@ So the [central-tabulation](../central_tabulation.md) cost of non-summability sh
 
 ---
 
-*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above; this page just gathers the summability angle in one place for folks browsing by topic. See [the topics index](../) for the other topic hubs.*
+*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above; this page just gathers the summability angle in one place for folks browsing by topic. See [the topics index](../README.md) for the other topic hubs.*

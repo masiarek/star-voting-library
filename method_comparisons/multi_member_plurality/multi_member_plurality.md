@@ -43,5 +43,5 @@ This set's *point* is the Plurality-family framing (votes-per-voter), and our en
 ## See also
 
 - Folder overview: [multi_member_plurality — README](README.md)
-- The BV-backed SNTV instance: [Pets Governance — Bloc Plurality](../pets_governance/cases/cases_pages/pets_gov_bloc_plurality.md) ([yaml](../pets_governance/cases/pets_gov_bloc_plurality.yaml)) · the whole [governance set](../pets_governance/)
-- Proportional alternatives: [STV](../../06_Other/STV/) · [STAR-PR](../../03_STAR_PR/)
+- The BV-backed SNTV instance: [Pets Governance — Bloc Plurality](../pets_governance/cases/cases_pages/pets_gov_bloc_plurality.md) ([yaml](../pets_governance/cases/pets_gov_bloc_plurality.yaml)) · the whole [governance set](../pets_governance/README.md)
+- Proportional alternatives: [STV](../../06_Other/STV/README.md) · [STAR-PR](../../03_STAR_PR/README.md)

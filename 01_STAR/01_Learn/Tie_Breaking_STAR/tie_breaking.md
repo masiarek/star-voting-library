@@ -73,7 +73,7 @@ Mnemonic worth keeping: **"it counts fives, not fours"** — an equal or absent 
 
 **The engine flags it.** When a tie falls all the way to the lot, the LH engine prints a `[Lot-decided tie — rare]` callout — the same spirit as the `[Divergence from STAR]` flag — so this uncommon "the ballots didn't decide, the lot did" event is named, not buried in the tiebreak trace.
 
-Runnable cases (all verified in the test suite): [the dead-rung tie-break cases](../../03_Criteria/tie_break_dead_rung/) — five-star-breaks vs no-fives-→-lot, in both the scoring round and the runoff, including the **cap ladder** (the same tie at cap 4 / 3 / 2, all falling to the lot). Spin up more with the [dead-rung scenario generator](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md) (`--rung alive|dead|tied`, `--cap`, `--adversarial-lot`).
+Runnable cases (all verified in the test suite): [the dead-rung tie-break cases](../../03_Criteria/tie_break_dead_rung/README.md) — five-star-breaks vs no-fives-→-lot, in both the scoring round and the runoff, including the **cap ladder** (the same tie at cap 4 / 3 / 2, all falling to the lot). Spin up more with the [dead-rung scenario generator](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md) (`--rung alive|dead|tied`, `--cap`, `--adversarial-lot`).
 
 ---
 

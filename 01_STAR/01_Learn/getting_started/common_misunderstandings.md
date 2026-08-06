@@ -24,7 +24,7 @@ No — and this is the single most important thing to get. If STAR just added up
 No. The "runoff" is **automatic** — it's computed from the same ballots you already cast, in the same count, in seconds. You vote once. (That's the "**A**" in ST**A**R: *Automatic* Runoff.) → [the Automatic Runoff](../the_count/STAR_Automatic_Runoff.md)
 
 **"So a candidate everyone rates a middling 3 wins?"**
-Only if no one is genuinely preferred over them. If a majority rates candidate A a 5 and the "safe" candidate B a 3, A and B may both reach the runoff — and then A wins, because more voters prefer A head-to-head. The runoff is precisely what stops a forgettable compromise from beating a majority favorite. → [runoff reversal](../../02_Examples/runoff_overturns_leader/)
+Only if no one is genuinely preferred over them. If a majority rates candidate A a 5 and the "safe" candidate B a 3, A and B may both reach the runoff — and then A wins, because more voters prefer A head-to-head. The runoff is precisely what stops a forgettable compromise from beating a majority favorite. → [runoff reversal](../../02_Examples/runoff_overturns_leader/README.md)
 
 ## About strategy ("won't people game it?")
 

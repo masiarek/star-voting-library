@@ -2,7 +2,7 @@
 
 **One line:** **RCV-RR (Ranked Robin / Copeland) is precinct-summable.** Its whole tally is the **pairwise matrix** — for every pair of candidates, how many ballots rank A over B, B over A, or neither — and those matrices **add across precincts**. So the *same ranked ballot* IRV must count centrally, Ranked Robin can tally locally and add up.
 
-→ Cross-method **topic hub**: [Summability](../../07_Concepts/topics/summability/) · the method itself: [Ranked Robin](ranked_robin.md) · the contrast — [IRV is *not* summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) · the score-method counterpart: [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) · Glossary: [`summability`](../../07_Concepts/GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../../07_Concepts/topics/summability/README.md) · the method itself: [Ranked Robin](ranked_robin.md) · the contrast — [IRV is *not* summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) · the score-method counterpart: [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) · Glossary: [`summability`](../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -35,7 +35,7 @@ From the summed matrix: **B beats A (11–9) and beats C (11–9)** → **B is t
 
 ## Tabulate & verify it
 
-The LH engine computes the matrix (`calculate_preference_matrix`); the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the **Copeland = Ranked Robin** winner and is itself [cross-checked](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md) against the LH engine — so the summable artifact is independently confirmed.
+The LH engine computes the matrix (`calculate_preference_matrix`); the [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the **Copeland = Ranked Robin** winner and is itself [cross-checked](../../07_Concepts/tabulation_engines/cross_checking_with_pref_voting.md) against the LH engine — so the summable artifact is independently confirmed.
 
 ## The nuance — same as STAR, opposite of IRV
 

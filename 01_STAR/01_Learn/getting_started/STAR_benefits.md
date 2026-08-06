@@ -32,7 +32,7 @@ The runoff is built into the count — there's no separate second election. Wher
 
 ## Anyone can check the count
 
-STAR is [summable](../../../07_Concepts/topics/summability/): each precinct posts its score totals and a small head-to-head tally, and those numbers **add up — by hand — to the final result.** No shipping every ballot to one central computer. Transparent and auditable by design.
+STAR is [summable](../../../07_Concepts/topics/summability/README.md): each precinct posts its score totals and a small head-to-head tally, and those numbers **add up — by hand — to the final result.** No shipping every ballot to one central computer. Transparent and auditable by design.
 
 ## Campaigns get nicer
 
@@ -40,7 +40,7 @@ To win, you need decent scores from your *opponents'* supporters too — so tras
 
 ## One method for one seat or many
 
-The same 0–5 ballot fills a single office, elects a slate ([Bloc STAR](../../../02_STAR_Bloc/)), or fills a whole body proportionally ([Proportional STAR](../../../03_STAR_PR/01_Learn/STAR_PR/README.md)). One ballot everyone already knows, across the entire ticket.
+The same 0–5 ballot fills a single office, elects a slate ([Bloc STAR](../../../02_STAR_Bloc/README.md)), or fills a whole body proportionally ([Proportional STAR](../../../03_STAR_PR/01_Learn/STAR_PR/README.md)). One ballot everyone already knows, across the entire ticket.
 
 ---
 

@@ -1,6 +1,6 @@
 # Other ranked methods — the shelf, not a method
 
-**This folder is not a voting method.** Its siblings in [06_Other](../README.md) each *are* one — [Plurality](../Plurality/), [RCV-IRV](../RCV_IRV/), [STV](../STV/), [Range](../Range/), [3-2-1](../three_two_one/) — and each earned a folder by having runnable `cases/` to put in it. This is the shelf for ranked methods that don't yet: one concept page apiece, no YAML, no tabulation.
+**This folder is not a voting method.** Its siblings in [06_Other](../README.md) each *are* one — [Plurality](../Plurality/README.md), [RCV-IRV](../RCV_IRV/README.md), [STV](../STV/README.md), [Range](../Range/README.md), [3-2-1](../three_two_one/README.md) — and each earned a folder by having runnable `cases/` to put in it. This is the shelf for ranked methods that don't yet: one concept page apiece, no YAML, no tabulation.
 
 | Page | What it is | Why it's here and not in its own folder |
 |---|---|---|

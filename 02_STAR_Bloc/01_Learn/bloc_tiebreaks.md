@@ -158,5 +158,5 @@ Two adjacent BV defects the same case set turned up, worth knowing because they 
 
 - [STAR Tie-Breaking — The Full Chain](../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md) · [the dead rung](../../01_STAR/01_Learn/Tie_Breaking_STAR/dead_rung_note_for_equal_vote.md) · [BV JSON → YAML mapping](../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking_JSON.md)
 - [The Bloc reference cases](../README.md#the-reference-cases) — the full BV id → tie type → issue table
-- [Ties](../../07_Concepts/topics/ties/) — the cross-method topic hub
+- [Ties](../../07_Concepts/topics/ties/README.md) — the cross-method topic hub
 - [Bloc STAR](bloc_star.md) · [honest limits](bloc_honest_limits.md)

@@ -2,7 +2,7 @@
 
 **One line:** the LH `starvote` engine prints a **full text audit report** — every number that produced the winner, in order — and saves a maximal `_tabulated.txt` copy of it. This page is the reporting-lens summary; the section-by-section walk is [Reading a STAR report](../../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).
 
-→ Hub: [STAR Reporting](../) · the engine itself: [BetterVoting and the LH engine](../../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) · [`GLOSSARY`](../../../../07_Concepts/GLOSSARY.md).
+→ Hub: [STAR Reporting](../README.md) · the engine itself: [BetterVoting and the LH engine](../../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) · [`GLOSSARY`](../../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -38,4 +38,4 @@ It names the decided count *against the total* with the Equal Support gap inline
 
 The on-screen report honors the file's `options:` (house default is minimal). The `_tabulated.txt` sibling is always the **maximal** render — every analysis on, the runoff line expanded into the funnel — so the saved audit copy is fully self-explanatory. Which flag shows which section: [**LH reporting options**](options.md). (House defaults: `CLAUDE.md`.)
 
-See it on a real election: [the pet race report](../../../04_Real_Elections/pet_real_bv_election/).
+See it on a real election: [the pet race report](../../../04_Real_Elections/pet_real_bv_election/README.md).

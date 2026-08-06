@@ -1,6 +1,6 @@
 # Condorcet's 1788 rebuttal to Borda — where the Condorcet criterion comes from
 
-*Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../07_Concepts/topics/condorcet/), and it is also the cleanest demonstration of what [STAR](../../01_STAR/01_Learn/README.md)'s second round is **for**.*
+*Borda's pitch (1770) was that his rank-points rule fixed plurality's embarrassment: the plurality winner can lose a direct majority contest to someone else. Condorcet's reply was that Borda's rule has the same disease — and he produced the election that proves it. Both plurality **and** Borda elect Paul here, yet **Peter beats every opponent head-to-head**. This is the argument that became the [Condorcet criterion](../../07_Concepts/topics/condorcet/README.md), and it is also the cleanest demonstration of what [STAR](../../01_STAR/01_Learn/README.md)'s second round is **for**.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/khcwm4) · **[results ↗](https://bettervoting.com/khcwm4/results)** (election `khcwm4`, Test ID **BV2250** — three races on the same 11 ballots: STAR, Ranked Robin, RCV-IRV).
 
@@ -91,7 +91,7 @@ Automatic Runoff Round
 
 Want the whole count? See the full LH reports → [`condorcet_1788_star.md`](cases/cases_pages/condorcet_1788_star.md) · [`condorcet_1788_ranked_robin.md`](cases/cases_pages/condorcet_1788_ranked_robin.md).
 
-One more thing the pairwise table shows: **James is the [Condorcet loser](../../07_Concepts/topics/condorcet/)** — he loses every matchup. No method here elects him, but it is worth noticing that Borda ranks him *above* nobody while plurality's 2 first-choice votes are all he has.
+One more thing the pairwise table shows: **James is the [Condorcet loser](../../07_Concepts/topics/condorcet/README.md)** — he loses every matchup. No method here elects him, but it is worth noticing that Borda ranks him *above* nobody while plurality's 2 first-choice votes are all he has.
 
 ## Reproduce it
 
@@ -138,4 +138,4 @@ Paul *loses* the only matchup that decides a head-to-head champion, and still fi
 
 (The margins are exactly what a Borda score is made of: [`Borda(x) = ½·Σ M(x,y) + n(m−1)/2`](../../06_Other/other_ranked_methods/borda.md), and the constant is the same for everyone.)
 
-Which is right is a values question, not a math question — and it's the same fork [Copeland vs Borda margins](../copeland_vs_borda_margins/) makes you choose at, with [the structural version](../../07_Concepts/topics/cycle_cocycle_decomposition.md) underneath. See also [what a method reads](../../07_Concepts/topics/what_a_method_reads.md).
+Which is right is a values question, not a math question — and it's the same fork [Copeland vs Borda margins](../copeland_vs_borda_margins/README.md) makes you choose at, with [the structural version](../../07_Concepts/topics/cycle_cocycle_decomposition.md) underneath. See also [what a method reads](../../07_Concepts/topics/what_a_method_reads.md).

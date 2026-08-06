@@ -1,6 +1,6 @@
 # Cycle resolution, counted — where the Condorcet family stops agreeing
 
-The tabulatable evidence behind [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../05_Ranked_Robin/01_Learn/cycle_resolution.md). When a [Condorcet winner](../../07_Concepts/topics/condorcet/) exists, **every** Condorcet method elects them and there is nothing to argue about. When majority preference **cycles**, the family splits — and these two elections are the split, made runnable.
+The tabulatable evidence behind [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../05_Ranked_Robin/01_Learn/cycle_resolution.md). When a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) exists, **every** Condorcet method elects them and there is nothing to argue about. When majority preference **cycles**, the family splits — and these two elections are the split, made runnable.
 
 Both are **LH-only**: the LH engine's Ranked Robin is Copeland, and in a cycle Copeland usually ties, which LH breaks by margin then lot and BetterVoting breaks *at random*. A tie-deciding result can't be frozen on BV, so these cases stay in the library.
 

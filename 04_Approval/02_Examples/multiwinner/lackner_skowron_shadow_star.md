@@ -45,10 +45,10 @@ So the takeaway isn't "STAR = proportional" or "STAR = majoritarian" — it's th
 | Shadow **Allocated Score** (STAR-PR) → A,B,C,D | [`lackner_skowron_shadow_star_pr_c7_b12.yaml`](../../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
 | Shadow **RRV** → A,B,C,F (matches PAV) | [`lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml`](../../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-The approval **PAV / seqPAV / Phragmén** results come from Lackner's own [`abcvoting`](https://github.com/martinlackner/abcvoting) — run the approval file through [`06_Other/abcvoting_tabulation_engine/`](../../../06_Other/abcvoting_tabulation_engine/) (guarded on the optional `abcvoting` install) to reproduce the book's proportional committees.
+The approval **PAV / seqPAV / Phragmén** results come from Lackner's own [`abcvoting`](https://github.com/martinlackner/abcvoting) — run the approval file through [`06_Other/abcvoting_tabulation_engine/`](../../../06_Other/abcvoting_tabulation_engine/README.md) (guarded on the optional `abcvoting` install) to reproduce the book's proportional committees.
 
 ## See also
 
 - **The ABC-rules education built on this same example:** [committees & coverage — a gentle intro (101)](../../01_Learn/Multiwinner_Approval/abc_rules_intro.md) · [ABC rules & the utilitarian–egalitarian spectrum (301)](../../01_Learn/Multiwinner_Approval/abc_rules_spectrum.md).
-- [Bloc STAR vs proportional STAR](../../../03_STAR_PR/01_Learn/) — the majoritarian/proportional split in the STAR family.
+- [Bloc STAR vs proportional STAR](../../../03_STAR_PR/01_Learn/README.md) — the majoritarian/proportional split in the STAR family.
 - [Approval multi-winner](../../01_Learn/Multiwinner_Approval/approval_multiwinner.md).

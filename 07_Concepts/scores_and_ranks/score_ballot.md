@@ -73,7 +73,7 @@ The same 0–5 grid above can be counted by:
 | [Score / Range](../../06_Other/Range/concepts/range_voting.md) | add the scores; highest total wins | STAR without the runoff |
 | [STAR](../../01_STAR/01_Learn/STAR_start_here.md) | add the scores, then the top two meet in an [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) | equal scores on the two finalists = [Equal Support](../../01_STAR/01_Learn/reference/glossary_STAR.md) — counted in round 1, neutral in the tie it had no stake in |
 | [Approval](../../04_Approval/01_Learn/approval_voting.md) | as 0/1 (approve or don't) | the 1-bit special case |
-| STAR-PR and friends | proportional multi-winner | [proportional representation](../../03_STAR_PR/01_Learn/) |
+| STAR-PR and friends | proportional multi-winner | [proportional representation](../../03_STAR_PR/01_Learn/README.md) |
 
 Same lesson as the ranked twin, from the other side: the ballot is what you mark; the **tabulation** decides what happens to it. See [what is a voting method? — a ballot and a count](../topics/voting_method_ballot_and_count.md).
 

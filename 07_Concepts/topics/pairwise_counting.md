@@ -2,7 +2,7 @@
 
 *How the preference matrix actually gets built: one ballot at a time. Once you see that each ballot is already a little head-to-head table, the matrix — and why it's precinct-summable — stops being mysterious.*
 
-→ **Level: 201 · deep dive** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · Glossary: [`preference matrix`](../GLOSSARY.md) · the summability payoff: [Summability topic hub](summability/)
+→ **Level: 201 · deep dive** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · Glossary: [`preference matrix`](../GLOSSARY.md) · the summability payoff: [Summability topic hub](summability/README.md)
 
 ---
 
@@ -13,7 +13,7 @@
 
 They are the same idea seen as verb and noun. The artifact goes by **many** names — **preference matrix**, **pairwise matrix**, **pairwise-comparison matrix**, **head-to-head table**, and, on [Wikipedia](https://en.wikipedia.org/wiki/Condorcet_method#Pairwise_counting_and_matrices), **beats matrix**, **tournament matrix**, or **outranking matrix**. When it holds the *summed* tallies for the whole electorate it's the **sum matrix**. The LH engine prints it as the **"Runoff (Preference) Matrix"** with the legend **For – Equal Support – Against**. All the same table. ([electowiki](https://electowiki.org/wiki/Pairwise_counting) calls the process "pairwise counting"; we use its mechanics pages here while noting it's an advocacy-adjacent wiki.)
 
-> **Seen the "strange" Wikipedia matrix?** That article shows a *single ballot* written as a 0/1 grid (1 = the row candidate beats the column candidate), then *adds* the ballots into a **sum matrix**. That two-step — one ballot is a matrix, and matrices add — is exactly what this page builds below, and it's why the count is **[precinct-summable](summability/)**.
+> **Seen the "strange" Wikipedia matrix?** That article shows a *single ballot* written as a 0/1 grid (1 = the row candidate beats the column candidate), then *adds* the ballots into a **sum matrix**. That two-step — one ballot is a matrix, and matrices add — is exactly what this page builds below, and it's why the count is **[precinct-summable](summability/README.md)**.
 
 ## The one idea: a ballot is already a matrix
 
@@ -79,7 +79,7 @@ Ann,Bob,Cal
  Bob
 ```
 <!-- /report -->
-Reading it: **Bob beats Ann 2–1 and beats Cal 2–1**, so Bob wins every head-to-head — the [Condorcet winner](condorcet/). And look at the Bob-vs-Ann cell: **2 – 0 – 1 is exactly STAR's Automatic Runoff** (Bob preferred on 2 ballots, Ann on 1). The runoff isn't a separate computation — it's **one cell of this matrix**.
+Reading it: **Bob beats Ann 2–1 and beats Cal 2–1**, so Bob wins every head-to-head — the [Condorcet winner](condorcet/README.md). And look at the Bob-vs-Ann cell: **2 – 0 – 1 is exactly STAR's Automatic Runoff** (Bob preferred on 2 ballots, Ann on 1). The runoff isn't a separate computation — it's **one cell of this matrix**.
 
 If a ballot puts a pair **equal** — the same score, or both blank — that ballot lands in the middle **Equal Support** bucket for that pair (none happen to occur here). No verdict is ever lost: every ballot counts For, Against, or Equal Support on every pair, which is what makes the matrix self-reconciling in an audit.
 
@@ -94,7 +94,7 @@ The matrix doesn't care which ballot style fed it, only *order*:
 
 1. **It's the auditable heart of the count.** The matrix is a small fixed-size table anyone can recompute from the ballots — the annotated tour of a full report is [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md), and the display demo is [`04b_c4_b3_display-options-all`](../../01_STAR/02_Examples/cases/cases_pages/04b_c4_b3_display-options-all.md) (`show_matrix`).
 2. **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) reads its whole result off it** — most head-to-head wins takes the seat. The matrix isn't a supporting exhibit there; it *is* the tally.
-3. **It's why these counts are [summable](summability/).** The election's matrix is the sum of the ballots' matrices — so a precinct's matrix is just a partial sum, and precinct tables **add** to the statewide result. That's the worked two-district demo in [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) and [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md), and the very thing [IRV's count can't do](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md): IRV has no per-ballot artifact that adds — its rounds depend on everyone else's ballots.
+3. **It's why these counts are [summable](summability/README.md).** The election's matrix is the sum of the ballots' matrices — so a precinct's matrix is just a partial sum, and precinct tables **add** to the statewide result. That's the worked two-district demo in [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) and [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md), and the very thing [IRV's count can't do](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md): IRV has no per-ballot artifact that adds — its rounds depend on everyone else's ballots.
 
 ## Further afield (301): write-ins and bookkeeping variants
 
@@ -106,6 +106,6 @@ Real election offices hit a wrinkle: a **write-in** candidate discovered mid-cou
 
 - [Ann, Bob, Cal — the canonical leading example](../../01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md) — the election used above (frozen ballots; [canonical registry](../tips/TIPS_canonical_elections.md))
 - [How the count works — STAR vs RCV-IRV, step by step](tabulation_star_vs_irv.md) — the two counts this matrix feeds and contrasts
-- [Summability topic hub](summability/) · [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) — the precinct-level payoff
+- [Summability topic hub](summability/README.md) · [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) — the precinct-level payoff
 - [The math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) — the 301 sequel: the matrix as a *graph* (tournaments, Smith set, cycles)
 - Glossary: [`preference matrix`, `Equal Support`, `summability`](../GLOSSARY.md)

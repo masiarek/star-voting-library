@@ -94,5 +94,5 @@ Correct *and* readable isn't the same as *self-certified*. The repo's third engi
 - [Reading a STAR report](reading_a_star_report.md) — the section-by-section walkthrough.
 - [The `.starvote` ballot file format](starvote_file_format.md) — Larry's own INI-like input format (`[options]` + `[ballots]`), the three front doors and their differing tiebreak defaults, and a worked Bloc STAR race that ties at every rung.
 - [BetterVoting and the LH engine](../bettervoting_and_the_engine.md) — the visual half of the same race.
-- [Runoff Reversal](../../../01_STAR/02_Examples/runoff_overturns_leader/) — the phenomenon the report is built to expose.
+- [Runoff Reversal](../../../01_STAR/02_Examples/runoff_overturns_leader/README.md) — the phenomenon the report is built to expose.
 - [starvote_larry_hastings.py — presentation wrapper](../../../STARVote_LH_tabulation_engine/README_larry_hastings.md) · [Fork Notes — starvote (vendored fork)](../../../STARVote_LH_tabulation_engine/FORK_NOTES.md) — the engine docs themselves.

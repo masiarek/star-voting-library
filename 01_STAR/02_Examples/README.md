@@ -54,6 +54,6 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 ---
 
-Up: [01_STAR — single-winner STAR Voting](../) · Concept docs: [STAR — start here](../01_Learn/STAR_start_here.md)
+Up: [01_STAR — single-winner STAR Voting](../README.md) · Concept docs: [STAR — start here](../01_Learn/STAR_start_here.md)
 
 # file: README.md

@@ -77,6 +77,7 @@ AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2144_mxfmhm_star.yaml,3,7,
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_star.yaml,3,17,Ada,Ada,Ada,Ada,Ada,Ada,Ben,Ada,Ada,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2151_97hbpw_star.yaml,3,9,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_star.yaml,4,103,B,B,B,B,B,B,B,B,B,0,False,False,False
+AGREE,method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_star.yaml,4,100,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,0,False,False,False
 AGREE,method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml,3,100,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,B,A,A,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_polarized_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,A,A,A,0,False,False,False
@@ -199,6 +200,7 @@ IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/cases/bv2150_dx
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml,4,103,B,A,A,B,B,B,B,B,B,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_affine.yaml,3,30,Ana,Bruno,Bruno,Ana,Ana,Ana,Ana,Ana,Ana,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml,3,30,Ana,Bruno,Bruno,Ana,Ana,Ana,Ana,Ana,Ana,0,False,False,False
+IRV_OUTLIER_RR_WITH_STAR,method_comparisons/kissel_single_elimination_rcv/cases/kissel_five_way_c5_b1000_star.yaml,5,1000,C,A,A,C,C,C,C,C,C,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/cases/pineapple_11pct.yaml,11,100,Cheese,Pineapple,Pineapple,Cheese,Cheese,Cheese,Cheese,Cheese,Cheese,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/cases/pineapple_25pct.yaml,5,100,Cheese,Pineapple,Pineapple,Cheese,Cheese,Cheese,Cheese,Cheese,Cheese,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,method_comparisons/minority_winner_progression/cases/pineapple_34pct.yaml,4,99,Cheese,Pineapple,Pineapple,Cheese,Cheese,Cheese,Cheese,Cheese,Cheese,0,False,False,False

@@ -61,7 +61,7 @@ Reproduce both rows:
 uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml --drop Bryce
 ```
 
-(Drop the `--drop Bryce` for the full field. The [LH engine](../../tabulation_engines/LH_starvote/) runs only the Copeland column — that's Ranked Robin — so the case's `_tabulated` mirror shows the pairwise matrix and a Copeland tie, and `pref_voting` supplies the rest.)
+(Drop the `--drop Bryce` for the full field. The [LH engine](../../tabulation_engines/LH_starvote/README.md) runs only the Copeland column — that's Ranked Robin — so the case's `_tabulated` mirror shows the pairwise matrix and a Copeland tie, and `pref_voting` supplies the rest.)
 
 ## Reading it fairly — four things the case does *not* show
 

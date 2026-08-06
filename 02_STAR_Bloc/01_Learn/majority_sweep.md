@@ -2,7 +2,7 @@
 
 **One line:** because every seat in a Bloc STAR race is decided by the *same* voters on the *same* unchanged ballots, a **cohesive majority can win every seat** — 55% of the electorate can take a council 5–0 and leave the other 45% with nothing. This is not a bug in the count; it is what "majoritarian" means, and it is the single fact that decides whether Bloc STAR is the right method for your body.
 
-→ The fork this sits on one side of: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md) · the method that refuses to do this: [STAR-PR](../../03_STAR_PR/01_Learn/) · the mechanics: [Bloc STAR](bloc_star.md)
+→ The fork this sits on one side of: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md) · the method that refuses to do this: [STAR-PR](../../03_STAR_PR/01_Learn/README.md) · the mechanics: [Bloc STAR](bloc_star.md)
 
 **Level: 201 · for voters**
 
@@ -15,7 +15,7 @@ Nothing carries over between seats. Seat 2 is counted on the identical ballots t
 - **The scoring round.** Suppose a majority scores its own slate high and the rest 0. Every slate member's total is built from more than half the ballots; every outsider's total is built from fewer. The slate therefore occupies the top of the score order and keeps supplying both finalists until it runs out of candidates.
 - **The runoff.** When a slate member does finally meet an outsider head-to-head, the same majority prefers the slate member. More than half of the voters, every time.
 
-Both halves of STAR point the same way, every seat, because neither half ever hears that this bloc has already been served. Compare a proportional method, which does exactly that: [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/) reweights the ballots that won a seat so they count for less on the next one.
+Both halves of STAR point the same way, every seat, because neither half ever hears that this bloc has already been served. Compare a proportional method, which does exactly that: [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) reweights the ballots that won a seat so they count for less on the next one.
 
 Two qualifiers keep this honest:
 
@@ -88,15 +88,15 @@ The 60% takes 100% of the board. Note *where* the south side loses: not in round
 
 ## The same electorate, counted five ways
 
-[Food-Truck Row](../../method_comparisons/food_truck_row/) is the sharpest version: **one** 100-voter electorate, **two** seats, five counting rules, three different outcomes. A 57-voter savory majority running three trucks against a disciplined 43-voter sweet minority running two:
+[Food-Truck Row](../../method_comparisons/food_truck_row/README.md) is the sharpest version: **one** 100-voter electorate, **two** seats, five counting rules, three different outcomes. A 57-voter savory majority running three trucks against a disciplined 43-voter sweet minority running two:
 
 | | first choices | SNTV | **Bloc STAR** | Bloc Ranked Robin | STAR-PR | STV |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | *savory : sweet (57 : 43)* | | **0 : 2** | **2 : 0** | **2 : 0** | **1 : 1** | **1 : 1** |
 
-Nothing about the voters changes across that row. Bloc STAR hands the majority both seats; the proportional methods split them; [SNTV](../../method_comparisons/multi_member_plurality/) hands the *minority* both, because the majority's three trucks split its own vote. Read the row as three answers to three different questions, not as four wrong ones and a right one.
+Nothing about the voters changes across that row. Bloc STAR hands the majority both seats; the proportional methods split them; [SNTV](../../method_comparisons/multi_member_plurality/README.md) hands the *minority* both, because the majority's three trucks split its own vote. Read the row as three answers to three different questions, not as four wrong ones and a right one.
 
-More of the same, at other sizes: the [Pets Governance](../../method_comparisons/pets_governance/) council (3 seats, bloc vs. proportional, side by side) and the [Herb Garden Council](../../06_Other/ballot_style_lab/cases/cases_pages/07a_c5_b36_herb-council-bloc-3-seats.md) (3 seats, the majority sweeps).
+More of the same, at other sizes: the [Pets Governance](../../method_comparisons/pets_governance/README.md) council (3 seats, bloc vs. proportional, side by side) and the [Herb Garden Council](../../06_Other/ballot_style_lab/cases/cases_pages/07a_c5_b36_herb-council-bloc-3-seats.md) (3 seats, the majority sweeps).
 
 ## So when is a sweep the right answer?
 
@@ -114,7 +114,7 @@ The question to ask is **what the body is for**, not how it feels to the losing 
 - anywhere the winners will be understood as *delegates* of the groups that elected them;
 - and, as a matter of law rather than taste, anywhere a racial or language minority is **clustered in one part of the jurisdiction** — there the sweep is what federal courts call vote dilution, and the seats being filled at-large is what makes it actionable ([at-large elections and the Voting Rights Act](at_large_and_the_vra.md)).
 
-**The tell:** picture the cohesive-majority sweep and ask whether the result would look legitimate. If yes, Bloc STAR is doing its job. If it makes you wince, you wanted [proportional representation](../../03_STAR_PR/01_Learn/) and should say so before the ballots are printed — this is a decision about the *rules*, and it cannot be fixed afterward by the count.
+**The tell:** picture the cohesive-majority sweep and ask whether the result would look legitimate. If yes, Bloc STAR is doing its job. If it makes you wince, you wanted [proportional representation](../../03_STAR_PR/01_Learn/README.md) and should say so before the ballots are printed — this is a decision about the *rules*, and it cannot be fixed afterward by the count.
 
 ## See also
 
@@ -122,5 +122,5 @@ The question to ask is **what the body is for**, not how it feels to the losing 
 - [Over 50% — what a landslide actually buys](over_50_percent.md) — this page's mirror image: the same majoritarian logic when the majority runs only *one* candidate, and the second seat goes to a candidate most of them scored 0
 - [The score leader can win no seat](score_leader_no_seat.md) — the *other* surprise, and not this one
 - [Honest limits](bloc_honest_limits.md) — the sweep, plus everything else worth disclosing
-- [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/) — quota and reweighting, the machinery that prevents a sweep
+- [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) — quota and reweighting, the machinery that prevents a sweep
 - [Electing a committee — a gentle intro](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md) — the same fork on the approval side, counting only

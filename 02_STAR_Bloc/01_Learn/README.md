@@ -1,6 +1,6 @@
 # Bloc STAR — concept pages
 
-Everything explaining **Bloc STAR** — multi-winner STAR for filling several seats at once with the same 0–5 ballot. It fills N seats by running the whole single-winner count N times: elect a winner, remove them from the field, re-run on the same unchanged ballots. It is the **majoritarian** multi-winner method — it asks "who does the majority most want?" for every seat — and its proportional cousin is [STAR-PR](../../03_STAR_PR/01_Learn/).
+Everything explaining **Bloc STAR** — multi-winner STAR for filling several seats at once with the same 0–5 ballot. It fills N seats by running the whole single-winner count N times: elect a winner, remove them from the field, re-run on the same unchanged ballots. It is the **majoritarian** multi-winner method — it asks "who does the majority most want?" for every seat — and its proportional cousin is [STAR-PR](../../03_STAR_PR/01_Learn/README.md).
 
 New here? Start with **[Bloc STAR](bloc_star.md)** — the ballot, the elect–remove–re-run loop, and how to read the report. Newer than that? Learn [single-winner STAR](../../01_STAR/01_Learn/STAR_start_here.md) first; Bloc STAR is that method, once per seat.
 
@@ -25,7 +25,7 @@ Every claim on these pages has a runnable election behind it. The full case inde
 - [The baseline](../02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) — the smallest Bloc election that decides anything, counted in full
 - [BV1835 — the score leader wins no seat](../02_Examples/bv1835_8h3yrx_score_leader_no_seat.md) — 100 voters, 4 seats; the compromise candidate leads every round and takes nothing
 - [Exercise 12 — bloc vs. proportional](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) — ten ballots, two seats, counted both ways: 60% takes the board, then earns half of it
-- [Food-Truck Row](../../method_comparisons/food_truck_row/) — one 100-voter electorate, five counts, three different outcomes
+- [Food-Truck Row](../../method_comparisons/food_truck_row/README.md) — one 100-voter electorate, five counts, three different outcomes
 - [Lot A](../02_Examples/cases/cases_pages/bloc_lot_path_dependence_a_c3_b5.md) / [Lot B](../02_Examples/cases/cases_pages/bloc_lot_path_dependence_b_c3_b5.md) — identical ballots, one seat-1 coin toss, two different councils
 - [BV130-r2 — the dead-rung lot tie](../02_Examples/bv130r2_dead_rung_bloc.md) — every deterministic rung inert, and BetterVoting still reporting `tieBreakType: none`
 

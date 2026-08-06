@@ -2,7 +2,7 @@
 
 *The "graduate seminar" companion to Ranked Robin. None of this is needed to run or advocate for a Condorcet election — [Ranked Robin](ranked_robin.md) ("most head-to-head wins") is the practical, explainable method. But once you ask **what is the structure of the pairwise results**, you walk straight into graph theory, game theory, and a few famous impossibility theorems. Here's the map.*
 
-→ Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../../07_Concepts/topics/condorcet/) · **Level: 301 · deep dive** — Curriculum [301.4](../../07_Concepts/CURRICULUM.md) (limits & theory), [301.6](../../07_Concepts/CURRICULUM.md) (Condorcet/Score/Runoff disagree)
+→ Companion: [Ranked Robin vs. the Condorcet winner](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md) · [Condorcet topic hub](../../07_Concepts/topics/condorcet/README.md) · **Level: 301 · deep dive** — Curriculum [301.4](../../07_Concepts/CURRICULUM.md) (limits & theory), [301.6](../../07_Concepts/CURRICULUM.md) (Condorcet/Score/Runoff disagree)
 
 ---
 
@@ -14,7 +14,7 @@ Every pair of candidates has a head-to-head winner, so the pairwise results form
 - A **Condorcet loser** points to no one.
 - A **cycle** (A→B→C→A) means the "beats" relation is **not transitive** — the famous **Condorcet paradox** (Condorcet, 1785). Majority rule, applied pairwise, can contradict itself. This is a property of the *voters' preferences*, not a flaw in any one method.
 
-**There is a whole academic field about just this graph** — rules that read the arrows and nothing else, Ranked Robin/Copeland among them. → [Tournament solutions](../../07_Concepts/topics/tournament_solutions.md), with the uncovered/Banks/bipartisan/Slater/Markov sets, McGarvey's theorem, and a [three-ballot election with five defensible winners](../../method_comparisons/tournament_solutions/).
+**There is a whole academic field about just this graph** — rules that read the arrows and nothing else, Ranked Robin/Copeland among them. → [Tournament solutions](../../07_Concepts/topics/tournament_solutions.md), with the uncovered/Banks/bipartisan/Slater/Markov sets, McGarvey's theorem, and a [three-ballot election with five defensible winners](../../method_comparisons/tournament_solutions/README.md).
 
 ## When there's no single winner: the Smith and Schwartz sets
 
@@ -64,5 +64,5 @@ You need **none** of this to run or advocate for a Condorcet election. **Ranked 
 ## Related
 
 - [Ranked Robin (the method)](ranked_robin.md) · [Ranked Robin vs. Condorcet](ranked_robin_vs_condorcet.md) · [cycle resolution](cycle_resolution.md)
-- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/README.md)
 - Glossary: [`Condorcet`](../../07_Concepts/GLOSSARY.md)

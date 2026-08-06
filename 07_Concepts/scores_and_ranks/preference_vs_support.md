@@ -27,7 +27,7 @@ And here's the part that makes this a *clean* example, not a lucky one: **the ga
 
 ## The same thing, as a live election
 
-The single-ballot version is the *idea*; here it is as a real 36-voter election you can re-run — the [**Preference vs. Support** case](../../method_comparisons/preference_vs_support/) (live on BetterVoting, [BV2225](https://bettervoting.com/ywx39y/results) / [BV2226](https://bettervoting.com/82gg36/results)). Two elections with **byte-identical rankings** — the only change is how hard the two wings score the centrist **Blair**: a grudging **1**, or a genuine **4**.
+The single-ballot version is the *idea*; here it is as a real 36-voter election you can re-run — the [**Preference vs. Support** case](../../method_comparisons/preference_vs_support/README.md) (live on BetterVoting, [BV2225](https://bettervoting.com/ywx39y/results) / [BV2226](https://bettervoting.com/82gg36/results)). Two elections with **byte-identical rankings** — the only change is how hard the two wings score the centrist **Blair**: a grudging **1**, or a genuine **4**.
 
 | Method | Reads… | Blair scored **1** (tolerated) | Blair scored **4** (supported) | Moved? |
 |---|---|:--:|:--:|:--:|

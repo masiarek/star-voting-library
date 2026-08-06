@@ -50,7 +50,7 @@ The table above corrects RCV advocates. This one corrects **us**. Reform argumen
 
 > Ranked ballots can't express equal support, and IRV's count discards your later preferences until your favorite is out — that's the price of Later-No-Harm. So IRV has no mechanism for finding the candidate most voters agree on, and in close three-way races it predictably squeezes that candidate out. The fix isn't abandoning ranked ballots — **Ranked Robin counts the same ballot and finds the consensus.** The fix is abandoning sequential elimination.
 
-That phrasing also does the [olive-branch](../../../05_Ranked_Robin/01_Learn/) work: it hands an RCV supporter a reform that keeps their ballot.
+That phrasing also does the [olive-branch](../../../05_Ranked_Robin/01_Learn/README.md) work: it hands an RCV supporter a reform that keeps their ballot.
 
 ## The umbrella term (so the exhausted-ballot claims stay precise)
 
@@ -67,7 +67,7 @@ That phrasing also does the [olive-branch](../../../05_Ranked_Robin/01_Learn/) w
 - [Favorite betrayal (301)](../../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) — "safe to vote your conscience."
 - [Is RCV "simple"?](RCV_IRV_is_simple.md) · [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) — "easy as 1-2-3."
 - [Center squeeze](RCV_IRV_center_squeeze.md) · [Lack of summability](RCV_IRV_lack_of_summability.md) — "non-polarizing," "ends the spoiler," "easy to count."
-- [STAR's honest limits](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) · [Majority Criterion hub](../../../07_Concepts/topics/majority_criterion/) · [Alaska 301](../../../method_comparisons/alaska_2022/alaska_301.md) — the mirror section: our own overreach, the Later-No-Harm fork, the rarity numbers.
+- [STAR's honest limits](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) · [Majority Criterion hub](../../../07_Concepts/topics/majority_criterion/README.md) · [Alaska 301](../../../method_comparisons/alaska_2022/alaska_301.md) — the mirror section: our own overreach, the Later-No-Harm fork, the rarity numbers.
 - `LINKS.md` → Full Deck **"RCV Common False Claims"** slide; the RCV-IRV source-note tables.
 
 # file: rcv_irv_false_claims.md

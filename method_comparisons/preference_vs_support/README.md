@@ -6,7 +6,7 @@
 - **Tolerated** (Blair = 1): [vote](https://bettervoting.com/ywx39y) · **[results ↗](https://bettervoting.com/ywx39y/results)** (election `ywx39y`, BV2225)
 - **Supported** (Blair = 4): [vote](https://bettervoting.com/82gg36) · **[results ↗](https://bettervoting.com/82gg36/results)** (election `82gg36`, BV2226)
 
-→ Companion pages: [Preference vs. Support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) · [Scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) · [Center squeeze](../center_squeeze/) (one electorate, method varies) · [What makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md)
+→ Companion pages: [Preference vs. Support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) · [Scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) · [Center squeeze](../center_squeeze/README.md) (one electorate, method varies) · [What makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md)
 
 ---
 
@@ -34,7 +34,7 @@ IRV and Ranked Robin **cannot tell the two electorates apart** — the rankings 
 
 ### Read it even-handedly — no method is the villain
 
-- **RCV-IRV** eliminates Blair for having the fewest first-choices in *both* elections — the textbook [center squeeze](../center_squeeze/). It never sees Blair's second-choice strength at all.
+- **RCV-IRV** eliminates Blair for having the fewest first-choices in *both* elections — the textbook [center squeeze](../center_squeeze/README.md). It never sees Blair's second-choice strength at all.
 - **Ranked Robin** looks *good* here: it finds the consensus Blair from the order alone (he beats both poles 21–15 head-to-head). But it crowns a **barely-tolerated** Blair exactly as readily as a **beloved** one — it has no way to know the difference. That's the honest limit of an order-only method, not a knock on Ranked Robin's design.
 - **STAR** is the one that says: *when Blair earns only 1s, he hasn't the support to win — elect the candidate with a real base (Alex); when Blair earns real 4s, he's earned the seat.* Support, tracked.
 

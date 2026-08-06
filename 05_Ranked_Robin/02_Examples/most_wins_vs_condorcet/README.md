@@ -76,7 +76,7 @@ Taking them one at a time:
 
 **"Adding up head-to-head victories just describes the Condorcet winner"** and **"most wins ⇒ Condorcet winner"** are the same error stated two ways, and the profile above refutes both: Cora has strictly the most wins and loses to Amy. The two descriptions coincide *whenever a Condorcet winner exists*, which is most of the time — that's why the claim feels safe. But "counting wins" and "identifying an undefeated candidate" are different operations, and they part company exactly when no one is undefeated. A method that merely counted wins wouldn't need a name; the reason Copeland is a *method* is that it still returns an answer when the Condorcet winner doesn't exist.
 
-**"Copeland subtracts pairwise losses"** is correct — that's the `wins − losses` convention. The other convention is `wins + ½·ties`, which is what this repo's engine, BetterVoting and `pref_voting` all print. They're affine transforms of each other, so they always rank identically. Worth knowing only so that seeing two formulas doesn't read as two sources disagreeing. (Neither equals the raw *win count* once draws exist — see [the companion case](../copeland_score/).)
+**"Copeland subtracts pairwise losses"** is correct — that's the `wins − losses` convention. The other convention is `wins + ½·ties`, which is what this repo's engine, BetterVoting and `pref_voting` all print. They're affine transforms of each other, so they always rank identically. Worth knowing only so that seeing two formulas doesn't read as two sources disagreeing. (Neither equals the raw *win count* once draws exist — see [the companion case](../copeland_score/README.md).)
 
 **"A Condorcet winner always has the highest Copeland score"** is true, and the sharper version is worth stating: *uniquely* highest, always, with no possibility of a tie at the top. A Condorcet winner takes all n−1 matchups; everyone else has lost at least that one, so nobody else can exceed n−2.
 
@@ -90,7 +90,7 @@ One more that's defensible but softer than it sounds: **"all Condorcet methods h
 
 There is **not a single drawn matchup** in this profile. Every pair has a clear winner, so `wins + ½·ties` and the raw win count are identical here.
 
-That matters, because the other well-known gap in "most matchups won" is about *draws* — [a drawn matchup is worth half a win](../copeland_score/), and a half-point can decide an election. Someone hearing that objection could reasonably reply "fine, but that's a technicality about tie-credit."
+That matters, because the other well-known gap in "most matchups won" is about *draws* — [a drawn matchup is worth half a win](../copeland_score/README.md), and a half-point can decide an election. Someone hearing that objection could reasonably reply "fine, but that's a technicality about tie-credit."
 
 This case closes that escape route. No draws, no half-points, no tie-breaking — the claim fails on its own terms.
 
@@ -119,7 +119,7 @@ Run it through the rest of the Condorcet family and that symmetry shows up immed
 
 Methods that decide by *margin* have nothing to work with when every margin is identical. Copeland, which counts only **how many** opponents you beat, is one of the few here that returns a decisive answer.
 
-This is worth setting beside the [companion case](../copeland_score/), which pushes in the opposite direction — there Copeland is the lone outlier and every margin-aware method overrules it. Together they're an honest picture of the [C1/C2 trade-off](../../../07_Concepts/topics/what_a_method_reads.md): discarding margins costs you in one profile and saves you in another. Neither case makes Copeland right or wrong; they show what the choice actually buys and spends.
+This is worth setting beside the [companion case](../copeland_score/README.md), which pushes in the opposite direction — there Copeland is the lone outlier and every margin-aware method overrules it. Together they're an honest picture of the [C1/C2 trade-off](../../../07_Concepts/topics/what_a_method_reads.md): discarding margins costs you in one profile and saves you in another. Neither case makes Copeland right or wrong; they show what the choice actually buys and spends.
 
 ## The shorthand shows up in official copy too
 
@@ -151,7 +151,7 @@ Want the whole count — full pairwise grid, Smith-set audit, ballot listing? Se
 
 ## See also
 
-- [The Copeland score — a draw is worth half a win](../copeland_score/) — the companion case: the *other* way "most matchups won" comes apart
+- [The Copeland score — a draw is worth half a win](../copeland_score/README.md) — the companion case: the *other* way "most matchups won" comes apart
 - [Ranked Robin vs. "the Condorcet winner"](../../01_Learn/ranked_robin_vs_condorcet.md) — same animal, until there's a cycle
 - [The Smith set](../../../07_Concepts/topics/smith_set.md) — the generalized Condorcet winner, which is what "best" means when nobody is undefeated
 - [Honest limits](../../01_Learn/RCV_RR_honest_limits.md)

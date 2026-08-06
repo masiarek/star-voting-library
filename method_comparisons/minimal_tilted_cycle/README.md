@@ -86,7 +86,7 @@ Exhaustive search agrees with the parity argument line for line.
 
 ## What the tilt buys: the methods split
 
-Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the [LH engine](../../STARVote_LH_tabulation_engine/) (the two `cases/` files), the rest by [`pref_voting`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) as an independent witness.
+Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the [LH engine](../../STARVote_LH_tabulation_engine/README.md) (the two `cases/` files), the rest by [`pref_voting`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) as an independent witness.
 
 | Rule | Winner(s) | Reads | Why |
 |---|:--|:--:|---|

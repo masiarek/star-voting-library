@@ -97,7 +97,7 @@ Count × Ana,Bruno,Chloe
 
 - [Cardinal utility](../../07_Concepts/topics/cardinal_utility.md) — the concept page this folder supports: what makes a scale cardinal, Sen's measurability/comparability axes, the vNM trap, Harsanyi's theorem, and a claim-check of Hillinger
 - [Is Approval's outcome arbitrary?](../../04_Approval/01_Learn/approval_indeterminacy.md) — the teaching page for §10 and Table 3: the Saari–Van Newenhizen criticism, why the Brams–Fishburn–Merrill defense fell short, and what the argument does to STAR
-- [Center squeeze](../center_squeeze/) — the same failure shape as a dedicated topic
-- [Condorcet efficiency](../../07_Concepts/topics/condorcet/) — how often the head-to-head winner actually wins
+- [Center squeeze](../center_squeeze/README.md) — the same failure shape as a dedicated topic
+- [Condorcet efficiency](../../07_Concepts/topics/condorcet/README.md) — how often the head-to-head winner actually wins
 - [Range / Score voting](../../06_Other/Range/concepts/range_voting.md) — EV without a runoff, which is what Hillinger actually proposes
 - [Scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — the ballot-level distinction, without the theory

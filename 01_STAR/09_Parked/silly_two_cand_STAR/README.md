@@ -11,7 +11,7 @@ With only **two candidates**, STAR has nothing distinctive to show a newcomer:
 
 In other words, a two-candidate STAR example teaches the *mechanics of the count* but hides the whole reason STAR exists: reading a **full ballot across three or more candidates** so the broad compromise can surface and vote-splitting can't bury it. Leading a first-time learner with one of these is actively misleading — it makes STAR look like a fancy way to do something they already know.
 
-That's why the [`STAR — start here`](../../01_Learn/STAR_start_here.md) page and the [teaching progression](../../02_Examples/) now open on the **three-candidate team-lunch example** instead.
+That's why the [`STAR — start here`](../../01_Learn/STAR_start_here.md) page and the [teaching progression](../../02_Examples/README.md) now open on the **three-candidate team-lunch example** instead.
 
 ## Why they're kept
 
@@ -27,8 +27,8 @@ That's why the [`STAR — start here`](../../01_Learn/STAR_start_here.md) page a
 | [`01b_c2_b2_two-candidates`](cases/cases_pages/01b_c2_b2_two-candidates.md) | A 5-and-0 ballot added. |
 | [`01c_c2_b3_two-candidates`](cases/cases_pages/01c_c2_b3_two-candidates.md) | Equal Support ("I like both flavors") at its smallest. |
 
-Equal Support and the runoff denominator are taught *properly* — with a real field of candidates — back in the [teaching progression](../../02_Examples/) ([equal_support_runoff_demo](../../02_Examples/cases/cases_pages/equal_support_runoff_demo.md)) and the [pet election](../../04_Real_Elections/pet_real_bv_election/).
+Equal Support and the runoff denominator are taught *properly* — with a real field of candidates — back in the [teaching progression](../../02_Examples/README.md) ([equal_support_runoff_demo](../../02_Examples/cases/cases_pages/equal_support_runoff_demo.md)) and the [pet election](../../04_Real_Elections/pet_real_bv_election/README.md).
 
 ---
 
-Up: [01_STAR — single-winner STAR Voting](../../) · Concept docs: [STAR — start here](../../01_Learn/STAR_start_here.md)
+Up: [01_STAR — single-winner STAR Voting](../../README.md) · Concept docs: [STAR — start here](../../01_Learn/STAR_start_here.md)

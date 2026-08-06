@@ -12,7 +12,7 @@
 
 A cohesive majority can take every seat: 55% of the electorate can hold a council 5–0 while 45% holds nothing. There is no threshold, no correction, and no tuning parameter — nothing in the count ever learns that a group has already been served. Worked in full, with the arithmetic, on [the majority sweep](majority_sweep.md).
 
-Stated as a limit it sounds damning; stated as a design goal it is simply what "majoritarian" means. The failure mode isn't the sweep, it's **using Bloc STAR for a body that was supposed to represent people.** If a 45% minority holding zero seats would read as a broken election, the method was chosen wrong — go to [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/) or [STV](../../06_Other/STV/README.md). That decision is made when the rules are written and cannot be repaired by the count.
+Stated as a limit it sounds damning; stated as a design goal it is simply what "majoritarian" means. The failure mode isn't the sweep, it's **using Bloc STAR for a body that was supposed to represent people.** If a 45% minority holding zero seats would read as a broken election, the method was chosen wrong — go to [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) or [STV](../../06_Other/STV/README.md). That decision is made when the rules are written and cannot be repaired by the count.
 
 In one class of jurisdiction that is not merely a design mistake but a legal exposure: where a racial or language minority is concentrated in one sector of a multi-seat district, an at-large majoritarian count is the mechanism §2 of the Voting Rights Act calls vote dilution, and the scored ballot does nothing to change the analysis. The law, the *Gingles* test, and what a scored ballot does and does not fix: [at-large elections and the Voting Rights Act](at_large_and_the_vra.md).
 
@@ -20,7 +20,7 @@ In one class of jurisdiction that is not merely a design mistake but a legal exp
 
 Every seat is decided by the runoff, so the candidate who leads *every* scoring round can lose *every* runoff and take no seat at all. [BV1835](../02_Examples/bv1835_8h3yrx_score_leader_no_seat.md) is the worked case: Ava leads by 63 points, reaches all four runoffs, loses all four 51–49, and finishes with nothing while the two rival camps split the seats 2–2.
 
-This is [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/) — STAR's signature step, and defensible on its own terms — but the multi-winner version has a sting the single-winner one doesn't. In a one-seat race a reversal costs you *the* seat, which is the deal. Here it costs you all of them, and a body that wanted its compromise figure in the room has no rung anywhere in the method at which "led every round" earns anything. Full argument, both readings: [the score leader can win no seat](score_leader_no_seat.md).
+This is [runoff reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md) — STAR's signature step, and defensible on its own terms — but the multi-winner version has a sting the single-winner one doesn't. In a one-seat race a reversal costs you *the* seat, which is the deal. Here it costs you all of them, and a body that wanted its compromise figure in the room has no rung anywhere in the method at which "led every round" earns anything. Full argument, both readings: [the score leader can win no seat](score_leader_no_seat.md).
 
 ## 3. A tie propagates forward
 
@@ -47,9 +47,9 @@ One practical limit that is genuinely new: **ballot length**. An at-large race w
 
 Parity cuts both ways, so the concessions above should be read against what survives the move to multi-winner intact:
 
-- **No vote splitting.** Running a third candidate cannot cost your side a seat. On [Food-Truck Row](../../method_comparisons/food_truck_row/) that is the difference between a 57-voter majority holding both seats and holding none.
+- **No vote splitting.** Running a third candidate cannot cost your side a seat. On [Food-Truck Row](../../method_comparisons/food_truck_row/README.md) that is the difference between a 57-voter majority holding both seats and holding none.
 - **It is still summable.** Every quantity the count needs — per-candidate score totals, the full For / Equal Support / Against matrix, the five-star counts — is a fixed-size precinct table that **adds**. Removing a seated candidate doesn't change anyone else's totals, so seat 2 is read off the same summed tables as seat 1. Bloc STAR is precinct-auditable in a way [STV is not](../../06_Other/STV/README.md); compare [STAR's summability](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md).
-- **One ballot for every race.** The same 0–5 ballot serves single-winner, bloc and [proportional](../../03_STAR_PR/01_Learn/) races, so a jurisdiction can change what a body is *for* without retraining its voters.
+- **One ballot for every race.** The same 0–5 ballot serves single-winner, bloc and [proportional](../../03_STAR_PR/01_Learn/README.md) races, so a jurisdiction can change what a body is *for* without retraining its voters.
 
 ## See also
 

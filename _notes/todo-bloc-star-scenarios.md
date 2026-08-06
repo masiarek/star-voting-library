@@ -25,7 +25,7 @@ Built 2026-08-04 by inventorying [`02_STAR_Bloc/`](../02_STAR_Bloc/README.md) ag
 | Scenario | Where it lives |
 |---|---|
 | The elect–remove–re-run loop, clean | [`00` baseline](../02_STAR_Bloc/02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) · [`01` 4c/2s](../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) |
-| Majority sweep (majoritarian, not proportional) | [majority_sweep.md](../02_STAR_Bloc/01_Learn/majority_sweep.md) · [ex12](../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) · [Food-Truck Row](../method_comparisons/food_truck_row/) |
+| Majority sweep (majoritarian, not proportional) | [majority_sweep.md](../02_STAR_Bloc/01_Learn/majority_sweep.md) · [ex12](../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) · [Food-Truck Row](../method_comparisons/food_truck_row/README.md) |
 | A landslide buys *one* seat; seat 2 goes to a candidate most scored 0 | [over_50_percent.md](../02_STAR_Bloc/01_Learn/over_50_percent.md) |
 | Score leader shut out of every seat | [score_leader_no_seat.md](../02_STAR_Bloc/01_Learn/score_leader_no_seat.md) · [BV1835](../02_STAR_Bloc/02_Examples/bv1835_8h3yrx_score_leader_no_seat.md) |
 | A seat-1 tie changes *who* wins seat 2 (lot path dependence) | [bloc_tiebreaks.md](../02_STAR_Bloc/01_Learn/bloc_tiebreaks.md) · [lot A](../02_STAR_Bloc/02_Examples/cases/cases_pages/bloc_lot_path_dependence_a_c3_b5.md) / [lot B](../02_STAR_Bloc/02_Examples/cases/cases_pages/bloc_lot_path_dependence_b_c3_b5.md) |
@@ -66,7 +66,7 @@ Tag `paradoxes: [condorcet_winner_paradox]`. Level 301.
 
 Same 7 ballots counted twice. With three candidates the council is **{C, A}**. Add **D** — who takes no seat — and the council is **{C, B}**: A is displaced without D ever winning anything. D's arrival changes the *seat-2 finalist pair* (D 17 outscores B 16), and B beats D there while A never reaches a runoff at all.
 
-The [IIA/cycle spoiler set](../01_STAR/03_Criteria/iia_cycle_spoiler/) does this for one seat and needs a genuine cycle to do it. The Bloc version needs no cycle — the removal step manufactures a fresh finalist pair every seat, so an also-ran gets N chances to reshuffle the pair rather than one. Tag `paradoxes: [spoiler_scc]`.
+The [IIA/cycle spoiler set](../01_STAR/03_Criteria/iia_cycle_spoiler/README.md) does this for one seat and needs a genuine cycle to do it. The Bloc version needs no cycle — the removal step manufactures a fresh finalist pair every seat, so an also-ran gets N chances to reshuffle the pair rather than one. Tag `paradoxes: [spoiler_scc]`.
 
 ### 2.4 Degenerate seat counts — the engine refuses, and BV probably doesn't
 
@@ -124,7 +124,7 @@ And the 2-seat case looks provable. Sketch, worth checking properly before it go
 
 ### 3.2 Reinforcement / multiple districts
 
-Bloc STAR is summable ([honest limits](../02_STAR_Bloc/01_Learn/bloc_honest_limits.md) leans on this), but summable ≠ consistent: the [reinforcement set](../method_comparisons/reinforcement_paradox/) already shows STAR electing one winner in each half and a different one in the whole. The Bloc question is sharper and unasked — *two districts that each elect {X, Y}, combined electing neither*. Reuse the existing district ballots; search for a 2-seat version.
+Bloc STAR is summable ([honest limits](../02_STAR_Bloc/01_Learn/bloc_honest_limits.md) leans on this), but summable ≠ consistent: the [reinforcement set](../method_comparisons/reinforcement_paradox/README.md) already shows STAR electing one winner in each half and a different one in the whole. The Bloc question is sharper and unasked — *two districts that each elect {X, Y}, combined electing neither*. Reuse the existing district ballots; search for a 2-seat version.
 
 ### 3.3 Clones and teaming
 
@@ -140,11 +140,11 @@ Once your candidate is seated, your ballot may express *no* preference between t
 
 ### 3.6 Proportionality axioms — showing the failure formally
 
-The folder says Bloc STAR is not proportional and shows a sweep. The modern statement is that it fails **justified representation** (JR), and a JR violation is checkable by hand on a tiny profile: a cohesive group of `n/k` voters gets nothing. Worth one 301 case in the STAR-PR direction, since it is the axiom that adjudicates Bloc vs [STAR-PR](../03_STAR_PR/) rather than an anecdote about a sweep. Needs a glossary entry first — "justified representation" appears nowhere in `GLOSSARY.md`.
+The folder says Bloc STAR is not proportional and shows a sweep. The modern statement is that it fails **justified representation** (JR), and a JR violation is checkable by hand on a tiny profile: a cohesive group of `n/k` voters gets nothing. Worth one 301 case in the STAR-PR direction, since it is the axiom that adjudicates Bloc vs [STAR-PR](../03_STAR_PR/README.md) rather than an anecdote about a sweep. Needs a glossary entry first — "justified representation" appears nowhere in `GLOSSARY.md`.
 
 ### 3.7 One electorate, every at-large count
 
-[Food-Truck Row](../method_comparisons/food_truck_row/) does five counts; the at-large *family* page names six methods (SNTV, Limited, Block Plurality, Bloc Approval, Bloc STAR, Bloc RR) with no single profile running all of them. The engine now covers every one of those (Bloc RR and SNTV included). A `method_comparisons/at_large_family/` set would retire a lot of prose.
+[Food-Truck Row](../method_comparisons/food_truck_row/README.md) does five counts; the at-large *family* page names six methods (SNTV, Limited, Block Plurality, Bloc Approval, Bloc STAR, Bloc RR) with no single profile running all of them. The engine now covers every one of those (Bloc RR and SNTV included). A `method_comparisons/at_large_family/` set would retire a lot of prose.
 
 ### 3.8 Real elections
 

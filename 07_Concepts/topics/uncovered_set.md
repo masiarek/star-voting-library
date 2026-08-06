@@ -21,7 +21,7 @@ Two properties make it well-behaved, and they are worth stating because most cyc
 - **The covering relation is transitive** — even though "beats" isn't. Covering is defined by set inclusion of who-you-beat, and inclusion is transitive. So the covering relation is a genuine partial order sitting *inside* the messy tournament, and the uncovered set is simply its maximal elements.
 - **It's never empty.** A cycle can destroy the Condorcet winner; it cannot destroy the uncovered set.
 
-And when a [Condorcet winner](condorcet/) exists, the uncovered set is just that one candidate — they beat everyone, so they cover everyone. Like every tournament solution, this only becomes interesting in a cycle.
+And when a [Condorcet winner](condorcet/README.md) exists, the uncovered set is just that one candidate — they beat everyone, so they cover everyone. Like every tournament solution, this only becomes interesting in a cycle.
 
 ## Also called the Landau set and the Fishburn set
 
@@ -85,7 +85,7 @@ Uncovered ⊆ Smith, always. The Smith set answers *who is in contention*; the u
 
 That is a genuine, citable virtue of [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), and via the Pareto theorem above it means **Ranked Robin is Pareto-optimal in the tournament sense**. It's a better thing to say about the method than any axiom scorecard, because a voter can follow it.
 
-**RCV-IRV can, and often does.** Over 120,000 random tie-free four-candidate ranked profiles, IRV elected a covered candidate 9.1% of the time — 61.6% of the time when there was no Condorcet winner. Two honest caveats on that number, both cutting the same way: uniform-random profiles ("impartial culture") produce far more cycles than real electorates do — 14.8% here, against the [2-in-182 rate observed in real IRV elections](../../06_Other/RCV_IRV/concepts/) — so treat 9.1% as *what the failure looks like when cycles are common*, not as a forecast for any real jurisdiction. When there is a Condorcet winner, no method that elects them can elect a covered candidate.
+**RCV-IRV can, and often does.** Over 120,000 random tie-free four-candidate ranked profiles, IRV elected a covered candidate 9.1% of the time — 61.6% of the time when there was no Condorcet winner. Two honest caveats on that number, both cutting the same way: uniform-random profiles ("impartial culture") produce far more cycles than real electorates do — 14.8% here, against the [2-in-182 rate observed in real IRV elections](../../06_Other/RCV_IRV/concepts/README.md) — so treat 9.1% as *what the failure looks like when cycles are common*, not as a forecast for any real jurisdiction. When there is a Condorcet winner, no method that elects them can elect a covered candidate.
 
 **STAR can too — and here it is.** Five ballots, four cities, every ballot using four distinct scores so nothing is a tie-breaking artifact ([full case](../../method_comparisons/tournament_solutions/cases/cases_pages/star_elects_a_covered_candidate_c4_b5.md)):
 
@@ -186,5 +186,5 @@ Four defensible answers to "who is redundant here," from one election. So: **"th
 
 - [Tournament solutions](tournament_solutions.md) — the whole C1 family, and where Ranked Robin sits in it
 - [The Smith set](smith_set.md) — the coarser sibling · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md)
-- [Tournament solutions, counted](../../method_comparisons/tournament_solutions/) — the runnable exhibits
-- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [its honest limits](../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md) · [STAR's properties and limits](../../01_STAR/01_Learn/properties_and_limits/)
+- [Tournament solutions, counted](../../method_comparisons/tournament_solutions/README.md) — the runnable exhibits
+- [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [its honest limits](../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md) · [STAR's properties and limits](../../01_STAR/01_Learn/properties_and_limits/README.md)

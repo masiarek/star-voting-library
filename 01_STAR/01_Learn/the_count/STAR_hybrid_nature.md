@@ -4,7 +4,7 @@
 
 In the formal language of the field, that means STAR combines a **cardinal** ballot (scores — *how much*) with an **ordinal** decision (the head-to-head runoff — *which one*). As Clelland (2023) puts it, STAR is *"a combination of cardinal and ordinal voting systems,"* first introduced in 2014 — ([arXiv:2303.00108](https://arxiv.org/abs/2303.00108); she uses it to explain why STAR gave a robust result on the [Alaska 2022 ballots](../../../method_comparisons/alaska_2022/README.md) where pure-cardinal Approval did not).
 
-→ The payoff this design produces: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/) and [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md). Glossary: [`STAR`](../../../07_Concepts/GLOSSARY.md).
+→ The payoff this design produces: [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md) and [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md). Glossary: [`STAR`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -47,7 +47,7 @@ That's the hybrid working as designed: scores *nominated* the two finalists; the
 
 ## Where this leads
 
-- When the scoring leader and the runoff winner **differ**, that's [**Runoff Reversal**](../../02_Examples/runoff_overturns_leader/) — the most important consequence of the hybrid design.
+- When the scoring leader and the runoff winner **differ**, that's [**Runoff Reversal**](../../02_Examples/runoff_overturns_leader/README.md) — the most important consequence of the hybrid design.
 - When **Condorcet, Score, and Runoff** point at three different candidates, see [Three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md).
 - For where STAR sits relative to ranked methods, see [Scoring methods aren't RCV](../../../07_Concepts/topics/scoring-methods-vs-ranked-voting.md) and the step-by-step [STAR vs RCV-IRV count](../../../07_Concepts/topics/tabulation_star_vs_irv.md).
 

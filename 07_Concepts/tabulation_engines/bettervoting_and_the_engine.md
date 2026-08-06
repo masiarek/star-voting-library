@@ -26,7 +26,7 @@ How the pieces line up (same Dog/Cat race):
 | **% Between Finalists** (52 / 48) | the `show_runoff_percent` line — *Voters with a preference: 363…* |
 | **Race Details** tables | the **Preference Matrix** (For–Equal–Against) + runoff block |
 
-See both sides for this exact race, end to end — the export YAML and the full engine report — in the worked lesson [A real BetterVoting election, end to end](../../01_STAR/04_Real_Elections/pet_real_bv_election/).
+See both sides for this exact race, end to end — the export YAML and the full engine report — in the worked lesson [A real BetterVoting election, end to end](../../01_STAR/04_Real_Elections/pet_real_bv_election/README.md).
 
 ## When the two reports differ — abstentions vs Equal Support
 
@@ -74,4 +74,4 @@ That loop is why the examples here can be trusted: every saved election has been
 
 ---
 
-*This page is about STAR's two reports (BetterVoting + the LH `starvote` engine). **Ranked** ballots are a different family with a different count — see [RCV-IRV](RCV_IRV/).*
+*This page is about STAR's two reports (BetterVoting + the LH `starvote` engine). **Ranked** ballots are a different family with a different count — see [RCV-IRV](RCV_IRV/README.md).*

@@ -17,7 +17,7 @@ Fix a set of voters `N = {1,…,n}` and a set of candidates `A`. A voter's ballo
 
 The SWF's output is called the **social preference order**. Note the asymmetry in Arrow's setup: individual ballots may *not* contain ties, but the social result *may*. That's a modeling convenience, not a law of nature — real ballots routinely permit equal ranks ([weak ranks](../scores_and_ranks/weak_ranks.md)), and STAR's [Equal Support](../GLOSSARY.md) bucket exists precisely because voters do want to say "these two are the same to me."
 
-Nearly every method taught in this repo is an **SCF** — STAR, Approval, RCV-IRV, Plurality all name a winner. [Ranked Robin](../../05_Ranked_Robin/01_Learn/) is the interesting hybrid: its pairwise win-loss record *is* a social ranking, and the winner is read off the top of it.
+Nearly every method taught in this repo is an **SCF** — STAR, Approval, RCV-IRV, Plurality all name a winner. [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) is the interesting hybrid: its pairwise win-loss record *is* a social ranking, and the winner is read off the top of it.
 
 ## The two axioms, stated at both levels
 
@@ -42,12 +42,12 @@ The proof runs on **decisive coalitions**. A coalition `C` is decisive for `a` o
 
 Pairwise majority rule satisfies both axioms, easily. So why isn't it a counterexample to Arrow?
 
-**Because it isn't an SWF.** Its output need not be transitive — the [Condorcet paradox](condorcet/) produces `a ≻ b ≻ c ≻ a`, which is not a weak order, so it isn't in `R(A)` and the function `f : L(A)ⁿ → R(A)` is not well defined. Majority rule escapes Arrow by **failing to have the right type**, not by beating an axiom.
+**Because it isn't an SWF.** Its output need not be transitive — the [Condorcet paradox](condorcet/README.md) produces `a ≻ b ≻ c ≻ a`, which is not a weak order, so it isn't in `R(A)` and the function `f : L(A)ⁿ → R(A)` is not well defined. Majority rule escapes Arrow by **failing to have the right type**, not by beating an axiom.
 
-This is the correct frame for [Condorcet methods](condorcet/) generally, and it cuts against a sloppy claim in both directions:
+This is the correct frame for [Condorcet methods](condorcet/README.md) generally, and it cuts against a sloppy claim in both directions:
 
-- **Against the critics:** "Condorcet methods sometimes elect nobody" is false for real methods. Bare "elect the Condorcet winner" is a partial rule; [Ranked Robin](../../05_Ranked_Robin/01_Learn/), Ranked Pairs, and Schulze are *completions* that always return a winner. Any criterion table with a "Condorcet Method — Always a Winner: NO" row needs that row split.
-- **Against the advocates:** a completion doesn't dodge Arrow either. Once a Condorcet method always outputs a ranking, it *is* an SWF, and Arrow applies in full — so it must fail IIA or Pareto or be a dictatorship. [Ranked Robin fails IIA](../../01_STAR/03_Criteria/iia_cycle_spoiler/), which is exactly where cycle-resolution rules live. Patching the cycle is what *costs* you IIA; it doesn't buy an exemption.
+- **Against the critics:** "Condorcet methods sometimes elect nobody" is false for real methods. Bare "elect the Condorcet winner" is a partial rule; [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md), Ranked Pairs, and Schulze are *completions* that always return a winner. Any criterion table with a "Condorcet Method — Always a Winner: NO" row needs that row split.
+- **Against the advocates:** a completion doesn't dodge Arrow either. Once a Condorcet method always outputs a ranking, it *is* an SWF, and Arrow applies in full — so it must fail IIA or Pareto or be a dictatorship. [Ranked Robin fails IIA](../../01_STAR/03_Criteria/iia_cycle_spoiler/README.md), which is exactly where cycle-resolution rules live. Patching the cycle is what *costs* you IIA; it doesn't buy an exemption.
 
 ## The asymmetry that keeps Pareto from being oversold
 
@@ -68,11 +68,11 @@ A short list, because "fails Pareto" sounds worse than it usually is — most me
 | **Imposed / constant rule** ("X always wins"; "everything ties") | ✗ | ignores the ballots entirely |
 | **[Sequential pairwise / agenda voting](../../06_Other/other_ranked_methods/agenda_voting.md)** | ✗ | a unanimously-preferred candidate can be eliminated early — runnable at [agenda_voting.md](../../06_Other/other_ranked_methods/agenda_voting.md) |
 | **Anti-plurality** | ✗ | on unanimous `A>B>C` it elects A *and* B; B is dominated |
-| **[Approval](../../04_Approval/01_Learn/)** | ✗ | worked: [Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
+| **[Approval](../../04_Approval/01_Learn/README.md)** | ✗ | worked: [Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) |
 
 **Why Approval fails and STAR doesn't** is the instructive pair, and it's a ballot-expressiveness point, not a tabulation one. An approval ballot cannot record a strict preference *within* the approved set, so "every voter prefers A to C" is a fact the ballots never carried and the count cannot honor.
 
-STAR passes, and the argument is short. If every voter scores `a` strictly above `b`, then `a`'s score total strictly exceeds `b`'s — so `b` can only reach the runoff alongside `a`, and there every voter prefers `a`. `b` never wins. Note this leans on the [scoring round](../../01_STAR/01_Learn/the_count/) and the runoff *together*: the runoff alone wouldn't do it.
+STAR passes, and the argument is short. If every voter scores `a` strictly above `b`, then `a`'s score total strictly exceeds `b`'s — so `b` can only reach the runoff alongside `a`, and there every voter prefers `a`. `b` never wins. Note this leans on the [scoring round](../../01_STAR/01_Learn/the_count/README.md) and the runoff *together*: the runoff alone wouldn't do it.
 
 **Don't run this row on a multi-winner rule — it's a type error.** Every table above is about a **single-winner** SCF. Apply the same definition candidate-by-candidate to a committee election and every bloc rule "fails" trivially: [Bloc STAR, Bloc Approval, Bloc Ranked Robin and SNTV](electing_more_than_one.md) must fill `N` seats, so if fewer than `N` candidates are Pareto optimal, one of the seated candidates is necessarily dominated. Zwicker gives the crisp specimen — seat candidates in descending [Copeland](../../05_Ranked_Robin/01_Learn/ranked_robin.md) order until the committee is full, which is exactly what this repo's Bloc RR does — and immediately supplies the correction: for a committee election the *alternatives* are **committees**, not candidates, so a committee-level Pareto criterion is the one that applies. The apparent failure is an artifact of comparing objects of the wrong type — the same trap this page opens with, one level up.
 

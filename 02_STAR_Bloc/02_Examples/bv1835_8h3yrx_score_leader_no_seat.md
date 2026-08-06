@@ -177,7 +177,7 @@ Two caveats before leaning on that comparison. EPR's scale is 1–6 with **1 = R
 
 ## Related
 
-- The section's own framing of majoritarian-vs-proportional: [02_STAR_Bloc README](../README.md) · the proportional cousin: [STAR-PR](../../03_STAR_PR/)
+- The section's own framing of majoritarian-vs-proportional: [02_STAR_Bloc README](../README.md) · the proportional cousin: [STAR-PR](../../03_STAR_PR/README.md)
 - A Score co-leader as near-Condorcet loser, 16 ballots: [BV1525](bv1525_condorcet_loser_bloc.md)
 - The clean no-tie control: [`00_c3_b3_bloc-baseline-2-seats`](cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md)
 - The method-name label ("STAR" vs "Bloc STAR"): [#1086 note](bv129_1086_method_name_note.md)

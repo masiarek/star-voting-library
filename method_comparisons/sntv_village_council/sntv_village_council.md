@@ -42,6 +42,6 @@ Reproduced natively as BV **multi-winner Plurality** (`Plurality` + `num_winners
 
 ## See also
 
-- The full family — Block vs. Limited vs. SNTV: [multi_member_plurality](../multi_member_plurality/) · how BV runs it: [running_on_bettervoting.md](../multi_member_plurality/running_on_bettervoting.md)
+- The full family — Block vs. Limited vs. SNTV: [multi_member_plurality](../multi_member_plurality/README.md) · how BV runs it: [running_on_bettervoting.md](../multi_member_plurality/running_on_bettervoting.md)
 - References: [SNTV (Wikipedia)](https://en.wikipedia.org/wiki/Single_non-transferable_vote) · [SNTV (electowiki)](https://electowiki.org/wiki/Single_non-transferable_vote)
-- Proportional alternatives: [STV](../../06_Other/STV/) · [STAR-PR](../../03_STAR_PR/)
+- Proportional alternatives: [STV](../../06_Other/STV/README.md) · [STAR-PR](../../03_STAR_PR/README.md)

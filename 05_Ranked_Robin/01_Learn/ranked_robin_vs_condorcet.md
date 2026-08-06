@@ -2,7 +2,7 @@
 
 *A question that trips up almost everyone: aren't **Ranked Robin (RCV-RR)** and **Condorcet** the same thing? Almost — and the gap between them is the whole lesson.*
 
-→ Topic hub: [Condorcet efficiency](../../07_Concepts/topics/condorcet/) · cycles in depth: [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md) · the method: [Ranked Robin (RCV-RR / Copeland)](ranked_robin.md) · the deeper math: [the math behind Condorcet](the_math_behind_condorcet.md) · **Level: 301 · deep dive** — Curriculum [301.6](../../07_Concepts/CURRICULUM.md)
+→ Topic hub: [Condorcet efficiency](../../07_Concepts/topics/condorcet/README.md) · cycles in depth: [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](cycle_resolution.md) · the method: [Ranked Robin (RCV-RR / Copeland)](ranked_robin.md) · the deeper math: [the math behind Condorcet](the_math_behind_condorcet.md) · **Level: 301 · deep dive** — Curriculum [301.6](../../07_Concepts/CURRICULUM.md)
 
 ---
 
@@ -124,7 +124,7 @@ Ranked Robin keeps equal scores **tied** — no head-to-head preference — whic
 
 ## Related
 
-- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/)
+- [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/README.md)
 - [Ranked Robin (the method)](ranked_robin.md) · [Cycle resolution](cycle_resolution.md)
 - [Which RCV-IRV?](../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) — the BTR/Baldwin/Nanson variants are also Condorcet methods
 - Generator: `STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py`

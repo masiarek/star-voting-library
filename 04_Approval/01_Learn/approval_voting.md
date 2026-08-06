@@ -2,7 +2,7 @@
 
 *The simplest equal-vote upgrade to Choose-One: mark **every** candidate you approve (**1**) and leave the rest (**0**); the most-approved candidate wins. It's Score voting at **one-bit resolution** — a big jump in expressiveness over "vote for one," for almost no added ballot complexity.*
 
-→ **Run it / examples:** the 101 case in [the Approval examples](../) ([`approval_101_c3_b5.yaml`](../02_Examples/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [in the theory literature](approval_in_the_literature.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
+→ **Run it / examples:** the 101 case in [the Approval examples](../README.md) ([`approval_101_c3_b5.yaml`](../02_Examples/cases/approval_101_c3_b5.yaml)) · the same five voters counted by Approval vs STAR vs RCV-IRV vs Score in [the Black Curtain set](../../method_comparisons/black_curtain/README.md) (Approval flips the winner in election 1). · Companions: [honest limits](approval_honest_limits.md) · [in the theory literature](approval_in_the_literature.md) · [multi-winner Approval](Multiwinner_Approval/approval_multiwinner.md) · [Approval + Top-Two](approval_top_two.md) · Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -88,7 +88,7 @@ The share and distribution print on every result; the co-approval matrix is opt-
 
 ## Where it fits
 
-Approval sits one rung above Choose-One in the equal-vote family, and it passes the [Equal Vote / balance test](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) (every ballot has an exact opposite that cancels it). Its virtue is **simplicity** — zero ballot redesign, trivial hand count — which makes it a strong first step for an organization leaving plurality behind. Its ceiling is the binary ballot: where a group wants to express *how strongly* or *in what order* it prefers candidates, **STAR** is the fuller expression of the same idea. The [Black Curtain](../../method_comparisons/black_curtain/) set makes the trade-off concrete: on identical ballots, Approval elects the broadly-approved consensus candidate while STAR's runoff hands the seat to the majority's favorite — same voters, different question.
+Approval sits one rung above Choose-One in the equal-vote family, and it passes the [Equal Vote / balance test](../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md) (every ballot has an exact opposite that cancels it). Its virtue is **simplicity** — zero ballot redesign, trivial hand count — which makes it a strong first step for an organization leaving plurality behind. Its ceiling is the binary ballot: where a group wants to express *how strongly* or *in what order* it prefers candidates, **STAR** is the fuller expression of the same idea. The [Black Curtain](../../method_comparisons/black_curtain/README.md) set makes the trade-off concrete: on identical ballots, Approval elects the broadly-approved consensus candidate while STAR's runoff hands the seat to the majority's favorite — same voters, different question.
 
 ## Practical strengths (beyond the ballot)
 
@@ -121,12 +121,12 @@ Equal Vote's case for Approval is worth stating in its own terms: for a jurisdic
 - [Approval + Top-Two](approval_top_two.md) — the two-round package (St. Louis; Oregon's Unified Primary) and why its runoff can't be automatic — the gap STAR closes
 - [Approval — Multi-Winner](Multiwinner_Approval/approval_multiwinner.md) — bloc counting, SPAV/PAV
 - [Combined Approval Voting (CAV)](../../06_Other/Combined_Approval/README.md) — the three-option variant: For / abstain / Against, highest net wins. Runnable, with the pair of elections showing the same twelve voters reversing end-to-end on what a blank is worth
-- [the Approval examples](../) — the method's example folder
+- [the Approval examples](../README.md) — the method's example folder
 - [Criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md) — Approval's pass/fail row beside STAR, Ranked Robin and RCV-IRV, each ✗ linked to a runnable failure (read its caveat first)
 - [Approval voting — Wikipedia](https://en.wikipedia.org/wiki/Approval_voting) — the neutral reference: pre-modern history, the full adoption *and repeal* list, and the criteria table this repo cross-checks against. Cited here rather than a campaign page precisely because adoption records and criteria claims are where an advocacy source is weakest
 - [Equal Vote: Approval Voting](https://www.equal.vote/approval) — advantages/disadvantages and the stepping-stone case
 - [Divided We Fall — "Can STAR and Approval Voting Fix Our Elections?"](https://dividedwefall.org/star-and-approval-voting/) — a joint STAR + Approval essay (authors lead STAR Voting Action and Utah Approves — advocacy lean disclosed); cites the 2021 St. Louis Approval primary
-- [Black Curtain](../../method_comparisons/black_curtain/) — Approval vs STAR vs RCV-IRV vs Score
+- [Black Curtain](../../method_comparisons/black_curtain/README.md) — Approval vs STAR vs RCV-IRV vs Score
 - [The fidelity ladder](../../07_Concepts/scores_and_ranks/fidelity_ladder.md) · [scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md)
 - Glossary: **Approval voting** — [Glossary — voting methods & criteria](../../07_Concepts/GLOSSARY.md)
 

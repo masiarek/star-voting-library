@@ -10,7 +10,7 @@ The same ranked ballot can be counted other ways entirely: **Ranked Robin** (a C
 
 ## Why the precision isn't pedantry
 
-It protects you from a real trap. The sharpest criticisms — [center squeeze](../../../07_Concepts/topics/center_squeeze/), [exhausted ballots](exhausted_ballots_301.md) — are failures of *IRV's elimination count*, not of ranked ballots in general. Ranked Robin uses the exact same ranked ballot and has **no** center squeeze. So a loose "RCV has center squeeze" hands a well-informed opponent an easy correction — "Ranked Robin is RCV and it doesn't" — whereas "**IRV** has center squeeze" is precisely, unarguably right. <!-- terminology-ok: quoting the imprecise "RCV has center squeeze" in order to correct it -->  Precision is armor — the same discipline STAR's critics should use to separate "the score ballot" from "the runoff."
+It protects you from a real trap. The sharpest criticisms — [center squeeze](../../../07_Concepts/topics/center_squeeze/README.md), [exhausted ballots](exhausted_ballots_301.md) — are failures of *IRV's elimination count*, not of ranked ballots in general. Ranked Robin uses the exact same ranked ballot and has **no** center squeeze. So a loose "RCV has center squeeze" hands a well-informed opponent an easy correction — "Ranked Robin is RCV and it doesn't" — whereas "**IRV** has center squeeze" is precisely, unarguably right. <!-- terminology-ok: quoting the imprecise "RCV has center squeeze" in order to correct it -->  Precision is armor — the same discipline STAR's critics should use to separate "the score ballot" from "the runoff."
 
 ## So what do I actually say?
 

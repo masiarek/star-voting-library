@@ -33,7 +33,7 @@ STAR removes the two things that break Plurality. **First, you're never punished
 
 Under Choose-One you *can't know*. Under STAR you *read it off the result.* That's the whole difference between hoping for majority rule and measuring it.
 
-**Worked demo.** [`04_star_wars_vote_split`](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) ([`.yaml`](../../method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml)) — Choose-One elects Vader (40%, the candidate 60% ranked last); STAR elects Leia, the majority's real choice, and the `[Divergence from STAR]` line shows **Choose-One (Plurality)** disagreeing with STAR while STAR matches the head-to-head ([Condorcet](condorcet/)) winner.
+**Worked demo.** [`04_star_wars_vote_split`](../../method_comparisons/split_voting/_main/_main_pages/04_star_wars_vote_split.md) ([`.yaml`](../../method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml)) — Choose-One elects Vader (40%, the candidate 60% ranked last); STAR elects Leia, the majority's real choice, and the `[Divergence from STAR]` line shows **Choose-One (Plurality)** disagreeing with STAR while STAR matches the head-to-head ([Condorcet](condorcet/README.md)) winner.
 
 ## The one-liner
 
@@ -44,7 +44,7 @@ Under Choose-One you *can't know*. Under STAR you *read it off the result.* That
 ## Where this fits in the overall teaching
 
 - **Level: 101 · for voters** — **foundational**. This is the *diagnosis*; read it before the spoiler-effect mechanism and the STAR pitch.
-- **Pairs with:** the [spoiler effect](spoiler_effect.md) and the [`split_voting/`](../../method_comparisons/split_voting/) demos — this page argues *that* the system is broken; those show *how*. Then [What's so good about STAR](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) delivers the fix.
+- **Pairs with:** the [spoiler effect](spoiler_effect.md) and the [`split_voting/`](../../method_comparisons/split_voting/README.md) demos — this page argues *that* the system is broken; those show *how*. Then [What's so good about STAR](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) delivers the fix.
 - **Terminology:** keep it `Choose-One` / `Plurality` for a public audience; the point is method-accurate for Plurality specifically. (Reworked from a classic pro-reform passage that originally leaned on IRV; here the resolution is STAR's majority runoff + preference matrix, which answer "is the plurality winner the real winner?" directly, on one ballot.)
 
 Cross-references:

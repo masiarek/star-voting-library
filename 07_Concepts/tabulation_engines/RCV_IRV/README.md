@@ -4,7 +4,7 @@ STAR uses **score** ballots (rate each candidate 0–5). The other family taught
 
 Because the count is different, so are its failure modes — center squeeze, exhausted ballots, non-monotonicity — none of which are STAR's. In this repo, ranked ballots are tabulated by a **separate** engine; STAR / score files never touch it, and vice versa.
 
-This folder is the RCV-IRV slot in the tabulation-engines hub, next to [the BetterVoting reader](../BV/) (BetterVoting's display) and [reading a STAR report](../LH_starvote/reading_a_star_report.md) (the LH STAR report). The substantive RCV-IRV explainers live with the other concept pages:
+This folder is the RCV-IRV slot in the tabulation-engines hub, next to [the BetterVoting reader](../BV/README.md) (BetterVoting's display) and [reading a STAR report](../LH_starvote/reading_a_star_report.md) (the LH STAR report). The substantive RCV-IRV explainers live with the other concept pages:
 
 - [RCV is a confusing name](../../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)
 - [Is IRV "just plurality"?](../../../06_Other/RCV_IRV/concepts/RCV_IRV_and_plurality.md)

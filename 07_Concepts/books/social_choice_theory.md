@@ -51,7 +51,7 @@ The deeper companion to Saari's popular [*Chaotic Elections!*](popular_introduct
 
 **The lean:** Same as Saari's other work — brilliant on *why methods disagree*, but carries his **pro-Borda** thesis. Take the diagnosis (paradoxes are structural) more readily than the prescription (Borda solves them).
 
-**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [Borda](../../06_Other/other_ranked_methods/borda.md) · [Condorcet](../topics/condorcet/)
+**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [Borda](../../06_Other/other_ranked_methods/borda.md) · [Condorcet](../topics/condorcet/README.md)
 
 </td>
 </tr>
@@ -85,7 +85,7 @@ The gentlest *rigorous* book on the shelf — an undergraduate text (SIAM, from 
 
 **The lean:** Neutral textbook — it teaches the mathematics and sells no method. Its voting coverage is classical (ranked methods and their theory); rated methods like score and STAR aren't its subject, so read it for the Condorcet-family foundations, not a method comparison.
 
-**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/)
+**In this repo:** [The Smith set](../topics/smith_set.md) · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [Condorcet](../topics/condorcet/README.md)
 
 </td>
 </tr>
@@ -102,7 +102,7 @@ A field guide to the paradoxes themselves: Condorcet cycles, monotonicity failur
 
 **The lean:** Reference-neutral; Nurmi surveys rather than advocates. Pairs naturally with this repo's own [paradoxes collection](../../method_comparisons/paradoxes_and_whoops/README.md).
 
-**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [monotonicity](../topics/monotonicity/) · [participation](../topics/participation/) · [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)
+**In this repo:** [voting paradoxes](../voting_paradoxes/README.md) · [monotonicity](../topics/monotonicity/README.md) · [participation](../topics/participation/README.md) · [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md)
 
 </td>
 </tr>
@@ -119,7 +119,7 @@ A field guide to the paradoxes themselves: Condorcet cycles, monotonicity failur
 
 **The lean:** Tideman invented **Ranked Pairs** (a Condorcet method), and the book leans toward Condorcet-consistent, criterion-driven design — a different destination from this repo's STAR. That makes it a valuable *opposing-camp* read: the strongest careful case for "get the Condorcet winner right." See also [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), this repo's Condorcet method.
 
-**In this repo:** [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [Condorcet](../topics/condorcet/) · [criteria at a glance](../topics/criteria_at_a_glance.md)
+**In this repo:** [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) · [Condorcet](../topics/condorcet/README.md) · [criteria at a glance](../topics/criteria_at_a_glance.md)
 
 </td>
 </tr>

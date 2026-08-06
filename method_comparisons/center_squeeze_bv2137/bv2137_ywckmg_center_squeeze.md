@@ -4,7 +4,7 @@
 
 *The textbook "center squeeze," from Robert LeGrand's [ranked-ballot calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html). One hundred voters rank three candidates. The broadly-liked centrist is the **Condorcet winner** — yet Instant-Runoff throws him out first. The same ballots, counted four ways on BetterVoting, split two-to-two. This is the single clearest "the tabulation, not the ballot, decides" lesson in the repo.*
 
-→ **Level: 301 · deep dive** — Curriculum [301.10](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [center squeeze topic hub](../../07_Concepts/topics/center_squeeze/) · [what makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md).
+→ **Level: 301 · deep dive** — Curriculum [301.10](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [center squeeze topic hub](../../07_Concepts/topics/center_squeeze/README.md) · [what makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md).
 
 ## The electorate
 

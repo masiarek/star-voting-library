@@ -6,7 +6,7 @@
 
 ## The method here
 
-- **[STAR-PR](STAR_PR/)** — the ordinary 0–5 STAR ballot, counted proportionally by **reweighting**: three tabulations (Allocated Score, Sequentially Spent Score, Reweighted Range Voting), all runnable on the same ballot file by switching `voting_method:`. The mechanics: [the math behind proportional STAR](STAR_PR/the_math_behind_proportional_star.md). Runnable elections: [`03_STAR_PR/`](../).
+- **[STAR-PR](STAR_PR/README.md)** — the ordinary 0–5 STAR ballot, counted proportionally by **reweighting**: three tabulations (Allocated Score, Sequentially Spent Score, Reweighted Range Voting), all runnable on the same ballot file by switching `voting_method:`. The mechanics: [the math behind proportional STAR](STAR_PR/the_math_behind_proportional_star.md). Runnable elections: [`03_STAR_PR/`](../README.md).
 
 ## The two comparisons
 

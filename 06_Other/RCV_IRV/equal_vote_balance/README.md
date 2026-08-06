@@ -1,6 +1,6 @@
 # Equal-vote balance — where RCV-IRV fails and Ranked Robin doesn't
 
-Runnable proof that **RCV-IRV fails the Equal Vote "Test of Balance"**: two exactly-opposite ballots don't reliably cancel under sequential elimination. The concept and the full write-up: [RCV-IRV Fails the Equal Vote Criterion](../concepts/RCV_IRV_equal_vote.md). The mirror image — where opposite *score* ballots **do** cancel — is [equal & opposite (STAR)](../../../01_STAR/03_Criteria/equal_and_opposite/).
+Runnable proof that **RCV-IRV fails the Equal Vote "Test of Balance"**: two exactly-opposite ballots don't reliably cancel under sequential elimination. The concept and the full write-up: [RCV-IRV Fails the Equal Vote Criterion](../concepts/RCV_IRV_equal_vote.md). The mirror image — where opposite *score* ballots **do** cancel — is [equal & opposite (STAR)](../../../01_STAR/03_Criteria/equal_and_opposite/README.md).
 
 Three candidates on a line: **Ada** (left), **Bruno** (center), **Cyrus** (right).
 

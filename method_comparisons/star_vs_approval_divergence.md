@@ -2,7 +2,7 @@
 
 *A common question with a deceptively honest answer: **there is no single number** — and the reason *why* is the actual lesson. This page measures the divergence rate (with a runnable, seeded simulation), explains why the two methods split, and links the worked elections where you can watch it happen on real ballots.*
 
-**Level: 301 · deep dive** Companion: [What makes a good winner?](../07_Concepts/topics/what_makes_a_good_winner.md) · [election simulation models](../07_Concepts/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/).
+**Level: 301 · deep dive** Companion: [What makes a good winner?](../07_Concepts/topics/what_makes_a_good_winner.md) · [election simulation models](../07_Concepts/topics/election_simulation_models.md) · the worked cases in [Black Curtain](black_curtain/README.md).
 
 ## Why there's no single rate
 
@@ -11,7 +11,7 @@ STAR has a **canonical sincere ballot**: min-max your feelings onto 0–5. Appro
 1. the **electorate model** (how voters' preferences are generated), and
 2. the **approval-cutoff rule** (how a voter turns feelings into approvals).
 
-Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../07_Concepts/curriculum/CURRICULUM_301.md); [simulations README](../06_Other/simulations/)).
+Quote a divergence percentage without both and it's meaningless — the same house rule the repo applies to every simulated number ([301.6/301.9](../07_Concepts/curriculum/CURRICULUM_301.md); [simulations README](../06_Other/simulations/README.md)).
 
 ## The measured rates — the approval cutoff is the knob
 
@@ -49,13 +49,13 @@ So the classic split is: a **broadly-tolerable consensus** candidate (Approval's
 
 ## Watch it on real ballots — worked examples
 
-The [**Black Curtain**](black_curtain/) set is exactly this, made countable: the *same* small electorate counted by Approval, STAR (and RCV-IRV / Range), so you can see where they agree and where they part:
+The [**Black Curtain**](black_curtain/README.md) set is exactly this, made countable: the *same* small electorate counted by Approval, STAR (and RCV-IRV / Range), so you can see where they agree and where they part:
 
 - [Hidden consensus](black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) — a broadly-liked compromise that Approval elects and STAR's runoff can pass over.
-- [Near-clones](black_curtain/) and [polarized](black_curtain/) variants — how the split appears (or doesn't) as the preference structure changes.
+- [Near-clones](black_curtain/README.md) and [polarized](black_curtain/README.md) variants — how the split appears (or doesn't) as the preference structure changes.
 - [Range vs the rest](black_curtain/black_curtain_range.md) — the same ballots under Score, for contrast.
 
-For the single-election view in the engine, any Approval or STAR file prints a **[Divergence from STAR]** block when the methods disagree ([divergence review ledger](divergence_review/)).
+For the single-election view in the engine, any Approval or STAR file prints a **[Divergence from STAR]** block when the methods disagree ([divergence review ledger](divergence_review/README.md)).
 
 ## Run it yourself
 
@@ -78,7 +78,7 @@ It reuses the electorate models and STAR tabulator from [`fbc_simulation.py`](..
 
 ## Related
 
-- [Black Curtain](black_curtain/) — the worked STAR-vs-Approval(-vs-others) elections
-- [Brams' grading paradox, counted](brams_grading_paradox/) — the cutoff dependence in one 3-voter example: four reasonable 0/1 cuts of the same grades elect Adams, Baker, or a tie
-- [Runoff-reversal & FBC simulations](../06_Other/simulations/) — the sibling brute-force studies
+- [Black Curtain](black_curtain/README.md) — the worked STAR-vs-Approval(-vs-others) elections
+- [Brams' grading paradox, counted](brams_grading_paradox/README.md) — the cutoff dependence in one 3-voter example: four reasonable 0/1 cuts of the same grades elect Adams, Baker, or a tie
+- [Runoff-reversal & FBC simulations](../06_Other/simulations/README.md) — the sibling brute-force studies
 - [Choosing among the Equal Vote methods](../07_Concepts/topics/choosing_among_evc_methods.md) · [Criteria at a glance](../07_Concepts/topics/criteria_at_a_glance.md)

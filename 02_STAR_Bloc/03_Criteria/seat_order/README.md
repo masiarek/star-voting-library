@@ -59,7 +59,7 @@ Live on BetterVoting and reproduced independently in the LH engine; **BV and LH 
 ## Related
 
 - [The score leader can win no seat](../../01_Learn/score_leader_no_seat.md) — the sharper form: leading every scoring round and taking nothing
-- [Participation](../participation/) · [the committee spoiler](../committee_spoiler/) — the folder's other two criteria
+- [Participation](../participation/README.md) · [the committee spoiler](../committee_spoiler/README.md) — the folder's other two criteria
 - [Ties, seat by seat](../../01_Learn/bloc_tiebreaks.md) — the other way seat order stops being cosmetic: a seat-1 tie can change *who* wins seat 2
 - [Honest limits](../../01_Learn/bloc_honest_limits.md) · [Bloc STAR among the at-large methods](../../01_Learn/bloc_star_vs_other_bloc_methods.md)
 

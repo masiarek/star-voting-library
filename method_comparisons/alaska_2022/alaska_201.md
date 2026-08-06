@@ -66,7 +66,7 @@ Read the **Begich** row:
 - **Begich vs Peltola: 93 – 84** → Begich wins. (The right wing, plus Begich's own voters, prefer the center candidate to the left one.)
 - **Begich vs Palin: 107 – 68** → Begich wins big. (The left wing prefers the center candidate to the right one.)
 
-Begich wins **every** matchup. A candidate who beats each rival head-to-head is the **[Condorcet winner](../../07_Concepts/topics/condorcet/)** — the "beats-everyone," consensus candidate. Alaska *had* one (Begich), and RCV-IRV **didn't elect him.** That's a **Condorcet failure**.
+Begich wins **every** matchup. A candidate who beats each rival head-to-head is the **[Condorcet winner](../../07_Concepts/topics/condorcet/README.md)** — the "beats-everyone," consensus candidate. Alaska *had* one (Begich), and RCV-IRV **didn't elect him.** That's a **Condorcet failure**.
 
 ## Naming the mechanism: center squeeze
 

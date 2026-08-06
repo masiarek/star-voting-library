@@ -2,7 +2,7 @@
 
 **One line:** Bloc STAR fills **N seats** by running ordinary single-winner STAR **N times** on the same ballots — elect a winner, remove them from the field, re-run the count on who's left. Same 0–5 ballot, same two rounds, repeated once per seat.
 
-→ Prerequisite: [STAR — start here](../../01_STAR/01_Learn/STAR_start_here.md) · the fork this sits on one side of: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md) · the proportional alternative: [STAR-PR](../../03_STAR_PR/01_Learn/) · Glossary: [Bloc STAR](../../07_Concepts/GLOSSARY.md) · Curriculum: [201.5](../../07_Concepts/curriculum/CURRICULUM_201.md)
+→ Prerequisite: [STAR — start here](../../01_STAR/01_Learn/STAR_start_here.md) · the fork this sits on one side of: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md) · the proportional alternative: [STAR-PR](../../03_STAR_PR/01_Learn/README.md) · Glossary: [Bloc STAR](../../07_Concepts/GLOSSARY.md) · Curriculum: [201.5](../../07_Concepts/curriculum/CURRICULUM_201.md)
 
 **Level: 201 · for voters**
 
@@ -25,7 +25,7 @@ To fill **N** seats:
 3. **Remove the winner** from the field and go back to step 1 with the *same, unchanged* ballots.
 4. Repeat until N seats are filled.
 
-Each seat is a complete little STAR election. Nothing is reweighted, spent, or transferred between seats — that is the single difference from [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/), and the reason this method is majoritarian rather than proportional.
+Each seat is a complete little STAR election. Nothing is reweighted, spent, or transferred between seats — that is the single difference from [STAR-PR](../../03_STAR_PR/01_Learn/STAR_PR/README.md), and the reason this method is majoritarian rather than proportional.
 
 **Worked — the baseline case.** 3 candidates, 2 seats, 3 ballots (the smallest Bloc election that actually decides anything: with 2 candidates for 2 seats nobody can lose):
 
@@ -122,7 +122,7 @@ The `_tabulated` mirror adds what the on-screen report leaves out: the score dis
 
 Three things separate Bloc STAR from what people assume it does. In the order they bite:
 
-1. **[The majority sweep](majority_sweep.md)** — a cohesive majority can take *every* seat. Majoritarian by design; the reason to reach for [STAR-PR](../../03_STAR_PR/01_Learn/) when you want representation instead.
+1. **[The majority sweep](majority_sweep.md)** — a cohesive majority can take *every* seat. Majoritarian by design; the reason to reach for [STAR-PR](../../03_STAR_PR/01_Learn/README.md) when you want representation instead.
 2. **[The score leader can win no seat](score_leader_no_seat.md)** — Bloc STAR is *not* "top N by points." Seats go to whoever is **preferred head-to-head**, so a broadly-liked compromise candidate who leads every scoring round can be shut out entirely.
 3. **[Ties, seat by seat](bloc_tiebreaks.md)** — the single-winner ladder runs once per seat, and a tie broken at seat 1 changes the field every later seat is decided in.
 

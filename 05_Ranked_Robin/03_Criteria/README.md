@@ -6,9 +6,9 @@ Same discipline as the STAR side: every claim is a runnable election, and the fa
 
 | Set | What it shows |
 |---|---|
-| [Burial](burial/) | **The signature strategic wart of Condorcet methods** — rank the frontrunner *last*, manufacture a cycle, win on the record. A sincere election a compromise wins cleanly, then the coordinated lie that takes it from her. (Side by side with Borda, STAR and IRV → [the burial topic hub](../../07_Concepts/topics/burial/README.md).) |
-| [Clone independence](clone_independence/) | **Ranked Robin's headline defense:** adding near-identical candidates shouldn't change the winner. The LH-only pair showing teaming on paper, then the BV-backed pair (BV2142/BV2143) where the engine and BetterVoting resolve the resulting cycle differently. |
-| [Tie-breaks](rr_tiebreaks/) | The edge: when Copeland scores tie, how the engine resolves it, and where that resolution **differs** from BetterVoting. |
+| [Burial](burial/README.md) | **The signature strategic wart of Condorcet methods** — rank the frontrunner *last*, manufacture a cycle, win on the record. A sincere election a compromise wins cleanly, then the coordinated lie that takes it from her. (Side by side with Borda, STAR and IRV → [the burial topic hub](../../07_Concepts/topics/burial/README.md).) |
+| [Clone independence](clone_independence/README.md) | **Ranked Robin's headline defense:** adding near-identical candidates shouldn't change the winner. The LH-only pair showing teaming on paper, then the BV-backed pair (BV2142/BV2143) where the engine and BetterVoting resolve the resulting cycle differently. |
+| [Tie-breaks](rr_tiebreaks/README.md) | The edge: when Copeland scores tie, how the engine resolves it, and where that resolution **differs** from BetterVoting. |
 
 ---
 

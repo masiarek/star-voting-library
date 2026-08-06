@@ -102,7 +102,7 @@ The flip side is the one the critics press, and it is equally real: a faction th
 
 ## Semi-proportional, and what that means precisely
 
-Applied to **party lists** (§5), SAV apportions seats by the **Jefferson/d'Hondt** method with a quota constraint — a genuine, if large-party-favouring, proportional rule. Applied to **individual candidates**, that guarantee does not carry over, because the divisor becomes the number of candidates a voter marked rather than the size of their party. This is the precise sense in which SAV is called **semi-proportional**: proportional over parties, and proportional over candidates only to the extent that voters coordinate their marks. It is the same bargain [SNTV](../../../method_comparisons/sntv_village_council/) and cumulative voting strike.
+Applied to **party lists** (§5), SAV apportions seats by the **Jefferson/d'Hondt** method with a quota constraint — a genuine, if large-party-favouring, proportional rule. Applied to **individual candidates**, that guarantee does not carry over, because the divisor becomes the number of candidates a voter marked rather than the size of their party. This is the precise sense in which SAV is called **semi-proportional**: proportional over parties, and proportional over candidates only to the extent that voters coordinate their marks. It is the same bargain [SNTV](../../../method_comparisons/sntv_village_council/README.md) and cumulative voting strike.
 
 ## In the wild
 

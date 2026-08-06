@@ -28,17 +28,17 @@ New here? Start with **[Ranked Robin (the method)](ranked_robin.md)**.
 
 Every claim on these pages has a runnable election behind it — one case folder per idea:
 
-- [The worked intro](../02_Examples/) — RR elects the consensus center 3–0 over the two poles that hold more first choices
-- [Condorcet vs. Ranked Robin](../02_Examples/condorcet_vs_ranked_robin/) — a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record
-- [RR vs. IRV vs. plurality](../02_Examples/rr_vs_irv_plurality/) — one ranked ballot set, three different winners (the Tennessee center squeeze)
-- [The Copeland score — a draw is worth half a win](../02_Examples/copeland_score/) — why "most head-to-head wins" is a shorthand, and the case where the ½-credit decides
-- [Most matchups won ≠ Condorcet winner](../02_Examples/most_wins_vs_condorcet/) — its mirror image: strictly the most wins, and still beaten head-to-head
-- [Tiebreaks](../03_Criteria/rr_tiebreaks/) — the Equal Support column and the full ladder down to lot
-- [Burial](../03_Criteria/burial/) — the signature wart, worked as a sincere/buried pair on both engines
-- [STAR vs RR — 30 divergence samples](../02_Examples/star_vs_rr_divergence/) — where the two methods part ways, each sample stating its own cause
+- [The worked intro](../02_Examples/README.md) — RR elects the consensus center 3–0 over the two poles that hold more first choices
+- [Condorcet vs. Ranked Robin](../02_Examples/condorcet_vs_ranked_robin/README.md) — a clean Condorcet winner, a genuine rock/paper/scissors cycle, and a real 0-wins record
+- [RR vs. IRV vs. plurality](../02_Examples/rr_vs_irv_plurality/README.md) — one ranked ballot set, three different winners (the Tennessee center squeeze)
+- [The Copeland score — a draw is worth half a win](../02_Examples/copeland_score/README.md) — why "most head-to-head wins" is a shorthand, and the case where the ½-credit decides
+- [Most matchups won ≠ Condorcet winner](../02_Examples/most_wins_vs_condorcet/README.md) — its mirror image: strictly the most wins, and still beaten head-to-head
+- [Tiebreaks](../03_Criteria/rr_tiebreaks/README.md) — the Equal Support column and the full ladder down to lot
+- [Burial](../03_Criteria/burial/README.md) — the signature wart, worked as a sincere/buried pair on both engines
+- [STAR vs RR — 30 divergence samples](../02_Examples/star_vs_rr_divergence/README.md) — where the two methods part ways, each sample stating its own cause
 
 ## Reference
 
 - Glossary: [Ranked Robin & the Condorcet family](glossary_ranked_robin.md)
 
-*(Other tabulations of the same ranked ballot: [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) (instant runoff), [STV](../../03_STAR_PR/01_Learn/) (proportional). Condorcet efficiency topic hub: [topics/condorcet](../../07_Concepts/topics/condorcet/README.md). Up: the docs hub [`00_START_HERE`](../../07_Concepts/00_START_HERE.md).)*
+*(Other tabulations of the same ranked ballot: [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md) (instant runoff), [STV](../../03_STAR_PR/01_Learn/README.md) (proportional). Condorcet efficiency topic hub: [topics/condorcet](../../07_Concepts/topics/condorcet/README.md). Up: the docs hub [`00_START_HERE`](../../07_Concepts/00_START_HERE.md).)*

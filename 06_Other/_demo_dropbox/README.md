@@ -35,7 +35,7 @@ For a **lot-decided tie** (a "dead rung": the ballots tie at every deterministic
 python ../../STARVote_LH_tabulation_engine/tools_adam/two_way_import.py <bv_export.json>
 ```
 
-It writes `<base>_bv_order.yaml` (BV's DRAWN order → reproduces BV's winner) and `<base>_published_order.yaml` (a deterministic pre-published order → the other winner), tabulates both, and prints the comparison — e.g. *BV drew Ben, the published order gives Ada; same ballots, decided entirely by the lot.* Pass `--published "Ada, Ben"` to set the published order explicitly. The export must carry BV's tie-break sequence (`perm` / `tieBreakOrder`, BV #1371) for its draw to be reconstructable. See [the dead-rung cases](../../01_STAR/03_Criteria/tie_break_dead_rung/).
+It writes `<base>_bv_order.yaml` (BV's DRAWN order → reproduces BV's winner) and `<base>_published_order.yaml` (a deterministic pre-published order → the other winner), tabulates both, and prints the comparison — e.g. *BV drew Ben, the published order gives Ada; same ballots, decided entirely by the lot.* Pass `--published "Ada, Ben"` to set the published order explicitly. The export must carry BV's tie-break sequence (`perm` / `tieBreakOrder`, BV #1371) for its draw to be reconstructable. See [the dead-rung cases](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md).
 
 ## Notes
 

@@ -80,7 +80,7 @@ Frozen exports sit beside each yaml as `…_bv_export.json`.
 
 - [Honest limits](../../01_Learn/bloc_honest_limits.md) — where this sits among the four limits Bloc STAR adds to STAR's own
 - [The score leader can win no seat](../../01_Learn/score_leader_no_seat.md) — the other case where the runoff step, not the scores, decides everything
-- [Seat order](../seat_order/) · [the committee spoiler](../committee_spoiler/) — the folder's other two criteria
+- [Seat order](../seat_order/README.md) · [the committee spoiler](../committee_spoiler/README.md) — the folder's other two criteria
 - [Reading the runoff percentages](../../../01_STAR/01_Learn/the_count/runoff_percentages.md) — why seat 1 above runs on 2 of 6 voters and seat 2 on 5 of 6
 
 # file: README.md

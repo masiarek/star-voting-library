@@ -38,7 +38,7 @@ One electorate, three defensible winners, all from the same arithmetic:
 
 - **Score totals: Amy 20, Ben 11, Cora 10, Dan 9.** Amy is the **utilitarian winner** — nearly double the runner-up. Pure Score voting elects her.
 - **Head-to-head: Amy loses every matchup 4:5.** She is the **Condorcet loser**; Ben (who beats Amy 5:4 and edges Cora and Dan 1:0 with eight Equal Support) is the **Condorcet winner**.
-- **STAR: finalists Amy (20) and Ben (11); runoff Ben 5, Amy 4 → Ben.** A textbook [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/) — the score leader with the most total support loses the majority check. And any *approval-with-runoff* rule does the same or worse: whichever pair reaches the runoff, Amy can't win it, exactly the paper's point.
+- **STAR: finalists Amy (20) and Ben (11); runoff Ben 5, Amy 4 → Ben.** A textbook [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md) — the score leader with the most total support loses the majority check. And any *approval-with-runoff* rule does the same or worse: whichever pair reaches the runoff, Amy can't win it, exactly the paper's point.
 
 The embedded LH report, with the engine calling all of it:
 

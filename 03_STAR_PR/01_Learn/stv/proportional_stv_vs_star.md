@@ -2,7 +2,7 @@
 
 **One line:** with multiple seats, a *proportional* method gives a coalition seats in proportion to its size — not all the seats to whoever leads first-choices. **STV** does this with ranked ballots + vote transfers; **STAR-PR** does it with scored ballots + ballot reweighting. They're different machinery, same goal.
 
-→ Glossary: [`STV`](../../../07_Concepts/GLOSSARY.md), [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) · Level: **Voting 301** · STAR-PR methods explained: [STAR_PR](../STAR_PR/)
+→ Glossary: [`STV`](../../../07_Concepts/GLOSSARY.md), [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) · Level: **Voting 301** · STAR-PR methods explained: [STAR_PR](../STAR_PR/README.md)
 
 ---
 
@@ -49,7 +49,7 @@ The most serious attempt is **AVEC** (Average Voter Effective Choice) by [Jameso
 
 But Quinn **shelved it**: he marked the work "[not ongoing]," left several sections unwritten, and conceded it stacks "5 different levels/types of approximation" on top of a one-dimensional-ideology assumption. Treat AVEC as a serious sketch of the right question, not a number to quote.
 
-**What follows for this library.** When someone asks "is STAR-PR better than STV?", the defensible comparisons are *mechanical and administrative* — [summability](../../../07_Concepts/topics/summability/), ballot expressiveness (scores capture strength, ranks capture order), how easily a voter can check the count, and whether the jurisdiction can run it — **not** a satisfaction score. Anyone quoting a precise "proportional accuracy" figure is ahead of the evidence. That applies to STAR-PR exactly as much as to STV.
+**What follows for this library.** When someone asks "is STAR-PR better than STV?", the defensible comparisons are *mechanical and administrative* — [summability](../../../07_Concepts/topics/summability/README.md), ballot expressiveness (scores capture strength, ranks capture order), how easily a voter can check the count, and whether the jurisdiction can run it — **not** a satisfaction score. Anyone quoting a precise "proportional accuracy" figure is ahead of the evidence. That applies to STAR-PR exactly as much as to STV.
 
 ## STV is not IRV
 
@@ -58,6 +58,6 @@ But Quinn **shelved it**: he marked the work "[not ongoing]," left several secti
 ## Engine notes
 
 - **STV** runs on the vendored `pyrankvote` (`single_transferable_vote`); the RCV-IRV wrapper now dispatches to it whenever `num_winners > 1`. No new library was needed — set `voting_method: STV` and `num_winners: k`.
-- **STAR-PR** runs on the STAR engine: `voting_method: sss | allocated | rrv` (proportional) or `bloc` (majoritarian contrast), with `num_winners: k`. Each method is explained in [STAR_PR](../STAR_PR/).
+- **STAR-PR** runs on the STAR engine: `voting_method: sss | allocated | rrv` (proportional) or `bloc` (majoritarian contrast), with `num_winners: k`. Each method is explained in [STAR_PR](../STAR_PR/README.md).
 
 Source: [Equal Vote — "Better elections are possible. Here's how." (video)](https://youtu.be/C_27pYcjsJs?t=127).

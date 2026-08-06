@@ -2,7 +2,7 @@
 
 **One line:** the word *winner* isn't one thing. In a single election, three reasonable definitions can point at **three different candidates** — and STAR's job is to choose among them on purpose, not by accident.
 
-→ Related: the simpler two-way case, [Runoff Reversal](../../02_Examples/runoff_overturns_leader/) (score leader ≠ STAR winner). Glossary: [`Condorcet winner`](../../../07_Concepts/GLOSSARY.md).
+→ Related: the simpler two-way case, [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md) (score leader ≠ STAR winner). Glossary: [`Condorcet winner`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -42,7 +42,7 @@ Each method optimizes a different, defensible goal, so disagreement is informati
 
 Here Ann (Condorcet) is shut out only because she's nudged into *third by total score* and never reaches the runoff. That's the design tradeoff in one picture: **STAR is not a Condorcet method**, and it doesn't pretend to be — it's a *score-then-majority* method, and Bob is exactly who that procedure is meant to elect.
 
-**This is exactly where STAR and Ranked Robin part ways.** On these same ballots, [**Ranked Robin**](../../../05_Ranked_Robin/01_Learn/README.md) — a Condorcet method — elects **Ann** (the head-to-head winner), while STAR elects **Bob** (the score-then-runoff winner). "RR = Condorcet winner, STAR = the runoff winner" is the whole STAR-vs-RR fault line, and it's the [preference-vs-support](../../../07_Concepts/scores_and_ranks/preference_vs_support.md) split: RR rewards *order*, STAR rewards *how much support* each candidate has. A gallery of 30 more elections where this happens (cycles *and* dark-horse Condorcet winners, each with its cause spelled out): [STAR vs Ranked Robin — divergence samples](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/). The full list of criteria STAR gives up (with receipts): [Every criterion STAR fails](star_criteria_failures.md).
+**This is exactly where STAR and Ranked Robin part ways.** On these same ballots, [**Ranked Robin**](../../../05_Ranked_Robin/01_Learn/README.md) — a Condorcet method — elects **Ann** (the head-to-head winner), while STAR elects **Bob** (the score-then-runoff winner). "RR = Condorcet winner, STAR = the runoff winner" is the whole STAR-vs-RR fault line, and it's the [preference-vs-support](../../../07_Concepts/scores_and_ranks/preference_vs_support.md) split: RR rewards *order*, STAR rewards *how much support* each candidate has. A gallery of 30 more elections where this happens (cycles *and* dark-horse Condorcet winners, each with its cause spelled out): [STAR vs Ranked Robin — divergence samples](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md). The full list of criteria STAR gives up (with receipts): [Every criterion STAR fails](star_criteria_failures.md).
 
 ## The takeaway for a debate
 

@@ -2,7 +2,7 @@
 
 *The academic treatment of Approval says something the advocacy pages on both sides tend to skip: the deepest disagreement isn't whether Approval works, it's **what a checkmark means**. Three incompatible answers are in circulation, and which one you hold decides whether Approval is nearly strategy-free or entirely strategic — before any simulation is run. This page walks the standard survey treatment: the arguments made for Approval, the criticisms made against it, which criticisms survive scrutiny, and one elegant result — on a restricted domain, Approval **is** Borda **is** Condorcet.*
 
-→ Overview: [Approval Voting](approval_voting.md) (the ballot and the count) · critique companion: [honest limits](approval_honest_limits.md) · the advocacy side's *own* academic case, claim-checked: [Hamlin & Hua (2023)](hamlin_hua_2023.md) · run it: [the Approval examples](../) · [Black Curtain](../../method_comparisons/black_curtain/). Source and its lean: the last section. Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
+→ Overview: [Approval Voting](approval_voting.md) (the ballot and the count) · critique companion: [honest limits](approval_honest_limits.md) · the advocacy side's *own* academic case, claim-checked: [Hamlin & Hua (2023)](hamlin_hua_2023.md) · run it: [the Approval examples](../README.md) · [Black Curtain](../../method_comparisons/black_curtain/README.md). Source and its lean: the last section. Curriculum: [301.4](../../07_Concepts/CURRICULUM.md).
 
 ---
 
@@ -19,13 +19,13 @@ Restated from the survey (which frames them as the case for Approval as an impro
 | # | The argument | Where it lands here |
 |---|---|---|
 | 1 | **Simplicity.** The ballot is barely more complicated than a plurality ballot and the counting rule is conceptually transparent — so it's an easier sell to the public. | Agreed, and it's the core of the [stepping-stone case](approval_voting.md#the-stepping-stone-argument). |
-| 2 | **It fixes plurality's worst failure** — one candidate at the minority end of a spectrum defeating several who split the majority end. | The [spoiler effect](../../07_Concepts/topics/spoiler_effect.md) and the [vote-splitting set](../../method_comparisons/split_voting/); see the real election below. |
+| 2 | **It fixes plurality's worst failure** — one candidate at the minority end of a spectrum defeating several who split the majority end. | The [spoiler effect](../../07_Concepts/topics/spoiler_effect.md) and the [vote-splitting set](../../method_comparisons/split_voting/README.md); see the real election below. |
 | 3 | **Better odds the winner has majority support**, which makes a governing "mandate" easier to claim. | *Odds*, not a guarantee — Approval has no majority criterion. |
 | 4 | **No wasted votes**, so minor-party candidates finally show their true level of support. | The strongest of the six, and hard to argue with: nothing on an Approval ballot punishes you for marking a long shot. |
-| 5 | **Likely to elect the [Condorcet winner](../../07_Concepts/topics/condorcet/) when one exists** (Beaujard et al. 2014, who also argue Approval favors "consensual" candidates near the middle of a multidimensional issue space — a generalization of argument 2). | *Likely*, not always — the counterexample is [in this repo](#the-caveat-that-matters-in-a-real-election) and is worked at the bottom of this page. |
+| 5 | **Likely to elect the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) when one exists** (Beaujard et al. 2014, who also argue Approval favors "consensual" candidates near the middle of a multidimensional issue space — a generalization of argument 2). | *Likely*, not always — the counterexample is [in this repo](#the-caveat-that-matters-in-a-real-election) and is worked at the bottom of this page. |
 | 6 | **Relatively resistant to strategic manipulation.** | The most contested of the six — and, as the next two sections show, the claim can't even be evaluated until you fix what "approve" means. |
 
-**The real election behind argument 2.** The survey's example is the **1980 U.S. Senate race in New York**: Alfonse D'Amato won with a plurality under 45%, Elizabeth Holtzman finished close behind, and Jacob Javits — who had lost the Republican primary to D'Amato and stayed in on the Liberal line — took roughly a tenth of the vote from the same end of the spectrum. The claim is that had even a small share of Javits's voters also approved Holtzman, she would have won. That is vote-splitting in its textbook form. *This repo has not modelled that election* — no ballot data exists to model it *with*, and the library's rule is to build a **model** and label it one rather than invent real ballots. The mechanism itself is runnable here in miniature: [the split-voting set](../../method_comparisons/split_voting/).
+**The real election behind argument 2.** The survey's example is the **1980 U.S. Senate race in New York**: Alfonse D'Amato won with a plurality under 45%, Elizabeth Holtzman finished close behind, and Jacob Javits — who had lost the Republican primary to D'Amato and stayed in on the Liberal line — took roughly a tenth of the vote from the same end of the spectrum. The claim is that had even a small share of Javits's voters also approved Holtzman, she would have won. That is vote-splitting in its textbook form. *This repo has not modelled that election* — no ballot data exists to model it *with*, and the library's rule is to build a **model** and label it one rather than invent real ballots. The mechanism itself is runnable here in miniature: [the split-voting set](../../method_comparisons/split_voting/README.md).
 
 ## The five criticisms — and which of them survive
 
@@ -71,7 +71,7 @@ Here is the elegant part, and it is genuinely surprising the first time you meet
 Translate each approval ballot into a weak ranking: everything approved sits above everything not approved, with indifference inside each group. That confines the ballots to the domain of **dichotomous preferences** — weak rankings with exactly two non-empty indifference classes. On that domain, three things that normally disagree collapse into one:
 
 - **Approval = [Borda](../../06_Other/other_ranked_methods/borda.md).** Applying the ordinary net-preference and symmetric-Borda definitions directly to these weak rankings reproduces the approval count exactly. (The equivalent bookkeeping: when a ballot expresses indifference, award each candidate in a tied group the *average* of the scoring weights that group spans.) Whether *other* scoring rules also collapse to Approval depends on the convention used for indifference — for some, like k-approval, the adaptation that would make it work looks artificial.
-- **Every profile has a [Condorcet winner](../../07_Concepts/topics/condorcet/).** Define "x beats y" as *more voters strictly prefer x to y than the reverse*. On dichotomous ballots that is precisely "more voters approve x than approve y" — which is transitive and always has a maximum. No cycles are possible.
+- **Every profile has a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md).** Define "x beats y" as *more voters strictly prefer x to y than the reverse*. On dichotomous ballots that is precisely "more voters approve x than approve y" — which is transitive and always has a maximum. No cycles are possible.
 - **Therefore Approval agrees with every Condorcet method** on this domain. One can fairly say that on dichotomous preferences, **Approval reconciles Borda and Condorcet** — the two poles that disagree nearly everywhere else.
 
 The structural reason is one this library already has a page for: the disagreement between Borda and Condorcet lives entirely in the **cyclic component** of the weighted tournament, and on dichotomous ballots that component is always zero. See [the cycle–cocycle decomposition](../../07_Concepts/topics/cycle_cocycle_decomposition.md) — this is the same theorem viewed from the approval end, and [Copeland vs Borda — margins matter](../../method_comparisons/copeland_vs_borda_margins/README.md) is what it looks like when the cyclic part is *not* zero.
@@ -83,7 +83,7 @@ Two conditions are doing quiet work above, and both are worth stating out loud:
 1. **The majority relation is defined by net strict preference** — more voters preferring x to y than y to x — *not* by "more than half of all voters rank x above y." With many indifferences those are different relations, and the second one behaves badly.
 2. **If the approval ballots were produced by compressing real rankings, the Condorcet winner of the uncompressed rankings can be somebody else.** The theorem is about a *domain*, not a property you can carry into an election where voters are doing the compressing.
 
-Caveat 2 is not hypothetical, and this repo has it on file. In [Black Curtain #1](../../method_comparisons/black_curtain/), five voters score three candidates; three of them love Cal and loathe Ann, two the reverse, and *every* voter rates Bob near the top. On the underlying scores the engine reports a clean Condorcet winner:
+Caveat 2 is not hypothetical, and this repo has it on file. In [Black Curtain #1](../../method_comparisons/black_curtain/README.md), five voters score three candidates; three of them love Cal and loathe Ann, two the reverse, and *every* voter rates Bob near the top. On the underlying scores the engine reports a clean Condorcet winner:
 
 ```text
 [Condorcet Winner]
@@ -137,6 +137,6 @@ Both columns are engine output, not arithmetic done here: the right-hand one is 
 - [Approval + Top-Two](approval_top_two.md) — what a second, head-to-head round recovers from a 0/1 ballot
 - [Preference vs support](../../07_Concepts/scores_and_ranks/preference_vs_support.md) · [scores vs ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — the two questions a ballot can ask
 - [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) — why "resistant" is the strongest any method gets
-- [Black Curtain](../../method_comparisons/black_curtain/) — five voters, four methods, three different winners
+- [Black Curtain](../../method_comparisons/black_curtain/README.md) — five voters, four methods, three different winners
 
 # file: approval_in_the_literature.md

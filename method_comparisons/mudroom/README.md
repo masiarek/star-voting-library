@@ -22,13 +22,13 @@
 | **Approval** | *to fill as we find stuff* | the chicken/Burr dilemma; the "where do you draw the line?" threshold trap |
 | **Plurality / Choose-One** | *to fill* | the spoiler effect; wasted votes; can elect the Condorcet loser |
 | **Score / Range** | *to fill* | reduces toward Approval under strategy; needs a fixed common scale |
-| **Borda** | *to fill* | the [Dark Horse](../dark_horse_borda/) — a nobody wins with zero honest support |
+| **Borda** | *to fill* | the [Dark Horse](../dark_horse_borda/README.md) — a nobody wins with zero honest support |
 
 *(The empty rows are honest to-dos — a method missing from the room isn't innocent, just un-curated yet.)*
 
 ## Why it's low-profile (not hidden)
 
-These pages are **mean, unfair, and one-sided by design** — they'd misrepresent the state of the art if anyone read one thinking it was balanced. So we don't *hide* them (nothing here is secret, and it stays in the published site), we just keep them **low-profile and unmistakably labeled**: off the main navigation, named with a leading underscore, and every one opens with a plain "this is deliberately mean and unfair" warning. Findable if you go looking or follow the one tucked-away link from [paradoxes & whoopses](../paradoxes_and_whoops/); never presented as the honest picture. The balanced, cite-in-a-debate versions live where they should — [criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md), each method's honest-limits page, and [how to read these fairly](../paradoxes_and_whoops/reading_these_fairly.md).
+These pages are **mean, unfair, and one-sided by design** — they'd misrepresent the state of the art if anyone read one thinking it was balanced. So we don't *hide* them (nothing here is secret, and it stays in the published site), we just keep them **low-profile and unmistakably labeled**: off the main navigation, named with a leading underscore, and every one opens with a plain "this is deliberately mean and unfair" warning. Findable if you go looking or follow the one tucked-away link from [paradoxes & whoopses](../paradoxes_and_whoops/README.md); never presented as the honest picture. The balanced, cite-in-a-debate versions live where they should — [criteria at a glance](../../07_Concepts/topics/criteria_at_a_glance.md), each method's honest-limits page, and [how to read these fairly](../paradoxes_and_whoops/reading_these_fairly.md).
 
 ## Where this sits — the "Level 401" safety check
 

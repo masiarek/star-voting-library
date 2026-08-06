@@ -2,7 +2,7 @@
 
 Method-specific terms for **Range (Score)** voting. Shared, cross-method vocabulary lives in the [main glossary](../../../07_Concepts/GLOSSARY.md).
 
-- **Range / Score voting** — grade each candidate on a fixed scale (e.g. 0–5); the highest **total score** wins. No runoff, no elimination. STAR's score round without the automatic runoff; Approval at more than 1 bit. → [Range / Score Voting](range_voting.md); engine [the Range engine](../Range_tabulation_engine/)
+- **Range / Score voting** — grade each candidate on a fixed scale (e.g. 0–5); the highest **total score** wins. No runoff, no elimination. STAR's score round without the automatic runoff; Approval at more than 1 bit. → [Range / Score Voting](range_voting.md); engine [the Range engine](../Range_tabulation_engine/README.md)
 - **Exaggeration / min-max strategy** — Range's central weakness: a voter often does best giving only max/min, which collapses Range toward Approval. STAR adds the runoff specifically to make honest scoring safer.
 - **Scale granularity** — how many rungs the scale offers (0–5 vs 0–9…). When top contenders are bunched, the granularity can change the winner. → [Scale granularity can flip the winner (a 301 case)](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md)
 

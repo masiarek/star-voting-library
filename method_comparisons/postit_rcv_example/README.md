@@ -31,6 +31,6 @@ The 20-voter election from Equal Vote's video **["Updated: How does RCV work? �
 | BV2178 — Ranked Robin | [page](cases/cases_pages/bv2178_8kg698_ranked_robin.md) | [`.yaml`](cases/bv2178_8kg698_ranked_robin.yaml) | Blue | Blue |
 | BV2178 — Choose-One | (in the STAR mirror's divergence block) | — | Purple | Purple |
 
-Related: [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/) (the same "eliminated the head-to-head winner" mechanic with a clean Condorcet winner) · up: [method_comparisons — same ballots, different methods](../)
+Related: [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [center squeeze](../center_squeeze/README.md) (the same "eliminated the head-to-head winner" mechanic with a clean Condorcet winner) · up: [method_comparisons — same ballots, different methods](../README.md)
 
 # file: README.md

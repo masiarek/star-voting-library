@@ -9,7 +9,7 @@
 | **What the voter marks** | ☑ in the *For* column | neither box | ☑ in the *Against* column |
 | **What it's worth** | **+1** | **0** | **−1** |
 
-It is a *reference* method here, kept in `06_Other/` alongside [RCV-IRV](../RCV_IRV/), [Range](../Range/), [STV](../STV/) and [3-2-1](../three_two_one/) — **not** one of the three [Equal Vote Coalition](https://www.equal.vote) methods ([STAR, Approval, Ranked Robin](../../07_Concepts/topics/choosing_among_evc_methods.md)).
+It is a *reference* method here, kept in `06_Other/` alongside [RCV-IRV](../RCV_IRV/README.md), [Range](../Range/README.md), [STV](../STV/README.md) and [3-2-1](../three_two_one/README.md) — **not** one of the three [Equal Vote Coalition](https://www.equal.vote) methods ([STAR, Approval, Ranked Robin](../../07_Concepts/topics/choosing_among_evc_methods.md)).
 
 ## The ballot
 
@@ -40,7 +40,7 @@ CAV has been reinvented repeatedly, which is why it answers to so many names. **
 | **Net approval voting** | descriptive; names the subtraction |
 | Approval with abstention option (AWAO) · True weight voting (TWV1) | rarer, mostly single-source |
 
-Felsenthal is the same author whose paradox examples this repo already runs — including [two demonstrations of ordinary Approval failing badly](../../method_comparisons/felsenthal_paradoxes/) ([missing a Condorcet winner](../../method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_felsenthal_ex5_approval_cw.md), and [electing a Pareto-dominated candidate](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md)). CAV is what he proposed in the same period as the fix. Whether the third option actually fixes those failures is the interesting question, and the answer is mostly no — see [What the third option buys](#what-the-third-option-buys-and-what-it-doesnt) below.
+Felsenthal is the same author whose paradox examples this repo already runs — including [two demonstrations of ordinary Approval failing badly](../../method_comparisons/felsenthal_paradoxes/README.md) ([missing a Condorcet winner](../../method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_felsenthal_ex5_approval_cw.md), and [electing a Pareto-dominated candidate](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md)). CAV is what he proposed in the same period as the fix. Whether the third option actually fixes those failures is the interesting question, and the answer is mostly no — see [What the third option buys](#what-the-third-option-buys-and-what-it-doesnt) below.
 
 *Sourcing note: the name inventory above draws on [electowiki](https://electowiki.org/wiki/Combined_approval_voting) and [Wikipedia](https://en.wikipedia.org/wiki/Combined_approval_voting). electowiki is **advocacy-adjacent** — reliable for what a method's proponents call it and how it works, weak for verdicts about whether it is good. The criteria and empirical claims below are sourced to the academic literature instead.*
 
@@ -238,7 +238,7 @@ CAV is three-level [score voting](../Range/concepts/range_voting.md), so it inhe
 | [Independence of clones](../../05_Ranked_Robin/03_Criteria/clone_independence) | ✔ | No first-choice count to split |
 | [Summable](../../07_Concepts/topics/summability) | ✔ | One running total per candidate; precinct-summable, unlike [IRV](../RCV_IRV/concepts/RCV-IRV-Hare.md) |
 | [Majority favorite](../../07_Concepts/topics/majority_criterion/README.md) | ✘ | Fails, as all score methods do — a majority's favorite can lose to a broadly-tolerated rival |
-| [Condorcet winner](../../07_Concepts/topics/condorcet/) | ✘ | Not Condorcet-efficient |
+| [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) | ✘ | Not Condorcet-efficient |
 | [Later-no-harm](../../01_STAR/01_Learn/the_count/STAR_second_round_FAQ.md) | ✘ | Voting For a second candidate can beat your favorite |
 
 ## What the third option buys — and what it doesn't
@@ -247,7 +247,7 @@ CAV's pitch is that the extra option lets you say something Approval can't: *thi
 
 **Under strategy it collapses into Approval — provably.** A voter maximising their influence should never use the middle option, because an abstention spends half the available voting power on that candidate for nothing. Suppose every voter uses only For and Against. Then each candidate's net is `(#For) − (#Against) = (#For) − (n − #For) = 2·(#For) − n`, and *n* is the same for every candidate — so ranking by net score is **identical** to ranking by approvals. A CAV election among strategic voters *is* an [Approval](../../04_Approval/01_Learn/approval_voting.md) election, with a constant offset. The third option is expressive, not decisive; the honest voters are the ones who use it, and they are the ones it moves.
 
-**It doesn't repair Approval's known failures.** Felsenthal's own Approval paradoxes — [electing someone who loses every head-to-head matchup](../../method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_felsenthal_ex5_approval_cw.md), or [a candidate every single voter likes less than another](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) — come from summing thresholded opinions with no head-to-head stage. Adding a third threshold level makes the ballot finer-grained; it doesn't add the comparison step, so the same constructions survive. This is the gap [STAR](../../01_STAR/01_Learn/README.md) closes from the other direction: keep the score ballot, then settle it with an [automatic runoff](../../01_STAR/01_Learn/the_count/) between the top two, which *is* a head-to-head comparison.
+**It doesn't repair Approval's known failures.** Felsenthal's own Approval paradoxes — [electing someone who loses every head-to-head matchup](../../method_comparisons/felsenthal_paradoxes/bv2152_r6ctvy_felsenthal_ex5_approval_cw.md), or [a candidate every single voter likes less than another](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md) — come from summing thresholded opinions with no head-to-head stage. Adding a third threshold level makes the ballot finer-grained; it doesn't add the comparison step, so the same constructions survive. This is the gap [STAR](../../01_STAR/01_Learn/README.md) closes from the other direction: keep the score ballot, then settle it with an [automatic runoff](../../01_STAR/01_Learn/the_count/README.md) between the top two, which *is* a head-to-head comparison.
 
 **Where it lands.** CAV is a genuine improvement in *expressiveness* over Approval at almost no cost in ballot complexity, and its equipment story is real. It is not a Condorcet method, not a runoff method, and under strategic pressure not distinguishable from the method it improves on. Judged against this library's usual yardstick — [what makes a good winner](../../07_Concepts/topics/what_makes_a_good_winner.md) — it belongs on the shelf beside Score, one notch more expressive and subject to the same limits.
 
@@ -259,6 +259,6 @@ CAV's pitch is that the extra option lets you say something Approval can't: *thi
 - Baujard, A., Gavrel, F., Igersheim, H., Laslier, J.-F., & Lebon, I. (2018). "How voters use grade scales in evaluative voting." *European Journal of Political Economy* **55**, 14–28. — the scale-calibration study behind the (0,1,2) vs (−1,0,+1) comparison above.
 - [Combined approval voting — Wikipedia](https://en.wikipedia.org/wiki/Combined_approval_voting) · [electowiki](https://electowiki.org/wiki/Combined_approval_voting) (advocacy-adjacent; see the sourcing note above)
 
-**See also:** [Approval Voting](../../04_Approval/01_Learn/approval_voting.md) · [Approval's honest limits](../../04_Approval/01_Learn/approval_honest_limits.md) · [Range / Score voting](../Range/concepts/range_voting.md) · [3-2-1 voting](../three_two_one/README.md) (the other three-level rated method here) · [Hillinger's evaluative voting](../../method_comparisons/hillinger_evaluative_voting/) (the same EV-3 ballot, made runnable from the paper) · [Cardinal utility](../../07_Concepts/topics/cardinal_utility.md) · [Strategic voting](../../07_Concepts/topics/strategic_voting.md)
+**See also:** [Approval Voting](../../04_Approval/01_Learn/approval_voting.md) · [Approval's honest limits](../../04_Approval/01_Learn/approval_honest_limits.md) · [Range / Score voting](../Range/concepts/range_voting.md) · [3-2-1 voting](../three_two_one/README.md) (the other three-level rated method here) · [Hillinger's evaluative voting](../../method_comparisons/hillinger_evaluative_voting/README.md) (the same EV-3 ballot, made runnable from the paper) · [Cardinal utility](../../07_Concepts/topics/cardinal_utility.md) · [Strategic voting](../../07_Concepts/topics/strategic_voting.md)
 
 # file: README.md

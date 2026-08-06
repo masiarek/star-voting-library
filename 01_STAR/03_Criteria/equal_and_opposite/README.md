@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** base — [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (`36f4v2`, BV2219) · plus-cancel — [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (`q8q9m7`, BV2220). Two elections differing only by the two mirror ballots — both elect Comet.
 
-→ Related: [the spoiler effect](../../../07_Concepts/topics/spoiler_effect.md) (what an *unequal* vote causes) · [the Equal Vote scorecard](../../../method_comparisons/single_winner_scorecard/) (row 1: "spoiler / vote splitting").
+→ Related: [the spoiler effect](../../../07_Concepts/topics/spoiler_effect.md) (what an *unequal* vote causes) · [the Equal Vote scorecard](../../../method_comparisons/single_winner_scorecard/README.md) (row 1: "spoiler / vote splitting").
 
 ---
 

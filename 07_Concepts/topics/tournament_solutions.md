@@ -1,10 +1,10 @@
 # Tournament solutions — the theory of the win-loss graph
 
-*Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), [STAR](../../01_STAR/01_Learn/) and [Approval](../../04_Approval/01_Learn/).*
+*Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), [STAR](../../01_STAR/01_Learn/README.md) and [Approval](../../04_Approval/01_Learn/README.md).*
 
 → Related: [what a method reads](what_a_method_reads.md) — the C1/C2/C3 tiers this page is the C1 half of · [the math behind Condorcet](../../05_Ranked_Robin/01_Learn/the_math_behind_condorcet.md) · [the Smith set](smith_set.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) — what the **C2** methods do with the margins tournament solutions discard · **Level: 301 · deep dive**
 
-**Runnable:** [Tournament solutions, counted](../../method_comparisons/tournament_solutions/) — five defensible winners from a three-ballot election, both engines agreeing.
+**Runnable:** [Tournament solutions, counted](../../method_comparisons/tournament_solutions/README.md) — five defensible winners from a three-ballot election, both engines agreeing.
 
 ---
 
@@ -29,7 +29,7 @@ The graph theory is where the *answers* come from; the voting theory is where th
 
 Start from the most appealing democratic primitive there is: **A is socially better than B if more people prefer A to B.** [May's theorem](mays_theorem.md) says that for *two* candidates this is essentially the only sensible rule. So the pairwise "beats" relation looks like bedrock.
 
-It isn't transitive. A beats B, B beats C, C beats A — the [Condorcet paradox](../../method_comparisons/paradoxes_and_whoops/) — and then there is no maximal element at all. "Elect the best" has no referent. Tournament solutions are the response: **give up on maximality, and define a replacement.** Each one is a different answer to "what should 'best' mean when 'beats' goes in circles."
+It isn't transitive. A beats B, B beats C, C beats A — the [Condorcet paradox](../../method_comparisons/paradoxes_and_whoops/README.md) — and then there is no maximal element at all. "Elect the best" has no referent. Tournament solutions are the response: **give up on maximality, and define a replacement.** Each one is a different answer to "what should 'best' mean when 'beats' goes in circles."
 
 Two structural facts frame everything else:
 
@@ -54,7 +54,7 @@ Two things a newcomer should take from that table. First, **"how hard is it to c
 
 The three axioms the literature actually argues about:
 
-- **Monotonicity** — gaining a win never costs you your place in the choice set. Nearly everything satisfies it. (This is a much weaker condition than [monotonicity as we use it elsewhere](monotonicity/).)
+- **Monotonicity** — gaining a win never costs you your place in the choice set. Nearly everything satisfies it. (This is a much weaker condition than [monotonicity as we use it elsewhere](monotonicity/README.md).)
 - **Stability** — chosen from `B` and chosen from `C` if and only if chosen from `B ∪ C`. Demanding; fails for most solutions.
 - **Composition-consistency** — "choose the best from the best components," the strong form of [clone-independence](../../05_Ranked_Robin/01_Learn/rr_clone_independence.md). Satisfied by the uncovered, Banks and bipartisan sets. **Failed by Copeland**, which is the interesting part for us.
 
@@ -166,7 +166,7 @@ What it is **not** good for: choosing a voting method for a real jurisdiction. N
 
 ## Sources
 
-- **Felix Brandt, Markus Brill & Paul Harrenstein, "Tournament Solutions,"** ch. 3 of the [Handbook of Computational Social Choice](https://procaccia.info/wp-content/uploads/2020/03/comsoc.pdf) (CUP 2016, free from co-editor Ariel Procaccia) — the source for this page: definitions, the axioms, Theorems 3.1–3.7, and Figures 3.1–3.5, two of which are [runnable here](../../method_comparisons/tournament_solutions/). **Lean:** neutral / academic. Dense but self-contained.
+- **Felix Brandt, Markus Brill & Paul Harrenstein, "Tournament Solutions,"** ch. 3 of the [Handbook of Computational Social Choice](https://procaccia.info/wp-content/uploads/2020/03/comsoc.pdf) (CUP 2016, free from co-editor Ariel Procaccia) — the source for this page: definitions, the axioms, Theorems 3.1–3.7, and Figures 3.1–3.5, two of which are [runnable here](../../method_comparisons/tournament_solutions/README.md). **Lean:** neutral / academic. Dense but self-contained.
 - Peter C. Fishburn, "Condorcet Social Choice Functions," *SIAM J. Appl. Math.* 33(3), 1977 — where C1 is defined, and one of two independent origins of the uncovered set. **Lean:** neutral.
 - David C. McGarvey, "A Theorem on the Construction of Voting Paradoxes," *Econometrica* 21(4), 1953. **Lean:** neutral.
 - The choice sets on this page are computed by [`tournament_solutions_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/tournament_solutions_report.py) via Eric Pacuit & Wesley Holliday's `pref_voting`, and cross-checked against the LH engine's own Ranked Robin. Nothing here is asserted from memory.

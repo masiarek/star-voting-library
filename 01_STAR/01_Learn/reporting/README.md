@@ -20,8 +20,8 @@ A STAR result is a short funnel, and every report shows the same stages:
 
 | Page | What it covers |
 |---|---|
-| **[How the LH engine reports](reporting_LH/)** | the text/audit report — score distribution, matrix, both rounds, the self-reconciling runoff line + "Runoff math" funnel |
-| **[How BetterVoting reports](reporting_BV/)** | the live visual — scoring bars, runoff bars/pie, the two percent columns, abstention count |
+| **[How the LH engine reports](reporting_LH/README.md)** | the text/audit report — score distribution, matrix, both rounds, the self-reconciling runoff line + "Runoff math" funnel |
+| **[How BetterVoting reports](reporting_BV/README.md)** | the live visual — scoring bars, runoff bars/pie, the two percent columns, abstention count |
 | **[Where the two reports differ](reporting_diff_BV_LH.md)** | same winner, different abstention/score-total bookkeeping — the flat-ballot reconciliation |
 
 ## Report elements, up close
@@ -46,7 +46,7 @@ House rule: every reporting example carries **two views of the same election** �
 
 | Example | BetterVoting (election ID) | LH engine (tabulated mirror) |
 |---|---|---|
-| Pet race, 461 ballots | **`pet`** → [bettervoting.com/pet/results](https://bettervoting.com/pet/results) | [`best_pet_c7_b461_tabulated.txt`](../../04_Real_Elections/pet_real_bv_election/cases/cases_tabulated/best_pet_c7_b461_tabulated.txt) · [lesson](../../04_Real_Elections/pet_real_bv_election/) |
+| Pet race, 461 ballots | **`pet`** → [bettervoting.com/pet/results](https://bettervoting.com/pet/results) | [`best_pet_c7_b461_tabulated.txt`](../../04_Real_Elections/pet_real_bv_election/cases/cases_tabulated/best_pet_c7_b461_tabulated.txt) · [lesson](../../04_Real_Elections/pet_real_bv_election/README.md) |
 | 3-candidate flat-scores | **`dq2dmm`** | [`flat_scores_abstention_c3_b8_tabulated.txt`](../../04_Real_Elections/pet_real_bv_election/cases/cases_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) · [lesson](../../04_Real_Elections/pet_real_bv_election/small_case_abstention_lesson.md) |
 | 2-candidate minimal | **`3w6v4b`** | [`small_abstention_c2_b5_tabulated.txt`](../../04_Real_Elections/pet_real_bv_election/cases/cases_tabulated/small_abstention_c2_b5_tabulated.txt) · [lesson](../../04_Real_Elections/pet_real_bv_election/small_abstention_c2_b5_lesson.md) |
 | Runoff tie | *(create one — see [ties](reporting_ties.md))* | [`02b_c3_b2_three-candidates_tabulated.txt`](../../02_Examples/cases/cases_tabulated/02b_c3_b2_three-candidates_tabulated.txt) |

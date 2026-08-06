@@ -44,6 +44,6 @@ STAR passes the standard monotonicity criterion (*mono-raise*), as the pair abov
 | [STAR mono-raise-delete — before](cases/cases_pages/mono_raise_delete_before.md) | baseline: finalists X & Y, X wins the runoff | [`.yaml`](cases/mono_raise_delete_before.yaml) |
 | [STAR mono-raise-delete — after](cases/cases_pages/mono_raise_delete_after.md) | raise X, delete Y (now below X) → Y drops below Z, finalists become X & Z, **X loses** | [`.yaml`](cases/mono_raise_delete_after.yaml) |
 
-Concept & why this is a *lab-grade* failure (not the everyday promise): [STAR & monotonicity](../../01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md). Up: [method_comparisons — same ballots, different methods](../)
+Concept & why this is a *lab-grade* failure (not the everyday promise): [STAR & monotonicity](../../01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md). Up: [method_comparisons — same ballots, different methods](../README.md)
 
 # file: README.md

@@ -53,7 +53,7 @@ Exactly as in [Alaska](upward_monotonicity_alaska.md), the trick is the **order 
 
 Both methods are **monotonic** — lowering a candidate can never *help* them, and raising one can never *hurt* — so **neither has a downward (or upward) monotonicity paradox.**
 
-- **Ranked Robin** (Condorcet / Copeland) reads every head-to-head, so the elimination-order trick has no purchase. On the **same** ballots it elects **Melgar both times** — before *and* after — because Melgar is the [Condorcet winner](../../07_Concepts/topics/condorcet/) (he beats Engardio 18561–16370 and Nguyen 24971–11655). Note the sharp contrast: RCV-IRV's result *moves off* the Condorcet winner under the paradox; Ranked Robin stays on him. (Same ranked ballot, a monotonic count.)
+- **Ranked Robin** (Condorcet / Copeland) reads every head-to-head, so the elimination-order trick has no purchase. On the **same** ballots it elects **Melgar both times** — before *and* after — because Melgar is the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) (he beats Engardio 18561–16370 and Nguyen 24971–11655). Note the sharp contrast: RCV-IRV's result *moves off* the Condorcet winner under the paradox; Ranked Robin stays on him. (Same ranked ballot, a monotonic count.)
 - **STAR** passes **mono-raise** and its downward form: a candidate losing points can only ever *hurt* their own total, never help. (See [STAR & monotonicity](../../01_STAR/01_Learn/properties_and_limits/STAR_monotonicity.md) and the runnable [STAR before/after pair](cases/cases_pages/monotonicity_star_before.md).)
 
 ## Keep it in proportion — the fair reading

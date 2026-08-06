@@ -6,13 +6,13 @@
 - **Honest ballots** (STAR + RCV-IRV + Ranked Robin, same voters): [vote](https://bettervoting.com/3xgkck) · **[results ↗](https://bettervoting.com/3xgkck/results)** (election `3xgkck`, BV2227)
 - **The betrayal** (RCV-IRV, 2 voters rank the compromise first): [vote](https://bettervoting.com/bgcmxx) · **[results ↗](https://bettervoting.com/bgcmxx/results)** (election `bgcmxx`, BV2228)
 
-→ The deep-dive concept page: [Favorite Betrayal — the full explainer](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md). Related: [center squeeze](../center_squeeze/) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [what makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md).
+→ The deep-dive concept page: [Favorite Betrayal — the full explainer](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md). Related: [center squeeze](../center_squeeze/README.md) · [strategic voting](../../07_Concepts/topics/strategic_voting.md) · [what makes a good winner?](../../07_Concepts/topics/what_makes_a_good_winner.md).
 
 ---
 
 ## The setup
 
-Three candidates on a spectrum — **Left**, **Center**, **Right** — and 34 voters. Center is everyone's second choice and the [Condorcet winner](../../07_Concepts/topics/condorcet/) (beats Left 22–12, beats Right 21–13 head-to-head), but has the fewest first-choices.
+Three candidates on a spectrum — **Left**, **Center**, **Right** — and 34 voters. Center is everyone's second choice and the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) (beats Left 22–12, beats Right 21–13 head-to-head), but has the fewest first-choices.
 
 | Voters | Ballot |
 |---|---|

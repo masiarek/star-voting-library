@@ -2,9 +2,9 @@
 
 *Every tabulation is a two-step act: **compress** the ballots into some summary, then **decide** from the summary. Change the second step and you have a different method; change the first and you have changed what the method is even capable of noticing. This page is about the first step — which statistic a rule actually reads — the question Peter Fishburn turned into a classification in 1977. It answers a debate question worth having ("how much of my ballot does your method look at?") and defuses two claims that sound right and aren't.*
 
-→ Related: [the C1/C2/C3 tiers in the Condorcet reading list](condorcet/condorcet_reading_list.md) · [summability](summability/) — how *big* the summary is · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — how the pairwise summary splits · [Borda](../../06_Other/other_ranked_methods/borda.md) · [pairwise counting](pairwise_counting.md).
+→ Related: [the C1/C2/C3 tiers in the Condorcet reading list](condorcet/condorcet_reading_list.md) · [summability](summability/README.md) — how *big* the summary is · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — how the pairwise summary splits · [Borda](../../06_Other/other_ranked_methods/borda.md) · [pairwise counting](pairwise_counting.md).
 
-**Runnable:** [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/) — three electorates, one pairwise table, three plurality winners.
+**Runnable:** [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/README.md) — three electorates, one pairwise table, three plurality winners.
 
 ---
 
@@ -13,7 +13,7 @@
 | Question | Asks | Answered by |
 |---|---|---|
 | **Which** statistic does the rule read? | can it even see margins? first choices? | Fishburn's tiers, below |
-| **How big** is that statistic? | what must a precinct publish? | [summability](summability/) |
+| **How big** is that statistic? | what must a precinct publish? | [summability](summability/README.md) |
 | **How hard** is it to compute from? | can you do it by hand? | complexity |
 
 These are independent, and every pairing of them comes apart somewhere. Keeping them separate is most of the value on this page.
@@ -24,7 +24,7 @@ Peter Fishburn (1977) sorted rules by how much of the **pairwise** data they nee
 
 | Tier | Reads | Members you'll meet |
 |:---:|---|---|
-| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../../05_Ranked_Robin/01_Learn/)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
+| **C1** | the **tournament** — who beat whom, and which pairs tied. Direction only, no sizes | Copeland (the core of [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md)), Smith set, Top Cycle, uncovered set — the [tournament solutions](tournament_solutions.md) |
 | **C2** | the **weighted tournament** — the same graph *with the margins on it* | Minimax/Simpson, Ranked Pairs, Schulze, Kemeny, Split Cycle — and Borda |
 | **C3** | more than the pairwise matrix contains | Dodgson, Young, **plurality**, RCV-IRV |
 
@@ -40,7 +40,7 @@ The two statistics are **incomparable, not nested.** First-place counts don't de
 
 > **Plurality's winner is not a function of the pairwise matrix.**
 
-And it is demonstrable. [Three 12-ballot electorates](../../method_comparisons/same_matrix_different_plurality/) produce the identical pairwise table — Ben beats Ada 7–5, Ada ties Cal 6–6, Ben beats Cal 7–5, hence the same Condorcet winner, the same Borda scores, the same Ranked Robin / Minimax / Ranked Pairs / Kemeny result — and **three different plurality winners, one per candidate.**
+And it is demonstrable. [Three 12-ballot electorates](../../method_comparisons/same_matrix_different_plurality/README.md) produce the identical pairwise table — Ben beats Ada 7–5, Ada ties Cal 6–6, Ben beats Cal 7–5, hence the same Condorcet winner, the same Borda scores, the same Ranked Robin / Minimax / Ranked Pairs / Kemeny result — and **three different plurality winners, one per candidate.**
 
 The mechanism is worth carrying, because it explains the whole tier: **a ballot and its exact mirror cancel pairwise but not in the first-choice tally.** `Ada>Ben>Cal` plus `Cal>Ben>Ada` puts one vote on each side of every head-to-head, leaving every margin untouched, while handing out two different first preferences. Swap mirror pairs in and out and the plurality winner roams while the matrix sits still.
 
@@ -76,7 +76,7 @@ This isn't STAR dodging a question. It's the same type distinction as the [SWF/S
 
 ## Why C3 is not a demerit
 
-C3 is a bag, not a basement. It holds **plurality** — the cheapest, most summable method in this library, one number per candidate — *and* **[RCV-IRV](../../06_Other/RCV_IRV/concepts/)**, the one method here whose count [doesn't summarize into precinct subtotals](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) at all. Those two have nothing in common except that the pairwise matrix doesn't determine them.
+C3 is a bag, not a basement. It holds **plurality** — the cheapest, most summable method in this library, one number per candidate — *and* **[RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md)**, the one method here whose count [doesn't summarize into precinct subtotals](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) at all. Those two have nothing in common except that the pairwise matrix doesn't determine them.
 
 Which is exactly why the tiers must not be read as a ladder:
 
@@ -96,12 +96,12 @@ It is positive rather than an attack: it says what pairwise and score counting *
 
 - Peter C. Fishburn, "Condorcet Social Choice Functions," *SIAM Journal on Applied Mathematics* 33(3), 1977, pp. 469–489 — the classification, for Condorcet SCFs. **Lean:** neutral; taxonomy.
 - William S. Zwicker, "Introduction to the Theory of Voting," in *Handbook of Computational Social Choice* (2016), §2.5 — the modern restatement, including the observation that one *should* balk at "plurality needs more information than Borda." **Lean:** neutral.
-- The tier assignments used across this repo, and the `[C1]`/`[C2]` tags printed by [`cycle_resolution_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/), follow `pref_voting`'s own module organization.
+- The tier assignments used across this repo, and the `[C1]`/`[C2]` tags printed by [`cycle_resolution_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md), follow `pref_voting`'s own module organization.
 
 ## Related
 
-- [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/) — the runnable exhibit
+- [Same matrix, different plurality](../../method_comparisons/same_matrix_different_plurality/README.md) — the runnable exhibit
 - [Tournament solutions](tournament_solutions.md) — the C1 tier as its own field: what the rules that read *only* the tournament actually do, and where Ranked Robin steps outside it
-- [Copeland vs Borda margins](../../method_comparisons/copeland_vs_borda_margins/) — C1 vs C2, worked · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — the theorem underneath
-- [Summability](summability/) — the *how big* question · [pairwise counting](pairwise_counting.md) — what the matrix is
+- [Copeland vs Borda margins](../../method_comparisons/copeland_vs_borda_margins/README.md) — C1 vs C2, worked · [the cycle–cocycle decomposition](cycle_cocycle_decomposition.md) — the theorem underneath
+- [Summability](summability/README.md) — the *how big* question · [pairwise counting](pairwise_counting.md) — what the matrix is
 - [The Condorcet reading list](condorcet/condorcet_reading_list.md) — the tiers applied to the Condorcet family · [the ranked-ballot zoo](ranked_ballot_methods_zoo.md)

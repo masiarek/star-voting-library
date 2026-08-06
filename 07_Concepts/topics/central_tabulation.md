@@ -2,13 +2,13 @@
 
 *The operational price of a non-summable count: ballots (or full cast-vote records) must be gathered in one place before anyone can name the winner — a single point of failure, a heavier and slower audit, and, in a low-trust era, a count that is harder to **show** correct to someone motivated to disbelieve it. This page expands the one-line cost bullet into what it actually means on the ground.*
 
-→ **Level: 201 · deep dive** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · the math side: [Summability topic hub](summability/) · Glossary: [`summability`](../GLOSSARY.md)
+→ **Level: 201 · deep dive** — Curriculum [201.1](../CURRICULUM.md) (reading the results) · the math side: [Summability topic hub](summability/README.md) · Glossary: [`summability`](../GLOSSARY.md)
 
 ---
 
 ## Two ways to count an election
 
-- **Precinct (local) count:** each precinct tallies its own ballots into a small fixed-size table — score totals, approval counts, a [pairwise matrix](pairwise_counting.md) — publishes it, and the jurisdiction **adds the tables**. The ballots never have to leave. Any method whose count works this way is [**summable**](summability/).
+- **Precinct (local) count:** each precinct tallies its own ballots into a small fixed-size table — score totals, approval counts, a [pairwise matrix](pairwise_counting.md) — publishes it, and the jurisdiction **adds the tables**. The ballots never have to leave. Any method whose count works this way is [**summable**](summability/README.md).
 - **Central tabulation:** the ballots themselves — or their electronic images, the **cast-vote records (CVRs)**, one record per ballot listing everything that voter marked — must be **gathered in one place** and run through one count, because no precinct subtotal can stand in for them.
 
 Which one a jurisdiction *needs* is a property of the voting method's count. IRV (and STV, and every sequential-elimination variant) is the prominent method that structurally **requires** central tabulation: who gets eliminated in round 2 depends on the *combined* round-1 totals of every precinct, so the count can't start until every ballot's full ranking is in one system. The worked two-district demonstration — B wins both districts, B is eliminated when they merge — is on [IRV is not summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md); this page is about what the centralization itself costs.
@@ -58,7 +58,7 @@ And the *results themselves* are slower and murkier along the way: partial count
 
 ## Cross-references
 
-- [Summability topic hub](summability/) — the mathematical property whose absence forces central tabulation (STAR / Ranked Robin / IRV side by side, and the multi-winner seat-capping story)
+- [Summability topic hub](summability/README.md) — the mathematical property whose absence forces central tabulation (STAR / Ranked Robin / IRV side by side, and the multi-winner seat-capping story)
 - [IRV is not summable](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md) — *why* no precinct subtotal exists, with the two-districts worked example this page leans on
 - [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md) · [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) — the methods that keep the local count
 - [Pairwise counting — every ballot is a tiny matrix](pairwise_counting.md) — the artifact precincts publish instead of shipping ballots

@@ -36,7 +36,7 @@ The scholarly reference: an edited volume collecting the theory, experiments, an
 
 **The lean:** An edited academic handbook, so more balanced than a single-advocate book — but its subject is approval, and contributors are largely sympathetic. Best mined for specific chapters (Laslier's own experimental work is a highlight).
 
-**In this repo:** [Approval voting](../../04_Approval/01_Learn/approval_voting.md) · [multi-winner approval](../../04_Approval/01_Learn/Multiwinner_Approval/) · the repo cross-checks approval counts against the [`abcvoting` engine](../tabulation_engines/)
+**In this repo:** [Approval voting](../../04_Approval/01_Learn/approval_voting.md) · [multi-winner approval](../../04_Approval/01_Learn/Multiwinner_Approval/README.md) · the repo cross-checks approval counts against the [`abcvoting` engine](../tabulation_engines/README.md)
 
 </td>
 </tr>

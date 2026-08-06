@@ -8,9 +8,9 @@ Why the folder exists at all: Bloc STAR **is** single-winner STAR, run once per 
 
 | Set | Level | Elections | What it shows |
 |---|:--:|---|---|
-| [Participation](participation/) | 🔴 301 | BV2264 [`j3hqvb`](https://bettervoting.com/j3hqvb/results) · BV2265 [`th3pbp`](https://bettervoting.com/th3pbp/results) | A voter joins, votes honestly, and gets a **worse council by their own ballot** — because their support lifted their favourite into the seat-2 runoff, where a candidate they scored 0 beat them. |
-| [Seat order](seat_order/) | 🟡 201 | BV2266 [`k7pfqt`](https://bettervoting.com/k7pfqt/results) | The candidate who beats **every** rival head-to-head is seated **second**. "First seated" is not "most preferred," which matters wherever the top finisher gets the chair. |
-| [The committee spoiler](committee_spoiler/) | 🔴 301 | BV2267 [`my9jd9`](https://bettervoting.com/my9jd9/results) · BV2268 [`6m3gxq`](https://bettervoting.com/6m3gxq/results) | Adding a candidate who **wins no seat** changes *which* candidates do — independence of irrelevant alternatives, at the level of the committee. |
+| [Participation](participation/README.md) | 🔴 301 | BV2264 [`j3hqvb`](https://bettervoting.com/j3hqvb/results) · BV2265 [`th3pbp`](https://bettervoting.com/th3pbp/results) | A voter joins, votes honestly, and gets a **worse council by their own ballot** — because their support lifted their favourite into the seat-2 runoff, where a candidate they scored 0 beat them. |
+| [Seat order](seat_order/README.md) | 🟡 201 | BV2266 [`k7pfqt`](https://bettervoting.com/k7pfqt/results) | The candidate who beats **every** rival head-to-head is seated **second**. "First seated" is not "most preferred," which matters wherever the top finisher gets the chair. |
+| [The committee spoiler](committee_spoiler/README.md) | 🔴 301 | BV2267 [`my9jd9`](https://bettervoting.com/my9jd9/results) · BV2268 [`6m3gxq`](https://bettervoting.com/6m3gxq/results) | Adding a candidate who **wins no seat** changes *which* candidates do — independence of irrelevant alternatives, at the level of the committee. |
 
 Every one of the five elections is live on BetterVoting and reproduced independently in the LH engine, and **BV agrees with LH exactly** in all five: same winners, same seat order, every ballot counted, and `tieBreakType: none` at every seat — nothing here rests on a lot. The ballots, the seat-by-seat count and the frozen export live with the case.
 

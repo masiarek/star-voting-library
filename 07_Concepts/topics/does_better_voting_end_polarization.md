@@ -15,7 +15,7 @@ The vivid recent statement of this is Tedman Getschman's *["How MaxVoting Ends P
 Strip the branding and there is a real, important truth here, and it's the honest core of **[STAR's own pitch](Why_STAR_Voting.md)**:
 
 - **No vote-splitting / no [spoiler](spoiler_effect.md).** Cardinal ballots genuinely remove the structural penalty for a crowded field. A consensus candidate can't be "split out" the way [Plurality](plurality.md) splits one side.
-- **The moderate survives instead of being squeezed.** Whole-ballot methods don't eliminate the broadly-liked centrist early the way Hare/IRV does — see [center squeeze](center_squeeze/). The candidate a majority would accept can actually win.
+- **The moderate survives instead of being squeezed.** Whole-ballot methods don't eliminate the broadly-liked centrist early the way Hare/IRV does — see [center squeeze](center_squeeze/README.md). The candidate a majority would accept can actually win.
 - **No lesser-evil trap.** Voters can support several candidates, or score an honest favorite *and* a safe compromise, without [betraying](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) either. That defuses the "vote for the frontrunner you hate least" dynamic that hardens two camps.
 
 Together these remove the **incentives** that reward running to the base and punish the compromiser. That is a legitimate, structural anti-polarization mechanism — and it's enough of a claim on its own. It doesn't need inflating.
@@ -45,5 +45,5 @@ Keep the defensible version, which is strong enough on its own: **a better ballo
 
 - [The spatial voting model](spatial_voting_model.md) — the median voter theorem, Hotelling, and why 1-D results break in higher dimensions
 - [Two-party dominance](two_party_dominance.md) — the case for and against, and what actually changes it
-- [The spoiler effect](spoiler_effect.md) · [center squeeze](center_squeeze/) · [Why STAR Voting](Why_STAR_Voting.md) · [What makes a good winner?](what_makes_a_good_winner.md)
+- [The spoiler effect](spoiler_effect.md) · [center squeeze](center_squeeze/README.md) · [Why STAR Voting](Why_STAR_Voting.md) · [What makes a good winner?](what_makes_a_good_winner.md)
 - External: [median voter theorem](https://en.wikipedia.org/wiki/Median_voter_theorem) · [Downsian / Hotelling's law](https://en.wikipedia.org/wiki/Hotelling%27s_law) · [McKelvey–Schofield chaos theorem](https://en.wikipedia.org/wiki/McKelvey%E2%80%93Schofield_chaos_theorem)

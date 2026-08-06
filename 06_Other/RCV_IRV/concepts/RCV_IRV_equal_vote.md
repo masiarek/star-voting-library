@@ -30,7 +30,7 @@ X and Y did *not* have an equal-and-opposite effect. They inadvertently **both h
 
 ### The same failure, counted — balanced ballots flip the winner
 
-Here it is with real numbers — the exact mirror of the STAR case where opposite ballots *do* cancel ([equal & opposite](../../../01_STAR/03_Criteria/equal_and_opposite/)). Three candidates on a line — **Ada** (left), **Bruno** (center), **Cyrus** (right) — and a small electorate where Bruno is the compromise:
+Here it is with real numbers — the exact mirror of the STAR case where opposite ballots *do* cancel ([equal & opposite](../../../01_STAR/03_Criteria/equal_and_opposite/README.md)). Three candidates on a line — **Ada** (left), **Bruno** (center), **Cyrus** (right) — and a small electorate where Bruno is the compromise:
 
 ```
 4: Bruno > Ada  > Cyrus
@@ -38,7 +38,7 @@ Here it is with real numbers — the exact mirror of the STAR case where opposit
 2: Cyrus > Bruno > Ada
 ```
 
-**Before.** Bruno is the [Condorcet winner](../../../07_Concepts/topics/condorcet/) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
+**Before.** Bruno is the [Condorcet winner](../../../07_Concepts/topics/condorcet/README.md) — he beats Ada 6–3 and Cyrus 7–2 — *and* RCV-IRV elects him too: Cyrus has the fewest first-choices (2) and is eliminated, his ballots flow to Bruno, Bruno wins 6–3. IRV and the head-to-head agree.
 
 Now add **three exact-opposite pairs** — each `Ada > Bruno > Cyrus` matched by its perfect reverse `Cyrus > Bruno > Ada`. Under Score, STAR, or [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) these **cancel**: every pairwise margin just grows symmetrically and **Bruno stays the Condorcet winner** (now 9–6 and 10–5). The balanced ballots changed nothing about whom a majority prefers.
 
@@ -52,7 +52,7 @@ Round 2:  Ada 10  Cyrus 5               → Ada wins
 
 The six new ballots put their first-choices on the two **extremes** (Ada +3, Cyrus +3) and *none* on the **center** (Bruno +0) — because IRV only ever counts the top of each ballot. Perfectly balanced ballots, which cancel under every other method, **squeezed the center candidate out and handed the win to an extreme.** Equal and opposite in, a flipped winner out — the effect was not zero.
 
-That is the Test of Balance failing in a single election, and the mechanism is exactly [center squeeze](RCV_IRV_center_squeeze.md): under sequential elimination it's *first-choice* counts that decide who survives, so opposite ballots don't cancel — they pile onto the ends and starve the middle. **Run it:** [`06_Other/RCV_IRV/equal_vote_balance/`](../equal_vote_balance/) (base → Bruno, plus-balanced → Ada).
+That is the Test of Balance failing in a single election, and the mechanism is exactly [center squeeze](RCV_IRV_center_squeeze.md): under sequential elimination it's *first-choice* counts that decide who survives, so opposite ballots don't cancel — they pile onto the ends and starve the middle. **Run it:** [`06_Other/RCV_IRV/equal_vote_balance/`](../equal_vote_balance/README.md) (base → Bruno, plus-balanced → Ada).
 
 **Is this a fair test, or an anti-IRV gotcha?** Fair — and the fairness is in *what passes*: **[Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md) is also a ranked method**, and the opposite ballots cancel under it perfectly. So the lesson is *not* "ranks are worse than scores" — it's that **summable and pairwise counts cancel opposites, while sequential elimination doesn't.** A score ballot cancels in the *sum*; a ranked-Condorcet count cancels in the *pairwise matrix*; only IRV's round-by-round elimination breaks the symmetry. That's also why Ranked Robin is the natural olive branch to ranked-choice voters — the *same ranked ballot*, counted in a way that keeps every voter's weight equal. (And this is a constructed illustration; center squeeze is a genuine IRV property but concentrated in competitive 3-way races — the honest scope is spelled out just below.)
 

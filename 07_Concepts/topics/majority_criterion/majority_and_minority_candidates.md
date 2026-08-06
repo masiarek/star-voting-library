@@ -14,7 +14,7 @@ Claude Hillinger raises it as a definitional aside and then walks past it, but i
 
 > With several candidates, it will be hard for anyone to win an arithmetic majority.
 
-If a "minority candidate" is one elected without more than half the vote, then in any field of three or more the winner is a minority candidate **as a matter of arithmetic**, not as a matter of failure. The label describes the size of the field at least as much as it describes the winner. So the literature reaches for a repair — and its favourite repair, as Hillinger notes, is the [Condorcet winner](../condorcet/): the candidate who beats every rival head-to-head. That repair has its own hole, which Condorcet knew about: the pairwise contest can cycle, and then no such candidate exists.
+If a "minority candidate" is one elected without more than half the vote, then in any field of three or more the winner is a minority candidate **as a matter of arithmetic**, not as a matter of failure. The label describes the size of the field at least as much as it describes the winner. So the literature reaches for a repair — and its favourite repair, as Hillinger notes, is the [Condorcet winner](../condorcet/README.md): the candidate who beats every rival head-to-head. That repair has its own hole, which Condorcet knew about: the pairwise contest can cycle, and then no such candidate exists.
 
 Neither observation settles anything, and Hillinger's own conclusion is the right one — you do not need to resolve this to see that plurality's outcomes are bad. But you *do* need to resolve it before saying "minority winner!" in an argument, because your opponent is allowed to ask which sense you meant.
 

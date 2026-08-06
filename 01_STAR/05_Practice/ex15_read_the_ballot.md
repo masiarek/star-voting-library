@@ -1,6 +1,6 @@
 # Exercise 15 — Read the ballot, name the method
 
-*Every other exercise in this set hands you the method and asks who wins. This one runs backwards. You get two filled-in profiles and no method name — just the marks. Name the method from the shape of the ballot, then count. Then the part the textbooks stop before: one of these two profiles has a property that guarantees its winner is also the **[Condorcet winner](../../07_Concepts/topics/condorcet/)**, and the other has a winner so uncontested that no method in the library disagrees. Work out which is which, and why.*
+*Every other exercise in this set hands you the method and asks who wins. This one runs backwards. You get two filled-in profiles and no method name — just the marks. Name the method from the shape of the ballot, then count. Then the part the textbooks stop before: one of these two profiles has a property that guarantees its winner is also the **[Condorcet winner](../../07_Concepts/topics/condorcet/README.md)**, and the other has a winner so uncontested that no method in the library disagrees. Work out which is which, and why.*
 
 **▶ Live on BetterVoting:** profile (a) — [vote](https://bettervoting.com/d4v2dh) · **[results ↗](https://bettervoting.com/d4v2dh/results)** (election `d4v2dh`, Test ID BV2258 — two races on the same 35 ballots: the Yes/No count, then the identical marks as 5/0 scores so the head-to-head view prints). Profile (b) — [vote](https://bettervoting.com/tfm64p) · **[results ↗](https://bettervoting.com/tfm64p/results)** (election `tfm64p`, Test ID BV2259). **BetterVoting's own count agrees with the engine on all three races** — Blair, Blair, Clara. Two elections rather than one because the profiles have different electorates (35 voters and 4), and every BV voter votes every race.
 
@@ -45,7 +45,7 @@ The column headings are how many voters cast that ballot.
 
 **Approval voting.** Two features settle it:
 
-1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../06_Other/RCV_IRV/concepts/), [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Borda — and every score method.
+1. **Each candidate is marked independently, with only two states.** No ranks (nothing says which Yes is better than another Yes), no magnitudes. That rules out every ranked method — [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md), [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Borda — and every score method.
 2. **Voters mark different *numbers* of candidates.** The ×15 bloc approves two, the ×5 bloc approves one. That rules out [Choose-One](../../07_Concepts/topics/plurality.md) (exactly one mark) and k-approval (exactly k marks).
 
 Independent, binary, unlimited marks — that is the definition of an approval ballot. The theorists' name for a profile of them is a **[dichotomous profile](../../07_Concepts/GLOSSARY.md#the-wider-field-computational-social-choice)**: every voter's ballot is a ranking with exactly two levels and nothing said inside either one.

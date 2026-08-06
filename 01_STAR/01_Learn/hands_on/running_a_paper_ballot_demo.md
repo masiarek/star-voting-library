@@ -69,7 +69,7 @@ python3 STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py \
 
 The ballot is styled after the **official Equal Vote STAR ballot** — STAR VOTING header, bulleted instructions, Worst/Best labels, star column headers, digit-in-bubble cells, zebra stripes (in the official ballot grays: bubbles `#666`, stars `#ccc`, highlight `#ececec`), and the "two highest scoring are finalists" footer — so it's instantly familiar to anyone who's seen STAR before.
 
-**Add the real STAR logo (optional, recommended).** The built-in header is a drawn facsimile so the tool works with no assets. For a polished print run, add the **official STAR Voting logo** with `--logo`. Two are bundled in [`tools_adam/assets/`](../../../STARVote_LH_tabulation_engine/tools_adam/assets/):
+**Add the real STAR logo (optional, recommended).** The built-in header is a drawn facsimile so the tool works with no assets. For a polished print run, add the **official STAR Voting logo** with `--logo`. Two are bundled in [`tools_adam/assets/`](../../../STARVote_LH_tabulation_engine/tools_adam/assets/README.md):
 - `--logo STARVote_LH_tabulation_engine/tools_adam/assets/BW_long_form.jpg` — the horizontal lockup (recommended; fits the header cleanly),
 - `--logo STARVote_LH_tabulation_engine/tools_adam/assets/bw_logo_star.jpg` — the round seal (lighter-ink alternative).
 

@@ -6,7 +6,7 @@
 
 > Why this page matters: summability sounds like a dry administrative detail, but it drives real things voters care about — how elections are audited, whether a precinct can verify its own result, and whether early/partial counts mean anything. IRV quietly gives all of that up.
 
-→ Cross-method **topic hub**: [Summability](../../../07_Concepts/topics/summability/) (STAR / Ranked Robin / IRV side by side). STAR keeps this property — [`STAR is summable`](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md). Glossary: [`summability`](../../../07_Concepts/GLOSSARY.md).
+→ Cross-method **topic hub**: [Summability](../../../07_Concepts/topics/summability/README.md) (STAR / Ranked Robin / IRV side by side). STAR keeps this property — [`STAR is summable`](../../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md). Glossary: [`summability`](../../../07_Concepts/GLOSSARY.md).
 
 ---
 
@@ -56,4 +56,4 @@ District B     3 – 4 – 6     3 – 6 – 4     7 – 6 – 0
 Combined       9 – 11 – 6    9 – 9 – 8    11 – 9 – 6     (= the sum)
 ```
 
-From that summed matrix: **B beats A (11–9) and beats C (11–9)** → **B is the Ranked Robin / Condorcet winner.** So the candidate who won *both* districts wins the merged election too — and you reach it by **adding precinct tables**, never pooling ballots. Same ranked ballots that broke IRV's count; Ranked Robin sums them and gets the sensible answer. (Produced by the LH engine's `calculate_preference_matrix`; the [`pref_voting` engine](../../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) reports the same **Copeland = Ranked Robin** winner. Files: [`summability_demo/`](../../../method_comparisons/summability_demo).) **Full RR-side treatment:** [Ranked Robin is summable](../../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md).
+From that summed matrix: **B beats A (11–9) and beats C (11–9)** → **B is the Ranked Robin / Condorcet winner.** So the candidate who won *both* districts wins the merged election too — and you reach it by **adding precinct tables**, never pooling ballots. Same ranked ballots that broke IRV's count; Ranked Robin sums them and gets the sensible answer. (Produced by the LH engine's `calculate_preference_matrix`; the [`pref_voting` engine](../../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the same **Copeland = Ranked Robin** winner. Files: [`summability_demo/`](../../../method_comparisons/summability_demo).) **Full RR-side treatment:** [Ranked Robin is summable](../../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md).

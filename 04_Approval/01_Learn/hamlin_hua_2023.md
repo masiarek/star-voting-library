@@ -1,6 +1,6 @@
 # The case for approval voting — Hamlin & Hua (2023), §4 claim-checked
 
-*The companion article to [the foundational STAR paper](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) — same journal, same issue, the next ten pages. Approval's advocacy organisation makes its case in an academic venue, and section 4 answers the four critiques it expects: the majority criterion, later-no-harm, bullet voting, expressiveness. This page runs it through the same [claim-check recipe](../../method_comparisons/fairvote_star_whitepaper/) used on every camp — concede the kernel, test what's testable, flag the overreach, disclose the lean. The §4.1 example is fully runnable, so most of this page is engine output rather than argument.*
+*The companion article to [the foundational STAR paper](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) — same journal, same issue, the next ten pages. Approval's advocacy organisation makes its case in an academic venue, and section 4 answers the four critiques it expects: the majority criterion, later-no-harm, bullet voting, expressiveness. This page runs it through the same [claim-check recipe](../../method_comparisons/fairvote_star_whitepaper/README.md) used on every camp — concede the kernel, test what's testable, flag the overreach, disclose the lean. The §4.1 example is fully runnable, so most of this page is engine output rather than argument.*
 
 **Level: 301 · deep dive** · [DOI 10.1007/s10602-022-09381-x](https://doi.org/10.1007/s10602-022-09381-x) · runnable companions: [Approval and the majority criterion](../../method_comparisons/approval_majority_criterion/README.md).
 
@@ -35,7 +35,7 @@ The paper's example, reproduced with its own labels ([case 01](../../method_comp
 
 A is the first choice of 60% and loses. The paper states this plainly and does not hedge it — which is to its credit, and is why the section is worth engaging with rather than rebutting.
 
-**One fact the section doesn't mention about its own example.** It opens by observing that a [Condorcet winner](../../07_Concepts/topics/condorcet/) need not exist. True in general — but this profile has one, and it is A ([case 02](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md)):
+**One fact the section doesn't mention about its own example.** It opens by observing that a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) need not exist. True in general — but this profile has one, and it is A ([case 02](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md)):
 
 ```text
 Round-Robin — every pair, head-to-head (For – Against):
@@ -155,6 +155,6 @@ What doesn't survive is the §4.1 defence, and it fails on its own terms. The se
 
 ---
 
-*See also: [Approval — honest limits](approval_honest_limits.md) · [Approval in the theory literature](approval_in_the_literature.md) · [the majority criterion](../../07_Concepts/topics/majority_criterion/README.md) · [the runnable case set](../../method_comparisons/approval_majority_criterion/README.md) · [claim-checking as a habit](../../method_comparisons/fairvote_star_whitepaper/).*
+*See also: [Approval — honest limits](approval_honest_limits.md) · [Approval in the theory literature](approval_in_the_literature.md) · [the majority criterion](../../07_Concepts/topics/majority_criterion/README.md) · [the runnable case set](../../method_comparisons/approval_majority_criterion/README.md) · [claim-checking as a habit](../../method_comparisons/fairvote_star_whitepaper/README.md).*
 
 # file: hamlin_hua_2023.md

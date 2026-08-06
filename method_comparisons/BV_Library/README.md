@@ -33,6 +33,6 @@ Ported from BetterVoting's `AllocatedScore.test.ts`. LH's `allocated` method rep
 | [Ranked Robin](cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | Condorcet winner, equal ranks allowed | [`.yaml`](cases/BV_Library_ranked_robin_single_winner.yaml) |
 | [Ranked Robin — tie](cases/cases_pages/BV_Library_ranked_robin_ties.md) | a Copeland tie broken by tiebreak order | [`.yaml`](cases/BV_Library_ranked_robin_ties.yaml) |
 
-Up: [method_comparisons — same ballots, different methods](../)
+Up: [method_comparisons — same ballots, different methods](../README.md)
 
 # file: README.md

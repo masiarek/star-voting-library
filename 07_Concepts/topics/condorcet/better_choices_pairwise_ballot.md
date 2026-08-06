@@ -26,7 +26,7 @@ Two real ideas here, and they're worth naming:
 
 1. **The pairwise matrix *is* the ballot.** A repo staple is that any Condorcet method [computes a pairwise matrix](../pairwise_counting.md) from ranked or scored ballots — the voter ranks, the machine derives the head-to-heads. Better Choices inverts that: it asks the head-to-heads **directly**, in the familiar bubble format people already use for [Choose-One](../plurality.md). No ranking to explain, no "what if I only rank two." For a public that rejects reforms it finds confusing, cutting the ballot down to "pick a winner in each of three races" is a real usability bet.
 
-2. **It surfaces the pairwise logic voters never see.** Under RCV-IRV a [center squeeze](../center_squeeze/) is invisible on the ballot — the eliminated [Condorcet winner](README.md) leaves no trace. Here the head-to-heads are the ballot, so "who beats whom" is the thing voters actually mark. That's pedagogically honest.
+2. **It surfaces the pairwise logic voters never see.** Under RCV-IRV a [center squeeze](../center_squeeze/README.md) is invisible on the ballot — the eliminated [Condorcet winner](README.md) leaves no trace. Here the head-to-heads are the ballot, so "who beats whom" is the thing voters actually mark. That's pedagogically honest.
 
 ## The wrinkle Fisher flags: intransitive ballots
 

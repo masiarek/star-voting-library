@@ -29,27 +29,27 @@
   - **STAR** → [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) (the *why*) and [every criterion STAR fails](../../01_STAR/01_Learn/properties_and_limits/star_criteria_failures.md) (the *index, with a runnable example + BV id for each*): not Condorcet-compliant; trades Later-No-Harm; rare majority / participation / mono-raise-delete / IIA / consistency failures.
   - **Ranked Robin / Condorcet** → [RR's honest limits](../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md) (cycles; blind to intensity — the sincere dark horse).
   - **RCV-IRV** → [non-monotonicity](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md), [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md), [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md).
-  - **Approval / Score** → [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/) and the "where do you draw the line?" threshold question ([are equal-score votes discounted?](../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md)).
+  - **Approval / Score** → [the chicken/Burr dilemma](../../method_comparisons/chicken_dilemma/README.md) and the "where do you draw the line?" threshold question ([are equal-score votes discounted?](../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md)).
   - **Plurality / Choose-One** → the [spoiler effect](../topics/spoiler_effect.md) and [wasted votes](../topics/wasted_votes.md) — the failures the whole reform movement exists to fix.
 - **The point:** a method that lists its own limits out loud is more trustworthy, not less. Candor is the credibility (it's [301](CURRICULUM_301.md)'s rule, carried to the capstone).
 
 ## 401.4 — The failures that actually happened
 
 - **Objective:** separate real-world failures from lab constructions — the top of the four-part test.
-- **Material:** [Burlington 2009](../../method_comparisons/burlington_2009/) (center squeeze + non-monotonicity on certified ballots → IRV repealed), [Alaska 2022](../../method_comparisons/alaska_2022/) (Condorcet failure, spoiler, upward monotonicity, exhaustion — one real race), and [San Francisco D7 2020](../../method_comparisons/monotonicity/downward_monotonicity_sf.md) (downward monotonicity).
+- **Material:** [Burlington 2009](../../method_comparisons/burlington_2009/README.md) (center squeeze + non-monotonicity on certified ballots → IRV repealed), [Alaska 2022](../../method_comparisons/alaska_2022/README.md) (Condorcet failure, spoiler, upward monotonicity, exhaustion — one real race), and [San Francisco D7 2020](../../method_comparisons/monotonicity/downward_monotonicity_sf.md) (downward monotonicity).
 - **The point:** these are IRV's, and they're *structural and sincere* — which is why they carry weight that a contrived STAR gotcha doesn't. Keep the [rarity](../../method_comparisons/alaska_2022/alaska_301.md) in view too (2 Condorcet failures in 182 US RCV elections): real, predictable, but not constant.
 
 ## 401.5 — The criterion-failure gallery (runnable)
 
 - **Objective:** see each named criterion fail on a real, re-runnable election — the concrete counterpart to 401.1's theorems.
-- **Material:** [monotonicity](../../method_comparisons/monotonicity/) (raise the winner → they lose), [reversal symmetry](../../method_comparisons/reversal_symmetry/) (best = worst), [the Dark Horse](../../method_comparisons/dark_horse_borda/) (Borda elects a nobody), [the chicken dilemma](../../method_comparisons/chicken_dilemma/), and [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/).
-- **The mean twin:** the [**Mudroom**](../../method_comparisons/mudroom/) collects these as deliberately *unfair*, one-sided per-method hit-reels — fun, clearly labeled, and **not for citing.** Use it to appreciate that *no method is spared*; use the fair pages above for the actual analysis.
+- **Material:** [monotonicity](../../method_comparisons/monotonicity/README.md) (raise the winner → they lose), [reversal symmetry](../../method_comparisons/reversal_symmetry/README.md) (best = worst), [the Dark Horse](../../method_comparisons/dark_horse_borda/README.md) (Borda elects a nobody), [the chicken dilemma](../../method_comparisons/chicken_dilemma/README.md), and [favorite betrayal](../../method_comparisons/favorite_betrayal_irv/README.md).
+- **The mean twin:** the [**Mudroom**](../../method_comparisons/mudroom/README.md) collects these as deliberately *unfair*, one-sided per-method hit-reels — fun, clearly labeled, and **not for citing.** Use it to appreciate that *no method is spared*; use the fair pages above for the actual analysis.
 - **The point:** the impossibility theorems say failures must exist; these make them tangible — and, seen across every method, prove the failures are universal, not a mark of one "bad" method.
 
 ## 401.6 — Reading the advocacy (claim-checking)
 
 - **Objective:** apply the safety check to the *literature*, not just the methods — every camp's white paper leans, and each is worth checking with the ballots in hand.
-- **Material:** the worked claim-checks — [FairVote's official position on STAR](../../method_comparisons/fairvote_star_whitepaper/) (pro-RCV), the [FairVote Condorcet article](../topics/condorcet/fairvote_condorcet_claim_check.md), and the [rangevoting.org "IRV logic" critique](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md#a-sharper-critique-and-where-it-overreaches-reading-advocacy-critically) (pro-Range). Each concedes the valid core, runs the testable claims, flags the overreach, discloses the lean — and lets the fairness cut against STAR too.
+- **Material:** the worked claim-checks — [FairVote's official position on STAR](../../method_comparisons/fairvote_star_whitepaper/README.md) (pro-RCV), the [FairVote Condorcet article](../topics/condorcet/fairvote_condorcet_claim_check.md), and the [rangevoting.org "IRV logic" critique](../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md#a-sharper-critique-and-where-it-overreaches-reading-advocacy-critically) (pro-Range). Each concedes the valid core, runs the testable claims, flags the overreach, discloses the lean — and lets the fairness cut against STAR too.
 - **The point:** the same discipline that grades a *method's* failure grades an *argument's*: concede the kernel, test it, name the overclaim, disclose who's talking.
 
 ## 401.7 — The synthesis: choosing responsibly
@@ -60,4 +60,4 @@
 
 ---
 
-*Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 301](CURRICULUM_301.md). The unfair, for-sport companion to this page is the [Mudroom](../../method_comparisons/mudroom/) — same failure modes, no bedside manner.*
+*Up: [Curriculum hub](../CURRICULUM.md) · Prev: [Voting 301](CURRICULUM_301.md). The unfair, for-sport companion to this page is the [Mudroom](../../method_comparisons/mudroom/README.md) — same failure modes, no bedside manner.*

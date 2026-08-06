@@ -14,7 +14,7 @@ In the [Equal Vote taxonomy of insincere votes](../strategic_voting.md#the-four-
 | **Margin-based Condorcet** (Minimax, Ranked Pairs, Schulze) | ⚠️ harder | they read *how much* each matchup was won by, so a thin manufactured cycle is resolved on numbers the buriers can't cheaply fake | [Alaska 2022, buried](../../../method_comparisons/condorcet_burial_alaska/README.md) · [Minimax](../../voting_paradoxes/minimax.md) |
 | **Borda** | ❌ yes, notoriously | every rank is worth points, so burying is plain arithmetic — the classic **Dark Horse** | [The Dark Horse](../../../method_comparisons/dark_horse_borda/README.md) |
 | **STAR** | ⚠️ possible, rarely pays | fails later-no-harm, so scoring a strong second 0 can help your favorite reach the runoff — but the runoff can then hand the win to the candidate you buried | [STAR's honest limits](../../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) · [criteria failures](../../../01_STAR/01_Learn/properties_and_limits/star_criteria_failures.md) · [FAQ](../../../01_STAR/01_Learn/getting_started/STAR_FAQ.md#q-does-star-fail-later-no-harm-should-i-bury-a-strong-second-choice) |
-| **RCV-IRV (Hare)** | ✅ largely no | satisfies later-no-harm — your 3rd choice is never read while your 1st is alive, so there's nothing to gain by mis-ordering below the top. IRV's exposure is *compromising* and [center squeeze](../center_squeeze/) instead | [Which RCV-IRV?](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) |
+| **RCV-IRV (Hare)** | ✅ largely no | satisfies later-no-harm — your 3rd choice is never read while your 1st is alive, so there's nothing to gain by mis-ordering below the top. IRV's exposure is *compromising* and [center squeeze](../center_squeeze/README.md) instead | [Which RCV-IRV?](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) |
 | **Approval / Score** | ✅ n/a (Approval) | Approval has no order to invert; withholding support is [bullet voting](../../../04_Approval/01_Learn/approval_honest_limits.md), a different strategy with a different cure | [Approval's honest limits](../../../04_Approval/01_Learn/approval_honest_limits.md) |
 
 The pattern worth naming: **later-no-harm and Condorcet compliance can't both be had** (a small impossibility result you can feel here). IRV buys burial-resistance by ignoring most of your ballot; Condorcet methods buy the head-to-head winner by reading all of it, and pay for that with burial. STAR sits between, and pays a smaller price than either.
@@ -38,10 +38,10 @@ Every page above lands on the same three facts, which is why this library treats
 
 And the even-handed framing this repo keeps returning to: **no method is strategy-proof** — [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) forbids it. The honest comparison isn't "which method has no wart," it's *which warts are systematic and which need a heist*. Burial is a heist. Center squeeze is a Tuesday.
 
-Closely related: [strategic voting](../strategic_voting.md) (the four-kinds taxonomy) · [the five strategic pathologies](../strategic_pathologies.md) (where the Dark Horse row hides this mechanism) · [center squeeze](../center_squeeze/) (IRV's systematic wart, the contrast case) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) (what happens after a burial succeeds) · [the Smith set](../smith_set.md). Glossary: [`burial (weak insincerity)`](../../GLOSSARY.md).
+Closely related: [strategic voting](../strategic_voting.md) (the four-kinds taxonomy) · [the five strategic pathologies](../strategic_pathologies.md) (where the Dark Horse row hides this mechanism) · [center squeeze](../center_squeeze/README.md) (IRV's systematic wart, the contrast case) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md) (what happens after a burial succeeds) · [the Smith set](../smith_set.md). Glossary: [`burial (weak insincerity)`](../../GLOSSARY.md).
 
 ---
 
-*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../) for the other topic hubs.*
+*This is a **topic hub** (cross-method index). The authoritative write-ups live in the per-method folders linked above. See [the topics index](../README.md) for the other topic hubs.*
 
 # file: README.md

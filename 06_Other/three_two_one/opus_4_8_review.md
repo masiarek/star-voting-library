@@ -17,7 +17,7 @@
 
 **Good / OK / Bad is more legible than 0–5** to a genuinely skeptical audience. Three words, no arithmetic implied. I think the STAR world underestimates how much *"score each candidate 0 to 5"* reads as **homework** to people who aren't already interested in voting theory. 3-2-1's ballot has no such tax.
 
-**The outcomes are fine.** No [center squeeze](../RCV_IRV/concepts/RCV_IRV_center_squeeze.md), a non-slippery [chicken dilemma](../../method_comparisons/chicken_dilemma/), [summable](../../07_Concepts/topics/summability/), high VSE. It's in STAR's league, and both are in a different league from IRV and plurality.
+**The outcomes are fine.** No [center squeeze](../RCV_IRV/concepts/RCV_IRV_center_squeeze.md), a non-slippery [chicken dilemma](../../method_comparisons/chicken_dilemma/README.md), [summable](../../07_Concepts/topics/summability/README.md), high VSE. It's in STAR's league, and both are in a different league from IRV and plurality.
 
 ## Where I think it's wrong
 

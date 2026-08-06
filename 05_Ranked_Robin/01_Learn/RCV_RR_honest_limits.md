@@ -18,9 +18,9 @@ A ranked ballot captures *order only*, not *how much*. RCV-RR elects the candida
 
 ## 3. Fails Later-No-Harm; open to burial
 
-Like STAR and Approval, RCV-RR fails Later-No-Harm — ranking a later choice can help them. More specifically it is open to **[burial](../../07_Concepts/topics/burial/)**: insincerely ranking a strong rival *last* can flip a pairwise matchup in your favorite's favor. Honest ranking is usually best, but the incentive exists (Gibbard again: no method is strategy-proof).
+Like STAR and Approval, RCV-RR fails Later-No-Harm — ranking a later choice can help them. More specifically it is open to **[burial](../../07_Concepts/topics/burial/README.md)**: insincerely ranking a strong rival *last* can flip a pairwise matchup in your favorite's favor. Honest ranking is usually best, but the incentive exists (Gibbard again: no method is strategy-proof).
 
-Two things the topic hub adds, both worth knowing before conceding the point in a debate: **no Condorcet method can avoid this** — later-no-harm and Condorcet compliance are incompatible, so this is a family property, not a Copeland quirk — and **it isn't ours alone**: Borda is worse, STAR fails the same criterion, and only IRV largely escapes, by not reading your lower ranks at all. Worked on four methods side by side: [Burial](../../07_Concepts/topics/burial/). This method's own worked pair: [burial](../03_Criteria/burial/README.md).
+Two things the topic hub adds, both worth knowing before conceding the point in a debate: **no Condorcet method can avoid this** — later-no-harm and Condorcet compliance are incompatible, so this is a family property, not a Copeland quirk — and **it isn't ours alone**: Borda is worse, STAR fails the same criterion, and only IRV largely escapes, by not reading your lower ranks at all. Worked on four methods side by side: [Burial](../../07_Concepts/topics/burial/README.md). This method's own worked pair: [burial](../03_Criteria/burial/README.md).
 
 ## 4. The count is harder to explain
 

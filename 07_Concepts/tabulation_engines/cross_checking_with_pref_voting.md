@@ -2,7 +2,7 @@
 
 **One line:** an independent referee. The repo's results are checked against [`pref_voting`](https://github.com/voting-tools/pref_voting) (Eric Pacuit's peer-reviewed Python social-choice library), so we know the LH engine's ranked-ballot machinery — **Condorcet, RCV-IRV, Plurality** — is correct, not just internally consistent.
 
-→ engine: [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/) · test: [`tests/test_pref_voting_crosscheck.py`](../../STARVote_LH_tabulation_engine/tests/test_pref_voting_crosscheck.py).
+→ engine: [the pref_voting engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) · test: [`tests/test_pref_voting_crosscheck.py`](../../STARVote_LH_tabulation_engine/tests/test_pref_voting_crosscheck.py).
 
 ---
 
@@ -74,6 +74,6 @@ For a fast manual second opinion on a *ranked* example, Rob LeGrand's [**ranked-
 
 ## Mining `pref_voting` for new teaching scenarios (balance-aware)
 
-`pref_voting` ships profile **generators** (`generate_profiles`, spatial models) and axiom checkers (monotonicity, no-show, etc.) that can *find* fresh paradox cases automatically — a great source for the [paradoxes & whoops gallery](../../method_comparisons/paradoxes_and_whoops/).
+`pref_voting` ships profile **generators** (`generate_profiles`, spatial models) and axiom checkers (monotonicity, no-show, etc.) that can *find* fresh paradox cases automatically — a great source for the [paradoxes & whoops gallery](../../method_comparisons/paradoxes_and_whoops/README.md).
 
 **House rule when mining:** respect the gallery's [balance ledger](../../method_comparisons/paradoxes_and_whoops/README.md#balance-ledger). The generators make IRV failures especially easy to surface — so deliberately search for cases that embarrass the **score family (STAR/Approval)** and **Condorcet/Ranked Robin** too, not just IRV. A mismatch the cross-check ever flags is itself a candidate teaching case (and a bug report): investigate before adding.

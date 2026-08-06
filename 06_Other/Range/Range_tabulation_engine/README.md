@@ -4,7 +4,7 @@ Tabulates **Range (Score) voting**: every voter grades each candidate on a fixed
 
 ## Engine choice — pref_voting
 
-This wraps **[pref_voting](https://pref-voting.readthedocs.io)** (Eric Pacuit) via its native `grade_methods.score_voting`. pref_voting was chosen over Votelib and VoteKit because it is **already this repo's independent cross-check engine** (see [the pref_voting engine](../../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/)) — so range tabulation adds **no new dependency** and reuses an actively-maintained, well-tested library. Range itself is trivial ("sum the scores"), so we also compute the totals **by hand and assert the two agree**: the result is reproducible *and* independently verified. If pref_voting isn't installed the hand count still runs (the cross-check is skipped with a note).
+This wraps **[pref_voting](https://pref-voting.readthedocs.io)** (Eric Pacuit) via its native `grade_methods.score_voting`. pref_voting was chosen over Votelib and VoteKit because it is **already this repo's independent cross-check engine** (see [the pref_voting engine](../../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md)) — so range tabulation adds **no new dependency** and reuses an actively-maintained, well-tested library. Range itself is trivial ("sum the scores"), so we also compute the totals **by hand and assert the two agree**: the result is reproducible *and* independently verified. If pref_voting isn't installed the hand count still runs (the cross-check is skipped with a note).
 
 ## Usage
 
@@ -20,6 +20,6 @@ Reads the library's usual score grid (header row of names, then one 0–max row 
 - **STAR** is Range's score round **plus an automatic runoff** — added precisely to fix Range's strategy problem (see below).
 - Range is the most *expressive* single-mark method but the most **strategy-exposed**: a voter's rational play is often to give max/min only (which collapses Range toward Approval). STAR's runoff is the standard answer.
 
-See the teaching page [Range / Score Voting](../concepts/range_voting.md) for the method overview, pros/cons, and ballot examples, and the [Black Curtain read as Range](../../../method_comparisons/black_curtain/black_curtain_range.md). Range is a **non-EVC** method, so its examples live in [other methods](../../), not a numbered root folder.
+See the teaching page [Range / Score Voting](../concepts/range_voting.md) for the method overview, pros/cons, and ballot examples, and the [Black Curtain read as Range](../../../method_comparisons/black_curtain/black_curtain_range.md). Range is a **non-EVC** method, so its examples live in [other methods](../../README.md), not a numbered root folder.
 
 # file: README.md

@@ -67,7 +67,7 @@ Game-theoretically, chicken/snowdrift has **two strong equilibria** (A concedes,
 
 - **This is a genuine Approval/Score seam** — the honest concession the [scorecard](../../07_Concepts/topics/strategic_pathologies.md) makes for the score family. Approval's simplicity has a cost: with only a yes/no cut, allies can't say "I back you, but my favorite more" without risking a tie.
 - **STAR mitigates but does not abolish it.** The claim is "non-slippery, honesty-stable," not "immune." Naming that limit is the point.
-- **IRV abolishes the chicken dilemma outright** — but only by creating a [center squeeze](../center_squeeze/) instead (a defector in the chicken dilemma looks exactly like a fringe first-choice under IRV). Quinn argues that trade is worse; the [monotonicity](../monotonicity/) and [favorite-betrayal](../favorite_betrayal_irv/) pages show why.
+- **IRV abolishes the chicken dilemma outright** — but only by creating a [center squeeze](../center_squeeze/README.md) instead (a defector in the chicken dilemma looks exactly like a fringe first-choice under IRV). Quinn argues that trade is worse; the [monotonicity](../monotonicity/README.md) and [favorite-betrayal](../favorite_betrayal_irv/README.md) pages show why.
 
 ## Reproduce it
 

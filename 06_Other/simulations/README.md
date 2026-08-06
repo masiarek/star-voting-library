@@ -70,7 +70,7 @@ python3 fbc_simulation.py --elections 3000 --voters 41 --candidates 3 --seed 7
 
 ## Runoff Reversal frequency simulation
 
-`runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/)).
+`runoff_reversal_simulation.py` measures how often a **Runoff Reversal** happens — the Scoring-Round leader losing the Automatic Runoff (the phenomenon taught in [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md)).
 
 ### Why this exists
 
@@ -220,7 +220,7 @@ The headline, for orientation (9 candidates, 501 voters, spatial model, top-4 ad
 
 ## Condorcet efficiency simulation
 
-`condorcet_efficiency_simulation.py` — how often does each method elect the [Condorcet winner](../../07_Concepts/topics/condorcet/)? The claim "STAR's Condorcet efficiency is very high" was asserted in four places in this repo with no reproducible number behind it; this script supplies one, and the answer is more qualified than the slogan.
+`condorcet_efficiency_simulation.py` — how often does each method elect the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md)? The claim "STAR's Condorcet efficiency is very high" was asserted in four places in this repo with no reproducible number behind it; this script supplies one, and the answer is more qualified than the slogan.
 
 ### The definition, and the trap in it
 
@@ -251,7 +251,7 @@ The headlines, for orientation:
 
 1. **No single number.** The electorate model swings the answer by more than the gap between any two methods — RCV-IRV spans 96.7% to 47.0% across the sweep. STAR runs 74–99%.
 2. **Under impartial culture, RCV-IRV beats STAR** (96.7% vs 89.7% at 3 candidates). Printed rather than buried — but the same model produces cycles in a third of elections, so it is not one either camp should argue from.
-3. **On a 1-D spectrum the ordering reverses and widens** — at 7 candidates RCV-IRV elects the head-to-head winner **less than half the time** (47.0%) against STAR's 74–79%. That is [center squeeze](../../07_Concepts/topics/center_squeeze/) as a statistic rather than an anecdote.
+3. **On a 1-D spectrum the ordering reverses and widens** — at 7 candidates RCV-IRV elects the head-to-head winner **less than half the time** (47.0%) against STAR's 74–79%. That is [center squeeze](../../07_Concepts/topics/center_squeeze/README.md) as a statistic rather than an anecdote.
 4. **Most of STAR's shortfall is the ballot, not the rule.** `--mechanism` splits the cases where the CW *reached* STAR's runoff and lost: about two-thirds are outright pairwise **reversals** on the 0–5 ballot, not ties. Rounding can never flip an individual ballot (scores are a monotone transform of utilities) but it flattens different voters at different rates, and that moves the aggregate. Score and Approval inherit the same effect.
 
 ### Caveats (read before quoting)

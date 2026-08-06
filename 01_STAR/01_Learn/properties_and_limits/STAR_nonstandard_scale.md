@@ -78,7 +78,7 @@ winner = starvote.election(starvote.star, ballots, maximum_score=10)
 starvote.election(starvote.star, ballots, maximum_score=10, verbosity=1)
 ```
 
-That's the whole trick — `maximum_score=N` for any N. (If you'd rather drive it through the YAML CLI, you'd raise or remove the `max_score=5` argument in `validate_star_rows`; but the library call above is cleaner for a one-off experiment and doesn't touch the guardrail everyone else relies on.) The same parameter is how the repo's divergence tools (`tools_adam/find_divergence.py`) already sweep across scales, and how the [Range engine](../../../06_Other/Range/Range_tabulation_engine/) tabulates 0–10 ballots natively.
+That's the whole trick — `maximum_score=N` for any N. (If you'd rather drive it through the YAML CLI, you'd raise or remove the `max_score=5` argument in `validate_star_rows`; but the library call above is cleaner for a one-off experiment and doesn't touch the guardrail everyone else relies on.) The same parameter is how the repo's divergence tools (`tools_adam/find_divergence.py`) already sweep across scales, and how the [Range engine](../../../06_Other/Range/Range_tabulation_engine/README.md) tabulates 0–10 ballots natively.
 
 ## So should you widen the scale?
 
