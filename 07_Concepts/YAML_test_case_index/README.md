@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**480 election files** (417 single-winner, 63 multi-winner) across 17 method(s).
+**486 election files** (421 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 250 |
+| STAR | 254 |
 | RCV-IRV (Hare) | 29 |
 | Ranked Robin (RCV-RR / Copeland) | 72 |
 | Approval | 19 |
@@ -21,7 +21,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Reweighted Range | 2 |
 | Allocated Score (STAR-PR) | 11 |
 | 3-2-1 | 1 |
-| APPROVAL_MULTI_WINNER | 4 |
+| APPROVAL_MULTI_WINNER | 6 |
 | BLOC STAR | 29 |
 | CAV | 1 |
 | IRV | 19 |
@@ -30,7 +30,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (250)
+## STAR  (254)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -209,6 +209,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`center_squeeze_star`](../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_star.md) | `method_comparisons/center_squeeze/cases/` | 1 | Center squeeze — STAR elects the consensus (Center) → _Center_ | [`.yaml`](../../method_comparisons/center_squeeze/cases/center_squeeze_star.yaml) |
 | [`center_squeeze_voteline_1d`](../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_voteline_1d.md) | `method_comparisons/center_squeeze/cases/` | 1 | Center squeeze — the voteline 1D spectrum (Red / Green / Yellow) → _Green_ | [`.yaml`](../../method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml) |
 | [`bv2137_ywckmg_star`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_star.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — STAR (ranks→scores): agrees with Condorcet, not IRV → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml) |
+| [`majority_illusion_c3_b41_score_vs_star`](../../method_comparisons/ces_majority_illusion/cases/cases_pages/majority_illusion_c3_b41_score_vs_star.md) | `method_comparisons/ces_majority_illusion/cases/` | 1 | The majority illusion — Score elects Brian, STAR elects Alice → _Alice_ | [`.yaml`](../../method_comparisons/ces_majority_illusion/cases/majority_illusion_c3_b41_score_vs_star.yaml) |
+| [`majority_illusion_c3_b41_two_rivals`](../../method_comparisons/ces_majority_illusion/cases/cases_pages/majority_illusion_c3_b41_two_rivals.md) | `method_comparisons/ces_majority_illusion/cases/` | 1 | The majority illusion, one score changed — the majority loses Alice → _Brian_ | [`.yaml`](../../method_comparisons/ces_majority_illusion/cases/majority_illusion_c3_b41_two_rivals.yaml) |
 | [`chicken_star`](../../method_comparisons/chicken_dilemma/cases/cases_pages/chicken_star.md) | `method_comparisons/chicken_dilemma/cases/` | 1 | Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly) → _A_ | [`.yaml`](../../method_comparisons/chicken_dilemma/cases/chicken_star.yaml) |
 | [`margins_star`](../../method_comparisons/copeland_vs_borda_margins/cases/cases_pages/margins_star.md) | `method_comparisons/copeland_vs_borda_margins/cases/` | 1 | Margins matter — STAR on the same twelve ballots (rank converted 5/3/0) → _Almond_ | [`.yaml`](../../method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml) |
 | [`dark_horse_star`](../../method_comparisons/dark_horse_borda/cases/cases_pages/dark_horse_star.md) | `method_comparisons/dark_horse_borda/cases/` | 1 | Dark Horse — STAR elects the honest winner A (Borda would elect the dark horse D) → _A_ | [`.yaml`](../../method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml) |
@@ -264,6 +266,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`reinf_combined_c3_b9_star`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_combined_c3_b9_star.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara) → _Cara_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml) |
 | [`reversal_star_original`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_star_original.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — STAR, original: B (STAR does not winner=loser here) → _B_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_star_original.yaml) |
 | [`reversal_star_reversed`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_star_reversed.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser) → _A_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml) |
+| [`same_ranks_lukewarm_c2_b3_procaccia_rosenschein`](../../method_comparisons/same_ranks_different_utilities/cases/cases_pages/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.md) | `method_comparisons/same_ranks_different_utilities/cases/` | 1 | Same ranks, lukewarm majority — the ranked ballot's blind spot (profile 1 of 2) → _A_ | [`.yaml`](../../method_comparisons/same_ranks_different_utilities/cases/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.yaml) |
+| [`same_ranks_polarized_c2_b3_procaccia_rosenschein`](../../method_comparisons/same_ranks_different_utilities/cases/cases_pages/same_ranks_polarized_c2_b3_procaccia_rosenschein.md) | `method_comparisons/same_ranks_different_utilities/cases/` | 1 | Same ranks, polarized electorate — the ranked ballot's blind spot (profile 2 of 2) → _A_ | [`.yaml`](../../method_comparisons/same_ranks_different_utilities/cases/same_ranks_polarized_c2_b3_procaccia_rosenschein.yaml) |
 | [`00_plurality_vs_majority`](../../method_comparisons/split_voting/_main/_main_pages/00_plurality_vs_majority.md) | `method_comparisons/split_voting/_main/` | 1 | Plurality vs Majority — most votes isn't more than half → _Blake_ | [`.yaml`](../../method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml) |
 | [`01_political_left_split`](../../method_comparisons/split_voting/_main/_main_pages/01_political_left_split.md) | `method_comparisons/split_voting/_main/` | 1 | Spoiler — a split coalition hands the seat to the minority → _Labour_ | [`.yaml`](../../method_comparisons/split_voting/_main/01_political_left_split.yaml) |
 | [`02_icecream_chocolate_split`](../../method_comparisons/split_voting/_main/_main_pages/02_icecream_chocolate_split.md) | `method_comparisons/split_voting/_main/` | 1 | Spoiler — chocolate's majority splits, vanilla steals the win → _MilkChoco_ | [`.yaml`](../../method_comparisons/split_voting/_main/02_icecream_chocolate_split.yaml) |
@@ -471,11 +475,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`321_tennessee_blank_encoding_c4_b100`](../../06_Other/three_two_one/cases/cases_pages/321_tennessee_blank_encoding_c4_b100.md) | `06_Other/three_two_one/cases/` | 1 | Tennessee capital by 3-2-1 Voting (blank = Bad) → _Nashville_ | [`.yaml`](../../06_Other/three_two_one/cases/321_tennessee_blank_encoding_c4_b100.yaml) |
 
-## APPROVAL_MULTI_WINNER  (4)
+## APPROVAL_MULTI_WINNER  (6)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`approval_bloc_2seats_c4_b6`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_2seats_c4_b6.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | Bloc Approval — 2 seats, majority sweep → _Amy, Ben_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_2seats_c4_b6.yaml) |
+| [`approval_sav_covers_everyone_c3_b17_brams_kilgour`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_sav_covers_everyone_c3_b17_brams_kilgour.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | SAV seats the pair that represents everybody; AV strands three voters → _Ash, Bree_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_covers_everyone_c3_b17_brams_kilgour.yaml) |
+| [`approval_sav_disjoint_c4_b10_brams_kilgour`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_sav_disjoint_c4_b10_brams_kilgour.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | SAV vs AV — the same ballots elect two disjoint committees → _Ada, Ben_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_disjoint_c4_b10_brams_kilgour.yaml) |
 | [`pets_gov_approval`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_approval.md) | `method_comparisons/pets_governance/cases/` | 2 | Pets Governance — Committee by Approval (2 seats): majority again → _Dog, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_approval.yaml) |
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |

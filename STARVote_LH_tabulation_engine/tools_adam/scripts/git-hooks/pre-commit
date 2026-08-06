@@ -66,6 +66,20 @@ if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_
   fi
 fi
 
+# Refresh the by-voting-method index (07_Concepts/YAML_test_case_index/README.md)
+# and stage it. This one is guarded in CI by test_yaml_index_current.py but is NOT
+# in the hook's pytest subset below, so before this block existed the *only* thing
+# that noticed a stale index was a red build on master — which is exactly how it
+# went stale for six commits (2026-08-05). Its three sibling indexes in the same
+# folder were already refreshed here; this closes the gap. Never blocks.
+if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py" ]; then
+  if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py" >/dev/null 2>&1; then
+    stage_generated "$ROOT/07_Concepts/YAML_test_case_index/README.md"
+  else
+    echo "pre-commit: YAML index refresh failed — skipping (commit not blocked)."
+  fi
+fi
+
 # Refresh the faceted catalog (CATALOG.md + races.csv + elections.csv) and stage
 # it. The single slice-and-dice view over every election & race. Never blocks.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" ]; then
