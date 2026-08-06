@@ -2,6 +2,8 @@
 
 *A worked example of reading advocacy literature critically. FairVote's article ([fairvote.org, Alec Slatky, August 10, 2010](https://fairvote.org/why-the-condorcet-criterion-is-less-important-than-it-seems/)) argues that the [Condorcet criterion](README.md) matters less than voting theorists claim. The article contains one genuinely good point — and several claims that are checkably false. This page quotes each claim verbatim, checks it, and tabulates the article's own hypothetical with the LH engine. The errors are FairVote's, not "RCV's" — this is about one article's reasoning, not a verdict on ranked ballots.*
 
+*Pointed the other way: [Wikipedia's "Condorcet winner criterion," claim-checked](condorcet_criterion_claim_check.md) — the case **for** the criterion, where three of four arguments hold and the weak one is weak in Condorcet's disfavor.*
+
 **Why this page exists.** Comparison and criteria pages are usually written by [advocacy organizations](../advocacy_organizations.md), and each leans toward the method it champions — that cuts in every direction, including pro-STAR pages (see the sources note in [RCV-IRV vs STAR](../rcv_irv_vs_star.md)). The skill being taught here is not "FairVote is wrong"; it's *how to check a voting-method claim against a countable election*. Every check below is a small YAML you can re-run.
 
 ## First, the honest framing: is the Condorcet winner the "best" choice?
