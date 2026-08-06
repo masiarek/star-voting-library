@@ -20,8 +20,22 @@ refreshed mirror.
 Aux mirrors (`<stem>_<TAG>_tabulated.txt`) from the side engines don't all
 embed the source, so only composed-format mirrors are checked — the count
 assertion keeps the check non-vacuous.
+
+ONLY GIT-TRACKED MIRRORS ARE CHECKED, and that matters. This guards the
+*committed* surface, but the scan used to be a plain filesystem walk, which
+also swept up every mirror a local run had ever dropped in an IGNORED
+directory — 3900 files on disk against 680 tracked. `06_Other/_demo_dropbox/
+processed/` is the usual culprit: its own .gitignore excludes it, engine runs
+leave mirrors there, and their source YAMLs get moved or deleted afterwards,
+so the guard reported "embedded source not found" for files that are not part
+of the repo at all. That made the result depend on what junk happened to be
+in someone's working tree — and since a pre-commit hook runs this suite, one
+stale scratch file blocked every commit in the repo until it was deleted.
+Tracked-only makes the check deterministic across machines and matches what
+the guard is actually for.
 """
 import re
+import subprocess
 from pathlib import Path
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
@@ -42,12 +56,34 @@ _COMPOSED = re.compile(
 )
 
 
+def _candidate_mirrors():
+    """Every git-TRACKED `*_tabulated.txt`, newest-checkout-independent.
+
+    Falls back to a filesystem walk only when git can't answer (a source
+    tarball, say). The `checked >= 300` assertion below is what stops either
+    path from going silently empty.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "ls-files", "-z", "*_tabulated.txt"],
+            cwd=REPO_ROOT, capture_output=True, text=True, check=True,
+        ).stdout
+        paths = [REPO_ROOT / rel for rel in out.split("\0") if rel]
+    except (OSError, subprocess.CalledProcessError):
+        paths = sorted(REPO_ROOT.rglob("*_tabulated.txt"))
+    if not paths:
+        paths = sorted(REPO_ROOT.rglob("*_tabulated.txt"))
+    return paths
+
+
 def _composed_mirrors():
-    for p in sorted(REPO_ROOT.rglob("*_tabulated.txt")):
+    for p in sorted(_candidate_mirrors()):
         rel_parts = set(p.relative_to(REPO_ROOT).parts)
         if rel_parts & SKIP_PARTS:
             continue
         if not p.parent.name.endswith("_tabulated"):
+            continue
+        if not p.is_file():          # tracked but deleted in the working tree
             continue
         text = p.read_text(encoding="utf-8", errors="replace")
         m = _COMPOSED.match(text)

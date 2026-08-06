@@ -1037,6 +1037,23 @@ def format_smith_set(candidates, matrix, winner=None, method_label=None,
     return L
 
 
+def _pairwise_preference_count(cand, group, ballots):
+    """Ballots on which `cand` outscores another member of `group`, summed over
+    every other member — the tally STAR's FIRST scoring-round tiebreaker prints
+    ("the candidate preferred in the most head-to-head matchups advances").
+
+    Delegates to starvote's own preference round rather than recounting, so
+    this can never disagree with the number the engine puts on screen.
+    """
+    return starvote._preference_round(ballots, list(group))[0].get(cand, 0)
+
+
+def _five_star_count(cand, ballots, max_score=5):
+    """Ballots giving `cand` a top score — STAR's SECOND scoring-round
+    tiebreaker ("the candidate with the most votes of score 5 advances")."""
+    return starvote._maximum_score_count_round(ballots, max_score, [cand]).get(cand, 0)
+
+
 def resolve_finalists(ballots, order_map=None, maximum_score=5):
     """The candidates that actually advance to the Automatic Runoff, and why.
 
@@ -1050,7 +1067,10 @@ def resolve_finalists(ballots, order_map=None, maximum_score=5):
     with Ana 15, Ben 14, Cora 14, score order hands the slot to Ben while the
     head-to-head rung advances Cora — so the matrix starred a candidate the
     report had just eliminated, and `matrix_finalists_only` filtered the grid
-    down to a matchup that never happened.
+    down to a matchup that never happened. See
+    01_STAR/03_Criteria/tie_break_ladder (bv2276_qhjyr2_second_finalist_tie,
+    the case that exposed it; bv2180_fp62p2_ice_cream_ladder for a three-way
+    tie that runs all the way to the five-star rung).
 
     Returns (finalists, tiebreak). `tiebreak` is None when the score alone
     settled both slots; otherwise it records who was tied, at what score,

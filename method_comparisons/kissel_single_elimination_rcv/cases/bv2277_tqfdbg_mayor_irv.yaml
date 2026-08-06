@@ -9,6 +9,9 @@ scenario_description: >-
   streamlined model eliminating a candidate who would win the fuller count — and it
   costs the Condorcet winner. Companion: …_rr.yaml, …_star.yaml, and the contingent /
   supplementary counts run by contingent_vote_report.py.
+bv_test_id: BV2277
+bv_election_id: tqfdbg
+bv_results_url: https://bettervoting.com/tqfdbg/results
 voting_method: RCV_IRV
 num_winners: 1
 # Round 1: Ada 33, Blake 31, Cora 20, Dean 16 — no majority; Dean eliminated -> Cora 36.
@@ -22,4 +25,4 @@ ballots: |-
 expected_winners:
   - Cora
 
-# file: mayor_c4_b100_streamlined_irv.yaml
+# file: bv2277_tqfdbg_mayor_irv.yaml

@@ -5523,7 +5523,148 @@ KIM_AB_SCORING_SPEC = {
     ),
 }
 
+SECOND_FINALIST_TIE_SPEC = {
+    "test_id": "BV2276",
+    "title": "Tied for the second finalist — the runoff pair settled without a coin toss",
+    "description": (
+        "Five voters score four candidates 0-5. Ana leads the scoring round with 15 stars, "
+        "but Ben and Cora BOTH finish on 14, so the scoring round names only one finalist "
+        "outright and the second seat in the runoff has to be settled some other way. "
+        "STAR's tiebreak ladder settles it on its first deterministic rung, the head-to-head: "
+        "Cora is preferred to Ben on three of the five ballots to Ben's two, so CORA advances "
+        "and the runoff is Ana vs Cora. No coin toss, no lot, no random rung — re-run the "
+        "count and you get the same pair every time, which is the point worth teaching here. "
+        "A tie for a finalist slot sounds alarming and usually is not; it has an ordinary "
+        "answer, and the answer does not depend on candidate order or on who happened to be "
+        "listed second. "
+        "In the runoff Ana beats Cora 2 to 1 with 2 of the 5 voters rating the two finalists "
+        "equally — one voter gives both 3 stars, one gives both 5 — so Equal Support is the "
+        "largest single group on the chart even though Ana wins. "
+        "The election is deliberately tiny so every number can be checked by hand, and it "
+        "doubles as a fixture for BetterVoting reporting issue #1484, which asks whether every "
+        "panel on the results page names the same second finalist once a tiebreak has moved "
+        "it. Write-ins are off, because one extra ballot line would break the exact 14-14 tie "
+        "the whole election is built around. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/01_STAR/03_Criteria/tie_break_ladder/index.html"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "enable_write_in": False,  # a write-in could disturb the exact 14-14 scoring tie
+    "candidates": ["Ana", "Ben", "Cora", "Dev"],
+    "ballots": [
+        [5, 3, 5, 0],
+        [3, 1, 3, 0],
+        [5, 4, 2, 1],
+        [1, 4, 0, 5],
+        [1, 2, 4, 5],
+    ],
+    "expected": (
+        "Scoring round Ana 15, Ben 14, Cora 14, Dev 11. Ben and Cora tie for the second "
+        "finalist slot; the head-to-head rung advances Cora (preferred on 3 ballots to Ben's "
+        "2), so the finalists are Ana and Cora and tieBreakType should be head_to_head, not "
+        "random. Automatic runoff Ana 2 - Cora 1 with 2 voters at Equal Support (one pair at "
+        "3 stars, one at 5), so Distribution of Equal Support is 3* 50% / 5* 50%. Ana wins. "
+        "LH agrees on every number and also advances Cora at its head-to-head rung. "
+        "Confirmed in the BV sandbox before minting: runoff chart reads Ana 40% / Cora 20% / "
+        "Equal Support 40%. "
+        "REGRESSION CHECK for issue #1484: the Scores Table highlight and the Runoff Table "
+        "must name CORA, not Ben. Naming Ben (with Equal Support collapsing to 0, since Ana "
+        "vs Ben is 3-2 with nobody equal) is the bug. Test ID BV2276."
+    ),
+}
+
+# --- BV2277 — The mayor's race: the third-place candidate who beats everyone ----
+# Backs method_comparisons/kissel_single_elimination_rcv (the claim-check of Adam
+# Kissel's "Can Ranked-Choice Voting Work? A Conservative Approach", Cardinal
+# Institute for West Virginia Policy).
+#
+# 100 voters, four candidates, one ordinary mayor's race. Cora is THIRD on first
+# choices but is every other bloc's second choice, and she beats every rival
+# head-to-head (Ada 67-33, Blake 69-31, Dean 84-16) — the Condorcet winner.
+#
+# What BetterVoting shows here: Choose-One elects Ada on 33%; IRV, Ranked Robin
+# and STAR all elect Cora. What it CANNOT show is the point of the case — the
+# Contingent / Supplementary Vote (rank two, jump straight to the top two) is not
+# one of BV's seven methods. That count keeps only Ada and Blake, so it eliminates
+# Cora before a single ballot transfers and elects Blake. It stays LH-only, run by
+# tools_adam/pref_voting_tabulation_engine/contingent_vote_report.py.
+_MAYOR_CANDS = ["Ada", "Blake", "Cora", "Dean"]
+# Blocs, aligned by voter index across every race (BV requires equal ballot counts):
+#   33 Ada>Cora>Blake>Dean · 31 Blake>Cora>Ada>Dean
+#   20 Cora>Blake>Ada>Dean · 16 Dean>Cora>Blake>Ada
+_MAYOR_BLOCS = [
+    # count, ranked (1=top, aligned to _MAYOR_CANDS), STAR 0-5, plurality 0/1
+    (33, [1, 3, 2, 4], [5, 1, 3, 0], [1, 0, 0, 0]),
+    (31, [3, 1, 2, 4], [1, 5, 3, 0], [0, 1, 0, 0]),
+    (20, [3, 2, 1, 4], [1, 3, 5, 0], [0, 0, 1, 0]),
+    (16, [4, 3, 2, 1], [0, 2, 4, 5], [0, 0, 0, 1]),
+]
+_MAYOR_RANKED = [r for c, r, s, p in _MAYOR_BLOCS for _ in range(c)]
+_MAYOR_STAR = [s for c, r, s, p in _MAYOR_BLOCS for _ in range(c)]
+_MAYOR_PLUR = [p for c, r, s, p in _MAYOR_BLOCS for _ in range(c)]
+
+MAYOR_THIRD_PLACE_SPEC = {
+    "test_id": "BV2277",
+    "title": "The Mayor's Race — the third-place candidate who beats everyone head-to-head",
+    "description": (
+        "100 voters, four candidates, an ordinary-looking mayor's race. Cora is only THIRD "
+        "on first choices (Ada 33, Blake 31, Cora 20, Dean 16) - but she is every other "
+        "bloc's second choice, and she beats every rival head-to-head: Ada 67-33, Blake "
+        "69-31, Dean 84-16. She is the Condorcet winner. Counted four ways here: Choose-One "
+        "elects Ada on 33% of the vote; Instant-Runoff finds Cora from third place (Dean is "
+        "eliminated, lifting her to 36 and past Blake); Ranked Robin elects her 3-0; STAR "
+        "elects her, leading the scoring round 356-280 and winning the runoff 69-31. "
+        "The case exists for a FIFTH count that BetterVoting does not offer: the Contingent "
+        "Vote, and its two-mark form the Supplementary Vote, which elected the Mayor of "
+        "London until the Elections Act 2022 replaced it with first-past-the-post. That "
+        "count keeps only the top two on first choices, so it eliminates Cora before a "
+        "single ballot transfers and elects Blake - the winner every method in this election "
+        "rejects. A 2021 policy paper proposed exactly that model as a simpler, safer RCV. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/"
+        "kissel_single_elimination_rcv/index.html"
+    ),
+    "races": [
+        {"title": "Mayor's race - Choose-One (Plurality)", "method": "Plurality",
+         "num_winners": 1, "candidates": _MAYOR_CANDS, "ballots": _MAYOR_PLUR},
+        {"title": "Mayor's race - IRV (Hare, full rounds)", "method": "IRV",
+         "num_winners": 1, "max_rankings": 4,
+         "candidates": _MAYOR_CANDS, "ballots": _MAYOR_RANKED},
+        {"title": "Mayor's race - Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 4,
+         "candidates": _MAYOR_CANDS, "ballots": _MAYOR_RANKED},
+        {"title": "Mayor's race - STAR", "method": "STAR",
+         "num_winners": 1, "candidates": _MAYOR_CANDS, "ballots": _MAYOR_STAR},
+    ],
+    "expected": (
+        "Plurality -> Ada (33 of 100). IRV -> Cora (round 1 Dean out, Cora 36; round 2 "
+        "Blake out, Cora 67-33). Ranked Robin -> Cora, 3-0 (Ada 67-33, Blake 69-31, Dean "
+        "84-16). STAR -> Cora (scores Cora 356, Blake 280, Ada 216, Dean 80; runoff Cora 69 "
+        "- Blake 31, no Equal Support). No tie at any rung in any race, so tieBreakType "
+        "should be 'none' throughout. LH agrees on every number. The Contingent / "
+        "Supplementary Vote (not a BV method) elects Blake instead - that divergence is the "
+        "lesson and stays LH-only. Test ID BV2277."
+    ),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [MAYOR_THIRD_PLACE_SPEC]   # BV2277 -> tqfdbg
+#   Created as designed, 100 ballots x 4 races. BV agrees with LH on every race:
+#   Plurality -> Ada, IRV -> Cora, Ranked Robin -> Cora, STAR -> Cora, and no race
+#   rests on a tie-break. Backs method_comparisons/kissel_single_elimination_rcv. — point this at a spec only for the run that mints it
+# Previously: [SECOND_FINALIST_TIE_SPEC]   # BV2276 -> qhjyr2
+#   Created as designed, 5 ballots × 1 race. BV agrees with LH on every number:
+#   scores Ana 15 / Ben 14 / Cora 14 / Dev 11, the Ben-Cora tie resolved on the
+#   HEAD-TO-HEAD rung (Cora 3 - Ben 2, tieBreakType 'head_to_head' — no five-star,
+#   no random), runoff Ana 2 - Cora 1 with 2 voters at Equal Support. Ana wins.
+#   Minted as the regression fixture for BetterVoting issue #1484: the live results
+#   page's Race Details tables name BEN (the second-highest scorer) instead of Cora
+#   (the candidate the tiebreak advanced), and Equal Support collapses from 2 to 0,
+#   while the charts and Tabulation Steps on the same page correctly say Cora. The
+#   bug reproduces on this brand-new election, which rules out a stale stored
+#   payload. Case: 01_STAR/03_Criteria/tie_break_ladder/bv2276_qhjyr2_second_finalist_tie.md
 # Previously: [KIM_AB_SCORING_SPEC]   # BV2275 -> 6mcgkq
 #   Created as designed, 36 ballots × 6 races.
 # Previously: [DISTRICTING_COST_SPEC]   # BV2274 -> 38b7fg

@@ -68,6 +68,7 @@ r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One
 rfyk46,BV2222 — STAR vs strategy — 5-1-0 min-max squeezes the center like IRV (thin moderate),2,contested (multi-race),100,"IRV, STAR",BV
 rhbfj7,"BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again",2,contested (multi-race),9,"RankedRobin, STAR",BV
 t4by6x,"BV2254 — Reinforcement paradox: two towns pick Ada, together pick Cara",2,contested (multi-race),9,"RankedRobin, STAR",BV
+tqfdbg,BV2277 — The Mayor's Race — the third-place candidate who beats everyone head-to-head,4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",7,contested (multi-race),20,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
 x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
@@ -210,6 +211,7 @@ LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and
 LH:copeland_half_credit_decides,Ranked Robin — the half-point for a draw decides the election (LH-only),1,single-race,30,RankedRobin,LH-only
 LH:copeland_vs_clones_c5_b3,"Copeland picks one, composition-consistency demands all five (tournament solutions)",1,single-race,3,RankedRobin,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
+LH:csv_ambiguity_ex1_c4_b8,"The eight ambiguous CSV lines, disambiguated (BV issue #778 ex1)",1,single-race,8,STAR,LH-only
 LH:cycle_C03_fewV15_noise_1,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",1,single-race,15,STAR,LH-only
 LH:cycle_C03_fewV15_noise_2,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR C)",1,single-race,15,STAR,LH-only
 LH:cycle_C03_medV45_noise_1,"STAR vs RR divergence -- 3 cands, 45 voters, cycle (STAR A, RR B)",1,single-race,45,STAR,LH-only
@@ -286,9 +288,6 @@ LH:majority_illusion_c3_b41_score_vs_star,"The majority illusion — Score elect
 LH:majority_illusion_c3_b41_two_rivals,"The majority illusion, one score changed — the majority loses Alice",1,single-race,41,STAR,LH-only
 LH:majority_vs_consensus_51_49,Majority criterion vs. the consensus candidate — the 51/49 polarized electorate,1,single-race,100,STAR,LH-only
 LH:margins_paper_exact_304,"Margins matter — the textbook profile at its printed size (304 ballots, LH-only)",1,single-race,304,RankedRobin,LH-only
-LH:mayor_c4_b100_streamlined_irv,"The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins",1,single-race,100,IRV,LH-only
-LH:mayor_c4_b100_streamlined_rr,The mayor's race (Ranked Robin) — Cora beats everyone head-to-head,1,single-race,100,RankedRobin,LH-only
-LH:mayor_c4_b100_streamlined_star,"The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31",1,single-race,100,STAR,LH-only
 LH:mmp_majority_ceiling,Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%,1,single-race,30,Plurality,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:mono_raise_delete_after,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",1,single-race,30,STAR,LH-only
@@ -398,6 +397,7 @@ pmrq4q,"BV2245 — The Herb Garden Council — Allocated Score / STAR-PR, 3 seat
 q2rkfm,"BV2257 — Choose-One lunch vote: five coworkers, one box each, and a 2-2 tie",1,single-race,5,Plurality,BV
 q8q9m7,BV2220 — Equally Weighted Vote — add two exact-opposite ballots (Comet still wins),1,single-race,5,STAR,BV
 qdh9qp,"BV2246 — Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats)",1,single-race,29,STAR_PR,BV
+qhjyr2,BV2276 — Tied for the second finalist — the runoff pair settled without a coin toss,1,single-race,5,STAR,BV
 qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,single-race,3,STAR,BV
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV

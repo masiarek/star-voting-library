@@ -33,6 +33,7 @@ AGREE,01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_02_scoring_no_five
 AGREE,01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_03_runoff_no_fives_to_lot.yaml,2,2,Alice,Alice,Alice,Alice,Alice,Alice,Alice,,,0,False,False,True
 AGREE,01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_published_order.yaml,2,2,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml,3,3,B,B,B,B,B,B,B,,,0,False,False,True
+AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/bv2276_qhjyr2_second_finalist_tie.yaml,4,5,Ana,Ana,Cora,Ana,Ana,Ana,Ana,Ana,Ana,2,True,False,False
 AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml,3,3,B,B,C,B,B,B,B,,B,1,True,False,True
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
@@ -81,7 +82,7 @@ AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_star.yaml,3,17
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2151_97hbpw_star.yaml,3,9,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,Beth,0,False,False,False
 AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_star.yaml,4,103,B,B,B,B,B,B,B,B,B,0,False,False,False
 AGREE,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a0_plurality.yaml,3,36,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,0,False,False,False
-AGREE,method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_star.yaml,4,100,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,0,False,False,False
+AGREE,method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_star.yaml,4,100,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,0,False,False,False
 AGREE,method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml,3,100,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,B,A,A,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_polarized_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,A,A,A,0,False,False,False
@@ -98,6 +99,7 @@ APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml,
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/04b_c4_b3_display-options-all.yaml,4,3,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Vanilla,Strawberry,Strawberry,Strawberry,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/bv2182_tg4779_faq_runoff_reversal.yaml,3,10,Almond,Almond,Almond,Almond,Almond,Berry,Berry,Almond,Almond,1,False,False,False
+APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/csv_ambiguity_ex1_c4_b8.yaml,4,8,B,B,B,B,B,A,B,B,B,1,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml,3,3,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/01b_c3_b9_overturn-holds-at-scale.yaml,3,9,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/02_c5_b5_leader-overturned.yaml,5,5,Boston,Boston,Boston,Boston,Boston,Austin,Austin,Boston,Boston,0,False,False,False

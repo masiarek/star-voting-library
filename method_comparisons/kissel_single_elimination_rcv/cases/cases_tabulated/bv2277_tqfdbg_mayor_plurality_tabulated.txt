@@ -1,0 +1,13 @@
+--- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 100 ballots.
+
+                    Ada   Blake   Cora   Dean 
+  33 ×               X      -      -      -   
+  31 ×               -      X      -      -   
+  20 ×               -      -      X      -   
+  16 ×               -      -      -      X   
+
+  Count the marks:  Ada 33 · Blake 31 · Cora 20 · Dean 16
+
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Ada   (33 of 100 marks)

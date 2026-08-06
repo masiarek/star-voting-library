@@ -18,12 +18,15 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 
 **[#884 — Update abstain behavior for STAR](https://github.com/Equal-Vote/bettervoting/issues/884)** is the source of the current behavior: STAR now counts a ballot as an abstention when its marks are **all equal** (all 3s, all 0s, a mix of 0s and nulls…), not only when it's all-null. Implemented via `makeAbstentionTest(markAllEqualAsAbstention=true)` in `Tabulators/Util.ts`. **Adam dissents on the record** ("all threes is not abstain though") — this is the open disagreement most of the UI-mislabel tickets below trace back to.
 
+**The dissent predates the ticket by eighteen months.** [#778 — "YAML File standard"](https://github.com/Equal-Vote/bettervoting/issues/778) (Feb 2025) annotates an all-zero ballot in its worked example with *"this voter marked all candidates as zero (this is not abstention!)"* — the same position, stated before #884 existed and in a ticket about the *file format* rather than the tabulator. Worth citing when the argument comes round again: it isn't a reaction to #884's implementation, it's the prior principle. The LH engine implements that principle — a ballot is an abstention when it is **marked** as one (`~ & ? % -`), never because its scores happen to be equal — and the two rules are put side by side in [Eight lines of CSV, eight questions](../../../YAML_library/csv_ambiguity.md).
+
 ## The tickets, by theme
 
 ### A. Policy — what counts as abstain
 | Issue | What | Status |
 |---|---|---|
 | [#884](https://github.com/Equal-Vote/bettervoting/issues/884) | Count **all-equal** ballots (all 3s/0s/mixed 0-null) as abstain | Implemented; **disputed** |
+| [#778](https://github.com/Equal-Vote/bettervoting/issues/778) | **File standard** — a bare CSV can't distinguish a real `0` from blank / abstained / spoiled, and never says which method counts it. Where the "all zeros is not abstention" principle was first stated | Open (Discussion) · [worked through here](../../../YAML_library/csv_ambiguity.md) |
 
 ### B. UI confirmation / receipt mislabels a real vote as "Abstained"
 | Issue | What | BV Test ID · election |
@@ -40,6 +43,8 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 | [#791](https://github.com/Equal-Vote/bettervoting/issues/791) | CSV download has **no clear abstain indicator** — empty cell ambiguous vs explicit 0 | BV20 · [bp7kwg](https://bettervoting.com/bp7kwg) |
 | [#1090 (Bug 2)](https://github.com/Equal-Vote/bettervoting/issues/1090) | CSV blanks-for-abstentions ambiguous; wants explicit `NULL` | BV655 · [jfrk9t](https://bettervoting.com/jfrk9t) |
 | [#1160](https://github.com/Equal-Vote/bettervoting/issues/1160) | **Add dual export**: "Official Count" (nulls→0) vs "Raw Audit" (keep nulls, `5,,4`) | (pet-style) — **emergent / deprioritized** |
+| [#1485](https://github.com/Equal-Vote/bettervoting/issues/1485) | **Record the abstention policy on the race** — an export can't tell "nobody abstained" from "abstaining was impossible"; `races[]` and `settings` carry no undervote field. Filed by us 2026-08-06 · [archive copy](bv_github_issue_abstention_policy.md) | Open · sibling of [#699](https://github.com/Equal-Vote/bettervoting/issues/699) (the admin-setting half) |
+| [#1486](https://github.com/Equal-Vote/bettervoting/issues/1486) | **The upload end of the same gap** — the CVR parser [#810](https://github.com/Equal-Vote/bettervoting/issues/810) plans to reuse is rank-only, takes the method from the *filename*, and knows only `skipped` / `overvote`, so it can't express a distinction the export makes. Filed by us 2026-08-06 · [archive copy](bv_github_issue_bulk_upload_format.md) | Open · the ask is that upload and export **round-trip** |
 
 ### D. Tabulation / results semantics
 | Issue | What | BV Test ID · election |
@@ -76,3 +81,4 @@ The "BetterVoting has no explicit abstain/spoiled mark distinct from 0/blank" id
 - **A closed BV election cannot verify a fix.** Its stored `ElectionResult` may be the tally from when it closed, so re-fetching proves nothing; only a fresh mint on the same ballots does. Worth remembering before trusting any re-fetch in this index.
 - **Check what a ticket actually says before citing it.** The #1056 mis-citation survived a year because the issue quotes the same BV2105 test doc. A test ID names a *document*, not a defect.
 - The **spoiled** / **spoiled-and-reissued** states (LH `?` / `%`) have no BetterVoting equivalent at all — not currently ticketed.
+- **What the rules *permitted* is recorded nowhere; filed 2026-08-06 as [#1485](https://github.com/Equal-Vote/bettervoting/issues/1485)** ✅ (archive copy: [`bv_github_issue_abstention_policy.md`](bv_github_issue_abstention_policy.md)). An export can't distinguish "nobody abstained" from "abstaining was impossible" — `races[]` carries only title / race_id / num_winners / voting_method / candidates / description, and `settings` has no undervote field. Deliberately scoped to the **recording**, because [#699](https://github.com/Equal-Vote/bettervoting/issues/699) already holds the *admin-setting* half (open since 2024-10; the maintainer asked for a use case, which #1485 supplies). The idea came from the #778 sketch's `race abstention allowed` / `candidate abstention allowed` keys — the one part of that proposal with no home in this library either.

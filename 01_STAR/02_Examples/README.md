@@ -29,6 +29,7 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 **Equal support & abstentions.** How "no preference" and blank scores are counted.
 
 - [Equal Support — counted in both rounds](cases/cases_pages/equal_support_runoff_demo.md) · [Abstentions — blank & abstaining ballots](cases/cases_pages/abstentions.md) · [Unanimous ballots](cases/cases_pages/05a_c5_b3_unanimous-ballots.md)
+- [Eight ambiguous CSV lines, disambiguated](cases/cases_pages/csv_ambiguity_ex1_c4_b8.md) — every marker in one file, and an all-zero ballot that is *not* an abstention; the lesson it backs is [Eight lines of CSV, eight questions](../../YAML_library/csv_ambiguity.md)
 
 **Majorities & denominators.** What "over 50%" turns out to mean once you ask *of what*.
 

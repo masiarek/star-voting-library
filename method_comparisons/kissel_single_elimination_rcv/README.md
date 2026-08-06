@@ -6,6 +6,8 @@
 
 The paper: Adam Kissel, [*Can Ranked-Choice Voting Work? A Conservative Approach*](https://cardinalinstitute.com/publication/ranked-choice-voting-a-conservative-approach/) (Cardinal Institute for West Virginia Policy; the landing page titles it *Ranked-Choice Voting: A Conservative Approach*). What the method is: [RCV-IRV (Contingent & Supplementary Vote)](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-contingent-supplementary.md) · [Which RCV-IRV?](../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md). Companions: [center squeeze](../../07_Concepts/topics/center_squeeze/README.md) · [exhausted ballots](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) · [summability](../../07_Concepts/topics/summability/README.md) · [false majorities](../../07_Concepts/topics/false_majorities.md).
 
+**▶ The mayor's race is live on BetterVoting:** [vote](https://bettervoting.com/tqfdbg) · **[results ↗](https://bettervoting.com/tqfdbg/results)** (election `tqfdbg`, Test ID **BV2277**) — four races on one ballot set, so a reader can watch Choose-One, RCV-IRV, Ranked Robin and STAR disagree on a third engine. The paper's own count is the one BetterVoting cannot run; see [below](#what-bettervoting-can-and-cannot-show).
+
 ---
 
 ## What the paper proposes
@@ -37,7 +39,7 @@ The paper concedes that "single elimination RCV might eliminate a candidate who 
 
 **The Contingent Vote's winner is always one of the top two on first choices. Full IRV's need not be.** That is not a tendency, it is the definition: step 3 eliminates everyone else before a single ballot transfers. Any candidate who would have climbed from third on transfers is mathematically ineligible under the paper's model.
 
-Here is that difference on 100 ballots — an ordinary four-way mayor's race, no cycle, no ties ([full count](cases/cases_pages/mayor_c4_b100_streamlined_irv.md)):
+Here is that difference on 100 ballots — an ordinary four-way mayor's race, no cycle, no ties ([full count](cases/cases_pages/bv2277_tqfdbg_mayor_irv.md)):
 
 ```text
  33 × Ada   > Cora > Blake > Dean      Round 1:  Ada 33 · Blake 31 · Cora 20 · Dean 16
@@ -271,29 +273,44 @@ Where the argument goes wrong is one substitution: it treats "fewer rounds" as i
 
 STAR is not exempt from this page's own standard. It fails the [majority criterion](../../07_Concepts/topics/majority_criterion/README.md) in a construction where a majority's generosity to a *second* rival lifts that rival past their favorite — demonstrated on the Center for Election Science's own example in [the majority illusion, counted](../ces_majority_illusion/README.md). It also fails [Later-No-Harm](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md). Those are real, and a debater using this page should know them before an opponent supplies them.
 
+## What BetterVoting can — and cannot — show
+
+The mayor's race is live as **BV2277** ([`tqfdbg`](https://bettervoting.com/tqfdbg/results)): one ballot set, four races, tabulated by an engine nobody here wrote. It agrees with the LH engine on every race, and no race rests on a tie-break (`tieBreakType: none` throughout).
+
+<img alt="BetterVoting results for election tqfdbg (BV2277): four races on one 100-voter ballot set — Choose-One elects Ada on 33%, IRV elects Cora 67–33, Ranked Robin elects Cora on head-to-head wins, and STAR elects Cora 69–31 in the runoff." src="img/tqfdbg_all_four_races.png" width="640">
+
+Read down that page and the divergence is the whole lesson in one scroll: **Choose-One crowns Ada on 33%**, and then instant runoff, Ranked Robin and STAR each independently land on **Cora** — the candidate sitting third in the very first chart.
+
+**And then the gap.** BetterVoting offers seven methods — STAR, STAR_PR, Approval, Ranked Robin, IRV, Plurality, STV — and the paper's model is not among them. There is no way to run a Contingent or Supplementary Vote on this election, which is itself worth noticing: the count a policy paper is recommending to a legislature in 2021 is one that no modern election platform implements, and that England repealed in 2022. It stays LH-only, run by `contingent_vote_report.py` below, and it elects **Blake** — a winner none of the four live races produce.
+
+For the third-party Copeland check the house rules require on every Ranked Robin case, `pref_voting` agrees too: `AGREE ✓ (unique Copeland winner)`. Three independent engines, one answer.
+
 ## The cases
 
-Two elections, each counted three ways. All **LH-only** — they are constructed profiles built to isolate a mechanism, and the headline method (the Contingent Vote) is not one BetterVoting offers, so a BV election would reproduce only the side legs.
+Two elections. The mayor's race is **BV-backed** (BV2277 / `tqfdbg`) and counted four ways, one per live race; Kissel's five-way field is **LH-only** — it is a reconstruction of the paper's percentages rather than anyone's real ballots, and its lesson is a divergence between counts that BV cannot host anyway.
 
 | Case | The job | Winner | Source |
 |---|---|---|---|
 | [Kissel's five-way (RCV-IRV)](cases/cases_pages/kissel_five_way_c5_b1000_irv.md) | the paper's own p.5 field, eliminated down | A | [`yaml`](cases/kissel_five_way_c5_b1000_irv.yaml) |
 | [Kissel's five-way (Ranked Robin)](cases/cases_pages/kissel_five_way_c5_b1000_rr.md) | same ballots, every pairing counted | C | [`yaml`](cases/kissel_five_way_c5_b1000_rr.yaml) |
 | [Kissel's five-way (STAR)](cases/cases_pages/kissel_five_way_c5_b1000_star.md) | same electorate, one 0–5 grid | C | [`yaml`](cases/kissel_five_way_c5_b1000_star.yaml) |
-| [The mayor's race (RCV-IRV)](cases/cases_pages/mayor_c4_b100_streamlined_irv.md) | full rounds find the third-place winner | Cora | [`yaml`](cases/mayor_c4_b100_streamlined_irv.yaml) |
-| [The mayor's race (Ranked Robin)](cases/cases_pages/mayor_c4_b100_streamlined_rr.md) | 3–0 round robin | Cora | [`yaml`](cases/mayor_c4_b100_streamlined_rr.yaml) |
-| [The mayor's race (STAR)](cases/cases_pages/mayor_c4_b100_streamlined_star.md) | scoring 356–280, runoff 69–31 | Cora | [`yaml`](cases/mayor_c4_b100_streamlined_star.yaml) |
+| [The mayor's race (Choose-One)](cases/cases_pages/bv2277_tqfdbg_mayor_plurality.md) | the baseline: 33% wins the pile | Ada | [`yaml`](cases/bv2277_tqfdbg_mayor_plurality.yaml) |
+| [The mayor's race (RCV-IRV)](cases/cases_pages/bv2277_tqfdbg_mayor_irv.md) | full rounds find the third-place winner | Cora | [`yaml`](cases/bv2277_tqfdbg_mayor_irv.yaml) |
+| [The mayor's race (Ranked Robin)](cases/cases_pages/bv2277_tqfdbg_mayor_rr.md) | 3–0 round robin | Cora | [`yaml`](cases/bv2277_tqfdbg_mayor_rr.yaml) |
+| [The mayor's race (STAR)](cases/cases_pages/bv2277_tqfdbg_mayor_star.md) | scoring 356–280, runoff 69–31 | Cora | [`yaml`](cases/bv2277_tqfdbg_mayor_star.yaml) |
+
+The four mayor cases share one frozen export, [`bv2277_tqfdbg_bv_export.json`](cases/bv2277_tqfdbg_bv_export.json) — BetterVoting's own Election + Ballots + Results, so the live page above can be re-checked even if it ever moves.
 
 **Run the paper's method yourself.** Neither engine in this repo counted the Contingent Vote before this page; `contingent_vote_report.py` now does, and cross-checks itself against `pref_voting`'s independent `plurality_with_runoff_put`:
 
 ```bash
-uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/contingent_vote_report.py method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_irv.yaml
+uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/contingent_vote_report.py method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_irv.yaml
 ```
 
 Add `--ranks 2` for the Supplementary Vote — the paper's two-mark ballot, with the exhausted count:
 
 ```bash
-uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/contingent_vote_report.py --ranks 2 method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_irv.yaml
+uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/contingent_vote_report.py --ranks 2 method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_irv.yaml
 ```
 
 **Lean disclosure:** the Cardinal Institute is a free-market state policy think tank, and the paper is written to persuade conservative legislators — its framing ("A Conservative Approach") says so openly, and the cover carries a disclaimer that the views are the author's. Per the repo's [sourcing tiers](../../CLAUDE.md) that makes it a fine source for a *proposal* and a weak one for *empirical verdicts* like "quite rare" — which is exactly where it needed evidence and didn't have any. It is also, by the standards of this genre, notably fair: it concedes its own method's central flaw, refuses the "majority" talking point, and quotes its critics accurately. This repo's own lean runs the other way — it advocates STAR — which is why the [cut against STAR](#the-honest-cut-against-star) is on the page. The same recipe applied to the other camp: [FairVote's STAR white paper](../fairvote_star_whitepaper/README.md) · [CES's majority illusion](../ces_majority_illusion/README.md).
