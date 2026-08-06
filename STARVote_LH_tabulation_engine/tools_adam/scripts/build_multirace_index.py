@@ -133,6 +133,13 @@ def main():
         "the frozen export. Single-race elections live in "
         "[BV_registry.md](BV_registry.md).",
         "",
+        "Every race row carries a **results ↗** link to the live tabulation. "
+        "BetterVoting renders all of an election's races on a single results page and "
+        "offers no per-race anchor, so within one block those links deliberately share "
+        "a URL — scroll to the race named in the row. The block header links the same "
+        "page alongside the frozen export, which is the copy the repo tabulates "
+        "against.",
+        "",
     ]
     if not rows:
         lines += ["_No multi-race elections found._", ""]
@@ -145,10 +152,19 @@ def main():
                      f"· **{len(r['races'])} races** · **{r['nballots']} ballots** · "
                      f"[frozen export]({r['rel']})")
         lines.append("")
-        lines.append("| Race | Method | Candidates | Winner |")
-        lines.append("|------|--------|:----------:|--------|")
+        lines.append("| Race | Method | Candidates | Winner | Live |")
+        lines.append("|------|--------|:----------:|--------|:----:|")
+        # Every race row links to the election's results page. BetterVoting renders
+        # all of an election's races on that ONE page and gives them no per-race
+        # anchor — checked against the live DOM: no `id` on the race sections, no
+        # `#` hrefs, and the export's race_id UUIDs appear nowhere in the markup. So
+        # the link cannot deep-link to the row's own race, and every row in a block
+        # necessarily carries the same URL. It is still the fastest way from a race
+        # you are reading about to the tabulation that produced it.
         for rc in r["races"]:
-            lines.append(f"| {rc['title']} | {rc['method']} | {rc['ncand']} | **{rc['winner']}** |")
+            lines.append(f"| {rc['title']} | {rc['method']} | {rc['ncand']} | "
+                         f"**{rc['winner']}** | "
+                         f"[results ↗](https://bettervoting.com/{r['eid']}/results) |")
         lines.append("")
 
     with open(OUT, "w", encoding="utf-8") as fh:
