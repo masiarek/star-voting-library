@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**501 election files** (436 single-winner, 65 multi-winner) across 17 method(s).
+**495 election files** (430 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 262 |
+| STAR | 259 |
 | RCV-IRV (Hare) | 31 |
-| Ranked Robin (RCV-RR / Copeland) | 75 |
-| Approval | 21 |
+| Ranked Robin (RCV-RR / Copeland) | 74 |
+| Approval | 19 |
 | STV (proportional RCV) | 10 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
@@ -30,7 +30,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (262)
+## STAR  (259)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -244,9 +244,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2167_f3dxq9_star`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2167_f3dxq9_star.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml) |
 | [`hillinger_t4_affine`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t4_affine.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 4, rescaled — what 'cardinal' actually guarantees → _Ana_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_affine.yaml) |
 | [`hillinger_t4_ev3`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t4_ev3.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 4 — three methods, three winners (EV-3 scale) → _Ana_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml) |
-| [`kim_scoring_a0_plurality`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_scoring_a0_plurality.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0 — the middle choice is worth nothing (Plurality) → _Cocoa_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_a0_plurality.yaml) |
-| [`kim_scoring_a1_negative`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_scoring_a1_negative.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=1 — the middle choice is worth everything (Negative voting) → _Berry_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_a1_negative.yaml) |
-| [`kim_scoring_ahalf_borda`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_scoring_ahalf_borda.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda) → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_ahalf_borda.yaml) |
 | [`kissel_five_way_c5_b1000_star`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/kissel_five_way_c5_b1000_star.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (STAR) — the compromise reaches the runoff and wins → _C_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/kissel_five_way_c5_b1000_star.yaml) |
 | [`mayor_c4_b100_streamlined_star`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/mayor_c4_b100_streamlined_star.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31 → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_star.yaml) |
 | [`p3_manip_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — two voters bury their 4th choice and STAR elects their favourite → _Edinburgh_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_star.yaml) |
@@ -333,7 +330,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (75)
+## Ranked Robin (RCV-RR / Copeland)  (74)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -383,7 +380,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2163_74j6vv_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2163_74j6vv_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_ranked_robin.yaml) |
 | [`bv2164_xbqq8t_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2164_xbqq8t_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.17 — Ranked Robin: the Condorcet winner Arlo → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_ranked_robin.yaml) |
 | [`felsenthal_ex6_ranked_robin`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_ranked_robin.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only) → _Aria_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_ranked_robin.yaml) |
-| [`kim_ranked_robin_reference`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_ranked_robin_reference.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring — the ranking alone (Ranked Robin reference) → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_ranked_robin_reference.yaml) |
 | [`kissel_five_way_c5_b1000_rr`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/kissel_five_way_c5_b1000_rr.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (Ranked Robin) — the same ballots elect C → _C_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/kissel_five_way_c5_b1000_rr.yaml) |
 | [`mayor_c4_b100_streamlined_rr`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/mayor_c4_b100_streamlined_rr.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (Ranked Robin) — Cora beats everyone head-to-head → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/mayor_c4_b100_streamlined_rr.yaml) |
 | [`p3_manip_compromise_rr`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_compromise_rr.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — the mild version: three adjacent swaps, no burial, same result → _Dublin_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_compromise_rr.yaml) |
@@ -413,7 +409,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (21)
+## Approval  (19)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -432,8 +428,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2154_wq6yv7_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2154_wq6yv7_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.8 — Approval: the absolute loser wins on one strategic ballot → _April_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2154_wq6yv7_approval.yaml) |
 | [`felsenthal_ex6_pareto_approval`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/felsenthal_ex6_pareto_approval.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only) → _Beau_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_pareto_approval.yaml) |
 | [`hillinger_t3_arbitrariness`](../../method_comparisons/hillinger_evaluative_voting/cases/cases_pages/hillinger_t3_arbitrariness.md) | `method_comparisons/hillinger_evaluative_voting/cases/` | 1 | Hillinger Table 3 — one approval result, two opposite Borda winners → _Ada_ | [`.yaml`](../../method_comparisons/hillinger_evaluative_voting/cases/hillinger_t3_arbitrariness.yaml) |
-| [`kim_approval_intense_seconds`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_approval_intense_seconds.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are intense → _Berry_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_approval_intense_seconds.yaml) |
-| [`kim_approval_lukewarm_seconds`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/kim_approval_lukewarm_seconds.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are lukewarm → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/kim_approval_lukewarm_seconds.yaml) |
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml) |

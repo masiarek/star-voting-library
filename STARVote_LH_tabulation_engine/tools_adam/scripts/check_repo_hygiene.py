@@ -202,6 +202,124 @@ def check_folder_links():
 
 
 # --------------------------------------------------------------------------- #
+# Uncommitted-target checker: a link on an ALREADY-COMMITTED page must point at
+# a file that is also committed.
+#
+# check_links() above resolves every link against the WORKING TREE, where a
+# not-yet-committed file — yours, or a concurrent session's — is sitting right
+# there. So the link looks fine locally and the pre-commit hook passes. CI then
+# builds the COMMITTED tree, the target isn't in it, and `mkdocs build --strict`
+# turns that missing target into a WARNING, which in strict mode fails the whole
+# docs deploy. Nothing in the local gate can see it, because locally it is true.
+#
+# This is not hypothetical: on 2026-08-05 the docs build went red five times in
+# about twenty minutes in a checkout shared by two sessions, every time because
+# a committed page referenced a file that had not been committed yet.
+#
+# Only TRACKED pages are scanned. A brand-new page linking to a brand-new case
+# is fine — both get committed together, and warning about it would fire on
+# every draft in progress. The break is specifically an *already-published* page
+# pointing at something that isn't published, which is why the page's own
+# tracked-ness is the trigger.
+# --------------------------------------------------------------------------- #
+def _git_tracked_paths():
+    """Repo-relative paths that the next commit's tree will contain: the union
+    of the INDEX (`ls-files`) and the HEAD tree. Separators normalized.
+    Returns None (check no-ops) if git isn't available or this isn't a repo.
+
+    Why the union rather than `ls-files` alone. `ls-files` reads only the index,
+    and this repo is routinely open in two sessions at once — while one of them
+    is mid-`git commit` the index.lock is held and the index is transiently
+    inconsistent, so a file that is comfortably committed in HEAD reads back as
+    untracked. Testing that on 2026-08-05 produced six false positives in one
+    run, every one of them present in both HEAD and origin/master. A guard that
+    cries wolf during a normal concurrent commit would be turned off within a
+    day, so HEAD is consulted too and anything in either set counts as present.
+
+    The trade: a target that is committed but deliberately `git rm`-ed in the
+    index reads as present and is not flagged. That is the deletion commit's
+    problem to notice, and it is far rarer than concurrent index churn.
+    """
+    import subprocess
+
+    def _run(args):
+        return subprocess.run(["git", "-C", REPO] + args, capture_output=True,
+                              text=True, check=True, timeout=60).stdout
+
+    paths = set()
+    ok = False
+    for args, sep in (
+        (["ls-files", "-z"], "\0"),
+        (["ls-tree", "-r", "--name-only", "-z", "HEAD"], "\0"),
+    ):
+        try:
+            paths |= {os.path.normpath(p) for p in _run(args).split(sep) if p}
+            ok = True
+        except Exception:
+            continue        # e.g. no HEAD yet in a fresh repo, or a held lock
+    return paths if ok else None
+
+
+def _iter_relative_links():
+    """Yield (rel_md, dirpath, raw_link, resolved_fs_path) for every relative
+    link in every scanned .md file — the extraction check_links() does, factored
+    out so a new check need not re-implement it. check_links() is left as-is."""
+    from urllib.parse import unquote
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        rel_dir = os.path.relpath(dirpath, REPO)
+        if rel_dir != "." and _skip(rel_dir):
+            continue
+        for fn in filenames:
+            if not fn.lower().endswith(".md"):
+                continue
+            full = os.path.join(dirpath, fn)
+            rel = os.path.normpath(os.path.join(rel_dir, fn))
+            try:
+                text = open(full, encoding="utf-8").read()
+            except OSError:
+                continue
+            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            raws = [m.group(1).strip() for m in MD_LINK.finditer(text)]
+            raws += [m.group(2).strip() for m in _HTML_PATH.finditer(text)]
+            for raw in raws:
+                if _EXTERNAL.match(raw):
+                    continue
+                target = raw.split()[0].strip("<>").split("#")[0]
+                if not target or os.path.basename(target).startswith("REPLACE_"):
+                    continue
+                p = os.path.normpath(
+                    os.path.join(dirpath, unquote(target).replace("/", os.sep)))
+                yield rel, dirpath, raw, p
+
+
+def check_untracked_link_targets():
+    """Return sorted [(md_file, raw_link, target_rel)] for links on a tracked
+    page whose target exists on disk but is NOT tracked by git."""
+    tracked = _git_tracked_paths()
+    if tracked is None:
+        return []
+    hits = []
+    for rel, _dirpath, raw, p in _iter_relative_links():
+        if rel not in tracked:
+            continue                      # page not committed yet — see docstring
+        if not os.path.exists(p):
+            continue                      # check_links() already reports these
+        if os.path.isdir(p):
+            idx = next((os.path.join(p, n) for n in ("README.md", "index.md")
+                        if os.path.exists(os.path.join(p, n))), None)
+            if idx is None:
+                continue                  # README-less folder — check_links()' job
+            p = idx
+        trel = os.path.normpath(os.path.relpath(p, REPO))
+        if trel.startswith(".."):
+            continue                      # outside the repo — not ours to judge
+        if trel not in tracked:
+            hits.append((rel, raw, trel))
+    return sorted(set(hits))
+
+
+# --------------------------------------------------------------------------- #
 # Anchor checker: a link like `page.md#some-heading` must point at a heading
 # that actually exists on the *rendered* page. The classic breakage: a heading
 # with " — ", " & ", " / " or ":" renders (in MkDocs / Python-Markdown's `toc`)
@@ -968,6 +1086,20 @@ def main(argv):
         print("              Name the README.md explicitly:")
         for rel, raw, fixed in folder_links:
             print(f"   • {rel}  →  ({raw})  → use ({fixed})")
+    untracked_targets = check_untracked_link_targets()
+    if not untracked_targets:
+        print("repo-hygiene: ✓ every link target on a committed page is itself committed.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  committed pages linking to UNCOMMITTED files "
+              f"({len(untracked_targets)}) — these resolve in your working")
+        print("              tree, so the link check above passes, but CI builds the "
+              "COMMITTED tree, where the target is")
+        print("              missing, and `mkdocs build --strict` fails the docs deploy "
+              "on it. Commit the target alongside")
+        print("              the page, or drop the link until it lands:")
+        for rel, raw, trel in untracked_targets:
+            print(f"   • {rel}  →  ({raw})   [not tracked: {trel}]")
     bad_anchors = check_anchors()
     if not bad_anchors:
         print("repo-hygiene: ✓ every #anchor link points at a real heading.")

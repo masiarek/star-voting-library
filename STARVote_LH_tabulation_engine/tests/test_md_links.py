@@ -118,3 +118,53 @@ def test_grandfather_list_stays_empty():
         "PASTED_REPORT_GRANDFATHERED is non-empty: "
         + ", ".join(sorted(mod.PASTED_REPORT_GRANDFATHERED))
     )
+
+
+def test_uncommitted_target_check_is_not_vacuous(tmp_path, monkeypatch):
+    """Prove the uncommitted-target guard can fail, and that it clears.
+
+    The breakage it exists for is invisible locally by construction — the target
+    IS in the working tree, which is exactly why check_links() passes and CI
+    still dies — so it can only be exercised against a real git repo. Build a
+    throwaway one: commit a page linking to a file, leave the file uncommitted,
+    and the link must be flagged; commit the file and the flag must clear.
+
+    Deliberately NOT paired with a "must be empty on this repo" gate. The hook
+    blocks commits on a failing test, and an in-progress draft that links to a
+    case not yet committed is normal, legitimate work — failing the whole suite
+    for it would make the guard something people switch off.
+    """
+    import subprocess
+    mod = _load_hygiene()
+
+    def git(*args):
+        subprocess.run(["git", "-C", str(tmp_path), *args],
+                       check=True, capture_output=True)
+
+    git("init", "-q")
+    git("config", "user.email", "t@example.com")
+    git("config", "user.name", "t")
+
+    (tmp_path / "page.md").write_text("# page\n[t](target.md)\n", encoding="utf-8")
+    git("add", "page.md")
+    git("commit", "-qm", "page")
+
+    # On disk, so check_links() is perfectly happy — but never committed.
+    (tmp_path / "target.md").write_text("# target\n", encoding="utf-8")
+
+    monkeypatch.setattr(mod, "REPO", str(tmp_path))
+    hits = [(rel, tgt) for rel, _raw, tgt in mod.check_untracked_link_targets()]
+    assert hits == [("page.md", "target.md")], (
+        "a committed page linking to an uncommitted file must be flagged "
+        f"(this is the failure that reddened the docs build); got {hits}"
+    )
+    assert not mod.check_links(), (
+        "check_links() must NOT catch it — if it did, this guard would be "
+        "redundant and the docs build would never have gone red"
+    )
+
+    git("add", "target.md")
+    git("commit", "-qm", "target")
+    assert mod.check_untracked_link_targets() == [], (
+        "committing the target must clear the flag"
+    )

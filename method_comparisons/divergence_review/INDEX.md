@@ -6,16 +6,16 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **231** single-winner STAR elections (skipped 163 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **136** (59%) diverge from STAR under at least one method; **95** agree across the board.
+- Scanned **228** single-winner STAR elections (skipped 160 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **134** (59%) diverge from STAR under at least one method; **94** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 31 |
 | STAR_OUTLIER_RR_WITH_IRV | 10 |
-| IRV_DIFFERS_ARTIFACT | 12 |
+| IRV_DIFFERS_ARTIFACT | 11 |
 | CYCLE_OR_THREE_WAY | 37 |
-| APPROVAL_OR_MINOR | 46 |
+| APPROVAL_OR_MINOR | 45 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,7 +26,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (133 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (131 cases; identical library copies merged).
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -125,7 +125,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
     _flags: 1 tied-score ballot(s)_
 
-### IRV_DIFFERS_ARTIFACT — 12
+### IRV_DIFFERS_ARTIFACT — 11
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -162,9 +162,6 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[bv2230_2hqmrd_french_2017_burial](cases/IRV_DIFFERS_ARTIFACT/bv2230_2hqmrd_french_2017_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml` (4c/100b)  
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
-- **[kim_scoring_a1_negative](cases/IRV_DIFFERS_ARTIFACT/kim_scoring_a1_negative.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_a1_negative.yaml` (3c/36b)  
-    STAR=**Berry** · IRV=Almond · RR=Berry · Approval=Berry · Score=Berry · Condorcet=Berry  
-    _flags: 36 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Berry, strict=Almond)_
 
 ### CYCLE_OR_THREE_WAY — 35
 
@@ -247,7 +244,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
 
-### APPROVAL_OR_MINOR — 46
+### APPROVAL_OR_MINOR — 45
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -334,8 +331,6 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Arlo** · IRV=Arlo · RR=Arlo · Approval=Bree · Score=Bree · Condorcet=Arlo
 - **[bv2166_b7b8dv_star](cases/APPROVAL_OR_MINOR/bv2166_b7b8dv_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml` (3c/13b)  
     STAR=**Cass** · IRV=Cass · RR=Cass · Approval=Amy · Score=Cass · Condorcet=none
-- **[kim_scoring_ahalf_borda](cases/APPROVAL_OR_MINOR/kim_scoring_ahalf_borda.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/kim_scoring_ahalf_borda.yaml` (3c/36b)  
-    STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Cocoa · Score=Almond · Condorcet=Almond
 - **[mono_raise_delete_after](cases/APPROVAL_OR_MINOR/mono_raise_delete_after.md)** — `method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml` (3c/30b)  
     STAR=**Z** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
 - **[bv2157_mmcmpy_condorcet_cycle_rps](cases/APPROVAL_OR_MINOR/bv2157_mmcmpy_condorcet_cycle_rps.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml` (3c/100b)  
