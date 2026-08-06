@@ -100,5 +100,5 @@ And this measures **welfare only**. Districts exist for representation, local ac
 - [Distributed voting — the measured price of counting by district](../../07_Concepts/topics/distributed_voting_distortion.md) — the theorems, the bounds table, and the sources
 - [Distortion](../../07_Concepts/topics/distortion.md) — the parent metric
 - [Exercise 1 — two districts, one mayor](../../01_STAR/05_Practice/ex01_two_districts.md) — the same architecture, opposite outcome
-- [The reinforcement paradox, counted](../reinforcement_paradox/) — the criterion-shaped version of the same slicing
+- [The reinforcement paradox, counted](../reinforcement_paradox/README.md) — the criterion-shaped version of the same slicing
 - [Summability](../../07_Concepts/topics/summability/README.md) — the *other* thing precincts do to a count, and the one this is constantly confused with
