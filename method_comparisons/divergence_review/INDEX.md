@@ -28,69 +28,71 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (136 cases; identical library copies merged).
 
+**73 of these 136 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
 _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: the center-squeeze story, two methods against one)_
 
 - **[09_c4_b100_tennessee-capital](cases/IRV_OUTLIER_RR_WITH_STAR/09_c4_b100_tennessee-capital.md)** — `01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml` (4c/100b)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
-- **[bv2184_fyy886_lunch_vote](cases/IRV_OUTLIER_RR_WITH_STAR/bv2184_fyy886_lunch_vote.md)** — `01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml` (3c/5b)  
+- **[bv2184_fyy886_lunch_vote](cases/IRV_OUTLIER_RR_WITH_STAR/bv2184_fyy886_lunch_vote.md)** — `01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml` (3c/5b)  ·  [BV ↗](https://bettervoting.com/fyy886/results)  
     STAR=**Pizza** · IRV=Sushi · RR=Pizza · Approval=Pizza · Score=Pizza · Condorcet=Pizza
-- **[ex03_five_verdicts](cases/IRV_OUTLIER_RR_WITH_STAR/ex03_five_verdicts.md)** — `01_STAR/05_Practice/cases/ex03_five_verdicts.yaml` (3c/9b)  
+- **[ex03_five_verdicts](cases/IRV_OUTLIER_RR_WITH_STAR/ex03_five_verdicts.md)** — `01_STAR/05_Practice/cases/ex03_five_verdicts.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/ywqhq4/results)  
     STAR=**Cherry** · IRV=Banana · RR=Cherry · Approval=Cherry · Score=Cherry · Condorcet=Cherry
-- **[ex05_center_squeeze](cases/IRV_OUTLIER_RR_WITH_STAR/ex05_center_squeeze.md)** — `01_STAR/05_Practice/cases/ex05_center_squeeze.yaml` (3c/9b)  
+- **[ex05_center_squeeze](cases/IRV_OUTLIER_RR_WITH_STAR/ex05_center_squeeze.md)** — `01_STAR/05_Practice/cases/ex05_center_squeeze.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/6bry7c/results)  
     STAR=**Brook** · IRV=Avi · RR=Brook · Approval=Brook · Score=Brook · Condorcet=Brook
-- **[ex06_bullet_honest](cases/IRV_OUTLIER_RR_WITH_STAR/ex06_bullet_honest.md)** — `01_STAR/05_Practice/cases/ex06_bullet_honest.yaml` (3c/9b)  
+- **[ex06_bullet_honest](cases/IRV_OUTLIER_RR_WITH_STAR/ex06_bullet_honest.md)** — `01_STAR/05_Practice/cases/ex06_bullet_honest.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/x4dkfd/results)  
     STAR=**Bree** · IRV=Cash · RR=Bree · Approval=Bree · Score=Bree · Condorcet=Bree
-- **[ex10_generous](cases/IRV_OUTLIER_RR_WITH_STAR/ex10_generous.md)** — `01_STAR/05_Practice/cases/ex10_generous.yaml` (3c/9b)  
+- **[ex10_generous](cases/IRV_OUTLIER_RR_WITH_STAR/ex10_generous.md)** — `01_STAR/05_Practice/cases/ex10_generous.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/yyhj9x/results)  
     STAR=**Bess** · IRV=Amir · RR=Bess · Approval=Bess · Score=Bess · Condorcet=Bess
-- **[bv2213_k3fmwv_alaska_2022](cases/IRV_OUTLIER_RR_WITH_STAR/bv2213_k3fmwv_alaska_2022.md)** — `method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml` (3c/200b)  
+- **[bv2213_k3fmwv_alaska_2022](cases/IRV_OUTLIER_RR_WITH_STAR/bv2213_k3fmwv_alaska_2022.md)** — `method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml` (3c/200b)  ·  [BV ↗](https://bettervoting.com/k3fmwv/results)  
     STAR=**Begich** · IRV=Peltola · RR=Begich · Approval=Begich · Score=Begich · Condorcet=Begich
 - **[center_squeeze_star](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_star.md)** — `method_comparisons/center_squeeze/cases/center_squeeze_star.yaml` (3c/27b)  
     STAR=**Center** · IRV=Left · RR=Center · Approval=Left · Score=Center · Condorcet=Center
 - **[center_squeeze_voteline_1d](cases/IRV_OUTLIER_RR_WITH_STAR/center_squeeze_voteline_1d.md)** — `method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml` (3c/998b)  
     STAR=**Green** · IRV=Yellow · RR=Green · Approval=Green · Score=Green · Condorcet=Green
-- **[bv2137_ywckmg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2137_ywckmg_star.md)** — `method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml` (3c/100b)  
+- **[bv2137_ywckmg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2137_ywckmg_star.md)** — `method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_star.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/ywckmg/results)  
     STAR=**Anderson** · IRV=Carter · RR=Anderson · Approval=Anderson · Score=Anderson · Condorcet=Anderson
-- **[bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](cases/IRV_OUTLIER_RR_WITH_STAR/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)** — `method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml` (3c/100b)  
+- **[bv2168_6w2gq7_fairvote_40_15_40_moderate_cw](cases/IRV_OUTLIER_RR_WITH_STAR/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md)** — `method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/6w2gq7/results)  
     STAR=**Moderate** · IRV=Liberal · RR=Moderate · Approval=Liberal · Score=Liberal · Condorcet=Moderate
-- **[bv2227_3xgkck_honest_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2227_3xgkck_honest_star.md)** — `method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml` (3c/34b)  
+- **[bv2227_3xgkck_honest_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2227_3xgkck_honest_star.md)** — `method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_star.yaml` (3c/34b)  ·  [BV ↗](https://bettervoting.com/3xgkck/results)  
     STAR=**Center** · IRV=Right · RR=Center · Approval=Center · Score=Center · Condorcet=Center
-- **[bv2145_6fj2kg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2145_6fj2kg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_star.yaml` (3c/17b)  
+- **[bv2145_6fj2kg_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2145_6fj2kg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_star.yaml` (3c/17b)  ·  [BV ↗](https://bettervoting.com/6fj2kg/results)  
     STAR=**Ada** · IRV=Ben · RR=Ada · Approval=Ada · Score=Ada · Condorcet=Ada
-- **[bv2150_dxg8pb_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2150_dxg8pb_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_star.yaml` (3c/11b)  
+- **[bv2150_dxg8pb_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2150_dxg8pb_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_star.yaml` (3c/11b)  ·  [BV ↗](https://bettervoting.com/dxg8pb/results)  
     STAR=**Beth** · IRV=Carl · RR=Beth · Approval=Beth · Score=Beth · Condorcet=Beth
-- **[bv2162_4htk44_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2162_4htk44_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml` (4c/103b)  
+- **[bv2162_4htk44_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2162_4htk44_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2162_4htk44_star.yaml` (4c/103b)  ·  [BV ↗](https://bettervoting.com/4htk44/results)  
     STAR=**B** · IRV=A · RR=B · Approval=B · Score=B · Condorcet=B
 - **[hillinger_t4_affine](cases/IRV_OUTLIER_RR_WITH_STAR/hillinger_t4_affine.md)** — `method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_affine.yaml` (3c/30b)  
     STAR=**Ana** · IRV=Bruno · RR=Ana · Approval=Ana · Score=Ana · Condorcet=Ana
 - **[hillinger_t4_ev3](cases/IRV_OUTLIER_RR_WITH_STAR/hillinger_t4_ev3.md)** — `method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml` (3c/30b)  
     STAR=**Ana** · IRV=Bruno · RR=Ana · Approval=Ana · Score=Ana · Condorcet=Ana
-- **[bv2278_8cdkkc_five_way_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2278_8cdkkc_five_way_star.md)** — `method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_star.yaml` (5c/1000b)  
+- **[bv2278_8cdkkc_five_way_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2278_8cdkkc_five_way_star.md)** — `method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_star.yaml` (5c/1000b)  ·  [BV ↗](https://bettervoting.com/8cdkkc/results)  
     STAR=**C** · IRV=A · RR=C · Approval=C · Score=C · Condorcet=C
-- **[pineapple_11pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_11pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_11pct.yaml` (11c/100b)  
+- **[pineapple_11pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_11pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_11pct.yaml` (11c/100b)  ·  [BV ↗](https://bettervoting.com/h34pp9/results)  
     STAR=**Cheese** · IRV=Pineapple · RR=Cheese · Approval=Cheese · Score=Cheese · Condorcet=Cheese
-- **[pineapple_25pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_25pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_25pct.yaml` (5c/100b)  
+- **[pineapple_25pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_25pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_25pct.yaml` (5c/100b)  ·  [BV ↗](https://bettervoting.com/mvxbxr/results)  
     STAR=**Cheese** · IRV=Pineapple · RR=Cheese · Approval=Cheese · Score=Cheese · Condorcet=Cheese
-- **[pineapple_34pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_34pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_34pct.yaml` (4c/99b)  
+- **[pineapple_34pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_34pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_34pct.yaml` (4c/99b)  ·  [BV ↗](https://bettervoting.com/ht2c3g/results)  
     STAR=**Cheese** · IRV=Pineapple · RR=Cheese · Approval=Cheese · Score=Cheese · Condorcet=Cheese
-- **[bv2155_cphxpt_tennessee_four_ways](cases/IRV_OUTLIER_RR_WITH_STAR/bv2155_cphxpt_tennessee_four_ways.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_tennessee_four_ways.yaml` (4c/100b)  
+- **[bv2155_cphxpt_tennessee_four_ways](cases/IRV_OUTLIER_RR_WITH_STAR/bv2155_cphxpt_tennessee_four_ways.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2155_cphxpt_tennessee_four_ways.yaml` (4c/100b)  ·  [BV ↗](https://bettervoting.com/cphxpt/results)  
     STAR=**Nashville** · IRV=Knoxville · RR=Nashville · Approval=Nashville · Score=Nashville · Condorcet=Nashville
-- **[bv2132_ykjjhy_pet_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2132_ykjjhy_pet_star.md)** — `method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml` (3c/22b)  
+- **[bv2132_ykjjhy_pet_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2132_ykjjhy_pet_star.md)** — `method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml` (3c/22b)  ·  [BV ↗](https://bettervoting.com/ykjjhy/results)  
     STAR=**Cat** · IRV=Fish · RR=Cat · Approval=Cat · Score=Cat · Condorcet=Cat
-- **[bv2133_dyxrbr_pet2_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2133_dyxrbr_pet2_star.md)** — `method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_star.yaml` (4c/32b)  
+- **[bv2133_dyxrbr_pet2_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2133_dyxrbr_pet2_star.md)** — `method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_star.yaml` (4c/32b)  ·  [BV ↗](https://bettervoting.com/dyxrbr/results)  
     STAR=**Cat** · IRV=Fish · RR=Cat · Approval=Bird · Score=Cat · Condorcet=Cat
-- **[bv2226_82gg36_center_supported](cases/IRV_OUTLIER_RR_WITH_STAR/bv2226_82gg36_center_supported.md)** — `method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml` (3c/36b)  
+- **[bv2226_82gg36_center_supported](cases/IRV_OUTLIER_RR_WITH_STAR/bv2226_82gg36_center_supported.md)** — `method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml` (3c/36b)  ·  [BV ↗](https://bettervoting.com/82gg36/results)  
     STAR=**Blair** · IRV=Alex · RR=Blair · Approval=Blair · Score=Blair · Condorcet=Blair
 - **[04_star_wars_vote_split](cases/IRV_OUTLIER_RR_WITH_STAR/04_star_wars_vote_split.md)** — `method_comparisons/split_voting/_main/04_star_wars_vote_split.yaml` (3c/100b)  
     STAR=**Leia** · IRV=Skywalker · RR=Leia · Approval=Skywalker · Score=Leia · Condorcet=Leia
-- **[bv2221_2kcwbw_sincere](cases/IRV_OUTLIER_RR_WITH_STAR/bv2221_2kcwbw_sincere.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2221_2kcwbw_sincere.yaml` (3c/100b)  
+- **[bv2221_2kcwbw_sincere](cases/IRV_OUTLIER_RR_WITH_STAR/bv2221_2kcwbw_sincere.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2221_2kcwbw_sincere.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/2kcwbw/results)  
     STAR=**Beth** · IRV=Ana · RR=Beth · Approval=Beth · Score=Beth · Condorcet=Beth
-- **[bv2223_dyh93j_510_real_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2223_dyh93j_510_real_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml` (3c/100b)  
+- **[bv2223_dyh93j_510_real_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2223_dyh93j_510_real_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/dyh93j/results)  
     STAR=**Beth** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
-- **[bv2171_h93tm4_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2171_h93tm4_star.md)** — `method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml` (3c/8b)  
+- **[bv2171_h93tm4_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2171_h93tm4_star.md)** — `method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml` (3c/8b)  ·  [BV ↗](https://bettervoting.com/h93tm4/results)  
     STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey
-- **[bv2172_bkwfjr_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2172_bkwfjr_star.md)** — `method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml` (3c/100b)  
+- **[bv2172_bkwfjr_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2172_bkwfjr_star.md)** — `method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/bkwfjr/results)  
     STAR=**Casey** · IRV=Avery · RR=Casey · Approval=Casey · Score=Casey · Condorcet=Casey  
     _also at: `method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_star.yaml`_
 
@@ -100,19 +102,19 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
 
 - **[three_winners_cw_score_runoff](cases/STAR_OUTLIER_RR_WITH_IRV/three_winners_cw_score_runoff.md)** — `01_STAR/02_Examples/cases/three_winners_cw_score_runoff.yaml` (3c/5b)  
     STAR=**Bob** · IRV=Ann · RR=Ann · Approval=Bob · Score=Carl · Condorcet=Ann
-- **[bv2206_7mckyg_fbc_honest_tepid_consensus](cases/STAR_OUTLIER_RR_WITH_IRV/bv2206_7mckyg_fbc_honest_tepid_consensus.md)** — `01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml` (3c/57b)  
+- **[bv2206_7mckyg_fbc_honest_tepid_consensus](cases/STAR_OUTLIER_RR_WITH_IRV/bv2206_7mckyg_fbc_honest_tepid_consensus.md)** — `01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml` (3c/57b)  ·  [BV ↗](https://bettervoting.com/7mckyg/results)  
     STAR=**Clover** · IRV=Bluebell · RR=Bluebell · Approval=Clover · Score=Aster · Condorcet=Bluebell  
     _flags: 9 tied-score ballot(s)_
-- **[bv95b_7pdq3r_favorite_loses_two_rivals](cases/STAR_OUTLIER_RR_WITH_IRV/bv95b_7pdq3r_favorite_loses_two_rivals.md)** — `01_STAR/03_Criteria/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml` (3c/5b)  
+- **[bv95b_7pdq3r_favorite_loses_two_rivals](cases/STAR_OUTLIER_RR_WITH_IRV/bv95b_7pdq3r_favorite_loses_two_rivals.md)** — `01_STAR/03_Criteria/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml` (3c/5b)  ·  [BV ↗](https://bettervoting.com/7pdq3r/results)  
     STAR=**Bruno** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
     _flags: 2 tied-score ballot(s)_
-- **[ex01_district_combined](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_combined.md)** — `01_STAR/05_Practice/cases/ex01_district_combined.yaml` (5c/18b)  
+- **[ex01_district_combined](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_combined.md)** — `01_STAR/05_Practice/cases/ex01_district_combined.yaml` (5c/18b)  ·  [BV ↗](https://bettervoting.com/923q3d/results)  
     STAR=**Carmen** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
     _flags: 18 tied-score ballot(s)_
-- **[ex01_district_east](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_east.md)** — `01_STAR/05_Practice/cases/ex01_district_east.yaml` (5c/9b)  
+- **[ex01_district_east](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_east.md)** — `01_STAR/05_Practice/cases/ex01_district_east.yaml` (5c/9b)  ·  [BV ↗](https://bettervoting.com/rhbfj7/results)  
     STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
     _flags: 9 tied-score ballot(s)_
-- **[ex01_district_west](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_west.md)** — `01_STAR/05_Practice/cases/ex01_district_west.yaml` (5c/9b)  
+- **[ex01_district_west](cases/STAR_OUTLIER_RR_WITH_IRV/ex01_district_west.md)** — `01_STAR/05_Practice/cases/ex01_district_west.yaml` (5c/9b)  ·  [BV ↗](https://bettervoting.com/d3b9wc/results)  
     STAR=**Avery** · IRV=Elena · RR=Elena · Approval=Avery · Score=Avery · Condorcet=Elena  
     _flags: 9 tied-score ballot(s)_
 - **[ex02_bella_exits](cases/STAR_OUTLIER_RR_WITH_IRV/ex02_bella_exits.md)** — `01_STAR/05_Practice/cases/ex02_bella_exits.yaml` (4c/9b)  
@@ -121,7 +123,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     STAR=**Brian** · IRV=Alice · RR=Alice · Approval=Brian · Score=Brian · Condorcet=Alice
 - **[mono_raise_delete_before](cases/STAR_OUTLIER_RR_WITH_IRV/mono_raise_delete_before.md)** — `method_comparisons/monotonicity/cases/mono_raise_delete_before.yaml` (3c/30b)  
     STAR=**X** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
-- **[wcl_c3_b5_star](cases/STAR_OUTLIER_RR_WITH_IRV/wcl_c3_b5_star.md)** — `method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml` (3c/5b)  
+- **[wcl_c3_b5_star](cases/STAR_OUTLIER_RR_WITH_IRV/wcl_c3_b5_star.md)** — `method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml` (3c/5b)  ·  [BV ↗](https://bettervoting.com/c73pfw/results)  
     STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
     _flags: 1 tied-score ballot(s)_
 
@@ -144,13 +146,13 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
     STAR=**Ben** · IRV=Cara · RR=Ben · Approval=Ann · Score=Ann · Condorcet=none  
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ben, strict=Cara)_
-- **[01_c3_b31_graders-divide](cases/IRV_DIFFERS_ARTIFACT/01_c3_b31_graders-divide.md)** — `06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml` (3c/31b)  
+- **[01_c3_b31_graders-divide](cases/IRV_DIFFERS_ARTIFACT/01_c3_b31_graders-divide.md)** — `06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml` (3c/31b)  ·  [BV ↗](https://bettervoting.com/4jmgrd/results)  
     STAR=**Clara** · IRV=Bruno · RR=Clara · Approval=Abby · Score=Bruno · Condorcet=none  
     _flags: 9 tied-score ballot(s); RR conv-sensitive (weak=Clara, strict=Bruno)_
-- **[02_c4_b40_cliff-city](cases/IRV_DIFFERS_ARTIFACT/02_c4_b40_cliff-city.md)** — `06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml` (4c/40b)  
+- **[02_c4_b40_cliff-city](cases/IRV_DIFFERS_ARTIFACT/02_c4_b40_cliff-city.md)** — `06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml` (4c/40b)  ·  [BV ↗](https://bettervoting.com/fm8cbv/results)  
     STAR=**Churro** · IRV=Bao · RR=Churro · Approval=Churro · Score=Bao · Condorcet=Churro  
     _flags: 10 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Churro, strict=Bao)_
-- **[05_c3_b38_squeeze-survives](cases/IRV_DIFFERS_ARTIFACT/05_c3_b38_squeeze-survives.md)** — `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml` (3c/38b)  
+- **[05_c3_b38_squeeze-survives](cases/IRV_DIFFERS_ARTIFACT/05_c3_b38_squeeze-survives.md)** — `06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml` (3c/38b)  ·  [BV ↗](https://bettervoting.com/td7jfy/results)  
     STAR=**Ben** · IRV=Cora · RR=Ben · Approval=Cora · Score=Cora · Condorcet=Ben  
     _flags: 2 tied-score ballot(s)_
 - **[hh41_03_marks_read_pairwise](cases/IRV_DIFFERS_ARTIFACT/hh41_03_marks_read_pairwise.md)** — `method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml` (3c/100b)  
@@ -159,10 +161,10 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[brams_ex6_three_winners_c3_b9](cases/IRV_DIFFERS_ARTIFACT/brams_ex6_three_winners_c3_b9.md)** — `method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml` (3c/9b)  
     STAR=**Cole** · IRV=Amos · RR=Cole · Approval=Amos · Score=Amos · Condorcet=Cole  
     _flags: 9 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Cole, strict=Amos)_
-- **[bv2230_2hqmrd_french_2017_burial](cases/IRV_DIFFERS_ARTIFACT/bv2230_2hqmrd_french_2017_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml` (4c/100b)  
+- **[bv2230_2hqmrd_french_2017_burial](cases/IRV_DIFFERS_ARTIFACT/bv2230_2hqmrd_french_2017_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml` (4c/100b)  ·  [BV ↗](https://bettervoting.com/2hqmrd/results)  
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
-- **[bv2275_6mcgkq_a1_negative](cases/IRV_DIFFERS_ARTIFACT/bv2275_6mcgkq_a1_negative.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml` (3c/36b)  
+- **[bv2275_6mcgkq_a1_negative](cases/IRV_DIFFERS_ARTIFACT/bv2275_6mcgkq_a1_negative.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml` (3c/36b)  ·  [BV ↗](https://bettervoting.com/6mcgkq/results)  
     STAR=**Berry** · IRV=Almond · RR=Berry · Approval=Berry · Score=Berry · Condorcet=Berry  
     _flags: 36 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Berry, strict=Almond)_
 
@@ -170,7 +172,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
-- **[bv2212_g3f7r2_cycle_spoiler](cases/CYCLE_OR_THREE_WAY/bv2212_g3f7r2_cycle_spoiler.md)** — `01_STAR/03_Criteria/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml` (3c/23b)  
+- **[bv2212_g3f7r2_cycle_spoiler](cases/CYCLE_OR_THREE_WAY/bv2212_g3f7r2_cycle_spoiler.md)** — `01_STAR/03_Criteria/iia_cycle_spoiler/cases/bv2212_g3f7r2_cycle_spoiler.yaml` (3c/23b)  ·  [BV ↗](https://bettervoting.com/g3f7r2/results)  
     STAR=**Alice** · IRV=Carla · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
 - **[tie_break_04_runoff_five_star_breaks](cases/CYCLE_OR_THREE_WAY/tie_break_04_runoff_five_star_breaks.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_04_runoff_five_star_breaks.yaml` (2c/2b)  
     STAR=**Alice** · IRV=Ben · RR=Alice · Approval=Alice · Score=Alice · Condorcet=none
@@ -183,7 +185,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Ben** · IRV=Ann · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
 - **[tie_break_09_five_star_tied_nonzero](cases/CYCLE_OR_THREE_WAY/tie_break_09_five_star_tied_nonzero.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_09_five_star_tied_nonzero.yaml` (2c/2b)  
     STAR=**Ben** · IRV=Ann · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none
-- **[lot_random_vs_published_jfk7pd_bv_order](cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml` (2c/2b)  
+- **[lot_random_vs_published_jfk7pd_bv_order](cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml` (2c/2b)  ·  [BV ↗](https://bettervoting.com/jfk7pd/results)  
     STAR=**Ben** · IRV=Ada · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none  
     _also at: `YAML_library/1_positive/lot_tiebreak_bv_order.yaml`_
 - **[three_way_dead_rung_A](cases/CYCLE_OR_THREE_WAY/three_way_dead_rung_A.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml` (3c/3b)  
@@ -193,56 +195,56 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Alex** · IRV=Bella · RR=Eli · Approval=Alex · Score=Alex · Condorcet=none
 - **[ex02_tenth_ballot](cases/CYCLE_OR_THREE_WAY/ex02_tenth_ballot.md)** — `01_STAR/05_Practice/cases/ex02_tenth_ballot.yaml` (5c/10b)  
     STAR=**Chris** · IRV=Bella · RR=Chris · Approval=Alex · Score=Alex · Condorcet=none
-- **[ex13_opinions](cases/CYCLE_OR_THREE_WAY/ex13_opinions.md)** — `01_STAR/05_Practice/cases/ex13_opinions.yaml` (3c/9b)  
+- **[ex13_opinions](cases/CYCLE_OR_THREE_WAY/ex13_opinions.md)** — `01_STAR/05_Practice/cases/ex13_opinions.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/qdtqf2/results)  
     STAR=**Cora** · IRV=Cora · RR=Ash · Approval=Ash · Score=Ash · Condorcet=none
-- **[03_c4_b33_bullet-storm](cases/CYCLE_OR_THREE_WAY/03_c4_b33_bullet-storm.md)** — `06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml` (4c/33b)  
+- **[03_c4_b33_bullet-storm](cases/CYCLE_OR_THREE_WAY/03_c4_b33_bullet-storm.md)** — `06_Other/ballot_style_lab/cases/03_c4_b33_bullet-storm.yaml` (4c/33b)  ·  [BV ↗](https://bettervoting.com/w9f4vd/results)  
     STAR=**Carla** · IRV=Astrid · RR=Carla · Approval=Carla · Score=Carla · Condorcet=none
-- **[04_c4_b47_noise-soup](cases/CYCLE_OR_THREE_WAY/04_c4_b47_noise-soup.md)** — `06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml` (4c/47b)  
+- **[04_c4_b47_noise-soup](cases/CYCLE_OR_THREE_WAY/04_c4_b47_noise-soup.md)** — `06_Other/ballot_style_lab/cases/04_c4_b47_noise-soup.yaml` (4c/47b)  ·  [BV ↗](https://bettervoting.com/74pbyg/results)  
     STAR=**Caleb** · IRV=Beth · RR=Beth · Approval=Beth · Score=Beth · Condorcet=none  
     _flags: 13 tied-score ballot(s); IRV flips on reversed priority_
-- **[06_c4_b24_narrow-bands](cases/CYCLE_OR_THREE_WAY/06_c4_b24_narrow-bands.md)** — `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml` (4c/24b)  
+- **[06_c4_b24_narrow-bands](cases/CYCLE_OR_THREE_WAY/06_c4_b24_narrow-bands.md)** — `06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml` (4c/24b)  ·  [BV ↗](https://bettervoting.com/gyv2qt/results)  
     STAR=**Beige** · IRV=Azure · RR=Coral · Approval=Azure · Score=Azure · Condorcet=none  
     _flags: 16 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Coral, strict=Azure)_
 - **[BV_Library_star_runoff_tie_score_resolves](cases/CYCLE_OR_THREE_WAY/BV_Library_star_runoff_tie_score_resolves.md)** — `method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml` (2c/2b)  
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
-- **[margins_star](cases/CYCLE_OR_THREE_WAY/margins_star.md)** — `method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml` (3c/12b)  
+- **[margins_star](cases/CYCLE_OR_THREE_WAY/margins_star.md)** — `method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml` (3c/12b)  ·  [BV ↗](https://bettervoting.com/kdjjkq/results)  
     STAR=**Almond** · IRV=Cocoa · RR=Berry · Approval=Berry · Score=Berry · Condorcet=none
-- **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  
+- **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/24b623/results)  
     STAR=**Harper** · IRV=Berkey · RR=Harper · Approval=Harper · Score=Rieger · Condorcet=none
-- **[bv2147_9gdrqg_star](cases/CYCLE_OR_THREE_WAY/bv2147_9gdrqg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml` (3c/17b)  
+- **[bv2147_9gdrqg_star](cases/CYCLE_OR_THREE_WAY/bv2147_9gdrqg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml` (3c/17b)  ·  [BV ↗](https://bettervoting.com/9gdrqg/results)  
     STAR=**Bruno** · IRV=Bruno · RR=Cora · Approval=Cora · Score=Cora · Condorcet=none
-- **[bv2149_byk9v2_star](cases/CYCLE_OR_THREE_WAY/bv2149_byk9v2_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_star.yaml` (3c/32b)  
+- **[bv2149_byk9v2_star](cases/CYCLE_OR_THREE_WAY/bv2149_byk9v2_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_star.yaml` (3c/32b)  ·  [BV ↗](https://bettervoting.com/byk9v2/results)  
     STAR=**Bruno** · IRV=Alma · RR=Cora · Approval=Cora · Score=Cora · Condorcet=none
-- **[bv2160_r6qc8h_star](cases/CYCLE_OR_THREE_WAY/bv2160_r6qc8h_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_star.yaml` (4c/7b)  
+- **[bv2160_r6qc8h_star](cases/CYCLE_OR_THREE_WAY/bv2160_r6qc8h_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_star.yaml` (4c/7b)  ·  [BV ↗](https://bettervoting.com/r6qc8h/results)  
     STAR=**B** · IRV=A · RR=C · Approval=B · Score=B · Condorcet=none
-- **[bv2165_9vxcj7_star](cases/CYCLE_OR_THREE_WAY/bv2165_9vxcj7_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2165_9vxcj7_star.yaml` (3c/15b)  
+- **[bv2165_9vxcj7_star](cases/CYCLE_OR_THREE_WAY/bv2165_9vxcj7_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2165_9vxcj7_star.yaml` (3c/15b)  ·  [BV ↗](https://bettervoting.com/9vxcj7/results)  
     STAR=**Boone** · IRV=Boone · RR=Cass · Approval=Cass · Score=Cass · Condorcet=none
-- **[bv2167_f3dxq9_star](cases/CYCLE_OR_THREE_WAY/bv2167_f3dxq9_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml` (4c/11b)  
+- **[bv2167_f3dxq9_star](cases/CYCLE_OR_THREE_WAY/bv2167_f3dxq9_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml` (4c/11b)  ·  [BV ↗](https://bettervoting.com/f3dxq9/results)  
     STAR=**B** · IRV=C · RR=A · Approval=B · Score=B · Condorcet=none
 - **[p3_manip_star](cases/CYCLE_OR_THREE_WAY/p3_manip_star.md)** — `method_comparisons/manipulability_p3/cases/p3_manip_star.yaml` (5c/7b)  
     STAR=**Edinburgh** · IRV=Dublin · RR=Edinburgh · Approval=Bergen · Score=Edinburgh · Condorcet=none
-- **[p3_sincere_star](cases/CYCLE_OR_THREE_WAY/p3_sincere_star.md)** — `method_comparisons/manipulability_p3/cases/p3_sincere_star.yaml` (5c/7b)  
+- **[p3_sincere_star](cases/CYCLE_OR_THREE_WAY/p3_sincere_star.md)** — `method_comparisons/manipulability_p3/cases/p3_sincere_star.yaml` (5c/7b)  ·  [BV ↗](https://bettervoting.com/4w96tr/results)  
     STAR=**Dublin** · IRV=Dublin · RR=Edinburgh · Approval=Bergen · Score=Dublin · Condorcet=none
 - **[monotonicity_star_after](cases/CYCLE_OR_THREE_WAY/monotonicity_star_after.md)** — `method_comparisons/monotonicity/cases/monotonicity_star_after.yaml` (3c/34b)  
     STAR=**X** · IRV=Z · RR=X · Approval=X · Score=X · Condorcet=none
 - **[monotonicity_star_before](cases/CYCLE_OR_THREE_WAY/monotonicity_star_before.md)** — `method_comparisons/monotonicity/cases/monotonicity_star_before.yaml` (3c/34b)  
     STAR=**X** · IRV=X · RR=Y · Approval=Y · Score=Y · Condorcet=none
-- **[bv2138_cxrf8v_star](cases/CYCLE_OR_THREE_WAY/bv2138_cxrf8v_star.md)** — `method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_star.yaml` (5c/921b)  
+- **[bv2138_cxrf8v_star](cases/CYCLE_OR_THREE_WAY/bv2138_cxrf8v_star.md)** — `method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_star.yaml` (5c/921b)  ·  [BV ↗](https://bettervoting.com/cxrf8v/results)  
     STAR=**Brad** · IRV=Dave · RR=Abby · Approval=Erin · Score=Abby · Condorcet=none
-- **[bv2156_3grpbb_star_misses_condorcet](cases/CYCLE_OR_THREE_WAY/bv2156_3grpbb_star_misses_condorcet.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2156_3grpbb_star_misses_condorcet.yaml` (3c/100b)  
+- **[bv2156_3grpbb_star_misses_condorcet](cases/CYCLE_OR_THREE_WAY/bv2156_3grpbb_star_misses_condorcet.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2156_3grpbb_star_misses_condorcet.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/3grpbb/results)  
     STAR=**Ada** · IRV=Ada · RR=Cleo · Approval=Ada · Score=Ada · Condorcet=Cleo  
     _flags: 25 tied-score ballot(s); IRV flips on reversed priority_
-- **[bv2174_yyhr66_noshow_baseline](cases/CYCLE_OR_THREE_WAY/bv2174_yyhr66_noshow_baseline.md)** — `method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml` (3c/54b)  
+- **[bv2174_yyhr66_noshow_baseline](cases/CYCLE_OR_THREE_WAY/bv2174_yyhr66_noshow_baseline.md)** — `method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml` (3c/54b)  ·  [BV ↗](https://bettervoting.com/yyhr66/results)  
     STAR=**Bruno** · IRV=Bruno · RR=Celia · Approval=Celia · Score=Celia · Condorcet=none
-- **[bv2175_9dhv8y_noshow_showup](cases/CYCLE_OR_THREE_WAY/bv2175_9dhv8y_noshow_showup.md)** — `method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml` (3c/62b)  
+- **[bv2175_9dhv8y_noshow_showup](cases/CYCLE_OR_THREE_WAY/bv2175_9dhv8y_noshow_showup.md)** — `method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml` (3c/62b)  ·  [BV ↗](https://bettervoting.com/9dhv8y/results)  
     STAR=**April** · IRV=Celia · RR=April · Approval=April · Score=April · Condorcet=none
-- **[bv2176_p8dp28_star](cases/CYCLE_OR_THREE_WAY/bv2176_p8dp28_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml` (4c/20b)  
+- **[bv2176_p8dp28_star](cases/CYCLE_OR_THREE_WAY/bv2176_p8dp28_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml` (4c/20b)  ·  [BV ↗](https://bettervoting.com/p8dp28/results)  
     STAR=**Blue** · IRV=Purple · RR=Blue · Approval=Pink · Score=Purple · Condorcet=none
-- **[bv2225_ywx39y_center_tolerated](cases/CYCLE_OR_THREE_WAY/bv2225_ywx39y_center_tolerated.md)** — `method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml` (3c/36b)  
+- **[bv2225_ywx39y_center_tolerated](cases/CYCLE_OR_THREE_WAY/bv2225_ywx39y_center_tolerated.md)** — `method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml` (3c/36b)  ·  [BV ↗](https://bettervoting.com/ywx39y/results)  
     STAR=**Alex** · IRV=Alex · RR=Blair · Approval=Alex · Score=Alex · Condorcet=Blair
 - **[reversal_star_original](cases/CYCLE_OR_THREE_WAY/reversal_star_original.md)** — `method_comparisons/reversal_symmetry/cases/reversal_star_original.yaml` (3c/24b)  
     STAR=**B** · IRV=A · RR=B · Approval=B · Score=B · Condorcet=none
-- **[bv2222_rfyk46_510_thin_star](cases/CYCLE_OR_THREE_WAY/bv2222_rfyk46_510_thin_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml` (3c/100b)  
+- **[bv2222_rfyk46_510_thin_star](cases/CYCLE_OR_THREE_WAY/bv2222_rfyk46_510_thin_star.md)** — `method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/rfyk46/results)  
     STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
@@ -260,7 +262,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
 - **[04b_c4_b3_display-options-all](cases/APPROVAL_OR_MINOR/04b_c4_b3_display-options-all.md)** — `01_STAR/02_Examples/cases/04b_c4_b3_display-options-all.yaml` (4c/3b)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Vanilla · Score=Strawberry · Condorcet=Strawberry
-- **[bv2182_tg4779_faq_runoff_reversal](cases/APPROVAL_OR_MINOR/bv2182_tg4779_faq_runoff_reversal.md)** — `01_STAR/02_Examples/cases/bv2182_tg4779_faq_runoff_reversal.yaml` (3c/10b)  
+- **[bv2182_tg4779_faq_runoff_reversal](cases/APPROVAL_OR_MINOR/bv2182_tg4779_faq_runoff_reversal.md)** — `01_STAR/02_Examples/cases/bv2182_tg4779_faq_runoff_reversal.yaml` (3c/10b)  ·  [BV ↗](https://bettervoting.com/tg4779/results)  
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Berry · Score=Berry · Condorcet=Almond  
     _flags: 1 tied-score ballot(s)_
 - **[csv_ambiguity_ex1_c4_b8](cases/APPROVAL_OR_MINOR/csv_ambiguity_ex1_c4_b8.md)** — `01_STAR/02_Examples/cases/csv_ambiguity_ex1_c4_b8.yaml` (4c/8b)  
@@ -279,15 +281,15 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     _flags: 1 tied-score ballot(s)_
 - **[reversal_jarring_c3_b100](cases/APPROVAL_OR_MINOR/reversal_jarring_c3_b100.md)** — `01_STAR/02_Examples/runoff_overturns_leader/cases/reversal_jarring_c3_b100.yaml` (3c/100b)  
     STAR=**Rye** · IRV=Rye · RR=Rye · Approval=Uma · Score=Uma · Condorcet=Rye
-- **[bv2207_b6xrdr_fbc_betrayal_pays](cases/APPROVAL_OR_MINOR/bv2207_b6xrdr_fbc_betrayal_pays.md)** — `01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml` (3c/57b)  
+- **[bv2207_b6xrdr_fbc_betrayal_pays](cases/APPROVAL_OR_MINOR/bv2207_b6xrdr_fbc_betrayal_pays.md)** — `01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml` (3c/57b)  ·  [BV ↗](https://bettervoting.com/b6xrdr/results)  
     STAR=**Bluebell** · IRV=Bluebell · RR=Bluebell · Approval=Clover · Score=Clover · Condorcet=Bluebell
-- **[bv95a_9m6rxr_favorite_survives_one_rival](cases/APPROVAL_OR_MINOR/bv95a_9m6rxr_favorite_survives_one_rival.md)** — `01_STAR/03_Criteria/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml` (3c/5b)  
+- **[bv95a_9m6rxr_favorite_survives_one_rival](cases/APPROVAL_OR_MINOR/bv95a_9m6rxr_favorite_survives_one_rival.md)** — `01_STAR/03_Criteria/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml` (3c/5b)  ·  [BV ↗](https://bettervoting.com/9m6rxr/results)  
     STAR=**Ada** · IRV=Ada · RR=Ada · Approval=Bruno · Score=Bruno · Condorcet=Ada  
     _flags: 2 tied-score ballot(s)_
-- **[bv2180_fp62p2_ice_cream_ladder](cases/APPROVAL_OR_MINOR/bv2180_fp62p2_ice_cream_ladder.md)** — `01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml` (6c/2b)  
+- **[bv2180_fp62p2_ice_cream_ladder](cases/APPROVAL_OR_MINOR/bv2180_fp62p2_ice_cream_ladder.md)** — `01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml` (6c/2b)  ·  [BV ↗](https://bettervoting.com/fp62p2/results)  
     STAR=**Strawberry** · IRV=Strawberry · RR=Strawberry · Approval=Chocolate · Score=Strawberry · Condorcet=none  
     _flags: 2 tied-score ballot(s)_
-- **[bhckrf7_range_of_scores](cases/APPROVAL_OR_MINOR/bhckrf7_range_of_scores.md)** — `01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml` (3c/3b)  
+- **[bhckrf7_range_of_scores](cases/APPROVAL_OR_MINOR/bhckrf7_range_of_scores.md)** — `01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml` (3c/3b)  ·  [BV ↗](https://bettervoting.com/hckrf7/results)  
     STAR=**Cal Creative** · IRV=Cal Creative · RR=Cal Creative · Approval=Ann Ambitious · Score=Cal Creative · Condorcet=Cal Creative
 - **[Runoff_02_atom_reversal_yx9447](cases/APPROVAL_OR_MINOR/Runoff_02_atom_reversal_yx9447.md)** — `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml` (3c/3b)  
     STAR=**Boston** · IRV=Boston · RR=Boston · Approval=Austin · Score=Austin · Condorcet=Boston
@@ -303,7 +305,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     _flags: 1 tied-score ballot(s); IRV flips on reversed priority_
 - **[ex04_olympics_1994](cases/APPROVAL_OR_MINOR/ex04_olympics_1994.md)** — `01_STAR/05_Practice/cases/ex04_olympics_1994.yaml` (3c/9b)  
     STAR=**Baiul** · IRV=Baiul · RR=Baiul · Approval=Kerrigan · Score=Kerrigan · Condorcet=Baiul
-- **[ex06_bullet_backfire](cases/APPROVAL_OR_MINOR/ex06_bullet_backfire.md)** — `01_STAR/05_Practice/cases/ex06_bullet_backfire.yaml` (3c/9b)  
+- **[ex06_bullet_backfire](cases/APPROVAL_OR_MINOR/ex06_bullet_backfire.md)** — `01_STAR/05_Practice/cases/ex06_bullet_backfire.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/7f4f7q/results)  
     STAR=**Cash** · IRV=Cash · RR=Cash · Approval=Ari · Score=Cash · Condorcet=Cash
 - **[ex08_minimal_reversal_2c](cases/APPROVAL_OR_MINOR/ex08_minimal_reversal_2c.md)** — `01_STAR/05_Practice/cases/ex08_minimal_reversal_2c.yaml` (2c/3b)  
     STAR=**A** · IRV=A · RR=A · Approval=B · Score=B · Condorcet=A
@@ -313,7 +315,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Allison** · IRV=Allison · RR=Allison · Approval=Bill · Score=Allison · Condorcet=none
 - **[count_simplicity_star_vs_irv](cases/APPROVAL_OR_MINOR/count_simplicity_star_vs_irv.md)** — `method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml` (5c/40b)  
     STAR=**Carmen** · IRV=Carmen · RR=Carmen · Approval=Andre · Score=Carmen · Condorcet=Carmen
-- **[bv2214_m3hb6y_alaska_2022_general](cases/APPROVAL_OR_MINOR/bv2214_m3hb6y_alaska_2022_general.md)** — `method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml` (3c/200b)  
+- **[bv2214_m3hb6y_alaska_2022_general](cases/APPROVAL_OR_MINOR/bv2214_m3hb6y_alaska_2022_general.md)** — `method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml` (3c/200b)  ·  [BV ↗](https://bettervoting.com/m3hb6y/results)  
     STAR=**Peltola** · IRV=Peltola · RR=Peltola · Approval=Begich · Score=Begich · Condorcet=Peltola
 - **[hh41_04_stipulated_utilities_star](cases/APPROVAL_OR_MINOR/hh41_04_stipulated_utilities_star.md)** — `method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml` (3c/100b)  
     STAR=**A** · IRV=A · RR=A · Approval=B · Score=A · Condorcet=A
@@ -323,7 +325,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Cal** · IRV=Cal · RR=Cal · Approval=Ann · Score=Cal · Condorcet=Cal
 - **[Black_Curtain_03_c3_b5_polarized-on-cal](cases/APPROVAL_OR_MINOR/Black_Curtain_03_c3_b5_polarized-on-cal.md)** — `method_comparisons/black_curtain/cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml` (3c/5b)  
     STAR=**Cal** · IRV=Cal · RR=Cal · Approval=Ann · Score=Ann · Condorcet=Cal
-- **[condorcet_1788_star](cases/APPROVAL_OR_MINOR/condorcet_1788_star.md)** — `method_comparisons/borda_condorcet_1788/cases/condorcet_1788_star.yaml` (3c/11b)  
+- **[condorcet_1788_star](cases/APPROVAL_OR_MINOR/condorcet_1788_star.md)** — `method_comparisons/borda_condorcet_1788/cases/condorcet_1788_star.yaml` (3c/11b)  ·  [BV ↗](https://bettervoting.com/khcwm4/results)  
     STAR=**Peter** · IRV=Peter · RR=Peter · Approval=Paul · Score=Paul · Condorcet=Peter
 - **[brams_ex3_two_candidates_c2_b5](cases/APPROVAL_OR_MINOR/brams_ex3_two_candidates_c2_b5.md)** — `method_comparisons/brams_grading_paradox/cases/brams_ex3_two_candidates_c2_b5.yaml` (2c/5b)  
     STAR=**Beth** · IRV=Beth · RR=Beth · Approval=Alan · Score=Alan · Condorcet=Beth
@@ -332,25 +334,25 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     _flags: 2 tied-score ballot(s); IRV flips on reversed priority_
 - **[majority_illusion_c3_b41_score_vs_star](cases/APPROVAL_OR_MINOR/majority_illusion_c3_b41_score_vs_star.md)** — `method_comparisons/ces_majority_illusion/cases/majority_illusion_c3_b41_score_vs_star.yaml` (3c/41b)  
     STAR=**Alice** · IRV=Alice · RR=Alice · Approval=Brian · Score=Brian · Condorcet=Alice
-- **[bv2173_gmfv4c_edelman_saari_cancellation](cases/APPROVAL_OR_MINOR/bv2173_gmfv4c_edelman_saari_cancellation.md)** — `method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml` (3c/81b)  
+- **[bv2173_gmfv4c_edelman_saari_cancellation](cases/APPROVAL_OR_MINOR/bv2173_gmfv4c_edelman_saari_cancellation.md)** — `method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml` (3c/81b)  ·  [BV ↗](https://bettervoting.com/gmfv4c/results)  
     STAR=**Ada** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada
-- **[bv2148_h87k6v_star](cases/APPROVAL_OR_MINOR/bv2148_h87k6v_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_star.yaml` (3c/15b)  
+- **[bv2148_h87k6v_star](cases/APPROVAL_OR_MINOR/bv2148_h87k6v_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_star.yaml` (3c/15b)  ·  [BV ↗](https://bettervoting.com/h87k6v/results)  
     STAR=**Bruno** · IRV=Bruno · RR=Bruno · Approval=Cora · Score=Bruno · Condorcet=Bruno
-- **[bv2161_q3h4fk_star](cases/APPROVAL_OR_MINOR/bv2161_q3h4fk_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml` (3c/7b)  
+- **[bv2161_q3h4fk_star](cases/APPROVAL_OR_MINOR/bv2161_q3h4fk_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml` (3c/7b)  ·  [BV ↗](https://bettervoting.com/q3h4fk/results)  
     STAR=**C** · IRV=C · RR=C · Approval=B · Score=C · Condorcet=none
-- **[bv2164_xbqq8t_star](cases/APPROVAL_OR_MINOR/bv2164_xbqq8t_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml` (4c/33b)  
+- **[bv2164_xbqq8t_star](cases/APPROVAL_OR_MINOR/bv2164_xbqq8t_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml` (4c/33b)  ·  [BV ↗](https://bettervoting.com/xbqq8t/results)  
     STAR=**Arlo** · IRV=Arlo · RR=Arlo · Approval=Bree · Score=Bree · Condorcet=Arlo
-- **[bv2166_b7b8dv_star](cases/APPROVAL_OR_MINOR/bv2166_b7b8dv_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml` (3c/13b)  
+- **[bv2166_b7b8dv_star](cases/APPROVAL_OR_MINOR/bv2166_b7b8dv_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml` (3c/13b)  ·  [BV ↗](https://bettervoting.com/b7b8dv/results)  
     STAR=**Cass** · IRV=Cass · RR=Cass · Approval=Amy · Score=Cass · Condorcet=none
-- **[bv2275_6mcgkq_ahalf_borda](cases/APPROVAL_OR_MINOR/bv2275_6mcgkq_ahalf_borda.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml` (3c/36b)  
+- **[bv2275_6mcgkq_ahalf_borda](cases/APPROVAL_OR_MINOR/bv2275_6mcgkq_ahalf_borda.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml` (3c/36b)  ·  [BV ↗](https://bettervoting.com/6mcgkq/results)  
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Cocoa · Score=Almond · Condorcet=Almond
 - **[mono_raise_delete_after](cases/APPROVAL_OR_MINOR/mono_raise_delete_after.md)** — `method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml` (3c/30b)  
     STAR=**Z** · IRV=Z · RR=Z · Approval=X · Score=X · Condorcet=Z
-- **[bv2157_mmcmpy_condorcet_cycle_rps](cases/APPROVAL_OR_MINOR/bv2157_mmcmpy_condorcet_cycle_rps.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml` (3c/100b)  
+- **[bv2157_mmcmpy_condorcet_cycle_rps](cases/APPROVAL_OR_MINOR/bv2157_mmcmpy_condorcet_cycle_rps.md)** — `method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/mmcmpy/results)  
     STAR=**Rock** · IRV=Rock · RR=Rock · Approval=Paper · Score=Rock · Condorcet=none
-- **[bv2178_8kg698_star](cases/APPROVAL_OR_MINOR/bv2178_8kg698_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml` (4c/20b)  
+- **[bv2178_8kg698_star](cases/APPROVAL_OR_MINOR/bv2178_8kg698_star.md)** — `method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml` (4c/20b)  ·  [BV ↗](https://bettervoting.com/8kg698/results)  
     STAR=**Blue** · IRV=Blue · RR=Blue · Approval=Pink · Score=Purple · Condorcet=Blue
-- **[reinf_combined_c3_b9_star](cases/APPROVAL_OR_MINOR/reinf_combined_c3_b9_star.md)** — `method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml` (3c/9b)  
+- **[reinf_combined_c3_b9_star](cases/APPROVAL_OR_MINOR/reinf_combined_c3_b9_star.md)** — `method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml` (3c/9b)  ·  [BV ↗](https://bettervoting.com/t4by6x/results)  
     STAR=**Cara** · IRV=Cara · RR=Cara · Approval=Ada · Score=Ada · Condorcet=Cara
 - **[reversal_star_reversed](cases/APPROVAL_OR_MINOR/reversal_star_reversed.md)** — `method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml` (3c/24b)  
     STAR=**A** · IRV=A · RR=A · Approval=C · Score=C · Condorcet=none
