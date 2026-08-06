@@ -6,6 +6,8 @@
 
 → The theorem behind it: [Condorcet-Consistent Choice Among Three Candidates](../../07_Concepts/topics/condorcet/three_candidate_maximin.md) · related: [the No-Show paradox](../../07_Concepts/voting_paradoxes/no_show.md) · [multiple-districts / consistency](../../07_Concepts/voting_paradoxes/multiple_districts.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md).
 
+→ The same event with a **price tag** instead of a checkmark: [distributed voting](../../07_Concepts/topics/distributed_voting_distortion.md) measures what slicing an electorate into districts costs in voter welfare (answer: a factor of `k`, the number of districts — and it survives even when every district counts perfect utilities). Consistency asks *did the promise break*; distortion asks *how much did the break cost*.
+
 ---
 
 ## The whole story in one table

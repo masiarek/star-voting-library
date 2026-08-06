@@ -193,6 +193,8 @@ The live BetterVoting trio makes Elena visible too: each election carries a seco
 
 A classroom construction, and it shows: mirror-image districts, three ballot styles, and (as the engine's own caveat notes) every ballot carrying tied scores somewhere. It demonstrates the *mechanism* of a consistency failure honestly; it says nothing about *frequency* in real electorates. Every method fails something — apply [the four-part test](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) before turning any single construction into a verdict, and see [STAR's honest limits](../01_Learn/properties_and_limits/STAR_honest_limits.md) for the balanced scorecard.
 
+And here it cuts *for* the districts. These same eighteen ballots are the exact setup that computational social choice calls **distributed voting**, where the welfare cost of slicing an electorate has been bounded by theorem — so you can price this election instead of only describing it. Scoring the three winners against total voter satisfaction: the districted answer (Avery, 70 points) is the **utilitarian optimum**, while citywide STAR's Carmen (64) gives up about 13% and the Condorcet winner Elena (50) rather more. The slicing that broke consistency cost nothing in welfare here, and the centralized count is the one that paid. Worked out in full on [distributed voting — the measured price of counting by district](../../07_Concepts/topics/distributed_voting_distortion.md).
+
 ## Run it yourself
 
 ```
