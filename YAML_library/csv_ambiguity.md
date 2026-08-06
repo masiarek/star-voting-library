@@ -193,7 +193,7 @@ Error: STAR ballots use scores 0..5 (blank or a marker counts as 0).
   Accepted marks: 0..5, blank, or a marker (-, ~, &, ?, %).
 ```
 
-**One idea from the sketch has no home yet.** `race abstention allowed:` and `candidate abstention allowed:` describe what the *rules of the election* permit, not what a voter did. The library records the ballot, not the rulebook, so there is no key for it — but it's a real distinction, and an election system that lets an administrator turn abstention off would need somewhere to say so.
+**One idea from the sketch had no home anywhere — so it was filed upstream.** `race abstention allowed:` and `candidate abstention allowed:` describe what the *rules of the election* permit, not what a voter did. This library records the ballot rather than the rulebook, so there's no key for it here; BetterVoting has no field for it either, which means an export can't distinguish *"nobody abstained"* from *"abstaining was impossible."* Filed 2026-08-06 as **[#1485 — Record the abstention policy on the race](https://github.com/Equal-Vote/bettervoting/issues/1485)**, scoped to the recording side because [#699](https://github.com/Equal-Vote/bettervoting/issues/699) already holds the admin-setting half. Report archived at [`bv_github_issue_abstention_policy.md`](../07_Concepts/tabulation_engines/BV/bv_github_issue_abstention_policy.md).
 
 ## The weights question
 

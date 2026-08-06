@@ -67,10 +67,10 @@ Full LH STAR engine report:
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-                 |   * Azure    |  * Beige    |
------------------------------------------------
-       * Azure > |     ---      |10 -  5 -  9 |
-       * Beige > |  9 -  5 - 10 |    ---      |
+               |  * Beige   | * Coral   |
+-----------------------------------------
+     * Beige > |    ---     |9 - 7 - 8  |
+     * Coral > | 8 - 7 - 9  |   ---     |
 
 [Divergence from STAR]
   STAR                   = Beige
