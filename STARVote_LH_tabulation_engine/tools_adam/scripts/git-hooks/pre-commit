@@ -100,13 +100,21 @@ if ! "$PY" -c "import pytest" >/dev/null 2>&1; then
 fi
 
 echo "pre-commit: running STAR YAML test suite…"
+# test_yaml_index_current is the backstop for the index refreshed above: the
+# regen makes it correct, this proves it. The two are complements, not a
+# duplicate — every refresh block here is deliberately non-blocking, so a
+# generator that dies (or a `git add` the hook couldn't do) leaves a stale index
+# and says so only in a line that scrolls past. Without this the drift ships and
+# CI catches it on master, which is exactly how the index sat stale for six
+# commits (2026-08-05). Cheap: ~1s, no tabulation.
 ( cd "$ENGINE" && "$PY" -m pytest \
     tests/test_single_winner_positive.py \
     tests/test_negative_validation.py \
     tests/test_harness_selfcheck.py \
     tests/test_json_to_yaml_conversion.py \
     tests/test_lot_number_tiebreak.py \
-    tests/test_readme_index_complete.py -q )
+    tests/test_readme_index_complete.py \
+    tests/test_yaml_index_current.py -q )
 status=$?
 
 if [ "$status" -ne 0 ]; then
