@@ -17,14 +17,24 @@ LINK to case pages, a stale catalog turns into dangling links, a red
 test_md_links, and an aborted `mkdocs --strict`.
 
 The generator writes through the module-level IDXDIR, so the test redirects that
-rather than letting it touch the repo. The throwaway lives *inside* the repo at
-the same depth as the real one (07_Concepts/<tmp>) so any relative link the
-generator emits comes out identical to the committed copy's.
+rather than letting it touch the repo. The throwaway goes to pytest's `tmp_path`
+— i.e. the SYSTEM temp dir, never the working tree.
+
+It used to be created at `07_Concepts/<tmp>`, on the theory that the generator
+needed the real depth for its relative links. It does not: every link CATALOG.md
+emits is a bare sibling name (`races.csv`, `BV_registry.md`, `README.md`,
+`multirace_elections.md`), a hardcoded `../../` hop, or `_rel()` measured from
+REPO — none of them read IDXDIR, and the three outputs come out byte-identical
+wherever they are written. What the in-tree scratch *did* buy was a failure mode:
+any interrupted run (Ctrl-C, a stopped background run, a crash) skipped the
+`finally` and orphaned a `_catalog_staleness_*/` holding a CATALOG.md whose
+sibling links resolve from nowhere. Four such orphans on 2026-08-06 produced 13
+spurious broken-link failures in check_links()/test_md_links.py and had to be
+cleared by hand; a live one also makes a concurrent link check flaky, since the
+directory is in the tree while another session walks it.
 """
 import importlib.util
-import shutil
 import sys
-import tempfile
 from pathlib import Path
 
 import pytest
@@ -43,25 +53,24 @@ def _load_generator():
     return mod
 
 
-def test_catalog_is_current():
+def test_catalog_is_current(tmp_path):
     if not GEN.exists():
         pytest.skip("build_catalog.py not present")
     mod = _load_generator()
 
-    # Same depth as the real output dir, so emitted relative links match.
-    tmp = Path(tempfile.mkdtemp(dir=IDXDIR.parent, prefix="_catalog_staleness_"))
-    try:
-        mod.IDXDIR = str(tmp)
-        mod.main()
-        stale = []
-        for name in OUTPUTS:
-            expected = (tmp / name).read_text(encoding="utf-8-sig")
-            committed = IDXDIR / name
-            actual = committed.read_text(encoding="utf-8-sig") if committed.exists() else ""
-            if actual != expected:
-                stale.append(name)
-    finally:
-        shutil.rmtree(tmp, ignore_errors=True)
+    # System temp, not the working tree — see the module docstring. No cleanup
+    # block: pytest owns tmp_path, so even a killed run leaves nothing behind
+    # that the link checks can trip over.
+    mod.IDXDIR = str(tmp_path)
+    mod.main()
+
+    stale = []
+    for name in OUTPUTS:
+        expected = (tmp_path / name).read_text(encoding="utf-8-sig")
+        committed = IDXDIR / name
+        actual = committed.read_text(encoding="utf-8-sig") if committed.exists() else ""
+        if actual != expected:
+            stale.append(name)
 
     assert not stale, (
         "Catalog is stale: " + ", ".join(stale) + "\n"

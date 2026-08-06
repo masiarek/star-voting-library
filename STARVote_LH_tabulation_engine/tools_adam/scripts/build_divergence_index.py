@@ -78,7 +78,18 @@ SCAN_DIRS = ["01_STAR", "method_comparisons", "YAML_library/1_positive",
 # monotonicity cases `mono_raise_delete_before/after.yaml`, which belong here.
 SCRATCH_NAMES = ("temp", "trash", "scratch")
 
-OUT_DIR = REPO / "method_comparisons" / "divergence_review"
+# Where the ledger canonically LIVES. Every relative link inside a generated case
+# page is computed against this (see case_md), so it is a property of the published
+# repo layout and must not move.
+LINK_BASE = REPO / "method_comparisons" / "divergence_review"
+
+# Where THIS run writes. Normally the same place. test_divergence_index_current.py
+# redirects it to a system temp dir to diff a fresh build against the committed
+# one — the write destination moves, the published link depth (LINK_BASE) does not.
+# Keeping them fused used to force that throwaway to live inside the repo tree, so
+# any interrupted run orphaned a scratch copy of the ledger whose links dangled and
+# reddened check_links()/test_md_links.py.
+OUT_DIR = LINK_BASE
 
 
 # --------------------------------------------------------------------------- #
@@ -506,9 +517,11 @@ def case_md(r, dupes):
     src = REPO / r["file"]
     candidates, ballots, ballots_text, order, title = _load_case(src)
     tab = w.tabulated_output_path(src)
-    # Case files live in OUT_DIR/cases/<BUCKET>/ — compute the hop back to the
-    # repo root instead of hardcoding it (the ledger has moved before).
-    depth = len((OUT_DIR / "cases" / "BUCKET").relative_to(REPO).parts)
+    # Case files live in <ledger>/cases/<BUCKET>/ — compute the hop back to the
+    # repo root instead of hardcoding it (the ledger has moved before). Measured
+    # from LINK_BASE, never OUT_DIR: the links must describe where the page will
+    # be COMMITTED, not where a given run happens to write it.
+    depth = len((LINK_BASE / "cases" / "BUCKET").relative_to(REPO).parts)
     up = "../" * depth
     try:
         tab_rel = up + str(tab.relative_to(REPO))
