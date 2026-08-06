@@ -1,0 +1,14 @@
+--- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 1000 ballots.
+
+                     A      B      C      D      E   
+  306 ×              X      -      -      -      -   
+  300 ×              -      X      -      -      -   
+  202 ×              -      -      X      -      -   
+  183 ×              -      -      -      X      -   
+  9 ×                -      -      -      -      X   
+
+  Count the marks:  A 306 · B 300 · C 202 · D 183 · E 9
+
+Winner — Choose-One / Plurality Voting Method (single winner)
+ A   (306 of 1000 marks)

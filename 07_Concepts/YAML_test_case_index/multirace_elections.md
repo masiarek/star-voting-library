@@ -786,6 +786,17 @@ Elections with **more than one race** (several contests / methods on one ballot)
 | BV2277 — Mayor's race - Ranked Robin (Copeland) | RankedRobin | 4 | **Cora** |
 | BV2277 — Mayor's race - STAR | STAR | 4 | **Cora** |
 
+## BV2278 — Five-Way Race — the moderate who beats both poles and loses every elimination count
+
+**Election** [`8cdkkc`](https://bettervoting.com/8cdkkc/results) · **4 races** · **1000 ballots** · [frozen export](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_bv_export.json)
+
+| Race | Method | Candidates | Winner |
+|------|--------|:----------:|--------|
+| BV2278 — Five-way - Choose-One (Plurality) | Plurality | 5 | **A** |
+| BV2278 — Five-way - IRV (Hare, full rounds) | IRV | 5 | **A** |
+| BV2278 — Five-way - Ranked Robin (Copeland) | RankedRobin | 5 | **C** |
+| BV2278 — Five-way - STAR | STAR | 5 | **C** |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

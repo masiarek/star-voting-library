@@ -16,6 +16,7 @@
 7f4f7q,BV2194 — Bullet Voting Backfires (2 of 2) — the strategic ballots elect the nightmare,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 82gg36,BV2226 — Preference vs Support — the center SUPPORTED (wings score Blair 4),3,contested (multi-race),36,"IRV, RankedRobin, STAR",BV
 89wwvr,"BV2199 — Two Seats, One Neighborhood — Bloc STAR sweeps, Allocated Score shares",2,contested (multi-race),10,"STAR, STAR_PR",BV
+8cdkkc,BV2278 — Five-Way Race — the moderate who beats both poles and loses every elimination count,4,contested (multi-race),1000,"IRV, Plurality, RankedRobin, STAR",BV
 8kg698,"BV2178 — The Post-it election's round-2 switch, made real — two ballots flip and RCV-IRV elects Blue",4,contested (multi-race),20,"IRV, Plurality, RankedRobin, STAR",BV
 923q3d,"BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts",2,contested (multi-race),18,"RankedRobin, STAR",BV
 93gjx6,"BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",4,contested (multi-race),9,"IRV, Plurality, RankedRobin, STAR",BV
@@ -275,9 +276,6 @@ LH:hillinger_t4_ev3,"Hillinger Table 4 — three methods, three winners (EV-3 sc
 LH:irv_combined,Summability demo — RCV-IRV combined A+B (B eliminated; not summable),1,single-race,26,IRV,LH-only
 LH:irv_district_A,Summability demo — RCV-IRV district A (B wins),1,single-race,13,IRV,LH-only
 LH:irv_district_B,Summability demo — RCV-IRV district B (B wins),1,single-race,13,IRV,LH-only
-LH:kissel_five_way_c5_b1000_irv,Kissel's five-way example (RCV-IRV) — the compromise is eliminated third,1,single-race,1000,IRV,LH-only
-LH:kissel_five_way_c5_b1000_rr,Kissel's five-way example (Ranked Robin) — the same ballots elect C,1,single-race,1000,RankedRobin,LH-only
-LH:kissel_five_way_c5_b1000_star,Kissel's five-way example (STAR) — the compromise reaches the runoff and wins,1,single-race,1000,STAR,LH-only
 LH:lackner_skowron_shadow_bloc_star_c7_b12,Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4),1,single-race,12,STAR,LH-only
 LH:lackner_skowron_shadow_star_pr_c7_b12,Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4),1,single-race,12,STAR_PR,LH-only
 LH:lackner_skowron_shadow_star_pr_rrv_c7_b12,Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV,1,single-race,12,STAR_PR,LH-only

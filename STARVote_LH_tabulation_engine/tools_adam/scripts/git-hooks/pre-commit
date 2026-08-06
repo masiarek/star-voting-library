@@ -19,19 +19,64 @@ ENGINE="$ROOT/STARVote_LH_tabulation_engine"
 PY="python3"
 [ -x "$ROOT/.venv/bin/python" ] && PY="$ROOT/.venv/bin/python"
 
-# Stage a generated index file (or folder) — and WARN, loudly, if it isn't there.
-# A bare `git add … 2>/dev/null || true` hides the one failure that matters: when
-# a generator's output moves (folder reorg), the refreshed file lands in the
-# working tree and is silently never staged, so the index drifts out of date
-# until a human notices. Warning-only — never blocks the commit.
-stage_generated() {
+# --------------------------------------------------------------------------
+# Staging generated output — ONLY what this run actually produced.
+#
+# This checkout is routinely open in two sessions sharing one index and HEAD, and
+# `git add <folder>` adopts everything dirty in that folder, including the other
+# session's in-flight work. That is not a cosmetic problem: for a pathspec commit
+# (`git commit -- <paths>`) git builds a TEMPORARY index and points GIT_INDEX_FILE
+# at it, so whatever this hook stages lands in the commit even though the author
+# explicitly scoped it. Verified 2026-08-06 in a throwaway repo: a one-file
+# `git commit -- mine.txt` committed two files because the hook staged the other.
+# On 2026-08-05 that turned a 3-file commit into 18, and later carried another
+# session's file deletions into an unrelated commit.
+#
+# The fix is NOT to skip staging on a scoped commit — these files must ride along
+# with the sources they describe, and test_yaml_index_current / test_catalog_current
+# / test_divergence_index_current fail the build if they don't. Instead: hash the
+# output paths before the generator runs and again after, and stage only what
+# changed in between. Anything already dirty that this run did not touch is
+# somebody else's edit and is deliberately left alone.
+# --------------------------------------------------------------------------
+
+# path<TAB>sha for every file under the given generated paths. Missing paths just
+# contribute nothing, which is what makes create/delete fall out of the diff.
+snapshot_paths() {
+  find "$@" -type f -print0 2>/dev/null \
+    | xargs -0 shasum 2>/dev/null \
+    | awk '{ sha=$1; $1=""; sub(/^ +/,""); print $0 "\t" sha }' \
+    | sort
+}
+
+# stage_regenerated <snapshot-before> <path>…  — stage only paths whose content
+# this run created, changed or removed. WARNs loudly if a declared output path is
+# missing: a bare `git add … || true` hides the one failure that matters, when a
+# generator's output moves in a reorg and the index silently drifts stale.
+stage_regenerated() {
+  before="$1"; shift
   for f in "$@"; do
-    if [ -e "$f" ]; then
-      git add "$f" 2>/dev/null || echo "pre-commit: WARNING — could not stage ${f#"$ROOT"/}"
-    else
+    if [ ! -e "$f" ]; then
       echo "pre-commit: WARNING — generated path missing, nothing staged: ${f#"$ROOT"/}"
       echo "            The generator's output path probably moved — update this hook."
+      return
     fi
+  done
+  after="$(snapshot_paths "$@")"
+  # Symmetric difference = created, rewritten or deleted by THIS run. `git add -A`
+  # so a path the generator pruned is staged as a deletion rather than left behind.
+  # NOTE the leading-tab strip BEFORE cut: `comm -3` puts lines unique to the
+  # SECOND list in column 2, i.e. prefixed with a TAB — so cutting field 1 first
+  # yields an empty string for every newly created or rewritten file, which is
+  # exactly the set that matters. Get this backwards and the hook silently stages
+  # only deletions.
+  changed="$(comm -3 <(printf '%s\n' "$before") <(printf '%s\n' "$after") \
+             | sed 's/^\t//' | cut -f1 | sort -u | grep -v '^$' || true)"
+  [ -z "$changed" ] && return
+  printf '%s\n' "$changed" | while IFS= read -r p; do
+    [ -n "$p" ] || continue
+    git add -A -- "$p" 2>/dev/null \
+      || echo "pre-commit: WARNING — could not stage ${p#"$ROOT"/}"
   done
 }
 
@@ -45,11 +90,13 @@ fi
 # Refresh the cross-method divergence ledger (generated; never blocks the commit).
 # Re-tabulates the curated single-winner STAR library under RCV-IRV / RCV-RR /
 # Approval and rewrites method_comparisons/divergence_review/ (INDEX.md, divergence.csv, and the
-# per-case teaching cases/*.md), then stages the whole folder so the review
-# surface always matches the committed elections.
+# per-case teaching cases/*.md), then stages what it rewrote — not the whole
+# folder — so the review surface matches the committed elections without
+# adopting a concurrent session's unrelated edits in the same directory.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py" ]; then
+  _snap="$(snapshot_paths "$ROOT/method_comparisons/divergence_review")"
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_divergence_index.py" >/dev/null 2>&1; then
-    stage_generated "$ROOT/method_comparisons/divergence_review"
+    stage_regenerated "$_snap" "$ROOT/method_comparisons/divergence_review"
   else
     echo "pre-commit: divergence ledger refresh failed — skipping (commit not blocked)."
   fi
@@ -59,8 +106,9 @@ fi
 # stage it, so multirace_elections.md always matches the committed cases. Never
 # blocks the commit.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py" ]; then
+  _snap="$(snapshot_paths "$ROOT/07_Concepts/YAML_test_case_index/multirace_elections.md")"
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_multirace_index.py" >/dev/null 2>&1; then
-    stage_generated "$ROOT/07_Concepts/YAML_test_case_index/multirace_elections.md"
+    stage_regenerated "$_snap" "$ROOT/07_Concepts/YAML_test_case_index/multirace_elections.md"
   else
     echo "pre-commit: multirace index refresh failed — skipping (commit not blocked)."
   fi
@@ -73,8 +121,9 @@ fi
 # went stale for six commits (2026-08-05). Its three sibling indexes in the same
 # folder were already refreshed here; this closes the gap. Never blocks.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py" ]; then
+  _snap="$(snapshot_paths "$ROOT/07_Concepts/YAML_test_case_index/README.md")"
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_index.py" >/dev/null 2>&1; then
-    stage_generated "$ROOT/07_Concepts/YAML_test_case_index/README.md"
+    stage_regenerated "$_snap" "$ROOT/07_Concepts/YAML_test_case_index/README.md"
   else
     echo "pre-commit: YAML index refresh failed — skipping (commit not blocked)."
   fi
@@ -83,8 +132,11 @@ fi
 # Refresh the faceted catalog (CATALOG.md + races.csv + elections.csv) and stage
 # it. The single slice-and-dice view over every election & race. Never blocks.
 if [ -f "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" ]; then
+  _snap="$(snapshot_paths "$ROOT/07_Concepts/YAML_test_case_index/CATALOG.md" \
+                          "$ROOT/07_Concepts/YAML_test_case_index/races.csv" \
+                          "$ROOT/07_Concepts/YAML_test_case_index/elections.csv")"
   if "$PY" "$ROOT/STARVote_LH_tabulation_engine/tools_adam/scripts/build_catalog.py" >/dev/null 2>&1; then
-    stage_generated "$ROOT/07_Concepts/YAML_test_case_index/CATALOG.md" \
+    stage_regenerated "$_snap" "$ROOT/07_Concepts/YAML_test_case_index/CATALOG.md" \
                     "$ROOT/07_Concepts/YAML_test_case_index/races.csv" \
                     "$ROOT/07_Concepts/YAML_test_case_index/elections.csv"
   else
@@ -100,13 +152,15 @@ if ! "$PY" -c "import pytest" >/dev/null 2>&1; then
 fi
 
 echo "pre-commit: running STAR YAML test suite…"
-# test_yaml_index_current is the backstop for the index refreshed above: the
-# regen makes it correct, this proves it. The two are complements, not a
-# duplicate — every refresh block here is deliberately non-blocking, so a
-# generator that dies (or a `git add` the hook couldn't do) leaves a stale index
-# and says so only in a line that scrolls past. Without this the drift ships and
-# CI catches it on master, which is exactly how the index sat stale for six
-# commits (2026-08-05). Cheap: ~1s, no tabulation.
+# The last three are the backstops for the three refresh blocks above: the regen
+# makes each generated file correct, these prove it did. They're complements, not
+# duplicates — every refresh block here is deliberately non-blocking, so a
+# generator that dies (or a `git add` the hook couldn't do) leaves a stale file
+# and says so only in a line that scrolls past. Without them the drift ships and
+# CI catches it on master, which is exactly how the YAML index sat stale for six
+# commits (2026-08-05) and how a divergence page for an uncommitted case shipped
+# and broke the docs build. ~14s together, nearly all of it the divergence
+# ledger re-tabulating the library — the only honest way to know it's right.
 ( cd "$ENGINE" && "$PY" -m pytest \
     tests/test_single_winner_positive.py \
     tests/test_negative_validation.py \
@@ -114,7 +168,9 @@ echo "pre-commit: running STAR YAML test suite…"
     tests/test_json_to_yaml_conversion.py \
     tests/test_lot_number_tiebreak.py \
     tests/test_readme_index_complete.py \
-    tests/test_yaml_index_current.py -q )
+    tests/test_yaml_index_current.py \
+    tests/test_catalog_current.py \
+    tests/test_divergence_index_current.py -q )
 status=$?
 
 if [ "$status" -ne 0 ]; then

@@ -6,7 +6,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **233** single-winner STAR elections (skipped 164 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- Scanned **233** single-winner STAR elections (skipped 165 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
 - **137** (59%) diverge from STAR under at least one method; **96** agree across the board.
 
 | Bucket | Count |
@@ -66,7 +66,7 @@ _RCV-IRV is the outlier — Ranked Robin AGREES with STAR (strongest teachable: 
     STAR=**Ana** · IRV=Bruno · RR=Ana · Approval=Ana · Score=Ana · Condorcet=Ana
 - **[hillinger_t4_ev3](cases/IRV_OUTLIER_RR_WITH_STAR/hillinger_t4_ev3.md)** — `method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml` (3c/30b)  
     STAR=**Ana** · IRV=Bruno · RR=Ana · Approval=Ana · Score=Ana · Condorcet=Ana
-- **[kissel_five_way_c5_b1000_star](cases/IRV_OUTLIER_RR_WITH_STAR/kissel_five_way_c5_b1000_star.md)** — `method_comparisons/kissel_single_elimination_rcv/cases/kissel_five_way_c5_b1000_star.yaml` (5c/1000b)  
+- **[bv2278_8cdkkc_five_way_star](cases/IRV_OUTLIER_RR_WITH_STAR/bv2278_8cdkkc_five_way_star.md)** — `method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_star.yaml` (5c/1000b)  
     STAR=**C** · IRV=A · RR=C · Approval=C · Score=C · Condorcet=C
 - **[pineapple_11pct](cases/IRV_OUTLIER_RR_WITH_STAR/pineapple_11pct.md)** — `method_comparisons/minority_winner_progression/cases/pineapple_11pct.yaml` (11c/100b)  
     STAR=**Cheese** · IRV=Pineapple · RR=Cheese · Approval=Cheese · Score=Cheese · Condorcet=Cheese
