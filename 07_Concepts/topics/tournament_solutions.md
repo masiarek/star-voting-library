@@ -18,7 +18,7 @@ It's voting theory that has been **completely translated into graph theory**, so
 | Condorcet winner | vertex with an arrow to everyone (a source) |
 | the pairwise-results table | **adjacency matrix** `M(T)` |
 | top cycle / Smith set | top **strongly connected component** |
-| uncovered set | the **kings** of the tournament — its *center* |
+| uncovered set (**Landau set**) | the **kings** of the tournament — its *center* |
 | Slater's rule | **minimum feedback arc set** (NP-hard) |
 | Markov set | essentially **PageRank** on the win graph |
 | bipartisan set | support of the **Nash equilibrium** of a zero-sum game |
@@ -109,6 +109,30 @@ Winner — Ranked Robin (RCV-RR): B
 ```
 
 **Ranked Robin elects B. Slater and Markov elect A.** Same ballots. B wins only because of the margin rung — the C2 step — and A beats B head-to-head. Neither answer is wrong; they optimize different things, and there is no fact of the matter to appeal to. Full report → [the runnable case](../../method_comparisons/tournament_solutions/README.md).
+
+### If you arrived from the textbook picture, it is this election
+
+Every write-up of this subject opens with the same drawing: four circles, six arrows, a caption reading `A = {1, 2, 3, 4}` and a list of ordered pairs. [Wikipedia's *Tournament solution*](https://en.wikipedia.org/wiki/Tournament_solution) leads with `≻ = {(1,2), (1,4), (2,4), (3,1), (3,2), (4,3)}`, where `(x, y)` means *x beats y*. **That is the tournament above**, relabelled:
+
+| Figure vertex | 3 | 1 | 2 | 4 |
+|---|:--:|:--:|:--:|:--:|
+| **Our candidate** | **A** | **B** | **C** | **D** |
+
+Read the six pairs through that table and you get `A>B`, `A>C`, `B>C`, `B>D`, `C>D`, `D>A` — arrow for arrow, our matrix. So the choice sets in the figure's own numbers are: top cycle `{1,2,3,4}` · uncovered = Banks = bipartisan `{1,3,4}` (vertex **2** is the covered one) · Copeland `{1,3}` · Slater `{3}`.
+
+**And it could hardly be otherwise.** There are exactly **four** tournaments on four vertices up to relabelling, and only **one** of them is strongly connected — the one where the top cycles. So the moment a four-candidate election has no [Condorcet winner](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md) *and* no pairwise ties, it draws this picture. It isn't a chosen example; it's the smallest thing the field has to talk about, which is why everyone draws it. Three voters produce it — that's the file above, and `uv run …/tournament_solutions_report.py` prints the graph and all seven solutions from those three ballots.
+
+**And you can vote in it.** The same profile — same four candidates, same six arrows, trees instead of letters — is a live public election: **[BV2270 `8h4bvh`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md)** (Alder = A, Birch = B, Cedar = C, Dogwood = D), minted for a different purpose and only later noticed to be this graph. Which makes it the cleanest demonstration on the page of what "the tournament doesn't decide it" costs in practice, because three real tabulators split three ways on those ballots:
+
+| Who is counting | Winner | On what rung |
+|---|---|---|
+| **BetterVoting** (`RankedRobin.ts`) | **A** (Alder) | Copeland tie → **head-to-head**, and A beat B |
+| **LH** (`starvote_larry_hastings.py`) | **B** (Birch) | Copeland tie → **total margin**, B +3 vs A +1 |
+| **`pref_voting`** (independent Copeland) | *declines* | returns the leader set `{A, B}` |
+
+BetterVoting's frozen export settles it with `tieBreakType: "none"` and the log line `Alder preferred over Birch in runoff.` — no random rung, no seed, derivable from the ballots by anyone. So the two engines disagree **on the rule, not on the count**, which is [documented at length here](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md).
+
+Worth noticing, and worth not over-reading: BV's cheap head-to-head rung lands on **A** — the same candidate **Slater and Markov** pick, after NP-hard work. That is a coincidence on this tournament, not a theorem; Copeland-plus-head-to-head is not Slater, and on a bigger graph they part company. But it is a fair reply to anyone who assumes the sophisticated rules and the practical ones are pulling in different directions.
 
 ## What this has to do with STAR: less than you'd hope, and precisely so
 
