@@ -25,6 +25,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 | **Majority Criterion** | must a majority's favorite win? + the Relaxed Majority Criterion & the Later-No-Harm link (IRV ✅; STAR ❌ but mild; Score/Approval ❌) | [Majority Criterion](majority_criterion/README.md) |
 | **"Majority" / "minority" candidate** | the *words*, not the criterion — five senses of "majority candidate", what "majority" means on a *score* ballot, why "minority winner" is nearly automatic in a big field, and what makes it a real indictment | [Majority & minority candidates](majority_criterion/majority_and_minority_candidates.md) |
 | **Participation** | can showing up to vote ever hurt you? the no-show/Twin paradoxes, live (Score/Approval/Choose-One ✅; STAR ❌ rare; IRV ❌ readily; Condorcet methods ❌ provably) | [Participation](participation/README.md) |
+| **Districting** | when the *lines* decide, not the count — the reinforcement paradox, the candidate who wins no district, seats vs. votes, and why a better ballot cannot fix any of it (no method is immune) | [Districting](districting/README.md) |
 | **Burial** | sinking a rival you actually like, so they lose a comparison they'd win (Ranked Robin/Copeland ❌ its named risk; Borda ❌ notoriously; STAR ⚠️ rarely pays; IRV ✅ later-no-harm) | [Burial](burial/README.md) |
 
 *(Add a new hub when a topic is clearly treated in 2+ method folders. A candidate still open: **vote-splitting** — see [the split-voting set](../../method_comparisons/split_voting/README.md) for the worked examples.)*
