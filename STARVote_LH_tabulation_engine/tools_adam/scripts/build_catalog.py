@@ -323,15 +323,29 @@ def _elections(races, exports):
     return rows
 
 
+def _eid_link(eid):
+    """Render an election id: BV ones link to their live results page, LH-only ones
+    stay plain text.
+
+    A bvid IS the link — it's the stable public handle for the election — so printing
+    it bare next to a column that says "Backing: BV" wastes the one identifier a
+    reader could act on. `election_id` carries the `LH:` prefix exactly when there is
+    no BetterVoting election behind it, which is the same test `_elections()` uses to
+    fill the Backing column; keep the two together if either changes."""
+    if eid.startswith("LH:"):
+        return f"`{eid[3:]}`"
+    return f"[`{eid}`](https://bettervoting.com/{eid}/results)"
+
+
 def _facet(rows, key, title, blurb):
     c = Counter(r[key] for r in rows)
     out = [f"### By {title}\n", blurb + "\n",
            f"| {title} | # races | example elections |", "|---|--:|---|"]
     ex = defaultdict(set)
     for r in rows:
-        ex[r[key]].add(r["election_id"].replace("LH:", ""))
+        ex[r[key]].add(r["election_id"])
     for val, n in c.most_common():
-        examples = ", ".join(sorted(ex[val])[:4])
+        examples = ", ".join(_eid_link(e) for e in sorted(ex[val])[:4])
         out.append(f"| {val} | {n} | {examples} |")
     return "\n".join(out) + "\n"
 
@@ -384,10 +398,12 @@ def main():
     M.append("| Election | Title | Races | Kind | Voters | Methods | Backing |")
     M.append("|---|---|--:|---|--:|---|---|")
     for e in elections:
-        eid = e["election_id"].replace("LH:", "")
-        M.append(f"| {eid} | {e['title'][:52]} | {e['races']} | {e['kind']} | "
-                 f"{e['voters']} | {e['methods']} | {e['backing']} |")
+        M.append(f"| {_eid_link(e['election_id'])} | {e['title'][:52]} | {e['races']} | "
+                 f"{e['kind']} | {e['voters']} | {e['methods']} | {e['backing']} |")
     M.append("")
+    M.append("_A **BV** election id links straight to its live results page on "
+             "BetterVoting — an independent tabulation of the same ballots. **LH-only** "
+             "ids are repo-local case stems with no public election behind them._\n")
 
     M.append("## Cuts\n")
     M.append("Counts per facet with example elections; drill into [`races.csv`](races.csv) "
