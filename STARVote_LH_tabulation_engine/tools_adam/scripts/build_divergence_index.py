@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import csv
 import shutil
+import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -558,14 +559,39 @@ def _case_filename(r):
 # --------------------------------------------------------------------------- #
 # Build
 # --------------------------------------------------------------------------- #
+def _git_known():
+    """Repo-relative paths in git's index (tracked + staged), or None if unavailable.
+
+    The pre-commit hook regenerates this ledger and stages the whole folder, so
+    anything scanned here can land in a commit. Scanning the raw working tree
+    therefore publishes a review page for a case that isn't committed — the page
+    ships, the case doesn't, and its two links dangle: `mkdocs --strict` aborts
+    and test_md_links goes red. That produced the orphan
+    divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/kissel_five_way_c5_b1000_star.md
+    on 2026-08-05. Staged counts as known, so a case landing in this same commit
+    still gets its page. None outside a git checkout.
+    """
+    try:
+        out = subprocess.run(["git", "-C", str(REPO), "ls-files", "-z"],
+                             capture_output=True, timeout=30)
+    except Exception:
+        return None
+    if out.returncode != 0:
+        return None
+    return {p for p in out.stdout.decode("utf-8", "replace").split("\0") if p}
+
+
 def main():
     files = []
+    known = _git_known()
     for d in SCAN_DIRS:
         base = REPO / d
         if base.exists():
             files += [p for p in sorted(base.rglob("*.y*ml"))
                       if "_tabulated" not in p.parts
-                      and not any(t in p.name.lower() for t in SCRATCH_NAMES)]
+                      and not any(t in p.name.lower() for t in SCRATCH_NAMES)
+                      and (known is None
+                           or p.relative_to(REPO).as_posix() in known)]
 
     rows, skipped = [], 0
     for f in files:

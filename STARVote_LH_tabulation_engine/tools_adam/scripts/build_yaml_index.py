@@ -16,6 +16,7 @@ file is stale, so the index can't silently drift out of date.
 import os
 import sys
 import glob
+import subprocess
 import yaml
 
 def _find_repo(start):
@@ -93,11 +94,43 @@ def _expected(race):
     return ""
 
 
+def _git_known():
+    """Repo-relative paths in git's index (tracked + staged), or None if unavailable.
+
+    This index is COMMITTED and re-derived by CI from a clean checkout, so it has
+    to describe what is in the repo — not whatever happens to be lying in the
+    working tree. Without this filter a case file that exists on disk but isn't
+    committed yet (another session's in-flight work, a half-finished set) gets
+    indexed anyway, and then two things break at once: CI regenerates a different
+    index and test_yaml_index_current.py goes red, and every row it added links to
+    a .yaml/.md that isn't there, so test_md_links and `mkdocs --strict` fail too.
+    That is exactly how master went red on 2026-08-05 (28 broken links).
+
+    Staged counts as known: adding a case is `git add` then commit, and the
+    pre-commit hook regenerates in between, so a case landing in THIS commit is
+    still indexed. Returns None outside a git checkout (or if git is unusable),
+    where the disk is the only source of truth we have.
+    """
+    try:
+        out = subprocess.run(["git", "-C", REPO, "ls-files", "-z"],
+                             capture_output=True, timeout=30)
+    except Exception:
+        return None
+    if out.returncode != 0:
+        return None
+    return {p for p in out.stdout.decode("utf-8", "replace").split("\0") if p}
+
+
 def collect():
     rows = []
+    known = _git_known()
+    skipped_untracked = []
     for p in glob.glob(os.path.join(REPO, "**", "*.yaml"), recursive=True):
         rel = os.path.relpath(p, REPO)
         if any(s in "/" + rel.replace(os.sep, "/") for s in EXCLUDE):
+            continue
+        if known is not None and rel.replace(os.sep, "/") not in known:
+            skipped_untracked.append(rel.replace(os.sep, "/"))
             continue
         if any(t in os.path.basename(rel).lower() for t in ("temp", "trash", "scratch")):
             continue                       # scratch files, not real cases
@@ -123,6 +156,15 @@ def collect():
             "has_title": bool(explicit),     # explicit election_title field?
         })
     rows.sort(key=lambda r: r["rel"])
+    if skipped_untracked:
+        # Never silent: a case missing from the index because its author forgot
+        # `git add` should say so here, not turn up as a puzzling gap later.
+        print(f"note: skipped {len(skipped_untracked)} election YAML(s) git doesn't "
+              f"know about yet (`git add` them to index them):", file=sys.stderr)
+        for rel in skipped_untracked[:10]:
+            print(f"        {rel}", file=sys.stderr)
+        if len(skipped_untracked) > 10:
+            print(f"        … and {len(skipped_untracked) - 10} more", file=sys.stderr)
     return rows
 
 
