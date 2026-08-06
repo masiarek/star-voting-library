@@ -14,6 +14,8 @@ import importlib.util
 import sys
 from pathlib import Path
 
+import tracked_paths
+
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = ENGINE_DIR.parent
 SCRIPT = REPO_ROOT / "STARVote_LH_tabulation_engine" / "tools_adam" / "scripts" / "build_yaml_pages.py"
@@ -30,6 +32,13 @@ def _load():
 def test_pages_exist_and_are_current():
     mod = _load()
     stale, orphans = mod.check()
+    # Only police the committed surface. The generator still discovers
+    # untracked YAMLs (a new case needs its first page), but a page for a
+    # case nobody has staged is another session's work in progress, and this
+    # suite runs in a pre-commit hook on a shared checkout. See
+    # tests/tracked_paths.py.
+    stale = tracked_paths.only_tracked(stale)
+    orphans = tracked_paths.only_tracked(orphans)
     msg = []
     if stale:
         msg.append(f"{len(stale)} stale/missing page(s):")

@@ -168,3 +168,62 @@ def test_uncommitted_target_check_is_not_vacuous(tmp_path, monkeypatch):
     assert mod.check_untracked_link_targets() == [], (
         "committing the target must clear the flag"
     )
+
+
+def test_untracked_report_is_capped_and_summarizes_by_target():
+    """The finding list must stay bounded, and the overflow must be actionable.
+
+    A concurrent session mid-rename produces one uncommitted case linked from a
+    dozen generated pages; an uncapped list once printed 48 near-identical lines
+    and buried every other hygiene check. What you act on is the set of DISTINCT
+    uncommitted targets, so the overflow names those rather than just counting.
+    """
+    mod = _load_hygiene()
+    cap = mod._MAX_LISTED
+    # 14 hits, 3 distinct targets — i.e. more findings than the cap.
+    hits = [(f"page{i:02d}.md", f"target{i % 3}.md", f"target{i % 3}.md")
+            for i in range(14)]
+    lines = mod.format_untracked_report(hits)
+
+    bullets = [l for l in lines if l.lstrip().startswith("•")]
+    assert len(bullets) == cap, f"expected the list capped at {cap}, got {len(bullets)}"
+    assert any(f"and {14 - cap} more" in l for l in lines), lines
+    assert any("Commit these 3 file(s)" in l for l in lines), (
+        "the overflow must name how many distinct files actually need committing"
+    )
+    for t in ("target0.md", "target1.md", "target2.md"):
+        assert any(l.strip() == f"- {t}" for l in lines), f"{t} missing from summary"
+
+    # Under the cap, no summary at all — just the findings.
+    few = mod.format_untracked_report(hits[:3])
+    assert len(few) == 3 and not any("more" in l for l in few), few
+
+
+def test_links_inside_html_comments_are_not_reported():
+    """An HTML comment renders as nothing on GitHub, on the site, and in a local
+    viewer, so a path inside one is not a link.
+
+    This is load-bearing, not pedantic: the BV workflow tells you to comment out
+    a screenshot slot you haven't captured yet rather than leave a REPLACE_
+    placeholder. Before this, a commented-out `<img src=…>` in an abstain_bugs
+    case was reported as a broken link and reddened the docs build (2026-08-06).
+    """
+    mod = _load_hygiene()
+    probe = REPO_ROOT / "07_Concepts" / "topics" / "_html_comment_probe.md"
+    probe.write_text(
+        "# probe\n"
+        "<!-- [a](no_such_commented.md) -->\n"
+        "<!-- a multi-line slot, as the BV workflow prescribes:\n"
+        '     <img src="no_such_slot.png" width="560"> -->\n'
+        "[b](no_such_real.md)\n",
+        encoding="utf-8",
+    )
+    try:
+        raws = sorted(raw for rel, raw in mod.check_links()
+                      if rel.endswith("_html_comment_probe.md"))
+    finally:
+        probe.unlink()
+    assert raws == ["no_such_real.md"], (
+        "only the uncommented link may be reported; commented-out paths are inert "
+        f"on every surface. got {raws}"
+    )

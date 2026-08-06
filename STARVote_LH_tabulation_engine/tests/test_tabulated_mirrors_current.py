@@ -35,8 +35,9 @@ Tracked-only makes the check deterministic across machines and matches what
 the guard is actually for.
 """
 import re
-import subprocess
 from pathlib import Path
+
+import tracked_paths
 
 ENGINE_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = ENGINE_DIR.parent
@@ -57,23 +58,18 @@ _COMPOSED = re.compile(
 
 
 def _candidate_mirrors():
-    """Every git-TRACKED `*_tabulated.txt`, newest-checkout-independent.
+    """Every git-TRACKED `*_tabulated.txt`, checkout-independent.
 
-    Falls back to a filesystem walk only when git can't answer (a source
-    tarball, say). The `checked >= 300` assertion below is what stops either
-    path from going silently empty.
+    Membership comes from tests/tracked_paths.py (index UNION HEAD, so a
+    concurrent commit holding index.lock can't make committed files look
+    untracked). Falls back to the plain walk when git can't answer at all;
+    the `checked >= 300` assertion below stops either path going silently
+    empty.
     """
-    try:
-        out = subprocess.run(
-            ["git", "ls-files", "-z", "*_tabulated.txt"],
-            cwd=REPO_ROOT, capture_output=True, text=True, check=True,
-        ).stdout
-        paths = [REPO_ROOT / rel for rel in out.split("\0") if rel]
-    except (OSError, subprocess.CalledProcessError):
-        paths = sorted(REPO_ROOT.rglob("*_tabulated.txt"))
-    if not paths:
-        paths = sorted(REPO_ROOT.rglob("*_tabulated.txt"))
-    return paths
+    walked = sorted(REPO_ROOT.rglob("*_tabulated.txt"))
+    if tracked_paths.tracked_set() is None:
+        return walked
+    return [p for p in walked if tracked_paths.is_tracked(p)]
 
 
 def _composed_mirrors():
