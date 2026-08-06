@@ -34,6 +34,7 @@ import glob
 import json
 import os
 import re
+import subprocess
 from collections import Counter, defaultdict
 
 try:
@@ -143,9 +144,12 @@ def _sibling_eid(yaml_path):
 def _export_meta():
     """{election_id: {title, nvoters, races:[{canon, method, ncand, winners}]}}"""
     meta = {}
+    known = _git_known()
     for p in glob.glob(os.path.join(REPO, "**", "*_bv_export.json"), recursive=True):
         if any(s in "/" + _rel(p) for s in EXCLUDE):
             continue
+        if known is not None and _rel(p) not in known:
+            continue                 # not committed yet — see _git_known()
         try:
             d = json.load(open(p, encoding="utf-8"))
         except Exception:
@@ -173,14 +177,38 @@ def _export_meta():
     return meta
 
 
+def _git_known():
+    """Repo-relative paths in git's index (tracked + staged), or None if unavailable.
+
+    Same contract as the sibling generators (build_yaml_index.py,
+    build_divergence_index.py). The pre-commit hook regenerates this catalog and
+    stages CATALOG.md + the two CSVs, so a case sitting in the working tree but
+    not committed would be catalogued in a file that ships without it — and
+    CATALOG.md's rows link to case pages, so those links then dangle and
+    test_md_links / `mkdocs --strict` go red. Three untracked kissel cases had
+    already leaked in this way by 2026-08-05. None outside a git checkout.
+    """
+    try:
+        out = subprocess.run(["git", "-C", REPO, "ls-files", "-z"],
+                             capture_output=True, timeout=30)
+    except Exception:
+        return None
+    if out.returncode != 0:
+        return None
+    return {p for p in out.stdout.decode("utf-8", "replace").split("\0") if p}
+
+
 def collect():
     exports = _export_meta()
+    known = _git_known()
     races = []                       # race-grain rows
     covered = defaultdict(list)      # election_id -> [canon] seen from yamls
     for p in sorted(glob.glob(os.path.join(REPO, "**", "*.yaml"), recursive=True)):
         rel = _rel(p)
         if any(s in "/" + rel for s in EXCLUDE):
             continue
+        if known is not None and rel not in known:
+            continue                 # not committed yet — see _git_known()
         name = os.path.basename(rel).lower()
         # Scratch files are not curated cases. Match the sibling generators'
         # tuple exactly (build_yaml_index.py, build_divergence_index.py's
