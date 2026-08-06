@@ -47,6 +47,9 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _bv_ids  # noqa: E402  — the shared BV-id resolver
+
 def _find_repo(start):
     p = Path(start).resolve()
     for anc in [p, *p.parents]:
@@ -202,30 +205,24 @@ def _strict_pseudo_scores(score_ballots, order):
 # --------------------------------------------------------------------------- #
 # A diverging case is far more persuasive when the reader can check it against a
 # tabulator nobody here wrote — and ~100 of these elections ARE live on
-# BetterVoting. The link has to be resolved here rather than taken from
-# `load_election`, which normalizes the YAML into engine keys and drops every
-# `bv_*` field on the way through. Same resolution order as
-# `build_bv_registry.py` (the canonical reader), so the two agree: explicit field
-# first, then the `bv<NNN>_<bvid>_…` filename convention.
-_BV_FN_RE = re.compile(r"^bv(\d+(?:-?r\d+|[a-z])?)_([a-z0-9]{6})_", re.IGNORECASE)
-
-
+# BetterVoting. Resolution is delegated to `_bv_ids`, the shared rule, rather than
+# re-derived here: the first version of this code parsed the election id out of the
+# `bv<testid>_<bvid>_…` filename, which the canonical registry deliberately refuses
+# to do because plenty of cases are named `bv<testid>_<descriptor>` instead and a
+# six-character descriptor would publish a confident link to an election that does
+# not exist. The id must come from something that asserts it — the yaml field or the
+# frozen export.
+#
+# It also cannot come from `load_election`, which normalizes the YAML into engine
+# keys and drops every `bv_*` field on the way through; hence the raw re-read.
 def _bv_fields(path):
     """(test_id, election_id, results_url) for a BV-backed election, else None."""
     try:
-        d = yaml.safe_load(open(path, encoding="utf-8"))
+        doc = yaml.safe_load(open(path, encoding="utf-8"))
     except Exception:
         return None
-    if not isinstance(d, dict):
-        return None
-    fn = _BV_FN_RE.match(Path(path).name)
-    test_id = d.get("bv_test_id") or (f"BV{fn.group(1)}" if fn else "")
-    election_id = d.get("bv_election_id") or (fn.group(2) if fn else "")
-    if not election_id:
-        return None                      # no id ⇒ no link we could build
-    results_url = (d.get("bv_results_url")
-                   or f"https://bettervoting.com/{election_id}/results")
-    return str(test_id), str(election_id), str(results_url)
+    test_id, election_id, results_url = _bv_ids.resolve(path, doc)
+    return (test_id, election_id, results_url) if election_id else None
 
 
 def analyze(path):

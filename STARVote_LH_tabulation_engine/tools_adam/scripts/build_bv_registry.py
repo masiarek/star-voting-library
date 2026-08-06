@@ -35,6 +35,9 @@ import sys
 
 import yaml
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _bv_ids  # noqa: E402  — the shared BV-id resolver
+
 EXCLUDE = ("/_tabulated", "_tabulated/", "/_demo_dropbox/", "/_generated",
            "/negative", "/tests/", "/test_elections/", "/YAML_library/2_negative",
            "/site/")  # mkdocs build output (mirrors the whole repo)
@@ -55,20 +58,8 @@ OUT_DIR = os.path.join(REPO, "07_Concepts", "YAML_test_case_index")
 # Test ID from a `bv<num>[letter|-rN]_...` filename. Election id is NEVER guessed
 # from the filename (descriptor words like "score"/"guido" would be mistaken for
 # BV ids); it comes from the `bv_election_id` field or the frozen export.
-FN_RE = re.compile(r"^bv(\d+(?:-?r\d+|[a-z])?)_", re.IGNORECASE)
-
-
-def _export_election_id(yaml_path):
-    """The authoritative BV election id from the case's frozen export sibling."""
-    exp = yaml_path[:-5] + "_bv_export.json"
-    if not os.path.exists(exp):
-        return ""
-    try:
-        d = json.load(open(exp))
-        E = d.get("Election") or d.get("election") or {}
-        return E.get("election_id", "") or ""
-    except Exception:
-        return ""
+FN_RE = _bv_ids.FN_RE                 # re-exported; the rule lives in _bv_ids
+_export_election_id = _bv_ids.export_election_id
 
 
 def _race(d):
@@ -147,14 +138,9 @@ def collect():
         if not isinstance(race, dict) or "ballots" not in race:
             continue
 
-        fn = FN_RE.match(name)
-        test_id = d.get("bv_test_id") or (f"BV{fn.group(1)}" if fn else "")
-        election_id = d.get("bv_election_id") or _export_election_id(p)
+        test_id, election_id, results_url = _bv_ids.resolve(p, d)
         if not test_id and not election_id:
             continue                    # neither a BV number nor a BV election id
-
-        results_url = d.get("bv_results_url") or (
-            f"https://bettervoting.com/{election_id}/results" if election_id else "")
         method = str(race.get("voting_method", "STAR")).strip()
         try:
             nw = int(race.get("num_winners", 1) or 1)

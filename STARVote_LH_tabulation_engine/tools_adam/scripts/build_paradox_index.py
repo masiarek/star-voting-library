@@ -28,6 +28,9 @@ import sys
 
 import yaml
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _bv_ids  # noqa: E402  — the shared BV-id resolver
+
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 OUT_DIR = os.path.join(REPO, "07_Concepts", "YAML_test_case_index")
 OUT_MD = os.path.join(OUT_DIR, "PARADOX_index.md")
@@ -123,8 +126,10 @@ def load_case(path):
         "title": title or os.path.basename(path),
         "method": method or "?",
         "winners": ", ".join(winners) if isinstance(winners, list) else (winners or ""),
-        "bvid": doc.get("bv_election_id") or "",
-        "test_id": doc.get("bv_test_id") or "",
+        # Resolved by the shared rule, not by reading `bv_election_id` alone: an older
+        # case can carry its bvid only in the frozen export sibling, and reading just
+        # the field showed those as "—" (no live election) when they have one.
+        "bv": _bv_ids.resolve(path, doc),
     }
 
 
@@ -183,8 +188,8 @@ def main():
             page_rel = best_page(c["path"])
             name = c["title"]
             case_cell = f"[{name}]({rel_from_index(page_rel)})" if page_rel else name
-            bv = (f"[{c['test_id'] or c['bvid']}](https://bettervoting.com/{c['bvid']}/results)"
-                  if c["bvid"] else "—")
+            test_id, election_id, results_url = c["bv"]
+            bv = f"[{test_id or election_id}]({results_url})" if election_id else "—"
             lines.append(f"| {case_cell} | {c['method']} | {c['winners'] or '—'} | {bv} "
                          f"| [{os.path.basename(c['path'])}]({rel_from_index(c['path'])}) |")
         lines.append("")
@@ -205,7 +210,7 @@ def main():
             display, kind, _pg, _d = VOCAB[tag]
             for c in sorted(by_tag[tag], key=lambda c: c["path"]):
                 w.writerow([display, kind, c["title"], c["method"], c["winners"],
-                            c["test_id"], c["bvid"], c["path"]])
+                            c["bv"][0], c["bv"][1], c["path"]])
     print(f"wrote {os.path.relpath(OUT_MD, REPO)} and paradox_cases.csv "
           f"({len(cases)} cases, {len(by_tag)} paradoxes, {len(unknown)} unknown tags)")
     return 1 if unknown else 0
