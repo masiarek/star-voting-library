@@ -1,0 +1,60 @@
+election_title: "hckrf7 — Range of Scores counts 3 ballots on a page that says 1 voter"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/hckrf7 ·
+  results: https://bettervoting.com/hckrf7/results
+  A three-ballot STAR race where BetterVoting's "Range of Scores" chart (Stats for
+  Nerds) and the page headline disagree about how many ballots there are.
+
+bv_election_id: hckrf7
+bv_results_url: https://bettervoting.com/hckrf7/results
+
+scenario_description: |-
+  Three voters, three candidates. Two ballots are **flat all-zeros**; one ballot
+  scores Cal 2, Bob 1, Ann 0.
+
+  BetterVoting's tabulator applies its flat-ballot rule (bettervoting#884): an
+  all-equal ballot is an **abstention**, so it reports `nAbstentions: 2` and
+  `nTallyVotes: 1`, and the results page headline reads **"1 voters"**. Cal wins
+  the runoff 1–0.
+
+  The **"Range of Scores"** chart under *Stats for Nerds* then shows two bars —
+  range 2 at **33%** and range 0 at **67%**. Those are thirds: the chart is
+  computed over **all three** ballots, because its data source
+  (`ballotsForRace()`) drops only a *truly blank* ballot, not a flat one. So the
+  chart's 67% bar is made entirely of ballots the same page says did not vote —
+  and the number **3** appears nowhere on the page for the reader to divide by.
+
+  Nothing is miscounted: the winner, the scores and the runoff are all correct.
+  It is a **denominator/labelling** problem, and it is the mirror image of the
+  already-fixed "Distribution of Equal Support" chart (bettervoting#1390), which
+  dropped ballots the tabulator kept. Here the chart keeps ballots the tabulator
+  dropped.
+
+  LH states its denominator inline instead: `Voters with a preference: 1 of 3
+  (2 Equal Support)` — the 1, the 3 and the gap between them all on one line.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Ann Ambitious,Bob Bossy,Cal Creative
+  0,0,0   # flat ballot — range 0 (BetterVoting files this as an abstention)
+  0,1,2   # the only tallied ballot — range 2, on a 0-5 ballot
+  0,0,0   # flat ballot — range 0 (BetterVoting files this as an abstention)
+
+expected_winners:
+  - Cal Creative
+
+# file: bhckrf7_range_of_scores.yaml

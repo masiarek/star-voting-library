@@ -23,12 +23,14 @@ A STAR result is a short funnel, and every report shows the same stages:
 | **[How the LH engine reports](reporting_LH/README.md)** | the text/audit report — score distribution, matrix, both rounds, the self-reconciling runoff line + "Runoff math" funnel |
 | **[How BetterVoting reports](reporting_BV/README.md)** | the live visual — scoring bars, runoff bars/pie, the two percent columns, abstention count |
 | **[Where the two reports differ](reporting_diff_BV_LH.md)** | same winner, different abstention/score-total bookkeeping — the flat-ballot reconciliation |
+| **[Two views of the same scores](score_matrix_two_views.md)** | not a disagreement — a division of labour: LH reads the ballot grid **down the columns** (per candidate), BetterVoting's nerd stats read it **across the rows** (per voter) |
 
 ## Report elements, up close
 
 | Page | What it explains |
 |---|---|
 | **[Score Distribution](reporting_LH/score_distribution.md)** | the per-score breakdown (how many 5s, 4s … 0s, blanks); Total and Avg; `0` vs blank |
+| **[Range of Scores vs Score Distribution](score_matrix_two_views.md)** | the two margins of the ballot grid, and which report answers which question |
 | **[Preference Matrix & Condorcet](reporting_LH/matrix.md)** | head-to-head `For – Equal Support – Against`; two-candidate vs full N×N; `show_condorcet` |
 | **[Reporting true ties](reporting_ties.md)** | how a tie shows up in each report; why the runoff-percentage line is suppressed on an exact tie |
 | **[LH reporting options](reporting_LH/options.md)** | what each `options:` flag (`show_matrix`, `show_condorcet`, `brief`, `show_runoff_percent` …) adds to or removes from the report |

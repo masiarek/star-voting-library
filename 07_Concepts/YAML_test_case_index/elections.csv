@@ -331,6 +331,7 @@ LH:same_matrix_p2_plurality,"Same matrix, different plurality — electorate P2:
 LH:same_matrix_p2_ranked_robin,"Same matrix, different plurality — electorate P2: Ranked Robin",1,single-race,12,RankedRobin,LH-only
 LH:same_matrix_p3_plurality,"Same matrix, different plurality — electorate P3: Choose-One",1,single-race,12,Plurality,LH-only
 LH:same_matrix_p3_ranked_robin,"Same matrix, different plurality — electorate P3: Ranked Robin",1,single-race,12,RankedRobin,LH-only
+LH:same_total_different_shape_c3_b7,"Same-ish total, different shape — the sandwich vote",1,single-race,7,STAR,LH-only
 LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
 LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only
 LH:split_cycle_schulze_spoiler_c5_b40,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",1,single-race,40,RankedRobin,LH-only
@@ -383,6 +384,7 @@ gg9qh9,BV2260 — Winning the most head-to-head matchups is not the same as bein
 gmfv4c,"Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada",1,single-race,81,STAR,BV
 gvtg2h,"BV2203 — The Transfer Machine, flag probe — same STV ballots, write-in key omitted",1,single-race,9,STV,BV
 gyv2qt,BV2239 — Narrow Bands — a paint-swatch election scored in slivers of the scale,1,single-race,24,STAR,BV
+hckrf7,Copy of BV210 - View / report - Distribution of Equal Preferences (3 cand),1,single-race,3,STAR,BV
 j3hqvb,BV2264 — Two-seat board by Bloc STAR: the council six voters elect,1,single-race,6,STAR,BV
 jfk7pd,"The BV recipe (the ""crazy"" scenario)",1,single-race,2,STAR,BV
 jt6r76,"BV27 - Lackner & Skowron steering committee (Approval, k=4)",1,single-race,12,Approval,BV

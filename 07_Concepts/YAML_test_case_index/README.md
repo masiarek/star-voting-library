@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**505 election files** (440 single-winner, 65 multi-winner) across 17 method(s).
+**507 election files** (442 single-winner, 65 multi-winner) across 17 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 264 |
+| STAR | 266 |
 | RCV-IRV (Hare) | 31 |
 | Ranked Robin (RCV-RR / Copeland) | 75 |
 | Approval | 21 |
@@ -30,10 +30,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (264)
+## STAR  (266)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`same_total_different_shape_c3_b7`](../../01_STAR/01_Learn/reporting/cases/cases_pages/same_total_different_shape_c3_b7.md) | `01_STAR/01_Learn/reporting/cases/` | 1 | Same-ish total, different shape — the sandwich vote → _Avocado_ | [`.yaml`](../../01_STAR/01_Learn/reporting/cases/same_total_different_shape_c3_b7.yaml) |
 | [`02a_c3_b1_three-candidates`](../../01_STAR/02_Examples/cases/cases_pages/02a_c3_b1_three-candidates.md) | `01_STAR/02_Examples/cases/` | 1 | Three candidates, one ballot - single-winner STAR → _Choco_ | [`.yaml`](../../01_STAR/02_Examples/cases/02a_c3_b1_three-candidates.yaml) |
 | [`02b_c3_b2_three-candidates`](../../01_STAR/02_Examples/cases/cases_pages/02b_c3_b2_three-candidates.md) | `01_STAR/02_Examples/cases/` | 1 | Three candidates, two ballots - single-winner STAR → _Vanilla_ | [`.yaml`](../../01_STAR/02_Examples/cases/02b_c3_b2_three-candidates.yaml) |
 | [`03a_c3_b3_style-bullet-vote`](../../01_STAR/02_Examples/cases/cases_pages/03a_c3_b3_style-bullet-vote.md) | `01_STAR/02_Examples/cases/` | 1 | Voting styles — a valid STAR bullet vote (3 candidates) → _Vanilla_ | [`.yaml`](../../01_STAR/02_Examples/cases/03a_c3_b3_style-bullet-vote.yaml) |
@@ -103,6 +104,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2180_fp62p2_ice_cream_ladder`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, fp62p2) → _Strawberry_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml) |
 | [`bv2276_qhjyr2_second_finalist_tie`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2276_qhjyr2_second_finalist_tie.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Tied for the second finalist — the head-to-head rung settles it (BV2276, qhjyr2) → _Ana_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv2276_qhjyr2_second_finalist_tie.yaml) |
 | [`bv830_vb3xv2_no_condorcet_tie_score`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2) → _B_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml) |
+| [`bhckrf7_range_of_scores`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bhckrf7_range_of_scores.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | hckrf7 — Range of Scores counts 3 ballots on a page that says 1 voter → _Cal Creative_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml) |
 | [`abstention_reconciliation_min_c2_b6`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/abstention_reconciliation_min_c2_b6.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | Abstention vs Equal Support — the minimal reconciliation case → _Dog_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml) |

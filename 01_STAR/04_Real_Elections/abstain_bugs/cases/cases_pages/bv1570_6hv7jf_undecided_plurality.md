@@ -81,4 +81,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/04_Real_
 - [Ballot & terminology basics](../../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [bv11_6xhfp8_full_equal_support](bv11_6xhfp8_full_equal_support.md) · [bv655_jfrk9t_equal_opposition](bv655_jfrk9t_equal_opposition.md)
+More cases in this set: [bhckrf7_range_of_scores](bhckrf7_range_of_scores.md) · [bv11_6xhfp8_full_equal_support](bv11_6xhfp8_full_equal_support.md) · [bv655_jfrk9t_equal_opposition](bv655_jfrk9t_equal_opposition.md)

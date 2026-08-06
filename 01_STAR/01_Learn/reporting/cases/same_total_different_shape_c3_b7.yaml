@@ -1,0 +1,56 @@
+election_title: "Same-ish total, different shape — the sandwich vote"
+election_description: |-
+  A seven-ballot STAR race built to be read BOTH ways: down the columns (how many
+  ballots gave each candidate each score) and across the rows (how much of the 0-5
+  range each voter used). LH-only — no BetterVoting election.
+
+scenario_description: |-
+  Seven people pick a sandwich. The score totals are close — **Avocado 25, Bacon
+  23** — but the two candidates got there in opposite ways, and no single number
+  in the Scoring Round shows that:
+
+  - **Avocado is polarizing.** Four voters gave it a 5; two gave it a 1 or a 0.
+  - **Bacon is the consensus.** Nobody's favourite (no 5s at all), but nobody's
+    enemy either (nothing below a 2). Every score is a 2, 3 or 4.
+
+  That difference lives in the **columns** of the ballot grid, which is what the
+  LH engine's `[Score Distribution]` block prints.
+
+  Read the **rows** instead and a different fact appears: three voters used the
+  whole 0-5 ballot (a range of 5), while voter 4 scored everyone a flat 4 and used
+  none of it (a range of 0). That is what BetterVoting's "Range of Scores" chart
+  measures — and it cannot be recovered from the score totals or from the score
+  distribution, because it is the other margin of the same grid.
+
+  Neither reading changes the result: Avocado and Bacon are the finalists, and
+  Avocado takes the runoff 4-2 with one Equal Support ballot.
+
+num_winners: 1
+voting_method: STAR
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Avocado,Bacon,Cheddar
+  5,3,0   # used the whole ballot — range 5
+  5,4,0   # used the whole ballot — range 5
+  5,3,1   # range 4
+  4,4,4   # scored everyone the same — range 0
+  0,3,5   # used the whole ballot — range 5
+  1,4,5   # range 4
+  5,2,3   # range 3
+
+expected_winners:
+  - Avocado
+
+# file: same_total_different_shape_c3_b7.yaml
