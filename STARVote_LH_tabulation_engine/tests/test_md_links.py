@@ -39,6 +39,56 @@ def test_all_relative_md_links_resolve():
     )
 
 
+def test_no_bare_folder_links():
+    """`[label](folder/)` must name the README.md explicitly.
+
+    The bare form resolves on GitHub and on the built site, so it reads as fine
+    from two of the three surfaces — but MkDocs does not rewrite it ("left as
+    is" in the build log), so the raw href ships and the published page 404s,
+    and a local Markdown viewer can't open it either. 635 links were landing
+    dead on the site before the 2026-08 sweep; this stops the next one.
+    """
+    mod = _load_hygiene()
+    bare = mod.check_folder_links()
+    assert not bare, (
+        f"{len(bare)} bare folder link(s) — name the README.md:\n" +
+        "\n".join(f"  {rel}  ->  ({raw})   use ({fixed})" for rel, raw, fixed in bare)
+    )
+
+
+def test_folder_link_check_is_not_vacuous():
+    """Prove the gate above can actually fail.
+
+    A checker that silently matches nothing passes forever and protects
+    nothing — the same reason tests/test_harness_selfcheck.py exists. This
+    writes each bad spelling into the repo, confirms it is caught, and confirms
+    the correct spelling and a fenced example are NOT caught.
+    """
+    mod = _load_hygiene()
+    probe = REPO_ROOT / "07_Concepts" / "topics" / "_folder_link_probe.md"
+    probe.write_text(
+        "# probe\n"
+        "[a](../../04_Approval/)\n"
+        "[b](../../04_Approval)\n"
+        "[c](../../04_Approval/#x)\n"
+        "[d](../../04_Approval/README.md)\n"
+        "`[e](../../04_Approval/)`\n",
+        encoding="utf-8",
+    )
+    try:
+        hits = [(raw, fixed) for rel, raw, fixed in mod.check_folder_links()
+                if rel.endswith("_folder_link_probe.md")]
+    finally:
+        probe.unlink()
+    raws = sorted(r for r, _ in hits)
+    assert raws == ["../../04_Approval", "../../04_Approval/", "../../04_Approval/#x"], (
+        f"expected all three bare spellings caught and nothing else, got {raws}"
+    )
+    assert dict(hits)["../../04_Approval/#x"] == "../../04_Approval/README.md#x", (
+        "the #anchor must survive the suggested rewrite"
+    )
+
+
 def test_no_new_hand_pasted_engine_reports():
     """A long engine report on a companion page must be embedded, not pasted.
 

@@ -142,6 +142,66 @@ def check_links():
 
 
 # --------------------------------------------------------------------------- #
+# Folder-link checker: `[label](some_folder/)` must be written
+# `[label](some_folder/README.md)`.
+#
+# The bare form resolves on GitHub (the tree view renders the folder's README)
+# and on the built site (the server serves the folder's index.html), so it looks
+# fine from two of the three surfaces people actually use — which is how ~1,000
+# of them accumulated. The two places it fails:
+#
+#   1. MkDocs does NOT rewrite it. The build log says "contains an unrecognized
+#      relative link '../../06_Other/RCV_IRV/concepts', it was LEFT AS IS", and
+#      the raw href ships to the published page. 635 links were landing dead on
+#      the site before the 2026-08 sweep.
+#   2. A plain local Markdown viewer opens it as a file and reports it missing.
+#
+# check_links() above covers the *other* half of this — a folder link whose
+# folder has no README.md at all. This one covers folders that DO have one, so
+# between them every folder link is either rewritten or reported.
+# --------------------------------------------------------------------------- #
+
+# Three spellings, all equivalent to a reader and all equally unrewritten:
+#   [x](foo/)   [x](foo)   [x](foo/#anchor)
+_FOLDER_LINK = re.compile(r"!?\[[^\]]*\]\(([^)\s]+?)(#[^)\s]*)?\)")
+
+
+def check_folder_links():
+    """Return sorted [(md_file, raw_link, suggestion)] for every relative link
+    pointing at a directory that has a README.md, written without naming it."""
+    from urllib.parse import unquote
+    bare = []
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        rel_dir = os.path.relpath(dirpath, REPO)
+        if rel_dir != "." and _skip(rel_dir):
+            continue
+        for fn in filenames:
+            if not fn.lower().endswith(".md"):
+                continue
+            rel = os.path.normpath(os.path.join(rel_dir, fn))
+            try:
+                text = open(os.path.join(dirpath, fn), encoding="utf-8").read()
+            except OSError:
+                continue
+            # Links inside code blocks / inline code are examples, not links —
+            # and this page documents the bad form on purpose.
+            text = _INLINE_CODE.sub("", _FENCED.sub("", text))
+            for m in _FOLDER_LINK.finditer(text):
+                target, frag = m.group(1), m.group(2) or ""
+                if _EXTERNAL.match(target) or target.startswith("/"):
+                    continue
+                p = os.path.normpath(
+                    os.path.join(dirpath, unquote(target).replace("/", os.sep)))
+                if not (os.path.isdir(p)
+                        and os.path.exists(os.path.join(p, "README.md"))):
+                    continue
+                fixed = target.rstrip("/") + "/README.md" + frag
+                bare.append((rel, target + frag, fixed))
+    return sorted(set(bare))
+
+
+# --------------------------------------------------------------------------- #
 # Anchor checker: a link like `page.md#some-heading` must point at a heading
 # that actually exists on the *rendered* page. The classic breakage: a heading
 # with " — ", " & ", " / " or ":" renders (in MkDocs / Python-Markdown's `toc`)
@@ -896,6 +956,18 @@ def main(argv):
               "HTML src/href; a folder move probably left these behind:")
         for rel, raw in dead:
             print(f"   • {rel}  →  ({raw})")
+    folder_links = check_folder_links()
+    if not folder_links:
+        print("repo-hygiene: ✓ every folder link names its README.md.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  bare folder links ({len(folder_links)}) — these "
+              "resolve on GitHub and on the site, but MkDocs leaves the href")
+        print("              UNREWRITTEN (\"left as is\" in the build log) so the "
+              "published page 404s, and a local viewer can't open them either.")
+        print("              Name the README.md explicitly:")
+        for rel, raw, fixed in folder_links:
+            print(f"   • {rel}  →  ({raw})  → use ({fixed})")
     bad_anchors = check_anchors()
     if not bad_anchors:
         print("repo-hygiene: ✓ every #anchor link points at a real heading.")

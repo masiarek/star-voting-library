@@ -301,6 +301,21 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   up top, then the **ballots**, then the **results** — with the full engine detail (the
   same content as the `_tabulated` mirror, or the mirror embedded) at the **bottom** of
   the page, so the reader gets the lesson before the numbers.
+- **Link a folder by naming its `README.md` — machine-checked** (`check_folder_links`,
+  gated by `tests/test_md_links.py`). Write `[label](some_folder/README.md)`, never
+  `[label](some_folder/)`, `[label](some_folder)`, or `[label](some_folder/#anchor)`.
+  The bare forms are seductive because they work on **two of the three surfaces**: GitHub's
+  tree view renders the folder's README, and the built site serves its `index.html`. The
+  one that fails is the one that matters — **MkDocs does not rewrite a bare folder link**;
+  its build log says *"contains an unrecognized relative link … it was left as is"* and the
+  raw href ships to the published page, which then 404s. A plain local Markdown viewer
+  can't open it either. That is how **635 dead links** accumulated before the 2026-08 sweep
+  (~1,000 rewritten across 400 files). Two notes: the check is the *complement* of the
+  broken-link check — `check_links` already flagged folder links whose folder has **no**
+  README, so between them every folder link is either named or reported; and
+  **`build_yaml_pages.py` is a source of these too** (its `METHOD_DOCS` map and the
+  `07_Concepts` fallback feed the generated `**Method:**` line on all 507 case pages), so
+  fix the generator, not its output.
 - **Voice — learner by default; "how to teach it" is a folder, not a mode.**
   The asymmetry decides it: a learner page serves a presenter fine (they read
   *"you score every candidate 0–5"* and say *"you all score…"*), but a presenter
