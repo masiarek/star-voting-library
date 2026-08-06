@@ -110,7 +110,7 @@ Count × Almond,Berry,Cocoa
 
 ## Why Borda is the one to beat
 
-Borda gets a rough ride in this library — the [Dark Horse](../dark_horse_borda/) folder is about the trap it sets — so it is worth being precise about the role it plays here. In Kim's environment it is not one setting among many. His **Proposition 1** characterizes every Pareto-efficient ordinal rule as a scoring rule whose scores are *the expected values of the ranked positions* given the voter's ranking, and **Corollary 1** picks out the utilitarian-best one. When a voter's middle value is uniform on `(0, 1)`, that expectation is exactly ½.
+Borda gets a rough ride in this library — the [Dark Horse](../dark_horse_borda/README.md) folder is about the trap it sets — so it is worth being precise about the role it plays here. In Kim's environment it is not one setting among many. His **Proposition 1** characterizes every Pareto-efficient ordinal rule as a scoring rule whose scores are *the expected values of the ranked positions* given the voter's ranking, and **Corollary 1** picks out the utilitarian-best one. When a voter's middle value is uniform on `(0, 1)`, that expectation is exactly ½.
 
 So `(1, ½, 0)` is the **best an ordinal ballot can do** in this environment, and Theorem 2's cardinal rule is claimed to beat it — not to beat plurality, which would be no achievement.
 
@@ -174,7 +174,7 @@ Three honest limits, because the cases are easy to over-read:
 - [Ordinal vs. cardinal, as mechanism design](../../07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md) — the concept page this folder supports: Kim's three results, claim-checked
 - [Cardinal utility](../../07_Concepts/topics/cardinal_utility.md) — what a score is reaching for, and Hillinger's rival account of the same question
 - [The Gibbard–Satterthwaite theorem](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) — the impossibility Kim escapes by weakening the incentive requirement
-- [Hillinger's evaluative voting](../hillinger_evaluative_voting/) — the other paper in this library that argues every rule is already cardinal, and differs only in what it forbids
-- [Dark Horse Borda](../dark_horse_borda/) — Borda's failure mode, for balance against the role it plays here
+- [Hillinger's evaluative voting](../hillinger_evaluative_voting/README.md) — the other paper in this library that argues every rule is already cardinal, and differs only in what it forbids
+- [Dark Horse Borda](../dark_horse_borda/README.md) — Borda's failure mode, for balance against the role it plays here
 - [Approval in the theory literature](../../04_Approval/01_Learn/approval_in_the_literature.md) — what a checkmark means, which is the question the two approval files turn on
 - [Scores vs. ranks](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md) — the same distinction at the ballot level, without the theory

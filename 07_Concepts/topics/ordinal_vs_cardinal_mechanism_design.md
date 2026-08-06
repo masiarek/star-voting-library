@@ -4,7 +4,7 @@
 
 **Level: 301 · deep dive** Builds on [cardinal utility](cardinal_utility.md) (301) and [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) (301).
 
-Companions: [Cardinal utility](cardinal_utility.md) — what a score is reaching for · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) — the impossibility this paper steps around · [Distortion](distortion.md) — the same ordinal-vs-cardinal gap measured in the worst case rather than on average · [Strategic voting](strategic_voting.md) — the practical side. **Run it:** [the (A,B)-scoring family, on one electorate](../../method_comparisons/kim_ordinal_vs_cardinal/).
+Companions: [Cardinal utility](cardinal_utility.md) — what a score is reaching for · [Gibbard–Satterthwaite](gibbard_satterthwaite_theorem.md) — the impossibility this paper steps around · [Distortion](distortion.md) — the same ordinal-vs-cardinal gap measured in the worst case rather than on average · [Strategic voting](strategic_voting.md) — the practical side. **Run it:** [the (A,B)-scoring family, on one electorate](../../method_comparisons/kim_ordinal_vs_cardinal/README.md).
 
 ---
 
@@ -43,7 +43,7 @@ Two supports underneath it are worth having on their own.
 
 **Corollary 1** picks out the utilitarian-best member. And here is the part worth sitting with: if a voter's second-place value is uniform on `(0,1)`, its expected value is **½**, so the optimal ordinal rule is `(1, ½, 0)` — **the Borda count**.
 
-> **Borda is the benchmark, not a strawman.** This library is otherwise hard on Borda — see [Dark Horse](../../method_comparisons/dark_horse_borda/) — so it matters that in Kim's environment Borda is *the best an ordinal ballot can do*. Theorem 2's claim is that a cardinal rule beats **that**, which is a far stronger claim than beating plurality.
+> **Borda is the benchmark, not a strawman.** This library is otherwise hard on Borda — see [Dark Horse](../../method_comparisons/dark_horse_borda/README.md) — so it matters that in Kim's environment Borda is *the best an ordinal ballot can do*. Theorem 2's claim is that a cardinal rule beats **that**, which is a far stronger claim than beating plurality.
 
 **And the neutrality assumption is load-bearing, by the author's own example.** Kim opens with a *non-neutral* environment — two alternatives popular ex ante — and shows Borda is **not** incentive compatible there: a voter whose second choice is nearly as good as their first can gain by misreporting the order. Change the single assumption to neutrality and the same rule becomes IC. Real elections have polls, frontrunners and incumbents, which is precisely what neutrality forbids. Theorem 1 is a result about a symmetric world, and it says so.
 
@@ -104,11 +104,11 @@ The (A,B) family is small enough to tabulate directly, so this library runs it o
 | `(0, 1)` | Approval, lukewarm second choices | **Almond** |
 | `(0, 1)` | Approval, intense second choices | **Berry** |
 
-One electorate, nobody changing their mind, three different winners from a dial the *designer* turns — and then two more from the same rankings when the *voters* hold it, using information no ranked ballot records. → **[the cases, with the full counts](../../method_comparisons/kim_ordinal_vs_cardinal/)**
+One electorate, nobody changing their mind, three different winners from a dial the *designer* turns — and then two more from the same rankings when the *voters* hold it, using information no ranked ballot records. → **[the cases, with the full counts](../../method_comparisons/kim_ordinal_vs_cardinal/README.md)**
 
 ## Claim-check
 
-Per [house practice](../../method_comparisons/fairvote_star_whitepaper/), a source that supports our side gets tested harder, not quoted more. Kim is not an advocate — this is a technical paper in a general-interest economics journal, with no ballot to sell — which makes it a *better* source than the campaign literature and a *narrower* one.
+Per [house practice](../../method_comparisons/fairvote_star_whitepaper/README.md), a source that supports our side gets tested harder, not quoted more. Kim is not an advocate — this is a technical paper in a general-interest economics journal, with no ballot to sell — which makes it a *better* source than the campaign literature and a *narrower* one.
 
 **What holds up:**
 
@@ -120,7 +120,7 @@ Per [house practice](../../method_comparisons/fairvote_star_whitepaper/), a sour
 **Where it does not reach as far as it looks:**
 
 - **BIC assumes a common prior and honest opponents — which polls destroy.** A voter who has read a poll no longer holds the symmetric prior the theorem is stated over. Kim's *own* opening example is the demonstration: make two alternatives popular ex ante and Borda stops being IC. Most of the strategic behavior this library worries about — [bullet voting](../../01_STAR/05_Practice/ex06_bullet_backfire.md), exaggeration, frontrunner-driven compression — is a response to exactly the information neutrality assumes away. **This paper does not retire the exaggeration critique of Score.** It shows the critique is not a theorem.
-- **The optimal rules are lotteries.** Rules map reports to *randomized* outcomes, and randomization is doing real work (it is also one of G–S's own escape hatches). Every method this library teaches is deterministic apart from [tiebreaks](ties/). A rule that is better on average because it sometimes flips a coin is not obviously a rule anyone would adopt.
+- **The optimal rules are lotteries.** Rules map reports to *randomized* outcomes, and randomization is doing real work (it is also one of G–S's own escape hatches). Every method this library teaches is deterministic apart from [tiebreaks](ties/README.md). A rule that is better on average because it sometimes flips a coin is not obviously a rule anyone would adopt.
 - **The numbers are two voters.** The analytical results are general (Theorem 2 in the working paper wants `n ≥ 5`), but the welfare comparison everyone will want to quote — *format costs more than strategy* — is computed on a two-agent, three-alternative, uniform-value model. Treat it as a well-motivated indication, not a measured quantity.
 - **The normalization smuggles in comparability, and the paper says so.** Setting every voter's top to 1 and bottom to 0 makes the scales interpersonally addable by construction. Kim flags in a footnote that it is arguable whether this captures intensity or licenses interpersonal comparison, and explicitly rules the question out of scope. That is honest, but it means the paper **assumes** the answer to the hardest question on the [cardinal utility](cardinal_utility.md) page rather than supplying one. It is the same normed-ballot move Hillinger makes — with the same strength (every voter gets equal power) and the same weakness (nobody has shown the normed number tracks anything).
 - **"Cardinal beats ordinal" is a claim about a rule class, not about STAR.** Every rule in Kim's space maximizes a **sum**. STAR is not in that space: the [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md) applies a majoritarian correction *after* the sum, which is the very step the utilitarian framework treats as an error. The paper's support lands on **cardinal ballots**, and stops there.
@@ -130,8 +130,8 @@ Per [house practice](../../method_comparisons/fairvote_star_whitepaper/), a sour
 
 Fairness runs both ways, so this gets stated rather than buried:
 
-- **The rule it endorses is Approval-shaped, not STAR-shaped.** If you read Proposition 2 as practical advice, the nearest real ballot is an [Approval](../../04_Approval/) ballot, and the second-nearest is a three-level score ballot — Hillinger's EV-3, not a 0–5 grid.
-- **Theorem 1 is ammunition for ranked-ballot advocates.** *"Efficient ordinal rules are incentive compatible"* is a sentence an [RCV](../../06_Other/RCV_IRV/) advocate can use, and the correct response is not to dispute it but to name its condition (neutrality) and its scope (it says nothing about IRV specifically — Theorem 1 is about Pareto-efficient *scoring* rules, and IRV is not one).
+- **The rule it endorses is Approval-shaped, not STAR-shaped.** If you read Proposition 2 as practical advice, the nearest real ballot is an [Approval](../../04_Approval/README.md) ballot, and the second-nearest is a three-level score ballot — Hillinger's EV-3, not a 0–5 grid.
+- **Theorem 1 is ammunition for ranked-ballot advocates.** *"Efficient ordinal rules are incentive compatible"* is a sentence an [RCV](../../06_Other/RCV_IRV/README.md) advocate can use, and the correct response is not to dispute it but to name its condition (neutrality) and its scope (it says nothing about IRV specifically — Theorem 1 is about Pareto-efficient *scoring* rules, and IRV is not one).
 - **The measured gain is small.** 2.6% in the worked example. This is not a paper that says ordinal ballots are broken; it says they leave something on the table.
 
 **Sourcing disclosure, since a claim-check that hides its own sources is doing the thing it exists to prevent.** The published paper (*GEB* 104, 2017) is paywalled. The theorem statements, the motivating example, the construction, `β* = 1/√2`, the `117/72` vs `114/72` figures and Proposition 2 here are read from the author's **freely available 2013 job-market-paper version**, which the published article grew out of. Two differences are known and should be assumed to matter: the job-market paper says **ex-ante** Pareto efficient where the published abstract says **ex-post**, and its Theorem 3 (on single-peaked domains, every IC ordinal rule is peak-only) was **replaced** in publication by the numerical section. The Result 3 material above therefore comes from the published abstract and introduction only, not from a read of that section. Anyone building on this page should pull the published version.
@@ -159,6 +159,6 @@ Added to the [glossary](../GLOSSARY.md).
 - [Strategic voting](strategic_voting.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) — where the exaggeration critique actually lives
 - [Approval in the theory literature](../../04_Approval/01_Learn/approval_in_the_literature.md) — what a checkmark means, which is the question Kim's mechanism answers with a threshold
 - [Scores vs. ranks](../scores_and_ranks/scores_vs_ranks.md) — the ballot-level distinction, without the theory
-- **The cases:** [one dial, three winners](../../method_comparisons/kim_ordinal_vs_cardinal/)
+- **The cases:** [one dial, three winners](../../method_comparisons/kim_ordinal_vs_cardinal/README.md)
 
 **Sources.** Kim, S. (2017), "Ordinal versus cardinal voting rules: A mechanism design approach," *Games and Economic Behavior* 104, pp. 350–371 ([DOI](https://doi.org/10.1016/j.geb.2017.04.012)); working-paper version, Ohio State job market paper, 2013 ([PDF](https://economics.osu.edu/sites/economics.osu.edu/files/JMP_Semin_Kim.pdf)) · Myerson, R. (2002), "Comparison of scoring rules in Poisson voting games," *Journal of Economic Theory* 103, pp. 219–251 · Börgers, T. & Postl, P. (2009), "Efficient compromising," *Journal of Economic Theory* 144 · Majumdar, D. & Sen, A. (2004), "Ordinally Bayesian incentive compatible voting rules," *Econometrica* 72 · Gibbard, A. (1973) and Satterthwaite, M. (1975) — see [that page](gibbard_satterthwaite_theorem.md) for full citations.
