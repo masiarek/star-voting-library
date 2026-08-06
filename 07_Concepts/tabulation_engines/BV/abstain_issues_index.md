@@ -44,6 +44,7 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
 | [#1090 (Bug 2)](https://github.com/Equal-Vote/bettervoting/issues/1090) | CSV blanks-for-abstentions ambiguous; wants explicit `NULL` | BV655 · [jfrk9t](https://bettervoting.com/jfrk9t) |
 | [#1160](https://github.com/Equal-Vote/bettervoting/issues/1160) | **Add dual export**: "Official Count" (nulls→0) vs "Raw Audit" (keep nulls, `5,,4`) | (pet-style) — **emergent / deprioritized** |
 | [#1485](https://github.com/Equal-Vote/bettervoting/issues/1485) | **Record the abstention policy on the race** — an export can't tell "nobody abstained" from "abstaining was impossible"; `races[]` and `settings` carry no undervote field. Filed by us 2026-08-06 · [archive copy](bv_github_issue_abstention_policy.md) | Open · sibling of [#699](https://github.com/Equal-Vote/bettervoting/issues/699) (the admin-setting half) |
+| [#1486](https://github.com/Equal-Vote/bettervoting/issues/1486) | **The upload end of the same gap** — the CVR parser [#810](https://github.com/Equal-Vote/bettervoting/issues/810) plans to reuse is rank-only, takes the method from the *filename*, and knows only `skipped` / `overvote`, so it can't express a distinction the export makes. Filed by us 2026-08-06 · [archive copy](bv_github_issue_bulk_upload_format.md) | Open · the ask is that upload and export **round-trip** |
 
 ### D. Tabulation / results semantics
 | Issue | What | BV Test ID · election |

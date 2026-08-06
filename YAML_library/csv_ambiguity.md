@@ -208,6 +208,17 @@ ballots: |-
 
 Separators `×`, `:`, `x` or `X`; house rule is that a weight must be **≥ 6**, so a count is never misread as a 0–5 score. (Keep examples small anyway — a handful of individual voters teaches better than a hundred weighted ones. → [Choosing voter counts](../07_Concepts/tips/TIPS_choosing_voter_counts.md).)
 
+## Filed upstream from this page
+
+Reading #778 back through eighteen months of running the format turned up two gaps that were worth taking to BetterVoting rather than only writing down here. Both were filed 2026-08-06, both are narrowly scoped, and both keep their full report archived in the repo:
+
+| Issue | The gap | Archive |
+|---|---|---|
+| [#1485](https://github.com/Equal-Vote/bettervoting/issues/1485) | An export can't distinguish *"nobody abstained"* from *"abstaining was impossible"* — the policy that governed the ballots isn't in the artifact the ballots ship in | [`bv_github_issue_abstention_policy.md`](../07_Concepts/tabulation_engines/BV/bv_github_issue_abstention_policy.md) |
+| [#1486](https://github.com/Equal-Vote/bettervoting/issues/1486) | The same gap at the *upload* end: the CVR parser [#810](https://github.com/Equal-Vote/bettervoting/issues/810) plans to reuse is rank-only and takes the method from the **filename**, so it can't express what the export writes | [`bv_github_issue_bulk_upload_format.md`](../07_Concepts/tabulation_engines/BV/bv_github_issue_bulk_upload_format.md) |
+
+The second one carries an argument worth repeating here, because it isn't ours: BetterVoting already keeps `voting_method` (and the IRV exhaustion rule) in a **YAML sidecar**, `public_archive_settings.yaml`, looked up by filename when a CVR is imported — *"used to infer election settings when elections are uploaded."* The conclusion that a ballot CSV can't carry the election's configuration is already drawn in their own code; the only question left is whether that information lives in a lookup table keyed on the filename, or in the file.
+
 ## Related
 
 - [Why YAML? One file a person reads and a computer runs](why_yaml_test_cases.md) — the design argument in full
