@@ -1,0 +1,73 @@
+======================================================================
+SOURCE FILE:     coombs_ex21_twin_after.yaml
+TABULATED FILE:  coombs_ex21_twin_after_tabulated.txt
+======================================================================
+
+election_title: "Coombs Ex.21 — after: two twins join for B, and B's win becomes a coin flip"
+scenario_description: |-
+  The AFTER half of Felsenthal's Coombs twin example. Source: Dan S. Felsenthal (2010), Appendix A7, Example 21 — see coombs_ex21_twin_before.yaml for the setup.
+  The same 20 voters plus two more casting B>A>D>C, twins of a voter already there: 22 in all. Their arrival adds two first places for B and, critically, two last places for C. C is now deleted first instead of A, the transfers run differently, and the count ends with A and B TIED — no winner without a lot.
+  Before the twins arrived, B won outright with 11 of 20. Two extra ballots ranking B FIRST turned a certain win into a coin flip. That is the weak twin paradox: not that the twins made B lose outright, but that they made B's victory strictly less certain, which is already a violation of what any voter is entitled to assume about casting a ballot for their favorite.
+  Because the post state is a genuine tie, this case has no determinate winner under Coombs and could never be published as a BetterVoting election with a meaningful result — the same limit noted for BV2142. The expected winner recorded below is the RCV-IRV winner, which IS determinate; only the Coombs count ties.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
+  Tabulated as RCV-IRV, the mirror-image count; IRV elects B before and after, so the failure is Coombs' alone. For the Coombs count, and its tie warning, run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
+paradoxes: [twin]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  5:A>B>D>C
+  5:B>C>D>A
+  3:B>A>D>C
+  6:C>A>D>B
+  1:C>B>A>D
+  2:C>B>D>A
+expected_winners:
+  - B
+
+# file: coombs_ex21_twin_after.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Coombs Ex.21 — after: two twins join for B, and B's win becomes a coin flip
+ Tabulating 22 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+C                  9  Hopeful
+B                  8  Hopeful
+A                  5  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+B                 13  Elected
+C                  9  Rejected
+A                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  B
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 4): B, C, A
+   Outside (1):        D
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (B) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner B is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md

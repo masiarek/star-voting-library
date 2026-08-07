@@ -216,6 +216,13 @@ LH:chicken_approval,"Chicken / Burr dilemma — Approval, honest: A and B tie 60
 LH:chicken_star,Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly),1,single-race,100,STAR,LH-only
 LH:clone_teaming_01_pre,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",1,single-race,33,RankedRobin,LH-only
 LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,1,single-race,33,RankedRobin,LH-only
+LH:coombs_ex18_monotonicity,Coombs Ex.18 — Bree is raised on four ballots and loses because of it,1,single-race,33,RCV-IRV,LH-only
+LH:coombs_ex20_amalgamated,"Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A",1,single-race,41,RCV-IRV,LH-only
+LH:coombs_ex20_district1,"Coombs Ex.20 — District I: 34 voters, Coombs elects B",1,single-race,34,RCV-IRV,LH-only
+LH:coombs_ex20_district2,"Coombs Ex.20 — District II: 7 voters, B wins outright",1,single-race,7,RCV-IRV,LH-only
+LH:coombs_ex21_twin_after,"Coombs Ex.21 — after: two twins join for B, and B's win becomes a coin flip",1,single-race,22,RCV-IRV,LH-only
+LH:coombs_ex21_twin_before,"Coombs Ex.21 — before: 20 voters, Coombs elects B outright",1,single-race,20,RCV-IRV,LH-only
+LH:coombs_ex22_scc,Coombs Ex.22 — SCC: C drops out and A wins instead of B,1,single-race,29,RCV-IRV,LH-only
 LH:coop_board_approval,Co-op board — Yes/No approval ballot (same nine voters),1,single-race,9,Approval,LH-only
 LH:coop_board_scores_allocated,"Co-op board — 0–5 score ballot, allocated",1,single-race,9,STAR_PR,LH-only
 LH:coop_board_scores_sss,"Co-op board — 0–5 score ballot, sss",1,single-race,9,STAR_PR,LH-only
@@ -298,6 +305,12 @@ LH:majority_vs_consensus_51_49,Majority criterion vs. the consensus candidate �
 LH:margins_paper_exact_304,"Margins matter — the textbook profile at its printed size (304 ballots, LH-only)",1,single-race,304,RankedRobin,LH-only
 LH:min_bloc_c3_b2,The smallest divergence — Bloc STAR,1,single-race,2,bloc,LH-only
 LH:min_pr_c3_b2,The smallest divergence — Proportional STAR (Allocated Score),1,single-race,2,STAR_PR,LH-only
+LH:minimax_ex30_noshow_after,"Minimax Ex.30 — after: three C>A>B>D voters stay home, Minimax elects A",1,single-race,16,RankedRobin,LH-only
+LH:minimax_ex30_noshow_before,"Minimax Ex.30 — before: all 19 vote, Minimax elects B",1,single-race,19,RankedRobin,LH-only
+LH:minimax_ex31_truncation,"Minimax Ex.31 — truncation: the same 19 voters, four ballots cut to their top two",1,single-race,19,RankedRobin,LH-only
+LH:minimax_ex32_amalgamated,"Minimax Ex.32 — amalgamated: both districts elected D, together they cannot",1,single-race,14,RankedRobin,LH-only
+LH:minimax_ex32_district2,"Minimax Ex.32 — District II: three voters, D wins outright",1,single-race,3,RankedRobin,LH-only
+LH:minimax_ex33_scc,Minimax Ex.33 — SCC: drop a loser and the winner changes,1,single-race,7,RankedRobin,LH-only
 LH:mmp_majority_ceiling,Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%,1,single-race,30,Plurality,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:mono_raise_delete_after,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",1,single-race,30,STAR,LH-only

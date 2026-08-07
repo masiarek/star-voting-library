@@ -1,0 +1,20 @@
+election_title: "Coombs Ex.20 — District I: 34 voters, Coombs elects B"
+scenario_description: |-
+  District I of Felsenthal's Coombs reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A7, Example 20.
+  34 voters, three candidates: 9×(A>B>C), 9×(B>C>A), 11×(C>A>B), 5×(C>B>A). Nobody holds a majority of first places (C leads with 16 of 34), so Coombs deletes the most-hated: A is ranked last on 14 ballots, more than B's 11 or C's 9. With A gone, B holds 18 of 34 and is elected.
+  District II (coombs_ex20_district2.yaml) also elects B. Their union (coombs_ex20_amalgamated.yaml) elects A. That is the reinforcement paradox — a method that agrees with itself in every district and contradicts itself over the whole.
+  A note on the source: Felsenthal prints District II as "6 voters" but lists 7, and the amalgamated table sums to 41. We take the tables as authoritative and flag the typo rather than silently picking one reading.
+  Labels are Felsenthal's own A/B/C so the case can be read side by side with the paper's table; this is an academic reproduction, not a scenario with a cast.
+  Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count. IRV elects B here too — and, unlike Coombs, keeps electing B in all three files, so the reinforcement failure belongs to Coombs alone. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
+paradoxes: [multiple-districts]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  9:A>B>C
+  9:B>C>A
+  11:C>A>B
+  5:C>B>A
+expected_winners:
+  - B
+
+# file: coombs_ex20_district1.yaml

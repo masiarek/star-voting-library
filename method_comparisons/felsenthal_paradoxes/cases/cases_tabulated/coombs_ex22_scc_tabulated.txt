@@ -1,0 +1,66 @@
+======================================================================
+SOURCE FILE:     coombs_ex22_scc.yaml
+TABULATED FILE:  coombs_ex22_scc_tabulated.txt
+======================================================================
+
+election_title: "Coombs Ex.22 — SCC: C drops out and A wins instead of B"
+scenario_description: |-
+  Felsenthal's Coombs subset-choice-condition example — the spoiler failure. Source: Dan S. Felsenthal (2010), Appendix A7, Example 22.
+  29 voters, four candidates: 11×(A>B>C>D), 12×(B>C>D>A), 2×(B>A>D>C), 4×(C>A>D>B). No first-place majority (B leads with 14 of 29), so Coombs deletes the most-hated — A, last on 12 ballots — and B inherits a majority and wins.
+  Now let C drop out before the election. C never had a chance: four first places out of 29, eliminated in every count. But with C gone, A is ranked first by 15 of 29 — an absolute majority — and Coombs elects A on the first count, never reaching a deletion. A candidate who could not win changed who did, purely by being on the ballot. That is the subset choice condition (SCC) failure, the formal version of the spoiler effect. Reproduce the second count with: coombs_report.py --drop C.
+  At 4 candidates and 29 voters this is far from minimal — Brandt, Matthäus & Saile (2022) exhibit a 4-candidate Coombs SCC failure with just 7 voters — so it is kept for readability, not tightness.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table; this is an academic reproduction, not a scenario with a cast.
+  Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count. IRV elects A with C present AND with C removed, so IRV shows no spoiler here and the failure is Coombs' alone — and note that IRV's winner A is the one Coombs only reaches after C leaves. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
+paradoxes: [spoiler-scc]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  11:A>B>C>D
+  12:B>C>D>A
+  2:B>A>D>C
+  4:C>A>D>B
+expected_winners:
+  - A
+
+# file: coombs_ex22_scc.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Coombs Ex.22 — SCC: C drops out and A wins instead of B
+ Tabulating 29 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+B                 14  Hopeful
+A                 11  Hopeful
+C                  4  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+A                 15  Elected
+B                 14  Rejected
+C                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  A
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 4): A, B, C
+   Outside (1):        D
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   RCV-IRV winner A is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md

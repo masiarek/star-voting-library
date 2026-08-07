@@ -1,0 +1,32 @@
+election_title: "Minimax Ex.30 — after: three C>A>B>D voters stay home, Minimax elects A"
+scenario_description: |-
+  The AFTER half of Felsenthal's Minimax no-show pair. Source: Dan S. Felsenthal (2010), Appendix A10, Example 30 (credited to Hannu Nurmi, private communication 22.2.2010) — see minimax_ex30_noshow_before.yaml for the setup.
+  The same electorate with three of the four C>A>B>D voters ABSENT: 16 voters now. Worst pairwise losses become A 10, B 11, C 12, D 11, so the smallest belongs to A and Minimax elects A. Those three voters ranked A second and B third, so by staying home they got a result they PREFER to the one their own ballots produced — the no-show paradox in its sharpest form. Read forward instead of backward it is the twin paradox: with one such voter A wins, and when the three "twin brothers" join, B does.
+  Nothing about the ballots changed. The only edit is which voters showed up, which is what makes this a conditional paradox in Felsenthal's sense rather than a surprising-but-static result.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
+  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; Ranked Robin elects D on these ballots, disagreeing with Minimax's A. For the Minimax count run tools_adam/pref_voting_tabulation_engine/minimax_report.py, which is cross-checked against pref_voting.
+paradoxes: [no-show, twin, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_smith_set: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  5:D>B>C>A
+  4:B>C>A>D
+  3:A>D>C>B
+  3:A>D>B>C
+  1:C>A>B>D
+expected_winners:
+  - D
+
+# file: minimax_ex30_noshow_after.yaml

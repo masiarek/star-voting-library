@@ -1,0 +1,18 @@
+election_title: "Coombs Ex.20 — District II: 7 voters, B wins outright"
+scenario_description: |-
+  District II of Felsenthal's Coombs reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A7, Example 20.
+  Seven voters, three candidates: 1×(A>B>C), 6×(B>A>C). B is ranked first by 6 of 7 — an absolute majority on the first count — so Coombs elects B immediately and never reaches its deletion step. No paradox here; this is the second clean district whose combination with the first produces one.
+  The source prints this district as "6 voters" while listing 7, and its amalgamated table sums to 41, which only works with 7. We take the tables as authoritative and flag the typo rather than quietly choosing.
+  District I (coombs_ex20_district1.yaml) also elects B. Together they elect A (coombs_ex20_amalgamated.yaml) — the reinforcement paradox.
+  Labels are Felsenthal's own A/B/C so the case can be read side by side with the paper's table.
+  Tabulated as RCV-IRV, the mirror-image count Coombs inverts; with a first-round majority both methods elect B by the same step. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
+paradoxes: [multiple-districts]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  1:A>B>C
+  6:B>A>C
+expected_winners:
+  - B
+
+# file: coombs_ex20_district2.yaml

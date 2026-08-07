@@ -1,0 +1,65 @@
+======================================================================
+SOURCE FILE:     coombs_ex20_amalgamated.yaml
+TABULATED FILE:  coombs_ex20_amalgamated_tabulated.txt
+======================================================================
+
+election_title: "Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A"
+scenario_description: |-
+  The amalgamation half of Felsenthal's Coombs reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A7, Example 20.
+  All 41 ballots from both districts in one election: District I's 34 (9×A>B>C, 9×B>C>A, 11×C>A>B, 5×C>B>A) plus District II's 7 (1×A>B>C, 6×B>A>C). Each district elected B on its own.
+  Counted together the last-place tally changes hands: C is now last on 16 ballots — more than A's 14 or B's 11 — so Coombs deletes C instead of A, and the ballots C was holding lift A to a majority. A wins. Neither district wanted A; their union does. That is the reinforcement paradox, also called the inconsistency paradox, and it is the formal reason a method that cannot be summed district by district cannot be canvassed that way either.
+  Labels are Felsenthal's own A/B/C so the case can be read side by side with the paper's table.
+  Tabulated as RCV-IRV, the mirror-image count. IRV elects B in all three files — District I, District II and this amalgamation — so on this profile IRV shows no reinforcement failure at all and the paradox is Coombs' alone. That contrast is why the three files are worth having separately.
+paradoxes: [multiple-districts]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  9:A>B>C
+  9:B>C>A
+  11:C>A>B
+  5:C>B>A
+  1:A>B>C
+  6:B>A>C
+expected_winners:
+  - B
+
+# file: coombs_ex20_amalgamated.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A
+ Tabulating 41 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+C                 16  Hopeful
+B                 15  Hopeful
+A                 10  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+B                 25  Elected
+C                 16  Rejected
+A                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  B
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): A, B, C
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   RCV-IRV winner B is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md

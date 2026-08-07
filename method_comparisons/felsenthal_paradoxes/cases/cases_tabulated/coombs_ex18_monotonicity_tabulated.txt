@@ -1,0 +1,63 @@
+======================================================================
+SOURCE FILE:     coombs_ex18_monotonicity.yaml
+TABULATED FILE:  coombs_ex18_monotonicity_tabulated.txt
+======================================================================
+
+election_title: "Coombs Ex.18 — Bree is raised on four ballots and loses because of it"
+scenario_description: |-
+  Felsenthal's Coombs non-monotonicity example. Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A7, Example 18.
+  The same 33 voters and the same cast as Example 17 (bv2164_xbqq8t_star.yaml, live as BV2164) with exactly one change: the four Cole>Arlo>Dana>Bree voters RAISE Bree over Dana, to Cole>Arlo>Bree>Dana. Nothing else moves. Same cast because it is the same election with one thing changed.
+  In Example 17 Coombs elects Bree: Arlo collects the most last-place votes (12), is deleted first, and Bree inherits a majority. Here the raise shifts the last-place counts — Dana now has 15 — so Dana is deleted instead, then Cole, and ARLO wins. Bree won before she was raised and loses after. That is non-monotonicity: additional support cost her the election.
+  Arlo is the Condorcet winner both before and after, which is what makes the pair readable — the pairwise picture is stable and only the elimination ORDER moved.
+  Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count: IRV eliminates whoever has the fewest FIRST places, Coombs whoever has the most LAST places. IRV elects Arlo on these ballots and is unmoved by the raise, so the failure belongs to Coombs alone. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py, which is cross-checked against pref_voting.
+paradoxes: [non-monotonicity, condorcet-winner]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  11:Arlo>Bree>Cole>Dana
+  12:Bree>Cole>Dana>Arlo
+  2:Bree>Arlo>Dana>Cole
+  4:Cole>Arlo>Bree>Dana
+  4:Dana>Arlo>Bree>Cole
+expected_winners:
+  - Arlo
+
+# file: coombs_ex18_monotonicity.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Coombs Ex.18 — Bree is raised on four ballots and loses because of it
+ Tabulating 33 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Bree              14  Hopeful
+Arlo              11  Hopeful
+Cole               4  Rejected
+Dana               4  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Arlo              19  Elected
+Bree              14  Rejected
+Cole               0  Rejected
+Dana               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Arlo
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Arlo
+   Outside (3):        Bree, Cole, Dana
+   One member ⇒ Arlo is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Arlo is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md

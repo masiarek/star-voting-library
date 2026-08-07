@@ -1,0 +1,67 @@
+======================================================================
+SOURCE FILE:     coombs_ex21_twin_before.yaml
+TABULATED FILE:  coombs_ex21_twin_before_tabulated.txt
+======================================================================
+
+election_title: "Coombs Ex.21 — before: 20 voters, Coombs elects B outright"
+scenario_description: |-
+  The BEFORE half of Felsenthal's Coombs twin example. Source: Dan S. Felsenthal (2010), Appendix A7, Example 21.
+  20 voters, four candidates: 5×(A>B>D>C), 5×(B>C>D>A), 1×(B>A>D>C), 6×(C>A>D>B), 1×(C>B>A>D), 2×(C>B>D>A). No first-place majority, so Coombs deletes the most-hated — A, last on 7 ballots — and after the transfers B holds 11 of 20 and wins.
+  Then two more voters with the ballot B>A>D>C arrive: see coombs_ex21_twin_after.yaml. They are "twins" of the single B>A>D>C voter already present, ranking B first, so their arrival should if anything help B. Instead the last-place counts tip, C is deleted first, and the count ends in an A/B TIE. B goes from a certain win to a coin flip because two of B's own supporters showed up. That is the weak twin paradox.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table; this is an academic reproduction, not a scenario with a cast.
+  Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count — IRV eliminates on fewest FIRST places, Coombs on most LAST places. IRV elects B both before and after the twins arrive, so the failure is Coombs' alone. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
+paradoxes: [twin]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  5:A>B>D>C
+  5:B>C>D>A
+  1:B>A>D>C
+  6:C>A>D>B
+  1:C>B>A>D
+  2:C>B>D>A
+expected_winners:
+  - B
+
+# file: coombs_ex21_twin_before.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Coombs Ex.21 — before: 20 voters, Coombs elects B outright
+ Tabulating 20 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+C                  9  Hopeful
+B                  6  Hopeful
+A                  5  Rejected
+D                  0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+B                 11  Elected
+C                  9  Rejected
+A                  0  Rejected
+D                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  B
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 4): A, B, C
+   Outside (1):        D
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   RCV-IRV winner B is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md

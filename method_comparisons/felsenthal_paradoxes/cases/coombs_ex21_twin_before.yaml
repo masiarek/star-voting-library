@@ -1,0 +1,21 @@
+election_title: "Coombs Ex.21 — before: 20 voters, Coombs elects B outright"
+scenario_description: |-
+  The BEFORE half of Felsenthal's Coombs twin example. Source: Dan S. Felsenthal (2010), Appendix A7, Example 21.
+  20 voters, four candidates: 5×(A>B>D>C), 5×(B>C>D>A), 1×(B>A>D>C), 6×(C>A>D>B), 1×(C>B>A>D), 2×(C>B>D>A). No first-place majority, so Coombs deletes the most-hated — A, last on 7 ballots — and after the transfers B holds 11 of 20 and wins.
+  Then two more voters with the ballot B>A>D>C arrive: see coombs_ex21_twin_after.yaml. They are "twins" of the single B>A>D>C voter already present, ranking B first, so their arrival should if anything help B. Instead the last-place counts tip, C is deleted first, and the count ends in an A/B TIE. B goes from a certain win to a coin flip because two of B's own supporters showed up. That is the weak twin paradox.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table; this is an academic reproduction, not a scenario with a cast.
+  Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count — IRV eliminates on fewest FIRST places, Coombs on most LAST places. IRV elects B both before and after the twins arrive, so the failure is Coombs' alone. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
+paradoxes: [twin]
+voting_method: RCV-IRV
+num_winners: 1
+ballots: |-
+  5:A>B>D>C
+  5:B>C>D>A
+  1:B>A>D>C
+  6:C>A>D>B
+  1:C>B>A>D
+  2:C>B>D>A
+expected_winners:
+  - B
+
+# file: coombs_ex21_twin_before.yaml
