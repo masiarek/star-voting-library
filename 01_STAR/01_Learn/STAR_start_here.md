@@ -2,7 +2,13 @@
 
 **New here? You're in exactly the right place.** No background needed, about five minutes, and nothing partisan. By the end you'll know what STAR Voting is — and *feel* why it picks winners people actually like.
 
-Here's the plan: a small, familiar problem, then the ballot, then the count — and at the end, for contrast, what the *usual* way of voting does with the very same five people. That's it. Ready?
+And here's the whole thing on paper — one voter's finished STAR ballot:
+
+<img src="../../07_Concepts/img/star_ballot_example.png" width="460" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
+
+*Score every candidate 0 to 5 — order **and** strength, at a glance. That's the ballot; the rest of this page is what happens to it.*
+
+Here's the plan: a small, familiar problem, then that ballot's two rules, then the count — and at the end, for contrast, what the *usual* way of voting does with the very same five people. That's it. Ready?
 
 ---
 
@@ -23,18 +29,12 @@ That's the name: **S**core **T**hen **A**utomatic **R**unoff. One ballot; the "r
 
 **Two sound-alike words — keep them straight: here you *rate*, you don't *rank*.** Rating and **scoring** are the same thing (that's the "Score" in STAR's name — and it's the word this library uses): each option judged on its own, so two favorites can honestly both earn a 5. A ranking only lines options up, 1st-2nd-3rd, and says nothing about *how much* you like any of them. People swap the words all the time, but the ballots behave very differently → [Scores vs. ranks — don't confuse them](../../07_Concepts/scores_and_ranks/scores_vs_ranks.md).
 
-The official [Equal Vote Coalition](https://www.equal.vote/star) rules, in plain language:
+The official [Equal Vote Coalition](https://www.equal.vote/star) rules — the instructions printed on the ballot up top, in plain language:
 
 - Give your **favorite** **5 stars**.
 - Give your **last choice 0** (or just leave it blank).
 - **Equal scores are allowed** — you're never forced to invent a preference you don't feel.
 - **Score everyone else** wherever they honestly land, 0 to 5.
-
-Here's the whole thing on paper — one voter's finished ballot:
-
-<img src="../../07_Concepts/img/star_ballot_example.png" width="400" alt="A filled-in STAR ballot: five candidates scored 0–5 stars — Andre 5, Blake 1, Carmen 4, David 4, Ella 0. Instructions at top: give your favorite(s) five stars, your last choice(s) zero, equal scores allowed, blanks receive zero.">
-
-*One voter's finished ballot — order **and** strength, at a glance.*
 
 → Every legal way to fill it out — bullet votes, backups, equal scores, "anyone but…", protest votes, eight styles with a worked election: [The STAR ballot & voting styles](voting_styles/README.md).
 
