@@ -4,7 +4,7 @@
 **Method:** [Allocated Score (proportional STAR)](../01_Learn/README.md) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation) · [full count →](cases/cases_pages/bv2130_presidential_board_star_pr.md)
 <!-- case-meta:end -->
 
-*A real 7-seat Proportional STAR election on BetterVoting (`bvhchj`): 51 candidates, 102 sparse ballots. LH's `allocated` engine reproduces BetterVoting's **first six seats exactly**; the **seventh diverges** (LH → Claudia De La Cruz, BV → Karina Garcia — both Socialism & Liberation).*
+*A real 7-seat Proportional STAR election on BetterVoting (`bvhchj`): 51 candidates, 102 sparse ballots. LH's `allocated` engine reproduces BetterVoting's **first six seats exactly**; the **seventh diverges** (LH → Claudia De La Cruz, BV → Karina Garcia — both Socialism & Liberation). **Resolved 2026-08-06:** the engines agree — BV counted 100 ballots to LH's 102, giving a different Hare quota. The two missing ballots are [#1478](https://github.com/Equal-Vote/bettervoting/issues/1478).*
 
 Reference files: [`bv2130_presidential_board_star_pr.yaml`](cases/bv2130_presidential_board_star_pr.yaml) (`voting_method: allocated`, 7 winners) · frozen export [`bv2130_presidential_board_star_pr_bv_export.json`](cases/bv2130_presidential_board_star_pr_bv_export.json) (BV `bvhchj`). Backs sheet row **BV2130**. The election also has a second race (party-alignment **Plurality**) that elects **Democrat**.
 
@@ -30,14 +30,28 @@ The highest-scoring candidate wins a seat.
 
 Full audit copy: [`_main_tabulated/bv2130_presidential_board_star_pr_tabulated.txt`](cases/cases_tabulated/bv2130_presidential_board_star_pr_tabulated.txt).
 
-## The finding
+## The finding — resolved 2026-08-06: it is the ballot count, not the method
 
-BetterVoting's result carries `tieBreakType: "random"`, and it elected Karina over Claudia — but in LH's computation this is **not a tie** (Claudia leads by ~0.26 of a reweighted point). So seat 7 is one of two things, both worth a maintainer's look:
+BetterVoting's result carries `tieBreakType: "random"` and elected Karina over Claudia, while in LH's computation this is **not a tie** (Claudia leads by ~0.26 of a reweighted point). That framing invited two hypotheses — an implementation difference in surplus/reweighting/rounding, or a near-tie BV broke at random. **Both are wrong.** The engines compute the same thing; they were handed different elections.
 
-1. a genuine **implementation difference** between BV's `STAR_PR` and LH's `allocated` (surplus/reweighting order, rounding, or quota), or
-2. a **near-tie in BV's math** that BV broke at random — in which case, like the other cases, the outcome is **non-reproducible** (a different draw flips the last seat between two same-party candidates).
+**The algorithms agree.** BetterVoting's own unit tests for this method — `packages/backend/src/Tabulators/AllocatedScore.test.ts` — reproduce exactly in LH's `allocated`: "Basic Example" → Allison, Doug; "Single vote fractional surplus" → Allison, Doug; "Voters < Winners" → Allison, Bill, Carmen. Their fixtures are our fixtures.
 
-Either way, the first six seats are a clean cross-check that LH `allocated` == BV `STAR_PR`, and the seventh isolates exactly where they part ways. (This is the first *proportional* case in the set; the tie cases so far were STAR / Bloc STAR.)
+**Precision is not the cause either.** `AllocatedScore.ts` uses `fraction.js`, i.e. exact rational arithmetic — the same exactness LH uses. A gap of 0.26 was never floating-point drift.
+
+**The inputs differ.** The frozen export reports **`nTallyVotes: 100`, `nAbstentions: 2`** for this race. The YAML holds **102 ballots**. Both engines then compute the same Hare quota `V / seats` from different `V`:
+
+| | ballots counted | Hare quota (7 seats) |
+|---|--:|--:|
+| BetterVoting | 100 | 14.2857 |
+| LH | 102 | 14.5714 |
+
+A different quota changes how much ballot weight each winner consumes, in **every** round. The effect compounds across six seats and finally flips the seventh.
+
+**And the two missing ballots have a name.** BV drops a partial ballot whose marks are all equal, counting it as an abstention — [#1478](https://github.com/Equal-Vote/bettervoting/issues/1478). With 51 candidates and sparse ballots, this election is precisely the shape that triggers it.
+
+That makes this case a **significant escalation of #1478** rather than a proportional-method defect. Filed as a count-level defect on a 4-ballot election where the winners happened to survive, the bug looked cosmetic. Here the two dropped ballots **change who holds a seat**. The seat-7 disagreement is the visible symptom; the discarded ballots are the disease.
+
+*(What still deserves a maintainer's eye is narrower than it first appeared: BV labels the race `tieBreakType: "random"` on a seat that, on its own numbers, may not have been tied at all.)*
 
 ## Related
 
