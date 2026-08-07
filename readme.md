@@ -56,16 +56,18 @@ The same ten sections as the sidebar, in the same order — each one's landing p
 
 | Section | What's in it |
 |---|---|
-| ⭐ **[01 STAR](01_STAR/README.md)** | The headline method, one seat. The lessons in [`01_Learn/`](01_STAR/01_Learn/README.md) — the ballot, the two rounds, tie-breaking, the honest limits — then the runnable examples, the [real BetterVoting elections](01_STAR/04_Real_Elections/README.md), and the criteria pages. |
+| ⭐ **[01 STAR](01_STAR/README.md)** | The headline method, *one seat*. The lessons first — the ballot, the two rounds, tie-breaking, the honest limits — then the runnable examples, the real BetterVoting elections, and the criteria pages. |
 | **[02 STAR Bloc](02_STAR_Bloc/README.md)** | Several seats at once, *majoritarian*: the same ballot, run once per seat — and, just as importantly, when **not** to use it. |
 | **[03 STAR PR](03_STAR_PR/README.md)** | Several seats at once, *proportional*: the same score ballot counted so seats reflect the electorate's proportions (`sss` · `allocated` · `rrv`). |
-| **[04 Approval](04_Approval/README.md)** | Approve or don't — Score voting at one bit of resolution. Enormous gain in expressiveness over choose-one, for almost no ballot complexity. |
-| **[05 Ranked Robin](05_Ranked_Robin/README.md)** | Ranked ballots counted head-to-head, so the candidate who beats the most rivals wins — the friendly upgrade for people who like ranking. |
-| **[06 Other methods](06_Other/README.md)** | Taught, not promoted: Choose-One (Plurality), [RCV-IRV](06_Other/RCV_IRV/README.md), STV, Range/Score, and the historical also-rans — here for honest comparison. |
-| **[07 Concepts](07_Concepts/README.md)** | The cross-method half: the [curriculum](07_Concepts/CURRICULUM.md) (101 / 201 / 301), the [glossary](07_Concepts/GLOSSARY.md), the topic pages (center squeeze, monotonicity, summability…), and the [voting paradoxes](07_Concepts/voting_paradoxes/README.md). |
+| **[04 Approval](04_Approval/README.md)** | Approve or don't — Score voting at *one bit of resolution*. Enormous gain in expressiveness over choose-one, for almost no ballot complexity. |
+| **[05 Ranked Robin](05_Ranked_Robin/README.md)** | Ranked ballots counted *head-to-head*, so the candidate who beats the most rivals wins — the friendly upgrade for people who like ranking. |
+| **[06 Other methods](06_Other/README.md)** | *Taught, not promoted*: Choose-One (Plurality), RCV-IRV, STV, Range/Score, and the historical also-rans — here for honest comparison. |
+| **[07 Concepts](07_Concepts/README.md)** | The *cross-method* half: the curriculum (101 / 201 / 301), the glossary, the topic pages (center squeeze, monotonicity, summability…), and the voting paradoxes. |
 | **[STARVote LH tabulation engine](STARVote_LH_tabulation_engine/README.md)** | The engine that counts every example here — Larry Hastings' `starvote`, vendored and forked, plus what this fork adds. |
 | **[YAML library](YAML_library/README.md)** | The election-file format itself: why YAML, what every field does, the BetterVoting importer, and the deliberately-broken files that prove bad input fails politely. |
 | **[Method comparisons](method_comparisons/README.md)** | The crown jewels — *same ballots, different methods*, where the contrast between them **is** the lesson. |
+
+Two indexes cut *across* those ten: **[Browse by tag](tags.md)** sorts the concept pages by what kind of question they answer rather than which method, and the **[Glossary](07_Concepts/GLOSSARY.md)** defines every term the rest of the library uses.
 
 > **Contributors / running it locally →** start at [**CONTRIBUTING.md**](CONTRIBUTING.md) (setup + the edit-regenerate-test loop). The [**Repository & Engine Guide**](07_Concepts/about_this_repo/repository_guide.md) has the repository map, quick-start commands, how the voting methods dispatch, the validation philosophy, and what the vendored engine adds. House conventions: [CLAUDE.md](CLAUDE.md).
 <!-- --8<-- [end:below-hero] -->
