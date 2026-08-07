@@ -41,21 +41,21 @@ Our worked examples come from **Felsenthal (2010)** and are chosen for teaching 
 
 | Our example | Rule · paradox | Ours (*m*, *n*) | Paper minimal | Status |
 |---|---|---|---|---|
-| BV2144 (Felsenthal Ex.1) | Plurality · Condorcet winner | 3, 7 | 3, 7 | ✅ **provably minimal** |
-| BV2144 | Plurality · Condorcet loser | 3, 7 | 3, 7 | ✅ **provably minimal** |
-| BV2144 | Plurality · absolute loser | 3, 7 | 3, 7 | ✅ **provably minimal** |
-| BV2144 | Plurality · SCC / subset choice | 3, 7 | 3, 7 | ✅ **provably minimal** |
-| BV2145→46 (Ex.2) | IRV · non-monotonicity (add'l support) | 3, 17 | 3, 17 | ✅ **provably minimal** (at 3 cand.) |
-| BV2150→51 (Ex.4) | IRV · no-show | 3, 11 | 3, 11 | ✅ **provably minimal** |
-| Coombs Ex.19 (BV2165/66) | Coombs · no-show | 3, 15 | 3, 15 | ✅ **provably minimal** (at 3 cand.) |
-| BV2147/48→49 (Ex.3) | Plurality-runoff · reinforcement | 3, 32 | 3, 15 | larger (Felsenthal's electorate) |
-| Coombs Ex.17 (BV2164) | Coombs · Condorcet winner | 4, 33 | 3, 13 / 4, 9 | larger — **and refutes a conjecture** (below) |
-| Coombs Ex.20 | Coombs · reinforcement | 3, 41 | 3, 13 | larger |
-| Coombs Ex.22 | Coombs · SCC | 4, 29 | 4, 7 | larger |
-| Minimax Ex.29 (BV2167) | Maximin · Condorcet & absolute loser | 4, 11 | 4, 9 | slightly larger |
-| Minimax Ex.30 | Maximin · no-show | 4, 19 | 4, 9 | larger |
-| Minimax Ex.32 | Maximin · reinforcement | 4, 14 | 3, 15 / 5, 9 | comparable |
-| Minimax Ex.33 | Maximin · SCC | 4, 7 | 3, 7 | one candidate more |
+| [BV2144 (Felsenthal Ex.1)](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) | Plurality · Condorcet winner | 3, 7 | 3, 7 | ✅ **provably minimal** |
+| [BV2144](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) | Plurality · Condorcet loser | 3, 7 | 3, 7 | ✅ **provably minimal** |
+| [BV2144](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) | Plurality · absolute loser | 3, 7 | 3, 7 | ✅ **provably minimal** |
+| [BV2144](../../method_comparisons/felsenthal_paradoxes/bv2144_mxfmhm_felsenthal_ex1.md) | Plurality · SCC / subset choice | 3, 7 | 3, 7 | ✅ **provably minimal** |
+| [BV2145→46 (Ex.2)](../../method_comparisons/felsenthal_paradoxes/bv2146_krk2px_felsenthal_ex2_monotonicity.md) | IRV · non-monotonicity (add'l support) | 3, 17 | 3, 17 | ✅ **provably minimal** (at 3 cand.) |
+| [BV2150→51 (Ex.4)](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_felsenthal_ex4_noshow.md) | IRV · no-show | 3, 11 | 3, 11 | ✅ **provably minimal** |
+| [Coombs Ex.19](coombs.md#example-19-no-show-and-truncation-live-pair-bv2165-bv2166) ([BV2165/66](../../method_comparisons/felsenthal_paradoxes/bv2166_b7b8dv_coombs_noshow.md)) | Coombs · no-show | 3, 15 | 3, 15 | ✅ **provably minimal** (at 3 cand.) |
+| [BV2147/48→49 (Ex.3)](../../method_comparisons/felsenthal_paradoxes/bv2149_byk9v2_felsenthal_ex3_reinforcement.md) | Plurality-runoff · reinforcement | 3, 32 | 3, 15 | larger (Felsenthal's electorate) |
+| [Coombs Ex.17](coombs.md#example-17-the-condorcet-winner-is-deleted-first-live-bv2164) ([BV2164](../../method_comparisons/felsenthal_paradoxes/bv2164_xbqq8t_coombs_cw.md)) | Coombs · Condorcet winner | 4, 33 | 3, 13 / 4, 9 | larger — **and refutes a conjecture** (below) |
+| [Coombs Ex.20](coombs.md#example-20-reinforcement-paper-only-source-typo-flagged) | Coombs · reinforcement | 3, 41 | 3, 13 | larger |
+| [Coombs Ex.22](coombs.md#example-22-scc-paper-only) | Coombs · SCC | 4, 29 | 4, 7 | larger |
+| [Minimax Ex.29](minimax.md#example-29-minimax-elects-the-condorcet-and-absolute-loser-live-bv2167) ([BV2167](../../method_comparisons/felsenthal_paradoxes/bv2167_f3dxq9_minimax_absolute_loser.md)) | Maximin · Condorcet & absolute loser | 4, 11 | 4, 9 | slightly larger |
+| [Minimax Ex.30](minimax.md#example-30-no-show-and-twin-hannu-nurmi-private-communication-2222010) | Maximin · no-show | 4, 19 | 4, 9 | larger |
+| [Minimax Ex.32](minimax.md#example-32-reinforcement) | Maximin · reinforcement | 4, 14 | 3, 15 / 5, 9 | comparable |
+| [Minimax Ex.33](minimax.md#example-33-scc-adapted-from-fishburn-1974-540) | Maximin · SCC | 4, 7 | 3, 7 | one candidate more |
 
 **Two takeaways.** (1) The BV2144 quartet and the monotonicity/no-show pairs are already the mathematically smallest possible — a nice, citable validation that the sharpest teaching cases are also the tightest. (2) The larger cases are Felsenthal's own historical electorates; we keep them for their named casts and live BV backing, but now have a reference for how far they *could* shrink. The paper studies only ranked rules and Felsenthal's *nine* paradoxes, so our **truncation** pages (score/ranked, and 103-voter Nurmi), **range voting** and **majority judgment** (score methods), and **successive-elimination** examples fall outside its scope — no minimal to compare against.
 
