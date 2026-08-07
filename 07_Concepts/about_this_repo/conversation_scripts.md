@@ -51,7 +51,7 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 | 8 | Counting & trust | summability, audits | any file's matrix | "Summability" slides |
 | 9 | Multi-winner & proportional | electing several seats | `02_Multi_winner/*` | "Proportional Representation" |
 | 10 | The honest limits | "resistant, not proof" | — | "Voting Theory Facts" |
-| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | [`equal_support_runoff_demo.yaml`](../../01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml) | "No-Preference Votes in the Runoff" |
+| 11 | "Discounted votes?" (objection) | are equal-score votes ignored? | [page](../../01_STAR/02_Examples/cases/cases_pages/equal_support_runoff_demo.md) · [`equal_support_runoff_demo.yaml`](../../01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml) | "No-Preference Votes in the Runoff" |
 | 12 | Favorite betrayal (Voting 301) | does *only* RCV avoid it? | — | "RCV Common False Claims", "Alaska '22", pass/fail criteria |
 | 13 | "Exhausted ballots," untangled (301) | what FairVote's word actually hides | `equal_support_runoff_demo` (contrast) | "Ranked Choice Deal Breakers", "Alaska '22", Exhausted Ballots deck |
 | ★ | **RCV-IRV false-claims index** (reference, not a clip) | look up any "RCV" claim → its precise rebuttal | — | "RCV Common False Claims" |

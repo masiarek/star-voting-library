@@ -159,6 +159,6 @@ These live in this repo and stay exactly in sync — **prefer them for live demo
 | **Curriculum** | [07_Concepts/CURRICULUM.md](CURRICULUM.md) |
 | **Flagship script** | [whats_so_good_about_STAR_Voting.md](../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) |
 | **Spoiler demos** | [split_voting/](../method_comparisons/split_voting/README.md) |
-| **Two-round demo** | [01b_c2_b2_two-candidates.yaml](../01_STAR/09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) |
+| **Two-round demo** | [page](../01_STAR/09_Parked/silly_two_cand_STAR/cases/cases_pages/01b_c2_b2_two-candidates.md) · [01b_c2_b2_two-candidates.yaml](../01_STAR/09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) |
 
 > Note: deep links of the form `…/edit#slide=id.g…` break when a slide is copied or duplicated. Prefer searching the slide **title** inside the deck over saving a deep link.

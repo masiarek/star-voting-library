@@ -84,9 +84,9 @@ Change the lot and the original South no longer springs the trap: if North resol
 
 | If the cycle resolves to… | South district | South elects | **Merged 9 voters elect** |
 |---|---|:--:|:--:|
-| **Ada** | [`reinf_south_c3_b3_rr`](cases/reinf_south_c3_b3_rr.yaml) | Ada | **Cara** ⚠️ |
-| **Ben** | [`reinf_south_ben_c3_b3_rr`](cases/reinf_south_ben_c3_b3_rr.yaml) | Ben | **Ada** ⚠️ |
-| **Cara** | [`reinf_south_cara_c3_b3_rr`](cases/reinf_south_cara_c3_b3_rr.yaml) | Cara | **Ben** ⚠️ |
+| **Ada** | [page](cases/cases_pages/reinf_south_c3_b3_rr.md) · [`reinf_south_c3_b3_rr`](cases/reinf_south_c3_b3_rr.yaml) | Ada | **Cara** ⚠️ |
+| **Ben** | [page](cases/cases_pages/reinf_south_ben_c3_b3_rr.md) · [`reinf_south_ben_c3_b3_rr`](cases/reinf_south_ben_c3_b3_rr.yaml) | Ben | **Ada** ⚠️ |
+| **Cara** | [page](cases/cases_pages/reinf_south_cara_c3_b3_rr.md) · [`reinf_south_cara_c3_b3_rr`](cases/reinf_south_cara_c3_b3_rr.yaml) | Cara | **Ben** ⚠️ |
 
 Every row is engine-verified, and every merged winner is a *strict* Condorcet winner with the same 5–4 / 5–4 / 7–2 signature, rotated:
 

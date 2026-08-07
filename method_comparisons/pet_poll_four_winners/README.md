@@ -4,12 +4,12 @@ A single BetterVoting election (`dyxrbr`, Test ID **BV2133**) with four races ov
 
 **▶ Live results:** [bettervoting.com/dyxrbr/results](https://bettervoting.com/dyxrbr/results)
 
-| Method | Winner | Why | yaml |
+| Method | Winner | Why | Read · run |
 |--------|:---:|-----|:--:|
-| Plurality | **Dog** | most first choices (13); 19 rank Dog last | [`.yaml`](cases/bv2133_dyxrbr_pet2_plurality.yaml) |
-| RCV-IRV | **Fish** | transfers pile on Fish after Bird/Cat drop | [`.yaml`](cases/bv2133_dyxrbr_pet2_irv.yaml) |
-| Approval | **Bird** | widely approved (19) | [`.yaml`](cases/bv2133_dyxrbr_pet2_approval.yaml) |
-| STAR | **Cat** | consensus: top score, wins runoff 22–10 | [`.yaml`](cases/bv2133_dyxrbr_pet2_star.yaml) |
+| Plurality | **Dog** | most first choices (13); 19 rank Dog last | [page](cases/cases_pages/bv2133_dyxrbr_pet2_plurality.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_plurality.yaml) |
+| RCV-IRV | **Fish** | transfers pile on Fish after Bird/Cat drop | [page](cases/cases_pages/bv2133_dyxrbr_pet2_irv.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_irv.yaml) |
+| Approval | **Bird** | widely approved (19) | [page](cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_approval.yaml) |
+| STAR | **Cat** | consensus: top score, wins runoff 22–10 | [page](cases/cases_pages/bv2133_dyxrbr_pet2_star.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_star.yaml) |
 
 Every race cross-checked **LH engine = BetterVoting**.
 

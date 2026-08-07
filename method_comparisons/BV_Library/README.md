@@ -6,7 +6,7 @@ Read the reader-friendly **pages** (`BV_Library_pages/`); the `.yaml` beside eac
 
 ## STAR
 
-| Page (read this) | What it shows | src |
+| Page (read this) | What it shows | Read · run |
 |---|---|:--:|
 | [Condorcet winner](cases/cases_pages/BV_Library_star_condorcet_winner.md) | highest-scoring candidate is also the pairwise winner | [`.yaml`](cases/BV_Library_star_condorcet_winner.yaml) |
 | [runoff](cases/cases_pages/BV_Library_star_runoff.md) | the lower score total wins the automatic runoff | [`.yaml`](cases/BV_Library_star_runoff.yaml) |
@@ -20,9 +20,9 @@ Ported from BetterVoting's `AllocatedScore.test.ts`. LH's `allocated` method rep
 
 | What it shows | src |
 |---|:--:|
-| basic two-seat allocation — elect top scorer, spend a quota, second seat follows | [`.yaml`](cases/BV_Library_star_pr_basic_two_seats.yaml) |
-| fewer voters than seats — every seat still fills, in score order | [`.yaml`](cases/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
-| fractional surplus — 8 supporters vs a quota of 6 → ballots reweighted to 0.25 | [`.yaml`](cases/BV_Library_star_pr_fractional_surplus.yaml) |
+| basic two-seat allocation — elect top scorer, spend a quota, second seat follows | [page](cases/cases_pages/BV_Library_star_pr_basic_two_seats.md) · [`.yaml`](cases/BV_Library_star_pr_basic_two_seats.yaml) |
+| fewer voters than seats — every seat still fills, in score order | [page](cases/cases_pages/BV_Library_star_pr_voters_fewer_than_seats.md) · [`.yaml`](cases/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
+| fractional surplus — 8 supporters vs a quota of 6 → ballots reweighted to 0.25 | [page](cases/cases_pages/BV_Library_star_pr_fractional_surplus.md) · [`.yaml`](cases/BV_Library_star_pr_fractional_surplus.yaml) |
 
 ## Approval · Plurality · Ranked Robin
 

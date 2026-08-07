@@ -90,8 +90,8 @@ Same ballots in both files; only `voting_method:` differs.
 
 | Case | Method | Elects | Files |
 |---|---|---|---|
-| Smallest divergence — majoritarian | `bloc` | **Ben, Ana** | [yaml](cases/min_bloc_c3_b2.yaml) |
-| Smallest divergence — proportional | `allocated` | **Ben, Cleo** | [yaml](cases/min_pr_c3_b2.yaml) |
+| Smallest divergence — majoritarian | `bloc` | **Ben, Ana** | [page](cases/cases_pages/min_bloc_c3_b2.md) · [yaml](cases/min_bloc_c3_b2.yaml) |
+| Smallest divergence — proportional | `allocated` | **Ben, Cleo** | [page](cases/cases_pages/min_pr_c3_b2.md) · [yaml](cases/min_pr_c3_b2.yaml) |
 
 ## Where to go next
 

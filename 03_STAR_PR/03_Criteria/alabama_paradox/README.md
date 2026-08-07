@@ -76,8 +76,8 @@ Identical ballots in both files; only `num_winners:` differs.
 
 | Case | Seats | Elects | File |
 |---|--:|---|---|
-| Two seats | 2 | **Basil, Dahlia** | [yaml](cases/alabama_2seats.yaml) |
-| Three seats | 3 | **Aster, Basil, Clover** | [yaml](cases/alabama_3seats.yaml) |
+| Two seats | 2 | **Basil, Dahlia** | [page](cases/cases_pages/alabama_2seats.md) · [yaml](cases/alabama_2seats.yaml) |
+| Three seats | 3 | **Aster, Basil, Clover** | [page](cases/cases_pages/alabama_3seats.md) · [yaml](cases/alabama_3seats.yaml) |
 
 ## See also
 

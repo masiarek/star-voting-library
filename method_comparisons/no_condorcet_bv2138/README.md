@@ -4,11 +4,11 @@ Robert LeGrand's flagship "the method decides everything" example from his [rank
 
 **Read the lesson:** [bv2138_cxrf8v_no_condorcet.md](bv2138_cxrf8v_no_condorcet.md) — the five-way split, the LH-vs-BetterVoting Ranked Robin tiebreak divergence, and which methods BetterVoting can and can't run.
 
-| Race | Method | Winner | src |
+| Race | Method | Winner | Read · run |
 |---|---|---|:--:|
-| IRV (Hare) | RCV-IRV | Dave | [`.yaml`](cases/bv2138_cxrf8v_irv.yaml) |
-| STV, 1 seat | STV | Dave | [`.yaml`](cases/bv2138_cxrf8v_stv.yaml) |
-| Ranked Robin | Copeland | **Abby** (LH) / **Brad** (BV) — tiebreak divergence | [`.yaml`](cases/bv2138_cxrf8v_ranked_robin.yaml) |
-| STAR | STAR (ranks→scores) | **Brad** | [`.yaml`](cases/bv2138_cxrf8v_star.yaml) |
+| IRV (Hare) | RCV-IRV | Dave | [page](cases/cases_pages/bv2138_cxrf8v_irv.md) · [`.yaml`](cases/bv2138_cxrf8v_irv.yaml) |
+| STV, 1 seat | STV | Dave | [page](cases/cases_pages/bv2138_cxrf8v_stv.md) · [`.yaml`](cases/bv2138_cxrf8v_stv.yaml) |
+| Ranked Robin | Copeland | **Abby** (LH) / **Brad** (BV) — tiebreak divergence | [page](cases/cases_pages/bv2138_cxrf8v_ranked_robin.md) · [`.yaml`](cases/bv2138_cxrf8v_ranked_robin.yaml) |
+| STAR | STAR (ranks→scores) | **Brad** | [page](cases/cases_pages/bv2138_cxrf8v_star.md) · [`.yaml`](cases/bv2138_cxrf8v_star.yaml) |
 
 Full field (Cora, Erin also win under other methods): see the lesson page. Up: [method_comparisons](../README.md) · sibling: [center_squeeze_bv2137](../center_squeeze_bv2137/README.md) · field guide: [ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md)

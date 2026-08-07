@@ -20,12 +20,12 @@ Twenty-two voters in three blocs, each with a clear preference order:
 
 ## Four methods, three winners
 
-| Race | Reads | Winner | Our engine | BetterVoting | yaml |
+| Race | Reads | Winner | Our engine | BetterVoting | Read · run |
 |------|-------|:---:|:---:|:---:|:--:|
-| **Plurality** (choose one) | first choices | **Dog** | Dog | Dog | [`…_plurality.yaml`](cases/bv2132_ykjjhy_pet_plurality.yaml) |
-| **RCV-IRV** | ranked, elimination | **Fish** | Fish | Fish | [`…_irv.yaml`](cases/bv2132_ykjjhy_pet_irv.yaml) |
-| **Approval** | approve any | **Cat** | Cat | Cat | [`…_approval.yaml`](cases/bv2132_ykjjhy_pet_approval.yaml) |
-| **STAR** | score 0–5 | **Cat** | Cat | Cat | [`…_star.yaml`](cases/bv2132_ykjjhy_pet_star.yaml) |
+| **Plurality** (choose one) | first choices | **Dog** | Dog | Dog | [page](cases/cases_pages/bv2132_ykjjhy_pet_plurality.md) · [`…_plurality.yaml`](cases/bv2132_ykjjhy_pet_plurality.yaml) |
+| **RCV-IRV** | ranked, elimination | **Fish** | Fish | Fish | [page](cases/cases_pages/bv2132_ykjjhy_pet_irv.md) · [`…_irv.yaml`](cases/bv2132_ykjjhy_pet_irv.yaml) |
+| **Approval** | approve any | **Cat** | Cat | Cat | [page](cases/cases_pages/bv2132_ykjjhy_pet_approval.md) · [`…_approval.yaml`](cases/bv2132_ykjjhy_pet_approval.yaml) |
+| **STAR** | score 0–5 | **Cat** | Cat | Cat | [page](cases/cases_pages/bv2132_ykjjhy_pet_star.md) · [`…_star.yaml`](cases/bv2132_ykjjhy_pet_star.yaml) |
 
 Every race's winner is cross-checked: our LH engine (`starvote_larry_hastings.py`) and BetterVoting's tabulator **agree on all four**.
 

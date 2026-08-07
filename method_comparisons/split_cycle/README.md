@@ -4,7 +4,7 @@ The tabulatable evidence behind [Split Cycle — the method that hands the tie b
 
 | Case (source) | Ballots | What it shows |
 |---|:--:|---|
-| [`split_cycle_schulze_spoiler_c5_b40.yaml`](cases/split_cycle_schulze_spoiler_c5_b40.yaml) | 40 | **Cascade beats Bryce 40–0** — not one voter prefers Bryce. Bryce wins nothing, ever. Yet Schulze elects **Cascade** without her on the ballot and **Everglade** with her on it. Split Cycle keeps Cascade in both fields. |
+| [page](cases/cases_pages/split_cycle_schulze_spoiler_c5_b40.md) · [`split_cycle_schulze_spoiler_c5_b40.yaml`](cases/split_cycle_schulze_spoiler_c5_b40.yaml) | 40 | **Cascade beats Bryce 40–0** — not one voter prefers Bryce. Bryce wins nothing, ever. Yet Schulze elects **Cascade** without her on the ballot and **Everglade** with her on it. Split Cycle keeps Cascade in both fields. |
 
 Reproduced independently (this is **not** the paper's own profile — it's the smallest one a `pref_voting` search turned up), and **LH-only**: neither the LH engine nor BetterVoting implements Schulze or Split Cycle, and LH's Copeland result here is a tie.
 

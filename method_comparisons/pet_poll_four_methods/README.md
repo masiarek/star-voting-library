@@ -4,12 +4,12 @@ A single BetterVoting election (`ykjjhy`, Test ID **BV2132**) with **four races*
 
 **▶ Live results:** [bettervoting.com/ykjjhy/results](https://bettervoting.com/ykjjhy/results)
 
-| Method | Winner | Why | yaml |
+| Method | Winner | Why | Read · run |
 |--------|:---:|-----|:--:|
-| Plurality | **Dog** | most first choices (9) — but 13/22 rank Dog last (spoiler/FPTP) | [`.yaml`](cases/bv2132_ykjjhy_pet_plurality.yaml) |
-| RCV-IRV | **Fish** | Cat (fewest first choices) eliminated first → center squeeze | [`.yaml`](cases/bv2132_ykjjhy_pet_irv.yaml) |
-| Approval | **Cat** | broad support — approved by 22 of 22 non-Dog partisans | [`.yaml`](cases/bv2132_ykjjhy_pet_approval.yaml) |
-| STAR | **Cat** | score leaders Cat & Fish advance; Cat wins runoff 15–7 | [`.yaml`](cases/bv2132_ykjjhy_pet_star.yaml) |
+| Plurality | **Dog** | most first choices (9) — but 13/22 rank Dog last (spoiler/FPTP) | [page](cases/cases_pages/bv2132_ykjjhy_pet_plurality.md) · [`.yaml`](cases/bv2132_ykjjhy_pet_plurality.yaml) |
+| RCV-IRV | **Fish** | Cat (fewest first choices) eliminated first → center squeeze | [page](cases/cases_pages/bv2132_ykjjhy_pet_irv.md) · [`.yaml`](cases/bv2132_ykjjhy_pet_irv.yaml) |
+| Approval | **Cat** | broad support — approved by 22 of 22 non-Dog partisans | [page](cases/cases_pages/bv2132_ykjjhy_pet_approval.md) · [`.yaml`](cases/bv2132_ykjjhy_pet_approval.yaml) |
+| STAR | **Cat** | score leaders Cat & Fish advance; Cat wins runoff 15–7 | [page](cases/cases_pages/bv2132_ykjjhy_pet_star.md) · [`.yaml`](cases/bv2132_ykjjhy_pet_star.yaml) |
 
 **Cat is the Condorcet winner** (beats Dog 13–9, Fish 15–7) — it wins the two cardinal methods and loses the two that only read first choices / eliminate. Every race's winner is cross-checked: **LH engine = BetterVoting** on all four.
 

@@ -17,12 +17,12 @@ The majority is 59%, the minority 41% — so a fair 3-seat body "should" be roug
 
 | Position | Method | Seats | Winners | Character |
 |----------|--------|:---:|---------|-----------|
-| **Mayor** | [Ranked Robin](cases/pets_gov_ranked_robin.yaml) | 1 | **Dog** | Condorcet — majority's consensus |
-| **Council** | [Bloc STAR](cases/pets_gov_bloc_star.yaml) | 3 | **Dog, Fish, Cat** | majoritarian — **majority sweeps** |
-| **Committee** | [Approval](cases/pets_gov_approval.yaml) | 2 | **Dog, Cat** | majoritarian — majority again |
-| **Council (PR)** | [STAR-PR](cases/pets_gov_star_pr.yaml) | 3 | **Bird, Dog, Fish** | proportional — **minority seated** |
-| **Delegates** | [STV](cases/pets_gov_stv.yaml) | 3 | **Dog, Bird, Cat** | proportional — minority seated |
-| **Neighborhood Reps** | [Bloc Plurality (SNTV)](cases/pets_gov_bloc_plurality.yaml) | 2 | **Dog, Bird** | concentrated votes → minority seated |
+| **Mayor** | [page](cases/cases_pages/pets_gov_ranked_robin.md) · [Ranked Robin](cases/pets_gov_ranked_robin.yaml) | 1 | **Dog** | Condorcet — majority's consensus |
+| **Council** | [page](cases/cases_pages/pets_gov_bloc_star.md) · [Bloc STAR](cases/pets_gov_bloc_star.yaml) | 3 | **Dog, Fish, Cat** | majoritarian — **majority sweeps** |
+| **Committee** | [page](cases/cases_pages/pets_gov_approval.md) · [Approval](cases/pets_gov_approval.yaml) | 2 | **Dog, Cat** | majoritarian — majority again |
+| **Council (PR)** | [page](cases/cases_pages/pets_gov_star_pr.md) · [STAR-PR](cases/pets_gov_star_pr.yaml) | 3 | **Bird, Dog, Fish** | proportional — **minority seated** |
+| **Delegates** | [page](cases/cases_pages/pets_gov_stv.md) · [STV](cases/pets_gov_stv.yaml) | 3 | **Dog, Bird, Cat** | proportional — minority seated |
+| **Neighborhood Reps** | [page](cases/cases_pages/pets_gov_bloc_plurality.md) · [Bloc Plurality (SNTV)](cases/pets_gov_bloc_plurality.yaml) | 2 | **Dog, Bird** | concentrated votes → minority seated |
 
 Every winner is tabulated by the LH engine (`starvote_larry_hastings.py`); mirrors are in `pets_governance_tabulated/`.
 

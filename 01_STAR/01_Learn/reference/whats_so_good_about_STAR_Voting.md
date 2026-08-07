@@ -199,8 +199,8 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 |------|------|-------|
 | Spoiler | [`01_political_left_split.yaml`](../../../method_comparisons/split_voting/_main/01_political_left_split.yaml) | majority split → minority wins Choose-One; STAR fixes |
 | Spoiler (food) | [`03_lunch_veggie_vs_meat.yaml`](../../../method_comparisons/split_voting/_main/03_lunch_veggie_vs_meat.yaml) | same effect, lighter theme |
-| Two rounds | [`01b_c2_b2_two-candidates.yaml`](../../09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) | gears visible, no surprise |
-| Compromise | [`vote_splitting2.yaml`](../../02_Examples/cases/vote_splitting2.yaml) | 3rd candidate → consensus winner |
+| Two rounds | [page](../../09_Parked/silly_two_cand_STAR/cases/cases_pages/01b_c2_b2_two-candidates.md) · [`01b_c2_b2_two-candidates.yaml`](../../09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) | gears visible, no surprise |
+| Compromise | [page](../../02_Examples/cases/cases_pages/vote_splitting2.md) · [`vote_splitting2.yaml`](../../02_Examples/cases/vote_splitting2.yaml) | 3rd candidate → consensus winner |
 | Method divergence | any 4-candidate file with `show_irv` | `[Divergence from STAR]` block |
 | Vote-split check | any file with a `blocs:` block | yes/no spoiler verdict in numbers |
 

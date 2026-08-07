@@ -19,12 +19,12 @@ Four pets (Dog, Cat, Fish, Bird), 32 voters in four blocs:
 
 ## Four methods, four winners
 
-| Race | Winner | Our engine | BetterVoting | Why | yaml |
+| Race | Winner | Our engine | BetterVoting | Why | Read · run |
 |------|:---:|:---:|:---:|-----|:--:|
-| **Plurality** | **Dog** | Dog | Dog | most first choices (13) — but 19 rank Dog last | [`.yaml`](cases/bv2133_dyxrbr_pet2_plurality.yaml) |
-| **RCV-IRV** | **Fish** | Fish | Fish | Bird then Cat eliminated; transfers pile on Fish (19–13) | [`.yaml`](cases/bv2133_dyxrbr_pet2_irv.yaml) |
-| **Approval** | **Bird** | Bird | Bird | widely approved (19) at the 3+ threshold | [`.yaml`](cases/bv2133_dyxrbr_pet2_approval.yaml) |
-| **STAR** | **Cat** | Cat | Cat | score leaders Cat (84) & Fish (72) advance; Cat wins runoff 22–10 | [`.yaml`](cases/bv2133_dyxrbr_pet2_star.yaml) |
+| **Plurality** | **Dog** | Dog | Dog | most first choices (13) — but 19 rank Dog last | [page](cases/cases_pages/bv2133_dyxrbr_pet2_plurality.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_plurality.yaml) |
+| **RCV-IRV** | **Fish** | Fish | Fish | Bird then Cat eliminated; transfers pile on Fish (19–13) | [page](cases/cases_pages/bv2133_dyxrbr_pet2_irv.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_irv.yaml) |
+| **Approval** | **Bird** | Bird | Bird | widely approved (19) at the 3+ threshold | [page](cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_approval.yaml) |
+| **STAR** | **Cat** | Cat | Cat | score leaders Cat (84) & Fish (72) advance; Cat wins runoff 22–10 | [page](cases/cases_pages/bv2133_dyxrbr_pet2_star.md) · [`.yaml`](cases/bv2133_dyxrbr_pet2_star.yaml) |
 
 Every race is cross-checked **LH engine = BetterVoting**. Four methods, four different pets — nobody wins twice.
 

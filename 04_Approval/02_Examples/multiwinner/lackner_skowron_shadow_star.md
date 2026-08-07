@@ -40,10 +40,10 @@ So the takeaway isn't "STAR = proportional" or "STAR = majoritarian" — it's th
 
 | View | File |
 |------|------|
-| Approval original (Bloc Approval → a,b,c,d) | [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
-| Shadow **Bloc STAR** → A,B,C,D | [`lackner_skowron_shadow_bloc_star_c7_b12.yaml`](../../../02_STAR_Bloc/02_Examples/cases/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
-| Shadow **Allocated Score** (STAR-PR) → A,B,C,D | [`lackner_skowron_shadow_star_pr_c7_b12.yaml`](../../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
-| Shadow **RRV** → A,B,C,F (matches PAV) | [`lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml`](../../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
+| Approval original (Bloc Approval → a,b,c,d) | [page](cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) · [`approval_bloc_4seats_c7_b12_lackner_skowron.yaml`](cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
+| Shadow **Bloc STAR** → A,B,C,D | [page](../../../02_STAR_Bloc/02_Examples/cases/cases_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) · [`lackner_skowron_shadow_bloc_star_c7_b12.yaml`](../../../02_STAR_Bloc/02_Examples/cases/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
+| Shadow **Allocated Score** (STAR-PR) → A,B,C,D | [page](../../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_c7_b12.md) · [`lackner_skowron_shadow_star_pr_c7_b12.yaml`](../../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
+| Shadow **RRV** → A,B,C,F (matches PAV) | [page](../../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) · [`lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml`](../../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
 The approval **PAV / seqPAV / Phragmén** results come from Lackner's own [`abcvoting`](https://github.com/martinlackner/abcvoting) — run the approval file through [`06_Other/abcvoting_tabulation_engine/`](../../../06_Other/abcvoting_tabulation_engine/README.md) (guarded on the optional `abcvoting` install) to reproduce the book's proportional committees.
 

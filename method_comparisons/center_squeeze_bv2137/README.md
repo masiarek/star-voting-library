@@ -4,11 +4,11 @@ The textbook **center squeeze** from Robert LeGrand's [ranked-ballot calculator]
 
 **Read the lesson:** [bv2137_ywckmg_center_squeeze.md](bv2137_ywckmg_center_squeeze.md) — the four-way result, the LeGrand ↔ pref_voting ↔ LH ↔ BV agreement table, and the rank→score conversion.
 
-| Race | Method | Winner | src |
+| Race | Method | Winner | Read · run |
 |---|---|---|:--:|
-| IRV (Hare) | RCV-IRV | Carter | [`.yaml`](cases/bv2137_ywckmg_irv.yaml) |
-| STV, 1 seat | STV | Carter | [`.yaml`](cases/bv2137_ywckmg_stv.yaml) |
-| Ranked Robin | Copeland | **Anderson** (Condorcet) | [`.yaml`](cases/bv2137_ywckmg_ranked_robin.yaml) |
-| STAR | STAR (ranks→scores) | **Anderson** | [`.yaml`](cases/bv2137_ywckmg_star.yaml) |
+| IRV (Hare) | RCV-IRV | Carter | [page](cases/cases_pages/bv2137_ywckmg_irv.md) · [`.yaml`](cases/bv2137_ywckmg_irv.yaml) |
+| STV, 1 seat | STV | Carter | [page](cases/cases_pages/bv2137_ywckmg_stv.md) · [`.yaml`](cases/bv2137_ywckmg_stv.yaml) |
+| Ranked Robin | Copeland | **Anderson** (Condorcet) | [page](cases/cases_pages/bv2137_ywckmg_ranked_robin.md) · [`.yaml`](cases/bv2137_ywckmg_ranked_robin.yaml) |
+| STAR | STAR (ranks→scores) | **Anderson** | [page](cases/cases_pages/bv2137_ywckmg_star.md) · [`.yaml`](cases/bv2137_ywckmg_star.yaml) |
 
 Up: [method_comparisons](../README.md) · sibling: [no_condorcet_bv2138](../no_condorcet_bv2138/README.md) · field guide: [ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md)

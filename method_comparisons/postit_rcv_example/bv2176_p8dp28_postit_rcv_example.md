@@ -181,9 +181,9 @@ BetterVoting's live result for the same race: **Green** (Copeland 2, elected via
 
 | Race | YAML | `_tabulated` mirror |
 |---|---|---|
-| STAR (lead) | [bv2176_p8dp28_star.yaml](cases/bv2176_p8dp28_star.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_star_tabulated.txt) |
-| RCV-IRV | [bv2176_p8dp28_irv.yaml](cases/bv2176_p8dp28_irv.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_irv_tabulated.txt) |
-| Ranked Robin | [bv2176_p8dp28_ranked_robin.yaml](cases/bv2176_p8dp28_ranked_robin.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_ranked_robin_tabulated.txt) |
+| STAR (lead) | [page](cases/cases_pages/bv2176_p8dp28_star.md) · [bv2176_p8dp28_star.yaml](cases/bv2176_p8dp28_star.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_star_tabulated.txt) |
+| RCV-IRV | [page](cases/cases_pages/bv2176_p8dp28_irv.md) · [bv2176_p8dp28_irv.yaml](cases/bv2176_p8dp28_irv.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_irv_tabulated.txt) |
+| Ranked Robin | [page](cases/cases_pages/bv2176_p8dp28_ranked_robin.md) · [bv2176_p8dp28_ranked_robin.yaml](cases/bv2176_p8dp28_ranked_robin.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_ranked_robin_tabulated.txt) |
 
 Frozen BetterVoting export (Election + Ballots + Results): [bv2176_p8dp28_bv_export.json](cases/bv2176_p8dp28_bv_export.json) — BV's stored winners match every LH prediction (STAR Blue, RCV-IRV Purple, Ranked Robin **Green** — the ladder divergence, on the record).
 

@@ -53,9 +53,9 @@ That is not a quirk of these particular ballots. It's the structural fact: **fir
 
 | Electorate | Ranked Robin | Choose-One |
 |---|---|---|
-| P1 | [`…p1_ranked_robin.yaml`](cases/same_matrix_p1_ranked_robin.yaml) → Ben | [`…p1_plurality.yaml`](cases/same_matrix_p1_plurality.yaml) → Ada |
-| P2 | [`…p2_ranked_robin.yaml`](cases/same_matrix_p2_ranked_robin.yaml) → Ben | [`…p2_plurality.yaml`](cases/same_matrix_p2_plurality.yaml) → Ben |
-| P3 | [`…p3_ranked_robin.yaml`](cases/same_matrix_p3_ranked_robin.yaml) → Ben | [`…p3_plurality.yaml`](cases/same_matrix_p3_plurality.yaml) → Cal |
+| P1 | [page](cases/cases_pages/same_matrix_p1_ranked_robin.md) · [`…p1_ranked_robin.yaml`](cases/same_matrix_p1_ranked_robin.yaml) → Ben | [page](cases/cases_pages/same_matrix_p1_plurality.md) · [`…p1_plurality.yaml`](cases/same_matrix_p1_plurality.yaml) → Ada |
+| P2 | [page](cases/cases_pages/same_matrix_p2_ranked_robin.md) · [`…p2_ranked_robin.yaml`](cases/same_matrix_p2_ranked_robin.yaml) → Ben | [page](cases/cases_pages/same_matrix_p2_plurality.md) · [`…p2_plurality.yaml`](cases/same_matrix_p2_plurality.yaml) → Ben |
+| P3 | [page](cases/cases_pages/same_matrix_p3_ranked_robin.md) · [`…p3_ranked_robin.yaml`](cases/same_matrix_p3_ranked_robin.yaml) → Ben | [page](cases/cases_pages/same_matrix_p3_plurality.md) · [`…p3_plurality.yaml`](cases/same_matrix_p3_plurality.yaml) → Cal |
 
 The Choose-One files encode each ballot as a single `1` — which is exactly what a Choose-One ballot *is*, and makes visible what it discards.
 

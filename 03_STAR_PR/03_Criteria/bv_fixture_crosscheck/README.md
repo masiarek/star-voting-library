@@ -158,8 +158,8 @@ It also cuts the other way, and should be said: these fixtures are BetterVoting'
 
 | Case | Seats | Files |
 |---|--:|---|
-| Fractional surplus | 2 | [yaml](cases/bkk2gxj_fractional_surplus.yaml) · [frozen BV export](cases/bkk2gxj_fractional_surplus_bv_export.json) |
-| Fewer voters than seats | 3 | [yaml](cases/bhk27tk_fewer_voters_than_seats.yaml) · [frozen BV export](cases/bhk27tk_fewer_voters_than_seats_bv_export.json) |
+| Fractional surplus | 2 | [page](cases/cases_pages/bkk2gxj_fractional_surplus.md) · [yaml](cases/bkk2gxj_fractional_surplus.yaml) · [frozen BV export](cases/bkk2gxj_fractional_surplus_bv_export.json) |
+| Fewer voters than seats | 3 | [page](cases/cases_pages/bhk27tk_fewer_voters_than_seats.md) · [yaml](cases/bhk27tk_fewer_voters_than_seats.yaml) · [frozen BV export](cases/bhk27tk_fewer_voters_than_seats_bv_export.json) |
 
 ## See also
 

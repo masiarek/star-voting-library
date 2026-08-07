@@ -56,7 +56,7 @@ Same 20 rankings, both scorings strictly consistent with them — and STAR flips
 | The video's IRV rounds | [BV2176 IRV race](https://bettervoting.com/p8dp28/results) · [LH mirror](cases/cases_tabulated/bv2176_p8dp28_irv_tabulated.txt) |
 | Blue beats Purple 10–9 | any race's pairwise matrix, e.g. [the RR mirror](cases/cases_tabulated/bv2176_p8dp28_ranked_robin_tabulated.txt) |
 | STAR → Blue under the video's scores | [BV2176/77 STAR races](https://bettervoting.com/v8r66y/results) · [LH mirror](cases/cases_tabulated/bv2176_p8dp28_star_tabulated.txt) |
-| STAR → Purple under stingy scores | re-score [bv2176_p8dp28_star.yaml](cases/bv2176_p8dp28_star.yaml) with 5→5, 4→2, 3→1 and re-run (40/34/32/26; runoff Purple 9–8) |
+| STAR → Purple under stingy scores | re-score [page](cases/cases_pages/bv2176_p8dp28_star.md) · [bv2176_p8dp28_star.yaml](cases/bv2176_p8dp28_star.yaml) with 5→5, 4→2, 3→1 and re-run (40/34/32/26; runoff Purple 9–8) |
 | Approval threshold picks the winner | [BV2177 Approval race](https://bettervoting.com/v8r66y/results) (threshold ≤ 3 → Pink) · [LH mirror](cases/cases_tabulated/bv2177_v8r66y_approval_tabulated.txt) |
 | The switch, real | [BV2178](https://bettervoting.com/8kg698/results) · [LH mirror](cases/cases_tabulated/bv2178_8kg698_irv_tabulated.txt) |
 
