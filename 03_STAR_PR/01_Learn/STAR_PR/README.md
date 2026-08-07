@@ -6,6 +6,109 @@
 
 ---
 
+## See it counted first
+
+**63 ballots · 5 candidates · 3 seats.** Two camps: 39 voters back Alice/Ben/Cara, 24 back Dan/Eve. [Bloc STAR](../../../02_STAR_Bloc/README.md) would hand the majority **all three** seats. Here is what the quota does instead:
+
+<!-- report:02a_c5_b63_proportional-allocated-score -->
+```text
+[Divergence from STAR]
+  STAR                   = Ben
+  Choose-One (Plurality) = Alice   (differs from STAR)
+  Approval               = Alice   (differs from STAR)
+
+--- Allocated Score Voting Method (3 winners) ---
+
+[Allocated Score Voting]
+ Tabulating 63 ballots to fill 3 seats.
+Count × Alice,Ben,Cara,Dan,Eve
+   18 ×     5,  4,   3,  0,  0
+   15 ×     0,  0,   0,  5,  4
+   12 ×     4,  5,   3,  0,  0
+    9 ×     3,  4,   5,  0,  0
+    9 ×     0,  0,   0,  4,  5
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Ben           -- 168 -- First place
+   Alice         -- 165
+   Cara          -- 135
+   Dan           -- 111
+   Eve           -- 105
+ Ben wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 21 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 12 ballots at score 5.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 2]
+ Remaining allocation quota is 9.
+ Allocating 27 ballots at score 4.
+ This allocation overfills the remaining quota.  Returning fractional surplus.
+ Allocating only 33.33% of these ballots.
+ Keeping these ballots, but multiplying their weights by 2/3.
+ 27 ballots reweighted from 1 to 2/3.
+
+[Allocated Score Voting: Round 2]
+ Tabulating 51 remaining ballots.
+Count × Alice,Ben,Cara,Dan,Eve
+   18 ×     5,  4,   3,  0,  0
+   15 ×     0,  0,   0,  5,  4
+   12 ×     4,  5,   3,  0,  0
+    9 ×     3,  4,   5,  0,  0
+    9 ×     0,  0,   0,  4,  5
+
+[Allocated Score Voting: Round 2: Ballot allocation round]
+ Allocating 21 ballots.
+
+[Allocated Score Voting: Round 2: Ballot allocation round: Round 1]
+ Allocating 15 ballots at score 5.
+
+[Allocated Score Voting: Round 2: Ballot allocation round: Round 2]
+ Remaining allocation quota is 6.
+ Allocating 9 ballots at score 4.
+ This allocation overfills the remaining quota.  Returning fractional surplus.
+ Allocating only 66.67% of these ballots.
+ Keeping these ballots, but multiplying their weights by 1/3.
+ 9 ballots reweighted from 1 to 1/3.
+
+[Allocated Score Voting: Round 3]
+ Tabulating 36 remaining ballots.
+Count × Alice,Ben,Cara,Dan,Eve
+   18 ×     5,  4,   3,  0,  0
+   15 ×     0,  0,   0,  5,  4
+   12 ×     4,  5,   3,  0,  0
+    9 ×     3,  4,   5,  0,  0
+    9 ×     0,  0,   0,  4,  5
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (3 winners)]
+ Alice
+ Ben
+ Dan
+```
+<!-- /report -->
+
+**Winners: Alice, Ben, Dan** — the 62% majority takes two seats, the 38% minority takes one. That third seat is the entire point of this page; everything below is *how the count got there*.
+
+```yaml
+voting_method: allocated   # or: sss | rrv   (proportional)
+num_winners: 3
+```
+
+**The same 63 ballots under each method** — they agree on the slate here, and diverge on closer or more fragmented races:
+
+- [Allocated Score](../../02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) — the count above, seat by seat ([yaml](../../02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml))
+- [SSS](../../02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) — same ballots, budget-spending reweight ([yaml](../../02_Examples/cases/02b_c5_b63_proportional-sss.yaml))
+- [RRV](../../02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) — same ballots, D'Hondt divisor ([yaml](../../02_Examples/cases/02c_c5_b63_proportional-rrv.yaml))
+- [STAR-PR, 3 seats](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) — the same race as the STV file ([yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml))
+- [Bloc STAR, 2 seats](../../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) — the majoritarian contrast ([yaml](../../../02_STAR_Bloc/02_Examples/cases/01_c4_b2_bloc-star-2-seats.yaml))
+
+The head-to-head with STV, on one shared electorate, is in [STV vs STAR-PR](../stv/proportional_stv_vs_star.md): STV and all three STAR-PR methods land on the same proportional slate; Bloc STAR doesn't.
+
+---
+
 ## The core idea: quota + reweighting
 
 A proportional method shares the seats among coalitions in proportion to their support, instead of letting the largest group take everything. Two ingredients:
@@ -58,23 +161,6 @@ Fractional surplus is what makes step 3 fair rather than arbitrary: voters who g
 ## The majoritarian contrast: Bloc STAR
 
 `voting_method: bloc` runs STAR's score-then-runoff *N* times with **no reweighting**, so the largest bloc can win **every** seat. It's useful when you *want* an at-large majority result, and it's the method to **avoid when you want proportionality**. Keep it in the comparison precisely to show what reweighting buys you.
-
-## Run them
-
-```
-voting_method: allocated   # or: sss | rrv   (proportional)
-num_winners: 3
-```
-
-Worked examples in [`03_STAR_PR/`](../../README.md):
-
-- [Allocated Score](../../02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) — the same 63 ballots, seat by seat ([yaml](../../02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml))
-- [SSS](../../02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) — same ballots, budget-spending reweight ([yaml](../../02_Examples/cases/02b_c5_b63_proportional-sss.yaml))
-- [RRV](../../02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) — same ballots, D'Hondt divisor ([yaml](../../02_Examples/cases/02c_c5_b63_proportional-rrv.yaml))
-- [STAR-PR, 3 seats](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) — the same race as the STV file ([yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml))
-- [Bloc STAR, 2 seats](../../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) — the majoritarian contrast ([yaml](../../../02_STAR_Bloc/02_Examples/cases/01_c4_b2_bloc-star-2-seats.yaml))
-
-The head-to-head with STV, on one shared electorate, is in [STV vs STAR-PR](../stv/proportional_stv_vs_star.md): STV and all three STAR-PR methods land on the same proportional slate; Bloc STAR doesn't.
 
 ## Why proportional representation? (pros & cons)
 
