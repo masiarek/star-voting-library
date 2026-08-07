@@ -1,5 +1,11 @@
 # 01_STAR — single-winner STAR Voting
 
+*One ballot, two rounds: score everyone 0–5, then an automatic runoff between the top two scorers.*
+
+<img src="01_Learn/img/star_ballot_official_evc.png" width="460" alt="A STAR Voting ballot: five candidates — Andre, Blake, Carmen, David, Erin — each scored 0 to 5. Instructions at top: give your favorite five stars, give your last choice zero or leave blank, equal scores are allowed, score other candidates as desired. This voter marks Andre 5, Blake 0, Carmen 4, David 4, Erin 1. Footer: the two highest scoring candidates are finalists, your full vote goes to the finalist you prefer, and the finalist with the most votes wins.">
+
+*The ballot ([Equal Vote](https://www.equal.vote/star)) — note Carmen and David both score 4: equal scores are allowed, so you are never forced to invent a preference you don't feel. And Erin's 1 still outranks Blake's 0 — the ballot records **how much** you like each candidate, not just the order.*
+
 The library's headline method: **STAR** (Score Then Automatic Runoff) for one seat. You score every candidate **0–5**; the two highest-scoring candidates become finalists, and an **automatic runoff** gives each ballot's full vote to whichever finalist it scored higher. Two rounds, one ballot.
 
 Everything about STAR lives in this one folder: the *concept* explanations in [`01_Learn/`](01_Learn/README.md), and the **runnable examples** — tiny elections you can tabulate yourself, each isolating one idea — in the subfolders below. New to STAR? Read the concepts first:
