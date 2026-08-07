@@ -160,6 +160,35 @@ NAV_ORDER: dict[str, list[str]] = {
         "three_neighbors.md",
         "two_officers.md",
     ],
+    # 58 loose pages plus 9 hubs, and alphabetical put "Advocacy organizations"
+    # and "AI advice" above "spoiler effect" and "Condorcet" purely by spelling.
+    # SPINE_BREAK comes FIRST on purpose: this orders without numbering, because
+    # a topic shelf is not a lesson spine and "3. Spoiler effect" would promise a
+    # step 4. Everything unlisted keeps its alphabetical slot underneath, so
+    # adding a topic still needs no edit here.
+    "07_Concepts/topics": [
+        SPINE_BREAK,
+        # the meta-questions this folder's own index opens with
+        "what_makes_a_good_winner.md",
+        "what_makes_a_voting_method_good.md",
+        "Why_STAR_Voting.md",
+        "our_voting_system_is_broken.md",
+        # what people actually arrive looking for
+        "spoiler_effect.md",
+        "center_squeeze",
+        "condorcet",
+        "majority_criterion",
+        # more than one seat
+        "electing_more_than_one.md",
+        "comparing_multiwinner_methods.md",
+        # the remaining cross-method hubs, before the flat pages
+        "monotonicity",
+        "participation",
+        "summability",
+        "ties",
+        "burial",
+        "districting",
+    ],
 }
 
 # Runs before TERMS, so "ranked robin" is settled before the single-word pass
