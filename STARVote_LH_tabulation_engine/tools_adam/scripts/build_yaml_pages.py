@@ -823,6 +823,88 @@ def check_companions():
 
 
 # --------------------------------------------------------------------------- #
+# Placeable managed blocks — where they may live, and what a bare stem means
+# --------------------------------------------------------------------------- #
+# Hand-authored pages that place a `ballots:` or `report:` marker live all over
+# the repo, not just under ROOTS — 07_Concepts/, YAML_library/ and the method
+# folders all use them — so this walk starts at the repo root. Both markers have
+# to be found by the SAME walk: the ballot half once walked ROOTS only, which
+# meant a block on a cross-method concept page was never even looked at. It got
+# no fill and, worse, no note, because `ballot_blocks_for()` (which writes the
+# note) was never called on that page — and `check_ballot_blocks()` inherited the
+# blind spot, so no test could catch the page shipping without its picture.
+#
+# `_notes/` and CLAUDE.md are skipped because they DOCUMENT the markers; filling
+# in a doc's example would turn the documentation into a report.
+_SKIP_DIRS = ("site", "node_modules", "_notes", "img")
+_SKIP_FILES = ("CLAUDE.md", "AGENTS.md")
+
+
+def _hand_authored_md_pages():
+    """Every hand-authored Markdown page in the repo that a marker may sit on."""
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames
+                       if not d.startswith(".") and d not in _SKIP_DIRS
+                       and not d.endswith(GENERATED_SUFFIXES)]
+        for fn in sorted(filenames):
+            if fn.endswith(".md") and fn not in _SKIP_FILES:
+                yield os.path.join(dirpath, fn)
+
+
+_PAGES_BY_STEM = None
+
+
+def _generated_pages_by_stem():
+    """{stem: absolute generated page path}, built once.
+
+    A stem that appears twice is dropped rather than resolved by guesswork —
+    the callers then leave a visible note, which is the honest answer to an
+    ambiguous marker.
+    """
+    global _PAGES_BY_STEM
+    if _PAGES_BY_STEM is None:
+        idx, dupes = {}, set()
+        for dirpath, dirnames, filenames in os.walk(REPO):
+            dirnames[:] = [d for d in dirnames
+                           if not d.startswith(".") and d not in _SKIP_DIRS]
+            if not os.path.basename(dirpath).endswith("_pages"):
+                continue
+            for fn in filenames:
+                if not fn.endswith(".md"):
+                    continue
+                stem = fn[:-3]
+                if stem in idx:
+                    dupes.add(stem)
+                idx[stem] = os.path.join(dirpath, fn)
+        for stem in dupes:
+            idx.pop(stem, None)
+        _PAGES_BY_STEM = idx
+    return _PAGES_BY_STEM
+
+
+def _case_by_stem(stem):
+    """The case YAML behind a bare `<stem>`, found repo-wide, or None.
+
+    Resolution runs through the generated-page index rather than the filesystem,
+    which makes it unambiguous by construction: a generated page sits at
+    `<folder>/<folder>_pages/<stem>.md` beside `<folder>/<stem>.yaml`, and a
+    stem claimed by two pages is dropped from the index instead of guessed at.
+    That is what lets `report:` accept a bare stem with no path, and it is the
+    same guarantee a `ballots:` stem needs when the page asking for the art
+    lives in a different tree from the case.
+    """
+    page = _generated_pages_by_stem().get(stem)
+    if not page:
+        return None
+    folder = os.path.dirname(os.path.dirname(page))
+    for ext in (".yaml", ".yml"):
+        cand = os.path.join(folder, stem + ext)
+        if os.path.isfile(cand):
+            return cand
+    return None
+
+
+# --------------------------------------------------------------------------- #
 # Ballot art on hand-authored pages — the placeable managed block
 # --------------------------------------------------------------------------- #
 def _case_for_stem(page_path, stem):
@@ -839,6 +921,14 @@ def _case_for_stem(page_path, stem):
     The search stays inside the method folder and only accepts a unique hit —
     two same-named cases mean the marker is ambiguous, so it gets nothing rather
     than a coin flip.
+
+    Proximity runs out at the method folder, though, and a cross-method page
+    (`07_Concepts/topics/…`) is nowhere near the case it wants to show. Rather
+    than widen the *filesystem* search — where a bare stem really could match
+    anything — the last resort is `_case_by_stem()`, the same generated-page
+    index the `report:` marker resolves through, which is unambiguous by
+    construction. Proximity still goes first: it is the one thing that can tell
+    two same-named cases apart, and the index just drops those.
     """
     here = os.path.dirname(page_path)
     up = os.path.dirname(here)
@@ -855,15 +945,18 @@ def _case_for_stem(page_path, stem):
                                 recursive=True))
         if len(hits) == 1:
             return hits[0]
-    return None
+    return _case_by_stem(stem)
 
 
 def ballot_blocks_for(page_path, text=None):
     """The filled-in ballot blocks this page asks for: {marker text: new text}.
 
     Returns None when the page has no marker. A marker naming a case with no
-    art (or no case) is left with a visible note rather than silently empty —
-    a lesson that asked for pictures and got nothing should say so.
+    art (or no case at all) is left with a visible note rather than silently
+    empty — a lesson that asked for pictures and got nothing should say so, and
+    the note is what `check_ballot_blocks()` fails the page on. The two notes
+    are worded apart because they need opposite fixes: draw the art, or fix the
+    stem.
     """
     text = open(page_path, encoding="utf-8").read() if text is None else text
     if not BALLOT_BLOCK_RE.search(text):
@@ -873,16 +966,21 @@ def ballot_blocks_for(page_path, text=None):
     for m in BALLOT_BLOCK_RE.finditer(text):
         stem = m.group(1)
         src = _case_for_stem(page_path, stem)
-        body = f"*(No ballot art for `{stem}` — draw it with " \
-               f"`build_style_ballot_images.py --from-yaml <case.yaml>`.)*\n"
-        if src:
+        if not src:
+            body = (f"*(No case named `{stem}` in this repo — check the stem "
+                    f"against the case file's name.)*\n")
+        else:
+            rel_src = os.path.relpath(src, REPO).replace(os.sep, "/")
+            body = (f"*(No ballot art for `{stem}` — draw it with "
+                    f"`build_style_ballot_images.py --from-yaml {rel_src}`.)*\n")
             data = yaml.safe_load(open(src, encoding="utf-8").read())
             ballots = _find_first(data, ["ballots"]) if isinstance(data, (dict, list)) else None
             art = None
             if ballots is not None:
-                text = str(ballots).rstrip("\n")
-                kind = _ballot_kind(text, _norm_method(_find_first(data, ["voting_method"])))
-                art = _ballot_art(src, text, page_dir, kind)
+                ballots_text = str(ballots).rstrip("\n")
+                kind = _ballot_kind(ballots_text,
+                                    _norm_method(_find_first(data, ["voting_method"])))
+                art = _ballot_art(src, ballots_text, page_dir, kind)
             if art:
                 caption, table, _lead = art
                 body = "\n".join([caption, "", *table]) + "\n"
@@ -899,20 +997,10 @@ def apply_ballot_blocks(text, blocks):
 def pages_with_ballot_blocks():
     """{page path: {marker: filled block}} for every page that asks for art."""
     found = {}
-    for root in ROOTS:
-        base = os.path.join(REPO, root)
-        if not os.path.isdir(base):
-            continue
-        for dirpath, dirnames, filenames in os.walk(base):
-            dirnames[:] = [d for d in dirnames
-                           if not d.endswith(GENERATED_SUFFIXES) and d != "img"]
-            for fn in sorted(filenames):
-                if not fn.endswith(".md"):
-                    continue
-                path = os.path.join(dirpath, fn)
-                blocks = ballot_blocks_for(path)
-                if blocks:
-                    found[path] = blocks
+    for path in _hand_authored_md_pages():
+        blocks = ballot_blocks_for(path)
+        if blocks:
+            found[path] = blocks
     return found
 
 
@@ -929,45 +1017,6 @@ def check_ballot_blocks():
 # --------------------------------------------------------------------------- #
 # Engine reports on hand-authored pages — the placeable managed block
 # --------------------------------------------------------------------------- #
-_PAGES_BY_STEM = None
-
-# Hand-authored pages that ask for a report live all over the repo, not just
-# under ROOTS — 07_Concepts/, YAML_library/ and the method folders all use the
-# marker — so this walk starts at the repo root. `_notes/` and CLAUDE.md are
-# skipped because they DOCUMENT the marker; filling in a doc's example would
-# turn the documentation into a report.
-_REPORT_SKIP_DIRS = ("site", "node_modules", "_notes", "img")
-_REPORT_SKIP_FILES = ("CLAUDE.md", "AGENTS.md")
-
-
-def _generated_pages_by_stem():
-    """{stem: absolute generated page path}, built once.
-
-    A stem that appears twice is dropped rather than resolved by guesswork —
-    `report_blocks_for` then leaves a visible note, which is the honest answer
-    to an ambiguous marker.
-    """
-    global _PAGES_BY_STEM
-    if _PAGES_BY_STEM is None:
-        idx, dupes = {}, set()
-        for dirpath, dirnames, filenames in os.walk(REPO):
-            dirnames[:] = [d for d in dirnames
-                           if not d.startswith(".") and d not in _REPORT_SKIP_DIRS]
-            if not os.path.basename(dirpath).endswith("_pages"):
-                continue
-            for fn in filenames:
-                if not fn.endswith(".md"):
-                    continue
-                stem = fn[:-3]
-                if stem in idx:
-                    dupes.add(stem)
-                idx[stem] = os.path.join(dirpath, fn)
-        for stem in dupes:
-            idx.pop(stem, None)
-        _PAGES_BY_STEM = idx
-    return _PAGES_BY_STEM
-
-
 def _generated_report(stem):
     """The report fence from `<stem>`'s generated page, or None."""
     page = _generated_pages_by_stem().get(stem)
@@ -1009,17 +1058,10 @@ def apply_report_blocks(text, blocks):
 def pages_with_report_blocks():
     """{page path: {marker: filled block}} for every page that asks for a report."""
     found = {}
-    for dirpath, dirnames, filenames in os.walk(REPO):
-        dirnames[:] = [d for d in dirnames
-                       if not d.startswith(".") and d not in _REPORT_SKIP_DIRS
-                       and not d.endswith(GENERATED_SUFFIXES)]
-        for fn in sorted(filenames):
-            if not fn.endswith(".md") or fn in _REPORT_SKIP_FILES:
-                continue
-            path = os.path.join(dirpath, fn)
-            blocks = report_blocks_for(path)
-            if blocks:
-                found[path] = blocks
+    for path in _hand_authored_md_pages():
+        blocks = report_blocks_for(path)
+        if blocks:
+            found[path] = blocks
     return found
 
 
