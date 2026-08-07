@@ -82,7 +82,7 @@ The informal Test of Balance has been formalized two ways (BTernaryTau):
 
 Keep this distinct from **reversal symmetry**, a *different* criterion (if every voter flips their preferences, the winner should flip). Equality/balance is about one ballot having an equal-and-opposite partner; reversal symmetry is about flipping the *whole* electorate.
 
-For **multi-winner** elections the equal-vote idea extends to **Vote Unitarity** (Keith Edmonds) — an equal vote *plus* proportionate spending — which motivates proportional score methods like **Sequentially Spent Score (SSS)**. See [proportional: STV vs STAR-PR](../../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md) for that thread.
+For **multi-winner** elections the equal-vote idea extends to **Vote Unitarity** (Keith Edmonds) — an equal vote *plus* proportionate spending — which motivates proportional score methods like **Sequentially Spent Score (SSS)**. See [proportional: STV vs STAR-PR](../../../method_comparisons/stv_vs_star_pr/README.md) for that thread.
 
 ## Sources
 

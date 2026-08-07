@@ -41,7 +41,7 @@ Read the table as a grid, not a list. **Move along a row** and you are testing t
 
 - Bloc Approval ↔ **Bloc STAR** — both majoritarian, so a divergence is attributable to what the paper let voters say. This is the honest version of "what does 0–5 buy over Yes/No?"
 - PAV or seq-Phragmén ↔ **Allocated Score** — the same question on the proportional side.
-- STV ↔ **STAR-PR** — ranked versus scored, both proportional. Worked in this repo at [STV vs STAR-PR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md).
+- STV ↔ **STAR-PR** — ranked versus scored, both proportional. Worked in this repo at [STV vs STAR-PR](../../method_comparisons/stv_vs_star_pr/README.md).
 
 **Testing the philosophy** (ballot held constant):
 

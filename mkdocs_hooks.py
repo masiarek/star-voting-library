@@ -137,7 +137,6 @@ NAV_ORDER: dict[str, list[str]] = {
         "star_pr_faq.md",
         "what_proportional_means.md",
         "STAR_PR",
-        "stv",
         "simulating_pr.md",
     ],
     # The three tabulations, recommended-first rather than alphabetical:

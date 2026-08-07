@@ -17,7 +17,7 @@ The standard survey course in a book: plurality, majority (including the alterna
 
 **The lean:** Comparative-politics neutral — Farrell describes and assesses rather than campaigns. A political-science lens (party systems, governance), which usefully complements this repo's mechanism-and-ballot lens.
 
-**In this repo:** [electing more than one](../topics/electing_more_than_one.md) · [two-party dominance](../topics/two_party_dominance.md) · [STV vs. proportional STAR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)
+**In this repo:** [electing more than one](../topics/electing_more_than_one.md) · [two-party dominance](../topics/two_party_dominance.md) · [STV vs. proportional STAR](../../method_comparisons/stv_vs_star_pr/README.md)
 
 </td>
 </tr>

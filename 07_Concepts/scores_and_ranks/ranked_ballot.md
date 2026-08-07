@@ -48,7 +48,7 @@ This is the repo's core terminology point: **RCV names the ballot, not the count
 |---|---|---|
 | [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) | elimination rounds | what "RCV" usually means in the US |
 | [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) | Condorcet / round-robin | reads every pairwise matchup; allows equal ranks |
-| STV | proportional | multi-winner transfers ([STV vs proportional STAR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)) |
+| STV | proportional | multi-winner transfers ([STV vs proportional STAR](../../method_comparisons/stv_vs_star_pr/README.md)) |
 | [Borda](../../06_Other/other_ranked_methods/borda.md), Bucklin, and a dozen more | positional & hybrids | the [method zoo](../topics/ranked_ballot_methods_zoo.md) runs 15+ on one screen |
 
 Different tabulations of the same ballots routinely elect **different winners** — which is why "the ballots decided" is never the whole story. See [what is a voting method? — a ballot and a count](../topics/voting_method_ballot_and_count.md).

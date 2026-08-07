@@ -2,7 +2,7 @@
 
 **One line:** STAR-PR fills **several seats proportionally** using ordinary STAR **score ballots** (0–5). After each seat is awarded, the ballots that helped win it are **reweighted** (their remaining influence is reduced), so the next seat reflects the voters who haven't been represented yet. Same scored ballot as single-winner STAR — different counting, run as many times as there are seats.
 
-→ STV (the ranked-ballot proportional method) side by side with STAR-PR: [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) · Glossary: [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) · Level: **Voting 301**
+→ STV (the ranked-ballot proportional method) side by side with STAR-PR: [STV vs STAR-PR](../../../method_comparisons/stv_vs_star_pr/README.md) · Glossary: [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) · Level: **Voting 301**
 
 ---
 
@@ -105,7 +105,7 @@ num_winners: 3
 - [STAR-PR, 3 seats](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) — the same race as the STV file ([yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml))
 - [Bloc STAR, 2 seats](../../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) — the majoritarian contrast ([yaml](../../../02_STAR_Bloc/02_Examples/cases/01_c4_b2_bloc-star-2-seats.yaml))
 
-The head-to-head with STV, on one shared electorate, is in [STV vs STAR-PR](../stv/proportional_stv_vs_star.md): STV and all three STAR-PR methods land on the same proportional slate; Bloc STAR doesn't.
+The head-to-head with STV, on one shared electorate, is in [STV vs STAR-PR](../../../method_comparisons/stv_vs_star_pr/README.md): STV and all three STAR-PR methods land on the same proportional slate; Bloc STAR doesn't.
 
 ---
 

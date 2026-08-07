@@ -70,7 +70,7 @@ It also explains the earlier warnings without contradiction: a very low threshol
 
 Proportionality is measurable once an election is over: what share of voters elected someone they feel represented by, and how strongly? A score ballot supports this directly — it already records degree of support, so the same ballots that ran the election can measure how well it represented the people who cast them.
 
-Worked in this library on a shared electorate, both ways: [STV vs STAR-PR](stv/proportional_stv_vs_star.md) counts one 100-voter, 3-seat election with each proportional method (they agree; the majoritarian one doesn't), and [exercise 12](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) does the same at whiteboard scale.
+Worked in this library on a shared electorate, both ways: [STV vs STAR-PR](../../method_comparisons/stv_vs_star_pr/README.md) counts one 100-voter, 3-seat election with each proportional method (they agree; the majoritarian one doesn't), and [exercise 12](../../01_STAR/05_Practice/ex12_bloc_vs_proportional.md) does the same at whiteboard scale.
 
 ## The families underneath: why RRV differs
 

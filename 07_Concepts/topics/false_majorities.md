@@ -59,7 +59,7 @@ Quote the four verified elections above instead. They are stronger than a contes
 
 **Changing the single-winner method does not fix false majorities.** Run STAR, or Ranked Robin, or Approval, in every district in the country, and you will elect a better representative in each one — and still hand a party 63% of the seats on 34% of the vote, because the distortion lives in *electing one person per district and adding up the winners*, not in how each district picks its one person.
 
-That is not a small caveat, and it's not one to bury. The single-winner methods this repo teaches solve the [spoiler effect](spoiler_effect.md), [center squeeze](center_squeeze/README.md), [vote splitting](../../method_comparisons/split_voting/README.md), and [minority winners](../../method_comparisons/minority_winner/README.md) — all real problems, all inside a district. Proportionality is a *different* problem with a different fix: elect multiple seats together, proportionally. That's [STAR-PR](../../03_STAR_PR/01_Learn/README.md), [STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md), and the party-list systems most democracies use.
+That is not a small caveat, and it's not one to bury. The single-winner methods this repo teaches solve the [spoiler effect](spoiler_effect.md), [center squeeze](center_squeeze/README.md), [vote splitting](../../method_comparisons/split_voting/README.md), and [minority winners](../../method_comparisons/minority_winner/README.md) — all real problems, all inside a district. Proportionality is a *different* problem with a different fix: elect multiple seats together, proportionally. That's [STAR-PR](../../03_STAR_PR/01_Learn/README.md), [STV](../../method_comparisons/stv_vs_star_pr/README.md), and the party-list systems most democracies use.
 
 Anyone claiming a better single-winner ballot will make legislatures representative is overselling. Anyone claiming proportional representation will fix a *single* office — a governor, a mayor, a president — is overselling in the other direction. They are two levers on two different machines, and the honest reform case names both.
 
@@ -68,6 +68,6 @@ Anyone claiming a better single-winner ballot will make legislatures representat
 - [Two-party dominance](two_party_dominance.md) — Duverger, and the other thing single-member districts do
 - [Wasted votes](wasted_votes.md) — the per-ballot view of the same arithmetic
 - [Electing more than one](electing_more_than_one.md) — bloc vs. proportional, and why the distinction decides everything here
-- [STAR-PR](../../03_STAR_PR/01_Learn/README.md) · [proportional STV vs STAR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)
+- [STAR-PR](../../03_STAR_PR/01_Learn/README.md) · [proportional STV vs STAR](../../method_comparisons/stv_vs_star_pr/README.md)
 - [Douglas Amy, *Behind the Ballot Box*](../books/electoral_systems_and_pr.md) — the citizen-level case for PR, with its lean disclosed
 - ["The Majority Illusion," claim-checked](majority_criterion/the_majority_illusion_claim_checked.md) — where this page came from

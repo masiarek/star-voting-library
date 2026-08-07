@@ -88,7 +88,7 @@ So if you say *"RCV has center squeeze,"* a sharp opponent can correctly reply *
 | Talking about the *ballot* / the ranked family | **[ranked ballots](../scores_and_ranks/strict_vs_weak_ranks.md)** / **[ranked methods](../../06_Other/RCV_IRV/concepts/RCV-IRV-confusing-name.md)** / **RCV ballot** | reserve bare "RCV" for the ballot, and say so |
 | A Condorcet count of a ranked ballot | **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** (RCV-RR / "consensus") | a different RCV tabulation; do NOT lump it with IRV |
 | Technical passage about that count — cycles, tiebreaks, clone independence | **Copeland** (the [naming decoder](../../05_Ranked_Robin/01_Learn/condorcet_naming_decoder.md) maps the rest) | "Ranked Robin" no longer picks out one procedure — its own coiner calls it a synonym for Condorcet generally — so name the algorithm where precision carries the argument |
-| Proportional multi-winner ranked | **[STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md)** | the proportional RCV tabulation |
+| Proportional multi-winner ranked | **[STV](../../method_comparisons/stv_vs_star_pr/README.md)** | the proportional RCV tabulation |
 
 ## House style for this repo
 

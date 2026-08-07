@@ -142,5 +142,5 @@ Allocated Score is the STAR-PR method with real coverage here — **17 case file
 
 - **The other two tabulations:** [Sequentially Spent Score](sequentially_spent_score.md) · [Reweighted Range Voting](reweighted_range_voting.md)
 - **The shared theory:** [the math behind proportional STAR](the_math_behind_proportional_star.md) — quotas, apportionment, the JR → PJR → EJR hierarchy
-- **The ranked-ballot cousin:** [STV vs STAR-PR](../stv/proportional_stv_vs_star.md) on one shared electorate
+- **The ranked-ballot cousin:** [STV vs STAR-PR](../../../method_comparisons/stv_vs_star_pr/README.md) on one shared electorate
 - **The plain-language fork:** [Electing more than one, simply](../../../07_Concepts/topics/electing_more_than_one.md)

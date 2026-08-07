@@ -98,7 +98,7 @@ Count × Alice,Ben,Cara,Dan,Eve
 | Scenario | What it shows | Read · run |
 |---|---|---|
 | **The 63-ballot baseline** | The count above, directly comparable with the [Allocated](allocated_score.md) and [RRV](reweighted_range_voting.md) runs on identical ballots. | [page](../../02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) · [yaml](../../02_Examples/cases/02b_c5_b63_proportional-sss.yaml) |
-| **STAR-PR, 3 seats** | A civic-priorities race — Housing, Schools, SmallBiz — counted on the same ballots as the STV file, which is what makes the [STV head-to-head](../stv/proportional_stv_vs_star.md) possible. | [page](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) · [yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml) |
+| **STAR-PR, 3 seats** | A civic-priorities race — Housing, Schools, SmallBiz — counted on the same ballots as the STV file, which is what makes the [STV head-to-head](../../../method_comparisons/stv_vs_star_pr/README.md) possible. | [page](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) · [yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml) |
 
 ## Related
 

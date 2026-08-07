@@ -28,7 +28,7 @@ Start here with zero background.
   - [STAR](../../01_STAR/01_Learn/STAR_start_here.md) — score 0–5, then an automatic runoff.
   - [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) — rank, then eliminate-and-transfer.
   - [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) — rank, then compare every pair (a Condorcet method).
-- **Multi-winner / proportional** → [proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) and [STV](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md) — how representation (not just a single winner) is chosen.
+- **Multi-winner / proportional** → [proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/README.md) and [STV](../../method_comparisons/stv_vs_star_pr/README.md) — how representation (not just a single winner) is chosen.
 
 ---
 

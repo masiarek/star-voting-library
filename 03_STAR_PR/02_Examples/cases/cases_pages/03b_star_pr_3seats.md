@@ -19,7 +19,8 @@ Progressive cluster (Housing, Schools, Parks, Transit) ≈ 58%; Business cluster
 larger cluster and ~1 to the smaller — like STV, and unlike Bloc STAR (which
 would let the 58% majority sweep all 3). Switch voting_method between `sss`,
 `allocated`, and `rrv` to compare; `bloc` shows the majoritarian contrast.
-STV counterpart: 03a_stv_3seats.yaml. See 07_Concepts/proportional_stv_vs_star.md.
+STV counterpart: 03a_stv_3seats.yaml. Counted side by side in
+method_comparisons/stv_vs_star_pr/README.md.
 
 ## Ballots
 
