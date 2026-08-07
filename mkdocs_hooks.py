@@ -136,6 +136,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "what_proportional_means.md",
         "STAR_PR",
         "stv",
+        "simulating_pr.md",
     ],
 }
 

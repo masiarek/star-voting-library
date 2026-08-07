@@ -8,6 +8,8 @@
 
 - **[What "proportional" actually means](what_proportional_means.md)** — read before advocating for any of this. Exact proportionality has one unambiguous definition and almost no real election meets it; quotas are a *guarantee*, not a price, so candidates routinely win on less; without parties there is no longer an obvious thing to be proportional **to**; and proportionality increases descriptive representation without guaranteeing it along any single characteristic. The honest limits, in one place.
 
+- **[Simulating proportional systems](simulating_pr.md)** (401) — where the quantitative claims come from. The four voter models, the parameters a study must fix, the metrics, and the two variables that dominate results — plus the clustered spatial model the peer-reviewed STAR paper actually uses, and why it was chosen over impartial culture and plain Gaussian spatial.
+
 ## The method here
 
 - **[STAR-PR](STAR_PR/README.md)** — the ordinary 0–5 STAR ballot, counted proportionally by **reweighting**: three tabulations (Allocated Score, Sequentially Spent Score, Reweighted Range Voting), all runnable on the same ballot file by switching `voting_method:`. The mechanics: [the math behind proportional STAR](STAR_PR/the_math_behind_proportional_star.md). Runnable elections: [`03_STAR_PR/`](../README.md).
