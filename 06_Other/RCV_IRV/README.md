@@ -1,4 +1,10 @@
-# 06_Other/RCV_IRV — ranked-ballot example + the vendored IRV engine
+# 06_Other/RCV_IRV — RCV-IRV: the ranked ballot, counted by instant runoff
+
+*Rank the candidates 1st, 2nd, 3rd… then count in rounds — eliminate the last-place candidate and transfer their ballots, until someone holds a majority of what's still active.*
+
+<img src="img/rcv_irv_ballot_example.png" width="460" alt="A Ranked Choice Voting ballot: five candidates — Andre, Blake, Carmen, David, Ella — in rows, with columns 1st through 5th and exactly one bubble filled per row. This voter ranked Andre 1st, Carmen 2nd, David 3rd, Blake 4th and Ella 5th. Instructions at top: rank candidates in order of preference; equal ranks are not allowed; candidates left blank are ranked last. Footer: votes are counted in rounds; a candidate with a majority of remaining votes is elected, otherwise the candidate with the fewest votes is eliminated; in each round your vote goes to the remaining candidate you ranked highest; if your vote is unable to transfer, it is discarded.">
+
+*The ballot ([Equal Vote](https://www.equal.vote/voting_methods)) — the same five candidates as the [STAR](../../01_STAR/README.md), [Approval](../../04_Approval/README.md) and [Ranked Robin](../../05_Ranked_Robin/README.md) ballots, so the four can be read side by side. Two printed lines carry most of what the pages below argue about. **"Equal ranks are not allowed"** — the very same ranked paper, counted by Ranked Robin, lets you rank two candidates equally; that restriction is IRV's, not the ballot's. And the footer's closing sentence, **"If your vote is unable to transfer, it is discarded"** — [exhausted ballots](concepts/RCV_IRV_exhausted_ballots.md), conceded on the ballot itself, and the reason IRV's "majority" is a majority of the ballots still active rather than of everyone who voted.*
 
 A basic runnable RCV-IRV election and the vendored `pyrankvote`-based engine that counts ranked (`A>C>B`) or score ballots round by round.
 
