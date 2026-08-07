@@ -11,6 +11,25 @@ Most of this repo is about picking **one** winner well. This shelf zooms out: ho
 <td width="150" valign="top"></td>
 <td valign="top">
 
+### Fair Representation: Meeting the Ideal of One Man, One Vote — Michel L. Balinski & H. Peyton Young (1982; 2nd ed. 2001)
+
+The **readable** book on apportionment, and the one to start with if Pukelsheim below looks forbidding. Balinski and Young tell the story of how the United States argued for two centuries about dividing House seats among the states — Jefferson against Hamilton, Webster, the Alabama paradox of 1880, the Oklahoma paradox of 1907 — and use that narrative to build the mathematics rather than the other way round. It is also the source of the **Balinski–Young impossibility theorem**: no apportionment rule can both stay within quota and avoid all the paradoxes. Pukelsheim, who cites it throughout, describes it as telling the tale "in a vivid and enlightening manner"; that is a fair summary.
+
+**The lean:** None on voting methods — it predates the current reform debate and is about seat allocation, not ballots. The authors do argue a position *within* apportionment (they favor Webster/Sainte-Laguë), and say so plainly.
+
+**Why it matters here:** the impossibility result is the reason [STAR-PR's method choice](../../03_STAR_PR/01_Learn/STAR_PR/README.md) is a genuine trade rather than a solved problem — Allocated Score buys a quota guarantee from the family with monotonicity problems, RRV buys monotonicity by giving up the guarantee. Read this before concluding that either is simply the right answer.
+
+**In this repo:** [the math behind proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/the_math_behind_proportional_star.md) · [what "proportional" actually means](../../03_STAR_PR/01_Learn/what_proportional_means.md) · [glossary — Alabama paradox, quota vs divisor](../GLOSSARY.md)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="150" valign="top"></td>
+<td valign="top">
+
 ### Proportional Representation: Apportionment Methods and Their Applications — Friedrich Pukelsheim (2nd ed. 2017)
 
 The definitive mathematical treatment of the problem underneath every proportional system: given each group's claim, how do you turn fractions into whole seats *fairly*? Pukelsheim builds the whole apparatus — rounding rules, the split between **quota methods** ("divide and rank") and **divisor methods** ("divide and round"), seat bias, and the classical paradoxes (Alabama, population, new-states, no-show) — then applies it to real European Parliament and Bundestag elections. Chapter 16 is a biographical digest of the people whose names the vocabulary carries: Hare, Droop, Hagenbach-Bischoff, D'Hondt, Sainte-Laguë, Jefferson, Webster.
