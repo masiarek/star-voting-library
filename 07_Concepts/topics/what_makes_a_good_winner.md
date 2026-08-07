@@ -29,7 +29,7 @@ These are *different questions*. "Who has the most passionate first-choice base?
 
 ## The key words
 
-- **Consensus candidate** — broadly acceptable; the compromise a majority would take over any single rival. Formally, when one exists, this is the **Condorcet winner** (beats every opponent head-to-head). Often *few first choices* but *wide second-choice support*.
+- **Consensus candidate** — broadly acceptable; the compromise a majority would take over any single rival. Formally, when one exists, this is the **[Condorcet winner](condorcet/README.md)** (beats every opponent head-to-head). Often *few first choices* but *wide second-choice support*.
 - **Strong candidate** — loosely, one who holds up under scrutiny: wins [pairwise matchups](pairwise_counting.md), or has deep and wide support. The Condorcet winner is the strongest in the pairwise sense.
 - **Utilitarian winner** — maximizes [total voter satisfaction](cardinal_utility.md) (e.g. the highest score sum). The strongest in the "greatest overall happiness" sense.
 - **Spoiler / vote-split victim** — a good winner who *loses* only because similar candidates divided the vote (see [spoiler effect](spoiler_effect.md)).
@@ -54,16 +54,19 @@ Which is "correct"? Memphis is the plurality answer; Nashville is the consensus 
 
 The two ideals that most often pull apart are the **majoritarian** winner (whom a majority prefers, e.g. the Condorcet/pairwise winner) and the **utilitarian** winner ([electowiki](https://electowiki.org/wiki/Utilitarian_winner) — who maximizes total voter satisfaction). A candidate loved intensely by 51% and hated by 49% can be the *majoritarian* winner while a broadly-liked compromise is the *utilitarian* winner.
 
-A tiny illustration (Range Voting's "three brothers split one fruit," utilities on an arbitrary happiness scale):
+A tiny illustration — Range Voting's **"three brothers split one fruit,"** which circulates as a table of utilities on an arbitrary 0–11 happiness scale. Rescaled ×5/11 onto a real 0–5 ballot it becomes a **runnable election** ([`three_brothers_one_fruit_c3_b3.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml)), preserving every relation the example turns on — the ordering of the totals, and all three head-to-heads:
 
-| | apple | orange | banana |
-|---|:---:|:---:|:---:|
-| boy 1 | 2 | 7 | **8** |
-| boy 2 | 3 | 9 | **10** |
-| boy 3 | 4 | **11** | 0 |
-| **average** | 3 | **9** | 6 |
+<!-- ballots:three_brothers_one_fruit_c3_b3 -->
+<!-- /ballots -->
 
-A **majority** (boys 1 & 2) rank *banana* top → the **majoritarian** winner is banana. But *orange* maximizes **total satisfaction** (avg 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things. Ranked methods can only see order — [**preference**, not **support**](../scores_and_ranks/preference_vs_support.md) — so they chase the majoritarian/Condorcet ideal; scored methods (STAR, Score) can see *intensity*, so they can weigh the utilitarian one — and STAR's automatic runoff then checks the utilitarian leader against majority preference.
+A **majority** (boys 1 & 2) put *banana* top → the **majoritarian** winner is banana, and it beats every rival head-to-head, so it is also the Condorcet winner. But *orange* maximizes **total satisfaction** (12 to banana's 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things.
+
+Watch STAR chase one ideal per round — the scoring round is the utilitarian count, the automatic runoff is the majoritarian check, and here the check **reverses** the count:
+
+<!-- report:three_brothers_one_fruit_c3_b3 -->
+<!-- /report -->
+
+So STAR elects **banana**, the majoritarian winner, walking past the utilitarian optimum it just printed — by design, not by accident. Score voting and Approval elect orange; STAR, Ranked Robin, RCV-IRV and Plurality all elect banana. Ranked methods can only see order — [**preference**, not **support**](../scores_and_ranks/preference_vs_support.md) — so they can only ever chase the majoritarian/Condorcet ideal; scored methods (STAR, Score) can see *intensity*, so they can weigh the utilitarian one, and STAR then checks that leader against majority preference. The value on offer isn't the "right" answer — it's that **both answers are on screen and the report says which one it acted on**. (Full write-up: [Majoritarian vs. utilitarian](../../method_comparisons/majoritarian_vs_utilitarian/README.md).)
 
 In practice the Condorcet and utilitarian (VSE) answers **usually agree**; they diverge only in close elections — where Condorcet favors the majority's first choice and VSE the broadest compromise. And a Condorcet winner is only as trustworthy as the ballots: with rankings you can't tell honest from strategic votes, or see *how much* a voter liked each candidate — which is the argument for an expressive (scored) ballot.
 
