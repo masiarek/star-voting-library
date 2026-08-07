@@ -156,6 +156,92 @@ def test_alt_text_reads_an_approval_ballot_as_yes_and_no():
     assert "0–5" not in alt
 
 
+# --------------------------------------------------------------------------- #
+# The `<!-- ballots:<stem> -->` block on a hand-authored page
+# --------------------------------------------------------------------------- #
+STEM = "lone_pear_c2_b2"
+
+
+def _mini_repo(tmp_path, *, with_case=True, with_art=True):
+    """A miniature repo: a case in one tree, the lesson that wants it in another.
+
+    `07_Concepts/` is deliberately NOT one of the case roots — that is the whole
+    point. The lesson carries both markers so the two can be compared directly.
+    """
+    pages = _load("build_yaml_pages")          # fresh module: REPO is ours to set
+    pages.REPO = str(tmp_path)
+    pages._PAGES_BY_STEM = None                # the stem index is cached per run
+
+    cases = tmp_path / "method_comparisons" / "set" / "cases"
+    if with_case:
+        cases.mkdir(parents=True)
+        (cases / f"{STEM}.yaml").write_text(
+            "election_title: One pear\nvoting_method: STAR\n"
+            "ballots: |-\n  Ada,Ben\n  5,0  # Ada all the way\n  0,5\n",
+            encoding="utf-8")
+        (cases / "cases_pages").mkdir()
+        (cases / "cases_pages" / f"{STEM}.md").write_text(
+            "# generated\n\n" + pages.SNIPPET_START
+            + "\n```text\nWinner: Ada\n```\n" + pages.SNIPPET_END + "\n",
+            encoding="utf-8")
+        if with_art:
+            (cases / "img").mkdir()
+            for n in (1, 2):                   # content is irrelevant: only paths
+                (cases / "img" / f"{STEM}_ballot_{n}.png").write_bytes(b"")
+
+    lesson = tmp_path / "07_Concepts" / "topics" / "lesson.md"
+    lesson.parent.mkdir(parents=True)
+    lesson.write_text(f"# Lesson\n\n<!-- ballots:{STEM} -->\n<!-- /ballots -->\n\n"
+                      f"<!-- report:{STEM} -->\n<!-- /report -->\n", encoding="utf-8")
+    return pages, str(lesson)
+
+
+def test_both_markers_reach_the_same_pages(tmp_path):
+    """`report:` walked the whole repo; `ballots:` walked the case roots only, so
+    a block on a cross-method page was never even looked at — no fill, and no
+    note either, because the code that writes the note never ran on that page."""
+    pages, lesson = _mini_repo(tmp_path)
+    assert lesson in pages.pages_with_ballot_blocks()
+    assert lesson in pages.pages_with_report_blocks()
+
+
+def test_a_cross_tree_ballot_block_is_filled(tmp_path):
+    """Proximity runs out at the method folder, so a stem is resolved through the
+    generated-page index too — the same route `report:` takes, and the reason a
+    bare stem with no path is unambiguous."""
+    pages, lesson = _mini_repo(tmp_path)
+    filled = "".join(pages.pages_with_ballot_blocks()[lesson].values())
+    assert f"{STEM}_ballot_1.png" in filled and f"{STEM}_ballot_2.png" in filled
+    # paths are relative to the LESSON, which lives two levels down another tree
+    assert "../../method_comparisons/set/cases/img/" in filled
+    assert "| Ada | Ben |" in filled and "Ada all the way" in filled
+
+
+@pytest.mark.parametrize("with_case, with_art, note", [
+    (True, False, "No ballot art"),      # case found, nobody drew it
+    (False, False, "No case named"),     # nothing by that stem anywhere
+])
+def test_an_unfillable_ballot_block_is_never_silently_empty(tmp_path, with_case,
+                                                            with_art, note):
+    """A lesson that asked for pictures and got none has to SAY so, and the
+    staleness check has to see it — otherwise the page ships without the picture
+    it asked for and nothing goes red."""
+    pages, lesson = _mini_repo(tmp_path, with_case=with_case, with_art=with_art)
+    filled = "".join(pages.pages_with_ballot_blocks()[lesson].values())
+    assert note in filled and STEM in filled
+    assert pages.check_ballot_blocks() == [lesson]
+
+
+def test_a_filled_ballot_block_settles(tmp_path):
+    """Writing the block back is a fixed point — otherwise every run would
+    rewrite the page and `test_yaml_pages_current.py` would never be green."""
+    pages, lesson = _mini_repo(tmp_path)
+    blocks = pages.pages_with_ballot_blocks()[lesson]
+    text = pages.apply_ballot_blocks(open(lesson, encoding="utf-8").read(), blocks)
+    open(lesson, "w", encoding="utf-8").write(text)
+    assert pages.check_ballot_blocks() == []
+
+
 def _art_files():
     pages = _load("build_yaml_pages")
     for root in pages.ROOTS:

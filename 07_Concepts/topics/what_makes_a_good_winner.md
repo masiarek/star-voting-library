@@ -56,6 +56,16 @@ The two ideals that most often pull apart are the **majoritarian** winner (whom 
 
 A tiny illustration — Range Voting's **"three brothers split one fruit,"** which circulates as a table of utilities on an arbitrary 0–11 happiness scale. Rescaled ×5/11 onto a real 0–5 ballot it becomes a **runnable election** ([`bv2279_qywq7d_star.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/bv2279_qywq7d_star.yaml) — the original utilities and the mapping are recorded in the file), preserving every relation the example turns on: the ordering of the totals, and all three head-to-heads. It is also live on BetterVoting as [BV2279 ↗](https://bettervoting.com/qywq7d/results), where the same three voters count under three methods.
 
+<!-- ballots:bv2279_qywq7d_star -->
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Apple | Orange | Banana |
+|:--|:--:|:--:|:--:|
+| <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
+| <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
+| <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
+<!-- /ballots -->
+
 A **majority** (boys 1 & 2) put *banana* top → the **majoritarian** winner is banana, and it beats every rival head-to-head, so it is also the Condorcet winner. But *orange* maximizes **total satisfaction** (12 to banana's 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things.
 
 Watch STAR chase one ideal per round — the scoring round is the utilitarian count, the automatic runoff is the majoritarian check, and here the check **reverses** the count:
