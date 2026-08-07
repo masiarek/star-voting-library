@@ -621,6 +621,19 @@ reproduce loop is in the **`bettervoting` skill**.
   fine when the *recording mechanism* is the subject and the page says to ignore who
   won. Worked: `05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md`,
   `05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_…md` / `bv2262_…md`.
+- **Minimax and Coombs are tabulable** (added 2026-08-07) —
+  `tools_adam/pref_voting_tabulation_engine/minimax_report.py` and
+  `coombs_report.py`, each cross-checked against `pref_voting` on every run.
+  Neither method exists in the LH engine or on BetterVoting, which is why
+  Felsenthal's §A7 and §A10 examples were prose for so long; all 18 are now
+  runnable case files in `method_comparisons/felsenthal_paradoxes/cases/`.
+  Two things to know before quoting a Minimax result: **"worst loss" has three
+  published readings** (winning votes = Felsenthal's, margins = `pref_voting`'s,
+  pairwise opposition), which agree on an odd electorate with no drawn pairs and
+  need not otherwise; and **a truncated ballot's unstated pair is a convention,
+  not arithmetic** — this repo counts it for neither candidate, Felsenthal splits
+  it ½–½ (`--equal-prob`), and Example 31's winner changes with the choice. Say
+  which convention a number came from.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

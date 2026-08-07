@@ -47,8 +47,26 @@ python ranked_robin_report.py ../../../05_Ranked_Robin/02_Examples/cases/ranked_
 
 It uses the LH pairwise-matrix helper (`pref_voting` only for an optional Copeland cross-check) and **flags a cycle** when the leaders tie on wins — pointing to [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md).
 
+## Coombs and Minimax reports (methods nothing else here counts)
+
+Two rules in Felsenthal's appendix have no tabulator anywhere in the stack — the LH engine sends ranked ballots to pyrankvote (Hare IRV), and BetterVoting offers neither. Their examples were prose for that reason. These two tools count them, each cross-checked against `pref_voting` on every run:
+
+```bash
+uv run minimax_report.py ../../../method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_before.yaml
+uv run coombs_report.py  ../../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex18_monotonicity.yaml
+```
+
+- **`minimax_report.py`** — the Condorcet / Simpson-Kramer rule: elect the Condorcet winner, else whoever's *worst pairwise loss* is smallest. Prints the full matrix, then the worst-loss table under **winning votes** (Felsenthal's convention) and **margins** (`pref_voting`'s) side by side, saying whether they agree — they must on an odd electorate with no drawn pairs, and need not otherwise. Ends by contrasting **Copeland** (LH's Ranked Robin) reading the very same matrix. `--drop NAME` recounts without a candidate (the SCC test); `--equal-prob` switches to Felsenthal's ½–½ reading of pairs a truncated ballot left unstated, which is the whole of his Example 31.
+- **`coombs_report.py`** — delete the candidate ranked *last* by the most voters until someone holds a majority. Prints every round's first- and last-place counts and the deletion, warns when a deletion or the winner falls to a lot, and contrasts Hare IRV on the same ballots. `--drop NAME` for the SCC test.
+
+Both are used by [`coombs.md`](../../../07_Concepts/voting_paradoxes/coombs.md) and [`minimax.md`](../../../07_Concepts/voting_paradoxes/minimax.md), whose 18 worked examples they reproduce.
+
 ## Files
 
 - `pref_voting_tabulation.py` — the cross-check wrapper (parser + both engines + compare).
 - `ranked_robin_report.py` — friendly Ranked Robin / Copeland report for one or more files.
+- `minimax_report.py` — Minimax / Simpson-Kramer, both worst-loss conventions, vs Copeland.
+- `coombs_report.py` — Coombs' procedure round by round, vs Hare IRV.
+- `contingent_vote_report.py` — the Contingent and Supplementary Vote.
+- `tournament_solutions_report.py` — the C1 tournament solutions, side by side.
 - `example_tennessee.yaml` — a demo election (the classic 3-methods-3-winners case).

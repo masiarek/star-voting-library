@@ -72,6 +72,7 @@ Condorcet winner paradox,Simple,Nurmi Ex.16 sincere — STAR: elects the Condorc
 Condorcet winner paradox,Simple,Coombs Ex.17 — Choose-One: Bree on first choices,Plurality,Bree,BV2164,xbqq8t,method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_plurality.yaml
 Condorcet winner paradox,Simple,Coombs Ex.17 — Ranked Robin: the Condorcet winner Arlo,RankedRobin,Arlo,BV2164,xbqq8t,method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_ranked_robin.yaml
 Condorcet winner paradox,Simple,"Coombs Ex.17 — STAR: Bree tops the scores, the Condorcet winner Arlo wins the runoff",STAR,Arlo,BV2164,xbqq8t,method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml
+Condorcet winner paradox,Simple,Coombs Ex.18 — Bree is raised on four ballots and loses because of it,RCV-IRV,Arlo,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex18_monotonicity.yaml
 Condorcet winner paradox,Simple,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),Approval,Beau,,,method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_pareto_approval.yaml
 Condorcet winner paradox,Simple,"Hillinger Table 4 — three methods, three winners (EV-3 scale)",STAR,Ana,,,method_comparisons/hillinger_evaluative_voting/cases/hillinger_t4_ev3.yaml
 Condorcet winner paradox,Simple,"Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the majority's real choice (BV2215, 2p33qq)",STAR,Cleo,BV2215,2p33qq,method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml
@@ -109,6 +110,8 @@ SCC / spoiler,Conditional,Felsenthal Ex.1 — STAR (ranks→scores): elects the 
 SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_irv.yaml
 SCC / spoiler,Conditional,Borda SCC Ex.15 — Choose-One: C wins on first choices,Plurality,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_plurality.yaml
 SCC / spoiler,Conditional,Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits),STAR,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml
+SCC / spoiler,Conditional,Coombs Ex.22 — SCC: C drops out and A wins instead of B,RCV-IRV,A,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex22_scc.yaml
+SCC / spoiler,Conditional,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
 Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
 Condorcet's paradox (cycle),Simple,"A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder",RankedRobin,Alder,,,method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml
@@ -125,6 +128,11 @@ Condorcet's paradox (cycle),Simple,Coombs Ex.19 full — Choose-One: Cass on fir
 Condorcet's paradox (cycle),Simple,Coombs Ex.19 full — STAR: Boone wins the runoff 8–7,STAR,Boone,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/cases/bv2165_9vxcj7_star.yaml
 Condorcet's paradox (cycle),Simple,"Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D",Plurality,D,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_plurality.yaml
 Condorcet's paradox (cycle),Simple,"Minimax Ex.29 — STAR: elects B, a top-cycle member, not the universal loser",STAR,B,BV2167,f3dxq9,method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_star.yaml
+Condorcet's paradox (cycle),Simple,"Minimax Ex.30 — after: three C>A>B>D voters stay home, Minimax elects A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_after.yaml
+Condorcet's paradox (cycle),Simple,"Minimax Ex.30 — before: all 19 vote, Minimax elects B",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_before.yaml
+Condorcet's paradox (cycle),Simple,"Minimax Ex.31 — truncation: the same 19 voters, four ballots cut to their top two",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex31_truncation.yaml
+Condorcet's paradox (cycle),Simple,"Minimax Ex.32 — amalgamated: both districts elected D, together they cannot",RankedRobin,B,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex32_amalgamated.yaml
+Condorcet's paradox (cycle),Simple,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
 Condorcet's paradox (cycle),Simple,"Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)",RCV-IRV,Cara,,,method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_irv.yaml
 Condorcet's paradox (cycle),Simple,"Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)",RankedRobin,Ada,,,method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_rr.yaml
 Condorcet's paradox (cycle),Simple,"A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)",STAR,Rock,BV2157,mmcmpy,method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml
@@ -146,6 +154,7 @@ Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winne
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_irv.yaml
 Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — Ranked Robin: unmoved, still Ada",RankedRobin,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_ranked_robin.yaml
 Non-monotonicity,Conditional,"Felsenthal Ex.2 after the raise — STAR: unmoved, still Ada",STAR,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_star.yaml
+Non-monotonicity,Conditional,Coombs Ex.18 — Bree is raised on four ballots and loses because of it,RCV-IRV,Arlo,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex18_monotonicity.yaml
 Non-monotonicity,Conditional,"Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses",RCV_IRV,Begich,,,method_comparisons/monotonicity/cases/alaska_upward_after.yaml
 Non-monotonicity,Conditional,Upward monotonicity (Alaska 2022) — BEFORE: Peltola wins,RCV_IRV,Peltola,,,method_comparisons/monotonicity/cases/alaska_upward_before.yaml
 Non-monotonicity,Conditional,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",STAR,Z,,,method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml
@@ -170,11 +179,17 @@ No-show paradox,Conditional,Coombs Ex.19 full — Choose-One: Cass on first choi
 No-show paradox,Conditional,Coombs Ex.19 full — STAR: Boone wins the runoff 8–7,STAR,Boone,BV2165,9vxcj7,method_comparisons/felsenthal_paradoxes/cases/bv2165_9vxcj7_star.yaml
 No-show paradox,Conditional,"Coombs Ex.19 no-show — Choose-One: still Cass, unmoved",Plurality,Cass,BV2166,b7b8dv,method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_plurality.yaml
 No-show paradox,Conditional,Coombs Ex.19 no-show — STAR: the two abstainers get their favorite (STAR flips too),STAR,Cass,BV2166,b7b8dv,method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml
+No-show paradox,Conditional,"Minimax Ex.30 — after: three C>A>B>D voters stay home, Minimax elects A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_after.yaml
+No-show paradox,Conditional,"Minimax Ex.30 — before: all 19 vote, Minimax elects B",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_before.yaml
 No-show paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
 No-show paradox,Conditional,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,STAR,Bruno,BV2174,yyhr66,method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml
 No-show paradox,Conditional,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,STAR,April,BV2175,9dhv8y,method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml
 Twin paradox (weak form),Conditional,Felsenthal Ex.4 full electorate — Runoff/IRV: their worst choice wins,IRV,Carl,BV2150,dxg8pb,method_comparisons/felsenthal_paradoxes/cases/bv2150_dxg8pb_irv.yaml
 Twin paradox (weak form),Conditional,Felsenthal Ex.4 after two no-shows — Runoff/IRV: the abstainers do better,IRV,Beth,BV2151,97hbpw,method_comparisons/felsenthal_paradoxes/cases/bv2151_97hbpw_irv.yaml
+Twin paradox (weak form),Conditional,"Coombs Ex.21 — after: two twins join for B, and B's win becomes a coin flip",RCV-IRV,B,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex21_twin_after.yaml
+Twin paradox (weak form),Conditional,"Coombs Ex.21 — before: 20 voters, Coombs elects B outright",RCV-IRV,B,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex21_twin_before.yaml
+Twin paradox (weak form),Conditional,"Minimax Ex.30 — after: three C>A>B>D voters stay home, Minimax elects A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_after.yaml
+Twin paradox (weak form),Conditional,"Minimax Ex.30 — before: all 19 vote, Minimax elects B",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_before.yaml
 Twin paradox (weak form),Conditional,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,STAR,April,BV2175,9dhv8y,method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml
 Truncation paradox,Conditional,Fishburn Ex.14 — Choose-One: A wins on first choices,Plurality,A,BV2160,r6qc8h,method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_plurality.yaml
 Truncation paradox,Conditional,Fishburn Ex.14 — STAR: B wins the electorate whose Borda count is truncation-unstable,STAR,B,BV2160,r6qc8h,method_comparisons/felsenthal_paradoxes/cases/bv2160_r6qc8h_star.yaml
@@ -183,6 +198,7 @@ Truncation paradox,Conditional,Nurmi Ex.16 sincere — STAR: elects the Condorce
 Truncation paradox,Conditional,Nurmi Ex.16 truncated — RCV-IRV: ranking ONLY their favorite serves 17 voters better,IRV,B,BV2163,74j6vv,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_irv.yaml
 Truncation paradox,Conditional,"Nurmi Ex.16 truncated — Ranked Robin: unmoved, still B",RankedRobin,B,BV2163,74j6vv,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_ranked_robin.yaml
 Truncation paradox,Conditional,"Nurmi Ex.16 truncated — STAR: unmoved, still B",STAR,B,BV2163,74j6vv,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_star.yaml
+Truncation paradox,Conditional,"Minimax Ex.31 — truncation: the same 19 voters, four ballots cut to their top two",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex31_truncation.yaml
 Truncation paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
 Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2143_9pr3wr_teaming_fails.yaml
@@ -197,6 +213,11 @@ Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District 
 Reinforcement / multiple-districts paradox,Conditional,Felsenthal Ex.3 District II — STAR: also Bruno,STAR,Bruno,BV2148,h87k6v,method_comparisons/felsenthal_paradoxes/cases/bv2148_h87k6v_star.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_irv.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Felsenthal Ex.3 Combined — STAR: Bruno, consistent with both districts",STAR,Bruno,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_star.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A",RCV-IRV,B,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_amalgamated.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Coombs Ex.20 — District I: 34 voters, Coombs elects B",RCV-IRV,B,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district1.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Coombs Ex.20 — District II: 7 voters, B wins outright",RCV-IRV,B,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district2.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Minimax Ex.32 — amalgamated: both districts elected D, together they cannot",RankedRobin,B,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex32_amalgamated.yaml
+Reinforcement / multiple-districts paradox,Conditional,"Minimax Ex.32 — District II: three voters, D wins outright",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex32_district2.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Reinforcement — Combined, Ben branch (9 voters; both halves say Ben, the whole says Ada)",RankedRobin,Ada,,,method_comparisons/reinforcement_paradox/cases/reinf_combined_ben_c3_b9_rr.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins)",RankedRobin,Cara,BV2254,t4by6x,method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_rr.yaml
 Reinforcement / multiple-districts paradox,Conditional,"Reinforcement — combined 9 voters, counted by STAR (scoring round → Ada, runoff → Cara)",STAR,Cara,BV2254,t4by6x,method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_star.yaml
