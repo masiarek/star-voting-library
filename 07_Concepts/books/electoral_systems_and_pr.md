@@ -8,6 +8,37 @@ Most of this repo is about picking **one** winner well. This shelf zooms out: ho
 
 <table>
 <tr>
+<td width="150" valign="top"></td>
+<td valign="top">
+
+### Proportional Representation: Apportionment Methods and Their Applications — Friedrich Pukelsheim (2nd ed. 2017)
+
+The definitive mathematical treatment of the problem underneath every proportional system: given each group's claim, how do you turn fractions into whole seats *fairly*? Pukelsheim builds the whole apparatus — rounding rules, the split between **quota methods** ("divide and rank") and **divisor methods** ("divide and round"), seat bias, and the classical paradoxes (Alabama, population, new-states, no-show) — then applies it to real European Parliament and Bundestag elections. Chapter 16 is a biographical digest of the people whose names the vocabulary carries: Hare, Droop, Hagenbach-Bischoff, D'Hondt, Sainte-Laguë, Jefferson, Webster.
+
+**The lean:** None to speak of — this is mathematics with worked legal applications, not advocacy. It is also genuinely technical; treat it as a reference to consult rather than a book to read front to back.
+
+**Reading it for STAR-PR — and the caveat first.** Pukelsheim assumes **party vote totals** as input. STAR-PR has no parties: it takes a ballot matrix and reweights *sequentially*. So the vocabulary and the paradox analysis transfer; the axiomatic results do not transfer automatically, because they are proved for one-shot apportionment. With that said, the chapters that pay off directly:
+
+| Chapter | Why it matters here |
+|---|---|
+| **5 — Quota methods** | Allocated Score *is* a quota method; §5.2's Hare-quota-with-greatest-remainders is the closest classical relative of fractional surplus handling |
+| **7 — Seat biases** | The quantified version of "Hare favors small factions, Droop favors large" — a formula instead of a rule of thumb |
+| **9 — Coherence and paradoxes** | Alabama, population and no-show paradoxes, with the formal apparatus. Whether Allocated Score exhibits them is untested here |
+| **10 — Goodness-of-fit** | How to *measure* whether an outcome was proportional — the answer to "with no parties, how would you check?" |
+| **3 — Rounding rules** | §3.12 "Simple Rounding Does Not Suffice!" — fractional surplus is a rounding problem |
+| **4 — Divisor methods** | RRV's family (Jefferson/D'Hondt-style divisors), which is *why* it behaves unlike the quota methods |
+| **2 §2.7–2.9** | Equality of voters' **success values** — the rigorous statement of what proportionality is trying to equalise |
+
+Mostly skip chapters 1, 6, 12 and 13 (country-specific party-list law). Chapters 14–15 on **double proportionality** — being proportional across districts *and* parties simultaneously — are party-list machinery today, but they are the natural home for "proportional across geography *and* preference at once".
+
+**In this repo:** [the math behind proportional STAR](../../03_STAR_PR/01_Learn/STAR_PR/the_math_behind_proportional_star.md) · [what "proportional" actually means](../../03_STAR_PR/01_Learn/what_proportional_means.md) · [glossary — apportionment vocabulary](../GLOSSARY.md)
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
 <td width="150" valign="top"><img src="img/electoral_systems_farrell.jpg" width="130" alt="Cover of Electoral Systems by David Farrell"></td>
 <td valign="top">
 
