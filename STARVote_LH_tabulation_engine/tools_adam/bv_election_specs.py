@@ -5727,7 +5727,79 @@ KISSEL_FIVE_WAY_SPEC = {
 }
 
 
+_BRO_CANDS = ["Apple", "Orange", "Banana"]
+# One row per brother, aligned by voter index across all three races.
+# Boy 1, Boy 2, Boy 3 — Warren Smith's 0-11 utilities rescaled x5/11 onto the 0-5 ballot:
+#   (2, 7, 8) -> (1, 3, 4) ; (3, 9, 10) -> (1, 4, 5) ; (4, 11, 0) -> (2, 5, 0)
+_BRO_STAR = [[1, 3, 4],
+             [1, 4, 5],
+             [2, 5, 0]]
+# The same opinions as ranks (1 = top, 3 = last; nobody truncates).
+_BRO_RANKED = [[3, 2, 1],
+               [3, 2, 1],
+               [2, 1, 3]]
+# The same opinions as approvals — approve everything scored 3 or more.
+_BRO_APPROVAL = [[0, 1, 1],
+                 [0, 1, 1],
+                 [0, 1, 0]]
+
+THREE_BROTHERS_SPEC = {
+    "test_id": "BV2279",
+    "title": "Three Brothers, One Fruit — the majoritarian winner is not the utilitarian one",
+    "description": (
+        "The smallest election in which the two deepest ideals of a good winner name "
+        "different candidates. Three brothers, three fruits. Banana is two brothers' "
+        "favorite and worth literally nothing to the third; Orange is nobody's favorite "
+        "and everybody's good-enough. "
+        "The UTILITARIAN winner - highest total satisfaction - is Orange, 12 points to "
+        "Banana's 9. The MAJORITARIAN winner - preferred head-to-head by a majority, the "
+        "Condorcet winner - is Banana, which beats Orange 2-1 and Apple 2-1. Neither is "
+        "wrong; they optimize different things. "
+        "STAR shows both and tells you which one it acted on: its scoring round is the "
+        "utilitarian count and Orange leads it 12-9, then its automatic runoff is the "
+        "majoritarian check and overturns that result 2-1 for Banana. So STAR does NOT "
+        "elect the utilitarian winner here - by design, because the runoff exists to make "
+        "the score leader survive a majority vote. Ranked Robin also elects Banana. "
+        "Approval elects Orange. "
+        "The construction is Warren Smith's 'three brothers split one fruit' "
+        "(rangevoting.org), which circulates as a table of happiness numbers on an "
+        "arbitrary 0-11 scale. Here it is rescaled x5/11 onto a real 0-5 ballot, which "
+        "preserves the ordering of the totals and every head-to-head, so the example can "
+        "be counted rather than believed. The ranked race carries the same opinions as "
+        "ranks; the approval race approves every fruit a brother scored 3 or higher. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/"
+        "majoritarian_vs_utilitarian/index.html"
+    ),
+    "races": [
+        {"title": "Three brothers - STAR", "method": "STAR",
+         "num_winners": 1, "candidates": _BRO_CANDS, "ballots": _BRO_STAR},
+        {"title": "Three brothers - Ranked Robin (Copeland)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3,
+         "candidates": _BRO_CANDS, "ballots": _BRO_RANKED},
+        {"title": "Three brothers - Approval (approve at 3 or more)", "method": "Approval",
+         "num_winners": 1, "candidates": _BRO_CANDS, "ballots": _BRO_APPROVAL},
+    ],
+    "expected": (
+        "STAR -> Banana. Scoring round Orange 12, Banana 9, Apple 4; Orange and Banana "
+        "advance; automatic runoff Banana 2 - Orange 1, no Equal Support. This is a runoff "
+        "reversal: the score leader loses. Ranked Robin -> Banana, 2-0 (Banana beats Orange "
+        "2-1 and Apple 2-1; Orange beats Apple 3-0; records Banana 2, Orange 1, Apple 0). "
+        "Approval -> Orange 3, Banana 2, Apple 0. Banana is the Condorcet winner and Apple "
+        "is the Condorcet loser. No tie at any rung in any race, so tieBreakType should be "
+        "'none' throughout. LH agrees on every number and additionally reports "
+        "[Divergence from STAR] Approval = Orange. Test ID BV2279."
+    ),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [THREE_BROTHERS_SPEC]   # BV2279 -> qywq7d
+#   Created as designed, 3 ballots x 3 races. BV agrees with LH on every race:
+#   STAR -> Banana (scoring round Orange 12, Banana 9; runoff Banana 2 - Orange 1,
+#   a runoff reversal), Ranked Robin -> Banana 2-0, Approval -> Orange 3-2, and
+#   tieBreakType 'none' throughout. pref_voting's independent Copeland agrees on
+#   the RR race (unique leader Banana). Backs method_comparisons/majoritarian_vs_utilitarian.
 # Previously: [KISSEL_FIVE_WAY_SPEC]   # BV2278 -> 8cdkkc
 #   Created as designed, 1000 ballots x 4 races. BV agrees with LH on every race:
 #   Plurality -> A, IRV -> A, Ranked Robin -> C, STAR -> C, tieBreakType 'none'

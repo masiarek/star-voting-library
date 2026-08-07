@@ -1,0 +1,62 @@
+election_title: Three brothers, one fruit — Ranked Robin confirms the majoritarian winner
+
+voting_method: RankedRobin
+num_winners: 1
+
+bv_test_id: BV2279
+bv_election_id: qywq7d
+bv_results_url: https://bettervoting.com/qywq7d/results
+
+scenario_description: |
+  Race 2 of 3 in the three-brothers election (BV2279, bvid qywq7d; BV-confirmed).
+  The setup, the source and the x5/11 rescale are documented in the STAR race,
+  bv2279_qywq7d_star.yaml.
+
+  The same three opinions written as ranks. Boys 1 and 2 rank Banana first;
+  boy 3 ranks Banana LAST, behind a fruit he scored a 2.
+
+  Ranked Robin elects Banana on 2 pairwise wins — Banana beats Orange 2-1 and
+  Apple 2-1, Orange beats Apple 3-0. Banana is the Condorcet winner, Apple the
+  Condorcet loser.
+
+  This race exists to show that the majoritarian answer is not an artifact of
+  STAR's runoff. A method that reads only the order, and reads all of it, lands
+  on Banana too — because the majoritarian ideal is exactly what pairwise
+  counting measures.
+
+  And it shows what the ranks cost. Written this way, boy 3's ballot says
+  "Orange, then Apple, then Banana" — the same sentence he would write if
+  Banana were merely his least favorite rather than worth nothing at all. The
+  0 that makes Orange the utilitarian winner is not in this file. Compare the
+  Approval race (bv2279_qywq7d_approval.yaml), which keeps enough of the level
+  to elect Orange.
+
+video_script: |
+  Run this straight after the STAR race. Same three people, same opinions, and
+  the winner doesn't move — that's the point, and it's the honest one: Banana
+  really is what a majority prefers, twice over, by two different counts.
+
+  Then the turn: ask what boy 3's ranking says about how much he'd mind. It
+  says nothing. Hold that against the STAR race's scoring round, where his 0
+  was the whole reason Orange led.
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Banana>Orange>Apple   # Boy 1
+  Banana>Orange>Apple   # Boy 2
+  Orange>Apple>Banana   # Boy 3
+
+expected_winners: [Banana]
+
+# file: bv2279_qywq7d_ranked_robin.yaml

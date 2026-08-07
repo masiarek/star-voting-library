@@ -5,11 +5,18 @@ search:
 
 # Three brothers, one fruit — the majoritarian winner is not the utilitarian one
 
-*Generated from [`three_brothers_one_fruit_c3_b3.yaml`](../three_brothers_one_fruit_c3_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2279_qywq7d_star.yaml`](../bv2279_qywq7d_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Banana
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qywq7d) · **[results ↗](https://bettervoting.com/qywq7d/results)** (election `qywq7d` · test `BV2279`).
+
 ## Scenario
+
+Race 1 of 3 in the three-brothers election (BV2279, bvid qywq7d; BV-confirmed).
+Live results: https://bettervoting.com/qywq7d/results
+Companion races: bv2279_qywq7d_ranked_robin.yaml (also elects Banana) and
+bv2279_qywq7d_approval.yaml (elects Orange).
 
 The smallest election in which the two deepest ideals of a "good winner"
 name different candidates.
@@ -65,9 +72,9 @@ The ballots as marked — the filled bubble is the score given, and the score is
 
 | Ballot as marked | Apple | Orange | Banana |
 |:--|:--:|:--:|:--:|
-| <img src="../img/three_brothers_one_fruit_c3_b3_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
-| <img src="../img/three_brothers_one_fruit_c3_b3_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
-| <img src="../img/three_brothers_one_fruit_c3_b3_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
+| <img src="../img/bv2279_qywq7d_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
+| <img src="../img/bv2279_qywq7d_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
+| <img src="../img/bv2279_qywq7d_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
 
 The same ballots as the file records them:
 
@@ -159,18 +166,20 @@ Orange     1  1  1  0  0  0  |    12   4.0
 Banana     1  1  0  0  0  1  |     9   3.0
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/three_brothers_one_fruit_c3_b3_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2279_qywq7d_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/majoritarian_vs_utilitarian/cases/bv2279_qywq7d_star.yaml
 ```
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/three_brothers_one_fruit_c3_b3.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/bv2279_qywq7d_star.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2279_qywq7d_approval](bv2279_qywq7d_approval.md) · [bv2279_qywq7d_ranked_robin](bv2279_qywq7d_ranked_robin.md)

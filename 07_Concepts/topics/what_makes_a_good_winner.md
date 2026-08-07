@@ -54,13 +54,13 @@ Which is "correct"? Memphis is the plurality answer; Nashville is the consensus 
 
 The two ideals that most often pull apart are the **majoritarian** winner (whom a majority prefers, e.g. the Condorcet/pairwise winner) and the **utilitarian** winner ([electowiki](https://electowiki.org/wiki/Utilitarian_winner) — who maximizes total voter satisfaction). A candidate loved intensely by 51% and hated by 49% can be the *majoritarian* winner while a broadly-liked compromise is the *utilitarian* winner.
 
-A tiny illustration — Range Voting's **"three brothers split one fruit,"** which circulates as a table of utilities on an arbitrary 0–11 happiness scale. Rescaled ×5/11 onto a real 0–5 ballot it becomes a **runnable election** ([`three_brothers_one_fruit_c3_b3.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml) — the original utilities and the mapping are recorded in the file), preserving every relation the example turns on: the ordering of the totals, and all three head-to-heads.
+A tiny illustration — Range Voting's **"three brothers split one fruit,"** which circulates as a table of utilities on an arbitrary 0–11 happiness scale. Rescaled ×5/11 onto a real 0–5 ballot it becomes a **runnable election** ([`bv2279_qywq7d_star.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/bv2279_qywq7d_star.yaml) — the original utilities and the mapping are recorded in the file), preserving every relation the example turns on: the ordering of the totals, and all three head-to-heads. It is also live on BetterVoting as [BV2279 ↗](https://bettervoting.com/qywq7d/results), where the same three voters count under three methods.
 
 A **majority** (boys 1 & 2) put *banana* top → the **majoritarian** winner is banana, and it beats every rival head-to-head, so it is also the Condorcet winner. But *orange* maximizes **total satisfaction** (12 to banana's 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things.
 
 Watch STAR chase one ideal per round — the scoring round is the utilitarian count, the automatic runoff is the majoritarian check, and here the check **reverses** the count:
 
-<!-- report:three_brothers_one_fruit_c3_b3 -->
+<!-- report:bv2279_qywq7d_star -->
 ```text
 [Divergence from STAR]
   STAR     = Banana

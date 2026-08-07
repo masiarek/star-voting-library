@@ -3,7 +3,16 @@ election_title: Three brothers, one fruit — the majoritarian winner is not the
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2279
+bv_election_id: qywq7d
+bv_results_url: https://bettervoting.com/qywq7d/results
+
 scenario_description: |
+  Race 1 of 3 in the three-brothers election (BV2279, bvid qywq7d; BV-confirmed).
+  Live results: https://bettervoting.com/qywq7d/results
+  Companion races: bv2279_qywq7d_ranked_robin.yaml (also elects Banana) and
+  bv2279_qywq7d_approval.yaml (elects Orange).
+
   The smallest election in which the two deepest ideals of a "good winner"
   name different candidates.
 
@@ -84,4 +93,4 @@ ballots: |-
 
 expected_winners: [Banana]
 
-# file: three_brothers_one_fruit_c3_b3.yaml
+# file: bv2279_qywq7d_star.yaml

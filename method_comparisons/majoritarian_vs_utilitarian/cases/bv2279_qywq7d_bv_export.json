@@ -1,0 +1,806 @@
+{
+  "Election": {
+    "election_id": "qywq7d",
+    "title": "BV2279 — Three Brothers, One Fruit — the majoritarian winner is not the utilitarian one",
+    "description": "The smallest election in which the two deepest ideals of a good winner name different candidates. Three brothers, three fruits. Banana is two brothers' favorite and worth literally nothing to the third; Orange is nobody's favorite and everybody's good-enough. The UTILITARIAN winner - highest total satisfaction - is Orange, 12 points to Banana's 9. The MAJORITARIAN winner - preferred head-to-head by a majority, the Condorcet winner - is Banana, which beats Orange 2-1 and Apple 2-1. Neither is wrong; they optimize different things. STAR shows both and tells you which one it acted on: its scoring round is the utilitarian count and Orange leads it 12-9, then its automatic runoff is the majoritarian check and overturns that result 2-1 for Banana. So STAR does NOT elect the utilitarian winner here - by design, because the runoff exists to make the score leader survive a majority vote. Ranked Robin also elects Banana. Approval elects Orange. The construction is Warren Smith's 'three brothers split one fruit' (rangevoting.org), which circulates as a table of happiness numbers on an arbitrary 0-11 scale. Here it is rescaled x5/11 onto a real 0-5 ballot, which preserves the ordering of the totals and every head-to-head, so the example can be counted rather than believed. The ranked race carries the same opinions as ranks; the approval race approves every fruit a brother scored 3 or higher. Full lesson & tabulation: https://masiarek.github.io/star-voting-library/method_comparisons/majoritarian_vs_utilitarian/index.html",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2279 — Three brothers - STAR",
+        "race_id": "e1f8c654-dedc-4fd7-935b-5952855a175c",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "2146fca4-4016-4aed-8c79-fd3bd6c44cbe",
+            "candidate_name": "Apple"
+          },
+          {
+            "candidate_id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+            "candidate_name": "Orange"
+          },
+          {
+            "candidate_id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+            "candidate_name": "Banana"
+          }
+        ],
+        "description": "",
+        "enable_write_in": true
+      },
+      {
+        "title": "BV2279 — Three brothers - Ranked Robin (Copeland)",
+        "race_id": "fc371c6a-3564-44c7-b630-460e7b4e752b",
+        "num_winners": 1,
+        "voting_method": "RankedRobin",
+        "candidates": [
+          {
+            "candidate_id": "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+            "candidate_name": "Apple"
+          },
+          {
+            "candidate_id": "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+            "candidate_name": "Orange"
+          },
+          {
+            "candidate_id": "617880da-11e7-4112-9659-470f9ea69b62",
+            "candidate_name": "Banana"
+          }
+        ],
+        "description": "",
+        "enable_write_in": true,
+        "max_rankings": 3
+      },
+      {
+        "title": "BV2279 — Three brothers - Approval (approve at 3 or more)",
+        "race_id": "25f315fe-d0f6-4dc7-95a1-ece936d60c0d",
+        "num_winners": 1,
+        "voting_method": "Approval",
+        "candidates": [
+          {
+            "candidate_id": "a3232536-0113-46e7-b261-08abb41815d9",
+            "candidate_name": "Apple"
+          },
+          {
+            "candidate_id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+            "candidate_name": "Orange"
+          },
+          {
+            "candidate_id": "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+            "candidate_name": "Banana"
+          }
+        ],
+        "description": "",
+        "enable_write_in": true
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-08-07T21:31:08.090Z",
+    "update_date": "1786138268090",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-kd26t4yk",
+      "election_id": "qywq7d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "e1f8c654-dedc-4fd7-935b-5952855a175c",
+          "scores": [
+            {
+              "candidate_id": "2146fca4-4016-4aed-8c79-fd3bd6c44cbe",
+              "score": 1
+            },
+            {
+              "candidate_id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+              "score": 3
+            },
+            {
+              "candidate_id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "fc371c6a-3564-44c7-b630-460e7b4e752b",
+          "scores": [
+            {
+              "candidate_id": "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+              "score": 3
+            },
+            {
+              "candidate_id": "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+              "score": 2
+            },
+            {
+              "candidate_id": "617880da-11e7-4112-9659-470f9ea69b62",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "25f315fe-d0f6-4dc7-95a1-ece936d60c0d",
+          "scores": [
+            {
+              "candidate_id": "a3232536-0113-46e7-b261-08abb41815d9",
+              "score": 0
+            },
+            {
+              "candidate_id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+              "score": 1
+            },
+            {
+              "candidate_id": "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-4k66jwph",
+      "election_id": "qywq7d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "e1f8c654-dedc-4fd7-935b-5952855a175c",
+          "scores": [
+            {
+              "candidate_id": "2146fca4-4016-4aed-8c79-fd3bd6c44cbe",
+              "score": 1
+            },
+            {
+              "candidate_id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+              "score": 4
+            },
+            {
+              "candidate_id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "fc371c6a-3564-44c7-b630-460e7b4e752b",
+          "scores": [
+            {
+              "candidate_id": "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+              "score": 3
+            },
+            {
+              "candidate_id": "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+              "score": 2
+            },
+            {
+              "candidate_id": "617880da-11e7-4112-9659-470f9ea69b62",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "25f315fe-d0f6-4dc7-95a1-ece936d60c0d",
+          "scores": [
+            {
+              "candidate_id": "a3232536-0113-46e7-b261-08abb41815d9",
+              "score": 0
+            },
+            {
+              "candidate_id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+              "score": 1
+            },
+            {
+              "candidate_id": "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-fwjptv8b",
+      "election_id": "qywq7d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "e1f8c654-dedc-4fd7-935b-5952855a175c",
+          "scores": [
+            {
+              "candidate_id": "2146fca4-4016-4aed-8c79-fd3bd6c44cbe",
+              "score": 2
+            },
+            {
+              "candidate_id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+              "score": 5
+            },
+            {
+              "candidate_id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "fc371c6a-3564-44c7-b630-460e7b4e752b",
+          "scores": [
+            {
+              "candidate_id": "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+              "score": 2
+            },
+            {
+              "candidate_id": "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+              "score": 1
+            },
+            {
+              "candidate_id": "617880da-11e7-4112-9659-470f9ea69b62",
+              "score": 3
+            }
+          ]
+        },
+        {
+          "race_id": "25f315fe-d0f6-4dc7-95a1-ece936d60c0d",
+          "scores": [
+            {
+              "candidate_id": "a3232536-0113-46e7-b261-08abb41815d9",
+              "score": 0
+            },
+            {
+              "candidate_id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+              "score": 1
+            },
+            {
+              "candidate_id": "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+          "name": "Banana",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "8680dfe7-b311-42cf-9b01-4f5726536599": 0,
+            "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 2,
+            "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 2
+          },
+          "winsAgainst": {
+            "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+            "2286c6b8-81d9-475e-96da-7b6fe3e0b291": true,
+            "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": true
+          },
+          "score": 9,
+          "fiveStarCount": 1
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+          "name": "Orange",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "8680dfe7-b311-42cf-9b01-4f5726536599": 1,
+            "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 0,
+            "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 3
+          },
+          "winsAgainst": {
+            "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+            "2286c6b8-81d9-475e-96da-7b6fe3e0b291": false,
+            "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": true
+          },
+          "score": 12,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "2146fca4-4016-4aed-8c79-fd3bd6c44cbe",
+          "name": "Apple",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "8680dfe7-b311-42cf-9b01-4f5726536599": 1,
+            "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 0,
+            "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 0
+          },
+          "winsAgainst": {
+            "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+            "2286c6b8-81d9-475e-96da-7b6fe3e0b291": false,
+            "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+              "name": "Banana",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "8680dfe7-b311-42cf-9b01-4f5726536599": 0,
+                "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 2,
+                "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 2
+              },
+              "winsAgainst": {
+                "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+                "2286c6b8-81d9-475e-96da-7b6fe3e0b291": true,
+                "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": true
+              },
+              "score": 9,
+              "fiveStarCount": 1
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+              "name": "Orange",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "8680dfe7-b311-42cf-9b01-4f5726536599": 1,
+                "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 0,
+                "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 3
+              },
+              "winsAgainst": {
+                "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+                "2286c6b8-81d9-475e-96da-7b6fe3e0b291": false,
+                "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": true
+              },
+              "score": 12,
+              "fiveStarCount": 1
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Orange",
+                "Banana"
+              ],
+              "stars": [
+                "12",
+                "9"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Banana",
+              "runner_up": "Orange",
+              "winner_votes": 2,
+              "runner_up_votes": 1,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "8680dfe7-b311-42cf-9b01-4f5726536599",
+            "name": "Banana",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "8680dfe7-b311-42cf-9b01-4f5726536599": 0,
+              "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 2,
+              "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 2
+            },
+            "winsAgainst": {
+              "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+              "2286c6b8-81d9-475e-96da-7b6fe3e0b291": true,
+              "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": true
+            },
+            "score": 9,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+            "name": "Orange",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "8680dfe7-b311-42cf-9b01-4f5726536599": 1,
+              "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 0,
+              "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 3
+            },
+            "winsAgainst": {
+              "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+              "2286c6b8-81d9-475e-96da-7b6fe3e0b291": false,
+              "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": true
+            },
+            "score": 12,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "2146fca4-4016-4aed-8c79-fd3bd6c44cbe",
+            "name": "Apple",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "8680dfe7-b311-42cf-9b01-4f5726536599": 1,
+              "2286c6b8-81d9-475e-96da-7b6fe3e0b291": 0,
+              "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": 0
+            },
+            "winsAgainst": {
+              "8680dfe7-b311-42cf-9b01-4f5726536599": false,
+              "2286c6b8-81d9-475e-96da-7b6fe3e0b291": false,
+              "2146fca4-4016-4aed-8c79-fd3bd6c44cbe": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 3
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "8680dfe7-b311-42cf-9b01-4f5726536599",
+        "2286c6b8-81d9-475e-96da-7b6fe3e0b291",
+        "2146fca4-4016-4aed-8c79-fd3bd6c44cbe"
+      ],
+      "writeInDiagnostics": {
+        "numScoresDisregardedForUnprocessed": 0,
+        "numScoresDisregarded": 0
+      }
+    },
+    {
+      "votingMethod": "RankedRobin",
+      "elected": [
+        {
+          "id": "617880da-11e7-4112-9659-470f9ea69b62",
+          "name": "Banana",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 2,
+            "477158b9-d856-4fe1-ae52-b6446bb7b77f": 2,
+            "617880da-11e7-4112-9659-470f9ea69b62": 0
+          },
+          "winsAgainst": {
+            "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": true,
+            "477158b9-d856-4fe1-ae52-b6446bb7b77f": true,
+            "617880da-11e7-4112-9659-470f9ea69b62": false
+          },
+          "copelandScore": 2
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+          "name": "Orange",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 0,
+            "477158b9-d856-4fe1-ae52-b6446bb7b77f": 3,
+            "617880da-11e7-4112-9659-470f9ea69b62": 1
+          },
+          "winsAgainst": {
+            "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": false,
+            "477158b9-d856-4fe1-ae52-b6446bb7b77f": true,
+            "617880da-11e7-4112-9659-470f9ea69b62": false
+          },
+          "copelandScore": 1
+        },
+        {
+          "id": "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+          "name": "Apple",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 0,
+            "477158b9-d856-4fe1-ae52-b6446bb7b77f": 0,
+            "617880da-11e7-4112-9659-470f9ea69b62": 1
+          },
+          "winsAgainst": {
+            "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": false,
+            "477158b9-d856-4fe1-ae52-b6446bb7b77f": false,
+            "617880da-11e7-4112-9659-470f9ea69b62": false
+          },
+          "copelandScore": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "617880da-11e7-4112-9659-470f9ea69b62",
+              "name": "Banana",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 2,
+                "477158b9-d856-4fe1-ae52-b6446bb7b77f": 2,
+                "617880da-11e7-4112-9659-470f9ea69b62": 0
+              },
+              "winsAgainst": {
+                "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": true,
+                "477158b9-d856-4fe1-ae52-b6446bb7b77f": true,
+                "617880da-11e7-4112-9659-470f9ea69b62": false
+              },
+              "copelandScore": 2
+            }
+          ],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            "Banana wins round with highest number of wins."
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "617880da-11e7-4112-9659-470f9ea69b62",
+            "name": "Banana",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 2,
+              "477158b9-d856-4fe1-ae52-b6446bb7b77f": 2,
+              "617880da-11e7-4112-9659-470f9ea69b62": 0
+            },
+            "winsAgainst": {
+              "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": true,
+              "477158b9-d856-4fe1-ae52-b6446bb7b77f": true,
+              "617880da-11e7-4112-9659-470f9ea69b62": false
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+            "name": "Orange",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 0,
+              "477158b9-d856-4fe1-ae52-b6446bb7b77f": 3,
+              "617880da-11e7-4112-9659-470f9ea69b62": 1
+            },
+            "winsAgainst": {
+              "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": false,
+              "477158b9-d856-4fe1-ae52-b6446bb7b77f": true,
+              "617880da-11e7-4112-9659-470f9ea69b62": false
+            },
+            "copelandScore": 1
+          },
+          {
+            "id": "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+            "name": "Apple",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": 0,
+              "477158b9-d856-4fe1-ae52-b6446bb7b77f": 0,
+              "617880da-11e7-4112-9659-470f9ea69b62": 1
+            },
+            "winsAgainst": {
+              "2c92aae8-4b80-4320-9b98-4249fd6f7cbc": false,
+              "477158b9-d856-4fe1-ae52-b6446bb7b77f": false,
+              "617880da-11e7-4112-9659-470f9ea69b62": false
+            },
+            "copelandScore": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 3
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "2c92aae8-4b80-4320-9b98-4249fd6f7cbc",
+        "477158b9-d856-4fe1-ae52-b6446bb7b77f",
+        "617880da-11e7-4112-9659-470f9ea69b62"
+      ],
+      "writeInDiagnostics": {
+        "numScoresDisregardedForUnprocessed": 0,
+        "numScoresDisregarded": 0
+      }
+    },
+    {
+      "votingMethod": "Approval",
+      "elected": [
+        {
+          "id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+          "name": "Orange",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 1,
+            "a3232536-0113-46e7-b261-08abb41815d9": 3
+          },
+          "winsAgainst": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": true,
+            "a3232536-0113-46e7-b261-08abb41815d9": true
+          },
+          "score": 3
+        }
+      ],
+      "tied": [
+        {
+          "id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+          "name": "Orange",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 1,
+            "a3232536-0113-46e7-b261-08abb41815d9": 3
+          },
+          "winsAgainst": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": true,
+            "a3232536-0113-46e7-b261-08abb41815d9": true
+          },
+          "score": 3
+        }
+      ],
+      "other": [
+        {
+          "id": "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+          "name": "Banana",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 0,
+            "a3232536-0113-46e7-b261-08abb41815d9": 2
+          },
+          "winsAgainst": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": false,
+            "a3232536-0113-46e7-b261-08abb41815d9": true
+          },
+          "score": 2
+        },
+        {
+          "id": "a3232536-0113-46e7-b261-08abb41815d9",
+          "name": "Apple",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 0,
+            "a3232536-0113-46e7-b261-08abb41815d9": 0
+          },
+          "winsAgainst": {
+            "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+            "d9675789-5f89-4d79-b9ed-483ab7ca6abc": false,
+            "a3232536-0113-46e7-b261-08abb41815d9": false
+          },
+          "score": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+              "name": "Orange",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+                "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 1,
+                "a3232536-0113-46e7-b261-08abb41815d9": 3
+              },
+              "winsAgainst": {
+                "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+                "d9675789-5f89-4d79-b9ed-483ab7ca6abc": true,
+                "a3232536-0113-46e7-b261-08abb41815d9": true
+              },
+              "score": 3
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Orange has the most approvals and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+              "name": "Orange",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+                "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 1,
+                "a3232536-0113-46e7-b261-08abb41815d9": 3
+              },
+              "winsAgainst": {
+                "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+                "d9675789-5f89-4d79-b9ed-483ab7ca6abc": true,
+                "a3232536-0113-46e7-b261-08abb41815d9": true
+              },
+              "score": 3
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+            "name": "Orange",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+              "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 1,
+              "a3232536-0113-46e7-b261-08abb41815d9": 3
+            },
+            "winsAgainst": {
+              "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+              "d9675789-5f89-4d79-b9ed-483ab7ca6abc": true,
+              "a3232536-0113-46e7-b261-08abb41815d9": true
+            },
+            "score": 3
+          },
+          {
+            "id": "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+            "name": "Banana",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+              "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 0,
+              "a3232536-0113-46e7-b261-08abb41815d9": 2
+            },
+            "winsAgainst": {
+              "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+              "d9675789-5f89-4d79-b9ed-483ab7ca6abc": false,
+              "a3232536-0113-46e7-b261-08abb41815d9": true
+            },
+            "score": 2
+          },
+          {
+            "id": "a3232536-0113-46e7-b261-08abb41815d9",
+            "name": "Apple",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": 0,
+              "d9675789-5f89-4d79-b9ed-483ab7ca6abc": 0,
+              "a3232536-0113-46e7-b261-08abb41815d9": 0
+            },
+            "winsAgainst": {
+              "8cea0edf-bbab-49bd-8f47-9d9afbcc552f": false,
+              "d9675789-5f89-4d79-b9ed-483ab7ca6abc": false,
+              "a3232536-0113-46e7-b261-08abb41815d9": false
+            },
+            "score": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 3
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "8cea0edf-bbab-49bd-8f47-9d9afbcc552f",
+        "d9675789-5f89-4d79-b9ed-483ab7ca6abc",
+        "a3232536-0113-46e7-b261-08abb41815d9"
+      ],
+      "writeInDiagnostics": {
+        "numScoresDisregardedForUnprocessed": 0,
+        "numScoresDisregarded": 0
+      }
+    }
+  ]
+}

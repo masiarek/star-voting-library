@@ -799,6 +799,16 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2278 — Five-way - Ranked Robin (Copeland) | RankedRobin | 5 | **C** | [results ↗](https://bettervoting.com/8cdkkc/results) |
 | BV2278 — Five-way - STAR | STAR | 5 | **C** | [results ↗](https://bettervoting.com/8cdkkc/results) |
 
+## BV2279 — Three Brothers, One Fruit — the majoritarian winner is not the utilitarian one
+
+**Election** [`qywq7d`](https://bettervoting.com/qywq7d/results) · **3 races** · **3 ballots** · [frozen export](../../method_comparisons/majoritarian_vs_utilitarian/cases/bv2279_qywq7d_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2279 — Three brothers - STAR | STAR | 3 | **Banana** | [results ↗](https://bettervoting.com/qywq7d/results) |
+| BV2279 — Three brothers - Ranked Robin (Copeland) | RankedRobin | 3 | **Banana** | [results ↗](https://bettervoting.com/qywq7d/results) |
+| BV2279 — Three brothers - Approval (approve at 3 or more) | Approval | 3 | **Orange** | [results ↗](https://bettervoting.com/qywq7d/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

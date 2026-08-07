@@ -1,0 +1,42 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 3 ballots (ranked ballots).
+
+Ballots:
+   Banana > Orange > Apple
+   Banana > Orange > Apple
+   Orange > Apple > Banana
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Banana  beats Orange   2 – 1
+   Banana  beats Apple    2 – 1
+   Orange  beats Apple    3 – 0
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |  Banana   | Orange   |  Apple   |
+----------------------------------------------
+  Banana > |    ---    |2 - 0 - 1 |2 - 0 - 1 |
+  Orange > | 1 - 0 - 2 |   ---    |3 - 0 - 0 |
+   Apple > | 1 - 0 - 2 |0 - 0 - 3 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Banana     2–0–0         2      +2  Orange, Apple
+    2  Orange     1–1–0         1      +2  Apple
+    3  Apple      0–2–0         0      -4  —
+
+Winner — Ranked Robin (RCV-RR): Banana
+   beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Banana
+   Outside (2):        Orange, Apple
+   One member ⇒ Banana is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Banana is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md
