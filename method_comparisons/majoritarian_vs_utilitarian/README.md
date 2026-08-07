@@ -23,9 +23,25 @@ They usually agree. This election is built so they don't.
 
 Three voters, three candidates. Banana is two brothers' favorite and worth **zero** to the third; Orange is nobody's favorite and everybody's good-enough. Orange wins the score round 12–9; Banana wins the runoff 2–1 and the STAR election.
 
-Race 1 on BetterVoting, where both ideals are visible in one screen — Orange leads the scoring round, Banana takes the runoff, and BetterVoting's own explainer says why:
+### Race 1 — STAR: both ideals on one screen
 
-<img alt="BetterVoting results for the STAR race: Banana wins. Scoring Round — Orange 12, Banana 9, Apple 4. Automatic Runoff Round — Banana 67%, Orange 33%. A panel headed 'Why is the top scoring candidate different from the winner?' explains that the winner is the finalist preferred by the most voters." src="img/qywq7d_result.png" width="640">
+Orange leads the scoring round, Banana takes the runoff, and BetterVoting's own explainer says why:
+
+<img alt="BetterVoting results for the STAR race: Banana wins. Scoring Round — Orange 12, Banana 9, Apple 4. Automatic Runoff Round — Banana 67%, Orange 33%. A panel headed 'Why is the top scoring candidate different from the winner?' explains that the winner is the finalist preferred by the most voters." src="img/qywq7d_result_star.png" width="640">
+
+### Race 2 — Ranked Robin: the majoritarian answer, independently
+
+Same three people, ranks instead of scores. Banana wins every head-to-head it plays; Apple wins none:
+
+<img alt="BetterVoting results for the Ranked Robin race: Banana wins. Head-to-head wins — Banana 100%, Orange 50%, Apple no bar." src="img/qywq7d_result_ranked_robin.png" width="640">
+
+### Race 3 — Approval: the winner changes
+
+Same three people again, a yes/no cut at 3. Orange takes it, and Banana — the winner of the other two races — comes second:
+
+<img alt="BetterVoting results for the Approval race: Orange wins. Candidate Approval — Orange 100%, Banana 67%, Apple no bar." src="img/qywq7d_result_approval.png" width="640">
+
+Three screens, one electorate, two different winners. That is the split, without a word of argument attached.
 
 <!-- ballots:bv2279_qywq7d_star -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
