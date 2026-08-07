@@ -122,11 +122,13 @@ This is the whole difference from **[Bloc STAR](../../../02_STAR_Bloc/01_Learn/b
 
 All three use the same score ballots and differ only in *how* a ballot's weight is spent after each seat. The LH engine runs each via `voting_method:` plus `num_winners: k`.
 
-| Method | `voting_method` | How it reweights, in a line |
-|---|---|---|
-| **Allocated Score** | `allocated` | Seat the top scorer, then fully **spend a quota's worth** of the ballots that supported them most (those ballots are "used up"); repeat. This is the Equal Vote Coalition's recommended "STAR-PR." |
-| **Sequentially Spent Score** (SSS) | `sss` | Like Allocated Score, but each supporting ballot **spends score proportionally** toward the quota rather than being fully exhausted — a smoother allocation. |
-| **Reweighted Range Voting** (RRV) | `rrv` | Don't spend ballots; instead **divide each ballot's weight** by a growing factor based on how much score it has already given to winners (a D'Hondt/Jefferson-style divisor). |
+| Method | `voting_method` | How it reweights, in a line | Full page |
+|---|---|---|---|
+| **Allocated Score** | `allocated` | Seat the top scorer, then fully **spend a quota's worth** of the ballots that supported them most (those ballots are "used up"); repeat. This is the Equal Vote Coalition's recommended "STAR-PR." | [Allocated Score](allocated_score.md) |
+| **Sequentially Spent Score** (SSS) | `sss` | Like Allocated Score, but each supporting ballot **spends score proportionally** toward the quota rather than being fully exhausted — a smoother allocation. | [SSS](sequentially_spent_score.md) |
+| **Reweighted Range Voting** (RRV) | `rrv` | Don't spend ballots; instead **divide each ballot's weight** by a growing factor based on how much score it has already given to winners (a D'Hondt/Jefferson-style divisor). | [RRV](reweighted_range_voting.md) |
+
+**Do they ever actually disagree? Yes — and it takes only three voters.** Two minimal elections split all three apart: [when the STAR-PR methods disagree](../../02_Examples/method_divergences/README.md).
 
 **The trade between these families cuts both ways.** Classical apportionment theory (Pukelsheim, ch. 9) proves a **Coherence Theorem**: a method is coherent — meaning every subset of the winners, re-solved on its own, gives the same answer — *if and only if* it is a **divisor** method. Quota methods are not coherent, and they are also not house-size monotone or vote-ratio monotone, which is why they are the family historically prone to the **Alabama paradox** (add a seat, someone loses one), the **population paradox**, and the **no-show paradox**. The German Bundestag abandoned Hare-quota-with-greatest-remainders in 2008 for precisely this reason.
 

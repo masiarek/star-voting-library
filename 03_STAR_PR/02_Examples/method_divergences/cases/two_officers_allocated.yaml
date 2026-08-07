@@ -1,0 +1,56 @@
+election_title: Two officers, three candidates — Allocated Score
+voting_method: allocated
+num_winners: 2
+
+scenario_description: |
+  The companion to "three neighbors": the smallest election that splits the
+  DIVISOR method off from the two QUOTA methods. Three voters, three
+  candidates, two seats. Dana leads on score (9, against Eli 8 and Finn 7) and
+  takes seat 1 under every method. Seat 2 is the argument.
+
+  Voters 1 and 2 both gave Dana 4 stars; voter 3 gave her only 1. Everything
+  turns on how hard those two big backers are charged for the seat they won --
+  and the three methods form a clean ladder from harshest to gentlest:
+
+    * Allocated Score charges them down to 1/4. The 1.5-voter quota is
+      overfilled by the two 4-star ballots, so fractional surplus leaves them
+      at a quarter. Voter 3 is never reached by the score tiers at all and
+      keeps FULL weight.      ->  Eli 4+1/4, Finn 4+3/4  ->  Dana, Finn
+
+    * SSS charges them down to 1/3, against a SCORE quota (total 9, Hare score
+      quota 7+1/2) rather than a ballot quota. Voter 3 pays too, landing at
+      5/6.                     ->  Eli 4+1/6, Finn 4+1/3  ->  Dana, Finn
+
+    * RRV computes no quota at all and merely DIVIDES: weight becomes
+      1 / (1 + score_given_to_winners / max_score), so the two land at 5/9 --
+      dampened, not spent. They keep enough to carry their shared second
+      choice.                  ->  Eli 5+5/18, Finn 5     ->  Dana, Eli
+
+  1/4, 1/3, 5/9. As the charge gets gentler the partly-satisfied voters keep
+  more say, and at the last rung their second choice overtakes. Found by
+  exhaustive smallest-first search, verified stable across five tiebreaker
+  seeds, so no lot is involved.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Dana,Eli,Finn
+  4,3,1      # Voter 1 — Dana first, Eli a solid second
+  4,2,2      # Voter 2 — Dana first, Eli and Finn equal behind
+  1,3,4      # Voter 3 — Finn first, barely backs Dana
+
+expected_winners:
+  - Dana
+  - Finn
+
+# file: two_officers_allocated.yaml

@@ -1,0 +1,61 @@
+election_title: Three neighbors, two seats — Sequentially Spent Score
+voting_method: sss
+num_winners: 2
+
+scenario_description: |
+  The smallest election in which two proportional STAR tabulations disagree:
+  three voters, three candidates, two seats. Ana, Bo and Cleo are up; Cleo is
+  the runaway favorite and takes seat 1 under every method. The argument is
+  entirely about seat 2.
+
+  Neighbor 2 is the odd one out. She is lukewarm on Cleo (2 stars), cool on Bo
+  (2), and gives Ana nothing. Neighbors 1 and 3 both love Cleo (5) and like
+  Ana (4).
+
+  After Cleo is seated, the three methods disagree about what neighbor 2's
+  two-star support for Cleo COST her:
+
+    * Allocated Score allocates by score TIER. The 5-star group (neighbors 1
+      and 3) already overfills the 1.5-voter quota, so neighbor 2 is never
+      allocated at all and keeps her FULL weight. She alone decides seat 2,
+      and her best remaining candidate is Bo -- who has 3 points in total,
+      against Ana's 8.  ->  Bo, Cleo
+
+    * Sequentially Spent Score charges every supporter in PROPORTION to the
+      score they gave, so neighbor 2's 2 stars for Cleo did cost her weight.
+      She can no longer outweigh the residue left to neighbors 1 and 3, and
+      their 4-star support carries Ana in.  ->  Ana, Cleo
+
+    * Reweighted Range Voting divides every ballot's weight instead of
+      spending it, and lands with SSS.  ->  Ana, Cleo
+
+  Same three ballots; the seat turns purely on how a partial supporter is
+  charged for a winner they only partly wanted. Found by an exhaustive
+  smallest-first search and verified stable across five tiebreaker seeds, so
+  no lot is involved.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Ana,Bo,Cleo
+  4,0,5      # Neighbor 1 — loves Cleo, likes Ana
+  0,2,2      # Neighbor 2 — lukewarm on Cleo and Bo, nothing for Ana
+  4,1,5      # Neighbor 3 — loves Cleo, likes Ana
+
+# file: three_neighbors_sss.yaml
+
+expected_winners:
+  - Ana
+  - Cleo
+
+# file: three_neighbors_sss.yaml

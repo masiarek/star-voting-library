@@ -349,6 +349,9 @@ LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals
 LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only
 LH:star_district_B,Summability demo — STAR district B (Oak wins — a runoff reversal),1,single-race,3,STAR,LH-only
 LH:star_elects_a_covered_candidate_c4_b5,"STAR elects a covered candidate — five ballots, four cities",1,single-race,5,STAR,LH-only
+LH:three_neighbors_allocated,"Three neighbors, two seats — Allocated Score",1,single-race,3,STAR_PR,LH-only
+LH:three_neighbors_rrv,"Three neighbors, two seats — Reweighted Range Voting",1,single-race,3,STAR_PR,LH-only
+LH:three_neighbors_sss,"Three neighbors, two seats — Sequentially Spent Score",1,single-race,3,STAR_PR,LH-only
 LH:three_way_dead_rung_A,"Three-way dead-rung tie — published order A,B,C elects A",1,single-race,3,STAR,LH-only
 LH:three_way_dead_rung_B,"Three-way dead-rung tie — published order B,C,A elects B",1,single-race,3,STAR,LH-only
 LH:three_way_dead_rung_C,"Three-way dead-rung tie — published order C,A,B elects C",1,single-race,3,STAR,LH-only
@@ -364,6 +367,9 @@ LH:tie_break_08_runoff_dead_rung_adversarial_lot,"Dead rung 04 — runoff tie, n
 LH:tie_break_09_five_star_tied_nonzero,Dead rung 05 — five-star rung alive but non-separating,1,single-race,2,STAR,LH-only
 LH:tilted_cycle_c3_b5_irv,"Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)",1,single-race,5,RCV-IRV,LH-only
 LH:tilted_cycle_c3_b5_rr,"Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)",1,single-race,5,RankedRobin,LH-only
+LH:two_officers_allocated,"Two officers, three candidates — Allocated Score",1,single-race,3,STAR_PR,LH-only
+LH:two_officers_rrv,"Two officers, three candidates — Reweighted Range Voting",1,single-race,3,STAR_PR,LH-only
+LH:two_officers_sss,"Two officers, three candidates — Sequentially Spent Score",1,single-race,3,STAR_PR,LH-only
 LH:vcl_c4_b9_score_vs_runoff,"The valuable Condorcet loser — Score elects her, the runoff rejects her",1,single-race,9,STAR,LH-only
 LH:vote_splitting,Vote splitting — two chocolates split the majority,1,single-race,36,STAR,LH-only
 LH:vote_splitting2,Vote splitting — two chocolates split the majority,1,single-race,360,STAR,LH-only

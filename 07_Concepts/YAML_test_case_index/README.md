@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**518 election files** (445 single-winner, 73 multi-winner) across 18 method(s).
+**524 election files** (445 single-winner, 79 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -18,9 +18,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Approval | 21 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
-| STAR-PR (Sequential Selection) | 2 |
-| Reweighted Range | 2 |
-| Allocated Score (STAR-PR) | 17 |
+| STAR-PR (Sequential Selection) | 4 |
+| Reweighted Range | 4 |
+| Allocated Score (STAR-PR) | 19 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 6 |
 | BLOC STAR | 29 |
@@ -469,25 +469,31 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`min_bloc_c3_b2`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/min_bloc_c3_b2.md) | `method_comparisons/bloc_vs_pr/cases/` | 2 | → _Ana, Ben_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/min_bloc_c3_b2.yaml) |
 | [`blocs_bloc_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_bloc_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_bloc_c9_b10.yaml) |
 
-## STAR-PR (Sequential Selection)  (2)
+## STAR-PR (Sequential Selection)  (4)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`three_neighbors_sss`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/three_neighbors_sss.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Three neighbors, two seats — Sequentially Spent Score → _Ana, Cleo_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/three_neighbors_sss.yaml) |
+| [`two_officers_sss`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_sss.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Sequentially Spent Score → _Dana, Finn_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_sss.yaml) |
 | [`02b_c5_b63_proportional-sss`](../../03_STAR_PR/02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Sequentially Spent Score → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02b_c5_b63_proportional-sss.yaml) |
 | [`03b_star_pr_3seats`](../../03_STAR_PR/02_Examples/cases/cases_pages/03b_star_pr_3seats.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — same 3-seat electorate as the STV demo → _Housing, Schools, SmallBiz_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/03b_star_pr_3seats.yaml) |
 
-## Reweighted Range  (2)
+## Reweighted Range  (4)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`three_neighbors_rrv`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/three_neighbors_rrv.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Three neighbors, two seats — Reweighted Range Voting → _Ana, Cleo_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/three_neighbors_rrv.yaml) |
+| [`two_officers_rrv`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_rrv.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Reweighted Range Voting → _Dana, Eli_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_rrv.yaml) |
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (17)
+## Allocated Score (STAR-PR)  (19)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex12_proportional_share`](../../01_STAR/05_Practice/cases/cases_pages/ex12_proportional_share.md) | `01_STAR/05_Practice/cases/` | 2 | Exercise 12 — Two seats, one neighborhood: Allocated Score shares → _Asa, Cleo_ | [`.yaml`](../../01_STAR/05_Practice/cases/ex12_proportional_share.yaml) |
+| [`three_neighbors_allocated`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/three_neighbors_allocated.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Three neighbors, two seats — Allocated Score → _Bo, Cleo_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/three_neighbors_allocated.yaml) |
+| [`two_officers_allocated`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_allocated.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Allocated Score → _Dana, Finn_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_allocated.yaml) |
 | [`alabama_2seats`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/cases_pages/alabama_2seats.md) | `03_STAR_PR/03_Criteria/alabama_paradox/cases/` | 2 |  | [`.yaml`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/alabama_2seats.yaml) |
 | [`bkk2gxj_fractional_surplus`](../../03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/cases_pages/bkk2gxj_fractional_surplus.md) | `03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/` | 2 | → _Allison, Doug_ | [`.yaml`](../../03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/bkk2gxj_fractional_surplus.yaml) |
 | [`08_c6_b29_quota-circus-pr-2-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/08_c6_b29_quota-circus-pr-2-seats.md) | `06_Other/ballot_style_lab/cases/` | 2 | Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats) → _Amir, Bree_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/08_c6_b29_quota-circus-pr-2-seats.yaml) |

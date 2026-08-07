@@ -140,6 +140,26 @@ NAV_ORDER: dict[str, list[str]] = {
         "stv",
         "simulating_pr.md",
     ],
+    # The three tabulations, recommended-first rather than alphabetical:
+    # Allocated Score is Equal Vote's pick and the one this library actually
+    # exercises, SSS is the other quota method, RRV the divisor outlier.
+    # `the_math_…` stays last — it is the shared theory under all three.
+    "03_STAR_PR/01_Learn/STAR_PR": [
+        "allocated_score.md",
+        "sequentially_spent_score.md",
+        "reweighted_range_voting.md",
+        "the_math_behind_proportional_star.md",
+    ],
+    # Divergences before the single-method write-up: "the methods disagree"
+    # is the question a reader arrives with once they know there are three.
+    "03_STAR_PR/02_Examples": [
+        "method_divergences",
+        "bv2130_presidential_board_star_pr.md",
+    ],
+    "03_STAR_PR/02_Examples/method_divergences": [
+        "three_neighbors.md",
+        "two_officers.md",
+    ],
 }
 
 # Runs before TERMS, so "ranked robin" is settled before the single-word pass
