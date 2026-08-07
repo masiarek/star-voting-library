@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # What a method reads — the informational basis of a voting rule
 
 *Every tabulation is a two-step act: **compress** the ballots into some summary, then **decide** from the summary. Change the second step and you have a different method; change the first and you have changed what the method is even capable of noticing. This page is about the first step — which statistic a rule actually reads — the question Peter Fishburn turned into a classification in 1977. It answers a debate question worth having ("how much of my ballot does your method look at?") and defuses two claims that sound right and aren't.*

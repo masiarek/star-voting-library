@@ -1,3 +1,9 @@
+---
+tags:
+  - reform
+  - multi-winner
+---
+
 # Two-Party Dominance — the case for it, the case against, and what actually changes it
 
 "Break the two-party system" is a rallying cry for a lot of voting reformers — but two-party dominance is **not** self-evidently bad, and plenty of thoughtful people defend it. A reform library that only prosecutes it isn't teaching; it's campaigning. So this page steelmans **both** sides, then draws the one distinction that actually matters for voting methods: **what makes two-party dominance change, and what doesn't.**

@@ -1,3 +1,8 @@
+---
+tags:
+  - reform
+---
+
 # RCV-IRV vs. STAR — A Side-by-Side
 
 *A neutral overview routing to the detailed facet pages. The honest summary: each method has real, documented strengths the other lacks — this is about specific trade-offs, not one being good and the other bad.*

@@ -1,3 +1,8 @@
+---
+tags:
+  - people
+---
+
 # Who's who in voting methods — a sourced reference
 
 *The names you'll keep running into in social-choice theory and electoral reform, grouped by the tradition or method they're associated with. This is **a reference, not a ranking** — no one here is presented as more correct than anyone else. Where a person advocates a particular method, that's stated plainly as **disclosure** (so you can read their work knowing where they stand), not as endorsement or criticism. The companion page [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) explains why that disclosure matters: the most-cited "measurers" are frequently also advocates — on every side.*

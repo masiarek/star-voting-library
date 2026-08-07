@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # Ballot & Terminology Basics
 
 *The four ideas people most often get wrong about voting methods — a short, four-step reading path. Read in order, or jump to whichever myth you're clearing up.*

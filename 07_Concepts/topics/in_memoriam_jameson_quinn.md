@@ -1,3 +1,8 @@
+---
+tags:
+  - people
+---
+
 # In memoriam — Jameson Quinn (1974–2025)
 
 *Jameson (James Arnold) Quinn, a statistician and voting-methods researcher whose work runs through this whole library, died on March 23, 2025, in a fall in Guatemala, where he lived with his wife. By several accounts he was trying to rescue a dog. He was 51.*

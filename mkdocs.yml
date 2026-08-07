@@ -104,6 +104,11 @@ hooks:
 plugins:
   - search
   - same-dir
+  # Built into mkdocs-material, so this adds NO dependency and no lock
+  # churn. Builds tags.md into a browse-by-tag index from each page's
+  # `tags:` front matter. Vocabulary and the reason there are no
+  # per-method tags are documented on tags.md itself.
+  - tags
   # Site-only URL redirects. The source .md keeps its content on disk (GitHub's
   # folder view still renders it in full); only the BUILT page at that URL is
   # replaced by a redirect stub. Use sparingly — a redirected folder README is

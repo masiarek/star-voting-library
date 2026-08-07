@@ -1,3 +1,9 @@
+---
+tags:
+  - reform
+  - theory
+---
+
 # Does a better ballot end political polarization? — the median-voter convergence argument, and its limits
 
 The biggest hope pinned on voting reform — loudest from the **cardinal / "MaxVoting" camp** (Approval, Score, STAR) — is that changing the *ballot* doesn't just pick better winners, it **ends political division**. The honest verdict: a better ballot removes the machinery that manufactures and *rewards* polarization, which is a real and important thing — but "ends division" overshoots the evidence. This page states the argument in its strongest form, concedes its genuine kernel, and marks exactly where it breaks. It's the fair-minded companion to [Two-party dominance](two_party_dominance.md) and leans on [the spatial voting model](spatial_voting_model.md) for the geometry.

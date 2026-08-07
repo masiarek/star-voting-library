@@ -1,3 +1,9 @@
+---
+tags:
+  - foundations
+  - simulation
+---
+
 # Election simulation models — how voters and ballots are generated for testing
 
 *You can't read voters' minds, and you can't run millions of real elections under a dozen methods. So to compare methods (the [VSE / Bayesian-Regret](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) studies), you **simulate**: generate synthetic electorates, cast ballots, tabulate, and score the outcome — thousands of times. This page is the neutral technical menu of the models used to generate those electorates, and a standing caution: **every conclusion is conditional on the model.***

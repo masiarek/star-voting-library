@@ -1,3 +1,8 @@
+---
+tags:
+  - people
+---
+
 # Choosing Among the Equal Vote Methods — STAR, Approval, Ranked Robin
 
 The [Equal Vote Coalition](https://www.equal.vote) endorses three single-winner methods, and this repo teaches all three: **[STAR](../../01_STAR/01_Learn/STAR_start_here.md)** (score, then automatic runoff), **[Approval](../../04_Approval/01_Learn/approval_voting.md)** (mark the ones you like, most marks win), and **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** (rank them, most head-to-head wins). All three clear the low bar that matters most — they end the [spoiler effect](spoiler_effect.md) and the [choose-one](plurality.md) status quo, and they let you support a favorite without betraying them the way [RCV-IRV](rcv_irv_vs_star.md) can.

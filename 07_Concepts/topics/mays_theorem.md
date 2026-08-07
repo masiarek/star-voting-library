@@ -1,3 +1,8 @@
+---
+tags:
+  - theory
+---
+
 # May's Theorem — why two candidates are easy, and everything hard starts at three
 
 *Every impossibility result in this library is the answer to a question that only becomes interesting at **three** candidates. With exactly **two**, there is no debate to have: majority rule is not merely a good choice, it is **provably the only** rule meeting three conditions almost nobody would give up. That's May's Theorem (1952), and it is the positive result the negative ones are measured against. It also supplies the fairest available framing of Choose-One voting: **First-Past-The-Post is not an unreasonable system — it is a two-candidate system, deployed in a world with more than two candidates.***

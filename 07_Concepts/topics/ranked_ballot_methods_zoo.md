@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # The ranked-ballot method zoo — many ways to count one ranked ballot
 
 *Robert LeGrand's [ranked-ballot voting calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html) offers fifteen-plus methods — Baldwin, Black, Borda, Bucklin, Carey, Coombs, Copeland, Dodgson, Hare, Nanson, Raynaud, Schulze, Simpson, Small, Tideman — all fed **the same ranked ballots**. That single screen is the clearest possible demonstration of this repo's core terminology point: **RCV names a ballot (ranked); it does not name a tabulation.** IRV is just one way to count a ranked ballot; here are a dozen more, and they routinely pick different winners on identical votes.*

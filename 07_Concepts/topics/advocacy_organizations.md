@@ -1,3 +1,8 @@
+---
+tags:
+  - people
+---
+
 # Advocacy organizations — who champions each method
 
 Each major single-winner reform has a national organization behind it. Knowing who advocates for what helps you read the literature: comparison pages are usually written by one of these groups and lean toward the method it champions (see [RCV-IRV vs STAR — reading advocacy sources](rcv_irv_vs_star.md)).

@@ -1,3 +1,10 @@
+---
+tags:
+  - reform
+  - theory
+  - strategy
+---
+
 # Why STAR Voting
 
 ### Voting 101 → 301 · the case for STAR — for voters, presenters, and debaters

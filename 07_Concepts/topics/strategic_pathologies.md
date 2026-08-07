@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - theory
+  - strategy
+---
+
 # The strategic pathologies — five "Molochs," and where STAR stands
 
 *Every single-winner voting method has a **strategic failure mode**: a situation where a voter's honest ballot works against them, and the individually-rational move is to lie. Jameson Quinn (Center for Election Science) catalogued these as **"Molochs"** — coordination traps where each voter's self-interest drags the whole electorate to a worse place. This page lays out the five, names the **game** each one is, and gives the honest scorecard: **which ones STAR and Ranked Robin escape, which they only soften, and which nobody can escape.***

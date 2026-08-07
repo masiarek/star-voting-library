@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # How the Count Works — STAR vs RCV-IRV, Step by Step
 
 **One line:** the *same* ballots, counted two ways. **STAR** scores then holds one runoff — **two steps.** **RCV-IRV** runs rounds of eliminate-and-transfer — here **three.** In this example both elect **Carmen**, so the page isolates the *process* (how each count works and what it costs), not the winner.

@@ -1,3 +1,8 @@
+---
+tags:
+  - criteria
+---
+
 # The Smith Set — the Smallest Club That Beats Everyone Outside It
 
 *What "the strongest candidate" means when no single candidate beats everyone. When a cycle erases the Condorcet winner, the principled fallback isn't a person — it's a **set**: the smallest group whose every member beats every outsider head-to-head. Once you have that club, "any decent method should at least pick from inside it" becomes a testable criterion — and it neatly sorts the Condorcet family.*

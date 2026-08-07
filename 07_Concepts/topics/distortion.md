@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - theory
+  - simulation
+---
+
 # Distortion — the formal price of a ranked ballot
 
 *A 301 theory page. **Distortion** is how mainstream computational social choice formalized the question this library keeps circling: if a ballot records only **order** and never **degree**, how much is that costing you? The literature's answer is a ratio with theorems attached — and it cuts both ways. It openly adopts the **cardinal premise** (the ground truth is voter utility; a ranked ballot is explicitly modeled as **lossy compression** of it), which sounds like a slam-dunk for scored ballots — until you read the headline theorem: under the spatial assumption, the best purely ordinal rules land within **3×** of optimal, and 3 is **provably the best possible**. Rankings are lossy *and* the loss is capped at a small constant. Both halves are proved.*

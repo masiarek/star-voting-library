@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - simulation
+---
+
 # The spatial model — voters and candidates as points on a map
 
 *The single most useful mental picture in voting theory. Put every voter and every candidate at a **point** — on a left–right line, or a 2-D map of issues — and assume each voter prefers whoever is **closer** to them. That one idea explains the political spectrum, predicts who wins under each method, and is why the word **"spatial"** keeps showing up in this repo's simulations. This page is the concept; the simulation menu that uses it is [Election simulation models](election_simulation_models.md).*

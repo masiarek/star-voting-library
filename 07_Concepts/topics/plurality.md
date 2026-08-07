@@ -1,3 +1,8 @@
+---
+tags:
+  - reform
+---
+
 # Plurality — Choose-One / First-Past-The-Post
 
 *The status quo for most US single-winner elections, and the baseline every reform on this site improves on. **Mark exactly one candidate; whoever gets the most marks wins — even without a majority.** Simple to count, but it forces the problems the other methods are designed to fix.*

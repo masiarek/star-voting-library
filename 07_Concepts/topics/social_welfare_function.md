@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # Social welfare function — the object Arrow's theorem is actually about
 
 *Almost every impossibility argument you'll meet turns on a distinction that debate rarely bothers to state: does a voting rule output a **winner**, or a **ranking**? Arrow's theorem is about the second kind. Get the type wrong and you'll either over-apply the theorem ("Arrow proved every method is unfair") or miss why some methods dodge it on a technicality. This page pins down the two objects, states the Pareto and IIA axioms at both levels, and shows the trap: **majority rule is both Paretian and IIA, and escapes Arrow only because it is not a social welfare function at all.***

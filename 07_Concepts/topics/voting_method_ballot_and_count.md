@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # What is a voting method? — a ballot **and** a count
 
 *The single most useful idea in this whole topic: a voting method is **two parts**, not one, and you can't judge one without the other.*

@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # Pairwise Counting — Every Ballot Is a Tiny Matrix
 
 *How the preference matrix actually gets built: one ballot at a time. Once you see that each ballot is already a little head-to-head table, the matrix — and why it's precinct-summable — stops being mysterious.*

@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - theory
+  - strategy
+---
+
 # Does Arrow's Impossibility Theorem apply to STAR? — ranked vs. rated
 
 *A recurring debate move: "Arrow proved no voting method can be fair, so STAR can't escape it either." The precise answer is more interesting than the slogan. **Arrow's theorem is about *ranked* (ordinal) methods — and cardinal methods like STAR, Score, and Approval genuinely fall outside its scope.** But escaping Arrow is not escaping *all* impossibility: cardinal methods still run into Gibbard's manipulability theorem. This page draws that line honestly — the real pro-STAR point, and its real bound.*

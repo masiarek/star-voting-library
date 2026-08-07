@@ -1,3 +1,9 @@
+---
+tags:
+  - reform
+  - strategy
+---
+
 # Strategic Voting Across the Equal Vote Methods
 
 **Strategic voting** (also *tactical* or *insincere* voting) is casting a ballot that doesn't reflect your honest preferences, in the hope of a better outcome. The [Equal Vote Coalition](https://www.equal.vote) treats **honesty** as a core test of a voting method: *can a voter safely express her sincere opinion, and how much does the method reward insincerity?*

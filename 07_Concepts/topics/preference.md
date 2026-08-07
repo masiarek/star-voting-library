@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # "Preference" — the Word That Causes Half the Confusion
 
 *"Preferential Voting" (Australia's name for RCV-IRV) is a misnomer. Here's why, and what "preference" actually means.*

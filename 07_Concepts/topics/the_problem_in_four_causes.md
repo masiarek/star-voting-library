@@ -1,3 +1,8 @@
+---
+tags:
+  - reform
+---
+
 # The problem, in four causes — where a voter's influence actually gets lost
 
 *A structural diagnosis, borrowed and extended. **Wesley H. Holliday** (UC Berkeley philosophy; a board member at Better Choices for Democracy) opens ["How to Make Every Voter Matter and Make Spoiler Effects Go Away"](https://www.betterchoices.vote/news/how-to-make-every-voter-matter-and-make-spoiler-effects-go-away) with an unusually clean move: state the problem in one sentence, then break it into **separate causes**, each with its **own** fix. That structure is worth stealing, because it kills the most common confusion in reform arguments — treating "voters don't matter" as one big grievance with one big answer. It isn't. There are at least four distinct places a voter's influence gets lost, they fail independently, and **fixing one does nothing for the others**.*

@@ -1,3 +1,9 @@
+---
+tags:
+  - foundations
+  - simulation
+---
+
 # What makes a "good" winner? — the correct winner, the consensus candidate, and why there's no single ideal
 
 *When we say a voting method "gets it right" or "elects the wrong winner," what do we actually mean? There is no single **correct** winner handed down from on high — "good winner" is a **design choice** about what we value. This page lays out the competing ideals, shows them disagreeing on real elections in this repo, and pins down the vocabulary (consensus candidate, strong candidate, utilitarian winner) so the rest of the docs can use it precisely.*

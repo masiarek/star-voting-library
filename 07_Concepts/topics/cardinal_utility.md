@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # Cardinal utility — the number a score ballot is reaching for
 
 *A 301 theory page, and the missing definition under a lot of this library. Half a dozen pages here already assume voters "have utilities" — [distortion](distortion.md) treats a ranked ballot as lossy compression of them, [VSE](what_makes_a_good_winner.md) scores methods against them, the [spatial model](spatial_voting_model.md) manufactures them from distance, and the simulations [sample them first](simulate_utilities_not_ballots.md). None of those pages says what a utility **is**, or what makes one **cardinal**. This one does — and then asks the question that decides the whole ranked-vs-rated argument: is the number a voter writes in a 0–5 bubble a **measurement** of anything?*

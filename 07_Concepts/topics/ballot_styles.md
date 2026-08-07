@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # Alternate ballot styles — one voter, three ballots
 
 *The same voter's opinion, expressed on three different ballots: **Ranking**, **Yes/No** (Approval), and **Scoring**. Seeing them side by side is the clearest way to grasp what each ballot **captures** and what it **throws away**.*

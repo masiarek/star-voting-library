@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # The uncovered set — "you're beaten by someone who beats everyone you beat"
 
 *The one idea from the [tournament-solutions](tournament_solutions.md) literature that survives contact with a normal audience. Forget cycles and axioms for a moment and ask a much smaller question: **is this candidate redundant?** If somebody beats them head-to-head, and also beats everyone they beat, then yes — strictly, on the pairwise evidence alone. That candidate is **covered**. The **uncovered set** is everybody left — graph theory and Wikipedia call it the **Landau set**, occasionally the **Fishburn set**. It is the weakest structural filter in the field, it has three completely different definitions that turn out to be the same thing, and it is exactly the line between electing a Pareto-optimal candidate and not.*

@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - simulation
+---
+
 # The statistics you actually need to read voting research
 
 *Voting papers lean on a small, specific set of statistical ideas — and in this field several of them aren't background maths at all: **they are the thing being argued about.** Whether you total scores or take their median isn't a technical detail, it's the difference between two voting methods. This page covers only the concepts that **change a voting answer**, and points at where each one bites. It is not a statistics course; every entry is here because you'll misread a paper without it.*

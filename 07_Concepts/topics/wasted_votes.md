@@ -1,3 +1,8 @@
+---
+tags:
+  - reform
+---
+
 # Wasted Votes — what the phrase actually means (four senses), and how each method fares
 
 "My vote was wasted" is one of the most common complaints in elections — and one of the most *overloaded* phrases in voting theory. It's used for at least four different things, and arguments go in circles when people mean different ones. This page pins the senses down, shows how each method fares, and reads the popular *"STAR has no wasted votes"* claim honestly.

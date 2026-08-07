@@ -1,3 +1,8 @@
+---
+tags:
+  - criteria
+---
+
 # The cycle–cocycle decomposition — how much of an election is rock-paper-scissors?
 
 *Take any election's pairwise margins and draw them as arrows with numbers — the margin graph. A short theorem (Zwicker, 1991) says that picture is always, uniquely, the sum of two ingredients that carry none of each other's information: a **cocycle part** — a pure "these candidates are better, by this much" signal, fully explained by one quality number per candidate — and a **cycle part** — pure rock-paper-scissors circulation that says nothing about who is better. [Borda](../../06_Other/other_ranked_methods/borda.md) reads exactly the first ingredient and is structurally deaf to the second; [Copeland / Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) reads the *sign* of each summed arrow, which a strong enough circulation can point against the quality order. That is the entire mechanism behind [the gelato case](../../method_comparisons/copeland_vs_borda_margins/README.md)'s four verdicts from twelve ballots.*

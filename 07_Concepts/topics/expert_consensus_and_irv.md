@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - theory
+  - simulation
+---
+
 # Do the experts really think RCV-IRV is "bad"? — grading a common claim
 
 *One of the most repeated arguments in electoral reform is that the **voting-science community** — mathematicians, game theorists, statisticians — is critical of instant-runoff voting (RCV-IRV) and favors **cardinal** methods (Approval, Score, STAR), while the general public wrongly treats RCV-IRV as the ultimate fix. This page takes that argument seriously and grades it: what's solidly true, what's overstated, and what it leaves out. It is **not** a verdict that RCV-IRV is "bad" — it's about how strong the popular version of the claim actually is.*

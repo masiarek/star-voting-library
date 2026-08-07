@@ -1,3 +1,8 @@
+---
+tags:
+  - criteria
+---
+
 # Counting under encryption — can a STAR election be tallied without opening the ballots?
 
 *Yes — and the reason is worth understanding, because it is a genuine structural advantage of score methods over elimination methods. But STAR has one wrinkle that nobody mentions: **the scoring round is the easy case; the automatic runoff is not.** This page explains why, and how the wrinkle is resolved.*

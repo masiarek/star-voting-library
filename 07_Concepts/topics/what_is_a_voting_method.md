@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # What Is a Voting Method? — Ballot vs Count, Plurality vs Majority
 ### A recorded conversation — Larry (host) & Adam (expert) · Voting 101 · the foundation
 

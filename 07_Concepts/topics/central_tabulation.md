@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # Central Tabulation — When Every Ballot Must Travel
 
 *The operational price of a non-summable count: ballots (or full cast-vote records) must be gathered in one place before anyone can name the winner — a single point of failure, a heavier and slower audit, and, in a low-trust era, a count that is harder to **show** correct to someone motivated to disbelieve it. This page expands the one-line cost bullet into what it actually means on the ground.*

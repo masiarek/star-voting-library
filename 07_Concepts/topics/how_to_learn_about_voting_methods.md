@@ -1,3 +1,8 @@
+---
+tags:
+  - people
+---
+
 # How to Learn About Voting Methods — a reading path
 
 Voting theory gets deep fast, and it's easy to get lost. This page is a **guided path**, from complete beginner to advanced, threaded through this library's own pages — so at every step you can not just *read* the idea but *run the election* behind it.

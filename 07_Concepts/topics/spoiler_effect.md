@@ -1,3 +1,8 @@
+---
+tags:
+  - reform
+---
+
 # The spoiler effect
 
 *A **spoiler** is a candidate who can't win but still changes who does — by splitting another candidate's support. It's the single most-felt flaw of choose-one voting, the reason "don't waste your vote on a third party" is common advice, and the problem every reform on this site is partly trying to fix.*

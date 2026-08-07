@@ -1,3 +1,8 @@
+---
+tags:
+  - criteria
+---
+
 # Distributed voting — the measured price of counting by district
 
 *A 301 theory page. [Distortion](distortion.md) asks what a **ballot** costs you by recording order instead of degree. This page asks a different question with the same instrument: what does the **architecture** cost you? When voters are partitioned into districts that each elect a representative alternative, and the winner is chosen from among those representatives, the welfare loss is multiplied by **k, the number of districts** — and that factor is there even if every district counts perfect cardinal utilities. It is a cost of the map, not of the paper.*

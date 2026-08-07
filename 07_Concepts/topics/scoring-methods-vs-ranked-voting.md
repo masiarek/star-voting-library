@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # Scoring Methods vs. Ranked Voting
 
 *Why Approval Voting and STAR Voting are **not** forms of RCV.*

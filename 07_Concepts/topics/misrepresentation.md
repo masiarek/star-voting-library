@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # Misrepresentation — the measure that hands Borda the trophy, and why that's the lesson
 
 *A 301 theory page, and the other half of the paper that started [distortion](distortion.md). Having proved that **no** ranked rule is ever perfect, Procaccia & Rosenschein went looking for a model where possibility results exist — and found one by borrowing **misrepresentation** from Monroe's proportional-representation work: assume each voter's dissatisfaction with a candidate is simply that candidate's **rank position** on their ballot. Under that assumption the impossibilities lift and every method gets a finite score. **Borda scores a perfect 1.** That result is worth knowing, and worth being suspicious of, for exactly the same reason — because under this measure the Borda count and the thing being measured are the same arithmetic.*

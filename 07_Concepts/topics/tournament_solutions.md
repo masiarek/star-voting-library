@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # Tournament solutions — the theory of the win-loss graph
 
 *Throw away everything about an election except **who beat whom** head-to-head. No margins, no first choices, no scores — just arrows. What's left is a **tournament**: a complete directed graph. A **tournament solution** is a rule for picking the winners out of that graph, and there is a whole academic literature on it, because the graph can cycle and then "the best" has no obvious meaning. This page is the map: what the field is, why it exists, and exactly how much of it touches [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), [STAR](../../01_STAR/01_Learn/README.md) and [Approval](../../04_Approval/01_Learn/README.md).*

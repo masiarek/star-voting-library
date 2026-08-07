@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # 3-2-1 Voting — the "Good / OK / Bad" method, and how it compares to STAR
 
 *A well-regarded rated method designed by **Jameson Quinn** (Center for Election Science). Voters rate every candidate **Good**, **OK**, or **Bad**; the winner is found in three steps — **3** semifinalists, then **2** finalists, then **1** winner. It dodges the same strategic traps STAR does (no center squeeze, a non-slippery chicken dilemma, a built-in dark-horse guard), which is why it keeps coming up as a serious reform option. This page explains it fairly and lays it next to STAR — they're close cousins, with real trade-offs either way.*

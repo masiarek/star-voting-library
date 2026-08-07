@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - theory
+  - strategy
+---
+
 # Ordinal vs. cardinal, as mechanism design — Kim's answer to "but they'll exaggerate"
 
 *The strongest objection to score ballots is not that intensities are unmeasurable. It is practical: **sure, scores would be better if people reported them honestly — and they won't.** Semin Kim's 2017 paper takes that objection seriously by refusing to assume honesty at all. It imposes an incentive constraint first, and asks what the best rule is that survives it. The answer is that a cardinal rule still beats every ordinal rule — and that the winning mechanism looks a great deal like Approval voting.*

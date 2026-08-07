@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - strategy
+  - simulation
+---
+
 # PVSI — the Pivotal Voter Strategic Incentive
 
 *[VSE](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) asks **"does this method pick a good winner?"** PVSI asks the other half of the question: **"does this method reward you for lying on your ballot?"** It is VSE's companion metric, introduced in the same peer-reviewed paper, and it's the number behind claims like "in STAR, strategy is as likely to backfire as to work."*

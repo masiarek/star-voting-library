@@ -1,3 +1,8 @@
+---
+tags:
+  - reform
+---
+
 # Our Voting System Is Broken — The Problem with Plurality
 ### Voting 101 · foundational
 

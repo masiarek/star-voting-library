@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # "One person, one vote" — the legal principle, and the reformer's stronger claim
 
 *Two different ideas wear the same four words, and conflating them causes half the arguments about voting methods. **One is settled constitutional law; the other is a method-design criterion.** This page keeps them apart — because "RCV upholds one person, one vote" and "RCV fails the equal vote" can *both* be true, and are.*

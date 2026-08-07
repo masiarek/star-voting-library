@@ -1,3 +1,8 @@
+---
+tags:
+  - multi-winner
+---
+
 # Comparing multi-winner methods — change one thing at a time
 
 **One line:** a multi-winner method is two independent choices — *what the ballot lets you say* and *how the seats get filled* — and a comparison that changes both at once cannot tell you which one caused the difference. Match the half you are not testing, or the result is uninterpretable.

@@ -1,3 +1,8 @@
+---
+tags:
+  - multi-winner
+---
+
 # Quorum — did enough of the electorate show up?
 
 **One line:** **quorum** is a *turnout* threshold, separate from who wins: enough of the **eligible electorate** must participate for the election to count. It's **opt-in** (set `eligible_voters` and/or `quorum`), and a **cast abstention counts toward it** — showing up and turning in a blank ballot is still participation.

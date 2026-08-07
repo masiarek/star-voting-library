@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - theory
+---
+
 # Criteria at a glance — Approval, STAR, Ranked Robin, RCV-IRV
 
 *A single pass/fail map of the four single-winner methods this library covers, across the criteria voting theorists argue about — with, wherever we have one, a **runnable election** you can open to watch the failure happen. A linked ✗ has a worked demo behind it.*

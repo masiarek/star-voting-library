@@ -1,3 +1,8 @@
+---
+tags:
+  - ballots
+---
+
 # Same opinions, every method — the line-up
 
 *The clearest way to see what a voting method is *for*: hold the voters' honest opinions fixed, change only the counting rule, and watch where each one lands. Nobody changes their mind; the only variable is how much of the ballot the method reads. Line the results up, and the virtues show themselves.*
