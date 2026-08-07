@@ -1,6 +1,8 @@
 # Contributing to BetterVoting — process notes (for next time)
 
-A record of how the first code contribution went, so the workflow (and its gotchas) isn't re-derived from scratch. Written after PR **#1419** — "Clean up the JSON ballot-data export (v2 format)".
+A record of how the first code contribution went, so the workflow (and its gotchas) isn't re-derived from scratch. Written after PR **[#1419](https://github.com/Equal-Vote/bettervoting/pull/1419)** — "Clean up the ballot-data export (JSON v2 + CSV Raw/Official)".
+
+> **Outcome (recorded 2026-08-07):** the PR was **closed unmerged** on 2026-07-15, so BetterVoting still ships the v1 export. The tracking issue it addressed — **[#1420](https://github.com/Equal-Vote/bettervoting/issues/1420)**, "Download JSON export leaks the tabulator's internal object shape" — remains **open**. What the current format actually contains is documented in [the BV JSON export reference](../bv_json_export_format.md). The process notes below still hold; only the merge didn't.
 
 > **Running it locally** (dev server vs Docker, and the AirPlay / Keycloak / `crypto.randomUUID` / shared-rebuild gotchas) → [running_bettervoting_locally.md](running_bettervoting_locally.md).
 

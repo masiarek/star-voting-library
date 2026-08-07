@@ -2,6 +2,8 @@
 
 **One line:** a BetterVoting export **pre-draws the official tie-break order** and ships it inside the results JSON; the converter reads it and writes it into the YAML as `lot_numbers:`, so our re-tabulation reproduces BetterVoting's exact winner — even when a tie comes down to the lot.
 
+→ For the *rest* of the export — `Election`, `Ballots`, and everything in `Results` other than the lot — see [The BetterVoting JSON export, field-by-field](../../../07_Concepts/tabulation_engines/BV/bv_json_export_format.md).
+
 → Companion to [STAR Tie-Breaking — The Full Chain](tie_breaking.md) (the tiebreak *ladder* and the hand-written-YAML side). This page is the **JSON-side reference**: where the order lives in the export, and exactly how it maps to YAML. Implemented in the converter ([`YAML_library/1_positive/01_convert_json_yaml.py`](../../../YAML_library/1_positive/01_convert_json_yaml.py)), guarded by [`tests/test_lot_number_tiebreak.py`](../../../STARVote_LH_tabulation_engine/tests/test_lot_number_tiebreak.py) · Level **301**.
 
 ---
