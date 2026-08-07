@@ -3,7 +3,7 @@ SOURCE FILE:     blocs_bloc_c9_b10.yaml
 TABULATED FILE:  blocs_bloc_c9_b10_tabulated.txt
 ======================================================================
 
-title: Left, Centre, Right — Bloc STAR fills the council
+election_title: Left, Centre, Right — Bloc STAR fills the council
 scenario_description: >
   Ten voters split into three camps — six on the left, two in the centre, two on
   the right — choosing three seats from nine candidates, three per camp. Every

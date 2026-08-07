@@ -1,4 +1,4 @@
-title: BV fixture — fewer voters than seats
+election_title: BV fixture — fewer voters than seats
 scenario_description: >
   BetterVoting's own unit-test fixture for Allocated Score ("Voters < Winners"
   in packages/backend/src/Tabulators/AllocatedScore.test.ts), cast as a real

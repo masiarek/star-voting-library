@@ -3,7 +3,7 @@ SOURCE FILE:     alabama_3seats.yaml
 TABULATED FILE:  alabama_3seats_tabulated.txt
 ======================================================================
 
-title: The Alabama paradox — 3 seats
+election_title: The Alabama paradox — 3 seats
 scenario_description: >
   Five gardeners scoring four candidates for a community-garden committee.
   These are the SAME five ballots as the other file in this folder; the only

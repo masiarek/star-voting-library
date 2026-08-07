@@ -535,9 +535,13 @@ rung, a method divergence, a criterion failure…). Nothing there is permanent; 
 freely, keep examples small. **Two gotchas:** there is **no separate `candidates:` key** —
 the **first line of the `ballots:` block is the candidate header**, comma-separated; and
 weighted rows use a `Count:` header (`Count:Ada,Ben,Cara` then `15:5,2,0` per bloc).
+A third: the title key is **`election_title:`**, not `title:` — the engine accepts bare
+`title` as an alias so a scratch file *runs* either way, but it is not in the documented
+schema, so `check_top_level_keys` fails the moment that scratch case is promoted to a
+real one (which is exactly how 8 files drifted before 2026-08-07).
 
 ```yaml
-title: Scratch (delete me)
+election_title: Scratch (delete me)
 voting_method: STAR
 num_winners: 1
 options:            # house minimal block — see "Repo conventions"
