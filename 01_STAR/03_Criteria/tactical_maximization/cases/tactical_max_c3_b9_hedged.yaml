@@ -35,14 +35,14 @@ options:
 num_winners: 1
 ballots: |-
   Alma,Bruno,Celia
-  5,5,0     # Alma core — hedges Bruno 3 -> 5
-  5,5,0     # Alma core — hedges Bruno 3 -> 5
-  5,5,0     # Alma core — hedges Bruno 3 -> 5
-  5,5,0     # Alma core — hedges Bruno 3 -> 5
-  4,2,1     # independent, leans Alma — unchanged
-  1,5,3     # Bruno bloc — unchanged
-  1,5,3     # Bruno bloc — unchanged
-  1,5,3     # Bruno bloc — unchanged
+  5,5,0     # Alma's core — hedged, Bruno raised to a 5
+  5,5,0     # Alma's core — hedged, Bruno raised to a 5
+  5,5,0     # Alma's core — hedged, Bruno raised to a 5
+  5,5,0     # Alma's core — hedged, Bruno raised to a 5
+  4,2,1     # an independent, leaning Alma — unchanged
+  1,5,3     # the Bruno bloc — unchanged
+  1,5,3     # the Bruno bloc — unchanged
+  1,5,3     # the Bruno bloc — unchanged
   0,2,5     # Celia's one loyalist — unchanged
 expected_winners:
   - Bruno

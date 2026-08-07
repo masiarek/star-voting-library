@@ -36,14 +36,14 @@ options:
 num_winners: 1
 ballots: |-
   Alma,Bruno,Celia
-  5,3,0     # Alma core — likes Bruno fine, fears Celia
-  5,3,0     # Alma core
-  5,3,0     # Alma core
-  5,3,0     # Alma core
-  4,2,1     # independent, leans Alma
-  1,5,3     # Bruno bloc
-  1,5,3     # Bruno bloc
-  1,5,3     # Bruno bloc
+  5,3,0     # Alma's core — Bruno is fine, Celia is not
+  5,3,0     # Alma's core — Bruno is fine, Celia is not
+  5,3,0     # Alma's core — Bruno is fine, Celia is not
+  5,3,0     # Alma's core — Bruno is fine, Celia is not
+  4,2,1     # an independent, leaning Alma
+  1,5,3     # the Bruno bloc
+  1,5,3     # the Bruno bloc
+  1,5,3     # the Bruno bloc
   0,2,5     # Celia's one loyalist
 expected_winners:
   - Alma

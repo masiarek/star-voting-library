@@ -28,18 +28,34 @@ Half 2 (tactical_max_c3_b9_hedged.yaml) has those four raise Bruno
 
 ## Ballots
 
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Alma | Bruno | Celia |
+|:--|:--:|:--:|:--:|
+| <img src="../img/tactical_max_c3_b9_honest_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — an independent, leaning Alma: Alma 4, Bruno 2, Celia 1."> | 4 | 2 | 1 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
+| <img src="../img/tactical_max_c3_b9_honest_ballot_9.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Celia's one loyalist: Alma 0, Bruno 2, Celia 5."> | 0 | 2 | 5 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
 
 ```text
 Alma,Bruno,Celia
-5,3,0     # Alma core — likes Bruno fine, fears Celia
-5,3,0     # Alma core
-5,3,0     # Alma core
-5,3,0     # Alma core
-4,2,1     # independent, leans Alma
-1,5,3     # Bruno bloc
-1,5,3     # Bruno bloc
-1,5,3     # Bruno bloc
+5,3,0     # Alma's core — Bruno is fine, Celia is not
+5,3,0     # Alma's core — Bruno is fine, Celia is not
+5,3,0     # Alma's core — Bruno is fine, Celia is not
+5,3,0     # Alma's core — Bruno is fine, Celia is not
+4,2,1     # an independent, leaning Alma
+1,5,3     # the Bruno bloc
+1,5,3     # the Bruno bloc
+1,5,3     # the Bruno bloc
 0,2,5     # Celia's one loyalist
 ```
 
@@ -133,6 +149,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/03_Crite
 
 ## See also
 
+- [Methods disagree on this election](../../../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/tactical_max_c3_b9_honest.md) — its entry in the divergence review ledger
 - [Runoff reversal (worked set)](../../../../02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
