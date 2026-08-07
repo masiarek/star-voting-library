@@ -13,6 +13,7 @@ Everything explaining **RCV-IRV** — ranked ballots counted by **instant runoff
 - [Is RCV "simple"? — which half?](RCV_IRV_is_simple.md) — the ballot is simple; the count is not
 - [Is RCV-IRV "just plurality in sequence"?](RCV_IRV_and_plurality.md)
 - [Exhausted (inactive) ballots](RCV_IRV_exhausted_ballots.md) — ballots that drop out of the count mid-tally
+- [Elimination ties — who gets cut when two are tied for last](../../../07_Concepts/topics/ties/tiebreaking_star_vs_irv.md) — the tie IRV has that STAR doesn't, and the one that matters most: whichever candidate you cut transfers different ballots, so it reshapes every round after it. Also [batch elimination](../../../07_Concepts/topics/ties/batch_elimination.md) (what happens when *everyone* is tied) · [the Ties & Tie-Breaking hub](../../../07_Concepts/topics/ties/README.md) · [what our engine actually does](../RCV_IRV_tabulation_engine/README.md#known-limitation-elimination-ties)
 
 ## The IRV-specific critiques
 
