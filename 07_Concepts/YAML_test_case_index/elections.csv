@@ -184,6 +184,8 @@ LH:Flat_scores_ties_08_all_flat_zero_count,Flat scores 08 — every ballot flat 
 LH:RCV_ballot_example,RCV-IRV — a basic ranked-ballot example (3 candidates),1,single-race,100,IRV,LH-only
 LH:abstention_reconciliation_min_c2_b6,Abstention vs Equal Support — the minimal reconciliation case,1,single-race,6,STAR,LH-only
 LH:abstentions,Abstentions — blank and abstaining ballots in STAR,1,single-race,6,STAR,LH-only
+LH:alabama_2seats,The Alabama paradox — 2 seats,1,single-race,5,STAR_PR,LH-only
+LH:alabama_3seats,The Alabama paradox — 3 seats,1,single-race,5,STAR_PR,LH-only
 LH:alaska_buried_c3_b200,"Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't",1,single-race,200,IRV,LH-only
 LH:alaska_sincere_c3_b200,Alaska 2022 (sincere) — Begich is the Condorcet winner,1,single-race,200,IRV,LH-only
 LH:alaska_upward_after,"Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses",1,single-race,200,IRV,LH-only

@@ -1,0 +1,60 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  The Alabama paradox — 2 seats
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Aster, Basil, Clover, Dahlia
+     1 ×   Dahlia > Aster > Basil > Clover      (3, 3, 2, 4)
+     1 ×   Aster > Basil > Dahlia      (5, 4, 0, 2)
+     1 ×   Clover > Dahlia > Aster      (1, 0, 4, 3)
+     1 ×   Basil > Clover > Dahlia      (0, 5, 5, 3)
+     1 ×   Aster > Basil      (5, 5, 0, 0)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Aster              2  Hopeful
+Basil              1  Hopeful
+Dahlia             1  Hopeful
+Clover             1  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Aster              2  Hopeful
+Dahlia             2  Hopeful
+Basil              1  Rejected
+Clover             0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Dahlia             3  Elected
+Aster              2  Rejected
+Basil              0  Rejected
+Clover             0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Dahlia
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 4): Aster, Basil, Dahlia, Clover
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Aster, Basil) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   RCV-IRV winner Dahlia is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

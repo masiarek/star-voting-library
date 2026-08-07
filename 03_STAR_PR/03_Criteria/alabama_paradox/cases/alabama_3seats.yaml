@@ -1,0 +1,31 @@
+title: The Alabama paradox — 3 seats
+scenario_description: >
+  Five gardeners scoring four candidates for a community-garden committee.
+  These are the SAME five ballots as the other file in this folder; the only
+  difference is how many seats are up. At two seats Proportional STAR seats
+  Basil and Dahlia. At three seats it seats Aster, Basil and Clover — Dahlia
+  has LOST her seat because the committee grew. That is the Alabama paradox,
+  a failure of house-size monotonicity, and it is a known property of quota
+  methods rather than a bug in this file.
+voting_method: allocated
+num_winners: 3
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+ballots: |-
+  Aster,Basil,Clover,Dahlia
+  3,3,2,4
+  5,4,0,2
+  1,0,4,3
+  0,5,5,3
+  5,5,0,0
+
+# file: alabama_3seats.yaml

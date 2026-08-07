@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**514 election files** (445 single-winner, 69 multi-winner) across 18 method(s).
+**516 election files** (445 single-winner, 71 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -20,7 +20,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
-| Allocated Score (STAR-PR) | 13 |
+| Allocated Score (STAR-PR) | 15 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 6 |
 | BLOC STAR | 29 |
@@ -483,17 +483,19 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (13)
+## Allocated Score (STAR-PR)  (15)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex12_proportional_share`](../../01_STAR/05_Practice/cases/cases_pages/ex12_proportional_share.md) | `01_STAR/05_Practice/cases/` | 2 | Exercise 12 — Two seats, one neighborhood: Allocated Score shares → _Asa, Cleo_ | [`.yaml`](../../01_STAR/05_Practice/cases/ex12_proportional_share.yaml) |
+| [`alabama_2seats.yaml`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/alabama_2seats.yaml) | `03_STAR_PR/03_Criteria/alabama_paradox/cases/` | 2 |  | — |
 | [`08_c6_b29_quota-circus-pr-2-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/08_c6_b29_quota-circus-pr-2-seats.md) | `06_Other/ballot_style_lab/cases/` | 2 | Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats) → _Amir, Bree_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/08_c6_b29_quota-circus-pr-2-seats.yaml) |
 | [`BV_Library_star_pr_basic_two_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_basic_two_seats.md) | `method_comparisons/BV_Library/cases/` | 2 | BV parity — STAR_PR (Allocated Score): basic two-seat allocation → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_basic_two_seats.yaml) |
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/cases/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_fractional_surplus.yaml) |
 | [`min_pr_c3_b2`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/min_pr_c3_b2.md) | `method_comparisons/bloc_vs_pr/cases/` | 2 | → _Ben, Cleo_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/min_pr_c3_b2.yaml) |
 | [`bv2210_fvg8y8_star_pr_share`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_star_pr_share.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — STAR-PR / Allocated Score: one seat per side → _Arepa, Donut_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_star_pr_share.yaml) |
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml) |
+| [`alabama_3seats.yaml`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/alabama_3seats.yaml) | `03_STAR_PR/03_Criteria/alabama_paradox/cases/` | 3 |  | — |
 | [`07b_c5_b36_herb-council-pr-3-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/07b_c5_b36_herb-council-pr-3-seats.md) | `06_Other/ballot_style_lab/cases/` | 3 | The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone) → _Anise, Basil, Chive_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/07b_c5_b36_herb-council-pr-3-seats.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/cases/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
 | [`blocs_pr_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_pr_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_pr_c9_b10.yaml) |

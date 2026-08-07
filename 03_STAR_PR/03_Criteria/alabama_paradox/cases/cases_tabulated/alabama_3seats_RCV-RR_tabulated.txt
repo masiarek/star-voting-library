@@ -1,0 +1,58 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 5 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Aster, Basil, Clover, Dahlia
+     1 × Dahlia > Aster=Basil > Clover      (3, 3, 2, 4)
+     1 × Aster > Basil > Dahlia > Clover      (5, 4, 0, 2)
+     1 × Clover > Dahlia > Aster > Basil      (1, 0, 4, 3)
+     1 × Basil=Clover > Dahlia > Aster      (0, 5, 5, 3)
+     1 × Aster=Basil > Clover=Dahlia      (5, 5, 0, 0)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Aster   beats Basil    2 – 1
+   Aster   beats Clover   3 – 2
+   Dahlia  beats Aster    3 – 2
+   Basil   beats Clover   3 – 1
+   Basil   beats Dahlia   3 – 2
+   Clover  ties  Dahlia   2 – 2
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |   Aster   |  Basil   | Clover   | Dahlia   |
+---------------------------------------------------------
+   Aster > |    ---    |2 - 2 - 1 |3 - 0 - 2 |2 - 0 - 3 |
+   Basil > | 1 - 2 - 2 |   ---    |3 - 1 - 1 |3 - 0 - 2 |
+  Clover > | 2 - 0 - 3 |1 - 1 - 3 |   ---    |2 - 1 - 2 |
+  Dahlia > | 3 - 0 - 2 |2 - 0 - 3 |2 - 1 - 2 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Basil      2–1–0         2      +2  Dahlia, Clover
+    2  Aster      2–1–0         2      +1  Basil, Clover
+    3  Dahlia     1–1–1       1.5      +0  Aster
+    4  Clover     0–2–1       0.5      -3  —
+
+Winner — Ranked Robin (RCV-RR): Basil
+   *** 2 candidates tie for the most wins (Aster, Basil) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 4): Aster, Basil, Dahlia, Clover
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Aster, Basil) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Basil is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md
