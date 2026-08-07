@@ -374,6 +374,8 @@ LH:succ_elim_ex12_sincere,Successive elimination Ex.12 — sincere: the A>B>C>D 
 LH:succ_elim_ex12_truncated,Successive elimination Ex.12 — truncated: naming only A turns last place into first,1,single-race,6,RankedRobin,LH-only
 LH:succ_elim_ex9_noshow,Successive elimination Ex.9 — two D voters stay home and get a better result,1,single-race,9,RankedRobin,LH-only
 LH:succ_elim_ex9_pareto,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",1,single-race,11,RankedRobin,LH-only
+LH:tactical_max_c3_b9_hedged,"Tactical maximization in STAR (2 of 2) — four voters hedge to a 5, and hand the seat to the hedge",1,single-race,9,STAR,LH-only
+LH:tactical_max_c3_b9_honest,Tactical maximization in STAR (1 of 2) — honest ballots: the hedgers' preference decides the runoff,1,single-race,9,STAR,LH-only
 LH:three_neighbors_allocated,"Three neighbors, two seats — Allocated Score",1,single-race,3,STAR_PR,LH-only
 LH:three_neighbors_rrv,"Three neighbors, two seats — Reweighted Range Voting",1,single-race,3,STAR_PR,LH-only
 LH:three_neighbors_sss,"Three neighbors, two seats — Sequentially Spent Score",1,single-race,3,STAR_PR,LH-only

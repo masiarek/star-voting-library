@@ -1,0 +1,36 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Tactical maximization in STAR (2 of 2) — four voters hedge to a 5, and hand the seat to the hedge
+ Tabulating 9 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alma, Bruno, Celia
+     4 ×   Alma > Bruno      (5, 5, 0)
+     1 ×   Alma > Bruno > Celia      (4, 2, 1)
+     3 ×   Bruno > Celia > Alma      (1, 5, 3)
+     1 ×   Celia > Bruno      (0, 2, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alma               5  Elected
+Bruno              3  Rejected
+Celia              1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alma
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Bruno
+   Outside (2):        Alma, Celia
+   One member ⇒ Bruno is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Alma is OUTSIDE the Smith set. ✗
+      Every member of the set (Bruno) beats Alma head-to-head, yet
+      RCV-IRV elected Alma anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

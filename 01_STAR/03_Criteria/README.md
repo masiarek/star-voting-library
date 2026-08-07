@@ -11,6 +11,7 @@ Levels follow the [curriculum](../../07_Concepts/CURRICULUM.md): 🟢 101 · �
 | [The Majority Criterion](majority_criterion/README.md) | 🔴 301 | Two 5-voter elections isolating STAR's Majority-Criterion behavior — and the **Relaxed** Majority Criterion ("needs *two* rivals, not one"). |
 | [Favorite betrayal](favorite_betrayal/README.md) | 🔴 301 | STAR is **not** formally FBC-compliant, and the leak lives in the runoff: the score you give your favorite can keep your compromise out of the top two. Rare, constructed, and conceded honestly. |
 | [IIA & the cycle spoiler](iia_cycle_spoiler/README.md) | 🔴 301 | Independence of Irrelevant Alternatives, shown mechanically: in a genuine Condorcet cycle a candidate who *cannot win* still changes who does — with perfectly sincere ballots. |
+| [Tactical maximization](tactical_maximization/README.md) | 🟡 201 | The hedge that looks generous: four voters raise a rival to 5 without lowering anyone, register **Equal Support** in the runoff, and lose the election they'd otherwise have won. |
 | [Equal and opposite](equal_and_opposite/README.md) | 🟡 201 | The Equal Vote Coalition's **Test of Balance**: two voters with exact-opposite ballots cancel completely, so the winner never moves. What an [equally weighted vote](../01_Learn/properties_and_limits/equally_weighted_vote.md) means. |
 | [None of the Above](none_of_the_above/README.md) | 🔴 301 | A protest electorate where NOTA tops the scores *and* wins the runoff — STAR counts a formal rejection like any other candidate. |
 

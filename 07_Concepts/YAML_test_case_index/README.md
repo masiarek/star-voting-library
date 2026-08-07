@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**549 election files** (467 single-winner, 82 multi-winner) across 18 method(s).
+**551 election files** (469 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 266 |
+| STAR | 268 |
 | RCV-IRV (Hare) | 41 |
 | Ranked Robin (RCV-RR / Copeland) | 90 |
 | Approval | 21 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (266)
+## STAR  (268)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -84,6 +84,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv95b_7pdq3r_favorite_loses_two_rivals`](../../01_STAR/03_Criteria/majority_criterion/cases/cases_pages/bv95b_7pdq3r_favorite_loses_two_rivals.md) | `01_STAR/03_Criteria/majority_criterion/cases/` | 1 | BV95b — Majority Criterion: favorite LOSES when the majority backs TWO rivals → _Bruno_ | [`.yaml`](../../01_STAR/03_Criteria/majority_criterion/cases/bv95b_7pdq3r_favorite_loses_two_rivals.yaml) |
 | [`majority_vs_consensus_51_49`](../../01_STAR/03_Criteria/majority_criterion/cases/cases_pages/majority_vs_consensus_51_49.md) | `01_STAR/03_Criteria/majority_criterion/cases/` | 1 | Majority criterion vs. the consensus candidate — the 51/49 polarized electorate → _Celia_ | [`.yaml`](../../01_STAR/03_Criteria/majority_criterion/cases/majority_vs_consensus_51_49.yaml) |
 | [`bv215_26khr3_nota_wins`](../../01_STAR/03_Criteria/none_of_the_above/cases/cases_pages/bv215_26khr3_nota_wins.md) | `01_STAR/03_Criteria/none_of_the_above/cases/` | 1 | BV215 — None of the Above wins (STAR) — with a null abstention → _None of the Above_ | [`.yaml`](../../01_STAR/03_Criteria/none_of_the_above/cases/bv215_26khr3_nota_wins.yaml) |
+| [`tactical_max_c3_b9_hedged`](../../01_STAR/03_Criteria/tactical_maximization/cases/cases_pages/tactical_max_c3_b9_hedged.md) | `01_STAR/03_Criteria/tactical_maximization/cases/` | 1 | Tactical maximization in STAR (2 of 2) — four voters hedge to a 5, and hand the seat to the hedge → _Bruno_ | [`.yaml`](../../01_STAR/03_Criteria/tactical_maximization/cases/tactical_max_c3_b9_hedged.yaml) |
+| [`tactical_max_c3_b9_honest`](../../01_STAR/03_Criteria/tactical_maximization/cases/cases_pages/tactical_max_c3_b9_honest.md) | `01_STAR/03_Criteria/tactical_maximization/cases/` | 1 | Tactical maximization in STAR (1 of 2) — honest ballots: the hedgers' preference decides the runoff → _Alma_ | [`.yaml`](../../01_STAR/03_Criteria/tactical_maximization/cases/tactical_max_c3_b9_honest.yaml) |
 | [`bv126_ties_every_step_8fvd2x`](../../01_STAR/03_Criteria/tie_break_dead_rung/cases/cases_pages/bv126_ties_every_step_8fvd2x.md) | `01_STAR/03_Criteria/tie_break_dead_rung/cases/` | 1 | BV126 — ties at every step (single-winner STAR); #1052 → _Amy_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_dead_rung/cases/bv126_ties_every_step_8fvd2x.yaml) |
 | [`dead_rung_scoring_dead_cap2`](../../01_STAR/03_Criteria/tie_break_dead_rung/cases/cases_pages/dead_rung_scoring_dead_cap2.md) | `01_STAR/03_Criteria/tie_break_dead_rung/cases/` | 1 | Dead rung — scoring round, dead five-star rung, cap 2 → _Ann_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_dead_rung/cases/dead_rung_scoring_dead_cap2.yaml) |
 | [`dead_rung_scoring_dead_cap3`](../../01_STAR/03_Criteria/tie_break_dead_rung/cases/cases_pages/dead_rung_scoring_dead_cap3.md) | `01_STAR/03_Criteria/tie_break_dead_rung/cases/` | 1 | Dead rung — scoring round, dead five-star rung, cap 3 → _Ann_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_dead_rung/cases/dead_rung_scoring_dead_cap3.yaml) |

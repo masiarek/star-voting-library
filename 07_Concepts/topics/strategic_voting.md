@@ -19,14 +19,16 @@ External references worth reading directly: the Equal Vote Coalition's **[Strate
 
 The Equal Vote taxonomy names four distinct ways to vote insincerely on a rated or ranked ballot. The names matter — people argue past each other by confusing them:
 
-| Type | Also called | What the voter does |
-|---|---|---|
-| **Strong insincerity** | **Favorite betrayal**, *compromising*, *decapitation* | Gives someone a **higher** score/rank than their true favorite |
-| **Weak insincerity** | **Burial**, *skipping* | Keeps the favorite on top, but ranks/scores a *less*-preferred candidate **below** an even-less-preferred one |
-| **Restrictive sincerity** | **Tactical minimization**, *bullet voting*, *truncation* (down-voting) | **Lowers** support for non-favorites (e.g. scores everyone but the favorite a 0) |
-| **Expansive sincerity** | **Tactical maximization** (up-voting) | **Raises** support for non-favorites (e.g. gives a strong front-runner a 5 to hedge) |
+| Type | Also called | What the voter does | Worked in full |
+|---|---|---|---|
+| **Strong insincerity** | **Favorite betrayal**, *compromising*, *decapitation* | Gives someone a **higher** score/rank than their true favorite | [Favorite betrayal — Voting 301](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) · [the pair](../../01_STAR/03_Criteria/favorite_betrayal/README.md) |
+| **Weak insincerity** | **Burial**, *skipping* | Keeps the favorite on top, but ranks/scores a *less*-preferred candidate **below** an even-less-preferred one | [Burial (topic hub)](burial/README.md) |
+| **Restrictive sincerity** | **Tactical minimization**, *bullet voting*, *truncation* (down-voting) | **Lowers** support for non-favorites (e.g. scores everyone but the favorite a 0) | [Restrictive sincerity](insincere_votes/restrictive_sincerity.md) |
+| **Expansive sincerity** | **Tactical maximization** (up-voting) | **Raises** support for non-favorites (e.g. gives a strong front-runner a 5 to hedge) | [Expansive sincerity](insincere_votes/expansive_sincerity.md) |
 
 Only the first two distort *preference order*; the last two only distort *how much*. That distinction is why fully-expressive methods (STAR, Score) face the bottom two while choose-one and ranked methods face the top two.
+
+→ The four side by side, with the runnable elections for each and a four-question test for telling them apart: [**the four kinds of insincere vote**](insincere_votes/README.md).
 
 ## How each method handles each strategy
 

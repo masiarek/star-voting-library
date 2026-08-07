@@ -28,6 +28,8 @@ STAR ends *forced* vote-splitting, but a **narrow, self-inflicted** residue rema
 
 The 0–5 ballot invites **[min-maxing](../../../07_Concepts/topics/strategic_voting.md)** — giving 5s and 0s rather than honest intermediate scores — because an exaggerated ballot can carry more weight in the scoring round. STAR's automatic runoff dampens this (your honest order still decides the final round), but doesn't erase it. Gibbard's theorem guarantees **no** method with 3+ candidates is fully strategy-proof; STAR aims for *resistant, not proof*.
 
+The honest edge here is that min-maxing usually costs the *voter*, in both directions, and both are runnable: flattening down to 0 elects the candidate you scored 0 ([bullet voting backfires](../../05_Practice/ex06_bullet_backfire.md)), and flattening up to 5 registers Equal Support and takes you out of the runoff ([the up-voting pair](../../03_Criteria/tactical_maximization/README.md)). The four named ways to vote insincerely, and which ballots each is possible on: [the four kinds of insincere vote](../../../07_Concepts/topics/insincere_votes/README.md).
+
 ## 6. The ballot has a learning curve
 
 A 0–5 grid is more to explain than "pick one," and some voters under-use the scale (only 0s and 5s), losing expressiveness. It's still a familiar five-star pattern, but it is more cognitive load than plurality and a legitimate adoption hurdle.

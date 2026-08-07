@@ -1,0 +1,50 @@
+election_title: "Tactical maximization in STAR (2 of 2) — four voters hedge to a 5, and hand the seat to the hedge"
+paradoxes: [runoff-reversal]
+
+scenario_description: |-
+  Strategic ballots — half 2 of the worked expansive-sincerity pair
+  (07_Concepts/topics/insincere_votes/expansive_sincerity.md).
+  Identical to half 1 (tactical_max_c3_b9_honest.yaml) except that
+  Alma's four core members hedge: fearing Celia, they raise Bruno from
+  an honest 3 to a 5. They lower nobody — Alma keeps her 5 and her
+  score total of 27, unchanged. This is EXPANSIVE sincerity (tactical
+  maximization / up-voting): the order on the ballot is no longer true,
+  but only upward.
+  It costs them the election. Bruno's total climbs 31 -> 39; the
+  finalists are still Bruno and Alma; but in the automatic runoff a
+  ballot scoring both finalists 5 registers EQUAL SUPPORT. Four of nine
+  voters now sit out the only comparison they cared about, and Bruno
+  wins it 4-1. Alma loses to the candidate the hedgers insured against
+  — while Celia, the candidate they feared, finished third on 15 points
+  and was never in the runoff at all.
+  The lesson is not "never give a 5". It is that in STAR a 5 you give a
+  rival is spent in the SCORING round and silent in the RUNOFF: hedge
+  only against a candidate who can actually reach the final two.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: true
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alma,Bruno,Celia
+  5,5,0     # Alma core — hedges Bruno 3 -> 5
+  5,5,0     # Alma core — hedges Bruno 3 -> 5
+  5,5,0     # Alma core — hedges Bruno 3 -> 5
+  5,5,0     # Alma core — hedges Bruno 3 -> 5
+  4,2,1     # independent, leans Alma — unchanged
+  1,5,3     # Bruno bloc — unchanged
+  1,5,3     # Bruno bloc — unchanged
+  1,5,3     # Bruno bloc — unchanged
+  0,2,5     # Celia's one loyalist — unchanged
+expected_winners:
+  - Bruno
+
+# file: tactical_max_c3_b9_hedged.yaml

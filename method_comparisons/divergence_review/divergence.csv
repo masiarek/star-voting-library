@@ -109,6 +109,7 @@ APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/05_c3_b5_low
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/reversal_jarring_c3_b100.yaml,3,100,Rye,Rye,Rye,Rye,Rye,Uma,Uma,Rye,Rye,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml,3,57,Bluebell,Bluebell,Bluebell,Bluebell,Bluebell,Clover,Clover,Bluebell,Bluebell,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/03_Criteria/majority_criterion/cases/bv95a_9m6rxr_favorite_survives_one_rival.yaml,3,5,Ada,Ada,Ada,Ada,Ada,Bruno,Bruno,Ada,Ada,2,False,False,False
+APPROVAL_OR_MINOR,01_STAR/03_Criteria/tactical_maximization/cases/tactical_max_c3_b9_honest.yaml,3,9,Alma,Alma,Alma,Alma,Alma,Bruno,Bruno,Alma,Alma,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml,6,2,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Chocolate,Strawberry,,,2,False,False,True
 APPROVAL_OR_MINOR,01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml,3,3,Cal Creative,Cal Creative,Cal Creative,Cal Creative,Cal Creative,Ann Ambitious,Cal Creative,Cal Creative,Cal Creative,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml,3,3,Boston,Boston,Boston,Boston,Boston,Austin,Austin,Boston,Boston,0,False,False,False
@@ -185,6 +186,7 @@ IRV_DIFFERS_ARTIFACT,01_STAR/02_Examples/cases/03d_c5_b5_style-gallery-five-more
 IRV_DIFFERS_ARTIFACT,01_STAR/02_Examples/cases/display_options_demo.yaml,4,4,Don,Bob,Don,Don,Bob,Ann,Bob,Don,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,01_STAR/02_Examples/cases/star_ala_approval.yaml,4,8,D,A,D,D,A,A,D,D,A,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/03_Criteria/majority_criterion/cases/majority_vs_consensus_51_49.yaml,3,100,Celia,Alma,Alma,Celia,Alma,Celia,Celia,Celia,Alma,3,False,True,False
+IRV_DIFFERS_ARTIFACT,01_STAR/03_Criteria/tactical_maximization/cases/tactical_max_c3_b9_hedged.yaml,3,9,Bruno,Alma,Bruno,Bruno,Alma,Bruno,Bruno,Bruno,Alma,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ben,Cara,Ann,Ann,,,2,True,True,True
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml,3,31,Clara,Bruno,Bruno,Clara,Bruno,Abby,Bruno,,Bruno,9,False,True,True
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml,4,40,Churro,Bao,Churro,Churro,Bao,Churro,Bao,Churro,Bao,10,True,True,False
