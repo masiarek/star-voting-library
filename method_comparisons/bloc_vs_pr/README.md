@@ -58,6 +58,28 @@ Worth being precise about *why* this one diverges, because there are two differe
 
 This example is deliberately the second kind.
 
+## The same thing at readable scale: Left, Centre, Right
+
+Two ballots proves it can happen. This shows what it *looks like*. Ten voters, nine candidates (three per camp), **three seats**:
+
+| Camp | Voters | Scores their own camp | the neighbours | the far camp |
+|---|--:|--:|--:|--:|
+| **Left** (L1 L2 L3) | 6 | 4–5 | 1–2 | 0 |
+| **Centre** (C1 C2 C3) | 2 | 4–5 | 1–2 | — |
+| **Right** (R1 R2 R3) | 2 | 4–5 | 1–2 | 0 |
+
+The Left camp is **60% of the electorate**.
+
+> **Bloc STAR elects: L1, L2, L3.** Sixty percent of the voters take **100%** of the seats. The other forty percent elect nobody. This is [the majority sweep](../../02_STAR_Bloc/01_Learn/majority_sweep.md), and it is not a bug — it is what a majoritarian method is *for*.
+>
+> **Proportional STAR elects: C1, L1, L2.** Left takes two seats of three — close to its 60% share — and the third goes to the centre.
+
+Two things in that proportional result are worth slowing down for, because neither is obvious:
+
+**The Right camp wins nothing, and that is correct.** With ten voters and three seats the [quota](../../03_STAR_PR/01_Learn/STAR_PR/README.md) is 10 ÷ 3 ≈ **3.33 voters**. The Right camp has two. It is *below quota* — it has not earned a seat, and no proportional method owes it one. Proportionality guarantees representation to groups large enough to claim it; it does not promise everyone a seat.
+
+**The Centre camp is also below quota — and still wins one.** C1 gets there not on the strength of two voters but on **breadth**: Left and Right voters both score the centre candidates 1–2, and those partial scores add up. That is the specific thing a 0–5 ballot can see and a choose-one ballot cannot — C1 is nobody's favourite and many people's acceptable second, which is exactly the candidate a scored proportional count is built to find.
+
 ## Run it yourself
 
 Same ballots in both files; only `voting_method:` differs.

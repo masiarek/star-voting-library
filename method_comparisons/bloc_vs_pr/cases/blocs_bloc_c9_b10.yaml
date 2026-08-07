@@ -1,0 +1,35 @@
+title: Left, Centre, Right — Bloc STAR fills the council
+scenario_description: >
+  Ten voters split into three camps — six on the left, two in the centre, two on
+  the right — choosing three seats from nine candidates, three per camp. Every
+  voter scores their own camp highly, the neighbouring camp modestly, and the far
+  camp at zero. Identical ballots to blocs_pr_c9_b10.yaml; only the count differs.
+  This is the majoritarian half: with every ballot at full weight for every seat,
+  the largest camp decides all three.
+voting_method: bloc
+num_winners: 3
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  L1,L2,L3,C1,C2,C3,R1,R2,R3
+  5,5,4,2,2,1,0,0,0   # Left voter 1
+  5,4,5,2,1,2,0,0,0   # Left voter 2
+  5,5,4,1,2,2,0,0,0   # Left voter 3
+  4,5,5,2,2,1,0,0,0   # Left voter 4
+  5,4,5,2,2,1,0,0,0   # Left voter 5
+  5,5,4,2,1,2,0,0,0   # Left voter 6
+  2,2,1,5,5,4,2,2,1   # Centre voter 1
+  1,2,2,5,4,5,2,1,2   # Centre voter 2
+  0,0,0,2,2,1,5,5,4   # Right voter 1
+  0,0,0,1,2,2,5,4,5   # Right voter 2
+
+# file: blocs_bloc_c9_b10.yaml

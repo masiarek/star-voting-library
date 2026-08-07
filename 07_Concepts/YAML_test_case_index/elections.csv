@@ -194,6 +194,8 @@ LH:balance_base_irv_c3_b9,"Equal-vote balance — base (IRV elects the Condorcet
 LH:balance_plus_opposite_c3_b15,Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada),1,single-race,15,IRV,LH-only
 LH:bloc_lot_path_dependence_a_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first),1,single-race,5,STAR,LH-only
 LH:bloc_lot_path_dependence_b_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot B: Omar first),1,single-race,5,STAR,LH-only
+LH:blocs_bloc_c9_b10,"Left, Centre, Right — Bloc STAR fills the council",1,single-race,10,bloc,LH-only
+LH:blocs_pr_c9_b10,"Left, Centre, Right — Proportional STAR fills the council",1,single-race,10,STAR_PR,LH-only
 LH:brams_ex3_two_candidates_c2_b5,Brams Example 3 — two candidates: two loud fans vs three mild preferences,1,single-race,5,STAR,LH-only
 LH:brams_ex6_three_winners_c3_b9,"Brams Example 6 — three counts, three winners (STAR sides with head-to-head)",1,single-race,9,STAR,LH-only
 LH:brams_grading_paradox_c3_b3,Brams' grading paradox — the grade leader loses the runoff,1,single-race,3,STAR,LH-only

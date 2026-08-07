@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**509 election files** (442 single-winner, 67 multi-winner) across 18 method(s).
+**511 election files** (442 single-winner, 69 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -17,10 +17,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Ranked Robin (RCV-RR / Copeland) | 75 |
 | Approval | 21 |
 | STV (proportional RCV) | 10 |
-| Bloc STAR | 1 |
+| Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 2 |
 | Reweighted Range | 2 |
-| Allocated Score (STAR-PR) | 12 |
+| Allocated Score (STAR-PR) | 13 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 6 |
 | BLOC STAR | 29 |
@@ -459,11 +459,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`03a_stv_3seats`](../../06_Other/STV/cases/cases_pages/03a_stv_3seats.md) | `06_Other/STV/cases/` | 3 | STV — 3 seats, 7 candidates (proportional RCV) → _Housing, Schools, SmallBiz_ | [`.yaml`](../../06_Other/STV/cases/03a_stv_3seats.yaml) |
 | [`pets_gov_stv`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_stv.md) | `method_comparisons/pets_governance/cases/` | 3 | Pets Governance — Delegates by STV (3 seats): proportional again → _Dog, Bird, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_stv.yaml) |
 
-## Bloc STAR  (1)
+## Bloc STAR  (2)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`min_bloc_c3_b2`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/min_bloc_c3_b2.md) | `method_comparisons/bloc_vs_pr/cases/` | 2 | → _Ana, Ben_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/min_bloc_c3_b2.yaml) |
+| [`blocs_bloc_c9_b10.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_bloc_c9_b10.yaml) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | — |
 
 ## STAR-PR (Sequential Selection)  (2)
 
@@ -479,7 +480,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (12)
+## Allocated Score (STAR-PR)  (13)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -492,6 +493,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml) |
 | [`07b_c5_b36_herb-council-pr-3-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/07b_c5_b36_herb-council-pr-3-seats.md) | `06_Other/ballot_style_lab/cases/` | 3 | The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone) → _Anise, Basil, Chive_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/07b_c5_b36_herb-council-pr-3-seats.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/cases/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
+| [`blocs_pr_c9_b10.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_pr_c9_b10.yaml) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | — |
 | [`pets_gov_star_pr`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_star_pr.md) | `method_comparisons/pets_governance/cases/` | 3 | Pets Governance — Council by STAR-PR (3 seats): minority earns a seat → _Bird, Dog, Fish_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_star_pr.yaml) |
 | [`lackner_skowron_shadow_star_pr_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
 | [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/02_Examples/cases/cases_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/02_Examples/cases/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/bv2130_presidential_board_star_pr.yaml) |
