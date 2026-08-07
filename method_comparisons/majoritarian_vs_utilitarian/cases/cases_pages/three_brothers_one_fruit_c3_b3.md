@@ -169,6 +169,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/three_brothers_one_fruit_c3_b3.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
