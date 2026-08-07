@@ -21,6 +21,7 @@ Cases live in [`02_Examples/`](02_Examples/README.md) (the `02a/02b/02c` trio in
 ## Start here
 
 - **[Proportional to *what*?](01_Learn/proportional_to_what.md)** (101) — no parties on the ballot, so what is being made proportional? Answer: quotas of *voters*, with the factions discovered by the ballots instead of declared beforehand.
+- **[STAR-PR — a voter's FAQ](01_Learn/star_pr_faq.md)** (101) — the questions a voter actually asks with a sample ballot in front of them, including "am I being punished for voting for a winner?" and "can I verify the count?"
 - **[What "proportional" actually means](01_Learn/what_proportional_means.md)** — read before advocating for any of this. Exact proportionality is the only unambiguous definition and almost no election meets it; a quota is a guarantee, not a price; and without parties there is no longer an obvious thing to be proportional *to*.
 - **[Bloc STAR vs Proportional STAR — the same ballots, two councils](../method_comparisons/bloc_vs_pr/README.md)** (101) — two voters, three candidates, two seats. The smallest election in which the majoritarian and proportional counts fill a council differently, checkable in your head.
 - **[STAR-PR — the three methods](01_Learn/STAR_PR/README.md)** — quota + reweighting, and how `allocated` / `sss` / `rrv` differ.

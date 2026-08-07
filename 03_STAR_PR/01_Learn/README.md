@@ -8,6 +8,8 @@
 
 - **[Proportional to *what*?](proportional_to_what.md)** (101) — the question party-list PR never has to answer. STAR-PR divides seats among **quotas of voters**, not parties, so the groups are discovered by the ballots rather than declared in advance. Start here if proportionality makes sense to you with parties and stops making sense without them.
 
+- **[STAR-PR — a voter's FAQ](star_pr_faq.md)** (101) — the kitchen-table questions, answered by tracing one ballot: how 0–5 stars become three winners, whether a blank spoils anything, why a spent ballot is not a punishment, whether you should bullet vote, and who checks the math. Includes the two things people most often get wrong — Bloc STAR is not "top N by points", and Allocated Score does not shade everyone's weight.
+
 - **[What "proportional" actually means](what_proportional_means.md)** — read before advocating for any of this. Exact proportionality has one unambiguous definition and almost no real election meets it; quotas are a *guarantee*, not a price, so candidates routinely win on less; without parties there is no longer an obvious thing to be proportional **to**; and proportionality increases descriptive representation without guaranteeing it along any single characteristic. The honest limits, in one place.
 
 - **[Simulating proportional systems](simulating_pr.md)** (401) — where the quantitative claims come from. The four voter models, the parameters a study must fix, the metrics, and the two variables that dominate results — plus the clustered spatial model the peer-reviewed STAR paper actually uses, and why it was chosen over impartial culture and plain Gaussian spatial.

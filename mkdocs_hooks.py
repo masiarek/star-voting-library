@@ -134,6 +134,7 @@ NAV_ORDER: dict[str, list[str]] = {
     # page that stops a reader over-claiming for the rest.
     "03_STAR_PR/01_Learn": [
         "proportional_to_what.md",
+        "star_pr_faq.md",
         "what_proportional_means.md",
         "STAR_PR",
         "stv",
