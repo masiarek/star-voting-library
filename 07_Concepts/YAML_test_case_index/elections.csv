@@ -230,6 +230,18 @@ LH:coop_board_scores_sss,"Co-op board — 0–5 score ballot, sss",1,single-race
 LH:copeland_half_credit_decides,Ranked Robin — the half-point for a draw decides the election (LH-only),1,single-race,30,RankedRobin,LH-only
 LH:copeland_vs_clones_c5_b3,"Copeland picks one, composition-consistency demands all five (tournament solutions)",1,single-race,3,RankedRobin,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
+LH:crowded_field_c3_approval,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by Approval",1,single-race,65,Approval,LH-only
+LH:crowded_field_c3_irv,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by RCV-IRV",1,single-race,65,IRV,LH-only
+LH:crowded_field_c3_ranked_robin,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by Ranked Robin",1,single-race,65,RankedRobin,LH-only
+LH:crowded_field_c3_star,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by STAR",1,single-race,65,STAR,LH-only
+LH:crowded_field_c5_approval,"Crowded field, rung 5 — 5 candidates, 65 voters, counted by Approval",1,single-race,65,Approval,LH-only
+LH:crowded_field_c5_irv,"Crowded field, rung 5 — 5 candidates, 65 voters, counted by RCV-IRV",1,single-race,65,IRV,LH-only
+LH:crowded_field_c5_ranked_robin,"Crowded field, rung 5 — 5 candidates, 65 voters, counted by Ranked Robin",1,single-race,65,RankedRobin,LH-only
+LH:crowded_field_c5_star,"Crowded field, rung 5 — 5 candidates, 65 voters, counted by STAR",1,single-race,65,STAR,LH-only
+LH:crowded_field_c7_approval,"Crowded field, rung 7 — 7 candidates, 65 voters, counted by Approval",1,single-race,65,Approval,LH-only
+LH:crowded_field_c7_irv,"Crowded field, rung 7 — 7 candidates, 65 voters, counted by RCV-IRV",1,single-race,65,IRV,LH-only
+LH:crowded_field_c7_ranked_robin,"Crowded field, rung 7 — 7 candidates, 65 voters, counted by Ranked Robin",1,single-race,65,RankedRobin,LH-only
+LH:crowded_field_c7_star,"Crowded field, rung 7 — 7 candidates, 65 voters, counted by STAR",1,single-race,65,STAR,LH-only
 LH:csv_ambiguity_ex1_c4_b8,"The eight ambiguous CSV lines, disambiguated (BV issue #778 ex1)",1,single-race,8,STAR,LH-only
 LH:cycle_C03_fewV15_noise_1,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",1,single-race,15,STAR,LH-only
 LH:cycle_C03_fewV15_noise_2,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR C)",1,single-race,15,STAR,LH-only

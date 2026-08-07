@@ -1,0 +1,86 @@
+======================================================================
+SOURCE FILE:     crowded_field_c3_approval.yaml
+TABULATED FILE:  crowded_field_c3_approval_tabulated.txt
+======================================================================
+
+election_title: "Crowded field, rung 3 — 3 candidates, 65 voters, counted by Approval"
+
+scenario_description: |-
+  RUNG 1, counted by Approval — each bloc approves everyone it would have scored 4 or
+  5 on the STAR ballot for this rung. Diego wins with 44 approvals of 65. Every method at
+  this rung agrees.
+
+  Same 65 voters and the same fixed candidate positions as crowded_field_c3_star.yaml;
+  the approval ballot is that file's 0–5 ballot thresholded at 4 (approve everyone you
+  would score 4 or 5). Change the cutoff in build_ladder.py and this file changes with it.
+
+  Construction: build_ladder.py in this folder. 65 voters in seven blocs at 0, 4, 8, 12,
+  16, 20, 24 (sizes 6, 10, 13, 9, 12, 8, 7); candidates fixed at Ana 1 · Bruno 6 ·
+  Clara 9 · Diego 11 · Elsa 14 · Felix 16 · Greta 22; utility = minus distance; scores =
+  each bloc's own min-max scaling onto 0–5. Nothing is tuned, and no count at any rung is
+  settled by a tie-break.
+
+voting_method: Approval
+num_winners: 1
+
+lot_numbers: [Ana, Diego, Greta]
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Ana,Diego,Greta
+  6:1,0,0    # bloc at 0
+  10:1,1,0    # bloc at 4
+  13:0,1,0    # bloc at 8
+  9:0,1,0    # bloc at 12
+  12:0,1,1    # bloc at 16
+  8:0,0,1    # bloc at 20
+  7:0,0,1    # bloc at 24
+
+expected_winners:
+  - Diego
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 65 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Ana, Diego, Greta      (1 = approve; 0 / blank / marker = not approved)
+     6 × 1,0,0
+    10 × 1,1,0
+    22 × 0,1,0
+    12 × 0,1,1
+    15 × 0,0,1
+
+   Diego -- 44 (68%) -- Elected
+   Greta -- 27 (42%)
+   Ana   -- 16 (25%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   87 approvals across 65 ballots — average 1.3 of 3 (range 1–2).
+     approved 1: 43 ballots
+     approved 2: 22 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          | Diego  | Greta  |  Ana   |
+   -----------------------------------
+   Diego  |   --   |  27%   |  23%   |
+   Greta  |  44%   |   --   |   0%   |
+   Ana    |  62%   |   0%   |   --   |
+
+Winner — Approval Voting (single winner)
+  Diego

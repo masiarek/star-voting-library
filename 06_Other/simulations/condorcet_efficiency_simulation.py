@@ -54,6 +54,8 @@ Usage:  uv run 06_Other/simulations/condorcet_efficiency_simulation.py
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --selftest
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --trials 20000 --seed 7
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --approval-cutoff 3
+        uv run 06_Other/simulations/condorcet_efficiency_simulation.py --chart
+        uv run 06_Other/simulations/condorcet_efficiency_simulation.py --why --voters 501
 """
 import argparse
 import sys
@@ -209,6 +211,111 @@ def sweep(rng, trials, cutoff, models, cands, voters):
         print()
 
 
+# --- the same numbers, drawn ---------------------------------------------------
+BAR_WIDTH = 12                                    # characters at 100%
+
+
+def _bar(pct):
+    """A fixed-width bar. Deliberately plain block characters and nothing else: the
+    output is pasted into Markdown pages that must render identically on GitHub, on the
+    built site and in a plain text editor, so no colour and no partial glyphs."""
+    filled = int(round(pct / 100 * BAR_WIDTH))
+    return "█" * filled + "·" * (BAR_WIDTH - filled)
+
+
+def chart(rng, trials, cutoff, models, cands, voters):
+    """Condorcet efficiency as a bar chart, one block per (model, electorate size).
+
+    Same numbers as the sweep -- this mode only draws them. The shape it exists to make
+    visible is the one the table buries: EVERY method's bar shrinks as the field grows,
+    and the control's does not, because Ranked Robin cannot miss. How fast the others
+    shrink is the whole subject of
+    07_Concepts/topics/condorcet/why_more_candidates_miss.md.
+    """
+    print("Condorcet efficiency = P(elects the Condorcet winner | one exists).")
+    print(f"{trials} elections per bar, sincere approval cutoff score >= {cutoff}. "
+          f"Ranked Robin is the CONTROL and must read 100%.\n")
+
+    # Draw from the SAME random stream, in the same order, as sweep() -- so with the
+    # same flags every bar here is the same number as the corresponding table cell in
+    # 07_Concepts/topics/condorcet/condorcet_efficiency_measured.md, not a fresh sample
+    # that lands a point away and makes the two pages look like they disagree.
+    eff = {}
+    for model in models:
+        for C in cands:
+            for V in voters:
+                _, e, _ = run_cell(rng, model, V, C, trials, cutoff)
+                eff[(model, V, C)] = e
+
+    for model in models:
+        for V in voters:
+            print(f"{model} — {V} voters")
+            print((" " * 12 + "  ".join(f"{str(C) + ' candidates':<{BAR_WIDTH + 6}}"
+                                        for C in cands)).rstrip())
+            for m in METHODS:
+                print(f"{m:<12}" + "  ".join(
+                    f"{_bar(eff[(model, V, C)][m] * 100)}{eff[(model, V, C)][m] * 100:4.0f}%"
+                    for C in cands))
+            drops = [f"{m} {(eff[(model, V, cands[0])][m] - eff[(model, V, cands[-1])][m]) * 100:.0f}"
+                     for m in METHODS if m != "RankedRobin"]
+            print(f"{'':12}{cands[0]} → {cands[-1]} candidates, percentage points lost: "
+                  + ", ".join(drops))
+            print()
+
+
+# --- what actually changes when the field grows? -------------------------------
+def why(rng, trials, models, cands, voters):
+    """Measure the three things a bigger field does to an election, so the explanation
+    on 07_Concepts/topics/condorcet/why_more_candidates_miss.md is evidence and not
+    just a story. All three are properties of the ELECTORATE, not of any method:
+
+      CW 1st %      the Condorcet winner's share of first choices. This is what
+                    Choose-One counts and what RCV-IRV eliminates on, so when it falls
+                    below the pack the CW goes out early -- and it falls purely because
+                    more candidates stand between them and their voters.
+      CW margin     the Condorcet winner's NARROWEST head-to-head win, in percentage
+                    points. A wider field packs rivals closer, so the margin the ballot
+                    has to preserve gets thinner.
+      pairs tied    the share of candidate PAIRS an average 0-5 ballot cannot separate.
+                    Six rungs hold at most 6 distinct ranks, so past 6 candidates the
+                    pigeonhole makes ties compulsory -- this is the score ballot running
+                    out of room, measured.
+
+    Read the three together: the first explains the choose-one family, the third
+    explains the score family, and the second explains why both get worse at once.
+    """
+    print("What a bigger field does to the election itself (not to any method).\n")
+    print(f"{'model':<10}{'C':>3}{'V':>6} | {'CW 1st %':>10}{'CW margin':>11}"
+          f"{'pairs tied':>12}")
+    print("-" * 54)
+    for model in models:
+        for V in voters:
+            for C in cands:
+                first_share = margin = tied = n = 0.0
+                for _ in range(trials):
+                    util = gen(rng, model, V, C)
+                    cw = condorcet_winner(util)
+                    if cw < 0:
+                        continue
+                    n += 1
+                    counts = np.bincount(util.argmax(1), minlength=C)
+                    first_share += counts[cw] / V
+                    W = pairwise(util)
+                    others = [j for j in range(C) if j != cw]
+                    margin += min((W[cw, j] - W[j, cw]) / V for j in others)
+                    s = scores_from_util(util)
+                    eq = sum(int((s[:, i] == s[:, j]).sum())
+                             for i in range(C) for j in range(i + 1, C))
+                    tied += eq / (V * C * (C - 1) / 2)
+                if not n:
+                    continue
+                print(f"{model:<10}{C:>3}{V:>6} | {first_share/n*100:9.1f}%"
+                      f"{margin/n*100:10.1f}%{tied/n*100:11.1f}%")
+        print()
+    print("Ranked Robin reads the margin column and is unaffected by the other two,\n"
+          "which is exactly why its efficiency stays at 100% while everyone else's falls.")
+
+
 # --- why does a grid loss happen? --------------------------------------------
 def mechanism(rng, trials, cutoff, models, cands, voters):
     """Split the grid losses into 'exact tie' vs 'outright reversal' on the 0-5 ballot.
@@ -338,10 +445,24 @@ def main():
     ap.add_argument("--mechanism", action="store_true",
                     help="instead of the sweep, break the grid losses down into exact "
                          "ties vs outright reversals on the 0-5 ballot")
+    ap.add_argument("--why", action="store_true",
+                    help="instead of the sweep, measure what a bigger field does to the "
+                         "election itself: the CW's first-choice share, their narrowest "
+                         "head-to-head margin, and how much of the 0-5 ballot goes tied")
+    ap.add_argument("--chart", action="store_true",
+                    help="instead of the sweep, draw the same efficiencies as bars, "
+                         "grouped by field size (what more candidates cost each method)")
     a = ap.parse_args()
 
     if a.selftest:
         return selftest()
+    if a.chart:
+        chart(np.random.default_rng(a.seed), a.trials, a.approval_cutoff,
+              a.models, a.candidates, a.voters)
+        return 0
+    if a.why:
+        why(np.random.default_rng(a.seed), a.trials, a.models, a.candidates, a.voters)
+        return 0
     if a.mechanism:
         mechanism(np.random.default_rng(a.seed), a.trials, a.approval_cutoff,
                   a.models, a.candidates, a.voters)

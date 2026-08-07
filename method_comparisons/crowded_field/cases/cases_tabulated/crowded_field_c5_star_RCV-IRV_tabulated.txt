@@ -1,0 +1,68 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Crowded field, rung 5 — 5 candidates, 65 voters, counted by STAR
+ Tabulating 65 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ana, Bruno, Diego, Elsa, Greta
+     6 ×   Ana > Bruno > Diego > Elsa      (5, 4, 3, 2, 0)
+    10 ×   Ana > Bruno > Diego > Elsa      (5, 5, 3, 2, 0)
+    13 ×   Bruno > Diego > Ana > Elsa      (3, 5, 5, 3, 0)
+     9 ×   Diego > Elsa > Bruno      (0, 2, 5, 4, 0)
+    12 ×   Elsa > Diego > Greta > Bruno      (0, 2, 4, 5, 3)
+     8 ×   Greta > Elsa > Diego > Bruno      (0, 1, 3, 4, 5)
+     7 ×   Greta > Elsa > Diego > Bruno      (0, 1, 2, 3, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               16  Hopeful
+Greta             15  Hopeful
+Bruno             13  Hopeful
+Elsa              12  Hopeful
+Diego              9  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Elsa              21  Hopeful
+Ana               16  Hopeful
+Greta             15  Hopeful
+Bruno             13  Rejected
+Diego              0  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               29  Hopeful
+Elsa              21  Hopeful
+Greta             15  Rejected
+Bruno              0  Rejected
+Diego              0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Elsa              36  Elected
+Ana               29  Rejected
+Greta              0  Rejected
+Bruno              0  Rejected
+Diego              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Elsa
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): Diego
+   Outside (4):        Ana, Bruno, Elsa, Greta
+   One member ⇒ Diego is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Elsa is OUTSIDE the Smith set. ✗
+      Every member of the set (Diego) beats Elsa head-to-head, yet
+      RCV-IRV elected Elsa anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

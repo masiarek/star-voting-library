@@ -69,6 +69,7 @@ AGREE,method_comparisons/BV_Library/cases/BV_Library_star_runoff.yaml,2,2,Bill,B
 AGREE,method_comparisons/black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous.yaml,3,5,Bob,Bob,Cal,Bob,Bob,Bob,Bob,Bob,Bob,5,True,False,False
 AGREE,method_comparisons/black_curtain/cases/Black_Curtain_04_c4_b5_four-candidates.yaml,4,5,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,Cal,0,False,False,False
 AGREE,method_comparisons/chicken_dilemma/cases/chicken_star.yaml,3,100,A,A,A,A,A,A,A,A,A,0,False,False,False
+AGREE,method_comparisons/crowded_field/cases/crowded_field_c3_star.yaml,3,65,Diego,Diego,Diego,Diego,Diego,Diego,Diego,Diego,Diego,0,False,False,False
 AGREE,method_comparisons/dark_horse_borda/cases/dark_horse_star.yaml,4,100,A,A,B,A,A,A,A,A,A,66,True,False,False
 AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_combined.yaml,3,9,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
 AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_north.yaml,3,5,Ana,Ana,Ana,Ana,Ana,Ana,Ana,Ana,Ana,0,False,False,False
@@ -138,6 +139,7 @@ APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_st
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml,4,33,Arlo,Arlo,Arlo,Arlo,Arlo,Bree,Bree,Arlo,Arlo,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml,3,13,Cass,Cass,Cass,Cass,Cass,Amy,Cass,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml,3,36,Almond,Almond,Almond,Almond,Almond,Cocoa,Almond,Almond,Almond,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/majoritarian_vs_utilitarian/cases/bv2279_qywq7d_star.yaml,3,3,Banana,Banana,Banana,Banana,Banana,Orange,Orange,Banana,Banana,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml,3,30,Z,Z,Z,Z,Z,X,X,Z,Z,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml,4,20,Blue,Blue,Blue,Blue,Blue,Pink,Purple,Blue,Blue,0,False,False,False
@@ -193,6 +195,8 @@ IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml,4
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml,3,38,Ben,Cora,Cora,Ben,Ben,Cora,Cora,Ben,Ben,2,False,False,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml,3,100,B,A,B,B,A,B,B,B,A,100,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/crowded_field/cases/crowded_field_c5_star.yaml,5,65,Diego,Elsa,Diego,Diego,Diego,Diego,Diego,Diego,Diego,23,True,False,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/crowded_field/cases/crowded_field_c7_star.yaml,7,65,Clara,Felix,Felix,Clara,Clara,Diego,Clara,Clara,Clara,65,False,False,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml,4,100,Melenchon,LePen,Melenchon,Melenchon,Fillon,Fillon,Melenchon,Melenchon,,100,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml,3,36,Berry,Almond,Berry,Berry,Almond,Berry,Berry,Berry,Almond,36,True,True,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False

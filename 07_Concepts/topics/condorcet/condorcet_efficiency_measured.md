@@ -1,6 +1,6 @@
 # Condorcet efficiency, measured
 
-→ Topic hub: [Condorcet efficiency](README.md) · the simulation: [`condorcet_efficiency_simulation.py`](../../../06_Other/simulations/condorcet_efficiency_simulation.py) ([folder README](../../../06_Other/simulations/README.md)) · glossary: [`Condorcet efficiency`](../../GLOSSARY.md#properties-criteria) · **Level: 301 · deep dive** — Curriculum [301.7](../../curriculum/CURRICULUM_301.md)
+→ Topic hub: [Condorcet efficiency](README.md) · why the field size matters: [more candidates, more misses](why_more_candidates_miss.md) · the simulation: [`condorcet_efficiency_simulation.py`](../../../06_Other/simulations/condorcet_efficiency_simulation.py) ([folder README](../../../06_Other/simulations/README.md)) · glossary: [`Condorcet efficiency`](../../GLOSSARY.md#properties-criteria) · **Level: 301 · deep dive** — Curriculum [301.7](../../curriculum/CURRICULUM_301.md)
 
 "STAR's Condorcet efficiency is very high" is one of the most-repeated claims in voting reform — and, until this page existed, one this repo made in four places without a number anyone could reproduce. This page fixes that by **measuring** it, under the folder rule that governs every simulation here: *always report the model and the parameters with the number.*
 
@@ -74,7 +74,7 @@ But the same model that flatters IRV also destroys its own credibility: impartia
 
 **5. Plurality is the floor in every single cell**, bottoming out at 29.9%. Approval sits above it and below Score throughout — but its number is the least meaningful of the six, because it is set by the **cutoff rule**, a modelling choice and not a fact about Approval. Sweep it with `--approval-cutoff` and the column moves.
 
-**6. More candidates hurt everyone except the control.** Every method's efficiency declines with field size in every model. Nothing here is a small-field phenomenon that vanishes at scale.
+**6. More candidates hurt everyone except the control.** Every method's efficiency declines with field size in every model — no exceptions, at either electorate size. Nothing here is a small-field phenomenon that vanishes at scale. It is also the finding on this page that gets quoted most and explained least, so it has its own treatment: [Why more candidates make every method miss](why_more_candidates_miss.md) measures the three things a bigger field does to the election itself (the Condorcet winner's first-choice share, their narrowest margin, and how much of a 0–5 ballot goes tied), draws these efficiencies as bars, and works one electorate through 3, 5 and 7 candidates where four different people win.
 
 **7. More voters cut both ways.** Under structured models, more ballots *raise* efficiency (sampling noise fades, structure dominates: STAR 87.5% → 92.2% in `spatial2d` at 7). Under impartial culture they change almost nothing. This mirrors the [STAR-vs-RR divergence](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) finding that "fewer ballots → more disagreement" is a property of *structured* electorates, not random ones.
 
@@ -136,4 +136,4 @@ If what you want is a *guarantee* rather than a rate, that is what [Ranked Robin
 
 ---
 
-**See also:** [Topic hub: Condorcet efficiency](README.md) · [30 worked STAR ≠ Ranked Robin elections](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) · [the divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) (real library elections where the methods disagree) · [center squeeze](../center_squeeze/README.md) · [the Smith set](../smith_set.md) · [reading list](condorcet_reading_list.md) · [simulations folder](../../../06_Other/simulations/README.md)
+**See also:** [Topic hub: Condorcet efficiency](README.md) · [Why more candidates make every method miss](why_more_candidates_miss.md) · [the crowded field](../../../method_comparisons/crowded_field/README.md) · [30 worked STAR ≠ Ranked Robin elections](../../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) · [the divergence ledger](../../../method_comparisons/divergence_review/INDEX.md) (real library elections where the methods disagree) · [center squeeze](../center_squeeze/README.md) · [the Smith set](../smith_set.md) · [reading list](condorcet_reading_list.md) · [simulations folder](../../../06_Other/simulations/README.md)

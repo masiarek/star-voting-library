@@ -1,0 +1,76 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Crowded field, rung 7 — 7 candidates, 65 voters, counted by STAR
+ Tabulating 65 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ana, Bruno, Clara, Diego, Elsa, Felix, Greta
+     6 ×   Ana > Bruno > Clara > Diego > Elsa > Felix      (5, 4, 3, 3, 2, 1, 0)
+    10 ×   Ana > Bruno > Clara > Diego > Elsa > Felix      (5, 5, 4, 3, 2, 2, 0)
+    13 ×   Bruno > Clara > Diego > Ana > Elsa > Felix      (3, 5, 5, 4, 3, 2, 0)
+     9 ×   Diego > Clara > Elsa > Felix > Bruno      (0, 2, 4, 5, 4, 4, 0)
+    12 ×   Felix > Elsa > Clara > Diego > Greta > Bruno      (0, 2, 3, 3, 4, 5, 3)
+     8 ×   Greta > Elsa > Felix > Diego > Clara > Bruno      (0, 1, 2, 3, 4, 4, 5)
+     7 ×   Greta > Felix > Elsa > Clara > Diego > Bruno      (0, 1, 2, 2, 3, 4, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               16  Hopeful
+Greta             15  Hopeful
+Bruno             13  Hopeful
+Felix             12  Hopeful
+Diego              9  Rejected
+Clara              0  Rejected
+Elsa               0  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Felix             21  Hopeful
+Ana               16  Hopeful
+Greta             15  Hopeful
+Bruno             13  Rejected
+Diego              0  Rejected
+Clara              0  Rejected
+Elsa               0  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+Ana               29  Hopeful
+Felix             21  Hopeful
+Greta             15  Rejected
+Bruno              0  Rejected
+Diego              0  Rejected
+Clara              0  Rejected
+Elsa               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Felix             36  Elected
+Ana               29  Rejected
+Greta              0  Rejected
+Bruno              0  Rejected
+Diego              0  Rejected
+Clara              0  Rejected
+Elsa               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Felix
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 7): Clara
+   Outside (6):        Ana, Bruno, Diego, Elsa, Felix, Greta
+   One member ⇒ Clara is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Felix is OUTSIDE the Smith set. ✗
+      Every member of the set (Clara) beats Felix head-to-head, yet
+      RCV-IRV elected Felix anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

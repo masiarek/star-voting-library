@@ -1,0 +1,136 @@
+======================================================================
+SOURCE FILE:     crowded_field_c3_star.yaml
+TABULATED FILE:  crowded_field_c3_star_tabulated.txt
+======================================================================
+
+election_title: "Crowded field, rung 3 — 3 candidates, 65 voters, counted by STAR"
+
+scenario_description: |-
+  RUNG 1 of the crowded-field ladder — three candidates, and all six methods agree.
+
+  Diego stands at 11 on a 0–24 spectrum, near the middle of where the voters are. He
+  beats both rivals head-to-head, so he is the Condorcet winner; he leads the scoring
+  round 266 to Greta's 123 and Ana's 119, and takes the runoff 50–15 with nobody
+  undecided. He even holds an outright majority of first choices, 34 of 65.
+
+  Ranked Robin, Score, Approval, RCV-IRV and Choose-One elect him too. That is the point
+  of this rung: with a small field there is nothing to argue about, so any disagreement
+  further up the ladder was caused by the candidates who joined — the voters never move.
+
+  Construction: build_ladder.py in this folder. 65 voters in seven blocs at 0, 4, 8, 12,
+  16, 20, 24 (sizes 6, 10, 13, 9, 12, 8, 7); candidates fixed at Ana 1 · Bruno 6 ·
+  Clara 9 · Diego 11 · Elsa 14 · Felix 16 · Greta 22; utility = minus distance; scores =
+  each bloc's own min-max scaling onto 0–5. Nothing is tuned, and no count at any rung is
+  settled by a tie-break.
+
+voting_method: STAR
+num_winners: 1
+
+lot_numbers: [Ana, Diego, Greta]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  Count:Ana,Diego,Greta
+  6:5,3,0    # bloc at 0
+  10:5,4,0    # bloc at 4
+  13:3,5,0    # bloc at 8
+  9:0,5,0    # bloc at 12
+  12:0,5,4    # bloc at 16
+  8:0,3,5    # bloc at 20
+  7:0,2,5    # bloc at 24
+
+expected_winners:
+  - Diego
+
+# file: crowded_field_c3_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Crowded field, rung 3 — 3 candidates, 65 voters, counted by STAR ===
+  RUNG 1 of the crowded-field ladder — three candidates, and all six methods agree.
+
+  Diego stands at 11 on a 0–24 spectrum, near the middle of where the voters are. He
+  beats both rivals head-to-head, so he is the Condorcet winner; he leads the scoring
+  round 266 to Greta's 123 and Ana's 119, and takes the runoff 50–15 with nobody
+  undecided. He even holds an outright majority of first choices, 34 of 65.
+
+  Ranked Robin, Score, Approval, RCV-IRV and Choose-One elect him too. That is the point
+  of this rung: with a small field there is nothing to argue about, so any disagreement
+  further up the ladder was caused by the candidates who joined — the voters never move.
+
+  Construction: build_ladder.py in this folder. 65 voters in seven blocs at 0, 4, 8, 12,
+  16, 20, 24 (sizes 6, 10, 13, 9, 12, 8, 7); candidates fixed at Ana 1 · Bruno 6 ·
+  Clara 9 · Diego 11 · Elsa 14 · Felix 16 · Greta 22; utility = minus distance; scores =
+  each bloc's own min-max scaling onto 0–5. Nothing is tuned, and no count at any rung is
+  settled by a tie-break.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |      Ana     |  * Diego    |  * Greta    |
+-------------------------------------------------------------
+           Ana > |     ---      |16 -  0 - 49 |29 -  9 - 27 |
+       * Diego > | 49 -  0 - 16 |    ---      |50 -  0 - 15 |
+       * Greta > | 27 -  9 - 29 |15 -  0 - 50 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Diego — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Greta — loses every head-to-head matchup
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 65 ballots.
+Count × Ana,Diego,Greta
+   13 ×   3,    5,    0
+   12 ×   0,    5,    4
+   10 ×   5,    4,    0
+    9 ×   0,    5,    0
+    8 ×   0,    3,    5
+    7 ×   0,    2,    5
+    6 ×   5,    3,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ana        16   0  13   0   0  36  |   119   1.8
+Diego      34  10  14   7   0   0  |   266   4.1
+Greta      15  12   0   0   0  38  |   123   1.9
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Diego         -- 266 -- First place
+   Greta         -- 123 -- Second place
+   Ana           -- 119
+ Diego and Greta advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Diego         -- 50 -- First place
+   Greta         -- 15
+   Equal Support --  0
+ Diego wins.
+   Runoff math:
+     65  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     65  voters with a preference  (majority = 33)
+           Diego 50 (77%)  ·  Greta 15 (23%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Diego

@@ -5,7 +5,7 @@ This folder holds brute-force simulations that **measure** a claim instead of ci
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
-- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md).
+- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md). Its `--chart` and `--why` modes back a second page: [Why more candidates make every method miss](../../07_Concepts/topics/condorcet/why_more_candidates_miss.md), which explains the field-size effect and works it through [one 65-voter election at 3, 5 and 7 candidates](../../method_comparisons/crowded_field/README.md).
 - **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py`: in a two-stage reform (open primary → top N → good general), how often does the *primary* discard the consensus candidate? Full writeup + measured rates: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md) ([mechanics](#qualifying-round-primary-method-simulation)).
 
 ## Favorite-Betrayal (FBC) simulation
@@ -240,6 +240,8 @@ The script does **not** define its own STAR — it imports `star_winner()` from 
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py                  # the sweep
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --selftest       # known answers
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --mechanism      # why STAR misses
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --chart          # the same rates, as bars
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --why            # what a bigger field does
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --approval-cutoff 3
 ```
 

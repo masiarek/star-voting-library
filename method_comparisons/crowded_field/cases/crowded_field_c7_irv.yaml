@@ -1,0 +1,53 @@
+election_title: "Crowded field, rung 7 — 7 candidates, 65 voters, counted by RCV-IRV"
+
+scenario_description: |-
+  RUNG 3 — seven candidates, and Diego is down to 9 first choices out of 65 while
+  still beating all six rivals head-to-head.
+
+  He is eliminated; RCV-IRV elects Clara. Round 1 doubles as the Choose-One count, which
+  elects Greta on 15 — the candidate standing furthest from the middle of the electorate,
+  and one Diego beats 50–15 one-on-one.
+
+  Counted here on the ranked ballots, deliberately. At seven candidates the 0–5 ballot in
+  crowded_field_c7_star.yaml carries ties on most rows, so reading IRV or Choose-One off
+  it — as that file's divergence block is forced to — measures the score-to-rank
+  tie-break rather than the method. These are the numbers to quote.
+
+  Same 65 voters and the same fixed candidate positions as crowded_field_c7_star.yaml,
+  on a ranked ballot — the same ballots as crowded_field_c7_ranked_robin.yaml, counted by
+  elimination instead of head-to-head.
+
+  Construction: build_ladder.py in this folder. 65 voters in seven blocs at 0, 4, 8, 12,
+  16, 20, 24 (sizes 6, 10, 13, 9, 12, 8, 7); candidates fixed at Ana 1 · Bruno 6 ·
+  Clara 9 · Diego 11 · Elsa 14 · Felix 16 · Greta 22; utility = minus distance; scores =
+  each bloc's own min-max scaling onto 0–5. Nothing is tuned, and no count at any rung is
+  settled by a tie-break.
+
+voting_method: RCV_IRV
+num_winners: 1
+
+lot_numbers: [Ana, Bruno, Clara, Diego, Elsa, Felix, Greta]
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  6:Ana>Bruno>Clara>Diego>Elsa>Felix>Greta    # bloc at 0
+  10:Bruno>Ana>Clara>Diego>Elsa>Felix>Greta    # bloc at 4
+  13:Clara>Bruno>Diego>Elsa>Ana>Felix>Greta    # bloc at 8
+  9:Diego>Elsa>Clara>Felix>Bruno>Greta>Ana    # bloc at 12
+  12:Felix>Elsa>Diego>Greta>Clara>Bruno>Ana    # bloc at 16
+  8:Greta>Felix>Elsa>Diego>Clara>Bruno>Ana    # bloc at 20
+  7:Greta>Felix>Elsa>Diego>Clara>Bruno>Ana    # bloc at 24
+
+expected_winners:
+  - Clara

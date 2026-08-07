@@ -1,0 +1,43 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 65 ballots (ranked ballots).
+
+Ballots:
+    16 × Ana > Diego > Greta
+    13 × Diego > Ana > Greta
+    21 × Diego > Greta > Ana
+    15 × Greta > Diego > Ana
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Diego  beats Ana     49 – 16
+   Greta  beats Ana     36 – 29
+   Diego  beats Greta   50 – 15
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |     Ana      |   Diego     |   Greta     |
+------------------------------------------------------
+    Ana > |     ---      |16 -  0 - 49 |29 -  0 - 36 |
+  Diego > | 49 -  0 - 16 |    ---      |50 -  0 - 15 |
+  Greta > | 36 -  0 - 29 |15 -  0 - 50 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Diego      2–0–0         2     +68  Greta, Ana
+    2  Greta      1–1–0         1     -28  Ana
+    3  Ana        0–2–0         0     -40  —
+
+Winner — Ranked Robin (RCV-RR): Diego
+   beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Diego
+   Outside (2):        Ana, Greta
+   One member ⇒ Diego is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Diego is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md

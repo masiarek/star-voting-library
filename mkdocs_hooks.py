@@ -188,6 +188,15 @@ NAV_ORDER: dict[str, list[str]] = {
         "burial",
         "districting",
     ],
+    # The two Condorcet-efficiency pages are a pair — the measured rates, then why
+    # field size moves them — and plain alphabetical order files four unrelated
+    # claim-checks between them. No numbering (SPINE_BREAK first): this is a shelf,
+    # not a spine. Everything unlisted keeps its alphabetical slot underneath.
+    "07_Concepts/topics/condorcet": [
+        SPINE_BREAK,
+        "condorcet_efficiency_measured.md",
+        "why_more_candidates_miss.md",
+    ],
 }
 
 # Runs before TERMS, so "ranked robin" is settled before the single-word pass

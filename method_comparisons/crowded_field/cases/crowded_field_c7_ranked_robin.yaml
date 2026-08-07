@@ -1,0 +1,57 @@
+election_title: "Crowded field, rung 7 — 7 candidates, 65 voters, counted by Ranked Robin"
+
+scenario_description: |-
+  RUNG 3, counted by Ranked Robin — the control for the whole ladder.
+
+  Diego beats all SIX rivals head-to-head. The electorate's answer has not budged since
+  rung 1, and Ranked Robin returns it, because a ranked ballot at seven candidates can
+  still say which of Clara and Diego a voter prefers: **Diego beats Clara 36–29** right
+  here in the round-robin. The 0–5 score ballot in crowded_field_c7_star.yaml largely
+  cannot — 25 of 65 voters score the two identically there, and Clara takes the runoff
+  23–17 out of what is left.
+
+  So this file is the control, and it carries the caveat that goes with being one: it
+  reads a full-resolution ranking while the STAR file reads six rungs. Part of the gap
+  between the two at this rung is ballot expressiveness rather than tabulation rule. A
+  real 0–5 STAR election really does have only six rungs, so the cost still lands on
+  STAR — but it is not the automatic runoff that caused it. The folder README works
+  through both halves of that.
+
+  Same 65 voters and the same fixed candidate positions as crowded_field_c7_star.yaml;
+  this file hands them a ranked ballot instead of a 0–5 one.
+
+  Construction: build_ladder.py in this folder. 65 voters in seven blocs at 0, 4, 8, 12,
+  16, 20, 24 (sizes 6, 10, 13, 9, 12, 8, 7); candidates fixed at Ana 1 · Bruno 6 ·
+  Clara 9 · Diego 11 · Elsa 14 · Felix 16 · Greta 22; utility = minus distance; scores =
+  each bloc's own min-max scaling onto 0–5. Nothing is tuned, and no count at any rung is
+  settled by a tie-break.
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ana, Bruno, Clara, Diego, Elsa, Felix, Greta]
+
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: true
+  show_score_counts: false
+  show_irv: false
+  show_smith_set: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+
+ballots: |-
+  6:Ana>Bruno>Clara>Diego>Elsa>Felix>Greta    # bloc at 0
+  10:Bruno>Ana>Clara>Diego>Elsa>Felix>Greta    # bloc at 4
+  13:Clara>Bruno>Diego>Elsa>Ana>Felix>Greta    # bloc at 8
+  9:Diego>Elsa>Clara>Felix>Bruno>Greta>Ana    # bloc at 12
+  12:Felix>Elsa>Diego>Greta>Clara>Bruno>Ana    # bloc at 16
+  8:Greta>Felix>Elsa>Diego>Clara>Bruno>Ana    # bloc at 20
+  7:Greta>Felix>Elsa>Diego>Clara>Bruno>Ana    # bloc at 24
+
+expected_winners:
+  - Diego

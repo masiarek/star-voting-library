@@ -6,6 +6,7 @@ The library's crown jewels: teaching sets where the *contrast between methods* i
 |---|---|
 | [The Black Curtain — one electorate, four "identical" landslides](black_curtain/README.md) | four elections, identical first-choice "landslides" — Approval, Score, STAR, and RCV-IRV reveal (or hide) four very different electorates |
 | [Center squeeze — RCV-IRV eliminates the consensus, STAR elects it](center_squeeze/README.md) | the same 1-D electorate: RCV-IRV eliminates the consensus center; STAR elects it |
+| [The crowded field — one electorate, three ballot sizes](crowded_field/README.md) | 65 voters who never change their minds, and a field that grows 3 → 5 → 7. Diego beats every rival head-to-head at all three rungs; at three candidates all six methods elect him, at seven **four different people win**. Rung 2 is vote-splitting (his first choices collapse 34 → 9 with nobody persuaded); rung 3 is the 0–5 ballot running out of rungs — he *reaches* STAR's runoff and still loses, because 25 of 65 voters can no longer tell him from his neighbour. Every ballot derived from the candidates' positions, nothing settled by a tie-break |
 | [Hillinger's evaluative voting — the paper, made runnable](hillinger_evaluative_voting/README.md) | his "mirror pathology" of IRV, run: 30 voters, three methods, three different winners — plus what "cardinal" guarantees under rescaling |
 | [One dial, three winners — Kim's (A,B)-scoring family](kim_ordinal_vs_cardinal/README.md) | Myerson's family indexed by *what your second choice is worth*: one 36-voter electorate with fixed rankings elects **Cocoa** at `A=0` (plurality), **Almond** at `A=½` (Borda — which Kim proves is the best an ordinal ballot can do), **Berry** at `A=1` (negative voting). Then the two Approval files hand the dial to the **voters**: identical rankings, different second-choice intensities, different winners — the half a ranking cannot record |
 | [Preference vs. Support, as a live election](preference_vs_support/README.md) | BV2225/2226 live: a matched pair with **byte-identical rankings** — only the wings' score for the centrist changes (1→4). RCV-IRV and Ranked Robin return the *same* winners in both (they read only order); STAR is the lone method that moves — because support is the one thing that changed, and only a score ballot carries it |
@@ -47,10 +48,11 @@ The library's crown jewels: teaching sets where the *contrast between methods* i
 
 ## Measured studies (simulation-backed, not case sets)
 
-Two pages here answer a "how often?" question with a seeded, runnable simulation rather than a curated election — the numbers live with their model and caveats, and disagreement is checkable:
+These pages answer a "how often?" question with a seeded, runnable simulation rather than a curated election — the numbers live with their model and caveats, and disagreement is checkable:
 
 | Study | The question |
 |---|---|
+| [Why more candidates make every method miss](../07_Concepts/topics/condorcet/why_more_candidates_miss.md) | why Condorcet efficiency falls with field size, for every method, in every electorate model. Three measured causes — the Condorcet winner's first-choice share halves, their narrowest margin thins to a third, and the fraction of a 0–5 ballot that goes tied doubles — plus which mechanism hits which method, and [the crowded field](crowded_field/README.md) as the worked election |
 | [How often do STAR and Approval disagree?](star_vs_approval_divergence.md) | there is no single rate — it depends on the electorate model *and* on where each voter draws their approval cutoff |
 | [Does the qualifying round throw away the consensus winner?](qualifying_round_primary_method.md) | in a two-stage reform (open primary → top N → good general), a **Plurality** primary drops the consensus winner 17.3% of the time at top-4; **Approval** drops it 0.4%. The method matters far more than the number of slots |
 
