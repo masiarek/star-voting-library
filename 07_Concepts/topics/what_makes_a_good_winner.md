@@ -20,18 +20,18 @@ This isn't a gap waiting to be filled; it's a **theorem**. Arrow's impossibility
 
 | Ideal | The winner is… | Also called | The criterion |
 |-------|----------------|-------------|---------------|
-| **Most first choices** | whoever leads the first-preference count | the plurality leader / front-runner | (plurality) |
+| **Most first choices** | whoever leads the first-preference count | the plurality leader / front-runner | ([plurality](../../06_Other/Plurality/README.md)) |
 | **Majority's choice** | someone a majority ranks first / prefers | the majority winner | [Majority criterion](majority_criterion/README.md) |
 | **Beats everyone head-to-head** | who wins every one-on-one matchup | the **consensus candidate** / **Condorcet winner** / a "strong" candidate | [Condorcet criterion](condorcet/README.md) |
-| **Highest overall support** | who the electorate rates highest in total | the **utilitarian** / best-liked winner | (utilitarian efficiency) |
+| **Highest overall support** | who the electorate rates highest in total | the **utilitarian** / best-liked winner | ([utilitarian efficiency](#measuring-it-empirically-vse-bayesian-regret)) |
 
 These are *different questions*. "Who has the most passionate first-choice base?" is not "who could beat any rival in a runoff?" is not "who is rated highest by everyone?" A **polarizing front-runner** can lead first choices while losing every head-to-head; a **consensus candidate** can be almost nobody's favorite yet everybody's acceptable second choice and beat all rivals one-on-one.
 
 ## The key words
 
 - **Consensus candidate** — broadly acceptable; the compromise a majority would take over any single rival. Formally, when one exists, this is the **Condorcet winner** (beats every opponent head-to-head). Often *few first choices* but *wide second-choice support*.
-- **Strong candidate** — loosely, one who holds up under scrutiny: wins pairwise matchups, or has deep and wide support. The Condorcet winner is the strongest in the pairwise sense.
-- **Utilitarian winner** — maximizes total voter satisfaction (e.g. the highest score sum). The strongest in the "greatest overall happiness" sense.
+- **Strong candidate** — loosely, one who holds up under scrutiny: wins [pairwise matchups](pairwise_counting.md), or has deep and wide support. The Condorcet winner is the strongest in the pairwise sense.
+- **Utilitarian winner** — maximizes [total voter satisfaction](cardinal_utility.md) (e.g. the highest score sum). The strongest in the "greatest overall happiness" sense.
 - **Spoiler / vote-split victim** — a good winner who *loses* only because similar candidates divided the vote (see [spoiler effect](spoiler_effect.md)).
 
 ## They disagree — on real elections in this repo
