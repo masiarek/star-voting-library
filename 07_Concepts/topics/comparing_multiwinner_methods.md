@@ -75,5 +75,6 @@ The same discipline applied to individual edge cases is [Reading these fairly](.
 - **The fork:** [Electing more than one, simply](electing_more_than_one.md) — majoritarian vs proportional in plain language
 - **The majoritarian family:** [Bloc STAR among the at-large methods](../../02_STAR_Bloc/01_Learn/bloc_star_vs_other_bloc_methods.md)
 - **The proportional families:** [the three STAR-PR methods](../../03_STAR_PR/01_Learn/STAR_PR/README.md) · [Thiele methods on approval ballots](../../04_Approval/01_Learn/Multiwinner_Approval/thiele_methods.md)
+- **A worked row comparison:** [Proportional on both sides](../../method_comparisons/proportional_ballots/README.md) — one electorate, two ballots, both proportional; the third seat moves
 - **Within-family divergence, done right:** [when the STAR-PR methods disagree](../../03_STAR_PR/02_Examples/method_divergences/README.md) — three tabulations, one ballot, one philosophy, so the difference is attributable
 - **The engine for the approval half:** [abcvoting](../../06_Other/abcvoting_tabulation_engine/README.md)

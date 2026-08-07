@@ -1,0 +1,60 @@
+election_title: Co-op board — 0–5 score ballot, sss
+voting_method: sss
+num_winners: 3
+
+scenario_description: |
+  Nine co-op members elect a three-seat board. This file is the SCORE half of
+  a matched pair: the same nine people, the same opinions, recorded once on a
+  0-5 ballot and once as Yes/No approvals (approve iff score >= 3, in
+  coop_board_approval.yaml).
+
+  Both halves are counted PROPORTIONALLY -- Allocated Score and SSS here,
+  seq-Phragmen / PAV / seqPAV on the approval file -- so the seat-filling
+  philosophy is held constant and any difference is attributable to the
+  BALLOT rather than to majoritarian-vs-proportional.
+
+  Score totals: Chris 36, Ben 24, Dana 23, Ella 22, Amy 18.
+  Both score tabulations elect  ->  Ben, Chris, Dana
+  All three approval rules elect ->  Chris, Dana, Ella
+
+  Ben and Ella swap, and the reason is the threshold. Ben is nobody's
+  favourite and everybody's acceptable: his scores are 1,2,4,3,2,2,2,5,3 --
+  a total of 24 with NOT ONE ZERO. Ella's are 4,0,3,4,5,0,2,4,0 -- a lower
+  total of 22, but five of them clear the 3-star line and three voters give
+  her nothing at all. Approval counts them 4 to 5 and seats Ella; the score
+  ballot counts them 24 to 22 and seats Ben.
+
+  An approval ballot cannot see a floor. Everything below the threshold --
+  Ben's steady 2s from the whole room -- is erased, and a bare 3 counts
+  exactly as much as a 5.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Amy,Ben,Chris,Dana,Ella
+  5,1,3,3,4      # Member 1
+  2,2,4,3,0      # Member 2
+  0,4,4,2,3      # Member 3
+  1,3,4,4,4      # Member 4
+  5,2,5,2,5      # Member 5
+  1,2,4,0,0      # Member 6
+  1,2,5,4,2      # Member 7
+  2,5,4,0,4      # Member 8
+  1,3,3,5,0      # Member 9
+
+expected_winners:
+  - Ben
+  - Chris
+  - Dana
+
+# file: coop_board_scores_sss.yaml
