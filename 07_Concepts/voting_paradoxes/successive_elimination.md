@@ -1,4 +1,4 @@
-# The successive-elimination procedure — one agenda, five paradoxes (worked tables)
+# The successive-elimination procedure — one agenda, five paradoxes
 
 *The **successive elimination** procedure (the parliamentary/amendment procedure): candidates meet in pairwise majority votes in a fixed agenda order; each round's loser is eliminated and the winner meets the next candidate; the last survivor wins.* Neither BetterVoting nor the LH engine implements this procedure — it is a parliamentary practice, not a ballot-box method — so this repo counts it with [`successive_elimination_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py), and **every example below is a runnable case file**.
 
