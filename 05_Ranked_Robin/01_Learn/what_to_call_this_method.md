@@ -10,7 +10,7 @@
 
 Strip the labels and the method is short to state: **compare every pair of candidates head-to-head; whoever wins the most matchups wins.** Ties are broken by summing win margins.
 
-That core is old. It was described by Ramon Llull in **1299**, rediscovered by the Marquis de Condorcet in the 1780s, and formalised as an algorithm by A. H. Copeland in **1951**. The margins tiebreak makes it what the literature calls **Copeland//Borda**. The name *"Ranked Robin"* was coined by Sara Wolk of the Equal Vote Coalition in **2021**.
+That core is old. It was described by Ramon Llull in **1299**, rediscovered by the Marquis de Condorcet in the 1780s, and formalised as an algorithm by A. H. Copeland in **1951**. The margins tiebreak — proposed as Equal Vote's default by [Sass](https://electowiki.org/wiki/User:Sass) in **2021** — makes it what the literature calls **Copeland//Borda**. The name *"Ranked Robin"* was coined that same year by [Sara Wolk](https://electowiki.org/wiki/Talk:Ranked_Robin) of the Equal Vote Coalition.
 
 So the naming question is not "what do we call this new thing?" It is "which of several existing names for a 700-year-old thing should a teaching library lead with?"
 
