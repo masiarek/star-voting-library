@@ -1,6 +1,8 @@
 # Range Voting's paradoxes — when the mean overrules the majority (§A8 worked)
 
-*The **Range Voting (RV)** procedure: voters grade every candidate on a cardinal scale (Felsenthal uses 1–10); the highest **mean** grade wins.* Felsenthal lists RV as vulnerable to the Condorcet Winner, Condorcet Loser, Absolute Winner, Absolute Loser, and Truncation paradoxes — and notes the striking fact that, unlike every other procedure except Majority Judgment, most of RV's paradoxes need only **two candidates**. (For the repo's broader Range-Voting material see [06_Other/Range/concepts](../../06_Other/Range/concepts/README.md).)
+> **New to Range Voting? Start with the method itself → [Range / Score Voting](../../06_Other/Range/concepts/range_voting.md).** That page shows the ballot (with pictures of how voters mark it), the one-line count, the pros and cons, and where Range sits in the scored family **Approval → Range → STAR**. *This* page assumes all that and goes straight to where the mean misbehaves.
+
+*The **Range Voting (RV)** procedure: voters grade every candidate on a cardinal scale (Felsenthal uses 1–10); the highest **mean** grade wins.* Felsenthal lists RV as vulnerable to the Condorcet Winner, Condorcet Loser, Absolute Winner, Absolute Loser, and Truncation paradoxes — and notes the striking fact that, unlike every other procedure except Majority Judgment, most of RV's paradoxes need only **two candidates**. (More of the repo's Range material: the [concept folder](../../06_Other/Range/concepts/README.md), its [glossary](../../06_Other/Range/concepts/glossary_range.md), and the [Range tabulation engine](../../06_Other/Range/Range_tabulation_engine/README.md).)
 
 Both examples are **runnable case files**, counted by [`grade_methods_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/grade_methods_report.py) and cross-checked against `pref_voting` on every run:
 

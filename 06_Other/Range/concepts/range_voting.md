@@ -10,16 +10,19 @@
 
 ## How it works
 
-The ballot is a **score grid** — grade every candidate independently, e.g. 0–5:
+The ballot is a **score grid** — grade every candidate independently, e.g. 0–5. It is *the same piece of paper STAR uses*; the whole difference between the two methods is what happens after the marks are counted. Here are the five ballots of the [101 case](../cases/range_101_c3_b5.yaml) exactly as those voters marked them, each beside the numbers the file records:
 
-```
-Amy,Beth,Cole
-5,4,0
-5,3,1
-0,4,5
-1,5,4
-0,5,5
-```
+<!-- ballots:range_101_c3_b5 -->
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Amy | Beth | Cole |
+|:--|:--:|:--:|:--:|
+| <img src="../cases/img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
+| <img src="../cases/img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
+| <img src="../cases/img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
+| <img src="../cases/img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
+| <img src="../cases/img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
+<!-- /ballots -->
 
 Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No finalists, no rounds. (Larger scales — 0–9, 0–10, 0–99 — work the same way; `rangevoting.org` favors a wide scale.)
 
@@ -34,7 +37,7 @@ Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No
 | Pros | Cons |
 |---|---|
 | ✅ **Maximally expressive** — say *how much* you like each candidate, independently. | ⚠️ **Strategy-exposed.** A voter's rational play is often to give only max/min (exaggerate), which **collapses Range toward Approval**. |
-| ✅ **No vote-splitting / spoiler** in the choose-one sense — scoring a new candidate never lowers another's score. | ⚠️ **Not majoritarian.** A candidate a slim majority *strongly* prefers can lose to one a broad group *mildly* likes. Range fails the **Majority Criterion**. |
+| ✅ **No vote-splitting / spoiler** in the choose-one sense — scoring a new candidate never lowers another's score. | ⚠️ **Not majoritarian.** A candidate a slim majority *strongly* prefers can lose to one a broad group *mildly* likes. Range fails the **Majority Criterion** — pushed to the extreme in [Range Voting's paradoxes](../../../07_Concepts/voting_paradoxes/range_voting.md), where one enthusiastic grade overrules three majorities. |
 | ✅ **Precinct-summable & simple to tally** — just add columns; none of RCV-IRV's round-by-round machinery. | ⚠️ **The scale / normalization problem.** Honest voters using the scale differently — or a shifted "where's my line" — changes results (the [approval-line](../../../04_Approval/01_Learn/approval_honest_limits.md) issue, one notch up). |
 | ✅ **Monotone** — more support never hurts a candidate (unlike IRV). | ⚠️ **Fails Later-No-Harm** — grading a compromise can cost your favorite. |
 | ✅ **Passes the [Equal Vote / balance test](../../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md)** and elects the utilitarian/consensus winner. | ⚠️ **Scale granularity can flip the winner** — see the [301 case](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md). |

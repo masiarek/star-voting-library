@@ -15,11 +15,11 @@ num_winners: 1
 
 ballots: |-
   Amy,Beth,Cole
-  5,4,0
-  5,3,1
-  0,4,5
-  1,5,4
-  0,5,5
+  5,4,0   # Amy's camp — Beth a solid second
+  5,3,1   # Amy's camp — Cole barely registers
+  0,4,5   # Cole's camp — Beth a solid second
+  1,5,4   # Cole's camp — Beth edges Cole out
+  0,5,5   # Cole's camp — Beth and Cole tied at the top
 
 expected_winners:
   - Beth
