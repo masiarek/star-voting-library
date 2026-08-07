@@ -14,11 +14,10 @@ They keep Felsenthal's 1–10 grades rather than being rescaled, so they are **g
 
 ## Example 23 — four paradoxes with two candidates
 
-```
-Grades (1–10)   V1   V2   V3   V4   V5    Mean
-      x          2    2    2    3   10    3.8
-      y          1    1    1   10    7    4.0
-```
+| Grades (1–10) | V1 | V2 | V3 | V4 | V5 | Mean |
+|---|---:|---:|---:|---:|---:|---:|
+| **x** | 2 | 2 | 2 | 3 | 10 | 3.8 |
+| **y** | 1 | 1 | 1 | 10 | 7 | **4.0** |
 
 **RV elects y** (mean 4.0 > 3.8). But an absolute majority — V1, V2, V3, V5 — graded **x above y**, and an absolute majority (V1–V3) gave y the *lowest possible grade*: x is the Condorcet **and** absolute winner, y the Condorcet **and** absolute loser. One enthusiastic 10 from V4 outvotes three quiet majorities: the mean lets *intensity* overrule *count*.
 
@@ -28,11 +27,10 @@ Grades (1–10)   V1   V2   V3   V4   V5    Mean
 
 ## Example 24 — the Truncation paradox under RV
 
-```
-Grades (1–10)   V1   V2   V3   V4   V5   V6   V7    Mean
-      x          1    1    1   10    5    4    7    4.143
-      y          2    2    2    3    8    5    8    4.286
-```
+| Grades (1–10) | V1 | V2 | V3 | V4 | V5 | V6 | V7 | Mean |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **x** | 1 | 1 | 1 | 10 | 5 | 4 | 7 | 4.143 |
+| **y** | 2 | 2 | 2 | 3 | 8 | 5 | 8 | **4.286** |
 
 **RV elects y.** V4 (who graded x 10, y 3) can do better by **not grading y at all**: under the procedure's convention an ungraded candidate takes the lowest grade (1) on that ballot, dropping y's mean to 4.0 — **x wins**. Saying *less* about y served V4 better than honest grading: the [Truncation paradox](truncation.md), RV flavor. The mechanism is the same as Borda's ([BV2160](../../method_comparisons/felsenthal_paradoxes/bv2160_r6qc8h_fishburn_borda_truncation.md)): wherever an unmarked candidate scores bottom, silence is a weapon.
 

@@ -14,11 +14,10 @@ Examples 25, 27 and 28 are runnable case files. They keep Felsenthal's letter gr
 
 ## Example 25 — the absolute winner loses (Felsenthal & Machover 2008: 330)
 
-```
-Grades (A–H)    V1   V2   V3    Median
-      x          B    C    H      C
-      y          A    F    G      F
-```
+| Grades (A–H) | V1 | V2 | V3 | Median |
+|---|:-:|:-:|:-:|:-:|
+| **x** | B | C | H | C |
+| **y** | A | F | G | **F** |
 
 **Case:** [`mj_ex25_absolute_winner_loses.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/mj_ex25_absolute_winner_loses.yaml)
 
@@ -34,11 +33,10 @@ Three regions of 101 voters grade x and y on A–D. In every region the two cand
 
 ## Example 27 — No-Show and Twin (Felsenthal & Machover 2008: 329)
 
-```
-Grades (A–F)    V1   V2   V3   V4   V5   V6   V7    Median
-      x          A    A    A    D    E    E    F       D
-      y          B    B    B    C    F    F    F       C
-```
+| Grades (A–F) | V1 | V2 | V3 | V4 | V5 | V6 | V7 | Median |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **x** | A | A | A | D | E | E | F | **D** |
+| **y** | B | B | B | C | F | F | F | C |
 
 **Case:** [`mj_ex27_noshow_twin.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/mj_ex27_noshow_twin.yaml)
 
@@ -52,11 +50,10 @@ uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/gr
 
 ## Example 28 — the Truncation paradox
 
-```
-Grades (A–J)    V1   V2   V3   V4   V5   V6   V7    Median
-      x          A    A    A    J    E    D    G       D
-      y          B    B    B    C    H    E    H       C
-```
+| Grades (A–J) | V1 | V2 | V3 | V4 | V5 | V6 | V7 | Median |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **x** | A | A | A | J | E | D | G | **D** |
+| **y** | B | B | B | C | H | E | H | C |
 
 **Case:** [`mj_ex28_truncation.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/mj_ex28_truncation.yaml)
 
