@@ -54,16 +54,58 @@ Which is "correct"? Memphis is the plurality answer; Nashville is the consensus 
 
 The two ideals that most often pull apart are the **majoritarian** winner (whom a majority prefers, e.g. the Condorcet/pairwise winner) and the **utilitarian** winner ([electowiki](https://electowiki.org/wiki/Utilitarian_winner) — who maximizes total voter satisfaction). A candidate loved intensely by 51% and hated by 49% can be the *majoritarian* winner while a broadly-liked compromise is the *utilitarian* winner.
 
-A tiny illustration — Range Voting's **"three brothers split one fruit,"** which circulates as a table of utilities on an arbitrary 0–11 happiness scale. Rescaled ×5/11 onto a real 0–5 ballot it becomes a **runnable election** ([`three_brothers_one_fruit_c3_b3.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml)), preserving every relation the example turns on — the ordering of the totals, and all three head-to-heads:
-
-<!-- ballots:three_brothers_one_fruit_c3_b3 -->
-<!-- /ballots -->
+A tiny illustration — Range Voting's **"three brothers split one fruit,"** which circulates as a table of utilities on an arbitrary 0–11 happiness scale. Rescaled ×5/11 onto a real 0–5 ballot it becomes a **runnable election** ([`three_brothers_one_fruit_c3_b3.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml) — the original utilities and the mapping are recorded in the file), preserving every relation the example turns on: the ordering of the totals, and all three head-to-heads.
 
 A **majority** (boys 1 & 2) put *banana* top → the **majoritarian** winner is banana, and it beats every rival head-to-head, so it is also the Condorcet winner. But *orange* maximizes **total satisfaction** (12 to banana's 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things.
 
 Watch STAR chase one ideal per round — the scoring round is the utilitarian count, the automatic runoff is the majoritarian check, and here the check **reverses** the count:
 
 <!-- report:three_brothers_one_fruit_c3_b3 -->
+```text
+[Divergence from STAR]
+  STAR     = Banana
+  Approval = Orange   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Orange)
+ - Runoff Round Winner   = (Banana)
+  Candidate Orange earned the highest total score, but
+  Candidate Banana won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 3 ballots.
+Apple,Orange,Banana
+    1,     3,     4
+    1,     4,     5
+    2,     5,     0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Orange        -- 12 -- First place
+   Banana        --  9 -- Second place
+   Apple         --  4
+ Orange and Banana advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Banana        -- 2 -- First place
+   Orange        -- 1
+   Equal Support -- 0
+ Banana wins.
+   Runoff math:
+     3  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     3  voters with a preference  (majority = 2)
+           Banana 2 (67%)  ·  Orange 1 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Banana
+```
 <!-- /report -->
 
 So STAR elects **banana**, the majoritarian winner, walking past the utilitarian optimum it just printed — by design, not by accident. Score voting and Approval elect orange; STAR, Ranked Robin, RCV-IRV and Plurality all elect banana. Ranked methods can only see order — [**preference**, not **support**](../scores_and_ranks/preference_vs_support.md) — so they can only ever chase the majoritarian/Condorcet ideal; scored methods (STAR, Score) can see *intensity*, so they can weigh the utilitarian one, and STAR then checks that leader against majority preference. The value on offer isn't the "right" answer — it's that **both answers are on screen and the report says which one it acted on**. (Full write-up: [Majoritarian vs. utilitarian](../../method_comparisons/majoritarian_vs_utilitarian/README.md).)
