@@ -194,12 +194,28 @@ def parse_ranked_ballots(ballot_string):
 # Main
 # --------------------------------------------------------------------------- #
 def run(path):
-    # pyrankvote breaks elimination ties with random.choice(). Unseeded, the
-    # SAME ballots can elect DIFFERENT winners run to run — unacceptable for a
-    # library whose counts must be reproducible (cf. the STAR engine's
-    # deterministic lot order). Seed the RNG so tie resolution is arbitrary
-    # but stable. (A true tie is still a tie — the report shows the tied
-    # tallies; this only pins which candidate the coin flip picks.)
+    # Elimination ties. pyrankvote's ladder (_cmp_candidate_vote_counts in
+    # pyrankvote/helpers.py) is better than "it flips a coin": on equal first
+    # choices it compares MOST SECOND CHOICES, then thirds, then fourths, and
+    # only reaches random.choice() once it runs out of ranks — structurally the
+    # same shape as the STAR engine's pairwise -> five-star -> lot ladder.
+    # Seed the RNG so that last rung is at least stable run to run; unseeded,
+    # the SAME ballots can elect DIFFERENT winners on consecutive runs, which is
+    # unacceptable for a library whose counts must reproduce.
+    #
+    # KNOWN LIMITATION, and do not overstate what the seed buys. sorted() feeds
+    # the comparator pairs in an order set by the input list, and that list is
+    # built in order of each candidate's FIRST APPEARANCE across the ballot
+    # rows. So a fixed seed pins the SEQUENCE of coin flips, not the CANDIDATE
+    # each flip lands on. When the ladder dies — every candidate tied at every
+    # rank, e.g. a perfect 3-cycle — the winner is the first row's first choice,
+    # and re-ordering the identical ballots elects somebody else. That is an
+    # ANONYMITY failure (who cast which ballot changed the result), and the
+    # report does not disclose it.
+    #
+    # Pinned by tests/test_rcv_irv_tie_order_sensitivity.py; explained in
+    # RCV_IRV_tabulation_engine/README.md ("Known limitation — elimination
+    # ties") and 07_Concepts/topics/ties/batch_elimination.md.
     import random
     random.seed(0)
     title, ballots_text, num_winners = load_ballots_block(path)

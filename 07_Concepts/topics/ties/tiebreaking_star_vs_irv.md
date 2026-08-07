@@ -44,7 +44,7 @@ Random tie-breaks are **not** a STAR-specific wart. RCV-IRV jurisdictions common
 
 **And the academic literature is no tidier — the question is openly described as vexing and often simply ignored.** Two named proposals, both with real costs, both worth knowing because they show the problem isn't a drafting oversight:
 
-- **Drop them all** (Taylor & Pacelli, 2006): eliminate *every* candidate sharing the lowest plurality score. Clean and deterministic — but if `k ≥ 3` survivors are all tied it removes all of them at once, so no candidate ever reaches majority support. The rule only terminates if you abandon stop-when-someone-has-a-majority and declare everyone eliminated in the final round to be co-winners.
+- **Drop them all** (Taylor & Pacelli, 2006): eliminate *every* candidate sharing the lowest plurality score. Clean and deterministic — but if `k ≥ 3` survivors are all tied it removes all of them at once, so no candidate ever reaches majority support. The rule only terminates if you abandon stop-when-someone-has-a-majority and declare everyone eliminated in the final round to be co-winners. **This is the convention the reference implementations use** — Pacuit's SEP entry states both Hare and Coombs this way, and `pref_voting` implements it — and the co-winners clause is not a patch but the point: on a symmetric profile an all-candidate tie is the only outcome an anonymous, neutral rule may return. Worked in full, with three runnable cases: [Batch elimination — what happens when the batch is *everyone*](batch_elimination.md).
 - **Parallel universes** (Conitzer et al., 2009): at each stage eliminate *one* of the tied candidates, but explore **every possible elimination sequence**, compute the winner of each, and declare a tie among all winners found. Arguably the most principled answer — it refuses to let an arbitrary choice decide — and it is the [set-valued approach](ties_are_forced.md#four-ways-out-and-what-each-one-costs) applied to IRV. The cost is combinatorial: the number of sequences explodes with the number of tied candidates, and this style of tiebreak is known to be computationally hard in general. Some real RCV statutes specify something of this shape.
 
 Both reinforce section 3's point from the other direction. In STAR a tie is a question about *who wins*; in IRV it's a question about *who is eliminated*, which then changes every subsequent round — so an IRV tiebreak doesn't resolve one comparison, it forks the entire count. That's why the literature ends up enumerating universes.
@@ -53,13 +53,15 @@ Both reinforce section 3's point from the other direction. In STAR a tie is a qu
 
 The single-rule simplicity is a **real virtue**: "eliminate the candidate with the fewest votes, break ties by lot" is easy to explain to voters and to legislate, whereas STAR's three-rung cascade is more to teach and to display. And exact ties are rare in both methods at any real scale. The claim here is **not** that RCV-IRV is "worse at ties" — it's the narrower, more interesting point: **strict ranks do not make tie-breaking easier.** They trade a simpler rule for *less resolving power* and a *more consequential* tie, and they lean on chance sooner.
 
+**And a ranked ballot has more left in it than "lot" suggests — implementations use it.** The comparison above describes IRV *as legislated*, where a tie for last typically does go straight to a draw. It is not what a good implementation has to do. Our own vendored engine's ladder is **most second choices → thirds → fourths → coin** — the same shape as STAR's cascade, and for the same reason: keep reading the ballot while it still says something. So the honest version of the row below is that ranks carry **fewer** rungs than scores, not that they carry one; the gap is in resolving power, not in whether anybody bothered. Where the two ladders genuinely converge is at the bottom: STAR's [dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) and a ranked ladder exhausted at every rank are the same dead end, and both hand the result to something outside the ballots. What differs there is disclosure — see [batch elimination](batch_elimination.md#what-this-repos-engine-does-instead-a-ladder-then-a-coin), where our engine's dead ladder quietly lets the *ballot file order* decide.
+
 ## Side by side
 
 | | STAR | RCV-IRV (Hare) |
 |---|---|---|
 | Places a tie can occur | 2 (scoring round, runoff) | 1 (elimination) |
-| Information to break it | scores → pairwise, five-star, then lot | ranks only → prior rounds / lot |
-| Deterministic rungs before chance | several | few |
+| Information to break it | scores → pairwise, five-star, then lot | ranks only → prior rounds / lot by statute; *later ranks*, then chance, in implementations |
+| Deterministic rungs before chance | several | few (statute) — more in practice, but capped by the number of ranks |
 | How often chance decides | **less often** | sooner |
 | Rule complexity | higher (an explicit cascade) | lower per step, but non-canonical |
 | What the tie decides | usually which finalist advances | who is eliminated → cascades, can flip the winner |

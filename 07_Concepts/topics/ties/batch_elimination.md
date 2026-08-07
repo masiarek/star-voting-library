@@ -6,6 +6,8 @@
 
 Part of the [Ties & Tie-Breaking](README.md) hub · the theorem underneath it: [Ties Are Forced](ties_are_forced.md) · the sibling convention: [Parallel Universe Tiebreaking](parallel_universe_tiebreaking.md) · the methods affected: [RCV-IRV (Hare)](../../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) · [Coombs](../../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-Coombs.md)
 
+*In the literature this rule is **"drop them all"** (Taylor & Pacelli, 2006), listed alongside Parallel Universe Tiebreaking in [Tie-Breaking: STAR vs RCV-IRV § 5](tiebreaking_star_vs_irv.md#5-reproducibility-and-consistency). That page names it in a sentence; this one works it.*
+
 ---
 
 ## The idea in three steps
@@ -102,9 +104,15 @@ Result: Alex, Bella and Colin tie.  Dev does not.
 
 **Dev's exclusion is what [Pareto](ties_are_forced.md#the-three-axioms) buys you.** Every voter prefers all three others to Dev, so no rule worth defending can seat him — which is exactly the job Pareto does in Moulin's proposition: anonymity and neutrality force a tie among the symmetric candidates, and Pareto is what keeps a universally-rejected candidate out of it. Without it, "we could not separate the good candidates" would slide into "so let's call it a four-way tie."
 
-## What this repo's engine does instead — and why it is worse than a lot
+## What this repo's engine does instead — a ladder, then a coin
 
-Our vendored [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py) (pyrankvote) does not batch on a total tie. It cuts one candidate, transfers, and names a single winner:
+Our vendored [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py) (pyrankvote) does not batch. It has a **tiebreak ladder**, and it is a better one than it usually gets credit for — `_cmp_candidate_vote_counts` in `pyrankvote/helpers.py` breaks a first-choice tie on **most second choices**, then third, then fourth, and only falls to `random.choice` once it runs out of ranks. Structurally that is STAR's ladder: use the ballots while they still say something, and flip a coin only when they have stopped.
+
+So the honest statement is narrower than "the engine flips a coin on ties." It is: **the coin is reached only when the candidates are tied at *every* rank** — which is exactly the profile this page is about, and exactly the [dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) by another name.
+
+The control case proves the ladder works. Run all six row-orderings of the [Condorcet-winner profile](#what-it-costs-a-three-way-tie-in-an-election-that-has-a-clear-winner) above, where second choices are Amy 2, Bruno 1, Clara 0 — **all six elect Amy.** The ladder has information, it uses it, and the row order is irrelevant.
+
+Now the perfect cycle, where each candidate holds exactly one first, one second and one third choice, so the ladder is dead on arrival:
 
 <!-- report:batch_all_out_cycle_c3_b3 -->
 ```text
@@ -143,9 +151,13 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 | Clara · Amy · Bruno | **Clara** |
 | Clara · Bruno · Amy | **Clara** |
 
-The winner is always the **first row's first choice**. That is not a neutrality failure — it is an **anonymity** failure, the more basic of the two: *who cast which ballot* is supposed to be the one thing a voting rule provably ignores, and here the data-entry order decides the election. And nothing in the report says so.
+The winner is always the **first row's first choice**. That is not a neutrality failure — it is an **anonymity** failure, the more basic of the two: *who cast which ballot* is supposed to be the one thing a voting rule provably ignores, and here the data-entry order decides the election.
 
-This reframes the comparison the [PUT page](parallel_universe_tiebreaking.md#three-answers-and-what-each-conceals) sets up. Its table warns that batch elimination "can delete a candidate who would have survived" — true, and this page adds the other half: on a total batch, the alternatives are worse. A published [lot order](../../GLOSSARY.md) spends neutrality *in advance and in public*, which is defensible. Spending anonymity by accident, on whichever ballot happened to be first in the file, is not.
+**The mechanism, since "it's random" would be the wrong summary.** The engine sets `random.seed(0)` so counts reproduce run to run, and they do. But `sorted()` feeds the comparator pairs in an order determined by the input list, and that list is built in order of each candidate's **first appearance across the ballot rows**. A fixed seed therefore pins the *sequence of coin flips*, not the *candidate* each flip lands on. Seeding buys reproducibility across runs and buys nothing at all across ballot orderings — and nothing in the report says which of the two you are looking at.
+
+This reframes the comparison the [PUT page](parallel_universe_tiebreaking.md#three-answers-and-what-each-conceals) sets up. Its table warns that batch elimination "can delete a candidate who would have survived" — true, and this page adds the other half: **once the ladder is dead, the alternatives are worse.** A published [lot order](../../GLOSSARY.md) spends neutrality *in advance and in public*, which is defensible. Spending anonymity by accident, on whichever ballot happened to be typed first, is not.
+
+Stated fairly, then: the defect is not the ladder and not the seed. It is that the report draws no distinction between a winner the ballots chose and a winner the file order chose. → [engine limitations](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/README.md#known-limitation-elimination-ties).
 
 ## Cross-checked against an engine nobody here wrote
 
@@ -170,6 +182,7 @@ uv run python -c "from pref_voting.profiles import Profile; from pref_voting.ite
 
 ## Sources
 
+- Alan D. Taylor & Allison M. Pacelli, *Mathematics and Politics* (2nd ed., Springer, 2006) — the named statement of the rule, "drop them all," together with the observation that it only terminates if you declare everyone eliminated in the final round to be co-winners. This library already cited it in [Tie-Breaking: STAR vs RCV-IRV § 5](tiebreaking_star_vs_irv.md#5-reproducibility-and-consistency); this page is the worked version. **Lean:** neutral; a textbook.
 - Eric Pacuit, "Voting Methods," *Stanford Encyclopedia of Philosophy* — states Hare and Coombs with the batch convention, removing all of the poorly-performing candidates in each round. **Lean:** neutral; the standard reference.
 - Wesley H. Holliday & Eric Pacuit, [`pref_voting`](https://pref-voting.readthedocs.io/) — `instant_runoff`, `coombs` and their `_put` variants; the cross-check engine used above. **Lean:** neutral; an academic library.
 - Hervé Moulin, *The Strategy of Social Choice* (North-Holland, 1983) — the forced-tie proposition behind step 3. Via [Ties Are Forced](ties_are_forced.md).
