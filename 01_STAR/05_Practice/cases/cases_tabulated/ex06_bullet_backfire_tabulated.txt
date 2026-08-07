@@ -37,15 +37,15 @@ options:
 num_winners: 1
 ballots: |-
   Ari,Bree,Cash
-  5,0,0 # 4 voters: Ari fans BULLET VOTING (honest ballot was 5,3,0)
-  5,0,0
-  5,0,0
-  5,0,0
-  0,2,5 # 4 voters: Cash fans, unchanged
-  0,2,5
-  0,2,5
-  0,2,5
-  0,5,1 # 1 voter: Bree all the way, unchanged
+  5,0,0 # Ari fan 1 of 4 — BULLET: Bree zeroed (honest was 5,3,0)
+  5,0,0 # Ari fan 2 of 4 — BULLET: Bree zeroed
+  5,0,0 # Ari fan 3 of 4 — BULLET: Bree zeroed
+  5,0,0 # Ari fan 4 of 4 — BULLET: Bree zeroed
+  0,2,5 # Cash fan 1 of 4 — unchanged
+  0,2,5 # Cash fan 2 of 4 — unchanged
+  0,2,5 # Cash fan 3 of 4 — unchanged
+  0,2,5 # Cash fan 4 of 4 — unchanged
+  0,5,1 # The lone Bree fan — unchanged, and she decides the runoff
 expected_winners:
   - Cash
 

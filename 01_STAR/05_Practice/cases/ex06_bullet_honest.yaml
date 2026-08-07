@@ -30,15 +30,15 @@ options:
 num_winners: 1
 ballots: |-
   Ari,Bree,Cash
-  5,3,0 # 4 voters: Ari fans, honest about liking Bree too
-  5,3,0
-  5,3,0
-  5,3,0
-  0,2,5 # 4 voters: Cash fans, Bree tolerable
-  0,2,5
-  0,2,5
-  0,2,5
-  0,5,1 # 1 voter: Bree all the way
+  5,3,0 # Ari fan 1 of 4 — honest: Bree really is a second choice
+  5,3,0 # Ari fan 2 of 4 — same honest ballot
+  5,3,0 # Ari fan 3 of 4 — same honest ballot
+  5,3,0 # Ari fan 4 of 4 — same honest ballot
+  0,2,5 # Cash fan 1 of 4 — Bree tolerable
+  0,2,5 # Cash fan 2 of 4 — same ballot
+  0,2,5 # Cash fan 3 of 4 — same ballot
+  0,2,5 # Cash fan 4 of 4 — same ballot
+  0,5,1 # The lone Bree fan — her Cash 1 outranks Ari's 0
 expected_winners:
   - Bree
 
