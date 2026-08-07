@@ -18,7 +18,7 @@
 ## 401.2 — The tool: reading a claimed failure honestly
 
 - **Objective:** be able to weigh any "method X fails!" claim — including the ones aimed at the method you favor.
-- **Key terms:** the four-part test — *structural / sincere / realistic / really-happened*.
+- **Key terms:** [the four-part test](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md#the-four-part-test) — *structural / sincere / realistic / really-happened*.
 - **Material:** [Reading these fairly — the test for an honest "whoops"](../../method_comparisons/paradoxes_and_whoops/reading_these_fairly.md) and [criteria at a glance](../topics/criteria_at_a_glance.md).
 - **The point:** a failure that is structural, triggered by *sincere* votes, on a realistic electorate — and that has actually happened — is a serious mark against a method. A contrived, strategic, knife-edge construction never seen in the wild is the weakest, muddiest angle (and applies to *every* method via Gibbard). Grade every whoops on that scale.
 
