@@ -128,6 +128,15 @@ NAV_ORDER: dict[str, list[str]] = {
         "at_large_and_the_vra.md",
         "glossary_bloc_star.md",
     ],
+    # What the word promises comes before the machinery that delivers it:
+    # alphabetical order would open this folder on the STAR_PR method folder
+    # and bury "what proportional actually means" at the bottom, which is the
+    # page that stops a reader over-claiming for the rest.
+    "03_STAR_PR/01_Learn": [
+        "what_proportional_means.md",
+        "STAR_PR",
+        "stv",
+    ],
 }
 
 # Runs before TERMS, so "ranked robin" is settled before the single-word pass

@@ -10,14 +10,14 @@
 
 A proportional method shares the seats among coalitions in proportion to their support, instead of letting the largest group take everything. Two ingredients:
 
-1. **A quota** — the share of support that earns one seat. With *k* seats, the **Droop quota** is `votes / (k + 1)`, rounded up (for 3 seats, just over 25%).
+1. **A quota** — the share of support that earns one seat. STAR-PR uses the **Hare quota**, `votes / k` — for 3 seats, one third. (The other standard formula, the **Droop quota** `⌊votes / (k+1)⌋ + 1`, is what STV normally uses; it is smaller, so it is easier to reach. Hare favors smaller factions; Droop is more resistant to strategic voting. Don't mix them up when quoting a threshold: the engine prints `Hare quota is …` for `allocated` and `Hare score quota is …` for `sss`, and the [Hare Quota Criterion](../what_proportional_means.md) is named after this one.)
 2. **Reweighting** — once a candidate is seated, the ballots that scored them highly have "spent" some of their weight, so they count for less when the next seat is decided. That is what stops a 58% majority from sweeping all the seats.
 
 This is the whole difference from **[Bloc STAR](../../../02_STAR_Bloc/01_Learn/bloc_star.md)**, which runs the ordinary STAR count once per seat with no reweighting — and is therefore *majoritarian*, not proportional (see the contrast below). (It is *not* "the top N score-leaders": each seat is settled by its own runoff, so the point leader can [win no seat at all](../../../02_STAR_Bloc/01_Learn/score_leader_no_seat.md).)
 
 ## The three STAR-PR methods
 
-All three are proportional and use the same score ballots; they differ only in *how* a ballot's weight is spent after each seat. The LH engine runs each via `voting_method:` plus `num_winners: k`.
+All three use the same score ballots and differ only in *how* a ballot's weight is spent after each seat. The LH engine runs each via `voting_method:` plus `num_winners: k`.
 
 | Method | `voting_method` | How it reweights, in a line |
 |---|---|---|
@@ -25,7 +25,29 @@ All three are proportional and use the same score ballots; they differ only in *
 | **Sequentially Spent Score** (SSS) | `sss` | Like Allocated Score, but each supporting ballot **spends score proportionally** toward the quota rather than being fully exhausted — a smoother allocation. |
 | **Reweighted Range Voting** (RRV) | `rrv` | Don't spend ballots; instead **divide each ballot's weight** by a growing factor based on how much score it has already given to winners (a D'Hondt/Jefferson-style divisor). |
 
-In practice, on a clean two-coalition electorate they tend to **agree on the slate** (see the worked example below); they can diverge on closer or more fragmented races.
+**They are not equally proportional, and it's worth being precise about that.** Allocated Score and SSS are quota-based allocation methods. RRV is a *divisor* method and **does not pass the [Hare Quota Criterion](../what_proportional_means.md)** — a faction holding a quota's worth of voters cannot always force a seat by voting as a bloc — which is why some classify it as **semi-proportional** rather than proportional. Equal Vote's own summary of the trade: RRV is the mathematically simplest tabulation and the oldest cardinal-PR proposal, but tends toward more utilitarian and less diversified winners, and is less transparent to non-mathematicians. SSS they describe as innovative, easy to explain, and promising, but newer and still a proposal for further study. (Their assessment of methods they advocate — the criterion itself is standard and checkable.)
+
+In practice, on a clean two-coalition electorate all three tend to **agree on the slate** (see the worked example below); they diverge on closer or more fragmented races, which is exactly where the criterion difference bites.
+
+### Allocated Score, step by step
+
+The recommended method, in the three moves the count actually makes:
+
+1. **Winner selection** — for each seat, elect the highest-scoring candidate.
+2. **Allocating voters** — mark **one quota's worth** of that winner's strongest supporters as represented. Supporters are sorted into groups by the score they gave the winner: the 5-star group is allocated first, then 4-star, and so on until the quota is filled.
+3. **Fractional surplus** — the last group added is usually a little larger than the quota needs. The "extra votes" are returned to that group and shared evenly among them, so those voters keep partial influence over later seats.
+
+Subsequent rounds include everyone not yet *fully* represented — partial representation is real here, which is the point of a scored ballot: it records not just whether a voter is represented but **to what degree**.
+
+Fractional surplus is what makes step 3 fair rather than arbitrary: voters who gave the winner the *same* score are treated the same, instead of an alphabetical or random cut deciding which of them gets used up. ([electowiki](https://electowiki.org/wiki/Allocated_Score) adds that it preserves independence of irrelevant alternatives and monotonicity, though that claim carries a `citation needed` there — treat it as unverified.)
+
+**Three variants worth recognizing**, since they get named in the same discussions:
+
+- **Droop-quota Allocated Score** — swapping Hare for Droop mitigates free-riding but biases toward larger factions.
+- **Sequential Monroe** — Allocated Score with a different *selection* rule (highest-scoring quota rather than highest-scoring candidate). One of the committee's three finalists; **the LH engine does not implement it**.
+- **Allocated STAR** — adds a runoff on the **final** seat, so the last seat is decided the way single-winner STAR decides one: two finalists, the one more voters prefer. Intended to keep voters expressing a full preference order.
+
+*Provenance:* Allocated Score is the consensus method of the Equal Vote 0–5 STAR Proportional Representation Research Committee, which spent roughly two years from 2018 comparing options at each stage of the tabulation (credited to Parker Friedland, Keith Edmonds, Jameson Quinn, Sara Wolk and others). That is an advocacy body selecting among methods it favors — the *procedure* is precisely specified and independently reimplementable, which is what makes it checkable here regardless.
 
 ## The majoritarian contrast: Bloc STAR
 

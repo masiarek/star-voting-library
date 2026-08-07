@@ -4,6 +4,10 @@
 
 **Proportional representation** means a coalition wins seats **in proportion to its size**, instead of the largest group taking every seat. These are the concept pages for this folder's method — **STAR-PR** — plus the two comparisons you need to place it: the majoritarian method it replaces, and the ranked method it is always measured against.
 
+## What the word actually promises
+
+- **[What "proportional" actually means](what_proportional_means.md)** — read before advocating for any of this. Exact proportionality has one unambiguous definition and almost no real election meets it; quotas are a *guarantee*, not a price, so candidates routinely win on less; without parties there is no longer an obvious thing to be proportional **to**; and proportionality increases descriptive representation without guaranteeing it along any single characteristic. The honest limits, in one place.
+
 ## The method here
 
 - **[STAR-PR](STAR_PR/README.md)** — the ordinary 0–5 STAR ballot, counted proportionally by **reweighting**: three tabulations (Allocated Score, Sequentially Spent Score, Reweighted Range Voting), all runnable on the same ballot file by switching `voting_method:`. The mechanics: [the math behind proportional STAR](STAR_PR/the_math_behind_proportional_star.md). Runnable elections: [`03_STAR_PR/`](../README.md).

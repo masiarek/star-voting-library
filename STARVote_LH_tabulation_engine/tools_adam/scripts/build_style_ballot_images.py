@@ -75,6 +75,10 @@ class Ballot(NamedTuple):
     subtitle: str = ""
     header: tuple[str, ...] = ()
     footer: tuple[str, ...] = ()
+    # Equal Vote sets the STAR and Bloc STAR instructions as a bulleted list and
+    # the Proportional STAR ones as a running paragraph. That is their choice per
+    # ballot, not ours, so it is a per-ballot flag rather than a house style.
+    header_bullets: bool = True
 
 
 # Scores are 0-5; None means the row was left blank (which STAR counts as 0, but
@@ -181,6 +185,53 @@ BALLOTS.update({
             "your vote goes to the finalist you prefer. The finalist preferred by",
             "the most voters wins. This process repeats until all seats have",
             "been filled.",
+        ),
+    ),
+})
+
+# --------------------------------------------------------------------------- #
+# The third piece of paper: Proportional STAR
+# --------------------------------------------------------------------------- #
+# Transcribed from Equal Vote's own Proportional STAR ballot. Worth being exact
+# about what does and does not change from the two above, because it is easy to
+# assume "same 0–5 ballot" means "same ballot" and that is wrong:
+#
+#   * the GRID is identical — 0–5, one row per candidate, nothing rationed;
+#   * the seat count is stated above the race, as on the Bloc ballot;
+#   * the INSTRUCTIONS are reworded and set as a paragraph, not bullets;
+#   * the FOOTER is a completely different method — rounds, and each round
+#     designating a winner's strongest supporters as represented.
+#
+# So this is the same distinction the Bloc page draws (grid identical, top and
+# bottom lines differ), and the reason 03_STAR_PR cannot simply reuse the
+# single-winner ballot art.
+#
+# The title carries the same deliberate departure as the Bloc ballot: Equal
+# Vote's art heads this "STAR VOTING" and names the method only in the footer,
+# and we name it up front instead.
+PR_IMG_DIR = REPO_ROOT / "03_STAR_PR" / "01_Learn" / "img"
+
+PR_CAST = ["Abby", "Ben", "Carmen", "DeAndre", "Eric"]
+
+BALLOTS.update({
+    "ballot_proportional_star": Ballot(
+        "Proportional STAR Voting",
+        PR_CAST,
+        [4, 5, 3, 5, 0],
+        PR_IMG_DIR,
+        quoted=False,
+        subtitle="This election will elect 3 winners.",
+        header=(
+            "Score all candidates from 0–5 stars. Those you leave blank",
+            "receive a zero. If you don't have a preference you can give",
+            "candidates the same scores.",
+        ),
+        header_bullets=False,
+        footer=(
+            "Winners in Proportional STAR Voting are selected in rounds. Each",
+            "round elects the candidate with the highest total score and then",
+            "designates that candidate's strongest supporters as represented.",
+            "Subsequent rounds include all voters who are not yet represented.",
         ),
     ),
 })
@@ -572,12 +623,14 @@ def render_svg(ballot: Ballot) -> str:
         )
     for n, line in enumerate(ballot.header):
         y = TITLE_Y + (SUB_GAP if ballot.subtitle else 0) + HDR_GAP + n * HDR_LINE_H
+        if ballot.header_bullets:
+            out.append(
+                f'<text x="{BULLET_X}" y="{y}" font-family="{BODY_FONT}" '
+                f'font-size="{HDR_SIZE}" fill="{INK}">•</text>'
+            )
+        x = BULLET_TEXT_X if ballot.header_bullets else TITLE_X
         out.append(
-            f'<text x="{BULLET_X}" y="{y}" font-family="{BODY_FONT}" font-size="{HDR_SIZE}" '
-            f'fill="{INK}">•</text>'
-        )
-        out.append(
-            f'<text x="{BULLET_TEXT_X}" y="{y}" font-family="{BODY_FONT}" '
+            f'<text x="{x}" y="{y}" font-family="{BODY_FONT}" '
             f'font-size="{HDR_SIZE}" fill="{INK}">{esc(line)}</text>'
         )
 
@@ -775,8 +828,10 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
     f_instr = _font(HDR_SIZE * SS, body=True)
     for n, line in enumerate(ballot.header):
         y = TITLE_Y + (SUB_GAP if ballot.subtitle else 0) + HDR_GAP + n * HDR_LINE_H
-        d.text((s(BULLET_X), s(y)), "•", font=f_instr, fill=INK, anchor="ls")
-        d.text((s(BULLET_TEXT_X), s(y)), line, font=f_instr, fill=INK, anchor="ls")
+        if ballot.header_bullets:
+            d.text((s(BULLET_X), s(y)), "•", font=f_instr, fill=INK, anchor="ls")
+        d.text((s(BULLET_TEXT_X if ballot.header_bullets else TITLE_X), s(y)), line,
+               font=f_instr, fill=INK, anchor="ls")
 
     d.text((s(col_x(0) + 40), s(HDR_WORST_Y + dy)), "Worst", font=f_hdr, fill=INK, anchor="ms")
     d.text((s(col_x(5)), s(HDR_WORST_Y + dy)), "Best", font=f_hdr, fill=INK, anchor="ms")
