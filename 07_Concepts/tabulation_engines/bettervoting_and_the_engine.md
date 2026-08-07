@@ -70,7 +70,7 @@ flowchart TD
     correct -- "No" --> bug["File a GitHub bug report<br/>and attach the YAML file used"]
 ```
 
-That loop is why the examples here can be trusted: every saved election has been tabulated *and* cross-checked, and the engine's answer key is only marked "approved" once it matches. The BetterVoting-JSON → YAML converter is `YAML_library/1_positive/01_convert_json_yaml.py`, and a guard test (`STARVote_LH_tabulation_engine/tests/test_json_to_yaml_conversion.py`) re-converts a real export and confirms the engine reproduces the stated winner. Two independent implementations cross-checking each other is a *feature* — it's how you trust a count.
+That loop is why the examples here can be trusted: every saved election has been tabulated *and* cross-checked, and the engine's answer key is only marked "approved" once it matches. The BetterVoting-JSON → YAML converter is [`01_convert_json_yaml.py`](../../YAML_library/1_positive/01_convert_json_yaml.py), and a guard test ([`test_json_to_yaml_conversion.py`](../../STARVote_LH_tabulation_engine/tests/test_json_to_yaml_conversion.py)) re-converts a real export and confirms the engine reproduces the stated winner. Two independent implementations cross-checking each other is a *feature* — it's how you trust a count.
 
 ---
 

@@ -172,7 +172,7 @@ About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 
 ### Caveats (read before quoting)
 
 - Sincere, **normalized** 0–5 scores (each voter min-maxes their utilities). Real voters don't perfectly normalize; different scoring assumptions move the numbers.
-- **STAR here matches the LH engine exactly.** `star_winner()` implements starvote's tie-break rungs — head-to-head wins among the tied, then five-star counts, then lot (lowest column index, the engine's own fallback when a file publishes no lot numbers). It did not always: until 2026-07-26 it resolved every tie by numpy index order, which disagreed with the engine on ~2% of tie-heavy profiles and mislabelled one of the [30 dumped samples](../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md). `STARVote_LH_tabulation_engine/tests/test_sim_star_model.py` now cross-checks the model against the real engine, so that drift cannot return silently.
+- **STAR here matches the LH engine exactly.** `star_winner()` implements starvote's tie-break rungs — head-to-head wins among the tied, then five-star counts, then lot (lowest column index, the engine's own fallback when a file publishes no lot numbers). It did not always: until 2026-07-26 it resolved every tie by numpy index order, which disagreed with the engine on ~2% of tie-heavy profiles and mislabelled one of the [30 dumped samples](../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md). [`test_sim_star_model.py`](../../STARVote_LH_tabulation_engine/tests/test_sim_star_model.py) now cross-checks the model against the real engine, so that drift cannot return silently.
 - **RR is still a model, not the engine.** Copeland with a lowest-index tiebreak; LH breaks Copeland ties by margin then lot, so a knife-edge RR cell may still differ slightly from the engine.
 - "Divergence" counts *any* different winner, including ties resolved differently — report the model, size, and mechanism split with the number.
 
@@ -232,7 +232,7 @@ Copeland is Condorcet-efficient by construction, so its column **must** read exa
 
 ### One STAR, not two
 
-The script does **not** define its own STAR — it imports `star_winner()` from `star_vs_rr_divergence.py`, which implements the LH engine's tie-break rungs and is held to the real engine by `STARVote_LH_tabulation_engine/tests/test_sim_star_model.py`. A second copy would be a second thing to drift. The finalist set used for the mechanism split comes from the same helpers, so it matches the finalists STAR really advanced (an `argsort` shortcut silently disagrees exactly when the score round ties for second — which is the situation the grid-loss column is about).
+The script does **not** define its own STAR — it imports `star_winner()` from `star_vs_rr_divergence.py`, which implements the LH engine's tie-break rungs and is held to the real engine by [`test_sim_star_model.py`](../../STARVote_LH_tabulation_engine/tests/test_sim_star_model.py). A second copy would be a second thing to drift. The finalist set used for the mechanism split comes from the same helpers, so it matches the finalists STAR really advanced (an `argsort` shortcut silently disagrees exactly when the score round ties for second — which is the situation the grid-loss column is about).
 
 ### Running it
 

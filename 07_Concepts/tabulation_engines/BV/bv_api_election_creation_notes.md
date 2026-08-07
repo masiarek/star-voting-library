@@ -1,6 +1,6 @@
 # Creating BetterVoting elections via the API — what works, what doesn't
 
-Notes on `STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py`, the script that creates BV test elections (and casts their ballots) through the REST API instead of the builder UI. Written up after a round of testing on 2026-07-05, so the limitation below isn't re-discovered later.
+Notes on [`create_bv_test_election.py`](../../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.py), the script that creates BV test elections (and casts their ballots) through the REST API instead of the builder UI. Written up after a round of testing on 2026-07-05, so the limitation below isn't re-discovered later.
 
 ## How the script authenticates
 

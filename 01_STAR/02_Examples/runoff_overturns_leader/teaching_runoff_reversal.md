@@ -161,7 +161,7 @@ Talking point: the runoff isn't biased against the leader — it just *checks* t
 For the recorded races (`03` = BV `4c7kp9`, `05` = BV `BV1265`), the strongest proof is the same election shown both ways — BetterVoting's screenshot beside the LH report. To complete this (mirrors the pattern in `pet_real_bv_election/`):
 
 1. Screenshot each BV result and save under `runoff_overturns_leader/img/` (e.g. `img/REPLACE_4c7kp9_bv_result.png`, `img/bv1265_bv_result.png`).
-2. Export each BV JSON, drop it here, and convert it to YAML (`YAML_library/1_positive/01_convert_json_yaml.py`) — the **BV JSON → YAML → LH report** flow — so the ballots and both tabulations sit side by side.
+2. Export each BV JSON, drop it here, and convert it to YAML ([`01_convert_json_yaml.py`](../../../YAML_library/1_positive/01_convert_json_yaml.py)) — the **BV JSON → YAML → LH report** flow — so the ballots and both tabulations sit side by side.
 
 <!-- Once captured:
 ![BetterVoting result for BV 4c7kp9 (ice cream): ChocoDrk leads, ChocoAlm wins](img/REPLACE_4c7kp9_bv_result.png)

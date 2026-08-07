@@ -1103,7 +1103,8 @@ def check_pasted_reports():
     return bad
 
 
-_CODE_SPAN_PATH = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.(?:md|yaml))`")
+_CODE_SPAN_PATH = re.compile(
+    r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.(?:md|yaml|py|sh|json|toml|txt))`")
 
 
 def check_code_span_paths():
@@ -1127,6 +1128,20 @@ def check_code_span_paths():
     round.  A path that resolves from neither is left alone: it is usually a
     reference to some *other* codebase (BetterVoting's
     `packages/frontend/src/i18n/en.yaml`), which is exactly what code text is for.
+
+    Scripts count too (2026-08-07).  The extension list was `md|yaml` at first,
+    on the theory that this was a docs-link problem — but "go look at this file"
+    is said just as often about a *simulation or tool* as about a page, and nine
+    of those were hiding behind the narrower regex (`06_Other/simulations/
+    fbc_simulation.py` on the FBC 301 page, the JSON→YAML converter on two
+    pages, `build_yaml_pages.py` in ORGANIZATION.md, and so on).
+
+    Still invisible, and deliberately so: a *truncated* repo path — engine-dir
+    shorthand like ``tests/test_sim_star_model.py`` for a file that really lives
+    at `STARVote_LH_tabulation_engine/tests/…` — resolves from neither the page
+    nor the root, so it lands in the other-codebase escape hatch above.  Telling
+    the two apart needs a basename search, and inside CLAUDE.md (17 of the ~35)
+    that shorthand is idiomatic rather than wrong.  Judgment, not a gate.
     """
     bad = []
     for rel, text in sorted(_hand_authored_pages()):

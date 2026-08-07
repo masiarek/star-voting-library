@@ -127,6 +127,6 @@ Ranked Robin keeps equal scores **tied** — no head-to-head preference — whic
 - [Condorcet efficiency — topic hub](../../07_Concepts/topics/condorcet/README.md)
 - [Ranked Robin (the method)](ranked_robin.md) · [Cycle resolution](cycle_resolution.md)
 - [Which RCV-IRV?](../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) — the BTR/Baldwin/Nanson variants are also Condorcet methods
-- Generator: `STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py`
+- Generator: [`random_star_divergence.py`](../../STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py)
 
 Glossary: [`Condorcet`](../../07_Concepts/GLOSSARY.md).

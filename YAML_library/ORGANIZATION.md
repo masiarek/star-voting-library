@@ -24,7 +24,7 @@ Rule of thumb: **per-file context → in the YAML; cross-file teaching → Markd
 
 ## Generated pages: a browsable `.md` per YAML — but never hand-written
 
-Every election YAML also gets a **generated** Markdown page in `<folder>/<folder>_pages/<stem>.md` (`STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`): title, method (linked to its concept docs), the file's own scenario description, the ballots with a how-to-read line, the engine's full report (from the `_tabulated` mirror), and auto cross-references (folder README, topic hubs, divergence-ledger entry, siblings, glossary, index). `tests/test_yaml_pages_current.py` fails the suite if a page drifts from its sources — so the pages are always right, precisely because nobody edits them. The educational *prose* on a page comes from the YAML's own `scenario_description`; improve the YAML, regenerate, and the page follows.
+Every election YAML also gets a **generated** Markdown page in `<folder>/<folder>_pages/<stem>.md` ([`build_yaml_pages.py`](../STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py)): title, method (linked to its concept docs), the file's own scenario description, the ballots with a how-to-read line, the engine's full report (from the `_tabulated` mirror), and auto cross-references (folder README, topic hubs, divergence-ledger entry, siblings, glossary, index). `tests/test_yaml_pages_current.py` fails the suite if a page drifts from its sources — so the pages are always right, precisely because nobody edits them. The educational *prose* on a page comes from the YAML's own `scenario_description`; improve the YAML, regenerate, and the page follows.
 
 ## Don't: a separate HAND-WRITTEN `.md` per YAML, or a folder per scenario
 
