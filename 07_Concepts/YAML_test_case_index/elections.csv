@@ -286,6 +286,8 @@ LH:majority_illusion_c3_b41_score_vs_star,"The majority illusion — Score elect
 LH:majority_illusion_c3_b41_two_rivals,"The majority illusion, one score changed — the majority loses Alice",1,single-race,41,STAR,LH-only
 LH:majority_vs_consensus_51_49,Majority criterion vs. the consensus candidate — the 51/49 polarized electorate,1,single-race,100,STAR,LH-only
 LH:margins_paper_exact_304,"Margins matter — the textbook profile at its printed size (304 ballots, LH-only)",1,single-race,304,RankedRobin,LH-only
+LH:min_bloc_c3_b2,The smallest divergence — Bloc STAR,1,single-race,2,bloc,LH-only
+LH:min_pr_c3_b2,The smallest divergence — Proportional STAR (Allocated Score),1,single-race,2,STAR_PR,LH-only
 LH:mmp_majority_ceiling,Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%,1,single-race,30,Plurality,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:mono_raise_delete_after,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",1,single-race,30,STAR,LH-only

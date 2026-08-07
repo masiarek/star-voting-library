@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 421 elections, 593 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 423 elections, 595 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -302,6 +302,8 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `majority_illusion_c3_b41_two_rivals` | The majority illusion, one score changed — the major | 1 | single-race | 41 | STAR | LH-only |
 | `majority_vs_consensus_51_49` | Majority criterion vs. the consensus candidate — the | 1 | single-race | 100 | STAR | LH-only |
 | `margins_paper_exact_304` | Margins matter — the textbook profile at its printed | 1 | single-race | 304 | RankedRobin | LH-only |
+| `min_bloc_c3_b2` | The smallest divergence — Bloc STAR | 1 | single-race | 2 | bloc | LH-only |
+| `min_pr_c3_b2` | The smallest divergence — Proportional STAR (Allocat | 1 | single-race | 2 | STAR_PR | LH-only |
 | `mmp_majority_ceiling` | Block Voting (3 seats): the majority ceiling — a una | 1 | single-race | 30 | Plurality | LH-only |
 | `mmp_sntv` | Multi-member plurality — SNTV (3 seats): the minorit | 1 | single-race | 10 | Plurality | LH-only |
 | `mono_raise_delete_after` | STAR mono-raise-delete — part 2: raise X, delete Y-b | 1 | single-race | 30 | STAR | LH-only |
@@ -449,7 +451,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 340 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| single-race | 342 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | contested (multi-race) | 253 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`38b7fg`](https://bettervoting.com/38b7fg/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
 
 ### By seat class
@@ -459,7 +461,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 | seat class | # races | example elections |
 |---|--:|---|
 | single-winner | 524 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
-| multi-winner | 69 | [`3494cb`](https://bettervoting.com/3494cb/results), [`39py93`](https://bettervoting.com/39py93/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`3yr2qd`](https://bettervoting.com/3yr2qd/results) |
+| multi-winner | 71 | [`3494cb`](https://bettervoting.com/3494cb/results), [`39py93`](https://bettervoting.com/39py93/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`3yr2qd`](https://bettervoting.com/3yr2qd/results) |
 
 ### By ballot type
 
@@ -467,11 +469,11 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 
 | ballot type | # races | example elections |
 |---|--:|---|
-| score | 325 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
+| score | 326 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
 | ranked | 187 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`39py93`](https://bettervoting.com/39py93/results) |
 | choose-one | 44 | [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`4h89vj`](https://bettervoting.com/4h89vj/results), [`4w96tr`](https://bettervoting.com/4w96tr/results) |
 | approval | 34 | [`4hfwqd`](https://bettervoting.com/4hfwqd/results), [`6mcgkq`](https://bettervoting.com/6mcgkq/results), `BV_Library_approval_single_winner`, `Black_Curtain_01a_c3_b5_approval` |
-| ? | 3 | `321_tennessee_blank_encoding_c4_b100`, `cav_library_board_c3_b12`, `tilted_cycle_c3_b5_irv` |
+| ? | 4 | `321_tennessee_blank_encoding_c4_b100`, `cav_library_board_c3_b12`, `min_bloc_c3_b2`, `tilted_cycle_c3_b5_irv` |
 
 ### By character
 
@@ -479,9 +481,9 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | character | # races | example elections |
 |---|--:|---|
-| majoritarian | 458 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
+| majoritarian | 459 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
 | Condorcet | 104 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results), [`3r3yf7`](https://bettervoting.com/3r3yf7/results) |
-| proportional | 31 | [`39py93`](https://bettervoting.com/39py93/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), [`8xwx43`](https://bettervoting.com/8xwx43/results), `02a_c5_b63_proportional-allocated-score` |
+| proportional | 32 | [`39py93`](https://bettervoting.com/39py93/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), [`8xwx43`](https://bettervoting.com/8xwx43/results), `02a_c5_b63_proportional-allocated-score` |
 
 ### By multi-winner style
 
@@ -489,8 +491,8 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | multi-winner style | # races | example elections |
 |---|--:|---|
-| bloc / at-large | 47 | [`3494cb`](https://bettervoting.com/3494cb/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`3yr2qd`](https://bettervoting.com/3yr2qd/results), [`484mbm`](https://bettervoting.com/484mbm/results) |
-| proportional | 22 | [`39py93`](https://bettervoting.com/39py93/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), `02a_c5_b63_proportional-allocated-score`, `02b_c5_b63_proportional-sss` |
+| bloc / at-large | 48 | [`3494cb`](https://bettervoting.com/3494cb/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`3yr2qd`](https://bettervoting.com/3yr2qd/results), [`484mbm`](https://bettervoting.com/484mbm/results) |
+| proportional | 23 | [`39py93`](https://bettervoting.com/39py93/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), `02a_c5_b63_proportional-allocated-score`, `02b_c5_b63_proportional-sss` |
 
 ### By method (family)
 
@@ -503,11 +505,12 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 | IRV | 70 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`3xgkck`](https://bettervoting.com/3xgkck/results), [`4htk44`](https://bettervoting.com/4htk44/results), [`6bry7c`](https://bettervoting.com/6bry7c/results) |
 | Plurality | 44 | [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`4h89vj`](https://bettervoting.com/4h89vj/results), [`4w96tr`](https://bettervoting.com/4w96tr/results) |
 | Approval | 34 | [`4hfwqd`](https://bettervoting.com/4hfwqd/results), [`6mcgkq`](https://bettervoting.com/6mcgkq/results), `BV_Library_approval_single_winner`, `Black_Curtain_01a_c3_b5_approval` |
-| STAR_PR | 18 | [`89wwvr`](https://bettervoting.com/89wwvr/results), `02a_c5_b63_proportional-allocated-score`, `02b_c5_b63_proportional-sss`, `02c_c5_b63_proportional-rrv` |
+| STAR_PR | 19 | [`89wwvr`](https://bettervoting.com/89wwvr/results), `02a_c5_b63_proportional-allocated-score`, `02b_c5_b63_proportional-sss`, `02c_c5_b63_proportional-rrv` |
 | STV | 13 | [`39py93`](https://bettervoting.com/39py93/results), [`8xwx43`](https://bettervoting.com/8xwx43/results), `03a_stv_3seats`, [`bj8dfc`](https://bettervoting.com/bj8dfc/results) |
 | Range | 3 | `cav_library_board_blank_is_zero_c3_b12`, `range_101_c3_b5`, `range_sullivan_score_c4_b10` |
 | CAV | 1 | `cav_library_board_c3_b12` |
 | 3-2-1 | 1 | `321_tennessee_blank_encoding_c4_b100` |
+| bloc | 1 | `min_bloc_c3_b2` |
 | RCV-IRV | 1 | `tilted_cycle_c3_b5_irv` |
 
 ### By backing (BV vs LH-only)
@@ -517,7 +520,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
 | BV | 260 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
-| LH-only | 248 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| LH-only | 250 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
 | BV (no yaml) | 83 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results), [`3xgkck`](https://bettervoting.com/3xgkck/results) |
 | LH-only (exception) | 2 | `copeland_half_credit_decides`, `dead_heat_lot_tiebreak` |
 
