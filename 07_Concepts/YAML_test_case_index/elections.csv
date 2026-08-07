@@ -192,6 +192,9 @@ LH:approval_bloc_2seats_c4_b6,"Bloc Approval — 2 seats, majority sweep",1,sing
 LH:approval_bloc_3seats_c6_b5,Bloc Approval — 3-seat city council at-large,1,single-race,5,Approval,LH-only
 LH:balance_base_irv_c3_b9,"Equal-vote balance — base (IRV elects the Condorcet winner, Bruno)",1,single-race,9,IRV,LH-only
 LH:balance_plus_opposite_c3_b15,Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada),1,single-race,15,IRV,LH-only
+LH:batch_all_out_condorcet_c3_b3,Batch elimination empties the field — with a Condorcet winner sitting there,1,single-race,3,IRV,LH-only
+LH:batch_all_out_cycle_c3_b3,Batch elimination empties the field — the perfect cycle,1,single-race,3,IRV,LH-only
+LH:batch_all_out_round2_c4_b6,The field empties in round two — and Pareto is what keeps Dev out of the tie,1,single-race,6,IRV,LH-only
 LH:bloc_lot_path_dependence_a_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first),1,single-race,5,STAR,LH-only
 LH:bloc_lot_path_dependence_b_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot B: Omar first),1,single-race,5,STAR,LH-only
 LH:blocs_bloc_c9_b10,"Left, Centre, Right — Bloc STAR fills the council",1,single-race,10,bloc,LH-only

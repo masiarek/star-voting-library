@@ -1,0 +1,56 @@
+election_title: "Batch elimination empties the field — the perfect cycle"
+
+scenario_description: |-
+  Three voters, three candidates, and the smallest profile in which an
+  instant-runoff count has nobody left to elect. Amy, Bruno and Clara each hold
+  exactly one first choice, and the three ballots rotate: Amy>Bruno>Clara,
+  Bruno>Clara>Amy, Clara>Amy>Bruno. Nobody has a majority (2 of 3), so somebody
+  must be eliminated — and every candidate is tied for fewest first choices.
+  Under the BATCH convention, which the Stanford Encyclopedia entry and
+  pref_voting both use, you remove ALL candidates tied for last in one step. Here
+  that is the whole field. The count stops with an empty ballot, and the stated
+  answer is that all three candidates TIE for the win.
+  That is not a bug in the convention, it is the convention working. This profile
+  is perfectly symmetric: rotate the candidate names and you get the same three
+  ballots back in a different order. So an ANONYMOUS and NEUTRAL rule — one that
+  ignores who cast which ballot and shows no favouritism between names — has
+  nothing left to separate Amy from Bruno from Clara, and a three-way tie is the
+  only answer it can give. See 07_Concepts/topics/ties/ties_are_forced.md for the
+  theorem.
+  This engine does not do that. The vendored pyrankvote cuts one candidate,
+  transfers, and names a single winner — and WHICH one depends on the order the
+  ballots happen to be listed in. All six row orderings of these same three
+  ballots were run: the winner is always the first row's first choice. Amy in two
+  orderings, Bruno in two, Clara in two. That is an anonymity failure, not a
+  neutrality failure, and it is undisclosed. The expected_winners below records
+  what this engine prints for THIS row order; it is not the method's answer.
+  Lesson: 07_Concepts/topics/ties/batch_elimination.md
+
+video_script: |-
+  Three voters. Three candidates. Everybody's first choice is different.
+  Nobody has a majority, so instant-runoff has to eliminate somebody. Who?
+  Amy has one vote. Bruno has one vote. Clara has one vote. There is no fewest.
+  One textbook answer — and it is the one the Stanford Encyclopedia gives — is:
+  when several candidates tie for last, drop all of them. Usually that is a
+  shortcut. Here it is the whole field. The count ends with nobody left, and the
+  honest report is that all three tie.
+  And that really is the only answer a fair rule can give. Look at the ballots:
+  rename Amy to Bruno, Bruno to Clara, Clara to Amy, and you get the same three
+  ballots back. If the rule doesn't care who cast which ballot, and doesn't play
+  favourites with names, then it cannot tell these three candidates apart. A
+  three-way tie isn't the rule giving up. It is the rule being consistent.
+  Now watch what our engine does instead. It picks one. And if you shuffle the
+  ballot rows — same votes, same voters, just typed in a different order — it
+  picks a different one. Six orderings, three different winners.
+  Nothing in the report says so.
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  Amy>Bruno>Clara
+  Bruno>Clara>Amy
+  Clara>Amy>Bruno
+
+expected_winners:
+- Amy

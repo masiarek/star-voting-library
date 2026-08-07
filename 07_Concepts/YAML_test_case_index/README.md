@@ -8,12 +8,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**511 election files** (442 single-winner, 69 multi-winner) across 18 method(s).
+**514 election files** (445 single-winner, 69 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 266 |
-| RCV-IRV (Hare) | 31 |
+| RCV-IRV (Hare) | 34 |
 | Ranked Robin (RCV-RR / Copeland) | 75 |
 | Approval | 21 |
 | STV (proportional RCV) | 10 |
@@ -302,11 +302,14 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vcl_c4_b9_score_vs_runoff`](../../method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) | `method_comparisons/valuable_condorcet_loser/cases/` | 1 | The valuable Condorcet loser — Score elects her, the runoff rejects her → _Ben_ | [`.yaml`](../../method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml) |
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
-## RCV-IRV (Hare)  (31)
+## RCV-IRV (Hare)  (34)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`RCV_ballot_example`](../../06_Other/RCV_IRV/cases/cases_pages/RCV_ballot_example.md) | `06_Other/RCV_IRV/cases/` | 1 | RCV-IRV — a basic ranked-ballot example (3 candidates) → _A_ | [`.yaml`](../../06_Other/RCV_IRV/cases/RCV_ballot_example.yaml) |
+| [`batch_all_out_condorcet_c3_b3`](../../06_Other/RCV_IRV/cases/cases_pages/batch_all_out_condorcet_c3_b3.md) | `06_Other/RCV_IRV/cases/` | 1 | Batch elimination empties the field — with a Condorcet winner sitting there → _Amy_ | [`.yaml`](../../06_Other/RCV_IRV/cases/batch_all_out_condorcet_c3_b3.yaml) |
+| [`batch_all_out_cycle_c3_b3`](../../06_Other/RCV_IRV/cases/cases_pages/batch_all_out_cycle_c3_b3.md) | `06_Other/RCV_IRV/cases/` | 1 | Batch elimination empties the field — the perfect cycle → _Amy_ | [`.yaml`](../../06_Other/RCV_IRV/cases/batch_all_out_cycle_c3_b3.yaml) |
+| [`batch_all_out_round2_c4_b6`](../../06_Other/RCV_IRV/cases/cases_pages/batch_all_out_round2_c4_b6.md) | `06_Other/RCV_IRV/cases/` | 1 | The field empties in round two — and Pareto is what keeps Dev out of the tie → _Alex_ | [`.yaml`](../../06_Other/RCV_IRV/cases/batch_all_out_round2_c4_b6.yaml) |
 | [`put_two_universes_c3_b4`](../../06_Other/RCV_IRV/cases/cases_pages/put_two_universes_c3_b4.md) | `06_Other/RCV_IRV/cases/` | 1 | Parallel universes — one count, two legal answers → _Anna_ | [`.yaml`](../../06_Other/RCV_IRV/cases/put_two_universes_c3_b4.yaml) |
 | [`balance_base_irv_c3_b9`](../../06_Other/RCV_IRV/equal_vote_balance/cases/cases_pages/balance_base_irv_c3_b9.md) | `06_Other/RCV_IRV/equal_vote_balance/cases/` | 1 | Equal-vote balance — base (IRV elects the Condorcet winner, Bruno) → _Bruno_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/cases/balance_base_irv_c3_b9.yaml) |
 | [`balance_plus_opposite_c3_b15`](../../06_Other/RCV_IRV/equal_vote_balance/cases/cases_pages/balance_plus_opposite_c3_b15.md) | `06_Other/RCV_IRV/equal_vote_balance/cases/` | 1 | Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada) → _Ada_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/cases/balance_plus_opposite_c3_b15.yaml) |
@@ -464,7 +467,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`min_bloc_c3_b2`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/min_bloc_c3_b2.md) | `method_comparisons/bloc_vs_pr/cases/` | 2 | → _Ana, Ben_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/min_bloc_c3_b2.yaml) |
-| [`blocs_bloc_c9_b10.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_bloc_c9_b10.yaml) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | — |
+| [`blocs_bloc_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_bloc_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_bloc_c9_b10.yaml) |
 
 ## STAR-PR (Sequential Selection)  (2)
 
@@ -493,7 +496,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml) |
 | [`07b_c5_b36_herb-council-pr-3-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/07b_c5_b36_herb-council-pr-3-seats.md) | `06_Other/ballot_style_lab/cases/` | 3 | The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone) → _Anise, Basil, Chive_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/07b_c5_b36_herb-council-pr-3-seats.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/cases/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
-| [`blocs_pr_c9_b10.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_pr_c9_b10.yaml) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | — |
+| [`blocs_pr_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_pr_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 |  | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_pr_c9_b10.yaml) |
 | [`pets_gov_star_pr`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_star_pr.md) | `method_comparisons/pets_governance/cases/` | 3 | Pets Governance — Council by STAR-PR (3 seats): minority earns a seat → _Bird, Dog, Fish_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_star_pr.yaml) |
 | [`lackner_skowron_shadow_star_pr_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
 | [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/02_Examples/cases/cases_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/02_Examples/cases/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/bv2130_presidential_board_star_pr.yaml) |

@@ -1,0 +1,58 @@
+election_title: "The field empties in round two — and Pareto is what keeps Dev out of the tie"
+
+scenario_description: |-
+  A total batch elimination is not a round-one curiosity. Six voters, four
+  candidates: Alex, Bella and Colin rotate the top three between them, two voters
+  each, and every single ballot ranks Dev dead last.
+  Round 1 is ordinary. Alex 2, Bella 2, Colin 2, Dev 0 — Dev is the unique fewest,
+  so he is eliminated on his own, and because nobody ranked him first there is
+  nothing to transfer. Round 2 is where it stops: Alex 2, Bella 2, Colin 2,
+  majority is 4 of 6, nobody has it, and all three remaining candidates are tied
+  for fewest first choices. Batch elimination removes the entire remaining field,
+  and the count ends with all three tied for the win.
+  Dev is not in that tie, and the reason is worth naming: every voter prefers all
+  three others to Dev, so PARETO excludes him. That is precisely the role Pareto
+  plays in Moulin's forced-tie proposition — anonymity and neutrality force a tie
+  among the symmetric candidates, and Pareto is what stops a universally-rejected
+  candidate from being swept into it. See
+  07_Concepts/topics/ties/ties_are_forced.md.
+  Verified with pref_voting (Holliday & Pacuit): instant_runoff = {Alex, Bella,
+  Colin}, coombs = {Alex, Bella, Colin}, copeland = {Alex, Bella, Colin}. Coombs
+  lands in the same place by the mirror route — Dev carries all 6 last-place votes
+  and goes first, after which Alex, Bella and Colin have 2 apiece and tie.
+  This engine does not print those rounds. The vendored pyrankvote collapses the
+  whole thing into ONE round — it rejects Colin and Dev side by side, even though
+  Colin was tied at the top of the remaining field and Dev was alone at the bottom
+  — and elects Alex 4-2. So the round-2 structure described above is the METHOD's;
+  read it off pref_voting, not off the report below. expected_winners records what
+  this engine prints for this row order, not the method's answer.
+  Lesson: 07_Concepts/topics/ties/batch_elimination.md
+
+video_script: |-
+  Four candidates this time, six voters, and one candidate nobody likes.
+  Alex, Bella and Colin rotate the top three spots, two voters each. Dev is last
+  on every single ballot.
+  Round one is completely normal. Dev has zero first choices, he is clearly the
+  weakest, out he goes. Nobody ranked him first, so no votes move.
+  Round two is where it falls apart. Alex two, Bella two, Colin two. You need four
+  for a majority. Nobody has it, and nobody is behind. Eliminate everyone tied for
+  last and there is no field left. All three tie.
+  Notice who is NOT in that tie. Dev. And the reason is a principle worth knowing
+  by name: every voter, without exception, preferred the other three to Dev.
+  That is the Pareto condition, and it is the thing standing between "we could not
+  separate the good candidates" and "so let's call it a four-way tie."
+  The tie is forced. Dev's exclusion from it is not.
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  Alex>Bella>Colin>Dev
+  Alex>Bella>Colin>Dev
+  Bella>Colin>Alex>Dev
+  Bella>Colin>Alex>Dev
+  Colin>Alex>Bella>Dev
+  Colin>Alex>Bella>Dev
+
+expected_winners:
+- Alex

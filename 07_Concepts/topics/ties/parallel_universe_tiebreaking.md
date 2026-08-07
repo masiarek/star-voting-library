@@ -24,7 +24,9 @@ Only methods that eliminate have this problem. [RCV-IRV](../../../06_Other/RCV_I
 | **Batch-eliminate** | remove *all* candidates tied for last in one step | can delete a candidate who would have survived; the convention used in the [SEP entry](#sources) |
 | **PUT** | branch on every legal elimination, union the winners | the winner set can grow — and the cost is combinatorial |
 
-The first two produce exactly one winner and look decisive. That is precisely the problem: **they hide a genuine ambiguity behind a confident-looking report.** PUT is the only one of the three that tells you the count was ambiguous at all.
+Pick-one always produces exactly one winner and looks decisive. That is precisely the problem: **it hides a genuine ambiguity behind a confident-looking report.** Batch elimination *usually* does the same — but not always, and the exception is worth knowing: when the tied batch is the **entire remaining field**, it empties the ballot and reports every one of them as tied for the win. On a symmetric profile that is the only answer an anonymous, neutral rule may give. → [Batch elimination — what happens when the batch is *everyone*](batch_elimination.md).
+
+So of the three, PUT is the one that discloses a mid-count ambiguity *whenever* there is one; batch elimination discloses it only when the tie is total.
 
 ## Worked example — four voters, and a candidate who exists in only one universe
 

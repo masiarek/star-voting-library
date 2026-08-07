@@ -113,4 +113,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [min_bloc_c3_b2](min_bloc_c3_b2.md)
+More cases in this set: [blocs_bloc_c9_b10](blocs_bloc_c9_b10.md) · [blocs_pr_c9_b10](blocs_pr_c9_b10.md) · [min_bloc_c3_b2](min_bloc_c3_b2.md)

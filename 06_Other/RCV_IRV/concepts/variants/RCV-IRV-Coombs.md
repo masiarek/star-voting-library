@@ -35,6 +35,12 @@ No majority. **Last-place tally:** Right 18 (the 12 + 6), Left 9, **Center 0.**
 
 Same ballots as [Hare](../RCV-IRV-Hare.md) (which elected Left); Coombs elects **Center**, the Condorcet winner, because Center is *nobody's* last choice.
 
+## What happens when the last-place counts tie
+
+Step 3 says "eliminate the candidate with the most last-place rankings" — and, exactly as with [Hare](../RCV-IRV-Hare.md), that is undefined when several candidates are tied for most. The convention used by the academic statements of Coombs (and by `pref_voting`'s implementation) is to **remove all of them in one step**. Usually a shortcut; occasionally the whole field, at which point the count stops and every remaining candidate ties for the win.
+
+On a perfectly symmetric three-way rotation — where each candidate is ranked last by exactly one voter — that is precisely what happens, and Hare empties at the same moment from the other end of the ballot. Worth knowing because it is where Coombs' one structural advantage shows up: reading the *bottom* of the ballot gives the elimination step a different signal, so it survives some profiles on which Hare's first-choice counts have already tied. → [Batch elimination — what happens when the batch is *everyone*](../../../../07_Concepts/topics/ties/batch_elimination.md).
+
 ## Strengths & weaknesses
 
 - ✅ **Resists center squeeze** and usually elects the Condorcet/centrist candidate.
