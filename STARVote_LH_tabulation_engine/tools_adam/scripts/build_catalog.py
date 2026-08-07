@@ -61,7 +61,10 @@ CANON = {
     "plurality": "Plurality", "choose_one": "Plurality", "fptp": "Plurality",
     "rankedrobin": "RankedRobin", "rcv_rr": "RankedRobin", "rr": "RankedRobin",
     "copeland": "RankedRobin", "consensus": "RankedRobin",
-    "irv": "IRV", "rcv_irv": "IRV", "rcv": "IRV",
+    # "rcv-irv" is the repo's HOUSE SPELLING in prose (see CLAUDE.md), so it turns
+    # up in voting_method too; without it the file falls through to the raw string
+    # and lands in the "?" ballot-type bucket instead of "ranked".
+    "irv": "IRV", "rcv_irv": "IRV", "rcv-irv": "IRV", "rcv": "IRV",
     "stv": "STV", "range": "Range",
 }
 BALLOT_TYPE = {

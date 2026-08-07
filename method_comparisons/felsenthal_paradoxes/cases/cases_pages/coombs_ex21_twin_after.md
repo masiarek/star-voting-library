@@ -7,7 +7,7 @@ search:
 
 *Generated from [`coombs_ex21_twin_after.yaml`](../coombs_ex21_twin_after.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [rcv-irv](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** B
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** B
 
 ## Scenario
 

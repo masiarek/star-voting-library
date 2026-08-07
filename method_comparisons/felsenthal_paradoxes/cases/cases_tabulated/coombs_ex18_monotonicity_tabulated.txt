@@ -11,7 +11,7 @@ scenario_description: |-
   Arlo is the Condorcet winner both before and after, which is what makes the pair readable — the pairwise picture is stable and only the elimination ORDER moved.
   Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count: IRV eliminates whoever has the fewest FIRST places, Coombs whoever has the most LAST places. IRV elects Arlo on these ballots and is unmoved by the raise, so the failure belongs to Coombs alone. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py, which is cross-checked against pref_voting.
 paradoxes: [non-monotonicity, condorcet-winner]
-voting_method: RCV-IRV
+voting_method: RCV_IRV
 num_winners: 1
 ballots: |-
   11:Arlo>Bree>Cole>Dana

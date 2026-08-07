@@ -6,7 +6,7 @@ scenario_description: |-
   Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table; this is an academic reproduction, not a scenario with a cast.
   Coombs has no tabulator in the LH engine or on BetterVoting, so this file is tabulated as RCV-IRV, the mirror-image count — IRV eliminates on fewest FIRST places, Coombs on most LAST places. IRV elects B both before and after the twins arrive, so the failure is Coombs' alone. For the Coombs count run tools_adam/pref_voting_tabulation_engine/coombs_report.py.
 paradoxes: [twin]
-voting_method: RCV-IRV
+voting_method: RCV_IRV
 num_winners: 1
 ballots: |-
   5:A>B>D>C

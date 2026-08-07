@@ -11,7 +11,7 @@ scenario_description: |-
   Labels are Felsenthal's own A/B/C so the case can be read side by side with the paper's table.
   Tabulated as RCV-IRV, the mirror-image count. IRV elects B in all three files — District I, District II and this amalgamation — so on this profile IRV shows no reinforcement failure at all and the paradox is Coombs' alone. That contrast is why the three files are worth having separately.
 paradoxes: [multiple-districts]
-voting_method: RCV-IRV
+voting_method: RCV_IRV
 num_winners: 1
 ballots: |-
   9:A>B>C

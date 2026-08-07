@@ -13,7 +13,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Method | Files |
 |--------|------:|
 | STAR | 266 |
-| RCV-IRV (Hare) | 34 |
+| RCV-IRV (Hare) | 41 |
 | Ranked Robin (RCV-RR / Copeland) | 81 |
 | Approval | 21 |
 | STV (proportional RCV) | 10 |
@@ -28,7 +28,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | IRV | 19 |
 | PLURALITY | 28 |
 | RANGE | 3 |
-| RCV-IRV | 8 |
+| RCV-IRV | 1 |
 | RR | 1 |
 
 ## STAR  (266)
@@ -302,7 +302,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vcl_c4_b9_score_vs_runoff`](../../method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) | `method_comparisons/valuable_condorcet_loser/cases/` | 1 | The valuable Condorcet loser — Score elects her, the runoff rejects her → _Ben_ | [`.yaml`](../../method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml) |
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
-## RCV-IRV (Hare)  (34)
+## RCV-IRV (Hare)  (41)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -320,6 +320,13 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`alaska_sincere_c3_b200`](../../method_comparisons/condorcet_burial_alaska/cases/cases_pages/alaska_sincere_c3_b200.md) | `method_comparisons/condorcet_burial_alaska/cases/` | 1 | Alaska 2022 (sincere) — Begich is the Condorcet winner → _Peltola_ | [`.yaml`](../../method_comparisons/condorcet_burial_alaska/cases/alaska_sincere_c3_b200.yaml) |
 | [`bv2227_3xgkck_honest_irv`](../../method_comparisons/favorite_betrayal_irv/cases/cases_pages/bv2227_3xgkck_honest_irv.md) | `method_comparisons/favorite_betrayal_irv/cases/` | 1 | Favorite betrayal (RCV-IRV) — HONEST: Left voters rank their favorite first, and their WORST wins → _Right_ | [`.yaml`](../../method_comparisons/favorite_betrayal_irv/cases/bv2227_3xgkck_honest_irv.yaml) |
 | [`bv2228_bgcmxx_betray_irv`](../../method_comparisons/favorite_betrayal_irv/cases/cases_pages/bv2228_bgcmxx_betray_irv.md) | `method_comparisons/favorite_betrayal_irv/cases/` | 1 | Favorite betrayal (RCV-IRV) — BETRAY: 2 Left voters rank their favorite SECOND, and win → _Center_ | [`.yaml`](../../method_comparisons/favorite_betrayal_irv/cases/bv2228_bgcmxx_betray_irv.yaml) |
+| [`coombs_ex18_monotonicity`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex18_monotonicity.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.18 — Bree is raised on four ballots and loses because of it → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex18_monotonicity.yaml) |
+| [`coombs_ex20_amalgamated`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex20_amalgamated.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_amalgamated.yaml) |
+| [`coombs_ex20_district1`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex20_district1.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.20 — District I: 34 voters, Coombs elects B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district1.yaml) |
+| [`coombs_ex20_district2`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex20_district2.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.20 — District II: 7 voters, B wins outright → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district2.yaml) |
+| [`coombs_ex21_twin_after`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex21_twin_after.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.21 — after: two twins join for B, and B's win becomes a coin flip → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex21_twin_after.yaml) |
+| [`coombs_ex21_twin_before`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex21_twin_before.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.21 — before: 20 voters, Coombs elects B outright → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex21_twin_before.yaml) |
+| [`coombs_ex22_scc`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex22_scc.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.22 — SCC: C drops out and A wins instead of B → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex22_scc.yaml) |
 | [`bv2277_tqfdbg_mayor_irv`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2277_tqfdbg_mayor_irv.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_irv.yaml) |
 | [`bv2278_8cdkkc_five_way_irv`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2278_8cdkkc_five_way_irv.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (RCV-IRV) — the compromise is eliminated third → _A_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_irv.yaml) |
 | [`alaska_upward_after`](../../method_comparisons/monotonicity/cases/cases_pages/alaska_upward_after.md) | `method_comparisons/monotonicity/cases/` | 1 | Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses → _Begich_ | [`.yaml`](../../method_comparisons/monotonicity/cases/alaska_upward_after.yaml) |
@@ -642,17 +649,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`range_101_c3_b5`](../../06_Other/Range/cases/cases_pages/range_101_c3_b5.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) |
 | [`range_sullivan_score_c4_b10`](../../06_Other/Range/cases/cases_pages/range_sullivan_score_c4_b10.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | [`.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) |
 
-## RCV-IRV  (8)
+## RCV-IRV  (1)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
-| [`coombs_ex18_monotonicity`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex18_monotonicity.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.18 — Bree is raised on four ballots and loses because of it → _Arlo_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex18_monotonicity.yaml) |
-| [`coombs_ex20_amalgamated`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex20_amalgamated.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_amalgamated.yaml) |
-| [`coombs_ex20_district1`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex20_district1.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.20 — District I: 34 voters, Coombs elects B → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district1.yaml) |
-| [`coombs_ex20_district2`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex20_district2.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.20 — District II: 7 voters, B wins outright → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district2.yaml) |
-| [`coombs_ex21_twin_after`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex21_twin_after.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.21 — after: two twins join for B, and B's win becomes a coin flip → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex21_twin_after.yaml) |
-| [`coombs_ex21_twin_before`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex21_twin_before.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.21 — before: 20 voters, Coombs elects B outright → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex21_twin_before.yaml) |
-| [`coombs_ex22_scc`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex22_scc.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.22 — SCC: C drops out and A wins instead of B → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex22_scc.yaml) |
 | [`tilted_cycle_c3_b5_irv`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_irv.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV) → _Cara_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_irv.yaml) |
 
 ## RR  (1)
