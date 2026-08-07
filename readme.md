@@ -57,8 +57,8 @@ The same ten sections as the sidebar, in the same order — each one's landing p
 | Section | What's in it |
 |---|---|
 | ⭐ **[01 STAR](01_STAR/README.md)** | The headline method, *one seat*. The lessons first — the ballot, the two rounds, tie-breaking, the honest limits — then the runnable examples, the real BetterVoting elections, and the criteria pages. |
-| **[02 STAR Bloc](02_STAR_Bloc/README.md)** | Several seats at once, *majoritarian*: the same ballot, run once per seat — and, just as importantly, when **not** to use it. |
-| **[03 STAR PR](03_STAR_PR/README.md)** | Several seats at once, *proportional*: the same score ballot counted so seats reflect the electorate's proportions (`sss` · `allocated` · `rrv`). |
+| **[02 STAR Bloc](02_STAR_Bloc/README.md)** | Several seats at once, [*majoritarian*](07_Concepts/topics/electing_more_than_one.md): the same ballot, run once per seat — and, just as importantly, when **not** to use it. |
+| **[03 STAR PR](03_STAR_PR/README.md)** | Several seats at once, [*proportional*](07_Concepts/topics/electing_more_than_one.md): the same score ballot counted so seats reflect the electorate's proportions (`sss` · `allocated` · `rrv`). |
 | **[04 Approval](04_Approval/README.md)** | Approve or don't — Score voting at *one bit of resolution*. Enormous gain in expressiveness over choose-one, for almost no ballot complexity. |
 | **[05 Ranked Robin](05_Ranked_Robin/README.md)** | Ranked ballots counted *head-to-head*, so the candidate who beats the most rivals wins — the friendly upgrade for people who like ranking. |
 | **[06 Other methods](06_Other/README.md)** | *Taught, not promoted*: Choose-One (Plurality), RCV-IRV, STV, Range/Score, and the historical also-rans — here for honest comparison. |
