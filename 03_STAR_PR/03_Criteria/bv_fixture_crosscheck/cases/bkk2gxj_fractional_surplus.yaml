@@ -1,0 +1,42 @@
+title: BV fixture — fractional surplus
+scenario_description: >
+  BetterVoting's own unit-test fixture for Allocated Score ("Fractional
+  surplus" in packages/backend/src/Tabulators/AllocatedScore.test.ts), cast as
+  a real BetterVoting election and re-counted here. Allison has eight
+  top-level supporters but a seat costs only six voters, so the whole quota is
+  drawn from inside her 5-star group and each of those ballots keeps
+  1 - 6/8 = 0.25 of its weight for the second seat. This is the case that
+  shows fractional surplus doing its job: voters who scored the winner
+  identically are spent identically.
+bv_election_id: kk2gxj
+bv_results_url: https://bettervoting.com/kk2gxj/results
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+ballots: |-
+  Allison,Bill,Carmen,Doug
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,5,1,0
+  5,4,4,0
+  0,0,0,3
+  0,0,4,5
+  0,0,4,5
+  0,0,4,5
+expected_winners: [Allison, Doug]
+
+# file: bkk2gxj_fractional_surplus.yaml

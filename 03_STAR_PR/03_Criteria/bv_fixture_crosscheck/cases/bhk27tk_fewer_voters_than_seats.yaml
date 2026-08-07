@@ -1,0 +1,30 @@
+title: BV fixture — fewer voters than seats
+scenario_description: >
+  BetterVoting's own unit-test fixture for Allocated Score ("Voters < Winners"
+  in packages/backend/src/Tabulators/AllocatedScore.test.ts), cast as a real
+  BetterVoting election and re-counted here. Two voters, three seats: a
+  degenerate election that exists to prove the tabulator does something sane
+  when the quota is smaller than a single ballot rather than dividing by zero
+  or looping. Both engines seat Allison, Bill and Carmen.
+bv_election_id: hk27tk
+bv_results_url: https://bettervoting.com/hk27tk/results
+voting_method: allocated
+num_winners: 3
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+ballots: |-
+  Allison,Bill,Carmen,Doug
+  5,5,0,0
+  5,4,3,0
+expected_winners: [Allison, Bill, Carmen]
+
+# file: bhk27tk_fewer_voters_than_seats.yaml
