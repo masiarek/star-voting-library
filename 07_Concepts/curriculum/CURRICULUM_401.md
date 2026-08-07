@@ -11,7 +11,7 @@
 ## 401.1 — Why there's no perfect method (the frame)
 
 - **Objective:** internalize that a flawless method is mathematically impossible, so "method X has a flaw" is the beginning of the analysis, not the end.
-- **Key terms:** Arrow's impossibility theorem (ordinal methods), Gibbard–Satterthwaite (all methods are manipulable), VSE / Bayesian regret.
+- **Key terms:** [Arrow's impossibility theorem](../topics/arrow_theorem_and_star.md) (ordinal methods), [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md) (all methods are manipulable), [VSE / Bayesian regret](../topics/what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret).
 - **Material:** [Arrow's theorem & STAR](../topics/arrow_theorem_and_star.md) (why cardinal ballots escape Arrow but **not** Gibbard) and [Gibbard–Satterthwaite](../topics/gibbard_satterthwaite_theorem.md).
 - **The point:** the honest question is never "which method is flawless?" (none is) but **"which failures can I tolerate, and how often do they occur?"** Everything below serves that question.
 
