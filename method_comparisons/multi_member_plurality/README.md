@@ -2,6 +2,8 @@
 
 The three multi-member plurality methods on **one** 60/40 electorate (6-voter Home majority, 4-voter Away minority; 3 seats). They differ only in **votes per voter**, and that alone slides the result from majority sweep to minority-tops-the-poll.
 
+All three are **majoritarian** at-large methods — whether you want that at all, or a [proportional](../../03_STAR_PR/README.md) body instead, is the decision that comes first: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md). The expressive majoritarian alternative to these is [Bloc STAR](../../02_STAR_Bloc/README.md).
+
 Each row links the **page** — the readable write-up with the ballots and the engine's full count — and the **yaml** you feed the engine to run it yourself.
 
 | Method | Votes/voter | Winners | Home : Away | Read · run |

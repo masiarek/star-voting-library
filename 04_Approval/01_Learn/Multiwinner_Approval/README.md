@@ -2,6 +2,8 @@
 
 The same Yes/No ballot, more than one seat — and a genuinely new question: should the committee maximize *total* satisfaction (utilitarian) or make sure every faction gets *a* voice (egalitarian/proportional)?
 
+That is the multi-winner fork, in Approval clothing — the same decision a scored or ranked ballot faces, put in plain language at [Electing more than one, simply](../../../07_Concepts/topics/electing_more_than_one.md). Its scored counterparts are [Bloc STAR](../../../02_STAR_Bloc/README.md) (majoritarian) and [STAR-PR](../../../03_STAR_PR/README.md) (proportional).
+
 **Start here → [Approval Voting — Multi-Winner](approval_multiwinner.md)**
 
 ## The pages

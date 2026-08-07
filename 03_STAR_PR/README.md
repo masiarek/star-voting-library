@@ -8,7 +8,9 @@
 
 The same 0–5 score ballot, counted so that seats reflect the electorate's *proportions* instead of handing every seat to the largest bloc. Three tabulations are represented here, all runnable on the same ballot files by switching `voting_method:`:
 
-**New to multi-winner?** The concept pages for this method live in [`01_Learn/`](01_Learn/README.md) — start with [Proportional Representation](01_Learn/README.md) for the majoritarian-vs-proportional fork, then [the math behind proportional STAR](01_Learn/STAR_PR/the_math_behind_proportional_star.md). Everything below is the **runnable examples**.
+> **First, the bigger decision.** Whether you want a **majoritarian** body at all — "the N best" — or a **proportional** one that mirrors the electorate, comes before choosing any method on this page: **[Electing more than one, simply](../07_Concepts/topics/electing_more_than_one.md)**.
+
+**New to multi-winner?** The concept pages for this method live in [`01_Learn/`](01_Learn/README.md) — start with [Proportional Representation](01_Learn/README.md), then [the math behind proportional STAR](01_Learn/STAR_PR/the_math_behind_proportional_star.md). Everything below is the **runnable examples**.
 
 | `voting_method` | Counts as | The same 63 ballots, counted this way |
 |---|---|---|
