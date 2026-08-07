@@ -99,7 +99,7 @@ The rigorous, consequential version of "IRV is harder to count" isn't program le
 
 Here the methods agree, and Carmen even led the first round — but **the first-round leader is not always the winner.** In a **center squeeze**, the consensus candidate is almost everyone's second choice, so IRV eliminates her early (too few *firsts*) while STAR's scoring round keeps her in and she wins. Same ballots, different count, **different winner** — traced in [Center Squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) (demos `center_squeeze_irv.yaml` / `center_squeeze_star.yaml`). This is exactly why RCV-IRV results have to be read to the *final* round, never reported from first choices alone.
 
-> **On displaying RCV-IRV results.** The round-by-round table above follows the standard best practice (FairVote; Center for Civic Design): show every round with a written explanation, name the majority threshold, and treat the final round — not the first-choice lead — as the result. We deliberately show *all* the rounds rather than de-emphasizing the eliminations, because the whole point here is to see how the count works. See `07_Concepts/LINKS.md` → "FairVote: displaying RCV results."
+> **On displaying RCV-IRV results.** The round-by-round table above follows the standard best practice (FairVote; Center for Civic Design): show every round with a written explanation, name the majority threshold, and treat the final round — not the first-choice lead — as the result. We deliberately show *all* the rounds rather than de-emphasizing the eliminations, because the whole point here is to see how the count works. See [`LINKS.md`](../LINKS.md) → "FairVote: displaying RCV results."
 
 ## Run it yourself
 

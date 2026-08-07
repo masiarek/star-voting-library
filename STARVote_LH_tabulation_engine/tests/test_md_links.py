@@ -89,6 +89,58 @@ def test_folder_link_check_is_not_vacuous():
     )
 
 
+def test_no_repo_root_paths_in_code_text():
+    """A repo path in backticks must be a link, not bare code text.
+
+    ``07_Concepts/tips/TIPS_terminology.md`` in a page under
+    06_Other/RCV_IRV/concepts/variants/ reads as "go look at this," but every
+    reader resolves it from the page's own folder — the desktop app opens
+    `…/variants/07_Concepts/tips/TIPS_terminology.md` and reports the file
+    missing. On GitHub and the built site it is inert, which is why
+    check_links never saw this class.
+
+    The compounding cost is silent rot: not being links, these were invisible
+    to migrate_concept_links.py during the 2026-08-02 reorganization, so four
+    of them still named pre-reorg paths (`07_Concepts/residual_vote_splitting.md`,
+    `split_voting/*.yaml`) weeks after those files moved.
+    """
+    mod = _load_hygiene()
+    bad = mod.check_code_span_paths()
+    assert not bad, (
+        f"{len(bad)} repo-root path(s) written as bare code text:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in bad)
+    )
+
+
+def test_code_span_path_check_is_not_vacuous():
+    """Prove the gate above fires, and only on the misleading spelling.
+
+    Three things must NOT be caught: a path that resolves from the page (it is
+    correct as written), a path belonging to some other codebase (what code
+    text is legitimately for), and one already used as a link label.
+    """
+    mod = _load_hygiene()
+    probe = REPO_ROOT / "07_Concepts" / "topics" / "_code_span_probe.md"
+    probe.write_text(
+        "# probe\n"
+        "`07_Concepts/GLOSSARY.md`\n"                    # caught: root-relative
+        "`../GLOSSARY.md`\n"                             # ok: resolves from here
+        "`packages/frontend/src/i18n/en.yaml`\n"         # ok: another codebase
+        "[`07_Concepts/GLOSSARY.md`](../GLOSSARY.md)\n"  # ok: already a link
+        "`GLOSSARY.md`\n",                               # ok: bare name, no path
+        encoding="utf-8",
+    )
+    try:
+        hits = [msg for rel, msg in mod.check_code_span_paths()
+                if rel.startswith("07_Concepts/topics/_code_span_probe.md")]
+    finally:
+        probe.unlink()
+    assert len(hits) == 1, f"expected exactly the root-relative path caught, got {hits}"
+    assert "](../GLOSSARY.md)" in hits[0], (
+        f"the suggested fix must be relative to the page, got: {hits[0]}"
+    )
+
+
 def test_no_new_hand_pasted_engine_reports():
     """A long engine report on a companion page must be embedded, not pasted.
 

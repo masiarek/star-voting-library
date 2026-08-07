@@ -25,7 +25,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 **Adam:** Exactly. Someone says "ranked-choice is great" and they've described the *ballot* — they haven't told you how it's counted, which is the part that decides the election. The trick isn't to admire the two parts apart; it's to never let them be split — when someone praises a ballot, ask, "fine, now how do you count it?"
 
-> [REPO] `CLAUDE.md` terminology policy and `07_Concepts/GLOSSARY.md` — "Ballot," "Tabulation," "Voting method."
+> [REPO] [`CLAUDE.md`](../../CLAUDE.md) terminology policy and [`GLOSSARY.md`](../GLOSSARY.md) — "Ballot," "Tabulation," "Voting method."
 
 ---
 
@@ -55,7 +55,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 **Adam:** That gap *is* the trouble. Let me show you the smallest version.
 
-> [REPO] `07_Concepts/GLOSSARY.md` — "Plurality / minority winner," "Majority finish."
+> [REPO] [`GLOSSARY.md`](../GLOSSARY.md) — "Plurality / minority winner," "Majority finish."
 
 ---
 
@@ -69,7 +69,7 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 
 **Adam:** Exactly — and a majority rule wouldn't accept that. Since nobody cleared half, it demands another step: a runoff. STAR's automatic runoff is that step — after scoring, the top two meet head-to-head, and the winner holds a majority *between those two.* Said precisely: that's a majority over the other finalist — not a proof the winner is everyone's favorite across the whole field, but exactly the thing plurality never even checks.
 
-> [DEMO] `split_voting/00_plurality_vs_majority.yaml` — Choose-One elects Andre (40%, a candidate 60% voted against); STAR elects Blake, the coalition's consensus. `[Divergence from STAR]` shows **Choose-One (Plurality) = Andre** disagreeing with STAR, and the `[Vote-splitting check]` prints the 60-vote coalition in numbers.
+> [DEMO] [`00_plurality_vs_majority.yaml`](../../method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml) — Choose-One elects Andre (40%, a candidate 60% voted against); STAR elects Blake, the coalition's consensus. `[Divergence from STAR]` shows **Choose-One (Plurality) = Andre** disagreeing with STAR, and the `[Vote-splitting check]` prints the 60-vote coalition in numbers.
 
 ---
 
@@ -84,14 +84,14 @@ Cues: **[DEMO]** run a file live · **[SLIDE]** show a slide · **[REPO]** lesso
 ## Where this fits in the overall teaching
 
 - **Level: 101 · for voters** — **the foundation.** Play it before the "is the system broken?" diagnosis and the spoiler-effect mechanism; both assume ballot-vs-count and plurality-vs-majority are already clear.
-- **Pairs with:** `our_voting_system_is_broken.md` (the diagnosis that builds on this) and `whats_so_good_about_STAR_Voting.md` (the fix). This episode is purely definitional — no STAR pitch yet beyond showing the runoff as "the majority step."
+- **Pairs with:** [`our_voting_system_is_broken.md`](our_voting_system_is_broken.md) (the diagnosis that builds on this) and [`whats_so_good_about_STAR_Voting.md`](../../01_STAR/01_Learn/reference/whats_so_good_about_STAR_Voting.md) (the fix). This episode is purely definitional — no STAR pitch yet beyond showing the runoff as "the majority step."
 - **Terminology:** keep `Choose-One` / `Plurality` for a public audience. Hold the ballot-vs-tabulation distinction precisely — it's the spine of the whole curriculum.
 
 Cross-references:
-- `07_Concepts/GLOSSARY.md` — "Ballot," "Tabulation," "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Majority finish," "Vote splitting."
-- `07_Concepts/topics/our_voting_system_is_broken.md` — the next episode (1.5).
-- `split_voting/00_plurality_vs_majority.yaml` — the live demo for Segment 4.
-- `LINKS.md` → **Full Deck 2025** ("Rating vs Ranking," "Problem: Vote-Splitting").
+- [`GLOSSARY.md`](../GLOSSARY.md) — "Ballot," "Tabulation," "Choose-One / Plurality / First-Past-The-Post," "Plurality / minority winner," "Majority finish," "Vote splitting."
+- [`our_voting_system_is_broken.md`](our_voting_system_is_broken.md) — the next episode (1.5).
+- [`00_plurality_vs_majority.yaml`](../../method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml) — the live demo for Segment 4.
+- [`LINKS.md`](../LINKS.md) → **Full Deck 2025** ("Rating vs Ranking," "Problem: Vote-Splitting").
 - Source: Google Doc **"Voting Method - what is it?"** (the ballot/count framing and the Andre/Blake/Carmen plurality table this episode is built from).
 
 <!-- Sourced framing: a voting method = ballot (what voters express) + count (how a

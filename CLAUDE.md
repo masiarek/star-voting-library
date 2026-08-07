@@ -288,7 +288,7 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   they aren't here**; clone the companion, match the house structure, update the
   README slate table, and keep the two repos pointing at each other. Working the
   other direction: when a teaching page states an open gap in print (as
-  `topics/distortion.md` does for STAR's missing distortion bound), that's exactly
+  `07_Concepts/topics/distortion.md` does for STAR's missing distortion bound), that's exactly
   the raw material for a new topic page.
 - **When creating education pages or cross-referencing, prefer the `.md` page over
   the raw `.yaml` (and MD/links in general).**
@@ -316,6 +316,32 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   **`build_yaml_pages.py` is a source of these too** (its `METHOD_DOCS` map and the
   `07_Concepts` fallback feed the generated `**Method:**` line on all 507 case pages), so
   fix the generator, not its output.
+- **A repo path in backticks must be a LINK, not bare code text — machine-checked**
+  (`check_code_span_paths`, gated by `tests/test_md_links.py`). Writing
+  `` `07_Concepts/tips/TIPS_terminology.md` `` on a page under
+  `06_Other/RCV_IRV/concepts/variants/` reads as *"go look at this file"* — but the path
+  is **root-relative while every reader resolves it from the page's own folder**, so the
+  desktop app and any local Markdown viewer open
+  `…/variants/07_Concepts/tips/TIPS_terminology.md` and report the file missing. Put the
+  backticks in the *label* and a real relative path in the *href*:
+
+  ```markdown
+  BAD   `07_Concepts/tips/TIPS_terminology.md`
+  GOOD  [`TIPS_terminology.md`](../../../../07_Concepts/tips/TIPS_terminology.md)
+  ```
+
+  This one hides better than the folder-link bug, because on GitHub and the built site the
+  code span is **inert** — it renders as grey text and 404s nowhere, so only a reader who
+  tries to *follow* it ever finds out. `check_links` cannot see it either (it's not a
+  link), which is exactly why it rotted: **not being links, these were invisible to
+  `migrate_concept_links.py`** during the 2026-08-02 reorganization, so four still named
+  pre-reorg paths (`07_Concepts/residual_vote_splitting.md`, `split_voting/*.yaml`) weeks
+  after those files moved. The check fires only when the path resolves **from the repo
+  root but not from the containing page** — provably a real repo file written the wrong
+  way round. A path that resolves from neither is left alone: that's a reference to
+  *another* codebase (BetterVoting's `packages/frontend/src/i18n/en.yaml`), which is what
+  code text is legitimately for. Generated pages are exempt (`_hand_authored_pages()`
+  skips them), so the `divergence_review` index may keep printing source paths as data.
 - **Voice — learner by default; "how to teach it" is a folder, not a mode.**
   The asymmetry decides it: a learner page serves a presenter fine (they read
   *"you score every candidate 0–5"* and say *"you all score…"*), but a presenter

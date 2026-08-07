@@ -21,7 +21,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** Deal. Let's start with the problem it fixes — because once you *feel* the problem, STAR stops looking clever and starts looking obvious.
 
-> [SLIDE] Full Deck — "Why STAR Voting?" title + the one-line pitch. [REPO] `07_Concepts/00_START_HERE.md` (the one-sentence pitch).
+> [SLIDE] Full Deck — "Why STAR Voting?" title + the one-line pitch. [REPO] [`00_START_HERE.md`](../../../07_Concepts/00_START_HERE.md) (the one-sentence pitch).
 
 ---
 
@@ -39,11 +39,11 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** Let's run a real election.
 
-> [DEMO] `split_voting/01_political_left_split.yaml` — a 66% coalition (Green, Labour, SocialDem) splits three ways; under Choose-One the **Conservative wins with 34%**, a candidate two-thirds ranked last. The `[Vote-splitting check]` block says it in numbers. Then point out: *STAR elects Labour* — the coalition's consensus. [SLIDE] Full Deck — "PROBLEM: VOTE-SPLITTING" and "VOTE-SPLITTING SETS OFF A DOMINO EFFECT."
+> [DEMO] [`01_political_left_split.yaml`](../../../method_comparisons/split_voting/_main/01_political_left_split.yaml) — a 66% coalition (Green, Labour, SocialDem) splits three ways; under Choose-One the **Conservative wins with 34%**, a candidate two-thirds ranked last. The `[Vote-splitting check]` block says it in numbers. Then point out: *STAR elects Labour* — the coalition's consensus. [SLIDE] Full Deck — "PROBLEM: VOTE-SPLITTING" and "VOTE-SPLITTING SETS OFF A DOMINO EFFECT."
 
 **Adam (after the demo):** Notice what just happened. Nobody was dishonest. The majority just got divided and conquered by their own ballot. That's not a freak event — it can happen in *any* race with more than two candidates.
 
-> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — `07_Concepts/topics/our_voting_system_is_broken.md` (the foundational "Problem with Plurality" episode).
+> [REPO] The deeper *diagnosis* — is the system really broken, how often, how serious? — [`our_voting_system_is_broken.md`](../../../07_Concepts/topics/our_voting_system_is_broken.md) (the foundational "Problem with Plurality" episode).
 
 ---
 
@@ -65,7 +65,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** Essentially — from a score ballot you can always read off the ranking, but from a ranking you can never recover the scores. That's why STAR uses a score ballot as its raw material.
 
-> [SLIDE] Full Deck — "INTRODUCING: ALTERNATIVE VOTING! (Rating vs Ranking)" and "That changed with the invention of STAR Voting… Score + Instant Runoff." [REPO] `07_Concepts/GLOSSARY.md` — "Scored (cardinal)" vs "Ranked (ordinal)."
+> [SLIDE] Full Deck — "INTRODUCING: ALTERNATIVE VOTING! (Rating vs Ranking)" and "That changed with the invention of STAR Voting… Score + Instant Runoff." [REPO] [`GLOSSARY.md`](../../../07_Concepts/GLOSSARY.md) — "Scored (cardinal)" vs "Ranked (ordinal)."
 
 ---
 
@@ -111,7 +111,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** The smallest election possible.
 
-> [DEMO] `01_STAR/09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml` — two voters, two flavors. Watch the Scoring Round, then the Automatic Runoff. With two candidates STAR agrees with ordinary voting — that's *why* we start here: the gears are visible, nothing surprising competes for attention. [DEMO] Then `01_STAR/02_Examples/cases/vote_splitting2.yaml` — add a third candidate and watch the winner become the broad compromise. [SLIDE] Full Deck — "HOW DOES STAR VOTING WORK?" and "STAR RESULTS: 1) Add up the stars. 2) Add up the votes." [REPO] `07_Concepts/00_START_HERE.md` — "Why TWO rounds and not just scores?"
+> [DEMO] [`01b_c2_b2_two-candidates.yaml`](../../09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) — two voters, two flavors. Watch the Scoring Round, then the Automatic Runoff. With two candidates STAR agrees with ordinary voting — that's *why* we start here: the gears are visible, nothing surprising competes for attention. [DEMO] Then [`vote_splitting2.yaml`](../../02_Examples/cases/vote_splitting2.yaml) — add a third candidate and watch the winner become the broad compromise. [SLIDE] Full Deck — "HOW DOES STAR VOTING WORK?" and "STAR RESULTS: 1) Add up the stars. 2) Add up the votes." [REPO] [`00_START_HERE.md`](../../../07_Concepts/00_START_HERE.md) — "Why TWO rounds and not just scores?"
 
 **Adam (tie-in):** There's a lovely way the core Python developer Tim Peters put it: STAR treats your scores as *numbers* to pick the finalists, then treats the same scores as mere *order* to decide the runoff. The big "5" is decisive in step one and irrelevant in step two — and that's exactly what makes it hard to game.
 
@@ -132,7 +132,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** This is the sleeper feature. STAR is **[precinct-summable](../properties_and_limits/STAR_summability.md)** — each precinct reports its score totals and a small for/equal/against table, and you just add precincts together. No shipping every ballot to one central computer. That means fast results, easy audits, and it works with paper ballots and vote- by-mail. Any citizen can re-add the numbers.
 
-> [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] `07_Concepts/topics/Why_STAR_Voting.md` — Slides 5–9 bullets.
+> [SLIDE] Full Deck — "WHAT DO WE WANT IN A VOTING METHOD?", "FAIR-ACCURATE-EQUAL", the accuracy chart ("YOU ARE HERE / YOU COULD BE HERE"), and the summability slides. [REPO] [`Why_STAR_Voting.md`](../../../07_Concepts/topics/Why_STAR_Voting.md) — Slides 5–9 bullets.
 
 ---
 
@@ -175,7 +175,7 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 **Adam:** No method is perfect — that's a theorem, not an opinion (Gibbard). STAR isn't strategy-*proof*, just strongly strategy-*resistant*. And it's not formally Condorcet-compliant — very rarely it won't elect the pairwise winner. But when it diverges, it's choosing a candidate with broad, strong support over a weakly-liked compromise ([three notions of "winner"](../properties_and_limits/STAR_three_winner_notions.md)) — and that's a defensible philosophical call, not a bug. Saying that out loud is what earns you the room.
 
-> [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] `07_Concepts/topics/Why_STAR_Voting.md` Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is `07_Concepts/residual_vote_splitting.md` (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
+> [SLIDE] Full Deck — "RCV COMMON FALSE CLAIMS" table, "Burlington 2009", "Alaska '22 Special", "Single-Winner Voting Method Scorecard" (Torrance deck). [REPO] [`Why_STAR_Voting.md`](../../../07_Concepts/topics/Why_STAR_Voting.md) Part 2 — Tier 1 #2/#3 and Tier 3 #9 (later-no-harm / center squeeze) for the rebuttals. [REPO] The scorecard's "Spoiler / vote-splitting? No" is the *forced* kind; the narrow self-inflicted residual is [`residual_vote_splitting.md`](../properties_and_limits/residual_vote_splitting.md) (demos `split_voting/05a`–`05b`). [DEMO] Optional: run a strict 4-candidate file through both engines and show the `[Divergence from STAR]` block where RCV-IRV and STAR disagree. <!-- terminology-ok: RCV in slide/deck titles -->
 
 ---
 
@@ -197,11 +197,11 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 
 | Beat | File | Shows |
 |------|------|-------|
-| Spoiler | `split_voting/01_political_left_split.yaml` | majority split → minority wins Choose-One; STAR fixes |
-| Spoiler (food) | `split_voting/03_lunch_veggie_vs_meat.yaml` | same effect, lighter theme |
-| Two rounds | `01_STAR/09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml` | gears visible, no surprise |
-| Compromise | `01_STAR/02_Examples/cases/vote_splitting2.yaml` | 3rd candidate → consensus winner |
+| Spoiler | [`01_political_left_split.yaml`](../../../method_comparisons/split_voting/_main/01_political_left_split.yaml) | majority split → minority wins Choose-One; STAR fixes |
+| Spoiler (food) | [`03_lunch_veggie_vs_meat.yaml`](../../../method_comparisons/split_voting/_main/03_lunch_veggie_vs_meat.yaml) | same effect, lighter theme |
+| Two rounds | [`01b_c2_b2_two-candidates.yaml`](../../09_Parked/silly_two_cand_STAR/cases/01b_c2_b2_two-candidates.yaml) | gears visible, no surprise |
+| Compromise | [`vote_splitting2.yaml`](../../02_Examples/cases/vote_splitting2.yaml) | 3rd candidate → consensus winner |
 | Method divergence | any 4-candidate file with `show_irv` | `[Divergence from STAR]` block |
 | Vote-split check | any file with a `blocs:` block | yes/no spoiler verdict in numbers |
 
-See `07_Concepts/about_this_repo/conversation_scripts.md` for the full series plan, slide map, sync strategy, and demo-software recommendation.
+See [`conversation_scripts.md`](../../../07_Concepts/about_this_repo/conversation_scripts.md) for the full series plan, slide map, sync strategy, and demo-software recommendation.

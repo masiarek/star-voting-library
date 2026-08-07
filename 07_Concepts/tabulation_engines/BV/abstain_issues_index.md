@@ -65,7 +65,7 @@ Two policy/plumbing questions run through every ticket: **(a) what counts as an 
     - [`bv1570_6hv7jf_undecided_plurality`](../../../01_STAR/04_Real_Elections/abstain_bugs/bv1570_6hv7jf_undecided_plurality.md) → **#894** (undecided plurality still declares a winner; wrong voter count).
   - [`bv215_26khr3_nota_wins`](../../../01_STAR/03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md) → #1421 (NOTA wins; also carries a per-candidate `null`).
   - [`flat_scores_abstention_c3_b8`](../../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/flat_scores_abstention_c3_b8.md) · [`small_abstention_c2_b5`](../../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/small_abstention_c2_b5.md) · [`bv15_4h89vj_plurality_abstain`](../../../01_STAR/04_Real_Elections/pet_real_bv_election/bv15_4h89vj_plurality_abstain.md) — abstention handling in real BV counts.
-  - `YAML_library/2_negative/bv20_neg1.yaml` / `bv20_neg2.yaml` → BV20 / #791.
+  - [`bv20_neg1.yaml`](../../../YAML_library/2_negative/bv20_neg1.yaml) / [`bv20_neg2.yaml`](../../../YAML_library/2_negative/bv20_neg2.yaml) → BV20 / #791.
 
   **Key finding across the abstain_bugs set:** LH counts an explicit score (even all-0 or all-5) as a real vote and abstains only a *truly blank* ballot, so it never zeroes out the tally the way BetterVoting's #884 "all-equal = abstain" rule does. The winner survives via tiebreak, but the counts diverge — evidence for the #884 dispute.
 - **Code contribution:** PR **#1419** (v2 JSON export) preserves `score: null` distinct from `0` — i.e. it delivers the **"Raw Audit Data"** half of **#1160** for the JSON path. Worth commenting on #1160 to link them rather than opening a new export-ambiguity ticket.

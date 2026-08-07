@@ -17,7 +17,7 @@ Cues: **[DEMO]** run a file · **[SLIDE]** show a slide · **[REPO]** lesson fil
 
 The single most useful correction: ballot exhaustion is a property of **IRV's eliminate-and-transfer count**, *not* of ranked ballots in general. The *same* ranked ballot, counted by **Ranked Robin** or any Condorcet method, reads **every** ranking — nothing exhausts. Most voters actually assume that's how their ranked ballot is counted; almost everywhere it isn't (it's IRV).
 
-So the precise sentence is *"**RCV-IRV** has exhausted ballots,"* never *"RCV has exhausted ballots."* (See `07_Concepts/tips/TIPS_terminology.md`.) <!-- terminology-ok: quotes the imprecise phrasing to correct it -->
+So the precise sentence is *"**RCV-IRV** has exhausted ballots,"* never *"RCV has exhausted ballots."* (See [TIPS — Terminology](../../../07_Concepts/tips/TIPS_terminology.md).) <!-- terminology-ok: quotes the imprecise phrasing to correct it -->
 
 ---
 
@@ -75,7 +75,7 @@ flowchart TD
 
 *Static version for slides:* [`inactive_ballot_taxonomy.svg`](inactive_ballot_taxonomy.svg)
 
-> [SLIDE] **Exhausted Ballots** (deck) — the red-box / blue-box flow chart (see `07_Concepts/LINKS.md`). [REPO] full source notes: **Exhausted Ballots (doc)** in `LINKS.md`.
+> [SLIDE] **Exhausted Ballots** (deck) — the red-box / blue-box flow chart (see [LINKS.md](../../../07_Concepts/LINKS.md)). [REPO] full source notes: **Exhausted Ballots (doc)**, in the same file.
 
 ---
 
@@ -136,7 +136,7 @@ This is why STAR sidesteps the entire mess: **STAR counts every ballot in both r
 
 That distinction — *declared tie* (STAR) vs *lost voice* (IRV exhaustion) — is the hinge, and it's developed in full in the companion episode.
 
-> [REPO] `01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md` — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] `01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml` — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
+> [REPO] [`are_equal_score_votes_discounted.md`](../../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md) — the STAR-side of this same contrast (Segment B: "declared tie vs lost voice"). [DEMO] [`equal_support_runoff_demo.yaml`](../../../01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml) — Equal Support ballots that *picked the finalists*, then stayed neutral in the runoff.
 
 ---
 
@@ -170,14 +170,14 @@ The claim you'll actually meet isn't a neutral question — it's a reassurance. 
 
 ## Where this fits in the overall teaching
 
-- **Level: 301 · deep dive** — pairs with `favorite_betrayal_voting_301.md` (the *other* IRV-internals deep dive) and `are_equal_score_votes_discounted.md` (the STAR no-preference side of this exact contrast).
+- **Level: 301 · deep dive** — pairs with [`favorite_betrayal_voting_301.md`](../../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) (the *other* IRV-internals deep dive) and [`are_equal_score_votes_discounted.md`](../../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md) (the STAR no-preference side of this exact contrast).
 - **Terminology:** strictly **RCV-IRV / IRV** here — exhaustion is IRV-specific; Ranked Robin and the Condorcet methods read every ranking.
 
 Cross-references:
-- `07_Concepts/GLOSSARY.md` — "Exhausted ballot," "Equal Support / No Preference."
-- `07_Concepts/tips/TIPS_terminology.md` — exhaustion is IRV-specific, not all RCV.
-- `07_Concepts/CURRICULUM.md` — 301.7.
-- `LINKS.md` → **Exhausted Ballots (doc)**, **Exhausted Ballots (deck)**, **Full Deck 2025** ("Ranked Choice Deal Breakers" / exhausted-ballot slides), and the **RCV-IRV exhausted-ballot source notes** group (wasted-votes glossary, ranking-limit, definition, tabulation-transparency, commentary).
+- [`GLOSSARY.md`](../../../07_Concepts/GLOSSARY.md) — "Exhausted ballot," "Equal Support / No Preference."
+- [`TIPS_terminology.md`](../../../07_Concepts/tips/TIPS_terminology.md) — exhaustion is IRV-specific, not all RCV.
+- [`CURRICULUM.md`](../../../07_Concepts/CURRICULUM.md) — 301.7.
+- [`LINKS.md`](../../../07_Concepts/LINKS.md) → **Exhausted Ballots (doc)**, **Exhausted Ballots (deck)**, **Full Deck 2025** ("Ranked Choice Deal Breakers" / exhausted-ballot slides), and the **RCV-IRV exhausted-ballot source notes** group (wasted-votes glossary, ranking-limit, definition, tabulation-transparency, commentary).
 
 <!-- Sourced facts (verified 2026-06): Alaska 2022 US House special — 11,243
 ballots exhausted on Begich's elimination; Peltola 91,266 = 51.5% of remaining /

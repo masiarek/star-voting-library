@@ -1103,6 +1103,53 @@ def check_pasted_reports():
     return bad
 
 
+_CODE_SPAN_PATH = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.(?:md|yaml))`")
+
+
+def check_code_span_paths():
+    """Return [(rel:line, msg)] for repo-root paths written as bare code text.
+
+    A page that says ``07_Concepts/tips/TIPS_terminology.md`` in backticks reads
+    as "go look at this file," but the path is root-relative while every reader
+    resolves it from the page's own folder — so the desktop app and any local
+    Markdown viewer open `<this folder>/07_Concepts/tips/…` and 404.  On GitHub
+    and the built site it is inert code text, which is why this class survived
+    every existing check: `check_links` only sees real links.
+
+    That invisibility is the real cost.  Because these are not links, the
+    2026-08-02 reorganization's `migrate_concept_links.py` could not rewrite
+    them either, so several silently kept pointing at pre-reorg paths
+    (`07_Concepts/residual_vote_splitting.md`, `split_voting/*.yaml`) long after
+    the files moved.
+
+    Fires only when the path resolves from the repo root but NOT from the
+    containing file — i.e. it is provably a real repo file written the wrong way
+    round.  A path that resolves from neither is left alone: it is usually a
+    reference to some *other* codebase (BetterVoting's
+    `packages/frontend/src/i18n/en.yaml`), which is exactly what code text is for.
+    """
+    bad = []
+    for rel, text in sorted(_hand_authored_pages()):
+        here = os.path.dirname(os.path.join(REPO, rel))
+        for i, line in enumerate(text.splitlines(), 1):
+            for m in _CODE_SPAN_PATH.finditer(line):
+                path = m.group(1)
+                if "/" not in path:
+                    continue
+                if line[m.end():m.end() + 2] == "](":
+                    continue          # already the label of a real link
+                if os.path.exists(os.path.join(here, path)):
+                    continue          # resolves from the page — correct as written
+                if not os.path.exists(os.path.join(REPO, path)):
+                    continue          # not a repo file at all (other codebase)
+                fixed = os.path.relpath(os.path.join(REPO, path), here or REPO)
+                bad.append((f"{rel}:{i}",
+                            f"`{path}` is a repo-root path in code text — readers "
+                            f"resolve it from this page's folder and get a 404. "
+                            f"Link it: [`{os.path.basename(path)}`]({fixed})"))
+    return bad
+
+
 def main(argv):
     rc = 0
     hits = scan()
@@ -1231,6 +1278,19 @@ def main(argv):
         print("              output format changes (see CLAUDE.md, 'Route the short "
               "snippet to the full report'):")
         for rel, msg in pasted:
+            print(f"   • {rel}\n       {msg}")
+    span_paths = check_code_span_paths()
+    if not span_paths:
+        print("repo-hygiene: ✓ no repo-root paths written as bare code text.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  repo-root paths in code text ({len(span_paths)}) — "
+              "inert on GitHub and the site, but the desktop app and any local")
+        print("              Markdown viewer resolve them from the page's own folder "
+              "and 404. They are also invisible to check_links and to")
+        print("              migrate_concept_links.py, so they rot silently through "
+              "a folder move — make them links:")
+        for rel, msg in span_paths:
             print(f"   • {rel}\n       {msg}")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.
