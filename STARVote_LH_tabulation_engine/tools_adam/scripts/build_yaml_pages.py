@@ -656,6 +656,19 @@ def render(yaml_path, siblings):
 # --------------------------------------------------------------------------- #
 # Build
 # --------------------------------------------------------------------------- #
+def _has_ballots(path):
+    """True when this yaml is an election file render() will produce a page for.
+
+    Mirrors render()'s own precondition (a `ballots:` key somewhere in the file);
+    kept next to the caller that needs it so the sibling list and the page set
+    cannot drift apart."""
+    try:
+        data = yaml.safe_load(open(path, encoding="utf-8").read())
+    except Exception:
+        return False
+    return isinstance(data, (dict, list)) and _find_first(data, ["ballots"]) is not None
+
+
 def expected_pages():
     """Return {absolute page path: content} for every election YAML."""
     pages = {}
@@ -668,6 +681,14 @@ def expected_pages():
                            if not d.endswith(GENERATED_SUFFIXES) and d != "img"
                            and not d.endswith("_tabulation_engine")]
             ymls = sorted(f for f in filenames if f.endswith((".yaml", ".yml")))
+            # `ymls` becomes the "More cases in this set" footer on every page in
+            # the folder, so it must list only files that GET a page. render()
+            # returns None for a yaml with no `ballots:` block — the grade-ballot
+            # cases in felsenthal_paradoxes/cases are the live example, carrying a
+            # `grades:` block instead because Felsenthal's 1-10 and A-J scales fit
+            # neither the engine's 0-5 validation nor BetterVoting. Listing them
+            # anyway pointed 71 case pages at 5 pages that are never written.
+            ymls = [f for f in ymls if _has_ballots(os.path.join(dirpath, f))]
             for fn in ymls:
                 path = os.path.join(dirpath, fn)
                 try:

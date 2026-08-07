@@ -61,12 +61,23 @@ uv run coombs_report.py  ../../../method_comparisons/felsenthal_paradoxes/cases/
 
 Both are used by [`coombs.md`](../../../07_Concepts/voting_paradoxes/coombs.md) and [`minimax.md`](../../../07_Concepts/voting_paradoxes/minimax.md), whose 18 worked examples they reproduce.
 
+## Successive elimination and the grade methods
+
+Three more procedures with no tabulator anywhere in the stack, added for the rest of Felsenthal's worked-tables pages:
+
+- **`successive_elimination_report.py`** — the parliamentary / amendment procedure: candidates meet in pairwise majority votes in a fixed **agenda** order, each round's loser is eliminated, the last survivor wins. `--agenda` is the point rather than a detail: under a Condorcet cycle the agenda-setter picks the winner, which is Felsenthal's Example 9 electing a Pareto-dominated candidate under one order and a different candidate under another. `--tiebreak alpha|agenda` because the published examples disagree on how a tied round breaks, and the report re-runs the other convention and says whether the winner moves. `--drop` for the SCC test. This is the one tool here with **no `pref_voting` counterpart** — the library has no agenda-based method — so its independent check is structural: head-to-heads come from the LH engine's own pairwise matrix, and since the procedure is Condorcet-consistent the report asserts it elected the Condorcet winner whenever one exists.
+- **`grade_methods_report.py`** — **Range Voting** (highest mean) and **Majority Judgment** (highest median, with the Balinski–Laraki tie-break) on grade ballots of any scale, numeric `1-10` or letters `A-J`. Reads a `grades:` block — Felsenthal's own table, voters across the header, one row per candidate — because these scales fit neither the LH engine's 0–5 validation nor BetterVoting's ballot, and rescaling would change his numbers. Two separate levers, since the examples need both: `--ungrade CAND/VOTER` strikes one **cell** (truncation — the voter still votes and still grades everyone else), `--abstain VOTER` removes a **voter** (no-show — which changes the denominator, and that is what moves a median). Both winners are cross-checked against `pref_voting`'s `score_voting` and `majority_judgement`.
+
+Used by [`successive_elimination.md`](../../../07_Concepts/voting_paradoxes/successive_elimination.md), [`range_voting.md`](../../../07_Concepts/voting_paradoxes/range_voting.md) and [`majority_judgment.md`](../../../07_Concepts/voting_paradoxes/majority_judgment.md).
+
 ## Files
 
 - `pref_voting_tabulation.py` — the cross-check wrapper (parser + both engines + compare).
 - `ranked_robin_report.py` — friendly Ranked Robin / Copeland report for one or more files.
 - `minimax_report.py` — Minimax / Simpson-Kramer, both worst-loss conventions, vs Copeland.
 - `coombs_report.py` — Coombs' procedure round by round, vs Hare IRV.
+- `successive_elimination_report.py` — the agenda procedure; `--agenda`, `--tiebreak`, `--drop`.
+- `grade_methods_report.py` — Range (mean) and Majority Judgment (median) on any grade scale.
 - `contingent_vote_report.py` — the Contingent and Supplementary Vote.
 - `tournament_solutions_report.py` — the C1 tournament solutions, side by side.
 - `example_tennessee.yaml` — a demo election (the classic 3-methods-3-winners case).

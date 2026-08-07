@@ -365,7 +365,15 @@ LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals
 LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only
 LH:star_district_B,Summability demo — STAR district B (Oak wins — a runoff reversal),1,single-race,3,STAR,LH-only
 LH:star_elects_a_covered_candidate_c4_b5,"STAR elects a covered candidate — five ballots, four cities",1,single-race,5,STAR,LH-only
-LH:three_brothers_one_fruit_c3_b3,"Three brothers, one fruit — the majoritarian winner is not the utilitarian one",1,single-race,3,STAR,LH-only
+LH:succ_elim_ex10_amalgamated,"Successive elimination Ex.10 — amalgamated: every round ties, and the tie-break picks the winner",1,single-race,4,RankedRobin,LH-only
+LH:succ_elim_ex10_district1,"Successive elimination Ex.10 — District I: three voters, the agenda elects C",1,single-race,3,RankedRobin,LH-only
+LH:succ_elim_ex10_district2,"Successive elimination Ex.10 — District II: a single voter, C wins",1,single-race,1,RankedRobin,LH-only
+LH:succ_elim_ex11_twin_after,Successive elimination Ex.11 — after: a twin joins and costs their own side the win,1,single-race,7,RankedRobin,LH-only
+LH:succ_elim_ex11_twin_before,"Successive elimination Ex.11 — before: six voters, the agenda elects C",1,single-race,6,RankedRobin,LH-only
+LH:succ_elim_ex12_sincere,Successive elimination Ex.12 — sincere: the A>B>C>D voter gets their last choice,1,single-race,6,RankedRobin,LH-only
+LH:succ_elim_ex12_truncated,Successive elimination Ex.12 — truncated: naming only A turns last place into first,1,single-race,6,RankedRobin,LH-only
+LH:succ_elim_ex9_noshow,Successive elimination Ex.9 — two D voters stay home and get a better result,1,single-race,9,RankedRobin,LH-only
+LH:succ_elim_ex9_pareto,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",1,single-race,11,RankedRobin,LH-only
 LH:three_neighbors_allocated,"Three neighbors, two seats — Allocated Score",1,single-race,3,STAR_PR,LH-only
 LH:three_neighbors_rrv,"Three neighbors, two seats — Reweighted Range Voting",1,single-race,3,STAR_PR,LH-only
 LH:three_neighbors_sss,"Three neighbors, two seats — Sequentially Spent Score",1,single-race,3,STAR_PR,LH-only

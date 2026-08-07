@@ -63,9 +63,18 @@ Our worked examples come from **Felsenthal (2010)** and are chosen for teaching 
 
 Ostrogorski's paradox, Anscombe's paradox, the paradox of multiple elections, dedicated pages for the Absolute-Majority and Pareto-dominated paradoxes, and Simpson's paradox — each gets a page + a tagged case as examples are built.
 
-**Coombs (§A7) and Minimax (§A10) are no longer paper-only.** Both procedures are now tabulated by [`coombs_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/coombs_report.py) and [`minimax_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/minimax_report.py), which wrap `pref_voting` and cross-check against it on every run, and **every example on [coombs.md](coombs.md) and [minimax.md](minimax.md) is a runnable case file** — ballots in YAML, engine report on a generated page, reachable from each example. All 18 counts reproduce Felsenthal's published results except Minimax Ex.31, whose winner turns out to depend on a truncation convention the page now states explicitly.
+**Every worked-tables page is now runnable.** Four procedures that no engine here could count — Coombs (§A7), Minimax (§A10), successive elimination (§A4), and the two grade methods, Range Voting (§A8) and Majority Judgment (§A9) — have tabulators in [`tools_adam/pref_voting_tabulation_engine/`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md), each cross-checked against `pref_voting` where a counterpart exists:
 
-Still worked tables, because nothing in the stack counts them: [successive_elimination.md](successive_elimination.md) (Felsenthal §A4 — agenda-driven sequential majority), [range_voting.md](range_voting.md) (§A8 — the mean vs the majority, two candidates suffice; includes why STAR's runoff exists), and [majority_judgment.md](majority_judgment.md) (§A9, per Felsenthal & Machover 2008 — the median inherits the mean's diseases plus a tie-break reinforcement failure). The [summability demo](../../method_comparisons/summability_demo/README.md) is the operational cousin of reinforcement (district-by-district counting) and is cross-linked from [multiple_districts.md](multiple_districts.md).
+| Page | Tool | Levers it exposes |
+|---|---|---|
+| [coombs.md](coombs.md) | `coombs_report.py` | `--drop` (SCC) |
+| [minimax.md](minimax.md) | `minimax_report.py` | `--drop`, `--equal-prob` (truncation convention) |
+| [successive_elimination.md](successive_elimination.md) | `successive_elimination_report.py` | `--agenda` (path independence), `--tiebreak`, `--drop` |
+| [range_voting.md](range_voting.md) · [majority_judgment.md](majority_judgment.md) | `grade_methods_report.py` | `--ungrade` (truncation), `--abstain` (no-show) |
+
+**Every example on those pages is a case file**, ballots or grades in YAML rather than in a parenthetical. All 27 counts reproduce Felsenthal's published results, with three documented exceptions that the pages state rather than smooth over: **Minimax Ex.31**'s winner depends on a truncation convention; **successive elimination Ex.10**'s amalgamated round 1 is a 2:2 tie, not the win the page used to assert, so its reinforcement failure holds only under one tie-break reading; and **MJ Ex.26** has no case file at all, because its grade tables live in the source and were never reproduced here.
+
+The [summability demo](../../method_comparisons/summability_demo/README.md) is the operational cousin of reinforcement (district-by-district counting) and is cross-linked from [multiple_districts.md](multiple_districts.md).
 
 ## Further reading
 

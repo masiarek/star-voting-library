@@ -1,0 +1,16 @@
+election_title: "Range Ex.23 — four paradoxes with two candidates: one enthusiast outvotes three majorities"
+scenario_description: |-
+  Felsenthal's Range Voting showpiece, and the clearest two-candidate demonstration in the whole appendix. Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A8, Example 23.
+  Five voters grade two candidates on Felsenthal's 1-10 scale. x gets 2,2,2,3,10 (mean 3.8); y gets 1,1,1,10,7 (mean 4.0). Range Voting elects y on the mean.
+  But four of the five voters — V1, V2, V3 and V5 — grade x ABOVE y, so x is the Condorcet winner and y the Condorcet loser. And three of the five give y the lowest grade the scale allows, making y the absolute loser too. Four paradoxes from two candidates and five ballots: Condorcet winner, Condorcet loser, absolute winner, absolute loser. V4's single enthusiastic 10 outweighs three quiet majorities, because a mean measures intensity and a majority is a count.
+  THE STAR OBSERVATION, which is why this example belongs in this repo. With two candidates STAR's automatic runoff IS the head-to-head: the scoring round would rank y first on exactly these means, and the runoff would then elect x 4-1. This is the sharpest available illustration of why STAR is Score THEN Automatic Runoff rather than Score alone — the runoff exists to give the majority the last word after the scores have spoken.
+  This is a grade-ballot file, not an LH election file: the 1-10 scale does not fit the engine's 0-5 STAR validation or BetterVoting's ballot, and rescaling would change Felsenthal's numbers. Count it with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, which computes the mean and the median from scratch and cross-checks both against pref_voting.
+paradoxes: [condorcet-winner, condorcet-loser, absolute-loser, majority-failure]
+grade_method: Range
+grade_scale: "1-10"
+grades: |-
+  ,V1,V2,V3,V4,V5
+  x,2,2,2,3,10
+  y,1,1,1,10,7
+
+# file: range_ex23_mean_overrules_majority.yaml

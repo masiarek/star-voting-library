@@ -1,0 +1,17 @@
+election_title: "MJ Ex.27 — two voters do better by staying home"
+scenario_description: |-
+  Felsenthal's Majority Judgment no-show example, which read backwards is also the twin paradox. Source: Dan S. Felsenthal (2010), Appendix A9, drawing on Felsenthal & Machover (2008), p. 329.
+  Seven voters grade two candidates on an A-F scale, where LATER letters are HIGHER. x gets A,A,A,D,E,E,F (median D); y gets B,B,B,C,F,F,F (median C). Majority Judgment elects x.
+  V1 and V2 prefer y — they gave x the lowest grade on the scale and y a B. If they ABSTAIN, the five remaining grades for x are A,D,E,E,F (median E) and for y are B,C,F,F,F (median F), so y wins. Two voters get their preferred candidate by not voting: the no-show paradox.
+  Read in the other direction it is the twin paradox. Start from the five-voter electorate where y wins, then let two voters arrive who grade exactly as V1 and V2 do — both of whom prefer y — and their arrival elects x instead. Reproduce the abstention with: grade_methods_report.py --abstain V1,V2.
+  What makes MJ's version distinctive is that no cycle and no elimination order is involved. There are two candidates. The pathology lives in the grading arithmetic itself, which is Felsenthal and Machover's central charge against the method.
+  This is a grade-ballot file, not an LH election file: letter grades fit neither the engine's numeric ballot nor BetterVoting. Count it with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, cross-checked against pref_voting.
+paradoxes: [no-show, twin]
+grade_method: MajorityJudgment
+grade_scale: "A-F"
+grades: |-
+  ,V1,V2,V3,V4,V5,V6,V7
+  x,A,A,A,D,E,E,F
+  y,B,B,B,C,F,F,F
+
+# file: mj_ex27_noshow_twin.yaml

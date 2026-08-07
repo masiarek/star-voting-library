@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**541 election files** (459 single-winner, 82 multi-winner) across 18 method(s).
+**549 election files** (467 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 267 |
+| STAR | 266 |
 | RCV-IRV (Hare) | 41 |
-| Ranked Robin (RCV-RR / Copeland) | 81 |
+| Ranked Robin (RCV-RR / Copeland) | 90 |
 | Approval | 21 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 1 |
 | RR | 1 |
 
-## STAR  (267)
+## STAR  (266)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -254,7 +254,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2275_6mcgkq_ahalf_borda`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/bv2275_6mcgkq_ahalf_borda.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=1/2 — the middle choice is worth half (Borda) → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml) |
 | [`bv2277_tqfdbg_mayor_star`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2277_tqfdbg_mayor_star.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (STAR) — one grid, and Cora wins the runoff 69-31 → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_star.yaml) |
 | [`bv2278_8cdkkc_five_way_star`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2278_8cdkkc_five_way_star.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (STAR) — the compromise reaches the runoff and wins → _C_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_star.yaml) |
-| [`three_brothers_one_fruit_c3_b3`](../../method_comparisons/majoritarian_vs_utilitarian/cases/cases_pages/three_brothers_one_fruit_c3_b3.md) | `method_comparisons/majoritarian_vs_utilitarian/cases/` | 1 | Three brothers, one fruit — the majoritarian winner is not the utilitarian one → _Banana_ | [`.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml) |
 | [`p3_manip_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — two voters bury their 4th choice and STAR elects their favourite → _Edinburgh_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_star.yaml) |
 | [`p3_sincere_star`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_sincere_star.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 sincere — STAR elects Dublin (ranks converted 5/4/3/2/0) → _Dublin_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_sincere_star.yaml) |
 | [`bv2215_2p33qq_minority_winner`](../../method_comparisons/minority_winner/cases/cases_pages/bv2215_2p33qq_minority_winner.md) | `method_comparisons/minority_winner/cases/` | 1 | Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the majority's real choice (BV2215, 2p33qq) → _Cleo_ | [`.yaml`](../../method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml) |
@@ -349,7 +348,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (81)
+## Ranked Robin (RCV-RR / Copeland)  (90)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -405,6 +404,15 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`minimax_ex32_amalgamated`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/minimax_ex32_amalgamated.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.32 — amalgamated: both districts elected D, together they cannot → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/minimax_ex32_amalgamated.yaml) |
 | [`minimax_ex32_district2`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/minimax_ex32_district2.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.32 — District II: three voters, D wins outright → _D_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/minimax_ex32_district2.yaml) |
 | [`minimax_ex33_scc`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/minimax_ex33_scc.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.33 — SCC: drop a loser and the winner changes → _D_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml) |
+| [`succ_elim_ex10_amalgamated`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex10_amalgamated.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.10 — amalgamated: every round ties, and the tie-break picks the winner → _C_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex10_amalgamated.yaml) |
+| [`succ_elim_ex10_district1`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex10_district1.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.10 — District I: three voters, the agenda elects C → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex10_district1.yaml) |
+| [`succ_elim_ex10_district2`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex10_district2.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.10 — District II: a single voter, C wins → _C_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex10_district2.yaml) |
+| [`succ_elim_ex11_twin_after`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex11_twin_after.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.11 — after: a twin joins and costs their own side the win → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex11_twin_after.yaml) |
+| [`succ_elim_ex11_twin_before`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex11_twin_before.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.11 — before: six voters, the agenda elects C → _B_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex11_twin_before.yaml) |
+| [`succ_elim_ex12_sincere`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex12_sincere.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.12 — sincere: the A>B>C>D voter gets their last choice → _C_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex12_sincere.yaml) |
+| [`succ_elim_ex12_truncated`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex12_truncated.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.12 — truncated: naming only A turns last place into first → _C_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex12_truncated.yaml) |
+| [`succ_elim_ex9_noshow`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex9_noshow.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.9 — two D voters stay home and get a better result → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_noshow.yaml) |
+| [`succ_elim_ex9_pareto`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex9_pareto.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml) |
 | [`bv2275_6mcgkq_ranked_robin`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/bv2275_6mcgkq_ranked_robin.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring — the ranking alone (Ranked Robin reference) → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ranked_robin.yaml) |
 | [`bv2277_tqfdbg_mayor_rr`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2277_tqfdbg_mayor_rr.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (Ranked Robin) — Cora beats everyone head-to-head → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_rr.yaml) |
 | [`bv2278_8cdkkc_five_way_rr`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2278_8cdkkc_five_way_rr.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (Ranked Robin) — the same ballots elect C → _C_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_rr.yaml) |

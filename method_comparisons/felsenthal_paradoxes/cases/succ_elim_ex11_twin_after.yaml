@@ -1,0 +1,32 @@
+election_title: "Successive elimination Ex.11 — after: a twin joins and costs their own side the win"
+scenario_description: |-
+  The AFTER half of Felsenthal's successive-elimination twin example. Source: Dan S. Felsenthal (2010), Appendix A4, Example 11, crediting Moulin (1988b: 54) — see succ_elim_ex11_twin_before.yaml for the setup.
+  The same six voters plus one more casting C>B>A, an exact copy of a ballot already present: 7 voters, 2×(A>B>C), 2×(B>C>A), 1×(C>A>B), 2×(C>B>A). The extra ballot breaks the A/B tie that had been carrying A into round 2: B now beats A 4:3 and beats C 4:3, so B is the Condorcet winner and successive elimination elects B from any agenda at all.
+  Before the twin arrived, C won. The twin ranks C first. So the voter whose position was duplicated — and the duplicate themselves — both end up with their SECOND choice instead of their first, purely because one more person voted exactly as they did. That is the twin paradox.
+  It is worth being precise about why this is more than a curiosity: no voter changed a preference, no candidate entered or left, and the added ballot was not strategic or insincere. It was the most ordinary thing a supporter can do, and it backfired.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Tabulated as Ranked Robin, which elects B — here agreeing with the agenda, since a Condorcet winner exists and both methods are Condorcet-consistent. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda A,B,C.
+paradoxes: [twin, condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_smith_set: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  2:A>B>C
+  2:B>C>A
+  1:C>A>B
+  2:C>B>A
+expected_winners:
+  - B
+
+# file: succ_elim_ex11_twin_after.yaml

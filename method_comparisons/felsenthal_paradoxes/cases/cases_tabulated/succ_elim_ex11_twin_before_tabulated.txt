@@ -1,0 +1,51 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 6 ballots (ranked ballots).
+
+Ballots:
+     2 × A > B > C
+     2 × B > C > A
+     1 × C > A > B
+     1 × C > B > A
+
+Round-Robin — every pair, head-to-head (For – Against):
+   A  ties  B   3 – 3
+   C  beats A   4 – 2
+   B  beats C   4 – 2
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |     A     |    B     |    C     |
+-----------------------------------------
+  A > |    ---    |3 - 0 - 3 |2 - 0 - 4 |
+  B > | 3 - 0 - 3 |   ---    |4 - 0 - 2 |
+  C > | 4 - 0 - 2 |2 - 0 - 4 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  B          1–0–1       1.5      +2  C
+    2  C          1–1–0         1      +0  A
+    3  A          0–1–1       0.5      -2  —
+
+Winner — Ranked Robin (RCV-RR): B
+   unbeaten, but draws A — a *weak* Condorcet winner, not a strict one (highest Copeland score, 1.5).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 3): B, C, A
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (B) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner B is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md

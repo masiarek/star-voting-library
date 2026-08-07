@@ -1,0 +1,18 @@
+election_title: "MJ Ex.28 — V6 grades only y, and x's median collapses from D to A"
+scenario_description: |-
+  Felsenthal's Majority Judgment truncation example. Source: Dan S. Felsenthal (2010), Appendix A9, drawing on Felsenthal & Machover (2008).
+  Seven voters grade two candidates on an A-J scale, where LATER letters are HIGHER. x gets A,A,A,J,E,D,G (median D); y gets B,B,B,C,H,E,H (median C). Majority Judgment elects x.
+  V6 prefers y — grading x a D and y an E — and can flip the result by grading only y. Under the ungraded-equals-lowest convention V6's blank for x is scored A, the floor, which drops x's grades to A,A,A,J,E,A,G and collapses x's median from D all the way to A. y wins. Grading LESS got V6 more: the truncation paradox.
+  Reproduce the second count with: grade_methods_report.py --ungrade x/V6, which strikes that one cell and reports what it filled in at the floor.
+  The collapse is worth watching rather than just noting. A mean moves smoothly when one grade changes; a median jumps, and here a single blank moves it four positions down the scale, because it shifts which grade sits in the middle rather than nudging an average. That sensitivity is the flip side of the robustness the median is chosen for.
+  Same driver as Range Voting's Example 24 and Borda's Example 14: wherever an unmarked candidate is scored at the bottom, silence is a weapon.
+  This is a grade-ballot file, not an LH election file: letter grades fit neither the engine's numeric ballot nor BetterVoting. Count it with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, cross-checked against pref_voting.
+paradoxes: [truncation]
+grade_method: MajorityJudgment
+grade_scale: "A-J"
+grades: |-
+  ,V1,V2,V3,V4,V5,V6,V7
+  x,A,A,A,J,E,D,G
+  y,B,B,B,C,H,E,H
+
+# file: mj_ex28_truncation.yaml

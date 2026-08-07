@@ -225,16 +225,47 @@ def _bv_fields(path):
     return (test_id, election_id, results_url) if election_id else None
 
 
+def _has_ballots(path):
+    """True when this yaml is an election file, i.e. it has a `ballots:` block.
+
+    Deliberately a raw parse rather than load_election: the point is to decide
+    whether load_election may safely be called at all."""
+    try:
+        import yaml as _yaml
+        data = _yaml.safe_load(open(path, encoding="utf-8").read())
+    except Exception:
+        return False
+
+    def _find(node):
+        if isinstance(node, dict):
+            if node.get("ballots"):
+                return True
+            return any(_find(v) for v in node.values())
+        if isinstance(node, list):
+            return any(_find(v) for v in node)
+        return False
+
+    return _find(data)
+
+
 def analyze(path):
     """Return a dict of winners/flags for one single-winner STAR election, or
     None if the file isn't an eligible STAR/score/single-winner election."""
+    # A yaml with no `ballots:` block is not an election file at all, and this test
+    # has to come BEFORE load_election — the engine treats a missing ballots block
+    # as a fatal user error and calls sys.exit rather than returning. The
+    # grade-ballot cases in felsenthal_paradoxes/cases are the live example: they
+    # carry a `grades:` block because Felsenthal's 1-10 and A-J scales fit neither
+    # the engine's 0-5 validation nor BetterVoting.
+    if not _has_ballots(path):
+        return None
     el = w.load_election(str(path))
+    ballots_text = el["ballots"]
     method_name = (el.get("method_name") or "").strip().lower()
     if method_name not in ("", "star"):
         return None                       # skip Approval/RR/RCV/bloc/sss/etc.
     if (el.get("seats") or 1) != 1:
         return None                       # single-winner only
-    ballots_text = el["ballots"]
     detect = "\n".join(ln.split("#")[0] for ln in ballots_text.splitlines())
     if ">" in detect:
         return None                       # native ranked ballots, not a score race

@@ -634,6 +634,22 @@ reproduce loop is in the **`bettervoting` skill**.
   not arithmetic** — this repo counts it for neither candidate, Felsenthal splits
   it ½–½ (`--equal-prob`), and Example 31's winner changes with the choice. Say
   which convention a number came from.
+- **Successive elimination and the grade methods are tabulable too** (added
+  2026-08-07) — `successive_elimination_report.py` (the parliamentary agenda
+  procedure) and `grade_methods_report.py` (Range = mean, Majority Judgment =
+  median + Balinski–Laraki), completing Felsenthal's five uncountable
+  procedures. Two things that are easy to get wrong: **successive elimination
+  takes the agenda as an argument**, not a default — under a cycle the
+  agenda-setter picks the winner, so `--agenda` is required and a tied round is
+  broken by an explicitly-chosen `--tiebreak` (the published examples disagree:
+  alphabetical in Ex.11/12, "random" in Ex.10). And **grade cases are not LH
+  election files**: Felsenthal's 1–10 and A–J scales fit neither the engine's
+  0–5 validation nor BetterVoting, so they carry a `grades:` block instead of
+  `ballots:` — which keeps them invisible to `check_top_level_keys` and
+  `check_descriptions` (both gate on `ballots`) and means no `_tabulated`
+  mirror and no generated page. Their counts live on the concept pages.
+  Rescaling to 0–5 to make them engine-runnable would change the published
+  numbers, which is why it wasn't done.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

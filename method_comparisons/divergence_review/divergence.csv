@@ -137,7 +137,6 @@ APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_st
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2164_xbqq8t_star.yaml,4,33,Arlo,Arlo,Arlo,Arlo,Arlo,Bree,Bree,Arlo,Arlo,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/felsenthal_paradoxes/cases/bv2166_b7b8dv_star.yaml,3,13,Cass,Cass,Cass,Cass,Cass,Amy,Cass,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_ahalf_borda.yaml,3,36,Almond,Almond,Almond,Almond,Almond,Cocoa,Almond,Almond,Almond,0,False,False,False
-APPROVAL_OR_MINOR,method_comparisons/majoritarian_vs_utilitarian/cases/three_brothers_one_fruit_c3_b3.yaml,3,3,Banana,Banana,Banana,Banana,Banana,Orange,Orange,Banana,Banana,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/monotonicity/cases/mono_raise_delete_after.yaml,3,30,Z,Z,Z,Z,Z,X,X,Z,Z,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml,3,100,Rock,Rock,Rock,Rock,Rock,Paper,Rock,,,0,False,False,True
 APPROVAL_OR_MINOR,method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml,4,20,Blue,Blue,Blue,Blue,Blue,Pink,Purple,Blue,Blue,0,False,False,False

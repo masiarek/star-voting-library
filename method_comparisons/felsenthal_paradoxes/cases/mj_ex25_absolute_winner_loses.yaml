@@ -1,0 +1,16 @@
+election_title: "MJ Ex.25 — the median elects y though a majority grades x higher"
+scenario_description: |-
+  Felsenthal's Majority Judgment showpiece — the median's version of Range Voting's Example 23. Source: Dan S. Felsenthal (2010), Appendix A9, drawing on Felsenthal & Machover (2008), "The Majority Judgement voting procedure: a critical evaluation", p. 330.
+  Three voters grade two candidates on an A-H scale, where LATER letters are HIGHER grades. x gets B, C, H (median C); y gets A, F, G (median F). Majority Judgment elects y on the higher median.
+  But V1 and V3 — two of three, an absolute majority — grade x ABOVE y. x is the Condorcet winner and y the Condorcet loser. One middling grade placed exactly right (V2's F for y, against x's C) outweighs a majority, which is the same disease as the mean's in Example 23, in median clothing.
+  This matters because the median was proposed as the CURE for the mean's intensity problem: Balinski and Laraki's argument is that a median cannot be dragged by one extreme grade the way a mean can. True — and beside the point. The median can still be set by a single well-placed grade, and here it is. See the case for the method, and the argument underneath it, in 07_Concepts/scores_and_ranks/grading_as_a_rival_primitive.md.
+  This is a grade-ballot file, not an LH election file: letter grades fit neither the engine's numeric 0-5 ballot nor BetterVoting, and MJ's Balinski-Laraki tie-break exists in neither. Count it with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, which computes the median and the tie-break from scratch and cross-checks against pref_voting's majority_judgement.
+paradoxes: [condorcet-winner, condorcet-loser, majority-failure]
+grade_method: MajorityJudgment
+grade_scale: "A-H"
+grades: |-
+  ,V1,V2,V3
+  x,B,C,H
+  y,A,F,G
+
+# file: mj_ex25_absolute_winner_loses.yaml

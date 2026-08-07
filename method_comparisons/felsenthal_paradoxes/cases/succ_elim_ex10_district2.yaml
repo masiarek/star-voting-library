@@ -1,0 +1,28 @@
+election_title: "Successive elimination Ex.10 — District II: a single voter, C wins"
+scenario_description: |-
+  District II of Felsenthal's successive-elimination reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A4, Example 10.
+  One voter, ranking C>D>B>A. With a single ballot every pairwise majority is that voter's own preference, so the agenda B vs D, winner vs A, winner vs C runs D beats B 1:0, D beats A 1:0, C beats D 1:0 and C — the voter's first choice — is elected. C is trivially the Condorcet winner.
+  The one-voter district is not a mistake or a simplification: it is the smallest thing that can be amalgamated with District I, and Felsenthal uses it precisely because nothing about it is controversial. Both districts elect C. Their union (succ_elim_ex10_amalgamated.yaml) ties in every round, and under one tie-break reading elects B, which is the reinforcement failure.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Tabulated as Ranked Robin, which also elects C — with one ballot there is nothing for the two methods to disagree about. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda B,D,A,C.
+paradoxes: [multiple-districts]
+voting_method: RankedRobin
+num_winners: 1
+options:
+  show_description: false
+  show_matrix: true
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_smith_set: true
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  1:C>D>B>A
+expected_winners:
+  - C
+
+# file: succ_elim_ex10_district2.yaml

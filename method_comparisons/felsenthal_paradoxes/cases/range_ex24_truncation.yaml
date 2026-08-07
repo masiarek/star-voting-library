@@ -1,0 +1,17 @@
+election_title: "Range Ex.24 — V4 does better by not grading y at all"
+scenario_description: |-
+  Felsenthal's Range Voting truncation example. Source: Dan S. Felsenthal (2010), Appendix A8, Example 24.
+  Seven voters grade two candidates 1-10. x gets 1,1,1,10,5,4,7 (mean 4.143); y gets 2,2,2,3,8,5,8 (mean 4.286). Range Voting elects y.
+  V4 prefers x sharply — grading x 10 and y 3 — and can flip the result by GRADING LESS. If V4 simply leaves y ungraded, the procedure's convention scores the blank at the scale floor of 1 instead of V4's honest 3, which drags y's mean down to 4.0 and elects x. Saying nothing about y served V4 better than saying something true about it: the truncation paradox.
+  Reproduce the second count with: grade_methods_report.py --ungrade y/V4, which strikes that one cell and reports what it filled in at the floor.
+  The mechanism is exactly Borda's, and worth naming precisely: the exposure comes from the ungraded-equals-lowest CONVENTION, not from cardinal ballots as such. Where an unmarked candidate is scored at the bottom, silence is a weapon. STAR does not reward it the same way — 0 is simply the floor of the scale and a blank means 0 openly, so there is no gap between what a voter withholds and what the count assumes.
+  This is a grade-ballot file, not an LH election file: the 1-10 scale does not fit the engine's 0-5 validation, and rescaling would change Felsenthal's numbers. Count it with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, cross-checked against pref_voting.
+paradoxes: [truncation]
+grade_method: Range
+grade_scale: "1-10"
+grades: |-
+  ,V1,V2,V3,V4,V5,V6,V7
+  x,1,1,1,10,5,4,7
+  y,2,2,2,3,8,5,8
+
+# file: range_ex24_truncation.yaml
