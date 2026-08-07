@@ -2,7 +2,7 @@
 
 **One line:** RCV-IRV does **not** deliver an equally weighted vote. Because it counts only one ranking at a time and eliminates candidates sequentially, two voters with exactly opposite preferences often **cannot cancel each other out** — so vote-splitting and the spoiler effect survive. STAR, Score, and Approval pass this test; RCV-IRV does not.
 
-→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.4](../../../07_Concepts/CURRICULUM.md).
+→ The property itself, and why STAR passes it: [The Equally Weighted Vote](../../../01_STAR/01_Learn/properties_and_limits/equally_weighted_vote.md). Related IRV-specific failures: [center squeeze](RCV_IRV_center_squeeze.md) · [exhausted ballots](RCV_IRV_exhausted_ballots.md). Curriculum: [301.5](../../../07_Concepts/CURRICULUM.md).
 
 ---
 

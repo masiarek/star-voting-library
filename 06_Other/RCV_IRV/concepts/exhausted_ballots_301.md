@@ -176,7 +176,7 @@ The claim you'll actually meet isn't a neutral question — it's a reassurance. 
 Cross-references:
 - [`GLOSSARY.md`](../../../07_Concepts/GLOSSARY.md) — "Exhausted ballot," "Equal Support / No Preference."
 - [`TIPS_terminology.md`](../../../07_Concepts/tips/TIPS_terminology.md) — exhaustion is IRV-specific, not all RCV.
-- [`CURRICULUM.md`](../../../07_Concepts/CURRICULUM.md) — 301.7.
+- [`CURRICULUM.md`](../../../07_Concepts/CURRICULUM.md) — 301.8.
 - [`LINKS.md`](../../../07_Concepts/LINKS.md) → **Exhausted Ballots (doc)**, **Exhausted Ballots (deck)**, **Full Deck 2025** ("Ranked Choice Deal Breakers" / exhausted-ballot slides), and the **RCV-IRV exhausted-ballot source notes** group (wasted-votes glossary, ranking-limit, definition, tabulation-transparency, commentary).
 
 <!-- Sourced facts (verified 2026-06): Alaska 2022 US House special — 11,243

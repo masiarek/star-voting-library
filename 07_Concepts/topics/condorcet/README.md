@@ -46,7 +46,7 @@ The mirror image of this table is the **Condorcet loser** — the candidate who 
 
 Glossary: [`Condorcet`](../../GLOSSARY.md).
 
-**Learn it by depth.** The concept ladders across the curriculum: **101** — the [Condorcet winner](../../curriculum/CURRICULUM_101.md) as "the majority's head-to-head choice" (intuition only); **201** — what a [Condorcet *extension* is and the three-candidate collapse](../../curriculum/CURRICULUM_201.md) (§201.6); **301** — the variable-electorate paradoxes and the maximin result ([§301.6](../../curriculum/CURRICULUM_301.md) disagreement, §301.12 no-show, §301.13 reinforcement).
+**Learn it by depth.** The concept ladders across the curriculum: **101** — the [Condorcet winner](../../curriculum/CURRICULUM_101.md) as "the majority's head-to-head choice" (intuition only); **201** — what a [Condorcet *extension* is and the three-candidate collapse](../../curriculum/CURRICULUM_201.md) (§201.6); **301** — the variable-electorate paradoxes and the maximin result ([§301.7](../../curriculum/CURRICULUM_301.md) disagreement, §301.13 no-show, §301.14 reinforcement).
 
 ---
 

@@ -2,7 +2,7 @@
 
 *[May's Theorem](../mays_theorem.md) leaves an obvious question hanging: it proves majority rule is uniquely right for **two** alternatives, and its content evaporates at three. So which rule inherits the mantle? On the **full domain** the honest answer is nobody — no completely satisfactory extension of May exists. But **restrict the domain to profiles where a Condorcet winner exists**, and a uniqueness theorem comes back: electing the head-to-head winner is resolute, anonymous, neutral, and **strategyproof** — and for an odd number of voters it is the **only** such rule. This is the strongest positive result in the Condorcet family's favour, and it is worth stating at full strength before stating its limit.*
 
-→ Level: **Voting 301** ([301.19](../../curriculum/CURRICULUM_301.md)) · the two-candidate original: [May's theorem](../mays_theorem.md) · the impossibility it does *not* contradict: [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) · the family it characterises: [the Condorcet hub](README.md) · this repo's Condorcet method: [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md).
+→ Level: **Voting 301** ([301.20](../../curriculum/CURRICULUM_301.md)) · the two-candidate original: [May's theorem](../mays_theorem.md) · the impossibility it does *not* contradict: [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md) · the family it characterises: [the Condorcet hub](README.md) · this repo's Condorcet method: [Ranked Robin](../../../05_Ranked_Robin/01_Learn/ranked_robin.md).
 
 ---
 

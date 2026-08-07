@@ -44,4 +44,4 @@ Proportional methods all rest on a **quota** — roughly "how many votes buys on
 - **[Proportional representation](../../03_STAR_PR/01_Learn/README.md)** — the proportional family (Allocated Score, SSS, RRV) and [STV vs STAR-PR](../../03_STAR_PR/01_Learn/stv/proportional_stv_vs_star.md) on the same electorate
 - **[Electing a committee](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md)** — the same fork on the *approval* side, counting-only (a gentle companion)
 - **[Comparing multi-winner methods](comparing_multiwinner_methods.md)** — which pairs of methods can honestly be compared, and why "Bloc Approval vs STAR-PR" answers nothing
-- Curriculum: [201.5 multi-winner intro](../curriculum/CURRICULUM_201.md) → [301.1 proportional STAR](../curriculum/CURRICULUM_301.md)
+- Curriculum: [201.5 multi-winner intro](../curriculum/CURRICULUM_201.md) → [301.1 proportional STAR](../curriculum/CURRICULUM_301.md) and [301.2 STV](../curriculum/CURRICULUM_301.md) (separate rungs — same question, different ballot)

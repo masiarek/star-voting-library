@@ -25,4 +25,4 @@
 
   That page is a *comparison*, not STV's home — the STV method itself, its runnable cases, and the BetterVoting STV bug lab live in **[06_Other/STV](../../06_Other/STV/README.md)**. (And don't fold STV into "RCV" meaning IRV: same ranked ballot, different count — [terminology](../../07_Concepts/tips/TIPS_terminology.md).)
 
-Both proportional families are **Voting 301** material — see [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md) (301.1), or the [curriculum hub](../../07_Concepts/CURRICULUM.md) for the whole map. For the single-winner methods, stay in [STAR](../../01_STAR/01_Learn/README.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md).
+Both proportional families are **Voting 301** material, and they get **a rung each** — see [Voting 301](../../07_Concepts/curriculum/CURRICULUM_301.md): 301.1 proportional STAR, 301.2 STV. Or the [curriculum hub](../../07_Concepts/CURRICULUM.md) for the whole map. For the single-winner methods, stay in [STAR](../../01_STAR/01_Learn/README.md) and [RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md).

@@ -2,7 +2,7 @@
 
 *A score ballot's **resolution** — how many rungs the scale has — is a modeling choice, not a neutral detail. Compressing a 0–9 ballot down to STAR's 0–5 can change **who becomes a finalist**, and through that, **who wins**. This page works one real example where it does exactly that.*
 
-→ Companions: [the fidelity ladder](fidelity_ladder.md) · [scores vs. ranks](scores_vs_ranks.md) · Black Curtain lesson #5 (the 0–9 → 0–5 problem) in [The Black Curtain — one electorate, four "identical" landslides](../../method_comparisons/black_curtain/README.md) · Curriculum: [301.1 (RRV/proportional)](../CURRICULUM.md) and [301.6 (when Score/Runoff/Condorcet disagree)](../CURRICULUM.md)
+→ Companions: [the fidelity ladder](fidelity_ladder.md) · [scores vs. ranks](scores_vs_ranks.md) · Black Curtain lesson #5 (the 0–9 → 0–5 problem) in [The Black Curtain — one electorate, four "identical" landslides](../../method_comparisons/black_curtain/README.md) · Curriculum: [301.1 (RRV/proportional)](../CURRICULUM.md) and [301.7 (when Score/Runoff/Condorcet disagree)](../CURRICULUM.md)
 
 Files: [`rrv_sample_c15_b13_three-parties.yaml`](../../03_STAR_PR/02_Examples/cases/rrv_sample_c15_b13_three-parties.yaml) · full report [`…_tabulated.txt`](../../03_STAR_PR/02_Examples/cases/cases_tabulated/rrv_sample_c15_b13_three-parties_tabulated.txt)
 
@@ -127,7 +127,7 @@ And the two candidates behave differently in the runoff: **Orange5 beats Orange1
 ## The lesson (and the honest caveats)
 
 - **Resolution is a design decision.** How many rungs your ballot offers (0–5, 0–9, 0–10…) is part of the method. When the top contenders are bunched, that choice can pick the winner. This is the concrete, winner-flipping version of Black Curtain **lesson #5**, where a finer scale merely preserved a *pure-Score* near-tie; here it moves the **STAR** result.
-- **It lives on a knife's edge — say so.** The 0–9 outcome rests on a **2nd-place tie** (53–53) resolved by tiebreak; the 0–5 outcome rests on a **one-point** gap. This is a *fragile* divergence, not a robust law — exactly the kind of case where you should report the assumptions, never just the winner (the methodological habit of [301.6](../CURRICULUM.md)).
+- **It lives on a knife's edge — say so.** The 0–9 outcome rests on a **2nd-place tie** (53–53) resolved by tiebreak; the 0–5 outcome rests on a **one-point** gap. This is a *fragile* divergence, not a robust law — exactly the kind of case where you should report the assumptions, never just the winner (the methodological habit of [301.7](../CURRICULUM.md)).
 - **It's mapping-dependent.** A different 0–9 → 0–5 rule (floor, ceiling, a custom table) could land differently. The fragility *is* the point: when a race is this close, small modeling choices are decisive.
 - **Both winners are Orange.** The majority party still wins either way — STAR faithfully hands the seat to the 6-voter bloc. What's unstable is *which co-partisan*, which is precisely the internal choice a **proportional** method like the source RRV would instead resolve by seating several of them.
 

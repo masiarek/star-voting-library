@@ -11,7 +11,7 @@ onto 0-5). APPROVAL DOES NOT: the voter must pick a 0/1 cutoff, and *where they
 draw it* changes the winner. So the divergence rate depends on BOTH the electorate
 model AND the approval-cutoff rule. This script reports it across both, so the
 number always comes with its assumptions (the house rule: never quote a rate
-without the model — see 06_Other/simulations/README.md and Curriculum 301.6/301.9).
+without the model — see 06_Other/simulations/README.md and Curriculum 301.7/301.10).
 
 WHAT WE MEASURE
 ---------------

@@ -2,7 +2,7 @@
 
 **One line:** with multiple seats, a *proportional* method gives a coalition seats in proportion to its size — not all the seats to whoever leads first-choices. **STV** does this with ranked ballots + vote transfers; **STAR-PR** does it with scored ballots + ballot reweighting. They're different machinery, same goal.
 
-→ Glossary: [`STV`](../../../07_Concepts/GLOSSARY.md), [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) · Level: **Voting 301** · STAR-PR methods explained: [STAR_PR](../STAR_PR/README.md)
+→ Glossary: [`STV`](../../../07_Concepts/GLOSSARY.md), [`Proportional STAR`](../../../07_Concepts/GLOSSARY.md) · Curriculum: [`301.1`](../../../07_Concepts/CURRICULUM.md) (proportional STAR) and [`301.2`](../../../07_Concepts/CURRICULUM.md) (STV) — this page is the bridge between the two rungs · Level: **Voting 301** · STAR-PR methods explained: [STAR_PR](../STAR_PR/README.md) · STV's own door: [06_Other/STV](../../../06_Other/STV/README.md)
 
 ---
 

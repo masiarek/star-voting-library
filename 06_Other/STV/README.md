@@ -2,6 +2,8 @@
 
 Single Transferable Vote: the proportional, multi-winner tabulation of the ranked ballot. One runnable example — three seats, seven candidates — showing quota, surplus transfer, and elimination.
 
+→ Curriculum: **[301.2 — STV](../../07_Concepts/curriculum/CURRICULUM_301.md)**, its own rung (the score-ballot proportional family is the rung before it, [301.1](../../07_Concepts/curriculum/CURRICULUM_301.md)) · Level: **301 · deep dive**
+
 | Case | Page | YAML |
 |---|---|---|
 | STV — 3 seats, 7 candidates (proportional RCV) | [page](cases/cases_pages/03a_stv_3seats.md) | [`03a_stv_3seats.yaml`](cases/03a_stv_3seats.yaml) |

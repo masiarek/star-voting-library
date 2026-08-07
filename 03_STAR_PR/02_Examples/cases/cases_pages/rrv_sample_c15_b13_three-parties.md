@@ -29,7 +29,7 @@ TEACHING NOTE: on this 0-5 scale STAR elects Orange5, but on the source 0-9
 scale it elects Orange1 — the scale's granularity moves the second finalist.
 Worked as a 301 lesson in
 07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md (see also
-Curriculum 301.8).
+Curriculum 301.9).
 
 ## Ballots
 

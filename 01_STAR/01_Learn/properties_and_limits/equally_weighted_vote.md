@@ -2,7 +2,7 @@
 
 **One line:** a method gives an **equally weighted vote** if, however you fill out your ballot, someone else can fill out the *exact opposite* ballot and the two together change nothing. STAR passes this (so do Score and Approval); **Choose-One** and **RCV-IRV** do not — and that failure is precisely what causes vote-splitting and the spoiler effect.
 
-→ Curriculum: [301.4 — honest limits & theory](../../../07_Concepts/CURRICULUM.md) (the "Test of Balance"). Glossary: [`Equally Weighted Vote`](../../../07_Concepts/GLOSSARY.md). The narrow leftover STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md). Why RCV-IRV fails the same test: [RCV-IRV fails the Equal Vote](../../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md).
+→ Curriculum: [301.5 — honest limits & theory](../../../07_Concepts/CURRICULUM.md) (the "Test of Balance"). Glossary: [`Equally Weighted Vote`](../../../07_Concepts/GLOSSARY.md). The narrow leftover STAR *doesn't* erase: [residual vote-splitting](residual_vote_splitting.md). Why RCV-IRV fails the same test: [RCV-IRV fails the Equal Vote](../../../06_Other/RCV_IRV/concepts/RCV_IRV_equal_vote.md).
 
 ---
 

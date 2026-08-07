@@ -74,7 +74,7 @@ This is the single most important modelling fact in the field. [Impartial cultur
 
 ## The habit that matters more than any formula
 
-**Never quote a rate without its model.** Every number in this literature is conditional on assumptions — the electorate model, the strategy model, the candidate count, the tie rule. "STAR and Approval disagree 12% of the time" is meaningless until you add *under which model, with which approval cutoff*. That standing caution ([301.6](../curriculum/CURRICULUM_301.md)) is worth more than any single statistic, and it's the fastest way to spot an overclaim — including your own.
+**Never quote a rate without its model.** Every number in this literature is conditional on assumptions — the electorate model, the strategy model, the candidate count, the tie rule. "STAR and Approval disagree 12% of the time" is meaningless until you add *under which model, with which approval cutoff*. That standing caution ([301.7](../curriculum/CURRICULUM_301.md)) is worth more than any single statistic, and it's the fastest way to spot an overclaim — including your own.
 
 ## Related
 

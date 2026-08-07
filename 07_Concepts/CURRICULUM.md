@@ -26,7 +26,7 @@ Each level is its **own page** so it can stand alone; this page is just the hub.
 
 ## 🔴 [Voting 301 — proportional, criteria, debate theory](curriculum/CURRICULUM_301.md)
 
-*Skeptics, academics, RCV advocates, deep self-study.* Proportional STAR & STV, favorite betrayal, the honest limits, when Condorcet/Score/Runoff disagree, the simulation foundations of VSE, and worked claim-checks. Concede limits honestly — that candor is the credibility.
+*Skeptics, academics, RCV advocates, deep self-study.* Proportional STAR, then STV as its own topic, favorite betrayal, the honest limits, when Condorcet/Score/Runoff disagree, the simulation foundations of VSE, and worked claim-checks. Concede limits honestly — that candor is the credibility.
 → **[Start Voting 301](curriculum/CURRICULUM_301.md)**
 
 <a id="voting-401"></a>
