@@ -2,7 +2,7 @@
 
 **One line:** [RCTab](https://www.rcvresources.org/rctab) is the federally-tested, open-source tabulator that actual US jurisdictions use to count ranked-choice elections — which makes it a *different kind* of witness from this library's other cross-checks, and the one whose agreement would carry the most weight outside a classroom.
 
-→ upstream: [BrightSpots/rcv](https://github.com/BrightSpots/rcv) (Java, MPL-2.0) · docs: [rctab-docs.readthedocs.io](https://rctab-docs.readthedocs.io/) · compare: [cross-checking with `pref_voting`](cross_checking_with_pref_voting.md).
+→ upstream: [BrightSpots/rcv](https://github.com/BrightSpots/rcv) (Java, MPL-2.0) · docs: [rctab-docs.readthedocs.io](https://rctab-docs.readthedocs.io/) · compare: [cross-checking with `pref_voting`](cross_checking_with_pref_voting.md) · draws its output: [RCVis](rcvis.md).
 
 ---
 

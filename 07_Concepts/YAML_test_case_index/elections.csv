@@ -330,6 +330,8 @@ LH:minimax_ex31_truncation,"Minimax Ex.31 — truncation: the same 19 voters, fo
 LH:minimax_ex32_amalgamated,"Minimax Ex.32 — amalgamated: both districts elected D, together they cannot",1,single-race,14,RankedRobin,LH-only
 LH:minimax_ex32_district2,"Minimax Ex.32 — District II: three voters, D wins outright",1,single-race,3,RankedRobin,LH-only
 LH:minimax_ex33_scc,Minimax Ex.33 — SCC: drop a loser and the winner changes,1,single-race,7,RankedRobin,LH-only
+LH:minneapolis_2017_irv,"Minneapolis 2017 Mayor — 105,928 real ballots, and IRV lands on the Condorcet winner",1,single-race,104484,IRV,LH-only
+LH:minneapolis_2017_ranked_robin,"Minneapolis 2017 Mayor — the head-to-head check: right winner, wrong runner-up",1,single-race,104484,RankedRobin,LH-only
 LH:mmp_majority_ceiling,Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33%,1,single-race,30,Plurality,LH-only
 LH:mmp_sntv,Multi-member plurality — SNTV (3 seats): the minority tops the poll,1,single-race,10,Plurality,LH-only
 LH:mono_raise_delete_after,"STAR mono-raise-delete — part 2: raise X, delete Y-below-X, X loses",1,single-race,30,STAR,LH-only

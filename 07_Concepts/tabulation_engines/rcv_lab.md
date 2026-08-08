@@ -4,7 +4,7 @@
 
 **One line:** a free ranked-choice voting platform that publishes its sample elections as **downloadable cast vote records**, which makes it something this library can actually use — not another site to link, but a source of real ballots to re-count independently.
 
-→ verified reproduction: [the "Best Cycle-Breaking Rule" cases](../../method_comparisons/cycle_resolution/README.md) · sibling referees: [`pref_voting`](cross_checking_with_pref_voting.md) · [BetterVoting](bettervoting_and_the_engine.md).
+→ verified reproduction: [the "Best Cycle-Breaking Rule" cases](../../method_comparisons/cycle_resolution/README.md) · sibling referees: [`pref_voting`](cross_checking_with_pref_voting.md) · [BetterVoting](bettervoting_and_the_engine.md) · the other Sankey tool, which counts nothing: [RCVis](rcvis.md).
 
 ---
 
@@ -47,7 +47,7 @@ https://rcv-lab.org/sample-data/<id>/<file>
 | `minneapolis-park-2013` | 80,101 | `.xlsx` | Real. STV, 3 seats, 11 candidates, 11 rounds |
 | `minneapolis-park-2013-hare` | 80,101 | `.xlsx` | The same ballots under the Hare quota instead of Droop — a quota comparison for free |
 | `portland-me-mayor-2015` | **99** | `.xlsx` | Named for a real race but ships a **reduced fixture** — see the warning below |
-| `minneapolis-mayor-2017` | 105,928 | `.xlsx` | Real. IRV, 19 candidates, 6 rounds |
+| `minneapolis-mayor-2017` | 105,928 | `.xlsx` | Real. IRV, 19 candidates, 6 rounds. **[Reproduced here](../../method_comparisons/minneapolis_2017/README.md)** |
 | `maine-governor-primary-2018` | 132,250 | `.xlsx` | Real. The first statewide RCV election in the US |
 | `minnetonka-council-2021` | — | ✗ | Summary only (from rcvis.com) |
 | `eastpointe-council-2019` | — | ✗ | Summary only (from rcvis.com) |
@@ -129,7 +129,13 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 ```
 <!-- /report -->
 
-## Why the sample is worth having
+### The real one: Minneapolis 2017
+
+The `minneapolis-mayor-2017` CVR is [reproduced here too](../../method_comparisons/minneapolis_2017/README.md) — 105,928 ballots, 18 candidates plus write-ins, converted from the ESS export under the published RCTab rules. Four independent numbers confirm it, none of them used to build the conversion: the leading first-choice tallies, the 1,369 blank ballots, the 38 ballots truncated by the second-skipped-rank rule, and the final pair 46,704 / 34,970.
+
+It is also the case that keeps this library honest — Jacob Frey wins under Plurality, under RCV-IRV, and as the Condorcet winner 18–0, with no cycle anywhere. Two bookkeeping differences survive: round numbering (they batch-eliminate on a different schedule) and exhausted totals differing by 37 of 105,928. Every candidate tally appearing in both reports is identical.
+
+## Why the cycle sample is worth having
 
 The election is a joke with a real edge: five candidates, all of them **cycle-breaking rules**, and the ballots cycle. Ranked Pairs beats Schulze by 98, Schulze beats Minimax by 201, Minimax beats Ranked Pairs by 53 — no [Condorcet winner](../topics/condorcet/README.md), [Smith set](../topics/smith_set.md) of three. A society convened to adopt a completion rule generated precisely the knot a completion rule exists to untie.
 

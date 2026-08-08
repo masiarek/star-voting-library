@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**580 election files** (498 single-winner, 82 multi-winner) across 18 method(s).
+**582 election files** (500 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 274 |
-| RCV-IRV (Hare) | 48 |
-| Ranked Robin (RCV-RR / Copeland) | 99 |
+| RCV-IRV (Hare) | 49 |
+| Ranked Robin (RCV-RR / Copeland) | 100 |
 | Approval | 25 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
@@ -310,7 +310,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vcl_c4_b9_score_vs_runoff`](../../method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) | `method_comparisons/valuable_condorcet_loser/cases/` | 1 | The valuable Condorcet loser — Score elects her, the runoff rejects her → _Ben_ | [`.yaml`](../../method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml) |
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
-## RCV-IRV (Hare)  (48)
+## RCV-IRV (Hare)  (49)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -342,6 +342,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`coombs_ex22_scc`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/coombs_ex22_scc.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Coombs Ex.22 — SCC: C drops out and A wins instead of B → _A_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex22_scc.yaml) |
 | [`bv2277_tqfdbg_mayor_irv`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2277_tqfdbg_mayor_irv.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | The mayor's race (RCV-IRV, full rounds) — Cora comes from third and wins → _Cora_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_irv.yaml) |
 | [`bv2278_8cdkkc_five_way_irv`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2278_8cdkkc_five_way_irv.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | Kissel's five-way example (RCV-IRV) — the compromise is eliminated third → _A_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_irv.yaml) |
+| [`minneapolis_2017_irv`](../../method_comparisons/minneapolis_2017/cases/cases_pages/minneapolis_2017_irv.md) | `method_comparisons/minneapolis_2017/cases/` | 1 | Minneapolis 2017 Mayor — 105,928 real ballots, and IRV lands on the Condorcet winner → _Jacob Frey_ | [`.yaml`](../../method_comparisons/minneapolis_2017/cases/minneapolis_2017_irv.yaml) |
 | [`alaska_upward_after`](../../method_comparisons/monotonicity/cases/cases_pages/alaska_upward_after.md) | `method_comparisons/monotonicity/cases/` | 1 | Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses → _Begich_ | [`.yaml`](../../method_comparisons/monotonicity/cases/alaska_upward_after.yaml) |
 | [`alaska_upward_before`](../../method_comparisons/monotonicity/cases/cases_pages/alaska_upward_before.md) | `method_comparisons/monotonicity/cases/` | 1 | Upward monotonicity (Alaska 2022) — BEFORE: Peltola wins → _Peltola_ | [`.yaml`](../../method_comparisons/monotonicity/cases/alaska_upward_before.yaml) |
 | [`monotonicity_irv_after`](../../method_comparisons/monotonicity/cases/cases_pages/monotonicity_irv_after.md) | `method_comparisons/monotonicity/cases/` | 1 | Non-monotonicity (RCV-IRV) — part 2: raising X makes X lose → _Z_ | [`.yaml`](../../method_comparisons/monotonicity/cases/monotonicity_irv_after.yaml) |
@@ -363,7 +364,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (99)
+## Ranked Robin (RCV-RR / Copeland)  (100)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -442,6 +443,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`p3_manip_reversal_rr`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_manip_reversal_rr.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 manipulated — Zwicker's complete reversal makes Dublin a 4-0 Condorcet winner → _Dublin_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_manip_reversal_rr.yaml) |
 | [`p3_sincere_ranked_robin`](../../method_comparisons/manipulability_p3/cases/cases_pages/p3_sincere_ranked_robin.md) | `method_comparisons/manipulability_p3/cases/` | 1 | P3 sincere — Ranked Robin elects Edinburgh (the baseline every manipulation attacks) → _Edinburgh_ | [`.yaml`](../../method_comparisons/manipulability_p3/cases/p3_sincere_ranked_robin.yaml) |
 | [`tilted_cycle_c3_b5_rr`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_rr.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin) → _Ada_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_rr.yaml) |
+| [`minneapolis_2017_ranked_robin`](../../method_comparisons/minneapolis_2017/cases/cases_pages/minneapolis_2017_ranked_robin.md) | `method_comparisons/minneapolis_2017/cases/` | 1 | Minneapolis 2017 Mayor — the head-to-head check: right winner, wrong runner-up → _Jacob Frey_ | [`.yaml`](../../method_comparisons/minneapolis_2017/cases/minneapolis_2017_ranked_robin.yaml) |
 | [`bv2138_cxrf8v_ranked_robin`](../../method_comparisons/no_condorcet_bv2138/cases/cases_pages/bv2138_cxrf8v_ranked_robin.md) | `method_comparisons/no_condorcet_bv2138/cases/` | 1 | No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently → _Abby_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_ranked_robin.yaml) |
 | [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/cases/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_ranked_robin.yaml) |
 | [`bv2176_p8dp28_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, and two ladders → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_ranked_robin.yaml) |

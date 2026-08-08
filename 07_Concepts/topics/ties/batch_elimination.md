@@ -173,6 +173,8 @@ Stated fairly, then: the defect is not the ladder and not the seed. It is that t
 | Condorcet winner present | 6 | **Amy 6/6** | Amy (ladder has information) |
 | Parallel universes (4 ballots) | 24 | **Anna 24/24** | Anna |
 
+The six-voter round-2 case is absent from that table on purpose: 6 ballots is 720 orderings, which is 720 JVM launches, and the sweep was not run. No anonymity claim is made for it either way.
+
 **3. Its arbitrariness is declared instead of accidental.** RCTab still has to break the dead tie, and it still decides the election — but the lever is `tiebreakMode`, and under `useCandidateOrder` the lever is the **candidate order written in the config file**. Vary it on the perfect cycle and you get the same three winners our row-order sweep produced:
 
 | Declared candidate order | Winner |
