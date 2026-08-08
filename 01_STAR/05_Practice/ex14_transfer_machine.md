@@ -133,6 +133,14 @@ One more symptom for the report: the BV UI *export* of both elections silently o
 
 A tidy electorate: full rankings (nothing exhausts), one surplus, one meaningful elimination — chosen so every moving part fires exactly once. Real STV counts inherit RCV-IRV's operational caveats ([central tabulation](../../07_Concepts/GLOSSARY.md), exhaustion under rank limits) alongside the genuine proportionality shown here; the balanced comparison with the score-ballot PR family is [STV vs STAR-PR](../../method_comparisons/stv_vs_star_pr/README.md).
 
+## The case file
+
+The YAML the engine actually runs, embedded at build time — so the ballots on this page can never drift from the file:
+
+```yaml title="cases/ex14_two_novels.yaml"
+--8<-- "01_STAR/05_Practice/cases/ex14_two_novels.yaml"
+```
+
 ## Run it yourself
 
 ```
