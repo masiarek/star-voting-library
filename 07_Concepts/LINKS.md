@@ -142,7 +142,8 @@ _Last full review: 2026-06-21._
 | **starvote (upstream)** | Larry Hastings' original STAR tabulation library | [larryhastings/starvote ↗](https://github.com/larryhastings/starvote) |
 | **YAML fork (Adam)** | This repo — CSV parsing + extra reporting/options | [masiarek/star-voting-library ↗](https://github.com/masiarek/star-voting-library) |
 | **NIST VotingMethods** | US NIST reference tabulation implementations + election-data **interoperability** (Common Data Format) work. Neutral government source; the interop angle pairs with this repo's ABIF / ballot-format notes ([abif_format.md](scores_and_ranks/abif_format.md)) | [usnistgov/VotingMethods ↗](https://github.com/usnistgov/VotingMethods) |
-| **RCVis** | RCV-IRV results *visualizer* (Sankey / bar / table). Note: a visualizer, not a tabulator, and **strong-copyleft (AGPL-style)** — use the hosted site, don't vendor the code | [rcvis.com ↗](https://rcvis.com) |
+| **RCVis** | RCV-IRV results *visualizer* (Sankey / bar / table). A visualizer, **not** a tabulator — so it renders a result, it never corroborates one. **GPL-3.0** (not AGPL, as this row previously said): use the hosted site, don't vendor the code into this MIT repo. Full page: [rcvis.md](tabulation_engines/rcvis.md) | [rcvis.com ↗](https://www.rcvis.com/) |
+| **rcvformats** | RCVis's parsing library, split out and **MIT** — readers/validators for Universal RCV Tabulator JSON, Opavote, ElectionBuddy and three Dominion formats. Safe to depend on (`pip install rcvformats`), unlike RCVis itself | [artoonie/rcvformats ↗](https://github.com/artoonie/rcvformats) |
 | **maxhully/rcv** | BSD-3 Python RCV tabulation library (safe to borrow from, if ever needed) | [maxhully/rcv ↗](https://github.com/maxhully/rcv) |
 
 ---

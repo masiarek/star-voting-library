@@ -82,6 +82,14 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 
 The mechanism is worth tracing, because it is not mysterious. E is eliminated first and every one of those 49 ballots reads `E>D`, lifting D to 102. A goes next and those 50 read `A>B`, lifting B to 101. Both eliminations feed C's *rivals* and neither feeds C — so the candidate a two-thirds majority prefers to everyone finishes last of three and is cut.
 
+**BetterVoting's own results page makes the point without any help from us:**
+
+<img alt="BetterVoting results page for election qycpbx, race 1: headline 'D wins!', 303 voters, Voting Method: Ranked Choice Voting. The First Choice Preferences chart shows C at 33% with visibly the longest bar, D 17%, B 17%, A 17%, E 16%. The Final Runoff chart below it shows only D at 67% and B at 33% against a dashed majority-threshold line — C does not appear in the runoff at all." src="img/qycpbx_result.png" width="560">
+
+Read the two charts against each other. **C owns the longest bar in "First Choice Preferences" — and C is not in the "Final Runoff" at all.** That is the entire argument in one screenshot, drawn by the tabulator rather than by us.
+
+
+
 ## Example 2 — Brams 1982: twenty-one ballots, checkable on paper
 
 <!-- report:bv2282_hf3ckp_brams_irv -->
@@ -122,6 +130,10 @@ Winner(s) — RCV / Instant-Runoff Voting (single winner)
 
 B wins 13 of 21. But **G beats B head-to-head 14–7**, beats N 13–8 and beats F 18–3 — G is the Condorcet winner, eliminated one round before the finish on 6 first choices.
 
+<img alt="BetterVoting results page for election hf3ckp, race 1: headline 'B wins!', 21 voters, Voting Method: Ranked Choice Voting. First Choice Preferences shows B 33%, G 29%, N 24%, F 14%. The Final Runoff below shows only B at 62% and N at 38% against a dashed majority-threshold line — G, who beats B head-to-head, is absent from the runoff." src="img/hf3ckp_result.png" width="560">
+
+Same shape as the 303: G is second on first choices and **missing from the final runoff**, which is contested by B and N — the two candidates G beats head-to-head.
+
 Twenty-one ballots is the point. Someone who will not take a 303-voter profile on trust can check this one by hand in about a minute.
 
 **Provenance, stated carefully — this matters.** The profile is Stephen J. Brams's, from *"The AMS Nomination Procedure Is Vulnerable to 'Truncation of Preferences'"* (*Notices of the American Mathematical Society* 29:2, February 1982, 136–138). **The RCV-IRV reading is rangevoting.org's, not Brams's.** Brams's paper is about vulnerability to *preference truncation* — voters ranking only some candidates — which is a different argument from the Condorcet failure shown above, and we could not confirm from the abstract whether the AMS procedure of the day was Hare specifically. So cite **Brams for the ballots** and **this file for what Hare does with them**. Do not write *"Brams showed that IRV…"* — in this paper, he did not.
@@ -138,6 +150,15 @@ Neither profile needs a new ballot to fix. [Ranked Robin](../../05_Ranked_Robin/
 | Brams's 21 | **B** | **G** | G beats B 14–7 |
 
 That is the version of this argument worth making to someone who likes ranked ballots, because **it asks nothing of them.** The ballot they already support is fine. The disagreement is entirely in the tabulation.
+
+And it is the *same election* saying both things. Each BetterVoting election above carries the two races on one ballot set, so these are race 2 of the very pages that just said "D wins" and "B wins":
+
+| Ossipoff's 303 — race 2 | Brams's 21 — race 2 |
+|---|---|
+| <img alt="BetterVoting results page for election qycpbx, race 2: headline 'C wins!', 303 voters, Voting Method: Ranked Robin. A Head-to-head wins chart shows C at 100%, D 75%, B 50%, E 25% and A at zero." src="img/qycpbx_ranked_robin.png" width="420"> | <img alt="BetterVoting results page for election hf3ckp, race 2: headline 'G wins!', 21 voters, Voting Method: Ranked Robin. A Head-to-head wins chart shows G at 100%, B 67%, N 33% and F at zero." src="img/hf3ckp_ranked_robin.png" width="420"> |
+| **C wins** — 100% of head-to-head matchups | **G wins** — 100% of head-to-head matchups |
+
+Same voters, same marks, same website, one page apart: *"D wins!"* and *"C wins!"*
 
 <!-- report:bv2281_qycpbx_ossipoff_ranked_robin -->
 ```text

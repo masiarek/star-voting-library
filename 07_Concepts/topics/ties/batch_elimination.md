@@ -159,6 +159,52 @@ This reframes the comparison the [PUT page](parallel_universe_tiebreaking.md#thr
 
 Stated fairly, then: the defect is not the ladder and not the seed. It is that the report draws no distinction between a winner the ballots chose and a winner the file order chose. → [engine limitations](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/README.md#known-limitation-elimination-ties).
 
+## What a certified tabulator does instead
+
+`pref_voting` says what the *method* does; our engine says what *one teaching implementation* does. Neither is what a county runs. So these four cases were also put through **[RCTab](../../tabulation_engines/rctab.md) v2.1.0** — the federally-tested, state-certified tabulator that counts real US elections — via [`rctab_crosscheck.py`](../../../STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/README.md). Three findings, and the first is the least interesting.
+
+**1. It agrees on every winner.** Amy, Amy, Alex, Anna — the same four this repo reports. Our arithmetic is the arithmetic jurisdictions run. (What that is *not* is a verdict on IRV: certifying an implementation says nothing about the method, and every critique on this page survives RCTab counting perfectly.)
+
+**2. It is anonymous where we are not.** Re-run each case under every ordering of the ballot rows — the sweep that gives our engine three different winners in the table above — and RCTab does not move:
+
+| Case | Row orderings | RCTab | This repo's engine |
+|---|:--:|:--:|:--:|
+| Perfect cycle (3 ballots) | 6 | **Amy 6/6** | Amy 2, Bruno 2, Clara 2 |
+| Condorcet winner present | 6 | **Amy 6/6** | Amy (ladder has information) |
+| Parallel universes (4 ballots) | 24 | **Anna 24/24** | Anna |
+
+The six-voter round-2 case is absent from that table on purpose: 6 ballots is 720 orderings, which is 720 JVM launches, and the sweep was not run. No anonymity claim is made for it either way.
+
+**3. Its arbitrariness is declared instead of accidental.** RCTab still has to break the dead tie, and it still decides the election — but the lever is `tiebreakMode`, and under `useCandidateOrder` the lever is the **candidate order written in the config file**. Vary it on the perfect cycle and you get the same three winners our row-order sweep produced:
+
+| Declared candidate order | Winner |
+|---|:--:|
+| Amy, Bruno, Clara | **Amy** |
+| Amy, Clara, Bruno | **Clara** |
+| Bruno, Amy, Clara | **Amy** |
+| Bruno, Clara, Amy | **Bruno** |
+| Clara, Amy, Bruno | **Clara** |
+| Clara, Bruno, Amy | **Bruno** |
+
+And it says so, in the audit log, every time:
+
+```text title="Abridged for the lesson — RCTab audit lines, not a full report"
+INFO: Candidate "Clara" lost a tie-breaker in round 1 against "Amy" and "Bruno".
+      Each candidate had 1 vote(s). The selected candidate appeared latest in the
+      tie-breaking permutation list.
+INFO: Candidate "Amy" was elected in round 2 with 2 votes.
+```
+
+That is the whole comparison in one line: **both engines are arbitrary on a dead tie; only one of them tells you.** Our winner turns on the order the ballot rows were typed, which nobody thinks of as a rule and no report mentions. RCTab's turns on a value an auditor can read in the config before the count and find named in the log after it. The [parallel-universes case](parallel_universe_tiebreaking.md) makes the point sharpest — this page's criticism is that our report "never mentions" treating a 2–2 final round as a loss for Blake, and RCTab makes the identical call while printing it:
+
+```text title="Abridged for the lesson — RCTab audit lines, not a full report"
+INFO: Candidate "Anna" won a tie-breaker in round 2 against "Blake".
+      Each candidate had 2 vote(s). The selected candidate appeared earliest in
+      the tie-breaking permutation list.
+```
+
+**A note on the round structure.** RCTab also prints the rounds the *method* has, where our engine collapses them: on the six-voter case it eliminates Dev alone in round 1 (0 votes), reaches the genuine three-way tie in round 2, and breaks it — matching `pref_voting`'s account of the profile, where pyrankvote rejects Colin and Dev side by side in a single round. If you are reading these cases to understand the count rather than to test the engine, RCTab's report is the more faithful picture.
+
 ## Cross-checked against an engine nobody here wrote
 
 Per this library's [standing rule](../../tabulation_engines/cross_checking_with_pref_voting.md), the claims above are confirmed against `pref_voting` (Holliday & Pacuit), whose `instant_runoff` and `coombs` both implement the batch convention:
@@ -178,7 +224,7 @@ uv run python -c "from pref_voting.profiles import Profile; from pref_voting.ite
 1. **This is a small-electorate and simulation concern.** A total batch needs every remaining candidate to hold *exactly* the same first-choice count. Among thousands of ballots that is astronomically rare, and the same [caveat](why_contrived_tie_cases.md) the rest of this hub carries applies here undiminished. What it is not is a curiosity you can define away — see the theorem.
 2. **It is a convention, not a law.** Real statutes overwhelmingly pick one candidate by lot and continue. Batch elimination is the convention of the academic literature and the reference implementations; do not describe it as "how IRV works" without saying which IRV. [Which RCV-IRV?](../../../06_Other/RCV_IRV/concepts/variants/RCV_IRV_variants.md) catalogues the others.
 3. **It fixes none of IRV's real problems.** [Center squeeze](../center_squeeze/README.md), [non-monotonicity](../monotonicity/README.md) and exhausted ballots come from the elimination *structure*, not from its tie clause. Citing the batch convention as a repair would be exactly the overreach this library warns against.
-4. **"Batch elimination" also names a different thing.** In statute — North Carolina's, for one — it usually means dropping every candidate who is *mathematically out of reach* at once, purely to speed a hand count. That is a different rule with a different justification; see [Hare § batch](../../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md). This page is about the tie clause.
+4. **"Batch elimination" also names a different thing** — and the certified tabulator implements *that* one, not this one. In statute — North Carolina's, for one — it usually means dropping every candidate who is *mathematically out of reach* at once, purely to speed a hand count. RCTab's `batchElimination` flag is exactly that rule: `Tabulator.runBatchElimination` sums tallies low-to-high and cuts only where the sum "fails to equal or exceed the next-lowest candidate vote total," so candidates who are merely **tied** are never batched — the sum of a tied group always reaches the next tally. Switching the flag on changes nothing in any of the cases on this page, and RCTab structurally cannot empty the field. Two rules, one name, opposite behaviour on a dead tie; see [Hare § batch](../../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md). This page is about the tie clause.
 
 ## Sources
 
