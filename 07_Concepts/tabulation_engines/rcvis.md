@@ -103,6 +103,18 @@ RCVis computes its percentages on the **surviving** ballots — 492 of 886, not 
 
 **Uploads are public by default** (the upload page says so, and offers a private account by request to team@rcvis.com). This one is safe to publish because the ballots are RCV Lab's synthetic sample, already public — nobody's real preferences are in it. Apply the same test before sending anything else.
 
+## The library draws its own now
+
+Everything above is worth knowing and none of it is a dependency. The hard part of a Sankey was never the drawing — it was the transfer data, which our text report does not carry and [`ut_json_export.py`](../../STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/README.md) recomputes from the ballots. Once that existed, the picture was the easy half, and [`build_sankey.py`](../../STARVote_LH_tabulation_engine/tools_adam/scripts/build_sankey.py) makes it here:
+
+```bash
+python3 STARVote_LH_tabulation_engine/tools_adam/scripts/build_sankey.py 06_Other/RCV_IRV/cases/street_trees_five_rounds_c6_b100.yaml
+```
+
+Art lands beside the case as `img/<stem>_sankey.png` (+ `.svg`), and the generated case page picks it up the same way it picks up [ballot art](../../01_STAR/01_Learn/voting_styles/README.md) — 71 ranked cases carry one. That matters more than it sounds: **a committed picture survives the site that would otherwise have drawn it.** RCVis is GPL-3 and cannot be vendored into this MIT repo, RCV Lab says of itself that it is beta and may reset, and neither is under this project's control. A PNG in the tree renders on GitHub, on the built site, and in a local viewer, in ten years, with nothing running.
+
+So the division is: **draw in-repo, publish to RCVis when a public interactive link is the point** — a slide, or a [BetterVoting](bettervoting_and_the_engine.md) description where a reader should be able to click through the rounds themselves.
+
 ## `rcvformats` is the piece we could actually borrow
 
 Worth separating from the visualizer, because the licences differ and the difference decides what we may do:

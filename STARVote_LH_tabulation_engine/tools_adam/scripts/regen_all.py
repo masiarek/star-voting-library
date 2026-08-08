@@ -44,13 +44,14 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
-# (command, one-line what-it-writes) — ORDER IS LOAD-BEARING for the first four:
-# the ballot art has to be on disk before build_yaml_pages decides which pages
-# show a picture. `--refresh` only redraws cases that already have art, so this
-# never invents pictures for the other 300 cases.
+# (command, one-line what-it-writes) — ORDER IS LOAD-BEARING for the first five:
+# the ballot art and the Sankeys have to be on disk before build_yaml_pages
+# decides which pages show a picture. `--refresh` only redraws cases that already
+# have art, so this never invents pictures for the other 300 cases.
 GENERATORS = [
     ("build_style_ballot_images.py --refresh",
                                   "ballot art for cases that already have it"),
+    ("build_sankey.py --refresh", "round-by-round Sankeys for ranked cases that already have one"),
     ("build_divergence_index.py", "method_comparisons/divergence_review/ (INDEX, csv, cases/*.md)"),
     ("build_yaml_pages.py",       "per-election <set>_pages/*.md"),
     ("build_yaml_index.py",       "YAML_test_case_index/README.md (by-method index)"),
