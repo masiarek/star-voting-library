@@ -5,9 +5,11 @@ search:
 
 # Ossipoff's 303 — the first-round LEADER is eliminated
 
-*Generated from [`ossipoff_leader_eliminated_c5_b303.yaml`](../ossipoff_leader_eliminated_c5_b303.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2281_qycpbx_ossipoff_irv.yaml`](../bv2281_qycpbx_ossipoff_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** D
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qycpbx) · **[results ↗](https://bettervoting.com/qycpbx/results)** (election `qycpbx` · test `BV2281`).
 
 ## Scenario
 
@@ -42,6 +44,14 @@ is why it is here and the rhetoric is not.
 
 Bare letters are deliberate: this is an abstract published illustration, and
 A-E are the source's own labels.
+
+BV-CONFIRMED. Race 1 of live election qycpbx (Test ID BV2281) is these 303
+ballots counted by BetterVoting's own IRV tabulator, and it elects D, matching
+this file exactly; race 2 is the same ballots under Ranked Robin and elects C.
+tieBreakType 'none' in both. Frozen export: bv2281_qycpbx_bv_export.json.
+
+Live on BetterVoting: https://bettervoting.com/qycpbx
+Live results: https://bettervoting.com/qycpbx/results
 
 ## Ballots
 
@@ -123,18 +133,20 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ossipoff_leader_eliminated_c5_b303_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2281_qycpbx_ossipoff_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/ossipoff_leader_eliminated_c5_b303.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/bv2281_qycpbx_ossipoff_irv.yaml
 ```
 
 ## See also
 
 - [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [brams_1982_c4_b21](brams_1982_c4_b21.md) · [brams_1982_c4_b21_rr](brams_1982_c4_b21_rr.md) · [ossipoff_leader_eliminated_c5_b303_rr](ossipoff_leader_eliminated_c5_b303_rr.md)
+More cases in this set: [bv2281_qycpbx_ossipoff_ranked_robin](bv2281_qycpbx_ossipoff_ranked_robin.md) · [bv2282_hf3ckp_brams_irv](bv2282_hf3ckp_brams_irv.md) · [bv2282_hf3ckp_brams_ranked_robin](bv2282_hf3ckp_brams_ranked_robin.md)

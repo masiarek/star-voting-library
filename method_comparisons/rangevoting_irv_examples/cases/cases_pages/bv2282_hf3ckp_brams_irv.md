@@ -5,9 +5,11 @@ search:
 
 # Brams 1982 — twenty-one voters, and the Condorcet winner goes out second
 
-*Generated from [`brams_1982_c4_b21.yaml`](../brams_1982_c4_b21.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2282_hf3ckp_brams_irv.yaml`](../bv2282_hf3ckp_brams_irv.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** B
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/hf3ckp) · **[results ↗](https://bettervoting.com/hf3ckp/results)** (election `hf3ckp` · test `BV2282`).
 
 ## Scenario
 
@@ -35,6 +37,14 @@ Do not write "Brams showed that IRV..." — he did not, in this paper.
 
 Candidate labels B, G, N, F are Brams's own and are kept for traceability to
 the source, which is why they are neither alphabetical nor in reading order.
+
+BV-CONFIRMED. Race 1 of live election hf3ckp (Test ID BV2282) is these 21
+ballots counted by BetterVoting's own IRV tabulator, and it elects B, matching
+this file exactly; race 2 is the same ballots under Ranked Robin and elects G.
+tieBreakType 'none' in both. Frozen export: bv2282_hf3ckp_bv_export.json.
+
+Live on BetterVoting: https://bettervoting.com/hf3ckp
+Live results: https://bettervoting.com/hf3ckp/results
 
 ## Ballots
 
@@ -103,17 +113,19 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/brams_1982_c4_b21_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2282_hf3ckp_brams_irv_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/brams_1982_c4_b21.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/bv2282_hf3ckp_brams_irv.yaml
 ```
 
 ## See also
 
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [brams_1982_c4_b21_rr](brams_1982_c4_b21_rr.md) · [ossipoff_leader_eliminated_c5_b303](ossipoff_leader_eliminated_c5_b303.md) · [ossipoff_leader_eliminated_c5_b303_rr](ossipoff_leader_eliminated_c5_b303_rr.md)
+More cases in this set: [bv2281_qycpbx_ossipoff_irv](bv2281_qycpbx_ossipoff_irv.md) · [bv2281_qycpbx_ossipoff_ranked_robin](bv2281_qycpbx_ossipoff_ranked_robin.md) · [bv2282_hf3ckp_brams_ranked_robin](bv2282_hf3ckp_brams_ranked_robin.md)

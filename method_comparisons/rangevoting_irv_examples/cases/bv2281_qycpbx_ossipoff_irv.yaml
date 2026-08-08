@@ -1,8 +1,3 @@
-======================================================================
-SOURCE FILE:     ossipoff_leader_eliminated_c5_b303.yaml
-TABULATED FILE:  ossipoff_leader_eliminated_c5_b303_tabulated.txt
-======================================================================
-
 election_title: "Ossipoff's 303 — the first-round LEADER is eliminated"
 
 scenario_description: |-
@@ -37,6 +32,17 @@ scenario_description: |-
 
   Bare letters are deliberate: this is an abstract published illustration, and
   A-E are the source's own labels.
+
+  BV-CONFIRMED. Race 1 of live election qycpbx (Test ID BV2281) is these 303
+  ballots counted by BetterVoting's own IRV tabulator, and it elects D, matching
+  this file exactly; race 2 is the same ballots under Ranked Robin and elects C.
+  tieBreakType 'none' in both. Frozen export: bv2281_qycpbx_bv_export.json.
+
+  Live on BetterVoting: https://bettervoting.com/qycpbx
+  Live results: https://bettervoting.com/qycpbx/results
+bv_test_id: BV2281
+bv_election_id: qycpbx
+bv_results_url: https://bettervoting.com/qycpbx/results
 voting_method: RCV_IRV
 num_winners: 1
 
@@ -53,64 +59,4 @@ ballots: |-
 expected_winners:
   - D
 
-# file: ossipoff_leader_eliminated_c5_b303.yaml
-
-======================================================================
-TABULATION RESULTS
-======================================================================
-
---- RCV / Instant-Runoff Voting (single winner) ---
-  Ossipoff's 303 — the first-round LEADER is eliminated
- Tabulating 303 ballots (ranked ballots).
-
-ROUND 1
-Candidate      Votes  Status
------------  -------  --------
-C                100  Hopeful
-D                 53  Hopeful
-B                 51  Hopeful
-A                 50  Hopeful
-E                 49  Rejected
-
-ROUND 2
-Candidate      Votes  Status
------------  -------  --------
-D                102  Hopeful
-C                100  Hopeful
-B                 51  Hopeful
-A                 50  Rejected
-E                  0  Rejected
-
-ROUND 3
-Candidate      Votes  Status
------------  -------  --------
-D                102  Hopeful
-B                101  Hopeful
-C                100  Rejected
-A                  0  Rejected
-E                  0  Rejected
-
-FINAL RESULT
-Candidate      Votes  Status
------------  -------  --------
-D                202  Elected
-B                101  Rejected
-C                  0  Rejected
-A                  0  Rejected
-E                  0  Rejected
-
-
-Winner(s) — RCV / Instant-Runoff Voting (single winner)
-  D
-
---- Smith Set (the generalized Condorcet winner) ---
-The smallest group whose every member beats every candidate outside it —
-the honest answer to "who is even in contention?".
-   Smith set (1 of 5): C
-   Outside (4):        A, B, D, E
-   One member ⇒ C is the Condorcet winner, beating every rival head-to-head.
-   RCV-IRV winner D is OUTSIDE the Smith set. ✗
-      Every member of the set (C) beats D head-to-head, yet
-      RCV-IRV elected D anyway. RCV-IRV is not Smith-efficient (nor
-      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
-   More: 07_Concepts/topics/smith_set.md
+# file: bv2281_qycpbx_ossipoff_irv.yaml

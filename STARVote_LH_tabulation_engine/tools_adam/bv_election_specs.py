@@ -5922,7 +5922,126 @@ BALLOT_EXPRESSIVENESS_SPEC = {
 }
 
 
-ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# --------------------------------------------------------------------------
+# rangevoting.org's two constructed anti-IRV profiles, reproduced exactly and
+# counted BOTH ways on the identical ballots. Backs
+# method_comparisons/rangevoting_irv_examples/. Candidate labels are the
+# sources' own (A-E for Ossipoff, B/G/N/F for Brams) and are kept for
+# traceability, which is why Brams's are neither alphabetical nor in order.
+# --------------------------------------------------------------------------
+_OSSIPOFF_CANDS = ["A", "B", "C", "D", "E"]
+# ranks 1..5, aligned to _OSSIPOFF_CANDS; 1 = top choice.
+_OSSIPOFF_RANKS = _expand([
+    (50,  [1, 2, 3, 4, 5]),   # A>B>C>D>E
+    (51,  [2, 1, 3, 4, 5]),   # B>A>C>D>E
+    (100, [5, 3, 1, 2, 4]),   # C>D>B>E>A
+    (53,  [5, 4, 3, 1, 2]),   # D>E>C>B>A
+    (49,  [5, 4, 3, 2, 1]),   # E>D>C>B>A
+])
+
+OSSIPOFF_303_SPEC = {
+    "test_id": "BV2281",
+    "title": "Ossipoff's 303 — the first-round leader who beats every rival head-to-head",
+    "enable_write_in": False,
+    "description": (
+        "A constructed five-candidate profile published on rangevoting.org and credited "
+        "there to Mike Ossipoff, reproduced here exactly. 303 voters on a single "
+        "left-right line, A to E, with C in the middle. "
+        "C holds 100 of the 303 first choices - the LARGEST first-choice bloc in the "
+        "field, ahead of D (53), B (51), A (50) and E (49) - and C also beats every "
+        "rival head-to-head: A 202-101, B 202-101, D 201-102, E 201-102. "
+        "Both races use the SAME ballots. Only the counting rule changes. "
+        "Race 1 counts them by instant runoff: E is eliminated and every one of those "
+        "49 ballots lifts D to 102; A is eliminated and those 50 lift B to 101; C, who "
+        "led rounds 1 and 2 outright, is now the lowest of the three left and is cut on "
+        "100 - sending 100 ballots to D, who wins 202-101. "
+        "Race 2 counts the identical ballots by Ranked Robin (Copeland), comparing every "
+        "pair head-to-head, and elects C 4-0. "
+        "The ballot is the same in both races; the disagreement is entirely in the "
+        "tabulation, which is why this example asks nothing of a voter who already likes "
+        "ranked ballots. "
+        "Read it fairly: this is a CONSTRUCTED profile, so it shows what instant runoff "
+        "CAN do, not how often it does - Condorcet failures showed up in 2 of 182 US RCV "
+        "elections studied. Nothing here rests on a tie-break. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/"
+        "rangevoting_irv_examples/index.html"
+    ),
+    "races": [
+        {"title": "Rank all five - RCV-IRV (instant runoff)",
+         "method": "IRV", "num_winners": 1, "max_rankings": 5,
+         "candidates": _OSSIPOFF_CANDS, "ballots": _OSSIPOFF_RANKS},
+        {"title": "Rank all five - Ranked Robin (Copeland)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 5,
+         "candidates": _OSSIPOFF_CANDS, "ballots": _OSSIPOFF_RANKS},
+    ],
+    "expected": (
+        "RCV-IRV -> D. Rounds: E out (49), D 102; A out (50), B 101; C out on 100 "
+        "against D 102 and B 101; final D 202 - B 101. "
+        "Ranked Robin -> C, 4-0, margin +400 - the Condorcet winner. "
+        "Both LH-verified; the Ranked Robin race additionally cross-checked against "
+        "pref_voting's independent Copeland (AGREE, unique leader C). Smith set is the "
+        "single candidate C, so no cycle and tieBreakType should be 'none' in both "
+        "races. Test ID BV2281."
+    ),
+}
+
+_BRAMS_CANDS = ["B", "G", "N", "F"]
+# ranks 1..4, aligned to _BRAMS_CANDS; 1 = top choice.
+_BRAMS_RANKS = _expand([
+    (7, [1, 2, 3, 4]),   # B>G>N>F
+    (6, [2, 1, 3, 4]),   # G>B>N>F
+    (5, [3, 2, 1, 4]),   # N>G>B>F
+    (3, [4, 3, 2, 1]),   # F>N>G>B
+])
+
+BRAMS_1982_SPEC = {
+    "test_id": "BV2282",
+    "title": "Brams's 21 — twenty-one ranked ballots, two counts, two winners",
+    "enable_write_in": False,
+    "description": (
+        "A 21-voter, four-candidate profile from Stephen J. Brams, 'The AMS Nomination "
+        "Procedure Is Vulnerable to Truncation of Preferences', Notices of the American "
+        "Mathematical Society 29:2 (February 1982), 136-138, reproduced via "
+        "rangevoting.org. The candidate labels B, G, N and F are Brams's own and are "
+        "kept for traceability to the source. "
+        "Both races use the SAME 21 ballots. Only the counting rule changes. "
+        "Race 1 counts them by instant runoff: F is eliminated on 3 and sends 3 to N, "
+        "then G is eliminated on 6 and sends all 6 to B, who wins 13 of 21. "
+        "Race 2 counts the identical ballots by Ranked Robin (Copeland) and elects G, "
+        "who beats B head-to-head 14-7, beats N 13-8 and beats F 18-3 - every rival. "
+        "Twenty-one ballots is the point: this is small enough to check by hand in about "
+        "a minute, so nobody has to take either count on trust. "
+        "One note on provenance, because it matters: the PROFILE is Brams's, but the "
+        "instant-runoff reading is rangevoting.org's. Brams's paper is about "
+        "vulnerability to preference TRUNCATION, a different argument. Cite Brams for "
+        "the ballots and this election for what the two counts do with them. "
+        "Nothing here rests on a tie-break. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/"
+        "rangevoting_irv_examples/index.html"
+    ),
+    "races": [
+        {"title": "Rank all four - RCV-IRV (instant runoff)",
+         "method": "IRV", "num_winners": 1, "max_rankings": 4,
+         "candidates": _BRAMS_CANDS, "ballots": _BRAMS_RANKS},
+        {"title": "Rank all four - Ranked Robin (Copeland)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 4,
+         "candidates": _BRAMS_CANDS, "ballots": _BRAMS_RANKS},
+    ],
+    "expected": (
+        "RCV-IRV -> B. Rounds: F out (3) -> N 8; G out (6) -> B 13; final B 13 - N 8. "
+        "Ranked Robin -> G, 3-0, margin +27 - the Condorcet winner (G beats B 14-7, "
+        "N 13-8, F 18-3). "
+        "Both LH-verified; the Ranked Robin race additionally cross-checked against "
+        "pref_voting's independent Copeland (AGREE, unique leader G). Smith set is the "
+        "single candidate G, so no cycle and tieBreakType should be 'none' in both "
+        "races. Test ID BV2282."
+    ),
+}
+
+
+ELECTIONS: list = [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 / BV2282
 # Previously: [BALLOT_EXPRESSIVENESS_SPEC]   # BV2280 -> 37yf8x
 #   Created as designed, 25 ballots x 4 races. BV agrees with LH on all four:
 #   STAR -> Finn (84/83/81/80/80; runoff Finn 13-12, zero Equal Support),

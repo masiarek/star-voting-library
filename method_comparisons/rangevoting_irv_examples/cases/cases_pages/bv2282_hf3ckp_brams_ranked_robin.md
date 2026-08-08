@@ -5,13 +5,15 @@ search:
 
 # Brams 1982 — Ranked Robin on the identical ballots
 
-*Generated from [`brams_1982_c4_b21_rr.yaml`](../brams_1982_c4_b21_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2282_hf3ckp_brams_ranked_robin.yaml`](../bv2282_hf3ckp_brams_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** G
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/hf3ckp) · **[results ↗](https://bettervoting.com/hf3ckp/results)** (election `hf3ckp` · test `BV2282`).
+
 ## Scenario
 
-The SAME 21 ballots as brams_1982_c4_b21.yaml, not one mark changed, counted
+The SAME 21 ballots as bv2282_hf3ckp_brams_irv.yaml, not one mark changed, counted
 by Ranked Robin instead of Hare elimination.
 
 Hare eliminates G in round 2 and elects B 13-8. Ranked Robin elects G, who
@@ -21,9 +23,13 @@ Twenty-one ballots and four candidates: small enough that a skeptic can check
 both counts by hand and satisfy themselves that the disagreement is real and
 not an artifact of anyone's software.
 
-Triple-check status: LH native tally + pref_voting's independent Copeland
-(ranked_robin_report.py). No BetterVoting leg — this is a published profile
-reproduced from the literature, not a BV-backed case.
+TRIPLE-CHECKED, all three legs agreeing on G: this LH native tally,
+BetterVoting's own RankedRobin.ts (live election hf3ckp, race 2 — frozen in
+bv2282_hf3ckp_bv_export.json, tieBreakType 'none'), and pref_voting's
+independent Copeland (ranked_robin_report.py — AGREE, unique leader G).
+
+Live on BetterVoting (Test ID BV2282): https://bettervoting.com/hf3ckp
+Live results: https://bettervoting.com/hf3ckp/results
 
 ## Ballots
 
@@ -97,16 +103,18 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/brams_1982_c4_b21_rr_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2282_hf3ckp_brams_ranked_robin_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/brams_1982_c4_b21_rr.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/bv2282_hf3ckp_brams_ranked_robin.yaml
 ```
 
 ## See also
 
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [brams_1982_c4_b21](brams_1982_c4_b21.md) · [ossipoff_leader_eliminated_c5_b303](ossipoff_leader_eliminated_c5_b303.md) · [ossipoff_leader_eliminated_c5_b303_rr](ossipoff_leader_eliminated_c5_b303_rr.md)
+More cases in this set: [bv2281_qycpbx_ossipoff_irv](bv2281_qycpbx_ossipoff_irv.md) · [bv2281_qycpbx_ossipoff_ranked_robin](bv2281_qycpbx_ossipoff_ranked_robin.md) · [bv2282_hf3ckp_brams_irv](bv2282_hf3ckp_brams_irv.md)

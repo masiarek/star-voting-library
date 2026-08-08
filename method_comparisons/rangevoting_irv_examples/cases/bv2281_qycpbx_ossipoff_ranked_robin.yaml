@@ -1,7 +1,7 @@
 election_title: "Ossipoff's 303 — Ranked Robin on the identical ballots"
 
 scenario_description: |-
-  The SAME 303 ballots as ossipoff_leader_eliminated_c5_b303.yaml, not one mark
+  The SAME 303 ballots as bv2281_qycpbx_ossipoff_irv.yaml, not one mark
   changed, counted by Ranked Robin instead of Hare elimination. Same paper, same
   voters, same rankings — only the counting rule differs.
 
@@ -14,9 +14,16 @@ scenario_description: |-
   scores, no relearning how to vote. The ranked ballot they already support is
   fine. It is the tabulation that threw C away.
 
-  Triple-check status: LH native tally + pref_voting's independent Copeland
-  (ranked_robin_report.py). No BetterVoting leg — this is a constructed
-  published profile, not a BV-backed case.
+  TRIPLE-CHECKED, all three legs agreeing on C: this LH native tally,
+  BetterVoting's own RankedRobin.ts (live election qycpbx, race 2 — frozen in
+  bv2281_qycpbx_bv_export.json, tieBreakType 'none'), and pref_voting's
+  independent Copeland (ranked_robin_report.py — AGREE, unique leader C).
+
+  Live on BetterVoting (Test ID BV2281): https://bettervoting.com/qycpbx
+  Live results: https://bettervoting.com/qycpbx/results
+bv_test_id: BV2281
+bv_election_id: qycpbx
+bv_results_url: https://bettervoting.com/qycpbx/results
 voting_method: RankedRobin
 num_winners: 1
 options:
@@ -27,7 +34,7 @@ options:
   collapse_ballots: true
   count_separator: "×"
 
-# Identical ballot block to ossipoff_leader_eliminated_c5_b303.yaml — if you
+# Identical ballot block to bv2281_qycpbx_ossipoff_irv.yaml — if you
 # edit one, edit both. Source: https://rangevoting.org/rangeVirv.html section
 # 12, credited to Mike Ossipoff. Claim-checked in this folder's README.md.
 ballots: |-
@@ -40,4 +47,4 @@ ballots: |-
 expected_winners:
   - C
 
-# file: ossipoff_leader_eliminated_c5_b303_rr.yaml
+# file: bv2281_qycpbx_ossipoff_ranked_robin.yaml
