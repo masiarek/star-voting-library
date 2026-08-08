@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1010" width="1600" height="1010">
+<rect width="1600" height="1010" fill="#FFFFFF"/>
+<text x="40" y="62" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="48" fill="#C0504D" text-anchor="start" font-weight="bold">Nine candidates, six rungs</text>
+<text x="40" y="112" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" fill="#000000" text-anchor="start">One real voter from the ballot-expressiveness case. They hold nine distinct opinions and can write down six.</text>
+<text x="40" y="148" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#000000" text-anchor="start" font-weight="bold">What the voter thinks</text>
+<text x="40" y="178" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="25" fill="#555555" text-anchor="start">nine candidates, nine distinct places</text>
+<rect x="40" y="210" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="258" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">1.</text>
+<text x="135" y="258" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Finn</text>
+<rect x="40" y="292" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="340" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">2.</text>
+<text x="135" y="340" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Gus</text>
+<rect x="40" y="374" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="422" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">3.</text>
+<text x="135" y="422" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Emma</text>
+<rect x="40" y="456" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="504" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">4.</text>
+<text x="135" y="504" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Dev</text>
+<rect x="40" y="538" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="586" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">5.</text>
+<text x="135" y="586" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Cleo</text>
+<rect x="40" y="620" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="668" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">6.</text>
+<text x="135" y="668" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Ben</text>
+<rect x="40" y="702" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="750" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">7.</text>
+<text x="135" y="750" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Hugo</text>
+<rect x="40" y="784" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="832" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">8.</text>
+<text x="135" y="832" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Iris</text>
+<rect x="40" y="866" width="440" height="72" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="62" y="914" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#7F7F7F" text-anchor="start" font-weight="bold">9.</text>
+<text x="135" y="914" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="34" fill="#000000" text-anchor="start" font-weight="bold">Ada</text>
+<text x="580" y="148" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="30" fill="#000000" text-anchor="start" font-weight="bold">What a 0–5 ballot can hold</text>
+<text x="580" y="178" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="25" fill="#555555" text-anchor="start">six rungs, so at least three pairs must collide</text>
+<rect x="580" y="210" width="960" height="113" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="606" y="283.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="40" fill="#000000" text-anchor="start" font-weight="bold">5</text>
+<text x="680" y="283.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Finn</text>
+<rect x="580" y="333" width="960" height="113" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="606" y="406.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="40" fill="#000000" text-anchor="start" font-weight="bold">4</text>
+<text x="680" y="406.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Gus</text>
+<rect x="580" y="456" width="960" height="113" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="606" y="529.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="40" fill="#000000" text-anchor="start" font-weight="bold">3</text>
+<text x="680" y="529.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Emma</text>
+<text x="880" y="529.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Dev</text>
+<text x="1080" y="529.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Cleo</text>
+<rect x="666" y="468" width="570" height="89" fill="none" stroke="#C0504D" stroke-width="5" rx="12"/>
+<text x="1516" y="527.5" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" fill="#C0504D" text-anchor="end">3 pairs lost</text>
+<rect x="580" y="579" width="960" height="113" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="606" y="652.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="40" fill="#000000" text-anchor="start" font-weight="bold">2</text>
+<text x="680" y="652.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Ben</text>
+<text x="880" y="652.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Hugo</text>
+<text x="1080" y="652.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Iris</text>
+<rect x="666" y="591" width="570" height="89" fill="none" stroke="#C0504D" stroke-width="5" rx="12"/>
+<text x="1516" y="650.5" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="26" fill="#C0504D" text-anchor="end">3 pairs lost</text>
+<rect x="580" y="702" width="960" height="113" fill="#F2F2F2" stroke="#95B3D7" stroke-width="3"/>
+<text x="606" y="775.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="40" fill="#BFBFBF" text-anchor="start" font-weight="bold">1</text>
+<rect x="580" y="825" width="960" height="113" fill="#DCE6F1" stroke="#95B3D7" stroke-width="3"/>
+<text x="606" y="898.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="40" fill="#000000" text-anchor="start" font-weight="bold">0</text>
+<text x="680" y="898.5" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="32" fill="#000000" text-anchor="start" font-weight="bold">Ada</text>
+<text x="40" y="964" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" fill="#000000" text-anchor="start">This voter's ballot cannot separate 6 of the 36 candidate pairs. The pigeonhole forces only 3 of them —</text>
+<text x="40" y="996" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" fill="#000000" text-anchor="start">the other 3 are ordinary rounding. Neither costs this election its winner, but at a bigger field they start to.</text>
+</svg>

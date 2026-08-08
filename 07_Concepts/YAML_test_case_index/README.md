@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**566 election files** (484 single-winner, 82 multi-winner) across 18 method(s).
+**571 election files** (489 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 272 |
+| STAR | 273 |
 | RCV-IRV (Hare) | 44 |
-| Ranked Robin (RCV-RR / Copeland) | 94 |
+| Ranked Robin (RCV-RR / Copeland) | 96 |
 | Approval | 25 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
@@ -28,10 +28,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | IRV | 19 |
 | PLURALITY | 28 |
 | RANGE | 3 |
-| RCV-IRV | 1 |
+| RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (272)
+## STAR  (273)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -204,6 +204,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2214_m3hb6y_alaska_2022_general`](../../method_comparisons/alaska_2022_general/cases/cases_pages/bv2214_m3hb6y_alaska_2022_general.md) | `method_comparisons/alaska_2022_general/cases/` | 1 | Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola → _Peltola_ | [`.yaml`](../../method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml) |
 | [`hh41_03_marks_read_pairwise`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_03_marks_read_pairwise.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference → _B_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml) |
 | [`hh41_04_stipulated_utilities_star`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_04_stipulated_utilities_star.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — their own utility stipulation, on a 0-5 ballot: A 380, B 370, A wins → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml) |
+| [`ballot_expressiveness_c9_star`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_star.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — the 0–5 score ballot → _Finn_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml) |
 | [`Black_Curtain_01_c3_b5_hidden-consensus`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01_c3_b5_hidden-consensus.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml) |
 | [`Black_Curtain_01b_c3_b5_dichotomous`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01b_c3_b5_dichotomous.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01b_c3_b5_dichotomous.yaml) |
 | [`Black_Curtain_02_c3_b5_near-clones`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_02_c3_b5_near-clones.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Cal_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml) |
@@ -357,7 +358,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (94)
+## Ranked Robin (RCV-RR / Copeland)  (96)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -388,6 +389,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_ties.yaml) |
 | [`hh41_02_preferences_ranked_robin`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the assumed preferences, counted pairwise: A is the Condorcet winner → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_02_preferences_ranked_robin.yaml) |
+| [`ballot_expressiveness_c9_rr_full`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_rr_full.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — ranking all nine, counted by Ranked Robin → _Finn_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_rr_full.yaml) |
+| [`ballot_expressiveness_c9_rr_top5`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_rr_top5.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — ranking only five, counted by Ranked Robin → _Gus_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_rr_top5.yaml) |
 | [`condorcet_1788_ranked_robin`](../../method_comparisons/borda_condorcet_1788/cases/cases_pages/condorcet_1788_ranked_robin.md) | `method_comparisons/borda_condorcet_1788/cases/` | 1 | Condorcet's 1788 rebuttal to Borda — the ranked profile, counted pairwise → _Peter_ | [`.yaml`](../../method_comparisons/borda_condorcet_1788/cases/condorcet_1788_ranked_robin.yaml) |
 | [`burlington_2009_ranked_robin`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_ranked_robin.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_ranked_robin.yaml) |
 | [`bv2137_ywckmg_ranked_robin`](../../method_comparisons/center_squeeze_bv2137/cases/cases_pages/bv2137_ywckmg_ranked_robin.md) | `method_comparisons/center_squeeze_bv2137/cases/` | 1 | Center Squeeze — Ranked Robin (Copeland): the Condorcet winner survives → _Anderson_ | [`.yaml`](../../method_comparisons/center_squeeze_bv2137/cases/bv2137_ywckmg_ranked_robin.yaml) |
@@ -675,10 +678,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`range_101_c3_b5`](../../06_Other/Range/cases/cases_pages/range_101_c3_b5.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) |
 | [`range_sullivan_score_c4_b10`](../../06_Other/Range/cases/cases_pages/range_sullivan_score_c4_b10.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | [`.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) |
 
-## RCV-IRV  (1)
+## RCV-IRV  (3)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
+| [`ballot_expressiveness_c9_irv_full`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_irv_full.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — ranking all nine, counted by RCV-IRV → _Ben_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_irv_full.yaml) |
+| [`ballot_expressiveness_c9_irv_top5`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_irv_top5.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — ranking only five, counted by RCV-IRV → _Ben_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_irv_top5.yaml) |
 | [`tilted_cycle_c3_b5_irv`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_irv.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV) → _Cara_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_irv.yaml) |
 
 ## RR  (1)

@@ -5,7 +5,7 @@ This folder holds brute-force simulations that **measure** a claim instead of ci
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
-- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md). Its `--chart` and `--why` modes back a second page: [Why more candidates make every method miss](../../07_Concepts/topics/condorcet/why_more_candidates_miss.md), which explains the field-size effect and works it through [one 65-voter election at 3, 5 and 7 candidates](../../method_comparisons/crowded_field/README.md).
+- **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md). Its `--chart` and `--why` modes back a second page: [Why more candidates make every method miss](../../07_Concepts/topics/condorcet/why_more_candidates_miss.md), which explains the field-size effect and works it through [one 65-voter election at 3, 5 and 7 candidates](../../method_comparisons/crowded_field/README.md). Its `--expressiveness` and `--ballot-counts` modes back a third: [What the ballot can and cannot say](../../07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md), which separates ballot resolution from tabulation rule and works it through [one 25-voter election on five different papers](../../method_comparisons/ballot_expressiveness/README.md).
 - **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py`: in a two-stage reform (open primary → top N → good general), how often does the *primary* discard the consensus candidate? Full writeup + measured rates: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md) ([mechanics](#qualifying-round-primary-method-simulation)).
 
 ## Favorite-Betrayal (FBC) simulation
@@ -242,8 +242,12 @@ uv run 06_Other/simulations/condorcet_efficiency_simulation.py --selftest       
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --mechanism      # why STAR misses
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --chart          # the same rates, as bars
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --why            # what a bigger field does
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --expressiveness # ballot vs rule
+uv run 06_Other/simulations/condorcet_efficiency_simulation.py --ballot-counts  # what each paper can say
 uv run 06_Other/simulations/condorcet_efficiency_simulation.py --approval-cutoff 3
 ```
+
+`--expressiveness` is the script's own control on its biggest caveat. The sweep hands ranked methods a strict ranking of every candidate and score methods six rungs, so part of the measured gap is the **paper** rather than the **count**. That mode varies the two independently — Copeland on a 0–5 ballot, STAR's rule at full resolution, and the ranked methods on a ballot capped at 5 or 3 ranks the way real jurisdictions cap them — and `--ballot-counts` gives the arithmetic half. Both back [What the ballot can and cannot say](../../07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md), whose short version is that ~80% of STAR's gap at seven candidates is the ballot, that a *capped* ranked ballot is far less expressive than a 0–5 one, and that RCV-IRV cannot spend the resolution either way.
 
 ### Results, and what they mean
 

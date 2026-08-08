@@ -50,12 +50,23 @@ engine's tie-break rungs and is held to the real engine by
 STARVote_LH_tabulation_engine/tests/test_sim_star_model.py. Re-implementing STAR here
 would create a second model to drift; there is deliberately only one.
 
+THE BALLOT-RESOLUTION CONFOUND. The sweep above hands the ranked methods a strict
+ranking of every candidate and the score methods six rungs, which is realistic but
+means part of the measured gap is the PAPER rather than the COUNT. --expressiveness
+separates the two by crossing ballots with rules: run Copeland on the 0-5 ballot, run
+STAR's rule at full resolution, and run the ranked methods on a rank-capped ballot of
+the kind real IRV jurisdictions actually use. --ballot-counts gives the arithmetic half
+(how many distinct opinions each paper can record). Both feed
+07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md.
+
 Usage:  uv run 06_Other/simulations/condorcet_efficiency_simulation.py
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --selftest
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --trials 20000 --seed 7
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --approval-cutoff 3
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --chart
         uv run 06_Other/simulations/condorcet_efficiency_simulation.py --why --voters 501
+        uv run 06_Other/simulations/condorcet_efficiency_simulation.py --expressiveness
+        uv run 06_Other/simulations/condorcet_efficiency_simulation.py --ballot-counts
 """
 import argparse
 import sys
@@ -368,6 +379,202 @@ def mechanism(rng, trials, cutoff, models, cands, voters):
           "Read the README's caveat on ballot resolution before quoting it.")
 
 
+# --- ballot resolution vs tabulation rule ------------------------------------
+# The sweep above gives ranked methods a strict ranking of every candidate and score
+# methods six rungs. That is realistic, but it confounds two different things, and the
+# README says so as a caveat rather than measuring it. This section measures it: cross
+# the BALLOT with the RULE, so "what the paper could not carry" and "what the count got
+# wrong" become separate columns.
+#
+# THE PAPERS (all derived from the same sampled utilities):
+#   full   a strict ranking of every candidate, no ties, nothing truncated. An
+#          idealization -- no real jurisdiction issues this at a large field.
+#   0-5    the six-rung score ballot, min-max normalized per voter (scores_from_util).
+#   top-k  a ranked ballot capped at k ranks. This is the REAL ranked ballot: NYC and
+#          Maine cap at 5, San Francisco capped at 3 for years. Candidates left
+#          unranked are counted as preferred to nobody and beaten by everyone ranked;
+#          two unranked candidates tie. That is a CONVENTION, not arithmetic -- other
+#          published treatments split the unstated pair half-and-half.
+MAX_RUNGS = 6                                     # a 0-5 ballot has six rungs
+
+
+def truncate(util, k):
+    """Top-k ranked ballot: the k best survive, the rest go unranked (-inf)."""
+    V, C = util.shape
+    if k >= C:
+        return util.astype(float)
+    keep = np.argsort(-util, axis=1)[:, :k]
+    out = np.full((V, C), -np.inf)
+    np.put_along_axis(out, keep, np.take_along_axis(util, keep, 1), 1)
+    return out
+
+
+def copeland_on(mat):
+    """Copeland (Ranked Robin) on whatever preference matrix a ballot induces.
+
+    Equal marks count for neither side -- exactly how Ranked Robin reads a weak rank,
+    and how STAR's runoff reads Equal Support.
+    """
+    C = mat.shape[1]
+    W = np.stack([(mat[:, [i]] > mat).sum(0) for i in range(C)])
+    beats = W > W.T
+    ties = (W == W.T) & ~np.eye(C, dtype=bool)
+    return int((beats.sum(1) + 0.5 * ties.sum(1)).argmax())
+
+
+def _star_rule_at(mat):
+    """STAR's RULE -- top two by sum, then a pairwise runoff -- at any resolution.
+
+    This is NOT a second model of the engine's STAR, and it is never used for the 0-5
+    column: that column calls the imported, engine-verified star_winner(). It exists
+    only for the full-resolution contrast, where scores are continuous and the engine's
+    tie-break ladder is unreachable because exact ties essentially never occur.
+    """
+    C = mat.shape[1]
+    tot = {i: float(mat[:, i].sum()) for i in range(C)}
+    a, b = sorted(range(C), key=lambda i: (-tot[i], i))[:2]
+    fa = int((mat[:, a] > mat[:, b]).sum())
+    fb = int((mat[:, b] > mat[:, a]).sum())
+    return (a if fa > fb else b) if fa != fb else (a if tot[a] >= tot[b] else b)
+
+
+def _irv_on(mat):
+    """Hare on any paper. A row that ranks nobody still living is EXHAUSTED: it counts
+    for no one and leaves the majority denominator, which is what truncation really
+    does to an IRV count."""
+    V, C = mat.shape
+    alive = np.ones(C, dtype=bool)
+    while alive.sum() > 1:
+        live_only = np.where(alive, mat, -np.inf)
+        active = np.isfinite(live_only).any(1)
+        counts = (np.bincount(live_only[active].argmax(1), minlength=C)
+                  if active.any() else np.zeros(C, dtype=int))
+        if counts.max() * 2 > int(active.sum()):
+            return int(counts.argmax())
+        live = np.flatnonzero(alive)
+        alive[live[counts[live].argmin()]] = False
+    return int(np.flatnonzero(alive)[0])
+
+
+def _forced_ties(C, rungs=MAX_RUNGS):
+    """Fewest tied pairs possible when C candidates must go into `rungs` levels.
+
+    The pigeonhole FLOOR, not the effect: it is 0 up to six candidates and still only
+    ~5% of pairs at seven, while voters actually tie about three times that. Most
+    flattening is rounding, not the hard limit -- printing both stops the page from
+    blaming the pigeonhole for work that rounding did.
+    """
+    base, extra = divmod(C, rungs)
+    sizes = [base + 1] * extra + [base] * (rungs - extra)
+    return sum(n * (n - 1) // 2 for n in sizes)
+
+
+def expressiveness(rng, trials, models, cands, voters, caps):
+    """Condorcet efficiency with the BALLOT and the RULE varied independently."""
+    print("Ballot resolution vs tabulation rule. Same electorate, different paper.\n"
+          "  full  = strict ranking of everyone (an idealization)\n"
+          f"  0-5   = the six-rung score ballot\n"
+          f"  top-k = a ranked ballot capped at k ranks (NYC/Maine cap at 5; SF used 3)\n"
+          "Copeland@full is the control and must read 100.0%.\n")
+    cap_cols = [f"RR top{k}" for k in caps] + [f"IRV top{k}" for k in caps]
+    head = (f"{'model':<10}{'C':>3}{'V':>5} |{'RR full':>9}{'RR 0-5':>9}"
+            + "".join(f"{c:>9}" for c in cap_cols[:len(caps)])
+            + f" |{'STAR full':>10}{'STAR 0-5':>10}"
+            + f" |{'IRV full':>9}{'IRV 0-5':>9}"
+            + "".join(f"{c:>10}" for c in cap_cols[len(caps):])
+            + f" |{'tied%':>7}{'forced%':>8}")
+    print(head)
+    print("-" * len(head))
+    for model in models:
+        for V in voters:
+            for C in cands:
+                hits = {k: 0 for k in
+                        ["rr_full", "rr_05", "star_full", "star_05", "irv_full", "irv_05"]}
+                hits.update({f"rr_top{k}": 0 for k in caps})
+                hits.update({f"irv_top{k}": 0 for k in caps})
+                n = 0
+                tied = 0.0
+                for _ in range(trials):
+                    util = gen(rng, model, V, C)
+                    cw = condorcet_winner(util)
+                    if cw < 0:
+                        continue
+                    n += 1
+                    s5 = scores_from_util(util).astype(float)
+                    hits["rr_full"] += copeland_on(util) == cw
+                    hits["rr_05"] += copeland_on(s5) == cw
+                    hits["star_full"] += _star_rule_at(util) == cw
+                    hits["star_05"] += star_winner(s5.astype(int)) == cw
+                    hits["irv_full"] += _irv_on(util) == cw
+                    # IRV forbids equal ranks, so a voter whose SCORE ballot ties two
+                    # candidates has to invent an order. Break those ties per voter at
+                    # RANDOM: breaking them by column index would hand candidate 0 a
+                    # systematic bonus, and the column would measure that bias instead
+                    # of measuring resolution.
+                    hits["irv_05"] += _irv_on(s5 + rng.random(s5.shape) * 0.5) == cw
+                    for k in caps:
+                        t = truncate(util, k)
+                        hits[f"rr_top{k}"] += copeland_on(t) == cw
+                        hits[f"irv_top{k}"] += _irv_on(t) == cw
+                    eq = sum(int((s5[:, i] == s5[:, j]).sum())
+                             for i in range(C) for j in range(i + 1, C))
+                    tied += eq / (V * C * (C - 1) / 2)
+                if not n:
+                    continue
+                pct = {k: v / n * 100 for k, v in hits.items()}
+                floor = _forced_ties(C) / (C * (C - 1) / 2) * 100
+                row = (f"{model:<10}{C:>3}{V:>5} |{pct['rr_full']:8.1f}%{pct['rr_05']:8.1f}%"
+                       + "".join(f"{pct[f'rr_top{k}']:8.1f}%" for k in caps)
+                       + f" |{pct['star_full']:9.1f}%{pct['star_05']:9.1f}%"
+                       + f" |{pct['irv_full']:8.1f}%{pct['irv_05']:8.1f}%"
+                       + "".join(f"{pct[f'irv_top{k}']:9.1f}%" for k in caps)
+                       + f" |{tied/n*100:6.1f}%{floor:7.1f}%")
+                print(row)
+        print()
+    print("Read the first two columns together: Copeland is the SAME rule in both, so the\n"
+          "drop from 'RR full' to 'RR 0-5' is the ballot alone. Read 'STAR full' against\n"
+          "'STAR 0-5' the same way. And note IRV barely moves between them -- it reads only\n"
+          "each ballot's top living choice, so resolution it never looks at costs it little.")
+
+
+def ballot_counts(cands):
+    """How many distinct opinions can each paper record? Pure arithmetic, no sampling.
+
+    The count that surprises people: a 0-5 ballot records MORE distinct opinions than a
+    strict ranking does, all the way up to fourteen candidates. What it cannot do is
+    record a strict ranking of more than six -- six rungs hold six distinct places. So
+    past six candidates the two ballots express DISJOINT sets of orderings, and the
+    score ballot's set is the larger one.
+    """
+    from math import comb, factorial
+
+    def stirling2(n, k):
+        return sum((-1) ** i * comb(k, i) * (k - i) ** n
+                   for i in range(k + 1)) // factorial(k)
+
+    def weak_orders(C, max_levels=None):
+        top = C if max_levels is None else min(C, max_levels)
+        return sum(factorial(j) * stirling2(C, j) for j in range(1, top + 1))
+
+    def topk(C, k):
+        return sum(factorial(j) * comb(C, j) for j in range(min(k, C) + 1))
+
+    print("How many distinct opinions can each ballot record?\n")
+    head = (f"{'C':>3} |{'strict rank':>20}{'0-5 ballot':>20}{'0-5 as orders':>20}"
+            f"{'weak rank':>24}{'top-5 rank':>14} | strict rankable?")
+    print(head)
+    print("-" * len(head))
+    for C in cands:
+        print(f"{C:>3} |{factorial(C):>20,}{MAX_RUNGS ** C:>20,}"
+              f"{weak_orders(C, MAX_RUNGS):>20,}{weak_orders(C):>24,}{topk(C, 5):>14,}"
+              f" | {'all' if C <= MAX_RUNGS else 'NONE'}")
+    print("\n'0-5 as orders' collapses score ballots that say the same thing about ORDER.\n"
+          "'weak rank' is the ranked ballot that allows equal ranks -- the superset of\n"
+          "both, and what Ranked Robin actually accepts.\n"
+          "Past six candidates a 0-5 ballot can express NO strict ranking at all, so its\n"
+          "orderings and the strict ballot's are disjoint sets -- and the score set is bigger.")
+
+
 # --- known-answer checks -----------------------------------------------------
 def _center_squeeze():
     """The textbook squeeze: B is the Condorcet winner; IRV and Plurality miss them.
@@ -426,6 +633,42 @@ def selftest():
           "  (must be exactly 100.0%)")
     ok &= eff["RankedRobin"] == 1.0
 
+    # --- the --expressiveness helpers ---------------------------------------
+    # These are a SECOND path to results the sweep already computes, so the danger is
+    # a silent second model. Each check below pins one of them to the existing code.
+    print("\nballot/rule helpers")
+
+    # The pigeonhole floor, by hand: six rungs hold six candidates with no forced tie;
+    # the seventh must share, making exactly one pair; twelve candidates pair up all
+    # six rungs, making six.
+    floors = {6: 0, 7: 1, 12: 6}
+    for C, want in floors.items():
+        got = _forced_ties(C)
+        ok &= got == want
+        print(f"  forced ties at C={C:<3} -> {got}  (expect {want}) "
+              f"{'ok' if got == want else 'UNEXPECTED'}")
+
+    # A cap at or above the field size is not a cap at all.
+    util = _center_squeeze()
+    same = bool((truncate(util, 3) == util).all()) and bool((truncate(util, 9) == util).all())
+    ok &= same
+    print(f"  truncate(k >= C) is a no-op -> {same}  {'ok' if same else 'UNEXPECTED'}")
+
+    # The new any-paper implementations must agree with the sweep's on the paper the
+    # sweep uses. If they ever part, one of the two is wrong and the grid is not
+    # comparable to the main table.
+    rng = np.random.default_rng(4242)
+    agree_irv = agree_rr = 0
+    for _ in range(200):
+        u = gen(rng, "spatial2d", 41, 5)
+        agree_irv += _irv_on(u) == irv_winner(u)
+        agree_rr += copeland_on(u) == winners(u, scores_from_util(u), 4)["RankedRobin"]
+    ok &= agree_irv == 200 and agree_rr == 200
+    print(f"  _irv_on == irv_winner on full ballots  : {agree_irv}/200 "
+          f"{'ok' if agree_irv == 200 else 'UNEXPECTED'}")
+    print(f"  copeland_on == the sweep's RankedRobin : {agree_rr}/200 "
+          f"{'ok' if agree_rr == 200 else 'UNEXPECTED'}")
+
     print("\nSELFTEST", "PASSED" if ok else "FAILED")
     return 0 if ok else 1
 
@@ -452,10 +695,27 @@ def main():
     ap.add_argument("--chart", action="store_true",
                     help="instead of the sweep, draw the same efficiencies as bars, "
                          "grouped by field size (what more candidates cost each method)")
+    ap.add_argument("--expressiveness", action="store_true",
+                    help="instead of the sweep, vary the BALLOT and the RULE "
+                         "independently: Copeland on a 0-5 ballot, STAR's rule at full "
+                         "resolution, and the ranked methods on a rank-capped ballot")
+    ap.add_argument("--rank-caps", nargs="+", type=int, default=[5, 3], metavar="K",
+                    help="rank caps to test for --expressiveness (default 5 3: NYC and "
+                         "Maine cap at 5, San Francisco used 3)")
+    ap.add_argument("--ballot-counts", action="store_true",
+                    help="instead of the sweep, print how many distinct opinions each "
+                         "ballot can record (pure arithmetic, no sampling)")
     a = ap.parse_args()
 
     if a.selftest:
         return selftest()
+    if a.ballot_counts:
+        ballot_counts(a.candidates)
+        return 0
+    if a.expressiveness:
+        expressiveness(np.random.default_rng(a.seed), a.trials, a.models,
+                       a.candidates, a.voters, a.rank_caps)
+        return 0
     if a.chart:
         chart(np.random.default_rng(a.seed), a.trials, a.approval_cutoff,
               a.models, a.candidates, a.voters)

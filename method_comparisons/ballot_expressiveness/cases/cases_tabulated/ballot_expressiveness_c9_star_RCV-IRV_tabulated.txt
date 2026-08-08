@@ -1,0 +1,93 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Nine candidates, 25 voters — the 0–5 score ballot
+ Tabulating 25 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Ben, Cleo, Dev, Emma, Finn, Gus, Hugo, Iris
+     1 ×   Ada > Ben > Cleo > Dev > Emma > Finn > Gus      (5, 5, 4, 3, 1, 1, 1, 0, 0)
+     2 ×   Cleo > Dev > Emma > Ada > Ben > Finn > Gus > Hugo      (1, 1, 5, 4, 2, 1, 1, 1, 0)
+     2 ×   Cleo > Dev > Emma > Finn > Ben > Gus > Hugo      (0, 1, 5, 5, 2, 2, 1, 1, 0)
+     5 ×   Gus > Hugo > Iris > Emma > Finn > Dev > Cleo      (0, 0, 2, 3, 4, 4, 5, 5, 5)
+     1 ×   Dev > Emma > Finn > Gus > Hugo > Cleo > Iris      (0, 0, 3, 5, 5, 4, 4, 4, 3)
+     2 ×   Dev > Cleo > Emma > Finn > Gus > Hugo > Iris      (0, 0, 4, 5, 3, 2, 2, 2, 1)
+     1 ×   Cleo > Ben > Dev > Ada > Emma > Finn > Gus > Hugo      (2, 3, 5, 3, 2, 1, 1, 1, 0)
+     1 ×   Cleo > Dev > Ben > Emma > Ada > Finn > Gus > Hugo      (1, 2, 5, 4, 2, 1, 1, 1, 0)
+     1 ×   Ada > Ben > Cleo > Dev > Emma > Finn      (5, 5, 3, 2, 1, 1, 0, 0, 0)
+     2 ×   Finn > Gus > Hugo > Iris > Emma > Dev > Cleo      (0, 0, 2, 3, 4, 5, 5, 5, 5)
+     1 ×   Emma > Finn > Gus > Hugo > Dev > Iris > Cleo      (0, 0, 3, 4, 5, 5, 5, 5, 4)
+     1 ×   Dev > Emma > Cleo > Finn > Gus > Hugo > Iris      (0, 0, 3, 5, 4, 3, 3, 2, 2)
+     1 ×   Dev > Emma > Finn > Cleo > Gus > Hugo > Iris      (0, 0, 3, 5, 4, 4, 3, 3, 3)
+     1 ×   Dev > Cleo > Emma > Finn > Gus > Hugo > Iris      (0, 0, 3, 5, 3, 3, 2, 2, 2)
+     1 ×   Emma > Finn > Dev > Gus > Hugo > Iris > Cleo      (0, 0, 3, 4, 5, 5, 4, 4, 4)
+     2 ×   Cleo > Ada > Ben > Dev > Emma > Finn > Gus > Hugo      (3, 3, 5, 3, 2, 1, 1, 1, 0)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Cleo               8  Hopeful
+Dev                6  Hopeful
+Gus                5  Hopeful
+Emma               2  Hopeful
+Finn               2  Hopeful
+Ada                2  Rejected
+Hugo               0  Rejected
+Ben                0  Rejected
+Iris               0  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Cleo              10  Hopeful
+Dev                6  Hopeful
+Gus                5  Hopeful
+Emma               2  Rejected
+Finn               2  Rejected
+Ada                0  Rejected
+Hugo               0  Rejected
+Ben                0  Rejected
+Iris               0  Rejected
+
+ROUND 3
+Candidate      Votes  Status
+-----------  -------  --------
+Cleo              10  Hopeful
+Gus                8  Hopeful
+Dev                7  Rejected
+Emma               0  Rejected
+Finn               0  Rejected
+Ada                0  Rejected
+Hugo               0  Rejected
+Ben                0  Rejected
+Iris               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Cleo              15  Elected
+Gus               10  Rejected
+Dev                0  Rejected
+Emma               0  Rejected
+Finn               0  Rejected
+Ada                0  Rejected
+Hugo               0  Rejected
+Ben                0  Rejected
+Iris               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Cleo
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 9): Dev
+   Outside (8):        Ada, Ben, Cleo, Emma, Finn, Gus, Hugo, Iris
+   One member ⇒ Dev is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Cleo is OUTSIDE the Smith set. ✗
+      Every member of the set (Dev) beats Cleo head-to-head, yet
+      RCV-IRV elected Cleo anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -1,0 +1,201 @@
+---
+search:
+  exclude: true
+---
+
+# Nine candidates, 25 voters — ranking only five, counted by Ranked Robin
+
+*Generated from [`ballot_expressiveness_c9_rr_top5.yaml`](../ballot_expressiveness_c9_rr_top5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Gus
+
+**Official tie-break (lot) order:** Ada > Ben > Cleo > Dev > Emma > Finn > Gus > Hugo > Iris — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
+
+## Scenario
+
+THE CAP CHANGES THE WINNER. Same 25 voters, same Ranked Robin rule as
+ballot_expressiveness_c9_rr_full.yaml. The only difference is that each voter may name
+five candidates instead of nine — and Gus wins instead of Finn.
+
+Finn is the Condorcet winner on the electorate's real preferences. What the cap removes
+is the evidence: only 16 of the 25 voters can fit Finn into five names at all. For the
+other 9 Finn is simply absent from the paper, and an absent candidate wins no
+head-to-head.
+
+This is the reversal worth remembering. A ranked ballot is usually called the more
+expressive one, and at full resolution it is. Capped at five names out of nine it
+records 3,620 distinct opinions where the 0–5 score ballot records 10,077,696 — and
+here it loses an answer that six rungs kept.
+
+Convention, stated: a candidate left unranked is counted as beaten by everyone the
+voter did rank, and tied with everyone else the voter left off. Other treatments split
+that unstated pair half-and-half. It is a choice, not arithmetic, and it belongs in
+any quotation of this result.
+
+Construction: build_cases.py in this folder. 25 voters and 9 candidates at frozen
+positions on one spectrum — Ada −0.73 · Ben −0.37 · Cleo −0.18 · Dev −0.17 ·
+Emma −0.11 · Finn +0.24 · Gus +0.41 · Hugo +0.80 · Iris +0.84; utility = minus the
+distance; scores = each voter's own min-max scaling onto 0–5; rankings = those same
+utilities in order. Nothing is tuned to the result, and **no count in this folder is
+settled by a tie-break** — that was a search constraint, so every winner here survives
+any lot rule.
+
+## Ballots
+
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+Ben>Cleo>Dev>Ada>Emma    # voter at -0.43
+Gus>Hugo>Iris>Finn>Emma    # voter at +0.60
+Ada>Ben>Cleo>Dev>Emma    # voter at -0.67
+Iris>Hugo>Gus>Finn>Emma    # voter at +0.89
+Finn>Gus>Emma>Dev>Cleo    # voter at +0.18
+Emma>Dev>Cleo>Ben>Finn    # voter at -0.13
+Gus>Hugo>Iris>Finn>Emma    # voter at +0.59
+Hugo>Iris>Gus>Finn>Emma    # voter at +0.72
+Gus>Finn>Emma>Hugo>Iris    # voter at +0.34
+Hugo>Iris>Gus>Finn>Emma    # voter at +0.69
+Finn>Gus>Emma>Dev>Cleo    # voter at +0.23
+Ben>Cleo>Dev>Emma>Ada    # voter at -0.30
+Ben>Ada>Cleo>Dev>Emma    # voter at -0.51
+Iris>Hugo>Gus>Finn>Emma    # voter at +0.89
+Emma>Dev>Cleo>Finn>Ben    # voter at -0.05
+Gus>Hugo>Iris>Finn>Emma    # voter at +0.60
+Finn>Gus>Emma>Dev>Cleo    # voter at +0.28
+Ben>Cleo>Dev>Emma>Ada    # voter at -0.40
+Hugo>Gus>Iris>Finn>Emma    # voter at +0.62
+Ada>Ben>Cleo>Dev>Emma    # voter at -0.63
+Finn>Gus>Emma>Dev>Cleo    # voter at +0.27
+Ada>Ben>Cleo>Dev>Emma    # voter at -0.61
+Ada>Ben>Cleo>Dev>Emma    # voter at -1.33
+Cleo>Dev>Emma>Ben>Finn    # voter at -0.23
+Ada>Ben>Cleo>Dev>Emma    # voter at -1.82
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+<!-- --8<-- [start:report] -->
+```text
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 25 ballots (ranked ballots).
+
+Ballots:
+     1 × Ben > Cleo > Dev > Ada > Emma
+     3 × Gus > Hugo > Iris > Finn > Emma
+     5 × Ada > Ben > Cleo > Dev > Emma
+     2 × Iris > Hugo > Gus > Finn > Emma
+     4 × Finn > Gus > Emma > Dev > Cleo
+     1 × Emma > Dev > Cleo > Ben > Finn
+     2 × Hugo > Iris > Gus > Finn > Emma
+     1 × Gus > Finn > Emma > Hugo > Iris
+     2 × Ben > Cleo > Dev > Emma > Ada
+     1 × Ben > Ada > Cleo > Dev > Emma
+     1 × Emma > Dev > Cleo > Finn > Ben
+     1 × Hugo > Gus > Iris > Finn > Emma
+     1 × Cleo > Dev > Emma > Ben > Finn
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ben   beats Cleo    9 –  7
+   Ben   beats Dev     9 –  7
+   Ben   beats Ada     7 –  5
+   Emma  beats Ben    16 –  9
+   Gus   beats Ben    13 – 12
+   Ben   beats Hugo   12 –  9
+   Ben   beats Iris   12 –  9
+   Finn  beats Ben    14 – 11
+   Cleo  beats Dev    10 –  6
+   Cleo  beats Ada    10 –  6
+   Emma  beats Cleo   15 – 10
+   Gus   beats Cleo   13 – 12
+   Cleo  beats Hugo   16 –  9
+   Cleo  beats Iris   16 –  9
+   Finn  beats Cleo   13 – 12
+   Dev   beats Ada    10 –  6
+   Emma  beats Dev    15 – 10
+   Gus   beats Dev    13 – 12
+   Dev   beats Hugo   16 –  9
+   Dev   beats Iris   16 –  9
+   Finn  beats Dev    13 – 12
+   Emma  beats Ada    18 –  7
+   Gus   beats Ada    13 –  9
+   Ada   ties  Hugo    9 –  9
+   Ada   ties  Iris    9 –  9
+   Finn  beats Ada    16 –  9
+   Gus   beats Emma   13 – 12
+   Emma  beats Hugo   17 –  8
+   Emma  beats Iris   17 –  8
+   Finn  beats Emma   13 – 12
+   Gus   beats Hugo    8 –  5
+   Gus   beats Iris    9 –  4
+   Gus   beats Finn    9 –  7
+   Hugo  beats Iris    7 –  2
+   Hugo  ties  Finn    8 –  8
+   Iris  ties  Finn    8 –  8
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+         |     Ben      |    Cleo     |    Dev      |    Ada      |    Emma     |    Gus      |    Hugo     |    Iris     |    Finn     |
+-----------------------------------------------------------------------------------------------------------------------------------------
+   Ben > |     ---      | 9 -  9 -  7 | 9 -  9 -  7 | 7 - 13 -  5 | 9 -  0 - 16 |12 -  0 - 13 |12 -  4 -  9 |12 -  4 -  9 |11 -  0 - 14 |
+  Cleo > |  7 -  9 -  9 |    ---      |10 -  9 -  6 |10 -  9 -  6 |10 -  0 - 15 |12 -  0 - 13 |16 -  0 -  9 |16 -  0 -  9 |12 -  0 - 13 |
+   Dev > |  7 -  9 -  9 | 6 -  9 - 10 |    ---      |10 -  9 -  6 |10 -  0 - 15 |12 -  0 - 13 |16 -  0 -  9 |16 -  0 -  9 |12 -  0 - 13 |
+   Ada > |  5 - 13 -  7 | 6 -  9 - 10 | 6 -  9 - 10 |    ---      | 7 -  0 - 18 | 9 -  3 - 13 | 9 -  7 -  9 | 9 -  7 -  9 | 9 -  0 - 16 |
+  Emma > | 16 -  0 -  9 |15 -  0 - 10 |15 -  0 - 10 |18 -  0 -  7 |    ---      |12 -  0 - 13 |17 -  0 -  8 |17 -  0 -  8 |12 -  0 - 13 |
+   Gus > | 13 -  0 - 12 |13 -  0 - 12 |13 -  0 - 12 |13 -  3 -  9 |13 -  0 - 12 |    ---      | 8 - 12 -  5 | 9 - 12 -  4 | 9 -  9 -  7 |
+  Hugo > |  9 -  4 - 12 | 9 -  0 - 16 | 9 -  0 - 16 | 9 -  7 -  9 | 8 -  0 - 17 | 5 - 12 -  8 |    ---      | 7 - 16 -  2 | 8 -  9 -  8 |
+  Iris > |  9 -  4 - 12 | 9 -  0 - 16 | 9 -  0 - 16 | 9 -  7 -  9 | 8 -  0 - 17 | 4 - 12 -  9 | 2 - 16 -  7 |    ---      | 8 -  9 -  8 |
+  Finn > | 14 -  0 - 11 |13 -  0 - 12 |13 -  0 - 12 |16 -  0 -  9 |13 -  0 - 12 | 7 -  9 -  9 | 8 -  9 -  8 | 8 -  9 -  8 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Gus        8–0–0         8     +18  Emma, Finn, Ben, Cleo, Dev, Hugo, Ada, Iris
+    2  Emma       6–2–0         6     +44  Ben, Cleo, Dev, Hugo, Ada, Iris
+    3  Finn       5–1–2         6     +11  Emma, Ben, Cleo, Dev, Ada
+    4  Ben        5–3–0         5      +1  Cleo, Dev, Hugo, Ada, Iris
+    5  Cleo       4–4–0         4     +13  Dev, Hugo, Ada, Iris
+    6  Dev        3–5–0         3      +5  Hugo, Ada, Iris
+    7  Hugo       1–5–2         2     -24  Iris
+    8  Ada        0–6–2         1     -32  —
+    9  Iris       0–6–2         1     -36  —
+
+Winner — Ranked Robin (RCV-RR): Gus
+   beats every opponent head-to-head — the Condorcet winner.
+```
+<!-- --8<-- [end:report] -->
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 9): Gus
+   Outside (8):        Ben, Cleo, Dev, Ada, Emma, Hugo, Iris, Finn
+   One member ⇒ Gus is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner Gus is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ballot_expressiveness_c9_rr_top5_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_rr_top5.yaml
+```
+
+## See also
+
+- [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Vote splitting (worked set)](../../../split_voting/README.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [ballot_expressiveness_c9_irv_full](ballot_expressiveness_c9_irv_full.md) · [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [ballot_expressiveness_c9_rr_full](ballot_expressiveness_c9_rr_full.md) · [ballot_expressiveness_c9_star](ballot_expressiveness_c9_star.md)
