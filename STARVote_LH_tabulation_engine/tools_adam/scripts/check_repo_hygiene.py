@@ -1210,6 +1210,84 @@ def check_code_span_paths():
     return bad
 
 
+# Paths in CLAUDE.md that are deliberately unresolvable.  Both are QUOTATIONS
+# inside its own writeup of the bare-code-text bug, not references to anything:
+# the first is its worked example of a path that rotted through the 2026-08-02
+# reorganization, the second its example of a legitimate reference to ANOTHER
+# codebase (BetterVoting's).  Each has to stay broken to keep being an example
+# — "fixing" either one deletes the point the sentence is making.
+_CLAUDE_MD_ILLUSTRATIVE = {
+    "07_Concepts/residual_vote_splitting.md",
+    "packages/frontend/src/i18n/en.yaml",
+}
+
+
+def check_claude_md_paths(source=None):
+    """Return [(rel:line, msg)] for CLAUDE.md path references that no longer resolve.
+
+    CLAUDE.md is the one file where a root-relative path in code text is already
+    correct: it sits AT the repo root, so root-relative is page-relative, and
+    `check_code_span_paths` rightly has nothing to say about its ~41 paths.  It
+    is also deliberately not a wall of links — it loads into context every
+    session, and the reader who needs a clickable href least is the one reading
+    it there.
+
+    But "correct today" and "checked" are different things, and nothing checked
+    these.  They are inert text, so a folder move rots them **silently**, in the
+    file that both the contributor docs and every agent session take their
+    instructions from.  That is not hypothetical: it is exactly how the
+    2026-08-02 reorganization left four pages naming pre-reorg paths, which is
+    the story CLAUDE.md itself tells a few lines above one of them.
+
+    So this rung checks *reachability, not form* — the complement of
+    check_code_span_paths, which checks form and ignores this file.  A path
+    passes if it resolves from the repo root, or if its tail uniquely matches
+    one repo file (the `tests/…` engine-dir shorthand, correct to type from the
+    engine dir and exempted there for that reason).  Bare filenames with no
+    slash are not checked: `README.md` appears 11 times meaning "a folder's
+    README", and `_bv_export.json` / `_tabulated.txt` / `_201.md` are naming
+    conventions and suffixes rather than files.
+
+    `source` overrides the file read, for the non-vacuity test.  It exists so
+    that test never has to write to the real CLAUDE.md: this checkout is often
+    open in two sessions at once, and a probe left behind by a crashed run
+    would corrupt the operating contract both of them are following.  Paths are
+    still resolved against the repo root either way — that root-relative
+    reading is the whole premise, not a property of where the file sits.
+    """
+    bad = []
+    if source is None:
+        path_ = os.path.join(REPO, "CLAUDE.md")
+        if not os.path.exists(path_):
+            return bad
+        with open(path_, encoding="utf-8") as fh:
+            text = fh.read()
+    else:
+        text = source
+    for i, line in enumerate(text.splitlines(), 1):
+        for m in _CODE_SPAN_PATH.finditer(line):
+            path = m.group(1)
+            if "/" not in path:
+                continue          # a file's NAME, not a location — see docstring
+            if path in _CLAUDE_MD_ILLUSTRATIVE:
+                continue          # deliberately broken; it IS the example
+            if os.path.exists(os.path.join(REPO, path)):
+                continue          # resolves from the root, where CLAUDE.md lives
+            hits = [h for h in _repo_files_named(os.path.basename(path))
+                    if h.endswith("/" + path)]
+            if len(hits) == 1:
+                continue          # engine-dir shorthand, still reachable
+            near = _repo_files_named(os.path.basename(path))
+            where = f" (basename now at: {', '.join(near[:3])})" if near else \
+                    " (basename found nowhere in the repo)"
+            bad.append((f"CLAUDE.md:{i}",
+                        f"`{path}` no longer resolves{where}. CLAUDE.md's paths "
+                        f"are inert code text, so nothing else catches this — "
+                        f"repoint it, or add it to _CLAUDE_MD_ILLUSTRATIVE if it "
+                        f"is a deliberate example."))
+    return bad
+
+
 def main(argv):
     rc = 0
     hits = scan()
@@ -1351,6 +1429,19 @@ def main(argv):
         print("              migrate_concept_links.py, so they rot silently through "
               "a folder move — make them links:")
         for rel, msg in span_paths:
+            print(f"   • {rel}\n       {msg}")
+    claude_paths = check_claude_md_paths()
+    if not claude_paths:
+        print("repo-hygiene: ✓ every path CLAUDE.md names still resolves.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  stale paths in CLAUDE.md ({len(claude_paths)}) — "
+              "these are inert code text, correct as written from the repo")
+        print("              root, and therefore invisible to every other check "
+              "here. CLAUDE.md is what both contributors and each agent")
+        print("              session take their instructions from, so a path that "
+              "rots there is followed for weeks before anyone notices:")
+        for rel, msg in claude_paths:
             print(f"   • {rel}\n       {msg}")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.

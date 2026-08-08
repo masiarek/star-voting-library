@@ -141,6 +141,65 @@ def test_code_span_path_check_is_not_vacuous():
     )
 
 
+def test_claude_md_paths_all_resolve():
+    """Every path CLAUDE.md names must still exist somewhere.
+
+    CLAUDE.md is the one file where a root-relative path in code text is
+    already correct — it sits AT the repo root — so the gate above deliberately
+    exempts it, and it is deliberately not a wall of links (it loads into
+    context every session). That leaves ~41 real paths that nothing verified.
+
+    Inert text rots silently, and this is the worst file for that: both the
+    contributor docs and every agent session take their instructions from it,
+    so a path that goes stale here is *followed* for weeks. The 2026-08-02
+    reorganization is the precedent — the story CLAUDE.md itself tells a few
+    lines above one of these very paths.
+
+    Reachability, not form: this is the complement of the code-span gate, which
+    checks form and skips this file.
+    """
+    mod = _load_hygiene()
+    bad = mod.check_claude_md_paths()
+    assert not bad, (
+        f"{len(bad)} stale path(s) in CLAUDE.md:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in bad)
+    )
+
+
+def test_claude_md_path_check_is_not_vacuous():
+    """Prove it fires — including on the case that actually happens.
+
+    A path that rots to *nothing* is the easy catch. The one that matters is a
+    file that still exists but MOVED, because that is what a reorganization
+    does, and the finding has to say where it went or it isn't actionable.
+
+    Four things must NOT fire: a live path, engine-dir shorthand like `tests/…`
+    (correct to type from the engine dir, and exempt in the gate above for that
+    reason), a bare filename with no slash — `README.md` appears 11 times in
+    CLAUDE.md meaning "a folder's README", not one file — and the deliberate
+    examples, which have to stay broken to keep being examples.
+
+    The probe is passed in rather than written to the real CLAUDE.md on
+    purpose: this checkout is often open in two sessions at once, and a probe
+    left behind by a crashed run would corrupt the file both are following.
+    """
+    mod = _load_hygiene()
+    hits = mod.check_claude_md_paths(source=(
+        "`01_STAR/GLOSSARY.md`\n"                 # caught: moved (it is 07_Concepts/)
+        "`07_Concepts/tips/TIPS_gone_away.md`\n"  # caught: gone entirely
+        "`07_Concepts/GLOSSARY.md`\n"             # ok: live path
+        "`tests/test_md_links.py`\n"              # ok: engine-dir shorthand
+        "`README.md`\n"                           # ok: a name, not a location
+        "`07_Concepts/residual_vote_splitting.md`\n"  # ok: deliberate example
+    ))
+    assert len(hits) == 2, f"expected exactly the two stale paths, got {hits}"
+    moved = [m for _rel, m in hits if "01_STAR/GLOSSARY.md" in m]
+    assert moved, f"the moved-file case must be caught, got {hits}"
+    assert "07_Concepts/GLOSSARY.md" in moved[0], (
+        f"a moved-file finding must say where it went, got: {moved[0]}"
+    )
+
+
 def test_no_new_hand_pasted_engine_reports():
     """A long engine report on a companion page must be embedded, not pasted.
 
