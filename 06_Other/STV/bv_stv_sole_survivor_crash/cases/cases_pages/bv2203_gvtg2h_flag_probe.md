@@ -48,7 +48,9 @@ The count, step by step — the rounds and how the winner is reached:
 --- STV / Single Transferable Vote (multi-winner — 2 seats) ---
   BV2203 — The transfer machine, flag probe (STV 2 seats, write-in key omitted)
  Tabulating 9 ballots (ranked ballots).
- 2 seats; Droop quota = 4 (44.4% of 9).
+ 2 seats; quota = 3.00 (exact Droop, votes/(seats+1)) — 33.3% of 9.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(9/3)+1 = 4, is a different but equally standard rule.)
 
 ROUND 1
 Candidate      Votes  Status

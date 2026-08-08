@@ -48,7 +48,7 @@ Nine people in a book club, buying **two** novels by ranked ballot. Five adore A
 ×3  Camus > Dickens
 ```
 
-**The quota.** Two seats, nine voters: a third of nine is three, so **four** votes makes a seat safe (three candidates cannot each hold 4 of 9). Hand-counters write this as ⌊9 ÷ (2+1)⌋ + 1 = **4**.
+**The quota.** Two seats, nine voters: a third of nine is three, so **four** votes makes a seat safe (three candidates cannot each hold 4 of 9). Hand-counters write this as ⌊9 ÷ (2+1)⌋ + 1 = **4**, and that is the count worked below — the one you can do in your head. Software usually applies the *exact* form instead, 9 ÷ 3 = **3.00**; it seats the same two novels here but moves different numbers along the way, which is [fork 1](#where-it-genuinely-gets-complicated).
 
 **Round 1 — count first choices.** Austen 5, Camus 3, Brontë 1, Dickens 0. Austen is at or over quota: **seated**, with the first seat, holding **one vote more than she needed**.
 
@@ -69,7 +69,9 @@ Here is what the engine says:
 --- STV / Single Transferable Vote (multi-winner — 2 seats) ---
   Exercise 14 — The transfer machine: a book club buys two novels (STV)
  Tabulating 9 ballots (ranked ballots).
- 2 seats; Droop quota = 4 (44.4% of 9).
+ 2 seats; quota = 3.00 (exact Droop, votes/(seats+1)) — 33.3% of 9.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(9/3)+1 = 4, is a different but equally standard rule.)
 
 ROUND 1
 Candidate      Votes  Status
@@ -94,7 +96,7 @@ Winner(s) — STV / Single Transferable Vote (multi-winner — 2 seats)
 ```
 <!-- /report -->
 
-**Read that final table and something looks off** — the winners settle at 3.00 when the header just told you the quota was 4, and Brontë is *rejected* holding the same 3.00 that *elected* Camus. That is not a rounding artifact and it is not a bug. It is the first of the three places STV genuinely forks, so it belongs in the next section.
+**That is the same election, counted to a different quota — read the header.** The engine applies the **exact** Droop quota, 9 ÷ 3 = **3.00**, not the 4 we just used by hand, and the whole count changes shape: Austen's surplus is 5 − 3 = **2.00** rather than 1, so the five ballots move at 0.4 each and Brontë lands on 1 + 2 = **3.00** — level with Camus. There is no elimination round at all. Brontë is *rejected* holding the same 3.00 that seats Camus because only one seat was left and the two finished tied; pyrankvote breaks that tie deterministically (most second choices, then deeper). Different quota, different intermediate numbers, **same two novels** — which is exactly [fork 1](#where-it-genuinely-gets-complicated), and is why the header now prints both formulas.
 
 **Want to work it yourself instead of reading it?** The same election is a graded exercise with the arithmetic hidden behind spoilers: [Exercise 14 — the transfer machine](../../01_STAR/05_Practice/ex14_transfer_machine.md), which also asks you to follow one ballot's journey and to check the proportionality claim by hand.
 
@@ -110,9 +112,17 @@ The idea above is a paragraph. What is genuinely hard is that **STV is a family 
 | `⌊v ÷ (s+1)⌋ + 1` — the *integer* quota | **4** | Irish and Scottish hand counts, and this repo's teaching pages |
 | `v ÷ s` — the **Hare** quota | 4.5 | a higher bar; it is friendlier to small groups and is used in some Hare-Clark-descended rules |
 
-Our own two layers of software disagree, which is why that report reads strangely: the LH wrapper **prints** the integer quota (4 here, 26 in the 100-voter case below), while the vendored `pyrankvote` **applies** the exact quota (3.0, and 25.0) — electing at `≥ v/(s+1)` and measuring every surplus from that line, which is why the winners' final figures sit on it. Both of our cases seat the same people either way, so nothing published here is wrong; but the printed header does not name the number the count used, and if you hand-check with quota 4 the intermediate figures will not match. Treat the header as documentation and the table as the count until that line is fixed.
+**Which one does this repo run?** The exact quota. The vendored `pyrankvote` elects at `≥ v/(s+1)` and measures every surplus from that line, which is why the winners' final figures sit on it. Until August 2026 the LH wrapper *printed* the integer quota instead — a header naming a number the count never used, so anyone hand-checking with quota 4 found intermediate figures that would not reconcile. **The header now names the applied quota and prints the hand-count one beside it**, so both readings are on the page:
 
-**Fork 2 — how do you actually move a surplus?** Austen has 5 votes and needed 4. *Which* one moves? Every answer below is in real-world use:
+```text
+ 2 seats; quota = 3.00 (exact Droop, votes/(seats+1)) — 33.3% of 9.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(9/3)+1 = 4, is a different but equally standard rule.)
+```
+
+The distinction is real but narrow in its effect: it moves the **intermediate** numbers — surpluses, transfer weights, sometimes whether an elimination round happens at all — and it can decide a seat in principle. It does not decide one here. **All ten STV cases in this library seat identical winners under either quota**, checked by re-running each of them against a patched counter, so every result published on these pages is robust to the choice.
+
+**Fork 2 — how do you actually move a surplus?** Austen has 5 votes and needed 4 of them (3 under the exact quota, per fork 1). *Which* of the extras moves? Every answer below is in real-world use:
 
 - **Whole-vote, randomly drawn** — physically pull ballots from the winner's pile. Ireland and Malta do this. Cheap to hand-count, and reproducible only if the draw is recorded.
 - **Gregory (fractional)** — every one of the winner's ballots moves at a fraction, which is what the book club above did. No luck involved.
@@ -182,7 +192,7 @@ Every STV election in the library, wherever it physically lives. Tabulate any of
 
 ## Engine notes
 
-STV runs on the vendored `pyrankvote` (`single_transferable_vote`), reached through the RCV-IRV wrapper whenever `voting_method: STV` and `num_winners: k`. Fractional (Gregory) surplus transfer, exact Droop quota applied — see [fork 1](#where-it-genuinely-gets-complicated) for the caveat about the printed header. No STV engine is required for the LH side of the repo; the same YAML runs on BetterVoting for cross-checking, **except** for counts that end with a sole hopeful reaching quota, which is the crash documented above.
+STV runs on the vendored `pyrankvote` (`single_transferable_vote`), reached through the RCV-IRV wrapper whenever `voting_method: STV` and `num_winners: k`. Fractional (Gregory) surplus transfer, exact Droop quota applied — and, since August 2026, printed: the report header names `votes/(seats+1)` as the quota the count uses and gives the hand-count integer quota beside it ([fork 1](#where-it-genuinely-gets-complicated)). No STV engine is required for the LH side of the repo; the same YAML runs on BetterVoting for cross-checking, **except** for counts that end with a sole hopeful reaching quota, which is the crash documented above.
 
 ```bash
 .venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/cases/03a_stv_3seats.yaml

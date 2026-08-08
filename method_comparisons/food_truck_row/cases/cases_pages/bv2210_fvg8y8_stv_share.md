@@ -36,7 +36,9 @@ The count, step by step — the rounds and how the winner is reached:
 --- STV / Single Transferable Vote (multi-winner — 2 seats) ---
   Food-Truck Row — STV: one seat per side
  Tabulating 100 ballots (ranked ballots).
- 2 seats; Droop quota = 34 (34.0% of 100).
+ 2 seats; quota = 33.33 (exact Droop, votes/(seats+1)) — 33.3% of 100.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(100/3)+1 = 34, is a different but equally standard rule.)
 
 ROUND 1
 Candidate      Votes  Status
