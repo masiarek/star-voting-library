@@ -102,6 +102,7 @@ APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vot
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/04b_c4_b3_display-options-all.yaml,4,3,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Vanilla,Strawberry,Strawberry,Strawberry,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/bv2182_tg4779_faq_runoff_reversal.yaml,3,10,Almond,Almond,Almond,Almond,Almond,Berry,Berry,Almond,Almond,1,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/csv_ambiguity_ex1_c4_b8.yaml,4,8,B,B,B,B,B,A,B,B,B,1,False,False,False
+APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/same_mean_different_spread_c2_b5.yaml,2,5,Blake,Blake,Blake,Blake,Blake,Alice,Alice,Blake,Blake,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml,3,3,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/01b_c3_b9_overturn-holds-at-scale.yaml,3,9,Brownie,Brownie,Brownie,Brownie,Brownie,Almond,Almond,Brownie,Brownie,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/runoff_overturns_leader/cases/02_c5_b5_leader-overturned.yaml,5,5,Boston,Boston,Boston,Boston,Boston,Austin,Austin,Boston,Boston,0,False,False,False
