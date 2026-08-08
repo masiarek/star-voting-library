@@ -10,6 +10,7 @@ The concept page — what RCTab is, what its agreement is and isn't worth — is
 |---|---|
 | [`rctab_convert.py`](rctab_convert.py) | a ranked YAML → `<stem>.csv` + `<stem>_config.json`. **No Java needed.** |
 | [`rctab_crosscheck.py`](rctab_crosscheck.py) | runs RCTab on those files, parses its report, diffs it against ours, and runs the two sweeps. |
+| [`ut_json_export.py`](ut_json_export.py) | a ranked YAML → **Universal RCV Tabulator JSON** (the shape RCTab's own `_detailed_report.json` uses), recomputing the per-candidate transfers our text report omits. **No Java needed.** Feeds [RCVis](../../../07_Concepts/tabulation_engines/rcvis.md) for Sankey art; refuses score ballots, and disagrees with the engine on a dead tie (see its docstring). |
 
 ## STV — the leg that was missing
 
