@@ -398,7 +398,16 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   arbitrary even when each individual choice was defensible. Decide once for the
   whole list. (Rule 3 still wins: a term already linked earlier on the page stays
   unlinked, and the list is consistent *because* of that, not in spite of it — say
-  so in the commit if it looks uneven.) When in doubt, fewer links read better than
+  so in the commit if it looks uneven. **One carve-out, added 2026-08-07:** rule 3
+  forbids repeating a *destination*, not linking one term at two anchors that answer
+  two different questions — the definition where a summary table needs it, the
+  evidence where the prose leaning on it sits. Rare and deliberate: **18 of 602**
+  hand-authored pages do it, 3%. Don't reach for the looser count as licence —
+  *pages linking any target at 2+ anchors* is 92/602, but that tallies **different**
+  terms and says nothing about this one. That conflation is what made the carve-out
+  necessary: it was first argued from a "487 pages" figure that was neither pages
+  nor hand-authored, but (file, target) **pairs** over the whole tree.) When in
+  doubt, fewer links read better than
   a wall of blue. (Not machine-checked — the failure mode is over-linking, not
   under-linking; rule 5 is the exception, where the failure mode is *partial*
   linking, and only a human reading the rendered page will catch it.)

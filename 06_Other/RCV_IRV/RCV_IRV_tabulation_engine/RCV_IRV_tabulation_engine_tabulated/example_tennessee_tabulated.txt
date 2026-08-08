@@ -1,0 +1,67 @@
+======================================================================
+SOURCE FILE:     example_tennessee.yaml
+TABULATED FILE:  example_tennessee_tabulated.txt
+======================================================================
+
+election_title: "Tennessee capital — RCV-IRV engine demo"
+voting_method: RCV   # Instant-Runoff Voting (single winner)
+
+num_winners: 1
+ballots: |-
+  Count:Memphis,Nashville,Chattanooga,Knoxville
+  42:5,4,3,2
+  26:2,5,4,3
+  15:2,3,5,4
+  17:2,3,4,5
+
+# file: example_tennessee.yaml
+# Classic Tennessee-capital scenario. Scores are converted to ranks:
+#   higher score = higher preference, 0 = unranked.
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Tennessee capital — RCV-IRV engine demo
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Memphis           42  Hopeful
+Nashville         26  Hopeful
+Knoxville         17  Hopeful
+Chattanooga       15  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Memphis           42  Hopeful
+Knoxville         32  Hopeful
+Nashville         26  Rejected
+Chattanooga        0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Knoxville         58  Elected
+Memphis           42  Rejected
+Nashville          0  Rejected
+Chattanooga        0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Knoxville
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Nashville
+   Outside (3):        Memphis, Chattanooga, Knoxville
+   One member ⇒ Nashville is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Knoxville is OUTSIDE the Smith set. ✗
+      Every member of the set (Nashville) beats Knoxville head-to-head, yet
+      RCV-IRV elected Knoxville anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md

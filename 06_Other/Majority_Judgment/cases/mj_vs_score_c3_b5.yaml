@@ -1,0 +1,55 @@
+election_title: "Majority Judgment vs Score — the same ballots, two different winners"
+
+scenario_description: |-
+  The same grade ballot, counted twice. Range/Score adds the grades up and takes
+  the MEAN; Majority Judgment lines them up and takes the MEDIAN. Here the two
+  disagree, which is the whole difference between the methods made visible on one
+  five-voter election.
+  Score elects Bodhi (mean 3.2 to Asha's 2.8). Majority Judgment elects Asha
+  (median Good to Bodhi's Acceptable). Nobody changed their mind between the two
+  counts; the only thing that changed is what the count does with the column.
+  WHY THEY SPLIT. Bodhi collects the two loudest grades on the paper - two
+  Excellents - and three voters who say only Acceptable. Asha collects no
+  Excellents at all: two Very Goods, two Goods, and one To Reject. The mean asks
+  HOW MUCH each voter likes a candidate, so Bodhi's two Excellents outweigh
+  Asha's four warm-but-not-loud grades. The median asks only WHERE THE MIDDLE
+  VOTER STANDS: four of five voters put Asha at Good or better, while only two of
+  five put Bodhi above Acceptable.
+  THE LONE To Reject IS PIVOTAL - UNDER SCORE ONLY. V5 is the one voter who
+  rejects Asha outright. Had V5 graded her the Good that V3 and V4 did, Asha's
+  mean would be 17/5 = 3.4 and SCORE would elect her too. Her median would not
+  move an inch: it is Good with the To Reject and Good without it. One voter can
+  sink a candidate under the mean and cannot under the median - which is exactly
+  the robustness Balinski and Laraki designed the median for, and exactly the
+  intensity information Score advocates say the median throws away. Both readings
+  are on this ballot; the page argues them.
+  Camila loses under both counts (mean 1.6, median Poor), so the split is not an
+  artifact of a two-candidate race.
+  This is a grade-ballot file, not an LH election file: the grades are words,
+  which fit neither the engine's numeric 0-5 ballot nor BetterVoting. Count it
+  with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, which
+  prints BOTH winners and cross-checks each against pref_voting.
+
+grade_method: MajorityJudgment
+grade_scale: "To Reject|Poor|Acceptable|Good|Very Good|Excellent"
+
+# Titles for the drawn ballots — the grade block is transposed (a row per
+# candidate), so a voter's note can't ride on their row the way a `#` comment
+# titles a score ballot. Read only by build_style_ballot_images.py.
+voter_notes:
+  V1: "Bodhi's biggest fan — Excellent"
+  V2: "The second Excellent for Bodhi"
+  V3: "Asha Good; Bodhi only Acceptable"
+  V4: "The same again, warmer on Camila"
+  V5: "The lone To Reject for Asha"
+
+grades: |-
+  ,V1,V2,V3,V4,V5
+  Asha,Very Good,Very Good,Good,Good,To Reject
+  Bodhi,Excellent,Excellent,Acceptable,Acceptable,Acceptable
+  Camila,Poor,Poor,Poor,Acceptable,Good
+
+expected_winners:
+  - Asha
+
+# file: mj_vs_score_c3_b5.yaml

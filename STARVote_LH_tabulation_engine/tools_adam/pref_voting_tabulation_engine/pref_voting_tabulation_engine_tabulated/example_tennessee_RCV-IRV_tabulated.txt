@@ -1,0 +1,53 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Tennessee capital — cross-check demo (same ballots, three winners)
+ Tabulating 100 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Memphis, Nashville, Chattanooga, Knoxville
+    42 ×   Memphis > Nashville > Chattanooga      (5, 2, 1, 0)
+    26 ×   Nashville > Chattanooga > Knoxville > Memphis      (1, 5, 3, 2)
+    15 ×   Chattanooga > Knoxville > Nashville      (0, 3, 5, 4)
+    17 ×   Knoxville > Chattanooga > Nashville      (0, 3, 4, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Memphis           42  Hopeful
+Nashville         26  Hopeful
+Knoxville         17  Hopeful
+Chattanooga       15  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Memphis           42  Hopeful
+Knoxville         32  Hopeful
+Nashville         26  Rejected
+Chattanooga        0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Knoxville         58  Elected
+Memphis           42  Rejected
+Nashville          0  Rejected
+Chattanooga        0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Knoxville
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Nashville
+   Outside (3):        Memphis, Chattanooga, Knoxville
+   One member ⇒ Nashville is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Knoxville is OUTSIDE the Smith set. ✗
+      Every member of the set (Nashville) beats Knoxville head-to-head, yet
+      RCV-IRV elected Knoxville anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

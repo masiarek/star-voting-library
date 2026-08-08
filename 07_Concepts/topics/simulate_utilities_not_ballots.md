@@ -53,7 +53,7 @@ So if a reviewer looked at the *committed* simulations, they're already at level
 |---|---|---|
 | 1 | random ballots (`{0..5}` scores) | ✗ artificial, rigs comparisons |
 | 2 | random **utilities**, uniform & independent (**[impartial culture](election_simulation_models.md#a-noise-statistical-models-no-geometry)**) | better — but still *adversarial*: over-produces cycles and near-ties |
-| 3 | **spatial / structured** utilities ([issue space](spatial_voting_model.md), [Mallows](election_simulation_models.md#a-noise-statistical-models-no-geometry), [clusters](election_simulation_models.md#the-standing-caveat-results-are-conditional-on-the-model)) | most realistic; what VSE leans on |
+| 3 | **spatial / structured** utilities ([issue space](spatial_voting_model.md), [Mallows](election_simulation_models.md#a-noise-statistical-models-no-geometry), [clusters](spatial_voting_model.md#making-it-realistic-not-all-axes-weigh-the-same)) | most realistic; what VSE leans on |
 
 So `[0,1]`-uniform utilities (impartial culture) is one rung up from random scores — the right *direction* — but it is itself a stress model, not "the truth." The honest habit is to run **both** a structured model and an adversarial one and **report which** (the [never-quote-a-rate-without-the-model](../curriculum/CURRICULUM_301.md) rule). Our sims default to running spatial *and* impartial for exactly this reason.
 
