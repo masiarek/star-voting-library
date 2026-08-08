@@ -197,12 +197,16 @@ def _esc_attr(text):
 # `min-width` is what keeps the ballot legible; the table scrolls inside its own
 # container instead. Wider casts get a smaller picture so the table still fits.
 def _art_width(n_cast, kind="score"):
-    # A grade ballot's columns are WORDS ("Acceptable", "Very Good"), so the same
-    # drawing is roughly half again as wide as a row of numerals — shown at the
-    # score ballot's width its headings would land at a few pixels each, and the
-    # headings are the ballot. It gets about twice the room; the table scrolls.
+    """Rendered width for one ballot picture.
+
+    A grade ballot ignores the cast size: it never shares a row (see
+    `_ballot_art`), so its width is set purely by legibility. Its headings are
+    drawn at 1.9% of the image width, so 640px puts them at ~12px and anything
+    under ~575 starts to fail — which is precisely why it cannot sit beside a
+    column per candidate in a 688px content column.
+    """
     if kind == "grade":
-        return 640 if n_cast <= 3 else 520
+        return 640
     if n_cast <= 3:
         return 330
     return 260 if n_cast <= 6 else 220
@@ -266,14 +270,11 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
         except ballot_art.CaseBallotError:
             return None              # art we can't line up with the numbers
 
-    weighted = any(r.weight > 1 for r in rows)
     by_candidate = len(cast) <= MAX_CANDIDATE_COLUMNS
     width = _art_width(len(cast), kind)
     spill = {"approval": "Approvals", "grade": "Grades"}.get(kind, "Scores")
-    header = (["Ballot as marked"] + (["Voters"] if weighted else [])
-              + (list(cast) if by_candidate else [f"{spill} ({', '.join(cast)})"]))
-    align = [":--"] + [":--:"] * (len(header) - 1)
-    lines = ["| " + " | ".join(header) + " |", "|" + "|".join(align) + "|"]
+
+    drawn = []
     for n, path in found:
         if not 1 <= n <= len(rows):
             continue
@@ -284,16 +285,52 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
             title, cast, row.scores, img_dir, quoted=False, kind=kind,
             grades=tuple(grades)))
         src = os.path.relpath(path, page_dir).replace(os.sep, "/")
-        img = (f'<img src="{src}" width="{width}" style="min-width:{width}px" '
-               f'alt="{_esc_attr(alt)}">')
-        cells = [c if c else "-" for c in row.cells]
-        lines.append("| " + " | ".join(
-            [img] + ([str(row.weight)] if weighted else [])
-            + (cells if by_candidate else ["`" + ", ".join(cells) + "`"])) + " |")
-    if len(lines) == 2:              # art on disk, but none of it matched a row
+        drawn.append((row, alt, src))
+    if not drawn:                    # art on disk, but none of it matched a row
         return None
 
-    shown = len(lines) - 2
+    if kind == "grade":
+        # A grade ballot STACKS instead of sharing a row. Beside a column per
+        # candidate the table measured 974px against a 688px content column and
+        # simply spilled: MkDocs Material leaves these wrappers at
+        # `overflow-x: visible`, so the grades were unreachable rather than
+        # merely off-screen. Shrinking the picture is not the way out — its
+        # word-headings stop being readable under ~575px — so the grades the
+        # file records go UNDER each ballot instead of beside it. Dropping
+        # `min-width` here is deliberate too: with nothing to defend a table
+        # column, the picture may scale down on a narrow screen, and the text
+        # line below is what carries the grades when it does.
+        lines = []
+        for row, alt, src in drawn:
+            lines.append(f'<img src="{src}" width="{width}" '
+                         f'alt="{_esc_attr(alt)}">')
+            cells = [c if c else "—" for c in row.cells]
+            said = " · ".join(f"{who} **{g}**" for who, g in zip(cast, cells))
+            if row.weight > 1:
+                said = f"×{row.weight} — {said}"
+            lines += ["", said, ""]
+        lines.pop()                  # no trailing blank inside the block
+    else:
+        # No `Voters` column: the picture's own title states the count for a
+        # weighted row (`row_title` guarantees it), so a column repeating it
+        # bought nothing and cost 100px — enough to push a weighted table to
+        # 694px against a 688px content column, where it silently spilled off
+        # the page. The alternative was shrinking every picture to 260px, which
+        # traded legibility everywhere for a fit it still didn't achieve.
+        header = (["Ballot as marked"]
+                  + (list(cast) if by_candidate
+                     else [f"{spill} ({', '.join(cast)})"]))
+        align = [":--"] + [":--:"] * (len(header) - 1)
+        lines = ["| " + " | ".join(header) + " |", "|" + "|".join(align) + "|"]
+        for row, alt, src in drawn:
+            img = (f'<img src="{src}" width="{width}" style="min-width:{width}px" '
+                   f'alt="{_esc_attr(alt)}">')
+            cells = [c if c else "-" for c in row.cells]
+            lines.append("| " + " | ".join(
+                [img] + (cells if by_candidate
+                         else ["`" + ", ".join(cells) + "`"])) + " |")
+
+    shown = len(drawn)
     caption = "The ballot as marked" if shown == 1 else "The ballots as marked"
     lead = ("The same ballot as the file records it:" if shown == 1
             else "The same ballots as the file records them:")
@@ -304,7 +341,8 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
     caption += (" — a filled **Yes** is a `1` in that candidate's column, a filled "
                 "**No** a `0`:" if kind == "approval" else
                 " — the filled bubble is the grade given, and the grade is the "
-                "word in its column:" if kind == "grade" else
+                "word in its column. The grades the file records are repeated "
+                "under each ballot:" if kind == "grade" else
                 " — the filled bubble is the score given, and the score is the "
                 "number in its column:")
     return caption, lines, lead

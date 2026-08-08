@@ -129,6 +129,15 @@ def test_row_title_prefers_the_authors_note():
     assert len(art.row_title(1, 1, long_note)) <= art.TITLE_MAX_CHARS
 
 
+def test_a_weighted_row_keeps_its_count_in_the_title():
+    """One sheet standing for 21 voters has to SAY 21 — the page no longer
+    carries a `Voters` column to restore it (that column overflowed the
+    content width), and a note used to replace the count outright."""
+    assert art.row_title(1, 21, "Sofia loves sushi") == "21 voters — Sofia loves sushi"
+    assert art.row_title(1, 1, "Sofia loves sushi") == "Sofia loves sushi"
+    assert len(art.row_title(1, 21, "x" * 200)) <= art.TITLE_MAX_CHARS
+
+
 def test_titles_shrink_to_fit_the_canvas():
     """A style name renders full size; a long ballot note shrinks instead of
     running off the right edge (both renderers read this one number)."""
@@ -348,7 +357,35 @@ def test_a_grade_case_resolves_cross_tree_without_a_generated_page(tmp_path):
     assert f"{stem}_ballot_1.png" in filled
     # paths resolve from the LESSON, which is two levels down a different tree
     assert "../../method_comparisons/set/cases/img/" in filled
-    assert "| Alice | Bruno |" in filled
+    # A grade ballot stacks — the grades go UNDER the picture, not beside it.
+    assert "Alice **Excellent** · Bruno **Poor**" in filled
+
+
+def test_a_grade_ballot_stacks_instead_of_sharing_a_row(tmp_path):
+    """640px of picture plus a column per candidate came to 974px against a
+    688px content column, and Material leaves the wrapper `overflow-x: visible`
+    — so the grades spilled off the page unreachable. The picture cannot shrink
+    to fit (its word-headings die under ~575px), so the row has to go."""
+    pages = _load("build_yaml_pages")
+    case = tmp_path / "cases" / "g.yaml"
+    case.parent.mkdir(parents=True)
+    case.write_text("grade_method: MajorityJudgment\n"
+                    f'grade_scale: "{GRADE_SCALE}"\n'
+                    "grades: |-\n  ,V1\n  Alice,Excellent\n  Bruno,Poor\n",
+                    encoding="utf-8")
+    (case.parent / "img").mkdir()
+    (case.parent / "img" / "g_ballot_1.png").write_bytes(b"")
+
+    import yaml as _y
+    data = _y.safe_load(case.read_text(encoding="utf-8"))
+    kwargs = pages._grade_art_args(str(case), data, str(case.parent))
+    _caption, lines, _lead = pages._ballot_art(str(case), "", str(case.parent),
+                                               **kwargs)
+    body = "\n".join(lines)
+    assert "Ballot as marked" not in body        # no table header at all
+    assert "min-width" not in body               # nothing to defend, so no floor
+    assert 'width="640"' in body                 # still legible
+    assert "Alice **Excellent** · Bruno **Poor**" in body
 
 
 def test_an_ambiguous_grade_stem_is_dropped_not_guessed(tmp_path):

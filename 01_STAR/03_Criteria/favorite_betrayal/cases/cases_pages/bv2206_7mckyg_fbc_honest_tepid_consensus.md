@@ -37,12 +37,12 @@ Clover, no tiebreaks).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Voters | Aster | Bluebell | Clover |
-|:--|:--:|:--:|:--:|:--:|
-| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 9 voters: Aster 5, Bluebell 5, Clover 0."> | 9 | 5 | 5 | 0 |
-| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 6 voters: Aster 5, Bluebell 0, Clover 0."> | 6 | 5 | 0 | 0 |
-| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 24 voters: Aster 0, Bluebell 1, Clover 0."> | 24 | 0 | 1 | 0 |
-| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 18 voters: Aster 0, Bluebell 0, Clover 4."> | 18 | 0 | 0 | 4 |
+| Ballot as marked | Aster | Bluebell | Clover |
+|:--|:--:|:--:|:--:|
+| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 9 voters: Aster 5, Bluebell 5, Clover 0."> | 5 | 5 | 0 |
+| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 6 voters: Aster 5, Bluebell 0, Clover 0."> | 5 | 0 | 0 |
+| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 24 voters: Aster 0, Bluebell 1, Clover 0."> | 0 | 1 | 0 |
+| <img src="../img/bv2206_7mckyg_fbc_honest_tepid_consensus_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 18 voters: Aster 0, Bluebell 0, Clover 4."> | 0 | 0 | 4 |
 
 The same ballots as the file records them:
 

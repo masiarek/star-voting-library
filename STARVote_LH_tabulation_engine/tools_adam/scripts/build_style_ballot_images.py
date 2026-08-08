@@ -357,11 +357,21 @@ def parse_ballot_block(text: str, max_score: int = MAX_SCORE):
 
 
 def row_title(index: int, weight: int, note: str) -> str:
-    """What the drawn ballot calls itself: the author's note beats a bare count."""
-    if note:
-        return (note if len(note) <= TITLE_MAX_CHARS
-                else note[:TITLE_MAX_CHARS - 1].rstrip() + "…")
-    return f"{weight} voters" if weight > 1 else f"Voter {index}"
+    """What the drawn ballot calls itself: the author's note, after the count.
+
+    A weighted row is one piece of paper standing for many voters, and the
+    count has to survive into the title — a ballot captioned "Sofia loves
+    sushi" that actually represents 21 of them is a picture telling a small
+    lie. It used to: the note replaced the count outright, and the page
+    restored it in a separate `Voters` column. That column is what pushed a
+    weighted table past the site's content width, so the count moved here,
+    where it belonged anyway.
+    """
+    count = f"{weight} voters" if weight > 1 else ""
+    title = f"{count} — {note}" if count and note else (note or count
+                                                        or f"Voter {index}")
+    return (title if len(title) <= TITLE_MAX_CHARS
+            else title[:TITLE_MAX_CHARS - 1].rstrip() + "…")
 
 
 def grade_scale(spec) -> list[str]:

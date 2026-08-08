@@ -56,12 +56,12 @@ Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Voters | Almond | Berry | Cocoa |
-|:--|:--:|:--:|:--:|:--:|
-| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Almond &gt; Berry  &gt; Cocoa: Almond 4, Berry 4, Cocoa 0."> | 12 | 4 | 4 | 0 |
-| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Berry  &gt; Almond &gt; Cocoa: Almond 4, Berry 4, Cocoa 0."> | 8 | 4 | 4 | 0 |
-| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cocoa  &gt; Almond &gt; Berry: Almond 4, Berry 0, Cocoa 4."> | 7 | 4 | 0 | 4 |
-| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cocoa  &gt; Berry  &gt; Almond: Almond 0, Berry 4, Cocoa 4."> | 9 | 0 | 4 | 4 |
+| Ballot as marked | Almond | Berry | Cocoa |
+|:--|:--:|:--:|:--:|
+| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — Almond &gt; Berry  &gt; Cocoa: Almond 4, Berry 4, Cocoa 0."> | 4 | 4 | 0 |
+| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — Berry  &gt; Almond &gt; Cocoa: Almond 4, Berry 4, Cocoa 0."> | 4 | 4 | 0 |
+| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 7 voters — Cocoa  &gt; Almond &gt; Berry: Almond 4, Berry 0, Cocoa 4."> | 4 | 0 | 4 |
+| <img src="../img/bv2275_6mcgkq_a1_negative_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 9 voters — Cocoa  &gt; Berry  &gt; Almond: Almond 0, Berry 4, Cocoa 4."> | 0 | 4 | 4 |
 
 The same ballots as the file records them:
 

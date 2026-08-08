@@ -65,12 +65,12 @@ Concept page: 07_Concepts/topics/ordinal_vs_cardinal_mechanism_design.md
 
 The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
 
-| Ballot as marked | Voters | Almond | Berry | Cocoa |
-|:--|:--:|:--:|:--:|:--:|
-| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Almond &gt; Berry  &gt; Cocoa   — approves BOTH (Berry is a close second): Almond Yes, Berry Yes, Cocoa No."> | 12 | 1 | 1 | 0 |
-| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Berry  &gt; Almond &gt; Cocoa   — approves Berry only: Almond No, Berry Yes, Cocoa No."> | 8 | 0 | 1 | 0 |
-| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Almond &gt; Berry   — approves Cocoa only: Almond No, Berry No, Cocoa Yes."> | 7 | 0 | 0 | 1 |
-| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Cocoa  &gt; Berry  &gt; Almond  — approves BOTH (Berry is a close second): Almond No, Berry Yes, Cocoa Yes."> | 9 | 0 | 1 | 1 |
+| Ballot as marked | Almond | Berry | Cocoa |
+|:--|:--:|:--:|:--:|
+| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — 12 voters — Almond &gt; Berry  &gt; Cocoa   — approves BOTH (Berry is a c…: Almond Yes, Berry Yes, Cocoa No."> | 1 | 1 | 0 |
+| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — 8 voters — Berry  &gt; Almond &gt; Cocoa   — approves Berry only: Almond No, Berry Yes, Cocoa No."> | 0 | 1 | 0 |
+| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — 7 voters — Cocoa  &gt; Almond &gt; Berry   — approves Cocoa only: Almond No, Berry No, Cocoa Yes."> | 0 | 0 | 1 |
+| <img src="../img/bv2275_6mcgkq_approval_intense_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — 9 voters — Cocoa  &gt; Berry  &gt; Almond  — approves BOTH (Berry is a cl…: Almond No, Berry Yes, Cocoa Yes."> | 0 | 1 | 1 |
 
 The same ballots as the file records them:
 

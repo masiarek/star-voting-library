@@ -26,13 +26,19 @@ Examples 25, 27 and 28 are runnable case files. They keep Felsenthal's letter gr
 Three ballots, and the whole paradox is visible on the middle one:
 
 <!-- ballots:mj_ex25_absolute_winner_loses -->
-The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column:
+The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column. The grades the file records are repeated under each ballot:
 
-| Ballot as marked | x | y |
-|:--|:--:|:--:|
-| <img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_1.png" width="640" style="min-width:640px" alt="A grade ballot — Prefers x (B over A) — grades both low: x B, y A."> | B | A |
-| <img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_2.png" width="640" style="min-width:640px" alt="A grade ballot — The pivotal ballot — x C, y F: x C, y F."> | C | F |
-| <img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_3.png" width="640" style="min-width:640px" alt="A grade ballot — Prefers x (H over G) — grades both high: x H, y G."> | H | G |
+<img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_1.png" width="640" alt="A grade ballot — Prefers x (B over A) — grades both low: x B, y A.">
+
+x **B** · y **A**
+
+<img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_2.png" width="640" alt="A grade ballot — The pivotal ballot — x C, y F: x C, y F.">
+
+x **C** · y **F**
+
+<img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_3.png" width="640" alt="A grade ballot — Prefers x (H over G) — grades both high: x H, y G.">
+
+x **H** · y **G**
 <!-- /ballots -->
 
 **MJ elects y** (median F > C). But an absolute majority — V1 and V3 — graded **x above y**: x is the Condorcet and absolute winner, y the Condorcet and absolute loser. Same disease as [Range Voting's Example 23](range_voting.md), median flavor: one middling grade (V2's F for y) placed just right outweighs two majorities.

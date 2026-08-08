@@ -12,18 +12,30 @@
 
 The ballot is a **grade grid** — one column per grade, and the columns are *words*, not numbers. That is not decoration. Balinski and Laraki's central claim is that a shared vocabulary — the same *Excellent* you and I both learned from school reports, wine judging and figure skating — carries meaning that a bare 7-out-of-10 does not, and that this common language is what makes one voter's grade comparable to another's.
 
-Here are the five ballots of the [101 case](../cases/mj_101_c3_b5.yaml) exactly as those voters marked them, each beside the grades the file records:
+Here are the five ballots of the [101 case](../cases/mj_101_c3_b5.yaml) exactly as those voters marked them, each with the grades the file records underneath:
 
 <!-- ballots:mj_101_c3_b5 -->
-The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column:
+The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column. The grades the file records are repeated under each ballot:
 
-| Ballot as marked | Alice | Bruno | Cleo |
-|:--|:--:|:--:|:--:|
-| <img src="../cases/img/mj_101_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A grade ballot — An Alice enthusiast — Excellent: Alice Excellent, Bruno Very Good, Cleo Good."> | Excellent | Very Good | Good |
-| <img src="../cases/img/mj_101_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A grade ballot — The same again — Alice's second Excellent: Alice Excellent, Bruno Very Good, Cleo Good."> | Excellent | Very Good | Good |
-| <img src="../cases/img/mj_101_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A grade ballot — Bruno Very Good; Alice merely Good: Alice Good, Bruno Very Good, Cleo Acceptable."> | Good | Very Good | Acceptable |
-| <img src="../cases/img/mj_101_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A grade ballot — Alice down to Poor; Bruno still Good: Alice Poor, Bruno Good, Cleo Acceptable."> | Poor | Good | Acceptable |
-| <img src="../cases/img/mj_101_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A grade ballot — Left Alice ungraded — that counts as To Reject: Alice left ungraded (counts as To Reject), Bruno Poor, Cleo Acceptable."> | - | Poor | Acceptable |
+<img src="../cases/img/mj_101_c3_b5_ballot_1.png" width="640" alt="A grade ballot — An Alice enthusiast — Excellent: Alice Excellent, Bruno Very Good, Cleo Good.">
+
+Alice **Excellent** · Bruno **Very Good** · Cleo **Good**
+
+<img src="../cases/img/mj_101_c3_b5_ballot_2.png" width="640" alt="A grade ballot — The same again — Alice's second Excellent: Alice Excellent, Bruno Very Good, Cleo Good.">
+
+Alice **Excellent** · Bruno **Very Good** · Cleo **Good**
+
+<img src="../cases/img/mj_101_c3_b5_ballot_3.png" width="640" alt="A grade ballot — Bruno Very Good; Alice merely Good: Alice Good, Bruno Very Good, Cleo Acceptable.">
+
+Alice **Good** · Bruno **Very Good** · Cleo **Acceptable**
+
+<img src="../cases/img/mj_101_c3_b5_ballot_4.png" width="640" alt="A grade ballot — Alice down to Poor; Bruno still Good: Alice Poor, Bruno Good, Cleo Acceptable.">
+
+Alice **Poor** · Bruno **Good** · Cleo **Acceptable**
+
+<img src="../cases/img/mj_101_c3_b5_ballot_5.png" width="640" alt="A grade ballot — Left Alice ungraded — that counts as To Reject: Alice left ungraded (counts as To Reject), Bruno Poor, Cleo Acceptable.">
+
+Alice **—** · Bruno **Poor** · Cleo **Acceptable**
 <!-- /ballots -->
 
 Note Voter 5's ballot: they left Alice's row **untouched**. Under this procedure an ungraded candidate takes the bottom of the scale, so that blank counts as *To Reject*. The rule looks like bookkeeping and is not — it is the entire mechanism of MJ's truncation paradox, where a voter does better by saying *less*.
@@ -53,15 +65,27 @@ It works, and it is opaque. A voter can follow "highest median wins"; almost nob
 The comparison that matters most is with [Range / Score](../../Range/concepts/range_voting.md), because MJ and Score hand the voter **the same piece of paper**. Both ask for a grade on every candidate. They part company at exactly one step: Score adds the column up and takes the **mean**, MJ lines it up and takes the **median**. On the 101 case above that difference is invisible — Bruno wins under both, which is the honest picture most of the time. Here is a five-voter election where it isn't:
 
 <!-- ballots:mj_vs_score_c3_b5 -->
-The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column:
+The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column. The grades the file records are repeated under each ballot:
 
-| Ballot as marked | Asha | Bodhi | Camila |
-|:--|:--:|:--:|:--:|
-| <img src="../cases/img/mj_vs_score_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A grade ballot — Bodhi's biggest fan — Excellent: Asha Very Good, Bodhi Excellent, Camila Poor."> | Very Good | Excellent | Poor |
-| <img src="../cases/img/mj_vs_score_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A grade ballot — The second Excellent for Bodhi: Asha Very Good, Bodhi Excellent, Camila Poor."> | Very Good | Excellent | Poor |
-| <img src="../cases/img/mj_vs_score_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A grade ballot — Asha Good; Bodhi only Acceptable: Asha Good, Bodhi Acceptable, Camila Poor."> | Good | Acceptable | Poor |
-| <img src="../cases/img/mj_vs_score_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A grade ballot — The same again, warmer on Camila: Asha Good, Bodhi Acceptable, Camila Acceptable."> | Good | Acceptable | Acceptable |
-| <img src="../cases/img/mj_vs_score_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A grade ballot — The lone To Reject for Asha: Asha To Reject, Bodhi Acceptable, Camila Good."> | To Reject | Acceptable | Good |
+<img src="../cases/img/mj_vs_score_c3_b5_ballot_1.png" width="640" alt="A grade ballot — Bodhi's biggest fan — Excellent: Asha Very Good, Bodhi Excellent, Camila Poor.">
+
+Asha **Very Good** · Bodhi **Excellent** · Camila **Poor**
+
+<img src="../cases/img/mj_vs_score_c3_b5_ballot_2.png" width="640" alt="A grade ballot — The second Excellent for Bodhi: Asha Very Good, Bodhi Excellent, Camila Poor.">
+
+Asha **Very Good** · Bodhi **Excellent** · Camila **Poor**
+
+<img src="../cases/img/mj_vs_score_c3_b5_ballot_3.png" width="640" alt="A grade ballot — Asha Good; Bodhi only Acceptable: Asha Good, Bodhi Acceptable, Camila Poor.">
+
+Asha **Good** · Bodhi **Acceptable** · Camila **Poor**
+
+<img src="../cases/img/mj_vs_score_c3_b5_ballot_4.png" width="640" alt="A grade ballot — The same again, warmer on Camila: Asha Good, Bodhi Acceptable, Camila Acceptable.">
+
+Asha **Good** · Bodhi **Acceptable** · Camila **Acceptable**
+
+<img src="../cases/img/mj_vs_score_c3_b5_ballot_5.png" width="640" alt="A grade ballot — The lone To Reject for Asha: Asha To Reject, Bodhi Acceptable, Camila Good.">
+
+Asha **To Reject** · Bodhi **Acceptable** · Camila **Good**
 <!-- /ballots -->
 
 | Candidate | Grades in order | **Median** → MJ | **Mean** → Score |

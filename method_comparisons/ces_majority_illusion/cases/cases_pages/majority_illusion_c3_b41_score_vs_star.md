@@ -46,11 +46,11 @@ two-rivals hinge as the BV95a / BV95b pair.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Voters | Alice | Brian | Colin |
-|:--|:--:|:--:|:--:|:--:|
-| <img src="../img/majority_illusion_c3_b41_score_vs_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 21 voters: Alice 5, Brian 4, Colin 0."> | 21 | 5 | 4 | 0 |
-| <img src="../img/majority_illusion_c3_b41_score_vs_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 10 voters: Alice 0, Brian 5, Colin 0."> | 10 | 0 | 5 | 0 |
-| <img src="../img/majority_illusion_c3_b41_score_vs_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 10 voters: Alice 0, Brian 4, Colin 5."> | 10 | 0 | 4 | 5 |
+| Ballot as marked | Alice | Brian | Colin |
+|:--|:--:|:--:|:--:|
+| <img src="../img/majority_illusion_c3_b41_score_vs_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 21 voters: Alice 5, Brian 4, Colin 0."> | 5 | 4 | 0 |
+| <img src="../img/majority_illusion_c3_b41_score_vs_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 10 voters: Alice 0, Brian 5, Colin 0."> | 0 | 5 | 0 |
+| <img src="../img/majority_illusion_c3_b41_score_vs_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 10 voters: Alice 0, Brian 4, Colin 5."> | 0 | 4 | 5 |
 
 The same ballots as the file records them:
 
