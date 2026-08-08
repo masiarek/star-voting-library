@@ -57,6 +57,12 @@ __pycache__/
 ballots.html
 *_ballots.html
 /*.html
+# ...except search-engine site-ownership files, which MUST live at the root
+# under the exact name the search engine issued (Google Search Console's
+# google<token>.html). Without this exception `git add` silently stages
+# nothing and the site never serves the file. mkdocs_hooks.py has the matching
+# half — mkdocs-same-dir drops root non-documents from the build.
+!/google*.html
 ballots.pdf
 *_ballots.pdf
 *_preview.pdf

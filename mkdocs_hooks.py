@@ -78,6 +78,38 @@ sidebar; items after get none, because a number promises a next one and
 "Reference" is not step 7 of anything. Numbering a *page* also sets that page's
 `<title>` — see `_page_title` — which is why the spine is kept short and made of
 mostly sections.
+
+## Site-ownership verification files at the site root
+
+Search engines verify who owns a site by asking for a file at its root with a
+name they choose (`google<token>.html` for Google Search Console). The file has
+to ship verbatim, at the root, under that exact name — nothing else counts.
+
+Two things in this repo quietly eat such a file, and both fail *silently*, which
+is what makes them worth a docstring:
+
+1. **`.gitignore` has a root-level `/*.html` guard**, so the file is never even
+   committed. `git add` reports success-by-saying-nothing and the push carries
+   no file. (Fixed there with a matching `!` exception, not here.)
+2. **`mkdocs-same-dir` drops every non-document file in the root of `docs_dir`.**
+   Its `on_files` keeps a root file only if it is Markdown, JS, CSS, or named
+   exactly `CNAME`. That rule is right — `docs_dir` is the repo root, so it is
+   what stops `pyproject.toml` and `uv.lock` shipping as site content — but a
+   verification file is in the same class as the `CNAME` it special-cases, and
+   is not on the list. The file is therefore absent from the built site with no
+   warning: MkDocs never knew about it, so it has nothing to warn about.
+
+`on_files` below re-admits it after the plugin has run (hooks are appended to
+the plugin collection, so their events fire last). MkDocs' own
+`copy_static_files` then copies it through untouched — `.html` is a "static
+page", copied byte-for-byte rather than rendered, so the token reaches Google
+exactly as issued.
+
+The glob is deliberately narrow: only root-level `google*.html`. Widening it to
+all root `.html` would re-admit precisely the build artefacts the plugin and the
+`.gitignore` guard both exist to keep out. Add a sibling pattern here if another
+search engine's verification is ever needed. Guarded by
+`tests/test_search_console_file.py`.
 """
 
 from __future__ import annotations
@@ -85,6 +117,10 @@ from __future__ import annotations
 import posixpath
 import re
 from pathlib import Path
+
+# Root-level files that must ship verbatim to the site root even though
+# mkdocs-same-dir drops root non-documents. See the module docstring.
+SITE_VERIFICATION_GLOB = "google*.html"
 
 # Folders whose children have a reading order, keyed by repo-relative path.
 # Values are on-disk names — a file name, or the folder a section opens.
@@ -407,3 +443,24 @@ def on_nav(nav, config, files):
     _retitle(nav.items)
     _order(nav.items, "")
     return nav
+
+
+def on_files(files, config):
+    """Re-admit root-level site-verification files. See the module docstring."""
+    from mkdocs.structure.files import File
+
+    docs_dir = Path(config["docs_dir"])
+    present = {f.src_uri for f in files}
+
+    for path in sorted(docs_dir.glob(SITE_VERIFICATION_GLOB)):
+        if not path.is_file() or path.name in present:
+            continue
+        files.append(
+            File(
+                path.name,
+                src_dir=str(docs_dir),
+                dest_dir=config["site_dir"],
+                use_directory_urls=config["use_directory_urls"],
+            )
+        )
+    return files
