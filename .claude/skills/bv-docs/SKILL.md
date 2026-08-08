@@ -69,6 +69,17 @@ parent: BetterVoting Documentation
 
 **Mermaid is not enabled.** Adding it means a `mermaid:` key in `_config.yml`. Don't slip it into a content PR.
 
+## Sidebar structure ≠ folder structure (verified 2026-08-08)
+
+**just-the-docs builds the nav from front matter, not from directories.** Proof from BV's own repo: `index.md` sits at the docs root and is the `parent:` of `help/faq.md` in a subfolder. So **you can reorganize the sidebar into sections without moving a single file or changing a single URL** — add a section page with `has_children: true`, then set `parent:` on its children wherever they live.
+
+This matters because moving files is expensive here and re-parenting is free:
+
+- Six doc URLs are hardcoded in the app (see the table above), two as deep anchors. A move breaks them and needs a coordinated frontend PR.
+- **Redirects do not work today.** `redirect_from:` in front matter emits nothing, because `_config.yml` has no `plugins:` key. Verified both ways: with no `plugins:` entry the build produces no redirect stub; adding `plugins: [jekyll-redirect-from]` makes it work (the gem is already in the bundle via `github-pages`). So **before moving any published page, enable the plugin first** — otherwise the old URL just 404s.
+
+Default answer to "should we create folders?": **no — restructure the sidebar with `parent:`.** Folders are storage; the sidebar is the information architecture, and only one of them is visible to users.
+
 ## URLs are load-bearing — the app hardcodes them
 
 Eight links from the app into the docs. Moving or renaming any of these pages breaks the product, and two are **deep anchors**, so the heading text is load-bearing too:
