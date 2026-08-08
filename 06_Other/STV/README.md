@@ -192,7 +192,16 @@ Every STV election in the library, wherever it physically lives. Tabulate any of
 
 ## Engine notes
 
-STV runs on the vendored `pyrankvote` (`single_transferable_vote`), reached through the RCV-IRV wrapper whenever `voting_method: STV` and `num_winners: k`. Fractional (Gregory) surplus transfer, exact Droop quota applied — and, since August 2026, printed: the report header names `votes/(seats+1)` as the quota the count uses and gives the hand-count integer quota beside it ([fork 1](#where-it-genuinely-gets-complicated)). No STV engine is required for the LH side of the repo; the same YAML runs on BetterVoting for cross-checking, **except** for counts that end with a sole hopeful reaching quota, which is the crash documented above.
+STV runs on the vendored `pyrankvote` (`single_transferable_vote`), reached through the RCV-IRV wrapper whenever `voting_method: STV` and `num_winners: k`. Fractional (Gregory) surplus transfer, exact Droop quota applied — and, since August 2026, printed: the report header names `votes/(seats+1)` as the quota the count uses and gives the hand-count integer quota beside it ([fork 1](#where-it-genuinely-gets-complicated)).
+
+**Every STV case here is cross-checked against [RCTab](../../07_Concepts/tabulation_engines/rctab.md)** — the federally-tested, state-certified tabulator US jurisdictions run on election night — and **all ten agree on the seated set**. That matters more for STV than for any other method in this library, because the usual second opinion is missing: BetterVoting *crashes* on any count ending with a sole hopeful at quota, which is precisely the shape of the book club above. Until RCTab was wired in, those cases rested on one engine alone.
+
+```bash
+export RCTAB_HOME=/path/to/RCTab.app        # or an unpacked release
+.venv/bin/python STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/rctab_crosscheck.py 06_Other/STV/cases/03a_stv_3seats.yaml
+```
+
+The cross-check is only meaningful because the quota is pinned on both sides: it sets RCTab's `nonIntegerWinningThreshold: true`, whose documented formula `V/(S+1) + 10⁻ᵈ` is the same exact-Droop bar `pyrankvote` applies. Pass `--hand-count-quota` to count the same ballots under `⌊V/(S+1)⌋+1` instead and watch fork 1 move real numbers. Tool and findings: [`rctab_tabulation_engine/`](../../STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/README.md).
 
 ```bash
 .venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/cases/03a_stv_3seats.yaml

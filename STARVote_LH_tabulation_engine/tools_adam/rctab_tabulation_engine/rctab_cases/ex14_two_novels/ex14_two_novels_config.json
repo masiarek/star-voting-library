@@ -1,0 +1,77 @@
+{
+  "tabulatorVersion": "2.1.0",
+  "outputSettings": {
+    "contestName": "Exercise 14 \u2014 The transfer machine: a book club buys two novels (STV)",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "ex14_two_novels.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "idColumnIndex": "1",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Austen",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Bronte",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Camus",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Dickens",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "multiWinnerAllowMultipleWinnersPerRound",
+    "numberOfWinners": "2",
+    "nonIntegerWinningThreshold": true,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "4",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from ex14_two_novels.yaml by rctab_convert.py | candidate order: ballot | 2 seats; quota = V/(S+1)+10^-d (exact Droop, mirrors this repo's engine)",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "01_STAR/05_Practice/cases/ex14_two_novels.yaml",
+    "ballotsConverted": 9
+  }
+}

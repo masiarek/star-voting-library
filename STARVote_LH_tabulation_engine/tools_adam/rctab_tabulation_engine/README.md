@@ -11,6 +11,43 @@ The concept page — what RCTab is, what its agreement is and isn't worth — is
 | [`rctab_convert.py`](rctab_convert.py) | a ranked YAML → `<stem>.csv` + `<stem>_config.json`. **No Java needed.** |
 | [`rctab_crosscheck.py`](rctab_crosscheck.py) | runs RCTab on those files, parses its report, diffs it against ours, and runs the two sweeps. |
 
+## STV — the leg that was missing
+
+Multi-seat cases convert too, and this is where the cross-check earns its keep. Ranked Robin has three independent counts behind it; **STV had one and a half.** BetterVoting is the usual second opinion, and it *crashes* on any count whose eliminations leave a sole hopeful who then reaches quota — the [sole-survivor bug](../../../06_Other/STV/bv_stv_sole_survivor_crash/README.md) — which is exactly the shape of the repo's gentlest STV case. Those cases rested on the vendored `pyrankvote` alone.
+
+**All ten STV elections in the library now agree with RCTab on the seated set**, including the two BetterVoting cannot count at all.
+
+That comparison is only worth anything because the **quota is pinned on both sides**, and RCTab makes it a config field. Its own `docs/config_file_documentation.txt`:
+
+```text title="RCTab config_file_documentation.txt — quoted, not paraphrased"
+"nonIntegerWinningThreshold" optional
+  if true,  threshold = V/(S+1) + 10^-d
+  if false, threshold = floor(V/(S+1)) + 1
+  note: only valid for multi-seat contests
+```
+
+That is this repo's [fork 1](../../../06_Other/STV/README.md#where-it-genuinely-gets-complicated) as a checkbox. The converter sets it **true**, because `pyrankvote` elects at `votes - 1e-6 >= V/(S+1)` — strictly above the exact Droop quota by a hair, the same shape as RCTab's `+ 10⁻ᵈ`. Left false, RCTab would count an election one whole vote different and any disagreement would be about configuration rather than about the count. `--hand-count-quota` flips it back on purpose, which is how you make the fork move real numbers instead of describing it.
+
+Multi-seat also picks `winnerElectionMode: multiWinnerAllowMultipleWinnersPerRound` — "may elect more than one winner per round when there are multiple candidates exceeding the winning threshold", which is what `pyrankvote` does in one pass. The `OnlyOneWinnerPerRound` sibling would stagger the seats and desynchronise the rounds against ours.
+
+A non-STV multi-seat case is **refused** rather than converted: every multi-winner mode RCTab has is STV, so pointing it at Bloc RR, SNTV or Bloc STAR would compare two different methods and call it agreement.
+
+### What it found
+
+Agreement on winners was the boring half, as ever. Running ex14 three ways separated two things the repo had been treating as one:
+
+| | hand count, quota 4 | ours, exact 3.00 | RCTab, exact 3.0001 |
+|---|---|---|---|
+| Brontë after Austen's surplus | 2 | 3.00 — ties Camus | 2.9995 — just short |
+| eliminations | Dickens, Brontë | **none** | Dickens, Brontë |
+| seats | Austen + Camus | Austen + Camus | Austen + Camus |
+
+Our engine's vanishing elimination round looks like a consequence of the exact quota. It isn't: RCTab uses the same exact quota and eliminates normally. Ours sets the bar at exactly `V/(S+1)`, so Brontë lands on precisely 3.00, ties Camus, and is set aside by a "cannot change the result" shortcut; RCTab's bar is a hair higher, so she lands on 2.9995 and is simply eliminated. **Quota fork and tie handling are two different forks**, and only a third engine makes them separable. Written up on [exercise 14, part (f)](../../../01_STAR/05_Practice/ex14_transfer_machine.md#f).
+
+## Which RCTab you have matters
+
+RCTab refuses a config claiming a version newer than itself (`Unable to process a config file with version 2.1.0 using older version 2.0.0`), so `rctab_crosscheck.py` asks the installed app for its version and writes that into the config. `--pin-version` opts out. Two 2.0.0-vs-2.1.0 differences are handled for you: the version string, and `idColumnIndex`, which 2.0.0 rejects outright on a `CSV` source. `RCTAB_HOME` may point at an unpacked release (`bin/RCTab`) **or** at a macOS `RCTab.app`.
+
 Converted inputs for the cases run so far are committed under [`rctab_cases/`](rctab_cases/) — small, and they make the result reproducible without re-running the converter.
 
 ## Getting RCTab

@@ -79,7 +79,7 @@ That is the drill, and it is a correct STV count. It is *not* the count the engi
 
 Take any one of the five `Austen > Brontë > Camus > Dickens` ballots. **4/5 of it** was spent electing Austen (five ballots jointly paying the quota of 4). The remaining **1/5** transferred to Brontë; when Brontë was eliminated, that same fifth continued to **Camus** — and became part of the vote that elected him. Final ledger for this single ballot: 0.8 votes → Austen (seated), 0.2 votes → Camus (seated), 0.0 wasted. That is the "transferable" in Single Transferable Vote: a ballot is a *ranked to-do list with a budget*, spent top-down until it's used up — the honest version of the no-wasted-vote slogan. (The dishonest version ignores that rankings can run out mid-journey: a truncated ballot's remainder simply [exhausts](../../06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md) — here every transfer found a next name, but that's a property of these ballots, not of STV.)
 
-**The tidy ledger is the hand count's, and it is worth knowing that the exact-quota count is less tidy.** There the ballot pays 0.6 to Austen and sends 0.4 to Brontë — who is never eliminated, because the seats fill first. That 0.4 comes to rest on a candidate who does not win. Nothing was stolen from the voter: Camus already had the second seat sewn up, so the transfer would have changed nothing. But "0.0 wasted" is a claim about *this* rulebook and this electorate, not a theorem about STV, and [(f)](#f) is the reason to say so out loud.
+**That tidy ledger is the hand count's — our engine's is less tidy.** Under the exact quota it applies, the ballot pays 0.6 to Austen and sends 0.4 to Brontë, who is then never eliminated because the seats fill first; that 0.4 comes to rest on a candidate who does not win. Nothing was stolen from the voter — Camus already had the second seat sewn up, so the transfer would have changed nothing — but "0.0 wasted" is a claim about a particular rulebook and this electorate, not a theorem about STV. (Careful with the blame: RCTab counts the same ballots at the same exact quota and *does* carry that 0.4 on to Camus. The stranded fraction is our engine's tie handling, not the quota. [(f)](#f) puts all three counts side by side.)
 
 </details>
 
@@ -96,21 +96,27 @@ The verdict survives the quota switch, and gets cleaner: at 3.00 the Camus camp'
 
 *Not a spoiler — the reconciliation. Work (a)–(e) first, then read this.*
 
-Set the quota to 9 ÷ 3 = **3.00** and run it again. Round 1 is unchanged (nothing has moved yet), but everything after it is different: Austen keeps 3 instead of 4, so her surplus is **2**, and the five ballots move at **0.4** each. Brontë lands on 1 + 2 = **3.00** — level with Camus. One seat is left and the two are tied; Brontë and Dickens are set aside as unable to catch Camus, and Camus takes the last seat as the only hopeful still standing. **No candidate is ever eliminated, and no elimination transfer ever runs.**
+Set the quota to 9 ÷ 3 = **3.00** and run it again. Round 1 is unchanged (nothing has moved yet), but everything after it moves: Austen keeps 3 instead of 4, so her surplus is **2**, and the five ballots travel at **0.4** each instead of 0.2.
 
-| | hand-count quota **4** | exact quota **3.00** |
-|---|---|---|
-| Austen keeps / passes on | 4 / **1** | 3 / **2** |
-| transfer weight per Austen ballot | 0.2 | **0.4** |
-| Brontë after the surplus | 2 | **3.00** — tied with Camus |
-| eliminations | Dickens, then Brontë | **none** |
-| how the second seat fills | Camus climbs to 5 ≥ 4 | Camus is the last hopeful for the last seat |
-| one Austen ballot's ledger | 0.8 Austen + 0.2 Camus | 0.6 Austen + **0.4 Brontë** (unseated) |
-| **seats** | **Austen + Camus** | **Austen + Camus** |
+Three counts of the same nine ballots, then — the hand count, our engine, and [RCTab](../../07_Concepts/tabulation_engines/rctab.md), the certified tabulator US jurisdictions run on election night, configured to the same exact quota:
 
-Read the last row first, then the rest. Two published, in-use definitions of "the Droop quota" disagree about nearly every number in the count and agree about the only thing being decided. That is the honest shape of [fork 1](../../06_Other/STV/README.md#where-it-genuinely-gets-complicated): the quota choice is real, it can decide a seat in principle, and it decides nothing in any of the ten STV elections in this library — each one was re-counted under both quotas to check. It is also why the engine's header stopped naming one quota and applying another.
+| | hand count, quota **4** | our engine, exact **3.00** | RCTab, exact **3.0001** |
+|---|---|---|---|
+| Austen keeps / passes on | 4 / **1** | 3 / **2** | 3.0001 / **1.9999** |
+| transfer weight per Austen ballot | 0.2 | **0.4** | **0.3999** |
+| Brontë after the surplus | 2 | **3.00** — level with Camus | **2.9995** — just short |
+| eliminations | Dickens, then Brontë | **none** | Dickens, then Brontë |
+| how the second seat fills | Camus climbs to 5 ≥ 4 | Camus is the last hopeful left | Camus climbs to 5.9995 |
+| one Austen ballot's ledger | 0.8 Austen + 0.2 Camus | 0.6 Austen + **0.4 Brontë** (unseated) | 0.6 Austen + 0.4 → Brontë → Camus |
+| **seats** | **Austen + Camus** | **Austen + Camus** | **Austen + Camus** |
 
-Watch the Brontë row, though. She is *rejected* holding the same 3.00 that seats Camus, which looks wrong until you see that only one seat remained and they finished level. A tie for the last seat is the one place where the rulebook, not the electorate, picks the winner — here `pyrankvote` breaks it deterministically on second choices. Real STV codes write that rung down in law, and this is a good election to notice that they have to.
+Read the bottom row first, then the rest. Three rulebooks disagree about nearly every number in the count and agree about the only thing being decided.
+
+**And the middle column is the odd one out, which is the lesson.** It is tempting to read the "none" in the eliminations row as something the exact quota *causes* — it isn't. RCTab uses the same exact Droop quota and still eliminates Dickens and Brontë exactly as the hand count does. The difference is that RCTab sets the bar a hair *above* the quota (`V/(S+1) + 10⁻ᵈ` = 3.0001, per its own config documentation), so Austen keeps 3.0001, passes on 1.9999, and Brontë arrives at **2.9995** — strictly short of Camus, and duly eliminated. Our `pyrankvote` uses the bare `V/(S+1)`, so Brontë arrives at *exactly* 3.00, ties Camus, and gets set aside by a "cannot change the result" shortcut rather than eliminated. **The quota fork is real; the vanishing elimination round is our engine's tie handling, not the quota.** Only running a third engine makes that separable — which is what a cross-check is for.
+
+So Brontë being *rejected* on the same 3.00 that seats Camus is an artifact of one implementation's rounding, not a fact about STV. A tie for the last seat is the one place where the rulebook, not the electorate, picks the winner — `pyrankvote` breaks it deterministically on second choices; real STV codes write that rung down in law. Worth noticing that they have to.
+
+All three engines seat Austen and Camus, and [all ten STV elections in this library agree with RCTab](../../06_Other/STV/README.md#engine-notes).
 
 ## A live bug, found — and diagnosed
 

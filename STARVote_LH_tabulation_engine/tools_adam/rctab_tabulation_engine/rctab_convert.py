@@ -74,14 +74,21 @@ OVERVOTE_RULES = ["alwaysSkipToNextRank", "exhaustImmediately", "exhaustIfMultip
 
 
 def load_yaml_meta(path):
-    """election_title, straight from the file (parse_election drops it)."""
+    """(election_title, num_winners), straight from the file — parse_election drops both.
+
+    Read the RAW keys here. `pref_voting_tabulation.load_election()` normalises them to
+    `seats`/`method`, but this reads the document itself, so it is `num_winners` — asking
+    for `seats` here silently yields None and every contest converts as single-winner.
+    """
     try:
         import yaml
         with open(path, encoding="utf-8") as fh:
             doc = yaml.safe_load(fh) or {}
-        return doc.get("election_title") or doc.get("title") or os.path.basename(path)
+        title = doc.get("election_title") or doc.get("title") or os.path.basename(path)
+        seats = doc.get("num_winners", doc.get("seats", 1))
+        return title, int(seats or 1)
     except Exception:
-        return os.path.basename(path)
+        return os.path.basename(path), 1
 
 
 def ballots_to_rankings(voters, allow_equal):
@@ -146,11 +153,60 @@ def write_csv(path, candidates, rankings):
             w.writerow([f"b{i}"] + [ranking.get(c, "") for c in candidates])
 
 
-def build_config(title, csv_name, candidates, args, equal_seen, n_ballots):
+def seat_rules(seats, hand_count_quota):
+    """The multi-seat half of `rules` — the settings that decide WHICH STV this is.
+
+    RCTab's own `docs/config_file_documentation.txt` states the threshold exactly:
+
+        nonIntegerWinningThreshold
+          if true,  threshold = V/(S+1) + 10^-d
+          if false, threshold = floor(V/(S+1)) + 1
+          (S+1 becomes S if hareQuota is true)          note: only valid for multi-seat
+
+    That is this repo's "fork 1" as a config field, so the flag has to be chosen, not
+    defaulted. We mirror OUR engine, and ours applies the EXACT Droop quota: the vendored
+    pyrankvote elects at `votes - 1e-6 >= V/(S+1)`, i.e. strictly more than V/(S+1) by a
+    hair. RCTab's `true` branch is the same shape — V/(S+1) + 10^-d, strictly more by a
+    hair — so `true` compares like with like. Leaving it `false` would count a DIFFERENT
+    election (one vote higher) and any disagreement would be about configuration rather
+    than about the count, which is exactly what a cross-check must not do.
+
+    `--hand-count-quota` flips it back to the Irish/Scottish integer quota on purpose,
+    which is how you show the fork moving real numbers instead of describing it.
+
+    Single-seat is left alone: RCTab rejects both flags outright when numberOfWinners
+    is 1 ("only valid for multi-seat contests"), and a 1-seat STV contest *is* IRV.
+    """
+    if seats <= 1:
+        return {
+            "winnerElectionMode": "singleWinnerMajority",
+            "numberOfWinners": "1",
+            "nonIntegerWinningThreshold": False,
+            "hareQuota": False,
+        }
+    return {
+        # "may elect more than one winner per round when there are multiple candidates
+        # exceeding the winning threshold" — which is what pyrankvote does (it appends
+        # every at-quota candidate in one pass). multiWinnerAllowOnlyOneWinnerPerRound
+        # would stagger them and desynchronise the rounds.
+        "winnerElectionMode": "multiWinnerAllowMultipleWinnersPerRound",
+        "numberOfWinners": str(seats),
+        "nonIntegerWinningThreshold": not hand_count_quota,
+        "hareQuota": False,
+    }
+
+
+def build_config(title, csv_name, candidates, args, equal_seen, n_ballots, seats):
     notes = [f"Converted from {os.path.basename(args.yaml)} by rctab_convert.py",
              f"candidate order: {args.candidate_order}"]
     if equal_seen:
         notes.append("WARNING: equal ranks emitted as shared rank (overvote to RCTab)")
+    if seats > 1:
+        notes.append(
+            f"{seats} seats; quota = "
+            + ("floor(V/(S+1))+1 (hand-count Droop)" if args.hand_count_quota
+               else "V/(S+1)+10^-d (exact Droop, mirrors this repo's engine)")
+        )
     return {
         "tabulatorVersion": args.tabulator_version,
         "outputSettings": {
@@ -168,7 +224,11 @@ def build_config(title, csv_name, candidates, args, equal_seen, n_ballots):
             "contestId": "",
             "firstVoteColumnIndex": "2",   # 1-based; column 1 is the ballot id
             "firstVoteRowIndex": "2",      # 1-based; row 1 is the candidate header
-            "idColumnIndex": "1",
+            # RCTab 2.0.0 REJECTS idColumnIndex on a "CSV" source outright ("should not be
+            # defined for CVR source with provider CSV") and refuses to tabulate. 2.1.0
+            # accepts it. Column 1 is skipped either way because firstVoteColumnIndex is 2,
+            # so omitting it costs nothing but the id echo in the audit log.
+            **({} if args.tabulator_version.startswith("2.0") else {"idColumnIndex": "1"}),
             "batchColumnIndex": "",
             "precinctColumnIndex": "",
             "overvoteDelimiter": "",
@@ -182,9 +242,8 @@ def build_config(title, csv_name, candidates, args, equal_seen, n_ballots):
         "rules": {
             "tiebreakMode": args.tiebreak,
             "overvoteRule": args.overvote_rule,
-            "winnerElectionMode": "singleWinnerMajority",
             "randomSeed": args.random_seed,
-            "numberOfWinners": "1",
+            **seat_rules(seats, args.hand_count_quota),
             "multiSeatBottomsUpPercentageThreshold": "",
             # RCTab validates this as 1..20 — "0" is rejected outright. Irrelevant to a
             # single-winner whole-vote count, but it has to be a legal value.
@@ -192,9 +251,10 @@ def build_config(title, csv_name, candidates, args, equal_seen, n_ballots):
             "minimumVoteThreshold": "0",
             "maxSkippedRanksAllowed": "unlimited",
             "maxRankingsAllowed": str(len(candidates)),
-            "nonIntegerWinningThreshold": False,
+            # nonIntegerWinningThreshold / hareQuota / winnerElectionMode / numberOfWinners
+            # come from seat_rules() above — do NOT restate them here, a later literal key
+            # silently overrides the spread.
             "doesFirstRoundDetermineThreshold": False,
-            "hareQuota": False,
             "batchElimination": args.batch_elimination,
             "continueUntilTwoCandidatesRemain": args.continue_until_two,
             "stopTabulationEarlyAfterRound": "",
@@ -222,6 +282,19 @@ def convert(args):
     rankings, equal_seen = ballots_to_rankings(voters, args.allow_equal_ranks)
     candidates = order_candidates(cands_sorted, voters, args.candidate_order)
 
+    title, yaml_seats = load_yaml_meta(args.yaml)
+    seats = args.seats or yaml_seats
+    if seats > 1 and (vm or "").upper().replace("-", "_") not in ("STV", "RCV_STV"):
+        raise SystemExit(
+            f"refusing to convert: {os.path.basename(args.yaml)} asks for {seats} seats "
+            f"under voting_method: {vm}.\n"
+            "  Every multi-seat mode RCTab has is STV (fractional-transfer, quota-based).\n"
+            "  It cannot reproduce Bloc RR, SNTV or Bloc STAR, so a winner comparison would\n"
+            "  be against a different method, not a cross-check. Convert the STV sibling."
+        )
+    if seats > len(candidates):
+        raise SystemExit(f"refusing to convert: {seats} seats but only {len(candidates)} candidates.")
+
     stem = os.path.splitext(os.path.basename(args.yaml))[0]
     outdir = args.outdir or os.path.join(_HERE, "rctab_cases", stem)
     os.makedirs(outdir, exist_ok=True)
@@ -230,13 +303,19 @@ def convert(args):
     cfg_path = os.path.join(outdir, f"{stem}_config.json")
 
     write_csv(csv_path, candidates, rankings)
-    cfg = build_config(load_yaml_meta(args.yaml), csv_name, candidates, args, equal_seen, len(rankings))
+    cfg = build_config(title, csv_name, candidates, args, equal_seen, len(rankings), seats)
     with open(cfg_path, "w", encoding="utf-8") as fh:
         json.dump(cfg, fh, indent=2)
         fh.write("\n")
 
     print(f"  candidates : {', '.join(candidates)}   ({args.candidate_order} order)")
     print(f"  ballots    : {len(rankings)}")
+    if seats > 1:
+        v, s = len(rankings), seats
+        quota = (v / (s + 1) if not args.hand_count_quota else v // (s + 1) + 1)
+        which = "floor(V/(S+1))+1, hand-count" if args.hand_count_quota else "V/(S+1)+10^-d, exact"
+        print(f"  seats      : {seats}   mode: multiWinnerAllowMultipleWinnersPerRound")
+        print(f"  quota      : ~{quota:.2f}  ({which})")
     print(f"  tiebreak   : {args.tiebreak}   batchElimination: {args.batch_elimination}")
     print(f"  csv        : {csv_path}")
     print(f"  config     : {cfg_path}")
@@ -252,6 +331,12 @@ def add_args(p):
     p.add_argument("--candidate-order", default="ballot",
                    help="'ballot' (first appearance), 'alpha', or an explicit comma-separated list. "
                         "Under useCandidateOrder this IS the tiebreak ladder.")
+    p.add_argument("--seats", type=int, default=None,
+                   help="override num_winners from the YAML (multi-seat = STV)")
+    p.add_argument("--hand-count-quota", action="store_true",
+                   help="use RCTab's INTEGER threshold floor(V/(S+1))+1 instead of the exact "
+                        "V/(S+1)+10^-d. Default mirrors this repo's engine (exact); pass this "
+                        "to count the same ballots under the Irish/Scottish hand-count quota.")
     p.add_argument("--batch-elimination", action="store_true",
                    help="eliminate every candidate tied for last in one step")
     p.add_argument("--continue-until-two", action="store_true")

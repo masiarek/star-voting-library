@@ -1,0 +1,82 @@
+{
+  "tabulatorVersion": "2.1.0",
+  "outputSettings": {
+    "contestName": "No Condorcet Winner \u2014 STV (1 seat = IRV single-winner): Dave",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "bv2138_cxrf8v_stv.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "idColumnIndex": "1",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Abby",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Cora",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Erin",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Dave",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Brad",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "singleWinnerMajority",
+    "numberOfWinners": "1",
+    "nonIntegerWinningThreshold": false,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "5",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from bv2138_cxrf8v_stv.yaml by rctab_convert.py | candidate order: ballot",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_stv.yaml",
+    "ballotsConverted": 921
+  }
+}
