@@ -68,6 +68,8 @@ Only the first six keys appear on every election; the rest are era-dependent, so
 | `term_type` | 25/210 | `election` |
 | `contact_email` | 25/210 | string, often `""` |
 | `draggable_ballot` | 19/210 | `false` |
+
+`voter_access`, `voter_authentication` and `invitation` are **not independent** — only six combinations are legal, and which one an election is in decides whether turnout, quorum and delivery reporting exist for it at all. There is **no "demo election" flag**; that property is derived from these three. See [the six voter-authentication modes](bv_voter_authentication_modes.md). Note the counts above: `voter_access` is `open` in **210/210** exports and the authentication flags are all-false, so every frozen export in this repo is an unauthenticated election — the `open_open` mode.
 | `max_rankings` | 1/210 | Normally lives on the **race**, not here |
 
 ### `Election.races[]`
