@@ -325,8 +325,20 @@ async def shoot(
             print(f"wrote {out}  ({out.stat().st_size:,} bytes)")
     finally:
         proc.terminate()
-        proc.wait(timeout=10)
-        shutil.rmtree(profile, ignore_errors=True)
+        try:
+            proc.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            # --headless=new sometimes ignores SIGTERM. Escalate rather than
+            # leave an orphan behind: a stray headless Chrome still registers
+            # as *the* "Google Chrome" application with launchd, so macOS
+            # routes every Dock click and Cmd-N to it and the user is left
+            # with a Chrome menu bar and no way to open a window.
+            proc.kill()
+            proc.wait(timeout=10)
+        finally:
+            # Its own finally — an escalation that still times out must not
+            # strand a ~200 MB profile in /var/folders.
+            shutil.rmtree(profile, ignore_errors=True)
 
 
 def main() -> int:
