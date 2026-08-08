@@ -343,6 +343,7 @@ LH:put_two_universes_c3_b4,"Parallel universes — one count, two legal answers"
 LH:quorum_demo_c3_b6,Quorum — an abstention still counts toward turnout,1,single-race,6,STAR,LH-only
 LH:quorum_fail_demo_c3_b6,"Quorum FAILS — won the count, but not elected",1,single-race,6,STAR,LH-only
 LH:race_nobody_can_lose_two_seat_control,A race nobody can lose — the two-seat control,1,single-race,7,STAR,LH-only
+LH:range_101_0to9_c3_b5,"Range / Score Voting on its own scale — 0–9, the canonical ballot",1,single-race,5,Range,LH-only
 LH:range_101_c3_b5,Range / Score Voting 101 — highest total score wins,1,single-race,5,Range,LH-only
 LH:range_sullivan_score_c4_b10,Range / Score Voting — Sullivan's Example 5.2 (0–10 scale),1,single-race,10,Range,LH-only
 LH:ranked_robin_consensus_center,Ranked Robin (RCV-RR) — the consensus center wins the round-robin,1,single-race,13,RankedRobin,LH-only

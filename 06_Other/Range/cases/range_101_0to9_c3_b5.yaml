@@ -1,0 +1,41 @@
+election_title: "Range / Score Voting on its own scale — 0–9, the canonical ballot"
+
+scenario_description: |-
+  The same simple score election as the 101 case, run on the scale Range voting
+  actually uses. Five neighbours pick a tree for Main Street, grading each one
+  from 0 (worst) to 9 (best); Range just SUMS the grades — highest total wins,
+  no runoff and no elimination. Birch is nobody's absolute favourite and wins
+  anyway on broad, strong support (39), ahead of Cedar (25) and Ash (19).
+
+  The teaching value is the BALLOT, not the outcome. A STAR ballot is 0–5 and
+  prints its rungs as stars, because the stars are STAR Voting's own house
+  style. Canonical Range is 0–9 with plain circled digits — that is the sample
+  ballot Wikipedia's score-voting article shows ("0 is worst; 9 is best") and
+  the form rangevoting.org prints. Seeing the two side by side is the fastest
+  way to learn that the star glyphs are branding rather than part of the count,
+  and that a score ballot's resolution is a choice the election makes.
+
+  Its twin on the 0–5 scale is range_101_c3_b5.yaml, kept deliberately so the
+  same election can be read on STAR's scale and on Range's. Tabulated by the
+  range engine (pref_voting score_voting, cross-checked against a hand sum),
+  which reads the scale off the ballots themselves.
+
+# Range is a non-EVC method (see 06_Other/README.md). It is tabulated by
+# 06_Other/Range/Range_tabulation_engine/range_tabulation.py (pref_voting), NOT the
+# STAR engine — the STAR CLI's 0–5 cap is a teaching guardrail on that path and
+# does not apply here, which is what lets this case use its native 0–9 scale.
+voting_method: Range
+num_winners: 1
+
+ballots: |-
+  Ash,Birch,Cedar
+  9,7,0   # Ash's camp — Birch a strong second
+  9,6,1   # Ash's camp — Cedar barely registers
+  0,8,9   # Cedar's camp — Birch close behind
+  1,9,8   # Birch edges Cedar out
+  0,9,7   # Birch clearly ahead of Cedar
+
+expected_winners:
+  - Birch
+
+# file: range_101_0to9_c3_b5.yaml

@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**572 election files** (490 single-winner, 82 multi-winner) across 18 method(s).
+**573 election files** (491 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -27,7 +27,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | CAV | 1 |
 | IRV | 19 |
 | PLURALITY | 28 |
-| RANGE | 3 |
+| RANGE | 4 |
 | RCV-IRV | 3 |
 | RR | 1 |
 
@@ -671,11 +671,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`mmp_majority_ceiling`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_majority_ceiling.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33% → _Alice, Bruno, Cleo_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_majority_ceiling.yaml) |
 | [`mmp_sntv`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_sntv.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — SNTV (3 seats): the minority tops the poll → _Uma, Ada, Ben_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_sntv.yaml) |
 
-## RANGE  (3)
+## RANGE  (4)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`cav_library_board_blank_is_zero_c3_b12`](../../06_Other/Combined_Approval/cases/cases_pages/cav_library_board_blank_is_zero_c3_b12.md) | `06_Other/Combined_Approval/cases/` | 1 | Library board on a blank-is-zero score ballot — the same twelve voters → _Byron_ | [`.yaml`](../../06_Other/Combined_Approval/cases/cav_library_board_blank_is_zero_c3_b12.yaml) |
+| [`range_101_0to9_c3_b5`](../../06_Other/Range/cases/cases_pages/range_101_0to9_c3_b5.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting on its own scale — 0–9, the canonical ballot → _Birch_ | [`.yaml`](../../06_Other/Range/cases/range_101_0to9_c3_b5.yaml) |
 | [`range_101_c3_b5`](../../06_Other/Range/cases/cases_pages/range_101_c3_b5.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting 101 — highest total score wins → _Beth_ | [`.yaml`](../../06_Other/Range/cases/range_101_c3_b5.yaml) |
 | [`range_sullivan_score_c4_b10`](../../06_Other/Range/cases/cases_pages/range_sullivan_score_c4_b10.md) | `06_Other/Range/cases/` | 1 | Range / Score Voting — Sullivan's Example 5.2 (0–10 scale) → _C_ | [`.yaml`](../../06_Other/Range/cases/range_sullivan_score_c4_b10.yaml) |
 

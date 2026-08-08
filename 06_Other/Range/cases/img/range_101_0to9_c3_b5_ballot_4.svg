@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1841 844" width="1841" height="844">
+<rect width="1841" height="844" fill="#FFFFFF"/>
+<text x="30" y="78" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="66" font-weight="bold" fill="#C0504D">Birch edges Cedar out</text>
+<text x="470" y="168" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#000000" text-anchor="middle">Worst</text>
+<text x="1712" y="168" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#000000" text-anchor="middle">Best</text>
+<circle cx="470" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="470" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<circle cx="608" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="608" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<circle cx="746" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="746" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<circle cx="884" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="884" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<circle cx="1022" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="1022" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<circle cx="1160" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="1160" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<circle cx="1298" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="1298" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">6</text>
+<circle cx="1436" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="1436" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">7</text>
+<circle cx="1574" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="1574" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">8</text>
+<circle cx="1712" cy="274" r="43.5" fill="none" stroke="#A9C4D9" stroke-width="6"/>
+<text x="1712" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="45" font-weight="bold" fill="#000000" text-anchor="middle">9</text>
+<rect x="0" y="352" width="1841" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="352" x2="1841" y2="352" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="453.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Ash</text>
+<ellipse cx="470" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="470" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="608" cy="431.0" rx="34.0" ry="29.1" fill="#000000"/>
+<ellipse cx="746" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="746" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="884" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="884" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1022" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1022" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1160" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1160" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<ellipse cx="1298" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1298" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">6</text>
+<ellipse cx="1436" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1436" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">7</text>
+<ellipse cx="1574" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1574" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">8</text>
+<ellipse cx="1712" cy="431.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1712" y="447.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">9</text>
+<line x1="0" y1="510" x2="1841" y2="510" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="611.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Birch</text>
+<ellipse cx="470" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="470" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="608" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="608" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="746" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="746" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="884" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="884" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1022" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1022" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1160" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1160" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<ellipse cx="1298" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1298" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">6</text>
+<ellipse cx="1436" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1436" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">7</text>
+<ellipse cx="1574" cy="589.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1574" y="605.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">8</text>
+<ellipse cx="1712" cy="589.0" rx="34.0" ry="29.1" fill="#000000"/>
+<rect x="0" y="668" width="1841" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="668" x2="1841" y2="668" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="769.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Cedar</text>
+<ellipse cx="470" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="470" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">0</text>
+<ellipse cx="608" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="608" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+<ellipse cx="746" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="746" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+<ellipse cx="884" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="884" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+<ellipse cx="1022" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1022" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+<ellipse cx="1160" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1160" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+<ellipse cx="1298" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1298" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">6</text>
+<ellipse cx="1436" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1436" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">7</text>
+<ellipse cx="1574" cy="747.0" rx="34.0" ry="29.1" fill="#000000"/>
+<ellipse cx="1712" cy="747.0" rx="34.0" ry="29.1" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<text x="1712" y="763.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="35" font-weight="bold" fill="#000000" text-anchor="middle">9</text>
+<line x1="0" y1="826" x2="1841" y2="826" stroke="#95B3D7" stroke-width="7"/>
+</svg>

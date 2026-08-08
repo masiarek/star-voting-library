@@ -64,6 +64,14 @@ class Ballot(NamedTuple):
     # = the Majority Judgment grade ballot, one column per grade WORD. They are
     # different ballots, not settings of one — hence separate renderers.
     kind: str = "score"
+    # The top of the scale this ballot was printed with. 5 for STAR (always) and
+    # for Approval it is 1; a Range ballot's scale is a property of the election,
+    # so it travels with the ballot — and it is derived the same way the range
+    # engine derives it (the highest score anyone actually gave), so the picture
+    # and the report never disagree about what scale this was.
+    # (literal rather than MAX_SCORE: that constant is defined further down,
+    # with the parsing constants, and a NamedTuple default is evaluated here.)
+    max_score: int = 5
     # The grade ballot's column labels, lowest first ("To Reject" … "Excellent").
     # Only the grade ballot has these, and unlike the other two its scale is a
     # property of the election rather than a constant — Balinski & Laraki's whole
@@ -254,8 +262,27 @@ BALLOTS.update({
 # Methods whose voters are handed the 0–5 score ballot this art draws. Bloc STAR
 # and the proportional variants (allocated / sss / rrv) use the same ballot; only
 # the count differs.
-SCORE_METHODS = {"star", "starr", "bloc_star", "star_pr", "score", "range",
-                 "allocated", "sss", "rrv", "bloc"}
+STAR_BALLOT_METHODS = {"star", "starr", "bloc_star", "star_pr",
+                       "allocated", "sss", "rrv", "bloc"}
+# Range/Score voters are NOT handed a STAR ballot, and drawing them one was a
+# real bug: a reader landed on the Range page and reasonably concluded they were
+# looking at STAR. Two things are wrong with it. The **stars** are STAR Voting's
+# branding — Wikipedia's score-voting article ties star glyphs to STAR and to
+# consumer ratings (IMDb, Amazon), never to score voting generally. And the
+# **0–5 scale** is STAR's; canonical Range runs **0–9** ("0 is worst; 9 is
+# best"), which is what Wikipedia's sample ballot shows as circled digits and
+# what rangevoting.org prints as `Andrews [0 1 2 3 4 5 6 7 8 9 NO OPINION]`.
+# (Warren Smith prefers 0–99 for expressiveness but says outright that "simpler
+# is 0 to 9" and does not insist — rangevoting.org is advocacy-adjacent, so it
+# is cited here for the ballot's *form*, not for a verdict.)
+#   So Range gets its own drawing: plain numerals in circles, no stars, and
+# whatever scale the ballots actually use.
+RANGE_BALLOT_METHODS = {"score", "range"}
+SCORE_METHODS = STAR_BALLOT_METHODS | RANGE_BALLOT_METHODS
+# Bubbles stop being the right picture somewhere past 0–10: a real 0–99 ballot
+# has voters *write digits*, not fill a hundred ovals, so it is a different piece
+# of paper and we decline it rather than draw a wrong one.
+RANGE_DRAW_MAX = 10
 # Approval voters get a *different* piece of paper — approve or don't, one bit —
 # so it gets its own drawing (Yes/No bubbles) rather than a 0–5 grid with four
 # columns nobody was offered. Everything still outside both sets — Plurality, any
@@ -488,20 +515,29 @@ def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
     method = method.replace("-", "_").replace(" ", "_")
     if method in APPROVAL_METHODS:
         kind, max_score = "approval", 1
-    elif method in SCORE_METHODS:
+    elif method in RANGE_BALLOT_METHODS:
+        kind, max_score = "range", RANGE_DRAW_MAX
+    elif method in STAR_BALLOT_METHODS:
         kind, max_score = "score", MAX_SCORE
     else:
         raise CaseBallotError(
-            f"{method or 'this method'} is neither a 0–5 score nor an approval "
+            f"{method or 'this method'} is neither a score nor an approval "
             f"ballot — drawing one would mislead")
 
     cast, rows = parse_ballot_block(block, max_score)
+    if kind == "range":
+        # The range engine calls the scale `0..max observed grade`
+        # (range_tabulation.py's `max_grade`), so the drawing does too — a
+        # picture showing a 0–9 ballot beside a report headed "0–5 scale" would
+        # be its own small lie. Floor of 1 so an all-zeroes case still draws.
+        max_score = max(
+            [s for r in rows for s in r.scores if s is not None] or [1]) or 1
     stem = yaml_path.stem
     out_dir = yaml_path.parent / "img"
     return [
         (f"{stem}_ballot_{n}",
          Ballot(row_title(n, r.weight, r.note), cast, r.scores, out_dir,
-                quoted=False, kind=kind))
+                quoted=False, kind=kind, max_score=max_score))
         for n, r in enumerate(rows[:limit], start=1)
     ], len(rows)
 
@@ -602,7 +638,12 @@ def alt_text(ballot: Ballot) -> str:
         f"{name} {score}" if score is not None else f"{name} left blank (counts as 0)"
         for name, score in zip(ballot.cast, ballot.scores)
     ]
-    return f"A 0–5 STAR ballot — {ballot.title}: " + ", ".join(marks) + "."
+    # Name the paper the voter was actually handed. This used to say "0–5 STAR
+    # ballot" for every score case, Range included — which is how a reader came
+    # to believe the Range page was showing them STAR.
+    paper = (f"A 0–{ballot.max_score} score ballot" if ballot.kind == "range"
+             else f"A 0–{ballot.max_score} STAR ballot")
+    return f"{paper} — {ballot.title}: " + ", ".join(marks) + "."
 
 
 # Palette sampled from the existing hand-made thumbnails.
@@ -677,6 +718,38 @@ GRADE_COL_MIN_DX = 190
 GRADE_COL_PAD = 26        # blank space either side of the widest label line
 
 
+# The Range / Score ballot: the same grid as STAR, with the stars taken off and
+# the scale set by the election rather than fixed at 0–5.
+#   Up to six columns it reuses the STAR geometry EXACTLY (same width, same
+# gutter, same column spacing), which is deliberate: a 0–5 Range ballot then
+# renders as the STAR ballot minus its stars, and that is precisely the lesson —
+# same piece of paper, different count. Past six columns the grid has to give
+# ground, so the gutter tightens and the columns close up to keep 0–9 or 0–10 on
+# a canvas that is still readable at the width a page embeds it.
+RANGE_WIDE_COL0_X = 470
+RANGE_WIDE_COL_DX = 138
+RANGE_WIDE_NAME_X = 60
+RANGE_WIDE_PAD = 60
+
+
+def range_geometry(ballot: Ballot) -> tuple[float, float, float, float]:
+    """(col0_x, col_dx, name_x, bubble_rx) for this ballot's column count."""
+    if ballot.max_score <= MAX_SCORE:
+        return COL0_X, COL_DX, NAME_X, 42.0
+    return RANGE_WIDE_COL0_X, RANGE_WIDE_COL_DX, RANGE_WIDE_NAME_X, 34.0
+
+
+def range_col_x(i: int, col0: float, dx: float) -> float:
+    return col0 + i * dx
+
+
+def range_width(ballot: Ballot) -> int:
+    if ballot.max_score <= MAX_SCORE:
+        return W
+    col0, dx, _, _ = range_geometry(ballot)
+    return int(range_col_x(ballot.max_score, col0, dx) + dx / 2 + RANGE_WIDE_PAD)
+
+
 def grade_label_lines(label: str) -> list[str]:
     """A column heading, split onto two lines at its last space ("Very Good")."""
     label = str(label)
@@ -725,7 +798,11 @@ def grade_width(ballot: Ballot) -> int:
 def canvas_width(ballot: Ballot) -> int:
     if ballot.kind == "approval":
         return APPROVAL_W
-    return grade_width(ballot) if ballot.kind == "grade" else W
+    if ballot.kind == "grade":
+        return grade_width(ballot)
+    if ballot.kind == "range":
+        return range_width(ballot)
+    return W
 
 
 def title_font_size(shown: str, width: int = W) -> int:
@@ -795,11 +872,119 @@ def star_path(cx: float, cy: float, r: float) -> str:
     return "M" + "L".join(pts) + "Z"
 
 
+def render_range_svg(ballot: Ballot) -> str:
+    """The Range / Score ballot — the score grid with no stars on it.
+
+    Deliberately NOT a flag on the STAR renderer. The scale is the election's
+    rather than a constant, the header glyphs are circles rather than stars, and
+    those two differences are the whole point of having the drawing: a reader
+    should be able to tell at a glance that this is not a STAR ballot.
+    """
+    title, cast, scores = ballot.title, ballot.cast, ballot.scores
+    top_score = ballot.max_score
+    col0, dx, name_x, rx = range_geometry(ballot)
+    ry = rx * 36 / 42
+    width = range_width(ballot)
+    H = height_for(ballot)
+    dy = top_block_h(ballot)
+    plain = f'"{title}"' if ballot.quoted else title
+    shown = f"&quot;{title}&quot;" if ballot.quoted else title
+    out: list[str] = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {H}" '
+        f'width="{width}" height="{H}">',
+        f'<rect width="{width}" height="{H}" fill="#FFFFFF"/>',
+        f'<text x="{TITLE_X}" y="{TITLE_Y}" font-family="{FONT}" '
+        f'font-size="{title_font_size(plain, width)}" font-weight="bold" '
+        f'fill="{RUST}">{shown}</text>',
+    ]
+    if ballot.subtitle:
+        out.append(
+            f'<text x="{TITLE_X}" y="{TITLE_Y + SUB_GAP}" font-family="{FONT}" '
+            f'font-size="{SUB_SIZE}" font-weight="bold" fill="{INK}">'
+            f'{esc(ballot.subtitle)}</text>'
+        )
+    for n, line in enumerate(ballot.header):
+        y = TITLE_Y + (SUB_GAP if ballot.subtitle else 0) + HDR_GAP + n * HDR_LINE_H
+        out.append(
+            f'<text x="{TITLE_X}" y="{y}" font-family="{BODY_FONT}" '
+            f'font-size="{HDR_SIZE}" fill="{INK}">{esc(line)}</text>'
+        )
+
+    # "0 is worst; 9 is best" is the instruction Wikipedia's sample ballot
+    # prints, so the scale is labelled at both ends here too.
+    out += [
+        f'<text x="{range_col_x(0, col0, dx)}" y="{HDR_WORST_Y + dy}" '
+        f'font-family="{FONT}" font-size="52" font-weight="bold" fill="{INK}" '
+        f'text-anchor="middle">Worst</text>',
+        f'<text x="{range_col_x(top_score, col0, dx)}" y="{HDR_WORST_Y + dy}" '
+        f'font-family="{FONT}" font-size="52" font-weight="bold" fill="{INK}" '
+        f'text-anchor="middle">Best</text>',
+    ]
+
+    # Header scale: every rung is a numeral in a plain CIRCLE — Wikipedia renders
+    # the score-voting scale as circled digits (⓿①②…⑨). No stars anywhere.
+    for i in range(top_score + 1):
+        cx = range_col_x(i, col0, dx)
+        out.append(
+            f'<circle cx="{cx}" cy="{STAR_ROW_Y + dy - 18}" r="{rx * 1.28:.1f}" '
+            f'fill="none" stroke="{STAR_OUTLINE}" stroke-width="6"/>'
+        )
+        out.append(
+            f'<text x="{cx}" y="{STAR_ROW_Y + dy}" font-family="{FONT}" '
+            f'font-size="{int(rx * 1.33)}" font-weight="bold" fill="{INK}" '
+            f'text-anchor="middle">{i}</text>'
+        )
+
+    for r, name in enumerate(cast):
+        top = GRID_TOP + dy + r * ROW_H
+        mid = top + ROW_H / 2
+        if r % 2 == 0:
+            out.append(
+                f'<rect x="0" y="{top}" width="{width}" height="{ROW_H}" '
+                f'fill="{ROW_TINT}"/>')
+        out.append(
+            f'<line x1="0" y1="{top}" x2="{width}" y2="{top}" stroke="{RULE}" '
+            f'stroke-width="7"/>')
+        out.append(
+            f'<text x="{name_x}" y="{mid + 22}" font-family="{FONT}" '
+            f'font-size="62" font-weight="bold" fill="{INK}">{name}</text>'
+        )
+        marked = scores[r]
+        for i in range(top_score + 1):
+            cx = range_col_x(i, col0, dx)
+            if marked is not None and i == marked:
+                out.append(
+                    f'<ellipse cx="{cx}" cy="{mid}" rx="{rx:.1f}" ry="{ry:.1f}" '
+                    f'fill="{INK}"/>')
+            else:
+                out.append(
+                    f'<ellipse cx="{cx}" cy="{mid}" rx="{rx:.1f}" ry="{ry:.1f}" '
+                    f'fill="#FFFFFF" stroke="{BUBBLE_STROKE}" stroke-width="5"/>')
+                out.append(
+                    f'<text x="{cx}" y="{mid + 16}" font-family="{FONT}" '
+                    f'font-size="{int(rx * 1.05)}" font-weight="bold" '
+                    f'fill="{INK}" text-anchor="middle">{i}</text>')
+    bottom = GRID_TOP + dy + len(cast) * ROW_H
+    out.append(
+        f'<line x1="0" y1="{bottom}" x2="{width}" y2="{bottom}" '
+        f'stroke="{RULE}" stroke-width="7"/>')
+    for n, line in enumerate(ballot.footer):
+        out.append(
+            f'<text x="{TITLE_X}" y="{bottom + FTR_GAP + n * FTR_LINE_H}" '
+            f'font-family="{BODY_FONT}" font-size="{FTR_SIZE}" fill="{INK}">'
+            f'{esc(line)}</text>'
+        )
+    out.append("</svg>")
+    return "\n".join(out)
+
+
 def render_svg(ballot: Ballot) -> str:
     if ballot.kind == "approval":
         return render_approval_svg(ballot)
     if ballot.kind == "grade":
         return render_grade_svg(ballot)
+    if ballot.kind == "range":
+        return render_range_svg(ballot)
     title, cast, scores = ballot.title, ballot.cast, ballot.scores
     H = height_for(ballot)
     dy = top_block_h(ballot)
@@ -1069,6 +1254,8 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
         return rasterize_approval(ballot, png_path)
     if ballot.kind == "grade":
         return rasterize_grade(ballot, png_path)
+    if ballot.kind == "range":
+        return rasterize_range(ballot, png_path)
 
     def s(v: float) -> float:
         return v * SS
@@ -1130,6 +1317,85 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
         d.text((s(TITLE_X), s(bottom + FTR_GAP + n * FTR_LINE_H)), line,
                font=f_ftr, fill=INK, anchor="ls")
     _save_png(img, W, H, png_path)
+
+
+def rasterize_range(ballot: Ballot, png_path: Path) -> None:
+    """The Range / Score ballot as a bitmap — mirrors render_range_svg exactly.
+
+    There are two renderers per piece of paper (SVG for editing, PIL for the PNG
+    a page embeds) and they must stay in step: the first cut of this ballot
+    updated only the SVG, and the PNG went on quietly printing stars.
+    """
+    from PIL import Image, ImageDraw
+
+    top_score = ballot.max_score
+    col0, dx, name_x, rx = range_geometry(ballot)
+    ry = rx * 36 / 42
+    width = range_width(ballot)
+
+    def s(v: float) -> float:
+        return v * SS
+
+    title, cast, scores = ballot.title, ballot.cast, ballot.scores
+    H = height_for(ballot)
+    img = Image.new("RGB", (width * SS, H * SS), "#FFFFFF")
+    d = ImageDraw.Draw(img)
+    f_hdr = _font(52 * SS)
+    f_scale = _font(int(rx * 1.33) * SS)
+    f_name, f_bubble = _font(62 * SS), _font(int(rx * 1.05) * SS)
+
+    dy = top_block_h(ballot)
+    shown = f'"{title}"' if ballot.quoted else title
+    d.text((s(TITLE_X), s(TITLE_Y)), shown,
+           font=_font(title_font_size(shown, width) * SS), fill=RUST, anchor="ls")
+
+    if ballot.subtitle:
+        d.text((s(TITLE_X), s(TITLE_Y + SUB_GAP)), ballot.subtitle,
+               font=_font(SUB_SIZE * SS), fill=INK, anchor="ls")
+    f_instr = _font(HDR_SIZE * SS, body=True)
+    for n, line in enumerate(ballot.header):
+        y = TITLE_Y + (SUB_GAP if ballot.subtitle else 0) + HDR_GAP + n * HDR_LINE_H
+        d.text((s(TITLE_X), s(y)), line, font=f_instr, fill=INK, anchor="ls")
+
+    d.text((s(range_col_x(0, col0, dx)), s(HDR_WORST_Y + dy)), "Worst",
+           font=f_hdr, fill=INK, anchor="ms")
+    d.text((s(range_col_x(top_score, col0, dx)), s(HDR_WORST_Y + dy)), "Best",
+           font=f_hdr, fill=INK, anchor="ms")
+
+    for i in range(top_score + 1):
+        cx = range_col_x(i, col0, dx)
+        cy = STAR_ROW_Y + dy - 18
+        r = rx * 1.28
+        d.ellipse([s(cx - r), s(cy - r), s(cx + r), s(cy + r)],
+                  outline=STAR_OUTLINE, width=int(s(6)))
+        d.text((s(cx), s(STAR_ROW_Y + dy)), str(i), font=f_scale, fill=INK,
+               anchor="ms")
+
+    for r_i, name in enumerate(cast):
+        top = GRID_TOP + dy + r_i * ROW_H
+        mid = top + ROW_H / 2
+        if r_i % 2 == 0:
+            d.rectangle([0, s(top), s(width), s(top + ROW_H)], fill=ROW_TINT)
+        d.line([0, s(top), s(width), s(top)], fill=RULE, width=int(s(7)))
+        d.text((s(name_x), s(mid + 22)), name, font=f_name, fill=INK, anchor="ls")
+        marked = scores[r_i]
+        for i in range(top_score + 1):
+            cx = range_col_x(i, col0, dx)
+            box = [s(cx - rx), s(mid - ry), s(cx + rx), s(mid + ry)]
+            if marked is not None and i == marked:
+                d.ellipse(box, fill=INK)
+            else:
+                d.ellipse(box, fill="#FFFFFF", outline=BUBBLE_STROKE, width=int(s(5)))
+                d.text((s(cx), s(mid + 16)), str(i), font=f_bubble, fill=INK,
+                       anchor="ms")
+
+    bottom = GRID_TOP + dy + len(cast) * ROW_H
+    d.line([0, s(bottom), s(width), s(bottom)], fill=RULE, width=int(s(7)))
+    f_ftr = _font(FTR_SIZE * SS, body=True)
+    for n, line in enumerate(ballot.footer):
+        d.text((s(TITLE_X), s(bottom + FTR_GAP + n * FTR_LINE_H)), line,
+               font=f_ftr, fill=INK, anchor="ls")
+    _save_png(img, width, H, png_path)
 
 
 def rasterize_approval(ballot: Ballot, png_path: Path) -> None:

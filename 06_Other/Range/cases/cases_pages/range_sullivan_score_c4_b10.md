@@ -28,7 +28,7 @@ Source: Brendan W. Sullivan, An Introduction to the Math of Voting Methods
 
 ## Ballots
 
-Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+Row 1 = candidate names; each later row is one voter's scores on this election's scale, 0 = worst (a `N ×` prefix = N identical ballots).
 
 ```text
 A,B,C,D
@@ -107,4 +107,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/Range/c
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [range_101_c3_b5](range_101_c3_b5.md)
+More cases in this set: [range_101_0to9_c3_b5](range_101_0to9_c3_b5.md) · [range_101_c3_b5](range_101_c3_b5.md)

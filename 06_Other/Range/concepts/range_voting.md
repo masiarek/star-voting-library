@@ -1,8 +1,8 @@
 # Range / Score Voting
 
-*Every voter **grades each candidate** on a fixed scale (say 0–5); the candidate with the **highest total score wins**. No runoff, no elimination — just add up the grades. Range is the most expressive single-mark method: Approval with more than one bit, and STAR without the runoff.*
+*Every voter **grades each candidate** on a fixed scale — canonically **0–9**; the candidate with the **highest total score wins**. No runoff, no elimination — just add up the grades. Range is the most expressive single-mark method: Approval with more than one bit, and STAR without the runoff.*
 
-→ **Run it:** the 101 case [`06_Other/Range/cases/range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/README.md) (pref_voting). · Family: [Approval](../../../04_Approval/01_Learn/approval_voting.md) · [STAR](../../../01_STAR/01_Learn/README.md) · [Majority Judgment](../../Majority_Judgment/concepts/majority_judgment.md) (the same ballot, counted by the **median**) · [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
+→ **Run it:** the canonical 0–9 case [`range_101_0to9_c3_b5.yaml`](../cases/range_101_0to9_c3_b5.yaml) ([page](../cases/cases_pages/range_101_0to9_c3_b5.md)) · the same election on STAR's 0–5 scale [`range_101_c3_b5.yaml`](../cases/range_101_c3_b5.yaml) ([tabulated](../cases/cases_tabulated/range_101_c3_b5_RANGE_tabulated.txt)) · the **Black Curtain, read as Range** → [The Black Curtain, read as Range / Score voting](../../../method_comparisons/black_curtain/black_curtain_range.md) · Engine: [the Range engine](../Range_tabulation_engine/README.md) (pref_voting). · Family: [Approval](../../../04_Approval/01_Learn/approval_voting.md) · [STAR](../../../01_STAR/01_Learn/README.md) · [Majority Judgment](../../Majority_Judgment/concepts/majority_judgment.md) (the same ballot, counted by the **median**) · [fidelity ladder](../../../07_Concepts/scores_and_ranks/fidelity_ladder.md).
 
 > **Non-EVC method.** Range is what STAR *improves on*, so this library teaches *about* it rather than promoting it — it lives in [other methods](../../README.md), not the numbered root folders. The honest comparison is the point.
 
@@ -10,21 +10,52 @@
 
 ## How it works
 
-The ballot is a **score grid** — grade every candidate independently, e.g. 0–5. It is *the same piece of paper STAR uses*; the whole difference between the two methods is what happens after the marks are counted. Here are the five ballots of the [101 case](../cases/range_101_c3_b5.yaml) exactly as those voters marked them, each beside the numbers the file records:
+The ballot is a **score grid** — grade every candidate independently. Here is the canonical one, from the [0–9 case](../cases/range_101_0to9_c3_b5.yaml): five neighbours picking a tree for Main Street, each ballot beside the numbers the file records.
+
+<!-- ballots:range_101_0to9_c3_b5 -->
+The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
+
+| Ballot as marked | Ash | Birch | Cedar |
+|:--|:--:|:--:|:--:|
+| <img src="../cases/img/range_101_0to9_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Birch a strong second: Ash 9, Birch 7, Cedar 0."> | 9 | 7 | 0 |
+| <img src="../cases/img/range_101_0to9_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Cedar barely registers: Ash 9, Birch 6, Cedar 1."> | 9 | 6 | 1 |
+| <img src="../cases/img/range_101_0to9_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Cedar's camp — Birch close behind: Ash 0, Birch 8, Cedar 9."> | 0 | 8 | 9 |
+| <img src="../cases/img/range_101_0to9_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch edges Cedar out: Ash 1, Birch 9, Cedar 8."> | 1 | 9 | 8 |
+| <img src="../cases/img/range_101_0to9_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch clearly ahead of Cedar: Ash 0, Birch 9, Cedar 7."> | 0 | 9 | 7 |
+<!-- /ballots -->
+
+Counting is a single sum: Birch 39, Cedar 25, Ash 19 → **Birch wins**, though nobody made it their favourite. No finalists, no rounds.
+
+### It is not a STAR ballot — two differences worth naming
+
+A STAR ballot is a score grid too, and the two get confused constantly. What separates them on paper:
+
+| | **Range / Score** | **STAR** |
+|---|---|---|
+| Scale | **0–9** | **0–5** |
+| The rungs are drawn as | plain **circled digits** | **stars** |
+
+Neither difference is cosmetic-only, and neither is part of the arithmetic. The **stars are STAR Voting's house style** — [Wikipedia's score-voting article](https://en.wikipedia.org/wiki/Score_voting) uses star glyphs only for STAR and for consumer ratings (IMDb, Amazon), never for score voting generally. And **0–9 is Range's own default**: that article's sample ballot runs 0–9 as circled digits with the instruction *"0 is worst; 9 is best"*, and [rangevoting.org](https://rangevoting.org/RangeVoting.html) prints rows as `Andrews [0 1 2 3 4 5 6 7 8 9 NO OPINION]`. (Warren Smith prefers 0–99 for expressiveness but says outright that *"simpler is 0 to 9"* and does not insist. rangevoting.org is advocacy-adjacent, so it is cited here for the ballot's **form**, not for a verdict — see [how this repo sources claims](../../../07_Concepts/tips/TIPS_terminology.md).)
+
+One thing our ballots leave off deliberately: rangevoting.org's **NO OPINION** column. It is genuinely canonical, but it means *"leave me out of this candidate's average"* — and this library's engines count a blank as a **0**, which is a different rule. Drawing a column whose semantics we don't tabulate would be the same class of error as the stars, so the cases here use blank = 0 and say so.
+
+### The same election on STAR's scale
+
+Because the difference is the paper and not the count, the *same* election reads fine at 0–5 — this is the [101 case](../cases/range_101_c3_b5.yaml), and these are exactly the marks a STAR ballot would have collected, minus the stars:
 
 <!-- ballots:range_101_c3_b5 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
 | Ballot as marked | Amy | Beth | Cole |
 |:--|:--:|:--:|:--:|
-| <img src="../cases/img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
-| <img src="../cases/img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
-| <img src="../cases/img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
-| <img src="../cases/img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
-| <img src="../cases/img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
+| <img src="../cases/img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
+| <img src="../cases/img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
+| <img src="../cases/img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
+| <img src="../cases/img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
+| <img src="../cases/img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
 <!-- /ballots -->
 
-Counting is a single sum. Totals: Beth 21, Cole 15, Amy 11 → **Beth wins.** No finalists, no rounds. (Larger scales — 0–9, 0–10, 0–99 — work the same way; `rangevoting.org` favors a wide scale.)
+Same rule, same shape of result: Beth 21, Cole 15, Amy 11 → **Beth wins.** What the coarser scale costs is *resolution* — on 0–9 a voter can separate a 7 from a 6, and on 0–5 they cannot. That is not always harmless: compressing a 0–9 ballot to 0–5 can change who reaches STAR's runoff, and through that who wins — see [scale granularity can flip the winner](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md). Wider scales still (0–10, 0–99) work exactly the same way; our [Sullivan case](../cases/cases_pages/range_sullivan_score_c4_b10.md) runs 0–10.
 
 ## Where it sits in the scored family
 

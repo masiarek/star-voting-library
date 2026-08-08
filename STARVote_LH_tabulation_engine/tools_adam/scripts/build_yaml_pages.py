@@ -158,10 +158,18 @@ def _ballot_kind(ballots_text, method):
         return "ranked"
     if method == "approval":
         return "approval"
+    # Range/Score voters are handed a different piece of paper from STAR's — no
+    # stars, and the scale is the election's rather than a fixed 0–5. Calling it
+    # "score" here is what once put a star ballot on the Range page.
+    if method in ballot_art.RANGE_BALLOT_METHODS:
+        return "range"
     return "score"
 
 HOW_TO_READ = {
     "score":    "Row 1 = candidate names; each later row is one voter's 0–5 scores "
+                "(a `N ×` prefix = N identical ballots).",
+    "range":    "Row 1 = candidate names; each later row is one voter's scores on "
+                "this election's scale, 0 = worst "
                 "(a `N ×` prefix = N identical ballots).",
     "approval": "Row 1 = candidate names; each later row is one voter's approvals "
                 "(`1` = approve, `0`/blank = not approved).",
@@ -196,7 +204,7 @@ def _esc_attr(text):
 # auto table layout hands the column whatever the score columns don't want. The
 # `min-width` is what keeps the ballot legible; the table scrolls inside its own
 # container instead. Wider casts get a smaller picture so the table still fits.
-def _art_width(n_cast, kind="score"):
+def _art_width(n_cast, kind="score", max_score=5):
     """Rendered width for one ballot picture.
 
     A grade ballot ignores the cast size: it never shares a row (see
@@ -206,6 +214,13 @@ def _art_width(n_cast, kind="score"):
     column per candidate in a 688px content column.
     """
     if kind == "grade":
+        return 640
+    # A wide Range ballot has the same problem for the same reason: 0–9 is 11
+    # bubble columns on a canvas ~15% wider than the 0–5 grid, so at the usual
+    # 330px the digits land around 8px and stop being legible. Give it the grade
+    # ballot's width. A 0–5 Range ballot is geometrically the STAR grid with the
+    # stars removed, so it keeps the ordinary widths.
+    if kind == "range" and max_score > 5:
         return 640
     if n_cast <= 3:
         return 330
@@ -265,13 +280,25 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
     if parsed is not None:
         cast, rows = parsed
     else:
+        # A Range case is parsed against ITS OWN scale, not STAR's. Parsing a
+        # 0–9 ballot with the default 0–5 cap raised CaseBallotError and the art
+        # was silently dropped — the picture sat on disk and no page showed it,
+        # which is exactly the failure `test_ballot_art` exists to catch.
+        cap = ballot_art.RANGE_DRAW_MAX if kind == "range" else ballot_art.MAX_SCORE
         try:
-            cast, rows = ballot_art.parse_ballot_block(ballots_text)
+            cast, rows = ballot_art.parse_ballot_block(ballots_text, cap)
         except ballot_art.CaseBallotError:
             return None              # art we can't line up with the numbers
 
+    # Same rule the range engine and the drawer use: the scale is the highest
+    # score anyone actually gave, so picture, page and report agree.
+    max_score = 5
+    if kind == "range":
+        max_score = max(
+            [s for r in rows for s in r.scores if s is not None] or [1]) or 1
+
     by_candidate = len(cast) <= MAX_CANDIDATE_COLUMNS
-    width = _art_width(len(cast), kind)
+    width = _art_width(len(cast), kind, max_score)
     spill = {"approval": "Approvals", "grade": "Grades"}.get(kind, "Scores")
 
     drawn = []
@@ -283,7 +310,7 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
                  else ballot_art.row_title(n, row.weight, row.note))
         alt = ballot_art.alt_text(ballot_art.Ballot(
             title, cast, row.scores, img_dir, quoted=False, kind=kind,
-            grades=tuple(grades)))
+            grades=tuple(grades), max_score=max_score))
         src = os.path.relpath(path, page_dir).replace(os.sep, "/")
         drawn.append((row, alt, src))
     if not drawn:                    # art on disk, but none of it matched a row
