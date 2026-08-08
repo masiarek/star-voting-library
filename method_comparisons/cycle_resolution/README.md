@@ -1,14 +1,18 @@
 # Cycle resolution, counted — where the Condorcet family stops agreeing
 
-The tabulatable evidence behind [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../05_Ranked_Robin/01_Learn/cycle_resolution.md). When a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) exists, **every** Condorcet method elects them and there is nothing to argue about. When majority preference **cycles**, the family splits — and these two elections are the split, made runnable.
+The tabulatable evidence behind [Cycle Resolution — why Minimax, Ranked Pairs, and Schulze exist](../../05_Ranked_Robin/01_Learn/cycle_resolution.md). When a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) exists, **every** Condorcet method elects them and there is nothing to argue about. When majority preference **cycles**, the family splits — and these elections are the split, made runnable.
 
-Both are **LH-only**: the LH engine's Ranked Robin is Copeland, and in a cycle Copeland usually ties, which LH breaks by margin then lot and BetterVoting breaks *at random*. A tie-deciding result can't be frozen on BV, so these cases stay in the library.
+All are **LH-only**: the LH engine's Ranked Robin is Copeland, and in a cycle Copeland usually ties, which LH breaks by margin then lot and BetterVoting breaks *at random*. A tie-deciding result can't be frozen on BV, so these cases stay in the library.
+
+The last two rows are one election counted twice — 999 ballots converted from an outside engine's published cast vote record, which is why they break this folder's usual keep-it-small rule. See [RCV Lab](../../07_Concepts/tabulation_engines/rcv_lab.md) for where the data came from and what was verified against it.
 
 | Case (source) | Ballots | What it shows |
 |---|:--:|---|
 | [page](cases/cases_pages/cycle_copeland_ties_c4_b21.md) · [`cycle_copeland_ties_c4_b21.yaml`](cases/cycle_copeland_ties_c4_b21.yaml) | 21 | Copeland ties **Alder, Birch, Cedar** at 2–1 each — the simple count can't pick. All four refined rules then agree on **Alder**, whose only defeat (margin 1) is the mildest in the cycle. |
 | [page](cases/cases_pages/cycle_schulze_vs_ranked_pairs_c4_b40.md) · [`cycle_schulze_vs_ranked_pairs_c4_b40.yaml`](cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml) | 40 | The two "serious" cycle-resolvers **disagree outright**: Schulze elects **Ana**, Ranked Pairs elects **Bruno**, on identical ballots. Split Cycle returns **both**, on the grounds that the ballots don't separate them. |
 | [page](cases/cases_pages/cycle_family_splits_c5_b77.md) · [`cycle_family_splits_c5_b77.yaml`](cases/cycle_family_splits_c5_b77.yaml) | 77 | Five candidates, Smith set = everyone, no Condorcet winner. **Ranked Pairs alone picks Ben**; Ranked Robin (margin tiebreak), Minimax, Schulze and Stable Voting all pick **Ava**; Split Cycle returns both. Replaces an earlier unsourced "Heitzig" profile — this one is search-built and `pref_voting`-verified. |
+| [page](cases/cases_pages/cycle_vote_on_the_rule_rr_c5_b999.md) · [`cycle_vote_on_the_rule_rr_c5_b999.yaml`](cases/cycle_vote_on_the_rule_rr_c5_b999.yaml) | 999 | **The candidates are the cycle-breaking rules, and the ballots cycle.** Minimax, Ranked Pairs, Schulze, Split Cycle, Stable Voting and RCV-IRV are *unanimous* for **Ranked Pairs** — Schulze and Minimax each voting for a rival over itself. Only **Copeland's Rule** can't decide (all three go 3–1), so Ranked Robin's margin tiebreak lands on **Schulze Method** instead. Converted from [RCV Lab's](../../07_Concepts/tabulation_engines/rcv_lab.md) published CVR. |
+| [page](cases/cases_pages/cycle_vote_on_the_rule_irv_c5_b999.md) · [`cycle_vote_on_the_rule_irv_c5_b999.yaml`](cases/cycle_vote_on_the_rule_irv_c5_b999.yaml) | 999 | The same ballots as an RCV-IRV count, kept as the fidelity check: every tally reproduces [RCV Lab's](../../07_Concepts/tabulation_engines/rcv_lab.md) published report. Winner **Ranked Pairs** on 492 — a majority of the 886 ballots still live, and 49.2% of the 999 cast. |
 
 ## Running them
 

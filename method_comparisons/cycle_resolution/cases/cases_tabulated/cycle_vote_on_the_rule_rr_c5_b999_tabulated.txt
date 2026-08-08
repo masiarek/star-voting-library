@@ -1,0 +1,118 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 999 ballots (ranked ballots).
+
+Ballots:
+    82 × Ranked Pairs > Schulze Method
+    70 × Schulze Method > Minimax
+    65 × Minimax > Ranked Pairs
+    56 × Ranked Pairs > Schulze Method > Minimax > Copeland's Rule
+    49 × Schulze Method > Minimax > Ranked Pairs > Copeland's Rule
+    45 × Schulze Method > Minimax > Ranked Pairs
+    44 × Copeland's Rule > Flip a Coin
+    44 × Minimax > Ranked Pairs > Schulze Method > Copeland's Rule
+    42 × Ranked Pairs > Schulze Method > Minimax
+    41 × Flip a Coin > Copeland's Rule
+    39 × Schulze Method > Ranked Pairs
+    34 × Ranked Pairs > Minimax
+    30 × Minimax > Schulze Method > Ranked Pairs > Copeland's Rule
+    27 × Minimax > Ranked Pairs > Schulze Method
+    23 × Schulze Method > Ranked Pairs > Minimax > Copeland's Rule
+    21 × Minimax > Schulze Method
+    20 × Ranked Pairs > Minimax > Schulze Method
+    19 × Schulze Method
+    18 × Ranked Pairs > Minimax > Schulze Method > Copeland's Rule
+    18 × Schulze Method > Ranked Pairs > Minimax
+    16 × Minimax > Schulze Method > Ranked Pairs
+    16 × Ranked Pairs
+    14 × Minimax
+    12 × Ranked Pairs > Schulze Method > Copeland's Rule > Minimax
+    12 × Schulze Method > Minimax > Copeland's Rule > Ranked Pairs
+    11 × Minimax > Ranked Pairs > Copeland's Rule > Schulze Method
+    11 × Ranked Pairs > Schulze Method > Minimax > Copeland's Rule > Flip a Coin
+     9 × Minimax > Ranked Pairs > Schulze Method > Copeland's Rule > Flip a Coin
+     9 × Schulze Method > Minimax > Copeland's Rule
+     9 × Schulze Method > Minimax > Ranked Pairs > Copeland's Rule > Flip a Coin
+     8 × Ranked Pairs > Schulze Method > Copeland's Rule
+     7 × Minimax > Ranked Pairs > Copeland's Rule
+     6 × Schulze Method > Ranked Pairs > Minimax > Copeland's Rule > Flip a Coin
+     5 × Minimax > Schulze Method > Ranked Pairs > Copeland's Rule > Flip a Coin
+     5 × Ranked Pairs > Minimax > Schulze Method > Copeland's Rule > Flip a Coin
+     4 × Copeland's Rule
+     4 × Flip a Coin > Copeland's Rule > Ranked Pairs
+     4 × Ranked Pairs > Copeland's Rule > Schulze Method
+     4 × Schulze Method > Copeland's Rule > Minimax > Ranked Pairs
+     3 × Copeland's Rule > Flip a Coin > Ranked Pairs
+     3 × Copeland's Rule > Flip a Coin > Schulze Method
+     3 × Flip a Coin
+     3 × Minimax > Copeland's Rule
+     3 × Schulze Method > Copeland's Rule
+     2 × Copeland's Rule > Schulze Method > Minimax > Ranked Pairs
+     2 × Flip a Coin > Copeland's Rule > Minimax
+     2 × Flip a Coin > Copeland's Rule > Schulze Method
+     2 × Minimax > Copeland's Rule > Ranked Pairs > Schulze Method
+     2 × Minimax > Ranked Pairs > Copeland's Rule > Schulze Method > Flip a Coin
+     2 × Ranked Pairs > Copeland's Rule > Schulze Method > Minimax
+     2 × Ranked Pairs > Schulze Method > Copeland's Rule > Minimax > Flip a Coin
+     2 × Schulze Method > Copeland's Rule > Minimax
+     2 × Schulze Method > Minimax > Copeland's Rule > Ranked Pairs > Flip a Coin
+     2 × Schulze Method > Ranked Pairs > Copeland's Rule
+     1 × Copeland's Rule > Flip a Coin > Minimax
+     1 × Copeland's Rule > Minimax
+     1 × Copeland's Rule > Ranked Pairs > Schulze Method
+     1 × Copeland's Rule > Ranked Pairs > Schulze Method > Minimax
+     1 × Copeland's Rule > Schulze Method
+     1 × Minimax > Copeland's Rule > Ranked Pairs > Schulze Method > Flip a Coin
+     1 × Minimax > Schulze Method > Copeland's Rule
+     1 × Ranked Pairs > Copeland's Rule
+     1 × Ranked Pairs > Minimax > Copeland's Rule
+     1 × Ranked Pairs > Minimax > Copeland's Rule > Schulze Method > Flip a Coin
+     1 × Schulze Method > Ranked Pairs > Copeland's Rule > Minimax
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Ranked Pairs     beats Schulze Method    492 – 394
+   Minimax          beats Ranked Pairs      466 – 413
+   Ranked Pairs     beats Copeland's Rule   723 – 149
+   Ranked Pairs     beats Flip a Coin       748 – 103
+   Schulze Method   beats Minimax           542 – 341
+   Schulze Method   beats Copeland's Rule   722 – 145
+   Schulze Method   beats Flip a Coin       750 – 103
+   Minimax          beats Copeland's Rule   689 – 151
+   Minimax          beats Flip a Coin       716 – 103
+   Copeland's Rule  beats Flip a Coin       419 –  52
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+                    |   Ranked Pairs    | Schulze Method   |     Minimax      | Copeland's Rule  |   Flip a Coin    |
+---------------------------------------------------------------------------------------------------------------------
+     Ranked Pairs > |        ---        | 492 - 113 - 394  | 413 - 120 - 466  | 723 - 127 - 149  | 748 - 148 - 103  |
+   Schulze Method > |  394 - 113 - 492  |       ---        | 542 - 116 - 341  | 722 - 132 - 145  | 750 - 146 - 103  |
+          Minimax > |  466 - 120 - 413  | 341 - 116 - 542  |       ---        | 689 - 159 - 151  | 716 - 180 - 103  |
+  Copeland's Rule > |  149 - 127 - 723  | 145 - 132 - 722  | 151 - 159 - 689  |       ---        | 419 - 528 -  52  |
+      Flip a Coin > |  103 - 148 - 748  | 103 - 146 - 750  | 103 - 180 - 716  |  52 - 528 - 419  |       ---        |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate        W–L–T  Copeland  Margin  Beats
+    1  Schulze Method   3–1–0         3   +1327  Minimax, Copeland's Rule, Flip a Coin
+    2  Ranked Pairs     3–1–0         3   +1264  Schulze Method, Copeland's Rule, Flip a Coin
+    3  Minimax          3–1–0         3   +1003  Ranked Pairs, Copeland's Rule, Flip a Coin
+    4  Copeland's Rule  1–3–0         1   -1322  Flip a Coin
+    5  Flip a Coin      0–4–0         0   -2272  —
+
+Winner — Ranked Robin (RCV-RR): Schulze Method
+   *** 3 candidates tie for the most wins (Ranked Pairs, Schulze Method, Minimax) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (3 of 5): Ranked Pairs, Schulze Method, Minimax
+   Outside (2):        Copeland's Rule, Flip a Coin
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Ranked Robin (RCV-RR) winner Schulze Method is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md

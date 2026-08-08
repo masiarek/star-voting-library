@@ -129,4 +129,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [cycle_family_splits_c5_b77](cycle_family_splits_c5_b77.md) · [cycle_schulze_vs_ranked_pairs_c4_b40](cycle_schulze_vs_ranked_pairs_c4_b40.md)
+More cases in this set: [cycle_family_splits_c5_b77](cycle_family_splits_c5_b77.md) · [cycle_schulze_vs_ranked_pairs_c4_b40](cycle_schulze_vs_ranked_pairs_c4_b40.md) · [cycle_vote_on_the_rule_irv_c5_b999](cycle_vote_on_the_rule_irv_c5_b999.md) · [cycle_vote_on_the_rule_rr_c5_b999](cycle_vote_on_the_rule_rr_c5_b999.md)
