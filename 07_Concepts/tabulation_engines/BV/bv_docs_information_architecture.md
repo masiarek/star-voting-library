@@ -244,6 +244,38 @@ One process note: the *Election State Management — Overview* doc is already he
 - That same overview doc points at `https://docs.bettervoting.com/help/1_faq.html`, which 404s — the published page is `/help/faq.html`.
 - The backend's Keycloak error message sends contributors to `/contributions/1_local_setup.html`; the file is at `contributions/developers/1_local_setup.md`, so that URL 404s too.
 
+## Previewing the docs locally (verified 2026-08-08)
+
+Worth writing down because **BetterVoting's contributor guide has no local-preview section at all** — [`4_adding_documentation.md`](https://github.com/Equal-Vote/bettervoting/blob/main/docs/contributions/writers/4_adding_documentation.md) tells writers to edit the files "using the steps described in GitHub 101," i.e. edit in the web UI and wait for Pages to rebuild. That is a poor loop for one page and an unusable one for sixty.
+
+**The app's `docker-compose.yml` does not build the docs.** Its five services are `web`, `proxy`, `my-db`, `keycloak`, `playwright`. There is no `Gemfile` in `docs/` and no docs workflow in `.github/workflows/`, so the site is built by GitHub Pages' own Jekyll straight from the folder. Local preview therefore needs its own Jekyll, and one `docker run` is enough.
+
+Add a `docs/Gemfile`:
+
+```ruby
+source "https://rubygems.org"
+# Matches what GitHub Pages runs, so local preview == production.
+gem "github-pages", group: :jekyll_plugins
+# ffi >= 1.17 needs Ruby >= 3.0; github-pages pins Jekyll 3.9, happiest on 2.7.
+gem "ffi", "< 1.17"
+```
+
+Then, from `docs/`:
+
+```bash
+docker run --rm -v "$PWD":/site -w /site -p 4000:4000 -e PAGES_REPO_NWO=Equal-Vote/bettervoting ruby:2.7 sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --port 4000"
+```
+
+Serves the whole site at `http://localhost:4000` — theme, logo, custom colour scheme, search, and nav all render, and every existing page returns 200. Three things that cost time on the way there, all worth knowing before someone else hits them:
+
+- **`jekyll/jekyll:3.9` does not exist.** Those images are unmaintained; the tag pull fails outright. Use a `ruby:` base and the `github-pages` gem, which is what Pages itself runs.
+- **`ffi` must be pinned.** Unpinned, bundler resolves `ffi >= 1.17`, which requires Ruby >= 3.0 and hard-fails against the Ruby 2.7 that `github-pages`' Jekyll 3.9 wants.
+- **`PAGES_REPO_NWO` is required unless you run from the real checkout.** `jekyll-github-metadata` refuses to build without a repo identity: *"No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote."* Running from a clone with `origin` set to the GitHub repo satisfies it; running from a copied-out `docs/` folder does not.
+
+First run installs the gem set and takes a few minutes; add `-v bvdocs-gems:/usr/local/bundle` to cache it across runs.
+
+**This is a good first PR on its own** — the `Gemfile` plus a preview section in `4_adding_documentation.md`. It is small, uncontroversial, helps every future writer, and proves the contribution loop works before landing any content.
+
 ## Related
 
 - [BV — BetterVoting (the live web app)](README.md)
