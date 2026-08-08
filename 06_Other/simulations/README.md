@@ -133,7 +133,7 @@ uv run 06_Other/simulations/star_vs_rr_divergence.py --trials 3000
 
 ### Two models of STAR — the fast one, and the authority
 
-The sweep tabulates ~135,000 elections, so it uses **`star_winner()`**: numpy, top-two by score sum, pairwise runoff — *including the engine's tie-break rungs* (head-to-head wins among the tied, then five-star counts, then lot). It is not an approximation: it agrees with the engine on every profile tested, and `tests/test_sim_star_model.py` keeps it that way. The full 3000-trial sweep still runs in well under a minute.
+The sweep tabulates ~135,000 elections, so it uses **`star_winner()`**: numpy, top-two by score sum, pairwise runoff — *including the engine's tie-break rungs* (head-to-head wins among the tied, then five-star counts, then lot). It is not an approximation: it agrees with the engine on every profile tested, and [`tests/test_sim_star_model.py`](../../STARVote_LH_tabulation_engine/tests/test_sim_star_model.py) keeps it that way. The full 3000-trial sweep still runs in well under a minute.
 
 **`star_winner_engine()`** is the real LH tabulation, and remains what you should use for anything **written down** — not because the fast model is wrong, but because the engine is right *by construction* rather than by agreement, so it cannot drift if the rungs ever change.
 
@@ -143,7 +143,7 @@ Until 2026-07-26 the fast model settled every tie by column order, and that gap 
 uv run 06_Other/simulations/star_vs_rr_divergence.py --audit-model 400
 ```
 
-About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 voters — precisely the corner the [30 divergence samples](../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) live in, and one of those 30 was in fact born mislabelled (`cycle_C10_fewV29_bloc_2` claimed "STAR A"; the engine elects C). Their labels now come from the engine and are held there by `tools_adam/scripts/check_star_vs_rr_labels.py` + `tests/test_star_vs_rr_labels.py`.
+About **1% of elections overall**, but it climbs to ~5% at 10 candidates and 15 voters — precisely the corner the [30 divergence samples](../../05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md) live in, and one of those 30 was in fact born mislabelled (`cycle_C10_fewV29_bloc_2` claimed "STAR A"; the engine elects C). Their labels now come from the engine and are held there by [`tools_adam/scripts/check_star_vs_rr_labels.py`](../../STARVote_LH_tabulation_engine/tools_adam/scripts/check_star_vs_rr_labels.py) + [`tests/test_star_vs_rr_labels.py`](../../STARVote_LH_tabulation_engine/tests/test_star_vs_rr_labels.py).
 
 ### Representative results (3000 trials/cell, seed 20260721)
 

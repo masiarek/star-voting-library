@@ -283,7 +283,7 @@ UnbreakableTieError: Round 1: Scoring Round: {int_to_words(len(tie), flowery=Fal
 
 Both `UnbreakableTieError` strings in `_star_round()` were missing their `f` prefix, so the placeholder was never interpolated. `allocated_score_voting()` and `sequentially_spent_score()` build the same message correctly, which is why only STAR and Bloc STAR showed it — `_star_round()` serves both. The printed report was never affected — this is the exception text only, and the CLI prints its own `[Unbreakable Tie]` block and exits 0 — but any tool that surfaces the exception to a user showed the raw source. Upstream, not a fork regression.
 
-The fix is two characters (`"…"` → `f"…"`) and changes no winner: the message is built only once a tie is already unbreakable. The vendored engine now reports it properly, and `tests/test_unbreakable_tie_message.py` keeps it that way:
+The fix is two characters (`"…"` → `f"…"`) and changes no winner: the message is built only once a tie is already unbreakable. The vendored engine now reports it properly, and [`tests/test_unbreakable_tie_message.py`](../../../STARVote_LH_tabulation_engine/tests/test_unbreakable_tie_message.py) keeps it that way:
 
 ```
 UnbreakableTieError: Round 1: Scoring Round: three-way tie in Scoring Round

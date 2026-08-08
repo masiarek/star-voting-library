@@ -111,4 +111,4 @@ One caveat on #345, because it matters for anyone re-testing it: its screenshots
 - [Running a paper-ballot demo](../../01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md) — printing one and counting it by hand
 - [Glossary: Bloc STAR terms](glossary_bloc_star.md)
 
-*(The two ballot images on this page are drawn by `tools_adam/scripts/build_style_ballot_images.py` — slugs `ballot_bloc_star` and `ballot_star_single_winner` — so the wording is edited in one place and redrawn, never retouched by hand.)*
+*(The two ballot images on this page are drawn by [`tools_adam/scripts/build_style_ballot_images.py`](../../STARVote_LH_tabulation_engine/tools_adam/scripts/build_style_ballot_images.py) — slugs `ballot_bloc_star` and `ballot_star_single_winner` — so the wording is edited in one place and redrawn, never retouched by hand.)*

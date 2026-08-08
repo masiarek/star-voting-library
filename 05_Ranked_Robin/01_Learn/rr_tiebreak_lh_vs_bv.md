@@ -67,7 +67,7 @@ around a loop** (cycle):
 *** 3 candidates tie for the most wins (Rock, Scissors, Paper) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (… Minimax / Ranked Pairs / Schulze differ — see cycle_resolution.md.)
 ```
 
-Both lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop. The lead phrasing adapts: with no **draws** among the leaders it says "**tie for the most wins**" (then tying on Copeland *is* tying on wins), and once a draw is in play — as in the dead heat above, where Ada and Ben draw each other — it names the **Copeland score** instead, because "most wins" would no longer be true. Locked by `tests/test_ranked_robin.py` (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
+Both lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop. The lead phrasing adapts: with no **draws** among the leaders it says "**tie for the most wins**" (then tying on Copeland *is* tying on wins), and once a draw is in play — as in the dead heat above, where Ada and Ben draw each other — it names the **Copeland score** instead, because "most wins" would no longer be true. Locked by [`tests/test_ranked_robin.py`](../../STARVote_LH_tabulation_engine/tests/test_ranked_robin.py) (the RPS case asserts "Condorcet cycle"; the dead-heat case asserts "dead heat" and *not* "Condorcet cycle").
 
 ## Tested cases
 

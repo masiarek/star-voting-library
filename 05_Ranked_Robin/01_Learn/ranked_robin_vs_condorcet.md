@@ -70,7 +70,7 @@ This is the whole distinction in one election: **Condorcet = (blank), Ranked Rob
 
 ## In the wild — record 0 from the random sweep
 
-This isn't just a contrived 3-candidate trick. It's why the **Condorcet column was blank** in the random STAR sweep you ran (`tools_adam/random_star_divergence.py`). Take its very first divergent election — **record 0**, 6 candidates, 5 voters ([`03_real_record0_c6_b5.yaml`](../02_Examples/condorcet_vs_ranked_robin/cases/03_real_record0_c6_b5.yaml)):
+This isn't just a contrived 3-candidate trick. It's why the **Condorcet column was blank** in the random STAR sweep you ran ([`tools_adam/random_star_divergence.py`](../../STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py)). Take its very first divergent election — **record 0**, 6 candidates, 5 voters ([`03_real_record0_c6_b5.yaml`](../02_Examples/condorcet_vs_ranked_robin/cases/03_real_record0_c6_b5.yaml)):
 
 ```
      A  B  C  D  E  F

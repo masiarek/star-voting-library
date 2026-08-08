@@ -58,7 +58,7 @@ Full report: [`…_tabulated/02_cycle_no_condorcet_tabulated.txt`](cases/cases_t
 
 ## 3. The real one — record 0 from the random sweep (6 candidates)
 
-The first divergent election from `tools_adam/random_star_divergence.py`. STAR elects **B**; so does Ranked Robin. But these are **score** ballots, so Ranked Robin first reads them as a ranking (equal scores stay tied, `=`). **No candidate beats all five rivals**, so the Condorcet winner is blank — yet B has the best record (3 wins), so Ranked Robin elects B.
+The first divergent election from [`tools_adam/random_star_divergence.py`](../../../STARVote_LH_tabulation_engine/tools_adam/random_star_divergence.py). STAR elects **B**; so does Ranked Robin. But these are **score** ballots, so Ranked Robin first reads them as a ranking (equal scores stay tied, `=`). **No candidate beats all five rivals**, so the Condorcet winner is blank — yet B has the best record (3 wins), so Ranked Robin elects B.
 
 ```text
 Ballots:

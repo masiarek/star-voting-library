@@ -126,7 +126,7 @@ Full rundown of the whole block, option by option: **[LH reporting options](../0
 | `bv_election_id`, `bv_results_url`, `bv_test_id` | required for BV-backed cases | BetterVoting provenance: the live election id, its `/results` URL, and the assigned Test ID. These feed the auto-generated [BV registry](../07_Concepts/YAML_test_case_index/BV_registry.md) (`build_bv_registry.py`) and the case page's live-results lead line. Hand-written LH-only cases omit all three. |
 
 A key outside this table fails the schema lint (`check_repo_hygiene.py` /
-`tests/test_yaml_keys.py`) with a did-you-mean hint — that lint is what keeps a
+[`tests/test_yaml_keys.py`](../STARVote_LH_tabulation_engine/tests/test_yaml_keys.py)) with a did-you-mean hint — that lint is what keeps a
 typo like `expected_winers:` from silently removing a case from the test suite.
 Adding a genuinely new key means updating both this table and `ELECTION_KEYS`
 in the lint.

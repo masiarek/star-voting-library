@@ -106,7 +106,7 @@ Result: Alex, Bella and Colin tie.  Dev does not.
 
 ## What this repo's engine does instead — a ladder, then a coin
 
-Our vendored [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py) (pyrankvote) does not batch. It has a **tiebreak ladder**, and it is a better one than it usually gets credit for — `_cmp_candidate_vote_counts` in `pyrankvote/helpers.py` breaks a first-choice tie on **most second choices**, then third, then fourth, and only falls to `random.choice` once it runs out of ranks. Structurally that is STAR's ladder: use the ballots while they still say something, and flip a coin only when they have stopped.
+Our vendored [RCV-IRV engine](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py) (pyrankvote) does not batch. It has a **tiebreak ladder**, and it is a better one than it usually gets credit for — `_cmp_candidate_vote_counts` in [`pyrankvote/helpers.py`](../../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/pyrankvote/helpers.py) breaks a first-choice tie on **most second choices**, then third, then fourth, and only falls to `random.choice` once it runs out of ranks. Structurally that is STAR's ladder: use the ballots while they still say something, and flip a coin only when they have stopped.
 
 So the honest statement is narrower than "the engine flips a coin on ties." It is: **the coin is reached only when the candidates are tied at *every* rank** — which is exactly the profile this page is about, and exactly the [dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) by another name.
 

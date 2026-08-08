@@ -42,7 +42,7 @@ Clara>Amy>Bruno · Bruno>Clara>Amy · Amy>Bruno>Clara   →  Clara
 
 Change one ballot so second choices separate the candidates (Amy 2, Bruno 1, Clara 0) and all six orderings elect Amy — the ladder does its job and the row order stops mattering.
 
-**Practical impact is small; the disclosure gap is the real issue.** An exact tie at *every* rank needs a perfectly symmetric profile, which among real ballots is astronomically rare. What the report never says is which kind of winner you are looking at — one the ballots chose, or one the file order chose. Pinned by `tests/test_rcv_irv_tie_order_sensitivity.py` so a future pyrankvote bump or a home-grown tie rule shows up as a test change rather than a silent one.
+**Practical impact is small; the disclosure gap is the real issue.** An exact tie at *every* rank needs a perfectly symmetric profile, which among real ballots is astronomically rare. What the report never says is which kind of winner you are looking at — one the ballots chose, or one the file order chose. Pinned by [`tests/test_rcv_irv_tie_order_sensitivity.py`](../../../STARVote_LH_tabulation_engine/tests/test_rcv_irv_tie_order_sensitivity.py) so a future pyrankvote bump or a home-grown tie rule shows up as a test change rather than a silent one.
 
 Background and the alternatives (batch elimination, Parallel Universe Tiebreaking, a published lot order): [Batch elimination — what happens when the batch is *everyone*](../../../07_Concepts/topics/ties/batch_elimination.md) · [Parallel Universe Tiebreaking](../../../07_Concepts/topics/ties/parallel_universe_tiebreaking.md).
 

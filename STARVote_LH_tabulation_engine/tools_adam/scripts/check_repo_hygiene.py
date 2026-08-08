@@ -1106,6 +1106,28 @@ def check_pasted_reports():
 _CODE_SPAN_PATH = re.compile(
     r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.(?:md|yaml|py|sh|json|toml|txt))`")
 
+_BY_BASENAME = None
+
+
+def _repo_files_named(basename):
+    """Repo-relative paths of every file with this basename (cached, one walk).
+
+    Deliberately does NOT use `_skip()`: that excludes `_tabulation_engine`,
+    which is precisely where the truncated `tests/…` and `tools_adam/…` paths
+    resolve to.  SKIP_DIRS alone is right here — it still drops `.claude`, so
+    the worktree copies under `.claude/worktrees/` cannot turn a real finding
+    into an "ambiguous" one and silence it.
+    """
+    global _BY_BASENAME
+    if _BY_BASENAME is None:
+        _BY_BASENAME = {}
+        for dirpath, dirnames, filenames in os.walk(REPO):
+            dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+            for f in filenames:
+                rel = os.path.relpath(os.path.join(dirpath, f), REPO)
+                _BY_BASENAME.setdefault(f, []).append(rel)
+    return _BY_BASENAME.get(basename, [])
+
 
 def check_code_span_paths():
     """Return [(rel:line, msg)] for repo-root paths written as bare code text.
@@ -1136,15 +1158,27 @@ def check_code_span_paths():
     fbc_simulation.py` on the FBC 301 page, the JSON→YAML converter on two
     pages, `build_yaml_pages.py` in ORGANIZATION.md, and so on).
 
-    Still invisible, and deliberately so: a *truncated* repo path — engine-dir
-    shorthand like ``tests/test_sim_star_model.py`` for a file that really lives
-    at `STARVote_LH_tabulation_engine/tests/…` — resolves from neither the page
-    nor the root, so it lands in the other-codebase escape hatch above.  Telling
-    the two apart needs a basename search, and inside CLAUDE.md (17 of the ~35)
-    that shorthand is idiomatic rather than wrong.  Judgment, not a gate.
+    TRUNCATED paths are caught too, since the 2026-08-07 sweep.  Engine-dir
+    shorthand like ``tests/test_sim_star_model.py`` names a file that really
+    lives at `STARVote_LH_tabulation_engine/tests/…`, so it resolves from
+    neither the page nor the root and used to fall through the other-codebase
+    escape hatch above — invisible to every check in the repo.  It is the same
+    defect wearing a shorter name: 19 of them across 15 reader-facing pages, on
+    lines that read "the guard test is X" with no way to reach X.  They are
+    identified by a *basename* search, and only a unique hit whose tail matches
+    on a path boundary counts, so an other-codebase path still has to coincide
+    exactly with one repo file to be claimed — and if it somehow does, linking
+    it is not the wrong answer anyway.
+
+    `CLAUDE.md` is exempt, and that exemption is the whole reason this rung can
+    be a gate.  It holds 16 of these and they are idiomatic there: it tells the
+    reader to run pytest *from the engine dir*, so `tests/…` is the correct
+    thing to type, not a broken link.  A working-instruction file addresses
+    someone with a shell open; a teaching page addresses someone with a mouse.
     """
     bad = []
     for rel, text in sorted(_hand_authored_pages()):
+        exempt = os.path.basename(rel) == "CLAUDE.md"
         here = os.path.dirname(os.path.join(REPO, rel))
         for i, line in enumerate(text.splitlines(), 1):
             for m in _CODE_SPAN_PATH.finditer(line):
@@ -1155,13 +1189,24 @@ def check_code_span_paths():
                     continue          # already the label of a real link
                 if os.path.exists(os.path.join(here, path)):
                     continue          # resolves from the page — correct as written
-                if not os.path.exists(os.path.join(REPO, path)):
-                    continue          # not a repo file at all (other codebase)
-                fixed = os.path.relpath(os.path.join(REPO, path), here or REPO)
+                if os.path.exists(os.path.join(REPO, path)):
+                    fixed = os.path.relpath(os.path.join(REPO, path), here or REPO)
+                    bad.append((f"{rel}:{i}",
+                                f"`{path}` is a repo-root path in code text — readers "
+                                f"resolve it from this page's folder and get a 404. "
+                                f"Link it: [`{os.path.basename(path)}`]({fixed})"))
+                    continue
+                if exempt:
+                    continue          # engine-dir shorthand, addressed to a shell
+                hits = _repo_files_named(os.path.basename(path))
+                hits = [h for h in hits if h.endswith("/" + path)]
+                if len(hits) != 1:
+                    continue          # ambiguous, or not a repo file (other codebase)
+                fixed = os.path.relpath(os.path.join(REPO, hits[0]), here or REPO)
                 bad.append((f"{rel}:{i}",
-                            f"`{path}` is a repo-root path in code text — readers "
-                            f"resolve it from this page's folder and get a 404. "
-                            f"Link it: [`{os.path.basename(path)}`]({fixed})"))
+                            f"`{path}` is a truncated repo path in code text — the "
+                            f"file is at {hits[0]}, so it resolves from neither this "
+                            f"page nor the repo root. Link it: [`{path}`]({fixed})"))
     return bad
 
 
