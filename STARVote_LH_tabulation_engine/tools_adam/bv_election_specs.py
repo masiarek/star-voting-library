@@ -6051,7 +6051,14 @@ BRAMS_1982_SPEC = {
 }
 
 
-ELECTIONS: list = [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 / BV2282
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 -> qycpbx, BV2282 -> hf3ckp
+#   Created as designed, two races each on the same ballots (303 and 21 ballots).
+#   BV agrees with LH on all four races: IRV -> D and RankedRobin -> C on the 303,
+#   IRV -> B and RankedRobin -> G on the 21, with tieBreakType 'none' everywhere —
+#   which is the point, since the lesson is that the COUNT moved the winner, not a
+#   lot. Both RR races additionally cross-checked against pref_voting's independent
+#   Copeland (AGREE). Backs method_comparisons/rangevoting_irv_examples.
 # Previously: [BALLOT_EXPRESSIVENESS_SPEC]   # BV2280 -> 37yf8x
 #   Created as designed, 25 ballots x 4 races. BV agrees with LH on all four:
 #   STAR -> Finn (84/83/81/80/80; runoff Finn 13-12, zero Equal Support),
