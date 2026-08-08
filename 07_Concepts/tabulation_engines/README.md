@@ -12,5 +12,6 @@ Every claim in this library is backed by a runnable election, and every election
 
 - **[BetterVoting and the LH engine — one election, two reports](bettervoting_and_the_engine.md)** — why the two independent implementations agree on winners, and the one bookkeeping detail where their reports can differ.
 - **[Cross-checking with `pref_voting`](cross_checking_with_pref_voting.md)** — Eric Pacuit's peer-reviewed social-choice library as an outside referee for the Condorcet / RCV-IRV / Plurality machinery.
+- **[RCTab — the certified tabulator that counts real elections](rctab.md)** — the federally-tested engine actual US jurisdictions run on election night for RCV-IRV and STV. Not wired up: a documented opportunity, with the exact CSV bridge and the one gap (elimination ties) where it would earn its keep.
 
 *Up: [07_Concepts](../README.md) · the vendored fork's own ledger: [LH_ENGINE_CHANGES.md](../../STARVote_LH_tabulation_engine/LH_ENGINE_CHANGES.md).*

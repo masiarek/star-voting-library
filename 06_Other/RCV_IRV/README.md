@@ -26,3 +26,5 @@ The first two cases are ordinary elections — one minimal, one crowded and real
 The three `batch_all_out_*` cases back [Batch elimination — what happens when the batch is *everyone*](../../07_Concepts/topics/ties/batch_elimination.md).
 
 The engine lives in [`RCV_IRV_tabulation_engine/`](RCV_IRV_tabulation_engine/README.md); full audit mirrors are in `RCV_IRV_tabulated/`.
+
+**How real elections get counted.** The engine here is a teaching tabulator. The one US jurisdictions actually run on election night is [**RCTab**](../../07_Concepts/tabulation_engines/rctab.md) — federally tested under the VVSG, state-certified, open source, and free to download. That page covers what it is, whether it can be scripted (a CLI, not a web API), and how one of our cases would have to be reshaped to feed it.
