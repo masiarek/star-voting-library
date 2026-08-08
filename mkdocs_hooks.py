@@ -110,17 +110,62 @@ all root `.html` would re-admit precisely the build artefacts the plugin and the
 `.gitignore` guard both exist to keep out. Add a sibling pattern here if another
 search engine's verification is ever needed. Guarded by
 `tests/test_search_console_file.py`.
+
+## Keeping internal pages out of search results
+
+`CLAUDE.md` is house conventions for contributors and agents. It is a real page
+that 19 others link to — `readme.md` and `CONTRIBUTING.md` among them — so it
+has to stay built and clickable, and `exclude_docs` (the route `AGENTS.md`
+takes) is not available: dropping it would 404 all 19 links and fail
+`mkdocs build --strict`. But it is the wrong thing to hand a voter who searched
+for STAR voting, and it is a thousand lines of dense, keyword-rich terminology
+prose, which is exactly the shape of page that surfaces for a niche query.
+
+`not_in_nav` does not help: it hides a page from the sidebar, not from Google.
+Nor does removing it from `sitemap.xml` — a sitemap is a discovery hint, not an
+index gate, and a page linked from 19 others is discovered regardless. The only
+thing that actually keeps a page out of results is a `noindex` robots meta tag.
+
+So `on_post_page` stamps one. Material has no `page.meta.robots` support to hang
+this on (checked — no `robots` anywhere in its templates), and a `custom_dir`
+override would mean shadowing a theme template across future Material upgrades
+for the sake of one line, so the tag is injected into `<head>` directly.
+
+`on_post_build` then removes the same pages from `sitemap.xml`, because the two
+signals must agree: listing a `noindex` URL in a sitemap is contradictory, and
+Search Console reports it under "Submitted URL marked noindex" as an error
+rather than ignoring it. Half this fix is worse than none.
+
+Note `noindex, follow` rather than `noindex, nofollow` — the page should not be
+listed, but the links it makes to real pages should still pass through.
+
+To publish one of these again, delete it from `NOINDEX_PAGES`. Nothing else
+changes: the page is built, linked and rendered on GitHub either way. Guarded by
+`tests/test_noindex_pages.py`.
 """
 
 from __future__ import annotations
 
+import gzip
 import posixpath
 import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 # Root-level files that must ship verbatim to the site root even though
 # mkdocs-same-dir drops root non-documents. See the module docstring.
 SITE_VERIFICATION_GLOB = "google*.html"
+
+# Pages that stay built, linked and clickable but must not appear in search
+# results, keyed by src_uri. See the module docstring.
+NOINDEX_PAGES = {"CLAUDE.md"}
+
+SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+
+# Canonical URLs of the pages stamped this build, collected by on_post_page so
+# on_post_build can strip exactly those from the sitemap. Reset per build
+# because `mkdocs serve` reuses the process across rebuilds.
+_noindex_urls: set[str] = set()
 
 # Folders whose children have a reading order, keyed by repo-relative path.
 # Values are on-disk names — a file name, or the folder a section opens.
@@ -443,6 +488,62 @@ def on_nav(nav, config, files):
     _retitle(nav.items)
     _order(nav.items, "")
     return nav
+
+
+def on_pre_build(config):
+    """`mkdocs serve` reuses the process, so per-build state must be cleared."""
+    _noindex_urls.clear()
+
+
+def on_post_page(output, page, config):
+    """Stamp `noindex` on internal pages. See the module docstring."""
+    if page.file.src_uri not in NOINDEX_PAGES:
+        return output
+
+    if page.canonical_url:
+        _noindex_urls.add(page.canonical_url)
+
+    # Material offers no page.meta.robots to hang this on, and a custom_dir
+    # override would shadow a theme template for the sake of one line.
+    return output.replace(
+        "<head>",
+        '<head>\n    <meta name="robots" content="noindex, follow">',
+        1,
+    )
+
+
+def on_post_build(config):
+    """Strip the noindex pages from sitemap.xml — the signals must agree."""
+    if not _noindex_urls:
+        return
+
+    site_dir = Path(config["site_dir"])
+    sitemap = site_dir / "sitemap.xml"
+    if not sitemap.is_file():
+        return
+
+    ET.register_namespace("", SITEMAP_NS)
+    tree = ET.parse(sitemap)
+    root = tree.getroot()
+
+    removed = 0
+    for url in list(root.findall(f"{{{SITEMAP_NS}}}url")):
+        loc = url.find(f"{{{SITEMAP_NS}}}loc")
+        if loc is not None and (loc.text or "").strip() in _noindex_urls:
+            root.remove(url)
+            removed += 1
+
+    if not removed:
+        return
+
+    tree.write(sitemap, encoding="utf-8", xml_declaration=True)
+
+    # MkDocs writes both; a stale .gz would still be advertising the URL we
+    # just removed. mtime=0 keeps the artefact byte-reproducible.
+    gz = site_dir / "sitemap.xml.gz"
+    if gz.is_file():
+        with gzip.GzipFile(gz, mode="wb", mtime=0) as f:
+            f.write(sitemap.read_bytes())
 
 
 def on_files(files, config):
