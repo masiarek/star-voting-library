@@ -1,0 +1,77 @@
+{
+  "tabulatorVersion": "2.1.0",
+  "outputSettings": {
+    "contestName": "The field empties in round two \u2014 and Pareto is what keeps Dev out of the tie",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "batch_all_out_round2_c4_b6.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "idColumnIndex": "1",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Alex",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Bella",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Colin",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Dev",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "winnerElectionMode": "singleWinnerMajority",
+    "randomSeed": "",
+    "numberOfWinners": "1",
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "4",
+    "nonIntegerWinningThreshold": false,
+    "doesFirstRoundDetermineThreshold": false,
+    "hareQuota": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from batch_all_out_round2_c4_b6.yaml by rctab_convert.py | candidate order: ballot",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "06_Other/RCV_IRV/cases/batch_all_out_round2_c4_b6.yaml",
+    "ballotsConverted": 6
+  }
+}
