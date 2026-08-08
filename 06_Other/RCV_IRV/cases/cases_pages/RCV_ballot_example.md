@@ -30,6 +30,10 @@ Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical
 
 ## What the engine says
 
+<img src="../img/RCV_ballot_example_sankey.png" width="860" alt="Round-by-round Sankey diagram: each candidate's votes as a band, and where the votes of an eliminated candidate transferred to.">
+
+*Where the votes went. Band thickness is votes; a band leaving an eliminated candidate lands on whoever that ballot ranked next, or on **inactive** if it ranked nobody who was left.*
+
 The count, step by step — the rounds and how the winner is reached:
 
 <!-- --8<-- [start:report] -->

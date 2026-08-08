@@ -191,6 +191,31 @@ HOW_TO_READ = {
 _ART_RE = re.compile(r"_ballot_(\d+)\.png$")
 
 
+# Same convention for the round-by-round Sankey: if `<yaml dir>/img/<stem>_sankey.png`
+# exists it heads the results section. Draw it with
+#
+#     python STARVote_LH_tabulation_engine/tools_adam/scripts/build_sankey.py <case.yaml>
+#
+# The report says how many votes each candidate had in each round; only the
+# picture says where a transferred vote came FROM, which is the whole argument
+# on every page about center squeeze or exhausted ballots.
+def _sankey_art(yaml_path, page_dir):
+    """`[lines]` embedding a case's Sankey, or None if it has no art."""
+    stem = os.path.splitext(os.path.basename(yaml_path))[0]
+    png = os.path.join(os.path.dirname(yaml_path), "img", stem + "_sankey.png")
+    if not os.path.exists(png):
+        return None
+    rel = os.path.relpath(png, page_dir).replace(os.sep, "/")
+    alt = ("Round-by-round Sankey diagram: each candidate's votes as a band, "
+           "and where the votes of an eliminated candidate transferred to.")
+    return [f'<img src="{_esc_attr(rel)}" width="860" alt="{_esc_attr(alt)}">',
+            "",
+            "*Where the votes went. Band thickness is votes; a band leaving an "
+            "eliminated candidate lands on whoever that ballot ranked next, or "
+            "on **inactive** if it ranked nobody who was left.*",
+            ""]
+
+
 def _esc_attr(text):
     # ">" MUST be escaped too: a ballot row comment naturally contains one
     # ("Almond > Berry > Cocoa"), and a Markdown inline-HTML parser ends the tag
@@ -691,6 +716,9 @@ def render(yaml_path, siblings):
     report = _mirror_report(yaml_path)
     L.append("## What the engine says")
     L.append("")
+    sankey = _sankey_art(yaml_path, page_dir)
+    if sankey:
+        L += sankey
     if report:
         mirror_rel = os.path.relpath(_mirror_path(yaml_path), page_dir).replace(os.sep, "/")
         lead, audit = _split_report(report)
