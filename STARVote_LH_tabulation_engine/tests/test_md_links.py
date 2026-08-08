@@ -387,3 +387,38 @@ def test_links_inside_html_comments_are_not_reported():
         "only the uncommented link may be reported; commented-out paths are inert "
         f"on every surface. got {raws}"
     )
+
+
+def test_proper_nouns_spelled_with_rcv_are_not_terminology_violations():
+    """`rcv-lab.org` is a tool's NAME, not our sloppy terminology.
+
+    The precision rule is `\\bRCV\\b` + an IRV-specific word on the same line,
+    case-insensitive. A hyphen and a dot are both word boundaries, so the `rcv`
+    in `rcv-lab.org` matched it, and every line naming that tool alongside
+    "eliminated" was reported — a false positive the checker emitted forever
+    (coombs_ex20_district1.yaml was the live one).
+
+    Narrowing a checker is the dangerous direction: the fix must silence the
+    NAME without silencing the rule. Both halves are asserted here.
+    """
+    mod = _load_hygiene()
+    probe = REPO_ROOT / "07_Concepts" / "topics" / "_terminology_probe.md"
+    probe.write_text(
+        "# probe\n"
+        "rcv-lab.org drops B, so that ballot is eliminated.\n"   # name only  -> clean
+        "RCVis draws the eliminated rounds.\n"                   # mid-word   -> clean
+        "RCV-IRV eliminates the centrist in round one.\n"        # correct    -> clean
+        "RCV eliminates the centrist in round one.\n"            # violation  -> caught
+        "Both rcv-lab.org and RCV exhaust ballots.\n",           # violation  -> caught
+        encoding="utf-8",
+    )
+    try:
+        lines = sorted(ln for rel, ln, _ in mod.check_terminology()
+                       if rel.endswith("_terminology_probe.md"))
+    finally:
+        probe.unlink()
+    assert lines == [5, 6], (
+        "expected ONLY the two bare-RCV lines (5 and 6) to be reported: the name "
+        "must be exempt, and scrubbing it must not swallow a real violation on the "
+        f"same line. got lines {lines}"
+    )

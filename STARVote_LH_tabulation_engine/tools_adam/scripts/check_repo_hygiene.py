@@ -645,6 +645,14 @@ def check_terminology():
                 # Quoted 'RCV' / "RCV" is someone's usage under discussion,
                 # not our own claim — exempt it from the precision rule.
                 scrubbed = re.sub(r"[\"'“”‘’]RCV[.,]?[\"'“”‘’]", "QUOTEDRCV", ln)
+                # PROPER NOUNS spelled with "rcv" are somebody's name, not our
+                # terminology. `\bRCV\b` matches them because a hyphen and a dot
+                # are both word boundaries, so `rcv-lab.org` — a real tool this
+                # repo cross-checks against — tripped the precision rule on every
+                # line that also said "eliminated". Scrub the names before the
+                # rules run. (RCVis needs no entry: `\b` does not fire mid-word.)
+                scrubbed = re.sub(r"\brcv-lab(?:\.org)?", "RCVLABNAME",
+                                  scrubbed, flags=re.I)
                 for rx, msg in TERM_RULES:
                     if rx.search(scrubbed):
                         hits.append((rel, i, msg))
