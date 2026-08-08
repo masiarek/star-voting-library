@@ -23,9 +23,23 @@ Examples 25, 27 and 28 are runnable case files. They keep Felsenthal's letter gr
 
 **Case:** [`mj_ex25_absolute_winner_loses.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/mj_ex25_absolute_winner_loses.yaml)
 
+Three ballots, and the whole paradox is visible on the middle one:
+
+<!-- ballots:mj_ex25_absolute_winner_loses -->
+The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column:
+
+| Ballot as marked | x | y |
+|:--|:--:|:--:|
+| <img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_1.png" width="640" style="min-width:640px" alt="A grade ballot — Prefers x (B over A) — grades both low: x B, y A."> | B | A |
+| <img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_2.png" width="640" style="min-width:640px" alt="A grade ballot — The pivotal ballot — x C, y F: x C, y F."> | C | F |
+| <img src="../../method_comparisons/felsenthal_paradoxes/cases/img/mj_ex25_absolute_winner_loses_ballot_3.png" width="640" style="min-width:640px" alt="A grade ballot — Prefers x (H over G) — grades both high: x H, y G."> | H | G |
+<!-- /ballots -->
+
 **MJ elects y** (median F > C). But an absolute majority — V1 and V3 — graded **x above y**: x is the Condorcet and absolute winner, y the Condorcet and absolute loser. Same disease as [Range Voting's Example 23](range_voting.md), median flavor: one middling grade (V2's F for y) placed just right outweighs two majorities.
 
 This is the example that matters most for the method's own argument. The median was proposed *because* a mean can be dragged by one extreme grade — and that is true. It is also beside the point: a median can still be **set** by a single well-placed grade, and here it is. Read the case for the method first at [Grading as a rival primitive](../scores_and_ranks/grading_as_a_rival_primitive.md), then this.
+
+Worth being precise about what this example does and does not indict, because it is easy to over-read. It is **not** a mean-versus-median divergence — the mean elects y here too (x 3.33, y 3.67), so Range fails it identically. What it indicts is *grading arithmetic of either kind* against a majority. For the difference between the two rules, where the same ballots really do elect different candidates, see [MJ vs Score](../../06_Other/Majority_Judgment/concepts/majority_judgment.md#how-it-differs-from-score-the-same-ballots-two-winners).
 
 ## Example 26 — Reinforcement failure (Felsenthal & Machover 2008: 327)
 

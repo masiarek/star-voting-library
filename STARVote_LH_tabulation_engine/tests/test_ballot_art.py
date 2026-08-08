@@ -310,6 +310,73 @@ def test_a_ranked_grade_method_gets_no_grade_ballot(tmp_path):
         art.ballots_from_yaml(case)
 
 
+def test_a_grade_case_resolves_cross_tree_without_a_generated_page(tmp_path):
+    """The one case family the generated-page index structurally cannot see.
+
+    A `grades:` file is not an election YAML, so the mirror-and-page pipeline
+    never makes it a page — and the cross-tree stem lookup is keyed on exactly
+    those pages. So the §A9 paradox page in `07_Concepts/`, asking for a case
+    that lives in `method_comparisons/`, fell through every step and printed
+    "No case named" next to art that was sitting on disk. Grade cases are the
+    family that most needs this route, since the lesson is their *only*
+    reader-facing surface.
+    """
+    pages = _load("build_yaml_pages")
+    pages.REPO = str(tmp_path)
+    pages._PAGES_BY_STEM = None
+    pages._GRADE_CASES_BY_STEM = None
+
+    stem = "mj_lone_pear_c2_b2"
+    cases = tmp_path / "method_comparisons" / "set" / "cases"
+    cases.mkdir(parents=True)
+    (cases / f"{stem}.yaml").write_text(
+        "election_title: Grades\ngrade_method: MajorityJudgment\n"
+        f'grade_scale: "{GRADE_SCALE}"\n'
+        "grades: |-\n  ,V1,V2\n  Alice,Excellent,Good\n  Bruno,Poor,Good\n",
+        encoding="utf-8")
+    (cases / "img").mkdir()
+    for n in (1, 2):
+        (cases / "img" / f"{stem}_ballot_{n}.png").write_bytes(b"")
+
+    lesson = tmp_path / "07_Concepts" / "voting_paradoxes" / "lesson.md"
+    lesson.parent.mkdir(parents=True)
+    lesson.write_text(f"# Lesson\n\n<!-- ballots:{stem} -->\n<!-- /ballots -->\n",
+                      encoding="utf-8")
+
+    filled = "".join(pages.pages_with_ballot_blocks()[str(lesson)].values())
+    assert "No case named" not in filled
+    assert f"{stem}_ballot_1.png" in filled
+    # paths resolve from the LESSON, which is two levels down a different tree
+    assert "../../method_comparisons/set/cases/img/" in filled
+    assert "| Alice | Bruno |" in filled
+
+
+def test_an_ambiguous_grade_stem_is_dropped_not_guessed(tmp_path):
+    """Same contract as the page index: two cases with one stem means the marker
+    is ambiguous, so it gets the note rather than a coin flip."""
+    pages = _load("build_yaml_pages")
+    pages.REPO = str(tmp_path)
+    pages._PAGES_BY_STEM = None
+    pages._GRADE_CASES_BY_STEM = None
+
+    stem = "mj_twin_stem"
+    body = ("grade_method: MajorityJudgment\n"
+            f'grade_scale: "{GRADE_SCALE}"\n'
+            "grades: |-\n  ,V1\n  Alice,Good\n")
+    for tree in ("one", "two"):
+        d = tmp_path / "method_comparisons" / tree / "cases"
+        d.mkdir(parents=True)
+        (d / f"{stem}.yaml").write_text(body, encoding="utf-8")
+
+    lesson = tmp_path / "07_Concepts" / "topics" / "lesson.md"
+    lesson.parent.mkdir(parents=True)
+    lesson.write_text(f"# Lesson\n\n<!-- ballots:{stem} -->\n<!-- /ballots -->\n",
+                      encoding="utf-8")
+
+    filled = "".join(pages.pages_with_ballot_blocks()[str(lesson)].values())
+    assert "No case named" in filled
+
+
 def _pages_showing_art():
     """Every hand-authored `<!-- ballots: -->` block, as one blob of filled text.
 

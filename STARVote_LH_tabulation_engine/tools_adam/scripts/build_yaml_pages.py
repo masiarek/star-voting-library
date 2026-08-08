@@ -940,6 +940,52 @@ def _case_by_stem(stem):
     return None
 
 
+_GRADE_CASES_BY_STEM = None
+
+
+def _grade_cases_by_stem():
+    """{stem: absolute case path} for the `grades:` files, built once.
+
+    Grade cases — Majority Judgment's words, Felsenthal's A–J letters — are not
+    LH election files, so they get no `_tabulated` mirror and no generated page.
+    That makes them the one family `_case_by_stem()` structurally cannot see,
+    because it is keyed on generated pages. Their ballots *are* drawn, and the
+    lesson carrying the art is often in another tree entirely (the §A9 paradox
+    page in `07_Concepts/` showing a case from `method_comparisons/`), so
+    without this the marker resolves to nothing and the page prints a
+    "no case named" note next to art that exists on disk.
+
+    Same contract as the page index: a stem claimed twice is dropped rather than
+    guessed at, so this widens the search to one well-defined family without
+    giving up the uniqueness guarantee the docstring above relies on.
+    """
+    global _GRADE_CASES_BY_STEM
+    if _GRADE_CASES_BY_STEM is None:
+        idx, dupes = {}, set()
+        for dirpath, dirnames, filenames in os.walk(REPO):
+            dirnames[:] = [d for d in dirnames
+                           if not d.startswith(".") and d not in _SKIP_DIRS
+                           and not d.endswith("_tabulated")]
+            for fn in filenames:
+                if not fn.endswith((".yaml", ".yml")):
+                    continue
+                path = os.path.join(dirpath, fn)
+                try:
+                    text = open(path, encoding="utf-8").read()
+                except OSError:
+                    continue
+                if not re.search(r"^grades:", text, re.M):
+                    continue
+                stem = fn.rsplit(".", 1)[0]
+                if stem in idx:
+                    dupes.add(stem)
+                idx[stem] = path
+        for stem in dupes:
+            idx.pop(stem, None)
+        _GRADE_CASES_BY_STEM = idx
+    return _GRADE_CASES_BY_STEM
+
+
 # --------------------------------------------------------------------------- #
 # Ballot art on hand-authored pages — the placeable managed block
 # --------------------------------------------------------------------------- #
@@ -965,6 +1011,10 @@ def _case_for_stem(page_path, stem):
     index the `report:` marker resolves through, which is unambiguous by
     construction. Proximity still goes first: it is the one thing that can tell
     two same-named cases apart, and the index just drops those.
+
+    Grade cases need one more step after that: having no generated page, they
+    are absent from that index entirely, so `_grade_cases_by_stem()` indexes
+    them directly under the same drop-the-duplicates rule.
     """
     here = os.path.dirname(page_path)
     up = os.path.dirname(here)
@@ -981,7 +1031,7 @@ def _case_for_stem(page_path, stem):
                                 recursive=True))
         if len(hits) == 1:
             return hits[0]
-    return _case_by_stem(stem)
+    return _case_by_stem(stem) or _grade_cases_by_stem().get(stem)
 
 
 def ballot_blocks_for(page_path, text=None):

@@ -8,6 +8,15 @@ scenario_description: |-
 paradoxes: [condorcet-winner, condorcet-loser, majority-failure]
 grade_method: MajorityJudgment
 grade_scale: "A-H"
+
+# Titles for the drawn ballots — the grade block is transposed (a row per
+# candidate), so a voter's note can't ride on their row the way a `#` comment
+# titles a score ballot. Read only by build_style_ballot_images.py.
+voter_notes:
+  V1: "Prefers x (B over A) — grades both low"
+  V2: "The pivotal ballot — x C, y F"
+  V3: "Prefers x (H over G) — grades both high"
+
 grades: |-
   ,V1,V2,V3
   x,B,C,H

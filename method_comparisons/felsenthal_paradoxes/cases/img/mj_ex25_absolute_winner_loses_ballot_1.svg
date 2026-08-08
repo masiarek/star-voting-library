@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1985 686" width="1985" height="686">
+<rect width="1985" height="686" fill="#FFFFFF"/>
+<text x="30" y="78" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="66" font-weight="bold" fill="#C0504D">Prefers x (B over A) — grades both low</text>
+<text x="30" y="168" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#000000">Grade EVERY candidate. Ungraded counts as A.</text>
+<text x="560" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">A</text>
+<text x="750" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">B</text>
+<text x="940" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">C</text>
+<text x="1130" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">D</text>
+<text x="1320" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">E</text>
+<text x="1510" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">F</text>
+<text x="1700" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">G</text>
+<text x="1890" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">H</text>
+<rect x="0" y="352" width="1985" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="352" x2="1985" y2="352" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="453.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">x</text>
+<ellipse cx="560" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="750" cy="431.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="940" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1130" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1320" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1510" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1700" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1890" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<line x1="0" y1="510" x2="1985" y2="510" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="611.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">y</text>
+<ellipse cx="560" cy="589.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="750" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="940" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1130" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1320" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1510" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1700" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1890" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<line x1="0" y1="668" x2="1985" y2="668" stroke="#95B3D7" stroke-width="7"/>
+</svg>

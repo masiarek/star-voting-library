@@ -48,6 +48,64 @@ Two candidates sharing a median is common on a six-word scale, and MJ's answer i
 
 It works, and it is opaque. A voter can follow "highest median wins"; almost nobody can follow four iterations of grade-stripping, and the iteration is exactly what makes MJ's [reinforcement failure](../../../07_Concepts/voting_paradoxes/majority_judgment.md) — three regions that each elect y, merging into an electorate that elects x — so hard to see coming. The 101 case above is deliberately built to avoid a tie, so the lesson is the median and not the machinery.
 
+## How it differs from Score — the same ballots, two winners
+
+The comparison that matters most is with [Range / Score](../../Range/concepts/range_voting.md), because MJ and Score hand the voter **the same piece of paper**. Both ask for a grade on every candidate. They part company at exactly one step: Score adds the column up and takes the **mean**, MJ lines it up and takes the **median**. On the 101 case above that difference is invisible — Bruno wins under both, which is the honest picture most of the time. Here is a five-voter election where it isn't:
+
+<!-- ballots:mj_vs_score_c3_b5 -->
+The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column:
+
+| Ballot as marked | Asha | Bodhi | Camila |
+|:--|:--:|:--:|:--:|
+| <img src="../cases/img/mj_vs_score_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A grade ballot — Bodhi's biggest fan — Excellent: Asha Very Good, Bodhi Excellent, Camila Poor."> | Very Good | Excellent | Poor |
+| <img src="../cases/img/mj_vs_score_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A grade ballot — The second Excellent for Bodhi: Asha Very Good, Bodhi Excellent, Camila Poor."> | Very Good | Excellent | Poor |
+| <img src="../cases/img/mj_vs_score_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A grade ballot — Asha Good; Bodhi only Acceptable: Asha Good, Bodhi Acceptable, Camila Poor."> | Good | Acceptable | Poor |
+| <img src="../cases/img/mj_vs_score_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A grade ballot — The same again, warmer on Camila: Asha Good, Bodhi Acceptable, Camila Acceptable."> | Good | Acceptable | Acceptable |
+| <img src="../cases/img/mj_vs_score_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A grade ballot — The lone To Reject for Asha: Asha To Reject, Bodhi Acceptable, Camila Good."> | To Reject | Acceptable | Good |
+<!-- /ballots -->
+
+| Candidate | Grades in order | **Median** → MJ | **Mean** → Score |
+|---|---|:--:|:--:|
+| **Asha** | To Reject · Good · **Good** · Very Good · Very Good | **Good** ✔ | 2.8 |
+| **Bodhi** | Acceptable · Acceptable · **Acceptable** · Excellent · Excellent | Acceptable | **3.2** ✔ |
+| Camila | Poor · Poor · **Poor** · Acceptable · Good | Poor | 1.6 |
+
+**Score elects Bodhi. Majority Judgment elects Asha.** Nobody changed their mind between the two counts, and no ballot was marked differently — the only thing that changed is what the count does with the column.
+
+```bash
+uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/grade_methods_report.py 06_Other/Majority_Judgment/cases/mj_vs_score_c3_b5.yaml
+```
+
+```text title="grade_methods_report.py — both winners, from the same file"
+Grades:
+                     V1          V2          V3          V4          V5     mean      median
+   Asha       Very Good   Very Good        Good        Good   To Reject   (2.80)        Good
+   Bodhi      Excellent   Excellent  Acceptable  Acceptable  Acceptable   (3.20)  Acceptable
+   Camila          Poor        Poor        Poor  Acceptable        Good   (1.60)        Poor
+
+Winner — Range Voting (highest mean): Bodhi
+   (grades scored by position on the scale, To Reject=0)
+
+Winner — Majority Judgment (highest median): Asha
+   medians: Asha Good, Bodhi Acceptable, Camila Poor
+
+ pref_voting Range (mean): Bodhi   vs this report (Bodhi): AGREE ✓
+ pref_voting Majority Judgment: Asha   vs this report (Asha): AGREE ✓
+```
+
+The split is legible on the paper. Bodhi holds the two loudest grades in the election — two *Excellent*s — and three voters who say only *Acceptable*. Asha holds no *Excellent* at all: two *Very Good*s, two *Good*s, and one *To Reject*.
+
+- **The mean asks *how much*.** An *Excellent* is worth five and an *Acceptable* two, so Bodhi's two enthusiasts outweigh Asha's four warm-but-not-loud grades. Intensity is information, and Score is the method that counts it.
+- **The median asks *where the middle voter stands*.** Four of five voters put Asha at *Good* or better; only two of five put Bodhi above *Acceptable*. How strongly those two feel never enters the count — under MJ, a candidate is lifted by **one more voter reaching the grade**, never by one voter reaching harder.
+
+### The lone *To Reject* is pivotal — under Score only
+
+V5 is the one voter who rejects Asha outright. Had V5 given her the *Good* that V3 and V4 did, her mean would be **3.4** and **Score would elect Asha too** — the divergence exists only because of that single grade. Her median does not move an inch: *Good* with the *To Reject*, *Good* without it.
+
+That one cell is the argument, in both directions at once. Balinski and Laraki designed the median precisely so that a voter cannot sink a candidate by grading them at the floor — the strategy their book is most worried about, and MJ genuinely blocks it. Score advocates answer that V5's *To Reject* is not noise to be filtered out but a voter telling you something real, and a method that shrugs at it has thrown away the evidence it asked for. This election does not settle that; it shows you the exact cell where the two philosophies disagree, and it is one cell.
+
+**The rule of thumb:** the mean moves *smoothly* — change one grade and the total shifts a little. The median moves in *jumps* — change one grade and either nothing happens at all, or the winner changes, depending only on whether you crossed the middle. That is the same sensitivity, seen from the good side here and from the bad side in the [truncation paradox](../../../07_Concepts/voting_paradoxes/majority_judgment.md), where one blank drops a candidate four grades.
+
 ## Where it sits in the graded family
 
 - **[Approval](../../../04_Approval/01_Learn/approval_voting.md)** is the same idea at **two grades** — approve or don't.
@@ -72,6 +130,7 @@ So all four read a grade of some resolution; they differ in what they do with th
 ## Ballot examples
 
 - [`06_Other/Majority_Judgment/cases/mj_101_c3_b5.yaml`](../cases/mj_101_c3_b5.yaml) — the intro above (three candidates, five voters, the six-word scale, one ungraded cell).
+- [`06_Other/Majority_Judgment/cases/mj_vs_score_c3_b5.yaml`](../cases/mj_vs_score_c3_b5.yaml) — the mean-versus-median split above: the same five ballots elect Bodhi under Score and Asha under MJ.
 - Felsenthal's four §A9 examples — the case against — live in [Felsenthal's paradox review, worked](../../../method_comparisons/felsenthal_paradoxes/README.md) and are worked on [Majority Judgment's paradoxes](../../../07_Concepts/voting_paradoxes/majority_judgment.md).
 
 ## Links

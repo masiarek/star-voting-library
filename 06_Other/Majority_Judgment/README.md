@@ -7,6 +7,7 @@ Majority Judgment: every voter grades every candidate in a **common language of 
 | Case | Read · run |
 |---|---|
 | Majority Judgment 101 — the highest median grade wins | [`mj_101_c3_b5.yaml`](cases/mj_101_c3_b5.yaml) |
+| MJ vs Score — the same ballots, two different winners ([worked here](concepts/majority_judgment.md#how-it-differs-from-score-the-same-ballots-two-winners)) | [`mj_vs_score_c3_b5.yaml`](cases/mj_vs_score_c3_b5.yaml) |
 
 Felsenthal's four §A9 examples — the case *against* the method — live with the rest of that appendix in [Felsenthal's paradox review, worked](../../method_comparisons/felsenthal_paradoxes/README.md), and are worked on [Majority Judgment's paradoxes](../../07_Concepts/voting_paradoxes/majority_judgment.md).
 
