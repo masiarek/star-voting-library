@@ -14,25 +14,20 @@ search:
 ## Scenario
 
 A nine-member book club buys TWO novels by ranked ballot, counted with
-STV (the proportional cousin of RCV-IRV). Hand-count Droop quota =
-floor(9/3)+1 = 4. Round 1: Austen has 5 first choices — over quota —
-and is elected; her ONE surplus vote transfers (as fractions of the
-five ballots that elected her) to their next choice, Bronte.
-Standings: Bronte 2, Camus 3, Dickens 0. Nobody reaches quota, so the
-machine turns to eliminations: Dickens (0) first, then Bronte (2) —
-whose pile, INCLUDING the fraction that arrived from Austen's surplus,
-moves on to Camus. Camus reaches 5 and takes the second seat. Seats:
-Austen + Camus. The drill follows one ballot through the whole journey
-— surplus, then elimination — to see how STV keeps a vote moving until
-it lands. Exercise: ex14_transfer_machine.md. Ballots and cast
-(novelists as candidates) are this repo's own.
-NOTE — which Droop quota: every figure above is the HAND COUNT's, and
-the report below runs the other standard Droop quota, the exact 9/3 =
-3.00, so its intermediate numbers differ. There Austen's surplus is 2
-(each ballot moving at 0.4), Bronte finishes level with Camus at 3.00,
-and no elimination round runs at all. Both rules are standard, both
-seat Austen + Camus; part (f) of the exercise tables the two counts
-side by side.
+STV (the proportional cousin of RCV-IRV). Round 1: Austen has 5 first
+choices — over quota — and is elected; her surplus transfers, as
+fractions of the five ballots that elected her, to their next choice,
+Bronte. From there STV fills the second seat the way it always does —
+moving surpluses, and eliminating from the bottom if nobody is over
+the line — and Camus takes it. Seats: Austen + Camus. The drill
+follows one ballot through the whole journey — how much of it elected
+Austen, and where the remainder came to rest — to see how STV keeps a
+vote moving until it lands. How large that surplus is, and whether any
+elimination is needed, depends on which of the two published Droop
+quotas the count applies; the report below names the one it uses, and
+part (f) of the exercise works these same ballots both ways. Exercise:
+ex14_transfer_machine.md. Ballots and cast (novelists as candidates)
+are this repo's own.
 Live on BetterVoting (Test ID BV2201): https://bettervoting.com/tk776t
 — the vote page works, but BV's STV tabulator currently returns a
 server error on /results for this election, and for its fully-ranked

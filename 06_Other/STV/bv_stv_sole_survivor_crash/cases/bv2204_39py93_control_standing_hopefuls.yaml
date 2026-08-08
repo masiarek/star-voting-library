@@ -8,17 +8,14 @@ scenario_description: |-
   crash: config identical to the crashing exercise-14 election tk776t —
   STV, 2 seats, 4 candidates, write-ins off — but ballots whose count
   ends with two hopefuls STILL STANDING, so no candidate is ever
-  eliminated. 13 voters, hand-count Droop quota = floor(13/3)+1 = 5.
-  Round 1: Angelou holds 6 ≥ 5, elected; her surplus of 1 transfers (six
-  ballots at 1/6 each) to Blake: 1+1 = 2. Round 2: Cummings holds 5 ≥ 5,
-  elected with zero surplus — both seats filled, Blake and Dickinson
-  never eliminated. (NOTE — which Droop quota: those two rounds are the
-  hand count's. The LH report below applies the other standard Droop
-  quota, the exact 13/3 = 4.33, which BOTH Angelou and Cummings already
-  clear on first choices — so it seats them together in one round and
-  prints a single table, with no surplus transfer to Blake shown. Same
-  two seats, and the point of the probe — an endgame with hopefuls still
-  standing — holds under either rule.) PREDICTION: computes. RESULT: computes — BetterVoting
+  eliminated. 13 voters: Angelou (6 first choices) and Cummings (5) both
+  clear quota outright, so both are elected and any surplus of Angelou's
+  transfers to Blake — both seats filled with Blake and Dickinson never
+  eliminated. How many rounds that takes, and how much surplus moves,
+  depends on which of the two published Droop quotas the count applies;
+  the report below names the one it uses. The probe's point — an endgame
+  that leaves hopefuls still standing — holds either way. PREDICTION:
+  computes. RESULT: computes — BetterVoting
   returns Angelou + Cummings, agreeing with the LH engine. Together with
   probe #1 (gvtg2h: same crashing count, flag removed, still errors)
   this convicts the ENDGAME — electing the last remaining hopeful at

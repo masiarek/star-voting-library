@@ -8,8 +8,7 @@ scenario_description: |-
   One of six races in the Pets Governance election (BV2134, bvid kcf8vf; BV-confirmed). Same 22 voters, a
   13-voter MAJORITY (Dog, Cat, Fish) and a 9-voter MINORITY (Bird, Rabbit,
   Hamster), voting ranked ballots. This 3-seat Delegates race uses STV
-  (hand-count Droop quota = floor(22/4)+1 = 6; the report below applies the other
-  standard form, the exact 22/4 = 5.50 — same seats). The majority (13) meets two quotas and the minority
+  (the report below prints the Droop quota it applies). The majority (13) meets two quotas and the minority
   (9) meets one, so STV elects Dog, Cat (majority) and Bird (minority) — 2 + 1,
   proportional. Like STAR-PR (Bird, Dog, Fish) it seats the minority; the two
   proportional methods differ only on the majority's third pick (Cat vs Fish).

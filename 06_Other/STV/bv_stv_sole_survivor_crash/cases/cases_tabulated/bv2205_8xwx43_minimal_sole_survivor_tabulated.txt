@@ -11,11 +11,11 @@ bv_results_url: https://bettervoting.com/8xwx43/results
 scenario_description: |-
   Bisection probe #3 (the MINIMAL crasher) for the BetterVoting STV
   sole-survivor crash: 1 seat, 3 candidates, 6 fully deterministic
-  ballots — no tie at any step. Droop quota = floor(6/2)+1 = 4. Round 1:
-  Ash 3 / Birch 2 / Cedar 1 — nobody at quota; Cedar eliminated, his
-  ballot exhausts. Round 2: Birch eliminated, both Birch ballots
-  transfer to Ash. Round 3: Ash — now the ONLY remaining candidate —
-  holds 5 ≥ 4, and BetterVoting's elect-branch removes him and tries to
+  ballots — no tie at any step. BetterVoting's count runs: Round 1, Ash
+  3 / Birch 2 / Cedar 1 — nobody at quota; Cedar eliminated, his ballot
+  exhausts. Round 2: Birch eliminated, both Birch ballots transfer to
+  Ash. Round 3: Ash — now the ONLY remaining candidate — is over quota,
+  and BetterVoting's elect-branch removes him and tries to
   redistribute his surplus over an EMPTY candidate list: IRV.ts
   distributeVotes reduces over the empty array with no initial value and
   throws. PREDICTION: errors. RESULT: errors (13617b56). Proves the
