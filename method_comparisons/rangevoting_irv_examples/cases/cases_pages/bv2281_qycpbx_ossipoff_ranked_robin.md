@@ -5,13 +5,15 @@ search:
 
 # Ossipoff's 303 — Ranked Robin on the identical ballots
 
-*Generated from [`ossipoff_leader_eliminated_c5_b303_rr.yaml`](../ossipoff_leader_eliminated_c5_b303_rr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2281_qycpbx_ossipoff_ranked_robin.yaml`](../bv2281_qycpbx_ossipoff_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** C
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/qycpbx) · **[results ↗](https://bettervoting.com/qycpbx/results)** (election `qycpbx` · test `BV2281`).
+
 ## Scenario
 
-The SAME 303 ballots as ossipoff_leader_eliminated_c5_b303.yaml, not one mark
+The SAME 303 ballots as bv2281_qycpbx_ossipoff_irv.yaml, not one mark
 changed, counted by Ranked Robin instead of Hare elimination. Same paper, same
 voters, same rankings — only the counting rule differs.
 
@@ -24,9 +26,13 @@ ranked ballots, because it asks for NOTHING from them: no new ballot, no
 scores, no relearning how to vote. The ranked ballot they already support is
 fine. It is the tabulation that threw C away.
 
-Triple-check status: LH native tally + pref_voting's independent Copeland
-(ranked_robin_report.py). No BetterVoting leg — this is a constructed
-published profile, not a BV-backed case.
+TRIPLE-CHECKED, all three legs agreeing on C: this LH native tally,
+BetterVoting's own RankedRobin.ts (live election qycpbx, race 2 — frozen in
+bv2281_qycpbx_bv_export.json, tieBreakType 'none'), and pref_voting's
+independent Copeland (ranked_robin_report.py — AGREE, unique leader C).
+
+Live on BetterVoting (Test ID BV2281): https://bettervoting.com/qycpbx
+Live results: https://bettervoting.com/qycpbx/results
 
 ## Ballots
 
@@ -108,16 +114,18 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ossipoff_leader_eliminated_c5_b303_rr_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2281_qycpbx_ossipoff_ranked_robin_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/ossipoff_leader_eliminated_c5_b303_rr.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/bv2281_qycpbx_ossipoff_ranked_robin.yaml
 ```
 
 ## See also
 
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [brams_1982_c4_b21](brams_1982_c4_b21.md) · [brams_1982_c4_b21_rr](brams_1982_c4_b21_rr.md) · [ossipoff_leader_eliminated_c5_b303](ossipoff_leader_eliminated_c5_b303.md)
+More cases in this set: [bv2281_qycpbx_ossipoff_irv](bv2281_qycpbx_ossipoff_irv.md) · [bv2282_hf3ckp_brams_irv](bv2282_hf3ckp_brams_irv.md) · [bv2282_hf3ckp_brams_ranked_robin](bv2282_hf3ckp_brams_ranked_robin.md)

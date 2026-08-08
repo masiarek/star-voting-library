@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     brams_1982_c4_b21.yaml
-TABULATED FILE:  brams_1982_c4_b21_tabulated.txt
+SOURCE FILE:     bv2282_hf3ckp_brams_irv.yaml
+TABULATED FILE:  bv2282_hf3ckp_brams_irv_tabulated.txt
 ======================================================================
 
 election_title: "Brams 1982 — twenty-one voters, and the Condorcet winner goes out second"
@@ -30,6 +30,17 @@ scenario_description: |-
 
   Candidate labels B, G, N, F are Brams's own and are kept for traceability to
   the source, which is why they are neither alphabetical nor in reading order.
+
+  BV-CONFIRMED. Race 1 of live election hf3ckp (Test ID BV2282) is these 21
+  ballots counted by BetterVoting's own IRV tabulator, and it elects B, matching
+  this file exactly; race 2 is the same ballots under Ranked Robin and elects G.
+  tieBreakType 'none' in both. Frozen export: bv2282_hf3ckp_bv_export.json.
+
+  Live on BetterVoting: https://bettervoting.com/hf3ckp
+  Live results: https://bettervoting.com/hf3ckp/results
+bv_test_id: BV2282
+bv_election_id: hf3ckp
+bv_results_url: https://bettervoting.com/hf3ckp/results
 voting_method: RCV_IRV
 num_winners: 1
 
@@ -44,7 +55,7 @@ ballots: |-
 expected_winners:
   - B
 
-# file: brams_1982_c4_b21.yaml
+# file: bv2282_hf3ckp_brams_irv.yaml
 
 ======================================================================
 TABULATION RESULTS

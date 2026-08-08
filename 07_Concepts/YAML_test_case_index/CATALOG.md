@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 489 elections, 666 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 487 elections, 666 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -65,6 +65,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`h34pp9`](https://bettervoting.com/h34pp9/results) | BV2218 — Pineapple progression 3/3 — Choose-One elec | 4 | contested (multi-race) | 100 | Approval, Plurality, RankedRobin, STAR | BV |
 | [`h87k6v`](https://bettervoting.com/h87k6v/results) | BV2148 — Felsenthal's Reinforcement paradox (II of I | 2 | contested (multi-race) | 15 | IRV, STAR | BV |
 | [`h93tm4`](https://bettervoting.com/h93tm4/results) | BV2171 — The Condorcet centrist, minimal form (8 vot | 7 | contested (multi-race) | 8 | Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
+| [`hf3ckp`](https://bettervoting.com/hf3ckp/results) | BV2282 — Brams's 21 — twenty-one ranked ballots, two | 2 | contested (multi-race) | 21 | IRV, RankedRobin | BV |
 | [`ht2c3g`](https://bettervoting.com/ht2c3g/results) | BV2216 — Pineapple progression 1/3 — Choose-One elec | 4 | contested (multi-race) | 99 | Approval, Plurality, RankedRobin, STAR | BV |
 | [`jfrk9t`](https://bettervoting.com/jfrk9t/results) | BV655 - “equal opposition” vote - the “Same-Score Ba | 2 | contested (multi-race) | 2 | STAR | BV |
 | [`k3fmwv`](https://bettervoting.com/k3fmwv/results) | BV2213 — Alaska 2022 special, scaled model: STAR & R | 4 | contested (multi-race) | 200 | IRV, Plurality, RankedRobin, STAR | BV |
@@ -81,6 +82,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`pp2q4q`](https://bettervoting.com/pp2q4q/results) | BV2170 — The centrist a majority prefers, squeezed o | 4 | contested (multi-race) | 100 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`q3h4fk`](https://bettervoting.com/q3h4fk/results) | BV2161 — Borda's SCC paradox electorate — the winner | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
 | [`qdtqf2`](https://bettervoting.com/qdtqf2/results) | BV2200 — Where Do You Draw the Line? — one electorat | 4 | contested (multi-race) | 9 | Approval, STAR | BV |
+| [`qycpbx`](https://bettervoting.com/qycpbx/results) | BV2281 — Ossipoff's 303 — the first-round leader who | 2 | contested (multi-race) | 303 | IRV, RankedRobin | BV |
 | [`qywq7d`](https://bettervoting.com/qywq7d/results) | BV2279 — Three Brothers, One Fruit — the majoritaria | 3 | contested (multi-race) | 3 | Approval, RankedRobin, STAR | BV |
 | [`r6ctvy`](https://bettervoting.com/r6ctvy/results) | BV2152 — Felsenthal & Maoz's Approval paradox — the  | 2 | contested (multi-race) | 47 | Approval, RankedRobin | BV |
 | [`r6qc8h`](https://bettervoting.com/r6qc8h/results) | BV2160 — Fishburn's Borda truncation electorate — ST | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
@@ -220,8 +222,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `bloc_lot_path_dependence_b_c3_b5` | Bloc STAR — a seat-1 lot decides who wins seat 2 (lo | 1 | single-race | 5 | STAR | LH-only |
 | `blocs_bloc_c9_b10` | Left, Centre, Right — Bloc STAR fills the council | 1 | single-race | 10 | bloc | LH-only |
 | `blocs_pr_c9_b10` | Left, Centre, Right — Proportional STAR fills the co | 1 | single-race | 10 | STAR_PR | LH-only |
-| `brams_1982_c4_b21` | Brams 1982 — twenty-one voters, and the Condorcet wi | 1 | single-race | 21 | IRV | LH-only |
-| `brams_1982_c4_b21_rr` | Brams 1982 — Ranked Robin on the identical ballots | 1 | single-race | 21 | RankedRobin | LH-only |
 | `brams_ex3_two_candidates_c2_b5` | Brams Example 3 — two candidates: two loud fans vs t | 1 | single-race | 5 | STAR | LH-only |
 | `brams_ex6_three_winners_c3_b9` | Brams Example 6 — three counts, three winners (STAR  | 1 | single-race | 9 | STAR | LH-only |
 | `brams_grading_paradox_c3_b3` | Brams' grading paradox — the grade leader loses the  | 1 | single-race | 3 | STAR | LH-only |
@@ -356,8 +356,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `monotonicity_star_before` | Monotonicity — STAR counterpart (BEFORE — X wins) | 1 | single-race | 34 | STAR | LH-only |
 | `omr_opposition_decides` | Ordered majority rule — the opposition decides the A | 1 | single-race | 100 | IRV | LH-only |
 | `options_examples` | Display-options reference — every reporting toggle ( | 1 | single-race | 100 | STAR | LH-only |
-| `ossipoff_leader_eliminated_c5_b303` | Ossipoff's 303 — the first-round LEADER is eliminate | 1 | single-race | 303 | IRV | LH-only |
-| `ossipoff_leader_eliminated_c5_b303_rr` | Ossipoff's 303 — Ranked Robin on the identical ballo | 1 | single-race | 303 | RankedRobin | LH-only |
 | `p3_manip_compromise_rr` | P3 manipulated — the mild version: three adjacent sw | 1 | single-race | 7 | RankedRobin | LH-only |
 | `p3_manip_reversal_rr` | P3 manipulated — Zwicker's complete reversal makes D | 1 | single-race | 7 | RankedRobin | LH-only |
 | `p3_manip_star` | P3 manipulated — two voters bury their 4th choice an | 1 | single-race | 7 | STAR | LH-only |
@@ -517,8 +515,8 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 406 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
-| contested (multi-race) | 260 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`38b7fg`](https://bettervoting.com/38b7fg/results) |
+| single-race | 402 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| contested (multi-race) | 264 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`38b7fg`](https://bettervoting.com/38b7fg/results) |
 
 ### By seat class
 
@@ -584,8 +582,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 312 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
-| BV | 269 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| LH-only | 308 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| BV | 273 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | BV (no yaml) | 83 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results), [`3xgkck`](https://bettervoting.com/3xgkck/results) |
 | LH-only (exception) | 2 | `copeland_half_credit_decides`, `dead_heat_lot_tiebreak` |
 

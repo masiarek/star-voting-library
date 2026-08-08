@@ -820,6 +820,24 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2280 — Rank only five - Ranked Robin (Copeland) | RankedRobin | 9 | **Gus** | [results ↗](https://bettervoting.com/37yf8x/results) |
 | BV2280 — Rank all nine - RCV-IRV (instant runoff) | IRV | 9 | **Ben** | [results ↗](https://bettervoting.com/37yf8x/results) |
 
+## BV2281 — Ossipoff's 303 — the first-round leader who beats every rival head-to-head
+
+**Election** [`qycpbx`](https://bettervoting.com/qycpbx/results) · **2 races** · **303 ballots** · [frozen export](../../method_comparisons/rangevoting_irv_examples/cases/bv2281_qycpbx_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2281 — Rank all five - RCV-IRV (instant runoff) | IRV | 5 | **D** | [results ↗](https://bettervoting.com/qycpbx/results) |
+| BV2281 — Rank all five - Ranked Robin (Copeland) | RankedRobin | 5 | **C** | [results ↗](https://bettervoting.com/qycpbx/results) |
+
+## BV2282 — Brams's 21 — twenty-one ranked ballots, two counts, two winners
+
+**Election** [`hf3ckp`](https://bettervoting.com/hf3ckp/results) · **2 races** · **21 ballots** · [frozen export](../../method_comparisons/rangevoting_irv_examples/cases/bv2282_hf3ckp_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2282 — Rank all four - RCV-IRV (instant runoff) | IRV | 4 | **B** | [results ↗](https://bettervoting.com/hf3ckp/results) |
+| BV2282 — Rank all four - Ranked Robin (Copeland) | RankedRobin | 4 | **G** | [results ↗](https://bettervoting.com/hf3ckp/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

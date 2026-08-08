@@ -4,6 +4,13 @@
 
 **Level: 301 · for debaters**
 
+**▶ Both are LIVE BetterVoting elections**, each carrying two races on the same ballots — an RCV-IRV race and a Ranked Robin race — so the disagreement is clickable rather than merely claimed:
+
+- **BV2281 — Ossipoff's 303** · [vote](https://bettervoting.com/qycpbx) · **[results ↗](https://bettervoting.com/qycpbx/results)** (election `qycpbx`)
+- **BV2282 — Brams's 21** · [vote](https://bettervoting.com/hf3ckp) · **[results ↗](https://bettervoting.com/hf3ckp/results)** (election `hf3ckp`)
+
+**BetterVoting agrees with this repo's engine on all four races** — IRV → D and Ranked Robin → C on the 303; IRV → B and Ranked Robin → G on the 21 — with `tieBreakType: none` throughout, so nothing here rests on a lot. Frozen exports sit beside the case files (`bv2281_qycpbx_bv_export.json`, `bv2282_hf3ckp_bv_export.json`).
+
 ---
 
 ## Why this folder exists
@@ -18,7 +25,7 @@ This is the [claim-check](../fairvote_condorcet_claims/README.md) pattern the li
 
 Five candidates on a left-to-right line, 303 voters, C in the middle.
 
-<!-- report:ossipoff_leader_eliminated_c5_b303 -->
+<!-- report:bv2281_qycpbx_ossipoff_irv -->
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
   Ossipoff's 303 — the first-round LEADER is eliminated
@@ -77,7 +84,7 @@ The mechanism is worth tracing, because it is not mysterious. E is eliminated fi
 
 ## Example 2 — Brams 1982: twenty-one ballots, checkable on paper
 
-<!-- report:brams_1982_c4_b21 -->
+<!-- report:bv2282_hf3ckp_brams_irv -->
 ```text
 --- RCV / Instant-Runoff Voting (single winner) ---
   Brams 1982 — twenty-one voters, and the Condorcet winner goes out second
@@ -132,7 +139,7 @@ Neither profile needs a new ballot to fix. [Ranked Robin](../../05_Ranked_Robin/
 
 That is the version of this argument worth making to someone who likes ranked ballots, because **it asks nothing of them.** The ballot they already support is fine. The disagreement is entirely in the tabulation.
 
-<!-- report:ossipoff_leader_eliminated_c5_b303_rr -->
+<!-- report:bv2281_qycpbx_ossipoff_ranked_robin -->
 ```text
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 303 ballots (ranked ballots).
@@ -180,7 +187,7 @@ Winner — Ranked Robin (RCV-RR): C
 ```
 <!-- /report -->
 
-**Verification.** Both Ranked Robin counts are cross-checked against `pref_voting`'s independent Copeland implementation — a third-party library nobody here wrote — which returns the same unique winner in both cases (`AGREE ✓`). There is no BetterVoting leg: these are published constructed profiles, not BV-backed elections. The [Smith set](../../07_Concepts/topics/smith_set.md) is a single candidate in both, so there is no cycle and no tiebreak to argue about.
+**Verification — all three legs, and they agree.** Every Ranked Robin result here is confirmed by three independent tabulators: this repo's native tally, **BetterVoting's own `RankedRobin.ts`** (race 2 of each live election above, frozen in the exports), and **`pref_voting`'s Copeland** — a third-party library nobody here wrote, which returns the same unique leader in both cases (`AGREE ✓`). The RCV-IRV results are confirmed twice over, by this engine and by BetterVoting's own IRV tabulator. That matters more than usual for a page arguing from someone else's examples: **the profiles came from an advocacy site, so the counts had better not come from anywhere we control alone.** The [Smith set](../../07_Concepts/topics/smith_set.md) is a single candidate in both profiles, so there is no cycle, and `tieBreakType` is `none` in all four races — nothing rests on a lot.
 
 ## Reading this fairly — including against ourselves
 
@@ -203,12 +210,14 @@ The Condorcet half of the claim stands. The rest does not, and this library does
 
 ## The files
 
-| Case | Method | What it shows | Page | YAML |
-|---|:--:|---|---|---|
-| **Ossipoff's 303** | RCV-IRV | the first-round leader and Condorcet winner is cut in round 3 by one vote | [page](cases/cases_pages/ossipoff_leader_eliminated_c5_b303.md) | [`.yaml`](cases/ossipoff_leader_eliminated_c5_b303.yaml) |
-| …identical ballots | Ranked Robin | elects C, 4–0 on the pairwise record | [page](cases/cases_pages/ossipoff_leader_eliminated_c5_b303_rr.md) | [`.yaml`](cases/ossipoff_leader_eliminated_c5_b303_rr.yaml) |
-| **Brams 1982** | RCV-IRV | 21 ballots, hand-checkable; G eliminated one round from the finish | [page](cases/cases_pages/brams_1982_c4_b21.md) | [`.yaml`](cases/brams_1982_c4_b21.yaml) |
-| …identical ballots | Ranked Robin | elects G, 3–0 on the pairwise record | [page](cases/cases_pages/brams_1982_c4_b21_rr.md) | [`.yaml`](cases/brams_1982_c4_b21_rr.yaml) |
+Each election's two races are one file apiece, sharing the bvid prefix — so `rg qycpbx` returns the whole set, and the suffix carries the reading order.
+
+| Case | Method | What it shows | Live | Page | YAML |
+|---|:--:|---|:--:|---|---|
+| **Ossipoff's 303** (BV2281) | RCV-IRV | the first-round leader and Condorcet winner is cut in round 3 by one vote | [results ↗](https://bettervoting.com/qycpbx/results) | [page](cases/cases_pages/bv2281_qycpbx_ossipoff_irv.md) | [`.yaml`](cases/bv2281_qycpbx_ossipoff_irv.yaml) |
+| …identical ballots | Ranked Robin | elects C, 4–0 on the pairwise record | [results ↗](https://bettervoting.com/qycpbx/results) | [page](cases/cases_pages/bv2281_qycpbx_ossipoff_ranked_robin.md) | [`.yaml`](cases/bv2281_qycpbx_ossipoff_ranked_robin.yaml) |
+| **Brams 1982** (BV2282) | RCV-IRV | 21 ballots, hand-checkable; G eliminated one round from the finish | [results ↗](https://bettervoting.com/hf3ckp/results) | [page](cases/cases_pages/bv2282_hf3ckp_brams_irv.md) | [`.yaml`](cases/bv2282_hf3ckp_brams_irv.yaml) |
+| …identical ballots | Ranked Robin | elects G, 3–0 on the pairwise record | [results ↗](https://bettervoting.com/hf3ckp/results) | [page](cases/cases_pages/bv2282_hf3ckp_brams_ranked_robin.md) | [`.yaml`](cases/bv2282_hf3ckp_brams_ranked_robin.yaml) |
 
 **Sources.** Profiles from [rangevoting.org — "Range voting vs. IRV"](https://rangevoting.org/rangeVirv.html) §12 (Warren D. Smith; **score-voting advocacy**, credited there to Mike Ossipoff), and Brams (1982) as cited above. Where the two disagree with each other, or with us, the engine output on this page is what we stand behind. Related claim-checks: [FairVote's Condorcet article](../fairvote_condorcet_claims/README.md) · [advocacy organizations and their leans](../../07_Concepts/topics/advocacy_organizations.md) · [misconceptions in both directions](../../06_Other/RCV_IRV/concepts/rcv_irv_false_claims.md) · up: [method comparisons](../README.md)
 
