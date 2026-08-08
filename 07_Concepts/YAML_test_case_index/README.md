@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**571 election files** (489 single-winner, 82 multi-winner) across 18 method(s).
+**572 election files** (490 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 273 |
+| STAR | 274 |
 | RCV-IRV (Hare) | 44 |
 | Ranked Robin (RCV-RR / Copeland) | 96 |
 | Approval | 25 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (273)
+## STAR  (274)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -59,6 +59,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`equal_support_runoff_demo`](../../01_STAR/02_Examples/cases/cases_pages/equal_support_runoff_demo.md) | `01_STAR/02_Examples/cases/` | 1 | Equal Support — counted in both rounds, neutral only in the tie-break → _A_ | [`.yaml`](../../01_STAR/02_Examples/cases/equal_support_runoff_demo.yaml) |
 | [`quorum_demo_c3_b6`](../../01_STAR/02_Examples/cases/cases_pages/quorum_demo_c3_b6.md) | `01_STAR/02_Examples/cases/` | 1 | Quorum — an abstention still counts toward turnout → _Anna_ | [`.yaml`](../../01_STAR/02_Examples/cases/quorum_demo_c3_b6.yaml) |
 | [`quorum_fail_demo_c3_b6`](../../01_STAR/02_Examples/cases/cases_pages/quorum_fail_demo_c3_b6.md) | `01_STAR/02_Examples/cases/` | 1 | Quorum FAILS — won the count, but not elected | [`.yaml`](../../01_STAR/02_Examples/cases/quorum_fail_demo_c3_b6.yaml) |
+| [`same_mean_different_spread_c2_b5`](../../01_STAR/02_Examples/cases/cases_pages/same_mean_different_spread_c2_b5.md) | `01_STAR/02_Examples/cases/` | 1 | Same mean, different spread — the consensus candidate and the polarizing one → _Blake_ | [`.yaml`](../../01_STAR/02_Examples/cases/same_mean_different_spread_c2_b5.yaml) |
 | [`star_ala_approval`](../../01_STAR/02_Examples/cases/cases_pages/star_ala_approval.md) | `01_STAR/02_Examples/cases/` | 1 | STAR à la Approval — 0/1 & marker ballots are legal on a STAR ballot → _D_ | [`.yaml`](../../01_STAR/02_Examples/cases/star_ala_approval.yaml) |
 | [`three_winners_cw_score_runoff`](../../01_STAR/02_Examples/cases/cases_pages/three_winners_cw_score_runoff.md) | `01_STAR/02_Examples/cases/` | 1 | Three notions of "winner" disagree — Condorcet, Score, and Runoff → _Bob_ | [`.yaml`](../../01_STAR/02_Examples/cases/three_winners_cw_score_runoff.yaml) |
 | [`vote_splitting`](../../01_STAR/02_Examples/cases/cases_pages/vote_splitting.md) | `01_STAR/02_Examples/cases/` | 1 | Vote splitting — two chocolates split the majority → _DarkChoco_ | [`.yaml`](../../01_STAR/02_Examples/cases/vote_splitting.yaml) |

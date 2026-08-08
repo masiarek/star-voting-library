@@ -35,6 +35,10 @@ Each link goes to the reader-friendly page; the tabulatable `.yaml` sits beside 
 
 - [Over 50% — every point on every ballot](cases/cases_pages/bv2263_xw23m9_over_50_percent.md) · **[live ↗](https://bettervoting.com/xw23m9/results)** — the ceiling case: score share, ballot share and decided-voter share all agree, and the runoff still runs. Its two-seat twin, where the same dominance buys exactly one seat: [Over 50% — what a landslide actually buys](../../02_STAR_Bloc/01_Learn/over_50_percent.md)
 
+**Score shape — what the average hides.** Two candidates can tie on the total and still be nothing alike.
+
+- [Same mean, different spread](cases/cases_pages/same_mean_different_spread_c2_b5.md) — a flat 3 from everyone vs three 5s and two 0s, both totalling 15; Score can't separate them, Approval takes the consensus candidate, the runoff takes the polarizing one. The lesson it backs is [Variance — the statistical name for "divisive"](../../07_Concepts/topics/variance_and_polarization.md)
+
 **Larger fields & the runoff.** Where the scoring round has to choose two finalists.
 
 - [Large field (9 candidates) — Equal Support decides](cases/cases_pages/06a_c9_b3_large-field-equal-support.md) · [Large field — the runoff overturns the leader](cases/cases_pages/06b_c9_runoff-overturns-leader.md) · [Tennessee capital (the classic)](cases/cases_pages/09_c4_b100_tennessee-capital.md) · [When Condorcet, Score & Runoff disagree](cases/cases_pages/three_winners_cw_score_runoff.md)

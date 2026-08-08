@@ -1,0 +1,38 @@
+election_title: "Same mean, different spread — the consensus candidate and the polarizing one"
+
+scenario_description: |-
+  Two candidates, five voters, and an exact tie in the Scoring Round: Alice 15,
+  Blake 15, both averaging 3.0. Every difference between them is SPREAD. Alice
+  is a flat 3 on all five ballots; Blake is three 5s and two 0s. The Score
+  Distribution block is the whole lesson — same mean, variance 0.0 vs 6.0 —
+  and 6.0 is the LARGEST variance arithmetically possible at a mean of 3.0 on
+  a 0-5 scale, so Blake is exactly as divisive as this ballot allows.
+  Because the totals tie, pure Score cannot separate them at all; the
+  divergence block's Approval reading (approve = 3+ stars) picks Alice 5-3;
+  STAR's Automatic Runoff hands the seat to Blake 3-2. "Polarizing" is not a
+  mood — it is variance, and only the second round reads it.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  brief: true
+  collapse_ballots: false
+  show_runoff_percent: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alice,Blake
+  3,5 # Blake is my champion; Alice is fine
+  3,5 # Blake is my champion; Alice is fine
+  3,5 # Blake is my champion; Alice is fine
+  3,0 # Alice is fine; Blake, absolutely not
+  3,0 # Alice is fine; Blake, absolutely not
+
+expected_winners:
+  - Blake
+
+# file: same_mean_different_spread_c2_b5.yaml

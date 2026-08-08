@@ -50,6 +50,7 @@ Keep the defensible version, which is strong enough on its own: **a better ballo
 ## Related
 
 - [The spatial voting model](spatial_voting_model.md) — the median voter theorem, Hotelling, and why 1-D results break in higher dimensions
+- [Variance — the statistical name for "divisive"](variance_and_polarization.md) — what "polarizing" means once you compute it from the ballots instead of asserting it
 - [Two-party dominance](two_party_dominance.md) — the case for and against, and what actually changes it
 - [The spoiler effect](spoiler_effect.md) · [center squeeze](center_squeeze/README.md) · [Why STAR Voting](Why_STAR_Voting.md) · [What makes a good winner?](what_makes_a_good_winner.md)
 - External: [median voter theorem](https://en.wikipedia.org/wiki/Median_voter_theorem) · [Downsian / Hotelling's law](https://en.wikipedia.org/wiki/Hotelling%27s_law) · [McKelvey–Schofield chaos theorem](https://en.wikipedia.org/wiki/McKelvey%E2%80%93Schofield_chaos_theorem)

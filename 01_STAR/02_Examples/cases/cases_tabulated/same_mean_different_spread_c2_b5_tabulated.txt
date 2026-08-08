@@ -1,0 +1,113 @@
+======================================================================
+SOURCE FILE:     same_mean_different_spread_c2_b5.yaml
+TABULATED FILE:  same_mean_different_spread_c2_b5_tabulated.txt
+======================================================================
+
+election_title: "Same mean, different spread — the consensus candidate and the polarizing one"
+
+scenario_description: |-
+  Two candidates, five voters, and an exact tie in the Scoring Round: Alice 15,
+  Blake 15, both averaging 3.0. Every difference between them is SPREAD. Alice
+  is a flat 3 on all five ballots; Blake is three 5s and two 0s. The Score
+  Distribution block is the whole lesson — same mean, variance 0.0 vs 6.0 —
+  and 6.0 is the LARGEST variance arithmetically possible at a mean of 3.0 on
+  a 0-5 scale, so Blake is exactly as divisive as this ballot allows.
+  Because the totals tie, pure Score cannot separate them at all; the
+  divergence block's Approval reading (approve = 3+ stars) picks Alice 5-3;
+  STAR's Automatic Runoff hands the seat to Blake 3-2. "Polarizing" is not a
+  mood — it is variance, and only the second round reads it.
+voting_method: STAR
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: true
+  show_irv: false
+  brief: true
+  collapse_ballots: false
+  show_runoff_percent: true
+  count_separator: "×"
+num_winners: 1
+ballots: |-
+  Alice,Blake
+  3,5 # Blake is my champion; Alice is fine
+  3,5 # Blake is my champion; Alice is fine
+  3,5 # Blake is my champion; Alice is fine
+  3,0 # Alice is fine; Blake, absolutely not
+  3,0 # Alice is fine; Blake, absolutely not
+
+expected_winners:
+  - Blake
+
+# file: same_mean_different_spread_c2_b5.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Same mean, different spread — the consensus candidate and the polarizing one ===
+  Two candidates, five voters, and an exact tie in the Scoring Round: Alice 15,
+  Blake 15, both averaging 3.0. Every difference between them is SPREAD. Alice
+  is a flat 3 on all five ballots; Blake is three 5s and two 0s. The Score
+  Distribution block is the whole lesson — same mean, variance 0.0 vs 6.0 —
+  and 6.0 is the LARGEST variance arithmetically possible at a mean of 3.0 on
+  a 0-5 scale, so Blake is exactly as divisive as this ballot allows.
+  Because the totals tie, pure Score cannot separate them at all; the
+  divergence block's Approval reading (approve = 3+ stars) picks Alice 5-3;
+  STAR's Automatic Runoff hands the seat to Blake 3-2. "Polarizing" is not a
+  mood — it is variance, and only the second round reads it.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+               |  * Alice   | * Blake   |
+-----------------------------------------
+     * Alice > |    ---     |2 - 0 - 3  |
+     * Blake > | 3 - 0 - 2  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Blake — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Alice — loses every head-to-head matchup — elected by Approval!
+
+[Divergence from STAR]
+  STAR     = Blake
+  Approval = Alice   (differs from STAR)
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 5 ballots.
+Count × Alice,Blake
+    3 ×     3,    5
+    2 ×     3,    0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Alice      0  0  5  0  0  0  |    15   3.0
+Blake      3  0  0  0  0  2  |    15   3.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alice         -- 15 -- First place
+   Blake         -- 15 -- Second place
+ Alice and Blake advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Blake         -- 3 -- First place
+   Alice         -- 2
+   Equal Support -- 0
+ Blake wins.
+   Runoff math:
+     5  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     5  voters with a preference  (majority = 3)
+           Blake 3 (60%)  ·  Alice 2 (40%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Blake

@@ -371,6 +371,7 @@ LH:same_matrix_p2_plurality,"Same matrix, different plurality — electorate P2:
 LH:same_matrix_p2_ranked_robin,"Same matrix, different plurality — electorate P2: Ranked Robin",1,single-race,12,RankedRobin,LH-only
 LH:same_matrix_p3_plurality,"Same matrix, different plurality — electorate P3: Choose-One",1,single-race,12,Plurality,LH-only
 LH:same_matrix_p3_ranked_robin,"Same matrix, different plurality — electorate P3: Ranked Robin",1,single-race,12,RankedRobin,LH-only
+LH:same_mean_different_spread_c2_b5,"Same mean, different spread — the consensus candidate and the polarizing one",1,single-race,5,STAR,LH-only
 LH:same_total_different_shape_c3_b7,"Same-ish total, different shape — the sandwich vote",1,single-race,7,STAR,LH-only
 LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
 LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only

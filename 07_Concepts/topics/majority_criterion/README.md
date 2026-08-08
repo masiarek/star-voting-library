@@ -25,9 +25,9 @@ Five voters. Three of them (a **60% majority**) love **Ada** — they give her t
 **Election A — Ada's majority backs only ONE other candidate** ([`bv95a`](../../../01_STAR/03_Criteria/majority_criterion/bv95a_9m6rxr_favorite_survives_one_rival.md)). They give Bruno a 4 and Cleo a 0:
 
 ```
-Ada,Bruno,Cleo
-5,4,0   ← the 3-voter majority (×3)
-0,5,5   ← the 2-voter minority (×2)
+Count × Ada,Bruno,Cleo
+    3 × 5,4,0   ← the majority bloc
+    2 × 0,5,5   ← the minority bloc
 
 Totals: Ada 15, Bruno 22, Cleo 10
 Finalists (top two by score): Bruno & Ada  →  runoff: Ada beats Bruno  →  ADA WINS ✓
@@ -38,9 +38,9 @@ Ada's majority got their favorite. Supporting *one* compromise candidate cost th
 **Election B — the same majority also backs a SECOND candidate** ([`bv95b`](../../../01_STAR/03_Criteria/majority_criterion/bv95b_7pdq3r_favorite_loses_two_rivals.md)). Everything identical except they now give Cleo a 3 instead of 0:
 
 ```
-Ada,Bruno,Cleo
-5,4,3   ← the 3-voter majority (×3)
-0,5,5   ← the 2-voter minority (×2)
+Count × Ada,Bruno,Cleo
+    3 × 5,4,3   ← the majority bloc
+    2 × 0,5,5   ← the minority bloc
 
 Totals: Ada 15, Bruno 22, Cleo 19
 Finalists (top two by score): Bruno & Cleo  →  Ada never reaches the runoff  →  BRUNO WINS ✗
@@ -53,6 +53,8 @@ Now Ada — the top choice of a clear majority — **loses**. That's the Majorit
 Look at *what it took* to make Ada lose: her own majority had to spread real support across **two** other candidates. If they'd backed only one (Election A), Ada was safe. STAR's failure needs the majority to be generous to a *second* rival — which is a much narrower, harder-to-trigger situation than it first sounds.
 
 And notice *why* Ada loses in Election B: **almost everyone likes Bruno** (the majority gave him a 4, the minority a 5), while 40% of voters actively reject Ada. STAR is deciding that a broadly-liked candidate nobody hates (Bruno) is a better representative than a divisive one that 40% score at rock bottom (Ada). Whether that's a bug or a feature is the whole debate. FairVote sees "the majority was overruled." Equal Vote sees "a polarizing candidate was correctly passed over for a consensus one."
+
+"Polarizing" in that sentence is not a mood — it is **variance**, and it can be computed from the ballots rather than asserted. For the arithmetic behind the word, the smallest election where spread is the *only* difference between two candidates, and the reason raw variance is a worse divisiveness score than it looks on a bounded ballot: [Variance — the statistical name for "divisive"](../variance_and_polarization.md).
 
 ## A sharper version of the objection — *whose* majority is it?
 

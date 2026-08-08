@@ -45,9 +45,13 @@ A single number destroys the shape of the thing it summarizes. Three electorates
 
 **Variance** (and its square root, **standard deviation**) measures spread. It's the most under-used idea in this literature, because it's what "polarizing candidate" actually means:
 
-> Two candidates with the **same average score** can be completely different politicians. One got 3s from everybody. The other got 5s from half the electorate and 0s from the other half. Same mean — **wildly different variance.**
+> Two candidates with the **same average score** can be completely different politicians. One got 3s from everybody. The other got 5s from three voters in every five and 0s from the other two. Same mean, 3.0 — **wildly different variance**, 0.0 against 6.0.
+
+Mind the arithmetic, because the stock version of this example doesn't tie: *half* the electorate at 5 and half at 0 averages **2.5**, and no flat integer score on a 0–5 ballot matches that. Getting a real tie means moving the split (as above) or moving the flat score — see [the worked election](../../01_STAR/02_Examples/cases/cases_pages/same_mean_different_spread_c2_b5.md), where Score can't separate the two at all, Approval takes the consensus candidate and STAR's runoff takes the polarizing one.
 
 That single sentence is the [majority criterion](majority_criterion/README.md) debate in miniature: the broadly-liked candidate and the polarizing one, arithmetically tied on the mean, separated only by the spread. Whenever a method is accused of electing a "divisive" winner, the claim is about variance.
+
+**One catch worth carrying:** on a bounded ballot, variance isn't independent of the mean — a candidate averaging 4.5 can't have a variance above 2.25 no matter how split the electorate is, so raw variance partly ranks candidates by how mediocre their average is. The bound, the fix, and the full argument: [variance — the statistical name for "divisive"](variance_and_polarization.md).
 
 ## 5. Normalization — turning feelings into a 0–5 ballot
 
