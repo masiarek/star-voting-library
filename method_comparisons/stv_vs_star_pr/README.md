@@ -8,7 +8,7 @@
 
 ## The shared idea: a quota
 
-To win one of *k* seats you need a **Droop quota** = `votes / (k+1)`, rounded up. For **3 seats and 100 voters that's 26** (just over 25%). Any candidate over quota is elected; surplus or last-place support is redistributed until the seats are filled. This is why the video says "over 25% wins" for three seats.
+To win one of *k* seats you need a **Droop quota** = `votes / (k+1)`. For **3 seats and 100 voters that's 25** — and a hand count uses the next whole ballot above it, **26**, so that no four candidates can all reach it. Either way the answer to "how big is a safe share?" is *just over 25%*, which is why the video says so for three seats. Any candidate at quota is elected; surplus or last-place support is redistributed until the seats are filled. (The two forms of the quota are one vote apart and both standard — [fork 1](../../06_Other/STV/README.md#where-it-genuinely-gets-complicated).)
 
 ## The demo electorate (constructed)
 

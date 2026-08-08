@@ -55,7 +55,9 @@ TABULATION RESULTS
 --- STV / Single Transferable Vote (multi-winner — 2 seats) ---
   BV2204 — Poets on the shelf: the control (STV 2 seats, hopefuls still standing)
  Tabulating 13 ballots (ranked ballots).
- 2 seats; Droop quota = 5 (38.5% of 13).
+ 2 seats; quota = 4.33 (exact Droop, votes/(seats+1)) — 33.3% of 13.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(13/3)+1 = 5, is a different but equally standard rule.)
 
 FINAL RESULT
 Candidate      Votes  Status
