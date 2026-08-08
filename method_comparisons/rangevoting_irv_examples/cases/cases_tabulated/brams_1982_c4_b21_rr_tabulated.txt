@@ -1,0 +1,48 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 21 ballots (ranked ballots).
+
+Ballots:
+     7 × B > G > N > F
+     6 × G > B > N > F
+     5 × N > G > B > F
+     3 × F > N > G > B
+
+Round-Robin — every pair, head-to-head (For – Against):
+   G  beats B   14 –  7
+   B  beats N   13 –  8
+   B  beats F   18 –  3
+   G  beats N   13 –  8
+   G  beats F   18 –  3
+   N  beats F   18 –  3
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      B       |     G       |     N       |     F       |
+----------------------------------------------------------------
+  B > |     ---      | 7 -  0 - 14 |13 -  0 -  8 |18 -  0 -  3 |
+  G > | 14 -  0 -  7 |    ---      |13 -  0 -  8 |18 -  0 -  3 |
+  N > |  8 -  0 - 13 | 8 -  0 - 13 |    ---      |18 -  0 -  3 |
+  F > |  3 -  0 - 18 | 3 -  0 - 18 | 3 -  0 - 18 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  G          3–0–0         3     +27  B, N, F
+    2  B          2–1–0         2     +13  N, F
+    3  N          1–2–0         1      +5  F
+    4  F          0–3–0         0     -45  —
+
+Winner — Ranked Robin (RCV-RR): G
+   beats every opponent head-to-head — the Condorcet winner.
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): G
+   Outside (3):        B, N, F
+   One member ⇒ G is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner G is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md
