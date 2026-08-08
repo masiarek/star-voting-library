@@ -139,7 +139,8 @@ def order_candidates(cands_sorted, voters, how):
 def write_csv(path, candidates, rankings):
     """Column 1 = ballot id, columns 2.. = candidates; cells = rank ints, blank = unranked."""
     with open(path, "w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh)
+        # csv.writer defaults to CRLF; RCTab reads either, but the repo stores LF.
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["Ballot ID"] + candidates)
         for i, ranking in enumerate(rankings, 1):
             w.writerow([f"b{i}"] + [ranking.get(c, "") for c in candidates])
