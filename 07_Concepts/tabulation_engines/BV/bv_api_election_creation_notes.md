@@ -23,6 +23,14 @@ The election's `owner_id` is whatever the script's `BV_USER_ID` says. **Set it t
 
   [`tools_adam/fetch_bv_export.py`](../../../STARVote_LH_tabulation_engine/tools_adam/fetch_bv_export.py) assembles these into the house frozen-export shape (`{"Election":…, "Ballots":…, "Results":…}`). Verified against the UI-downloaded `vqyqkr` export: Election and Results **byte-identical**, Ballots identical up to order (ballot order always varied between UI downloads too). `create_bv_test_election.py` now calls it automatically after casting, so a freshly minted election lands in `_demo_dropbox/` with its full export already frozen. Crash-case elections whose ElectionResult 500s (the STV sole-survivor pair) freeze with `--without-results` (`Results: []` + a self-documenting `_note`).
 
+## Election descriptions render markdown — and only `[text](url)` links
+
+The `description` sent at mint is **not plain text**. BetterVoting renders election and race descriptions through `formatMarkdown()` (`packages/shared/src/utils/formatMarkdown.ts`), which recognises exactly two things — `**bold**` and `[text](url)` — and sanitises everything else. Its link rule is a single regex, `rLink = /\[([^\]]*?)\]\(([^)]*?)\)/`. There is **no bare-URL autolinker**.
+
+That is what makes the house backlink form load-bearing. `[Full lesson & tabulation](https://…)` becomes a real `<a target="_blank">`; the retired bare form, `Full lesson & tabulation: https://…`, ships as grey text a voter has to select and copy. 65 of the repo's frozen exports are permanently in that state, because a description cannot be edited after the create (see the `/admin` gate below).
+
+BetterVoting says so on screen exactly once. The **Election Description** field on Admin Home carries the helper text `Supports **bold** and [link text](url) formatting` — and it is the last one standing: the hint was added under both Description fields, and the later `RaceForm` rewrite dropped it, so a **race** description takes the same markdown with nothing on the page saying so. Checked against the source 2026-08-08 — the string survives in `ElectionDetailsForm.tsx` and `SendEmailDialog.tsx` only.
+
 ## Ballot-data export format — the `precinct` column
 
 BetterVoting's **Ballot Data** export (the per-ballot CSV, `Ballot Data - <title>-<id>.csv`) has this shape: `ballot_id, precinct, <Candidate1>, <Candidate2>, …`. Two things worth knowing:
@@ -52,6 +60,22 @@ So the `temp_id` is **server-side only** (dedup / vote-changing while voting); i
 ## What does NOT work — the `/admin` gate (a real BV limitation)
 
 **You cannot administer an API-created election from the UI**, even though you own it. Opening `/<id>/admin` returns *"Only the users with admin access on the election can view this page."*
+
+### What is behind that gate — the admin URL map
+
+The seven entries in the admin sidebar (`Sidebar.tsx`), and which of them the gate actually costs you:
+
+| Sidebar entry | URL | Behind the gate? |
+|---|---|---|
+| Admin Home — title, description, start/end times, **Duplicate**, **Archive** | `/<id>/admin` | 🔒 |
+| Build Ballot | `/<id>/admin/build_ballot` | 🔒 |
+| Manage Voters — [the two questions that set the mode](bv_voter_authentication_modes.md) | `/<id>/admin/voters` | 🔒 |
+| Settings | `/<id>/admin/settings` | 🔒 |
+| Preview Ballot *(draft)* / Live Ballot | `/<id>` | **public** |
+| Preview Results *(draft)* / Live Results | `/<id>/results` | **public** |
+| Publish & Share | `/<id>/admin/publish` | 🔒 |
+
+Two things the table makes plain. **The two entries this repo actually uses are the two that are not admin pages** — `/<id>` to vote and `/<id>/results` to read the count are public URLs the sidebar merely links to, which is why the gate has never blocked the mint → export → freeze pipeline. And **the ballot and results labels flip with `election.state`**: a draft says *Preview*, an open election says *Live*, same two URLs either way. (An eighth entry, *Edit Election Roles* → `/<id>/admin/roles`, appears only when the `ELECTION_ROLES` feature flag is on.)
 
 This was tested directly, and the result is counter-intuitive — two elections with the **same `owner_id` (my account)**:
 

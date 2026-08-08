@@ -12,7 +12,7 @@ For the raw field definitions see [BV's election table](database_schema/election
 
 ## Terminology — why "demo election" isn't quite right
 
-**Manage Voters asks two independent questions**, and "demo election" collapses them into one. That collapse is the whole inaccuracy:
+**Manage Voters** — `bettervoting.com/<id>/admin/voters`, third in the admin sidebar ([the whole map](bv_api_election_creation_notes.md#what-is-behind-that-gate-the-admin-url-map)) — **asks two independent questions**, and "demo election" collapses them into one. That collapse is the whole inaccuracy:
 
 > **Would you like your election to be restricted to a pre-defined voter list?** &nbsp; ○ Yes &nbsp; ● No
 >
