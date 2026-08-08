@@ -1,0 +1,120 @@
+---
+search:
+  exclude: true
+---
+
+# Brams 1982 — Ranked Robin on the identical ballots
+
+*Generated from [`bv2282_hf3ckp_brams_ranked_robin.yaml`](../bv2282_hf3ckp_brams_ranked_robin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** G
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/hf3ckp) · **[results ↗](https://bettervoting.com/hf3ckp/results)** (election `hf3ckp` · test `BV2282`).
+
+## Scenario
+
+The SAME 21 ballots as bv2282_hf3ckp_brams_irv.yaml, not one mark changed, counted
+by Ranked Robin instead of Hare elimination.
+
+Hare eliminates G in round 2 and elects B 13-8. Ranked Robin elects G, who
+beats B 14-7, N 13-8 and F 18-3 — every rival head-to-head.
+
+Twenty-one ballots and four candidates: small enough that a skeptic can check
+both counts by hand and satisfy themselves that the disagreement is real and
+not an artifact of anyone's software.
+
+TRIPLE-CHECKED, all three legs agreeing on G: this LH native tally,
+BetterVoting's own RankedRobin.ts (live election hf3ckp, race 2 — frozen in
+bv2282_hf3ckp_bv_export.json, tieBreakType 'none'), and pref_voting's
+independent Copeland (ranked_robin_report.py — AGREE, unique leader G).
+
+Live on BetterVoting (Test ID BV2282): https://bettervoting.com/hf3ckp
+Live results: https://bettervoting.com/hf3ckp/results
+
+## Ballots
+
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+7:B>G>N>F
+6:G>B>N>F
+5:N>G>B>F
+3:F>N>G>B
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+<!-- --8<-- [start:report] -->
+```text
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 21 ballots (ranked ballots).
+
+Ballots:
+     7 × B > G > N > F
+     6 × G > B > N > F
+     5 × N > G > B > F
+     3 × F > N > G > B
+
+Round-Robin — every pair, head-to-head (For – Against):
+   G  beats B   14 –  7
+   B  beats N   13 –  8
+   B  beats F   18 –  3
+   G  beats N   13 –  8
+   G  beats F   18 –  3
+   N  beats F   18 –  3
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+      |      B       |     G       |     N       |     F       |
+----------------------------------------------------------------
+  B > |     ---      | 7 -  0 - 14 |13 -  0 -  8 |18 -  0 -  3 |
+  G > | 14 -  0 -  7 |    ---      |13 -  0 -  8 |18 -  0 -  3 |
+  N > |  8 -  0 - 13 | 8 -  0 - 13 |    ---      |18 -  0 -  3 |
+  F > |  3 -  0 - 18 | 3 -  0 - 18 | 3 -  0 - 18 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  G          3–0–0         3     +27  B, N, F
+    2  B          2–1–0         2     +13  N, F
+    3  N          1–2–0         1      +5  F
+    4  F          0–3–0         0     -45  —
+
+Winner — Ranked Robin (RCV-RR): G
+   beats every opponent head-to-head — the Condorcet winner.
+```
+<!-- --8<-- [end:report] -->
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): G
+   Outside (3):        B, N, F
+   One member ⇒ G is the Condorcet winner, beating every rival head-to-head.
+   Ranked Robin (RCV-RR) winner G is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2282_hf3ckp_brams_ranked_robin_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/rangevoting_irv_examples/cases/bv2282_hf3ckp_brams_ranked_robin.yaml
+```
+
+## See also
+
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [bv2281_qycpbx_ossipoff_irv](bv2281_qycpbx_ossipoff_irv.md) · [bv2281_qycpbx_ossipoff_ranked_robin](bv2281_qycpbx_ossipoff_ranked_robin.md) · [bv2282_hf3ckp_brams_irv](bv2282_hf3ckp_brams_irv.md)
