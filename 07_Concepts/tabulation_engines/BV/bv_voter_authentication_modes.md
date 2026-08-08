@@ -10,6 +10,61 @@ For the raw field definitions see [BV's election table](database_schema/election
 
 ---
 
+## Terminology — "demo election" vs "No Voting Limit"
+
+The term feels slippery because **BetterVoting's own copy names this mode three different ways**, and the admin-facing one is not a noun phrase at all.
+
+The settings form (`ElectionAuthForm.tsx`) asks the question as a **sentence**, with the modes as its endings:
+
+> **Who can vote?**
+> Limit to one vote per… &nbsp;•&nbsp; **device** &nbsp;•&nbsp; **WiFi/cellular network** &nbsp;•&nbsp; **user (login required)** &nbsp;•&nbsp; **no limit**
+
+Each option carries a tooltip with a fuller title and description. So for this one mode:
+
+| Surface | What it says |
+|---|---|
+| Source / mode name | **`open_open`** |
+| The option an admin clicks | **"no limit"** — completing *"Limit to one vote per…"* |
+| Its tooltip title | **"No Voting Limit"** |
+| Its tooltip description | *"Allows unlimited votes per device. Great for demos or where all your voters are sharing the same device."* |
+
+**So "demo election" comes from BetterVoting's own vocabulary** — the word "demos" is in the tooltip a user reads while choosing the setting. It is a description of what the mode is *good for*, though, never its name.
+
+> **A dead key, worth not citing.** `en.yaml` also holds `demo_title: "Allows multiple votes per device"` and `demo_description: "Great for demonstrations…"`. Neither is referenced by any component — apparently leftovers from an earlier wizard. They read like evidence that BetterVoting calls this a "demo election"; they are not, because nobody ever sees them.
+
+### The four options, mapped
+
+| Admin picks | Mode |
+|---|---|
+| one vote per **device** | `open_unique_cookie` |
+| one vote per **WiFi/cellular network** | `open_unique_ip_address` |
+| one vote per **user (login required)** | `open_unique_keycloak` |
+| **no limit** | `open_open` |
+
+Reading them as a sentence makes the family obvious in a way the mode names don't: they are four answers to *"one vote per what?"*, and `open_open` is the answer "per nothing."
+
+### The distinction that resolves it
+
+**"Demo" names an *intent*. "No Voting Limit" names a *configuration*.** They are not synonyms, and treating them as such is what makes the term feel unstable:
+
+- You can run a **demo in a restricted election** — a classroom exercise with a real emailed roll is still a demo.
+- You can, badly, run a **real election with no voting limit** — the mode does not know what you meant by it.
+
+This is the same shape as the [RCV / IRV distinction](../../tips/TIPS_terminology.md) used throughout this repo: one word names the thing you're doing, another names the mechanism you're doing it with, and collapsing them loses an argument later.
+
+### House usage
+
+- **Technical writing — exports, code, case files, anything precise → `open_open`.** It is the mode's actual name and cannot be misread.
+- **Walking someone through the BetterVoting UI → "no limit"**, and quote the question with it: *"under **Who can vote?**, choose **no limit**."* An instruction that names anything else sends the reader looking for a control that isn't there.
+- **"Demo election" stays**, for *intent* — it is the word BetterVoting's own tooltip uses, and it is the honest label for why we run most of these. On first mention in a page, name the mode once: *"a demo election (BetterVoting's **no limit** setting, `open_open`)"*. Thereafter the short word is fine.
+- **Don't write "No Voting Limit" as though it were the control.** It is the tooltip's title, not the option's label.
+
+### One trap: "public" is a different axis
+
+BetterVoting's wizard also offers **"Public election"**, described as *"one person, one vote… open to anyone via the Browse Polls page."* That is about **listing and discoverability**, and its description asserts the *opposite* of unlimited voting. "Public", "open", and "no voting limit" are three different properties, and only the last is what "demo" informally means. The `is_public` field is the one that tracks listing.
+
+---
+
 ## There is no demo flag
 
 BetterVoting's `Election` object carries `election_id`, `title`, `description`, `state`, `races`, `settings`, `owner_id`, `admin_ids`, `is_public`, `ballot_source`, `public_archive_id`, and the usual dates. Checked against the domain model and against the frozen exports in this repo, there is **no `is_demo`, no `is_test`, no `demo`** — and nothing else that flags an election as practice rather than real.
