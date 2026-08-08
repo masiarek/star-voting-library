@@ -1,6 +1,7 @@
 ﻿election_id,title,races,kind,voters,methods,backing
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
+37yf8x,"Nine candidates, 25 voters — ranking all nine, counted by RCV-IRV",4,contested (multi-race),25,"IRV, RankedRobin, STAR",BV
 38b7fg,BV2274 — The cost of districting — the best candidate wins no district at all,3,contested (multi-race),9,STAR,BV
 3grpbb,BV2156 — STAR's own miss — the Condorcet winner scores third and never reaches the runoff,2,contested (multi-race),100,"RankedRobin, STAR",BV
 3x4vrv,"BV2135 — Block & Limited voting, reproduced as bloc Approval",2,contested (multi-race),10,Plurality,BV
@@ -195,11 +196,7 @@ LH:approval_bloc_2seats_c4_b6,"Bloc Approval — 2 seats, majority sweep",1,sing
 LH:approval_bloc_3seats_c6_b5,Bloc Approval — 3-seat city council at-large,1,single-race,5,Approval,LH-only
 LH:balance_base_irv_c3_b9,"Equal-vote balance — base (IRV elects the Condorcet winner, Bruno)",1,single-race,9,IRV,LH-only
 LH:balance_plus_opposite_c3_b15,Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada),1,single-race,15,IRV,LH-only
-LH:ballot_expressiveness_c9_irv_full,"Nine candidates, 25 voters — ranking all nine, counted by RCV-IRV",1,single-race,25,IRV,LH-only
 LH:ballot_expressiveness_c9_irv_top5,"Nine candidates, 25 voters — ranking only five, counted by RCV-IRV",1,single-race,25,IRV,LH-only
-LH:ballot_expressiveness_c9_rr_full,"Nine candidates, 25 voters — ranking all nine, counted by Ranked Robin",1,single-race,25,RankedRobin,LH-only
-LH:ballot_expressiveness_c9_rr_top5,"Nine candidates, 25 voters — ranking only five, counted by Ranked Robin",1,single-race,25,RankedRobin,LH-only
-LH:ballot_expressiveness_c9_star,"Nine candidates, 25 voters — the 0–5 score ballot",1,single-race,25,STAR,LH-only
 LH:batch_all_out_condorcet_c3_b3,Batch elimination empties the field — with a Condorcet winner sitting there,1,single-race,3,IRV,LH-only
 LH:batch_all_out_cycle_c3_b3,Batch elimination empties the field — the perfect cycle,1,single-race,3,IRV,LH-only
 LH:batch_all_out_round2_c4_b6,The field empties in round two — and Pareto is what keeps Dev out of the tie,1,single-race,6,IRV,LH-only

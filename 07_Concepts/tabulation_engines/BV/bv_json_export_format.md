@@ -219,6 +219,8 @@ Adam filed **[#1420 — "Download JSON export leaks the tabulator's internal obj
 
 **The PR was split, not rejected.** A maintainer extracted its **CSV bug fixes** into [PR #1428](https://github.com/Equal-Vote/bettervoting/pull/1428) — on a branch named `masiarek/csv-escaping-fix`, with the commit keeping Adam's authorship — and merged that on 2026-07-16. The **format redesign** was deferred with "the rest needs some contemplation", and #1419 was closed on 2026-07-15. So the export shipping today has correct CSV escaping and download behaviour, but the JSON is still v1 — which is what this page documents, and why #1420 stays open.
 
+**The format half was re-proposed as [PR #1492](https://github.com/Equal-Vote/bettervoting/pull/1492) on 2026-08-07, this time additive** — `+391/−0`, no deletions at all. The existing "Download JSON" is left byte-identical and the compact shape is a second menu item writing a `.v2.json` file, so the question in front of the maintainers is no longer "should we migrate the export format" but "may people opt into a cleaner one." Verified across 197 distinct real exports (0 failures on score-multiset, null preservation, elected set, and counts); median size 76% of legacy, best 43% on a 9-candidate field. **Until it lands, this page describes what BetterVoting ships.**
+
 The contribution workflow and what was learned from it: [contributing to BetterVoting](tabulation_engine/contributing_to_bettervoting.md).
 
 Related open tickets: [#1160](https://github.com/Equal-Vote/bettervoting/issues/1160) (dual raw/processed export), [#1432](https://github.com/Equal-Vote/bettervoting/issues/1432) (surface tie-break explanations).

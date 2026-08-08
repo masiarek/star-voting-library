@@ -28,7 +28,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (142 cases; identical library copies merged).
 
-**79 of these 142 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**80 of these 142 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -330,7 +330,7 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Peltola** · IRV=Peltola · RR=Peltola · Approval=Begich · Score=Begich · Condorcet=Peltola
 - **[hh41_04_stipulated_utilities_star](cases/APPROVAL_OR_MINOR/hh41_04_stipulated_utilities_star.md)** — `method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml` (3c/100b)  
     STAR=**A** · IRV=A · RR=A · Approval=B · Score=A · Condorcet=A
-- **[ballot_expressiveness_c9_star](cases/APPROVAL_OR_MINOR/ballot_expressiveness_c9_star.md)** — `method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml` (9c/25b)  
+- **[ballot_expressiveness_c9_star](cases/APPROVAL_OR_MINOR/ballot_expressiveness_c9_star.md)** — `method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml` (9c/25b)  ·  [BV ↗](https://bettervoting.com/37yf8x/results)  
     STAR=**Finn** · IRV=Finn · RR=Finn · Approval=Emma · Score=Finn · Condorcet=Finn  
     _flags: 25 tied-score ballot(s); IRV flips on reversed priority_
 - **[Black_Curtain_01_c3_b5_hidden-consensus](cases/APPROVAL_OR_MINOR/Black_Curtain_01_c3_b5_hidden-consensus.md)** — `method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml` (3c/5b)  
