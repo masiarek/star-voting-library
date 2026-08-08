@@ -240,6 +240,32 @@ NAV_ORDER: dict[str, list[str]] = {
         "three_neighbors.md",
         "two_officers.md",
     ],
+    # The RCV-IRV concept shelf, and the one folder where alphabetical order was
+    # not merely arbitrary but unfair: it opened on the critiques and pushed
+    # "why_rcv_irv.md" — the case FOR the method — to the very bottom, below
+    # every page arguing against it. A reader is owed the method and its
+    # strengths before the objections. Numbered spine kept to three so the
+    # critiques stay a shelf rather than reading as steps 4-9 of an indictment.
+    "06_Other/RCV_IRV/concepts": [
+        "RCV_or_IRV_whats_the_right_word.md",
+        "RCV-IRV-Hare.md",
+        "why_rcv_irv.md",
+        SPINE_BREAK,
+        "RCV_IRV_is_simple.md",
+        "RCV_IRV_exhausted_ballots.md",
+        "RCV_IRV_center_squeeze.md",
+        "RCV_IRV_non_monotonicity.md",
+        "RCV_IRV_lack_of_summability.md",
+        "RCV_IRV_equal_vote.md",
+        "rcv_irv_false_claims.md",
+        "case_studies",
+        "variants",
+        "RCV_IRV_and_plurality.md",
+        "RCV-IRV-confusing-name.md",
+        "exhausted_ballots_301.md",
+        "forced_vs_voluntary_exhaustion.md",
+        "glossary_rcv_irv.md",
+    ],
     # 58 loose pages plus 9 hubs, and alphabetical put "Advocacy organizations"
     # and "AI advice" above "spoiler effect" and "Condorcet" purely by spelling.
     # SPINE_BREAK comes FIRST on purpose: this orders without numbering, because

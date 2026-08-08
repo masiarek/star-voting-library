@@ -8,6 +8,10 @@ Everything explaining **RCV-IRV** — ranked ballots counted by **instant runoff
 - [RCV vs. IRV vs. RCV-IRV — a note on terminology](RCV-IRV-confusing-name.md)
 - [RCV-IRV (Hare)](RCV-IRV-Hare.md) — the specific method US "RCV" almost always means
 
+## The case for it
+
+- [**Why RCV-IRV — the case for it, made fairly**](why_rcv_irv.md) — what the method genuinely gets right, made the way its advocates make it: it fixes the ordinary spoiler, guarantees later-no-harm and mutual majority (both of which STAR fails), is clone-independent, and is the reform that actually passed. Read this **before** the critiques below, or you'll be arguing with a strawman.
+
 ## How it counts
 
 - [Is RCV "simple"? — which half?](RCV_IRV_is_simple.md) — the ballot is simple; the count is not
