@@ -260,10 +260,20 @@ def run(path):
               else "converted from score ballots; 0 = unranked")
     print(f" Tabulating {total} ballots ({source}).")
     if seats > 1:
-        # Droop quota = floor(valid_votes / (seats + 1)) + 1
-        droop = total // (seats + 1) + 1
-        print(f" {seats} seats; Droop quota = {droop} "
-              f"({droop / total * 100:.1f}% of {total}).")
+        # Name the quota the COUNT applies, not a different one.
+        # pyrankvote's single_transferable_vote uses the EXACT Droop quota
+        # votes/(seats+1): it elects at >= that line and measures every
+        # surplus from it. "Droop quota" also names the integer form
+        # floor(votes/(seats+1))+1 used by Irish/Scottish hand counts, one
+        # vote higher — so print both, or a reader hand-checking the count
+        # cannot reconcile the final table with this header.
+        quota = total / (seats + 1)
+        hand = total // (seats + 1) + 1
+        print(f" {seats} seats; quota = {quota:.2f} "
+              f"(exact Droop, votes/(seats+1)) — {quota / total * 100:.1f}% of {total}.")
+        print(f" Elected at >= quota, and every surplus is measured from it.")
+        print(f" (Hand-count Droop, floor({total}/{seats + 1})+1 = {hand}, is a "
+              f"different but equally standard rule.)")
     print()
 
     if seats > 1:

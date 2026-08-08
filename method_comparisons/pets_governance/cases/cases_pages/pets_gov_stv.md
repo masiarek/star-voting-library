@@ -39,7 +39,9 @@ The count, step by step — the rounds and how the winner is reached:
 --- STV / Single Transferable Vote (multi-winner — 3 seats) ---
   Pets Governance — Delegates by STV (3 seats): proportional again
  Tabulating 22 ballots (ranked ballots).
- 3 seats; Droop quota = 6 (27.3% of 22).
+ 3 seats; quota = 5.50 (exact Droop, votes/(seats+1)) — 25.0% of 22.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(22/4)+1 = 6, is a different but equally standard rule.)
 
 ROUND 1
 Candidate      Votes  Status
