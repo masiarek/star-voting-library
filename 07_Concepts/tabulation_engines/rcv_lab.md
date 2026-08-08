@@ -4,7 +4,7 @@
 
 **One line:** a free ranked-choice voting platform that publishes its sample elections as **downloadable cast vote records**, which makes it something this library can actually use — not another site to link, but a source of real ballots to re-count independently.
 
-→ verified reproduction: [the "Best Cycle-Breaking Rule" cases](../../method_comparisons/cycle_resolution/README.md) · sibling referees: [`pref_voting`](cross_checking_with_pref_voting.md) · [BetterVoting](bettervoting_and_the_engine.md) · the other Sankey tool, which counts nothing: [RCVis](rcvis.md).
+→ verified reproduction: [the "Best Cycle-Breaking Rule" cases](../../method_comparisons/cycle_resolution/README.md) · **it also counts *our* cases: [all 64 IRV cases cross-checked](rcv_lab_irv_crosscheck.md)** · sibling referees: [`pref_voting`](cross_checking_with_pref_voting.md) · [BetterVoting](bettervoting_and_the_engine.md) · the other Sankey tool, which counts nothing: [RCVis](rcvis.md).
 
 ---
 
