@@ -23,7 +23,7 @@ The reviewer's correction — "start from a number in [0,1], not from {0..5} sco
 ## Why "random ballots" breaks a method comparison
 
 - **There's no common ground to compare on.** To ask "who would STAR / Approval / IRV each elect from the *same electorate*," every method must render the **same underlying preferences** into its own ballot. Random 0–5 scores *are already a STAR ballot* — there's no neutral preference underneath from which to also derive a sincere Approval or ranked ballot. Starting from scores privileges the score methods by construction.
-- **It assumes no preference structure.** Independent per-candidate scores imply candidates are unrelated — no ideological axis, no coalitions, no clones. Real electorates are highly structured; a model with none manufactures disagreement that reality doesn't have (see [impartial culture](election_simulation_models.md), already the *adversarial* end of the spectrum — and raw random scores are even more artificial).
+- **It assumes no preference structure.** Independent per-candidate scores imply candidates are unrelated — no ideological axis, no coalitions, no clones. Real electorates are highly structured; a model with none manufactures disagreement that reality doesn't have (see [impartial culture](election_simulation_models.md#the-standing-caveat-results-are-conditional-on-the-model), already the *adversarial* end of the spectrum — and raw random scores are even more artificial).
 - **It skips the object of interest.** A ballot is a voter's *rendering* of their preferences (and, if strategic, of the race). The interesting method differences live in **how preferences become ballots** — the min-max scaling, the approval cutoff, the ranking. Sample ballots directly and you've thrown away both the preferences *and* the rendering step.
 - **It bakes in arbitrary shape.** Uniform-independent `{0..5}` over-represents flat and extreme ballots in a way that corresponds to no coherent utility model. Utility-first + min-max produces ballot *shapes* that reflect the preference geometry.
 
@@ -52,7 +52,7 @@ So if a reviewer looked at the *committed* simulations, they're already at level
 | Rung | What you sample | Realism |
 |---|---|---|
 | 1 | random ballots (`{0..5}` scores) | ✗ artificial, rigs comparisons |
-| 2 | random **utilities**, uniform & independent (**impartial culture**) | better — but still *adversarial*: over-produces cycles and near-ties |
+| 2 | random **utilities**, uniform & independent (**[impartial culture](election_simulation_models.md#a-noise-statistical-models-no-geometry)**) | better — but still *adversarial*: over-produces cycles and near-ties |
 | 3 | **spatial / structured** utilities ([issue space](spatial_voting_model.md), [Mallows](election_simulation_models.md#a-noise-statistical-models-no-geometry), [clusters](election_simulation_models.md#the-standing-caveat-results-are-conditional-on-the-model)) | most realistic; what VSE leans on |
 
 So `[0,1]`-uniform utilities (impartial culture) is one rung up from random scores — the right *direction* — but it is itself a stress model, not "the truth." The honest habit is to run **both** a structured model and an adversarial one and **report which** (the [never-quote-a-rate-without-the-model](../curriculum/CURRICULUM_301.md) rule). Our sims default to running spatial *and* impartial for exactly this reason.
