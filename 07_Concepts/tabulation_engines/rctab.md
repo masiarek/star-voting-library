@@ -87,10 +87,18 @@ Beyond confirming winners, there's one specific gap RCTab is unusually well-suit
 
 RCTab makes that choice explicit instead. Its `tiebreakMode` is a required, named setting — `random`, `stopCountingAndAsk`, `previousRoundCountsThenRandom`, `previousRoundCountsThenAsk`, `useCandidateOrder`, `generatePermutation` — and `useCandidateOrder` in particular is a *declared, reproducible* rule where ours is an accident of file layout. Running the pathological cases through RCTab under each mode would turn "the engine has a quiet tiebreak" into a documented comparison of how production systems make the same decision out loud. It has the flags for the other awkward corners too: `batchElimination`, `continueUntilTwoCandidatesRemain`, `exhaustOnDuplicateCandidate`, `maxSkippedRanksAllowed`, and three `overvoteRule` settings — each one a policy question our engine answers implicitly.
 
-## Status
+## Status: wired up
 
-**Not wired up.** This page documents an opportunity, not a shipped cross-check — there is no RCTab converter, config generator, or guard test in the repo today, and no RCTab result is quoted anywhere in this library. The barrier is modest (a JDK 21 toolchain, a CSV writer, a JSON diff) but real enough that it hasn't been paid, and the payoff is narrower than it first looks: it would cover the ranked-ballot engine only, which `pref_voting` already cross-checks for IRV winners.
+The converter and runner live in [`tools_adam/rctab_tabulation_engine/`](../../STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/README.md) — `rctab_convert.py` (YAML → CSV + config, no Java needed) and `rctab_crosscheck.py` (runs RCTab, parses its report, diffs it against ours). The converted inputs for the cases run so far are committed beside them.
 
-What would make it worth doing is the *tie* work above — the one place where our engine is knowingly weak and RCTab is explicit. If you're picking this up, start there rather than with the cases that already agree.
+**First run: the four tie cases.** All four winners agree with this repo's engine. The interesting results were the two sweeps, written up on [Batch elimination § what a certified tabulator does instead](../topics/ties/batch_elimination.md#what-a-certified-tabulator-does-instead):
+
+- **RCTab is anonymous where our engine is not.** Across every ballot-row ordering (6, 6 and 24 runs) its winner never moves; the vendored pyrankvote's changes with the typing order.
+- **Its arbitrariness is declared.** The dead tie still decides the election, but the lever is the candidate order in the config — and every tiebreak is named in the audit log, including the 2–2 final round our own report passes over in silence.
+- **Its `batchElimination` is a different rule** from the one our cases are named after: it drops candidates who are mathematically out of reach, never candidates merely tied, so it cannot empty the field.
+
+It is a **report, not a guard** — there's no pytest gating on RCTab, because that would put a 66 MB JVM download in the test path. Run it when a ranked case's tie behaviour matters.
+
+**Scope hasn't changed:** this covers the ranked-ballot engine only. STAR, Score, Approval and Ranked Robin still answer to [`pref_voting`](cross_checking_with_pref_voting.md) and BetterVoting.
 
 *Up: [tabulation engines](README.md) · the method: [RCV-IRV](../../06_Other/RCV_IRV/README.md) · the other referees: [`pref_voting`](cross_checking_with_pref_voting.md) · [BetterVoting](bettervoting_and_the_engine.md).*
