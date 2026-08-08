@@ -203,6 +203,8 @@ export RCTAB_HOME=/path/to/RCTab.app        # or an unpacked release
 
 The cross-check is only meaningful because the quota is pinned on both sides: it sets RCTab's `nonIntegerWinningThreshold: true`, whose documented formula `V/(S+1) + 10⁻ᵈ` is the same exact-Droop bar `pyrankvote` applies. Pass `--hand-count-quota` to count the same ballots under `⌊V/(S+1)⌋+1` instead and watch fork 1 move real numbers. Tool and findings: [`rctab_tabulation_engine/`](../../STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/README.md).
 
+**What that exercise actually taught is worth its own page** — why agreement between two tabulators is a weaker claim than it sounds, and how counting one book club three ways separated two forks this library had been treating as one: **[Three engines, one election](three_engines_one_election.md)** (301).
+
 ```bash
 .venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/cases/03a_stv_3seats.yaml
 ```

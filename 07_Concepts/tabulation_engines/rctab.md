@@ -104,7 +104,19 @@ Two things make that comparison meaningful rather than decorative:
 - **The quota is pinned on both sides.** RCTab's `nonIntegerWinningThreshold` is documented in its own config reference as `threshold = V/(S+1) + 10^-d` when true and `floor(V/(S+1)) + 1` when false — [fork 1](../../06_Other/STV/README.md#where-it-genuinely-gets-complicated) as a checkbox. The converter sets it **true**, matching the exact Droop bar `pyrankvote` applies. Left false it would count an election one whole vote different, and every disagreement would be about configuration.
 - **It separated two forks we had been treating as one.** Our engine finishes ex14 with *no elimination round at all*, which reads like a consequence of the exact quota. It isn't — RCTab uses the same exact quota and eliminates normally. Ours puts the bar at exactly `V/(S+1)`, so Brontë lands on precisely 3.00, ties Camus, and is set aside by a "cannot change the result" shortcut; RCTab's bar sits a hair higher, she lands on 2.9995, and is simply eliminated. Quota choice and tie handling are **different forks**, and only a third engine made them separable. ([Exercise 14, part (f)](../../01_STAR/05_Practice/ex14_transfer_machine.md#f).)
 
-It is a **report, not a guard** — there's no pytest gating on RCTab, because that would put a 66 MB JVM download in the test path. Run it when a ranked case's tie behaviour matters, and whenever an STV result is going to be quoted.
+The methodology lesson from that run — why a green tick is a claim about your *configuration* as much as your arithmetic — is written up at [Three engines, one election](../../06_Other/STV/three_engines_one_election.md).
+
+**Third run: every RCV-IRV case in the library — 71 of them.** 68 agree. One is refused by design (`example_tennessee` carries score ballots, which RCTab cannot read) and one is a deliberately malformed negative fixture. **One disagrees, and it is the useful one.**
+
+`coombs_ex20_district1` — Felsenthal's District I, 34 voters — has **A and B tied on nine first places each**, so IRV's opening elimination is arbitrary *and it decides the election*. Drop A and her nine `A>B>C` ballots carry B to 18 and a majority; drop B and her nine `B>C>A` ballots carry C to 25. Our engine breaks the tie toward B and says nothing about having done so; RCTab named it in the audit log —
+
+> Candidate "B" lost a tie-breaker in round 1 against "A". Each candidate had 9 vote(s).
+
+— and sweeping all six declared candidate orders returns **C three times and B three times**. So IRV has no determinate winner on this profile at all.
+
+That matters because the case file used IRV as a *control*: Coombs elects B in both districts and A in their union (a reinforcement failure), and the file argued the failure was Coombs' alone because "IRV keeps electing B in all three." It doesn't — in District I it elects whoever the tie-break happens to favour. Both case descriptions now say so. The Coombs paradox itself is untouched: its own eliminations are untied throughout (A is last on 14 ballots to B's 11 and C's 9). This is the [known `pyrankvote` elimination-tie limitation](../../06_Other/RCV_IRV/RCV_IRV_tabulation_engine/README.md#known-limitation-elimination-ties) doing real damage to a teaching claim, caught only because a second engine had a *declared* tiebreak to disagree with.
+
+It is a **report, not a guard** — there's no pytest gating on RCTab, because that would put a 66 MB JVM download in the test path. Run it when a ranked case's tie behaviour matters, and whenever an STV or IRV result is going to be quoted.
 
 **Scope hasn't changed:** this covers the ranked-ballot engine only — now both of its counts, IRV and STV. STAR, Score, Approval and Ranked Robin still answer to [`pref_voting`](cross_checking_with_pref_voting.md) and BetterVoting. A multi-seat case that *isn't* STV is refused rather than converted, since every multi-winner mode RCTab has is STV: pointing it at Bloc RR, SNTV or Bloc STAR would compare two methods and call it agreement.
 
