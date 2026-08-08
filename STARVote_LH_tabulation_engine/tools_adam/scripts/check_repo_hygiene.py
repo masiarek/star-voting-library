@@ -1222,6 +1222,74 @@ _CLAUDE_MD_ILLUSTRATIVE = {
 }
 
 
+# A ballot row as this repo writes one: single-character cells (a 0–5 score or a
+# blank/abstention marker) joined by commas.  Two cells minimum, so an ordinary
+# "5, 4" in prose needs the comma run to look like a ballot before we look further.
+_BALLOT_ROW = re.compile(
+    r"^\s*(?P<row>[-~&?%0-5](?:\s*,\s*[-~&?%0-5])+)\s*(?P<rest>\S.*)$")
+
+# The multiplier written on the WRONG side.  Two shapes, both deliberately tight:
+# the rest of the line *opens* with it (`× 5   Andre`, `×3`), or a real `×` glyph
+# turns up later in an annotation (`← the 3-voter majority (×3)`).  Bare `x`/`X`
+# is only honoured in the first position — anywhere else it matches prose.
+_WEIGHT_AFTER_ROW = re.compile(r"^[xX×]\s?\d+\b|[(\s]×\s?\d+\b")
+
+
+def check_ballot_weight_side():
+    """Return [(rel:line, msg)] for ballot rows whose weight trails the scores.
+
+    One election is written one way everywhere else in the repo: the count comes
+    FIRST.  That is the YAML schema (`Count:Ada,Ben,Cara` / `15:5,2,0` — the
+    engine's parser only ever matches a *leading* weight, so a source file
+    physically cannot drift), and it is what the engine echoes back
+    (`Count × Memphis,…` / `42 × 5,4,3,2`).  Hand-authored Markdown is the one
+    surface with no parser and no generator holding the line, so that is exactly
+    where `0,4,5   ×3` accumulates — and a reader who meets both forms has to
+    work out, per page, which number is the ballot and which is the bloc size.
+
+    Scans hand-authored pages and the election YAMLs.  A YAML's `ballots:` block
+    is already safe by construction, so a hit there is in a comment or a
+    `scenario_description` — prose that teaches the wrong form just as loudly.
+    """
+    bad = []
+
+    def _scan(rel, text):
+        for i, line in enumerate(text.splitlines(), 1):
+            m = _BALLOT_ROW.match(line)
+            if not m:
+                continue
+            if not _WEIGHT_AFTER_ROW.search(m.group("rest")):
+                continue
+            row = re.sub(r"\s+", "", m.group("row"))
+            bad.append((f"{rel}:{i}",
+                        f"ballot row `{row}` carries its weight AFTER the scores — "
+                        f"put the count first (`N × {row}`, under a `Count × …` "
+                        f"header), the way the YAML schema and the engine's own "
+                        f"echo write it"))
+
+    for rel, text in sorted(_hand_authored_pages()):
+        _scan(rel, text)
+
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS and d != "site"]
+        for fn in sorted(filenames):
+            if not fn.endswith((".yaml", ".yml")):
+                continue
+            p = os.path.join(dirpath, fn)
+            rel = os.path.relpath(p, REPO).replace(os.sep, "/")
+            if "_tabulated" in rel:
+                continue          # generated mirror — it echoes the source
+            try:
+                text = open(p, encoding="utf-8").read()
+            except OSError:
+                continue
+            if "ballots:" not in text and "grades:" not in text:
+                continue          # not an election file
+            _scan(rel, text)
+
+    return bad
+
+
 def check_claude_md_paths(source=None):
     """Return [(rel:line, msg)] for CLAUDE.md path references that no longer resolve.
 
@@ -1429,6 +1497,21 @@ def main(argv):
         print("              migrate_concept_links.py, so they rot silently through "
               "a folder move — make them links:")
         for rel, msg in span_paths:
+            print(f"   • {rel}\n       {msg}")
+    weight_side = check_ballot_weight_side()
+    if not weight_side:
+        print("repo-hygiene: ✓ every ballot row puts its weight before the scores.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  ballot weights written after the scores "
+              f"({len(weight_side)}) — the YAML schema and the engine's echo both")
+        print("              put the count FIRST (`Count × Ada,Ben,Cara` / "
+              "`3 × 5,2,0`), and a source file cannot drift because the parser")
+        print("              only matches a leading weight. Hand-authored Markdown "
+              "is the one surface with nothing holding the line, so mixing")
+        print("              the two forms makes a reader decide per page which "
+              "number is the ballot and which is the bloc size:")
+        for rel, msg in weight_side:
             print(f"   • {rel}\n       {msg}")
     claude_paths = check_claude_md_paths()
     if not claude_paths:

@@ -15,11 +15,11 @@ Reference file: [`bv1525_condorcet_loser_bloc.yaml`](cases/bv1525_condorcet_lose
 Bloc STAR, 5 candidates, **4 seats**, 16 ballots (four distinct ballots, weighted 8 / 5 / 2 / 1):
 
 ```
-First,Condorcet Loser,Second,Third,Fourth
-3,0,1,1,1     × 8
-0,4,0,0,0     × 5
-0,1,3,2,1     × 2
-0,2,5,4,3     × 1
+Count × First,Condorcet Loser,Second,Third,Fourth
+    8 × 3,0,1,1,1
+    5 × 0,4,0,0,0
+    2 × 0,1,3,2,1
+    1 × 0,2,5,4,3
 ```
 
 ```

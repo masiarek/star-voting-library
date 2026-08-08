@@ -13,9 +13,9 @@ Reference files: [`bv95a_9m6rxr_favorite_survives_one_rival.yaml`](cases/bv95a_9
 ## The ballots
 
 ```
-Ada,Bruno,Cleo
-5,4,0     ← the 3-voter majority (×3): love Ada, like Bruno, ignore Cleo
-0,5,5     ← the 2-voter minority (×2): reject Ada, love Bruno & Cleo
+Count × Ada,Bruno,Cleo
+    3 × 5,4,0     ← the majority bloc: love Ada, like Bruno, ignore Cleo
+    2 × 0,5,5     ← the minority bloc: reject Ada, love Bruno & Cleo
 ```
 
 ## The STAR tabulation (LH)

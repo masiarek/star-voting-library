@@ -21,10 +21,10 @@ Crucially, BetterVoting's backend already has the numbers. The frozen export's `
 Plurality, 2 candidates, **12 ballots** — five for Andre, two for Blake, five blank:
 
 ```
-Andre,Blake
-1,0   × 5   Andre  (a choose-one vote for Andre)
-0,1   × 2   Blake  (a choose-one vote for Blake)
--,-   × 5   blank  — true abstentions (no vote for anyone)
+Count × Andre,Blake
+    5 × 1,0   Andre  (a choose-one vote for Andre)
+    2 × 0,1   Blake  (a choose-one vote for Blake)
+    5 × -,-   blank  — true abstentions (no vote for anyone)
 ```
 
 Andre 5, Blake 2 → **Andre wins** (BV `tieBreakType: none`; no tie).

@@ -17,10 +17,10 @@ Reference file: [`bv130_bloc_pagination_731.yaml`](cases/bv130_bloc_pagination_7
 Bloc STAR, 6 candidates, 3 seats, 9 ballots (three distinct ballots, weighted 3 / 4 / 2):
 
 ```
-Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Apocalypse Now
-0,2,4,3,5,0      × 3
-2,1,3,4,3,2      × 4
-1,1,5,2,5,0      × 2
+Count × Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Apocalypse Now
+    3 × 0,2,4,3,5,0
+    4 × 2,1,3,4,3,2
+    2 × 1,1,5,2,5,0
 ```
 
 Scores separate everyone cleanly — Someone I Like 37, Santa Claus 34, The Lesser Evil 29, Elvis 12, Johnny 10, Apocalypse 8 — so no tiebreak is ever consulted. Bloc fills the seats by running STAR three times (elect, remove, repeat).

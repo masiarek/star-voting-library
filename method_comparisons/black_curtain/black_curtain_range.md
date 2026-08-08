@@ -30,9 +30,9 @@ Candidate cast: Ann, Bob, Cal (+ Dee). Scores are the 0–5 mapping of the video
 Every voter scored Bob a near-top 4, but Bob is nobody's first choice. Range sees the consensus; STAR's runoff (Cal vs Bob, 3–2) does not.
 
 ```
-Ann,Bob,Cal
-0,4,5   ×3
-5,4,0   ×2
+Count × Ann,Bob,Cal
+    3 × 0,4,5
+    2 × 5,4,0
 
 Total score:  Bob 20 ← winner · Cal 15 · Ann 10   (pref_voting ✓ Bob)
 ```
@@ -44,9 +44,9 @@ Total score:  Bob 20 ← winner · Cal 15 · Ann 10   (pref_voting ✓ Bob)
 Both blocs love Ann and Cal; Bob is universally hated. Range and STAR agree on Cal (Cal 23, Ann 22 — a one-point margin).
 
 ```
-Ann,Bob,Cal
-4,0,5   ×3
-5,0,4   ×2
+Count × Ann,Bob,Cal
+    3 × 4,0,5
+    2 × 5,0,4
 
 Total score:  Cal 23 ← winner · Ann 22 · Bob 0   (pref_voting ✓ Cal)
 ```
@@ -58,9 +58,9 @@ Total score:  Cal 23 ← winner · Ann 22 · Bob 0   (pref_voting ✓ Cal)
 Ann is scored high by *all five* voters; Cal is loved by three and zeroed by two. Range elects the broadly-liked Ann (22); STAR's runoff keeps the 3-voter majority's Cal.
 
 ```
-Ann,Bob,Cal
-4,0,5   ×3
-5,1,0   ×2
+Count × Ann,Bob,Cal
+    3 × 4,0,5
+    2 × 5,1,0
 
 Total score:  Ann 22 ← winner · Cal 15 · Bob 2   (pref_voting ✓ Ann)
 ```
@@ -72,9 +72,9 @@ Total score:  Ann 22 ← winner · Cal 15 · Bob 2   (pref_voting ✓ Ann)
 Range and STAR agree on Cal — but only by **one point** (Cal 15, Bob 14). At the video's finer 0–9 scale, Score elects Bob; the 0–5 rescale flips it. That fragility is its own lesson: [scale granularity can flip the winner](../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md).
 
 ```
-Ann,Bob,Cal,Dee
-0,2,5,3   ×3
-5,4,0,1   ×2
+Count × Ann,Bob,Cal,Dee
+    3 × 0,2,5,3
+    2 × 5,4,0,1
 
 Total score:  Cal 15 ← winner · Bob 14 · Dee 11 · Ann 10   (pref_voting ✓ Cal)
 ```

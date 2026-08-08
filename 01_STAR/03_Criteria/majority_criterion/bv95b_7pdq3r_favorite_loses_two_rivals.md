@@ -13,9 +13,9 @@ Reference files: [`bv95b_7pdq3r_favorite_loses_two_rivals.yaml`](cases/bv95b_7pd
 ## The ballots
 
 ```
-Ada,Bruno,Cleo
-5,4,3     ← the 3-voter majority (×3): love Ada, but also back Bruno AND Cleo
-0,5,5     ← the 2-voter minority (×2): reject Ada, love Bruno & Cleo
+Count × Ada,Bruno,Cleo
+    3 × 5,4,3     ← the majority bloc: love Ada, but also back Bruno AND Cleo
+    2 × 0,5,5     ← the minority bloc: reject Ada, love Bruno & Cleo
 ```
 
 The only difference from BV95a is the majority's `Cleo` score: **3 instead of 0**.

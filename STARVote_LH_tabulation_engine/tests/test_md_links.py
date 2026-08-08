@@ -231,6 +231,55 @@ def test_grandfather_list_stays_empty():
     )
 
 
+def test_ballot_weights_come_before_the_scores():
+    """One election is written one way: the bloc count comes first.
+
+    The YAML schema puts it there (`Count:Ada,Ben,Cara` / `15:5,2,0`) and so
+    does the engine's echo (`Count × Memphis,…` / `42 × 5,4,3,2`). A source file
+    physically cannot drift — the parser only ever matches a *leading* weight —
+    so the trailing form only ever appears in hand-authored Markdown, the one
+    surface with neither a parser nor a generator holding the line. Eight pages
+    had accumulated it by 2026-08-07, and a reader meeting both forms has to
+    work out per page which number is the ballot and which is the bloc size.
+    """
+    mod = _load_hygiene()
+    bad = mod.check_ballot_weight_side()
+    assert not bad, (
+        f"{len(bad)} ballot row(s) with the weight after the scores:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in bad)
+    )
+
+
+def test_ballot_weight_check_is_not_vacuous():
+    """Prove the gate fires on the trailing form and spares everything else.
+
+    The rows that must stay clean are the ones that make a naive regex noisy:
+    the correct leading form, the `Count ×` header, the YAML colon spelling, and
+    an annotated ballot whose note simply has no multiplier in it.
+    """
+    mod = _load_hygiene()
+    probe = REPO_ROOT / "07_Concepts" / "topics" / "_ballot_weight_probe.md"
+    probe.write_text(
+        "# probe\n"
+        "```\n"
+        "Count × Ada,Ben,Cara\n"                  # ok: header
+        "    3 × 5,2,0\n"                         # ok: leading weight
+        "   15:5,2,0\n"                           # ok: YAML colon spelling
+        "5,2,0   ← the majority bloc\n"           # ok: annotated, no multiplier
+        "0,4,5   ×3\n"                            # caught: bare trailing
+        "1,0   × 5   Andre\n"                     # caught: trailing + note
+        "5,4,0   ← the 3-voter majority (×3)\n"   # caught: buried in the note
+        "```\n",
+        encoding="utf-8",
+    )
+    try:
+        hits = [rel for rel, _msg in mod.check_ballot_weight_side()
+                if rel.startswith("07_Concepts/topics/_ballot_weight_probe.md")]
+    finally:
+        probe.unlink()
+    assert len(hits) == 3, f"expected the three trailing-weight rows, got {hits}"
+
+
 def test_uncommitted_target_check_is_not_vacuous(tmp_path, monkeypatch):
     """Prove the uncommitted-target guard can fail, and that it clears.
 

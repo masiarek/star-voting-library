@@ -28,10 +28,10 @@ Three findings worth carrying:
 The paper's Example 5.1 is a *utility profile*; here it is as a countable election — [`vcl_c4_b9_score_vs_runoff`](cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) ([yaml](cases/vcl_c4_b9_score_vs_runoff.yaml)). Four voters adore **Amy** and score everyone else zero; five voters score Amy zero and spread mild support across **Ben, Cora, Dan** (one of them leans Ben, so every count below is deterministic):
 
 ```
-Amy,Ben,Cora,Dan
-  5,  0,  0,  0   × 4 voters   (the devoted minority)
-  0,  2,  2,  2   × 4 voters   (the spread-the-love majority)
-  0,  3,  2,  1   × 1 voter    (same bloc, leans Ben)
+Count × Amy,Ben,Cora,Dan
+    4 ×   5,  0,  0,  0   (the devoted minority)
+    4 ×   0,  2,  2,  2   (the spread-the-love majority)
+    1 ×   0,  3,  2,  1   (same bloc, leans Ben)
 ```
 
 One electorate, three defensible winners, all from the same arithmetic:

@@ -26,7 +26,7 @@ options:
   collapse_ballots: true
   count_separator: "×"
 # Approval sets: 51×{Amos,Bella} (top two of Amos>Bella>Chad); 49×{Bella,Chad}
-# (top two of both Bella>Chad>Amos ×48 and Chad>Bella>Amos ×1 — same set).
+# (top two of both 48×Bella>Chad>Amos and 1×Chad>Bella>Amos — same set).
 ballots: |-
   Amos,Bella,Chad
   51: 1,1,0

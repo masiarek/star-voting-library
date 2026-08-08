@@ -30,12 +30,12 @@ In the vocabulary of [what makes a "good" winner](../../../07_Concepts/topics/wh
 
 ## The hybrid in one tiny election
 
-Five voters, three flavors:
+Three voters, three flavors:
 
 ```
-  Almond  Brownie  Cocoa
-    5       1        2      ×1
-    4       5        0      ×2     (collapsed: appears twice)
+  Count ×  Almond  Brownie  Cocoa
+      1 ×    5       1        2
+      2 ×    4       5        0     (collapsed: appears twice)
 ```
 
 → run [`runoff_overturns_leader/01a_c3_b3_more-stars-fewer-voters.yaml`](../../02_Examples/runoff_overturns_leader/cases/01a_c3_b3_more-stars-fewer-voters.yaml)

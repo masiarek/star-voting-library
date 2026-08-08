@@ -147,6 +147,25 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   (e.g., percentages or proportional seats). When you *do* weight, `Count` values
   must be **≥ 6** (avoid collision with 0–5 scores); scaling all weights ×N
   preserves STAR/proportional winners. See `07_Concepts/tips/TIPS_choosing_voter_counts.md`.
+- **A ballot's weight goes BEFORE the scores — machine-checked**
+  (`check_ballot_weight_side`, gated by `tests/test_md_links.py`). One election is
+  written one way everywhere: `Count × Ada,Ben,Cara` over `3 × 5,2,0`. That is the
+  YAML schema (`Count:Ada,Ben,Cara` / `15:5,2,0`) and it is what the engine echoes
+  back (`Count × Memphis,…` / `42 × 5,4,3,2`). A *source* file cannot drift — the
+  parser only ever matches a **leading** weight — so `0,4,5   ×3` only ever shows up
+  in **hand-authored Markdown**, the one surface with neither a parser nor a
+  generator holding the line. Eight pages had accumulated it by 2026-08-07, and it
+  hides well: each page is internally consistent, so the inconsistency is only
+  visible to someone reading two of them. A reader who meets both forms has to work
+  out, per page, which number is the ballot and which is the bloc size — on a
+  three-candidate row (`0,4,5   ×3`) the trailing count looks exactly like a fourth
+  candidate's score. The check also fires on **YAML comments and
+  `scenario_description` prose**, which teach the wrong form just as loudly and ride
+  into the `_tabulated` mirror and the generated page. Note the trailing form's best
+  hiding place is an *annotation*, not a bare row —
+  `5,4,0   ← the 3-voter majority (×3)` states the weight twice, in words and in a
+  glyph, and neither one is where the schema puts it; write the count in the column
+  and let the note say what the bloc *is*.
 - **Candidate names — a fresh, easy cast per scenario; the same cast within one.**
   Prefer a *new* set of names for each scenario (memorable beats uniform — "the
   Ada/Ben/Cara split," "the Tennessee cities") over one fixed roster. Four rules:
