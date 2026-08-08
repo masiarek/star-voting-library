@@ -8,12 +8,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**573 election files** (491 single-winner, 82 multi-winner) across 18 method(s).
+**574 election files** (492 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 274 |
-| RCV-IRV (Hare) | 44 |
+| RCV-IRV (Hare) | 45 |
 | Ranked Robin (RCV-RR / Copeland) | 96 |
 | Approval | 25 |
 | STV (proportional RCV) | 10 |
@@ -310,7 +310,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vcl_c4_b9_score_vs_runoff`](../../method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) | `method_comparisons/valuable_condorcet_loser/cases/` | 1 | The valuable Condorcet loser — Score elects her, the runoff rejects her → _Ben_ | [`.yaml`](../../method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml) |
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
-## RCV-IRV (Hare)  (44)
+## RCV-IRV (Hare)  (45)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -319,6 +319,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`batch_all_out_cycle_c3_b3`](../../06_Other/RCV_IRV/cases/cases_pages/batch_all_out_cycle_c3_b3.md) | `06_Other/RCV_IRV/cases/` | 1 | Batch elimination empties the field — the perfect cycle → _Amy_ | [`.yaml`](../../06_Other/RCV_IRV/cases/batch_all_out_cycle_c3_b3.yaml) |
 | [`batch_all_out_round2_c4_b6`](../../06_Other/RCV_IRV/cases/cases_pages/batch_all_out_round2_c4_b6.md) | `06_Other/RCV_IRV/cases/` | 1 | The field empties in round two — and Pareto is what keeps Dev out of the tie → _Alex_ | [`.yaml`](../../06_Other/RCV_IRV/cases/batch_all_out_round2_c4_b6.yaml) |
 | [`put_two_universes_c3_b4`](../../06_Other/RCV_IRV/cases/cases_pages/put_two_universes_c3_b4.md) | `06_Other/RCV_IRV/cases/` | 1 | Parallel universes — one count, two legal answers → _Anna_ | [`.yaml`](../../06_Other/RCV_IRV/cases/put_two_universes_c3_b4.yaml) |
+| [`street_trees_five_rounds_c6_b100`](../../06_Other/RCV_IRV/cases/cases_pages/street_trees_five_rounds_c6_b100.md) | `06_Other/RCV_IRV/cases/` | 1 | Street trees — five rounds, and the bar keeps dropping → _Birch_ | [`.yaml`](../../06_Other/RCV_IRV/cases/street_trees_five_rounds_c6_b100.yaml) |
 | [`balance_base_irv_c3_b9`](../../06_Other/RCV_IRV/equal_vote_balance/cases/cases_pages/balance_base_irv_c3_b9.md) | `06_Other/RCV_IRV/equal_vote_balance/cases/` | 1 | Equal-vote balance — base (IRV elects the Condorcet winner, Bruno) → _Bruno_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/cases/balance_base_irv_c3_b9.yaml) |
 | [`balance_plus_opposite_c3_b15`](../../06_Other/RCV_IRV/equal_vote_balance/cases/cases_pages/balance_plus_opposite_c3_b15.md) | `06_Other/RCV_IRV/equal_vote_balance/cases/` | 1 | Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada) → _Ada_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/cases/balance_plus_opposite_c3_b15.yaml) |
 | [`burlington_2009_irv`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_irv.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third) → _Kiss_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_irv.yaml) |

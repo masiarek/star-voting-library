@@ -382,6 +382,7 @@ LH:star_combined,Summability demo — STAR combined A+B (Oak; precinct subtotals
 LH:star_district_A,Summability demo — STAR district A (Maple wins outright),1,single-race,3,STAR,LH-only
 LH:star_district_B,Summability demo — STAR district B (Oak wins — a runoff reversal),1,single-race,3,STAR,LH-only
 LH:star_elects_a_covered_candidate_c4_b5,"STAR elects a covered candidate — five ballots, four cities",1,single-race,5,STAR,LH-only
+LH:street_trees_five_rounds_c6_b100,"Street trees — five rounds, and the bar keeps dropping",1,single-race,100,IRV,LH-only
 LH:succ_elim_ex10_amalgamated,"Successive elimination Ex.10 — amalgamated: every round ties, and the tie-break picks the winner",1,single-race,4,RankedRobin,LH-only
 LH:succ_elim_ex10_district1,"Successive elimination Ex.10 — District I: three voters, the agenda elects C",1,single-race,3,RankedRobin,LH-only
 LH:succ_elim_ex10_district2,"Successive elimination Ex.10 — District II: a single voter, C wins",1,single-race,1,RankedRobin,LH-only
