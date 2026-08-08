@@ -33,6 +33,16 @@ uv run --group docs mkdocs serve
     - **`capitalize_first()`** — the capitalize step is all-or-nothing, so one capital anywhere in the folder name suppresses it for the whole label. That is why `reporting_BV` and `silly_two_cand_STAR` used to start lowercase under sentence-cased siblings; only the first character moves, and the deliberate capitals further in survive.
 - **A hook is deliberately not a plugin**: it is one file in the repo and adds nothing to the `docs` dependency group, so `uv.lock` and the `properdocs` pin audit stay untouched.
 
+## Search ranking is tuned — don't restore the defaults (2026-08-07)
+
+The search box is the reason the site exists, and Material's stock settings rank badly at this repo's size. Three knobs are set explicitly in `mkdocs.yml`; each was measured by rebuilding the index offline with lunr and recording where the obviously-wanted page landed for 15 real queries. **Median rank went 20 → 4.** The comments in `mkdocs.yml` carry the per-knob reasoning; the short version:
+
+- **`separator`** — the default `[\s\-]+` splits on whitespace and hyphens *only*, so punctuation stays welded to the word. A **trailing comma** — what you get pasting a phrase out of a sentence — makes `Ballot expressiveness,` a different token from `Ballot expressiveness`, and the page falls from **#25 to #264**. We split on ordinary punctuation instead, keeping decimals intact (`\.(?!\d)`). This is Material's own recommended separator *minus* its camelCase clause, which measured identical here and would have chopped up `STARVote` / `BetterVoting` / `RankedRobin`.
+- **`pipeline`** — added `trimmer` (worth 3 places on "exhausted ballots"). **`stemmer` is deliberately absent**: it was measured and it is *harmful* here (median 4 → 10; "exhausted ballots" stops matching its own page). Material appends a trailing wildcard to every query term, so prefix matching already does stemming's job and stemming on top of it mangles the prefixes.
+- **`fields` boosts** — the default tag boost is **1,000,000×** against title's 1,000×, which assumes tags are rare and distinctive. Here they are neither: **9 broad tags over 507 pages**. Because of that trailing wildcard, a search for `ballot` prefix-matches the `ballots` tag and lifts all 94 tagged pages above everything else — *including pages with the word in their title*. Tags now sit at **100**, restoring the sane order **title > tags > text**.
+
+The failure this fixes is subtle and worth recognizing: the page was always indexed and always published — it was simply buried. Two separate reading sessions filed it as "search is broken" before it was traced. If someone reports a page that "isn't in search," **check its rank before checking the build**; and note that generic query words hurt more than they help, since `Range Voting` finds the Range page at #1 while `Range Voting Voting Method` was pushing it to #8.
+
 ## Known nits (accepted for v1)
 
 - **Anchor slugs differ from GitHub's** for headings with `&`/em-dashes (GitHub's `#properties--criteria` style). Those links land at the top of the correct page instead of the exact section — about 30 across the repo.

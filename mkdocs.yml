@@ -102,7 +102,51 @@ hooks:
   - mkdocs_hooks.py
 
 plugins:
-  - search
+  # Material's search defaults are tuned for a small doc set with few tags.
+  # Both defaults misfire badly on a 5,000-section site with 9 generic tags,
+  # so all three knobs below are deliberate. Measured against the live index
+  # with lunr offline (median rank of the obviously-wanted page over 15 real
+  # queries: 5 -> 4; catastrophic cases fixed, see each note).
+  - search:
+      # DEFAULT: "[\s\-]+" — splits on whitespace and hyphens ONLY, so
+      # punctuation stays glued to the word: a trailing comma makes
+      # "Ballot expressiveness," a different token from "Ballot
+      # expressiveness" and the page you wanted falls from #25 to #264.
+      # Typing a phrase copied out of a sentence is the normal way people
+      # search, so this is not an edge case. Splitting on the usual
+      # punctuation costs nothing and fixes it.
+      #   The `\.(?!\d)` clause splits sentence periods but keeps decimals
+      # intact, so "0.5" and "§A8" style references still tokenize sanely.
+      #   NOTE: this is Material's own recommended separator MINUS its
+      # camelCase clause `(?!\b)(?=[A-Z][a-z])`. Measured identical on every
+      # benchmark query, so we take the version that does NOT split
+      # STARVote / BetterVoting / RankedRobin into pieces.
+      separator: '[\s\-,:!=\[\]()"/]+|\.(?!\d)|&[lg]t;'
+      # DEFAULT: [stopWordFilter] only. Adding `trimmer` strips leftover
+      # punctuation from token edges — worth 3 places on "exhausted ballots"
+      # (#5 -> #2) even with the separator above already in place.
+      #   `stemmer` is deliberately ABSENT: it was measured and it is HARMFUL
+      # here (median rank 4 -> 10, "exhausted ballots" stops matching its own
+      # page entirely). Material appends a trailing wildcard to every query
+      # term, and prefix matching already does the job stemming would —
+      # stemming on top of it mangles the prefixes. Don't add it back.
+      pipeline:
+        - trimmer
+        - stopWordFilter
+      # DEFAULT: tags 1e6, title 1e3, text 1. That 1,000,000x tag boost
+      # assumes tags are rare and distinctive. Here they are neither: 9 broad
+      # tags spread over 507 pages, and the trailing wildcard means a search
+      # for "ballot" prefix-matches the `ballots` tag and lifts all 94
+      # tagged pages above everything else — including pages with the term
+      # in their TITLE. Dropping tags below title restores the sane order
+      # title > tags > text ("Ballot expressiveness" #16 -> #4).
+      fields:
+        title:
+          boost: 1000
+        text:
+          boost: 1
+        tags:
+          boost: 100
   - same-dir
   # Built into mkdocs-material, so this adds NO dependency and no lock
   # churn. Builds tags.md into a browse-by-tag index from each page's
