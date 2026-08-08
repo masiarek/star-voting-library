@@ -32,11 +32,16 @@ So of the three, PUT is the one that discloses a mid-count ambiguity *whenever* 
 
 Four voters, three candidates — the runnable case is [`put_two_universes_c3_b4`](../../../06_Other/RCV_IRV/cases/cases_pages/put_two_universes_c3_b4.md):
 
-| Voters | Ballot |
-|:--:|---|
-| 2 | Anna > Blake > Cora |
-| 1 | Blake > Anna > Cora |
-| 1 | Cora > Blake > Anna |
+<!-- ballots:put_two_universes_c3_b4 -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+Anna>Blake>Cora
+Anna>Blake>Cora
+Blake>Anna>Cora
+Cora>Blake>Anna
+```
+<!-- /ballots -->
 
 First choices: **Anna 2, Blake 1, Cora 1.** Four voters, so a majority needs 3 — nobody has it. **Blake and Cora are tied for last**, and the rule must decide who goes.
 

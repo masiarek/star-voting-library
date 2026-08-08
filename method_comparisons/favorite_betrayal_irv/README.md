@@ -14,12 +14,16 @@
 
 Three candidates on a spectrum — **Left**, **Center**, **Right** — and 34 voters. Center is everyone's second choice and the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) (beats Left 22–12, beats Right 21–13 head-to-head), but has the fewest first-choices.
 
-| Voters | Ballot |
-|---|---|
-| 12 | Left > Center > Right |
-| 4 | Center > Left > Right |
-| 5 | Center > Right > Left |
-| 13 | Right > Center > Left |
+<!-- ballots:bv2227_3xgkck_honest_irv -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+12:Left>Center>Right
+5:Center>Right>Left
+4:Center>Left>Right
+13:Right>Center>Left
+```
+<!-- /ballots -->
 
 ## 1. Honest ballots → RCV-IRV elects your *worst* ([`bv2227_3xgkck_honest_irv`](cases/cases_pages/bv2227_3xgkck_honest_irv.md))
 

@@ -29,13 +29,17 @@ A, B, C form a top cycle (B>A 7–4, A>C 8–3, C>B 7–4) and **D loses every m
 
 **Cases:** [before — all 19 vote](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/minimax_ex30_noshow_before.md) → [after — three stay home](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/minimax_ex30_noshow_after.md)
 
-| Voters | Ranking |
-|---:|---|
-| 5 | D > B > C > A |
-| 4 | B > C > A > D |
-| 3 | A > D > C > B |
-| 3 | A > D > B > C |
-| 4 | C > A > B > D |
+<!-- ballots:minimax_ex30_noshow_before -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+5:D>B>C>A
+4:B>C>A>D
+3:A>D>C>B
+3:A>D>B>C
+4:C>A>B>D
+```
+<!-- /ballots -->
 
 19 voters, four candidates; the social ordering is cyclical (C > A > D > B > C), so Minimax reaches its second clause. Worst losses: A 13, **B 11**, C 12, D 14 → **B elected**. Now three of the four `C>A>B>D` voters stay home: worst losses become **A 10**, B 11, C 12, D 11 → **A elected** — which the absent voters prefer to B: the [No-Show paradox](no_show.md). Read forward it's the Twin paradox: with one such voter, A wins; when the three "twin brothers" join, B does.
 
@@ -65,11 +69,15 @@ The even electorate is doing real work here. With 14 voters a pair *can* draw; o
 
 **Case:** [7 voters, then B drops out](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/minimax_ex33_scc.md)
 
-| Voters | Ranking |
-|---:|---|
-| 3 | D > C > B > A |
-| 2 | A > D > C > B |
-| 2 | B > A > D > C |
+<!-- ballots:minimax_ex33_scc -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+3:D>C>B>A
+2:A>D>C>B
+2:B>A>D>C
+```
+<!-- /ballots -->
 
 Cyclical (A > D > C > B > A). Worst losses: A 5, B 5, C 7, **D 4** → **D elected**. Now B — a loser, four first places short of contention — drops out: **A becomes the Condorcet winner**, first on 4 of 7 ballots, and wins outright. A loser's exit flipped the winner: [SCC](spoiler_scc.md). Recount it yourself with `--drop B`:
 

@@ -28,12 +28,16 @@ The moment one matchup is drawn, the two part company — and a single half-poin
 
 Thirty club members rank five candidates.
 
-| Voters | Ranking |
-|---:|---|
-| 9 | Alice > Elena > Dmitri > Bruno > Carmen |
-| 8 | Carmen > Bruno > Alice > Elena > Dmitri |
-| 7 | Dmitri > Bruno > Carmen > Alice > Elena |
-| 6 | Carmen > Alice > Dmitri > Elena > Bruno |
+<!-- ballots:copeland_half_credit_decides -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+9:Alice>Elena>Dmitri>Bruno>Carmen
+8:Carmen>Bruno>Alice>Elena>Dmitri
+7:Dmitri>Bruno>Carmen>Alice>Elena
+6:Carmen>Alice>Dmitri>Elena>Bruno
+```
+<!-- /ballots -->
 
 Every pair meets head-to-head:
 

@@ -25,12 +25,16 @@ The first three are ordinal — a ranking is enough to fill them in. The fourth 
 
 One electorate throughout: **36 voters, three flavors, fixed rankings.**
 
-| Voters | Ranking |
-|:--:|---|
-| 12 | Almond > Berry > Cocoa |
-| 8 | Berry > Almond > Cocoa |
-| 7 | Cocoa > Almond > Berry |
-| 9 | Cocoa > Berry > Almond |
+<!-- ballots:bv2275_6mcgkq_ranked_robin -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+12:Almond>Berry>Cocoa
+8:Berry>Almond>Cocoa
+7:Cocoa>Almond>Berry
+9:Cocoa>Berry>Almond
+```
+<!-- /ballots -->
 
 | Case | (A, B) | Winner | What it shows |
 |---|:--:|:--:|---|

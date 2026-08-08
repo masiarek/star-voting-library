@@ -83,11 +83,18 @@ only what is BV-specific, so non-BV sessions don't pay for it.
   repo teaching page (BV → repo).** The repo→BV direction (above) is only half the
   loop; a voter who lands on a public BV election should be able to click through to
   the lesson. So the `description` you pass to the create script must end with the
-  case's **public site URL**:
-  `Full lesson & tabulation: https://masiarek.github.io/star-voting-library/<page path>.html`
+  case's **public site URL, written as a MARKDOWN LINK**:
+  `[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/<page path>.html)`
   where `<page path>` is the generated page's repo-relative path with `.md`→`.html`
   (the site is `use_directory_urls: false`, so paths map 1:1) — e.g.
   `…/06_Other/ballot_style_lab/cases/cases_pages/05_c3_b38_squeeze-survives.html`.
+  **The brackets are load-bearing** (found 2026-08-08). BetterVoting renders election
+  and race descriptions through `formatMarkdown()`, whose only link rule is
+  `/\[([^\]]*?)\]\(([^)]*?)\)/` — `[text](url)` becomes a real `<a target="_blank">`,
+  and nothing else does. There is **no bare-URL autolinker**, so the retired form
+  `Full lesson & tabulation: https://…` renders as plain grey text the reader has to
+  copy-paste. 65 of the repo's frozen exports shipped that way and, descriptions being
+  permanent, they stay unclickable — `--dry-run` now warns before you add a 66th.
   **This MUST be set on the first create — BV descriptions are PERMANENT and CANNOT be
   edited via the API afterward** (verified 2026-07-24: `PUT /API/Election/<id>` 404,
   `POST …/edit` 502 — no owner-editable path; API-created elections aren't

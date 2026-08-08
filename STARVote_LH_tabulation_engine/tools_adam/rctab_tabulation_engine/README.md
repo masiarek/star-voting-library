@@ -10,6 +10,7 @@ The concept page — what RCTab is, what its agreement is and isn't worth — is
 |---|---|
 | [`rctab_convert.py`](rctab_convert.py) | a ranked YAML → `<stem>.csv` + `<stem>_config.json`. **No Java needed.** |
 | [`rctab_crosscheck.py`](rctab_crosscheck.py) | runs RCTab on those files, parses its report, diffs it against ours, and runs the two sweeps. |
+| [`ut_json_export.py`](ut_json_export.py) | a ranked YAML → **Universal RCV Tabulator JSON** (the shape RCTab's own `_detailed_report.json` uses), recomputing the per-candidate transfers our text report omits. **No Java needed.** Feeds [RCVis](../../../07_Concepts/tabulation_engines/rcvis.md) for Sankey art; refuses score ballots, and disagrees with the engine on a dead tie (see its docstring). |
 
 ## STV — the leg that was missing
 
@@ -95,6 +96,22 @@ Both engines are arbitrary on a dead tie. Only one is auditable. That is the who
 **Equal ranks are refused by default.** This repo's ranked ballots may tie candidates in a level (`Ava=Bianca>Cara`) and the LH engine honours that as indifference. RCTab has no such concept — two candidates at one rank is an **overvote**, disposed of by `overvoteRule`. Converting silently would compare two different elections, so it stops. `--allow-equal-ranks` is there for studying the overvote rules on purpose.
 
 Score files are refused outright: RCTab counts ranked ballots only, so it has nothing to say about STAR, Score, Approval or Ranked Robin.
+
+## The whole IRV corpus — `rctab_sweep.py`
+
+`rctab_crosscheck.py` is the microscope (one case, round by round, with the sweeps). [`rctab_sweep.py`](rctab_sweep.py) is the wide-angle lens: it converts and counts **every** ranked case in the library in one pass, one line each, so a regression anywhere shows up as a row that stopped saying AGREE.
+
+```bash
+RCTAB_HOME=… uv run STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/rctab_sweep.py --irv
+```
+
+**69 single-winner IRV elections, 68 AGREE, 1 disagreement — and the disagreement was already documented.** 8 of the 69 needed a tiebreak to reach an answer at all. Ranked Robin is refused rather than swept: RCTab implements no Condorcet method, so agreement there would be a coincidence of the profile rather than a check of anything.
+
+The one disagreement is [`coombs_ex20_district1`](../../../method_comparisons/felsenthal_paradoxes/cases/coombs_ex20_district1.yaml), and it is the sweep earning its keep. That file's own description had flagged a **first-round elimination tie** — A and B level on 9, and which one goes decides the election (drop A → B wins 18–16; drop B → C wins 25–9). Our engine drops A silently; rcv-lab.org drops B, which is how the tie was originally noticed. RCTab drops B, elects C 25–9, and — unlike either of the others — *prints the tie in its audit log*. Sweeping its declared candidate order over all six permutations returns C three times and B three times.
+
+So the corpus contains exactly one case where two engines legitimately differ, it was known and written down beforehand, and a certified tabulator has now independently confirmed both branches are legal. That is the outcome you want from a cross-check: no silent surprises, and the one loud result lands on a caveat the library had already published.
+
+**Skips are printed, never swallowed.** A case the converter refuses — equal ranks, a score ballot, a non-STV multi-seat method — is listed with its reason, and the summary always states how many were converted, skipped and failed. A sweep that quietly counted 60 of 70 and reported "all agree" would be worse than useless.
 
 ## What agreement here is worth — and what it isn't
 

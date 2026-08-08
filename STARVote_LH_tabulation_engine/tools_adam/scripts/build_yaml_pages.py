@@ -501,6 +501,17 @@ SNIPPET_END = "<!-- --8<-- [end:report] -->"
 #
 # Same contract as `case-meta`: everything between the markers is generated,
 # everything outside is the author's, and the staleness test fails on drift.
+#
+# A case with no picture still fills the block — with the file's own `ballots:`
+# text in a fence, the same rendering its generated page carries. That is the
+# only surface a RANKED case ever had: nothing draws a ranked ballot (the drawer
+# refuses them outright), so before this every ranked lesson hand-typed its
+# profile as a Markdown table — 38 pages of an election transcribed by hand
+# beside a generated report of the same file, with no check that the two agreed
+# and two readings of the leading column (`| 9 | A > B > C |` is nine voters,
+# `| 3 | Clara > Amy > Bruno |` is voter #3) live on one page in
+# `topics/ties/batch_elimination.md`. The schema form has neither problem: it is
+# the file, so it cannot drift, and `N:` means one thing.
 BALLOT_BLOCK_RE = re.compile(
     r"<!-- ballots:([A-Za-z0-9_.\-]+) -->\n?(.*?)<!-- /ballots -->", re.S)
 
@@ -1099,15 +1110,31 @@ def _case_for_stem(page_path, stem):
     return _case_by_stem(stem) or _grade_cases_by_stem().get(stem)
 
 
+def _schema_fence(kind, ballots_text):
+    """The case's own `ballots:` text, rendered as its generated page renders it.
+
+    Byte-identical to the generated page's Ballots section (minus the art), so a
+    lesson and the case page show one election written one way — and, being the
+    file itself, it cannot drift from the report below it.
+    """
+    lines = [HOW_TO_READ[kind]]
+    if re.search(r"[~&?%]|(^|,)\s*-\s*(,|$)", ballots_text, re.M):
+        lines += ["", f"Markers on these ballots: {MARKER_LEGEND}."]
+    return "\n".join(lines + ["", "```text", ballots_text, "```"]) + "\n"
+
+
 def ballot_blocks_for(page_path, text=None):
     """The filled-in ballot blocks this page asks for: {marker text: new text}.
 
-    Returns None when the page has no marker. A marker naming a case with no
-    art (or no case at all) is left with a visible note rather than silently
-    empty — a lesson that asked for pictures and got nothing should say so, and
-    the note is what `check_ballot_blocks()` fails the page on. The two notes
-    are worded apart because they need opposite fixes: draw the art, or fix the
-    stem.
+    Returns None when the page has no marker. A case with art gets the picture
+    table; one without gets `_schema_fence()` — the ballots as the YAML records
+    them — because a lesson that asked for its election should get the election,
+    and for a ranked case that fence is the only form there is.
+
+    A marker naming a case that *could* be drawn but hasn't been keeps a visible
+    note above the fence, and one naming no case at all says so instead: the two
+    need opposite fixes (draw the art, or fix the stem), and `check_ballot_blocks
+    ()` fails the page on either drifting.
     """
     text = open(page_path, encoding="utf-8").read() if text is None else text
     if not BALLOT_BLOCK_RE.search(text):
@@ -1132,6 +1159,12 @@ def ballot_blocks_for(page_path, text=None):
                 kind = _ballot_kind(ballots_text,
                                     _norm_method(_find_first(data, ["voting_method"])))
                 art = _ballot_art(src, ballots_text, page_dir, kind)
+                if not art:
+                    fence = _schema_fence(kind, ballots_text)
+                    # Nothing draws a ranked ballot, so the fence isn't a
+                    # fallback there — it's the answer, and a "draw it" nudge
+                    # would be advice no tool can take.
+                    body = fence if kind == "ranked" else body + "\n" + fence
             elif isinstance(data, dict) and data.get("grades") is not None:
                 # A grade-ballot file. It gets no generated page of its own, so
                 # this block is the ONLY place its ballots are ever drawn for a

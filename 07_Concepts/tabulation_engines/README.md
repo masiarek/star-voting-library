@@ -15,7 +15,7 @@ Every claim in this library is backed by a runnable election, and every election
 
 ## Outside engines and data
 
-- **[RCV Lab (rcv-lab.org)](rcv_lab.md)** — a free RCV platform that publishes its sample elections as downloadable cast vote records, including three full-size real elections with their rules files. Its "Best Cycle-Breaking Rule" sample is [reproduced and re-counted here](../../method_comparisons/cycle_resolution/README.md), matching round for round.
+- **[RCV Lab (rcv-lab.org)](rcv_lab.md)** — a free RCV platform that publishes its sample elections as downloadable cast vote records, including three full-size real elections with their rules files. Its "Best Cycle-Breaking Rule" sample is [reproduced and re-counted here](../../method_comparisons/cycle_resolution/README.md), matching round for round. It also counts in the other direction: [all 64 of our RCV-IRV cases run through its engine](rcv_lab_irv_crosscheck.md), 63 agreeing outright and the 64th exposing a silent tie in one of our own cases.
 - **[RCTab — the certified tabulator that counts real elections](rctab.md)** — the federally-tested engine actual US jurisdictions run on election night for RCV-IRV and STV. Wired up: our ranked cases convert to its CSV and run through it, and on the tie cases it agrees on every winner while being anonymous where our engine isn't.
 - **[RCVis (rcvis.com)](rcvis.md)** — the best-known US ranked-choice results *visualizer*: Sankey diagrams, round bars, Wikipedia-ready tables. The one entry on this shelf that does **no counting** — it renders a result some other engine produced, so it is a presentation tool and never a cross-check. Its format library `rcvformats` is MIT and reusable; the site itself is GPL-3.0.
 

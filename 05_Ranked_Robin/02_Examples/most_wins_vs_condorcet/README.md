@@ -12,11 +12,15 @@ It isn't true. This page is the counterexample, and the explanation of exactly w
 
 Eighteen voters, five candidates, three equal blocs:
 
-| Voters | Ranking |
-|---:|---|
-| 6 | Blake > Erin > Amy > Cora > Diego |
-| 6 | Amy > Cora > Erin > Diego > Blake |
-| 6 | Diego > Cora > Blake > Erin > Amy |
+<!-- ballots:bgg9qh9_most_wins_is_not_condorcet -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+6:Blake>Erin>Amy>Cora>Diego
+6:Amy>Cora>Erin>Diego>Blake
+6:Diego>Cora>Blake>Erin>Amy
+```
+<!-- /ballots -->
 
 Every pair meets:
 

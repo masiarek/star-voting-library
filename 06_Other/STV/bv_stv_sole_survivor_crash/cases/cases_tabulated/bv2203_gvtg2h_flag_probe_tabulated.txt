@@ -11,17 +11,18 @@ bv_results_url: https://bettervoting.com/gvtg2h/results
 scenario_description: |-
   Bisection probe #1 for the BetterVoting STV sole-survivor crash: the
   exercise-14 ballots byte-for-byte (5:Austen>Bronte>Camus>Dickens,
-  1:Bronte>Camus, 3:Camus>Dickens; 2 seats; Droop quota 4), created with
+  1:Bronte>Camus, 3:Camus>Dickens; 2 seats), created with
   the enable_write_in key OMITTED from the race object — the one config
   key that separated the crashing elections (tk776t, bj8dfc) from the
   working older STV races (ywckmg, kcf8vf). Key confirmed absent on the
   created race. RESULT: still crashes (error cc9625bb) — the flag is
-  acquitted, which pointed the investigation at the count itself: the
-  eliminations consume Dickens and Bronte, and Camus reaches quota as the
-  SOLE remaining hopeful — the endgame BetterVoting's IRV.ts cannot
-  redistribute a surplus from ([].reduce with no initial value throws).
-  Full lab notebook: README.md in this folder. Seats below are the LH
-  engine's (BV errors until fixed).
+  acquitted, which pointed the investigation at the count itself: in
+  BetterVoting's count the eliminations consume Dickens and Bronte, and
+  Camus reaches quota as the SOLE remaining hopeful — the endgame
+  BetterVoting's IRV.ts cannot redistribute a surplus from ([].reduce
+  with no initial value throws). Full lab notebook: README.md in this
+  folder. Seats below are the LH engine's (BV errors until fixed); LH is
+  a different implementation, so its rounds need not match BV's.
   Live on BetterVoting (Test ID BV2203): https://bettervoting.com/gvtg2h
   — results page errors by design of the probe.
 voting_method: STV

@@ -62,7 +62,17 @@ you need not hoard every spec here.
 
 # DESCRIPTION BACKLINK — get the URL right the FIRST time; BV descriptions are
 # PERMANENT and cannot be edited via the API. Every description must end with
-#   "Full lesson & tabulation: https://masiarek.github.io/star-voting-library/<path>.html"
+#   "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/<path>.html)"
+# WRITE IT AS A MARKDOWN LINK — the brackets are the whole point (found 2026-08-08).
+# BetterVoting renders election and race descriptions through formatMarkdown()
+# (packages/shared/src/utils/formatMarkdown.ts), whose only link rule is
+# /\[([^\]]*?)\]\(([^)]*?)\)/ — [text](url) becomes an <a>, and NOTHING else does.
+# There is no bare-URL autolinker, so the older bare form
+#   "Full lesson & tabulation: https://…"
+# ships as plain grey text the reader must copy-paste, forever. 65 of the repo's
+# frozen exports are already like that and cannot be fixed, which is why the specs
+# below still show the bare form — they are the record of what was actually sent.
+# Copy the bracketed form for anything new; --dry-run warns if you don't.
 # GOTCHA (found 2026-07-25): when the lesson page is a folder README.md, the site
 # serves it as <folder>/index.html — README.html 404s. MkDocs renames a folder
 # README to index; use_directory_urls:false only stops the directory-style URL, it
@@ -6041,7 +6051,14 @@ BRAMS_1982_SPEC = {
 }
 
 
-ELECTIONS: list = [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 / BV2282
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 -> qycpbx, BV2282 -> hf3ckp
+#   Created as designed, two races each on the same ballots (303 and 21 ballots).
+#   BV agrees with LH on all four races: IRV -> D and RankedRobin -> C on the 303,
+#   IRV -> B and RankedRobin -> G on the 21, with tieBreakType 'none' everywhere —
+#   which is the point, since the lesson is that the COUNT moved the winner, not a
+#   lot. Both RR races additionally cross-checked against pref_voting's independent
+#   Copeland (AGREE). Backs method_comparisons/rangevoting_irv_examples.
 # Previously: [BALLOT_EXPRESSIVENESS_SPEC]   # BV2280 -> 37yf8x
 #   Created as designed, 25 ballots x 4 races. BV agrees with LH on all four:
 #   STAR -> Finn (84/83/81/80/80; runoff Finn 13-12, zero Equal Support),

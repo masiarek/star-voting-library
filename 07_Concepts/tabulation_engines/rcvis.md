@@ -32,7 +32,7 @@ Imports are listed as RankedVote.co, RankedChoices.com, RCV123.org, Opavote, Ele
 
 Nearly all of those are **tabulated summaries**, not ballots — which follows from the previous section. The parsing is factored out into a separate project, [`rcvformats`](https://github.com/artoonie/rcvformats), and that project's design tells you what the real target format is: every supported input is normalized to **Universal RCV Tabulator JSON** — the format RCTab writes, under RCTab's former name.
 
-There is an API (`POST` to `/api/visualizations/` with a `jsonFile`, or `/api/bp/` with a `resultsSummaryFile`), but it needs an account plus an access request by email to the maintainers, and is rate-limited to 1,000 requests/hour. That gate is why nothing here is automated against it.
+Two routes in, at very different heights. The **web upload** needs only a self-serve account — that is how the [live example below](#status-verified-end-to-end) was published. The **API** (`POST` to `/api/visualizations/` with a `jsonFile`, or `/api/bp/` with a `resultsSummaryFile`) additionally needs an access request emailed to the maintainers, and is rate-limited to 1,000 requests/hour. That second gate is why nothing here is *automated* against it, though the manual path is open.
 
 ## The bridge from this repo
 
@@ -46,7 +46,7 @@ ranked YAML → rctab_convert.py → RCTab → *_detailed_report.json → RCVis
 
 with no format work in the middle. The cost is that it drags a JVM through the pipeline for a drawing, which is why this is documented rather than wired: the [RCTab page](rctab.md) already notes that its runner is *a report, not a guard*, for the same reason.
 
-The lighter alternative is to emit the JSON ourselves from our own round data and skip RCTab entirely — which is worth knowing is possible, and has one sharp edge.
+The lighter alternative skips RCTab and the JVM entirely: [`ut_json_export.py`](../../STARVote_LH_tabulation_engine/tools_adam/rctab_tabulation_engine/README.md) recounts a ranked case here and writes the same JSON directly. That is what produced the live example below. It has one sharp edge, and it is the next section.
 
 ## The trap: an eliminated candidate must leave the table
 
@@ -77,7 +77,31 @@ After a candidate is eliminated, they should be removed from all future vote tal
 
 Both renderings are defensible — ours keeps the column headers stable down the report, theirs treats a round's tally as the set of candidates still standing — but a converter that passes our rows through unchanged produces a file RCVis will refuse. This is the same class of gotcha as [RCTab's "a rank is not a score"](rctab.md#the-trap-a-rank-is-not-a-score): the two formats look alike and disagree about something quiet.
 
-*(Verified 2026-08-08 against `rcvformats` from PyPI, schema `universaltabulator`, using the round tallies published on the [RCV Lab page](rcv_lab.md). No account and no upload were involved — the check is purely against the format library.)*
+*(Verified 2026-08-08 against `rcvformats` from PyPI, schema `universaltabulator`, using the round tallies published on the [RCV Lab page](rcv_lab.md).)*
+
+## Status: verified end to end
+
+The bridge is no longer theoretical. On 2026-08-08 the [cycle case](../../method_comparisons/cycle_resolution/README.md) was emitted as Universal RCV Tabulator JSON from its ballots, uploaded, and rendered:
+
+**→ [the live visualization](https://www.rcvis.com/v/best-cycle-breaking-rule-a-society-votes-on-how-to-break-a-cycle-and-cycles)** (bar · table · pie · **Sankey** · by-round · by-candidate).
+
+Every number RCVis reports matches this repo's count:
+
+| Round | Our engine | RCVis |
+|---|---|---|
+| 1 | 315 · 313 · 258 · 61 · 52 | identical, Copeland's Rule **and** Flip a Coin both out |
+| 2 | 324 · 321 · 262, 92 blank | identical, "Inactive Ballots: 92" |
+| 3 | 492 · 394, 113 blank | identical, "Inactive Ballots: 113", Ranked Pairs elected |
+
+Three things that were open questions until the upload, and are now answered:
+
+- **The Sankey draws real ribbons.** Our engine's text report has no per-candidate transfer data at all, so it had to be recomputed from the ballots — Minimax's 262 splitting 168 to Ranked Pairs and 73 to Schulze is the widest band in the picture, and it is the whole reason a Sankey is worth making.
+- **Batch elimination survives.** Round 1 drops two candidates at once, and RCVis renders both with an ✗ in the same column rather than forcing them into separate rounds. Worth knowing, because its generic explanation prose still says *"the candidate with the fewest votes is eliminated"*, singular — the picture is right where the boilerplate is not.
+- **Exhausted ballots get their own line**, labelled "Inactive Ballots … with no choices left". They are encoded as an `exhausted` key inside the `transfers` map, which the schema accepts.
+
+RCVis computes its percentages on the **surviving** ballots — 492 of 886, not of 999 — so its 55.53% is the same decided-voters denominator this repo uses for [`show_runoff_percent`](LH_starvote/README.md). Convenient, and worth stating out loud before someone reads 55.53% as a share of everyone who voted.
+
+**Uploads are public by default** (the upload page says so, and offers a private account by request to team@rcvis.com). This one is safe to publish because the ballots are RCV Lab's synthetic sample, already public — nobody's real preferences are in it. Apply the same test before sending anything else.
 
 ## `rcvformats` is the piece we could actually borrow
 
@@ -109,7 +133,9 @@ Two entries in that table draw Sankey diagrams, and they are not interchangeable
 
 ## Verdict
 
-**Real, well-established, and deliberately narrow.** RCVis is the best-known RCV results visualizer in the US, it is honest about being a visualizer, and its format library is MIT and genuinely reusable. Cite it for **presentation**, never for **corroboration** — a Sankey of our own numbers is our own numbers in colour. Nothing here is wired up, and the API gate (account + emailed access request) is the reason; the format half of the bridge is verified and recorded above so that anyone who wants the pictures starts from a known-good shape rather than from a rejected upload.
+**Real, well-established, and deliberately narrow.** RCVis is the best-known RCV results visualizer in the US, it is honest about being a visualizer, and its format library is MIT and genuinely reusable. The pipeline works: a case of ours renders faithfully, Sankey and all, and the numbers match.
+
+None of which changes the rule this page opened with. Cite it for **presentation**, never for **corroboration** — the live example above agrees with us perfectly, and that agreement is worth exactly nothing as evidence, because RCVis did no counting. It drew our arithmetic back to us in colour. When you want a second *opinion* on a ranked count, that is [RCTab](rctab.md), [RCV Lab](rcv_lab.md) or [`pref_voting`](cross_checking_with_pref_voting.md); when you want the picture that a column of numbers cannot show, it is this.
 
 ---
 
