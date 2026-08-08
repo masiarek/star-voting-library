@@ -1,0 +1,52 @@
+election_title: "Majority Judgment 101 — the highest median grade wins"
+
+scenario_description: |-
+  The simplest grade election. Three candidates, five voters, and the six-word
+  common language Balinski and Laraki propose: To Reject, Poor, Acceptable, Good,
+  Very Good, Excellent. Majority Judgment ignores totals and averages entirely -
+  it lines each candidate's grades up in order and takes the MIDDLE one. Highest
+  median wins.
+  Bruno wins on a median of Very Good. The candidate to watch is Alice: she
+  collects the two loudest grades on the whole ballot (two Excellents, more
+  enthusiasm than anyone else gets) and still finishes second, because her median
+  is only Good. That is the median doing exactly the job it was chosen for -
+  nobody can lift a candidate by grading them harder, only by being one more
+  voter who ranks them at or above that middle grade.
+  V5 left Alice UNGRADED rather than grading her. Under both grade procedures an
+  ungraded candidate takes the bottom of the scale, so that blank counts as To
+  Reject; the report says so and names the cell. The convention looks like
+  bookkeeping and is not - it is the entire mechanism of the truncation paradox
+  (Felsenthal's Examples 24 and 28).
+  The mean agrees with the median here (Bruno 3.2, Alice 2.8, Cleo 2.4), which is
+  the honest 101 picture: the two usually pick the same candidate. Where they come
+  apart is the interesting part - see 07_Concepts/voting_paradoxes/majority_judgment.md.
+  This is a grade-ballot file, not an LH election file: the grades are words, which
+  fit neither the engine's numeric 0-5 ballot nor BetterVoting, and MJ's tie-break
+  exists in neither. Count it with
+  tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, which computes
+  the median and the tie-break from scratch and cross-checks both against
+  pref_voting's majority_judgement.
+
+grade_method: MajorityJudgment
+grade_scale: "To Reject|Poor|Acceptable|Good|Very Good|Excellent"
+
+# Titles for the drawn ballots — the grade block is transposed (a row per
+# candidate), so a voter's note can't ride on their row the way a `#` comment
+# titles a score ballot. Read only by build_style_ballot_images.py.
+voter_notes:
+  V1: "An Alice enthusiast — Excellent"
+  V2: "The same again — Alice's second Excellent"
+  V3: "Bruno Very Good; Alice merely Good"
+  V4: "Alice down to Poor; Bruno still Good"
+  V5: "Left Alice ungraded — that counts as To Reject"
+
+grades: |-
+  ,V1,V2,V3,V4,V5
+  Alice,Excellent,Excellent,Good,Poor,
+  Bruno,Very Good,Very Good,Very Good,Good,Poor
+  Cleo,Good,Good,Acceptable,Acceptable,Acceptable
+
+expected_winners:
+  - Bruno
+
+# file: mj_101_c3_b5.yaml

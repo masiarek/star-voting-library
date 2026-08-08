@@ -248,16 +248,95 @@ def _art_files():
         yield from sorted((REPO_ROOT / root).rglob("img/*_ballot_[0-9]*.png"))
 
 
+GRADE_SCALE = "To Reject|Poor|Acceptable|Good|Very Good|Excellent"
+GRADE_BLOCK = (
+    ",V1,V2,V3\n"
+    "Alice,Excellent,Good,\n"
+    "Bruno,Very Good,Very Good,Poor\n"
+)
+
+
+def test_grade_scale_accepts_words_ranges_and_letters():
+    assert art.grade_scale(GRADE_SCALE)[0] == "To Reject"
+    assert art.grade_scale(GRADE_SCALE)[-1] == "Excellent"
+    assert art.grade_scale("1-10") == [str(n) for n in range(1, 11)]
+    assert art.grade_scale("A-D") == ["A", "B", "C", "D"]
+    with pytest.raises(art.CaseBallotError):
+        art.grade_scale("very good")
+
+
+def test_grade_block_transposes_to_one_ballot_per_voter():
+    """The file stores a row per CANDIDATE; a ballot is a row per VOTER."""
+    scale = art.grade_scale(GRADE_SCALE)
+    cast, rows, voters = art.parse_grade_block(GRADE_BLOCK, scale)
+    assert cast == ["Alice", "Bruno"] and voters == ["V1", "V2", "V3"]
+    assert rows[0].scores == [5, 4]                      # V1: Excellent, Very Good
+    assert rows[0].cells == ["Excellent", "Very Good"]
+    # V3 left Alice ungraded. Both grade procedures count that as the scale floor,
+    # but the voter marked nothing — so the picture shows nothing, as with a blank
+    # on a 0–5 ballot.
+    assert rows[2].scores == [None, 1]
+    assert rows[2].cells == ["", "Poor"]
+
+
+def test_grade_block_rejects_a_grade_off_the_scale():
+    scale = art.grade_scale(GRADE_SCALE)
+    with pytest.raises(art.CaseBallotError):
+        art.parse_grade_block(",V1\nAlice,Superb\n", scale)
+
+
+def test_voter_notes_title_the_drawn_grade_ballots():
+    """A `#` comment can't title a transposed row, so `voter_notes:` does."""
+    assert art.grade_row_title("V4", "") == "Voter 4"
+    assert art.grade_row_title("Ines", "") == "Ines"
+    assert art.grade_row_title("V4", "A harsh grader") == "A harsh grader"
+
+
+def test_grade_ballot_alt_text_reads_the_words():
+    scale = art.grade_scale(GRADE_SCALE)
+    cast, rows, _ = art.parse_grade_block(GRADE_BLOCK, scale)
+    alt = art.alt_text(art.Ballot("Voter 3", cast, rows[2].scores, Path("."),
+                                  quoted=False, kind="grade", grades=tuple(scale)))
+    assert "Alice left ungraded (counts as To Reject)" in alt
+    assert "Bruno Poor" in alt
+
+
+def test_a_ranked_grade_method_gets_no_grade_ballot(tmp_path):
+    """The allowlist is the point: an unknown grade method draws nothing."""
+    case = tmp_path / "nope.yaml"
+    case.write_text(f'grade_method: Borda\ngrade_scale: "{GRADE_SCALE}"\n'
+                    f'grades: |-\n  ,V1\n  Alice,Good\n', encoding="utf-8")
+    with pytest.raises(art.CaseBallotError):
+        art.ballots_from_yaml(case)
+
+
+def _pages_showing_art():
+    """Every hand-authored `<!-- ballots: -->` block, as one blob of filled text.
+
+    The generated case page is where art normally lands, but a **grade** case has
+    no generated page at all — its `grades:` block is not an election YAML, so the
+    mirror-and-page pipeline never sees it. For those the lesson's ballot block is
+    the only reader-facing surface, and it is the one that has to be checked.
+    """
+    pages = _load("build_yaml_pages")
+    return "".join("".join(blocks.values())
+                   for blocks in pages.pages_with_ballot_blocks().values())
+
+
 def test_every_drawn_ballot_is_embedded_on_its_page():
     missing = []
+    on_lessons = _pages_showing_art()
     for png in _art_files():
         stem = re.sub(r"_ballot_\d+$", "", png.stem)
         case_dir = png.parent.parent
         page = case_dir / f"{case_dir.name}_pages" / f"{stem}.md"
-        if not page.exists() or png.name not in page.read_text(encoding="utf-8"):
-            missing.append(f"{png.relative_to(REPO_ROOT)} → {page.relative_to(REPO_ROOT)}")
+        if page.exists() and png.name in page.read_text(encoding="utf-8"):
+            continue
+        if png.name in on_lessons:
+            continue
+        missing.append(f"{png.relative_to(REPO_ROOT)} → {page.relative_to(REPO_ROOT)}")
     assert not missing, (
-        "ballot art exists but its case page doesn't show it:\n  "
+        "ballot art exists but no page shows it:\n  "
         + "\n  ".join(missing)
         + "\nRegenerate with: python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py"
     )

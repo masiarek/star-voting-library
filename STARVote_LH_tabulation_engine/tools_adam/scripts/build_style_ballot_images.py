@@ -60,9 +60,15 @@ class Ballot(NamedTuple):
     out_dir: Path
     quoted: bool = True  # gallery titles are shown in quotes; figures are not
     # Which piece of paper this is. "score" = the 0–5 STAR ballot (six bubbles a
-    # row); "approval" = the Yes/No double-bubble Approval ballot (two). They are
-    # different ballots, not two settings of one — hence separate renderers.
+    # row); "approval" = the Yes/No double-bubble Approval ballot (two); "grade"
+    # = the Majority Judgment grade ballot, one column per grade WORD. They are
+    # different ballots, not settings of one — hence separate renderers.
     kind: str = "score"
+    # The grade ballot's column labels, lowest first ("To Reject" … "Excellent").
+    # Only the grade ballot has these, and unlike the other two its scale is a
+    # property of the election rather than a constant — Balinski & Laraki's whole
+    # argument is that the *words* are the ballot, so they travel with it.
+    grades: tuple[str, ...] = ()
     # A *whole* ballot rather than a thumbnail: the seat count above the race
     # (technical specifications §3.c), the voter instructions above the grid
     # (§3.b), and the method explanation below it (§3.d). A style thumbnail is
@@ -256,6 +262,11 @@ SCORE_METHODS = {"star", "starr", "bloc_star", "star_pr", "score", "range",
 # ranked method — has no art at all: a ballot we can't draw beats a wrong one.
 APPROVAL_METHODS = {"approval", "approval_multi_winner", "approval_multiwinner",
                     "bloc_approval"}
+# The grade-ballot procedures — a `grades:` file rather than a `ballots:` one, and
+# a third piece of paper: columns of grade WORDS, no numerals at all. Keyed off
+# `grade_method:`, which is the key those files use.
+GRADE_METHODS = {"majorityjudgment", "majority_judgment", "majority_judgement",
+                 "mj", "range", "rangevoting", "range_voting"}
 MARKER_CHARS = set("-~&?%")
 WEIGHT_RE = re.compile(r"\s*(\d+)\s*[:xX×]\s*(.*)")  # "42: 5, 4" / "9x5" / "9×5"
 MAX_SCORE = 5
@@ -353,6 +364,97 @@ def row_title(index: int, weight: int, note: str) -> str:
     return f"{weight} voters" if weight > 1 else f"Voter {index}"
 
 
+def grade_scale(spec) -> list[str]:
+    """The grade columns, lowest first, from a `grade_scale:` string.
+
+    Mirrors `_scale()` in `pref_voting_tabulation_engine/grade_methods_report.py`
+    — the tool that *counts* these files — and adds the form that tool doesn't
+    need but a picture does: a pipe-separated list of words,
+    `"To Reject|Poor|Acceptable|Good|Very Good|Excellent"`. Numeric and letter
+    ranges come back as strings here because a column label is text either way;
+    the counting tool keeps them typed, because it has to do arithmetic.
+    """
+    spec = str(spec).strip()
+    if "|" in spec:
+        return [w.strip() for w in spec.split("|") if w.strip()]
+    lo, _, hi = spec.partition("-")
+    lo, hi = lo.strip(), hi.strip()
+    if lo.isdigit() and hi.isdigit():
+        return [str(n) for n in range(int(lo), int(hi) + 1)]
+    if len(lo) == 1 and len(hi) == 1 and lo.isalpha() and hi.isalpha():
+        return [chr(c) for c in range(ord(lo.upper()), ord(hi.upper()) + 1)]
+    raise CaseBallotError(
+        f"grade_scale {spec!r} must be '1-10', 'A-H', or 'Worst|…|Best'")
+
+
+def parse_grade_block(text: str, scale: list[str], notes: dict | None = None):
+    """(cast, [BallotRow, …]) from a `grades:` block — one row per VOTER.
+
+    The block is Felsenthal's table, which is transposed relative to a ballot: its
+    header names the voters and each later row is one candidate. A ballot is one
+    voter's paper, so this transposes it back. A blank cell stays blank in the
+    picture even though both grade procedures count it as the scale floor — the
+    same rule the 0–5 art follows, and the reason the truncation examples are
+    worth drawing at all.
+
+    `notes` is the case file's optional `voter_notes:` map; a voter named there
+    gets that as the title on their ballot, exactly as a `#` comment titles a
+    score ballot.
+    """
+    rows = [l for l in str(text).strip().splitlines() if l.strip()]
+    if len(rows) < 2:
+        raise CaseBallotError("need a voter header and at least one candidate row")
+    voters = [c.strip() for c in rows[0].split(",")][1:]
+    if not voters:
+        raise CaseBallotError("the header row names no voters")
+
+    cast, by_cand = [], []
+    index = {str(g).upper(): i for i, g in enumerate(scale)}
+    for line in rows[1:]:
+        cells = [c.strip() for c in line.split(",")]
+        cand, cells = cells[0], cells[1:]
+        if len(cells) != len(voters):
+            raise CaseBallotError(
+                f"row {cand!r} has {len(cells)} grades but the header names "
+                f"{len(voters)} voters")
+        marks = []
+        for cell in cells:
+            if not cell:
+                marks.append((None, ""))
+                continue
+            if cell.upper() not in index:
+                raise CaseBallotError(
+                    f"grade {cell!r} for {cand} is not on the "
+                    f"{scale[0]}…{scale[-1]} scale")
+            marks.append((index[cell.upper()], scale[index[cell.upper()]]))
+        cast.append(cand)
+        by_cand.append(marks)
+
+    notes = notes or {}
+    out = []
+    for v, voter in enumerate(voters):
+        out.append(BallotRow(
+            1,
+            [by_cand[c][v][0] for c in range(len(cast))],
+            str(notes.get(voter, "")).strip(),
+            [by_cand[c][v][1] for c in range(len(cast))],
+        ))
+    return cast, out, voters
+
+
+def grade_row_title(voter: str, note: str) -> str:
+    """What a drawn grade ballot calls itself: the author's note, else the voter.
+
+    `V1` is Felsenthal's column heading, not a name a reader recognises, so it is
+    spelled out; anything else is already a name and is left alone.
+    """
+    if note:
+        return (note if len(note) <= TITLE_MAX_CHARS
+                else note[:TITLE_MAX_CHARS - 1].rstrip() + "…")
+    m = re.match(r"^[Vv](\d+)$", voter.strip())
+    return f"Voter {m.group(1)}" if m else voter.strip()
+
+
 def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
     """[(slug, Ballot)] for a case file — one per ballot row, capped at `limit`."""
     try:
@@ -364,6 +466,8 @@ def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
     data = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
     block = _find_ballots(data)
     if block is None:
+        if isinstance(data, dict) and data.get("grades") is not None:
+            return _grade_ballots_from(yaml_path, data, limit)
         raise CaseBallotError("no `ballots:` block")
     # Allowlist, not a blocklist: each drawing IS a particular piece of paper, so
     # a method is drawn only when we know which paper its voters were handed —
@@ -388,6 +492,27 @@ def ballots_from_yaml(yaml_path: Path, limit: int = DEFAULT_LIMIT):
         (f"{stem}_ballot_{n}",
          Ballot(row_title(n, r.weight, r.note), cast, r.scores, out_dir,
                 quoted=False, kind=kind))
+        for n, r in enumerate(rows[:limit], start=1)
+    ], len(rows)
+
+
+def _grade_ballots_from(yaml_path: Path, data: dict, limit: int):
+    """[(slug, Ballot)] for a `grades:` case file — one ballot per voter."""
+    method = str(data.get("grade_method") or "").split("#")[0].strip().lower()
+    method = method.replace("-", "_").replace(" ", "_")
+    if method not in GRADE_METHODS:
+        raise CaseBallotError(
+            f"{method or 'this grade method'} is not a grade ballot this art "
+            f"knows how to draw")
+    scale = grade_scale(data.get("grade_scale", "1-10"))
+    cast, rows, voters = parse_grade_block(
+        data["grades"], scale, data.get("voter_notes"))
+    stem = yaml_path.stem
+    out_dir = yaml_path.parent / "img"
+    return [
+        (f"{stem}_ballot_{n}",
+         Ballot(grade_row_title(voters[n - 1], r.note), cast, r.scores, out_dir,
+                quoted=False, kind="grade", grades=tuple(scale)))
         for n, r in enumerate(rows[:limit], start=1)
     ], len(rows)
 
@@ -455,6 +580,14 @@ def alt_text(ballot: Ballot) -> str:
             for name, mark in zip(ballot.cast, ballot.scores)
         ]
         return f"A Yes/No Approval ballot — {ballot.title}: " + ", ".join(marks) + "."
+    if ballot.kind == "grade":
+        floor = ballot.grades[0] if ballot.grades else "the lowest grade"
+        marks = [
+            f"{name} {ballot.grades[i]}" if i is not None
+            else f"{name} left ungraded (counts as {floor})"
+            for name, i in zip(ballot.cast, ballot.scores)
+        ]
+        return (f"A grade ballot — {ballot.title}: " + ", ".join(marks) + ".")
     marks = [
         f"{name} {score}" if score is not None else f"{name} left blank (counts as 0)"
         for name, score in zip(ballot.cast, ballot.scores)
@@ -519,6 +652,49 @@ APPROVAL_INSTRUCTION = "Vote for ALL candidates you approve of."
 APPROVAL_INSTRUCTION_SIZE = 42
 
 
+# The grade ballot: one column per grade WORD. Wider than either of the others
+# and unavoidably so — six words need six words' room, which is why real Majority
+# Judgment ballots print landscape. Nothing here is a constant width: the scale
+# is per-election, so the columns are sized from the labels and the canvas from
+# the columns. The name gutter is tighter than the 0–5 grid's for the same reason
+# — every pixel spent left of the first column is a pixel the words don't get.
+GRADE_COL0_X = 560
+GRADE_NAME_X = 60
+GRADE_HDR_SIZE = 44
+GRADE_HDR_LINE_H = 54
+GRADE_INSTRUCTION_SIZE = 42
+GRADE_COL_MIN_DX = 190
+GRADE_COL_PAD = 26        # blank space either side of the widest label line
+
+
+def grade_label_lines(label: str) -> list[str]:
+    """A column heading, split onto two lines at its last space ("Very Good")."""
+    label = str(label)
+    if " " not in label:
+        return [label]
+    head, _, tail = label.rpartition(" ")
+    return [head, tail]
+
+
+def grade_col_dx(labels) -> int:
+    """Column spacing: wide enough for the widest heading line, at a floor."""
+    widest = max((len(line) for l in labels for line in grade_label_lines(l)),
+                 default=1)
+    return max(GRADE_COL_MIN_DX,
+               int(widest * GRADE_HDR_SIZE * TITLE_CHAR_W) + GRADE_COL_PAD)
+
+
+def grade_instruction(ballot: Ballot) -> str:
+    """The one printed line — and it names the convention that decides elections.
+
+    Under both grade procedures an ungraded candidate takes the bottom of the
+    scale, which is the entire mechanism of the truncation paradox. On a real
+    ballot that rule would be printed on the paper, so it is printed here.
+    """
+    floor = ballot.grades[0] if ballot.grades else "the lowest grade"
+    return f"Grade EVERY candidate. Ungraded counts as {floor}."
+
+
 def col_x(i: int) -> float:
     return COL0_X + i * COL_DX
 
@@ -527,8 +703,19 @@ def approval_col_x(i: int) -> float:
     return APPROVAL_COL0_X + i * APPROVAL_COL_DX
 
 
+def grade_col_x(i: int, dx: int) -> float:
+    return GRADE_COL0_X + i * dx
+
+
+def grade_width(ballot: Ballot) -> int:
+    dx = grade_col_dx(ballot.grades)
+    return int(grade_col_x(len(ballot.grades) - 1, dx) + dx / 2)
+
+
 def canvas_width(ballot: Ballot) -> int:
-    return APPROVAL_W if ballot.kind == "approval" else W
+    if ballot.kind == "approval":
+        return APPROVAL_W
+    return grade_width(ballot) if ballot.kind == "grade" else W
 
 
 def title_font_size(shown: str, width: int = W) -> int:
@@ -601,6 +788,8 @@ def star_path(cx: float, cy: float, r: float) -> str:
 def render_svg(ballot: Ballot) -> str:
     if ballot.kind == "approval":
         return render_approval_svg(ballot)
+    if ballot.kind == "grade":
+        return render_grade_svg(ballot)
     title, cast, scores = ballot.title, ballot.cast, ballot.scores
     H = height_for(ballot)
     dy = top_block_h(ballot)
@@ -758,6 +947,67 @@ def render_approval_svg(ballot: Ballot) -> str:
     return "\n".join(out)
 
 
+def render_grade_svg(ballot: Ballot) -> str:
+    """The grade ballot: a column per grade word, one filled bubble per row."""
+    title, cast, marks = ballot.title, ballot.cast, ballot.scores
+    width = grade_width(ballot)
+    dx = grade_col_dx(ballot.grades)
+    H = height_for(ballot)
+    plain = f'"{title}"' if ballot.quoted else title
+    shown = f"&quot;{title}&quot;" if ballot.quoted else title
+    out: list[str] = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {H}" '
+        f'width="{width}" height="{H}">',
+        f'<rect width="{width}" height="{H}" fill="#FFFFFF"/>',
+        f'<text x="{TITLE_X}" y="{TITLE_Y}" font-family="{FONT}" '
+        f'font-size="{title_font_size(plain, width)}" font-weight="bold" '
+        f'fill="{RUST}">{shown}</text>',
+        f'<text x="{TITLE_X}" y="{HDR_WORST_Y}" font-family="{FONT}" '
+        f'font-size="{GRADE_INSTRUCTION_SIZE}" font-weight="bold" fill="{INK}">'
+        f'{esc(grade_instruction(ballot))}</text>',
+    ]
+
+    # Headings bottom-align on one baseline, so a one-word grade sits level with
+    # the second line of a two-word one instead of floating above the row.
+    for i, label in enumerate(ballot.grades):
+        lines = grade_label_lines(label)
+        for n, line in enumerate(lines):
+            y = STAR_ROW_Y - (len(lines) - 1 - n) * GRADE_HDR_LINE_H
+            out.append(
+                f'<text x="{grade_col_x(i, dx)}" y="{y}" font-family="{FONT}" '
+                f'font-size="{GRADE_HDR_SIZE}" font-weight="bold" fill="{INK}" '
+                f'text-anchor="middle">{esc(line)}</text>'
+            )
+
+    for r, name in enumerate(cast):
+        top = GRID_TOP + r * ROW_H
+        mid = top + ROW_H / 2
+        if r % 2 == 0:
+            out.append(f'<rect x="0" y="{top}" width="{width}" height="{ROW_H}" fill="{ROW_TINT}"/>')
+        out.append(
+            f'<line x1="0" y1="{top}" x2="{width}" y2="{top}" stroke="{RULE}" stroke-width="7"/>'
+        )
+        out.append(
+            f'<text x="{GRADE_NAME_X}" y="{mid + 22}" font-family="{FONT}" font-size="62" '
+            f'font-weight="bold" fill="{INK}">{esc(name)}</text>'
+        )
+        for i in range(len(ballot.grades)):
+            cx = grade_col_x(i, dx)
+            if marks[r] is not None and i == marks[r]:
+                out.append(f'<ellipse cx="{cx}" cy="{mid}" rx="42" ry="36" fill="{INK}"/>')
+            else:
+                out.append(
+                    f'<ellipse cx="{cx}" cy="{mid}" rx="42" ry="36" fill="#FFFFFF" '
+                    f'stroke="{BUBBLE_STROKE}" stroke-width="5"/>'
+                )
+    bottom = GRID_TOP + len(cast) * ROW_H
+    out.append(
+        f'<line x1="0" y1="{bottom}" x2="{width}" y2="{bottom}" stroke="{RULE}" stroke-width="7"/>'
+    )
+    out.append("</svg>")
+    return "\n".join(out)
+
+
 # Heavy grotesque, to match the slide art the original eight were captured from.
 FONT_CANDIDATES = [
     "/System/Library/Fonts/Supplemental/Arial Black.ttf",
@@ -784,7 +1034,8 @@ def _font(size: int, body: bool = False):
     return ImageFont.load_default(size)
 
 
-def _save_png(img, width: int, height: int, png_path: Path) -> None:
+def _save_png(img, width: int, height: int, png_path: Path,
+              max_w: int = 0) -> None:
     """Downscale for antialiasing, then quantize, then write.
 
     This is flat art in a handful of colors, and the LANCZOS pass is the only
@@ -795,7 +1046,7 @@ def _save_png(img, width: int, height: int, png_path: Path) -> None:
     """
     from PIL import Image
 
-    out_w = min(width, PNG_MAX_W)
+    out_w = min(width, max_w or PNG_MAX_W)
     small = img.resize((out_w, round(height * out_w / width)), Image.LANCZOS)
     small.convert("P", palette=Image.ADAPTIVE, colors=64).save(png_path, optimize=True)
 
@@ -806,6 +1057,8 @@ def rasterize(ballot: Ballot, png_path: Path) -> None:
 
     if ballot.kind == "approval":
         return rasterize_approval(ballot, png_path)
+    if ballot.kind == "grade":
+        return rasterize_grade(ballot, png_path)
 
     def s(v: float) -> float:
         return v * SS
@@ -912,6 +1165,61 @@ def rasterize_approval(ballot: Ballot, png_path: Path) -> None:
     bottom = GRID_TOP + len(cast) * ROW_H
     d.line([0, s(bottom), s(width), s(bottom)], fill=RULE, width=int(s(7)))
     _save_png(img, width, H, png_path)
+
+
+# Six grade words is a much wider drawing than six numerals, and a page shows it
+# at roughly twice the width to compensate — so it is saved bigger too, or the
+# headings that ARE the ballot would land at a handful of pixels each.
+GRADE_PNG_MAX_W = 1400
+
+
+def rasterize_grade(ballot: Ballot, png_path: Path) -> None:
+    """The grade ballot as a bitmap — mirrors render_grade_svg exactly."""
+    from PIL import Image, ImageDraw
+
+    def s(v: float) -> float:
+        return v * SS
+
+    title, cast, marks = ballot.title, ballot.cast, ballot.scores
+    width = grade_width(ballot)
+    dx = grade_col_dx(ballot.grades)
+    H = height_for(ballot)
+    img = Image.new("RGB", (width * SS, H * SS), "#FFFFFF")
+    d = ImageDraw.Draw(img)
+    f_instr = _font(GRADE_INSTRUCTION_SIZE * SS)
+    f_hdr, f_name = _font(GRADE_HDR_SIZE * SS), _font(62 * SS)
+
+    shown = f'"{title}"' if ballot.quoted else title
+    f_title = _font(title_font_size(shown, width) * SS)
+    d.text((s(TITLE_X), s(TITLE_Y)), shown, font=f_title, fill=RUST, anchor="ls")
+    d.text((s(TITLE_X), s(HDR_WORST_Y)), grade_instruction(ballot),
+           font=f_instr, fill=INK, anchor="ls")
+
+    for i, label in enumerate(ballot.grades):
+        lines = grade_label_lines(label)
+        for n, line in enumerate(lines):
+            y = STAR_ROW_Y - (len(lines) - 1 - n) * GRADE_HDR_LINE_H
+            d.text((s(grade_col_x(i, dx)), s(y)), line,
+                   font=f_hdr, fill=INK, anchor="ms")
+
+    for r, name in enumerate(cast):
+        top = GRID_TOP + r * ROW_H
+        mid = top + ROW_H / 2
+        if r % 2 == 0:
+            d.rectangle([0, s(top), s(width), s(top + ROW_H)], fill=ROW_TINT)
+        d.line([0, s(top), s(width), s(top)], fill=RULE, width=int(s(7)))
+        d.text((s(GRADE_NAME_X), s(mid + 22)), name, font=f_name, fill=INK, anchor="ls")
+        for i in range(len(ballot.grades)):
+            cx = grade_col_x(i, dx)
+            box = [s(cx - 42), s(mid - 36), s(cx + 42), s(mid + 36)]
+            if marks[r] is not None and i == marks[r]:
+                d.ellipse(box, fill=INK)
+            else:
+                d.ellipse(box, fill="#FFFFFF", outline=BUBBLE_STROKE, width=int(s(5)))
+
+    bottom = GRID_TOP + len(cast) * ROW_H
+    d.line([0, s(bottom), s(width), s(bottom)], fill=RULE, width=int(s(7)))
+    _save_png(img, width, H, png_path, max_w=GRADE_PNG_MAX_W)
 
 
 def _write(slug: str, ballot: Ballot, want_png: bool) -> None:

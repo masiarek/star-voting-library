@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2298 844" width="2298" height="844">
+<rect width="2298" height="844" fill="#FFFFFF"/>
+<text x="30" y="78" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="66" font-weight="bold" fill="#C0504D">Left Alice ungraded — that counts as To Reject</text>
+<text x="30" y="168" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#000000">Grade EVERY candidate. Ungraded counts as To Reject.</text>
+<text x="560" y="238" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">To</text>
+<text x="560" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Reject</text>
+<text x="876" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Poor</text>
+<text x="1192" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Acceptable</text>
+<text x="1508" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Good</text>
+<text x="1824" y="238" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Very</text>
+<text x="1824" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Good</text>
+<text x="2140" y="292" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="44" font-weight="bold" fill="#000000" text-anchor="middle">Excellent</text>
+<rect x="0" y="352" width="2298" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="352" x2="2298" y2="352" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="453.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Alice</text>
+<ellipse cx="560" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="876" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1192" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1508" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1824" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="2140" cy="431.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<line x1="0" y1="510" x2="2298" y2="510" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="611.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Bruno</text>
+<ellipse cx="560" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="876" cy="589.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1192" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1508" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1824" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="2140" cy="589.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<rect x="0" y="668" width="2298" height="158" fill="#DCE6F1"/>
+<line x1="0" y1="668" x2="2298" y2="668" stroke="#95B3D7" stroke-width="7"/>
+<text x="60" y="769.0" font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="62" font-weight="bold" fill="#000000">Cleo</text>
+<ellipse cx="560" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="876" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1192" cy="747.0" rx="42" ry="36" fill="#000000"/>
+<ellipse cx="1508" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="1824" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<ellipse cx="2140" cy="747.0" rx="42" ry="36" fill="#FFFFFF" stroke="#595959" stroke-width="5"/>
+<line x1="0" y1="826" x2="2298" y2="826" stroke="#95B3D7" stroke-width="7"/>
+</svg>

@@ -91,6 +91,13 @@ def _cases():
             expected = data.get("expected_winners")
             if not isinstance(expected, list) or not expected:
                 continue
+            # A grade-ballot file (`grades:` instead of `ballots:`) is not an LH
+            # election at all — its grades are words or a 1-10 scale, and no
+            # `voting_method:` key means _find_method() would default it to STAR
+            # and hand the engine a file it cannot read. Its answer key is checked
+            # by test_grade_methods.py, against the tool that actually counts it.
+            if data.get("grades") is not None and data.get("ballots") is None:
+                continue
             method = (_find_method(data) or "STAR").strip().lower()
             seats = data.get("num_winners", 1)
             # Range / Score is tabulated by the separate range engine

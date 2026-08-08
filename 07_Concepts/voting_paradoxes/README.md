@@ -72,6 +72,8 @@ Ostrogorski's paradox, Anscombe's paradox, the paradox of multiple elections, de
 | [successive_elimination.md](successive_elimination.md) | `successive_elimination_report.py` | `--agenda` (path independence), `--tiebreak`, `--drop` |
 | [range_voting.md](range_voting.md) · [majority_judgment.md](majority_judgment.md) | `grade_methods_report.py` | `--ungrade` (truncation), `--abstain` (no-show) |
 
+**These pages are the case *against* a method — start with the method.** Each of the two grade procedures has a front door that shows its ballot, its count worked on a small election, and its pros and cons: [Range / Score Voting](../../06_Other/Range/concepts/range_voting.md) and [Majority Judgment](../../06_Other/Majority_Judgment/concepts/majority_judgment.md). Landing on a paradox first is landing in the middle of an argument.
+
 **Every example on those pages is a case file**, ballots or grades in YAML rather than in a parenthetical. All 27 counts reproduce Felsenthal's published results, with three documented exceptions that the pages state rather than smooth over: **Minimax Ex.31**'s winner depends on a truncation convention; **successive elimination Ex.10**'s amalgamated round 1 is a 2:2 tie, not the win the page used to assert, so its reinforcement failure holds only under one tie-break reading; and **MJ Ex.26** has no case file at all, because its grade tables live in the source and were never reproduced here.
 
 The [summability demo](../../method_comparisons/summability_demo/README.md) is the operational cousin of reinforcement (district-by-district counting) and is cross-linked from [multiple_districts.md](multiple_districts.md).

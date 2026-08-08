@@ -1,5 +1,7 @@
 # Majority Judgment's paradoxes — the median misbehaves too (§A9 worked)
 
+> **New to Majority Judgment? Start with the method itself → [Majority Judgment](../../06_Other/Majority_Judgment/concepts/majority_judgment.md).** That page shows the grade ballot (with pictures of how voters mark it), the count worked on a five-voter election, the Balinski–Laraki tie-break, and the pros and cons. *This* page assumes all that and goes straight to where the median misbehaves.
+
 *The **Majority Judgment (MJ)** procedure (Balinski & Laraki): voters grade every candidate on a common ordinal scale; the highest **median** grade wins, with an iterative tie-breaking algorithm when medians match.* Felsenthal lists MJ as vulnerable to the Condorcet Winner, Condorcet Loser, Absolute Winner, Absolute Loser, Truncation, Reinforcement, No-Show, and Twin paradoxes — the longest list of any procedure in the appendix except successive elimination. Like Range Voting, most of them need only **two candidates**. MJ has no tabulator on BetterVoting or in the LH engine, so this repo counts it with [`grade_methods_report.py`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/grade_methods_report.py), which computes the median and the Balinski–Laraki tie-break from scratch and cross-checks both against `pref_voting` on every run. In each table below, **later letters are higher grades**.
 
 ```bash

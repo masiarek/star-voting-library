@@ -51,15 +51,30 @@ import yaml
 
 
 def _scale(spec):
-    """'1-10' -> [1..10] as ints; 'A-H' -> ['A'..'H']. Lowest first, highest last."""
+    """'1-10' -> [1..10] as ints; 'A-H' -> ['A'..'H']; a pipe-separated list ->
+    those words. Lowest first, highest last.
+
+    The word form is what Majority Judgment actually asks for. Balinski & Laraki's
+    argument is not "grade on six levels" but that the levels are a COMMON
+    LANGUAGE — Excellent, Very Good, Good, Acceptable, Poor, To Reject — whose
+    shared meaning is what supplies the interpersonal comparability a numeric
+    score can't. Felsenthal's examples happen to use letters, so letters were all
+    this tool needed at first; a file that teaches the method wants the words.
+    """
     spec = str(spec).strip()
+    if "|" in spec:
+        words = [w.strip() for w in spec.split("|") if w.strip()]
+        if len(words) < 2:
+            raise SystemExit(f"grade_scale {spec!r} needs at least two grades")
+        return words
     lo, _, hi = spec.partition("-")
     lo, hi = lo.strip(), hi.strip()
     if lo.isdigit() and hi.isdigit():
         return list(range(int(lo), int(hi) + 1))
     if len(lo) == 1 and len(hi) == 1 and lo.isalpha() and hi.isalpha():
         return [chr(c) for c in range(ord(lo.upper()), ord(hi.upper()) + 1)]
-    raise SystemExit(f"grade_scale {spec!r} must look like '1-10' or 'A-H'")
+    raise SystemExit(f"grade_scale {spec!r} must look like '1-10', 'A-H', "
+                     f"or 'To Reject|Poor|…|Excellent'")
 
 
 def parse_grade_file(path, ungrade=(), abstain=()):
@@ -109,7 +124,11 @@ def parse_grade_file(path, ungrade=(), abstain=()):
                 row[v] = scale[0]
                 filled.append((cand, v))
             else:
-                val = int(cell) if cell.lstrip("-").isdigit() else cell.upper()
+                # Matched case-insensitively and stored as the scale spells it, so
+                # "very good" and "Very Good" are the same grade and the report
+                # prints one of them.
+                canon = {str(g).upper(): g for g in scale}
+                val = int(cell) if cell.lstrip("-").isdigit() else canon.get(cell.upper())
                 if val not in scale:
                     raise SystemExit(f"{path}: grade {cell!r} for {cand}/{v} is not on "
                                      f"the {data.get('grade_scale')} scale")
@@ -164,17 +183,21 @@ def report(path, ungrade=(), abstain=()):
 
     # --- The table, as the source prints it. ---
     w = max(len(c) for c in cands) + 2
+    # Column width follows the widest thing that goes in it — "Very Good" is a
+    # grade, not an overflow.
+    gw = max(6, max(len(str(g)) for g in scale) + 2, max(len(v) for v in voters) + 2)
+    mw = max(8, max(len(str(g)) for g in scale) + 2)
     out.append("Grades:")
-    out.append("   " + "".join([f"{'':<{w}}"] + [f"{v:>6}" for v in voters])
-               + f"{'mean':>9}{'median':>8}")
+    out.append("   " + "".join([f"{'':<{w}}"] + [f"{v:>{gw}}" for v in voters])
+               + f"{'mean':>9}{'median':>{mw}}")
     for c in cands:
         row = [grades[c][v] for v in voters]
         mean = statistics.mean(rank[g] for g in row) if isinstance(scale[0], str) \
             else statistics.mean(row)
         med = sorted(row, key=lambda g: rank[g])[(n - 1) // 2]
         shown = f"{mean:.3f}" if not isinstance(scale[0], str) else f"({mean:.2f})"
-        out.append("   " + "".join([f"{c:<{w}}"] + [f"{g:>6}" for g in row])
-                   + f"{shown:>9}{str(med):>8}")
+        out.append("   " + "".join([f"{c:<{w}}"] + [f"{str(g):>{gw}}" for g in row])
+                   + f"{shown:>9}{str(med):>{mw}}")
     out.append("")
     if filled:
         cells = ", ".join(f"{c}/{v}" for c, v in filled)
@@ -189,7 +212,7 @@ def report(path, ungrade=(), abstain=()):
     rv = sorted(c for c in cands if means[c] == rv_best)
     out.append(f"Winner — Range Voting (highest mean): {' / '.join(rv)}")
     if isinstance(scale[0], str):
-        out.append("   (letters scored by position on the scale, A=0)")
+        out.append(f"   (grades scored by position on the scale, {scale[0]}=0)")
     out.append("")
 
     # --- Majority Judgment: the median, then Balinski-Laraki. ---

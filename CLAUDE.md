@@ -492,8 +492,9 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   - **Which cases get pictures is editorial; keeping them current is not.** `regen_all.py` runs `--refresh`, which redraws (and prunes) art **only for cases that already have some** — so edit a `ballots:` block and the pictures follow, but the other ~300 cases stay text. Worth drawing for the small 101 rungs (2–3 candidates, a handful of ballots) and the ballot-style sets; pointless for a 100-ballot field.
   - **Blanks and markers (`-` `~` `&` `?` `%`) draw as no mark at all.** The engine counts them 0; the voter marked nothing. That gap is the whole reason the abstention cases have pictures. On an Approval ballot the same rule reads as: `1` fills **Yes**, `0` fills **No** (a real 0 *is* a No on a double-bubble ballot), a blank fills neither. Ranked cases are refused outright.
   - **The title on each ballot is that row's `#` comment** (else "Voter N" / "N voters"), and the alt text is generated from the same parse — so a good trailing comment in the YAML *is* the figure caption. Long titles shrink to fit; they don't wrap. Adding comments to a case's ballot rows is a real improvement — but the `_tabulated` mirror echoes the YAML, so **re-run the engine on that file** afterwards or `test_tabulated_mirrors_current.py` fails.
-  - **Two ballots are drawn, and only two** — the 0–5 STAR grid (`SCORE_METHODS`: STAR, Bloc STAR, the PR variants, Score/Range) and, since 2026-08-04, the **Approval Yes/No double bubble** (`APPROVAL_METHODS`, single- *and* multi-winner: bloc changes the count, not the paper). They are separate renderers, not one drawing with a flag, because they are separate pieces of paper. Everything else — Plurality, every ranked method — is refused rather than approximated; both sets are allowlists on purpose, so a new method defaults to no picture, not to a wrong one. An Approval file holding a real score (a `3`) is refused too: `parse_ballot_block(..., max_score=1)` won't round it to a bubble.
-  Covered by `tests/test_ballot_art.py` (parser, the method allowlist, and "every drawn ballot appears on its page").
+  - **Three ballots are drawn, and only three** — the 0–5 STAR grid (`SCORE_METHODS`: STAR, Bloc STAR, the PR variants, Score/Range); since 2026-08-04 the **Approval Yes/No double bubble** (`APPROVAL_METHODS`, single- *and* multi-winner: bloc changes the count, not the paper); and since 2026-08-07 the **grade ballot** (`GRADE_METHODS`), a column per grade *word* for Majority Judgment. They are separate renderers, not one drawing with a flag, because they are separate pieces of paper. Everything else — Plurality, every ranked method — is refused rather than approximated; all three sets are allowlists on purpose, so a new method defaults to no picture, not to a wrong one. An Approval file holding a real score (a `3`) is refused too: `parse_ballot_block(..., max_score=1)` won't round it to a bubble.
+  - **The grade ballot is drawn from a `grades:` file, which is transposed** — its header names the voters and each row is a *candidate*, so `parse_grade_block()` transposes it back into one ballot per voter. Three consequences: a voter's caption cannot ride on a `#` comment (use the optional **`voter_notes:`** map, read only by the drawer); the scale travels *with* the ballot rather than being a constant, since a grade ballot's columns are the election's own words (`grade_scale: "To Reject|Poor|…|Excellent"`, the pipe form both the drawer and `grade_methods_report.py` accept alongside `1-10` / `A-H`); and its width is computed from the labels, so a page shows it at roughly **twice** the score ballot's width or the headings — which *are* the ballot — would be illegible. A grade case has **no generated page**, so its `<!-- ballots: -->` block on a hand-authored lesson is the only place a reader ever sees the art.
+  Covered by `tests/test_ballot_art.py` (parser, the method allowlist, and "every drawn ballot appears on *a* page" — the generated one, or a lesson's block for the grade cases that have no generated page).
 - **A hand-authored page shows ballot art with a `<!-- ballots:<stem> -->` block.** The generated page's table can't be pulled in with `--8<--`: its `<img>` paths are relative to `cases/cases_pages/`, and a snippet is pasted verbatim, so every picture would 404 from a page at a different depth. Instead the lesson marks the spot and `build_yaml_pages.py` fills it, with paths relative to *that* page:
 
   ```
@@ -649,7 +650,18 @@ reproduce loop is in the **`bettervoting` skill**.
   `check_descriptions` (both gate on `ballots`) and means no `_tabulated`
   mirror and no generated page. Their counts live on the concept pages.
   Rescaling to 0–5 to make them engine-runnable would change the published
-  numbers, which is why it wasn't done.
+  numbers, which is why it wasn't done. **A grade file's scale may be words**
+  (`grade_scale: "To Reject|Poor|Acceptable|Good|Very Good|Excellent"`), which is
+  what Majority Judgment actually asks for — B&L's claim is not "six levels" but
+  a shared *common language*, so the method's own front door
+  (`06_Other/Majority_Judgment/`) uses it and its ballots are drawn. **Two
+  published tie-breaks, not one:** this tool implements the *iterative* rule
+  (strip a shared median, recompute, repeat); `pref_voting` implements the
+  **majority gauge** (share above the median vs share below), and on a profile
+  where both tied candidates have more detractors than supporters at the median
+  the gauge as implemented compares only the losing shares and returns a **tie**
+  where the iteration separates them — an observed DISAGREE, not a bug in either.
+  Say which reading a number came from.
 - `06_Other/RCV_IRV/RCV_IRV_tabulation_engine/rcv_irv_tabulation.py` — vendored pyrankvote; reads
   ranked (`A>C>B`) or score ballots.
 - `06_Other/abcvoting_tabulation_engine/abc_tabulation.py` — multi-winner Approval (ABC)

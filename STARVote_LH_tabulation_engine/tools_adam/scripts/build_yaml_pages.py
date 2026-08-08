@@ -196,7 +196,13 @@ def _esc_attr(text):
 # auto table layout hands the column whatever the score columns don't want. The
 # `min-width` is what keeps the ballot legible; the table scrolls inside its own
 # container instead. Wider casts get a smaller picture so the table still fits.
-def _art_width(n_cast):
+def _art_width(n_cast, kind="score"):
+    # A grade ballot's columns are WORDS ("Acceptable", "Very Good"), so the same
+    # drawing is roughly half again as wide as a row of numerals — shown at the
+    # score ballot's width its headings would land at a few pixels each, and the
+    # headings are the ballot. It gets about twice the room; the table scrolls.
+    if kind == "grade":
+        return 640 if n_cast <= 3 else 520
     if n_cast <= 3:
         return 330
     return 260 if n_cast <= 6 else 220
@@ -207,7 +213,27 @@ def _art_width(n_cast):
 MAX_CANDIDATE_COLUMNS = 6
 
 
-def _ballot_art(yaml_path, ballots_text, page_dir, kind="score"):
+def _grade_art_args(yaml_path, data, page_dir):
+    """`_ballot_art` arguments for a `grades:` case file, or None.
+
+    A grade file is not an election YAML — no `ballots:` block, no mirror, no
+    generated page — but it is still a ballot somebody marked, and the transposed
+    table it stores (a row per candidate) is exactly what a beginner cannot read.
+    So the art comes from the same place it does for every other case, and this
+    turns the file into the (cast, rows) shape the table builder wants.
+    """
+    try:
+        scale = ballot_art.grade_scale(data.get("grade_scale", "1-10"))
+        cast, rows, voters = ballot_art.parse_grade_block(
+            data["grades"], scale, data.get("voter_notes"))
+    except (ballot_art.CaseBallotError, KeyError, AttributeError):
+        return None
+    titles = [ballot_art.grade_row_title(v, r.note) for v, r in zip(voters, rows)]
+    return dict(parsed=(cast, rows), kind="grade", grades=tuple(scale), titles=titles)
+
+
+def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
+                parsed=None, grades=(), titles=None):
     """(caption, table lines, text lead-in) for this case's art, or None.
 
     The table is the point: one row per ballot, the marked-up picture beside the
@@ -215,8 +241,11 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score"):
     read a filled bubble straight across into its column instead of being asked
     to hold the CSV and the picture in their head at once.
 
-    `kind` picks which ballot was drawn ("score" or "approval") so the caption
-    and the alt text describe the paper the voter actually held.
+    `kind` picks which ballot was drawn ("score", "approval" or "grade") so the
+    caption and the alt text describe the paper the voter actually held. A grade
+    case arrives already `parsed` (its block is transposed, so the parser is a
+    different one) and carries its `grades` scale and per-voter `titles`, which a
+    `#` comment can't supply on that layout.
     """
     stem = os.path.splitext(os.path.basename(yaml_path))[0]
     img_dir = os.path.join(os.path.dirname(yaml_path), "img")
@@ -229,15 +258,18 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score"):
         return None
     found.sort()
 
-    try:
-        cast, rows = ballot_art.parse_ballot_block(ballots_text)
-    except ballot_art.CaseBallotError:
-        return None                  # art we can't line up with the numbers
+    if parsed is not None:
+        cast, rows = parsed
+    else:
+        try:
+            cast, rows = ballot_art.parse_ballot_block(ballots_text)
+        except ballot_art.CaseBallotError:
+            return None              # art we can't line up with the numbers
 
     weighted = any(r.weight > 1 for r in rows)
     by_candidate = len(cast) <= MAX_CANDIDATE_COLUMNS
-    width = _art_width(len(cast))
-    spill = "Approvals" if kind == "approval" else "Scores"
+    width = _art_width(len(cast), kind)
+    spill = {"approval": "Approvals", "grade": "Grades"}.get(kind, "Scores")
     header = (["Ballot as marked"] + (["Voters"] if weighted else [])
               + (list(cast) if by_candidate else [f"{spill} ({', '.join(cast)})"]))
     align = [":--"] + [":--:"] * (len(header) - 1)
@@ -246,9 +278,11 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score"):
         if not 1 <= n <= len(rows):
             continue
         row = rows[n - 1]
+        title = (titles[n - 1] if titles
+                 else ballot_art.row_title(n, row.weight, row.note))
         alt = ballot_art.alt_text(ballot_art.Ballot(
-            ballot_art.row_title(n, row.weight, row.note), cast, row.scores,
-            img_dir, quoted=False, kind=kind))
+            title, cast, row.scores, img_dir, quoted=False, kind=kind,
+            grades=tuple(grades)))
         src = os.path.relpath(path, page_dir).replace(os.sep, "/")
         img = (f'<img src="{src}" width="{width}" style="min-width:{width}px" '
                f'alt="{_esc_attr(alt)}">')
@@ -269,6 +303,8 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score"):
         lead = "Every ballot in the file, as text:"
     caption += (" — a filled **Yes** is a `1` in that candidate's column, a filled "
                 "**No** a `0`:" if kind == "approval" else
+                " — the filled bubble is the grade given, and the grade is the "
+                "word in its column:" if kind == "grade" else
                 " — the filled bubble is the score given, and the score is the "
                 "number in its column:")
     return caption, lines, lead
@@ -981,6 +1017,13 @@ def ballot_blocks_for(page_path, text=None):
                 kind = _ballot_kind(ballots_text,
                                     _norm_method(_find_first(data, ["voting_method"])))
                 art = _ballot_art(src, ballots_text, page_dir, kind)
+            elif isinstance(data, dict) and data.get("grades") is not None:
+                # A grade-ballot file. It gets no generated page of its own, so
+                # this block is the ONLY place its ballots are ever drawn for a
+                # reader — which makes it the mechanism that matters here.
+                kwargs = _grade_art_args(src, data, page_dir)
+                if kwargs:
+                    art = _ballot_art(src, "", page_dir, **kwargs)
             if art:
                 caption, table, _lead = art
                 body = "\n".join([caption, "", *table]) + "\n"
