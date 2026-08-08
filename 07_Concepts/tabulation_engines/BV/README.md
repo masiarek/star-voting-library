@@ -16,6 +16,8 @@ The matching **text** report — the same election counted by Larry Hastings' `s
 
 **Website / UI testing backlog:** [BV website TO-DO](BV_website_TODO.md) — hands-on tasks to test or learn on the live app (e.g. entering **district** data to BV-back the summability demo).
 
+**Start here if you're working on BetterVoting's help site:** [Organizing docs.bettervoting.com — an IA proposal](bv_docs_information_architecture.md) — what the published site has (7 user pages) versus what the Google-Docs corpus has (60+), the four competitor help sites compared, a proposed nav, why the BPML sheet is the right backlog and the wrong navigation, and a publishing order. Its companion finding: [What "test votes" means in draft state](bv_draft_state_test_votes.md) — draft *is* BetterVoting's test mode, and it skips the authentication, one-vote-per-voter, and editable-ballot checks that a test is supposed to rehearse.
+
 **Start here if you're wondering whether an election was a "demo":** [BetterVoting's six voter-authentication modes](bv_voter_authentication_modes.md) — there is no demo flag; it's derived from three settings, only one of the six modes is genuinely unlimited, and the mode decides whether turnout, quorum and delivery reporting exist at all.
 
 **Deeper BV internals** (reference docs, moved here from the repo root):
