@@ -697,7 +697,7 @@ def dry_run(spec):
     Everything about a BV election is permanent: the title, the race titles, the
     description (and therefore the backlink URL inside it — BV2249 shipped a 404
     that can never be corrected), and the candidate list. This prints all of them,
-    resolves the description's "Full lesson & tabulation:" URL, and reports the
+    resolves the description's "[Full lesson & tabulation](…)" URL, and reports the
     ballot count, so the irreversible step is the SECOND thing you do, not the
     first. (An offline check existed early on and was removed in the 2026-07
     simplification; restored deliberately — a dry run costs nothing and the
@@ -743,13 +743,25 @@ def dry_run(spec):
         print(f"      {line}")
     if len(textwrap.wrap(desc, 88)) > 4:
         print("      …")
-    # The one permanent mistake a dry run can actually catch: a backlink that 404s.
-    m = re.search(r"https?://\S+", desc[desc.rfind("Full lesson"):]) if "Full lesson" in desc else None
+    # The two permanent mistakes a dry run can actually catch: a backlink that 404s,
+    # and a backlink that never becomes a link at all.
+    #
+    # House form is a MARKDOWN link. BetterVoting renders election and race
+    # descriptions through formatMarkdown() (packages/shared/src/utils/formatMarkdown.ts),
+    # whose only link rule is /\[([^\]]*?)\]\(([^)]*?)\)/ — it linkifies [text](url) and
+    # NOTHING else. There is no bare-URL autolinker, so a description ending
+    # "Full lesson & tabulation: https://…" ships as plain, unclickable grey text that
+    # the reader has to copy-paste, permanently. 65 of the repo's frozen exports are in
+    # that boat and cannot be fixed. The bare form is still ACCEPTED here so an older
+    # spec keeps its 404 check, but it warns.
+    md = re.search(r"\[Full lesson & tabulation\]\((https?://[^)\s]+)\)", desc)
+    bare = re.search(r"Full lesson & tabulation:\s*(https?://\S+)", desc)
+    m = md or bare
     if not m:
-        print("  ⚠ description has no 'Full lesson & tabulation: <url>' backlink — house "
+        print("  ⚠ description has no '[Full lesson & tabulation](<url>)' backlink — house "
               "rule; BV descriptions can NEVER be edited, so add it before creating.")
     else:
-        url = m.group(0).rstrip(").,")
+        url = m.group(1).rstrip(").,")
         try:
             with urllib.request.urlopen(url, timeout=10) as r:
                 code = r.status
@@ -759,6 +771,11 @@ def dry_run(spec):
             code = f"unreachable ({e.__class__.__name__})"
         good = code == 200
         print(f"  backlink        : {'✓' if good else '⚠'} HTTP {code}  {url}")
+        if not md:
+            print("      ⚠ that backlink is a BARE URL, so BetterVoting will render it as "
+                  "plain text — it linkifies [text](url) and nothing else. Rewrite it as "
+                  "[Full lesson & tabulation](<url>) BEFORE minting; descriptions are "
+                  "permanent, so an unclickable backlink stays unclickable.")
         if not good:
             print("      ^ fix this BEFORE creating — the description is permanent and "
                   "the API offers no edit path (this is exactly how BV2249 got a "

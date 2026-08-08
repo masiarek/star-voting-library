@@ -62,7 +62,17 @@ you need not hoard every spec here.
 
 # DESCRIPTION BACKLINK — get the URL right the FIRST time; BV descriptions are
 # PERMANENT and cannot be edited via the API. Every description must end with
-#   "Full lesson & tabulation: https://masiarek.github.io/star-voting-library/<path>.html"
+#   "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/<path>.html)"
+# WRITE IT AS A MARKDOWN LINK — the brackets are the whole point (found 2026-08-08).
+# BetterVoting renders election and race descriptions through formatMarkdown()
+# (packages/shared/src/utils/formatMarkdown.ts), whose only link rule is
+# /\[([^\]]*?)\]\(([^)]*?)\)/ — [text](url) becomes an <a>, and NOTHING else does.
+# There is no bare-URL autolinker, so the older bare form
+#   "Full lesson & tabulation: https://…"
+# ships as plain grey text the reader must copy-paste, forever. 65 of the repo's
+# frozen exports are already like that and cannot be fixed, which is why the specs
+# below still show the bare form — they are the record of what was actually sent.
+# Copy the bracketed form for anything new; --dry-run warns if you don't.
 # GOTCHA (found 2026-07-25): when the lesson page is a folder README.md, the site
 # serves it as <folder>/index.html — README.html 404s. MkDocs renames a folder
 # README to index; use_directory_urls:false only stops the directory-style URL, it
