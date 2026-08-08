@@ -561,6 +561,15 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   rule, `BV_registry.md` regeneration, and BV's method strings + bloc multi-winner.
   **Read it BEFORE creating or fetching any BV election** — BV titles, descriptions and
   numbers are PERMANENT and unfixable, so those rules have to be right the first time.
+- **BetterVoting *documentation* work → load the `bv-docs` skill.** A different job from
+  the one above, so a different skill: BV's help site (docs.bettervoting.com) is Jekyll +
+  just-the-docs built by GitHub Pages from `docs/` in the BV checkout, and the skill holds
+  the local Docker preview (plus its three traps), the front-matter `parent:` exact-match
+  rule, the `.md` link convention, the eight doc URLs the *app* hardcodes (two of them deep
+  anchors, so heading text is load-bearing), the verified election-state facts, and the
+  fork/PR path. Load it before writing or moving any BV help page — and note the real
+  bottleneck is that ~60 pages sit unpublished in Google Docs, so the job is usually
+  publish/dedupe/shelve rather than write.
 
 ## Scratch drafting (any method)
 
