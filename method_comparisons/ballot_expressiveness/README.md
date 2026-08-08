@@ -2,19 +2,29 @@
 
 → The topic page: [What the ballot can and cannot say](../../07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md) · the rates: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md) · the sibling worked election: [the crowded field](../crowded_field/README.md) · **Level: 301 · deep dive**
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/37yf8x) · **[results ↗](https://bettervoting.com/37yf8x/results)** (election `37yf8x`, BV2280 — four of these five papers, one race each).
+
 **One line:** twenty-five voters, nine candidates, and five different ballots — and the winner changes twice, once because the *paper* changed and once because the *count* did.
 
 Every case in this folder is the **same electorate**. Voters and candidates sit at frozen positions on a single left–right spectrum, and every ballot is derived from those positions by a stated rule ([`build_cases.py`](build_cases.py)) — nothing hand-written, nothing tuned. **Finn beats all eight rivals head-to-head**, so Finn is the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) and the electorate's answer is fixed. The only thing that varies is what a voter is allowed to write down.
 
-| Ballot | Count | Winner | |
-|---|---|:--:|---|
-| [0–5 scores](cases/cases_pages/ballot_expressiveness_c9_star.md) | STAR | **Finn** | ✅ the Condorcet winner |
-| [ranks all nine](cases/cases_pages/ballot_expressiveness_c9_rr_full.md) | Ranked Robin | **Finn** | ✅ the control |
-| [ranks only five](cases/cases_pages/ballot_expressiveness_c9_rr_top5.md) | Ranked Robin | **Gus** | ❌ the *cap* lost the answer |
-| [ranks all nine](cases/cases_pages/ballot_expressiveness_c9_irv_full.md) | RCV-IRV | **Ben** | ❌ the *count* lost the answer |
-| [ranks only five](cases/cases_pages/ballot_expressiveness_c9_irv_top5.md) | RCV-IRV | **Ben** | ❌ unchanged — already lost |
+| Ballot | Count | Winner | | On BV |
+|---|---|:--:|---|:--:|
+| [0–5 scores](cases/cases_pages/ballot_expressiveness_c9_star.md) | STAR | **Finn** | ✅ the Condorcet winner | ✔ |
+| [ranks all nine](cases/cases_pages/ballot_expressiveness_c9_rr_full.md) | Ranked Robin | **Finn** | ✅ the control | ✔ |
+| [ranks only five](cases/cases_pages/ballot_expressiveness_c9_rr_top5.md) | Ranked Robin | **Gus** | ❌ the *cap* lost the answer | ✔ |
+| [ranks all nine](cases/cases_pages/ballot_expressiveness_c9_irv_full.md) | RCV-IRV | **Ben** | ❌ the *count* lost the answer | ✔ |
+| [ranks only five](cases/cases_pages/ballot_expressiveness_c9_irv_top5.md) | RCV-IRV | **Ben** | ❌ unchanged — already lost | — |
 
 Read the table down the middle column and the whole lesson falls out.
+
+**Three independent engines agree on every row.** The LH engine tabulates all five; [BetterVoting](https://bettervoting.com/37yf8x/results) independently tabulates the four it carries and reports `tieBreakType: none` throughout; and both Ranked Robin rows are additionally cross-checked against [`pref_voting`](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/ranked_robin_report.py)'s Copeland, a library nobody here wrote. The frozen export is [`bv2280_37yf8x_bv_export.json`](cases/bv2280_37yf8x_bv_export.json).
+
+On BetterVoting the rank cap is not a description, it is **enforced** — race 3 sets `max_rankings: 5`, so a voter filling it in actually runs out of places to put Finn. That is the whole point of minting it rather than only simulating it. (The fifth paper stays LH-only: it is the control that changes nothing, and did not earn a permanent public race.)
+
+<img src="img/37yf8x_result.png" width="640" alt="BetterVoting results for the STAR race: 'Finn wins!', 25 voters. Scoring Round bars read Finn 84, Emma 83, Cleo 81, Dev 80, Gus 80, Ben 75, Hugo 51, Iris 50, Ada 47. The Automatic Runoff Round shows Finn 52% against Emma 48%, with Equal Support empty.">
+
+BetterVoting's STAR numbers are the LH engine's, line for line — scoring round 84/83/81/80/80, runoff Finn 13–12 with nobody at Equal Support.
 
 ## The two things that are usually confused
 

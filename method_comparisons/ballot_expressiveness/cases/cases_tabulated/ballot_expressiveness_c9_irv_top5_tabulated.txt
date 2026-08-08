@@ -34,6 +34,9 @@ scenario_description: |-
 voting_method: RCV-IRV
 num_winners: 1
 
+# Not on BetterVoting: this is the control leg that changes nothing.
+# The other four papers are BV2280 (37yf8x).
+
 lot_numbers: [Ada, Ben, Cleo, Dev, Emma, Finn, Gus, Hugo, Iris]
 
 options:

@@ -5793,7 +5793,145 @@ THREE_BROTHERS_SPEC = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Ballot expressiveness — one electorate, four papers (9 candidates, 25 voters)
+#
+# The BV half of method_comparisons/ballot_expressiveness/. Twenty-five voters and
+# nine candidates on one spectrum; Finn beats all eight rivals head-to-head. The
+# four races change only WHAT THE VOTER MAY WRITE DOWN, so the election is a live
+# demonstration that ballot resolution and tabulation rule are different things:
+#
+#   race 1  STAR, 0-5 scores            -> Finn   the coarse ballot finds the CW
+#   race 2  Ranked Robin, rank all 9    -> Finn   the control
+#   race 3  Ranked Robin, rank only 5   -> Gus    only the PAPER changed
+#   race 4  RCV-IRV, rank all 9         -> Ben    only the COUNT changed
+#
+# Race 3 is why this is worth minting rather than just simulating: max_rankings=5
+# makes BetterVoting ENFORCE the cap that New York City and Maine really impose, so
+# a voter feels the ballot run out. Nine candidates on a 0-5 ballot is the mirror
+# limit — six rungs cannot strictly rank nine names, so every voter must tie a pair.
+#
+# Ballots are generated, not hand-written: method_comparisons/ballot_expressiveness/
+# build_cases.py is the source of truth (frozen positions, utility = minus distance,
+# scores = each voter's own min-max scaling onto 0-5, ranks = the same utilities in
+# order). The arrays below were printed from it. NOTHING in any race is settled by a
+# tie-break — that was a search constraint on the electorate.
+_BE_CANDS = ["Ada", "Ben", "Cleo", "Dev", "Emma", "Finn", "Gus", "Hugo", "Iris"]
+
+_BE_STAR = [
+    [4, 5, 4, 4, 4, 2, 2, 0, 0], [0, 2, 2, 2, 3, 4, 5, 5, 5],
+    [5, 4, 4, 3, 3, 2, 1, 0, 0], [0, 1, 2, 2, 2, 3, 4, 5, 5],
+    [0, 2, 3, 3, 4, 5, 4, 2, 1], [2, 4, 5, 5, 5, 3, 2, 0, 0],
+    [0, 2, 2, 2, 3, 4, 5, 5, 5], [0, 1, 2, 2, 2, 4, 4, 5, 5],
+    [0, 2, 3, 3, 3, 5, 5, 3, 3], [0, 1, 2, 2, 2, 4, 4, 5, 5],
+    [0, 2, 3, 3, 3, 5, 4, 2, 2], [3, 5, 5, 5, 4, 3, 2, 0, 0],
+    [5, 5, 4, 4, 4, 2, 2, 0, 0], [0, 1, 2, 2, 2, 3, 4, 5, 5],
+    [1, 3, 5, 5, 5, 4, 3, 0, 0], [0, 2, 2, 2, 3, 4, 5, 5, 5],
+    [0, 2, 3, 3, 3, 5, 5, 2, 2], [4, 5, 4, 4, 4, 2, 2, 0, 0],
+    [0, 2, 2, 2, 3, 4, 5, 5, 5], [5, 4, 4, 4, 3, 2, 2, 0, 0],
+    [0, 2, 3, 3, 3, 5, 4, 2, 2], [5, 5, 4, 4, 4, 2, 2, 0, 0],
+    [5, 4, 3, 3, 3, 2, 1, 0, 0], [3, 5, 5, 5, 5, 3, 2, 0, 0],
+    [5, 4, 3, 3, 3, 2, 1, 0, 0],
+]
+
+# Ranks, 1 = top. All nine rankable.
+_BE_R9 = [
+    [4, 1, 2, 3, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 1, 2, 3],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [9, 6, 5, 4, 3, 1, 2, 7, 8], [7, 4, 3, 2, 1, 5, 6, 8, 9],
+    [9, 8, 7, 6, 5, 4, 1, 2, 3], [9, 8, 7, 6, 5, 4, 3, 1, 2],
+    [9, 8, 7, 6, 3, 2, 1, 4, 5], [9, 8, 7, 6, 5, 4, 3, 1, 2],
+    [9, 8, 5, 4, 3, 1, 2, 6, 7], [5, 1, 2, 3, 4, 6, 7, 8, 9],
+    [2, 1, 3, 4, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [7, 5, 3, 2, 1, 4, 6, 8, 9], [9, 8, 7, 6, 5, 4, 1, 2, 3],
+    [9, 8, 5, 4, 3, 1, 2, 6, 7], [5, 1, 2, 3, 4, 6, 7, 8, 9],
+    [9, 8, 7, 6, 5, 4, 2, 1, 3], [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [9, 8, 5, 4, 3, 1, 2, 6, 7], [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9], [6, 4, 1, 2, 3, 5, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+]
+
+# The same voters, capped at five ranks. 0 = unranked — and for nine of these
+# twenty-five voters, Finn is one of the names that no longer fits.
+_BE_R5 = [
+    [4, 1, 2, 3, 5, 0, 0, 0, 0], [0, 0, 0, 0, 5, 4, 1, 2, 3],
+    [1, 2, 3, 4, 5, 0, 0, 0, 0], [0, 0, 0, 0, 5, 4, 3, 2, 1],
+    [0, 0, 5, 4, 3, 1, 2, 0, 0], [0, 4, 3, 2, 1, 5, 0, 0, 0],
+    [0, 0, 0, 0, 5, 4, 1, 2, 3], [0, 0, 0, 0, 5, 4, 3, 1, 2],
+    [0, 0, 0, 0, 3, 2, 1, 4, 5], [0, 0, 0, 0, 5, 4, 3, 1, 2],
+    [0, 0, 5, 4, 3, 1, 2, 0, 0], [5, 1, 2, 3, 4, 0, 0, 0, 0],
+    [2, 1, 3, 4, 5, 0, 0, 0, 0], [0, 0, 0, 0, 5, 4, 3, 2, 1],
+    [0, 5, 3, 2, 1, 4, 0, 0, 0], [0, 0, 0, 0, 5, 4, 1, 2, 3],
+    [0, 0, 5, 4, 3, 1, 2, 0, 0], [5, 1, 2, 3, 4, 0, 0, 0, 0],
+    [0, 0, 0, 0, 5, 4, 2, 1, 3], [1, 2, 3, 4, 5, 0, 0, 0, 0],
+    [0, 0, 5, 4, 3, 1, 2, 0, 0], [1, 2, 3, 4, 5, 0, 0, 0, 0],
+    [1, 2, 3, 4, 5, 0, 0, 0, 0], [0, 4, 1, 2, 3, 5, 0, 0, 0],
+    [1, 2, 3, 4, 5, 0, 0, 0, 0],
+]
+
+BALLOT_EXPRESSIVENESS_SPEC = {
+    "test_id": "BV2280",
+    "title": "Ballot expressiveness — nine candidates, one electorate, four different ballots",
+    "description": (
+        "Twenty-five voters and nine candidates on a single left-right spectrum. Finn "
+        "beats all eight rivals head-to-head, so Finn is the Condorcet winner and the "
+        "electorate's answer is fixed. The four races change only what a voter is "
+        "ALLOWED TO WRITE DOWN, which is what makes this election a demonstration "
+        "rather than a comparison. Race 1 is a 0-5 score ballot: nine candidates will "
+        "not fit on six rungs, so every voter must give at least two candidates the "
+        "same score - and STAR still elects Finn. Race 2 ranks all nine and Ranked "
+        "Robin elects Finn. Race 3 is the SAME voters and the SAME Ranked Robin rule "
+        "with the ballot capped at five names, the cap New York City and Maine really "
+        "impose - and it elects Gus, because only 16 of the 25 voters can fit Finn "
+        "into five names at all. Race 4 ranks all nine again and RCV-IRV elects Ben: "
+        "same paper as race 2, different count, because Finn holds only 6 of 25 first "
+        "choices and elimination reaches Finn before the head-to-heads Finn wins are "
+        "ever consulted. So races 2 and 3 differ only in the PAPER, and races 2 and 4 "
+        "differ only in the COUNT - the two things usually confused when people say a "
+        "ballot was 'not expressive enough'. Nothing in any race is settled by a "
+        "tie-break. "
+        "Full lesson & tabulation: "
+        "https://masiarek.github.io/star-voting-library/method_comparisons/"
+        "ballot_expressiveness/index.html"
+    ),
+    "races": [
+        {"title": "Nine candidates on a 0-5 score ballot - STAR",
+         "method": "STAR", "num_winners": 1,
+         "candidates": _BE_CANDS, "ballots": _BE_STAR},
+        {"title": "Rank all nine - Ranked Robin (Copeland)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 9,
+         "candidates": _BE_CANDS, "ballots": _BE_R9},
+        {"title": "Rank only five - Ranked Robin (Copeland)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 5,
+         "candidates": _BE_CANDS, "ballots": _BE_R5},
+        {"title": "Rank all nine - RCV-IRV (instant runoff)",
+         "method": "IRV", "num_winners": 1, "max_rankings": 9,
+         "candidates": _BE_CANDS, "ballots": _BE_R9},
+    ],
+    "expected": (
+        "STAR -> Finn (scoring round Finn 84, Emma 83, Cleo 81, Dev 80, Gus 80; "
+        "automatic runoff Finn 13 - Emma 12, zero Equal Support). "
+        "Ranked Robin on all nine -> Finn, 8-0, margin +38 - the Condorcet winner. "
+        "Ranked Robin capped at five -> Gus, 8-0 on that paper, with Finn falling to "
+        "5-1-2t and margin +11. "
+        "RCV-IRV on all nine -> Ben. "
+        "All four LH-verified; both Ranked Robin races additionally cross-checked "
+        "against pref_voting's independent Copeland. No race rests on a tie-break, so "
+        "tieBreakType should be 'none' throughout. Test ID BV2280."
+    ),
+}
+
+
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [BALLOT_EXPRESSIVENESS_SPEC]   # BV2280 -> 37yf8x
+#   Created as designed, 25 ballots x 4 races. BV agrees with LH on all four:
+#   STAR -> Finn (84/83/81/80/80; runoff Finn 13-12, zero Equal Support),
+#   Ranked Robin on all nine -> Finn 8-0, Ranked Robin capped at five -> Gus,
+#   RCV-IRV on all nine -> Ben. tieBreakType 'none' in every race, which matters
+#   because the lesson is that the PAPER and the COUNT moved the winner, not a lot.
+#   The max_rankings=5 race is the reason this was minted rather than only simulated:
+#   BV enforces the NYC/Maine cap, so a voter runs out of places to put Finn.
+#   Case: method_comparisons/ballot_expressiveness/
 # Previously: [THREE_BROTHERS_SPEC]   # BV2279 -> qywq7d
 #   Created as designed, 3 ballots x 3 races. BV agrees with LH on every race:
 #   STAR -> Banana (scoring round Orange 12, Banana 9; runoff Banana 2 - Orange 1,

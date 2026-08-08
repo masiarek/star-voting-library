@@ -159,6 +159,8 @@ Rows 2 and 3 differ **only in the paper**; rows 2 and 4 differ **only in the cou
 
 Every ballot is derived from frozen positions by a stated rule, and **no count in that folder is settled by a tie-break** — that was a search constraint, after an earlier candidate electorate was discarded for having an 8–8 IRV elimination tie whose winner flipped between lot rules.
 
+**Four of the five papers are live, so you can fill them in yourself:** BetterVoting election [`37yf8x`](https://bettervoting.com/37yf8x) ([results ↗](https://bettervoting.com/37yf8x/results)), one race each. It is worth voting rather than only reading, because two of the limits on this page are things you *feel* rather than follow: on the STAR race, nine candidates and six rungs means you physically cannot give every candidate a different score; and the third race sets `max_rankings: 5`, so BetterVoting enforces the real NYC/Maine cap and you run out of places to put Finn. BV tabulates all four independently and agrees with the LH engine on every winner, reporting `tieBreakType: none` throughout.
+
 ## 7. Caveats
 
 - **The unstated pairs on a truncated ballot are a convention.** Here an unranked candidate is beaten by everyone the voter ranked and tied with everyone else left off; other treatments split that pair half-and-half. The `top-k` columns move if you change it, and the choice belongs with any quotation of them.

@@ -17,7 +17,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 |---|---|--:|---|--:|---|---|
 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results) | BV2169 — FairVote's hypothetical, electorate shifted | 2 | contested (multi-race) | 100 | IRV, STAR | BV |
 | [`2p33qq`](https://bettervoting.com/2p33qq/results) | BV2215 — Minority winner — 34% wins Choose-One, but  | 3 | contested (multi-race) | 100 | Plurality, RankedRobin, STAR | BV |
-| [`37yf8x`](https://bettervoting.com/37yf8x/results) | Nine candidates, 25 voters — ranking all nine, count | 4 | contested (multi-race) | 25 | IRV, RankedRobin, STAR | BV |
+| [`37yf8x`](https://bettervoting.com/37yf8x/results) | BV2280 — Ballot expressiveness — nine candidates, on | 4 | contested (multi-race) | 25 | IRV, RankedRobin, STAR | BV |
 | [`38b7fg`](https://bettervoting.com/38b7fg/results) | BV2274 — The cost of districting — the best candidat | 3 | contested (multi-race) | 9 | STAR | BV |
 | [`3grpbb`](https://bettervoting.com/3grpbb/results) | BV2156 — STAR's own miss — the Condorcet winner scor | 2 | contested (multi-race) | 100 | RankedRobin, STAR | BV |
 | [`3x4vrv`](https://bettervoting.com/3x4vrv/results) | BV2135 — Block & Limited voting, reproduced as bloc  | 2 | contested (multi-race) | 10 | Plurality | BV |

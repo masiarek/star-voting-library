@@ -29,6 +29,10 @@ scenario_description: |-
 voting_method: STAR
 num_winners: 1
 
+bv_test_id: BV2280
+bv_election_id: 37yf8x
+bv_results_url: https://bettervoting.com/37yf8x/results
+
 lot_numbers: [Ada, Ben, Cleo, Dev, Emma, Finn, Gus, Hugo, Iris]
 
 options:

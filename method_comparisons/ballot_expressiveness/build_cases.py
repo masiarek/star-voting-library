@@ -103,7 +103,25 @@ CONSTRUCTION = """  Construction: build_cases.py in this folder. 25 voters and 9
   any lot rule."""
 
 
-def write(stem, title, method, description, ballots, winner):
+"""Four of the five papers are also live on BetterVoting as BV2280 (`37yf8x`), one
+race each, so a reader can fill the ballots in themselves and watch a nine-candidate
+0-5 ballot run out of rungs. BV agrees with the LH engine on all four winners and
+reports tieBreakType 'none' throughout. The fifth (IRV capped at five) is LH-only:
+it is the control that changes nothing, and it did not earn a permanent public race."""
+BV_TEST_ID = "BV2280"
+BV_ELECTION_ID = "37yf8x"
+
+
+def bv_fields(on_bv):
+    if not on_bv:
+        return ("# Not on BetterVoting: this is the control leg that changes nothing.\n"
+                "# The other four papers are BV2280 (37yf8x).\n")
+    return (f'bv_test_id: {BV_TEST_ID}\n'
+            f'bv_election_id: {BV_ELECTION_ID}\n'
+            f'bv_results_url: https://bettervoting.com/{BV_ELECTION_ID}/results\n')
+
+
+def write(stem, title, method, description, ballots, winner, on_bv=True):
     opts = OPTIONS_SCORE if method == "STAR" else OPTIONS_RANKED
     body = f"""election_title: "{title}"
 
@@ -115,6 +133,7 @@ scenario_description: |-
 voting_method: {method}
 num_winners: 1
 
+{bv_fields(on_bv)}
 lot_numbers: [{", ".join(NAMES)}]
 
 {opts}
@@ -265,6 +284,7 @@ def main():
   the majority denominator, which is what a rank cap really does to an instant runoff.""",
         rank_block(CAP),
         "Ben",
+        on_bv=False,
     )
 
 

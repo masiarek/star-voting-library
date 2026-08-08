@@ -809,6 +809,17 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2279 — Three brothers - Ranked Robin (Copeland) | RankedRobin | 3 | **Banana** | [results ↗](https://bettervoting.com/qywq7d/results) |
 | BV2279 — Three brothers - Approval (approve at 3 or more) | Approval | 3 | **Orange** | [results ↗](https://bettervoting.com/qywq7d/results) |
 
+## BV2280 — Ballot expressiveness — nine candidates, one electorate, four different ballots
+
+**Election** [`37yf8x`](https://bettervoting.com/37yf8x/results) · **4 races** · **25 ballots** · [frozen export](../../method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2280 — Nine candidates on a 0-5 score ballot - STAR | STAR | 9 | **Finn** | [results ↗](https://bettervoting.com/37yf8x/results) |
+| BV2280 — Rank all nine - Ranked Robin (Copeland) | RankedRobin | 9 | **Finn** | [results ↗](https://bettervoting.com/37yf8x/results) |
+| BV2280 — Rank only five - Ranked Robin (Copeland) | RankedRobin | 9 | **Gus** | [results ↗](https://bettervoting.com/37yf8x/results) |
+| BV2280 — Rank all nine - RCV-IRV (instant runoff) | IRV | 9 | **Ben** | [results ↗](https://bettervoting.com/37yf8x/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)
