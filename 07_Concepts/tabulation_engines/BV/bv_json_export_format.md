@@ -215,7 +215,11 @@ Adam filed **[#1420 — "Download JSON export leaks the tabulator's internal obj
 3. Inconsistent timestamps — ISO-8601 `create_date` beside epoch-ms-string `update_date`.
 4. No `format_version`, so a consumer cannot tell which era of export it has.
 
-**[PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419)** — "Clean up the ballot-data export (JSON v2 + CSV Raw/Official)" — implemented a fix in `packages/shared/src/utils/exportFormat.ts`: candidates listed once, a deduped `pairwise` matrix keyed by name, `{id,name}` refs, snake_case throughout, ISO timestamps, `format_version: 2`, `score: null` preserved, and the CSV split into Official Count / Raw Audit. It measured 69–74% of legacy size on real exports from this repo. **It was closed unmerged on 2026-07-15**, so everything on this page describes the format BetterVoting still ships. The contribution workflow and what was learned from it: [contributing to BetterVoting](tabulation_engine/contributing_to_bettervoting.md).
+**[PR #1419](https://github.com/Equal-Vote/bettervoting/pull/1419)** — "Clean up the ballot-data export (JSON v2 + CSV Raw/Official)" — implemented a fix in `packages/shared/src/utils/exportFormat.ts`: candidates listed once, a deduped `pairwise` matrix keyed by name, `{id,name}` refs, snake_case throughout, ISO timestamps, `format_version: 2`, `score: null` preserved, and the CSV split into Official Count / Raw Audit. It measured 69–74% of legacy size on real exports from this repo.
+
+**The PR was split, not rejected.** A maintainer extracted its **CSV bug fixes** into [PR #1428](https://github.com/Equal-Vote/bettervoting/pull/1428) — on a branch named `masiarek/csv-escaping-fix`, with the commit keeping Adam's authorship — and merged that on 2026-07-16. The **format redesign** was deferred with "the rest needs some contemplation", and #1419 was closed on 2026-07-15. So the export shipping today has correct CSV escaping and download behaviour, but the JSON is still v1 — which is what this page documents, and why #1420 stays open.
+
+The contribution workflow and what was learned from it: [contributing to BetterVoting](tabulation_engine/contributing_to_bettervoting.md).
 
 Related open tickets: [#1160](https://github.com/Equal-Vote/bettervoting/issues/1160) (dual raw/processed export), [#1432](https://github.com/Equal-Vote/bettervoting/issues/1432) (surface tie-break explanations).
 
