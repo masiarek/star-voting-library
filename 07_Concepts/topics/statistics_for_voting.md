@@ -19,7 +19,7 @@ The big one. These are not three ways of saying "average"; picking between them 
 | Rule | Method | Behaviour |
 |---|---|---|
 | **Sum** (≡ mean, when everyone scores everyone) | **Score / Range**, and STAR's scoring round | rewards **intensity** — a 5 counts five times a 1 |
-| **Median** | **[Majority Judgment](three_two_one_voting.md)** | ignores how extreme the extremes are |
+| **Median** | **[Majority Judgment](../../06_Other/Majority_Judgment/concepts/majority_judgment.md)** | ignores how extreme the extremes are |
 
 Why it matters: the **mean is dragged by outliers, the median isn't.** So under a summing method, exaggerating your scores (5s and 0s instead of 4s and 1s) genuinely moves the total — which is exactly the residual strategic incentive [PVSI](pvsi_strategic_incentive.md) measures for STAR. Under a median method that exaggeration does almost nothing… but neither does *sincere* intensity, so the method can't tell "everyone's decent second choice" from "one faction's passion." **Robustness and expressiveness are the trade**, and mean-vs-median is where you make it.
 

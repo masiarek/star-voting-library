@@ -62,7 +62,30 @@ It works, and it is opaque. A voter can follow "highest median wins"; almost nob
 
 ## How it differs from Score — the same ballots, two winners
 
-The comparison that matters most is with [Range / Score](../../Range/concepts/range_voting.md), because MJ and Score hand the voter **the same piece of paper**. Both ask for a grade on every candidate. They part company at exactly one step: Score adds the column up and takes the **mean**, MJ lines it up and takes the **median**. On the 101 case above that difference is invisible — Bruno wins under both, which is the honest picture most of the time. Here is a five-voter election where it isn't:
+The comparison that matters most is with [Range / Score](../../Range/concepts/range_voting.md), because MJ and Score hand the voter **the same piece of paper**. Both ask for a grade on every candidate. They part company at exactly one step, and it is worth doing that step slowly.
+
+### The one step that differs
+
+Each candidate ends up with a **column of five grades** — one per voter. Both methods have to boil that column down to a single figure. That is the only place they disagree:
+
+- **Score adds the column up** (equivalently, takes the **mean** — the ordinary average).
+- **MJ sorts the column and takes the middle one** (the **median**).
+
+Every grade has a position on the six-word scale — *To Reject* 0, *Poor* 1, *Acceptable* 2, *Good* 3, *Very Good* 4, *Excellent* 5 — so both are arithmetic you can check by eye:
+
+| Candidate | The five grades, lowest first | **Mean** — add them, divide by 5 | **Median** — the middle one |
+|---|---|:--|:--:|
+| **Asha** | To Reject · Good · **Good** · Very Good · Very Good | 0+3+3+4+4 = 14 → **2.8** | **Good** |
+| **Bodhi** | Acceptable · Acceptable · **Acceptable** · Excellent · Excellent | 2+2+2+5+5 = 16 → **3.2** | **Acceptable** |
+| Camila | Poor · Poor · **Poor** · Acceptable · Good | 1+1+1+2+3 = 8 → **1.6** | **Poor** |
+
+**Bodhi has the higher mean (3.2). Asha has the higher median (*Good*).** Same five ballots, and the two rules point at different people.
+
+The reason is in the two right-hand columns. The mean **touches every grade**, so Bodhi's two *Excellent*s — 5 apiece — haul his total past Asha's four warm ones. The median **adds nothing at all**: it walks to the middle of the sorted list and stops. It can see that two voters put Bodhi above *Acceptable*; it cannot see that they went all the way to *Excellent*. One rule measures **how much**, the other measures **how many got at least this far**.
+
+→ The idea in general, beyond this election: [mean, sum, and median — a method-defining choice](../../../07_Concepts/topics/statistics_for_voting.md#1-mean-sum-and-median-a-method-defining-choice).
+
+Here are the ballots those three rows came from:
 
 <!-- ballots:mj_vs_score_c3_b5 -->
 The ballots as marked — the filled bubble is the grade given, and the grade is the word in its column. The grades the file records are repeated under each ballot:
@@ -88,12 +111,6 @@ Asha **Good** · Bodhi **Acceptable** · Camila **Acceptable**
 Asha **To Reject** · Bodhi **Acceptable** · Camila **Good**
 <!-- /ballots -->
 
-| Candidate | Grades in order | **Median** → MJ | **Mean** → Score |
-|---|---|:--:|:--:|
-| **Asha** | To Reject · Good · **Good** · Very Good · Very Good | **Good** ✔ | 2.8 |
-| **Bodhi** | Acceptable · Acceptable · **Acceptable** · Excellent · Excellent | Acceptable | **3.2** ✔ |
-| Camila | Poor · Poor · **Poor** · Acceptable · Good | Poor | 1.6 |
-
 **Score elects Bodhi. Majority Judgment elects Asha.** Nobody changed their mind between the two counts, and no ballot was marked differently — the only thing that changed is what the count does with the column.
 
 ```bash
@@ -113,16 +130,26 @@ Winner — Range Voting (highest mean): Bodhi
 Winner — Majority Judgment (highest median): Asha
    medians: Asha Good, Bodhi Acceptable, Camila Poor
 
+Head-to-head — every pair, by how many voters graded one ABOVE the other:
+   Bodhi beats Asha   3–2
+   Asha beats Camila   4–1
+   Bodhi beats Camila   3–1
+   Bodhi is the Condorcet winner — beats every rival head-to-head.
+   ⚠️  Majority Judgment elects Asha — NOT the Condorcet winner. Bodhi beats Asha head-to-head.
+
  pref_voting Range (mean): Bodhi   vs this report (Bodhi): AGREE ✓
  pref_voting Majority Judgment: Asha   vs this report (Asha): AGREE ✓
 ```
 
-The split is legible on the paper. Bodhi holds the two loudest grades in the election — two *Excellent*s — and three voters who say only *Acceptable*. Asha holds no *Excellent* at all: two *Very Good*s, two *Good*s, and one *To Reject*.
+### The catch: MJ's winner loses the head-to-head
 
-- **The mean asks *how much*.** An *Excellent* is worth five and an *Acceptable* two, so Bodhi's two enthusiasts outweigh Asha's four warm-but-not-loud grades. Intensity is information, and Score is the method that counts it.
-- **The median asks *where the middle voter stands*.** Four of five voters put Asha at *Good* or better; only two of five put Bodhi above *Acceptable*. How strongly those two feel never enters the count — under MJ, a candidate is lifted by **one more voter reaching the grade**, never by one voter reaching harder.
+Read the last block of that report before deciding the median looks wise here. Ask the five voters to choose between Asha and Bodhi directly and **Bodhi wins 3–2** — V1, V2 and V5 all grade him above her. Bodhi also beats Camila, so he is the [Condorcet winner](../../../07_Concepts/topics/condorcet/README.md): the candidate who would win every head-to-head. **Score elects him. Majority Judgment does not.**
 
-### The lone *To Reject* is pivotal — under Score only
+That is not a quirk of this construction — it is MJ's [majority-criterion failure](../../../07_Concepts/voting_paradoxes/majority_judgment.md), which Balinski and Laraki accept openly, arguing that a majority's *ordering* should not overrule the electorate's *evaluations*. Whether you find that defensible is the argument; that it happens is not in dispute. It happens here, in the smallest election built to show the two rules apart. (For the record, [STAR](../../../01_STAR/01_Learn/README.md) elects Bodhi too — the scoring round puts him and Asha in the runoff, and the runoff is that same 3–2.)
+
+So the honest reading of this page is not "the median finds the broadly acceptable candidate." It is: **the median is unmoved by intensity, and that cuts both ways** — it ignores a saboteur's *To Reject*, and it equally ignores three voters who actually prefer someone else.
+
+### What the median buys: the lone *To Reject* is pivotal — under Score only
 
 V5 is the one voter who rejects Asha outright. Had V5 given her the *Good* that V3 and V4 did, her mean would be **3.4** and **Score would elect Asha too** — the divergence exists only because of that single grade. Her median does not move an inch: *Good* with the *To Reject*, *Good* without it.
 

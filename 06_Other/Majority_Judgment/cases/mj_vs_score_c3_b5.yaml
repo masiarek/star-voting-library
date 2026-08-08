@@ -25,6 +25,18 @@ scenario_description: |-
   are on this ballot; the page argues them.
   Camila loses under both counts (mean 1.6, median Poor), so the split is not an
   artifact of a two-candidate race.
+  THE CATCH, AND IT MATTERS: Bodhi is also the CONDORCET WINNER here. Head to
+  head he beats Asha 3-2 (V1, V2 and V5 all grade him above her) and Camila 3-1.
+  So Score elects the candidate who would win every pairwise contest and Majority
+  Judgment does not - MJ's majority-criterion failure, live, in the smallest
+  election built to separate the two rules. Balinski and Laraki accept this
+  openly (they argue a majority's ORDERING should not overrule the electorate's
+  EVALUATIONS); the point here is that the case must not be read as "the median
+  finds the broadly acceptable candidate." STAR elects Bodhi too: he and Asha
+  take the runoff slots on score, and the runoff is that same 3-2.
+  The head-to-head block is printed by the report itself, so this is checkable
+  rather than asserted - the check used to run only on two-candidate files, which
+  is exactly why this case was published before anyone noticed.
   This is a grade-ballot file, not an LH election file: the grades are words,
   which fit neither the engine's numeric 0-5 ballot nor BetterVoting. Count it
   with tools_adam/pref_voting_tabulation_engine/grade_methods_report.py, which

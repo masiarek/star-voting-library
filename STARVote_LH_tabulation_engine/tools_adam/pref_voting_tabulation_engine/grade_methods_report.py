@@ -233,10 +233,20 @@ def report(path, ungrade=(), abstain=()):
     out.append("")
 
     # --- What a majority actually thinks, which is what these examples indict. ---
+    #
+    # This used to run only on a two-candidate file, because Felsenthal's §A8/§A9
+    # examples all happen to be two-candidate. That silently exempted every
+    # teaching case with a real field: `mj_vs_score_c3_b5` was built, published
+    # and reviewed before anyone noticed by hand that Majority Judgment elects
+    # Asha there while Bodhi beats her head-to-head 3–2. A page comparing two
+    # grade rules has to say when one of them overrules a majority, so the check
+    # now runs at any size.
+    def _above(x, y):
+        return sum(1 for v in voters if rank[grades[x][v]] > rank[grades[y][v]])
+
     if len(cands) == 2:
         x, y = cands
-        fx = sum(1 for v in voters if rank[grades[x][v]] > rank[grades[y][v]])
-        fy = sum(1 for v in voters if rank[grades[y][v]] > rank[grades[x][v]])
+        fx, fy = _above(x, y), _above(y, x)
         out.append(f"Head-to-head — how many voters graded each ABOVE the other:")
         out.append(f"   {x} above {y}: {fx}      {y} above {x}: {fy}"
                    f"      (equal: {n - fx - fy})")
@@ -249,17 +259,44 @@ def report(path, ungrade=(), abstain=()):
                 if maj[0] not in w_:
                     out.append(f"   ⚠️  {rule} elects {' / '.join(w_)} — the Condorcet "
                                f"LOSER. An absolute majority is overruled.")
-        # Absolute winner / loser: a majority putting a candidate at the scale's edge.
-        for c in cands:
-            top_ct = sum(1 for v in voters if grades[c][v] == scale[-1])
-            bot_ct = sum(1 for v in voters if grades[c][v] == scale[0])
-            if bot_ct > n / 2:
-                out.append(f"   {c} is the ABSOLUTE LOSER — {bot_ct} of {n} gave the "
-                           f"lowest possible grade ({scale[0]}).")
-            if top_ct > n / 2:
-                out.append(f"   {c} is the ABSOLUTE WINNER — {top_ct} of {n} gave the "
-                           f"highest possible grade ({scale[-1]}).")
-        out.append("")
+    else:
+        out.append("Head-to-head — every pair, by how many voters graded one "
+                   "ABOVE the other:")
+        beats = {c: 0 for c in cands}
+        for i, x in enumerate(cands):
+            for y in cands[i + 1:]:
+                fx, fy = _above(x, y), _above(y, x)
+                if fx > fy:
+                    beats[x] += 1
+                    out.append(f"   {x} beats {y}   {fx}–{fy}")
+                elif fy > fx:
+                    beats[y] += 1
+                    out.append(f"   {y} beats {x}   {fy}–{fx}")
+                else:
+                    out.append(f"   {x} ties {y}   {fx}–{fy}")
+        cw = [c for c in cands if beats[c] == len(cands) - 1]
+        if cw:
+            out.append(f"   {cw[0]} is the Condorcet winner — beats every rival "
+                       f"head-to-head.")
+            for rule, w_ in (("Range Voting", rv), ("Majority Judgment", mj)):
+                if cw[0] not in w_:
+                    lost = " / ".join(w_)
+                    out.append(f"   ⚠️  {rule} elects {lost} — NOT the Condorcet "
+                               f"winner. {cw[0]} beats {lost} head-to-head.")
+        else:
+            out.append("   No Condorcet winner — the pairwise results cycle.")
+
+    # Absolute winner / loser: a majority putting a candidate at the scale's edge.
+    for c in cands:
+        top_ct = sum(1 for v in voters if grades[c][v] == scale[-1])
+        bot_ct = sum(1 for v in voters if grades[c][v] == scale[0])
+        if bot_ct > n / 2:
+            out.append(f"   {c} is the ABSOLUTE LOSER — {bot_ct} of {n} gave the "
+                       f"lowest possible grade ({scale[0]}).")
+        if top_ct > n / 2:
+            out.append(f"   {c} is the ABSOLUTE WINNER — {top_ct} of {n} gave the "
+                       f"highest possible grade ({scale[-1]}).")
+    out.append("")
 
     # --- Independent second computation. Loud when skipped, never silently. ---
     try:
