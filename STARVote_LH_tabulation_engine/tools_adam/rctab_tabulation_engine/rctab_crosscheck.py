@@ -60,17 +60,51 @@ MAX_PERMUTATIONS = 720  # 6! — beyond this the sweep is not a sane thing to ru
 
 
 def find_rctab():
+    """The launcher, from RCTAB_HOME — an unpacked release OR a macOS .app bundle.
+
+    The release zips unpack to `<home>/bin/RCTab`, but the macOS build is shipped as
+    `RCTab.app`, where the launcher is `Contents/MacOS/RCTab` and there is no bin/ at
+    all. Accept both, and accept being pointed at either the .app or its parent, so
+    RCTAB_HOME can be whatever the user actually has on disk.
+    """
     home = os.environ.get("RCTAB_HOME")
     if not home:
         raise SystemExit(
-            "RCTAB_HOME is not set. Point it at an unpacked RCTab (the folder holding bin/RCTab):\n"
-            "  export RCTAB_HOME=/path/to/rcv\n"
+            "RCTAB_HOME is not set. Point it at an unpacked RCTab or a macOS RCTab.app:\n"
+            "  export RCTAB_HOME=/path/to/rcv            # release zip (has bin/RCTab)\n"
+            "  export RCTAB_HOME=/path/to/RCTab.app      # macOS bundle\n"
             "Download from https://github.com/BrightSpots/rcv/releases (the zips bundle a JDK)."
         )
-    launcher = os.path.join(home, "bin", "RCTab")
-    if not os.path.isfile(launcher):
-        raise SystemExit(f"no RCTab launcher at {launcher} — is RCTAB_HOME right?")
-    return launcher
+    candidates = [
+        os.path.join(home, "bin", "RCTab"),                      # unpacked release
+        os.path.join(home, "Contents", "MacOS", "RCTab"),         # RCTAB_HOME=…/RCTab.app
+        os.path.join(home, "RCTab.app", "Contents", "MacOS", "RCTab"),  # its parent folder
+    ]
+    for launcher in candidates:
+        if os.path.isfile(launcher) and os.access(launcher, os.X_OK):
+            return launcher
+    raise SystemExit(
+        f"no RCTab launcher under {home} — is RCTAB_HOME right? Looked for:\n  "
+        + "\n  ".join(candidates)
+    )
+
+
+def rctab_version(launcher):
+    """The app's own version string, for the config's tabulatorVersion.
+
+    RCTab refuses a config whose tabulatorVersion is newer than itself ("Unable to
+    process a config file with version 2.1.0 using older version 2.0.0"), so the
+    converter has to be told which one is on this machine rather than assuming.
+    """
+    try:
+        out = subprocess.run([launcher, "--cli", "--help"], capture_output=True,
+                             text=True, timeout=120)
+        for line in (out.stdout + out.stderr).splitlines():
+            if line.startswith("RCTab version "):
+                return line.split("RCTab version ", 1)[1].strip()
+    except Exception:
+        pass
+    return None
 
 
 def run_rctab(launcher, cfg_path, operator="star-voting-library crosscheck"):
@@ -88,14 +122,28 @@ def run_rctab(launcher, cfg_path, operator="star-voting-library crosscheck"):
         return json.load(fh), blob
 
 
-def winner_of(report):
+def winners_of(report):
+    """Every candidate RCTab elects, in the order the rounds elect them.
+
+    Multi-seat matters here: an STV report elects across several rounds, and may elect
+    more than one in the SAME round under multiWinnerAllowMultipleWinnersPerRound, so
+    stopping at the first `elected` (which is all a single-winner count ever has) would
+    silently report a 3-seat contest as a 1-seat one and "agree" with nothing.
+    """
     if not report:
-        return None
+        return []
+    elected = []
     for rnd in report.get("results", []):
         for tr in rnd.get("tallyResults", []):
-            if "elected" in tr:
-                return tr["elected"]
-    return None
+            if "elected" in tr and tr["elected"] not in elected:
+                elected.append(tr["elected"])
+    return elected
+
+
+def winner_of(report):
+    """First elected candidate, or None — the single-winner view the sweeps compare on."""
+    got = winners_of(report)
+    return got[0] if got else None
 
 
 def tiebreak_lines(blob):
@@ -113,10 +161,22 @@ def expected_from_yaml(path):
         return []
 
 
+def _num(v):
+    """Tally values arrive as strings, and under STV they are FRACTIONAL ('5.9995').
+
+    int() on those raises — which single-winner IRV never revealed, because whole-vote
+    transfers keep every tally an integer. Sort on the float; print what RCTab wrote.
+    """
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def print_rounds(report):
     for rnd in report.get("results", []):
         tally = rnd.get("tally", {})
-        line = "  ".join(f"{c} {v}" for c, v in sorted(tally.items(), key=lambda kv: -int(kv[1])))
+        line = "  ".join(f"{c} {v}" for c, v in sorted(tally.items(), key=lambda kv: -_num(kv[1])))
         acts = []
         for tr in rnd.get("tallyResults", []):
             if "elected" in tr:
@@ -216,11 +276,21 @@ def main():
     p.add_argument("--candidate-orders", metavar="SPEC",
                    help="comma list of alpha|reverse|ballot|all, or explicit 'A|B|C' orders")
     p.add_argument("--keep", action="store_true", help="keep the RCTab output tree")
+    p.add_argument("--pin-version", action="store_true",
+                   help="use --tabulator-version as given instead of detecting the installed app")
     args = p.parse_args()
 
     launcher = find_rctab()
+    # Match the config to the installed app unless the caller pinned a version: RCTab
+    # hard-fails on a config newer than itself, and the converter's default tracks the
+    # newest release, not whatever is on this machine.
+    if not args.pin_version:
+        detected = rctab_version(launcher)
+        if detected:
+            args.tabulator_version = detected
     stem = os.path.splitext(os.path.basename(args.yaml))[0]
     print(f"\n=== {stem} ===")
+    print(f"  RCTab      : {args.tabulator_version}  ({launcher})")
     csv_path, cfg_path = convert_quiet(args)
     cands = [c["name"] for c in json.load(open(cfg_path, encoding="utf-8"))["candidates"]]
     print(f"  candidates : {', '.join(cands)}   ({args.candidate_order} order)")
@@ -233,16 +303,43 @@ def main():
 
     print("\n  RCTab count:")
     print_rounds(report)
-    rc_winner = winner_of(report)
+    rc_winners = winners_of(report)
     for ln in tiebreak_lines(blob):
         print(f"    ⚖  {ln}")
 
+    with open(cfg_path, encoding="utf-8") as fh:
+        rules = json.load(fh)["rules"]
+    seats = int(rules.get("numberOfWinners") or 1)
+
     ours = expected_from_yaml(args.yaml)
-    print(f"\n  RCTab      : {rc_winner}")
+    print(f"\n  RCTab      : {', '.join(rc_winners) if rc_winners else '(no winner)'}")
     print(f"  this repo  : {', '.join(ours) if ours else '(no expected_winners)'}")
-    if ours and rc_winner in ours:
+    if seats > 1:
+        thr = ("floor(V/(S+1))+1, hand-count Droop" if not rules["nonIntegerWinningThreshold"]
+               else "V/(S+1)+10^-d, exact Droop")
+        print(f"  quota rule : {thr}   ({seats} seats)")
+
+    if not ours:
+        pass
+    elif seats > 1:
+        # Multi-seat: compare the SEATED SET. Order is not meaningful — STV fills seats
+        # in count order, and expected_winners is authored in whatever order reads best —
+        # but membership and COUNT both are. A short set is a real disagreement.
+        if set(rc_winners) == set(ours):
+            print("  ✅ AGREE — same seated set.")
+        else:
+            only_rc = sorted(set(rc_winners) - set(ours))
+            only_us = sorted(set(ours) - set(rc_winners))
+            print("  ❌ DISAGREE — investigate before quoting either number.")
+            if only_rc:
+                print(f"     RCTab seats, we don't : {', '.join(only_rc)}")
+            if only_us:
+                print(f"     we seat, RCTab doesn't: {', '.join(only_us)}")
+            if len(rc_winners) != seats:
+                print(f"     NOTE: RCTab elected {len(rc_winners)} of {seats} seats.")
+    elif winner_of(report) in ours:
         print("  ✅ AGREE")
-    elif ours:
+    else:
         print("  ❌ DISAGREE — investigate before quoting either number.")
 
     if args.candidate_orders:

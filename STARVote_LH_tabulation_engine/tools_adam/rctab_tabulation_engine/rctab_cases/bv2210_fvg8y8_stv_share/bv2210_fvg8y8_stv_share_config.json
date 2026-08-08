@@ -1,0 +1,82 @@
+{
+  "tabulatorVersion": "2.1.0",
+  "outputSettings": {
+    "contestName": "Food-Truck Row \u2014 STV: one seat per side",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "bv2210_fvg8y8_stv_share.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "idColumnIndex": "1",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Arepa",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Bao",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Churro",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Donut",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Eclair",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "multiWinnerAllowMultipleWinnersPerRound",
+    "numberOfWinners": "2",
+    "nonIntegerWinningThreshold": true,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "5",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from bv2210_fvg8y8_stv_share.yaml by rctab_convert.py | candidate order: ballot | 2 seats; quota = V/(S+1)+10^-d (exact Droop, mirrors this repo's engine)",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "method_comparisons/food_truck_row/cases/bv2210_fvg8y8_stv_share.yaml",
+    "ballotsConverted": 100
+  }
+}

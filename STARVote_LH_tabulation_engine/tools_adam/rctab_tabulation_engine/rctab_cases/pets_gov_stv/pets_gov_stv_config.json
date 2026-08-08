@@ -1,0 +1,87 @@
+{
+  "tabulatorVersion": "2.1.0",
+  "outputSettings": {
+    "contestName": "Pets Governance \u2014 Delegates by STV (3 seats): proportional again",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "pets_gov_stv.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "idColumnIndex": "1",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Dog",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Cat",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Fish",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Bird",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Rabbit",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Hamster",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "multiWinnerAllowMultipleWinnersPerRound",
+    "numberOfWinners": "3",
+    "nonIntegerWinningThreshold": true,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "6",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from pets_gov_stv.yaml by rctab_convert.py | candidate order: ballot | 3 seats; quota = V/(S+1)+10^-d (exact Droop, mirrors this repo's engine)",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "method_comparisons/pets_governance/cases/pets_gov_stv.yaml",
+    "ballotsConverted": 22
+  }
+}

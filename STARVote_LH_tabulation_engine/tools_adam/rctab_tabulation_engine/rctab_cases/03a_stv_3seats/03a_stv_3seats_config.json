@@ -1,0 +1,91 @@
+{
+  "tabulatorVersion": "2.0.0",
+  "outputSettings": {
+    "contestName": "STV \u2014 3 seats, 7 candidates (proportional RCV)",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "03a_stv_3seats.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Housing",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Schools",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Parks",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Transit",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "SmallBiz",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "BigBiz",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "TaxCuts",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "multiWinnerAllowMultipleWinnersPerRound",
+    "numberOfWinners": "3",
+    "nonIntegerWinningThreshold": true,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "7",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from 03a_stv_3seats.yaml by rctab_convert.py | candidate order: ballot | 3 seats; quota = V/(S+1)+10^-d (exact Droop, mirrors this repo's engine)",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "06_Other/STV/cases/03a_stv_3seats.yaml",
+    "ballotsConverted": 100
+  }
+}

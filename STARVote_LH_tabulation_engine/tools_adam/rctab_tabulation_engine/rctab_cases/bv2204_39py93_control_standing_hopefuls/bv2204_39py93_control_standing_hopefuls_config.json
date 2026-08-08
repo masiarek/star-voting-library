@@ -1,0 +1,77 @@
+{
+  "tabulatorVersion": "2.1.0",
+  "outputSettings": {
+    "contestName": "BV2204 \u2014 Poets on the shelf: the control (STV 2 seats, hopefuls still standing)",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "bv2204_39py93_control_standing_hopefuls.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "idColumnIndex": "1",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Angelou",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Blake",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Cummings",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Dickinson",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "multiWinnerAllowMultipleWinnersPerRound",
+    "numberOfWinners": "2",
+    "nonIntegerWinningThreshold": true,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "4",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from bv2204_39py93_control_standing_hopefuls.yaml by rctab_convert.py | candidate order: ballot | 2 seats; quota = V/(S+1)+10^-d (exact Droop, mirrors this repo's engine)",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "06_Other/STV/bv_stv_sole_survivor_crash/cases/bv2204_39py93_control_standing_hopefuls.yaml",
+    "ballotsConverted": 13
+  }
+}
