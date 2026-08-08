@@ -13,6 +13,13 @@ scenario_description: |-
   seats are identical to the exercise: Austen elected round 1, surplus 1
   to Bronte; Dickens then Bronte eliminated; Camus reaches 5. Seats:
   Austen + Camus.
+  NOTE — which Droop quota: that walkthrough is the HAND COUNT's,
+  floor(9/3)+1 = 4, and the report below runs the other standard Droop
+  quota, the exact 9/3 = 3.00, so its intermediate numbers differ —
+  Austen's surplus is 2 (each ballot moving at 0.4), Bronte finishes
+  level with Camus at 3.00, and no elimination round runs at all. Both
+  rules are standard, both seat Austen + Camus; part (f) of
+  ex14_transfer_machine.md tables the two counts side by side.
   This variant exists as a bug probe: BetterVoting's STV tabulator
   returns a server error on the exercise's truncated ballots (BV2201,
   tk776t) — and, it turns out, on this fully-ranked copy too (BV2202,

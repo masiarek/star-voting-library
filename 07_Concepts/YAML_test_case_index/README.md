@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**576 election files** (494 single-winner, 82 multi-winner) across 18 method(s).
+**580 election files** (498 single-winner, 82 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 274 |
-| RCV-IRV (Hare) | 46 |
-| Ranked Robin (RCV-RR / Copeland) | 97 |
+| RCV-IRV (Hare) | 48 |
+| Ranked Robin (RCV-RR / Copeland) | 99 |
 | Approval | 25 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
@@ -310,7 +310,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`vcl_c4_b9_score_vs_runoff`](../../method_comparisons/valuable_condorcet_loser/cases/cases_pages/vcl_c4_b9_score_vs_runoff.md) | `method_comparisons/valuable_condorcet_loser/cases/` | 1 | The valuable Condorcet loser — Score elects her, the runoff rejects her → _Ben_ | [`.yaml`](../../method_comparisons/valuable_condorcet_loser/cases/vcl_c4_b9_score_vs_runoff.yaml) |
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 
-## RCV-IRV (Hare)  (46)
+## RCV-IRV (Hare)  (48)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -353,6 +353,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2183_dfw8rj_forced_exhaustion_ceiling`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | BV2183 — Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap) → _Ada_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2183_dfw8rj_forced_exhaustion_ceiling.yaml) |
 | [`bv2132_ykjjhy_pet_irv`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_irv.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (RCV-IRV): center squeeze elects Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_irv.yaml) |
 | [`bv2133_dyxrbr_pet2_irv`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_irv.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (RCV-IRV): transfers elect Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_irv.yaml) |
+| [`brams_1982_c4_b21`](../../method_comparisons/rangevoting_irv_examples/cases/cases_pages/brams_1982_c4_b21.md) | `method_comparisons/rangevoting_irv_examples/cases/` | 1 | Brams 1982 — twenty-one voters, and the Condorcet winner goes out second → _B_ | [`.yaml`](../../method_comparisons/rangevoting_irv_examples/cases/brams_1982_c4_b21.yaml) |
+| [`ossipoff_leader_eliminated_c5_b303`](../../method_comparisons/rangevoting_irv_examples/cases/cases_pages/ossipoff_leader_eliminated_c5_b303.md) | `method_comparisons/rangevoting_irv_examples/cases/` | 1 | Ossipoff's 303 — the first-round LEADER is eliminated → _D_ | [`.yaml`](../../method_comparisons/rangevoting_irv_examples/cases/ossipoff_leader_eliminated_c5_b303.yaml) |
 | [`reversal_irv_original`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_irv_original.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — RCV-IRV, original: A wins (best) → _A_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_irv_original.yaml) |
 | [`reversal_irv_reversed`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_irv_reversed.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best) → _A_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_irv_reversed.yaml) |
 | [`bv2222_rfyk46_510_thin_irv`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2222_rfyk46_510_thin_irv.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | RCV-IRV on the same electorate — also squeezes the center (→ Ana) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_irv.yaml) |
@@ -361,7 +363,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (97)
+## Ranked Robin (RCV-RR / Copeland)  (99)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -444,6 +446,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/cases/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_ranked_robin.yaml) |
 | [`bv2176_p8dp28_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, and two ladders → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_ranked_robin.yaml) |
 | [`bv2178_8kg698_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — Ranked Robin: Blue, now the outright Condorcet winner → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_ranked_robin.yaml) |
+| [`brams_1982_c4_b21_rr`](../../method_comparisons/rangevoting_irv_examples/cases/cases_pages/brams_1982_c4_b21_rr.md) | `method_comparisons/rangevoting_irv_examples/cases/` | 1 | Brams 1982 — Ranked Robin on the identical ballots → _G_ | [`.yaml`](../../method_comparisons/rangevoting_irv_examples/cases/brams_1982_c4_b21_rr.yaml) |
+| [`ossipoff_leader_eliminated_c5_b303_rr`](../../method_comparisons/rangevoting_irv_examples/cases/cases_pages/ossipoff_leader_eliminated_c5_b303_rr.md) | `method_comparisons/rangevoting_irv_examples/cases/` | 1 | Ossipoff's 303 — Ranked Robin on the identical ballots → _C_ | [`.yaml`](../../method_comparisons/rangevoting_irv_examples/cases/ossipoff_leader_eliminated_c5_b303_rr.yaml) |
 | [`reinf_combined_ben_c3_b9_rr`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_combined_ben_c3_b9_rr.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — Combined, Ben branch (9 voters; both halves say Ben, the whole says Ada) → _Ada_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_ben_c3_b9_rr.yaml) |
 | [`reinf_combined_c3_b9_rr`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_combined_c3_b9_rr.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — combined 9 voters, counted by Ranked Robin (Cara wins) → _Cara_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_c3_b9_rr.yaml) |
 | [`reinf_combined_cara_c3_b9_rr`](../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_combined_cara_c3_b9_rr.md) | `method_comparisons/reinforcement_paradox/cases/` | 1 | Reinforcement — Combined, Cara branch (9 voters; both halves say Cara, the whole says Ben) → _Ben_ | [`.yaml`](../../method_comparisons/reinforcement_paradox/cases/reinf_combined_cara_c3_b9_rr.yaml) |

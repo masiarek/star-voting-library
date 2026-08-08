@@ -22,7 +22,9 @@ num_winners: 3
 # 7 candidates in two clusters:
 #   Progressive: Housing, Schools, Parks, Transit   (58 first-choices)
 #   Business:    SmallBiz, BigBiz, TaxCuts           (42 first-choices)
-# 3 seats, Droop quota = 100/(3+1)+1 = 26. Proportional expectation: ~2 progressive
+# 3 seats. Hand-count Droop quota = floor(100/4)+1 = 26; the report below applies
+# the other standard form, the exact 100/4 = 25.00 (same seats either way).
+# Proportional expectation: ~2 progressive
 # + 1 business seat. Watch a low-first-choice consensus progressive (Schools, 15)
 # take a seat over a higher-first-choice candidate (BigBiz, 17) via transfers.
 # STAR-PR counterpart: 03b_star_pr_3seats.yaml. Counted side by side in

@@ -11,7 +11,8 @@ bv_results_url: https://bettervoting.com/gvtg2h/results
 scenario_description: |-
   Bisection probe #1 for the BetterVoting STV sole-survivor crash: the
   exercise-14 ballots byte-for-byte (5:Austen>Bronte>Camus>Dickens,
-  1:Bronte>Camus, 3:Camus>Dickens; 2 seats; Droop quota 4), created with
+  1:Bronte>Camus, 3:Camus>Dickens; 2 seats; hand-count Droop quota 4),
+  created with
   the enable_write_in key OMITTED from the race object — the one config
   key that separated the crashing elections (tk776t, bj8dfc) from the
   working older STV races (ywckmg, kcf8vf). Key confirmed absent on the
@@ -22,6 +23,13 @@ scenario_description: |-
   redistribute a surplus from ([].reduce with no initial value throws).
   Full lab notebook: README.md in this folder. Seats below are the LH
   engine's (BV errors until fixed).
+  NOTE — which Droop quota: the elimination sequence above is the one
+  BetterVoting's tabulator walks under the hand-count quota of 4, and it
+  is the shape that crashes it. The LH report below applies the other
+  standard Droop quota, the exact 9/3 = 3.00, and on that rulebook the
+  second seat fills with NO elimination round at all — so don't expect
+  the sole-survivor endgame to appear in the table. Same seats either
+  way; the crash is BV's, and it is real.
   Live on BetterVoting (Test ID BV2203): https://bettervoting.com/gvtg2h
   — results page errors by design of the probe.
 voting_method: STV
