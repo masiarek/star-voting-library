@@ -5,7 +5,7 @@ search:
 
 # Nine candidates, 25 voters — the 0–5 score ballot
 
-*Generated from [`ballot_expressiveness_c9_star.yaml`](../ballot_expressiveness_c9_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2280_37yf8x_star.yaml`](../bv2280_37yf8x_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Finn
 
@@ -27,7 +27,7 @@ the hard limit.
 And it does not matter. The preference that decides this election — Finn over everyone
 — survives the rounding, so STAR returns the Condorcet winner anyway.
 
-Read this file against ballot_expressiveness_c9_rr_top5.yaml, where the same 25 voters
+Read this file against bv2280_37yf8x_rr_top5.yaml, where the same 25 voters
 fill in a RANKED ballot capped at five names, the cap New York City and Maine actually
 use, and the count elects Gus instead. The ballot usually called "more expressive"
 loses the answer that these six rungs kept.
@@ -176,20 +176,20 @@ Hugo        8   0   1   4   0  12  |    51   2.0
 Iris        8   0   1   3   1  12  |    50   2.0
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ballot_expressiveness_c9_star_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2280_37yf8x_star_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_star.yaml
 ```
 
 ## See also
 
-- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/ballot_expressiveness_c9_star.md) — its entry in the divergence review ledger
+- [Methods disagree on this election](../../../divergence_review/cases/APPROVAL_OR_MINOR/bv2280_37yf8x_star.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [ballot_expressiveness_c9_irv_full](ballot_expressiveness_c9_irv_full.md) · [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [ballot_expressiveness_c9_rr_full](ballot_expressiveness_c9_rr_full.md) · [ballot_expressiveness_c9_rr_top5](ballot_expressiveness_c9_rr_top5.md)
+More cases in this set: [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [bv2280_37yf8x_irv_full](bv2280_37yf8x_irv_full.md) · [bv2280_37yf8x_rr_full](bv2280_37yf8x_rr_full.md) · [bv2280_37yf8x_rr_top5](bv2280_37yf8x_rr_top5.md)

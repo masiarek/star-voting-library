@@ -2,7 +2,7 @@ election_title: "Nine candidates, 25 voters — ranking only five, counted by Ra
 
 scenario_description: |-
   THE CAP CHANGES THE WINNER. Same 25 voters, same Ranked Robin rule as
-  ballot_expressiveness_c9_rr_full.yaml. The only difference is that each voter may name
+  bv2280_37yf8x_rr_full.yaml. The only difference is that each voter may name
   five candidates instead of nine — and Gus wins instead of Finn.
 
   Finn is the Condorcet winner on the electorate's real preferences. What the cap removes
@@ -80,4 +80,4 @@ ballots: |-
 expected_winners:
   - Gus
 
-# file: ballot_expressiveness_c9_rr_top5.yaml
+# file: bv2280_37yf8x_rr_top5.yaml

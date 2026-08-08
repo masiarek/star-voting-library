@@ -23,7 +23,7 @@ STAR, RCV-IRV and Ranked Robin all agree on **Finn**. Only **Approval** differs,
 
 **Flags:** 25 tied-score ballot(s); IRV winner flips under reversed priority (fragile tie)
 
-**Source election:** [`method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml`](../../../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml)  ·  **STAR tabulated mirror:** [`ballot_expressiveness_c9_star_tabulated.txt`](../../../../method_comparisons/ballot_expressiveness/cases/cases_tabulated/ballot_expressiveness_c9_star_tabulated.txt)
+**Source election:** [`method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_star.yaml`](../../../../method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_star.yaml)  ·  **STAR tabulated mirror:** [`bv2280_37yf8x_star_tabulated.txt`](../../../../method_comparisons/ballot_expressiveness/cases/cases_tabulated/bv2280_37yf8x_star_tabulated.txt)
 
 _9 candidates, 25 ballots._
 

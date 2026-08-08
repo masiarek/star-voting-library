@@ -111,6 +111,18 @@ it is the control that changes nothing, and it did not earn a permanent public r
 BV_TEST_ID = "BV2280"
 BV_ELECTION_ID = "37yf8x"
 
+# Case stems. The four papers that are live on BetterVoting lead with the bvid, the
+# house naming rule for a BV-backed case; the fifth is LH-only and keeps a descriptive
+# name. Both forms sit side by side in method_comparisons/felsenthal_paradoxes/ too.
+# They are constants rather than literals because the scenario_descriptions cross-
+# reference each other by filename, and a rename that updated the files but not the
+# prose would leave every case pointing at a name that no longer exists.
+S_STAR = f"bv2280_{BV_ELECTION_ID}_star"
+S_RR_FULL = f"bv2280_{BV_ELECTION_ID}_rr_full"
+S_RR_TOP5 = f"bv2280_{BV_ELECTION_ID}_rr_top5"
+S_IRV_FULL = f"bv2280_{BV_ELECTION_ID}_irv_full"
+S_IRV_TOP5 = "ballot_expressiveness_c9_irv_top5"      # LH-only: no BV race
+
 
 def bv_fields(on_bv):
     if not on_bv:
@@ -165,10 +177,10 @@ def main():
     HERE.mkdir(parents=True, exist_ok=True)
 
     write(
-        "ballot_expressiveness_c9_star",
+        S_STAR,
         "Nine candidates, 25 voters — the 0–5 score ballot",
         "STAR",
-        """  THE COARSE BALLOT GETS IT RIGHT. Finn beats all eight rivals head-to-head, and STAR
+        f"""  THE COARSE BALLOT GETS IT RIGHT. Finn beats all eight rivals head-to-head, and STAR
   elects them from a ballot that cannot even rank the field.
 
   Nine candidates will not fit on six rungs — 0, 1, 2, 3, 4 and 5 hold six distinct
@@ -180,7 +192,7 @@ def main():
   And it does not matter. The preference that decides this election — Finn over everyone
   — survives the rounding, so STAR returns the Condorcet winner anyway.
 
-  Read this file against ballot_expressiveness_c9_rr_top5.yaml, where the same 25 voters
+  Read this file against {S_RR_TOP5}.yaml, where the same 25 voters
   fill in a RANKED ballot capped at five names, the cap New York City and Maine actually
   use, and the count elects Gus instead. The ballot usually called "more expressive"
   loses the answer that these six rungs kept.""",
@@ -189,20 +201,20 @@ def main():
     )
 
     write(
-        "ballot_expressiveness_c9_rr_full",
+        S_RR_FULL,
         "Nine candidates, 25 voters — ranking all nine, counted by Ranked Robin",
         "RankedRobin",
-        """  THE CONTROL. Every voter ranks all nine candidates, nothing truncated and nothing
+        f"""  THE CONTROL. Every voter ranks all nine candidates, nothing truncated and nothing
   rounded, and Ranked Robin returns Finn — the candidate who beats each of the other
   eight head-to-head.
 
   This is the full-resolution ranked ballot that Condorcet-efficiency simulations
   normally hand to ranked methods. It is also an idealization: no large-field
-  jurisdiction issues it. ballot_expressiveness_c9_rr_top5.yaml cuts it down to five
+  jurisdiction issues it. {S_RR_TOP5}.yaml cuts it down to five
   ranks, which is what a real ranked ballot looks like, and the winner changes.
 
-  Compare with ballot_expressiveness_c9_star.yaml: the 0–5 score ballot agrees with this
-  one. Compare with ballot_expressiveness_c9_irv_full.yaml: the SAME ballots, counted by
+  Compare with {S_STAR}.yaml: the 0–5 score ballot agrees with this
+  one. Compare with {S_IRV_FULL}.yaml: the SAME ballots, counted by
   instant runoff, do not — which is the cleanest evidence in this folder that the paper
   and the count are separate things.""",
         rank_block(),
@@ -210,11 +222,11 @@ def main():
     )
 
     write(
-        "ballot_expressiveness_c9_rr_top5",
+        S_RR_TOP5,
         "Nine candidates, 25 voters — ranking only five, counted by Ranked Robin",
         "RankedRobin",
-        """  THE CAP CHANGES THE WINNER. Same 25 voters, same Ranked Robin rule as
-  ballot_expressiveness_c9_rr_full.yaml. The only difference is that each voter may name
+        f"""  THE CAP CHANGES THE WINNER. Same 25 voters, same Ranked Robin rule as
+  {S_RR_FULL}.yaml. The only difference is that each voter may name
   five candidates instead of nine — and Gus wins instead of Finn.
 
   Finn is the Condorcet winner on the electorate's real preferences. What the cap removes
@@ -236,11 +248,11 @@ def main():
     )
 
     write(
-        "ballot_expressiveness_c9_irv_full",
+        S_IRV_FULL,
         "Nine candidates, 25 voters — ranking all nine, counted by RCV-IRV",
         "RCV-IRV",
-        """  THE EXPRESSIVE BALLOT DOES NOT RESCUE THE COUNT. These are the same complete,
-  full-resolution rankings as ballot_expressiveness_c9_rr_full.yaml — every voter's
+        f"""  THE EXPRESSIVE BALLOT DOES NOT RESCUE THE COUNT. These are the same complete,
+  full-resolution rankings as {S_RR_FULL}.yaml — every voter's
   opinion of all nine candidates, nothing rounded and nothing truncated. Instant runoff
   still elects Ben, not the Condorcet winner Finn.
 
@@ -263,11 +275,11 @@ def main():
     )
 
     write(
-        "ballot_expressiveness_c9_irv_top5",
+        S_IRV_TOP5,
         "Nine candidates, 25 voters — ranking only five, counted by RCV-IRV",
         "RCV-IRV",
-        """  BOTH LIMITS AT ONCE, and the winner does not move again. Five ranks out of nine,
-  counted by instant runoff: Ben, exactly as in ballot_expressiveness_c9_irv_full.yaml.
+        f"""  BOTH LIMITS AT ONCE, and the winner does not move again. Five ranks out of nine,
+  counted by instant runoff: Ben, exactly as in {S_IRV_FULL}.yaml.
 
   This file is the honest control on the rest of the folder, and it is the one that stops
   the lesson from overreaching. Ranked Robin's winner DID change when the ballot was

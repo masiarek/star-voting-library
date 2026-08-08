@@ -5,7 +5,7 @@
 
 The picture for 07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md. It is
 NOT invented: it draws one real voter from
-method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_star.yaml — the
+method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_star.yaml — the
 voter standing at +0.20 on that folder's spectrum — with their true opinion on the left
 and the 0-5 ballot they are actually able to fill in on the right.
 

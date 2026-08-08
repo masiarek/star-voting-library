@@ -6,8 +6,8 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **241** single-winner STAR elections (skipped 211 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **144** (60%) diverge from STAR under at least one method; **97** agree across the board.
+- Scanned **242** single-winner STAR elections (skipped 214 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **145** (60%) diverge from STAR under at least one method; **97** agree across the board.
 
 | Bucket | Count |
 |---|---:|
@@ -15,7 +15,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 | STAR_OUTLIER_RR_WITH_IRV | 10 |
 | IRV_DIFFERS_ARTIFACT | 15 |
 | CYCLE_OR_THREE_WAY | 37 |
-| APPROVAL_OR_MINOR | 51 |
+| APPROVAL_OR_MINOR | 52 |
 
 ## Score→rank conversion (recorded both ways)
 
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (141 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (142 cases; identical library copies merged).
 
-**79 of these 141 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**80 of these 142 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -258,7 +258,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
 
-### APPROVAL_OR_MINOR — 51
+### APPROVAL_OR_MINOR — 52
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
@@ -330,6 +330,9 @@ _Only Approval (or a minor method) differs — usually a threshold story, not an
     STAR=**Peltola** · IRV=Peltola · RR=Peltola · Approval=Begich · Score=Begich · Condorcet=Peltola
 - **[hh41_04_stipulated_utilities_star](cases/APPROVAL_OR_MINOR/hh41_04_stipulated_utilities_star.md)** — `method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml` (3c/100b)  
     STAR=**A** · IRV=A · RR=A · Approval=B · Score=A · Condorcet=A
+- **[bv2280_37yf8x_star](cases/APPROVAL_OR_MINOR/bv2280_37yf8x_star.md)** — `method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_star.yaml` (9c/25b)  ·  [BV ↗](https://bettervoting.com/37yf8x/results)  
+    STAR=**Finn** · IRV=Finn · RR=Finn · Approval=Emma · Score=Finn · Condorcet=Finn  
+    _flags: 25 tied-score ballot(s); IRV flips on reversed priority_
 - **[Black_Curtain_01_c3_b5_hidden-consensus](cases/APPROVAL_OR_MINOR/Black_Curtain_01_c3_b5_hidden-consensus.md)** — `method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml` (3c/5b)  
     STAR=**Cal** · IRV=Cal · RR=Cal · Approval=Bob · Score=Bob · Condorcet=Cal
 - **[Black_Curtain_02_c3_b5_near-clones](cases/APPROVAL_OR_MINOR/Black_Curtain_02_c3_b5_near-clones.md)** — `method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml` (3c/5b)  

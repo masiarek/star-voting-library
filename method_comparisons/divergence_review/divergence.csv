@@ -126,6 +126,7 @@ APPROVAL_OR_MINOR,method_comparisons/BV_Library/cases/BV_Library_star_runoff_sco
 APPROVAL_OR_MINOR,method_comparisons/_main/cases/count_simplicity_star_vs_irv.yaml,5,40,Carmen,Carmen,Carmen,Carmen,Carmen,Andre,Carmen,Carmen,Carmen,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml,3,200,Peltola,Peltola,Peltola,Peltola,Peltola,Begich,Begich,Peltola,Peltola,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml,3,100,A,A,A,A,A,B,A,A,A,0,False,False,False
+APPROVAL_OR_MINOR,method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_star.yaml,9,25,Finn,Finn,Ben,Finn,Finn,Emma,Finn,Finn,Finn,25,True,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/cases/Black_Curtain_01_c3_b5_hidden-consensus.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Bob,Bob,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/cases/Black_Curtain_02_c3_b5_near-clones.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Cal,Cal,Cal,0,False,False,False
 APPROVAL_OR_MINOR,method_comparisons/black_curtain/cases/Black_Curtain_03_c3_b5_polarized-on-cal.yaml,3,5,Cal,Cal,Cal,Cal,Cal,Ann,Ann,Cal,Cal,0,False,False,False

@@ -874,6 +874,17 @@ plugins:
         # tooling changed, which is the drift this library exists to avoid.
         07_Concepts/topics/the_pipeline.md: YAML_library/README.md
 
+        # --- Ballot-expressiveness cases renamed to the bvid prefix (2026-08-07),
+        # once BV2280 (37yf8x) existed to back them. They were minted under
+        # descriptive LH-only names hours earlier, so these four URLs were briefly
+        # live and get the usual permanent redirect. The fifth case in that folder
+        # keeps its descriptive name — it is LH-only, with no BV race — so it did
+        # not move and needs no entry.
+        method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_star.md: method_comparisons/ballot_expressiveness/cases/cases_pages/bv2280_37yf8x_star.md
+        method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_rr_full.md: method_comparisons/ballot_expressiveness/cases/cases_pages/bv2280_37yf8x_rr_full.md
+        method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_rr_top5.md: method_comparisons/ballot_expressiveness/cases/cases_pages/bv2280_37yf8x_rr_top5.md
+        method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_irv_full.md: method_comparisons/ballot_expressiveness/cases/cases_pages/bv2280_37yf8x_irv_full.md
+
 markdown_extensions:
   - admonition
   - attr_list

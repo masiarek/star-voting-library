@@ -2,7 +2,7 @@ election_title: "Nine candidates, 25 voters — ranking all nine, counted by RCV
 
 scenario_description: |-
   THE EXPRESSIVE BALLOT DOES NOT RESCUE THE COUNT. These are the same complete,
-  full-resolution rankings as ballot_expressiveness_c9_rr_full.yaml — every voter's
+  full-resolution rankings as bv2280_37yf8x_rr_full.yaml — every voter's
   opinion of all nine candidates, nothing rounded and nothing truncated. Instant runoff
   still elects Ben, not the Condorcet winner Finn.
 
@@ -81,4 +81,4 @@ ballots: |-
 expected_winners:
   - Ben
 
-# file: ballot_expressiveness_c9_irv_full.yaml
+# file: bv2280_37yf8x_irv_full.yaml

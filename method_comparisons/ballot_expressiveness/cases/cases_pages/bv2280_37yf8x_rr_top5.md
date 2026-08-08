@@ -5,7 +5,7 @@ search:
 
 # Nine candidates, 25 voters — ranking only five, counted by Ranked Robin
 
-*Generated from [`ballot_expressiveness_c9_rr_top5.yaml`](../ballot_expressiveness_c9_rr_top5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2280_37yf8x_rr_top5.yaml`](../bv2280_37yf8x_rr_top5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Gus
 
@@ -16,7 +16,7 @@ search:
 ## Scenario
 
 THE CAP CHANGES THE WINNER. Same 25 voters, same Ranked Robin rule as
-ballot_expressiveness_c9_rr_full.yaml. The only difference is that each voter may name
+bv2280_37yf8x_rr_full.yaml. The only difference is that each voter may name
 five candidates instead of nine — and Gus wins instead of Finn.
 
 Finn is the Condorcet winner on the electorate's real preferences. What the cap removes
@@ -184,12 +184,12 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ballot_expressiveness_c9_rr_top5_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2280_37yf8x_rr_top5_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_rr_top5.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_rr_top5.yaml
 ```
 
 ## See also
@@ -200,4 +200,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [ballot_expressiveness_c9_irv_full](ballot_expressiveness_c9_irv_full.md) · [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [ballot_expressiveness_c9_rr_full](ballot_expressiveness_c9_rr_full.md) · [ballot_expressiveness_c9_star](ballot_expressiveness_c9_star.md)
+More cases in this set: [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [bv2280_37yf8x_irv_full](bv2280_37yf8x_irv_full.md) · [bv2280_37yf8x_rr_full](bv2280_37yf8x_rr_full.md) · [bv2280_37yf8x_star](bv2280_37yf8x_star.md)

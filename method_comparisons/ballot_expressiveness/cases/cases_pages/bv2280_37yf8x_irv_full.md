@@ -5,7 +5,7 @@ search:
 
 # Nine candidates, 25 voters — ranking all nine, counted by RCV-IRV
 
-*Generated from [`ballot_expressiveness_c9_irv_full.yaml`](../ballot_expressiveness_c9_irv_full.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2280_37yf8x_irv_full.yaml`](../bv2280_37yf8x_irv_full.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [rcv-irv](../../../../07_Concepts/README.md) · **1 seat** · **Expected winner:** Ben
 
@@ -16,7 +16,7 @@ search:
 ## Scenario
 
 THE EXPRESSIVE BALLOT DOES NOT RESCUE THE COUNT. These are the same complete,
-full-resolution rankings as ballot_expressiveness_c9_rr_full.yaml — every voter's
+full-resolution rankings as bv2280_37yf8x_rr_full.yaml — every voter's
 opinion of all nine candidates, nothing rounded and nothing truncated. Instant runoff
 still elects Ben, not the Condorcet winner Finn.
 
@@ -198,12 +198,12 @@ the honest answer to "who is even in contention?".
    More: 07_Concepts/topics/smith_set.md
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ballot_expressiveness_c9_irv_full_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2280_37yf8x_irv_full_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_irv_full.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_irv_full.yaml
 ```
 
 ## See also
@@ -216,4 +216,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [ballot_expressiveness_c9_rr_full](ballot_expressiveness_c9_rr_full.md) · [ballot_expressiveness_c9_rr_top5](ballot_expressiveness_c9_rr_top5.md) · [ballot_expressiveness_c9_star](ballot_expressiveness_c9_star.md)
+More cases in this set: [ballot_expressiveness_c9_irv_top5](ballot_expressiveness_c9_irv_top5.md) · [bv2280_37yf8x_rr_full](bv2280_37yf8x_rr_full.md) · [bv2280_37yf8x_rr_top5](bv2280_37yf8x_rr_top5.md) · [bv2280_37yf8x_star](bv2280_37yf8x_star.md)

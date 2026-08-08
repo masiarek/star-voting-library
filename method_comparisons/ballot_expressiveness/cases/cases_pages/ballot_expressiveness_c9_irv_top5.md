@@ -14,7 +14,7 @@ search:
 ## Scenario
 
 BOTH LIMITS AT ONCE, and the winner does not move again. Five ranks out of nine,
-counted by instant runoff: Ben, exactly as in ballot_expressiveness_c9_irv_full.yaml.
+counted by instant runoff: Ben, exactly as in bv2280_37yf8x_irv_full.yaml.
 
 This file is the honest control on the rest of the folder, and it is the one that stops
 the lesson from overreaching. Ranked Robin's winner DID change when the ballot was
@@ -210,4 +210,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Exhausted ballots (conversation)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [ballot_expressiveness_c9_irv_full](ballot_expressiveness_c9_irv_full.md) · [ballot_expressiveness_c9_rr_full](ballot_expressiveness_c9_rr_full.md) · [ballot_expressiveness_c9_rr_top5](ballot_expressiveness_c9_rr_top5.md) · [ballot_expressiveness_c9_star](ballot_expressiveness_c9_star.md)
+More cases in this set: [bv2280_37yf8x_irv_full](bv2280_37yf8x_irv_full.md) · [bv2280_37yf8x_rr_full](bv2280_37yf8x_rr_full.md) · [bv2280_37yf8x_rr_top5](bv2280_37yf8x_rr_top5.md) · [bv2280_37yf8x_star](bv2280_37yf8x_star.md)

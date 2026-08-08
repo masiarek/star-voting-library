@@ -1,6 +1,6 @@
 ======================================================================
-SOURCE FILE:     ballot_expressiveness_c9_star.yaml
-TABULATED FILE:  ballot_expressiveness_c9_star_tabulated.txt
+SOURCE FILE:     bv2280_37yf8x_star.yaml
+TABULATED FILE:  bv2280_37yf8x_star_tabulated.txt
 ======================================================================
 
 election_title: "Nine candidates, 25 voters — the 0–5 score ballot"
@@ -18,7 +18,7 @@ scenario_description: |-
   And it does not matter. The preference that decides this election — Finn over everyone
   — survives the rounding, so STAR returns the Condorcet winner anyway.
 
-  Read this file against ballot_expressiveness_c9_rr_top5.yaml, where the same 25 voters
+  Read this file against bv2280_37yf8x_rr_top5.yaml, where the same 25 voters
   fill in a RANKED ballot capped at five names, the cap New York City and Maine actually
   use, and the count elects Gus instead. The ballot usually called "more expressive"
   loses the answer that these six rungs kept.
@@ -83,7 +83,7 @@ ballots: |-
 expected_winners:
   - Finn
 
-# file: ballot_expressiveness_c9_star.yaml
+# file: bv2280_37yf8x_star.yaml
 
 ======================================================================
 TABULATION RESULTS
@@ -102,7 +102,7 @@ TABULATION RESULTS
   And it does not matter. The preference that decides this election — Finn over everyone
   — survives the rounding, so STAR returns the Condorcet winner anyway.
 
-  Read this file against ballot_expressiveness_c9_rr_top5.yaml, where the same 25 voters
+  Read this file against bv2280_37yf8x_rr_top5.yaml, where the same 25 voters
   fill in a RANKED ballot capped at five names, the cap New York City and Maine actually
   use, and the count elects Gus instead. The ballot usually called "more expressive"
   loses the answer that these six rungs kept.

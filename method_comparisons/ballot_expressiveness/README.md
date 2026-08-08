@@ -10,10 +10,10 @@ Every case in this folder is the **same electorate**. Voters and candidates sit 
 
 | Ballot | Count | Winner | | On BV |
 |---|---|:--:|---|:--:|
-| [0–5 scores](cases/cases_pages/ballot_expressiveness_c9_star.md) | STAR | **Finn** | ✅ the Condorcet winner | ✔ |
-| [ranks all nine](cases/cases_pages/ballot_expressiveness_c9_rr_full.md) | Ranked Robin | **Finn** | ✅ the control | ✔ |
-| [ranks only five](cases/cases_pages/ballot_expressiveness_c9_rr_top5.md) | Ranked Robin | **Gus** | ❌ the *cap* lost the answer | ✔ |
-| [ranks all nine](cases/cases_pages/ballot_expressiveness_c9_irv_full.md) | RCV-IRV | **Ben** | ❌ the *count* lost the answer | ✔ |
+| [0–5 scores](cases/cases_pages/bv2280_37yf8x_star.md) | STAR | **Finn** | ✅ the Condorcet winner | ✔ |
+| [ranks all nine](cases/cases_pages/bv2280_37yf8x_rr_full.md) | Ranked Robin | **Finn** | ✅ the control | ✔ |
+| [ranks only five](cases/cases_pages/bv2280_37yf8x_rr_top5.md) | Ranked Robin | **Gus** | ❌ the *cap* lost the answer | ✔ |
+| [ranks all nine](cases/cases_pages/bv2280_37yf8x_irv_full.md) | RCV-IRV | **Ben** | ❌ the *count* lost the answer | ✔ |
 | [ranks only five](cases/cases_pages/ballot_expressiveness_c9_irv_top5.md) | RCV-IRV | **Ben** | ❌ unchanged — already lost | — |
 
 Read the table down the middle column and the whole lesson falls out.
@@ -54,7 +54,7 @@ Nine candidates will not fit on six rungs, so **every** voter here must give at 
 
 And in this election it costs nothing: the preference that decides the race — Finn over everyone — survives the rounding, and STAR returns the Condorcet winner from a ballot that cannot even rank the field. The runoff is Finn 13, Emma 12, with **zero** voters expressing no preference between them.
 
-<!-- report:ballot_expressiveness_c9_star -->
+<!-- report:bv2280_37yf8x_star -->
 ```text
 [Divergence from STAR]
   STAR                   = Finn

@@ -7,11 +7,11 @@ scenario_description: |-
 
   This is the full-resolution ranked ballot that Condorcet-efficiency simulations
   normally hand to ranked methods. It is also an idealization: no large-field
-  jurisdiction issues it. ballot_expressiveness_c9_rr_top5.yaml cuts it down to five
+  jurisdiction issues it. bv2280_37yf8x_rr_top5.yaml cuts it down to five
   ranks, which is what a real ranked ballot looks like, and the winner changes.
 
-  Compare with ballot_expressiveness_c9_star.yaml: the 0–5 score ballot agrees with this
-  one. Compare with ballot_expressiveness_c9_irv_full.yaml: the SAME ballots, counted by
+  Compare with bv2280_37yf8x_star.yaml: the 0–5 score ballot agrees with this
+  one. Compare with bv2280_37yf8x_irv_full.yaml: the SAME ballots, counted by
   instant runoff, do not — which is the cleanest evidence in this folder that the paper
   and the count are separate things.
 
@@ -75,4 +75,4 @@ ballots: |-
 expected_winners:
   - Finn
 
-# file: ballot_expressiveness_c9_rr_full.yaml
+# file: bv2280_37yf8x_rr_full.yaml

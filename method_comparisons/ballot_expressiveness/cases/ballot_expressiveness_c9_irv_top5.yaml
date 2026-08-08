@@ -2,7 +2,7 @@ election_title: "Nine candidates, 25 voters — ranking only five, counted by RC
 
 scenario_description: |-
   BOTH LIMITS AT ONCE, and the winner does not move again. Five ranks out of nine,
-  counted by instant runoff: Ben, exactly as in ballot_expressiveness_c9_irv_full.yaml.
+  counted by instant runoff: Ben, exactly as in bv2280_37yf8x_irv_full.yaml.
 
   This file is the honest control on the rest of the folder, and it is the one that stops
   the lesson from overreaching. Ranked Robin's winner DID change when the ballot was
