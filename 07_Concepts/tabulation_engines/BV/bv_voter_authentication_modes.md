@@ -10,16 +10,29 @@ For the raw field definitions see [BV's election table](database_schema/election
 
 ---
 
-## Terminology — "demo election" vs "No Voting Limit"
+## Terminology — why "demo election" isn't quite right
 
-The term feels slippery because **BetterVoting's own copy names this mode three different ways**, and the admin-facing one is not a noun phrase at all.
+**Manage Voters asks two independent questions**, and "demo election" collapses them into one. That collapse is the whole inaccuracy:
 
-The settings form (`ElectionAuthForm.tsx`) asks the question as a **sentence**, with the modes as its endings:
-
+> **Would you like your election to be restricted to a pre-defined voter list?** &nbsp; ○ Yes &nbsp; ● No
+>
 > **Who can vote?**
-> Limit to one vote per… &nbsp;•&nbsp; **device** &nbsp;•&nbsp; **WiFi/cellular network** &nbsp;•&nbsp; **user (login required)** &nbsp;•&nbsp; **no limit**
+> Limit to one Vote per… &nbsp;○ device &nbsp;○ user (login required) &nbsp;○ WiFi/cellular network &nbsp;● no limit
 
-Each option carries a tooltip with a fuller title and description. So for this one mode:
+The first sets **`voter_access`** — is there an electorate at all? The second sets **`voter_authentication`** — how hard is it to vote twice? They are orthogonal, and *both* answers are needed to name what you are looking at. The screen above is **unrestricted + no limit**, i.e. `open_open`.
+
+So the accurate description of that election is a two-part phrase — *"unrestricted, with no vote limit"* — and `open_open` is simply its compact name. There is no single word on the screen for it, which is exactly why one gets improvised.
+
+**What makes "demo election" inaccurate is that it names a *purpose* while the screen sets a *mechanism*.** Nothing here says "demo". The two come apart in both directions:
+
+- A **demo can be restricted** — a classroom exercise with a real emailed roll is still a demo.
+- **No limit can be a mistake** — a real election configured carelessly is `open_open` and nobody meant it as a demonstration.
+
+Same shape as the [RCV / IRV distinction](../../tips/TIPS_terminology.md) this repo keeps: one word names what you're doing, the other names the mechanism you're doing it with, and collapsing them costs you an argument later.
+
+### What BetterVoting itself calls it
+
+Three different things, and the admin-facing one is not a noun phrase at all. The form (`ElectionAuthForm.tsx`) asks the question as a **sentence**, with the modes as its endings — each carrying a tooltip with a fuller title and description:
 
 | Surface | What it says |
 |---|---|
@@ -43,20 +56,12 @@ Each option carries a tooltip with a fuller title and description. So for this o
 
 Reading them as a sentence makes the family obvious in a way the mode names don't: they are four answers to *"one vote per what?"*, and `open_open` is the answer "per nothing."
 
-### The distinction that resolves it
-
-**"Demo" names an *intent*. "No Voting Limit" names a *configuration*.** They are not synonyms, and treating them as such is what makes the term feel unstable:
-
-- You can run a **demo in a restricted election** — a classroom exercise with a real emailed roll is still a demo.
-- You can, badly, run a **real election with no voting limit** — the mode does not know what you meant by it.
-
-This is the same shape as the [RCV / IRV distinction](../../tips/TIPS_terminology.md) used throughout this repo: one word names the thing you're doing, another names the mechanism you're doing it with, and collapsing them loses an argument later.
-
 ### House usage
 
-- **Technical writing — exports, code, case files, anything precise → `open_open`.** It is the mode's actual name and cannot be misread.
-- **Walking someone through the BetterVoting UI → "no limit"**, and quote the question with it: *"under **Who can vote?**, choose **no limit**."* An instruction that names anything else sends the reader looking for a control that isn't there.
-- **"Demo election" stays**, for *intent* — it is the word BetterVoting's own tooltip uses, and it is the honest label for why we run most of these. On first mention in a page, name the mode once: *"a demo election (BetterVoting's **no limit** setting, `open_open`)"*. Thereafter the short word is fine.
+- **Technical writing — exports, code, case files, anything precise → `open_open`.** It is the mode's actual name, it encodes *both* axes, and it cannot be misread.
+- **Prose that needs to be plain → "unrestricted, no vote limit."** Two facts, because the screen sets two. *"Open"* alone is ambiguous: three of the four unrestricted settings still limit voting.
+- **Walking someone through the UI → "no limit"**, quoting the question with it: *"under **Who can vote?**, choose **no limit**."* An instruction naming anything else sends the reader hunting for a control that isn't there.
+- **"Demo election" stays for *intent*** — it is the word BetterVoting's own tooltip uses, and it is the honest reason we run most of ours. But it is a claim about *why*, so pair it with the mode on first mention: *"a demo election (unrestricted, no vote limit — `open_open`)"*. Never let it stand as the technical description.
 - **Don't write "No Voting Limit" as though it were the control.** It is the tooltip's title, not the option's label.
 
 ### One trap: "public" is a different axis
