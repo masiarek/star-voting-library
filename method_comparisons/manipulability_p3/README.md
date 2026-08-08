@@ -12,11 +12,15 @@
 
 A committee of seven picks a meeting city.
 
-| Voters | Ranking |
-|---:|---|
-| 2 | Edinburgh > Cork > Athens > Dublin > Bergen |
-| 3 | Dublin > Edinburgh > Bergen > Cork > Athens |
-| 2 | Athens > Bergen > Cork > Dublin > Edinburgh |
+<!-- ballots:p3_sincere_ranked_robin -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+2:Edinburgh>Cork>Athens>Dublin>Bergen
+3:Dublin>Edinburgh>Bergen>Cork>Athens
+2:Athens>Bergen>Cork>Dublin>Edinburgh
+```
+<!-- /ballots -->
 
 Sincerely, here is where everyone lands:
 

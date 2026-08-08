@@ -8,11 +8,15 @@
 
 ## The ballots
 
-| Voters | Ranking |
-|:--:|---|
-| 2 | Ada > Ben > Cara |
-| 1 | Ben > Cara > Ada |
-| 2 | Cara > Ada > Ben |
+<!-- ballots:tilted_cycle_c3_b5_irv -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+2:Ada>Ben>Cara
+1:Ben>Cara>Ada
+2:Cara>Ada>Ben
+```
+<!-- /ballots -->
 
 Same cast as the [reinforcement pair](../reinforcement_paradox/README.md) on purpose — it is the same paper's three-candidate world, with one thing changed: the cycle is **tilted** instead of symmetric.
 

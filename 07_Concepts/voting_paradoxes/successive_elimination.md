@@ -14,12 +14,16 @@ uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/su
 
 **Case:** [11 voters, four readings](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex9_pareto.md)
 
-| Voters | Preference ordering |
-|---:|---|
-| 3 | A > B > C > D |
-| 2 | C > A > B > D |
-| 1 | C > D > A > B |
-| 5 | D > A > B > C |
+<!-- ballots:succ_elim_ex9_pareto -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+3:A>B>C>D
+2:C>A>B>D
+1:C>D>A>B
+5:D>A>B>C
+```
+<!-- /ballots -->
 
 The social preference ordering is **cyclical** (B > C > D > A > B) — a necessary condition for electing a Pareto-dominated candidate here. With the agenda *D vs A*, *winner vs C*, *winner vs B*: D beats A **6:5**, C beats D **6:5**, B beats C **8:3** — **B wins**. But *every* voter prefers **A** to B: a Pareto-dominated candidate is elected ([`pareto`](../YAML_test_case_index/PARADOX_index.md); the Approval flavor of the same paradox is runnable: [Felsenthal Ex.6](../../method_comparisons/felsenthal_paradoxes/felsenthal_ex6_pareto.md)). The report detects that unanimity itself and flags it, rather than leaving you to check eleven ballots by eye.
 
@@ -50,12 +54,16 @@ The runnable ballot-box version of this paradox (plurality-with-runoff) is the l
 
 **Cases:** [before](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex11_twin_before.md) → [after the twin joins](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex11_twin_after.md)
 
-| Voters | Preference ordering |
-|---:|---|
-| 2 | A > B > C |
-| 2 | B > C > A |
-| 1 | C > A > B |
-| 1 | C > B > A |
+<!-- ballots:succ_elim_ex11_twin_before -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+2:A>B>C
+2:B>C>A
+1:C>A>B
+1:C>B>A
+```
+<!-- /ballots -->
 
 Agenda *A vs B*, *winner vs C*; ties break lexicographically (toward the earlier letter). Round 1: A ties B 3:3 → **A** advances; round 2: **C beats A** 4:2 and wins. The single `C>B>A` voter should welcome a *twin* — another `C>B>A` voter. But with that twin added, **B becomes the Condorcet winner** (beating A 4:3 and C 4:3) and wins the procedure — and the original `C>B>A` voter prefers C, the old winner, to B: the twin's arrival made them worse off ([no_show.md](no_show.md) covers the twin's runnable runoff flavor, [BV2150/51](../../method_comparisons/felsenthal_paradoxes/bv2151_97hbpw_felsenthal_ex4_noshow.md)).
 
@@ -65,12 +73,16 @@ Nothing insincere happened. No preference changed, no candidate entered or left,
 
 **Cases:** [sincere](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex12_sincere.md) → [truncated](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/succ_elim_ex12_truncated.md)
 
-| Voters | Preference ordering |
-|---:|---|
-| 1 | A > B > C > D |
-| 1 | C > B > A > D |
-| 2 | C > D > B > A |
-| 2 | D > A > B > C |
+<!-- ballots:succ_elim_ex12_sincere -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+1:A>B>C>D
+1:C>B>A>D
+2:C>D>B>A
+2:D>A>B>C
+```
+<!-- /ballots -->
 
 Agenda *B vs C*, *winner vs D*, *winner vs A*; ties break toward the earlier letter. Sincere: B ties C 3:3 → **B**; **D beats B** 4:2; **D beats A** 4:2 — D wins, the `A>B>C>D` voter's *last* choice. Now let that voter **truncate** to just `A` (participating only where A stands): round 1 **C beats B** 3:2; round 2 **C beats D** 3:2; round 3 A ties C 3:3 → **A wins**. Revealing *less* of the ballot got the voter their *first* choice instead of their last — the Truncation paradox ([`truncation`](../YAML_test_case_index/PARADOX_index.md); its IRV flavor lurks in [BV2159 (Brams)](../../method_comparisons/paradoxes_and_whoops/bv2159_f4cjpy_brams_irv_pathologies.md)).
 

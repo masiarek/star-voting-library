@@ -12,12 +12,16 @@ The case: [`coombs_ex20_district1`](../../../method_comparisons/felsenthal_parad
 
 Felsenthal's Example 20, District I — 34 voters, three candidates, Felsenthal's own A/B/C labels:
 
-| Voters | Ballot |
-|---:|---|
-| 9 | A > B > C |
-| 9 | B > C > A |
-| 11 | C > A > B |
-| 5 | C > B > A |
+<!-- ballots:coombs_ex20_district1 -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+9:A>B>C
+9:B>C>A
+11:C>A>B
+5:C>B>A
+```
+<!-- /ballots -->
 
 First choices: **C 16, A 9, B 9.** A majority is 18, so nobody has one and somebody must be eliminated. IRV eliminates the fewest first choices — and A and B are level on 9.
 

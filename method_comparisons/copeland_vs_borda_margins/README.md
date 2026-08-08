@@ -10,12 +10,24 @@
 
 ## The ballots
 
-| Voters | Ranking |
-|---:|---|
-| 5 | Almond > Berry > Cocoa |
-| 3 | Berry > Cocoa > Almond |
-| 2 | Cocoa > Almond > Berry |
-| 2 | Cocoa > Berry > Almond |
+<!-- ballots:margins_ranked_robin -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+Almond>Berry>Cocoa
+Almond>Berry>Cocoa
+Almond>Berry>Cocoa
+Almond>Berry>Cocoa
+Almond>Berry>Cocoa
+Berry>Cocoa>Almond
+Berry>Cocoa>Almond
+Berry>Cocoa>Almond
+Cocoa>Almond>Berry
+Cocoa>Almond>Berry
+Cocoa>Berry>Almond
+Cocoa>Berry>Almond
+```
+<!-- /ballots -->
 
 Twelve individual ballots, no weighting. Every voter's own ranking is perfectly transitive; the loop is manufactured entirely by adding them up.
 

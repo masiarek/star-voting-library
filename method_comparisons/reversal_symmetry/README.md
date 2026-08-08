@@ -10,11 +10,15 @@
 
 24 voters, three candidates, forming a **Condorcet cycle** (A beats B, B beats C, C beats A — nobody beats everyone):
 
-| Voters | Ballot |
-|---|---|
-| 9 | B > C > A |
-| 8 | A > B > C |
-| 7 | C > A > B |
+<!-- ballots:reversal_irv_original -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+9:B>C>A
+8:A>B>C
+7:C>A>B
+```
+<!-- /ballots -->
 
 **Original — RCV-IRV elects A** ([`reversal_irv_original`](cases/cases_pages/reversal_irv_original.md)): C has the fewest first-choices, is eliminated, and C's ballots flow to A → **A wins 15–9.**
 

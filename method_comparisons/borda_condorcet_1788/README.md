@@ -12,12 +12,16 @@
 
 Three candidates and 11 voters. The names are Condorcet's own:
 
-| Voters | Ranking |
-|---:|---|
-| 4 | Peter > Paul > James |
-| 3 | Paul > James > Peter |
-| 2 | Paul > Peter > James |
-| 2 | James > Peter > Paul |
+<!-- ballots:condorcet_1788_ranked_robin -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+4:Peter>Paul>James
+3:Paul>James>Peter
+2:Paul>Peter>James
+2:James>Peter>Paul
+```
+<!-- /ballots -->
 
 **Plurality** counts first choices: Paul 5, Peter 4, James 2 → **Paul**.
 
