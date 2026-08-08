@@ -16,7 +16,10 @@ The matching **text** report — the same election counted by Larry Hastings' `s
 
 **Website / UI testing backlog:** [BV website TO-DO](BV_website_TODO.md) — hands-on tasks to test or learn on the live app (e.g. entering **district** data to BV-back the summability demo).
 
+**Start here if you're wondering whether an election was a "demo":** [BetterVoting's six voter-authentication modes](bv_voter_authentication_modes.md) — there is no demo flag; it's derived from three settings, only one of the six modes is genuinely unlimited, and the mode decides whether turnout, quorum and delivery reporting exist at all.
+
 **Deeper BV internals** (reference docs, moved here from the repo root):
 - [**bv_json_export_format.md**](bv_json_export_format.md) — the export's field-by-field reference (and the direction back: what a mint can actually set).
+- [**bv_voter_authentication_modes.md**](bv_voter_authentication_modes.md) — the six canonical `{voter_access, voter_authentication, invitation}` shapes, and what each one lets a report claim.
 - [**tabulation_engine/**](tabulation_engine/README.md) — notes on BV's own tabulator (`RankedRobin.ts` etc.), running it locally, and contributing changes.
 - [**database_schema/**](database_schema/README.md) — BV's data model: ballot / election / election-roll / email-events tables.
