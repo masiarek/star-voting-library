@@ -36,7 +36,7 @@ leave rows blank.
 
 ## Ballots
 
-Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+Row 1 = candidate names; each later row is one voter's scores on this election's scale, 0 = worst (a `N ×` prefix = N identical ballots).
 
 ```text
 Alma,Byron,Cleo

@@ -68,7 +68,7 @@ Note what this shows: **ranked ballots do not create proportionality.** Sweeps a
 ## Counts 4 & 5 — STAR-PR and STV: one seat per side
 
 - **STAR-PR / Allocated Score:** Arepa wins seat 1; the quota of ballots that elected him is spent; the remaining live weight is majority-sweet, and Donut takes seat 2.
-- **STV:** Droop quota 34. Churro's elimination pools the savory vote → Arepa elected; Eclair's elimination pools the sweet vote → Donut elected. (The count deliberately ends with a hopeful still standing — clear of the [BV sole-survivor STV crash](../../06_Other/STV/bv_stv_sole_survivor_crash/README.md).)
+- **STV:** Droop quota 33⅓ exactly, 34 by hand count — [either form](../../06_Other/STV/README.md#where-it-genuinely-gets-complicated) seats the same two. Churro's elimination pools the savory vote → Arepa elected; Eclair's elimination pools the sweet vote → Donut elected. (The count deliberately ends with a hopeful still standing — clear of the [BV sole-survivor STV crash](../../06_Other/STV/bv_stv_sole_survivor_crash/README.md).)
 
 A 57:43 room, a 1:1 delegation — one seat per ~quota of voters, the [proportional representation](../../03_STAR_PR/01_Learn/README.md) promise kept by both the score-ballot and ranked-ballot routes.
 

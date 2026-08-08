@@ -41,7 +41,9 @@ The count, step by step — the rounds and how the winner is reached:
 --- STV / Single Transferable Vote (multi-winner — 3 seats) ---
   STV — 3 seats, 7 candidates (proportional RCV)
  Tabulating 100 ballots (ranked ballots).
- 3 seats; Droop quota = 26 (26.0% of 100).
+ 3 seats; quota = 25.00 (exact Droop, votes/(seats+1)) — 25.0% of 100.
+ Elected at >= quota, and every surplus is measured from it.
+ (Hand-count Droop, floor(100/4)+1 = 26, is a different but equally standard rule.)
 
 ROUND 1
 Candidate      Votes  Status
