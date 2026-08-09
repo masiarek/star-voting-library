@@ -31,14 +31,15 @@ TABULATION RESULTS
 === Free riding — honest baseline (Allocated Score) ===
   HONEST BASELINE. A neighbourhood association fills two board seats. Anika is the beloved incumbent — every one of the 20 voters scores her 5. The 12-voter majority wants Bruno for the second seat; the 8-voter minority wants Camila. Everyone votes sincerely. Anika takes seat 1 with 100 points, and because ALL 20 ballots sit in her 5-star group, the Hare quota of 10 is charged to every ballot equally: each keeps half its weight. The original 12-to-8 split therefore survives intact into round 2, and Bruno wins the second seat 24 to 20. Compare free_ride_hylland_allocated.yaml, where the minority scores Anika 4 instead of 5 and flips that second seat.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      |20 -  0 -  0 |12 -  8 -  0 |
-       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      |20 -  0 -  0 |12 -  8 -  0 |
+         Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
         Camila > |  0 -  8 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

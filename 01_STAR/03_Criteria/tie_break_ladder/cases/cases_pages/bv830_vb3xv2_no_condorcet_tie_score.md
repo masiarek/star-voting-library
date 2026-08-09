@@ -31,11 +31,11 @@ Lesson: bv830_vb3xv2_no_condorcet_tie_score.md
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | A | B | C |
-|:--|:--:|:--:|:--:|
-| <img src="../img/bv830_vb3xv2_no_condorcet_tie_score_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: A 0, B 0, C 1."> | 0 | 0 | 1 |
-| <img src="../img/bv830_vb3xv2_no_condorcet_tie_score_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 0, B 2, C 2."> | 0 | 2 | 2 |
-| <img src="../img/bv830_vb3xv2_no_condorcet_tie_score_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: A 0, B 5, C 0."> | 0 | 5 | 0 |
+| # | Ballot as marked | A | B | C |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/bv830_vb3xv2_no_condorcet_tie_score_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: A 0, B 0, C 1."> | 0 | 0 | 1 |
+| 2 | <img src="../img/bv830_vb3xv2_no_condorcet_tie_score_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 0, B 2, C 2."> | 0 | 2 | 2 |
+| 3 | <img src="../img/bv830_vb3xv2_no_condorcet_tie_score_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: A 0, B 5, C 0."> | 0 | 5 | 0 |
 
 The same ballots as the file records them:
 

@@ -65,14 +65,15 @@ TABULATION RESULTS
   — one election, both races (Bloc STAR + STAR-PR); BV agrees on both
   seat pairs.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Asa    |  * Bram   |    Cleo   |    Dane   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Asa    |    Bram   |    Cleo   |    Dane   |
 -----------------------------------------------------------------
-       * Asa > |    ---     |6 - 4 - 0  |6 - 0 - 4  |6 - 0 - 4  |
-      * Bram > | 0 - 4 - 6  |   ---     |6 - 0 - 4  |6 - 0 - 4  |
+         Asa > |    ---     |6 - 4 - 0  |6 - 0 - 4  |6 - 0 - 4  |
+        Bram > | 0 - 4 - 6  |   ---     |6 - 0 - 4  |6 - 0 - 4  |
         Cleo > | 4 - 0 - 6  |4 - 0 - 6  |   ---     |4 - 6 - 0  |
         Dane > | 4 - 0 - 6  |4 - 0 - 6  |0 - 6 - 4  |   ---     |
 

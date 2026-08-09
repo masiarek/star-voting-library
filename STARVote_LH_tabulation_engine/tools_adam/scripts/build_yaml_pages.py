@@ -337,7 +337,7 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
             title, cast, row.scores, img_dir, quoted=False, kind=kind,
             grades=tuple(grades), max_score=max_score))
         src = os.path.relpath(path, page_dir).replace(os.sep, "/")
-        drawn.append((row, alt, src))
+        drawn.append((n, row, alt, src))
     if not drawn:                    # art on disk, but none of it matched a row
         return None
 
@@ -353,7 +353,7 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
         # column, the picture may scale down on a narrow screen, and the text
         # line below is what carries the grades when it does.
         lines = []
-        for row, alt, src in drawn:
+        for n, row, alt, src in drawn:
             lines.append(f'<img src="{src}" width="{width}" '
                          f'alt="{_esc_attr(alt)}">')
             cells = [c if c else "—" for c in row.cells]
@@ -369,18 +369,25 @@ def _ballot_art(yaml_path, ballots_text, page_dir, kind="score",
         # 694px against a 688px content column, where it silently spilled off
         # the page. The alternative was shrinking every picture to 260px, which
         # traded legibility everywhere for a fit it still didn't achieve.
-        header = (["Ballot as marked"]
+        # The leading `#` is the row's number in the file's `ballots:` block, and
+        # it is what the prose around the table points at ("the 5,5 — ballot 3").
+        # Without it a reader has to count rows to find the one being discussed,
+        # and a partial set (`shown < len(rows)`) would have them count wrong.
+        # A bare `#` is the narrowest label that does the job: the word `Voters`
+        # cost ~100px and spilled the widest tables (see above), a two-character
+        # column does not.
+        header = (["#", "Ballot as marked"]
                   + (list(cast) if by_candidate
                      else [f"{spill} ({', '.join(cast)})"]))
-        align = [":--"] + [":--:"] * (len(header) - 1)
+        align = [":--:", ":--"] + [":--:"] * (len(header) - 2)
         lines = ["| " + " | ".join(header) + " |", "|" + "|".join(align) + "|"]
-        for row, alt, src in drawn:
+        for n, row, alt, src in drawn:
             img = (f'<img src="{src}" width="{width}" style="min-width:{width}px" '
                    f'alt="{_esc_attr(alt)}">')
             cells = [c if c else "-" for c in row.cells]
             lines.append("| " + " | ".join(
-                [img] + (cells if by_candidate
-                         else ["`" + ", ".join(cells) + "`"])) + " |")
+                [str(n), img] + (cells if by_candidate
+                                 else ["`" + ", ".join(cells) + "`"])) + " |")
 
     shown = len(drawn)
     caption = "The ballot as marked" if shown == 1 else "The ballots as marked"

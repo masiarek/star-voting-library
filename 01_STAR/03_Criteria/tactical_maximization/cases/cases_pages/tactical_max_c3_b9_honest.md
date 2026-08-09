@@ -30,17 +30,17 @@ Half 2 (tactical_max_c3_b9_hedged.yaml) has those four raise Bruno
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Alma | Bruno | Celia |
-|:--|:--:|:--:|:--:|
-| <img src="../img/tactical_max_c3_b9_honest_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — an independent, leaning Alma: Alma 4, Bruno 2, Celia 1."> | 4 | 2 | 1 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
-| <img src="../img/tactical_max_c3_b9_honest_ballot_9.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Celia's one loyalist: Alma 0, Bruno 2, Celia 5."> | 0 | 2 | 5 |
+| # | Ballot as marked | Alma | Bruno | Celia |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/tactical_max_c3_b9_honest_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| 2 | <img src="../img/tactical_max_c3_b9_honest_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| 3 | <img src="../img/tactical_max_c3_b9_honest_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| 4 | <img src="../img/tactical_max_c3_b9_honest_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alma's core — Bruno is fine, Celia is not: Alma 5, Bruno 3, Celia 0."> | 5 | 3 | 0 |
+| 5 | <img src="../img/tactical_max_c3_b9_honest_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — an independent, leaning Alma: Alma 4, Bruno 2, Celia 1."> | 4 | 2 | 1 |
+| 6 | <img src="../img/tactical_max_c3_b9_honest_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
+| 7 | <img src="../img/tactical_max_c3_b9_honest_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
+| 8 | <img src="../img/tactical_max_c3_b9_honest_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the Bruno bloc: Alma 1, Bruno 5, Celia 3."> | 1 | 5 | 3 |
+| 9 | <img src="../img/tactical_max_c3_b9_honest_ballot_9.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Celia's one loyalist: Alma 0, Bruno 2, Celia 5."> | 0 | 2 | 5 |
 
 The same ballots as the file records them:
 

@@ -143,17 +143,18 @@ Count × Johnny Cash,Elvis Presley,Santa Claus,The Lesser Evil,Someone I Like,Ap
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                        |      Johnny Cash    |    Elvis Presley   |   * Santa Claus    |   The Lesser Evil  | * Someone I Like   |   Apocalypse Now   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                        |      Johnny Cash    |    Elvis Presley   |     Santa Claus    |   The Lesser Evil  |   Someone I Like   |   Apocalypse Now   |
 --------------------------------------------------------------------------------------------------------------------------------------------------------
           Johnny Cash > |         ---         |     4 - 2 - 3      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     2 - 7 - 0      |
         Elvis Presley > |      3 - 2 - 4      |        ---         |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     5 - 0 - 4      |
-        * Santa Claus > |      9 - 0 - 0      |     9 - 0 - 0      |        ---         |     5 - 0 - 4      |     0 - 6 - 3      |     9 - 0 - 0      |
+          Santa Claus > |      9 - 0 - 0      |     9 - 0 - 0      |        ---         |     5 - 0 - 4      |     0 - 6 - 3      |     9 - 0 - 0      |
       The Lesser Evil > |      9 - 0 - 0      |     9 - 0 - 0      |     4 - 0 - 5      |        ---         |     4 - 0 - 5      |     9 - 0 - 0      |
-     * Someone I Like > |      9 - 0 - 0      |     9 - 0 - 0      |     3 - 6 - 0      |     5 - 0 - 4      |        ---         |     9 - 0 - 0      |
+       Someone I Like > |      9 - 0 - 0      |     9 - 0 - 0      |     3 - 6 - 0      |     5 - 0 - 4      |        ---         |     9 - 0 - 0      |
        Apocalypse Now > |      0 - 7 - 2      |     4 - 0 - 5      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |        ---         |
 
 [Condorcet Winner]

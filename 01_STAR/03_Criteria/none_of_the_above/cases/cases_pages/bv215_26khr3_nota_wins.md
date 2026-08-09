@@ -37,14 +37,14 @@ Three teaching points in one ballot set:
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ada | Bruno | None of the Above |
-|:--|:--:|:--:|:--:|
-| <img src="../img/bv215_26khr3_nota_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — scored NOTA an explicit 0: Ada 5, Bruno 1, None of the Above 0."> | 5 | 1 | 0 |
-| <img src="../img/bv215_26khr3_nota_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — left NOTA unscored: Ada 5, Bruno 1, None of the Above left blank (counts as 0)."> | 5 | 1 | & |
-| <img src="../img/bv215_26khr3_nota_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
-| <img src="../img/bv215_26khr3_nota_wins_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
-| <img src="../img/bv215_26khr3_nota_wins_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
-| <img src="../img/bv215_26khr3_nota_wins_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| # | Ballot as marked | Ada | Bruno | None of the Above |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/bv215_26khr3_nota_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — scored NOTA an explicit 0: Ada 5, Bruno 1, None of the Above 0."> | 5 | 1 | 0 |
+| 2 | <img src="../img/bv215_26khr3_nota_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — left NOTA unscored: Ada 5, Bruno 1, None of the Above left blank (counts as 0)."> | 5 | 1 | & |
+| 3 | <img src="../img/bv215_26khr3_nota_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| 4 | <img src="../img/bv215_26khr3_nota_wins_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| 5 | <img src="../img/bv215_26khr3_nota_wins_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| 6 | <img src="../img/bv215_26khr3_nota_wins_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
 
 The same ballots as the file records them:
 
@@ -123,10 +123,12 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                         Score
-Candidate          5  4  3  2  1  0  Abs  | Total   Avg
-Ada                2  0  0  0  0  4    0  |    10   1.7
-Bruno              0  0  0  0  2  4    0  |     2   0.3
-None of the Above  4  0  0  0  0  1    1  |    20   4.0
+Candidate          5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Ada                2  0  0  0  0  4    0  |    10      1.7        1.7
+Bruno              0  0  0  0  2  4    0  |     2      0.3        0.3
+None of the Above  4  0  0  0  0  1    1  |    20      3.3        4.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv215_26khr3_nota_wins_tabulated.txt) (regenerated on every run; every analysis forced on).

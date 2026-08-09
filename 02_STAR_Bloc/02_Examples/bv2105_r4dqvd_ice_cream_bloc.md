@@ -51,10 +51,10 @@ Vanilla,Chocolate,Strawberry
 
 [Score Distribution] (how many ballots gave each star rating)
                  Score
-Candidate   5  4  3  2  1  0  Abs  | Total   Avg
-Vanilla     1  0  0  1  1  0    1  |     8   2.7
-Chocolate   2  0  0  0  0  0    2  |    10   5.0
-Strawberry  1  1  0  0  0  0    2  |     9   4.5
+Candidate   5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Vanilla     1  0  0  1  1  0    1  |     8      2.0        2.7
+Chocolate   2  0  0  0  0  0    2  |    10      2.5        5.0
+Strawberry  1  1  0  0  0  0    2  |     9      2.3        4.5
 
 Round 1: Chocolate (10) & Strawberry (9) advance → Chocolate wins the runoff (1 vs 0, 3 Equal Support).
 Round 2: Strawberry (9) & Vanilla (8) advance → runoff ties 1–1 → score tiebreak → Strawberry (9 > 8).
@@ -64,6 +64,8 @@ Winners — Bloc STAR Voting Method (2 winners)
  Strawberry
 ```
 Full audit copy: [`_main_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt`](cases/cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt).
+
+The two average columns are what make the disagreement legible, because **the whole defect is a denominator**. Vanilla's total of 8 is not in dispute; what to divide it by is. LH offers the two defensible readings — `2.0` over all **4** ballots cast (a blank scores 0) and `2.7` over the **3** that scored her — while BetterVoting divides by **2**, a denominator that matches neither, because it has already discarded the partial ballot whose `1` is *inside* that total. → [how the two columns differ](../../01_STAR/01_Learn/reporting/reporting_LH/score_distribution.md).
 
 ## LH ↔ BetterVoting
 

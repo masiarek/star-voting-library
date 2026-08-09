@@ -8,7 +8,7 @@
 - **Frozen raw export (this folder):** [`best_pet_c7_b461_bv_export.json`](cases/best_pet_c7_b461_bv_export.json) — the full BetterVoting JSON (461 ballots + BetterVoting's own `Results`).
 - **Converted election (tabulated by the LH engine):** [`best_pet_c7_b461.yaml`](cases/best_pet_c7_b461.yaml)
 
-## BetterVoting's reported result (frozen)
+## BetterVoting's reported result
 
 From the export's `Results[0].summaryData`:
 
@@ -33,7 +33,7 @@ All six are **flat** ballots (every candidate scored the same). Extracted from t
 
 ## Reconciliation with a full count (LH engine, all 461 ballots)
 
-| | BetterVoting (frozen) | LH engine (all 461) |
+| | BetterVoting | LH engine (all 461) |
 |---|---:|---:|
 | Ballots tallied | 455 | 461 |
 | "Abstentions" | 6 (all flat ballots) | 1 (the blank only) |

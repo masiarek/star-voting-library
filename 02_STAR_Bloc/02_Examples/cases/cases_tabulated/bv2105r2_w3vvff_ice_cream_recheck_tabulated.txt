@@ -151,15 +151,16 @@ TABULATION RESULTS
   loser, so the winners survive — this is a REPORTING/counting defect, not a wrong
   result. But a discarded cast ballot can flip a closer election.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                   |     Vanilla    | * Chocolate   | * Strawberry  |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                   |     Vanilla    |   Chocolate   |   Strawberry  |
 ---------------------------------------------------------------------
          Vanilla > |      ---       |  1 - 2 - 1    |  1 - 2 - 1    |
-     * Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
-    * Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
+       Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
+      Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Vanilla, Chocolate (pairwise ties)
@@ -192,10 +193,12 @@ Vanilla,Chocolate,Strawberry
 
 [Score Distribution] (how many ballots gave each star rating)
                  Score
-Candidate   5  4  3  2  1  0  Abs  | Total   Avg
-Vanilla     1  0  0  1  1  0    1  |     8   2.7
-Chocolate   2  0  0  0  0  0    2  |    10   5.0
-Strawberry  1  1  0  0  0  0    2  |     9   4.5
+Candidate   5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Vanilla     1  0  0  1  1  0    1  |     8      2.0        2.7
+Chocolate   2  0  0  0  0  0    2  |    10      2.5        5.0
+Strawberry  1  1  0  0  0  0    2  |     9      2.3        4.5
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [Bloc STAR: Round 1: Scoring Round]
  The two highest-scoring candidates advance to the next round.

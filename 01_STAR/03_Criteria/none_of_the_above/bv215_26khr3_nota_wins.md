@@ -23,14 +23,14 @@ Candidates: **Ada, Bruno, None of the Above**. `&` = candidate abstention (Bette
 <!-- ballots:bv215_26khr3_nota_wins -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ada | Bruno | None of the Above |
-|:--|:--:|:--:|:--:|
-| <img src="cases/img/bv215_26khr3_nota_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — scored NOTA an explicit 0: Ada 5, Bruno 1, None of the Above 0."> | 5 | 1 | 0 |
-| <img src="cases/img/bv215_26khr3_nota_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — left NOTA unscored: Ada 5, Bruno 1, None of the Above left blank (counts as 0)."> | 5 | 1 | & |
-| <img src="cases/img/bv215_26khr3_nota_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
-| <img src="cases/img/bv215_26khr3_nota_wins_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
-| <img src="cases/img/bv215_26khr3_nota_wins_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
-| <img src="cases/img/bv215_26khr3_nota_wins_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| # | Ballot as marked | Ada | Bruno | None of the Above |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="cases/img/bv215_26khr3_nota_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — scored NOTA an explicit 0: Ada 5, Bruno 1, None of the Above 0."> | 5 | 1 | 0 |
+| 2 | <img src="cases/img/bv215_26khr3_nota_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ada's supporter — left NOTA unscored: Ada 5, Bruno 1, None of the Above left blank (counts as 0)."> | 5 | 1 | & |
+| 3 | <img src="cases/img/bv215_26khr3_nota_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| 4 | <img src="cases/img/bv215_26khr3_nota_wins_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| 5 | <img src="cases/img/bv215_26khr3_nota_wins_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
+| 6 | <img src="cases/img/bv215_26khr3_nota_wins_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — rejects both candidates, wants NOTA: Ada 0, Bruno 0, None of the Above 5."> | 0 | 0 | 5 |
 <!-- /ballots -->
 
 Voters 1 and 2 marked the same opinion of the candidates; they differ only on whether NOTA got an explicit `0` or no mark at all — and the count treats those the same.

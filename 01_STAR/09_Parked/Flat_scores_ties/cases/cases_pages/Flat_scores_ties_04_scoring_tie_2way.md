@@ -20,11 +20,11 @@ Lesson: 09_Parked/Flat_scores_ties/README.md#case-04  (BV id pending).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Aral | Baikal | Crater |
-|:--|:--:|:--:|:--:|
-| <img src="../img/Flat_scores_ties_04_scoring_tie_2way_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Aral 5, Baikal 4, Crater 4."> | 5 | 4 | 4 |
-| <img src="../img/Flat_scores_ties_04_scoring_tie_2way_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Aral 5, Baikal 4, Crater 4."> | 5 | 4 | 4 |
-| <img src="../img/Flat_scores_ties_04_scoring_tie_2way_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Aral 5, Baikal 0, Crater 0."> | 5 | 0 | 0 |
+| # | Ballot as marked | Aral | Baikal | Crater |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/Flat_scores_ties_04_scoring_tie_2way_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Aral 5, Baikal 4, Crater 4."> | 5 | 4 | 4 |
+| 2 | <img src="../img/Flat_scores_ties_04_scoring_tie_2way_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Aral 5, Baikal 4, Crater 4."> | 5 | 4 | 4 |
+| 3 | <img src="../img/Flat_scores_ties_04_scoring_tie_2way_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Aral 5, Baikal 0, Crater 0."> | 5 | 0 | 0 |
 
 The same ballots as the file records them:
 

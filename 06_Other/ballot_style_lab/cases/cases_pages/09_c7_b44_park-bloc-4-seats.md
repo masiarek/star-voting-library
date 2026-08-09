@@ -275,16 +275,17 @@ Count × Aspen,Birch,Cedar,Dogwood,Elm,Fir,Ginkgo
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Aspen    |    Birch    |    Cedar    | * Dogwood   |     Elm     |     Fir     |    Ginkgo   |
+        Informational only — not part of the 4-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Aspen    |    Birch    |    Cedar    |   Dogwood   |     Elm     |     Fir     |    Ginkgo   |
 ---------------------------------------------------------------------------------------------------------------------
-       * Aspen > |     ---      |22 - 18 -  4 |23 -  5 - 16 | 8 - 24 - 12 |11 - 27 -  6 |22 - 10 - 12 |19 - 18 -  7 |
+         Aspen > |     ---      |22 - 18 -  4 |23 -  5 - 16 | 8 - 24 - 12 |11 - 27 -  6 |22 - 10 - 12 |19 - 18 -  7 |
          Birch > |  4 - 18 - 22 |    ---      | 9 - 13 - 22 | 6 - 15 - 23 | 7 - 15 - 22 | 6 - 17 - 21 | 9 - 25 - 10 |
          Cedar > | 16 -  5 - 23 |22 - 13 -  9 |    ---      |17 -  4 - 23 |17 -  6 - 21 |14 - 16 - 14 |24 - 12 -  8 |
-     * Dogwood > | 12 - 24 -  8 |23 - 15 -  6 |23 -  4 - 17 |    ---      |13 - 22 -  9 |22 -  7 - 15 |21 - 16 -  7 |
+       Dogwood > | 12 - 24 -  8 |23 - 15 -  6 |23 -  4 - 17 |    ---      |13 - 22 -  9 |22 -  7 - 15 |21 - 16 -  7 |
            Elm > |  6 - 27 - 11 |22 - 15 -  7 |21 -  6 - 17 | 9 - 22 - 13 |    ---      |21 -  8 - 15 |19 - 17 -  8 |
            Fir > | 12 - 10 - 22 |21 - 17 -  6 |14 - 16 - 14 |15 -  7 - 22 |15 -  8 - 21 |    ---      |19 - 17 -  8 |
         Ginkgo > |  7 - 18 - 19 |10 - 25 -  9 | 8 - 12 - 24 | 7 - 16 - 21 | 8 - 17 - 19 | 8 - 17 - 19 |    ---      |
@@ -297,14 +298,16 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Aspen      15   7   3   1   3   7    8  |   117   3.3
-Birch       4   1   0   5   9  17    8  |    43   1.2
-Cedar      16   4   1   3   5  14    1  |   110   2.6
-Dogwood    17   5   3   1   2   8    8  |   118   3.3
-Elm        13   6   5   0   2  10    8  |   106   2.9
-Fir        13   4   1   6   5  14    1  |   101   2.3
-Ginkgo      8   0   0   4   4  20    8  |    52   1.4
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Aspen      15   7   3   1   3   7    8  |   117      2.7        3.3
+Birch       4   1   0   5   9  17    8  |    43      1.0        1.2
+Cedar      16   4   1   3   5  14    1  |   110      2.5        2.6
+Dogwood    17   5   3   1   2   8    8  |   118      2.7        3.3
+Elm        13   6   5   0   2  10    8  |   106      2.4        2.9
+Fir        13   4   1   6   5  14    1  |   101      2.3        2.3
+Ginkgo      8   0   0   4   4  20    8  |    52      1.2        1.4
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/09_c7_b44_park-bloc-4-seats_tabulated.txt) (regenerated on every run; every analysis forced on).

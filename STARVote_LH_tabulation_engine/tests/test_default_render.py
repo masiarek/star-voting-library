@@ -12,6 +12,11 @@ Behaviour locked here:
     runoff);
   * a MULTI-WINNER race auto-suppresses the matrix (a "Top 2 Finalist" grid is
     a single-winner concept) — but a file's `show_matrix: true` still wins;
+  * whenever a MULTI-WINNER race DOES render the grid (a file override, the
+    always-full `_tabulated` mirror, `--full`), it renders as plain
+    head-to-head data: retitled "Preference Matrix", no Top-2 finalist
+    markers (they come from a silent seats=1 STAR analysis), and an
+    "Informational only" legend line in their place;
   * `--full` puts the everything-on mirror render on screen (full grid, score
     distribution, description, and the "Runoff math" funnel).
 
@@ -29,6 +34,8 @@ WRAPPER = ENGINE_DIR / "starvote_larry_hastings.py"
 
 MATRIX_HEADER = "--- Runoff (Preference) Matrix ---"
 FINALIST_LEGEND = "* indicates Top 2 Finalist"
+MW_MATRIX_HEADER = "--- Preference Matrix ---"
+MW_MATRIX_NOTE = "so no Top-2 finalists are marked"
 SCORE_DIST = "[Score Distribution]"
 FUNNEL = "Runoff math:"
 DESC_MARKER = "UNIQUE-DESC-MARKER"
@@ -94,11 +101,36 @@ def test_multiwinner_suppresses_matrix(tmp_path):
 
 
 def test_multiwinner_file_override_wins(tmp_path):
-    # The auto-gate is a DEFAULT, not a gag: a file's own options still win.
+    # The auto-gate is a DEFAULT, not a gag: a file's own options still win —
+    # but the grid a multi-winner file forces on is the UNMARKED one (plain
+    # head-to-head data, no seats=1 "Top 2 Finalist" markers).
     text = MW4.replace("ballots: |-", "options:\n  show_matrix: true\nballots: |-")
     r = _run(_write(tmp_path, text))
     assert r.returncode == 0, r.stdout + r.stderr
-    assert MATRIX_HEADER in r.stdout, r.stdout
+    assert MW_MATRIX_HEADER in r.stdout, r.stdout
+    assert MW_MATRIX_NOTE in r.stdout, r.stdout
+    assert MATRIX_HEADER not in r.stdout, r.stdout
+    assert "Top 2 Finalist" not in r.stdout, r.stdout
+
+
+def test_multiwinner_mirror_grid_is_unmarked(tmp_path):
+    # The always-full `_tabulated` mirror keeps the pairwise grid for a
+    # multi-winner race (maximum info), but as plain head-to-head data:
+    # retitled, no finalist markers, and the "Informational only" legend
+    # naming the reason. Nothing locked this before 2026-08-09 — the mirror
+    # carried a "Top 2 Finalist" grid from the silent seats=1 STAR analysis.
+    p = _write(tmp_path, MW4)
+    r = _run(p)
+    assert r.returncode == 0, r.stdout + r.stderr
+    mirror = p.parent / f"{p.parent.name}_tabulated" / f"{p.stem}_tabulated.txt"
+    assert mirror.exists(), f"mirror not written: {mirror}"
+    out = mirror.read_text(encoding="utf-8")
+    assert MW_MATRIX_HEADER in out, out
+    assert MW_MATRIX_NOTE in out, out
+    assert "2-winner count" in out, out        # the note names the seat count
+    assert MATRIX_HEADER not in out, out
+    assert "Top 2 Finalist" not in out, out
+    assert "Ada >" in out, out                 # the grid itself is present
 
 
 def test_full_flag_shows_everything(tmp_path):

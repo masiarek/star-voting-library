@@ -40,7 +40,9 @@ Read down Banana's row: it beats Apple (3 vs 1) **and** Cherry (5 vs 0), so Bana
 
 ## The options
 
-- **`show_matrix`** — print the matrix at all. Default `true`, auto-suppressed for two-candidate races (it would just echo the runoff) and for multi-winner (a "Top 2 Finalist" matrix is a single-winner idea).
+These are **engine defaults**, not something you write into a case file — case files carry no `options:` block (dropped repo-wide 2026-08-09). To see more than the default render, read the case's `_tabulated.txt` mirror or add `--full` to the run. Details: [**LH reporting options**](options.md).
+
+- **`show_matrix`** — print the matrix at all. Default `true`, auto-suppressed for two-candidate races (it would just echo the runoff) and for multi-winner (a "Top 2 Finalist" matrix is a single-winner idea). When a multi-winner report *does* render the grid — the `_tabulated` mirror and `--full` always carry it, and a file can force it on screen — it prints as plain head-to-head data: retitled **Preference Matrix**, no `*` finalist markers, and a legend line saying the grid is informational only, not part of the multi-winner count.
 - **`matrix_finalists_only`** — `true` prints only the two finalists' row/column (a compact check that the runoff matches the pairwise result); `false` prints the full N×N grid. The saved `_tabulated.txt` always forces the **full** grid.
 - **`show_condorcet`** — `true` prints the `[Condorcet Winner]` line and whether it **matches the STAR winner**; `false` hides it (the on-screen default, keeping the report lean). The `_tabulated.txt` copy always includes it, and the `--full` flag puts it on screen.
 

@@ -22,10 +22,10 @@ See 01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md ("dead rung").
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Alice | Ben | Cara |
-|:--|:--:|:--:|:--:|
-| <img src="../img/tie_break_01_scoring_five_star_breaks_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Alice 5, Ben 5, Cara 3."> | 5 | 5 | 3 |
-| <img src="../img/tie_break_01_scoring_five_star_breaks_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Alice 5, Ben 1, Cara 3."> | 5 | 1 | 3 |
+| # | Ballot as marked | Alice | Ben | Cara |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/tie_break_01_scoring_five_star_breaks_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Alice 5, Ben 5, Cara 3."> | 5 | 5 | 3 |
+| 2 | <img src="../img/tie_break_01_scoring_five_star_breaks_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Alice 5, Ben 1, Cara 3."> | 5 | 1 | 3 |
 
 The same ballots as the file records them:
 

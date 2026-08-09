@@ -181,11 +181,13 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Astrid     12   0   1   1   2  11    6  |    67   2.5
-Boris       7   0   0   2   0  15    9  |    39   1.6
-Carla      11   4   0   1   0  12    5  |    73   2.6
-Dolores     3   3   0   0   0  16   11  |    27   1.2
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Astrid     12   0   1   1   2  11    6  |    67      2.0        2.5
+Boris       7   0   0   2   0  15    9  |    39      1.2        1.6
+Carla      11   4   0   1   0  12    5  |    73      2.2        2.6
+Dolores     3   3   0   0   0  16   11  |    27      0.8        1.2
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03_c4_b33_bullet-storm_tabulated.txt) (regenerated on every run; every analysis forced on).

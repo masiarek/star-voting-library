@@ -29,14 +29,15 @@ TABULATION RESULTS
 === Misjudged queue — the free ride achieves nothing ===
   THE FREE RIDE THAT ACHIEVES NOTHING. The minority tries the move that worked in free_ride_hylland_allocated.yaml — scoring their sure winner 4 instead of 5. It changes the result not at all. They misjudged the queue: at 4 stars they are STILL the highest score group, because the majority only gave Amara 3, so they are still spent first and in full. Free riding only pays if it puts someone else above you in the spend order, and a voter cannot know that without knowing how everyone else scored.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Amara    |  * Boris    |     Cleo    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Amara    |    Boris    |     Cleo    |
 -------------------------------------------------------------
-       * Amara > |     ---      | 8 -  0 - 12 |12 -  8 -  0 |
-       * Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
+         Amara > |     ---      | 8 -  0 - 12 |12 -  8 -  0 |
+         Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
           Cleo > |  0 -  8 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

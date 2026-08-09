@@ -982,14 +982,16 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                       Score
-Candidate    5    4    3    2    1    0  Abs  | Total   Avg
-Bird        31   49  114  112   61   65   29  |   978   2.3
-Cat        210  119   51   25   21   20   15  |  1750   3.9
-Python      12   23   32   59   83  193   59  |   449   1.1
-Dog        231  113   52   16   12   22   15  |  1807   4.1
-Fish        15   46  106  107   72   70   45  |   863   2.1
-Rabbit      20   55  121  101   78   44   42  |   963   2.3
-Rat         17   31   57   58   93  162   43  |   589   1.4
+Candidate    5    4    3    2    1    0  Abs  | Total  Avg all  Avg rated
+Bird        31   49  114  112   61   65   29  |   978      2.1        2.3
+Cat        210  119   51   25   21   20   15  |  1750      3.8        3.9
+Python      12   23   32   59   83  193   59  |   449      1.0        1.1
+Dog        231  113   52   16   12   22   15  |  1807      3.9        4.1
+Fish        15   46  106  107   72   70   45  |   863      1.9        2.1
+Rabbit      20   55  121  101   78   44   42  |   963      2.1        2.3
+Rat         17   31   57   58   93  162   43  |   589      1.3        1.4
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/best_pet_c7_b461_tabulated.txt) (regenerated on every run; every analysis forced on).

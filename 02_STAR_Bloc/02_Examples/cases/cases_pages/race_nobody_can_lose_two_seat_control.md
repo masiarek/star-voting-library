@@ -110,14 +110,15 @@ Abby,Bruno,Celia
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Abby   | * Bruno   |   Celia   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Abby   |   Bruno   |   Celia   |
 -----------------------------------------------------
-      * Abby > |    ---     |5 - 0 - 2  |5 - 0 - 2  |
-     * Bruno > | 2 - 0 - 5  |   ---     |5 - 0 - 2  |
+        Abby > |    ---     |5 - 0 - 2  |5 - 0 - 2  |
+       Bruno > | 2 - 0 - 5  |   ---     |5 - 0 - 2  |
        Celia > | 2 - 0 - 5  |2 - 0 - 5  |   ---     |
 
 [Condorcet Winner]

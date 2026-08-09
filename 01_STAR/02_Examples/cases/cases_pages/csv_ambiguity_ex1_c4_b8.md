@@ -146,11 +146,13 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-A          0  0  0  0  0  6    2  |     0   0.0
-B          0  0  0  0  3  2    3  |     3   0.6
-C          0  0  0  0  1  5    2  |     1   0.2
-D          0  0  0  0  1  2    5  |     1   0.3
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+A          0  0  0  0  0  6    2  |     0      0.0        0.0
+B          0  0  0  0  3  2    3  |     3      0.4        0.6
+C          0  0  0  0  1  5    2  |     1      0.1        0.2
+D          0  0  0  0  1  2    5  |     1      0.1        0.3
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/csv_ambiguity_ex1_c4_b8_tabulated.txt) (regenerated on every run; every analysis forced on).

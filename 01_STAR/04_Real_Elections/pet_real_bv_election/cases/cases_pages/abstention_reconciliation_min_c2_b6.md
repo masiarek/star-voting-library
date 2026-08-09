@@ -43,14 +43,14 @@ reconciliation note), which is the entire 461-vs-455 gap in the pet race.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Dog | Cat |
-|:--|:--:|:--:|
-| <img src="../img/abstention_reconciliation_min_c2_b6_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — clear preference: Dog: Dog 5, Cat 0."> | 5 | 0 |
-| <img src="../img/abstention_reconciliation_min_c2_b6_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — clear preference: Dog: Dog 4, Cat 0."> | 4 | 0 |
-| <img src="../img/abstention_reconciliation_min_c2_b6_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — clear preference: Cat: Dog 0, Cat 5."> | 0 | 5 |
-| <img src="../img/abstention_reconciliation_min_c2_b6_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support: cast ballot, rates both finalists the same: Dog 5, Cat 5."> | 5 | 5 |
-| <img src="../img/abstention_reconciliation_min_c2_b6_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-zero: cast ballot, supports neither (NOT an abstention): Dog 0, Cat 0."> | 0 | 0 |
-| <img src="../img/abstention_reconciliation_min_c2_b6_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank: a true abstention (no score for anyone): Dog left blank (counts as 0), Cat left blank (counts as 0)."> | - | - |
+| # | Ballot as marked | Dog | Cat |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/abstention_reconciliation_min_c2_b6_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — clear preference: Dog: Dog 5, Cat 0."> | 5 | 0 |
+| 2 | <img src="../img/abstention_reconciliation_min_c2_b6_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — clear preference: Dog: Dog 4, Cat 0."> | 4 | 0 |
+| 3 | <img src="../img/abstention_reconciliation_min_c2_b6_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — clear preference: Cat: Dog 0, Cat 5."> | 0 | 5 |
+| 4 | <img src="../img/abstention_reconciliation_min_c2_b6_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support: cast ballot, rates both finalists the same: Dog 5, Cat 5."> | 5 | 5 |
+| 5 | <img src="../img/abstention_reconciliation_min_c2_b6_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-zero: cast ballot, supports neither (NOT an abstention): Dog 0, Cat 0."> | 0 | 0 |
+| 6 | <img src="../img/abstention_reconciliation_min_c2_b6_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank: a true abstention (no score for anyone): Dog left blank (counts as 0), Cat left blank (counts as 0)."> | - | - |
 
 The same ballots as the file records them:
 
@@ -131,9 +131,11 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Dog        2  1  0  0  0  2    1  |    14   2.8
-Cat        2  0  0  0  0  3    1  |    10   2.0
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Dog        2  1  0  0  0  2    1  |    14      2.3        2.8
+Cat        2  0  0  0  0  3    1  |    10      1.7        2.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/abstention_reconciliation_min_c2_b6_tabulated.txt) (regenerated on every run; every analysis forced on).

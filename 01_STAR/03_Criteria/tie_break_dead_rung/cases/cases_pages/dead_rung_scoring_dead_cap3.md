@@ -19,10 +19,10 @@ Generated dead-rung scenario (scoring round, 'dead' five-star rung). no 5 anywhe
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ann | Ben | Cara |
-|:--|:--:|:--:|:--:|
-| <img src="../img/dead_rung_scoring_dead_cap3_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ann 3, Ben 3, Cara 1."> | 3 | 3 | 1 |
-| <img src="../img/dead_rung_scoring_dead_cap3_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ann 3, Ben 0, Cara 2."> | 3 | 0 | 2 |
+| # | Ballot as marked | Ann | Ben | Cara |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/dead_rung_scoring_dead_cap3_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ann 3, Ben 3, Cara 1."> | 3 | 3 | 1 |
+| 2 | <img src="../img/dead_rung_scoring_dead_cap3_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ann 3, Ben 0, Cara 2."> | 3 | 0 | 2 |
 
 The same ballots as the file records them:
 

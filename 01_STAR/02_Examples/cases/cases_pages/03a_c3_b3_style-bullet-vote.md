@@ -22,11 +22,11 @@ either way.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Choco | Almond | Vanilla |
-|:--|:--:|:--:|:--:|
-| <img src="../img/03a_c3_b3_style-bullet-vote_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — full/expressive style: Choco 1, Almond 2, Vanilla 5."> | 1 | 2 | 5 |
-| <img src="../img/03a_c3_b3_style-bullet-vote_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — equal scores are OK: Choco 0, Almond 5, Vanilla 5."> | 0 | 5 | 5 |
-| <img src="../img/03a_c3_b3_style-bullet-vote_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — bullet voting: Choco 0, Almond 0, Vanilla 5."> | 0 | 0 | 5 |
+| # | Ballot as marked | Choco | Almond | Vanilla |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/03a_c3_b3_style-bullet-vote_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — full/expressive style: Choco 1, Almond 2, Vanilla 5."> | 1 | 2 | 5 |
+| 2 | <img src="../img/03a_c3_b3_style-bullet-vote_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — equal scores are OK: Choco 0, Almond 5, Vanilla 5."> | 0 | 5 | 5 |
+| 3 | <img src="../img/03a_c3_b3_style-bullet-vote_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — bullet voting: Choco 0, Almond 0, Vanilla 5."> | 0 | 0 | 5 |
 
 The same ballots as the file records them:
 

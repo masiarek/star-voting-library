@@ -25,10 +25,10 @@ finalist. See 01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Alice | Ben | Cara |
-|:--|:--:|:--:|:--:|
-| <img src="../img/tie_break_02_scoring_no_fives_to_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Alice 4, Ben 4, Cara 2."> | 4 | 4 | 2 |
-| <img src="../img/tie_break_02_scoring_no_fives_to_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Alice 4, Ben 0, Cara 2."> | 4 | 0 | 2 |
+| # | Ballot as marked | Alice | Ben | Cara |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/tie_break_02_scoring_no_fives_to_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Alice 4, Ben 4, Cara 2."> | 4 | 4 | 2 |
+| 2 | <img src="../img/tie_break_02_scoring_no_fives_to_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Alice 4, Ben 0, Cara 2."> | 4 | 0 | 2 |
 
 The same ballots as the file records them:
 

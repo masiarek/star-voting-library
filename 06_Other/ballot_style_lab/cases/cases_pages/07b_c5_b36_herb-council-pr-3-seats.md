@@ -184,15 +184,16 @@ Count × Anise,Basil,Chive,Dill,Endive
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     Anise    |  * Basil    |  * Chive    |     Dill    |    Endive   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anise    |    Basil    |    Chive    |     Dill    |    Endive   |
 -----------------------------------------------------------------------------------------
          Anise > |     ---      |16 -  0 - 20 |16 -  4 - 16 |16 -  4 - 16 | 5 - 28 -  3 |
-       * Basil > | 20 -  0 - 16 |    ---      | 6 - 26 -  4 |10 - 20 -  6 |20 -  0 - 16 |
-       * Chive > | 16 -  4 - 16 | 4 - 26 -  6 |    ---      | 8 - 23 -  5 |16 -  4 - 16 |
+         Basil > | 20 -  0 - 16 |    ---      | 6 - 26 -  4 |10 - 20 -  6 |20 -  0 - 16 |
+         Chive > | 16 -  4 - 16 | 4 - 26 -  6 |    ---      | 8 - 23 -  5 |16 -  4 - 16 |
           Dill > | 16 -  4 - 16 | 6 - 20 - 10 | 5 - 23 -  8 |    ---      |16 -  4 - 16 |
         Endive > |  3 - 28 -  5 |16 -  0 - 20 |16 -  4 - 16 |16 -  4 - 16 |    ---      |
 
@@ -204,12 +205,14 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Anise      13   2   3   0   0  11    7  |    82   2.8
-Basil      20   0   0   0   3  12    1  |   103   2.9
-Chive      15   0   1   3   3  10    4  |    87   2.7
-Dill       12   3   1   1   6   9    4  |    83   2.6
-Endive     11   4   3   0   0  11    7  |    80   2.8
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Anise      13   2   3   0   0  11    7  |    82      2.3        2.8
+Basil      20   0   0   0   3  12    1  |   103      2.9        2.9
+Chive      15   0   1   3   3  10    4  |    87      2.4        2.7
+Dill       12   3   1   1   6   9    4  |    83      2.3        2.6
+Endive     11   4   3   0   0  11    7  |    80      2.2        2.8
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  Hare quota is 12.
 ```
 

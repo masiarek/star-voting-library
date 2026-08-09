@@ -39,10 +39,10 @@ dispute; the UI/export mislabel is bettervoting#1090).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Option 1 | Option 2 |
-|:--|:--:|:--:|
-| <img src="../img/bv655_jfrk9t_equal_opposition_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — explicit equal opposition (rejects both): Option 1 0, Option 2 0."> | 0 | 0 |
-| <img src="../img/bv655_jfrk9t_equal_opposition_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Option 1 = 5, Option 2 left blank: Option 1 5, Option 2 left blank (counts as 0)."> | 5 | & |
+| # | Ballot as marked | Option 1 | Option 2 |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/bv655_jfrk9t_equal_opposition_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — explicit equal opposition (rejects both): Option 1 0, Option 2 0."> | 0 | 0 |
+| 2 | <img src="../img/bv655_jfrk9t_equal_opposition_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Option 1 = 5, Option 2 left blank: Option 1 5, Option 2 left blank (counts as 0)."> | 5 | & |
 
 The same ballots as the file records them:
 
@@ -114,9 +114,11 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Option 1   1  0  0  0  0  1    0  |     5   2.5
-Option 2   0  0  0  0  0  1    1  |     0   0.0
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Option 1   1  0  0  0  0  1    0  |     5      2.5        2.5
+Option 2   0  0  0  0  0  1    1  |     0      0.0        0.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv655_jfrk9t_equal_opposition_tabulated.txt) (regenerated on every run; every analysis forced on).

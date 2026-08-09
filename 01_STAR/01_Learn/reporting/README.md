@@ -30,6 +30,7 @@ A STAR result is a short funnel, and every report shows the same stages:
 | Page | What it explains |
 |---|---|
 | **[Score Distribution](reporting_LH/score_distribution.md)** | the per-score breakdown (how many 5s, 4s … 0s, blanks); Total and Avg; `0` vs blank |
+| **[Score averages — which denominator](score_averages.md)** | why one total yields two honest averages once a ballot abstains, what the gap between them means, and why the column rounds instead of printing an exact fraction |
 | **[Range of Scores vs Score Distribution](score_matrix_two_views.md)** | the two margins of the ballot grid, and which report answers which question |
 | **[Preference Matrix & Condorcet](reporting_LH/matrix.md)** | head-to-head `For – Equal Support – Against`; two-candidate vs full N×N; `show_condorcet` |
 | **[Reporting true ties](reporting_ties.md)** | how a tie shows up in each report; why the runoff-percentage line is suppressed on an exact tie |

@@ -34,13 +34,13 @@ which reads the scale off the ballots themselves.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ash | Birch | Cedar |
-|:--|:--:|:--:|:--:|
-| <img src="../img/range_101_0to9_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Birch a strong second: Ash 9, Birch 7, Cedar 0."> | 9 | 7 | 0 |
-| <img src="../img/range_101_0to9_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Cedar barely registers: Ash 9, Birch 6, Cedar 1."> | 9 | 6 | 1 |
-| <img src="../img/range_101_0to9_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Cedar's camp — Birch close behind: Ash 0, Birch 8, Cedar 9."> | 0 | 8 | 9 |
-| <img src="../img/range_101_0to9_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch edges Cedar out: Ash 1, Birch 9, Cedar 8."> | 1 | 9 | 8 |
-| <img src="../img/range_101_0to9_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch clearly ahead of Cedar: Ash 0, Birch 9, Cedar 7."> | 0 | 9 | 7 |
+| # | Ballot as marked | Ash | Birch | Cedar |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/range_101_0to9_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Birch a strong second: Ash 9, Birch 7, Cedar 0."> | 9 | 7 | 0 |
+| 2 | <img src="../img/range_101_0to9_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Cedar barely registers: Ash 9, Birch 6, Cedar 1."> | 9 | 6 | 1 |
+| 3 | <img src="../img/range_101_0to9_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Cedar's camp — Birch close behind: Ash 0, Birch 8, Cedar 9."> | 0 | 8 | 9 |
+| 4 | <img src="../img/range_101_0to9_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch edges Cedar out: Ash 1, Birch 9, Cedar 8."> | 1 | 9 | 8 |
+| 5 | <img src="../img/range_101_0to9_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch clearly ahead of Cedar: Ash 0, Birch 9, Cedar 7."> | 0 | 9 | 7 |
 
 The same ballots as the file records them:
 

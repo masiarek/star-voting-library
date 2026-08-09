@@ -44,6 +44,8 @@ expected_winners:
 - Bob
 ```
 
+`expected_winners` is the **answer key, not the report**: it's the one line CI enforces, so the file stays small enough to read at a glance. Run it and the round-by-round count appears on screen — and the same run writes a full-detail audit copy under the same name, [`bv2187_qrw6wb_ann-bob-cal_tabulated.txt`](01_STAR/02_Examples/cases/cases_tabulated/bv2187_qrw6wb_ann-bob-cal_tabulated.txt), with the scoring round, the runoff, the preference matrix and the score distribution. Every count in this library is *generated* from its YAML, never typed beside it.
+
 This exact election is the repo's **canonical leading example** — it lives as a runnable file ([`bv2187_qrw6wb_ann-bob-cal.yaml`](01_STAR/02_Examples/cases/bv2187_qrw6wb_ann-bob-cal.yaml) · [reader page](01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)), is reused verbatim across the intro docs, and runs **[live on BetterVoting ↗](https://bettervoting.com/qrw6wb/results)** (election `qrw6wb`). The registry of all reusable teaching elections (and the freeze rule that keeps them stable) is [TIPS — Canonical Elections](07_Concepts/tips/TIPS_canonical_elections.md).
 
 **Why the format is YAML, what every field does, and what happens to the file once you run it → [YAML election files — why, what, how](YAML_library/README.md)** — the format's front door, with the [fill-in authoring template](YAML_library/YAML_authoring_template.md) one click further. House style keeps examples **small** ([how many voters?](07_Concepts/tips/TIPS_choosing_voter_counts.md)), and the ladder that settles a dead heat is [STAR Tie-Breaking — The Full Chain](01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md).

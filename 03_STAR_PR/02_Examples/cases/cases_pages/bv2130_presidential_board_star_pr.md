@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2130_presidential_board_star_pr.yaml`](../bv2130_presidential_board_star_pr.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../01_Learn/README.md) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)
+**Method:** [Allocated Score (proportional STAR)](../../../01_Learn/README.md) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Karina Garcia (Socialism and Liberation)
 
 ## Scenario
 
@@ -16,17 +16,16 @@ Proportional STAR (BV's "STAR_PR" = the Allocated Score method), 7 seats, 51
 candidates, 102 sparse ballots. The LH reference uses voting_method: allocated
 (BV's STAR_PR isn't a name LH recognizes — it maps to Allocated Score).
 
-LH allocated reproduces BetterVoting's first SIX seats exactly (Bernie Sanders,
-Al Gore, Barack Obama, Cornel West, Chase Oliver, Kamala Harris). The SEVENTH
-seat diverges: LH elects Claudia De La Cruz, BetterVoting elected Karina Garcia
-(both Socialism & Liberation), with Claudia ahead in LH's exact math (34.26 vs
-34.00 reweighted). RESOLVED 2026-08-09: this is a genuine implementation
-difference, and BetterVoting is right. The LH engine fills allocation quotas by
-ballot COUNT instead of ballot weight (reported as starvote issue #20), which
-is what inflates Claudia here; under weight-true accounting Karina is strictly
-ahead, and today's production sandbox re-elects her deterministically, no tie
-in the round. The tieBreakType "random" that pointed the old note toward a
-chance tiebreak was a red herring — BV's Allocated Score stamps it on every
+LH allocated now reproduces all SEVEN BetterVoting seats exactly (Bernie
+Sanders, Al Gore, Barack Obama, Cornel West, Chase Oliver, Kamala Harris,
+Karina Garcia). It didn't always: until the fork's 2026-08-09
+count-vs-weight fix (upstream starvote issue #20), the engine elected
+Claudia De La Cruz for seat 7 — count-based allocation left the Socialism
+& Liberation math at Claudia 34.26 vs Karina 34.00, where weight-true
+accounting puts Karina strictly ahead, deterministically (production
+sandbox re-elects her with no tie in the round). The old note here blamed
+"a near-tie BV broke by chance" because BV's export said tieBreakType
+"random" — a red herring: BV's Allocated Score stamps that on every
 result, tie or none (bettervoting issue #1507). Full story:
 03_STAR_PR/03_Criteria/allocated_count_vs_weight.
 
@@ -389,10 +388,11 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
 [Allocated Score Voting: Round 2: Ballot allocation round: Round 3]
  Remaining allocation quota is 11/7.
  Allocating 8 ballots at score 195/56.
+ These ballots carry a remaining weight of 39/7.
  This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 19.64% of these ballots.
- Keeping these ballots, but multiplying their weights by 45/56.
- 8 ballots reweighted from 39/56 to 1755/3136.
+ Allocating only 28.21% of these ballots.
+ Keeping these ballots, but multiplying their weights by 28/39.
+ 8 ballots reweighted from 39/56 to 1/2.
 
 [Allocated Score Voting: Round 3]
  Tabulating 89 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
@@ -514,18 +514,20 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
 [Allocated Score Voting: Round 3: Ballot allocation round: Round 3]
  Remaining allocation quota is 74/7.
  Allocating 5 ballots at score 195/56.
+ These ballots carry a remaining weight of 195/56.
 
 [Allocated Score Voting: Round 3: Ballot allocation round: Round 4]
- Remaining allocation quota is 39/7.
+ Remaining allocation quota is 397/56.
  Allocating 3 ballots at score 3.
 
 [Allocated Score Voting: Round 3: Ballot allocation round: Round 5]
- Remaining allocation quota is 18/7.
- Allocating 5 ballots at score 8775/3136.
+ Remaining allocation quota is 229/56.
+ Allocating 10 ballots at score 39/14.
+ These ballots carry a remaining weight of 195/28.
  This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 51.43% of these ballots.
- Keeping these ballots, but multiplying their weights by 17/35.
- 5 ballots reweighted from 1755/3136 to 5967/21952.
+ Allocating only 58.72% of these ballots.
+ Keeping these ballots, but multiplying their weights by 161/390.
+ 10 ballots reweighted from 39/56 to 23/80.
 
 [Allocated Score Voting: Round 4]
  Tabulating 77 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
@@ -646,14 +648,19 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
 
 [Allocated Score Voting: Round 4: Ballot allocation round: Round 3]
  Remaining allocation quota is 46/7.
- Allocating 8 ballots at score 195/56.
+ Allocating 6 ballots at score 195/56.
+ These ballots carry a remaining weight of 117/28.
+
+[Allocated Score Voting: Round 4: Ballot allocation round: Round 4]
+ Remaining allocation quota is 67/28.
+ Allocating 3 ballots at score 3.
  This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 82.14% of these ballots.
- Keeping these ballots, but multiplying their weights by 5/28.
- 8 ballots reweighted from 39/56 to 195/1568.
+ Allocating only 79.76% of these ballots.
+ Keeping these ballots, but multiplying their weights by 17/84.
+ 3 ballots reweighted from 1 to 17/84.
 
 [Allocated Score Voting: Round 5]
- Tabulating 69 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
+ Tabulating 63 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
 Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Clinton (Democrat),Joe Biden (Democrat),John Kerry (Democrat),Kamala Harris (Democrat),Donald Trump (Republican),George W. Bush Jr. (Republican),J.D. Vance (Republican),Mike Pence (Republican),Nikki Haley (Republican),Ted Cruz (Republican),Vivek Ramaswamy (Republican),Bob Barr (Libertarian),Chase Oliver (Libertarian),Gary Johnson (Libertarian),Harry Browne (Libertarian),Jo Jorgensen (Libertarian),Michael Badnarik (Libertarian),Mike ter Maat (Libertarian),Ajamu Baraka (Green),Angela Walker (Green),Cynthia McKinney (Green),David Cobb (Green),Howie Hawkins (Green),Jill Stein (Green),Rudolph "Butch" Ware (Green),Chuck Baldwin (Constitution),Darrell castle (Constitution),Don Blankenship (Constitution),Howard Phillips (Constitution),Michael Peroutka (Constitution),Randall Terry (Constitution),Virgil Goode (Constitution),Claudia De La Cruz (Socialism and Liberation),Eugene Puryear (Socialism and Liberation),Gloria La Riva (Socialism and Liberation),Karina Garcia (Socialism and Liberation),Peta Lindsay (Socialism and Liberation),Sunil Freeman (Socialism and Liberation),Yari Osorio (Socialism and Liberation),Amar Patel (Solidarity),Brian Carroll (Solidarity),Joseph "Joe" Charles Schriner (Solidarity),Juan Muñoz (Solidarity),Lauren Onak (Solidarity),Mike Maturen (Solidarity),Peter Sonski (Solidarity),Robert F. Kennedy Jr. (Independent),Cornel West (Independent)
                  5,                      3,                        5,                         3,                   1,                    2,                       2,                        0,                              1,                      0,                      2,                       -,                    0,                           1,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 2,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  0,                        4
                  -,                      5,                        -,                         -,                   -,                    -,                       -,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
@@ -772,21 +779,28 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
 [Allocated Score Voting: Round 5: Ballot allocation round: Round 3]
  Remaining allocation quota is 25/7.
  Allocating 1 ballot at score 39/14.
+ These ballots carry a remaining weight of 39/56.
 
 [Allocated Score Voting: Round 5: Ballot allocation round: Round 4]
- Remaining allocation quota is 18/7.
- Allocating 2 ballots at score 117/56.
+ Remaining allocation quota is 23/8.
+ Allocating 1 ballot at score 5/2.
+ These ballots carry a remaining weight of 1/2.
 
 [Allocated Score Voting: Round 5: Ballot allocation round: Round 5]
- Remaining allocation quota is 4/7.
+ Remaining allocation quota is 19/8.
+ Allocating 2 ballots at score 117/56.
+ These ballots carry a remaining weight of 39/28.
+
+[Allocated Score Voting: Round 5: Ballot allocation round: Round 6]
+ Remaining allocation quota is 55/56.
  Allocating 2 ballots at score 2.
  This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 28.57% of these ballots.
- Keeping these ballots, but multiplying their weights by 5/7.
- 2 ballots reweighted from 1 to 5/7.
+ Allocating only 49.11% of these ballots.
+ Keeping these ballots, but multiplying their weights by 57/112.
+ 2 ballots reweighted from 1 to 57/112.
 
 [Allocated Score Voting: Round 6]
- Tabulating 55 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
+ Tabulating 48 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
 Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Clinton (Democrat),Joe Biden (Democrat),John Kerry (Democrat),Kamala Harris (Democrat),Donald Trump (Republican),George W. Bush Jr. (Republican),J.D. Vance (Republican),Mike Pence (Republican),Nikki Haley (Republican),Ted Cruz (Republican),Vivek Ramaswamy (Republican),Bob Barr (Libertarian),Chase Oliver (Libertarian),Gary Johnson (Libertarian),Harry Browne (Libertarian),Jo Jorgensen (Libertarian),Michael Badnarik (Libertarian),Mike ter Maat (Libertarian),Ajamu Baraka (Green),Angela Walker (Green),Cynthia McKinney (Green),David Cobb (Green),Howie Hawkins (Green),Jill Stein (Green),Rudolph "Butch" Ware (Green),Chuck Baldwin (Constitution),Darrell castle (Constitution),Don Blankenship (Constitution),Howard Phillips (Constitution),Michael Peroutka (Constitution),Randall Terry (Constitution),Virgil Goode (Constitution),Claudia De La Cruz (Socialism and Liberation),Eugene Puryear (Socialism and Liberation),Gloria La Riva (Socialism and Liberation),Karina Garcia (Socialism and Liberation),Peta Lindsay (Socialism and Liberation),Sunil Freeman (Socialism and Liberation),Yari Osorio (Socialism and Liberation),Amar Patel (Solidarity),Brian Carroll (Solidarity),Joseph "Joe" Charles Schriner (Solidarity),Juan Muñoz (Solidarity),Lauren Onak (Solidarity),Mike Maturen (Solidarity),Peter Sonski (Solidarity),Robert F. Kennedy Jr. (Independent),Cornel West (Independent)
                  5,                      3,                        5,                         3,                   1,                    2,                       2,                        0,                              1,                      0,                      2,                       -,                    0,                           1,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 2,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  0,                        4
                  -,                      5,                        -,                         -,                   -,                    -,                       -,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
@@ -896,18 +910,52 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
  Allocating 14+4/7 ballots.
 
 [Allocated Score Voting: Round 6: Ballot allocation round: Round 1]
- Allocating 9 ballots at score 39/14.
+ Allocating 4 ballots at score 39/14.
+ These ballots carry a remaining weight of 39/14.
 
 [Allocated Score Voting: Round 6: Ballot allocation round: Round 2]
- Remaining allocation quota is 39/7.
- Allocating 6 ballots at score 117/56.
+ Remaining allocation quota is 165/14.
+ Allocating 2 ballots at score 5/2.
+ These ballots carry a remaining weight of 1.
+
+[Allocated Score Voting: Round 6: Ballot allocation round: Round 3]
+ Remaining allocation quota is 151/14.
+ Allocating 3 ballots at score 117/56.
+ These ballots carry a remaining weight of 117/56.
+
+[Allocated Score Voting: Round 6: Ballot allocation round: Round 4]
+ Remaining allocation quota is 487/56.
+ Allocating 1 ballot at score 2.
+ These ballots carry a remaining weight of 1/2.
+
+[Allocated Score Voting: Round 6: Ballot allocation round: Round 5]
+ Remaining allocation quota is 459/56.
+ Allocating 1 ballot at score 3/2.
+ These ballots carry a remaining weight of 1/2.
+
+[Allocated Score Voting: Round 6: Ballot allocation round: Round 6]
+ Remaining allocation quota is 431/56.
+ Allocating 4 ballots at score 39/28.
+ These ballots carry a remaining weight of 39/14.
+
+[Allocated Score Voting: Round 6: Ballot allocation round: Round 7]
+ Remaining allocation quota is 275/56.
+ Allocating 7 ballots at score 23/20.
+ These ballots carry a remaining weight of 161/80.
+
+[Allocated Score Voting: Round 6: Ballot allocation round: Round 8]
+ Remaining allocation quota is 1623/560.
+ Allocating 4 ballots at score 1.
+ These ballots carry a remaining weight of 3.
  This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 92.86% of these ballots.
- Keeping these ballots, but multiplying their weights by 1/14.
- 6 ballots reweighted from 39/56 to 39/784.
+ Allocating only 96.61% of these ballots.
+ Keeping these ballots, but multiplying their weights by 19/560.
+ Reweighted 4 ballots:
+    2 ballots reweighted from 1 to 19/560.
+    2 ballots reweighted from 1/2 to 19/1120.
 
 [Allocated Score Voting: Round 7]
- Tabulating 46 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
+ Tabulating 26 remaining ballots. Note: 1 of 102 ballots is marked as an abstention.
 Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Clinton (Democrat),Joe Biden (Democrat),John Kerry (Democrat),Kamala Harris (Democrat),Donald Trump (Republican),George W. Bush Jr. (Republican),J.D. Vance (Republican),Mike Pence (Republican),Nikki Haley (Republican),Ted Cruz (Republican),Vivek Ramaswamy (Republican),Bob Barr (Libertarian),Chase Oliver (Libertarian),Gary Johnson (Libertarian),Harry Browne (Libertarian),Jo Jorgensen (Libertarian),Michael Badnarik (Libertarian),Mike ter Maat (Libertarian),Ajamu Baraka (Green),Angela Walker (Green),Cynthia McKinney (Green),David Cobb (Green),Howie Hawkins (Green),Jill Stein (Green),Rudolph "Butch" Ware (Green),Chuck Baldwin (Constitution),Darrell castle (Constitution),Don Blankenship (Constitution),Howard Phillips (Constitution),Michael Peroutka (Constitution),Randall Terry (Constitution),Virgil Goode (Constitution),Claudia De La Cruz (Socialism and Liberation),Eugene Puryear (Socialism and Liberation),Gloria La Riva (Socialism and Liberation),Karina Garcia (Socialism and Liberation),Peta Lindsay (Socialism and Liberation),Sunil Freeman (Socialism and Liberation),Yari Osorio (Socialism and Liberation),Amar Patel (Solidarity),Brian Carroll (Solidarity),Joseph "Joe" Charles Schriner (Solidarity),Juan Muñoz (Solidarity),Lauren Onak (Solidarity),Mike Maturen (Solidarity),Peter Sonski (Solidarity),Robert F. Kennedy Jr. (Independent),Cornel West (Independent)
                  5,                      3,                        5,                         3,                   1,                    2,                       2,                        0,                              1,                      0,                      2,                       -,                    0,                           1,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 2,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  0,                        4
                  -,                      5,                        -,                         -,                   -,                    -,                       -,                        -,                              -,                      -,                      -,                       -,                    -,                           -,                     -,                         -,                         -,                         -,                         -,                             -,                          -,                   -,                    -,                       -,                 -,                    -,                 -,                           -,                           -,                            -,                             -,                             -,                              -,                           -,                          -,                                            -,                                        -,                                        -,                                       -,                                      -,                                       -,                                     -,                      -,                         -,                                         -,                      -,                       -,                        -,                        -,                                  -,                        -
@@ -1018,24 +1066,25 @@ Al Gore (Democrat),Barack Obama (Democrat),Bernie Sanders (Democrat),Hillary Cli
  Barack Obama (Democrat)
  Bernie Sanders (Democrat)
  Chase Oliver (Libertarian)
- Claudia De La Cruz (Socialism and Liberation)
  Cornel West (Independent)
  Kamala Harris (Democrat)
+ Karina Garcia (Socialism and Liberation)
 ```
 <!-- --8<-- [end:report] -->
 
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                                                      |               * Al Gore (Democrat)                |              Barack Obama (Democrat)             |           * Bernie Sanders (Democrat)            |            Hillary Clinton (Democrat)            |               Joe Biden (Democrat)               |               John Kerry (Democrat)              |             Kamala Harris (Democrat)             |             Donald Trump (Republican)            |          George W. Bush Jr. (Republican)         |              J.D. Vance (Republican)             |              Mike Pence (Republican)             |             Nikki Haley (Republican)             |               Ted Cruz (Republican)              |           Vivek Ramaswamy (Republican)           |              Bob Barr (Libertarian)              |            Chase Oliver (Libertarian)            |            Gary Johnson (Libertarian)            |            Harry Browne (Libertarian)            |            Jo Jorgensen (Libertarian)            |          Michael Badnarik (Libertarian)          |            Mike ter Maat (Libertarian)           |               Ajamu Baraka (Green)               |               Angela Walker (Green)              |             Cynthia McKinney (Green)             |                David Cobb (Green)                |               Howie Hawkins (Green)              |                Jill Stein (Green)                |           Rudolph "Butch" Ware (Green)           |           Chuck Baldwin (Constitution)           |           Darrell castle (Constitution)          |          Don Blankenship (Constitution)          |          Howard Phillips (Constitution)          |          Michael Peroutka (Constitution)         |           Randall Terry (Constitution)           |            Virgil Goode (Constitution)           |   Claudia De La Cruz (Socialism and Liberation)  |     Eugene Puryear (Socialism and Liberation)    |     Gloria La Riva (Socialism and Liberation)    |     Karina Garcia (Socialism and Liberation)     |      Peta Lindsay (Socialism and Liberation)     |     Sunil Freeman (Socialism and Liberation)     |      Yari Osorio (Socialism and Liberation)      |              Amar Patel (Solidarity)             |            Brian Carroll (Solidarity)            |    Joseph "Joe" Charles Schriner (Solidarity)    |              Juan Muñoz (Solidarity)             |             Lauren Onak (Solidarity)             |             Mike Maturen (Solidarity)            |             Peter Sonski (Solidarity)            |        Robert F. Kennedy Jr. (Independent)       |             Cornel West (Independent)            |
+        Informational only — not part of the 7-winner count below,
+        so no Top-2 finalists are marked.
+                                                      |                 Al Gore (Democrat)                |              Barack Obama (Democrat)             |             Bernie Sanders (Democrat)            |            Hillary Clinton (Democrat)            |               Joe Biden (Democrat)               |               John Kerry (Democrat)              |             Kamala Harris (Democrat)             |             Donald Trump (Republican)            |          George W. Bush Jr. (Republican)         |              J.D. Vance (Republican)             |              Mike Pence (Republican)             |             Nikki Haley (Republican)             |               Ted Cruz (Republican)              |           Vivek Ramaswamy (Republican)           |              Bob Barr (Libertarian)              |            Chase Oliver (Libertarian)            |            Gary Johnson (Libertarian)            |            Harry Browne (Libertarian)            |            Jo Jorgensen (Libertarian)            |          Michael Badnarik (Libertarian)          |            Mike ter Maat (Libertarian)           |               Ajamu Baraka (Green)               |               Angela Walker (Green)              |             Cynthia McKinney (Green)             |                David Cobb (Green)                |               Howie Hawkins (Green)              |                Jill Stein (Green)                |           Rudolph "Butch" Ware (Green)           |           Chuck Baldwin (Constitution)           |           Darrell castle (Constitution)          |          Don Blankenship (Constitution)          |          Howard Phillips (Constitution)          |          Michael Peroutka (Constitution)         |           Randall Terry (Constitution)           |            Virgil Goode (Constitution)           |   Claudia De La Cruz (Socialism and Liberation)  |     Eugene Puryear (Socialism and Liberation)    |     Gloria La Riva (Socialism and Liberation)    |     Karina Garcia (Socialism and Liberation)     |      Peta Lindsay (Socialism and Liberation)     |     Sunil Freeman (Socialism and Liberation)     |      Yari Osorio (Socialism and Liberation)      |              Amar Patel (Solidarity)             |            Brian Carroll (Solidarity)            |    Joseph "Joe" Charles Schriner (Solidarity)    |              Juan Muñoz (Solidarity)             |             Lauren Onak (Solidarity)             |             Mike Maturen (Solidarity)            |             Peter Sonski (Solidarity)            |        Robert F. Kennedy Jr. (Independent)       |             Cornel West (Independent)            |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                               * Al Gore (Democrat) > |                        ---                        |                  32 -  51 -  19                  |                  15 -  27 -  60                  |                  50 -  47 -   5                  |                  58 -  38 -   6                  |                  51 -  47 -   4                  |                  50 -  41 -  11                  |                  75 -  15 -  12                  |                  75 -  22 -   5                  |                  73 -  14 -  15                  |                  72 -  22 -   8                  |                  72 -  23 -   7                  |                  77 -  16 -   9                  |                  76 -  10 -  16                  |                  76 -  13 -  13                  |                  66 -  19 -  17                  |                  65 -  22 -  15                  |                  73 -  17 -  12                  |                  73 -  15 -  14                  |                  75 -  16 -  11                  |                  74 -  16 -  12                  |                  57 -  27 -  18                  |                  59 -  27 -  16                  |                  61 -  28 -  13                  |                  61 -  29 -  12                  |                  50 -  32 -  20                  |                  58 -  21 -  23                  |                  55 -  30 -  17                  |                  77 -  15 -  10                  |                  77 -  14 -  11                  |                  76 -  16 -  10                  |                  76 -  15 -  11                  |                  76 -  16 -  10                  |                  76 -  16 -  10                  |                  76 -  16 -  10                  |                  51 -  28 -  23                  |                  57 -  28 -  17                  |                  51 -  30 -  21                  |                  56 -  29 -  17                  |                  56 -  30 -  16                  |                  56 -  30 -  16                  |                  56 -  30 -  16                  |                  67 -  24 -  11                  |                  67 -  24 -  11                  |                  68 -  23 -  11                  |                  69 -  22 -  11                  |                  69 -  21 -  12                  |                  69 -  22 -  11                  |                  69 -  21 -  12                  |                  68 -  12 -  22                  |                  49 -  24 -  29                  |
+                                 Al Gore (Democrat) > |                        ---                        |                  32 -  51 -  19                  |                  15 -  27 -  60                  |                  50 -  47 -   5                  |                  58 -  38 -   6                  |                  51 -  47 -   4                  |                  50 -  41 -  11                  |                  75 -  15 -  12                  |                  75 -  22 -   5                  |                  73 -  14 -  15                  |                  72 -  22 -   8                  |                  72 -  23 -   7                  |                  77 -  16 -   9                  |                  76 -  10 -  16                  |                  76 -  13 -  13                  |                  66 -  19 -  17                  |                  65 -  22 -  15                  |                  73 -  17 -  12                  |                  73 -  15 -  14                  |                  75 -  16 -  11                  |                  74 -  16 -  12                  |                  57 -  27 -  18                  |                  59 -  27 -  16                  |                  61 -  28 -  13                  |                  61 -  29 -  12                  |                  50 -  32 -  20                  |                  58 -  21 -  23                  |                  55 -  30 -  17                  |                  77 -  15 -  10                  |                  77 -  14 -  11                  |                  76 -  16 -  10                  |                  76 -  15 -  11                  |                  76 -  16 -  10                  |                  76 -  16 -  10                  |                  76 -  16 -  10                  |                  51 -  28 -  23                  |                  57 -  28 -  17                  |                  51 -  30 -  21                  |                  56 -  29 -  17                  |                  56 -  30 -  16                  |                  56 -  30 -  16                  |                  56 -  30 -  16                  |                  67 -  24 -  11                  |                  67 -  24 -  11                  |                  68 -  23 -  11                  |                  69 -  22 -  11                  |                  69 -  21 -  12                  |                  69 -  22 -  11                  |                  69 -  21 -  12                  |                  68 -  12 -  22                  |                  49 -  24 -  29                  |
                             Barack Obama (Democrat) > |                   19 -  51 -  32                  |                       ---                        |                  14 -  24 -  64                  |                  51 -  45 -   6                  |                  50 -  51 -   1                  |                  53 -  43 -   6                  |                  42 -  52 -   8                  |                  69 -  21 -  12                  |                  70 -  30 -   2                  |                  69 -  18 -  15                  |                  68 -  24 -  10                  |                  69 -  27 -   6                  |                  71 -  21 -  10                  |                  69 -  17 -  16                  |                  68 -  22 -  12                  |                  62 -  19 -  21                  |                  60 -  23 -  19                  |                  67 -  21 -  14                  |                  65 -  22 -  15                  |                  68 -  21 -  13                  |                  68 -  21 -  13                  |                  54 -  27 -  21                  |                  55 -  28 -  19                  |                  57 -  29 -  16                  |                  56 -  29 -  17                  |                  48 -  29 -  25                  |                  55 -  23 -  24                  |                  52 -  30 -  20                  |                  71 -  21 -  10                  |                  71 -  20 -  11                  |                  70 -  22 -  10                  |                  71 -  19 -  12                  |                  71 -  21 -  10                  |                  70 -  21 -  11                  |                  71 -  20 -  11                  |                  47 -  32 -  23                  |                  52 -  30 -  20                  |                  48 -  30 -  24                  |                  54 -  28 -  20                  |                  53 -  29 -  20                  |                  54 -  28 -  20                  |                  54 -  28 -  20                  |                  62 -  27 -  13                  |                  60 -  27 -  15                  |                  61 -  28 -  13                  |                  61 -  27 -  14                  |                  61 -  27 -  14                  |                  62 -  28 -  12                  |                  61 -  26 -  15                  |                  65 -  14 -  23                  |                  49 -  23 -  30                  |
-                        * Bernie Sanders (Democrat) > |                   60 -  27 -  15                  |                  64 -  24 -  14                  |                       ---                        |                  74 -  21 -   7                  |                  75 -  21 -   6                  |                  73 -  21 -   8                  |                  73 -  22 -   7                  |                  81 -  11 -  10                  |                  81 -  17 -   4                  |                  79 -   9 -  14                  |                  81 -  12 -   9                  |                  78 -  18 -   6                  |                  82 -  11 -   9                  |                  80 -   8 -  14                  |                  79 -  12 -  11                  |                  76 -  12 -  14                  |                  75 -   9 -  18                  |                  77 -  11 -  14                  |                  76 -  12 -  14                  |                  78 -  13 -  11                  |                  79 -  12 -  11                  |                  73 -  22 -   7                  |                  73 -  22 -   7                  |                  77 -  21 -   4                  |                  75 -  21 -   6                  |                  71 -  24 -   7                  |                  68 -  25 -   9                  |                  72 -  24 -   6                  |                  83 -   9 -  10                  |                  83 -   9 -  10                  |                  83 -   9 -  10                  |                  82 -  10 -  10                  |                  83 -   9 -  10                  |                  82 -   9 -  11                  |                  82 -   9 -  11                  |                  69 -  23 -  10                  |                  71 -  22 -   9                  |                  70 -  22 -  10                  |                  72 -  20 -  10                  |                  72 -  21 -   9                  |                  72 -  22 -   8                  |                  72 -  22 -   8                  |                  76 -  16 -  10                  |                  77 -  15 -  10                  |                  78 -  15 -   9                  |                  78 -  14 -  10                  |                  77 -  14 -  11                  |                  79 -  14 -   9                  |                  77 -  14 -  11                  |                  78 -   7 -  17                  |                  61 -  31 -  10                  |
+                          Bernie Sanders (Democrat) > |                   60 -  27 -  15                  |                  64 -  24 -  14                  |                       ---                        |                  74 -  21 -   7                  |                  75 -  21 -   6                  |                  73 -  21 -   8                  |                  73 -  22 -   7                  |                  81 -  11 -  10                  |                  81 -  17 -   4                  |                  79 -   9 -  14                  |                  81 -  12 -   9                  |                  78 -  18 -   6                  |                  82 -  11 -   9                  |                  80 -   8 -  14                  |                  79 -  12 -  11                  |                  76 -  12 -  14                  |                  75 -   9 -  18                  |                  77 -  11 -  14                  |                  76 -  12 -  14                  |                  78 -  13 -  11                  |                  79 -  12 -  11                  |                  73 -  22 -   7                  |                  73 -  22 -   7                  |                  77 -  21 -   4                  |                  75 -  21 -   6                  |                  71 -  24 -   7                  |                  68 -  25 -   9                  |                  72 -  24 -   6                  |                  83 -   9 -  10                  |                  83 -   9 -  10                  |                  83 -   9 -  10                  |                  82 -  10 -  10                  |                  83 -   9 -  10                  |                  82 -   9 -  11                  |                  82 -   9 -  11                  |                  69 -  23 -  10                  |                  71 -  22 -   9                  |                  70 -  22 -  10                  |                  72 -  20 -  10                  |                  72 -  21 -   9                  |                  72 -  22 -   8                  |                  72 -  22 -   8                  |                  76 -  16 -  10                  |                  77 -  15 -  10                  |                  78 -  15 -   9                  |                  78 -  14 -  10                  |                  77 -  14 -  11                  |                  79 -  14 -   9                  |                  77 -  14 -  11                  |                  78 -   7 -  17                  |                  61 -  31 -  10                  |
                          Hillary Clinton (Democrat) > |                    5 -  47 -  50                  |                   6 -  45 -  51                  |                   7 -  21 -  74                  |                       ---                        |                  23 -  65 -  14                  |                  17 -  69 -  16                  |                  11 -  68 -  23                  |                  62 -  26 -  14                  |                  58 -  38 -   6                  |                  62 -  24 -  16                  |                  55 -  34 -  13                  |                  54 -  37 -  11                  |                  61 -  29 -  12                  |                  59 -  23 -  20                  |                  58 -  30 -  14                  |                  48 -  27 -  27                  |                  48 -  28 -  26                  |                  57 -  28 -  17                  |                  53 -  28 -  21                  |                  59 -  29 -  14                  |                  59 -  29 -  14                  |                  45 -  34 -  23                  |                  47 -  33 -  22                  |                  48 -  36 -  18                  |                  47 -  35 -  20                  |                  40 -  33 -  29                  |                  42 -  30 -  30                  |                  44 -  34 -  24                  |                  61 -  31 -  10                  |                  61 -  30 -  11                  |                  61 -  31 -  10                  |                  60 -  29 -  13                  |                  60 -  31 -  11                  |                  61 -  30 -  11                  |                  61 -  30 -  11                  |                  44 -  30 -  28                  |                  48 -  32 -  22                  |                  44 -  32 -  26                  |                  47 -  33 -  22                  |                  48 -  33 -  21                  |                  48 -  33 -  21                  |                  48 -  33 -  21                  |                  54 -  33 -  15                  |                  54 -  32 -  16                  |                  56 -  32 -  14                  |                  55 -  33 -  14                  |                  56 -  31 -  15                  |                  56 -  33 -  13                  |                  55 -  32 -  15                  |                  60 -  19 -  23                  |                  41 -  25 -  36                  |
                                Joe Biden (Democrat) > |                    6 -  38 -  58                  |                   1 -  51 -  50                  |                   6 -  21 -  75                  |                  14 -  65 -  23                  |                       ---                        |                  13 -  72 -  17                  |                  10 -  63 -  29                  |                  58 -  30 -  14                  |                  53 -  43 -   6                  |                  58 -  28 -  16                  |                  49 -  39 -  14                  |                  49 -  43 -  10                  |                  56 -  35 -  11                  |                  54 -  31 -  17                  |                  55 -  33 -  14                  |                  47 -  30 -  25                  |                  42 -  37 -  23                  |                  53 -  34 -  15                  |                  50 -  35 -  17                  |                  55 -  34 -  13                  |                  55 -  34 -  13                  |                  39 -  36 -  27                  |                  40 -  37 -  25                  |                  43 -  37 -  22                  |                  41 -  38 -  23                  |                  36 -  35 -  31                  |                  39 -  33 -  30                  |                  38 -  35 -  29                  |                  57 -  35 -  10                  |                  58 -  33 -  11                  |                  57 -  34 -  11                  |                  58 -  32 -  12                  |                  58 -  34 -  10                  |                  57 -  33 -  12                  |                  58 -  33 -  11                  |                  36 -  36 -  30                  |                  41 -  35 -  26                  |                  37 -  34 -  31                  |                  40 -  37 -  25                  |                  41 -  35 -  26                  |                  42 -  35 -  25                  |                  41 -  36 -  25                  |                  48 -  39 -  15                  |                  49 -  37 -  16                  |                  50 -  38 -  14                  |                  50 -  38 -  14                  |                  50 -  37 -  15                  |                  50 -  40 -  12                  |                  50 -  37 -  15                  |                  56 -  22 -  24                  |                  37 -  28 -  37                  |
                               John Kerry (Democrat) > |                    4 -  47 -  51                  |                   6 -  43 -  53                  |                   8 -  21 -  73                  |                  16 -  69 -  17                  |                  17 -  72 -  13                  |                       ---                        |                   9 -  64 -  29                  |                  60 -  28 -  14                  |                  58 -  38 -   6                  |                  60 -  26 -  16                  |                  52 -  39 -  11                  |                  52 -  42 -   8                  |                  58 -  33 -  11                  |                  56 -  28 -  18                  |                  56 -  32 -  14                  |                  46 -  31 -  25                  |                  45 -  31 -  26                  |                  54 -  33 -  15                  |                  51 -  32 -  19                  |                  58 -  30 -  14                  |                  57 -  31 -  14                  |                  42 -  34 -  26                  |                  44 -  33 -  25                  |                  46 -  35 -  21                  |                  46 -  33 -  23                  |                  40 -  31 -  31                  |                  43 -  29 -  30                  |                  41 -  33 -  28                  |                  60 -  32 -  10                  |                  61 -  30 -  11                  |                  59 -  32 -  11                  |                  59 -  31 -  12                  |                  59 -  32 -  11                  |                  59 -  31 -  12                  |                  60 -  31 -  11                  |                  41 -  31 -  30                  |                  45 -  31 -  26                  |                  41 -  30 -  31                  |                  44 -  33 -  25                  |                  45 -  31 -  26                  |                  46 -  31 -  25                  |                  45 -  32 -  25                  |                  52 -  36 -  14                  |                  53 -  33 -  16                  |                  54 -  34 -  14                  |                  54 -  34 -  14                  |                  54 -  33 -  15                  |                  54 -  36 -  12                  |                  54 -  33 -  15                  |                  58 -  21 -  23                  |                  41 -  25 -  36                  |
@@ -1093,579 +1142,591 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                                                        Score
-Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
-Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
-Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
-Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
-Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174   2.2
-Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160   2.2
-John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166   2.2
-Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192   2.4
-Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37   0.5
-George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48   0.7
-J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56   0.7
-Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62   0.8
-Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61   0.9
-Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42   0.6
-Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65   0.8
-Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82   1.3
-Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131   1.7
-Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139   1.8
-Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87   1.3
-Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107   1.6
-Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77   1.2
-Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84   1.4
-Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136   2.3
-Angela Walker (Green)                           5  10   8  15   6  13   45  |   125   2.2
-Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110   2.0
-David Cobb (Green)                              3   9   8  15   6  14   47  |   111   2.0
-Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149   2.4
-Jill Stein (Green)                              8   9  12  12   8  22   31  |   144   2.0
-Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135   2.4
-Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45   0.9
-Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45   0.8
-Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47   0.9
-Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47   0.9
-Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44   0.9
-Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48   1.0
-Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48   1.0
-Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157   2.6
-Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130   2.4
-Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148   2.6
-Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133   2.5
-Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126   2.3
-Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123   2.3
-Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124   2.4
-Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86   1.8
-Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90   1.9
-Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79   1.6
-Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80   1.7
-Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86   1.7
-Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77   1.6
-Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
-Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
-Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
+Candidate                                       5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259      2.5        3.0
+Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246      2.4        3.0
+Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346      3.4        3.8
+Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174      1.7        2.2
+Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160      1.6        2.2
+John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166      1.6        2.2
+Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192      1.9        2.4
+Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37      0.4        0.5
+George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48      0.5        0.7
+J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56      0.5        0.7
+Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62      0.6        0.8
+Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61      0.6        0.9
+Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42      0.4        0.6
+Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65      0.6        0.8
+Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82      0.8        1.3
+Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131      1.3        1.7
+Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139      1.4        1.8
+Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87      0.9        1.3
+Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107      1.0        1.6
+Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77      0.8        1.2
+Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84      0.8        1.4
+Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136      1.3        2.3
+Angela Walker (Green)                           5  10   8  15   6  13   45  |   125      1.2        2.2
+Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110      1.1        2.0
+David Cobb (Green)                              3   9   8  15   6  14   47  |   111      1.1        2.0
+Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149      1.5        2.4
+Jill Stein (Green)                              8   9  12  12   8  22   31  |   144      1.4        2.0
+Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135      1.3        2.4
+Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45      0.4        0.9
+Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45      0.4        0.8
+Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47      0.5        0.9
+Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47      0.5        0.9
+Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44      0.4        0.9
+Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48      0.5        1.0
+Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48      0.5        1.0
+Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157      1.5        2.6
+Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130      1.3        2.4
+Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148      1.5        2.6
+Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133      1.3        2.5
+Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126      1.2        2.3
+Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123      1.2        2.3
+Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124      1.2        2.4
+Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86      0.8        1.8
+Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90      0.9        1.9
+Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79      0.8        1.6
+Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80      0.8        1.7
+Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86      0.8        1.7
+Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77      0.8        1.6
+Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88      0.9        1.8
+Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98      1.0        1.4
+Cornel West (Independent)                      14  10   9  13  11  11   34  |   174      1.7        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  Hare quota is 102/7.
 
 [Score Distribution] (how many ballots gave each star rating)
                                                        Score
-Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
-Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
-Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
-Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
-Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174   2.2
-Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160   2.2
-John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166   2.2
-Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192   2.4
-Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37   0.5
-George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48   0.7
-J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56   0.7
-Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62   0.8
-Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61   0.9
-Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42   0.6
-Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65   0.8
-Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82   1.3
-Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131   1.7
-Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139   1.8
-Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87   1.3
-Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107   1.6
-Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77   1.2
-Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84   1.4
-Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136   2.3
-Angela Walker (Green)                           5  10   8  15   6  13   45  |   125   2.2
-Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110   2.0
-David Cobb (Green)                              3   9   8  15   6  14   47  |   111   2.0
-Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149   2.4
-Jill Stein (Green)                              8   9  12  12   8  22   31  |   144   2.0
-Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135   2.4
-Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45   0.9
-Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45   0.8
-Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47   0.9
-Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47   0.9
-Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44   0.9
-Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48   1.0
-Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48   1.0
-Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157   2.6
-Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130   2.4
-Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148   2.6
-Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133   2.5
-Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126   2.3
-Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123   2.3
-Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124   2.4
-Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86   1.8
-Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90   1.9
-Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79   1.6
-Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80   1.7
-Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86   1.7
-Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77   1.6
-Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
-Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
-Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
+Candidate                                       5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259      2.5        3.0
+Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246      2.4        3.0
+Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346      3.4        3.8
+Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174      1.7        2.2
+Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160      1.6        2.2
+John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166      1.6        2.2
+Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192      1.9        2.4
+Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37      0.4        0.5
+George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48      0.5        0.7
+J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56      0.5        0.7
+Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62      0.6        0.8
+Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61      0.6        0.9
+Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42      0.4        0.6
+Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65      0.6        0.8
+Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82      0.8        1.3
+Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131      1.3        1.7
+Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139      1.4        1.8
+Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87      0.9        1.3
+Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107      1.0        1.6
+Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77      0.8        1.2
+Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84      0.8        1.4
+Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136      1.3        2.3
+Angela Walker (Green)                           5  10   8  15   6  13   45  |   125      1.2        2.2
+Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110      1.1        2.0
+David Cobb (Green)                              3   9   8  15   6  14   47  |   111      1.1        2.0
+Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149      1.5        2.4
+Jill Stein (Green)                              8   9  12  12   8  22   31  |   144      1.4        2.0
+Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135      1.3        2.4
+Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45      0.4        0.9
+Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45      0.4        0.8
+Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47      0.5        0.9
+Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47      0.5        0.9
+Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44      0.4        0.9
+Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48      0.5        1.0
+Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48      0.5        1.0
+Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157      1.5        2.6
+Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130      1.3        2.4
+Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148      1.5        2.6
+Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133      1.3        2.5
+Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126      1.2        2.3
+Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123      1.2        2.3
+Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124      1.2        2.4
+Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86      0.8        1.8
+Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90      0.9        1.9
+Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79      0.8        1.6
+Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80      0.8        1.7
+Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86      0.8        1.7
+Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77      0.8        1.6
+Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88      0.9        1.8
+Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98      1.0        1.4
+Cornel West (Independent)                      14  10   9  13  11  11   34  |   174      1.7        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  The highest-scoring candidate wins a seat.
-   Barack Obama (Democrat)                       -- 146+ 111/448  -- First place
-   Cornel West (Independent)                     -- 127+  59/392
-   Kamala Harris (Democrat)                      -- 111+1969/3136
-   Claudia De La Cruz (Socialism and Liberation) -- 111+1963/3136
-   Jill Stein (Green)                            -- 110+  89/392
-   Gloria La Riva (Socialism and Liberation)     -- 108+ 731/3136
-   Howie Hawkins (Green)                         -- 107+2431/3136
-   Ajamu Baraka (Green)                          -- 101+ 435/784
-   Karina Garcia (Socialism and Liberation)      --  99+1515/3136
-   John Kerry (Democrat)                         --  96+ 593/1568
-   Rudolph "Butch" Ware (Green)                  --  95+ 229/392
-   Hillary Clinton (Democrat)                    --  95+ 873/1568
-   Chase Oliver (Libertarian)                    --  95+ 993/3136
-   Eugene Puryear (Socialism and Liberation)     --  95+ 283/3136
-   Gary Johnson (Libertarian)                    --  93+ 617/784
-   Peta Lindsay (Socialism and Liberation)       --  93+ 283/3136
-   Sunil Freeman (Socialism and Liberation)      --  93+ 283/3136
-   Yari Osorio (Socialism and Liberation)        --  93+ 283/3136
-   Angela Walker (Green)                         --  91+ 533/784
-   Joe Biden (Democrat)                          --  90+  19/112
-   Cynthia McKinney (Green)                      --  79+ 879/1568
-   David Cobb (Green)                            --  79+ 155/784
-   Robert F. Kennedy Jr. (Independent)           --  79+   1/56
-   Jo Jorgensen (Libertarian)                    --  75+1243/1568
-   Brian Carroll (Solidarity)                    --  69+3119/3136
-   Amar Patel (Solidarity)                       --  69+1887/3136
-   Lauren Onak (Solidarity)                      --  69+ 655/3136
-   Peter Sonski (Solidarity)                     --  69+ 655/3136
-   Mike ter Maat (Libertarian)                   --  66+2467/3136
-   Mike Maturen (Solidarity)                     --  63+ 509/784
-   Juan Muñoz (Solidarity)                       --  61+ 655/3136
-   Harry Browne (Libertarian)                    --  60+2747/3136
-   Joseph "Joe" Charles Schriner (Solidarity)    --  60+ 655/3136
-   Bob Barr (Libertarian)                        --  60+  95/3136
-   Michael Badnarik (Libertarian)                --  57+2467/3136
-   Vivek Ramaswamy (Republican)                  --  55+ 411/1568
-   J.D. Vance (Republican)                       --  47+   5/28
-   Mike Pence (Republican)                       --  43+ 655/3136
-   Nikki Haley (Republican)                      --  42+   1/3136
-   Howard Phillips (Constitution)                --  41+   4/7
-   Darrell castle (Constitution)                 --  41+  27/56
-   Don Blankenship (Constitution)                --  41+   5/28
-   Virgil Goode (Constitution)                   --  41+   5/28
-   Chuck Baldwin (Constitution)                  --  40+  27/56
-   Randall Terry (Constitution)                  --  40+   5/28
-   Michael Peroutka (Constitution)               --  39+  15/56
-   Ted Cruz (Republican)                         --  32+ 607/1568
-   Donald Trump (Republican)                     --  30+   5/56
-   George W. Bush Jr. (Republican)               --  30+  61/784
+   Barack Obama (Democrat)                       -- 144+ 9/56 -- First place
+   Cornel West (Independent)                     -- 126+11/56
+   Claudia De La Cruz (Socialism and Liberation) -- 111+ 5/56
+   Kamala Harris (Democrat)                      -- 110+ 1/56
+   Jill Stein (Green)                            -- 109+ 3/4
+   Gloria La Riva (Socialism and Liberation)     -- 107+39/56
+   Howie Hawkins (Green)                         -- 107
+   Ajamu Baraka (Green)                          -- 100+47/56
+   Karina Garcia (Socialism and Liberation)      --  98+53/56
+   Rudolph "Butch" Ware (Green)                  --  95+ 3/28
+   Chase Oliver (Libertarian)                    --  94+37/56
+   John Kerry (Democrat)                         --  94+33/56
+   Eugene Puryear (Socialism and Liberation)     --  94+31/56
+   Hillary Clinton (Democrat)                    --  93+43/56
+   Gary Johnson (Libertarian)                    --  93+ 1/14
+   Peta Lindsay (Socialism and Liberation)       --  92+31/56
+   Sunil Freeman (Socialism and Liberation)      --  92+31/56
+   Yari Osorio (Socialism and Liberation)        --  92+31/56
+   Angela Walker (Green)                         --  90+27/28
+   Joe Biden (Democrat)                          --  88+ 1/2
+   Robert F. Kennedy Jr. (Independent)           --  79+ 1/56
+   Cynthia McKinney (Green)                      --  78+27/28
+   David Cobb (Green)                            --  78+27/56
+   Jo Jorgensen (Libertarian)                    --  75+11/56
+   Brian Carroll (Solidarity)                    --  69+39/56
+   Amar Patel (Solidarity)                       --  69+17/56
+   Lauren Onak (Solidarity)                      --  68+51/56
+   Peter Sonski (Solidarity)                     --  68+51/56
+   Mike ter Maat (Libertarian)                   --  66+ 1/4
+   Mike Maturen (Solidarity)                     --  63+23/56
+   Juan Muñoz (Solidarity)                       --  60+51/56
+   Harry Browne (Libertarian)                    --  60+19/56
+   Joseph "Joe" Charles Schriner (Solidarity)    --  59+51/56
+   Bob Barr (Libertarian)                        --  59+41/56
+   Michael Badnarik (Libertarian)                --  57+ 1/4
+   Vivek Ramaswamy (Republican)                  --  55+ 1/7
+   J.D. Vance (Republican)                       --  47+ 5/28
+   Mike Pence (Republican)                       --  42+51/56
+   Nikki Haley (Republican)                      --  41+23/28
+   Howard Phillips (Constitution)                --  41+ 4/7
+   Darrell castle (Constitution)                 --  41+27/56
+   Don Blankenship (Constitution)                --  41+ 5/28
+   Virgil Goode (Constitution)                   --  41+ 5/28
+   Chuck Baldwin (Constitution)                  --  40+27/56
+   Randall Terry (Constitution)                  --  40+ 5/28
+   Michael Peroutka (Constitution)               --  39+15/56
+   Ted Cruz (Republican)                         --  32+15/56
+   Donald Trump (Republican)                     --  30+ 5/56
+   George W. Bush Jr. (Republican)               --  29+47/56
  Barack Obama (Democrat) wins a seat.
 
 [Score Distribution] (how many ballots gave each star rating)
                                                        Score
-Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
-Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
-Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
-Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
-Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174   2.2
-Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160   2.2
-John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166   2.2
-Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192   2.4
-Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37   0.5
-George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48   0.7
-J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56   0.7
-Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62   0.8
-Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61   0.9
-Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42   0.6
-Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65   0.8
-Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82   1.3
-Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131   1.7
-Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139   1.8
-Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87   1.3
-Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107   1.6
-Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77   1.2
-Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84   1.4
-Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136   2.3
-Angela Walker (Green)                           5  10   8  15   6  13   45  |   125   2.2
-Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110   2.0
-David Cobb (Green)                              3   9   8  15   6  14   47  |   111   2.0
-Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149   2.4
-Jill Stein (Green)                              8   9  12  12   8  22   31  |   144   2.0
-Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135   2.4
-Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45   0.9
-Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45   0.8
-Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47   0.9
-Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47   0.9
-Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44   0.9
-Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48   1.0
-Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48   1.0
-Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157   2.6
-Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130   2.4
-Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148   2.6
-Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133   2.5
-Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126   2.3
-Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123   2.3
-Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124   2.4
-Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86   1.8
-Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90   1.9
-Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79   1.6
-Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80   1.7
-Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86   1.7
-Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77   1.6
-Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
-Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
-Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
+Candidate                                       5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259      2.5        3.0
+Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246      2.4        3.0
+Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346      3.4        3.8
+Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174      1.7        2.2
+Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160      1.6        2.2
+John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166      1.6        2.2
+Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192      1.9        2.4
+Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37      0.4        0.5
+George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48      0.5        0.7
+J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56      0.5        0.7
+Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62      0.6        0.8
+Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61      0.6        0.9
+Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42      0.4        0.6
+Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65      0.6        0.8
+Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82      0.8        1.3
+Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131      1.3        1.7
+Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139      1.4        1.8
+Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87      0.9        1.3
+Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107      1.0        1.6
+Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77      0.8        1.2
+Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84      0.8        1.4
+Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136      1.3        2.3
+Angela Walker (Green)                           5  10   8  15   6  13   45  |   125      1.2        2.2
+Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110      1.1        2.0
+David Cobb (Green)                              3   9   8  15   6  14   47  |   111      1.1        2.0
+Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149      1.5        2.4
+Jill Stein (Green)                              8   9  12  12   8  22   31  |   144      1.4        2.0
+Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135      1.3        2.4
+Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45      0.4        0.9
+Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45      0.4        0.8
+Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47      0.5        0.9
+Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47      0.5        0.9
+Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44      0.4        0.9
+Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48      0.5        1.0
+Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48      0.5        1.0
+Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157      1.5        2.6
+Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130      1.3        2.4
+Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148      1.5        2.6
+Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133      1.3        2.5
+Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126      1.2        2.3
+Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123      1.2        2.3
+Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124      1.2        2.4
+Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86      0.8        1.8
+Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90      0.9        1.9
+Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79      0.8        1.6
+Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80      0.8        1.7
+Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86      0.8        1.7
+Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77      0.8        1.6
+Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88      0.9        1.8
+Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98      1.0        1.4
+Cornel West (Independent)                      14  10   9  13  11  11   34  |   174      1.7        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  The highest-scoring candidate wins a seat.
-   Cornel West (Independent)                     -- 111+  745/1568  -- First place
-   Jill Stein (Green)                            -- 100+ 5437/5488
-   Gloria La Riva (Socialism and Liberation)     --  99+17869/21952
-   Claudia De La Cruz (Socialism and Liberation) --  98+11205/21952
-   Howie Hawkins (Green)                         --  95+17825/21952
-   Karina Garcia (Socialism and Liberation)      --  91+16693/21952
-   Ajamu Baraka (Green)                          --  89+ 3247/5488
-   Chase Oliver (Libertarian)                    --  86+16637/21952
-   Gary Johnson (Libertarian)                    --  85+ 5161/5488
-   Eugene Puryear (Socialism and Liberation)     --  85+14733/21952
-   Peta Lindsay (Socialism and Liberation)       --  85+ 8069/21952
-   Sunil Freeman (Socialism and Liberation)      --  85+ 8069/21952
-   Yari Osorio (Socialism and Liberation)        --  85+ 8069/21952
-   Rudolph "Butch" Ware (Green)                  --  84+ 4901/5488
-   Kamala Harris (Democrat)                      --  80+10027/21952
-   Angela Walker (Green)                         --  80+ 2267/5488
-   Robert F. Kennedy Jr. (Independent)           --  76+    9/28
-   Jo Jorgensen (Libertarian)                    --  69+ 5727/10976
-   Cynthia McKinney (Green)                      --  68+ 3225/10976
-   David Cobb (Green)                            --  67+ 5109/5488
-   Hillary Clinton (Democrat)                    --  66+  537/5488
-   Peter Sonski (Solidarity)                     --  64+ 8275/21952
-   Brian Carroll (Solidarity)                    --  64+ 3571/21952
-   John Kerry (Democrat)                         --  63+ 6931/10976
-   Lauren Onak (Solidarity)                      --  63+ 8275/21952
-   Joe Biden (Democrat)                          --  62+  537/1372
-   Mike ter Maat (Libertarian)                   --  61+17639/21952
-   Amar Patel (Solidarity)                       --  60+16899/21952
-   Mike Maturen (Solidarity)                     --  58+  577/5488
-   Bob Barr (Libertarian)                        --  57+ 4355/21952
-   Juan Muñoz (Solidarity)                       --  56+ 8275/21952
-   Joseph "Joe" Charles Schriner (Solidarity)    --  55+ 8275/21952
-   Harry Browne (Libertarian)                    --  54+19599/21952
-   Michael Badnarik (Libertarian)                --  52+17639/21952
-   Vivek Ramaswamy (Republican)                  --  51+ 1525/5488
-   J.D. Vance (Republican)                       --  43+    5/28
-   Howard Phillips (Constitution)                --  40+    5/28
-   Darrell castle (Constitution)                 --  40+    5/56
-   Don Blankenship (Constitution)                --  39+   11/14
-   Virgil Goode (Constitution)                   --  39+   11/14
-   Chuck Baldwin (Constitution)                  --  39+    5/56
-   Randall Terry (Constitution)                  --  38+   11/14
-   Michael Peroutka (Constitution)               --  37+    7/8
-   Mike Pence (Republican)                       --  33+18951/21952
-   Donald Trump (Republican)                     --  29+    5/56
-   Nikki Haley (Republican)                      --  28+21037/21952
-   Ted Cruz (Republican)                         --  28+ 7927/10976
-   George W. Bush Jr. (Republican)               --  16+ 4705/10976
+   Cornel West (Independent)                     -- 105+327/560 -- First place
+   Jill Stein (Green)                            --  94+ 11/80
+   Gloria La Riva (Socialism and Liberation)     --  91+ 13/560
+   Claudia De La Cruz (Socialism and Liberation) --  89+403/560
+   Howie Hawkins (Green)                         --  87+ 21/40
+   Chase Oliver (Libertarian)                    --  85+279/280
+   Ajamu Baraka (Green)                          --  84+ 89/140
+   Karina Garcia (Socialism and Liberation)      --  84+ 11/56
+   Gary Johnson (Libertarian)                    --  83+ 27/35
+   Eugene Puryear (Socialism and Liberation)     --  78+ 37/40
+   Peta Lindsay (Socialism and Liberation)       --  78+ 87/140
+   Sunil Freeman (Socialism and Liberation)      --  78+ 87/140
+   Yari Osorio (Socialism and Liberation)        --  78+ 87/140
+   Rudolph "Butch" Ware (Green)                  --  77+ 27/28
+   Robert F. Kennedy Jr. (Independent)           --  75+141/280
+   Angela Walker (Green)                         --  75+ 16/35
+   Kamala Harris (Democrat)                      --  70+ 27/560
+   Jo Jorgensen (Libertarian)                    --  68+ 69/560
+   Peter Sonski (Solidarity)                     --  64+  7/10
+   Lauren Onak (Solidarity)                      --  63+  7/10
+   Cynthia McKinney (Green)                      --  63+ 16/35
+   Mike ter Maat (Libertarian)                   --  63+ 11/280
+   David Cobb (Green)                            --  62+ 39/40
+   Brian Carroll (Solidarity)                    --  62+ 17/20
+   Amar Patel (Solidarity)                       --  59+ 27/560
+   Hillary Clinton (Democrat)                    --  58+141/560
+   Mike Maturen (Solidarity)                     --  58+  1/5
+   John Kerry (Democrat)                         --  57+397/560
+   Juan Muñoz (Solidarity)                       --  56+  7/10
+   Bob Barr (Libertarian)                        --  55+ 31/35
+   Joseph "Joe" Charles Schriner (Solidarity)    --  55+  7/10
+   Harry Browne (Libertarian)                    --  54+101/112
+   Michael Badnarik (Libertarian)                --  54+ 11/280
+   Joe Biden (Democrat)                          --  53+271/280
+   Vivek Ramaswamy (Republican)                  --  49+ 45/112
+   J.D. Vance (Republican)                       --  43+  5/28
+   Darrell castle (Constitution)                 --  39+381/560
+   Don Blankenship (Constitution)                --  38+271/280
+   Virgil Goode (Constitution)                   --  38+271/280
+   Chuck Baldwin (Constitution)                  --  38+381/560
+   Howard Phillips (Constitution)                --  38+ 19/35
+   Randall Terry (Constitution)                  --  37+271/280
+   Michael Peroutka (Constitution)               --  35+ 93/112
+   Mike Pence (Republican)                       --  31+ 11/70
+   Donald Trump (Republican)                     --  29+  5/56
+   Ted Cruz (Republican)                         --  28+431/560
+   Nikki Haley (Republican)                      --  27+ 53/280
+   George W. Bush Jr. (Republican)               --  15+  1/112
  Cornel West (Independent) wins a seat.
 
 [Score Distribution] (how many ballots gave each star rating)
                                                        Score
-Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
-Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
-Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
-Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
-Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174   2.2
-Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160   2.2
-John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166   2.2
-Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192   2.4
-Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37   0.5
-George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48   0.7
-J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56   0.7
-Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62   0.8
-Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61   0.9
-Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42   0.6
-Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65   0.8
-Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82   1.3
-Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131   1.7
-Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139   1.8
-Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87   1.3
-Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107   1.6
-Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77   1.2
-Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84   1.4
-Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136   2.3
-Angela Walker (Green)                           5  10   8  15   6  13   45  |   125   2.2
-Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110   2.0
-David Cobb (Green)                              3   9   8  15   6  14   47  |   111   2.0
-Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149   2.4
-Jill Stein (Green)                              8   9  12  12   8  22   31  |   144   2.0
-Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135   2.4
-Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45   0.9
-Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45   0.8
-Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47   0.9
-Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47   0.9
-Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44   0.9
-Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48   1.0
-Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48   1.0
-Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157   2.6
-Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130   2.4
-Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148   2.6
-Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133   2.5
-Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126   2.3
-Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123   2.3
-Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124   2.4
-Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86   1.8
-Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90   1.9
-Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79   1.6
-Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80   1.7
-Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86   1.7
-Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77   1.6
-Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
-Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
-Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
+Candidate                                       5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259      2.5        3.0
+Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246      2.4        3.0
+Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346      3.4        3.8
+Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174      1.7        2.2
+Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160      1.6        2.2
+John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166      1.6        2.2
+Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192      1.9        2.4
+Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37      0.4        0.5
+George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48      0.5        0.7
+J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56      0.5        0.7
+Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62      0.6        0.8
+Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61      0.6        0.9
+Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42      0.4        0.6
+Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65      0.6        0.8
+Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82      0.8        1.3
+Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131      1.3        1.7
+Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139      1.4        1.8
+Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87      0.9        1.3
+Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107      1.0        1.6
+Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77      0.8        1.2
+Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84      0.8        1.4
+Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136      1.3        2.3
+Angela Walker (Green)                           5  10   8  15   6  13   45  |   125      1.2        2.2
+Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110      1.1        2.0
+David Cobb (Green)                              3   9   8  15   6  14   47  |   111      1.1        2.0
+Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149      1.5        2.4
+Jill Stein (Green)                              8   9  12  12   8  22   31  |   144      1.4        2.0
+Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135      1.3        2.4
+Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45      0.4        0.9
+Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45      0.4        0.8
+Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47      0.5        0.9
+Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47      0.5        0.9
+Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44      0.4        0.9
+Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48      0.5        1.0
+Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48      0.5        1.0
+Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157      1.5        2.6
+Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130      1.3        2.4
+Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148      1.5        2.6
+Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133      1.3        2.5
+Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126      1.2        2.3
+Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123      1.2        2.3
+Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124      1.2        2.4
+Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86      0.8        1.8
+Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90      0.9        1.9
+Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79      0.8        1.6
+Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80      0.8        1.7
+Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86      0.8        1.7
+Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77      0.8        1.6
+Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88      0.9        1.8
+Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98      1.0        1.4
+Cornel West (Independent)                      14  10   9  13  11  11   34  |   174      1.7        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  The highest-scoring candidate wins a seat.
-   Chase Oliver (Libertarian)                    -- 76+10211/21952 -- First place
-   Gary Johnson (Libertarian)                    -- 73+  603/2744
-   Kamala Harris (Democrat)                      -- 67+ 3503/21952
-   Robert F. Kennedy Jr. (Independent)           -- 61+   71/224
-   Jo Jorgensen (Libertarian)                    -- 60+  128/343
-   Howie Hawkins (Green)                         -- 57+17433/21952
-   Hillary Clinton (Democrat)                    -- 56+ 7255/10976
-   Mike ter Maat (Libertarian)                   -- 55+11311/21952
-   Gloria La Riva (Socialism and Liberation)     -- 55+ 7985/21952
-   Jill Stein (Green)                            -- 54+ 5981/10976
-   Claudia De La Cruz (Socialism and Liberation) -- 54+ 1321/21952
-   John Kerry (Democrat)                         -- 52+ 5251/10976
-   Joe Biden (Democrat)                          -- 51+ 8895/10976
-   Karina Garcia (Socialism and Liberation)      -- 51+16301/21952
-   Ajamu Baraka (Green)                          -- 50+  985/1372
-   Bob Barr (Libertarian)                        -- 50+ 7421/21952
-   Harry Browne (Libertarian)                    -- 48+  713/21952
-   Vivek Ramaswamy (Republican)                  -- 46+ 5431/5488
-   Michael Badnarik (Libertarian)                -- 46+11311/21952
-   Peta Lindsay (Socialism and Liberation)       -- 46+10841/21952
-   Sunil Freeman (Socialism and Liberation)      -- 46+10841/21952
-   Yari Osorio (Socialism and Liberation)        -- 46+10841/21952
-   Eugene Puryear (Socialism and Liberation)     -- 45+17505/21952
-   Rudolph "Butch" Ware (Green)                  -- 44+ 1745/10976
-   Angela Walker (Green)                         -- 43+ 2271/2744
-   Peter Sonski (Solidarity)                     -- 37+ 5013/21952
-   Cynthia McKinney (Green)                      -- 36+ 7775/10976
-   Howard Phillips (Constitution)                -- 36+  951/1568
-   Darrell castle (Constitution)                 -- 36+  811/1568
-   Lauren Onak (Solidarity)                      -- 36+ 5013/21952
-   Don Blankenship (Constitution)                -- 36+  335/1568
-   Virgil Goode (Constitution)                   -- 36+  335/1568
-   David Cobb (Green)                            -- 36+ 2259/10976
-   J.D. Vance (Republican)                       -- 36+    5/28
-   Chuck Baldwin (Constitution)                  -- 35+  811/1568
-   Randall Terry (Constitution)                  -- 35+  335/1568
-   Brian Carroll (Solidarity)                    -- 34+15933/21952
-   Michael Peroutka (Constitution)               -- 34+  475/1568
-   Amar Patel (Solidarity)                       -- 32+10473/21952
-   Mike Maturen (Solidarity)                     -- 30+10499/10976
-   Joseph "Joe" Charles Schriner (Solidarity)    -- 30+ 5013/21952
-   Juan Muñoz (Solidarity)                       -- 30+ 5013/21952
-   Mike Pence (Republican)                       -- 30+   65/21952
-   Ted Cruz (Republican)                         -- 27+ 6345/10976
-   Donald Trump (Republican)                     -- 26+    5/56
-   Nikki Haley (Republican)                      -- 23+14709/21952
-   George W. Bush Jr. (Republican)               -- 13+ 1541/10976
+   Chase Oliver (Libertarian)                    -- 74+391/420  -- First place
+   Gary Johnson (Libertarian)                    -- 71+583/840
+   Kamala Harris (Democrat)                      -- 60+ 47/560
+   Jo Jorgensen (Libertarian)                    -- 58+139/560
+   Robert F. Kennedy Jr. (Independent)           -- 57+349/420
+   Mike ter Maat (Libertarian)                   -- 56+ 19/20
+   Hillary Clinton (Democrat)                    -- 50+381/560
+   Howie Hawkins (Green)                         -- 49+  9/10
+   Bob Barr (Libertarian)                        -- 49+223/280
+   Gloria La Riva (Socialism and Liberation)     -- 49+173/560
+   Harry Browne (Libertarian)                    -- 48+ 13/16
+   John Kerry (Democrat)                         -- 48+417/560
+   Michael Badnarik (Libertarian)                -- 47+ 19/20
+   Claudia De La Cruz (Socialism and Liberation) -- 47+173/560
+   Karina Garcia (Socialism and Liberation)      -- 46+ 15/56
+   Vivek Ramaswamy (Republican)                  -- 45+305/336
+   Joe Biden (Democrat)                          -- 45+  7/10
+   Jill Stein (Green)                            -- 44+881/1680
+   Ajamu Baraka (Green)                          -- 43+173/280
+   Peta Lindsay (Socialism and Liberation)       -- 40+ 97/140
+   Sunil Freeman (Socialism and Liberation)      -- 40+ 97/140
+   Yari Osorio (Socialism and Liberation)        -- 40+ 97/140
+   Eugene Puryear (Socialism and Liberation)     -- 39+279/280
+   Rudolph "Butch" Ware (Green)                  -- 39+  9/14
+   Angela Walker (Green)                         -- 39+173/280
+   Don Blankenship (Constitution)                -- 35+ 19/70
+   Virgil Goode (Constitution)                   -- 35+ 19/70
+   Chuck Baldwin (Constitution)                  -- 34+551/560
+   Darrell castle (Constitution)                 -- 34+653/1680
+   Randall Terry (Constitution)                  -- 34+ 19/70
+   J.D. Vance (Republican)                       -- 33+ 11/14
+   Howard Phillips (Constitution)                -- 33+211/840
+   Cynthia McKinney (Green)                      -- 32+173/280
+   David Cobb (Green)                            -- 32+173/280
+   Michael Peroutka (Constitution)               -- 32+ 15/112
+   Brian Carroll (Solidarity)                    -- 27+127/420
+   Ted Cruz (Republican)                         -- 27+463/1680
+   Amar Patel (Solidarity)                       -- 25+991/1680
+   Mike Pence (Republican)                       -- 25+241/420
+   Peter Sonski (Solidarity)                     -- 25+ 23/140
+   Lauren Onak (Solidarity)                      -- 24+101/105
+   Joseph "Joe" Charles Schriner (Solidarity)    -- 23+157/210
+   Juan Muñoz (Solidarity)                       -- 23+157/210
+   Donald Trump (Republican)                     -- 23+ 39/56
+   Mike Maturen (Solidarity)                     -- 23+  9/20
+   Nikki Haley (Republican)                      -- 21+377/420
+   George W. Bush Jr. (Republican)               -- 11+  1/48
  Chase Oliver (Libertarian) wins a seat.
 
 [Score Distribution] (how many ballots gave each star rating)
                                                        Score
-Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
-Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
-Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
-Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
-Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174   2.2
-Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160   2.2
-John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166   2.2
-Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192   2.4
-Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37   0.5
-George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48   0.7
-J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56   0.7
-Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62   0.8
-Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61   0.9
-Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42   0.6
-Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65   0.8
-Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82   1.3
-Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131   1.7
-Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139   1.8
-Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87   1.3
-Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107   1.6
-Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77   1.2
-Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84   1.4
-Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136   2.3
-Angela Walker (Green)                           5  10   8  15   6  13   45  |   125   2.2
-Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110   2.0
-David Cobb (Green)                              3   9   8  15   6  14   47  |   111   2.0
-Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149   2.4
-Jill Stein (Green)                              8   9  12  12   8  22   31  |   144   2.0
-Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135   2.4
-Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45   0.9
-Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45   0.8
-Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47   0.9
-Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47   0.9
-Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44   0.9
-Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48   1.0
-Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48   1.0
-Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157   2.6
-Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130   2.4
-Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148   2.6
-Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133   2.5
-Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126   2.3
-Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123   2.3
-Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124   2.4
-Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86   1.8
-Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90   1.9
-Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79   1.6
-Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80   1.7
-Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86   1.7
-Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77   1.6
-Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
-Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
-Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
+Candidate                                       5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259      2.5        3.0
+Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246      2.4        3.0
+Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346      3.4        3.8
+Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174      1.7        2.2
+Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160      1.6        2.2
+John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166      1.6        2.2
+Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192      1.9        2.4
+Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37      0.4        0.5
+George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48      0.5        0.7
+J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56      0.5        0.7
+Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62      0.6        0.8
+Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61      0.6        0.9
+Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42      0.4        0.6
+Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65      0.6        0.8
+Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82      0.8        1.3
+Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131      1.3        1.7
+Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139      1.4        1.8
+Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87      0.9        1.3
+Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107      1.0        1.6
+Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77      0.8        1.2
+Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84      0.8        1.4
+Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136      1.3        2.3
+Angela Walker (Green)                           5  10   8  15   6  13   45  |   125      1.2        2.2
+Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110      1.1        2.0
+David Cobb (Green)                              3   9   8  15   6  14   47  |   111      1.1        2.0
+Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149      1.5        2.4
+Jill Stein (Green)                              8   9  12  12   8  22   31  |   144      1.4        2.0
+Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135      1.3        2.4
+Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45      0.4        0.9
+Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45      0.4        0.8
+Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47      0.5        0.9
+Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47      0.5        0.9
+Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44      0.4        0.9
+Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48      0.5        1.0
+Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48      0.5        1.0
+Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157      1.5        2.6
+Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130      1.3        2.4
+Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148      1.5        2.6
+Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133      1.3        2.5
+Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126      1.2        2.3
+Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123      1.2        2.3
+Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124      1.2        2.4
+Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86      0.8        1.8
+Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90      0.9        1.9
+Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79      0.8        1.6
+Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80      0.8        1.7
+Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86      0.8        1.7
+Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77      0.8        1.6
+Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88      0.9        1.8
+Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98      1.0        1.4
+Cornel West (Independent)                      14  10   9  13  11  11   34  |   174      1.7        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  The highest-scoring candidate wins a seat.
-   Kamala Harris (Democrat)                      -- 58+21927/21952 -- First place
-   Hillary Clinton (Democrat)                    -- 52+ 2159/10976
-   Howie Hawkins (Green)                         -- 51+16649/21952
-   Claudia De La Cruz (Socialism and Liberation) -- 50+12689/21952
-   Gloria La Riva (Socialism and Liberation)     -- 50+ 9945/21952
-   Karina Garcia (Socialism and Liberation)      -- 49+13557/21952
-   Ajamu Baraka (Green)                          -- 48+  321/686
-   Joe Biden (Democrat)                          -- 48+  467/10976
-   John Kerry (Democrat)                         -- 47+  155/10976
-   Jill Stein (Green)                            -- 45+ 5393/10976
-   Peta Lindsay (Socialism and Liberation)       -- 44+ 8097/21952
-   Sunil Freeman (Socialism and Liberation)      -- 44+ 8097/21952
-   Yari Osorio (Socialism and Liberation)        -- 44+ 8097/21952
-   Eugene Puryear (Socialism and Liberation)     -- 43+14761/21952
-   Angela Walker (Green)                         -- 41+ 1585/2744
-   Rudolph "Butch" Ware (Green)                  -- 39+ 8997/10976
-   Cynthia McKinney (Green)                      -- 34+ 5031/10976
-   David Cobb (Green)                            -- 34+ 2651/10976
-   Gary Johnson (Libertarian)                    -- 29+  505/2744
-   Peter Sonski (Solidarity)                     -- 27+ 5797/21952
-   Lauren Onak (Solidarity)                      -- 26+ 5797/21952
-   Robert F. Kennedy Jr. (Independent)           -- 25+   79/224
-   Brian Carroll (Solidarity)                    -- 23+16717/21952
-   Amar Patel (Solidarity)                       -- 23+11257/21952
-   Jo Jorgensen (Libertarian)                    -- 21+ 1171/2744
-   Mike Maturen (Solidarity)                     -- 20+10891/10976
-   Joseph "Joe" Charles Schriner (Solidarity)    -- 20+ 5797/21952
-   Juan Muñoz (Solidarity)                       -- 20+ 5797/21952
-   Mike Pence (Republican)                       -- 18+14177/21952
-   Vivek Ramaswamy (Republican)                  -- 17+  923/5488
-   J.D. Vance (Republican)                       -- 17+    3/56
-   Nikki Haley (Republican)                      -- 16+ 9613/21952
-   Donald Trump (Republican)                     -- 13+   37/56
-   Bob Barr (Libertarian)                        -- 13+10557/21952
-   Harry Browne (Libertarian)                    -- 13+10121/21952
-   Michael Badnarik (Libertarian)                -- 11+20719/21952
-   Mike ter Maat (Libertarian)                   -- 11+20719/21952
-   George W. Bush Jr. (Republican)               -- 10+ 8401/10976
-   Ted Cruz (Republican)                         --  8+ 8109/10976
-   Howard Phillips (Constitution)                --  7+   55/1568
-   Michael Peroutka (Constitution)               --  5+ 1147/1568
-   Darrell castle (Constitution)                 --  4+ 1483/1568
-   Don Blankenship (Constitution)                --  3+ 1007/1568
-   Randall Terry (Constitution)                  --  3+ 1007/1568
-   Virgil Goode (Constitution)                   --  3+ 1007/1568
-   Chuck Baldwin (Constitution)                  --  2+ 1483/1568
+   Kamala Harris (Democrat)                      -- 49+  61/280  -- First place
+   Claudia De La Cruz (Socialism and Liberation) -- 43+ 463/560
+   Hillary Clinton (Democrat)                    -- 43+ 143/280
+   Gloria La Riva (Socialism and Liberation)     -- 43+  13/35
+   Howie Hawkins (Green)                         -- 43+ 139/560
+   Karina Garcia (Socialism and Liberation)      -- 43+  13/112
+   Ajamu Baraka (Green)                          -- 40+ 421/560
+   John Kerry (Democrat)                         -- 40+  23/40
+   Joe Biden (Democrat)                          -- 39+ 127/560
+   Peta Lindsay (Socialism and Liberation)       -- 37+ 303/560
+   Sunil Freeman (Socialism and Liberation)      -- 37+ 303/560
+   Yari Osorio (Socialism and Liberation)        -- 37+ 303/560
+   Eugene Puryear (Socialism and Liberation)     -- 36+ 473/560
+   Angela Walker (Green)                         -- 36+ 421/560
+   Jill Stein (Green)                            -- 35+ 101/1680
+   Rudolph "Butch" Ware (Green)                  -- 34+  11/16
+   David Cobb (Green)                            -- 30+  17/70
+   Cynthia McKinney (Green)                      -- 29+ 421/560
+   Gary Johnson (Libertarian)                    -- 24+ 911/1680
+   Robert F. Kennedy Jr. (Independent)           -- 21+ 383/840
+   Amar Patel (Solidarity)                       -- 16+ 361/1680
+   Jo Jorgensen (Libertarian)                    -- 16+  13/70
+   Brian Carroll (Solidarity)                    -- 15+ 779/840
+   Vivek Ramaswamy (Republican)                  -- 15+   5/84
+   Peter Sonski (Solidarity)                     -- 14+ 221/280
+   Lauren Onak (Solidarity)                      -- 14+ 493/840
+   Nikki Haley (Republican)                      -- 13+ 709/840
+   Mike Pence (Republican)                       -- 13+ 677/840
+   J.D. Vance (Republican)                       -- 13+  71/112
+   Joseph "Joe" Charles Schriner (Solidarity)    -- 13+ 313/840
+   Juan Muñoz (Solidarity)                       -- 13+ 313/840
+   Mike Maturen (Solidarity)                     -- 13+   3/40
+   Bob Barr (Libertarian)                        -- 12+ 181/560
+   Harry Browne (Libertarian)                    -- 11+  37/112
+   Michael Badnarik (Libertarian)                -- 10+ 131/280
+   Mike ter Maat (Libertarian)                   -- 10+ 131/280
+   Donald Trump (Republican)                     -- 10+  27/112
+   George W. Bush Jr. (Republican)               --  8+  37/84
+   Ted Cruz (Republican)                         --  7+1033/1680
+   Howard Phillips (Constitution)                --  3+ 113/420
+   Michael Peroutka (Constitution)               --  3+  17/112
+   Darrell castle (Constitution)                 --  2+ 683/1680
+   Don Blankenship (Constitution)                --  2+  81/280
+   Randall Terry (Constitution)                  --  2+  81/280
+   Virgil Goode (Constitution)                   --  2+  81/280
+   Chuck Baldwin (Constitution)                  --  2+   1/560
  Kamala Harris (Democrat) wins a seat.
 
 [Score Distribution] (how many ballots gave each star rating)
                                                        Score
-Candidate                                       5   4   3   2   1   0  Abs  | Total   Avg
-Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259   3.0
-Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246   3.0
-Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346   3.8
-Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174   2.2
-Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160   2.2
-John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166   2.2
-Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192   2.4
-Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37   0.5
-George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48   0.7
-J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56   0.7
-Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62   0.8
-Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61   0.9
-Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42   0.6
-Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65   0.8
-Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82   1.3
-Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131   1.7
-Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139   1.8
-Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87   1.3
-Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107   1.6
-Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77   1.2
-Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84   1.4
-Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136   2.3
-Angela Walker (Green)                           5  10   8  15   6  13   45  |   125   2.2
-Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110   2.0
-David Cobb (Green)                              3   9   8  15   6  14   47  |   111   2.0
-Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149   2.4
-Jill Stein (Green)                              8   9  12  12   8  22   31  |   144   2.0
-Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135   2.4
-Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45   0.9
-Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45   0.8
-Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47   0.9
-Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47   0.9
-Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44   0.9
-Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48   1.0
-Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48   1.0
-Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157   2.6
-Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130   2.4
-Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148   2.6
-Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133   2.5
-Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126   2.3
-Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123   2.3
-Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124   2.4
-Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86   1.8
-Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90   1.9
-Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79   1.6
-Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80   1.7
-Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86   1.7
-Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77   1.6
-Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88   1.8
-Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98   1.4
-Cornel West (Independent)                      14  10   9  13  11  11   34  |   174   2.6
+Candidate                                       5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Al Gore (Democrat)                             15  25  16  14   8   7   17  |   259      2.5        3.0
+Barack Obama (Democrat)                        19  15  22   9   7   9   21  |   246      2.4        3.0
+Bernie Sanders (Democrat)                      48  15   9   5   9   4   12  |   346      3.4        3.8
+Hillary Clinton (Democrat)                      5  15  17  13  12  16   24  |   174      1.7        2.2
+Joe Biden (Democrat)                            6   7  21  14  11  15   28  |   160      1.6        2.2
+John Kerry (Democrat)                           5  10  22  10  15  15   25  |   166      1.6        2.2
+Kamala Harris (Democrat)                        5  19  19  11  12  13   23  |   192      1.9        2.4
+Donald Trump (Republican)                       2   0   5   4   4  62   25  |    37      0.4        0.5
+George W. Bush Jr. (Republican)                 0   0   2   9  24  32   35  |    48      0.5        0.7
+J.D. Vance (Republican)                         3   4   5   2   6  57   25  |    56      0.5        0.7
+Mike Pence (Republican)                         0   0   5  14  19  38   26  |    62      0.6        0.8
+Nikki Haley (Republican)                        0   4   3  12  12  40   31  |    61      0.6        0.9
+Ted Cruz (Republican)                           0   1   4   4  18  48   27  |    42      0.4        0.6
+Vivek Ramaswamy (Republican)                    4   2   5   5  12  51   23  |    65      0.6        0.8
+Bob Barr (Libertarian)                          4   4   3  11  15  28   37  |    82      0.8        1.3
+Chase Oliver (Libertarian)                      9   2   9  17  17  22   26  |   131      1.3        1.7
+Gary Johnson (Libertarian)                      7   7  11  13  17  21   26  |   139      1.4        1.8
+Harry Browne (Libertarian)                      6   2   4  13  11  30   36  |    87      0.9        1.3
+Jo Jorgensen (Libertarian)                      4   4  11  12  14  23   34  |   107      1.0        1.6
+Michael Badnarik (Libertarian)                  5   2   4  10  12  30   39  |    77      0.8        1.2
+Mike ter Maat (Libertarian)                     9   0   3  10  10  29   41  |    84      0.8        1.4
+Ajamu Baraka (Green)                            6  10  12  12   6  13   43  |   136      1.3        2.3
+Angela Walker (Green)                           5  10   8  15   6  13   45  |   125      1.2        2.2
+Cynthia McKinney (Green)                        5   7   8  13   7  16   46  |   110      1.1        2.0
+David Cobb (Green)                              3   9   8  15   6  14   47  |   111      1.1        2.0
+Howie Hawkins (Green)                           5  15  13  10   5  14   40  |   149      1.5        2.4
+Jill Stein (Green)                              8   9  12  12   8  22   31  |   144      1.4        2.0
+Rudolph "Butch" Ware (Green)                    8   9  11  10   6  12   46  |   135      1.3        2.4
+Chuck Baldwin (Constitution)                    2   4   3   3   4  36   50  |    45      0.4        0.9
+Darrell castle (Constitution)                   1   5   3   4   3  38   48  |    45      0.4        0.8
+Don Blankenship (Constitution)                  2   4   3   5   2  37   49  |    47      0.5        0.9
+Howard Phillips (Constitution)                  1   4   3   7   3  35   49  |    47      0.5        0.9
+Michael Peroutka (Constitution)                 0   5   4   5   2  35   51  |    44      0.4        0.9
+Randall Terry (Constitution)                    2   3   4   6   2  33   52  |    48      0.5        1.0
+Virgil Goode (Constitution)                     2   4   4   4   2  34   52  |    48      0.5        1.0
+Claudia De La Cruz (Socialism and Liberation)  15   9   6   9  10  12   41  |   157      1.5        2.6
+Eugene Puryear (Socialism and Liberation)      10   7   9   7  11  11   47  |   130      1.3        2.4
+Gloria La Riva (Socialism and Liberation)      11  12   6   9   9  11   44  |   148      1.5        2.6
+Karina Garcia (Socialism and Liberation)        9  11   7   7   9  11   48  |   133      1.3        2.5
+Peta Lindsay (Socialism and Liberation)         8  10   6   9  10  11   48  |   126      1.2        2.3
+Sunil Freeman (Socialism and Liberation)        8  10   6   7  11  12   48  |   123      1.2        2.3
+Yari Osorio (Socialism and Liberation)          8  10   6   7  12   9   50  |   124      1.2        2.4
+Amar Patel (Solidarity)                         8   0   5   8  15  11   55  |    86      0.8        1.8
+Brian Carroll (Solidarity)                      7   1   8   6  15  11   54  |    90      0.9        1.9
+Joseph "Joe" Charles Schriner (Solidarity)      3   5   5   8  13  14   54  |    79      0.8        1.6
+Juan Muñoz (Solidarity)                         4   3   7   7  13  14   54  |    80      0.8        1.7
+Lauren Onak (Solidarity)                        7   1   5   9  14  14   52  |    86      0.8        1.7
+Mike Maturen (Solidarity)                       6   1   5   7  14  14   55  |    77      0.8        1.6
+Peter Sonski (Solidarity)                       8   0   7   7  13  15   52  |    88      0.9        1.8
+Robert F. Kennedy Jr. (Independent)            10   4   4   6   8  39   31  |    98      1.0        1.4
+Cornel West (Independent)                      14  10   9  13  11  11   34  |   174      1.7        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  The highest-scoring candidate wins a seat.
-   Claudia De La Cruz (Socialism and Liberation) -- 34+ 5745/21952 -- First place
-   Gloria La Riva (Socialism and Liberation)     -- 34+ 3001/21952
-   Karina Garcia (Socialism and Liberation)      -- 33+21901/21952
-   Howie Hawkins (Green)                         -- 33+11021/21952
-   Ajamu Baraka (Green)                          -- 32+ 4381/5488
-   Jill Stein (Green)                            -- 31+ 8907/10976
-   Eugene Puryear (Socialism and Liberation)     -- 28+16441/21952
-   Peta Lindsay (Socialism and Liberation)       -- 28+16441/21952
-   Sunil Freeman (Socialism and Liberation)      -- 28+16441/21952
-   Yari Osorio (Socialism and Liberation)        -- 28+16441/21952
-   Angela Walker (Green)                         -- 25+ 4983/5488
-   Robert F. Kennedy Jr. (Independent)           -- 24+   21/32
-   Rudolph "Butch" Ware (Green)                  -- 24+ 1647/10976
-   Peter Sonski (Solidarity)                     -- 21+17389/21952
-   Hillary Clinton (Democrat)                    -- 20+ 8865/10976
-   Lauren Onak (Solidarity)                      -- 20+17389/21952
-   John Kerry (Democrat)                         -- 19+ 7729/10976
-   Joe Biden (Democrat)                          -- 19+ 7551/10976
-   Gary Johnson (Libertarian)                    -- 19+  471/5488
-   Cynthia McKinney (Green)                      -- 18+ 8657/10976
-   David Cobb (Green)                            -- 18+ 6277/10976
-   Brian Carroll (Solidarity)                    -- 18+ 6357/21952
-   Amar Patel (Solidarity)                       -- 18+  897/21952
-   J.D. Vance (Republican)                       -- 17+    3/56
-   Vivek Ramaswamy (Republican)                  -- 15+ 4801/5488
-   Mike Maturen (Solidarity)                     -- 15+ 5711/10976
-   Joseph "Joe" Charles Schriner (Solidarity)    -- 14+17389/21952
-   Juan Muñoz (Solidarity)                       -- 14+17389/21952
-   Jo Jorgensen (Libertarian)                    -- 14+ 1815/2744
-   Donald Trump (Republican)                     -- 13+   37/56
-   Mike Pence (Republican)                       -- 11+17145/21952
-   Nikki Haley (Republican)                      -- 10+20113/21952
-   Ted Cruz (Republican)                         --  8+  465/10976
-   Harry Browne (Libertarian)                    --  8+  853/21952
-   Michael Badnarik (Libertarian)                --  7+17891/21952
-   Mike ter Maat (Libertarian)                   --  7+17891/21952
-   Bob Barr (Libertarian)                        --  7+ 6861/21952
-   George W. Bush Jr. (Republican)               --  6+ 6987/10976
-   Howard Phillips (Constitution)                --  3+ 1101/1568
-   Darrell castle (Constitution)                 --  3+  135/224
-   Michael Peroutka (Constitution)               --  1+ 1179/1568
-   Chuck Baldwin (Constitution)                  --  1+  135/224
-   Don Blankenship (Constitution)                --  1+  135/224
-   Randall Terry (Constitution)                  --  1+  135/224
-   Virgil Goode (Constitution)                   --  1+  135/224
- Claudia De La Cruz (Socialism and Liberation) wins a seat.
+   Karina Garcia (Socialism and Liberation)      -- 22+ 117/1120 -- First place
+   Claudia De La Cruz (Socialism and Liberation) -- 21+1067/1120
+   Gloria La Riva (Socialism and Liberation)     -- 21+ 557/1120
+   Jill Stein (Green)                            -- 20+   1/30
+   Ajamu Baraka (Green)                          -- 18+  79/140
+   Howie Hawkins (Green)                         -- 18+ 139/560
+   Eugene Puryear (Socialism and Liberation)     -- 17+ 117/1120
+   Peta Lindsay (Socialism and Liberation)       -- 17+ 117/1120
+   Sunil Freeman (Socialism and Liberation)      -- 17+ 117/1120
+   Yari Osorio (Socialism and Liberation)        -- 17+ 117/1120
+   Robert F. Kennedy Jr. (Independent)           -- 15+  17/48
+   Angela Walker (Green)                         -- 14+  79/140
+   Rudolph "Butch" Ware (Green)                  -- 13+ 177/560
+   Vivek Ramaswamy (Republican)                  -- 11+ 947/3360
+   J.D. Vance (Republican)                       -- 10+ 103/140
+   Gary Johnson (Libertarian)                    --  9+  97/336
+   David Cobb (Green)                            --  9+   3/140
+   Cynthia McKinney (Green)                      --  8+ 297/560
+   Donald Trump (Republican)                     --  7+  12/35
+   Hillary Clinton (Democrat)                    --  7+ 169/560
+   Joe Biden (Democrat)                          --  6+ 251/280
+   Peter Sonski (Solidarity)                     --  6+   1/7
+   Amar Patel (Solidarity)                       --  6+  11/84
+   Brian Carroll (Solidarity)                    --  6+  11/84
+   Lauren Onak (Solidarity)                      --  5+  79/84
+   Jo Jorgensen (Libertarian)                    --  5+  17/20
+   John Kerry (Democrat)                         --  5+ 393/1120
+   Mike Maturen (Solidarity)                     --  4+  13/14
+   Joseph "Joe" Charles Schriner (Solidarity)    --  4+  61/84
+   Juan Muñoz (Solidarity)                       --  4+  61/84
+   Ted Cruz (Republican)                         --  3+ 587/840
+   Nikki Haley (Republican)                      --  3+ 229/840
+   Bob Barr (Libertarian)                        --  3+  27/112
+   Mike Pence (Republican)                       --  2+ 277/420
+   Harry Browne (Libertarian)                    --  2+   5/14
+   Howard Phillips (Constitution)                --  1+ 419/420
+   Michael Peroutka (Constitution)               --  1+ 493/560
+   Michael Badnarik (Libertarian)                --  1+ 219/280
+   Mike ter Maat (Libertarian)                   --  1+ 219/280
+   Darrell castle (Constitution)                 --  1+  71/168
+   Chuck Baldwin (Constitution)                  --  1+   1/56
+   Don Blankenship (Constitution)                --  1+   1/56
+   Randall Terry (Constitution)                  --  1+   1/56
+   Virgil Goode (Constitution)                   --  1+   1/56
+   George W. Bush Jr. (Republican)               -- 671/672
+ Karina Garcia (Socialism and Liberation) wins a seat.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2130_presidential_board_star_pr_tabulated.txt) (regenerated on every run; every analysis forced on).

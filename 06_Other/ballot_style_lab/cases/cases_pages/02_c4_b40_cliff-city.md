@@ -206,11 +206,13 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Arepa       8   2   1   0   1  26    2  |    52   1.4
-Bao        15   4   3   0   0  17    1  |   100   2.6
-Churro      9  12   2   0   0  15    2  |    99   2.6
-Dumpling    4   5   2   0   0  27    2  |    46   1.2
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Arepa       8   2   1   0   1  26    2  |    52      1.3        1.4
+Bao        15   4   3   0   0  17    1  |   100      2.5        2.6
+Churro      9  12   2   0   0  15    2  |    99      2.5        2.6
+Dumpling    4   5   2   0   0  27    2  |    46      1.2        1.2
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/02_c4_b40_cliff-city_tabulated.txt) (regenerated on every run; every analysis forced on).

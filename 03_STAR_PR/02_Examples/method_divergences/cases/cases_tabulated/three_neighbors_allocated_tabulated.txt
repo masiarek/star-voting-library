@@ -89,15 +89,16 @@ TABULATION RESULTS
   smallest-first search and verified stable across five tiebreaker seeds, so
   no lot is involved.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ana    |     Bo    |  * Cleo   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ana    |     Bo    |    Cleo   |
 -----------------------------------------------------
-       * Ana > |    ---     |2 - 0 - 1  |0 - 0 - 3  |
+         Ana > |    ---     |2 - 0 - 1  |0 - 0 - 3  |
           Bo > | 1 - 0 - 2  |   ---     |0 - 1 - 2  |
-      * Cleo > | 3 - 0 - 0  |2 - 1 - 0  |   ---     |
+        Cleo > | 3 - 0 - 0  |2 - 1 - 0  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Cleo — matches the STAR winner

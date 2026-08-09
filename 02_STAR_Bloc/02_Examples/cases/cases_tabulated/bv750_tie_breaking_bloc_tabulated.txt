@@ -62,19 +62,16 @@ TABULATION RESULTS
        elects a different pair. The winners are unaffected by the dropped ballots
        (identical ballots can't separate anyone) — it's the lot order that decides.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-        Note: a, b and c tied at 15 in the Scoring Round, and the lot rung
-              (the ballots could not separate them) advanced a and c. The *
-              marks who advanced, not who scored highest.
-
-               |    * a     |     b     |   * c     |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |      a     |     b     |     c     |
 -----------------------------------------------------
-         * a > |    ---     |0 - 3 - 0  |0 - 3 - 0  |
+           a > |    ---     |0 - 3 - 0  |0 - 3 - 0  |
            b > | 0 - 3 - 0  |   ---     |0 - 3 - 0  |
-         * c > | 0 - 3 - 0  |0 - 3 - 0  |   ---     |
+           c > | 0 - 3 - 0  |0 - 3 - 0  |   ---     |
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: a, b, c (pairwise ties)

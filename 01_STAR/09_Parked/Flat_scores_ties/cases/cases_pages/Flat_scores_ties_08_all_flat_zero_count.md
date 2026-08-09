@@ -20,13 +20,13 @@ Lesson: 09_Parked/Flat_scores_ties/README.md#case-08  (BV id pending).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Anchovy | Basil | Caper |
-|:--|:--:|:--:|:--:|
-| <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Anchovy 1, Basil 1, Caper 1."> | 1 | 1 | 1 |
-| <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Anchovy 2, Basil 2, Caper 2."> | 2 | 2 | 2 |
-| <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Anchovy 3, Basil 3, Caper 3."> | 3 | 3 | 3 |
-| <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Anchovy 4, Basil 4, Caper 4."> | 4 | 4 | 4 |
-| <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Anchovy 5, Basil 5, Caper 5."> | 5 | 5 | 5 |
+| # | Ballot as marked | Anchovy | Basil | Caper |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Anchovy 1, Basil 1, Caper 1."> | 1 | 1 | 1 |
+| 2 | <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Anchovy 2, Basil 2, Caper 2."> | 2 | 2 | 2 |
+| 3 | <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Anchovy 3, Basil 3, Caper 3."> | 3 | 3 | 3 |
+| 4 | <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Anchovy 4, Basil 4, Caper 4."> | 4 | 4 | 4 |
+| 5 | <img src="../img/Flat_scores_ties_08_all_flat_zero_count_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Anchovy 5, Basil 5, Caper 5."> | 5 | 5 | 5 |
 
 The same ballots as the file records them:
 

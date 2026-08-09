@@ -25,13 +25,13 @@ winner. Level 201. Full two-view lesson: Runoff_05_reversal_with_equal_support_x
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Rosa | Sage | Tulip |
-|:--|:--:|:--:|:--:|
-| <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Rosa 5, Sage 1, Tulip 0."> | 5 | 1 | 0 |
-| <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Rosa 4, Sage 5, Tulip 0."> | 4 | 5 | 0 |
-| <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Rosa 4, Sage 5, Tulip 0."> | 4 | 5 | 0 |
-| <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Rosa 3, Sage 3, Tulip 1."> | 3 | 3 | 1 |
-| <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Rosa 5, Sage 5, Tulip 2."> | 5 | 5 | 2 |
+| # | Ballot as marked | Rosa | Sage | Tulip |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Rosa 5, Sage 1, Tulip 0."> | 5 | 1 | 0 |
+| 2 | <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Rosa 4, Sage 5, Tulip 0."> | 4 | 5 | 0 |
+| 3 | <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Rosa 4, Sage 5, Tulip 0."> | 4 | 5 | 0 |
+| 4 | <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Rosa 3, Sage 3, Tulip 1."> | 3 | 3 | 1 |
+| 5 | <img src="../img/Runoff_05_reversal_with_equal_support_xgkw3w_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Rosa 5, Sage 5, Tulip 2."> | 5 | 5 | 2 |
 
 The same ballots as the file records them:
 

@@ -130,14 +130,15 @@ TABULATION RESULTS
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit quota_circus
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Amir    |   * Bree    |     Cato    |    Della    |     Enzo    |     Faye    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |      Amir    |     Bree    |     Cato    |    Della    |     Enzo    |     Faye    |
 -------------------------------------------------------------------------------------------------------
-        * Amir > |     ---      | 8 - 14 -  7 |14 -  6 -  9 |15 -  6 -  8 |15 - 12 -  2 |16 - 10 -  3 |
-        * Bree > |  7 - 14 -  8 |    ---      |14 -  7 -  8 |14 -  8 -  7 |17 - 12 -  0 |16 - 10 -  3 |
+          Amir > |     ---      | 8 - 14 -  7 |14 -  6 -  9 |15 -  6 -  8 |15 - 12 -  2 |16 - 10 -  3 |
+          Bree > |  7 - 14 -  8 |    ---      |14 -  7 -  8 |14 -  8 -  7 |17 - 12 -  0 |16 - 10 -  3 |
           Cato > |  9 -  6 - 14 | 8 -  7 - 14 |    ---      | 4 - 24 -  1 | 8 - 19 -  2 | 9 - 19 -  1 |
          Della > |  8 -  6 - 15 | 7 -  8 - 14 | 1 - 24 -  4 |    ---      | 9 - 18 -  2 | 8 - 20 -  1 |
           Enzo > |  2 - 12 - 15 | 0 - 12 - 17 | 2 - 19 -  8 | 2 - 18 -  9 |    ---      | 3 - 21 -  5 |
@@ -174,13 +175,15 @@ Count × Amir,Bree,Cato,Della,Enzo,Faye
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Amir       16   1   2   0   2   6    2  |    92   3.4
-Bree       12   6   1   1   1   8    0  |    90   3.1
-Cato        6   3   0   2   0  16    2  |    46   1.7
-Della       4   5   1   0   0  17    2  |    43   1.6
-Enzo        2   0   5   1   0  19    2  |    27   1.0
-Faye        0   4   3   0   1  19    2  |    26   1.0
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Amir       16   1   2   0   2   6    2  |    92      3.2        3.4
+Bree       12   6   1   1   1   8    0  |    90      3.1        3.1
+Cato        6   3   0   2   0  16    2  |    46      1.6        1.7
+Della       4   5   1   0   0  17    2  |    43      1.5        1.6
+Enzo        2   0   5   1   0  19    2  |    27      0.9        1.0
+Faye        0   4   3   0   1  19    2  |    26      0.9        1.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  Hare quota is 29/2.
 
 [Allocated Score Voting: Round 1]

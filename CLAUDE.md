@@ -75,7 +75,12 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   its pairwise table by default** (the round-robin table IS the method; the Smith
   block stays a separate opt-in). The saved `_tabulated` copy still renders
   **maximum info automatically**, and the **`--full`** CLI flag puts that same
-  everything-on render on screen. Consequences:
+  everything-on render on screen — with one seam (closed 2026-08-09): for a
+  **multi-winner** race the forced-on grid prints as a plain, unmarked
+  **"Preference Matrix"** (the "Top 2 Finalist" markers came from a silent
+  seats=1 STAR analysis; an "Informational only — not part of the N-winner
+  count" legend line replaces them, and the same unmarked grid is what a
+  `show_matrix: true` override puts on screen). Consequences:
   - **Don't add an `options:` block to a case file.** A lesson that wants a heavier
     section on the page (score distribution, full grid, Smith set) links the case's
     generated page / `_tabulated` mirror — which force everything on — or pastes

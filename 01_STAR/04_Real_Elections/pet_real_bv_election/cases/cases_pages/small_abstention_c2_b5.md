@@ -37,13 +37,13 @@ the single-ballot difference is the 5,5.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | A | B |
-|:--|:--:|:--:|
-| <img src="../img/small_abstention_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers B: A 0, B 5."> | 0 | 5 |
-| <img src="../img/small_abstention_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 4, B 0."> | 4 | 0 |
-| <img src="../img/small_abstention_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — loves BOTH equally (a cast vote, not an abstention): A 5, B 5."> | 5 | 5 |
-| <img src="../img/small_abstention_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 5, B 0."> | 5 | 0 |
-| <img src="../img/small_abstention_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — the one true abstention: A left blank (counts as 0), B left blank (counts as 0)."> | - | - |
+| # | Ballot as marked | A | B |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/small_abstention_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers B: A 0, B 5."> | 0 | 5 |
+| 2 | <img src="../img/small_abstention_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 4, B 0."> | 4 | 0 |
+| 3 | <img src="../img/small_abstention_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — loves BOTH equally (a cast vote, not an abstention): A 5, B 5."> | 5 | 5 |
+| 4 | <img src="../img/small_abstention_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 5, B 0."> | 5 | 0 |
+| 5 | <img src="../img/small_abstention_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — the one true abstention: A left blank (counts as 0), B left blank (counts as 0)."> | - | - |
 
 The same ballots as the file records them:
 
@@ -122,9 +122,11 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-A          2  1  0  0  0  1    1  |    14   3.5
-B          2  0  0  0  0  2    1  |    10   2.5
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+A          2  1  0  0  0  1    1  |    14      2.8        3.5
+B          2  0  0  0  0  2    1  |    10      2.0        2.5
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/small_abstention_c2_b5_tabulated.txt) (regenerated on every run; every analysis forced on).

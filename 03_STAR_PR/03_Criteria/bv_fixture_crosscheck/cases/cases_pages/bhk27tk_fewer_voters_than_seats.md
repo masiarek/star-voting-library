@@ -69,16 +69,13 @@ Allison,Bill,Carmen,Doug
 
 [Allocated Score Voting: Round 2: Ballot allocation round: Round 1]
  Allocating 1 ballot at score 10/3.
- This allocation overfills the quota.  Returning fractional surplus.
- Allocating only 66.67% of this ballot.
- Keeping this ballot, but multiplying its weight by 1/3.
- 1 ballot reweighted from 2/3 to 2/9.
+ These ballots carry a remaining weight of 2/3.
 
 [Allocated Score Voting: Round 3]
- The highest-scoring candidate wins a seat.
-   Carmen        -- 2 -- First place
-   Doug          -- 0
- Carmen wins a seat.
+ Tabulating 1 remaining ballots.
+Allison,Bill,Carmen,Doug
+      5,   5,     0,   0
+      5,   4,     3,   0
 
 [Allocated Score Voting: Winners — Allocated Score Voting Method (3 winners)]
  Allison
@@ -90,14 +87,15 @@ Allison,Bill,Carmen,Doug
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Allison  |  * Bill    |   Carmen   |    Doug    |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                |    Allison  |    Bill    |   Carmen   |    Doug    |
 ----------------------------------------------------------------------
-    * Allison > |     ---     | 1 - 1 - 0  | 2 - 0 - 0  | 2 - 0 - 0  |
-       * Bill > |  0 - 1 - 1  |    ---     | 2 - 0 - 0  | 2 - 0 - 0  |
+      Allison > |     ---     | 1 - 1 - 0  | 2 - 0 - 0  | 2 - 0 - 0  |
+         Bill > |  0 - 1 - 1  |    ---     | 2 - 0 - 0  | 2 - 0 - 0  |
        Carmen > |  0 - 0 - 2  | 0 - 0 - 2  |    ---     | 1 - 1 - 0  |
          Doug > |  0 - 0 - 2  | 0 - 0 - 2  | 0 - 1 - 1  |    ---     |
 
@@ -115,6 +113,18 @@ Bill       1  1  0  0  0  0  |     9   4.5
 Carmen     0  0  1  0  0  1  |     3   1.5
 Doug       0  0  0  0  0  2  |     0   0.0
  Hare quota is 2/3.
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Allison    2  0  0  0  0  0  |    10   5.0
+Bill       1  1  0  0  0  0  |     9   4.5
+Carmen     0  0  1  0  0  1  |     3   1.5
+Doug       0  0  0  0  0  2  |     0   0.0
+ The highest-scoring candidate wins a seat.
+   Carmen        -- 2 -- First place
+   Doug          -- 0
+ Carmen wins a seat.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bhk27tk_fewer_voters_than_seats_tabulated.txt) (regenerated on every run; every analysis forced on).

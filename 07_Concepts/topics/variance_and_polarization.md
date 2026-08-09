@@ -25,13 +25,13 @@ Two candidates, five voters. Alice is a flat **3** on every ballot. Blake takes 
 <!-- ballots:same_mean_different_spread_c2_b5 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Alice | Blake |
-|:--|:--:|:--:|
-| <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Blake is my champion; Alice is fine: Alice 3, Blake 5."> | 3 | 5 |
-| <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Blake is my champion; Alice is fine: Alice 3, Blake 5."> | 3 | 5 |
-| <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Blake is my champion; Alice is fine: Alice 3, Blake 5."> | 3 | 5 |
-| <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alice is fine; Blake, absolutely not: Alice 3, Blake 0."> | 3 | 0 |
-| <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alice is fine; Blake, absolutely not: Alice 3, Blake 0."> | 3 | 0 |
+| # | Ballot as marked | Alice | Blake |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Blake is my champion; Alice is fine: Alice 3, Blake 5."> | 3 | 5 |
+| 2 | <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Blake is my champion; Alice is fine: Alice 3, Blake 5."> | 3 | 5 |
+| 3 | <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Blake is my champion; Alice is fine: Alice 3, Blake 5."> | 3 | 5 |
+| 4 | <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alice is fine; Blake, absolutely not: Alice 3, Blake 0."> | 3 | 0 |
+| 5 | <img src="../../01_STAR/02_Examples/cases/img/same_mean_different_spread_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Alice is fine; Blake, absolutely not: Alice 3, Blake 0."> | 3 | 0 |
 <!-- /ballots -->
 
 <!-- report:same_mean_different_spread_c2_b5 -->

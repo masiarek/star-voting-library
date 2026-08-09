@@ -629,68 +629,70 @@ Count × Akinyemi Agbede (D),Mohammad Arif (D),Larry Azevedo (D),Xavier Becerra 
 
 [Score Distribution] (how many ballots gave each star rating)
                                               Score
-Candidate                              5   4   3   2   1   0  Abs  | Total   Avg
-Akinyemi Agbede (D)                    1   1   4   3  11  23  276  |    38   0.9
-Mohammad Arif (D)                      1   0   4   3  13  22  276  |    36   0.8
-Larry Azevedo (D)                      1   1   3   3  13  21  277  |    37   0.9
-Xavier Becerra (D)                    27  22  28   6  11  11  214  |   330   3.1
-Carolina Buhler (D)                    2   1   4   3  13  21  275  |    45   1.0
-Louis A. De Barraicua (D)              1   0   3   3  10  25  277  |    30   0.7
-Sophia Edum-a-Sam (D)                  3   0   4   2   9  23  278  |    40   1.0
-Derek Grasty (D)                       2   0   4   3  11  22  277  |    39   0.9
-Joel E. Jacob (D)                      1   0   3   3  11  24  277  |    31   0.7
-Gary Howard Kidgell (D)                1   0   3   4  10  24  277  |    32   0.8
-Matthew Chase Levy (D)                 2   0   3   5   9  23  277  |    38   0.9
-Matt Mahan (D)                        49   6   9  18  20  25  192  |   352   2.8
-Barack D. Obama Shaw (D)               0   1   2   5  12  22  277  |    32   0.8
-Thunder Parley (D)                     1   2   4   5   9  22  276  |    44   1.0
-Katie Porter (D)                      29  30  16  13   9  12  210  |   348   3.2
-Raji Rab (D)                           0   2   5   2  12  22  276  |    39   0.9
-Satish Rao (D)                         1   1   4   2  10  24  277  |    35   0.8
-Scott P Shields (D)                    0   1   4   3   9  25  277  |    31   0.7
-Tom Steyer (D)                        44  29   8  12   6   9  211  |   390   3.6
-Eric Swalwell (D)                     12  12  17   9   9  30  230  |   186   2.1
-Tony K. Thurmond (D)                   3   9  17  12  13  15  250  |   139   2.0
-Antonio Villaraigosa (D)               4   4  19  12  18  21  241  |   135   1.7
-Betty T. Yee (D)                       5  12  20  14  14  13  241  |   175   2.2
-Erin "Zez" Zezulak (D)                 0   1   3   3  10  25  277  |    29   0.7
-James Athans Jr. (R)                   6   0   0   0   1  42  270  |    31   0.6
-Chad Bianco (R)                       44  21   2   0   3  60  189  |   313   2.4
-Patricia De Luca Basualdo (R)          0   0   0   0   1  43  275  |     1   0.0
-Randeep S. Dhillon (R)                 0   0   0   0   2  46  271  |     2   0.0
-Rafael M. Hernandez (R)                0   0   0   0   0  46  273  |     0   0.0
-Steve Hilton (R)                       4   1  15   3   5  53  238  |    80   1.0
-Alicia Olivia Lapp (R)                74   4   1   2   2  42  194  |   395   3.2
-Leo Naranjo IV (R)                    56   3   1   4   5  43  207  |   308   2.8
-Tim Nelson (R)                         0   0   0   0   3  44  272  |     3   0.1
-Gretha Solórzano (R)                   0   0   0   0   4  43  272  |     4   0.1
-Leo Samuel Zacky (R)                  61   2   6   1   1  46  202  |   334   2.9
-David Zickefoose (R)                   0   0   0   0   2  45  272  |     2   0.0
-Tom Woodard (L)                       70   2   1   0   5  36  205  |   366   3.2
-Ramsey Robinson (P&F)                 13   3   2   2   8  27  264  |    95   1.7
-Naomi Bar-Lev (NPP)                    1   0   2   1   4  32  279  |    17   0.4
-Joseph Cabrera (NPP)                   1   0   3   0   6  30  279  |    20   0.5
-Elaine Culotti (NPP)                  61   2   3   4   4  31  214  |   334   3.2
-LivingForGod AndCountry DeMott (NPP)   1   0   1   2   3  33  279  |    15   0.4
-Serge Fiankan (NPP)                    1   0   3   0   3  32  280  |    17   0.4
-Lukasz Adam Filinski (NPP)            69   0   1   0   3  33  213  |   351   3.3
-Max Fomin (NPP)                        1   0   1   1   3  33  280  |    13   0.3
-Don J. Grundmann (NPP)                 1   0   1   0   3  34  280  |    11   0.3
-Jon Henderson (NPP)                   62   2   3   3   4  29  216  |   337   3.3
-Lewis Herms (NPP)                     63   5   2   2   3  32  212  |   348   3.3
-Dawit Kellel (NPP)                     1   0   1   0   3  32  282  |    11   0.3
-Anne Komarovsk (NPP)                   1   0   1   0   5  30  282  |    13   0.4
-Duane Terrence Loynes Jr. (NPP)       71   0   1   0   6  29  212  |   364   3.4
-Amanda Martin (NPP)                   65   0   1   1   5  29  218  |   335   3.3
-Brent Maupin (NPP)                     1   0   1   0   3  31  283  |    11   0.3
-Daniel Mercuri (NPP)                  62   3   5   2   4  30  213  |   345   3.3
-Mauro Alberto Orozco (NPP)             1   0   1   0   4  31  282  |    12   0.3
-Reza Safarnejad (NPP)                  1   0   2   0   3  30  283  |    14   0.4
-Sam Sandak (NPP)                       1   0   1   0   3  32  282  |    11   0.3
-Christine R. Sarmiento (NPP)           1   0   2   1   4  29  282  |    17   0.5
-Frederic C. Schultz (NPP)              1   1   1   1   3  29  283  |    17   0.5
-Margret Trowe (NPP)                    2   2   1   1   4  28  281  |    27   0.7
-Nancy D. Young (NPP)                   1   0   1   1   6  28  282  |    16   0.4
+Candidate                              5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Akinyemi Agbede (D)                    1   1   4   3  11  23  276  |    38      0.1        0.9
+Mohammad Arif (D)                      1   0   4   3  13  22  276  |    36      0.1        0.8
+Larry Azevedo (D)                      1   1   3   3  13  21  277  |    37      0.1        0.9
+Xavier Becerra (D)                    27  22  28   6  11  11  214  |   330      1.0        3.1
+Carolina Buhler (D)                    2   1   4   3  13  21  275  |    45      0.1        1.0
+Louis A. De Barraicua (D)              1   0   3   3  10  25  277  |    30      0.1        0.7
+Sophia Edum-a-Sam (D)                  3   0   4   2   9  23  278  |    40      0.1        1.0
+Derek Grasty (D)                       2   0   4   3  11  22  277  |    39      0.1        0.9
+Joel E. Jacob (D)                      1   0   3   3  11  24  277  |    31      0.1        0.7
+Gary Howard Kidgell (D)                1   0   3   4  10  24  277  |    32      0.1        0.8
+Matthew Chase Levy (D)                 2   0   3   5   9  23  277  |    38      0.1        0.9
+Matt Mahan (D)                        49   6   9  18  20  25  192  |   352      1.1        2.8
+Barack D. Obama Shaw (D)               0   1   2   5  12  22  277  |    32      0.1        0.8
+Thunder Parley (D)                     1   2   4   5   9  22  276  |    44      0.1        1.0
+Katie Porter (D)                      29  30  16  13   9  12  210  |   348      1.1        3.2
+Raji Rab (D)                           0   2   5   2  12  22  276  |    39      0.1        0.9
+Satish Rao (D)                         1   1   4   2  10  24  277  |    35      0.1        0.8
+Scott P Shields (D)                    0   1   4   3   9  25  277  |    31      0.1        0.7
+Tom Steyer (D)                        44  29   8  12   6   9  211  |   390      1.2        3.6
+Eric Swalwell (D)                     12  12  17   9   9  30  230  |   186      0.6        2.1
+Tony K. Thurmond (D)                   3   9  17  12  13  15  250  |   139      0.4        2.0
+Antonio Villaraigosa (D)               4   4  19  12  18  21  241  |   135      0.4        1.7
+Betty T. Yee (D)                       5  12  20  14  14  13  241  |   175      0.5        2.2
+Erin "Zez" Zezulak (D)                 0   1   3   3  10  25  277  |    29      0.1        0.7
+James Athans Jr. (R)                   6   0   0   0   1  42  270  |    31      0.1        0.6
+Chad Bianco (R)                       44  21   2   0   3  60  189  |   313      1.0        2.4
+Patricia De Luca Basualdo (R)          0   0   0   0   1  43  275  |     1      0.0        0.0
+Randeep S. Dhillon (R)                 0   0   0   0   2  46  271  |     2      0.0        0.0
+Rafael M. Hernandez (R)                0   0   0   0   0  46  273  |     0      0.0        0.0
+Steve Hilton (R)                       4   1  15   3   5  53  238  |    80      0.3        1.0
+Alicia Olivia Lapp (R)                74   4   1   2   2  42  194  |   395      1.2        3.2
+Leo Naranjo IV (R)                    56   3   1   4   5  43  207  |   308      1.0        2.8
+Tim Nelson (R)                         0   0   0   0   3  44  272  |     3      0.0        0.1
+Gretha Solórzano (R)                   0   0   0   0   4  43  272  |     4      0.0        0.1
+Leo Samuel Zacky (R)                  61   2   6   1   1  46  202  |   334      1.0        2.9
+David Zickefoose (R)                   0   0   0   0   2  45  272  |     2      0.0        0.0
+Tom Woodard (L)                       70   2   1   0   5  36  205  |   366      1.1        3.2
+Ramsey Robinson (P&F)                 13   3   2   2   8  27  264  |    95      0.3        1.7
+Naomi Bar-Lev (NPP)                    1   0   2   1   4  32  279  |    17      0.1        0.4
+Joseph Cabrera (NPP)                   1   0   3   0   6  30  279  |    20      0.1        0.5
+Elaine Culotti (NPP)                  61   2   3   4   4  31  214  |   334      1.0        3.2
+LivingForGod AndCountry DeMott (NPP)   1   0   1   2   3  33  279  |    15      0.0        0.4
+Serge Fiankan (NPP)                    1   0   3   0   3  32  280  |    17      0.1        0.4
+Lukasz Adam Filinski (NPP)            69   0   1   0   3  33  213  |   351      1.1        3.3
+Max Fomin (NPP)                        1   0   1   1   3  33  280  |    13      0.0        0.3
+Don J. Grundmann (NPP)                 1   0   1   0   3  34  280  |    11      0.0        0.3
+Jon Henderson (NPP)                   62   2   3   3   4  29  216  |   337      1.1        3.3
+Lewis Herms (NPP)                     63   5   2   2   3  32  212  |   348      1.1        3.3
+Dawit Kellel (NPP)                     1   0   1   0   3  32  282  |    11      0.0        0.3
+Anne Komarovsk (NPP)                   1   0   1   0   5  30  282  |    13      0.0        0.4
+Duane Terrence Loynes Jr. (NPP)       71   0   1   0   6  29  212  |   364      1.1        3.4
+Amanda Martin (NPP)                   65   0   1   1   5  29  218  |   335      1.1        3.3
+Brent Maupin (NPP)                     1   0   1   0   3  31  283  |    11      0.0        0.3
+Daniel Mercuri (NPP)                  62   3   5   2   4  30  213  |   345      1.1        3.3
+Mauro Alberto Orozco (NPP)             1   0   1   0   4  31  282  |    12      0.0        0.3
+Reza Safarnejad (NPP)                  1   0   2   0   3  30  283  |    14      0.0        0.4
+Sam Sandak (NPP)                       1   0   1   0   3  32  282  |    11      0.0        0.3
+Christine R. Sarmiento (NPP)           1   0   2   1   4  29  282  |    17      0.1        0.5
+Frederic C. Schultz (NPP)              1   1   1   1   3  29  283  |    17      0.1        0.5
+Margret Trowe (NPP)                    2   2   1   1   4  28  281  |    27      0.1        0.7
+Nancy D. Young (NPP)                   1   0   1   1   6  28  282  |    16      0.1        0.4
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

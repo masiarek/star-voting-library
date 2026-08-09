@@ -29,14 +29,15 @@ TABULATION RESULTS
 === Free riding — both sides ride, nobody gains ===
   THE STRATEGY CANCELS ITSELF. Both blocs free ride: all 20 voters now score Anika 4 rather than 5. She still wins seat 1, and every ballot is once again in the same score group — so the quota is charged to everyone equally, exactly as it was under honest voting, and Bruno takes the second seat 24 to 20. The free ride pays only while the OTHER side does not attempt it. Its gain is positional, not absolute, which is the main reason it is self-limiting in practice.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      | 8 - 12 -  0 |12 -  0 -  8 |
-       * Bruno > |  0 - 12 -  8 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      | 8 - 12 -  0 |12 -  0 -  8 |
+         Bruno > |  0 - 12 -  8 |    ---      |12 -  0 -  8 |
         Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

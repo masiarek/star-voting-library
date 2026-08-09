@@ -90,14 +90,15 @@ Count × Arepa,Bao,Churro,Donut,Eclair
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Arepa    |   * Bao     |    Churro   |    Donut    |    Eclair   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Arepa    |     Bao     |    Churro   |    Donut    |    Eclair   |
 -----------------------------------------------------------------------------------------
-       * Arepa > |     ---      |38 - 43 - 19 |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
-         * Bao > | 19 - 43 - 38 |    ---      |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
+         Arepa > |     ---      |38 - 43 - 19 |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
+           Bao > | 19 - 43 - 38 |    ---      |39 - 43 - 18 |57 -  0 - 43 |57 -  0 - 43 |
         Churro > | 18 - 43 - 39 |18 - 43 - 39 |    ---      |57 -  0 - 43 |57 -  0 - 43 |
          Donut > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |    ---      |22 - 57 - 21 |
         Eclair > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |21 - 57 - 22 |    ---      |

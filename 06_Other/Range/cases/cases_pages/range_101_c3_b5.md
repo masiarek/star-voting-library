@@ -21,13 +21,13 @@ engine (pref_voting score_voting, cross-checked against a hand sum).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Amy | Beth | Cole |
-|:--|:--:|:--:|:--:|
-| <img src="../img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
-| <img src="../img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
-| <img src="../img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
-| <img src="../img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
-| <img src="../img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
+| # | Ballot as marked | Amy | Beth | Cole |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
+| 2 | <img src="../img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
+| 3 | <img src="../img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
+| 4 | <img src="../img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
+| 5 | <img src="../img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
 
 The same ballots as the file records them:
 

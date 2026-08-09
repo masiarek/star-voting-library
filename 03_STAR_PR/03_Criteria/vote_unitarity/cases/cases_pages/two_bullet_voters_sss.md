@@ -32,15 +32,15 @@ Correct SSS elects Amy and Cy.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Amy | Bo | Cy |
-|:--|:--:|:--:|:--:|
-| <img src="../img/two_bullet_voters_sss_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Bo fan, warm on Cy: Amy 0, Bo 5, Cy 3."> | 0 | 5 | 3 |
-| <img src="../img/two_bullet_voters_sss_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #1 — scores Cy 0: Amy 5, Bo 0, Cy 0."> | 5 | 0 | 0 |
-| <img src="../img/two_bullet_voters_sss_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy leaner: Amy 0, Bo 3, Cy 4."> | 0 | 3 | 4 |
-| <img src="../img/two_bullet_voters_sss_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy 5, no surplus — exhausts in round 1: Amy 2, Bo 2, Cy 5."> | 2 | 2 | 5 |
-| <img src="../img/two_bullet_voters_sss_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #2 — scores Cy 0: Amy 5, Bo 1, Cy 0."> | 5 | 1 | 0 |
-| <img src="../img/two_bullet_voters_sss_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy-only supporter: Amy 0, Bo 0, Cy 4."> | 0 | 0 | 4 |
-| <img src="../img/two_bullet_voters_sss_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — spread-out moderate: Amy 2, Bo 2, Cy 1."> | 2 | 2 | 1 |
+| # | Ballot as marked | Amy | Bo | Cy |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/two_bullet_voters_sss_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Bo fan, warm on Cy: Amy 0, Bo 5, Cy 3."> | 0 | 5 | 3 |
+| 2 | <img src="../img/two_bullet_voters_sss_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #1 — scores Cy 0: Amy 5, Bo 0, Cy 0."> | 5 | 0 | 0 |
+| 3 | <img src="../img/two_bullet_voters_sss_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy leaner: Amy 0, Bo 3, Cy 4."> | 0 | 3 | 4 |
+| 4 | <img src="../img/two_bullet_voters_sss_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy 5, no surplus — exhausts in round 1: Amy 2, Bo 2, Cy 5."> | 2 | 2 | 5 |
+| 5 | <img src="../img/two_bullet_voters_sss_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #2 — scores Cy 0: Amy 5, Bo 1, Cy 0."> | 5 | 1 | 0 |
+| 6 | <img src="../img/two_bullet_voters_sss_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy-only supporter: Amy 0, Bo 0, Cy 4."> | 0 | 0 | 4 |
+| 7 | <img src="../img/two_bullet_voters_sss_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — spread-out moderate: Amy 2, Bo 2, Cy 1."> | 2 | 2 | 1 |
 
 The same ballots as the file records them:
 
@@ -111,15 +111,16 @@ Amy,Bo,Cy
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Amy    |     Bo    |   * Cy    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Amy    |     Bo    |     Cy    |
 -----------------------------------------------------
-       * Amy > |    ---     |2 - 3 - 2  |3 - 0 - 4  |
+         Amy > |    ---     |2 - 3 - 2  |3 - 0 - 4  |
           Bo > | 2 - 3 - 2  |   ---     |3 - 1 - 3  |
-        * Cy > | 4 - 0 - 3  |3 - 1 - 3  |   ---     |
+          Cy > | 4 - 0 - 3  |3 - 1 - 3  |   ---     |
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Bo, Cy (pairwise ties)

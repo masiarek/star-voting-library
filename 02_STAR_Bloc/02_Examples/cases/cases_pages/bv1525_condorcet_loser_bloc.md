@@ -194,14 +194,15 @@ Count × First,Condorcet Loser,Second,Third,Fourth
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                        |       * First       | * Condorcet Loser  |       Second       |        Third       |       Fourth       |
+        Informational only — not part of the 4-winner count below,
+        so no Top-2 finalists are marked.
+                        |         First       |   Condorcet Loser  |       Second       |        Third       |       Fourth       |
 -----------------------------------------------------------------------------------------------------------------------------------
-              * First > |         ---         |    8 -  0 -  8     |    8 -  5 -  3     |    8 -  5 -  3     |    8 -  5 -  3     |
-    * Condorcet Loser > |     8 -  0 -  8     |        ---         |    5 -  0 - 11     |    5 -  0 - 11     |    5 -  2 -  9     |
+                First > |         ---         |    8 -  0 -  8     |    8 -  5 -  3     |    8 -  5 -  3     |    8 -  5 -  3     |
+      Condorcet Loser > |     8 -  0 -  8     |        ---         |    5 -  0 - 11     |    5 -  0 - 11     |    5 -  2 -  9     |
                Second > |     3 -  5 -  8     |   11 -  0 -  5     |        ---         |    3 - 13 -  0     |    3 - 13 -  0     |
                 Third > |     3 -  5 -  8     |   11 -  0 -  5     |    0 - 13 -  3     |        ---         |    3 - 13 -  0     |
                Fourth > |     3 -  5 -  8     |    9 -  2 -  5     |    0 - 13 -  3     |    0 - 13 -  3     |        ---         |

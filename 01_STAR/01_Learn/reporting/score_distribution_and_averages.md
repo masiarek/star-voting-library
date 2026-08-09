@@ -22,7 +22,18 @@ Eve        0  0  2  2  0  0  |    10   2.5
 Finn       0  0  0  0  3  1  |     3   0.8
 ```
 
-Each row is one candidate; the `Score` group header spans the star-value columns (5 down to 0); each cell is **how many ballots gave that candidate that many stars**. `Total` is the sum of stars; `Avg` is the mean stars per ballot. (When any ballot abstains on a candidate an `Abs` column appears — outside the `Score` group — and the average is taken over the ballots that actually scored the candidate.)
+Each row is one candidate; the `Score` group header spans the star-value columns (5 down to 0); each cell is **how many ballots gave that candidate that many stars**. `Total` is the sum of stars; `Avg` is the mean stars per ballot.
+
+**When some ballot abstains, one `Avg` is no longer enough.** An `Abs` column appears — outside the `Score` group — and the single column splits into two, because a blank is counted **one way by the tabulation and the other way by the average**:
+
+| column | denominator | what it means |
+| --- | --- | --- |
+| `Avg all` | every ballot cast | The blank is scored **0**, exactly as the tabulation scores it. So this is just `Total` restated per ballot, and it ranks candidates in the Scoring Round's own order. **The only one that decides anything.** |
+| `Avg rated` | ballots that scored this candidate (`Abs` excluded) | Support among voters who had an opinion. Decides nothing — but it tells *unknown* apart from *disliked*, which the totals alone cannot. |
+
+An explicit `0` sits in the `0` column and drags **both** down; a blank sits in `Abs` and drags down only `Avg all`. The gap between the two columns is therefore the candidate's **abstention drag** — how much of a weak total is people not rating them rather than people rating them low. With no abstentions the two denominators are the same number, so the table prints one plain `Avg` and no note.
+
+**This page is about the *arithmetic* — exact rationals, and how they round.** The *choice of denominator* — why both readings are honest, what their gap measures, and why no exact-fraction column is printed — has its own page: [Score averages — which denominator, and why](score_averages.md). Reading the table column by column: [The Score Distribution table](reporting_LH/score_distribution.md).
 
 ## The thing that looked wrong
 
@@ -100,7 +111,7 @@ The clean fix is not "one decimal vs two" — it is to stop using a float at all
 
 Recommended split: use the exact `Fraction` as the source of truth everywhere (honoring the design), render the **exact mixed number where Larry already does** (the scoring round), and in the scannable **Score Distribution `Avg`** column round half-up to one decimal. That removes the float, kills the banker's-rounding surprise, and keeps the histogram readable.
 
-> **Status: fixed.** The `Avg` column now computes the mean as an exact rational — `Decimal(totals[c]) / Decimal(scored)` — and rounds **half-up** to one decimal (`quantize(Decimal("0.1"), ROUND_HALF_UP)`) in `format_score_counts`. No binary float is involved, and an exact `1.25` now prints as `1.3` (matching the arithmetic a reader does by hand) rather than `1.2`. The engine's own scoring-round averages remain exact `Fraction` mixed numbers as before; only this scannable histogram column trades exactness for a compact, predictable one-decimal.
+> **Status: fixed.** The average columns now compute the mean as an exact rational — `Decimal(total) / Decimal(denominator)`, in the shared `_avg()` helper both `Avg all` and `Avg rated` call — and round **half-up** to one decimal (`quantize(Decimal("0.1"), ROUND_HALF_UP)`) in `format_score_counts`. No binary float is involved, and an exact `1.25` now prints as `1.3` (matching the arithmetic a reader does by hand) rather than `1.2`. The engine's own scoring-round averages remain exact `Fraction` mixed numbers as before; only this scannable histogram column trades exactness for a compact, predictable one-decimal.
 
 ## See also
 

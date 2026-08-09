@@ -25,11 +25,11 @@ Three ballots on a 0–5 STAR ballot. Two are flat all-zeros; one scores Cal 2, 
 <!-- ballots:bhckrf7_range_of_scores -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ann Ambitious | Bob Bossy | Cal Creative |
-|:--|:--:|:--:|:--:|
-| <img src="cases/img/bhckrf7_range_of_scores_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — flat ballot — range 0 (BetterVoting files this as an abstention): Ann Ambitious 0, Bob Bossy 0, Cal Creative 0."> | 0 | 0 | 0 |
-| <img src="cases/img/bhckrf7_range_of_scores_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the only tallied ballot — range 2, on a 0-5 ballot: Ann Ambitious 0, Bob Bossy 1, Cal Creative 2."> | 0 | 1 | 2 |
-| <img src="cases/img/bhckrf7_range_of_scores_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — flat ballot — range 0 (BetterVoting files this as an abstention): Ann Ambitious 0, Bob Bossy 0, Cal Creative 0."> | 0 | 0 | 0 |
+| # | Ballot as marked | Ann Ambitious | Bob Bossy | Cal Creative |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="cases/img/bhckrf7_range_of_scores_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — flat ballot — range 0 (BetterVoting files this as an abstention): Ann Ambitious 0, Bob Bossy 0, Cal Creative 0."> | 0 | 0 | 0 |
+| 2 | <img src="cases/img/bhckrf7_range_of_scores_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — the only tallied ballot — range 2, on a 0-5 ballot: Ann Ambitious 0, Bob Bossy 1, Cal Creative 2."> | 0 | 1 | 2 |
+| 3 | <img src="cases/img/bhckrf7_range_of_scores_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — flat ballot — range 0 (BetterVoting files this as an abstention): Ann Ambitious 0, Bob Bossy 0, Cal Creative 0."> | 0 | 0 | 0 |
 <!-- /ballots -->
 
 ## What BetterVoting shows

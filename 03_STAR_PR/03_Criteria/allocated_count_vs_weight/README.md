@@ -8,9 +8,9 @@
 
 ---
 
-**One line:** in Allocated Score's ballot-allocation round, Larry Hastings' `starvote` engine (which this library embeds) measures the Hare quota in ballot **counts**, ignoring the fractional weights ballots carry from earlier rounds, while BetterVoting — and the method's published reference implementation, which `starvote` itself ships — measure it in ballot **weight**; on any profile where one bloc earns three or more seats, the two accountings can seat different councils, and the weight accounting is the correct one.
+**One line:** in Allocated Score's ballot-allocation round, upstream `starvote` measures the Hare quota in ballot **counts**, ignoring the fractional weights ballots carry from earlier rounds, while BetterVoting — and the method's published reference implementation, which `starvote` itself ships — measure it in ballot **weight**; on any profile where one bloc earns three or more seats, the two accountings can seat different councils, and the weight accounting is the correct one.
 
-This page documents the divergence, the fingerprint election that isolates it, and where it bites elsewhere in this library. It was confirmed live against bettervoting.com on 2026-08-09 and is reported upstream: [starvote#20](https://github.com/larryhastings/starvote/issues/20) (the accounting bug) and [bettervoting#1507](https://github.com/Equal-Vote/bettervoting/issues/1507) (the reporting quirk that kept it hidden — see below).
+This page documents the divergence, the fingerprint election that isolates it, and where it bit this library. It was confirmed live against bettervoting.com on 2026-08-09, reported upstream the same day — [starvote#20](https://github.com/larryhastings/starvote/issues/20) (the accounting bug, still open) and [bettervoting#1507](https://github.com/Equal-Vote/bettervoting/issues/1507) (the reporting quirk that kept it hidden — see below) — and **fixed in this library's vendored fork the same day**, so the engine here now agrees with BetterVoting seat-for-seat (fix details at the bottom; the fingerprint case doubles as the regression guard).
 
 ## The fingerprint election
 
@@ -19,16 +19,16 @@ Sixty-six voters, nine candidates in three party-line slates, five seats. Every 
 <!-- ballots:count_vs_weight_slates_c9_b66 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Scores (A1, A2, A3, A4, B1, B2, B3, C1, C2) |
-|:--|:--:|
-| <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_1.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 41 voters — slate A — 3.11 quotas: A1 5, A2 5, A3 5, A4 5, B1 0, B2 0, B3 0, C1 0, C2 0."> | `5, 5, 5, 5, 0, 0, 0, 0, 0` |
-| <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_2.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 19 voters — slate B — 1.44 quotas: A1 0, A2 0, A3 0, A4 0, B1 5, B2 5, B3 5, C1 0, C2 0."> | `0, 0, 0, 0, 5, 5, 5, 0, 0` |
-| <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_3.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 6 voters — slate C — 0.45 quotas: A1 0, A2 0, A3 0, A4 0, B1 0, B2 0, B3 0, C1 5, C2 5."> | `0, 0, 0, 0, 0, 0, 0, 5, 5` |
+| # | Ballot as marked | Scores (A1, A2, A3, A4, B1, B2, B3, C1, C2) |
+|:--:|:--|:--:|
+| 1 | <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_1.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 41 voters — slate A — 3.11 quotas: A1 5, A2 5, A3 5, A4 5, B1 0, B2 0, B3 0, C1 0, C2 0."> | `5, 5, 5, 5, 0, 0, 0, 0, 0` |
+| 2 | <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_2.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 19 voters — slate B — 1.44 quotas: A1 0, A2 0, A3 0, A4 0, B1 5, B2 5, B3 5, C1 0, C2 0."> | `0, 0, 0, 0, 5, 5, 5, 0, 0` |
+| 3 | <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_3.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 6 voters — slate C — 0.45 quotas: A1 0, A2 0, A3 0, A4 0, B1 0, B2 0, B3 0, C1 5, C2 5."> | `0, 0, 0, 0, 0, 0, 0, 5, 5` |
 <!-- /ballots -->
 
 The Hare quota is 66 ÷ 5 = **13.2 ballots per seat**. Slate A's 41 voters hold 41 ÷ 13.2 = **3.11 quotas**, B holds 1.44, C holds 0.45. Under [largest-remainder (Hamilton) apportionment](https://en.wikipedia.org/wiki/Largest_remainder_method) that's **3 A + 1 B + 1 C**; under [D'Hondt](https://en.wikipedia.org/wiki/D%27Hondt_method), the divisor family that favors large parties, it's **4 A + 1 B + 0 C**. The whole point of Allocated Score's quota mechanism is to deliver the first answer.
 
-| Slate | Voters | Quotas held | Hamilton | D'Hondt | BetterVoting elects | LH `starvote` elects |
+| Slate | Voters | Quotas held | Hamilton | D'Hondt | BetterVoting (and this fork, fixed) | unpatched `starvote` |
 |---|--:|--:|--:|--:|--:|--:|
 | A (A1–A4) | 41 | 3.11 | 3 | 4 | **3** | **4** |
 | B (B1–B3) | 19 | 1.44 | 1 | 1 | **1** | **1** |
@@ -36,11 +36,11 @@ The Hare quota is 66 ÷ 5 = **13.2 ballots per seat**. Slate A's 41 voters hold 
 
 (Within a slate the candidates tie every round, so *which* A-candidates take the A seats is decided by the published lot order — but the **seat split between slates is decided by the ballots alone**, on both engines. The tiebreaks don't touch this divergence.)
 
-## What each engine does
+## What each accounting does
 
-The LH engine's own output shows the mechanism. Watch the percentage — it never changes:
+The unpatched engine's own output shows the mechanism (this is upstream `starvote`'s behavior, and this fork's until 2026-08-09). Watch the percentage — it never changes:
 
-```text title="Abridged for the lesson — not verbatim engine output"
+```text title="Unpatched starvote — abridged for the lesson, not verbatim engine output"
 Round 1   A1 wins (205) → Allocating only 32.20% of these ballots.   ← 13.2 / 41
           41 ballots reweighted from 1 to 139/205
 Round 2   A2 wins (139) → Allocating only 32.20% of these ballots.   ← 13.2 / 41 again
@@ -82,18 +82,22 @@ The weight accounting. Three independent confirmations:
 
 The count accounting matches no published source. In `starvote`'s allocation loop ([`__init__.py` L2029–L2048](https://github.com/larryhastings/starvote/blob/master/starvote/__init__.py#L2029-L2048)): the group size is `len(supporters) − score_start`, the fully-spent branch subtracts that *count* from the quota (a ballot at weight 139/205 retires 1.0 of it), and the surplus branch's factor is `quota ÷ count`. Both branches are weight-blind — and invisible on simple fixtures, because count and weight coincide while every ballot still has weight 1. Divergence needs a *second* allocation event on already-reduced ballots, which is why every one-surplus test agrees and this hid for years.
 
-## Where it bites in this library
+## Where it bit this library
 
-The repo's twenty allocated-score cases were all re-run against BetterVoting production for this page. Eighteen match. The two that don't are both organic casualties of this bug, not ties:
+The repo's twenty allocated-score cases were all re-run against BetterVoting production for this page. Eighteen matched even pre-fix (a single surplus event on full-weight ballots can't tell the accountings apart). The two that didn't were both organic casualties of this bug, not ties — both corrected when the fork was patched:
 
-- **[Co-op board, score half](../../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_scores_allocated.md)** — the LH engine (and, via its clip bug, the pandas reference) leaves 0.4 of a quota unspent after Ben's seat and elects **Dana** third; BetterVoting spends it and elects **Amy** (7.8 vs 7.0 stars, no tie in sight). The page's "both score tabulations elect Ben, Chris, Dana" claim holds only on the buggy accounting; its yaml carries a correction note.
-- **[BV2130, the presidential board](../../02_Examples/cases/cases_pages/bv2130_presidential_board_star_pr.md)** — the long-flagged seat-7 mystery (LH: Claudia De La Cruz; BetterVoting: Karina Garcia) is this bug, not a tiebreak. The old note blamed "a near-tie BV broke by chance" because BetterVoting's export said `tieBreakType: "random"` — but that flag is set on **every** STAR-PR result, tie or no tie (the winner always appears in the export's `tied` list by construction). That reporting quirk is now [bettervoting#1507](https://github.com/Equal-Vote/bettervoting/issues/1507); Karina's seat is deterministic, and correct.
+- **[Co-op board, score half](../../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_scores_allocated.md)** — the unpatched engine (and, via its clip bug, the pandas reference) left 0.4 of a quota unspent after Ben's seat and elected **Dana** third; weight-true accounting spends it and elects **Amy** (7.8 vs 7.0 stars, no tie in sight), as BetterVoting confirmed live. The fixed engine now agrees, which means the two *score* rules genuinely split their third chair (Amy on allocated, Dana on SSS) — the [proportional-ballots page](../../../method_comparisons/proportional_ballots/README.md) tells that story honestly now.
+- **[BV2130, the presidential board](../../02_Examples/cases/cases_pages/bv2130_presidential_board_star_pr.md)** — the long-flagged seat-7 mystery (unpatched: Claudia De La Cruz; BetterVoting: Karina Garcia) was this bug, not a tiebreak. The old note blamed "a near-tie BV broke by chance" because BetterVoting's export said `tieBreakType: "random"` — but that flag is set on **every** STAR-PR result, tie or no tie (the winner always appears in the export's `tied` list by construction). That reporting quirk is now [bettervoting#1507](https://github.com/Equal-Vote/bettervoting/issues/1507). The fixed engine reproduces all seven BetterVoting seats exactly.
 
-Two near-misses worth naming: the [Alabama-paradox pair](../alabama_paradox/README.md) **survives** — BetterVoting production confirms both of its seat sets, so the paradox lesson stands on the correct accounting — and the [BV fixture crosscheck](../bv_fixture_crosscheck/README.md) passes on both engines *because it structurally cannot see this bug*: its surplus fixture has one allocation event on full-weight ballots, the one situation where count and weight agree. This folder's fingerprint is the missing fixture.
+Two near-misses worth naming: the [Alabama-paradox pair](../alabama_paradox/README.md) **survives** — BetterVoting production confirms both of its seat sets, so the paradox lesson stands on the correct accounting — and the [BV fixture crosscheck](../bv_fixture_crosscheck/README.md) passes on both accountings *because it structurally cannot see this bug*: its surplus fixture has one allocation event on full-weight ballots, the one situation where count and weight agree. This folder's fingerprint is the missing fixture.
+
+## The fix in this fork
+
+Applied 2026-08-09, following the fork's minimal-edit rule: in the allocation loop the score group's **weight sum** (`allocation_weight`) replaces its row count in exactly three places — the overfill test, the quota subtraction, and the surplus factor (`quota ÷ allocation_weight`). Round-1 output is byte-identical to upstream (weight = count while all weights are 1); later rounds add one line, `These ballots carry a remaining weight of W.`, whenever the two differ. Details: [`BUG_allocated_count_vs_weight.md`](../../../STARVote_LH_tabulation_engine/BUG_allocated_count_vs_weight.md) · ledger row: [`LH_ENGINE_CHANGES.md` §1](../../../STARVote_LH_tabulation_engine/LH_ENGINE_CHANGES.md) · regression guard: [`tests/test_allocated_weight_accounting.py`](../../../STARVote_LH_tabulation_engine/tests/test_allocated_weight_accounting.py) plus this case's `expected_winners`. Upstream [starvote#20](https://github.com/larryhastings/starvote/issues/20) remains open; the patch is offered there.
 
 ## Run it
 
-The case file is [`count_vs_weight_slates_c9_b66.yaml`](cases/count_vs_weight_slates_c9_b66.yaml); the full LH report (all five rounds, tie ladder and all) is on [the generated case page](cases/cases_pages/count_vs_weight_slates_c9_b66.md). The BetterVoting side reproduces with one anonymous request — the sandbox tabulates with live production code and stores nothing:
+The case file is [`count_vs_weight_slates_c9_b66.yaml`](cases/count_vs_weight_slates_c9_b66.yaml); run it here and the fixed engine elects the proportional 3-1-1 (the full report, all five rounds, tie ladder and all, is on [the generated case page](cases/cases_pages/count_vs_weight_slates_c9_b66.md)). To watch the *bug* happen, run the same profile through upstream `starvote` 2.1.6 (`pip install starvote`) — it elects 4-1-0 with the constant 32.20% surplus factor shown above. The BetterVoting side reproduces with one anonymous request — the sandbox tabulates with live production code and stores nothing:
 
 ```bash
 curl -sS -X POST https://bettervoting.com/API/Sandbox -H "Content-Type: application/json" -d '{"candidates":["A1","A2","A3","A4","B1","B2","B3","C1","C2"],"cvr":[[5,5,5,5,0,0,0,0,0],[5,5,5,5,0,0,0,0,0]],"num_winners":5,"votingMethod":"STAR_PR"}'
