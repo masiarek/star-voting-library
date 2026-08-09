@@ -11,12 +11,15 @@ search:
 
 ## Scenario
 
-Five CAST ballots, only three of which can decide the runoff: a 5-5 Equal
-Support ballot and an all-zero ballot count as cast but express no preference
-between the finalists. Teaches the runoff denominator: Dog beats Cat 2-1
-among voters WITH a preference, and the two-line runoff summary
-(show_runoff_percent) reconciles 5 cast = 3 decided + 2 Equal Support, so
-the percentages never look like votes went missing.
+Six ballots tabulated, only three of which can decide the runoff: the 5-5
+Equal Support ballot, the all-zero ballot, and the truly blank ballot all
+express no preference between the finalists. Teaches the runoff
+denominator: the two-line summary (show_runoff_percent) counts ALL
+tabulated ballots and folds every no-preference ballot — the blank
+included — into one Equal Support bucket, so it reads 3 of 6 (3 Equal
+Support); the cast-vs-abstained split is carried separately by the
+abstention Note (1 of 6 ballots). Dog beats Cat 2-1 among voters WITH a
+preference, and the percentages never look like votes went missing.
 
 ## Ballots
 
@@ -125,6 +128,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/02_Examp
 
 ## See also
 
+- [Vote splitting (worked set)](../../../../method_comparisons/split_voting/README.md)
 - [Runoff reversal (worked set)](../../runoff_overturns_leader/README.md)
 - [Ballot & terminology basics](../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

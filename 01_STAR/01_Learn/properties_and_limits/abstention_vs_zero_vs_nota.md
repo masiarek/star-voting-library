@@ -8,8 +8,15 @@ Three ballot situations look similar on a STAR score sheet but mean genuinely di
 
 **2. An abstention — blank / unscored.** You left the line blank. Two flavors:
 
-- **Whole-ballot abstention** — every line blank (or, in STAR, *all lines equal*, e.g. `0,0,0` or `5,5,5`). The ballot expresses **no preference**, so it's set aside as an **abstention**: it counts as turnout but contributes nothing to any candidate's score or to the runoff. **Set aside is not discarded** — the ballot is still counted as turnout (and toward [quorum](../../../07_Concepts/topics/quorum.md)); it's only kept out of the *preference* math. And that costs no one anything: an all-equal ballot rates every candidate the same, so folding it in would move every total by the identical amount and tip no scoring round and no runoff — the winner is unchanged either way. Setting it aside simply keeps the turnout count honest instead of padding everyone's score with a ballot that voiced no opinion.
+- **Whole-ballot abstention** — every line **blank**. The ballot expresses **no preference**, so it's set aside as an **abstention**: it counts as turnout but contributes nothing to any candidate's score or to the runoff. **Set aside is not discarded** — the ballot is still counted as turnout (and toward [quorum](../../../07_Concepts/topics/quorum.md)); it's only kept out of the *preference* math.
 - **Per-candidate abstention** — you scored some candidates and left one blank. That one blank tallies as 0 for the math, but the ballot still counts — a single unscored candidate does **not** turn the whole ballot into an abstention.
+
+**The boundary case — a flat *scored* ballot** (all lines equal, none blank: `0,0,0` or `5,5,5`). Like case 2 it voices no preference between anyone — but it's built out of case-1 scores, and the two tabulators in these materials file it on opposite sides of the line:
+
+- **BetterVoting** classifies any all-equal ballot as a whole-ballot abstention too and sets it aside with the blanks (its [#884 policy](https://github.com/Equal-Vote/bettervoting/issues/884)) — the thinking: don't pad every candidate's total with a ballot that voiced no opinion.
+- **The Larry Hastings engine** marks only truly-blank ballots as abstentions — the thinking: an explicit score is a real vote (an all-`0` ballot *rejects the field*, an all-`5` ballot *endorses it*), so a flat-but-scored ballot stays **cast**. Its stars count in full in the Scoring Round (a `5,5` ballot adds 5 to *each* finalist's total), and in the runoff it files under [Equal Support](../reference/are_equal_score_votes_discounted.md). The [`abstentions` demo](../../02_Examples/cases/cases_pages/abstentions.md) shows the three side by side: the engine notes "1 of 6 ballots is marked as an abstention" — the blank one — while the `5,5` and `0,0` ballots stay in the count.
+
+Either way, **no outcome can change**: an all-equal ballot rates every candidate the same, so counting it moves every total by the identical amount and tips no scoring round and no runoff — the winner is identical under both bookkeepings. What moves is only the *report* (score totals and the abstention count) — see [when the two reports differ — abstentions vs Equal Support](../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md#when-the-two-reports-differ-abstentions-vs-equal-support) for the line-by-line reconciliation.
 
 **3. None of the Above — `c-nota` (an active vote for "reject the field").** "None of the Above" is a real *candidate* on BetterVoting. Scoring it 5 is an **active preference** — a vote *for* the option "none of these should be seated." It competes like any candidate: it can reach the runoff and win (see the [BV215 case](../../03_Criteria/none_of_the_above/bv215_26khr3_nota_wins.md), where it does).
 
@@ -25,6 +32,7 @@ An all-blank ballot removes your weight from the room. A `0,0,0,…,5-for-NOTA` 
 |---|:-:|:-:|:-:|---|---|
 | Bullet / zeros | 5 | 0 | 0 | Full support for Ada, rejects the rest | Cast vote; all scores tallied |
 | Whole-ballot abstention | – | – | – | No preference at all | Set aside as an abstention (turnout only) |
+| Flat scores (all equal) | 3 | 3 | 3 | Cast scores, no preference between anyone | Tabulators split: BV sets it aside as an abstention; LH counts it (Equal Support in the runoff) |
 | Per-candidate abstention | 5 | 1 | – | Scored two, left NOTA blank | Cast vote; blank tallies as 0, ballot still counts |
 | None of the Above | 0 | 0 | 5 | Actively rejects both real candidates | Cast vote; NOTA competes and can win |
 
