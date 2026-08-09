@@ -35,18 +35,6 @@ bv_test_id: BV2173
 bv_election_id: gmfv4c
 bv_results_url: https://bettervoting.com/gmfv4c/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # Edelman (2015) p.213, faithful counts (81 voters; small 1x blocs kept as
 # published — reproduction fidelity beats the count>=6 design rule).
 ballots: |-

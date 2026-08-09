@@ -39,24 +39,8 @@ election_title: "Short human title — what this case shows"
 
 scenario_description: |-
   2–6 lines of plain language: what the election demonstrates, what to look
-  for in the result. Printable (shown when show_description: true, and always
-  included in the _tabulated copy).
-
-# Output options — what the SHORT on-screen report shows. House default below
-# ("less is more"). The saved _tabulated copy always shows maximum detail
-# regardless of these flags, so only turn on the section your case teaches.
-options:
-  show_description: false     # print scenario_description in the on-screen report
-  show_matrix: true           # the Runoff (Preference) Matrix
-  matrix_finalists_only: true # true = finalists only; false = full N×N grid
-  show_condorcet: false       # the [Condorcet Winner] line
-  show_score_counts: false    # per-candidate score-distribution table
-  show_irv: false             # the [Divergence from STAR] RCV-IRV comparison
-  show_runoff_percent: true   # compact 2-line runoff summary (percentages)
-  brief: true                 # collapse repetitive section headers
-  collapse_ballots: true      # group identical ballots ("N × scores");
-                              #   use false when each ballot is a teaching case
-  count_separator: "×"        # glyph between count and ballot: × : x X
+  for in the result. Hidden on screen by default, but always included in the
+  _tabulated copy and on the generated case page.
 
 voting_method: STAR           # see the method table below
 num_winners: 1
@@ -88,20 +72,11 @@ expected_winners:
 # file: <your_file_name>.yaml
 ```
 
-### What those `options:` show (and what "on-screen report" means)
+### What the on-screen report shows (no `options:` needed)
 
-The **on-screen report** is the report the engine **prints on screen** as it tabulates. The `options:` flags only decide *how much of it appears* — they never change the winner or the numbers, and the saved **`_tabulated.txt`** mirror ignores them and always shows everything. So `options:` is purely "what to put on screen for *this* teaching case."
+The **on-screen report** is what the engine **prints on screen** as it tabulates, and its content is decided by the engine's built-in house defaults — **your case file should not set an `options:` block** (they were removed repo-wide 2026-08-09). The defaults show the finalists-only [Preference Matrix](../01_STAR/01_Learn/reporting/reporting_LH/matrix.md) (auto-omitted for multi-winner and 2-candidate races), the compact [self-reconciling runoff line](../01_STAR/01_Learn/the_count/runoff_percentages.md), collapsed ballots, and short headers; the `[Divergence from STAR]` block auto-prints whenever methods disagree. The saved **`_tabulated.txt`** mirror always shows everything — full grid, [Condorcet lines](../01_STAR/01_Learn/reporting/reporting_LH/matrix.md), [score distribution](../01_STAR/01_Learn/reporting/reporting_LH/score_distribution.md), the runoff funnel — and `--full` on the command line puts that same render on screen. Every divergent case across the whole library is auto-catalogued in the [divergence-review ledger](../method_comparisons/divergence_review/INDEX.md).
 
-Each flag, explained with before/after examples:
-
-- **`show_description`** — on-screen report the `scenario_description` prose (off by default; always in `_tabulated`).
-- **`show_matrix` · `matrix_finalists_only` · `show_condorcet`** → the head-to-head **[Preference Matrix](../01_STAR/01_Learn/reporting/reporting_LH/matrix.md)** (`matrix_finalists_only: false` shows the full N×N grid; `true` shows just the two finalists).
-- **`show_score_counts`** → the per-candidate **[score-distribution table](../01_STAR/01_Learn/reporting/reporting_LH/score_distribution.md)** (how many 5s, 4s, … each candidate got).
-- **`show_irv`** → adds the **RCV-IRV** comparison line to the `[Divergence from STAR]` block. Note the block itself is **built-in and auto-prints whenever STAR's winner differs** from Choose-One (Plurality) or Approval — no flag needed; `show_irv` only adds the IRV line. Every divergent case across the whole library is auto-catalogued in the [divergence-review ledger](../method_comparisons/divergence_review/INDEX.md).
-- **`show_runoff_percent`** → the compact [self-reconciling runoff line](../01_STAR/01_Learn/the_count/runoff_percentages.md).
-- **`brief`** → strip the repetitive `[STAR Voting: …]` header prefix — **[with/without](../01_STAR/01_Learn/reporting/reporting_LH/brief.md)**.
-
-Full rundown of the whole block, option by option: **[LH reporting options](../01_STAR/01_Learn/reporting/reporting_LH/options.md)**.
+Display never changes the winner or the numbers. The per-option reference (for the rare deliberate override): **[LH reporting options](../01_STAR/01_Learn/reporting/reporting_LH/options.md)**.
 
 ---
 
@@ -118,7 +93,7 @@ Full rundown of the whole block, option by option: **[LH reporting options](../0
 | `scenario_description` | optional | Printable context — the teaching text (shown only if `show_description: true`; always in `_tabulated`). |
 | `election_description` | BV-backed cases only | The BetterVoting election's own live blurb (results link, agreement note), kept distinct from the teaching text above. Don't use it as a synonym for `scenario_description` — that older usage was normalized away 2026-08. |
 | `video_script` | optional (discouraged) | Free-text authoring note; never shown on screen. Keep it a terse factual note if used at all — **do not** write scripted "SAY / HOW / WHY / POINT OUT / TRANSITION" presenter copy (that style was removed repo-wide, 2026-07-23). |
-| `options` | optional | On-screen display flags (see template comments). The `_tabulated` copy ignores them and always shows everything. |
+| `options` | **don't use** (legal but reserved) | On-screen display overrides. Case files carry none since 2026-08-09 — the engine's defaults are the house style; the key survives for the option-demo files and rare special renders. The `_tabulated` copy ignores it and always shows everything. |
 | `lot_numbers` | optional | Official tie-break (lot) order, highest priority first. |
 | `eligible_voters`, `quorum` | optional | Turnout / minimum-participation reporting. |
 | `blocs` | optional | Named candidate groups for the vote-splitting analysis. |

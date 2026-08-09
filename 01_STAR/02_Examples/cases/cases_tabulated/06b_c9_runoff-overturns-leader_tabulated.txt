@@ -19,17 +19,6 @@ scenario_description: |-
    - Contrast 06a_c9_b3_large-field-equal-support.yaml, where the runoff merely
      CONFIRMS the scoring leader. Same method, two different jobs the runoff does.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

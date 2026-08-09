@@ -28,18 +28,6 @@ bv_test_id: BV2220
 bv_election_id: q8q9m7
 bv_results_url: https://bettervoting.com/q8q9m7/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   Astra, Bolt, Comet, Dune, Echo, Flux
   3, 2, 5, 1, 4, 0

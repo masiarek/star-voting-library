@@ -31,17 +31,6 @@ bv_election_id: khcwm4
 bv_results_url: https://bettervoting.com/khcwm4/results
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   4:Peter>Paul>James
   3:Paul>James>Peter

@@ -44,18 +44,6 @@ num_winners: 1
 
 lot_numbers: [Ana, Bruno, Chloe, Diego]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   7:Ana>Bruno>Chloe>Diego
   8:Bruno>Ana>Chloe>Diego

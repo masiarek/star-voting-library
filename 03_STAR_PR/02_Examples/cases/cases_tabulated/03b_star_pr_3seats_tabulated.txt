@@ -20,17 +20,6 @@ scenario_description: |-
 num_winners: 3
 voting_method: sss
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
   29:5,4,3,2,1,0,0   # Housing > Schools > Parks > Transit > (business)

@@ -35,18 +35,6 @@ scenario_description: |-
   Write-ins were disabled on the BV election on purpose: a single write-in
   would supply the fourth candidate the premise excludes.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 3
 voting_method: Bloc STAR
 

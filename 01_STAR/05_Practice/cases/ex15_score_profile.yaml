@@ -31,18 +31,6 @@ bv_test_id: BV2259
 bv_election_id: tfm64p
 bv_results_url: https://bettervoting.com/tfm64p/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false   # four voters, one row each — the profile IS the lesson
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

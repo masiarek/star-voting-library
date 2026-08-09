@@ -36,18 +36,6 @@ bv_test_id: BV2225
 bv_election_id: ywx39y
 bv_results_url: https://bettervoting.com/ywx39y/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Alex,Blair,Cole
   15:5,1,0   # Alex > Blair > Cole   (Blair a grudging 2nd — scored 1)

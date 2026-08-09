@@ -14,17 +14,6 @@ scenario_description: |-
   votes, different winner, decided entirely by which lot order you follow — the
   argument for deterministic lot numbers (BV #1063). See the lesson md.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 1
 voting_method: STAR
 lot_numbers: [Ada, Ben]   # a deterministic, pre-published order

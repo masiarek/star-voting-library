@@ -17,17 +17,6 @@ bv_election_id: kk2gxj
 bv_results_url: https://bettervoting.com/kk2gxj/results
 voting_method: allocated
 num_winners: 2
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: false
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
 ballots: |-
   Allison,Bill,Carmen,Doug
   5,5,1,0

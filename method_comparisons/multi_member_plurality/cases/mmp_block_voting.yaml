@@ -20,9 +20,6 @@ lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
 bv_test_id: BV2135
 bv_election_id: 3x4vrv
 bv_results_url: https://bettervoting.com/3x4vrv/results
-options:
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Ada,Ben,Cal,Uma,Val,Wren
   6: 1,1,1,0,0,0

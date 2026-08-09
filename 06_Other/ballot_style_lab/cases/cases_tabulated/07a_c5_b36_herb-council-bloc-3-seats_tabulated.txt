@@ -48,18 +48,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit herb_council
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: Bloc STAR
 num_winners: 3
 ballots: |-

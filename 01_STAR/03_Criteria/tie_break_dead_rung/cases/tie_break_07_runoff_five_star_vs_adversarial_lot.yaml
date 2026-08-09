@@ -6,17 +6,6 @@ scenario_description: |-
   Ann has one 5, Ben none, so Ann wins. The lot order deliberately favors
   Ben: the expected winner (Ann) proves five-star outranks the lot.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

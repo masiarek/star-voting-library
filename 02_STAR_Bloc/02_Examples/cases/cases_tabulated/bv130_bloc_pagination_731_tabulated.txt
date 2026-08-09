@@ -19,18 +19,6 @@ scenario_description: |-
   NOTE: do not confuse this with BV130-r2 (election 9ff9jk), a separate 4-ballot
   retest built around a dead-rung lot tie — see bv130r2_dead_rung_bloc.md.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 3
 voting_method: Bloc STAR
 

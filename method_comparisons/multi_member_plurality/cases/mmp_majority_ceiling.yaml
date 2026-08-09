@@ -22,9 +22,6 @@ scenario_description: |-
 voting_method: Plurality
 num_winners: 3
 lot_numbers: [Alice, Bruno, Cleo, Dev, Esme]
-options:
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Alice,Bruno,Cleo,Dev,Esme
   12: 1,1,1,0,0

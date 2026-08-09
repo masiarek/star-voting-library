@@ -13,17 +13,6 @@ scenario_description: |-
   rung shorter, and the lot decides more often than the ladder's length
   suggests. Strange-looking, but perfectly legal ballots.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

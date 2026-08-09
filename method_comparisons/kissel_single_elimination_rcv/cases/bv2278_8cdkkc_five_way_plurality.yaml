@@ -14,17 +14,6 @@ bv_election_id: 8cdkkc
 bv_results_url: https://bettervoting.com/8cdkkc/results
 voting_method: Plurality
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: true       # A wins the pile; C wins every pairing
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 # One mark each: A 306, B 300, C 202, D 183, E 9. A wins with 30.6%.
 ballots: |-
   Count:A,B,C,D,E

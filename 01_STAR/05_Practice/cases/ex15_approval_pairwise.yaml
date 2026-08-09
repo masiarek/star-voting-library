@@ -29,18 +29,6 @@ bv_test_id: BV2258
 bv_election_id: d4v2dh
 bv_results_url: https://bettervoting.com/d4v2dh/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false   # the full pairwise grid is the point
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

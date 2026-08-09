@@ -45,18 +45,6 @@ bv_results_url: https://bettervoting.com/c73pfw/results
 voting_method: STAR
 num_winners: 1
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false   # the full grid IS the lesson — you must see all three pairings
-  show_condorcet: true           # names Ada, and says STAR elected someone else
-  show_score_counts: false
-  show_irv: true                 # RR / IRV / Plurality all elect Ada; STAR is the outlier
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false        # five distinct teaching ballots, one row per voter
-  count_separator: "×"
-
 ballots: |-
   Ada,Ben,Cora
   5,4,4   # loves Ada; Ben and Cora equally acceptable -> Equal Support in the runoff

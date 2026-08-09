@@ -21,18 +21,6 @@ scenario_description: |-
   07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md (see also
   Curriculum 301.9).
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 1
 voting_method: STAR
 

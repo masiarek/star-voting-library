@@ -21,18 +21,6 @@ scenario_description: |-
   LH-only (no BetterVoting election): the winner turns on the lot, and only
   LH's published lot_numbers let a reader derive the result from the file.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 

@@ -8,8 +8,6 @@ scenario_description: >-
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
 lot_numbers: [Ada, Ben, Cara]
-options:
-  show_matrix: true          # show the 3x3 pairwise matrix on screen
 # Cycle: Ada>Ben 5-2, Ben>Cara 5-2, Cara>Ada 4-3.  Every candidate is 1-1.
 #   Tiebreak = total margin: Ada +2, Ben 0, Cara -2  ->  RANKED ROBIN WINNER: Ada.
 #   There is NO Condorcet winner (no one beats both rivals).

@@ -35,9 +35,6 @@ num_winners: 1
 # cycle race drew a DIFFERENT perm ([Anika, Cleo, Beto]) from the same ballots and the
 # same candidates — that is the per-race offset in the seed, working as designed.
 lot_numbers: [Anika, Beto, Cleo]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # Records: all three 0-0-2, Copeland 1, margin +0 — every pair draws 3-3. LH ladder:
 #   Copeland tie -> margin tie -> lot (= BV's perm) -> Anika. BV: tieBreakType "random",
 #   perm [Anika, Beto, Cleo] -> Anika. Same winner, same full order.

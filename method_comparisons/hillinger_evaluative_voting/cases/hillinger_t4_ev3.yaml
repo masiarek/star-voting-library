@@ -30,18 +30,6 @@ paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: true          # the RCV-IRV divergence IS the lesson here
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # Hillinger (2004), Table 4. His orders are abc / bac / cab; his EV-3 rows are
 # (2,1,0) / (1,2,0) / (1,0,2). First choices: Ana 9, Bruno 10, Chloe 11 — so IRV
 # eliminates Ana, the one candidate nobody ranks last.

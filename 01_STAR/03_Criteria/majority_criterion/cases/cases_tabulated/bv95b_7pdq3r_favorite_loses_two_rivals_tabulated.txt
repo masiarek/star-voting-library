@@ -25,18 +25,6 @@ scenario_description: |-
   bv95b_7pdq3r_favorite_loses_two_rivals_bv_export.json. Live:
   https://bettervoting.com/7pdq3r/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 1
 voting_method: STAR
 ballots: |-

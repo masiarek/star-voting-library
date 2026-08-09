@@ -14,12 +14,6 @@ scenario_description: |-
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [Azul, Boggle, Catan, Dominion]
-options:
-  show_description: false
-  show_matrix: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Azul>Boggle>Catan>Dominion
   Azul>Boggle>Catan>Dominion

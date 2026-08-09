@@ -8,17 +8,6 @@ scenario_description: |-
   loser (the non-monotonicity paradox); STAR still elects X. See
   07_Concepts/monotonicity.md.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 paradoxes: [non-monotonicity]
 voting_method: STAR
 num_winners: 1

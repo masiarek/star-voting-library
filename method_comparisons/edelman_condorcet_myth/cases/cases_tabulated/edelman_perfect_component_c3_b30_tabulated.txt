@@ -31,18 +31,6 @@ paradoxes: [condorcet-cycle]
 
 lot_numbers: [Ada, Ben, Cara]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Ada,Ben,Cara
   10:5,2,0   # Ada > Ben > Cara

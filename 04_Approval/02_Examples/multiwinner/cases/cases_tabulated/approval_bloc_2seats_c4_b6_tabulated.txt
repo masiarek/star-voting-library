@@ -19,12 +19,6 @@ scenario_description: |-
   giving the minority its seat; see
   04_Approval/01_Learn/approval_multiwinner.md.
 
-options:
-  show_description: false
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: Approval_Multi_Winner
 num_winners: 2
 

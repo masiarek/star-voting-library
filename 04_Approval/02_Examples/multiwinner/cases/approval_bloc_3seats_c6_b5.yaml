@@ -11,12 +11,6 @@ scenario_description: |-
   and approval_bloc_4seats_c7_b12_lackner_skowron (AV vs PAV on the
   literature's running example).
 
-options:
-  show_description: false
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: Approval_Multi_Winner
 num_winners: 3
 

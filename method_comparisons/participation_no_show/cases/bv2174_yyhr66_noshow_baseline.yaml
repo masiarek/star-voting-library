@@ -28,18 +28,6 @@ bv_test_id: BV2174
 bv_election_id: yyhr66
 bv_results_url: https://bettervoting.com/yyhr66/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:April,Bruno,Celia
   16:5,2,0   # April > Bruno > Celia

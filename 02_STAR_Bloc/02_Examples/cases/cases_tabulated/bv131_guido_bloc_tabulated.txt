@@ -29,18 +29,6 @@ scenario_description: |-
        own round-0 `tieBreakType` is "random". A reader of the summary can't tell
        that seat 1 was a coin toss.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 lot_numbers: [Cand2, Cand1, Cand3]   # BV's drawn order (perm) — reproduces Cand2

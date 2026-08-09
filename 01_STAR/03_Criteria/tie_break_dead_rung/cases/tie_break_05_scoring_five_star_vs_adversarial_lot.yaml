@@ -8,18 +8,6 @@ scenario_description: |-
   rung and went straight to the lot, Cara would advance and ANN would win.
   The expected winner (Ben) therefore proves the rung was consulted.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

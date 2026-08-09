@@ -19,17 +19,6 @@ scenario_description: |-
   hold all nine papers, with the other chapter's members leaving the contest
   blank; a blank scores 0, so every total matches this file exactly.
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Ana,Beto,Cleo

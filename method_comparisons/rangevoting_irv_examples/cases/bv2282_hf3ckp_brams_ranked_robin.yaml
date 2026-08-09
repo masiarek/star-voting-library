@@ -23,13 +23,6 @@ bv_election_id: hf3ckp
 bv_results_url: https://bettervoting.com/hf3ckp/results
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_matrix: true
-  matrix_finalists_only: false
-  show_smith_set: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 
 # Identical ballot block to bv2282_hf3ckp_brams_irv.yaml — if you edit one, edit both.
 # Source profile: Brams (1982), via https://rangevoting.org/rangeVirv.html

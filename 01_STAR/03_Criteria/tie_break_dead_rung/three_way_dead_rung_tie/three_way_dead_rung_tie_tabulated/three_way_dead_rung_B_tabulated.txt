@@ -13,17 +13,6 @@ scenario_description: |-
   (which elects C) — the winner is entirely a function of the lot order, which
   under a random tie-break is a 1-in-3 draw. See the lesson md.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 1
 voting_method: STAR
 lot_numbers: [B, C, A]

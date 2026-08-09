@@ -15,9 +15,6 @@ paradoxes: [clone-teaming, condorcet-cycle]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A, B, C, D, E, F]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # Cycle A>B>C>A (A beats B 22-11, B beats C 23-10, C beats A 21-12); each also
 #   beats D,E,F -> A,B,C tie at 4 wins. Margins: A +101, B +101 (TIE), C +95.
 #   Margin drops C; A-vs-B tie -> lot -> A. (A coin flip between A and B.)

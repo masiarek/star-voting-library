@@ -43,18 +43,6 @@ video_script: |
   that the two elections are genuinely different and only one ballot
   format wrote the difference down.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   A,B
   5,0   # voter 1 — all-in for A

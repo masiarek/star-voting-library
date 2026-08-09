@@ -21,10 +21,6 @@ bv_results_url: https://bettervoting.com/48hjkv/results
 
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
-options:
-  show_matrix: true          # show the 5x5 pairwise (round-robin) matrix on screen
-  matrix_finalists_only: false
-  show_condorcet: true       # the point: there is NO Condorcet winner (a 3-cycle)
 # Pairwise (row beats column): Ava beats Cedric 18-11, Deegan 24-11, Eli 18-17, but
 #   LOSES to Bianca 14-15. Records: Ava 3, Bianca/Cedric/Deegan 2, Eli 1 -> Ranked
 #   Robin winner Ava (most wins), even though no candidate is a Condorcet winner

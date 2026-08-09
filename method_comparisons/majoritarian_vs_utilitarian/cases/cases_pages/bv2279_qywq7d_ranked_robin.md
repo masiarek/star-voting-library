@@ -56,9 +56,8 @@ The count, step by step — the rounds and how the winner is reached:
  Tabulating 3 ballots (ranked ballots).
 
 Ballots:
-   Banana > Orange > Apple
-   Banana > Orange > Apple
-   Orange > Apple > Banana
+     2 × Banana > Orange > Apple
+     1 × Orange > Apple > Banana
 
 Round-Robin — every pair, head-to-head (For – Against):
    Banana  beats Orange   2 – 1

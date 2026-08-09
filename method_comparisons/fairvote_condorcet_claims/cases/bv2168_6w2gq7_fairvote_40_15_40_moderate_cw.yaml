@@ -38,18 +38,6 @@ bv_test_id: BV2168
 bv_election_id: 6w2gq7
 bv_results_url: https://bettervoting.com/6w2gq7/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # 100 voters, FairVote's ranges: Liberal 45 (40-50%), Moderate 12 (10-15%),
 # Conservative 43 (40-50%). Moderate is everyone's acceptable second choice;
 # the 12 Moderate-first voters split evenly toward each pole.

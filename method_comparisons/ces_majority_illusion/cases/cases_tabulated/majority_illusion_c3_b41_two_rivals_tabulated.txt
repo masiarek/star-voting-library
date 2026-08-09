@@ -37,18 +37,6 @@ video_script: |
   the majority criterion" is true and why "it takes two supported rivals"
   is the part that has to be said in the same breath.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Alice,Brian,Colin
   21:5,4,3

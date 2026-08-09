@@ -19,18 +19,6 @@ scenario_description: |-
   This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
   Original 0–9 video scores mapped to 0–5: 0→0, 1→1, 4→2, 5→3, 8→4, 9→5.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

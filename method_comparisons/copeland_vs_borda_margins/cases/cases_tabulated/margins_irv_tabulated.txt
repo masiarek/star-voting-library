@@ -11,17 +11,6 @@ bv_election_id: kdjjkq
 bv_results_url: https://bettervoting.com/kdjjkq/results
 voting_method: IRV
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Almond>Berry>Cocoa
   Almond>Berry>Cocoa

@@ -36,18 +36,6 @@ scenario_description: |-
   sincere favorite of more than half the room, and "the majority should win"
   is a serious position, not a mistake. See the claim-check page for both sides.
 
-options:
-  show_description: false   # show the scenario context on screen (study/reference)
-  show_matrix: true   # show the Runoff (Preference) Matrix
-  matrix_finalists_only: false   # full N×N grid — Celia's two head-to-heads are the lesson
-  show_condorcet: true   # Celia is the Condorcet winner despite Alma's majority
-  show_score_counts: false   # show the per-candidate [Score Distribution] table
-  show_irv: true   # RCV-IRV diverges — Alma wins on a first-round majority
-  show_runoff_percent: true   # the 49 / 48 / 3-Equal-Support split is the whole point
-  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
-  collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
-  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
-
 voting_method: STAR
 num_winners: 1
 

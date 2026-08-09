@@ -19,9 +19,6 @@ paradoxes: [clone-teaming]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A1, A2, B, C, D, E, F]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # A1 & C tie at 5 wins. LH: margin A1 +134 > C +104 -> A1 (teaming succeeds).
 #   BV: 2-way head-to-head, C beats A1 21-12 -> C (teaming fails). Deterministic
 #   on BOTH engines, opposite winners.

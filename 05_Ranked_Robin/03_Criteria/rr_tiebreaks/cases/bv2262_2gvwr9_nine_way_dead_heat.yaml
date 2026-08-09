@@ -37,9 +37,6 @@ num_winners: 1
 # shuffle — Boris is 2nd in the candidate list and 1st here, Alice drops to 6th — so
 # matching BV's winner is a genuine test rather than an artifact of list order.
 lot_numbers: [Boris, Felix, Greta, Dmitri, Carmen, Alice, Ivan, Elena, Hugo]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # Records: all nine 4-4-0, Copeland 4, margin +0. LH ladder: Copeland tie -> margin
 #   tie -> lot (= BV's perm) -> Boris. BV: tieBreakType "random", perm as above ->
 #   Boris. pref_voting's independent Copeland returns the nine-way leader set and

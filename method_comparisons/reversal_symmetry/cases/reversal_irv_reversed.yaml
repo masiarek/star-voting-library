@@ -10,12 +10,6 @@ scenario_description: |-
 paradoxes: [condorcet-cycle]
 voting_method: RCV_IRV
 num_winners: 1
-options:
-  show_description: false
-  show_irv: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   9:A>C>B
   8:C>B>A

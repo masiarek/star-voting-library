@@ -36,17 +36,6 @@ scenario_description: |-
 num_winners: 1
 voting_method: STAR
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 # Option 1, Option 2.  `&` = candidate abstention (BV null / left blank).
 ballots: |-
   Option 1,Option 2

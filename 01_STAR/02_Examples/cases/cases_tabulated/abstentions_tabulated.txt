@@ -13,17 +13,6 @@ scenario_description: |-
   (show_runoff_percent) reconciles 5 cast = 3 decided + 2 Equal Support, so
   the percentages never look like votes went missing.
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: false
-  show_runoff_percent: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Dog,Cat

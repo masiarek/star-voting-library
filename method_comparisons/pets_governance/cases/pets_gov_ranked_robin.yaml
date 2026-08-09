@@ -13,8 +13,6 @@ bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]
-options:
-  show_matrix: true
 ballots: |-
   13:Dog>Cat>Fish>Bird>Rabbit>Hamster
   9:Bird>Rabbit>Hamster>Fish>Cat>Dog

@@ -16,18 +16,6 @@ scenario_description: |-
   BetterVoting template: https://bettervoting.com/p9gwc3/vote
   This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: true    # print the [Divergence from STAR] RCV-IRV comparison
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false   # each voter is part of the story
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

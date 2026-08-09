@@ -10,9 +10,6 @@ scenario_description: >-
   answer is read straight off the same pairwise matrix.
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_matrix: true          # the full pairwise grid IS the lesson here
-  show_smith_set: true       # no Condorcet winner: the Smith set is all three
 # Cycle construction (see README): with blocs 12 / 6 / 14 the pairwise margins are
 #   Ana  beats Bruno  by 20      Bruno's only loss  = 20
 #   Bruno beats Celia by  4      Celia's only loss  =  4

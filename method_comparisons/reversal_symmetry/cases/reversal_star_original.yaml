@@ -10,16 +10,6 @@ scenario_description: |-
 paradoxes: [condorcet-cycle]
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:A,B,C
   9:0,5,3

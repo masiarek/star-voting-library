@@ -25,17 +25,6 @@ num_winners: 1
 bv_test_id: BV2232
 bv_election_id: 24b623
 bv_results_url: https://bettervoting.com/24b623/results
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Berkey,Harper,Rieger
   35:5,3,1   # Berkey base — honest

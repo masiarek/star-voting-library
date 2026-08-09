@@ -14,17 +14,6 @@ bv_results_url: https://bettervoting.com/pcttmr/results
 paradoxes: [majority-failure]
 voting_method: Approval
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 # Approval sets: 51×{Amos,Bella} (top two of Amos>Bella>Chad); 49×{Bella,Chad}
 # (top two of both 48×Bella>Chad>Amos and 1×Chad>Bella>Amos — same set).
 ballots: |-

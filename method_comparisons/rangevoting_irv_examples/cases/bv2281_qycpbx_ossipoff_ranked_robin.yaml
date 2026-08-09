@@ -26,13 +26,6 @@ bv_election_id: qycpbx
 bv_results_url: https://bettervoting.com/qycpbx/results
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_matrix: true
-  matrix_finalists_only: false
-  show_smith_set: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 
 # Identical ballot block to bv2281_qycpbx_ossipoff_irv.yaml — if you
 # edit one, edit both. Source: https://rangevoting.org/rangeVirv.html section

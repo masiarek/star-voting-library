@@ -27,8 +27,6 @@ voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [Alice, Bruno, Carmen, Dmitri, Elena]
 lh_only_reason: "A pure engine-mechanics illustration of the Copeland half-credit; deterministic and reproducible, but with no BetterVoting election behind it."
-options:
-  show_matrix: true
 ballots: |-
   9:Alice>Elena>Dmitri>Bruno>Carmen
   8:Carmen>Bruno>Alice>Elena>Dmitri

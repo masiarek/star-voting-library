@@ -61,18 +61,6 @@ bv_test_id: BV2275
 bv_election_id: 6mcgkq
 bv_results_url: https://bettervoting.com/6mcgkq/results
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # Same rankings as the lukewarm file; the 12- and 9-voter blocs are the intense ones.
 ballots: |-
   Count:Almond,Berry,Cocoa

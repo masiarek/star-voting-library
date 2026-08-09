@@ -5,17 +5,6 @@ scenario_description: |-
 paradoxes: [pareto, condorcet-winner]
 voting_method: Approval
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
 # Adversarial lot: Beau first, so the 3-3 Aria/Beau approval tie resolves to the
 # Pareto-dominated candidate — the 0.5 branch Felsenthal's text warns about.
 lot_numbers: [Beau, Aria, Cole, Dean]

@@ -23,17 +23,6 @@ scenario_description: |-
   README.md in this folder.
   Live on BetterVoting (Test ID BV2204): https://bettervoting.com/39py93
 voting_method: STV
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 2
 ballots: |-
   6:Angelou>Blake

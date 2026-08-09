@@ -10,17 +10,6 @@ scenario_description: |-
   (With only two candidates the finalist matrix is trivial, so
   show_matrix is off per house style.)
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   A,B

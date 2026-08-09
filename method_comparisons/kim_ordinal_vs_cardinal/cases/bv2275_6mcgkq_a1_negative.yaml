@@ -47,18 +47,6 @@ bv_test_id: BV2275
 bv_election_id: 6mcgkq
 bv_results_url: https://bettervoting.com/6mcgkq/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # (1, A, 0) with A = 1, written x4 on the 0-5 scale: top 4, middle 4, bottom 0.
 ballots: |-
   Count:Almond,Berry,Cocoa

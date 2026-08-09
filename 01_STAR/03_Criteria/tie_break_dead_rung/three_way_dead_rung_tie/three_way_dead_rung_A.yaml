@@ -11,17 +11,6 @@ scenario_description: |-
   winners. A random tie-break (BetterVoting's tieBreakType) would pick one of the
   three; a deterministic published lot fixes it. See the lesson md and BV #1063.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 1
 voting_method: STAR
 lot_numbers: [A, B, C]

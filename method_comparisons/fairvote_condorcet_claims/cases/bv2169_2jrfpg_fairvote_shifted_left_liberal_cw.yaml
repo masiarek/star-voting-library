@@ -29,18 +29,6 @@ bv_test_id: BV2169
 bv_election_id: 2jrfpg
 bv_results_url: https://bettervoting.com/2jrfpg/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # Same 100-voter structure as the matched file, first-choice split shifted to
 # 56/12/32. Liberal holds a first-choice majority, hence is the Condorcet
 # winner by definition.

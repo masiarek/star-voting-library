@@ -30,13 +30,6 @@ paradoxes: [non-monotonicity]
 voting_method: RCV_IRV
 num_winners: 1
 
-options:
-  show_description: false
-  show_irv: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   13319:Engardio>Melgar>Nguyen
   2500:Melgar>Engardio>Nguyen

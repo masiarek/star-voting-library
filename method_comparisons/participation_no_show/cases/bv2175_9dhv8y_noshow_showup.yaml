@@ -32,18 +32,6 @@ bv_test_id: BV2175
 bv_election_id: 9dhv8y
 bv_results_url: https://bettervoting.com/9dhv8y/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:April,Bruno,Celia
   24:5,2,0   # April > Bruno > Celia   (16 + the 8 who showed up)

@@ -16,17 +16,6 @@ scenario_description: |-
   — with RCV-IRV and Ranked Robin races on the same opinions (IRV elects
   Cash even on the honest ballots — the squeeze cameo; RR confirms Bree).
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Ari,Bree,Cash

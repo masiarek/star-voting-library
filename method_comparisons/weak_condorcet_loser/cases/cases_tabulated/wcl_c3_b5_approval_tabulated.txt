@@ -47,17 +47,6 @@ bv_results_url: https://bettervoting.com/c73pfw/results
 voting_method: Approval
 num_winners: 1
 
-options:
-  show_description: false
-  show_matrix: false             # a finalists matrix is a STAR/runoff concept; Approval has no runoff
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: false        # one row per voter, to line up against the score ballots
-  count_separator: "×"
-
 ballots: |-
   Ada,Ben,Cora
   1,1,1   # scored 5,4,4 -> approves all three

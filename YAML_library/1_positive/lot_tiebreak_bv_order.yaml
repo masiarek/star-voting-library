@@ -12,17 +12,6 @@ scenario_description: |-
   lot. That divergence is the point of BetterVoting issue #1063 (deterministic,
   pre-published lot numbers). See 01_STAR/03_Criteria/tie_break_dead_rung/README.md.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 1
 voting_method: STAR
 lot_numbers: [Ben, Ada]   # the order BetterVoting's random draw produced

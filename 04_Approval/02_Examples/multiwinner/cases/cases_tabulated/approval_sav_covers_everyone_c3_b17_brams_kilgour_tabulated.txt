@@ -49,18 +49,6 @@ scenario_description: |-
   representative at all. Two-view page: bv2272_dr6fmg_sav_coverage.md
   Live results: https://bettervoting.com/dr6fmg/results
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: Approval_Multi_Winner
 num_winners: 2
 

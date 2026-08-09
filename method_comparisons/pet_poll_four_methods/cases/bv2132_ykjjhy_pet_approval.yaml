@@ -12,9 +12,6 @@ bv_election_id: ykjjhy
 bv_results_url: https://bettervoting.com/ykjjhy/results
 voting_method: Approval
 num_winners: 1
-options:
-  collapse_ballots: true
-  count_separator: "×"
 # Approval ballots accept only 0/1. Approvals: Dog bloc approves Dog+Cat; the Fish
 # and Cat blocs both approve Cat+Fish -> Cat 22, Fish 13, Dog 9.
 ballots: |-

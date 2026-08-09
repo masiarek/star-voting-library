@@ -10,17 +10,6 @@ scenario_description: >
   misjudged_queue_bury.yaml.
 voting_method: allocated
 num_winners: 2
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Amara,Boris,Cleo
   12:3,5,0

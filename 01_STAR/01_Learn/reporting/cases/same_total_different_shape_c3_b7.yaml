@@ -28,18 +28,6 @@ scenario_description: |-
 num_winners: 1
 voting_method: STAR
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   Avocado,Bacon,Cheddar
   5,3,0   # used the whole ballot — range 5

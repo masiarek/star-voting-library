@@ -31,17 +31,6 @@ scenario_description: |-
   engine's; BV STV races whose endgame leaves a hopeful standing
   (ywckmg, kcf8vf, 39py93) compute fine.
 voting_method: STV
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 2
 ballots: |-
   5:Austen>Bronte>Camus>Dickens

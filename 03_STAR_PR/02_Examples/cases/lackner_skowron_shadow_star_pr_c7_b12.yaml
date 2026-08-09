@@ -16,18 +16,6 @@ scenario_description: |-
   Approval original: 04_Approval/02_Examples/multiwinner/approval_bloc_4seats_c7_b12_lackner_skowron.yaml
   Majoritarian shadow (Bloc STAR): 02_STAR_Bloc/02_Examples/lackner_skowron_shadow_bloc_star_c7_b12.yaml
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 4
 voting_method: allocated
 lot_numbers: [A, B, C, D, E, F, G]

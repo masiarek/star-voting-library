@@ -12,9 +12,6 @@ bv_election_id: tqfdbg
 bv_results_url: https://bettervoting.com/tqfdbg/results
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
-options:
-  show_matrix: true          # the pairwise grid is the lesson here
-  show_smith_set: true       # Cora is a lone Condorcet winner, not a top cycle
 # Pairwise: Cora beats Ada 67-33, Blake 69-31, Dean 84-16  -> Copeland 3-0.
 # Blake beats Ada 67-33 and Dean 84-16; Ada beats Dean 84-16. No cycle.
 ballots: |-

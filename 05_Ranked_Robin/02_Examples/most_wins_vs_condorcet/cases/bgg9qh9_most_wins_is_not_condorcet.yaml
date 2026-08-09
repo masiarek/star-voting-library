@@ -35,8 +35,6 @@ bv_results_url: https://bettervoting.com/gg9qh9/results
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [Amy, Blake, Cora, Diego, Erin]
-options:
-  show_matrix: true
 ballots: |-
   6:Blake>Erin>Amy>Cora>Diego
   6:Amy>Cora>Erin>Diego>Blake

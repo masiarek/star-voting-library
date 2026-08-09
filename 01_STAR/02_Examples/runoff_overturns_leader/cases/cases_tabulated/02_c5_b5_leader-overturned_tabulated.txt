@@ -10,16 +10,6 @@ scenario_description: |-
   round with 22 stars. But Boston is the broad compromise and the real majority pick:
   three of the five prefer Boston to Austin, so Boston takes the automatic runoff 3-2.
   Chicago, Denver and Erie are genuine options that simply don't reach the final two.
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 voting_method: STAR
 num_winners: 1
 ballots: |-

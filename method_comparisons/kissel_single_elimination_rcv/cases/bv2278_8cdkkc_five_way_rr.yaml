@@ -14,9 +14,6 @@ bv_election_id: 8cdkkc
 bv_results_url: https://bettervoting.com/8cdkkc/results
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
-options:
-  show_matrix: true          # the pairwise grid is the lesson here
-  show_smith_set: true       # C is a lone Condorcet winner, not a top cycle
 # Pairwise: C beats A 511-489, B 700-300, D 808-192, E 991-9  -> Copeland 4-0.
 # A beats B 609-391, D 508-492, E; B beats D 502-498, E; D beats E.
 # No cycle, no pairwise tie: C is the unique Condorcet winner.

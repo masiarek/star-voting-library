@@ -38,18 +38,6 @@ scenario_description: |-
   (Aside: the BV export labels votingMethod "STAR" with num_winners 4 — "Bloc
   STAR" is never written down; #1086.)
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 4
 voting_method: Bloc STAR
 

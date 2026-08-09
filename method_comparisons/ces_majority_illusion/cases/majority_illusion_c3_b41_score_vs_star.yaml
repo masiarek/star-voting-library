@@ -43,18 +43,6 @@ video_script: |
   the majority winner isn't always best. Fair enough — but note which
   method sided with the majority, and it wasn't the ranked one.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Alice,Brian,Colin
   21:5,4,0

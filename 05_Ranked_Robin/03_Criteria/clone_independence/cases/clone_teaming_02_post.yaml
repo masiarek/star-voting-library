@@ -19,9 +19,6 @@ paradoxes: [clone-teaming]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A1, A2, B, C, D, E, F]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # After cloning: A1 and C tie at 5 wins (cycle A1>B>C>A1; C beats A1 21-12).
 #   Margins: A1 +134, C +104 -> A1 wins on MARGIN (no lot). B drops to 4 wins,
 #   no longer a finalist -> teaming succeeded. (BV's head-to-head tiebreak would

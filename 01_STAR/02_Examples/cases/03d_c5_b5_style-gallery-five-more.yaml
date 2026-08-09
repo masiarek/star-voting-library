@@ -19,18 +19,6 @@ scenario_description: |-
   cast a full-strength runoff vote — runoff votes count direction, not distance.
   Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
-options:
-  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
-  show_matrix: true   # show the Runoff (Preference) Matrix
-  matrix_finalists_only: true   # true = finalists only; false = full N×N grid (needs show_matrix)
-  show_condorcet: false   # show the [Condorcet Winner] line
-  show_score_counts: false   # show the per-candidate [Score Distribution] table
-  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
-  show_runoff_percent: true   # compact self-reconciling runoff summary
-  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
-  collapse_ballots: false   # each ballot is a distinct teaching case — one row per voter
-  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
-
 voting_method: STAR   # STAR Voting — single-winner
 num_winners: 1
 

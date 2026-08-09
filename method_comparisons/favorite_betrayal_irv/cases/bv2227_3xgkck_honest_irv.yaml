@@ -26,13 +26,6 @@ bv_test_id: BV2227
 bv_election_id: 3xgkck
 bv_results_url: https://bettervoting.com/3xgkck/results
 
-options:
-  show_description: false
-  show_irv: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   12:Left>Center>Right
   5:Center>Right>Left

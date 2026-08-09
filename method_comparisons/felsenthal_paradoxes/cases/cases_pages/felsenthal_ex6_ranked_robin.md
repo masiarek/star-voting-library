@@ -34,9 +34,9 @@ The count, step by step — the rounds and how the winner is reached:
  Tabulating 3 ballots (ranked ballots).
 
 Ballots:
-   Aria > Beau > Cole > Dean
-   Cole > Aria > Beau > Dean
-   Dean > Aria > Beau > Cole
+     1 × Aria > Beau > Cole > Dean
+     1 × Cole > Aria > Beau > Dean
+     1 × Dean > Aria > Beau > Cole
 
 Round-Robin — every pair, head-to-head (For – Against):
    Aria  beats Beau   3 – 0

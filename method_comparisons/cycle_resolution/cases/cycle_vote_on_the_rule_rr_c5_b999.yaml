@@ -52,19 +52,6 @@ num_winners: 1
 
 lot_numbers: [Ranked Pairs, Schulze Method, Minimax, Copeland's Rule, Flip a Coin]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  show_smith_set: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # The full 999-ballot CVR collapsed to 65 weighted blocs — identical to the
 # companion IRV file. Clean data: no overvotes, skipped ranks, or equal
 # rankings.

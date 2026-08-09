@@ -25,17 +25,6 @@ scenario_description: |-
   — one election, both races (Bloc STAR + STAR-PR); BV agrees on both
   seat pairs.
 voting_method: Bloc STAR
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 2
 ballots: |-
   Asa,Bram,Cleo,Dane

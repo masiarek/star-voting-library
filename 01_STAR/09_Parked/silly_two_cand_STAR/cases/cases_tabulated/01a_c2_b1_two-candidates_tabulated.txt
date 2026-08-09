@@ -36,17 +36,6 @@ ballots: |-
   Chocolate,Vanilla
           5,      3       # Caroline — Chocolate (5) over Vanilla (3)
 
-options:
-  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
-  show_matrix: false             # as little noise as possible
-  matrix_finalists_only: false   # as little noise as possible
-  show_score_counts: false
-  show_condorcet: false   # show the [Condorcet Winner] line
-  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
-  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
-  collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
-  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
-
 expected_winners:
   - Chocolate
 

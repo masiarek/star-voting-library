@@ -27,16 +27,6 @@ scenario_description: |-
 num_winners: 1
 voting_method: Plurality
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 # Approve, Reject.  `&` = candidate abstention (BV null / left blank).
 ballots: |-
   Approve,Reject

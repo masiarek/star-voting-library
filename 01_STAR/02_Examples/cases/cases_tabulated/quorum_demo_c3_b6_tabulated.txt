@@ -23,18 +23,6 @@ num_winners: 1
 eligible_voters: 10   # the electorate (aliases: electorate / registered_voters)
 # quorum omitted -> default = majority (>50%) of eligible voters = at least 6.
 
-options:
-  show_description: false
-  show_matrix: false   # the story here is quorum + the runoff line, not the matrix
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false   # one row per voter — the blank ballot is the point
-  count_separator: "×"
-
 ballots: |-
   Anna, Ben, Cara
   5, 0, 0

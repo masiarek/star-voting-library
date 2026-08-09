@@ -6,17 +6,6 @@ scenario_description: |-
   lot (Ben). A rung can run, count real votes, and still decide nothing.
   Compare case 03 (rung separates) and case 04 (rung dead).
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

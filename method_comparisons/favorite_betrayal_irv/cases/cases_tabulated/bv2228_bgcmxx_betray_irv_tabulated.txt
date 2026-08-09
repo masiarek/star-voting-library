@@ -32,13 +32,6 @@ bv_test_id: BV2228
 bv_election_id: bgcmxx
 bv_results_url: https://bettervoting.com/bgcmxx/results
 
-options:
-  show_description: false
-  show_irv: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   10:Left>Center>Right
   6:Center>Left>Right

@@ -38,9 +38,6 @@ num_winners: 1
 # races elect Anika; what differs is the recorded RUNNER-UP order, which the export
 # publishes just as explicitly.
 lot_numbers: [Anika, Cleo, Beto]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # Records: all three 1-1-0, Copeland 1, margin +0 — Anika>Beto, Beto>Cleo, Cleo>Anika,
 #   all 4-2. LH ladder: Copeland tie -> margin tie -> lot (= BV's perm) -> Anika.
 #   BV: tieBreakType "random", perm [Anika, Cleo, Beto] -> Anika. Same winner, same

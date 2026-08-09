@@ -17,17 +17,6 @@ bv_election_id: tqfdbg
 bv_results_url: https://bettervoting.com/tqfdbg/results
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: true       # Cora is the Condorcet winner the top-two model drops
-  show_score_counts: false
-  show_irv: true             # the divergence from RCV-IRV is the lesson
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 # Scores: Ada 216, Blake 280, Cora 356, Dean 80  -> finalists Cora and Blake.
 # Runoff: Cora 69, Blake 31.
 ballots: |-

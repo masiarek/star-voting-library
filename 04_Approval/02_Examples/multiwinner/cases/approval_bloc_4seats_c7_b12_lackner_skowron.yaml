@@ -24,12 +24,6 @@ scenario_description: |-
   committee. Two-view page: bv27_jt6r76_lackner_approval_committee.md.
   Live results: https://bettervoting.com/jt6r76/results
 
-options:
-  show_description: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: Approval_Multi_Winner
 num_winners: 4
 

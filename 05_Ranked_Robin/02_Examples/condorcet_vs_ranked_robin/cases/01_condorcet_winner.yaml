@@ -6,8 +6,6 @@ scenario_description: >-
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
 lot_numbers: [Ada, Ben, Cara]
-options:
-  show_matrix: true          # show the full pairwise matrix on screen
 # Pairwise: Ada beats Ben 3-2 and beats Cara 5-0; Ben beats Cara 5-0.
 #   Win-loss: Ada 2-0, Ben 1-1, Cara 0-2  ->  RANKED ROBIN WINNER: Ada (= Condorcet winner).
 # Companion file: 02_cycle_no_condorcet.yaml (same three candidates, no Condorcet winner).

@@ -30,18 +30,6 @@ bv_test_id: BV2227
 bv_election_id: 3xgkck
 bv_results_url: https://bettervoting.com/3xgkck/results
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Left,Center,Right
   12:5,3,0   # Left > Center > Right   (honest — favorite 5, compromise 3, worst 0)

@@ -20,18 +20,6 @@ scenario_description: |-
   A pre-published lot makes which of the two happens reproducible; a random draw
   (as in STAR Vote 2.0) does not, and picks different winners on each run.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 4
 voting_method: Bloc STAR
 lot_numbers: [First, Condorcet Loser, Second, Third, Fourth]   # pre-published permutation

@@ -37,18 +37,6 @@ scenario_description: |-
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit graders_divide
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 ballots: |-

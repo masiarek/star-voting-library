@@ -61,85 +61,57 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
 ---
 
 ## Repo conventions (so output stays consistent)
-- **YAML `options:` booleans → `true` / `false`** (parser also accepts t/f/y/n/etc.,
-  but house style is the long form).
-- **On-screen report `options:` — house default is "less is more."** The on-screen
-  on-screen report should be minimal; the saved `_tabulated` copy already renders **maximum
-  info automatically** (engine forces every analysis on, regardless of the file's
-  options — don't hand-set that). Single-winner default block:
-
-  ```
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: true
-    show_condorcet: false
-    show_score_counts: false
-    show_irv: false
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
-  ```
-
-  (`show_runoff_percent: true` is in the *minimal* block on purpose — the
-  self-reconciling runoff line is a compact, broadly-useful two-line summary, worth showing on
-  almost any single-winner result. The *engine* default remains `false`; this is the
-  house recommendation for YAML files.)
-
-  **Multi-winner** uses the same block but with `show_matrix: false` and
-  `matrix_finalists_only: false` (a "Top 2 Finalist" matrix is a single-winner
-  concept and prints misleadingly for PR/Bloc). **Exceptions:** the options-demo
-  files (`04b_…display-options-all`, `display_options_demo`, and the engine's
-  `options_examples` reference) keep their illustrative
-  all-on settings — they exist to showcase options; and **two-candidate intro
-  files set `show_matrix: false`** — with only two candidates the finalists matrix
-  is trivial (it just echoes the runoff). The `[Divergence from STAR]`
-  block prints whenever methods differ regardless of these flags, so comparative
-  demos keep their punch on screen even with the minimal block.
-- **On-screen report options = the minimal block + only the section(s) the doc teaches.** When a
-  file backs a teaching/reporting `.md` whose embedded on-screen report should show a specific
-  section, flip ON *just that flag* (keep everything else minimal; the `_tabulated`
-  mirror still forces full detail). `show_runoff_percent` is already on in the minimal
-  block, so the per-doc triggers are the heavier sections:
-  - score-distribution shape → `show_score_counts: true`
-  - full pairwise grid / Condorcet → `matrix_finalists_only: false` and/or `show_condorcet: true`
-  - RCV-IRV divergence → `show_irv: true`
-  - a plain result with no section to feature → leave the minimal block as-is
-    (which already shows the runoff line).
-
-  Ballot display: **`collapse_ballots: false`** when each ballot is a distinct teaching
-  case (small, one row per voter — e.g. the abstention cases); **`true`** otherwise.
-  Example: `flat_scores_abstention_c3_b8` teaches abstentions + score distribution +
-  the runoff denominator, so it sets `show_score_counts: true` and
-  `show_runoff_percent: true` but leaves `show_condorcet: false` /
-  `matrix_finalists_only: true` (the full matrix/Condorcet is the matrix page's job and
-  lives in the mirror).
-- **`show_description`**: per the block above, default `false` (clean demo —
-  description stays in the file and the always-full `_tabulated` copy, hidden on
-  screen). Flip to `true` only for a deliberate study/reference render.
-- **`show_runoff_percent`**: *engine* default `false`, but **on in the house minimal
-  block** — it's a compact, broadly-useful two-line summary, worth showing on almost any
-  single-winner result. When `true`, prints a two-line, **self-reconciling** runoff
-  summary under the Automatic Runoff winner — e.g.
-  `Voters with a preference: 363 of 461 (98 Equal Support). Dog 190 (52%) vs Cat 173
-  (48%); majority = 182` — using the **decided-voters** denominator (Equal Support
-  excluded) but stating it against the total ballots with the Equal Support gap named
-  inline, so the denominator never has to be inferred. The always-full `_tabulated`
-  copy forces it on AND expands it into a "Runoff math" funnel (`461 − 98 = 363`,
-  majority) — don't hand-set that. The wording/funnel are locked by
+- **Case files carry NO `options:` block (settled 2026-08-09).** The display flags
+  were maintainer conveniences that had accreted into ~10 lines of noise per file —
+  a quarter of a median case file — and a case file should read as a plain-text
+  election scenario: title → description → method → ballots → expected winners.
+  The engine's own defaults ARE the house on-screen style now — one
+  `DEFAULT_OPTIONS` dict in `starvote_larry_hastings.py`: finalists matrix ON, the
+  self-reconciling runoff summary ON, description / Condorcet / score-distribution
+  OFF, ballots collapsed with `×`. Two auto-gates cover what files used to
+  hand-set: the matrix switches itself off for **multi-winner** races (a "Top 2
+  Finalist" grid is a single-winner concept, misleading for PR/Bloc) and for
+  **2-candidate** races (it would just echo the runoff); and **Ranked Robin prints
+  its pairwise table by default** (the round-robin table IS the method; the Smith
+  block stays a separate opt-in). The saved `_tabulated` copy still renders
+  **maximum info automatically**, and the **`--full`** CLI flag puts that same
+  everything-on render on screen. Consequences:
+  - **Don't add an `options:` block to a case file.** A lesson that wants a heavier
+    section on the page (score distribution, full grid, Smith set) links the case's
+    generated page / `_tabulated` mirror — which force everything on — or pastes
+    from a `--full` run; it does not flip flags in the yaml.
+  - A file MAY still set `options:` to override any default. That is **reserved**
+    for the option-demo files (`04b_…display-options-all`, `display_options_demo`,
+    and the engine's `options_examples.yaml` reference — they exist to showcase the
+    feature) and rare deliberate special renders. When one is used, booleans are
+    the long `true` / `false` form (the parser also accepts t/f/y/n/etc.).
+  - The `[Divergence from STAR]` block prints whenever methods differ, regardless
+    of options — comparative demos keep their punch with no flags at all.
+  - History: before 2026-08-09 every case file restated a 10-line "house minimal
+    block" (501 files, ~5,000 lines); the sweep deleted them all, and the render
+    diffs were machine-verified (no winner line changed). `show_irv` was already
+    vestigial — the divergence block always prints — and survives only so old
+    blocks still parse. The defaults + auto-gates are locked by
+    `tests/test_default_render.py`.
+- **`show_runoff_percent`** (engine default **`true`** since 2026-08-09): prints the
+  two-line, **self-reconciling** runoff summary under the Automatic Runoff winner —
+  e.g. `Voters with a preference: 363 of 461 (98 Equal Support). Dog 190 (52%) vs
+  Cat 173 (48%); majority = 182` — using the **decided-voters** denominator (Equal
+  Support excluded) but stating it against the total ballots with the Equal Support
+  gap named inline, so the denominator never has to be inferred. The always-full
+  `_tabulated` copy expands it into a "Runoff math" funnel (`461 − 98 = 363`,
+  majority) — don't hand-set that. The wording/funnel/default are locked by
   `tests/test_runoff_percent.py`; change them together.
-- **`show_smith_set`** (Ranked Robin only): same contract as `show_runoff_percent` —
-  engine default `false` on screen, **always forced on in the `_tabulated` mirror**.
-  Prints the **Smith set** (the smallest group whose every member beats every
-  candidate outside it), says whether that's a lone Condorcet winner or a top cycle,
-  and whether the winner landed inside it. Deliberately separate from `show_matrix`
-  so a file can opt the echo into one without the other, and **not** in the house
-  minimal block (the mirror already carries it). **RCV-IRV mirrors get the same block
-  automatically** (no option — the IRV path has no options plumbing). The two uses are
-  opposite: RR is Smith-efficient so the block is descriptive; RCV-IRV is not, so it's
-  a genuine pass/fail. Wording locked by `tests/test_smith_set.py`; concept page
-  `07_Concepts/topics/smith_set.md`.
+- **`show_smith_set`** (Ranked Robin only): still **opt-in on screen** (engine
+  default `false`) and **always forced on in the `_tabulated` mirror** —
+  deliberately NOT dragged along by RR's default-on matrix (a dedicated `smith`
+  gate in the RR echo keeps them separate). Prints the **Smith set** (the smallest
+  group whose every member beats every candidate outside it), says whether that's a
+  lone Condorcet winner or a top cycle, and whether the winner landed inside it.
+  **RCV-IRV mirrors get the same block automatically** (no option — the IRV path
+  has no options plumbing). The two uses are opposite: RR is Smith-efficient so the
+  block is descriptive; RCV-IRV is not, so it's a genuine pass/fail. Wording locked
+  by `tests/test_smith_set.py`; concept page `07_Concepts/topics/smith_set.md`.
 - **Voter counts — keep examples SMALL.** Default to the *fewest ballots* that
   make the point; prefer **individual ballots** (one row per voter, a handful of
   them) over large weighted blocs. A 3-voter example that shows the effect beats a
@@ -598,9 +570,6 @@ real one (which is exactly how 8 files drifted before 2026-08-07).
 election_title: Scratch (delete me)
 voting_method: STAR
 num_winners: 1
-options:            # house minimal block — see "Repo conventions"
-  show_runoff_percent: true
-  brief: true
 ballots: |-
   Ada,Ben,Cara
   5,2,0
@@ -608,6 +577,9 @@ ballots: |-
   2,5,4
 expected_winners: [Ben]
 ```
+
+(No `options:` block — the engine's defaults are the house style; add `--full`
+to the run for the everything-on render.)
 
 Tabulate with `.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py trash_delete.yaml`.
 The run writes `_tabulated` mirrors into a sibling `<parentdir>_tabulated/` folder — for a

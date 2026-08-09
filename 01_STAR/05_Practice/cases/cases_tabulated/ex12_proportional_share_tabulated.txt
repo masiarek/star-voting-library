@@ -27,17 +27,6 @@ scenario_description: |-
   STAR_PR election, e.g. the older jwxr3j; the underlying scores here
   are a clean 30, then 20/16/4.)
 voting_method: allocated
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 2
 ballots: |-
   Asa,Bram,Cleo,Dane

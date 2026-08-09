@@ -40,18 +40,6 @@ video_script: |
   says nothing. Hold that against the STAR race's scoring round, where his 0
   was the whole reason Orange led.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   Banana>Orange>Apple   # Boy 1
   Banana>Orange>Apple   # Boy 2

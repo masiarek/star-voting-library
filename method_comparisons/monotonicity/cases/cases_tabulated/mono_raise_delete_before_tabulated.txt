@@ -35,13 +35,6 @@ ballots: |-
   9: 3,2,5
   9: 0,2,3
 
-options:
-  show_matrix: true
-  matrix_finalists_only: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-
 expected_winners:
   - X
 

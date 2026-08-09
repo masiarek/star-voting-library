@@ -25,17 +25,6 @@ num_winners: 1
 bv_test_id: BV2229
 bv_election_id: 7j2bqf
 bv_results_url: https://bettervoting.com/7j2bqf/results
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Macron,LePen,Fillon,Melenchon
   26:5,0,3,3   # Macron base

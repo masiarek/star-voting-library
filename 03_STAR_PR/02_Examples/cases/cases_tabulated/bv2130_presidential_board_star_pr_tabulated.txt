@@ -19,17 +19,6 @@ scenario_description: |-
   "random" — so seat 7 is either a genuine allocated-implementation difference or
   a near-tie BV broke by chance. Flagged as an LH-vs-BV divergence to investigate.
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 7
 voting_method: allocated
 ballots: |-

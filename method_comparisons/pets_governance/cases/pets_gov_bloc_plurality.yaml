@@ -14,9 +14,6 @@ bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: Plurality
 num_winners: 2
 lot_numbers: [Dog, Cat, Fish, Bird, Rabbit, Hamster]
-options:
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Dog,Cat,Fish,Bird,Rabbit,Hamster
   13: 1,0,0,0,0,0

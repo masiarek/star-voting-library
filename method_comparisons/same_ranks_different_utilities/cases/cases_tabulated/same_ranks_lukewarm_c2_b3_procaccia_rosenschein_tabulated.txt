@@ -54,18 +54,6 @@ video_script: |
   anyway, on purpose, because two candidates plus a majority is the one
   case where nobody argues.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   A,B
   3,2   # voter 1 — mildly prefers A

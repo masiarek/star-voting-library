@@ -16,9 +16,6 @@ num_winners: 3
 lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
 # Reproducible on BV: SNTV is choose-one, top-N — BV-confirmed as the BV2134
 # governance Bloc Plurality race. (Also = Approval + num_winners with 1 mark each.)
-options:
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Ada,Ben,Cal,Uma,Val,Wren
   2: 1,0,0,0,0,0

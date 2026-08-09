@@ -21,17 +21,6 @@ scenario_description: |-
   Lesson: 07_Concepts/topics/plurality.md · README.md
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Ada,Ben,Cleo
   34:5,0,4

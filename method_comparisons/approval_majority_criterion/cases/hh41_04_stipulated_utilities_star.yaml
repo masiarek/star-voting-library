@@ -38,18 +38,6 @@ voting_method: STAR
 num_winners: 1
 paradoxes: [condorcet-winner]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:A,B,C
   60:5,3,0   # strongly prefer A; B barely acceptable (at the approval line)

@@ -66,19 +66,6 @@ lot_numbers: [Jacob Frey, Betsy Hodges, Tom Hoch, Raymond Dehn, Nekima Levy-Poun
               Christopher Zimmerman, Theron Preston Washington,
               Undeclared Write-ins]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  show_smith_set: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # Identical ballots to the companion IRV file — 2,479 distinct rankings.
 ballots: |-
   4636:Jacob Frey

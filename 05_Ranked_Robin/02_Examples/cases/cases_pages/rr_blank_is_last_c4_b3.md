@@ -46,9 +46,9 @@ The count, step by step — the rounds and how the winner is reached:
  Tabulating 3 ballots (ranked ballots).
 
 Ballots:
-   Ada > Ben > Cara > Dan
-   Ada > Cara > Ben
-   Ben > Ada > Cara
+     1 × Ada > Ben > Cara > Dan
+     1 × Ada > Cara > Ben
+     1 × Ben > Ada > Cara
 
 Round-Robin — every pair, head-to-head (For – Against):
    Ada   beats Ben    2 – 1

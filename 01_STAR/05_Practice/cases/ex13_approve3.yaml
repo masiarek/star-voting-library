@@ -14,17 +14,6 @@ scenario_description: |-
   Live on BetterVoting (Test ID BV2200): https://bettervoting.com/qdtqf2/results
   — this is the "approve 3 and up" race; BV agrees: Ash 7.
 voting_method: Approval
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Ash,Beck,Cora

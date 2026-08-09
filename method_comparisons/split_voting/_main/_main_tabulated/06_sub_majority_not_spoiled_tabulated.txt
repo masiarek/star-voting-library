@@ -26,18 +26,6 @@ scenario_description: |-
   Compare 01_political_left_split.yaml, where the same 41%-ish arithmetic DOES
   hide a flipped result.
 
-options:
-  show_description: false   # show the scenario context on screen (study/reference)
-  show_matrix: true   # show the Runoff (Preference) Matrix
-  matrix_finalists_only: false   # full N×N grid — the lesson is that Aspen beats BOTH rivals
-  show_condorcet: true   # the sub-majority winner IS the Condorcet winner
-  show_score_counts: false   # show the per-candidate [Score Distribution] table
-  show_irv: true   # [Divergence from STAR] — silent here, because RCV-IRV agrees (Aspen 18 -> 30)
-  show_runoff_percent: true   # self-reconciling runoff summary
-  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
-  collapse_ballots: true   # true = group identical ballots as "count <sep> scores"
-  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
-
 voting_method: STAR
 num_winners: 1
 

@@ -62,18 +62,6 @@ bv_test_id: BV2105
 bv_election_id: r4dqvd
 bv_results_url: https://bettervoting.com/r4dqvd/results
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true    # the count is the whole point — show the per-score + Abs column
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false    # only 4 ballots, each a distinct teaching case — one row per voter
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 ballots: |-

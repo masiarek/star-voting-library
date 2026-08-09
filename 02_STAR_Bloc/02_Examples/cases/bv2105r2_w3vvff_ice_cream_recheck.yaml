@@ -66,18 +66,6 @@ bv_test_id: BV2105-r2
 bv_election_id: w3vvff
 bv_results_url: https://bettervoting.com/w3vvff/results
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true    # the count is the whole point — show the per-score + Abs column
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false    # only 4 ballots, each a distinct teaching case — one row per voter
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 ballots: |-

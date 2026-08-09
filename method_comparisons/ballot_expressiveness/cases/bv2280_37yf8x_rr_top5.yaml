@@ -37,19 +37,6 @@ bv_results_url: https://bettervoting.com/37yf8x/results
 
 lot_numbers: [Ada, Ben, Cleo, Dev, Emma, Finn, Gus, Hugo, Iris]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_smith_set: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Ben>Cleo>Dev>Ada>Emma    # voter at -0.43
   Gus>Hugo>Iris>Finn>Emma    # voter at +0.60

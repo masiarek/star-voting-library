@@ -28,15 +28,6 @@ scenario_description: >-
   point is the disagreement between two published rules, not a live tally.
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
 ballots: |-
   A>B>C>E>D
   D>C>A>B>E

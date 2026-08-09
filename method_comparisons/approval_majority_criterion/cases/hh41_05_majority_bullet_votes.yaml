@@ -32,17 +32,6 @@ scenario_description: |-
 voting_method: Approval
 num_winners: 1
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:A,B,C
   60:1,0,0   # A > B > C — bullet-votes A

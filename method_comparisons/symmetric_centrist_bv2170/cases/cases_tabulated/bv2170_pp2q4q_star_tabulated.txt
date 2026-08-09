@@ -21,17 +21,6 @@ num_winners: 1
 # lot-decided. Casey is the deterministic winner regardless. lot_numbers pinned to
 # BV's `perm` for this run so LH reproduces the frozen export.
 lot_numbers: [Blake, Casey, Avery]
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Avery,Blake,Casey
   47:5,1,3   # Avery > Casey > Blake  (left pole)

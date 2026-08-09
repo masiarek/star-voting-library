@@ -9,17 +9,6 @@ scenario_description: |-
   Lesson: 01_STAR/01_Learn/the_count/STAR_second_round_FAQ.md
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true      # the score distribution (intense minority vs broad) IS the lesson
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Max,Nora,Cal
   45:5,2,0    # Max's intense base — love Max, mildly prefer Nora to Cal

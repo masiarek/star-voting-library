@@ -37,18 +37,6 @@ num_winners: 1
 
 lot_numbers: [Ana, Bruno, Clara, Diego, Elsa, Felix, Greta]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:Ana,Bruno,Clara,Diego,Elsa,Felix,Greta
   6:5,4,3,3,2,1,0    # bloc at 0

@@ -29,9 +29,6 @@ num_winners: 1
 # Bianca] so LH's lot rung reproduces BV's frozen instance: Ava precedes Bianca ->
 # Ava. (BV's tieBreakType was "random"; this pins the one draw we froze.)
 lot_numbers: [Fabio, Eli, Cedric, Deegan, Ava, Bianca]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # Records: Ava 3-1-1 and Bianca 3-1-1 both tie at Copeland 3.5, both +55 margin,
 #   both 149 against. Cedric/Deegan 2.5, Eli 2, Fabio 1. LH ladder: wins tie ->
 #   margin tie -> lot (perm) -> Ava. BV: random -> Ava (this draw). Equal-Vote

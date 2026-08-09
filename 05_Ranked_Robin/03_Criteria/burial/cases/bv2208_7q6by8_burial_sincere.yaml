@@ -20,9 +20,6 @@ scenario_description: >-
   Live results: https://bettervoting.com/7q6by8/results
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 ballots: |-
   15:Amber>Beryl>Coral>Diamond
   12:Beryl>Amber>Diamond>Coral

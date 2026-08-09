@@ -21,17 +21,6 @@ scenario_description: |-
 
   Deep dive: 07_Concepts/is_rcv_simple.md (the "simple — which half?" point).
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

@@ -14,12 +14,6 @@ scenario_description: |-
   approval election) and method_comparisons/black_curtain (the same five
   voters counted by Approval vs STAR vs RCV-IRV).
 
-options:
-  show_description: false
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: Approval
 num_winners: 1
 

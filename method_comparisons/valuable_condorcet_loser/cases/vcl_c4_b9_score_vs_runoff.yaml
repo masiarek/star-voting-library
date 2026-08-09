@@ -27,18 +27,6 @@ video_script: |
   precisely what a beloved-minority candidate can never pass, no matter
   how much total happiness she represents.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   Amy,Ben,Cora,Dan
   5,0,0,0

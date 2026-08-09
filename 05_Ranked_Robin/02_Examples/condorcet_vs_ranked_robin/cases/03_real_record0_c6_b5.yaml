@@ -6,8 +6,6 @@ scenario_description: >-
 voting_method: rr   # = RCV-RR / Copeland — round-robin on the same score ballots
 num_winners: 1
 lot_numbers: [A, B, C, D, E, F]
-options:
-  show_matrix: true          # the full 6x6 pairwise matrix (busy — the win-loss record is easier to read)
 # Same five score ballots STAR tabulated (STAR winner = B). Ranked Robin reads them
 # pairwise; the win-loss record shows nobody is 5-0 (no Condorcet winner) and B has the
 # best record. Lesson: 05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md

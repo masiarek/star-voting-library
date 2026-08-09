@@ -8,7 +8,6 @@ scenario_description: |-
   cell by cell, to the combined result with no ballot-level recount.
 voting_method: STAR
 num_winners: 1
-options: {show_score_counts: true, show_matrix: true, matrix_finalists_only: false, show_runoff_percent: true}
 expected_winners: [Maple]
 ballots: |-
   Maple, Oak, Pine

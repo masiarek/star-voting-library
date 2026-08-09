@@ -9,17 +9,6 @@ scenario_description: |-
 paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "x"
 ballots: |-
   Count:A,B,C,D,E
   257:0,5,3,4,1
@@ -65,11 +54,11 @@ Legend: For - Equal Support - Against
 --- STAR Voting Method (single winner) ---
 [STAR Voting]
  Tabulating 599 ballots.
-Count x A,B,C,D,E
-  257 x 0,5,3,4,1
-  230 x 5,0,1,0,3
-   80 x 3,2,5,0,5
-   32 x 5,0,0,1,1
+Count × A,B,C,D,E
+  257 × 0,5,3,4,1
+  230 × 5,0,1,0,3
+   80 × 3,2,5,0,5
+   32 × 5,0,0,1,1
 
 [Score Distribution] (how many ballots gave each star rating)
                       Score

@@ -16,18 +16,6 @@ scenario_description: |-
   Bloc tie probes vary from. Bloc is majoritarian: a cohesive majority can take
   every seat.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 ballots: |-

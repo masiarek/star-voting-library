@@ -14,17 +14,6 @@ bv_election_id: 8cdkkc
 bv_results_url: https://bettervoting.com/8cdkkc/results
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: true       # the Condorcet winner is what the elimination counts miss
-  show_score_counts: false
-  show_irv: true             # the divergence from RCV-IRV is the lesson
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 # Scores: A 2695, B 1884, C 3221, D 1557, E 45  -> finalists C and A.
 # Runoff: C 511, A 489 — the same head-to-head the pairwise matrix shows.
 ballots: |-

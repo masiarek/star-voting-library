@@ -15,17 +15,6 @@ scenario_description: >
   seat to the voter who has nobody yet.
 voting_method: bloc
 num_winners: 2
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
 ballots: |-
   Ana,Ben,Cleo
   0,0,1   # Voter 1 — likes only Cleo, and only mildly

@@ -36,18 +36,6 @@ scenario_description: |-
   Original video source: https://www.youtube.com/watch?v=5_ZMruwOZgw
   See README.md in this folder.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false   # the full pairwise grid IS the lesson
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false   # each voter is part of the story
-  count_separator: "×"
-
 voting_method: STAR
 num_winners: 1
 

@@ -16,17 +16,6 @@ scenario_description: |-
   Half 2 (tactical_max_c3_b9_hedged.yaml) has those four raise Bruno
   3 -> 5 as insurance against Celia, and lose the election because of it.
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Alma,Bruno,Celia

@@ -34,18 +34,6 @@ scenario_description: |-
 voting_method: Approval
 num_winners: 1
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 # Hillinger (2004), Table 3, the AV row: (1,0,0) x3, (0,1,1) x2, (1,0,1) x2.
 # Written one row per voter; collapse_ballots regroups them as the paper does.
 ballots: |-

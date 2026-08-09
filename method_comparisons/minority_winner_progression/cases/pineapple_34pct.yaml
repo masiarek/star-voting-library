@@ -13,16 +13,6 @@ scenario_description: |-
   Next rung adds a topping and the winner's share shrinks. Lesson: README.md
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Pineapple,Anchovy,Mushroom,Cheese
   34:5,0,0,4

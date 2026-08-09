@@ -20,17 +20,6 @@ scenario_description: |-
   Live on BetterVoting (Test ID BV2197): https://bettervoting.com/ggg7hd/results
   — with a Choose-One race (also Alba: two names, one verdict).
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Alba,Brett

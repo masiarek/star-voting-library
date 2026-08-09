@@ -9,8 +9,6 @@ scenario_description: >-
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
 lot_numbers: [Ada, Ben, Cara, Dave]
-options:
-  show_matrix: true          # the pairwise matrix IS the lesson here
 # Cycle: Ada>Ben 5-2, Ben>Cara 5-2, Cara>Ada 4-3; everyone beats Dave 7-0.
 #   Records: Ada 2-1, Ben 2-1, Cara 2-1, Dave 0-3 -> three-way Copeland tie.
 #   Tiebreak = total margin: Ada +9, Ben +7, Cara +5 -> RANKED ROBIN WINNER: Ada.

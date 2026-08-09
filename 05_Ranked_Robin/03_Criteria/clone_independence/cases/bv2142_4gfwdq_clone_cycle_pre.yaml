@@ -18,9 +18,6 @@ paradoxes: [clone-teaming, condorcet-cycle]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A, B, C, D, E, F]
-options:
-  show_matrix: true
-  matrix_finalists_only: false
 # A,B,C cycle, tie at 4 wins. Margins A +101, B +101, C +95. LH: margin drops C,
 #   lot -> A. BV: 3-way tie -> RANDOM -> C (this draw). LH can't elect C (lowest
 #   margin) -> a genuine LH/BV divergence, not just a different lot.

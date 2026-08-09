@@ -33,18 +33,6 @@ scenario_description: |-
   non-reproducible (cf. #1063 / #1417), and BV's top-level tieBreakType is
   reported as "none" even though a seat was decided by the lot.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 3
 voting_method: Bloc STAR
 lot_numbers: [Finn, Ben, Dan, Eve, Ada, Cara]   # BV's drawn order (perm) — reproduces Dan, Ada, Eve

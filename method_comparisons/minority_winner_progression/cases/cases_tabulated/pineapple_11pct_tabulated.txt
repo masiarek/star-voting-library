@@ -17,16 +17,6 @@ scenario_description: |-
   method read the whole ballot. Lesson: README.md
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: true
-  show_condorcet: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Pineapple,Anchovy,Mushroom,Olive,Sausage,Spinach,Jalapeno,Onion,Pepper,Basil,Cheese
   11:5,0,0,0,0,0,0,0,0,0,4

@@ -16,9 +16,6 @@ bv_election_id: kcf8vf
 bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: Approval_Multi_Winner
 num_winners: 2
-options:
-  collapse_ballots: true
-  count_separator: "×"
 # Approval ballots are 0/1 (approve = score>=3 in the parties' scoring).
 ballots: |-
   Dog,Cat,Fish,Bird,Rabbit,Hamster

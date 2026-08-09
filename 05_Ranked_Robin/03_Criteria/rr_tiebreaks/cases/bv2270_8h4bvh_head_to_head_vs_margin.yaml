@@ -47,12 +47,6 @@ num_winners: 1
 # (tieBreakOrder: Cedar 0, Birch 1, Dogwood 2, Alder 3) decides nothing about the winner —
 # it only decides the ROW ORDER on the results page, which is what makes the display defect
 # visible. tieBreakType in the export is "none".
-options:
-  show_matrix: true
-  matrix_finalists_only: false
-  show_smith_set: true
-  brief: true
-  count_separator: "×"
 # Records: Birch 2-1-0 Copeland 2 margin +3; Alder 2-1-0 Copeland 2 margin +1;
 #   Dogwood 1-2-0 Copeland 1 margin -1; Cedar 1-2-0 Copeland 1 margin -3.
 #   Pairwise: Alder>Birch 5-4, Alder>Cedar 5-4, Dogwood>Alder 5-4, Birch>Cedar 6-3,

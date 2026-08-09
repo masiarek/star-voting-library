@@ -21,17 +21,6 @@ num_winners: 1
 bv_test_id: BV2231
 bv_election_id: b4yr3v
 bv_results_url: https://bettervoting.com/b4yr3v/results
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Berkey,Harper,Rieger
   35:5,3,1   # Berkey (moderate) base

@@ -4,17 +4,6 @@ scenario_description: |-
   Lesson: 01_STAR/01_Learn/the_count/STAR_second_round_FAQ.md
 voting_method: STAR
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true      # the near-consensus vs polarizing distribution IS the lesson
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Count:Uma,Rye,Tao
   51:4,5,0    # love Rye, but Uma is a strong 4

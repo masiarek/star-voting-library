@@ -21,18 +21,6 @@ scenario_description: |-
   export: bv2264_j3hqvb_council_before_joiner_bv_export.json.
   Live results: https://bettervoting.com/j3hqvb/results
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 ballots: |-

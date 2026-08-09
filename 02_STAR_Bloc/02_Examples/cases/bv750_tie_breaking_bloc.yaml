@@ -19,18 +19,6 @@ scenario_description: |-
        elects a different pair. The winners are unaffected by the dropped ballots
        (identical ballots can't separate anyone) — it's the lot order that decides.
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 num_winners: 2
 voting_method: Bloc STAR
 lot_numbers: [c, a, b]   # BV's drawn order (perm) — reproduces c, a

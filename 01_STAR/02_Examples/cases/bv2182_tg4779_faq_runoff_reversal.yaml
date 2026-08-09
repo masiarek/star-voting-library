@@ -34,13 +34,6 @@ ballots: |-
   0,5,2
   5,5,0
 
-options:
-  show_matrix: true
-  matrix_finalists_only: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-
 expected_winners:
 - Almond
 

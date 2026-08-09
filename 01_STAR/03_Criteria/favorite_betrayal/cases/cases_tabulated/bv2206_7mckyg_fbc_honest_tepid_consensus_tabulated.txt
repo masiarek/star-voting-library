@@ -30,17 +30,6 @@ scenario_description: |-
   Live results: https://bettervoting.com/7mckyg/results (BV agrees:
   Clover, no tiebreaks).
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Aster,Bluebell,Clover

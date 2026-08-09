@@ -78,18 +78,6 @@ video_script: |
   optimum is on screen and STAR walks past it. The sales point is that
   you can SEE it walk past.
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 ballots: |-
   Apple,Orange,Banana
   1,3,4   # Boy 1 — banana by a nose, orange close behind

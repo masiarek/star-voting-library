@@ -23,17 +23,6 @@ scenario_description: |-
   Live on BetterVoting (Test ID BV2202): https://bettervoting.com/bj8dfc
   — the vote page works; /results currently errors (the bug above).
 voting_method: STV
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 2
 bv_test_id: BV2202
 bv_election_id: bj8dfc

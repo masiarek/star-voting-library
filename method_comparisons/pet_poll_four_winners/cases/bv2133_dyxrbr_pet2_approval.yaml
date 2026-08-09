@@ -12,9 +12,6 @@ bv_election_id: dyxrbr
 bv_results_url: https://bettervoting.com/dyxrbr/results
 voting_method: Approval
 num_winners: 1
-options:
-  collapse_ballots: true
-  count_separator: "×"
 # Approval 0/1 (= score>=3). Bird 19, Dog 13, Cat 10, Fish 10 -> Bird.
 ballots: |-
   Dog,Cat,Fish,Bird

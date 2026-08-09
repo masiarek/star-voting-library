@@ -25,17 +25,6 @@ scenario_description: |-
   rival is spent in the SCORING round and silent in the RUNOFF: hedge
   only against a candidate who can actually reach the final two.
 voting_method: STAR
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: true
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 num_winners: 1
 ballots: |-
   Alma,Bruno,Celia

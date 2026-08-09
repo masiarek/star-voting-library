@@ -9,18 +9,6 @@ scenario_description: |-
 paradoxes: [truncation, condorcet-cycle]
 voting_method: RankedRobin
 num_winners: 1
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  show_smith_set: true
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   1:A>B>C>D
   1:C>B>A>D

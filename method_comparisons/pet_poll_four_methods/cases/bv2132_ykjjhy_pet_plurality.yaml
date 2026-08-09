@@ -13,9 +13,6 @@ bv_election_id: ykjjhy
 bv_results_url: https://bettervoting.com/ykjjhy/results
 voting_method: Plurality
 num_winners: 1
-options:
-  collapse_ballots: true
-  count_separator: "×"
 # Choose-one: 1 marks the single first choice. Dog 9, Fish 7, Cat 6 -> Dog.
 ballots: |-
   Dog,Cat,Fish

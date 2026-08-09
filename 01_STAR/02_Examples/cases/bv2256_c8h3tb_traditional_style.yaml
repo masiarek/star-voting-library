@@ -31,18 +31,6 @@ scenario_description: |-
 voting_method: STAR
 num_winners: 1
 
-options:
-  show_description: false   # clean demo: description stays in the file (+_tabulated), hidden on screen
-  show_matrix: true   # show the Runoff (Preference) Matrix
-  matrix_finalists_only: true   # true = finalists only; false = full N×N grid (needs show_matrix)
-  show_condorcet: false   # show the [Condorcet Winner] line
-  show_score_counts: false   # show the per-candidate [Score Distribution] table
-  show_irv: false   # show the [Divergence from STAR] RCV-IRV comparison
-  show_runoff_percent: true   # the two-line self-reconciling runoff summary
-  brief: true   # true = collapse repetitive "[STAR Voting: ...]" headers
-  collapse_ballots: false   # one row per voter — each ballot is a distinct teaching case
-  count_separator: "×"   # collapsed-count separator: ×, :, or x/X
-
 ballots: |-
   Andre,Blake,Carmen,David,Ella
       0,    0,     5,    0,   0   # traditional: "Carmen. Period."

@@ -17,16 +17,6 @@ scenario_description: |-
   BetterVoting template: https://bettervoting.com/p9gwc3/vote
   This folder on GitHub: https://github.com/masiarek/YAML/tree/master/method_comparisons/black_curtain
 
-options:
-  show_description: false
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: false
-  show_irv: false
-  brief: true
-  collapse_ballots: false
-  count_separator: "×"
-
 voting_method: Approval
 num_winners: 1
 

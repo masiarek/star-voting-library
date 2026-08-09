@@ -20,18 +20,6 @@ scenario_description: |-
   which is the STAR-family parallel to the book's PAV. lot_numbers [A..G] pins any
   ties to alphabetical priority (matching the approval file's D-over-F choice).
 
-options:
-  show_description: false
-  show_matrix: false
-  matrix_finalists_only: false
-  show_condorcet: false
-  show_score_counts: true
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 num_winners: 4
 voting_method: Bloc STAR
 lot_numbers: [A, B, C, D, E, F, G]

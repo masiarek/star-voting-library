@@ -11,10 +11,6 @@ bv_election_id: kcf8vf
 bv_results_url: https://bettervoting.com/kcf8vf/results
 voting_method: Bloc STAR
 num_winners: 3
-options:
-  show_matrix: false
-  collapse_ballots: true
-  count_separator: "×"
 ballots: |-
   Dog,Cat,Fish,Bird,Rabbit,Hamster
   13: 5,4,4,1,0,0

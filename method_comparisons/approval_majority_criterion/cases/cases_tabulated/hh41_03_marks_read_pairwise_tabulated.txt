@@ -35,18 +35,6 @@ voting_method: STAR
 num_winners: 1
 paradoxes: [majority-failure, condorcet-winner]
 
-options:
-  show_description: false
-  show_matrix: true
-  matrix_finalists_only: false   # the Equal Support column IS the lesson
-  show_condorcet: true
-  show_score_counts: false
-  show_irv: false
-  show_runoff_percent: true
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:A,B,C
   60:5,5,0   # approved A and B — and no preference between them

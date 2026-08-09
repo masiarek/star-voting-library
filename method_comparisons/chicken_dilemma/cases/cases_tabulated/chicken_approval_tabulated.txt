@@ -21,12 +21,6 @@ paradoxes: []
 voting_method: Approval
 num_winners: 1
 
-options:
-  show_description: false
-  brief: true
-  collapse_ballots: true
-  count_separator: "×"
-
 ballots: |-
   Count:A,B,C
   35:1,1,0   # approve A and B

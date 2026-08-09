@@ -51,12 +51,12 @@ The count, step by step — the rounds and how the winner is reached:
 
 [STAR Voting]
  Tabulating 30 ballots.
-Count x A,B,C,D,E,F,G
-    6 x 5,3,1,4,0,4,3
-    6 x 2,2,5,3,0,2,0
-    6 x 3,3,5,4,0,2,1
-    6 x 5,3,0,4,0,5,3
-    6 x 3,4,5,4,0,2,2
+Count × A,B,C,D,E,F,G
+    6 × 5,3,1,4,0,4,3
+    6 × 2,2,5,3,0,2,0
+    6 × 3,3,5,4,0,2,1
+    6 × 5,3,0,4,0,5,3
+    6 × 3,4,5,4,0,2,2
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
