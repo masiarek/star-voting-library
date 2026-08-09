@@ -4,7 +4,6 @@ TABULATED FILE:  tactical_max_c3_b9_honest_tabulated.txt
 ======================================================================
 
 election_title: "Tactical maximization in STAR (1 of 2) — honest ballots: the hedgers' preference decides the runoff"
-paradoxes: [runoff-reversal]
 
 scenario_description: |-
   Honest ballots — half 1 of the worked expansive-sincerity pair
