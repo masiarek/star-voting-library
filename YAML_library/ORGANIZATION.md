@@ -7,7 +7,7 @@ Where things live, what goes in the YAML vs a Markdown file, and how to get a cl
 Most of the second-guessing ("if I document the scenario in the YAML it clutters my recording") comes from treating *where the text lives* and *what shows on screen* as the same decision. They aren't.
 
 - **Keep the scenario text in the YAML** — one source of truth, travels with the ballots, can't drift out of sync.
-- **Control what prints with an option** — `show_description: false` hides the long description on screen for a clean demo, *without removing it from the file*. The saved `_tabulated` file always keeps the full text.
+- **The engine keeps the screen clean by default** — the long description stays in the file but off the screen (`show_description` defaults to `false`), so you get a clean demo *without removing anything from the file*. The saved `_tabulated` file always keeps the full text, and a `--full` run puts it on screen.
 
 So: store rich, display clean. You never have to choose.
 
@@ -16,7 +16,7 @@ So: store rich, display clean. You never have to choose.
 | Content | Lives in | Prints on screen? |
 |---------|----------|-------------------|
 | `election_title` | YAML | yes (one-line banner) |
-| `scenario_description` — short, audience-facing "what" | YAML | yes, unless `show_description: false` |
+| `scenario_description` — short, audience-facing "what" | YAML | not by default (always in the `_tabulated` copy; `--full` or `show_description: true` shows it) |
 | `video_script` — presenter notes, cues, "how to present" | YAML | **no** (never shown on screen) |
 | Cross-file teaching (lessons, sequences, comparisons, "why") | **Markdown** (`07_Concepts/`, folder READMEs) | n/a |
 
@@ -105,19 +105,7 @@ STARVote_LH_tabulation_engine/   the STAR engine, its tests/, and
 
 ## The clean-demo / recording recipe
 
-For a file you'll show on camera:
-
-```yaml
-options:
-  show_description: false   # hide the long write-up
-  show_matrix: false
-  show_condorcet: false
-  show_score_counts: false
-  brief: true
-  show_irv: false
-```
-
-That leaves just the title banner, the ballots, and the tabulation. The full context is still in the file (and in its `_tabulated` copy) for anyone studying it later. Flip the flags back to `true` for a workshop or self-study.
+For a file you'll show on camera: **do nothing.** The engine's built-in defaults already render the clean demo — the title banner, the ballots, the rounds, the finalists matrix, the runoff line — with the long write-up, the full grid and the score distribution held back. There is no `options:` block to write (the feature still exists to override a default, but case files don't use it). The full context is still in the file (and in its `_tabulated` copy) for anyone studying it later; for a workshop or self-study render, run with `--full` to put the everything-on report on screen.
 
 > Tip: keep `scenario_description` to 1–3 short paragraphs (the audience-facing "what"), and put longer staging notes in `video_script` — it never prints, so it can be as detailed as you like without ever cluttering a demo.
 

@@ -26,17 +26,13 @@ scenario_description: |-
 num_winners: 1          # -> seats
 voting_method: STAR     # see "Methods" below
 
-options:                # all optional; see "Display options"
-  show_matrix: true
-  matrix_finalists_only: true
-
 ballots: |-
   Memphis,Nashville,Chattanooga,Knoxville
   42: 5, 4, 3, 2        # "weight: scores" — 42 identical ballots
   26: 2, 5, 4, 3
 ```
 
-- **`election_title`** and **`scenario_description`** print as a header above the tabulation (also accepts `race_description` / `election_description`).
+- **`election_title`** prints as a one-line banner; **`scenario_description`** (also accepted as `race_description` / `election_description`) stays in the file and the `_tabulated` copy — it reaches the screen only via `--full` or `show_description: true`.
 - Ballots may use `weight: scores` (e.g. `42: 5,4,3,2`) to stand in for many identical ballots. Empty cells and marker characters count as score 0.
 
 ### Methods (`voting_method`)
@@ -53,12 +49,12 @@ A method/seat mismatch (single-winner method with `num_winners > 1`, or a multi-
 
 ## Display options
 
-Set under `options:` (top level or per race). All are booleans unless noted.
+Set under `options:` (top level or per race). All are booleans unless noted. The defaults **are** the house on-screen style, so case files normally carry no `options:` block at all; set a key only to override a default, or pass `--full` on the command line to put the mirror's everything-on render on screen for one run.
 
 | Option | Default | Effect |
 |--------|---------|--------|
-| `show_matrix` | off | Show the Runoff (Preference) Matrix — the head-to-head / pairwise grid. |
-| `matrix_finalists_only` | off | Restrict the matrix to just the two finalists (the decisive runoff matchup). Requires `show_matrix`. |
+| `show_matrix` | on | Show the Runoff (Preference) Matrix — the head-to-head / pairwise grid. Auto-suppressed for multi-winner and two-candidate races. |
+| `matrix_finalists_only` | on | Restrict the matrix to just the two finalists (the decisive runoff matchup). Requires `show_matrix`. |
 | `show_condorcet` | off | Show the `[Condorcet Winner]` line. |
 | `show_score_counts` | off | Show the per-candidate `[Score Distribution]` table. |
 | `brief` | on | Collapse repetitive `[STAR Voting: …]` section headers into plain sub-headings. |
@@ -80,6 +76,7 @@ Set under `options:` (top level or per race). All are booleans unless noted.
 
 Behavioral edits to `starvote_larry_hastings.py`'s presentation layer. The vendored `starvote/` core stays pristine (see [`FORK_NOTES.md`](FORK_NOTES.md)); these never touch it.
 
+- **House defaults built in (2026-08-09)** — `DEFAULT_OPTIONS` is now the house on-screen style: `show_matrix` + `matrix_finalists_only` + `show_runoff_percent` on by default (the matrix auto-suppressed for multi-winner and two-candidate races); case files carry no `options:` block (501 removed repo-wide; an override remains legal); new `--full` flag renders the mirror's everything-on report on screen; `show_irv` is accepted for parse-compat only (the divergence block always prints).
 - **Ranked Robin equal-rankings (`A=B>C`) — parser fix** — `run_ranked_robin`'s ranked-ballot reader now splits each `>` rank level on `=`, so tied candidates share a rank and are scored as *Equal Support* against each other (exactly how Ranked Robin treats a tie). Previously the parser split only on `>`, so a level like `Ava=Bianca=Cedric` was mis-read as a *single phantom candidate* by that literal name — inflating the field and electing the wrong winner. Strict ballots (every level a singleton) are byte-for-byte unchanged. Equal ranking is a core Ranked Robin feature, so this lets the engine read the weak orders RR is defined on natively (e.g. the [electowiki worked example](https://electowiki.org/wiki/Ranked_Robin)). Guarded by `tests/test_ranked_robin.py::test_equal_rankings_are_ties`.
 - **`[Score Distribution]` header + exact-rational half-up average** — `Score` corner label, `===` rule row, star-rating caption, and the Avg float→`Decimal`/`ROUND_HALF_UP` fix. ([full write-up](../01_STAR/01_Learn/reporting/score_distribution_and_averages.md))
 - **Multiwinner setup line** — merged `Want to fill N seats.` into `Tabulating N ballots to fill N seats.`

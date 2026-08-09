@@ -59,6 +59,8 @@ Winner — STAR Voting Method (single winner)
  Bo
 ```
 
+(Both renders are trimmed to the sections `brief` touches. A real default run also prints the finalists matrix and the runoff summary around these — those belong to other options and would drown the header comparison this page is about.)
+
 ## Exactly what `brief` does to each header
 
 | `brief: false` | `brief: true` |
@@ -72,6 +74,6 @@ The `[STAR Voting:` prefix is noise once you know the method — so `brief` remo
 
 ## Which to use
 
-- **On-screen report → `brief: true`** is the [house default](../../../../CLAUDE.md) ("less is more"). It reads cleaner, especially when several elections scroll past.
+- **`brief: true`** is the engine's built-in default (the [house style](../../../../CLAUDE.md) — "less is more"). It reads cleaner, especially when several elections scroll past.
 - **`brief: false`** is occasionally handy when you want the section markers to be unmistakable machine-parseable `[...]` tags, or when teaching what the raw sections are called.
 - **The `_tabulated.txt` mirror** ignores `brief` entirely and always renders full detail — so the saved audit copy never depends on this flag.

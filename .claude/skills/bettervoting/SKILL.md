@@ -209,12 +209,9 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
    use a `Count:` header — `Count:Ada,Ben,Cara` then `15:5,2,0` per bloc):
 
    ```yaml
-   title: Scratch (delete me)
+   election_title: Scratch (delete me)
    voting_method: STAR
    num_winners: 1
-   options:            # house minimal block — see "Repo conventions"
-     show_runoff_percent: true
-     brief: true
    ballots: |-
      Ada,Ben,Cara
      5,2,0
@@ -222,6 +219,9 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
      2,5,4
    expected_winners: [Ben]
    ```
+
+   (No `options:` block — the engine's defaults are the house on-screen style;
+   add `--full` to the run for the everything-on render.)
 
    Tabulate with `.venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py trash_delete.yaml`.
    The run writes `_tabulated` mirrors into a sibling `<parentdir>_tabulated/`

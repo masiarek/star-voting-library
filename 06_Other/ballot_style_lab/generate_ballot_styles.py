@@ -289,7 +289,6 @@ SCENARIOS = {
             dict(name="Bruno camp", share=0.42, mu=[0.12, 0.90, 0.55],
                  sigma=0.15, styles={"gentle": 1.0}),
         ],
-        feature_options={"show_score_counts": True},
         intro=("Two camps, two GRADING CULTURES. The Abby camp are harsh "
                "graders: even their favorite only earns a 2, everyone else "
                "0-1. The Bruno camp are gentle souls: nobody gets less than "
@@ -324,7 +323,6 @@ SCENARIOS = {
                  sigma=0.25, styles={"cliff34": 0.4, "chaos": 0.2,
                                      "flat": 0.2, "anyone_but": 0.2}),
         ],
-        feature_options={"show_score_counts": True},
         intro=("A whole town votes like it's Approval-with-a-volume-knob: "
                "every ballot is either 0 ('not my truck') or 3-5 ('one of "
                "mine'). Nobody uses 1 or 2 - the middle of the scale is a "
@@ -357,7 +355,6 @@ SCENARIOS = {
                  mu=[0.45, 0.40, 0.50, 0.75], sigma=0.20,
                  styles={"nuanced": 0.6, "ranked_style": 0.4}),
         ],
-        feature_options={},
         intro=("Three brigades bullet-vote their champion (5 and silence - "
                "many literally leave the rest blank), while a thoughtful "
                "minority spreads honest scores. The lesson lives in the "
@@ -396,7 +393,6 @@ SCENARIOS = {
         ],
         marker_rows=["~", "?"],
         blank_glitch=0.06,
-        feature_options={"show_condorcet": True, "matrix_finalists_only": False},
         intro=("The messy-reality fixture: two loose leans instead of "
                "crisp camps, a crosswind bloc, pure-noise voters, "
                "flat-line no-preference ballots, one race abstention (~), "
@@ -429,7 +425,6 @@ SCENARIOS = {
             dict(name="Ben middle", share=0.18, mu=[0.40, 0.92, 0.40],
                  sigma=0.15, styles={"nuanced": 0.7, "gentle": 0.3}),
         ],
-        feature_options={"show_irv": True},
         intro=("The center-squeeze profile - two big poles who each rate "
                "consensus-Ben an honest second - but built from NOISY "
                "utilities and mixed ballot styles instead of clean "
@@ -461,7 +456,6 @@ SCENARIOS = {
                  sigma=0.30, styles={"flat": 0.3, "protest": 0.25,
                                      "chaos": 0.25, "ranked_style": 0.2}),
         ],
-        feature_options={"show_score_counts": True},
         intro=("The scale-abuse special: nobody here uses the 0-5 ballot "
                "as designed. One camp scores only in 0-2, one only in "
                "3-5, cliff voters jump 0-to-3, sliver voters live in "
@@ -505,7 +499,6 @@ SCENARIOS = {
                  mu=[0.90, 0.15, 0.20, 0.25, 0.85], sigma=0.12,
                  styles={"nuanced": 0.40, "slate": 0.30, "cliff35": 0.30}),
         ],
-        feature_options={"show_matrix": False, "matrix_finalists_only": False},
         intro=("One garden, 36 ballots, three seats - and TWO philosophies "
                "of 'three winners'. This is a same-ballots TWIN PAIR: file "
                "07a tabulates Bloc STAR (single-winner STAR run once per "
@@ -546,8 +539,6 @@ SCENARIOS = {
                  mu=[0.45, 0.45, 0.45, 0.45, 0.45, 0.45], sigma=0.30,
                  styles={"chaos": 0.40, "flat": 0.30, "anyone_but": 0.30}),
         ],
-        feature_options={"show_matrix": False, "matrix_finalists_only": False,
-                         "show_score_counts": True},
         intro=("Proportional STAR meets the style circus: a north side "
                "voting in cliffs, slates and bullets (0s and 5s, nothing "
                "between) against a south side of gentle souls and sliver "
@@ -589,7 +580,6 @@ SCENARIOS = {
                  styles={"chaos": 0.30, "anyone_but": 0.25, "protest": 0.15,
                          "flat": 0.15, "ranked_style": 0.15}),
         ],
-        feature_options={"show_matrix": False, "matrix_finalists_only": False},
         intro=("The big-field crazy one: seven trees, FOUR seats, "
                "forty-four ballots. An evergreen duo and a shade trio "
                "campaign as slates while a quarter of the town votes "
@@ -674,7 +664,6 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
                voting_method="STAR", num_winners=1, title=None,
                twin_note=None):
     cast = spec["cast"]
-    opt_lines = "\n".join(f"  {k}: {str(v).lower()}" for k, v in options)
     desc = [wrap(spec["intro"]), ""]
     desc.append(f"The electorate ({len(rows)} ballots, all individual rows):")
     desc.extend(census_lines(spec, census))
@@ -708,10 +697,19 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
         "scenario_description: |-",
         indent("\n".join(desc)),
         "",
-        "options:",
-        opt_lines,
-        "  count_separator: \"×\"",
-        "",
+    ]
+    if options:
+        # Hunt-mode probes only: the frozen teaching yamls carry NO options
+        # block (the engine's defaults are the house style, 2026-08-09), but
+        # the probes keep HUNT_OPTIONS so parse_report sees every section it
+        # reads. Emission passes options=None.
+        parts += [
+            "options:",
+            "\n".join(f"  {k}: {str(v).lower()}" for k, v in options),
+            "  count_separator: \"×\"",
+            "",
+        ]
+    parts += [
         f"voting_method: {voting_method}",
         f"num_winners: {num_winners}",
         "ballots: |-",
@@ -1108,8 +1106,6 @@ def emit(names, outdir):
                    f"b{len(rows)}_{v['descriptor']}.yaml") for v in vs}
         for v in vs:
             rep = probes[v["suffix"]]
-            options = dict(HOUSE_OPTIONS)
-            options.update(spec.get("feature_options", {}))
             facts = (facts_from(rep) if v["num_winners"] == 1
                      else facts_multi(rep, spec))
             twin_note = None
@@ -1122,7 +1118,7 @@ def emit(names, outdir):
                              f"{', '.join(orep['winners'])}.")
             fname = fnames[v["suffix"]]
             body = build_yaml(name, spec, seed, rows, census,
-                              list(options.items()), facts=facts,
+                              None, facts=facts,
                               voting_method=v["voting_method"],
                               num_winners=v["num_winners"],
                               title=v["title"], twin_note=twin_note)

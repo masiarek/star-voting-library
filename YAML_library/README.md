@@ -70,7 +70,7 @@ expected_winners:       # the answer key: the pytest suite finds this key and ch
 
 Everything else in the file is optional and additive: an `election_title`, a printable `scenario_description`, `options:` controlling how much of the report appears on screen, `lot_numbers:` pinning the official tie-break order, `eligible_voters` / `quorum` for turnout reporting, `blocs:` for the vote-splitting check.
 
-That optional half follows one rule — **store rich, display clean**. Keep the context *in* the file and let `options:` decide what reaches the screen; you never have to delete information to get a tidy demo. → [Organizing the YAML files](ORGANIZATION.md)
+That optional half follows one rule — **store rich, display clean**. Keep the context *in* the file — the engine's default report already keeps the screen tidy (an `options:` block can override any default, but case files don't need one); you never have to delete information to get a tidy demo. → [Organizing the YAML files](ORGANIZATION.md)
 
 → Every field, every option, the full marker table, and the house style rules: **[YAML Test Case — Authoring Template](YAML_authoring_template.md)**
 
@@ -157,7 +157,7 @@ Ann,Bob,Cal
 ```
 <!-- /report -->
 
-Notice what the file never had to state: the totals, the finalists, the head-to-head count, the majority threshold. All of it is *derived* from those three ballot rows. **How much of it lands on screen** is the one thing the file does control — that's the optional `options:` block, which can hide the description, show the full pairwise grid, add the score-distribution table, and so on. It never changes the winner or the numbers.
+Notice what the file never had to state: the totals, the finalists, the head-to-head count, the majority threshold. All of it is *derived* from those three ballot rows. **How much of it lands on screen** is the one thing the file *can* control — the optional `options:` block overrides the engine's house defaults (show the description, the full pairwise grid, the score-distribution table, and so on), though case files normally set nothing and a `--full` run shows everything for one render. It never changes the winner or the numbers.
 
 → The whole count for this election, every section forced on, plus the preference matrix and the score distribution: [`bv2187_qrw6wb_ann-bob-cal.md`](../01_STAR/02_Examples/cases/cases_pages/bv2187_qrw6wb_ann-bob-cal.md)
 

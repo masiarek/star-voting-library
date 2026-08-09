@@ -54,7 +54,7 @@ What the case pins down is the precise claim: **Bloc STAR seats winners in the o
 |---|:--:|---|---|
 | **BV2266** | 7 | Dev (seat 1), **Anika** (seat 2) | [count](cases/cases_pages/bv2266_k7pfqt_condorcet_winner_seated_second.md) · [yaml](cases/bv2266_k7pfqt_condorcet_winner_seated_second.yaml) · [results ↗](https://bettervoting.com/k7pfqt/results) |
 
-Live on BetterVoting and reproduced independently in the LH engine; **BV and LH agree exactly** — Dev then Anika, `nTallyVotes 7`, `tieBreakType: none`. The frozen export sits beside the yaml. The yaml turns the full pairwise grid on (`show_matrix: true`, `matrix_finalists_only: false`, `show_condorcet: true`) because the head-to-head table is the whole point here.
+Live on BetterVoting and reproduced independently in the LH engine; **BV and LH agree exactly** — Dev then Anika, `nTallyVotes 7`, `tieBreakType: none`. The frozen export sits beside the yaml. The head-to-head table is the whole point here, and it lives in the full count — the linked count page and the `_tabulated` mirror render the full pairwise grid (or run the yaml with `--full`).
 
 ## Related
 

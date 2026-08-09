@@ -150,7 +150,7 @@ When the two finalists tie *in the runoff* (an even split), the engine says so a
 
 ## Variation 3 — everyone's a finalist (two candidates)
 
-With only two candidates the Scoring Round is just a formality (both advance), so the "runoff" is the whole election and the finalists matrix merely echoes it. That's why two-candidate teaching files set `show_matrix: false`.
+With only two candidates the Scoring Round is just a formality (both advance), so the "runoff" is the whole election and the finalists matrix merely echoes it. That's why the on-screen report automatically skips the matrix for two-candidate races.
 
 ## Quick questions (the ones learners actually ask)
 

@@ -38,7 +38,7 @@ Now only the two finalists matter. Each ballot's full vote goes to whichever of 
    Dog 190 (52%) vs Cat 173 (48%); majority = 182.
 ```
 
-**Dog wins.** The line self-reconciles: of **461** cast ballots, **363 had a preference** between the finalists and **98 are Equal Support** (`461 − 98 = 363`). The same 190 reads two ways — 190 of all 461 isn't the point; 190 of the **363 with a preference** is **52%**, clearing the 182-vote majority. The 98 Equal Support voters scored Dog and Cat the same, so they sit out *this* head-to-head (but counted fully in the scoring round). That two-denominator idea is the whole [runoff percentages lesson](../../01_Learn/the_count/runoff_percentages.md); the engine prints the decisive line because the file sets `show_runoff_percent: true`. (The saved `_tabulated` copy expands it into a "Runoff math" funnel.)
+**Dog wins.** The line self-reconciles: of **461** cast ballots, **363 had a preference** between the finalists and **98 are Equal Support** (`461 − 98 = 363`). The same 190 reads two ways — 190 of all 461 isn't the point; 190 of the **363 with a preference** is **52%**, clearing the 182-vote majority. The 98 Equal Support voters scored Dog and Cat the same, so they sit out *this* head-to-head (but counted fully in the scoring round). That two-denominator idea is the whole [runoff percentages lesson](../../01_Learn/the_count/runoff_percentages.md); the engine prints the decisive line as part of its default report. (The saved `_tabulated` copy expands it into a "Runoff math" funnel.)
 
 ## 3. Did STAR pick the "right" pet? (the Condorcet check)
 

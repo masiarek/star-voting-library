@@ -46,7 +46,7 @@ The Larry↔Adam dialogue format exists **for recording** — it is a presenter 
 | 4 | The STAR ballot | how do I vote? | — | "Instructions" / 5-star ballot |
 | 5 | The two rounds | why Score *then* Runoff? | `00a_c2_b1`, `vote_splitting2` | "How STAR Works", Dual-Nature doc |
 | 6 | Benefits of STAR | Simple/Honest/Expressive/Accurate/Equal | accuracy demos | "What do we want", accuracy chart |
-| 7 | STAR vs RCV-IRV | pros & cons, honestly | 4-cand `show_irv` divergence | Scorecard, Burlington, Alaska |
+| 7 | STAR vs RCV-IRV | pros & cons, honestly | 4-cand `[Divergence from STAR]` demo | Scorecard, Burlington, Alaska |
 | 7.5 | RCV or IRV? (nomenclature, **201**) | which word, and why | — | "About Ranked Choice" |
 | 8 | Counting & trust | summability, audits | any file's matrix | "Summability" slides |
 | 9 | Multi-winner & proportional | electing several seats | `02_Multi_winner/*` | "Proportional Representation" |
@@ -61,7 +61,7 @@ Episodes 1, 2, 5, and 7 are the highest-value if you only make four. Episode 11 
 ### Suggested additional topics (good standalone clips)
 - "Equal Preference / no-preference in the runoff" — what an equal score does. <!-- terminology-ok: names the aka under discussion -->
 - "Bullet voting — is it a strategy?" (it isn't; show why).
-- "The preference matrix, read out loud" — using the engine's `show_matrix`.
+- "The preference matrix, read out loud" — using the matrix the engine prints by default.
 - "Abstentions, blanks, and 0s" — what the ballot markers mean (use the engine's legend + the `Abs` score-distribution bucket).
 
 ---
@@ -123,7 +123,7 @@ The repo's own files (engine output, example YAMLs) *are* canonical and version-
 
 **Make the engine demos better for recording:**
 - Pre-stage the exact files (see the flagship's demo index) so you never type ballots live.
-- Turn on only the output you'll narrate (`options: { show_matrix: t, show_condorcet: t, show_irv: t }`) and hide the rest, so the screen isn't busy.
+- The engine's default on-screen report already shows the matrix, the runoff summary, and the `[Divergence from STAR]` block with the rest quiet; when you'll narrate a heavier section (Condorcet lines, the score distribution), run with `--full` — so the screen isn't busy.
 - Keep a blank "Live Demo" slide to cut to, so the video editor has a clean seam.
 - For the spoiler beat, the `[Vote-splitting check]` block gives you the punchline in numbers — read it out loud.
 

@@ -4,7 +4,7 @@
 
 → Hub: [STAR Reporting](../README.md) · the full report: [How the LH engine reports](README.md) · what counts as a blank: [`GLOSSARY`](../../../../07_Concepts/GLOSSARY.md).
 
-Turn it on with `options: { show_score_counts: true }` (the saved `_tabulated.txt` always includes it).
+Not in the default on-screen report — read it in the saved `_tabulated.txt` (always included) or put it on screen with the `--full` flag. (A file may still set `options: { show_score_counts: true }` to opt it on.)
 
 ---
 

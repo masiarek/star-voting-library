@@ -11,7 +11,7 @@
 The engine marks the tied rows and says so in words, then resolves them by the tie-break ladder. A runoff that splits evenly:
 
 ```
-[STAR Voting: Automatic Runoff Round]
+Automatic Runoff Round
  The candidate preferred in the most head-to-head matchups wins.
    Choco         -- 1 -- Tied for first place
    Vanilla       -- 1 -- Tied for first place

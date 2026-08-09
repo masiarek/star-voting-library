@@ -15,7 +15,7 @@
 - **Two reports, one count:** the same election appears both as BetterVoting's visual display and the LH engine's text report — why there are two, how they map, and the convert→validate→test pipeline: [BetterVoting and the LH Engine — One Election, Two Reports](../tabulation_engines/bettervoting_and_the_engine.md).
 - **The full audit report:** the generated `_tabulated.txt` siblings carry the complete engine report (preference matrix + score distribution + the rounds). 101.4 showed the *minimal* on-screen view; reading the **full** report of those same elections (e.g. the `_tabulated` mirrors under [Runoff Reversal](../../01_STAR/02_Examples/runoff_overturns_leader/README.md)) is the 201 skill — and *why* the on-screen report is minimal by default (don't overwhelm a beginner).
 - **Worked walkthrough:** [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md) — a full LH report annotated section by section, with a "which parts to show at 101 / 201 / 301" table.
-- **Reading the runoff percentages:** [Two Denominators, One Winner](../../01_STAR/01_Learn/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. Enable in the engine with `options: { show_runoff_percent: true }`. Pairs with 301.4 (Equal Support).
+- **Reading the runoff percentages:** [Two Denominators, One Winner](../../01_STAR/01_Learn/the_count/runoff_percentages.md) — the runoff shown two ways (% of *all* voters vs % of those *with a preference*), and why the majority bar is half of the *decided* voters. The engine prints this summary by default (`show_runoff_percent`). Pairs with 301.4 (Equal Support).
 - **A real election, end to end:** [What Makes the Best Pet?](../../01_STAR/04_Real_Elections/pet_real_bv_election/README.md) — a real 461-ballot BetterVoting STAR election, the actual export read section by section (scoring → runoff → runoff % → Condorcet), including the real-ballot difference between an abstention (blank) and an explicit-zero ballot.
 
 ## 201.2 — Edge cases & trust
@@ -32,7 +32,7 @@
 ## 201.4 — STAR vs RCV-IRV (the honest comparison)
 
 - **Key terms:** exhausted ballots, center squeeze, wasted votes, the method scorecard.
-- **See it:** [RCV-IRV vs STAR](../topics/rcv_irv_vs_star.md); any 4-candidate file with `options: { show_irv: true }` prints the `[Divergence from STAR]` block. The cross-method worked sets live in [the method-comparisons sets](../../method_comparisons/README.md).
+- **See it:** [RCV-IRV vs STAR](../topics/rcv_irv_vs_star.md); any 4-candidate file prints the `[Divergence from STAR]` block automatically. The cross-method worked sets live in [the method-comparisons sets](../../method_comparisons/README.md).
 
 ## 201.5 — Multi-winner intro: Bloc STAR
 

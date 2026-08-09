@@ -106,7 +106,7 @@ voting_method: Bloc STAR     # aliases: bloc, "bloc star"
 num_winners: 2
 ```
 
-House style spells it **`Bloc STAR`** rather than the vaguer `bloc` — the count is a specific method, not a generic mode. Everything else in the file is an ordinary STAR file. Multi-winner races use the house minimal `options:` block with `show_matrix: false` and `matrix_finalists_only: false`: a "Top 2 Finalist" matrix is a single-winner idea and prints misleadingly across several seats.
+House style spells it **`Bloc STAR`** rather than the vaguer `bloc` — the count is a specific method, not a generic mode. Everything else in the file is an ordinary STAR file, and no display options are needed: the engine's defaults switch the finalists matrix off for multi-winner races automatically — a "Top 2 Finalist" matrix is a single-winner idea and prints misleadingly across several seats.
 
 ```bash
 .venv/bin/python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/02_Examples/cases/00_c3_b3_bloc-baseline-2-seats.yaml
