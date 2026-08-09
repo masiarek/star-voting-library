@@ -23,8 +23,8 @@ Modes:
         each with the real LH engine, score "interestingness" (runoff reversals,
         Condorcet cycles, center-squeeze signatures, ties, photo finishes,
         Equal-Support blowouts) and print the champions.
-    --emit SCEN|all   write the frozen-seed YAML case file(s) next to this
-        script (refuses if a scenario's seed is not frozen yet).
+    --emit SCEN|all   rewrite the frozen-seed YAML case file(s) in cases/
+        (refuses if a scenario's seed is not frozen yet).
     --list   show the scenario menu.
 
 Stdlib only. Reproducible: every emitted file records its scenario + seed.
@@ -274,12 +274,17 @@ def format_ballots(cast, rows):
 
 # ---------------------------------------------------------------------------
 # Scenarios — the electorate recipes. seed=None until a champion is frozen.
+# bv=(test_id, election_id) is the frozen BetterVoting provenance, set when
+# the case was minted (per-VARIANT for twin pairs — 07a/07b are two BV
+# elections); --emit writes it back as the bv_* keys so the frozen files
+# regenerate byte-identically.
 # ---------------------------------------------------------------------------
 
 SCENARIOS = {
     "graders_divide": dict(
         seed=94,
         file_no="01", descriptor="graders-divide",
+        bv=("BV2234", "4jmgrd"),
         title="The Graders' Divide — a harsh 0-2 camp meets a gentle 3-5 camp",
         cast=["Abby", "Bruno", "Clara"],
         n_ballots=31,
@@ -309,6 +314,7 @@ SCENARIOS = {
     "cliff_city": dict(
         seed=123,
         file_no="02", descriptor="cliff-city",
+        bv=("BV2235", "fm8cbv"),
         title="Cliff City food trucks — everyone scores 0 or 3-5, nothing between",
         cast=["Arepa", "Bao", "Churro", "Dumpling"],
         n_ballots=40,
@@ -341,6 +347,7 @@ SCENARIOS = {
     "bullet_storm": dict(
         seed=90,
         file_no="03", descriptor="bullet-storm",
+        bv=("BV2236", "w9f4vd"),
         title="Bullet Storm — a bullet-voting electorate and the few who spread",
         cast=["Astrid", "Boris", "Carla", "Dolores"],
         n_ballots=33,
@@ -374,6 +381,7 @@ SCENARIOS = {
     "noise_soup": dict(
         seed=217,
         file_no="04", descriptor="noise-soup",
+        bv=("BV2237", "74pbyg"),
         title="Noise Soup — weak factions, cross-winds, flat-liners and static",
         cast=["Aaron", "Beth", "Caleb", "Dana"],
         n_ballots=47,
@@ -412,6 +420,7 @@ SCENARIOS = {
     "squeeze_survives": dict(
         seed=51,
         file_no="05", descriptor="squeeze-survives",
+        bv=("BV2238", "td7jfy"),
         title="Does the squeeze survive noise? Two poles, one consensus middle",
         cast=["Ava", "Ben", "Cora"],
         n_ballots=38,
@@ -444,6 +453,7 @@ SCENARIOS = {
     "narrow_bands": dict(
         seed=239,
         file_no="06", descriptor="narrow-bands",
+        bv=("BV2239", "gyv2qt"),
         title="Narrow Bands — a paint-swatch election scored in slivers of the scale",
         cast=["Azure", "Beige", "Coral", "Dune"],
         n_ballots=24,
@@ -483,10 +493,12 @@ SCENARIOS = {
         variants=[
             dict(suffix="a", voting_method="Bloc STAR",
                  descriptor="herb-council-bloc-3-seats",
+                 bv=("BV2244", "9dx494"),
                  title="The Herb Garden Council — Bloc STAR, 3 seats "
                        "(the majority can sweep)"),
             dict(suffix="b", voting_method="allocated",
                  descriptor="herb-council-pr-3-seats",
+                 bv=("BV2245", "pmrq4q"),
                  title="The Herb Garden Council — Allocated Score / STAR-PR, "
                        "3 seats (each quota seats someone)"),
         ],
@@ -521,6 +533,7 @@ SCENARIOS = {
     "quota_circus": dict(
         seed=34,
         file_no="08", descriptor="quota-circus-pr-2-seats",
+        bv=("BV2246", "qdh9qp"),
         title="Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats)",
         cast=["Amir", "Bree", "Cato", "Della", "Enzo", "Faye"],
         n_ballots=29,
@@ -559,6 +572,7 @@ SCENARIOS = {
     "park_bloc": dict(
         seed=7,
         file_no="09", descriptor="park-bloc-4-seats",
+        bv=("BV2247", "v9rhhr"),
         title="Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards",
         cast=["Aspen", "Birch", "Cedar", "Dogwood", "Elm", "Fir", "Ginkgo"],
         n_ballots=44,
@@ -662,7 +676,7 @@ def wrap(text, width=76):
 
 def build_yaml(name, spec, seed, rows, census, options, facts=None,
                voting_method="STAR", num_winners=1, title=None,
-               twin_note=None):
+               twin_note=None, bv=None):
     cast = spec["cast"]
     desc = [wrap(spec["intro"]), ""]
     desc.append(f"The electorate ({len(rows)} ballots, all individual rows):")
@@ -691,8 +705,17 @@ def build_yaml(name, spec, seed, rows, census, options, facts=None,
         f"renderings), not a method-welfare comparison. Regenerate "
         f"byte-identically: python generate_ballot_styles.py --emit {name}"))
 
-    parts = [
-        f"election_title: {title or spec['title']}",
+    parts = [f"election_title: {title or spec['title']}"]
+    if bv:
+        # Frozen BV provenance (the specs' bv= field): the keys the minted
+        # cases carry. Hunt probes pass no bv — a probe backs no election.
+        test_id, bvid = bv
+        parts += [
+            f"bv_test_id: {test_id}",
+            f"bv_election_id: {bvid}",
+            f"bv_results_url: https://bettervoting.com/{bvid}/results",
+        ]
+    parts += [
         "",
         "scenario_description: |-",
         indent("\n".join(desc)),
@@ -727,11 +750,13 @@ def variants_of(spec):
         for v in spec["variants"]:
             vv = dict(v)
             vv.setdefault("num_winners", spec.get("num_winners", 1))
+            vv.setdefault("bv", spec.get("bv"))
             out.append(vv)
         return out
     return [dict(suffix="", voting_method=spec.get("voting_method", "STAR"),
                  num_winners=spec.get("num_winners", 1),
-                 descriptor=spec["descriptor"], title=spec["title"])]
+                 descriptor=spec["descriptor"], title=spec["title"],
+                 bv=spec.get("bv"))]
 
 
 # ---------------------------------------------------------------------------
@@ -1121,7 +1146,8 @@ def emit(names, outdir):
                               None, facts=facts,
                               voting_method=v["voting_method"],
                               num_winners=v["num_winners"],
-                              title=v["title"], twin_note=twin_note)
+                              title=v["title"], twin_note=twin_note,
+                              bv=v.get("bv"))
             body += ("\nexpected_winners:\n"
                      + "".join(f"  - {w}\n" for w in rep["winners"])
                      + f"\n# file: {fname}\n")
@@ -1137,7 +1163,7 @@ def main():
     ap.add_argument("--seeds", type=int, default=150)
     ap.add_argument("--tmp", default=None,
                     help="hunt workdir (default: a fresh temp dir)")
-    ap.add_argument("--outdir", default=str(LAB_DIR))
+    ap.add_argument("--outdir", default=str(LAB_DIR / "cases"))
     ap.add_argument("--list", action="store_true")
     args = ap.parse_args()
 
