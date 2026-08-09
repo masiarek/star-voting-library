@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**593 election files** (500 single-winner, 93 multi-winner) across 18 method(s).
+**594 election files** (500 single-winner, 94 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -20,7 +20,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
 | Reweighted Range | 6 |
-| Allocated Score (STAR-PR) | 26 |
+| Allocated Score (STAR-PR) | 27 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 7 |
 | BLOC STAR | 29 |
@@ -545,7 +545,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (26)
+## Allocated Score (STAR-PR)  (27)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -574,6 +574,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`pets_gov_star_pr`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_star_pr.md) | `method_comparisons/pets_governance/cases/` | 3 | Pets Governance — Council by STAR-PR (3 seats): minority earns a seat → _Bird, Dog, Fish_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_star_pr.yaml) |
 | [`coop_board_scores_allocated`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_scores_allocated.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — 0–5 score ballot, allocated → _Ben, Chris, Dana_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_scores_allocated.yaml) |
 | [`lackner_skowron_shadow_star_pr_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (Allocated Score) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
+| [`count_vs_weight_slates_c9_b66`](../../03_STAR_PR/03_Criteria/allocated_count_vs_weight/cases/cases_pages/count_vs_weight_slates_c9_b66.md) | `03_STAR_PR/03_Criteria/allocated_count_vs_weight/cases/` | 5 | Three slates, five seats — the count-vs-weight fingerprint | [`.yaml`](../../03_STAR_PR/03_Criteria/allocated_count_vs_weight/cases/count_vs_weight_slates_c9_b66.yaml) |
 | [`bv2130_presidential_board_star_pr`](../../03_STAR_PR/02_Examples/cases/cases_pages/bv2130_presidential_board_star_pr.md) | `03_STAR_PR/02_Examples/cases/` | 7 | BV2130 — Presidential Board Election (Proportional STAR = Allocated Score) → _Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Claudia De La Cruz (Socialism and Liberation)_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/bv2130_presidential_board_star_pr.yaml) |
 
 ## 3-2-1  (1)
