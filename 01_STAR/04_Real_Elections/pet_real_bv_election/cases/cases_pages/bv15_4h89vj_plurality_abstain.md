@@ -40,10 +40,13 @@ turnout.
 
 This file matches BV's method: Plurality (choose-one, 0/1 ballots). (An earlier
 version modelled it as STAR 5/0, on the mistaken belief that the LH engine had
-no Plurality method — it does: single-winner Plurality tabulates via the STAR
-path, multi-winner as SNTV.) The self-reconciling turnout line still prints the
-accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
-preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
+no Plurality method — it does: `run_plurality_single` for one seat, SNTV for
+several.) The choose-one report prints the accounting #740 is missing, in the
+form choose-one actually has — marks, blanks, and the total, which reconcile:
+"Andre 5 · Blake 2", "(5 ballot(s) marked nobody.)", "Andre (5 of 12 marks)" —
+5 + 2 + 5 = 12. That is the "stats for nerds" turnout breakdown #740 asks BV to
+add: the 5 abstentions are named, and the winner's share is stated against all
+12 ballots cast rather than against the 7 that BV displays as turnout.
 
 ## Ballots
 
