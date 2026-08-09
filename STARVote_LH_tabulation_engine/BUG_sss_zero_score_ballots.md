@@ -1,6 +1,6 @@
 # Bug: SSS silently discards zero-score ballots whenever any ballot exhausts in the same round
 
-> **STATUS: FIXED in this fork (2026-08-09; found 2026-08-08) — still open upstream ([larryhastings/starvote#19](https://github.com/larryhastings/starvote/issues/19), filed 2026-08-09; latest release 2.1.6 affected at HEAD). Distinct from [#17](https://github.com/larryhastings/starvote/issues/17) (the verbosity bug, fixed in this fork — see [BUG_sss_verbosity.md](BUG_sss_verbosity.md)), but the two interact: fixing #17 by dedenting the allocation block, as this fork did, promotes THIS bug from the verbose-only path to every run — which is how the fork carried it at all verbosities until the sprint census surfaced it. Regression guard: `tests/test_sss_zero_score_ballots.py`; ledger row: [LH_ENGINE_CHANGES.md §1](LH_ENGINE_CHANGES.md).**
+> **STATUS: FIXED in this fork (2026-08-09; found 2026-08-08) — still open upstream ([larryhastings/starvote#19](https://github.com/larryhastings/starvote/issues/19), filed 2026-08-09; latest release 2.1.6 affected at HEAD). Distinct from [#17](https://github.com/larryhastings/starvote/issues/17) (the verbosity bug, fixed in this fork — see [BUG_sss_verbosity.md](BUG_sss_verbosity.md)), but the two interact: fixing #17 by dedenting the allocation block, as this fork did, promotes THIS bug from the verbose-only path to every run — which is how the fork carried it at all verbosities until the sprint census surfaced it. Regression guard: `tests/test_sss_zero_score_ballots.py`; ledger row: [LH_ENGINE_CHANGES.md §1](LH_ENGINE_CHANGES.md); teaching case: [the two bullet voters](../03_STAR_PR/03_Criteria/vote_unitarity/README.md).**
 >
 > **Repo impact: none.** All 5 SSS case files were checked — the trigger condition never fires in any of them, and the full verbose reports are byte-identical under the fix (so no `_tabulated` mirror would change). Verified 2026-08-09; details below.
 
@@ -36,7 +36,7 @@ ballots = [
 print(sorted(starvote.election(starvote.sss, ballots, seats=2, verbosity=1)))
 ```
 
-(The YAML form lived at the STAR-PR sprint's scratchpad as `exp_census/cli/quirk_sss.yaml`; the profile above is the same election and is the durable copy.)
+(The YAML form lived at the STAR-PR sprint's scratchpad as `exp_census/cli/quirk_sss.yaml`. The profile is now a permanent LH-only teaching case — [`two_bullet_voters_sss.yaml`](../03_STAR_PR/03_Criteria/vote_unitarity/cases/two_bullet_voters_sss.yaml), with the vote-unitarity lesson at [the two bullet voters](../03_STAR_PR/03_Criteria/vote_unitarity/README.md).)
 
 ### Actual output (this fork, any verbosity; upstream at verbosity>=1)
 
