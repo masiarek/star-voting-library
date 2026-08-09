@@ -1,0 +1,99 @@
+======================================================================
+SOURCE FILE:     free_ride_arms_race_allocated.yaml
+TABULATED FILE:  free_ride_arms_race_allocated_tabulated.txt
+======================================================================
+
+election_title: Free riding — both sides ride, nobody gains
+scenario_description: >
+  THE STRATEGY CANCELS ITSELF. Both blocs free ride: all 20 voters now score
+  Anika 4 rather than 5. She still wins seat 1, and every ballot is once
+  again in the same score group — so the quota is charged to everyone
+  equally, exactly as it was under honest voting, and Bruno takes the second
+  seat 24 to 20. The free ride pays only while the OTHER side does not
+  attempt it. Its gain is positional, not absolute, which is the main reason
+  it is self-limiting in practice.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:4,4,0
+  8:4,0,5
+expected_winners: [Anika, Bruno]
+
+# file: free_ride_arms_race_allocated.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Free riding — both sides ride, nobody gains ===
+  THE STRATEGY CANCELS ITSELF. Both blocs free ride: all 20 voters now score Anika 4 rather than 5. She still wins seat 1, and every ballot is once again in the same score group — so the quota is charged to everyone equally, exactly as it was under honest voting, and Bruno takes the second seat 24 to 20. The free ride pays only while the OTHER side does not attempt it. Its gain is positional, not absolute, which is the main reason it is self-limiting in practice.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Anika    |  * Bruno    |    Camila   |
+-------------------------------------------------------------
+       * Anika > |     ---      | 8 - 12 -  0 |12 -  0 -  8 |
+       * Bruno > |  0 - 12 -  8 |    ---      |12 -  0 -  8 |
+        Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Anika — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Camila — loses every head-to-head matchup
+
+--- Allocated Score Voting Method (2 winners) ---
+[Allocated Score Voting]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Anika,Bruno,Camila
+   12 ×     4,    4,     0
+    8 ×     4,    0,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Anika       0  20   0   0   0   0  |    80   4.0
+Bruno       0  12   0   0   0   8  |    48   2.4
+Camila      8   0   0   0   0  12  |    40   2.0
+ Hare quota is 10.
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Anika         -- 80 -- First place
+   Bruno         -- 48
+   Camila        -- 40
+ Anika wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 10 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 20 ballots at score 4.
+ This allocation overfills the quota.  Returning fractional surplus.
+ Allocating only 50.00% of these ballots.
+ Keeping these ballots, but multiplying their weights by 1/2.
+ 20 ballots reweighted from 1 to 1/2.
+
+[Allocated Score Voting: Round 2]
+ The highest-scoring candidate wins a seat.
+   Bruno         -- 24 -- First place
+   Camila        -- 20
+ Bruno wins a seat.
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
+ Anika
+ Bruno

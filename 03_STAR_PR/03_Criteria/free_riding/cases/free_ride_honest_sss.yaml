@@ -1,0 +1,26 @@
+election_title: Free riding — honest baseline (SSS)
+scenario_description: >
+  The honest ballots of free_ride_honest_allocated.yaml, counted with
+  Sequentially Spent Score instead. SSS reaches the same result — Anika and
+  Bruno — so the free ride in free_ride_hylland_sss.yaml is a genuine change
+  of outcome and not an artefact of the tabulation.
+voting_method: sss
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0
+  8:5,0,5
+expected_winners: [Anika, Bruno]
+
+# file: free_ride_honest_sss.yaml

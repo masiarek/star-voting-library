@@ -1,0 +1,29 @@
+election_title: Misjudged queue — the free ride achieves nothing
+scenario_description: >
+  THE FREE RIDE THAT ACHIEVES NOTHING. The minority tries the move that
+  worked in free_ride_hylland_allocated.yaml — scoring their sure winner 4
+  instead of 5. It changes the result not at all. They misjudged the queue:
+  at 4 stars they are STILL the highest score group, because the majority
+  only gave Amara 3, so they are still spent first and in full. Free riding
+  only pays if it puts someone else above you in the spend order, and a
+  voter cannot know that without knowing how everyone else scored.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Amara,Boris,Cleo
+  12:3,5,0
+  8:4,0,4
+expected_winners: [Amara, Boris]
+
+# file: misjudged_queue_hylland.yaml

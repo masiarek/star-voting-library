@@ -154,7 +154,7 @@ Fractional surplus is what makes step 3 fair rather than arbitrary: voters who g
 
 **Three variants worth recognizing**, since they get named in the same discussions:
 
-- **Droop-quota Allocated Score** — swapping Hare for Droop mitigates free-riding but biases toward larger factions.
+- **Droop-quota Allocated Score** — swapping Hare for Droop is said to mitigate [free riding](../../03_Criteria/free_riding/README.md) while biasing toward larger factions. That claim is inherited from the STV literature and is **untested here** — the engine is Hare-only, so there is no Droop run to check it against. A smaller quota cuts both ways: it charges fewer ballots, but it also exhausts the top score group sooner.
 - **Sequential Monroe** — Allocated Score with a different *selection* rule (highest-scoring quota rather than highest-scoring candidate). One of the committee's three finalists; **the LH engine does not implement it**.
 - **Allocated STAR** — adds a runoff on the **final** seat, so the last seat is decided the way single-winner STAR decides one: two finalists, the one more voters prefer. Intended to keep voters expressing a full preference order.
 

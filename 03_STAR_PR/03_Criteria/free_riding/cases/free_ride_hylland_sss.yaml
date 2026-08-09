@@ -1,0 +1,27 @@
+election_title: Free riding — the free ride (SSS)
+scenario_description: >
+  The free-riding ballots of free_ride_hylland_allocated.yaml, counted with
+  Sequentially Spent Score. SSS spends score from the top down just as
+  Allocated Score does, so it inherits the same cliff: the minority's 4-star
+  ballots are reached later, or not at all, and the second seat moves from
+  Bruno to Camila. SSS is not a defence against this.
+voting_method: sss
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0
+  8:4,0,5
+expected_winners: [Anika, Camila]
+
+# file: free_ride_hylland_sss.yaml

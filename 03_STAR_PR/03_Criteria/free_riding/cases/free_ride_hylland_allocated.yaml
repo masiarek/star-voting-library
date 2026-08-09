@@ -1,0 +1,31 @@
+election_title: Free riding — the free ride (Allocated Score)
+scenario_description: >
+  THE FREE RIDE. Identical to free_ride_honest_allocated.yaml except that
+  the 8-voter minority scores Anika 4 instead of 5 — a candidate they
+  genuinely love, and who wins either way. Anika still takes seat 1, 92 to
+  48. But Allocated Score spends the quota one score group at a time,
+  highest first: the 5-star group now holds only the 12 majority ballots,
+  which alone overfills the quota of 10, so they are charged 83.33% and keep
+  one sixth. The 4-star group is never reached, so the free riders keep 100%
+  of their weight. Camila takes the second seat 40 to 8. One star, withheld
+  from a landslide winner, swung the seat.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0   # 12-voter majority: unchanged, still honest
+  8:4,0,5    # 8-voter minority FREE RIDING: Anika 4, not 5
+expected_winners: [Anika, Camila]
+
+# file: free_ride_hylland_allocated.yaml

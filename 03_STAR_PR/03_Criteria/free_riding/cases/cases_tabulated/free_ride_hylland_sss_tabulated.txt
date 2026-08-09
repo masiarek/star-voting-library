@@ -1,0 +1,94 @@
+======================================================================
+SOURCE FILE:     free_ride_hylland_sss.yaml
+TABULATED FILE:  free_ride_hylland_sss_tabulated.txt
+======================================================================
+
+election_title: Free riding — the free ride (SSS)
+scenario_description: >
+  The free-riding ballots of free_ride_hylland_allocated.yaml, counted with
+  Sequentially Spent Score. SSS spends score from the top down just as
+  Allocated Score does, so it inherits the same cliff: the minority's 4-star
+  ballots are reached later, or not at all, and the second seat moves from
+  Bruno to Camila. SSS is not a defence against this.
+voting_method: sss
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0
+  8:4,0,5
+expected_winners: [Anika, Camila]
+
+# file: free_ride_hylland_sss.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Free riding — the free ride (SSS) ===
+  The free-riding ballots of free_ride_hylland_allocated.yaml, counted with Sequentially Spent Score. SSS spends score from the top down just as Allocated Score does, so it inherits the same cliff: the minority's 4-star ballots are reached later, or not at all, and the second seat moves from Bruno to Camila. SSS is not a defence against this.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Anika    |  * Bruno    |    Camila   |
+-------------------------------------------------------------
+       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+        Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Anika — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Camila — loses every head-to-head matchup
+
+--- Sequentially Spent Score Voting Method (2 winners) ---
+[Sequentially Spent Score]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Anika,Bruno,Camila
+   12 ×     5,    4,     0
+    8 ×     4,    0,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Anika      12   8   0   0   0   0  |    92   4.6
+Bruno       0  12   0   0   0   8  |    48   2.4
+Camila      8   0   0   0   0  12  |    40   2.0
+ Hare score quota is 50.
+
+[Sequentially Spent Score: Round 1]
+ The highest-scoring candidate wins a seat.
+   Anika         -- 92 -- First place
+   Bruno         -- 48
+   Camila        -- 40
+ Anika wins a seat.
+
+[Sequentially Spent Score: Round 1: Ballot allocation round]
+ Total score is 92, Hare score quota is 50, giving back surplus.
+ Reducing each ballot's stars by their vote * 21/46.
+ Reweighted 20 ballots:
+    12 ballots voted 5, stars reduced from 5 to 105/46, reweighted to 21/46.
+    8 ballots voted 4, stars reduced from 5 to 65/23, reweighted to 13/23.
+
+[Sequentially Spent Score: Round 2]
+ The highest-scoring candidate wins a seat.
+   Camila        -- 22+14/23 -- First place
+   Bruno         -- 21+21/23
+ Camila wins a seat.
+
+[Sequentially Spent Score: Winners — Sequentially Spent Score Voting Method (2 winners)]
+ Anika
+ Camila

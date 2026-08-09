@@ -1,0 +1,127 @@
+======================================================================
+SOURCE FILE:     misjudged_queue_hylland.yaml
+TABULATED FILE:  misjudged_queue_hylland_tabulated.txt
+======================================================================
+
+election_title: Misjudged queue — the free ride achieves nothing
+scenario_description: >
+  THE FREE RIDE THAT ACHIEVES NOTHING. The minority tries the move that
+  worked in free_ride_hylland_allocated.yaml — scoring their sure winner 4
+  instead of 5. It changes the result not at all. They misjudged the queue:
+  at 4 stars they are STILL the highest score group, because the majority
+  only gave Amara 3, so they are still spent first and in full. Free riding
+  only pays if it puts someone else above you in the spend order, and a
+  voter cannot know that without knowing how everyone else scored.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Amara,Boris,Cleo
+  12:3,5,0
+  8:4,0,4
+expected_winners: [Amara, Boris]
+
+# file: misjudged_queue_hylland.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Misjudged queue — the free ride achieves nothing ===
+  THE FREE RIDE THAT ACHIEVES NOTHING. The minority tries the move that worked in free_ride_hylland_allocated.yaml — scoring their sure winner 4 instead of 5. It changes the result not at all. They misjudged the queue: at 4 stars they are STILL the highest score group, because the majority only gave Amara 3, so they are still spent first and in full. Free riding only pays if it puts someone else above you in the spend order, and a voter cannot know that without knowing how everyone else scored.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Amara    |  * Boris    |     Cleo    |
+-------------------------------------------------------------
+       * Amara > |     ---      | 8 -  0 - 12 |12 -  8 -  0 |
+       * Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
+          Cleo > |  0 -  8 - 12 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Boris — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Cleo — loses every head-to-head matchup
+
+[Divergence from STAR]
+  STAR     = Boris
+  Approval = Amara   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Amara)
+ - Runoff Round Winner   = (Boris)
+  Candidate Amara earned the highest total score, but
+  Candidate Boris won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- Allocated Score Voting Method (2 winners) ---
+[Allocated Score Voting]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Amara,Boris,Cleo
+   12 ×     3,    5,   0
+    8 ×     4,    0,   4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Amara       0   8  12   0   0   0  |    68   3.4
+Boris      12   0   0   0   0   8  |    60   3.0
+Cleo        0   8   0   0   0  12  |    32   1.6
+ Hare quota is 10.
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Amara         -- 68 -- First place
+   Boris         -- 60
+   Cleo          -- 32
+ Amara wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 10 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 8 ballots at score 4.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 2]
+ Remaining allocation quota is 2.
+ Allocating 12 ballots at score 3.
+ This allocation overfills the remaining quota.  Returning fractional surplus.
+ Allocating only 16.67% of these ballots.
+ Keeping these ballots, but multiplying their weights by 5/6.
+ 12 ballots reweighted from 1 to 5/6.
+
+[Allocated Score Voting: Round 2]
+ Tabulating 12 remaining ballots.
+Count × Amara,Boris,Cleo
+   12 ×     3,    5,   0
+    8 ×     4,    0,   4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Amara       0   8  12   0   0   0  |    68   3.4
+Boris      12   0   0   0   0   8  |    60   3.0
+Cleo        0   8   0   0   0  12  |    32   1.6
+ The highest-scoring candidate wins a seat.
+   Boris         -- 50 -- First place
+   Cleo          --  0
+ Boris wins a seat.
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
+ Amara
+ Boris

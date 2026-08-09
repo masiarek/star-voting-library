@@ -1,0 +1,88 @@
+======================================================================
+SOURCE FILE:     free_ride_honest_rrv.yaml
+TABULATED FILE:  free_ride_honest_rrv_tabulated.txt
+======================================================================
+
+election_title: Free riding — honest baseline (RRV)
+scenario_description: >
+  The honest ballots of free_ride_honest_allocated.yaml, counted with
+  Reweighted Range Voting. Every ballot scored Anika 5, so every ballot is
+  reweighted from 1 to 1/2 and Bruno takes the second seat 24 to 20 — the
+  same result the two quota methods reach.
+voting_method: rrv
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0
+  8:5,0,5
+expected_winners: [Anika, Bruno]
+
+# file: free_ride_honest_rrv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Free riding — honest baseline (RRV) ===
+  The honest ballots of free_ride_honest_allocated.yaml, counted with Reweighted Range Voting. Every ballot scored Anika 5, so every ballot is reweighted from 1 to 1/2 and Bruno takes the second seat 24 to 20 — the same result the two quota methods reach.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Anika    |  * Bruno    |    Camila   |
+-------------------------------------------------------------
+       * Anika > |     ---      |20 -  0 -  0 |12 -  8 -  0 |
+       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+        Camila > |  0 -  8 - 12 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Anika — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Camila — loses every head-to-head matchup
+
+--- Reweighted Range Voting Method (2 winners) ---
+[Reweighted Range Voting]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Anika,Bruno,Camila
+   12 ×     5,    4,     0
+    8 ×     5,    0,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Anika      20   0   0   0   0   0  |   100   5.0
+Bruno       0  12   0   0   0   8  |    48   2.4
+Camila      8   0   0   0   0  12  |    40   2.0
+
+[Reweighted Range Voting: Round 1: Score round]
+ The highest-scoring candidate wins a seat.
+   Anika         -- 100 -- First place
+   Bruno         --  48
+   Camila        --  40
+ Anika wins a seat.
+
+[Reweighted Range Voting: Round 1: Reweighing Ballots]
+ 20 ballots reweighted from 1 to 1/2.
+
+[Reweighted Range Voting: Round 2: Score round]
+ The highest-scoring candidate wins a seat.
+   Bruno         -- 24 -- First place
+   Camila        -- 20
+ Bruno wins a seat.
+
+[Reweighted Range Voting: Winners — Reweighted Range Voting Method (2 winners)]
+ Anika
+ Bruno

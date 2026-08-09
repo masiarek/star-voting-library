@@ -1,0 +1,29 @@
+election_title: Free riding — both sides ride, nobody gains
+scenario_description: >
+  THE STRATEGY CANCELS ITSELF. Both blocs free ride: all 20 voters now score
+  Anika 4 rather than 5. She still wins seat 1, and every ballot is once
+  again in the same score group — so the quota is charged to everyone
+  equally, exactly as it was under honest voting, and Bruno takes the second
+  seat 24 to 20. The free ride pays only while the OTHER side does not
+  attempt it. Its gain is positional, not absolute, which is the main reason
+  it is self-limiting in practice.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:4,4,0
+  8:4,0,5
+expected_winners: [Anika, Bruno]
+
+# file: free_ride_arms_race_allocated.yaml

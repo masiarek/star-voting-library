@@ -1,0 +1,94 @@
+======================================================================
+SOURCE FILE:     free_ride_hylland_rrv.yaml
+TABULATED FILE:  free_ride_hylland_rrv_tabulated.txt
+======================================================================
+
+election_title: Free riding — the free ride fails (RRV)
+scenario_description: >
+  THE CONTROL THAT DOES NOT BREAK. The free-riding ballots of
+  free_ride_hylland_allocated.yaml, counted with Reweighted Range Voting —
+  and here the strategy FAILS. RRV's weight is a smooth function of the
+  score you gave, 1/(1 + score/max), so dropping Anika from 5 to 4 moves a
+  free rider from 1/2 to 5/9 rather than from 1/2 to 1. Camila climbs from
+  20 to 22.22 and still loses to Bruno's 24. Bruno keeps the seat that the
+  quota methods handed to Camila. RRV is a divisor method with no score
+  groups and therefore no cliff to jump.
+voting_method: rrv
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0
+  8:4,0,5
+expected_winners: [Anika, Bruno]
+
+# file: free_ride_hylland_rrv.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Free riding — the free ride fails (RRV) ===
+  THE CONTROL THAT DOES NOT BREAK. The free-riding ballots of free_ride_hylland_allocated.yaml, counted with Reweighted Range Voting — and here the strategy FAILS. RRV's weight is a smooth function of the score you gave, 1/(1 + score/max), so dropping Anika from 5 to 4 moves a free rider from 1/2 to 5/9 rather than from 1/2 to 1. Camila climbs from 20 to 22.22 and still loses to Bruno's 24. Bruno keeps the seat that the quota methods handed to Camila. RRV is a divisor method with no score groups and therefore no cliff to jump.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Anika    |  * Bruno    |    Camila   |
+-------------------------------------------------------------
+       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+        Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Anika — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Camila — loses every head-to-head matchup
+
+--- Reweighted Range Voting Method (2 winners) ---
+[Reweighted Range Voting]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Anika,Bruno,Camila
+   12 ×     5,    4,     0
+    8 ×     4,    0,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Anika      12   8   0   0   0   0  |    92   4.6
+Bruno       0  12   0   0   0   8  |    48   2.4
+Camila      8   0   0   0   0  12  |    40   2.0
+
+[Reweighted Range Voting: Round 1: Score round]
+ The highest-scoring candidate wins a seat.
+   Anika         -- 92 -- First place
+   Bruno         -- 48
+   Camila        -- 40
+ Anika wins a seat.
+
+[Reweighted Range Voting: Round 1: Reweighing Ballots]
+ Reweighted 20 ballots:
+   12 ballots reweighted from 1 to 1/2.
+   8 ballots reweighted from 1 to 5/9.
+
+[Reweighted Range Voting: Round 2: Score round]
+ The highest-scoring candidate wins a seat.
+   Bruno         -- 24     -- First place
+   Camila        -- 22+2/9
+ Bruno wins a seat.
+
+[Reweighted Range Voting: Winners — Reweighted Range Voting Method (2 winners)]
+ Anika
+ Bruno

@@ -1,0 +1,31 @@
+election_title: Misjudged queue — the free ride backfires
+scenario_description: >
+  THE BACKFIRE. Having gained nothing at 4, the minority pushes to 0 —
+  burying Amara completely, which under Allocated Score is the one move that
+  guarantees exemption, since ballots scoring the winner 0 are never charged
+  at all. It works, and it costs them the election they wanted. Without
+  their 40 points Amara drops to 36 and LOSES seat 1 to Boris, whose
+  supporters are then charged the quota; Cleo takes seat 2 on the minority's
+  untouched ballots. Their honest haul was Amara, scored 5; their strategic
+  haul is Cleo, scored 4. They are strictly worse off, and the board lost
+  the one candidate every voter actually liked.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Amara,Boris,Cleo
+  12:3,5,0
+  8:0,0,4
+expected_winners: [Boris, Cleo]
+
+# file: misjudged_queue_bury.yaml

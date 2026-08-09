@@ -1,0 +1,101 @@
+======================================================================
+SOURCE FILE:     free_ride_hylland_allocated.yaml
+TABULATED FILE:  free_ride_hylland_allocated_tabulated.txt
+======================================================================
+
+election_title: Free riding — the free ride (Allocated Score)
+scenario_description: >
+  THE FREE RIDE. Identical to free_ride_honest_allocated.yaml except that
+  the 8-voter minority scores Anika 4 instead of 5 — a candidate they
+  genuinely love, and who wins either way. Anika still takes seat 1, 92 to
+  48. But Allocated Score spends the quota one score group at a time,
+  highest first: the 5-star group now holds only the 12 majority ballots,
+  which alone overfills the quota of 10, so they are charged 83.33% and keep
+  one sixth. The 4-star group is never reached, so the free riders keep 100%
+  of their weight. Camila takes the second seat 40 to 8. One star, withheld
+  from a landslide winner, swung the seat.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0   # 12-voter majority: unchanged, still honest
+  8:4,0,5    # 8-voter minority FREE RIDING: Anika 4, not 5
+expected_winners: [Anika, Camila]
+
+# file: free_ride_hylland_allocated.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Free riding — the free ride (Allocated Score) ===
+  THE FREE RIDE. Identical to free_ride_honest_allocated.yaml except that the 8-voter minority scores Anika 4 instead of 5 — a candidate they genuinely love, and who wins either way. Anika still takes seat 1, 92 to 48. But Allocated Score spends the quota one score group at a time, highest first: the 5-star group now holds only the 12 majority ballots, which alone overfills the quota of 10, so they are charged 83.33% and keep one sixth. The 4-star group is never reached, so the free riders keep 100% of their weight. Camila takes the second seat 40 to 8. One star, withheld from a landslide winner, swung the seat.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Anika    |  * Bruno    |    Camila   |
+-------------------------------------------------------------
+       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+        Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Anika — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Camila — loses every head-to-head matchup
+
+--- Allocated Score Voting Method (2 winners) ---
+[Allocated Score Voting]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Anika,Bruno,Camila
+   12 ×     5,    4,     0
+    8 ×     4,    0,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Anika      12   8   0   0   0   0  |    92   4.6
+Bruno       0  12   0   0   0   8  |    48   2.4
+Camila      8   0   0   0   0  12  |    40   2.0
+ Hare quota is 10.
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Anika         -- 92 -- First place
+   Bruno         -- 48
+   Camila        -- 40
+ Anika wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 10 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 12 ballots at score 5.
+ This allocation overfills the quota.  Returning fractional surplus.
+ Allocating only 83.33% of these ballots.
+ Keeping these ballots, but multiplying their weights by 1/6.
+ 12 ballots reweighted from 1 to 1/6.
+
+[Allocated Score Voting: Round 2]
+ The highest-scoring candidate wins a seat.
+   Camila        -- 40 -- First place
+   Bruno         --  8
+ Camila wins a seat.
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
+ Anika
+ Camila

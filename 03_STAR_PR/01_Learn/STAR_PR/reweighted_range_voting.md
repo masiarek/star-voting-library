@@ -94,6 +94,8 @@ Three seats agree; the fourth does not. That last seat is the quota-versus-divis
 
 **RRV is a divisor method, and the trade cuts both ways.** Classical apportionment theory (Pukelsheim, ch. 9) proves a **Coherence Theorem**: a method is coherent — every subset of the winners, re-solved on its own, gives the same answer — *if and only if* it is a divisor method. So RRV is coherent, house-size monotone and vote-ratio monotone, and structurally immune to the family of paradoxes that quota methods are prone to — including the **[Alabama paradox this library demonstrates for Allocated Score](../../03_Criteria/alabama_paradox/README.md)**. That is a real advantage, and it should not be buried under the criterion failure below.
 
+**The same coherence buys a second, less-advertised advantage: it resists the cheap free ride.** A quota method spends supporters one score group at a time, so a ballot's exposure is a *step* function of the score it gave and there is an edge to stand just past. RRV has no groups — weight is `1 / (1 + score ÷ max_score)`, continuous in the score. On [the library's worked case](../../03_Criteria/free_riding/README.md), dropping a landslide winner from 5 to 4 moves a free rider from 1/2 to 5/9 rather than from 1/2 to 1, and the seat does **not** flip; under Allocated Score and SSS it does. Worth stating precisely, because the usual claim in this area — that reweighting makes free riding riskier than in ranked methods — is true of RRV but **not** of the quota methods that also reweight.
+
 **What it pays for that: it does not guarantee quota.** A faction holding a quota's worth of voters cannot always force a seat by voting as a bloc, so RRV **fails the [Hare Quota Criterion](../what_proportional_means.md)** — which is why some classify it as **semi-proportional** rather than proportional. Structurally it belongs to the Thiele school, which equalizes satisfaction rather than allocating quotas; the criterion failure is a different answer to what "proportional" should mean, not a bug.
 
 **It is not on Equal Vote's shortlist, and that is consistent rather than incidental.** Their committee's three finalists are Allocated Score, SSS and Sequential Monroe. RRV is the one that doesn't pass the quota criterion. Their summary of the trade, with the lean stated: RRV is the mathematically simplest tabulation and the oldest cardinal-PR proposal, but tends toward more utilitarian and less diversified winners, and is less transparent to non-mathematicians.
@@ -102,12 +104,13 @@ Three seats agree; the fourth does not. That last seat is the quota-versus-divis
 
 ## Scenarios in this library
 
-Two case files use `rrv`, and between them they make the whole point — one where RRV agrees with the quota methods and one where it doesn't:
+Six case files use `rrv`, and between them they make the whole point — where RRV agrees with the quota methods, where it doesn't, and where it is the only one of the three that holds:
 
 | Scenario | What it shows | Read · run |
 |---|---|---|
 | **The 63-ballot baseline** | The count above. Same slate as [Allocated](allocated_score.md) and [SSS](sequentially_spent_score.md) — the family difference stays invisible on a clean two-coalition race. | [page](../../02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) · [yaml](../../02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | **Shadow — Lackner & Skowron** | The divergence: **A, B, C, F** where Allocated Score seats D, on identical ballots. | [page](../../02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) · [yaml](../../02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
+| **Free riding, resisted** | The one-star free ride that flips the second seat under both quota methods — and fails here. RRV's best showing in this library. | [lesson](../../03_Criteria/free_riding/README.md) · [count](../../03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_rrv.md) |
 
 ## Related
 

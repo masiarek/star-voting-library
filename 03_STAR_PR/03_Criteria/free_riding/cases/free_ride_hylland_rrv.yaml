@@ -1,0 +1,30 @@
+election_title: Free riding — the free ride fails (RRV)
+scenario_description: >
+  THE CONTROL THAT DOES NOT BREAK. The free-riding ballots of
+  free_ride_hylland_allocated.yaml, counted with Reweighted Range Voting —
+  and here the strategy FAILS. RRV's weight is a smooth function of the
+  score you gave, 1/(1 + score/max), so dropping Anika from 5 to 4 moves a
+  free rider from 1/2 to 5/9 rather than from 1/2 to 1. Camila climbs from
+  20 to 22.22 and still loses to Bruno's 24. Bruno keeps the seat that the
+  quota methods handed to Camila. RRV is a divisor method with no score
+  groups and therefore no cliff to jump.
+voting_method: rrv
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Anika,Bruno,Camila
+  12:5,4,0
+  8:4,0,5
+expected_winners: [Anika, Bruno]
+
+# file: free_ride_hylland_rrv.yaml

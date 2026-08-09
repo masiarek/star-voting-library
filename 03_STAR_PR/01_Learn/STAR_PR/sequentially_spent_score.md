@@ -89,15 +89,18 @@ Count × Alice,Ben,Cara,Dan,Eve
 
 **SSS is a quota method**, like Allocated Score and unlike [RRV](reweighted_range_voting.md). It passes the [Hare Quota Criterion](../what_proportional_means.md) — a cohesive quota-sized faction can force a seat — and it inherits the same structural exposure that guarantee brings with it, the non-monotonicity that produces the [Alabama paradox](../../03_Criteria/alabama_paradox/README.md). That paradox is *demonstrated* in this library for Allocated Score; whether SSS's proportional spending changes the picture is **not something anyone here has checked**, and it would be a good and entirely runnable question.
 
+**One piece of that exposure *has* been checked, and SSS shares it.** Because SSS also spends score from the top down, it inherits Allocated Score's [free-riding cliff](../../03_Criteria/free_riding/README.md): on the library's worked case, a bloc that scores a landslide winner 4 instead of 5 flips the second seat under **both** quota methods, while [RRV](reweighted_range_voting.md) — a divisor method with no score groups — holds. SSS's smoother, proportional spending is not a defence against this one.
+
 **Equal Vote's own assessment**, worth quoting with its lean stated: they describe SSS as innovative, easy to explain, and promising — but newer, and still a proposal for further study rather than a settled recommendation. It is one of the committee's **three finalists** (with Allocated Score and Sequential Monroe), and Allocated Score is the one they actually recommend. That is an advocacy body ranking methods it favors; the criteria themselves are standard and checkable.
 
-**Coverage here is thin, and that is worth saying plainly.** Two case files use `sss`, against seventeen for Allocated Score. Nothing about the method makes it hard to test — the gap is this library's, not SSS's.
+**Coverage here is thin, and that is worth saying plainly.** Seven case files use `sss`, against 26 for Allocated Score. Nothing about the method makes it hard to test — the gap is this library's, not SSS's.
 
 ## Scenarios in this library
 
 | Scenario | What it shows | Read · run |
 |---|---|---|
 | **The 63-ballot baseline** | The count above, directly comparable with the [Allocated](allocated_score.md) and [RRV](reweighted_range_voting.md) runs on identical ballots. | [page](../../02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) · [yaml](../../02_Examples/cases/02b_c5_b63_proportional-sss.yaml) |
+| **Free riding** | SSS shares Allocated Score's cliff: the same one-star free ride flips the second seat here too. | [lesson](../../03_Criteria/free_riding/README.md) · [count](../../03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_sss.md) |
 | **STAR-PR, 3 seats** | A civic-priorities race — Housing, Schools, SmallBiz — counted on the same ballots as the STV file, which is what makes the [STV head-to-head](../../../method_comparisons/stv_vs_star_pr/README.md) possible. | [page](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) · [yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml) |
 
 ## Related

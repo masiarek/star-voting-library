@@ -1,0 +1,128 @@
+======================================================================
+SOURCE FILE:     misjudged_queue_honest.yaml
+TABULATED FILE:  misjudged_queue_honest_tabulated.txt
+======================================================================
+
+election_title: Misjudged queue — honest baseline
+scenario_description: >
+  HONEST BASELINE for the backfire pair. A different election: the 8-voter
+  minority scores Amara 5 and Cleo 4; the 12-voter majority is only lukewarm
+  on Amara (3) and wants Boris (5). Amara wins seat 1 with 76. The quota is
+  charged from the top down, and the top score group is the MINORITY's own
+  5-star ballots — all 8 are spent in full before the majority is touched at
+  all. Seat 2 goes to Boris. The minority's honest haul is Amara, whom they
+  scored 5. Compare misjudged_queue_hylland.yaml and
+  misjudged_queue_bury.yaml.
+voting_method: allocated
+num_winners: 2
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: false
+  brief: true
+  collapse_ballots: true
+  count_separator: "×"
+ballots: |-
+  Count:Amara,Boris,Cleo
+  12:3,5,0
+  8:5,0,4
+expected_winners: [Amara, Boris]
+
+# file: misjudged_queue_honest.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Misjudged queue — honest baseline ===
+  HONEST BASELINE for the backfire pair. A different election: the 8-voter minority scores Amara 5 and Cleo 4; the 12-voter majority is only lukewarm on Amara (3) and wants Boris (5). Amara wins seat 1 with 76. The quota is charged from the top down, and the top score group is the MINORITY's own 5-star ballots — all 8 are spent in full before the majority is touched at all. Seat 2 goes to Boris. The minority's honest haul is Amara, whom they scored 5. Compare misjudged_queue_hylland.yaml and misjudged_queue_bury.yaml.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                 |   * Amara    |  * Boris    |     Cleo    |
+-------------------------------------------------------------
+       * Amara > |     ---      | 8 -  0 - 12 |20 -  0 -  0 |
+       * Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
+          Cleo > |  0 -  0 - 20 | 8 -  0 - 12 |    ---      |
+
+[Condorcet Winner]
+  Condorcet Winner: Boris — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Cleo — loses every head-to-head matchup
+
+[Divergence from STAR]
+  STAR     = Boris
+  Approval = Amara   (differs from STAR)
+
+[Runoff Reversal]
+ - Score Round Winner(s) = (Amara)
+ - Runoff Round Winner   = (Boris)
+  Candidate Amara earned the highest total score, but
+  Candidate Boris won the automatic runoff — not a malfunction,
+  STAR working as designed: the runoff elects the finalist preferred
+  by the majority (of voters with a preference).
+
+
+--- Allocated Score Voting Method (2 winners) ---
+[Allocated Score Voting]
+ Tabulating 20 ballots to fill 2 seats.
+Count × Amara,Boris,Cleo
+   12 ×     3,    5,   0
+    8 ×     5,    0,   4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Amara       8   0  12   0   0   0  |    76   3.8
+Boris      12   0   0   0   0   8  |    60   3.0
+Cleo        0   8   0   0   0  12  |    32   1.6
+ Hare quota is 10.
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Amara         -- 76 -- First place
+   Boris         -- 60
+   Cleo          -- 32
+ Amara wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 10 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 8 ballots at score 5.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 2]
+ Remaining allocation quota is 2.
+ Allocating 12 ballots at score 3.
+ This allocation overfills the remaining quota.  Returning fractional surplus.
+ Allocating only 16.67% of these ballots.
+ Keeping these ballots, but multiplying their weights by 5/6.
+ 12 ballots reweighted from 1 to 5/6.
+
+[Allocated Score Voting: Round 2]
+ Tabulating 12 remaining ballots.
+Count × Amara,Boris,Cleo
+   12 ×     3,    5,   0
+    8 ×     5,    0,   4
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Amara       8   0  12   0   0   0  |    76   3.8
+Boris      12   0   0   0   0   8  |    60   3.0
+Cleo        0   8   0   0   0  12  |    32   1.6
+ The highest-scoring candidate wins a seat.
+   Boris         -- 50 -- First place
+   Cleo          --  0
+ Boris wins a seat.
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
+ Amara
+ Boris

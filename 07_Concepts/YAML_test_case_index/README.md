@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**582 election files** (500 single-winner, 82 multi-winner) across 18 method(s).
+**592 election files** (500 single-winner, 92 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -18,9 +18,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Approval | 25 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
-| STAR-PR (Sequential Selection) | 5 |
-| Reweighted Range | 4 |
-| Allocated Score (STAR-PR) | 20 |
+| STAR-PR (Sequential Selection) | 7 |
+| Reweighted Range | 6 |
+| Allocated Score (STAR-PR) | 26 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 7 |
 | BLOC STAR | 29 |
@@ -521,26 +521,30 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`min_bloc_c3_b2`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/min_bloc_c3_b2.md) | `method_comparisons/bloc_vs_pr/cases/` | 2 | The smallest divergence — Bloc STAR → _Ana, Ben_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/min_bloc_c3_b2.yaml) |
 | [`blocs_bloc_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_bloc_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 | Left, Centre, Right — Bloc STAR fills the council | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_bloc_c9_b10.yaml) |
 
-## STAR-PR (Sequential Selection)  (5)
+## STAR-PR (Sequential Selection)  (7)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`three_neighbors_sss`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/three_neighbors_sss.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Three neighbors, two seats — Sequentially Spent Score → _Ana, Cleo_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/three_neighbors_sss.yaml) |
 | [`two_officers_sss`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_sss.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Sequentially Spent Score → _Dana, Finn_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_sss.yaml) |
+| [`free_ride_honest_sss`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_honest_sss.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — honest baseline (SSS) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_honest_sss.yaml) |
+| [`free_ride_hylland_sss`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_sss.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — the free ride (SSS) → _Anika, Camila_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_hylland_sss.yaml) |
 | [`02b_c5_b63_proportional-sss`](../../03_STAR_PR/02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Sequentially Spent Score → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02b_c5_b63_proportional-sss.yaml) |
 | [`03b_star_pr_3seats`](../../03_STAR_PR/02_Examples/cases/cases_pages/03b_star_pr_3seats.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — same 3-seat electorate as the STV demo → _Housing, Schools, SmallBiz_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/03b_star_pr_3seats.yaml) |
 | [`coop_board_scores_sss`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_scores_sss.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — 0–5 score ballot, sss → _Ben, Chris, Dana_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_scores_sss.yaml) |
 
-## Reweighted Range  (4)
+## Reweighted Range  (6)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`three_neighbors_rrv`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/three_neighbors_rrv.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Three neighbors, two seats — Reweighted Range Voting → _Ana, Cleo_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/three_neighbors_rrv.yaml) |
 | [`two_officers_rrv`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_rrv.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Reweighted Range Voting → _Dana, Eli_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_rrv.yaml) |
+| [`free_ride_honest_rrv`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_honest_rrv.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — honest baseline (RRV) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_honest_rrv.yaml) |
+| [`free_ride_hylland_rrv`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_rrv.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — the free ride fails (RRV) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_hylland_rrv.yaml) |
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (20)
+## Allocated Score (STAR-PR)  (26)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -549,6 +553,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`two_officers_allocated`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_allocated.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Allocated Score → _Dana, Finn_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_allocated.yaml) |
 | [`alabama_2seats`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/cases_pages/alabama_2seats.md) | `03_STAR_PR/03_Criteria/alabama_paradox/cases/` | 2 | The Alabama paradox — 2 seats | [`.yaml`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/alabama_2seats.yaml) |
 | [`bkk2gxj_fractional_surplus`](../../03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/cases_pages/bkk2gxj_fractional_surplus.md) | `03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/` | 2 | BV fixture — fractional surplus → _Allison, Doug_ | [`.yaml`](../../03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/bkk2gxj_fractional_surplus.yaml) |
+| [`free_ride_arms_race_allocated`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_arms_race_allocated.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — both sides ride, nobody gains → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_arms_race_allocated.yaml) |
+| [`free_ride_honest_allocated`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_honest_allocated.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — honest baseline (Allocated Score) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_honest_allocated.yaml) |
+| [`free_ride_hylland_allocated`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_allocated.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — the free ride (Allocated Score) → _Anika, Camila_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_hylland_allocated.yaml) |
+| [`misjudged_queue_bury`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/misjudged_queue_bury.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Misjudged queue — the free ride backfires → _Boris, Cleo_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/misjudged_queue_bury.yaml) |
+| [`misjudged_queue_honest`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/misjudged_queue_honest.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Misjudged queue — honest baseline → _Amara, Boris_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/misjudged_queue_honest.yaml) |
+| [`misjudged_queue_hylland`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/misjudged_queue_hylland.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Misjudged queue — the free ride achieves nothing → _Amara, Boris_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/misjudged_queue_hylland.yaml) |
 | [`08_c6_b29_quota-circus-pr-2-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/08_c6_b29_quota-circus-pr-2-seats.md) | `06_Other/ballot_style_lab/cases/` | 2 | Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats) → _Amir, Bree_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/08_c6_b29_quota-circus-pr-2-seats.yaml) |
 | [`BV_Library_star_pr_basic_two_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_basic_two_seats.md) | `method_comparisons/BV_Library/cases/` | 2 | BV parity — STAR_PR (Allocated Score): basic two-seat allocation → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_basic_two_seats.yaml) |
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/cases/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_fractional_surplus.yaml) |

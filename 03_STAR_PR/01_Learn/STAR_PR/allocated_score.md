@@ -112,22 +112,25 @@ Count × Alice,Ben,Cara,Dan,Eve
 
 That is not hypothetical here. This library asked the question and answered it: **[Allocated Score has the Alabama paradox](../../03_Criteria/alabama_paradox/README.md)**. Five gardeners, four candidates — a two-seat committee elects Basil and Dahlia, a *three*-seat committee elects Aster, Basil and Clover. Dahlia was on the smaller committee and is off the bigger one, with no ballot changed. The trade against a divisor method like [RRV](reweighted_range_voting.md) is a genuine [Balinski–Young](the_math_behind_proportional_star.md) one, not a winner.
 
+**It is also the STAR-PR method most exposed to free riding, and that is the same trade wearing a different hat.** Because the quota is spent one score group at a time, highest first, a ballot's exposure is a *step* function of the score it gave — so **[withholding one star from a candidate who is winning anyway can take a ballot out of the charge entirely](../../03_Criteria/free_riding/README.md)**. In this library's case a bloc flips the second seat by scoring a landslide winner 4 rather than 5, while she still wins 92 to 48. [RRV](reweighted_range_voting.md) resists that same move because a divisor method has no score groups to step between. The strategy has real limits — it needs a read on how *other* factions scored, and it backfires when pushed — but it is cheaper here than the usual "modest incentive" framing allows.
+
 **Provenance, with the lean stated.** Allocated Score is the consensus method of the Equal Vote 0–5 STAR Proportional Representation Research Committee, which spent roughly two years from 2018 comparing options at each stage of the tabulation (credited to Parker Friedland, Keith Edmonds, Jameson Quinn, Sara Wolk and others). That is an advocacy body selecting among methods it favors — what makes it checkable here regardless is that the procedure is precisely specified and independently reimplementable.
 
 **Three named variants** you will meet in the same discussions:
 
-- **Droop-quota Allocated Score** — swapping Hare for Droop mitigates free-riding but biases toward larger factions.
+- **Droop-quota Allocated Score** — swapping Hare for Droop is said to mitigate free riding while biasing toward larger factions. That claim is inherited from the STV literature and is **untested here** — the engine is Hare-only, so there is no Droop run to check it against. A smaller quota cuts both ways: it charges fewer ballots, but it also exhausts the top score group sooner.
 - **Sequential Monroe** — Allocated Score with a different *selection* rule (highest-scoring quota rather than highest-scoring candidate). One of the committee's three finalists; **the LH engine does not implement it**, so a third of the recommended shortlist has no runnable case in this library.
 - **Allocated STAR** — adds a runoff on the **final** seat, so the last seat is decided the way single-winner STAR decides one.
 
 ## Scenarios in this library
 
-Allocated Score is the STAR-PR method with real coverage here — **17 case files across seven folders**, against two apiece for [SSS](sequentially_spent_score.md) and [RRV](reweighted_range_voting.md). Gathered:
+Allocated Score is the STAR-PR method with real coverage here — **26 case files across 12 folders**, against seven for [SSS](sequentially_spent_score.md) and six for [RRV](reweighted_range_voting.md). Gathered:
 
 | Scenario | What it shows | Read · run |
 |---|---|---|
 | **The 63-ballot baseline** | The count above — two coalitions, three seats, both surplus reweights. | [page](../../02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) · [yaml](../../02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml) |
 | **The Alabama paradox** | Add a seat, someone loses one. The monotonicity price of a quota method, at 2 and 3 seats. | [lesson](../../03_Criteria/alabama_paradox/README.md) |
+| **Free riding** | Score a landslide winner 4 instead of 5 and the quota never reaches your ballot — the second seat flips. Plus the two ways the strategy fails, and the same ballots under all three methods. | [lesson](../../03_Criteria/free_riding/README.md) · [count](../../03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_allocated.md) |
 | **Fractional surplus, isolated** | The step-3 remainder handled on its own, cross-checked against BetterVoting. | [lesson](../../03_Criteria/bv_fixture_crosscheck/README.md) · [count](../../03_Criteria/bv_fixture_crosscheck/cases/cases_pages/bkk2gxj_fractional_surplus.md) |
 | **Shadow — Lackner & Skowron** | The academic running example from the multi-winner literature; seats **A, B, C, D**. Compare with [RRV on the identical ballots](reweighted_range_voting.md), which seats **F** instead of D. | [page](../../02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_c7_b12.md) · [yaml](../../02_Examples/cases/lackner_skowron_shadow_star_pr_c7_b12.yaml) |
 | **A presidential board** | A realistic multi-seat board election, BV-backed. | [lesson](../../02_Examples/bv2130_presidential_board_star_pr.md) · [count](../../02_Examples/cases/cases_pages/bv2130_presidential_board_star_pr.md) |
