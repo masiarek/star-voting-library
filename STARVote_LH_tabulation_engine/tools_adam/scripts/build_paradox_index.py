@@ -17,6 +17,17 @@ reported loudly (and listed in a trailing section so nothing silently drops).
 To add a paradox: add a VOCAB entry (display name, Felsenthal kind, teaching
 page or None, one-line definition), then tag the case YAMLs.
 
+The bar for a VOCAB entry is a Felsenthal-style pathology — a startling outcome
+from the data as given ("Simple"), or a perverse response to changing one datum
+("Conditional"). A designed mechanism doing its designed job does NOT qualify,
+and neither does a strategy backfire. Precedent (2026-08-09): `runoff-reversal`
+was untagged rather than added — the automatic runoff overturning the scoring
+leader is the repo's canonical FEATURE demonstration
+(01_STAR/02_Examples/runoff_overturns_leader/), the tactical-maximization pair
+that carried the tag is a criteria/strategy lesson, and one of its two files
+never even reversed. Rationale on the taxonomy page:
+07_Concepts/voting_paradoxes/README.md, "Deliberately not listed".
+
 Run from the repo root:
     python STARVote_LH_tabulation_engine/tools_adam/scripts/build_paradox_index.py
 """
