@@ -34,7 +34,7 @@ The **`5,5`** (ballot 3) is the one in dispute, and the **blank** (ballot 5) is 
 
 ## Two reports — one ballot of disagreement
 
-| | BetterVoting (frozen) | LH engine |
+| | BetterVoting | LH engine |
 |---|---:|---:|
 | Ballots tallied | **3** (`nTallyVotes`) | **5** |
 | Abstentions | **2** — the `5,5` **and** the blank | **1** — the blank only |

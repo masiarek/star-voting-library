@@ -52,7 +52,7 @@ So the two notions genuinely disagree on two ballots: `3,3,3` (a real, engaged v
 
 ## Two reports
 
-| | BetterVoting (frozen) | LH engine |
+| | BetterVoting | LH engine |
 |---|---:|---:|
 | Ballots tallied | **5** (`nTallyVotes`) | **8** |
 | Abstentions | **3** (flat ballots) | **1** (blank only) |
