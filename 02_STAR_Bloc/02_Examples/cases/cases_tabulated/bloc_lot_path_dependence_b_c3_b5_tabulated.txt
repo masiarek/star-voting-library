@@ -70,14 +70,15 @@ TABULATION RESULTS
   LH-only (no BetterVoting election): the winner turns on the lot, and only
   LH's published lot_numbers let a reader derive the result from the file.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Nadia   |  * Omar   |   Priya   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |    Nadia   |    Omar   |   Priya   |
 -----------------------------------------------------
-     * Nadia > |    ---     |2 - 1 - 2  |3 - 0 - 2  |
-      * Omar > | 2 - 1 - 2  |   ---     |1 - 2 - 2  |
+       Nadia > |    ---     |2 - 1 - 2  |3 - 0 - 2  |
+        Omar > | 2 - 1 - 2  |   ---     |1 - 2 - 2  |
        Priya > | 2 - 0 - 3  |2 - 2 - 1  |   ---     |
 
 [Condorcet Winner]

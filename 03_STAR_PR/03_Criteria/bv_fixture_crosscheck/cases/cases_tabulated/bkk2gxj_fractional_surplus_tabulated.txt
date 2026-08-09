@@ -42,14 +42,15 @@ TABULATION RESULTS
 === BV fixture — fractional surplus ===
   BetterVoting's own unit-test fixture for Allocated Score ("Fractional surplus" in packages/backend/src/Tabulators/AllocatedScore.test.ts), cast as a real BetterVoting election and re-counted here. Allison has eight top-level supporters but a seat costs only six voters, so the whole quota is drawn from inside her 5-star group and each of those ballots keeps 1 - 6/8 = 0.25 of its weight for the second seat. This is the case that shows fractional surplus doing its job: voters who scored the winner identically are spent identically.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |  * Allison   |   * Bill    |    Carmen   |     Doug    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |    Allison   |     Bill    |    Carmen   |     Doug    |
 ---------------------------------------------------------------------------
-     * Allison > |     ---      | 1 - 11 -  0 | 8 -  1 -  3 | 8 -  0 -  4 |
-        * Bill > |  0 - 11 -  1 |    ---      | 7 -  2 -  3 | 8 -  0 -  4 |
+       Allison > |     ---      | 1 - 11 -  0 | 8 -  1 -  3 | 8 -  0 -  4 |
+          Bill > |  0 - 11 -  1 |    ---      | 7 -  2 -  3 | 8 -  0 -  4 |
         Carmen > |  3 -  1 -  8 | 3 -  2 -  7 |    ---      | 8 -  0 -  4 |
           Doug > |  4 -  0 -  8 | 4 -  0 -  8 | 4 -  0 -  8 |    ---      |
 

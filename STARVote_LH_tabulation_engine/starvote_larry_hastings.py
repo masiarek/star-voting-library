@@ -238,6 +238,9 @@ DEFAULT_OPTIONS = {
 # What the always-full `_tabulated` mirror forces on, regardless of any option
 # above or in the file. `--full` applies the same set to the on-screen render.
 # (count_separator is deliberately NOT forced — the file's choice is kept.)
+# For a MULTI-WINNER race the forced-on matrix renders as plain head-to-head
+# data — retitled "Preference Matrix", no "Top 2 Finalist" markers — because
+# the finalists come from a silent seats=1 STAR analysis (see print_matrix).
 FULL_RENDER_OVERRIDES = dict(
     show_matrix=True,
     matrix_finalists_only=False,
@@ -1241,22 +1244,39 @@ def finalist_tiebreak_note(tiebreak, finalists_only=False):
 
 def print_matrix(
     candidates, matrix, finalists=None, star_winner=None, finalists_only=False,
-    tiebreak=None,
+    tiebreak=None, seats=1,
 ):
     if not candidates or not matrix:
         return
     if finalists is None:
         finalists = []
+    # Multi-winner: the finalists (and any finalist tiebreak) come from the
+    # silent seats=1 STAR analysis, and a Top-2 runoff is a single-winner
+    # concept — so a Bloc/PR report shows the grid as plain head-to-head data:
+    # retitled, no finalist markers, and a legend line saying the actual count
+    # happens in the method rounds below.
+    multiwinner = seats > 1
+    if multiwinner:
+        finalists = []
+        tiebreak = None
     # Optionally restrict the grid to just the two finalists — the decisive
     # head-to-head that determines the STAR runoff.
     if finalists_only and finalists:
         candidates = [c for c in candidates if c in finalists]
-    print("\n--- Runoff (Preference) Matrix ---")
+    if multiwinner:
+        print("\n--- Preference Matrix ---")
+    else:
+        print("\n--- Runoff (Preference) Matrix ---")
     print("Head-to-head / pairwise comparison")
     print(
         f"Legend: {COLOR_GREEN}For{COLOR_RESET} - {COLOR_BLUE}Equal Support{COLOR_RESET} - {COLOR_RED}Against{COLOR_RESET}"
     )
-    print("        * indicates Top 2 Finalist")
+    if multiwinner:
+        print(f"        Informational only — not part of the {seats}-winner "
+              "count below,")
+        print("        so no Top-2 finalists are marked.")
+    else:
+        print("        * indicates Top 2 Finalist")
     # Only when a tie actually reached the ladder — which is rare, so the
     # house "less is more" default is untouched for ordinary elections.
     if tiebreak:
@@ -3126,6 +3146,7 @@ def run_election(
                 star_winner,
                 finalists_only=matrix_finalists_only,
                 tiebreak=finalist_tiebreak,
+                seats=seats,
             )
         if show_condorcet:
             print_condorcet(candidates, matrix, star_winner, finalists,
@@ -3860,7 +3881,10 @@ Memphis,Nashville,Chattanooga,Knoxville
         # win): the preference matrix is a SINGLE-WINNER concept — a Bloc/PR
         # report with a "Top 2 Finalist" grid is misleading — and with only
         # two candidates it merely echoes the runoff, so both cases default
-        # the matrix off. A file can still force it with `show_matrix: true`.
+        # the matrix off. A file can still force it with `show_matrix: true`,
+        # and the always-full mirror / `--full` render always carries it —
+        # for seats > 1 those render the grid as plain head-to-head data with
+        # no finalist markers (see print_matrix).
         if SEATS > 1 or len(_hdr_names) == 2:
             SHOW_MATRIX = False
             MATRIX_FINALISTS_ONLY = False

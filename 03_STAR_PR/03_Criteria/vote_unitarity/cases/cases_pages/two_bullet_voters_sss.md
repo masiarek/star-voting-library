@@ -111,15 +111,16 @@ Amy,Bo,Cy
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Amy    |     Bo    |   * Cy    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Amy    |     Bo    |     Cy    |
 -----------------------------------------------------
-       * Amy > |    ---     |2 - 3 - 2  |3 - 0 - 4  |
+         Amy > |    ---     |2 - 3 - 2  |3 - 0 - 4  |
           Bo > | 2 - 3 - 2  |   ---     |3 - 1 - 3  |
-        * Cy > | 4 - 0 - 3  |3 - 1 - 3  |   ---     |
+          Cy > | 4 - 0 - 3  |3 - 1 - 3  |   ---     |
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Bo, Cy (pairwise ties)

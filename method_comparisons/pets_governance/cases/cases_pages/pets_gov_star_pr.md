@@ -103,15 +103,16 @@ Count × Dog,Cat,Fish,Bird,Rabbit,Hamster
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Dog     |     Cat     |   * Fish    |     Bird    |    Rabbit   |   Hamster   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                 |      Dog     |     Cat     |     Fish    |     Bird    |    Rabbit   |   Hamster   |
 -------------------------------------------------------------------------------------------------------
-         * Dog > |     ---      |13 -  9 -  0 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+           Dog > |     ---      |13 -  9 -  0 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
            Cat > |  0 -  9 - 13 |    ---      | 0 - 13 -  9 |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
-        * Fish > |  9 -  0 - 13 | 9 - 13 -  0 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
+          Fish > |  9 -  0 - 13 | 9 - 13 -  0 |    ---      |13 -  0 -  9 |13 -  0 -  9 |13 -  0 -  9 |
           Bird > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 |    ---      |22 -  0 -  0 |22 -  0 -  0 |
         Rabbit > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 |    ---      | 0 - 22 -  0 |
        Hamster > |  9 -  0 - 13 | 9 -  0 - 13 | 9 -  0 - 13 | 0 -  0 - 22 | 0 - 22 -  0 |    ---      |

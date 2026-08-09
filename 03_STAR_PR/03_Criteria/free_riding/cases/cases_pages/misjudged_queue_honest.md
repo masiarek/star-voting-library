@@ -85,14 +85,15 @@ Count × Amara,Boris,Cleo
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Amara    |  * Boris    |     Cleo    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Amara    |    Boris    |     Cleo    |
 -------------------------------------------------------------
-       * Amara > |     ---      | 8 -  0 - 12 |20 -  0 -  0 |
-       * Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
+         Amara > |     ---      | 8 -  0 - 12 |20 -  0 -  0 |
+         Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
           Cleo > |  0 -  0 - 20 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

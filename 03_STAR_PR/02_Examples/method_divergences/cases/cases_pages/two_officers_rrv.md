@@ -92,14 +92,15 @@ Dana,Eli,Finn
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Dana   |  * Eli    |    Finn   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Dana   |    Eli    |    Finn   |
 -----------------------------------------------------
-      * Dana > |    ---     |2 - 0 - 1  |2 - 0 - 1  |
-       * Eli > | 1 - 0 - 2  |   ---     |1 - 1 - 1  |
+        Dana > |    ---     |2 - 0 - 1  |2 - 0 - 1  |
+         Eli > | 1 - 0 - 2  |   ---     |1 - 1 - 1  |
         Finn > | 1 - 0 - 2  |1 - 1 - 1  |   ---     |
 
 [Condorcet Winner]

@@ -31,14 +31,15 @@ TABULATION RESULTS
 === Free riding — the free ride (Allocated Score) ===
   THE FREE RIDE. Identical to free_ride_honest_allocated.yaml except that the 8-voter minority scores Anika 4 instead of 5 — a candidate they genuinely love, and who wins either way. Anika still takes seat 1, 92 to 48. But Allocated Score spends the quota one score group at a time, highest first: the 5-star group now holds only the 12 majority ballots, which alone overfills the quota of 10, so they are charged 83.33% and keep one sixth. The 4-star group is never reached, so the free riders keep 100% of their weight. Camila takes the second seat 40 to 8. One star, withheld from a landslide winner, swung the seat.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
-       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+         Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
         Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

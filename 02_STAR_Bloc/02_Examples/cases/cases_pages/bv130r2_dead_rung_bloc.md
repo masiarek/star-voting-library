@@ -166,16 +166,17 @@ Ada,Ben,Cara,Dan,Eve,Finn
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ada    |    Ben    |    Cara   |  * Dan    |    Eve    |    Finn   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ada    |    Ben    |    Cara   |    Dan    |    Eve    |    Finn   |
 -----------------------------------------------------------------------------------------
-       * Ada > |    ---     |4 - 0 - 0  |4 - 0 - 0  |1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |
+         Ada > |    ---     |4 - 0 - 0  |4 - 0 - 0  |1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |
          Ben > | 0 - 0 - 4  |   ---     |3 - 0 - 1  |0 - 0 - 4  |0 - 1 - 3  |3 - 1 - 0  |
         Cara > | 0 - 0 - 4  |1 - 0 - 3  |   ---     |0 - 0 - 4  |0 - 1 - 3  |1 - 2 - 1  |
-       * Dan > | 1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |   ---     |4 - 0 - 0  |4 - 0 - 0  |
+         Dan > | 1 - 2 - 1  |4 - 0 - 0  |4 - 0 - 0  |   ---     |4 - 0 - 0  |4 - 0 - 0  |
          Eve > | 0 - 0 - 4  |3 - 1 - 0  |3 - 1 - 0  |0 - 0 - 4  |   ---     |4 - 0 - 0  |
         Finn > | 0 - 0 - 4  |0 - 1 - 3  |1 - 2 - 1  |0 - 0 - 4  |0 - 0 - 4  |   ---     |
 

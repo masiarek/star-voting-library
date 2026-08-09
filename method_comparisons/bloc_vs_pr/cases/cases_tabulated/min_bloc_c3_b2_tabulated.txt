@@ -30,14 +30,15 @@ TABULATION RESULTS
 === The smallest divergence — Bloc STAR ===
   Two voters, three candidates, two seats — the smallest election in which Bloc STAR and Proportional STAR (Allocated Score) fill the council differently. Identical ballots to min_pr_c3_b2.yaml; only the count differs. Both methods agree that Ben takes the first seat. They disagree about the second, and the reason is the whole difference between the two methods: Bloc lets the voter who already got Ben pick the second seat too, while Proportional STAR considers that voter represented and hands the second seat to the voter who has nobody yet.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ana    |  * Ben    |    Cleo   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ana    |    Ben    |    Cleo   |
 -----------------------------------------------------
-       * Ana > |    ---     |0 - 1 - 1  |1 - 0 - 1  |
-       * Ben > | 1 - 1 - 0  |   ---     |1 - 0 - 1  |
+         Ana > |    ---     |0 - 1 - 1  |1 - 0 - 1  |
+         Ben > | 1 - 1 - 0  |   ---     |1 - 0 - 1  |
         Cleo > | 1 - 0 - 1  |1 - 0 - 1  |   ---     |
 
 [Condorcet Winner]
