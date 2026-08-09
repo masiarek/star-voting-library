@@ -252,35 +252,45 @@ FULL_RENDER_OVERRIDES = dict(
 )
 
 
+def _strip_inline_comment(s):
+    """Drop a trailing '# comment' from a single-line YAML scalar, the way real
+    YAML would: '#' starts a comment only at the start of the value or after
+    whitespace, and never inside a quoted string. (The PyYAML-less fallback
+    needs this — `voting_method: STAR   # note` must yield 'STAR'.)"""
+    quote = None
+    for i, ch in enumerate(s):
+        if quote:
+            if ch == quote:
+                quote = None
+        elif ch in "\"'":
+            quote = ch
+        elif ch == "#" and (i == 0 or s[i - 1] in " \t"):
+            return s[:i].strip()
+    return s.strip()
+
+
+# Human-context text fields the lite reader must not drop (plain scalars or
+# `|-` block scalars). Same lookup preference as the PyYAML path's _pick().
+_LITE_TITLE_KEYS = ("election_title", "title")
+_LITE_DESCRIPTION_KEYS = (
+    "scenario_description", "race_description", "election_description"
+)
+
+
 def _yaml_lite(text):
     """Extract just the fields we need from the STAR election schema, without
     requiring PyYAML: the first race's `ballots` block (a YAML `|` block
-    scalar), `num_winners`, `voting_method`, and any output `options`.
-    Returns (ballots_text, seats, method_name, options)."""
+    scalar), `num_winners`, `voting_method`, any output `options`, and the
+    human context (title / description — plain values or block scalars).
+    Inline '# comments' after a value are stripped, as real YAML would.
+    Returns a dict: {ballots, seats, method_name, options, title, description}."""
     lines = text.splitlines()
 
-    seats = None
-    method_name = None
-    options = {}
-    for ln in lines:
-        m = re.match(r"\s*num_winners:\s*(\d+)", ln)
-        if m and seats is None:
-            seats = int(m.group(1))
-        m = re.match(r"\s*voting_method:\s*(\S.*?)\s*$", ln)
-        if m and method_name is None:
-            method_name = m.group(1).strip().strip("\"'")
-        m = re.match(r"\s*([a-z_]+):\s*(\S.*?)\s*$", ln)
-        if m and m.group(1) in OPTION_KEYS and m.group(1) not in options:
-            options[m.group(1)] = m.group(2).strip().strip("\"'")
-
-    ballots_text = None
-    for idx, ln in enumerate(lines):
-        key = re.match(r"(\s*)ballots:\s*\|", ln)
-        if not key:
-            continue
-        base = len(key.group(1))
+    def _block_scalar(idx, base):
+        """Dedented text of the indented block below a 'key: |' at lines[idx]
+        (key indented `base` columns). None if the block is empty."""
         block = []
-        for nxt in lines[idx + 1 :]:
+        for nxt in lines[idx + 1:]:
             if nxt.strip() == "":
                 block.append("")
                 continue
@@ -288,13 +298,91 @@ def _yaml_lite(text):
                 break  # dedent -> end of block
             block.append(nxt)
         nonempty = [b for b in block if b.strip()]
-        if nonempty:
-            cut = min(len(b) - len(b.lstrip()) for b in nonempty)
-            ballots_text = "\n".join(b[cut:] if b.strip() else "" for b in block).strip(
-                "\n"
-            )
-        break
-    return ballots_text, seats, method_name, options
+        if not nonempty:
+            return None
+        cut = min(len(b) - len(b.lstrip()) for b in nonempty)
+        return "\n".join(b[cut:] if b.strip() else "" for b in block).strip("\n")
+
+    seats = None
+    method_name = None
+    options = {}
+    texts = {}
+    for idx, ln in enumerate(lines):
+        m = re.match(r"\s*num_winners:\s*(\d+)", ln)
+        if m and seats is None:
+            seats = int(m.group(1))
+        m = re.match(r"\s*voting_method:\s*(\S.*?)\s*$", ln)
+        if m and method_name is None:
+            method_name = _strip_inline_comment(m.group(1)).strip("\"'")
+        m = re.match(r"\s*([a-z_]+):\s*(\S.*?)\s*$", ln)
+        if m and m.group(1) in OPTION_KEYS and m.group(1) not in options:
+            options[m.group(1)] = _strip_inline_comment(m.group(2)).strip("\"'")
+        # Title / description: TOP-LEVEL (column 0) keys only, so text inside
+        # another block scalar (e.g. video_script) can't shadow the real fields.
+        m = re.match(r"([a-z_]+):\s*(.*?)\s*$", ln)
+        if m and m.group(1) in _LITE_TITLE_KEYS + _LITE_DESCRIPTION_KEYS \
+                and m.group(1) not in texts:
+            val = m.group(2)
+            if re.match(r"[|>][+-]?\s*$", val):  # literal/folded block scalar
+                val = _block_scalar(idx, 0)
+            else:
+                val = _strip_inline_comment(val).strip("\"'")
+            if val:
+                texts[m.group(1)] = val
+
+    ballots_text = None
+    for idx, ln in enumerate(lines):
+        key = re.match(r"(\s*)ballots:\s*\|", ln)
+        if key:
+            ballots_text = _block_scalar(idx, len(key.group(1)))
+            break
+
+    return {
+        "ballots": ballots_text,
+        "seats": seats,
+        "method_name": method_name,
+        "options": options,
+        "title": next((texts[k] for k in _LITE_TITLE_KEYS if k in texts), None),
+        "description": next(
+            (texts[k] for k in _LITE_DESCRIPTION_KEYS if k in texts), None),
+    }
+
+
+# Flipped (once) when load_election falls back to the PyYAML-less reader. The
+# lite reader covers ballots/seats/method/options/title/description, but still
+# ignores blocs, lot_numbers, quorum and eligible_voters — enough to change a
+# report (or even a tie-break), so degraded runs must never overwrite committed
+# _tabulated mirrors (see _skip_degraded_mirror).
+_NO_PYYAML_FALLBACK = False
+
+
+def _warn_no_pyyaml():
+    """Mark the run as degraded and warn ONCE, loudly, on stderr."""
+    global _NO_PYYAML_FALLBACK
+    if not _NO_PYYAML_FALLBACK:
+        _NO_PYYAML_FALLBACK = True
+        print(
+            "WARNING: PyYAML not installed — using the built-in minimal YAML "
+            "reader (blocs / lot_numbers / quorum / eligible_voters are "
+            "ignored; existing _tabulated mirrors will NOT be overwritten). "
+            "Run via the repo .venv, or `pip install pyyaml`, for full output.",
+            file=sys.stderr,
+        )
+
+
+def _skip_degraded_mirror(out_path):
+    """True -> leave `out_path` alone. In the PyYAML-less fallback the parse is
+    degraded, so overwriting an EXISTING _tabulated mirror would silently strip
+    content from a committed file. A brand-new mirror (nothing to clobber) is
+    still written — the stderr warning already flags the whole run as degraded."""
+    if _NO_PYYAML_FALLBACK and Path(out_path).exists():
+        print(
+            f"NOTE: degraded run (no PyYAML) — existing mirror left untouched: "
+            f"{Path(out_path).name}",
+            file=sys.stderr,
+        )
+        return True
+    return False
 
 
 KEY_COMPONENTS_HELP = """\
@@ -509,7 +597,14 @@ def load_election(path, race_index=0):
                 lot_numbers = [str(x).strip() for x in _src.get("lot_numbers")]
                 break
     except ImportError:
-        ballots_text, seats, method_name, options = _yaml_lite(text)
+        _warn_no_pyyaml()
+        lite = _yaml_lite(text)
+        ballots_text = lite["ballots"]
+        seats = lite["seats"]
+        method_name = lite["method_name"]
+        options = lite["options"]
+        title = lite["title"]
+        description = lite["description"]
         eligible_voters = quorum = blocs = lot_numbers = None
 
     method = (
@@ -608,6 +703,8 @@ def write_tabulated_copy(src_path, output_text):
     """Write the (ANSI-stripped) tabulation text under the '<folder>_tabulated'
     mirror folder nested inside the source file's folder. Returns the path written."""
     out_path = tabulated_output_path(src_path)
+    if _skip_degraded_mirror(out_path):
+        return out_path
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(strip_ansi(output_text), encoding="utf-8")
     return out_path
@@ -2081,7 +2178,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                    .replace(win, f"{COLOR_WINNER}{win}{COLOR_RESET}")
     if not silent:
         print(colored)
-    if out_path is not None:
+    if out_path is not None and not _skip_degraded_mirror(out_path):
         try:
             Path(out_path).parent.mkdir(parents=True, exist_ok=True)
             Path(out_path).write_text(strip_ansi(_build(full=True)),
@@ -2183,7 +2280,7 @@ def run_plurality_single(ballots_text, file_path=None, lot_numbers=None,
     report = "\n".join(L)
     if not silent:
         print(report.replace(banner, f"{COLOR_HEADER}{banner}{COLOR_RESET}"))
-    if out_path is not None:
+    if out_path is not None and not _skip_degraded_mirror(out_path):
         try:
             Path(out_path).parent.mkdir(parents=True, exist_ok=True)
             Path(out_path).write_text(strip_ansi(report), encoding="utf-8")
@@ -2256,7 +2353,7 @@ def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
     report = "\n".join(L)
     if not silent:
         print(report.replace(banner, f"{COLOR_HEADER}{banner}{COLOR_RESET}"))
-    if out_path is not None:
+    if out_path is not None and not _skip_degraded_mirror(out_path):
         try:
             Path(out_path).parent.mkdir(parents=True, exist_ok=True)
             Path(out_path).write_text(strip_ansi(report), encoding="utf-8")
@@ -2446,6 +2543,8 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
                 return
             try:
                 out = aux_tabulated_path(src_path, method_tag)
+                if _skip_degraded_mirror(out):
+                    return
                 out.parent.mkdir(parents=True, exist_ok=True)
                 out.write_text(strip_ansi(text), encoding="utf-8")
             except Exception:
