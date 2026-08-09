@@ -1,6 +1,6 @@
 # Bug: SSS silently discards zero-score ballots whenever any ballot exhausts in the same round
 
-> **STATUS: OPEN in this fork (found 2026-08-08, verified 2026-08-09) — fix drafted and proven on a scratch copy, NOT yet applied (awaiting Adam's go). Present in upstream [larryhastings/starvote](https://github.com/larryhastings/starvote) at HEAD (2.1.6); no upstream issue filed yet. Distinct from [#17](https://github.com/larryhastings/starvote/issues/17) (the verbosity bug, fixed in this fork — see [BUG_sss_verbosity.md](BUG_sss_verbosity.md)), but the two interact: fixing #17 by dedenting the allocation block, as this fork did, promotes THIS bug from the verbose-only path to every run.**
+> **STATUS: FIXED in this fork (2026-08-09; found 2026-08-08) — still open upstream ([larryhastings/starvote#19](https://github.com/larryhastings/starvote/issues/19), filed 2026-08-09; latest release 2.1.6 affected at HEAD). Distinct from [#17](https://github.com/larryhastings/starvote/issues/17) (the verbosity bug, fixed in this fork — see [BUG_sss_verbosity.md](BUG_sss_verbosity.md)), but the two interact: fixing #17 by dedenting the allocation block, as this fork did, promotes THIS bug from the verbose-only path to every run — which is how the fork carried it at all verbosities until the sprint census surfaced it. Regression guard: `tests/test_sss_zero_score_ballots.py`; ledger row: [LH_ENGINE_CHANGES.md §1](LH_ENGINE_CHANGES.md).**
 >
 > **Repo impact: none.** All 5 SSS case files were checked — the trigger condition never fires in any of them, and the full verbose reports are byte-identical under the fix (so no `_tabulated` mirror would change). Verified 2026-08-09; details below.
 
@@ -12,7 +12,7 @@ The trigger is narrow but real: a ballot exhausts only when its raw score for th
 
 ## Environment
 
-- This fork: `starvote/__init__.py`, `sequentially_spent_score()`, allocation loop at ~L2704–2747 — bug manifests at **every** verbosity (the fork's #17 fix dedented the whole block out of the verbosity guard, structure preserved).
+- This fork: `starvote/__init__.py`, `sequentially_spent_score()`, allocation loop at ~L2704–2747 — the bug manifested at **every** verbosity (the fork's #17 fix dedented the whole block out of the verbosity guard, structure preserved) until the 2026-08-09 fix below.
 - Upstream starvote **2.1.6** (current HEAD, verified 2026-08-09): same loop at ~L2387–2428, still nested inside `if options.verbosity:` — so upstream manifests this bug at `verbosity>=1` and the #17 bug (no spending at all) at `verbosity=0`.
 - Method: `sss` (Sequentially Spent Score), multi-winner.
 
@@ -89,7 +89,7 @@ All 5 repo SSS cases (`coop_board_scores_sss`, `three_neighbors_sss`, `two_offic
 - the trigger (a supporter exhausting while a zero-score ballot is still alive) **never fires** in any of them — every allocation round in those files has a surplus, so no ballot ever exhausts;
 - winners are unchanged, and the full `verbosity=2` reports are **byte-identical** under the fix — so no `_tabulated` mirror or generated page would shift.
 
-## Suggested fix
+## The fix (applied 2026-08-09)
 
 Dedent the two append lines out of `if score:` (fork lines ~2742–2743), so non-supporters ride through the rebuild; exhausted supporters still `continue` past the append:
 
@@ -109,10 +109,8 @@ Dedent the two append lines out of `if score:` (fork lines ~2742–2743), so non
                         remaining_weighted_ballots.append(weighted_ballot)
 ```
 
-Verified on a scratch copy: the repro flips to `['Amy', 'Cy']` at every verbosity, and all 5 repo SSS cases produce byte-identical reports. When applied to the fork, the change lands with: a regression test (the repro profile asserted at verbosities 0/1/2, plus the 5 repo cases pinned — natural home: extend `tests/test_verbosity_invariance.py`'s SSS coverage or a new `tests/test_sss_zero_score_ballots.py`), and a ledger row in [LH_ENGINE_CHANGES.md](LH_ENGINE_CHANGES.md).
+Verified before applying, on a scratch copy: the repro flips to `['Amy', 'Cy']` at every verbosity, and all 5 repo SSS cases produce byte-identical reports. Landed with a regression guard, `tests/test_sss_zero_score_ballots.py` — the repro profile asserted at verbosities 0/1/2, plus a print-capture assertion that the profile still exercises the trigger (no-surplus round, one ballot allocated), so the test can't go vacuous if the profile is ever edited. The 5 repo SSS cases stay pinned by the existing `_tabulated`-mirror currency tests. Ledger row: [LH_ENGINE_CHANGES.md §1](LH_ENGINE_CHANGES.md).
 
-## Upstream issue draft (for larryhastings/starvote)
+## Upstream issue
 
-Title: **SSS ballot allocation silently discards ballots that scored the winner 0, whenever any ballot exhausts in the same round**
-
-Body: the Summary, Reproduction, Hand-trace, and Why-keep-them sections above, framed against 2.1.6's line numbers (~L2387–2428), plus this warning: *the bug currently manifests only at `verbosity>=1`, because at `verbosity=0` the entire allocation block is skipped (issue #17). Fixing #17 by dedenting the block — the natural fix — promotes this bug to every run unless the two `remaining_*.append(...)` calls are also dedented out of `if score:` at the same time.* The repro above shows upstream returning `['Amy', 'Cy']` at verbosity 0 and `['Bo', 'Cy']` at verbosity 1 — a second winners-depend-on-verbosity demonstration for #17's thread, and textbook SSS (per electowiki's procedure and reference implementation, which never remove a ballot) says `['Amy', 'Cy']`.
+Filed 2026-08-09 as [larryhastings/starvote#19](https://github.com/larryhastings/starvote/issues/19): the Summary, Reproduction, Hand-trace, and Why-keep-them sections above, framed against 2.1.6's line numbers (~L2387–2428), plus the interplay warning: *upstream currently manifests this bug only at `verbosity>=1`, because at `verbosity=0` the entire allocation block is skipped (issue #17). Fixing #17 by dedenting the block — the natural fix — promotes this bug to every run unless the two `remaining_*.append(...)` calls are also dedented out of `if score:` at the same time.* The repro shows upstream returning `['Amy', 'Cy']` at verbosity 0 and `['Bo', 'Cy']` at verbosity 1 — a second winners-depend-on-verbosity demonstration for #17's thread.
