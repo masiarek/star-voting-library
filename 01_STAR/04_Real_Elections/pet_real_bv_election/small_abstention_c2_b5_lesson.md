@@ -26,7 +26,7 @@ The ballots as marked — the filled bubble is the score given, and the score is
 | <img src="cases/img/small_abstention_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — the one true abstention: A left blank (counts as 0), B left blank (counts as 0)."> | - | - |
 <!-- /ballots -->
 
-Ballot 3 is the one in dispute, and ballot 5 is what an abstention actually looks like: **nothing marked at all**.
+The **`5,5`** (ballot 3) is the one in dispute, and the **blank** (ballot 5) is what an abstention actually looks like: **nothing marked at all**.
 
 - Frozen raw export: [`small_abstention_c2_b5_bv_export.json`](cases/small_abstention_c2_b5_bv_export.json)
 - Converted election (LH-tabulatable): [`small_abstention_c2_b5.yaml`](cases/small_abstention_c2_b5.yaml)
