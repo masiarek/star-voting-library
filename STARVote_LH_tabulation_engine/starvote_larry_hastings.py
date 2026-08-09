@@ -210,6 +210,47 @@ OPTION_KEYS = (
     "show_smith_set",
 )
 
+# The GLOBAL on-screen defaults — the house style, applied to every run.
+# Since 2026-08-09 the teaching case files carry NO `options:` block at all;
+# a file may still set one to override any of these, but that is reserved for
+# the option-demo files and special renders. Two of these are auto-adjusted
+# per election before the file's own options apply (see the CLI main):
+#   * show_matrix is switched OFF for multi-winner races (a "Top 2 Finalist"
+#     matrix is a single-winner concept) and for 2-candidate races (the
+#     matrix would just echo the runoff).
+# The `_tabulated` mirror ignores all of this — it always renders full detail
+# (FULL_RENDER_OVERRIDES below). `--full` puts that same render on screen.
+DEFAULT_OPTIONS = {
+    "show_matrix": True,             # finalists head-to-head (auto-off: multi-winner, 2 candidates)
+    "matrix_finalists_only": True,   # False = the full N×N grid
+    "show_condorcet": False,
+    "show_score_counts": False,
+    "show_irv": False,               # vestigial: the divergence block always prints
+    "show_description": False,       # the description stays in the file & the mirror
+    "show_runoff_percent": True,     # the self-reconciling two-line runoff summary
+    "brief": True,
+    "collapse_ballots": True,
+    "count_separator": "×",
+    # Ranked Robin path only (read in run_ranked_robin, not via the globals):
+    "show_smith_set": False,         # the mirror always carries the Smith block
+}
+
+# What the always-full `_tabulated` mirror forces on, regardless of any option
+# above or in the file. `--full` applies the same set to the on-screen render.
+# (count_separator is deliberately NOT forced — the file's choice is kept.)
+FULL_RENDER_OVERRIDES = dict(
+    show_matrix=True,
+    matrix_finalists_only=False,
+    show_condorcet=True,
+    show_score_counts=True,
+    show_runoff_percent=True,
+    brief=False,
+    collapse_ballots=True,  # collapsed counts are clearer than a raw dump
+    show_irv=True,
+    show_description=True,  # the saved file always keeps the full context
+    full_report=True,  # expand the runoff line into the "Runoff math" funnel
+)
+
 
 def _yaml_lite(text):
     """Extract just the fields we need from the STAR election schema, without
@@ -1824,18 +1865,24 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
         if isinstance(v, str):
             return v.strip().lower() not in {"false", "f", "no", "n", "0", "off"}
         return default if v is None else bool(v)
-    _echo_full = _truthy(_opts.get("show_matrix"), default=False)  # full matrix on screen?
+    # show_matrix: the full pairwise table ON SCREEN. Default ON since
+    # 2026-08-09 — the round-robin table IS the method, so hiding it made every
+    # case file opt back in. `show_matrix: false` still gives the compact echo.
+    _echo_full = _truthy(_opts.get("show_matrix"), default=True)
     # show_smith_set: the Smith-set analysis. OFF on screen by default (house rule:
-    # minimal echo), ALWAYS on in the _tabulated mirror — same contract as
-    # show_runoff_percent. Kept separate from show_matrix so a file can opt the
-    # echo into one without dragging in the other.
+    # the mirror always carries it), and deliberately separate from show_matrix so
+    # a file can opt the echo into one without dragging in the other.
     _show_smith = _truthy(_opts.get("show_smith_set"), default=False)
     # collapse_ballots: default ON — show "N × ballot"; OFF — one row per voter.
     _collapse = _truthy(_opts.get("collapse_ballots"))
     # count_separator: the glyph between count and ballot (× : x X); default ×.
     _sep = str(_opts.get("count_separator", "×")) or "×"
 
-    def _build(full):
+    def _build(full, smith=None):
+        # smith: None → follow `full` (the mirror's everything-on build). The
+        # echo passes smith=_show_smith so the Smith block stays a separate
+        # opt-in even though the matrix now defaults ON.
+        smith_on = full if smith is None else smith
         L = [f"--- Ranked Robin (RCV-RR / Copeland) Method ({seats_label}) ---",
              f" Tabulating {n} ballots "
              f"({'ranked' if _is_ranked else 'score'} ballots).", ""]
@@ -1924,7 +1971,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                          "lot order. (This is "
                          "where Minimax / Ranked Pairs / Schulze differ — see "
                          "05_Ranked_Robin/01_Learn/cycle_resolution.md.)")
-        if full or _show_smith:
+        if smith_on or _show_smith:
             # The Smith set reads the same pairwise matrix Ranked Robin counts, so
             # nothing is discarded in the translation — it is RR's native yardstick,
             # and RR always passes it. Single-winner only: with several seats
@@ -1938,10 +1985,11 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                 L += block
         return "\n".join(L)
 
-    # On-screen echo is compact by default (house rule), but the file can opt
-    # the echo into the full matrix with `options: { show_matrix: true }`. The
+    # On-screen echo shows the pairwise matrix by default (it IS the method —
+    # flipped 2026-08-09); `show_matrix: false` gives the compact echo, and the
+    # Smith block stays a separate `show_smith_set` opt-in either way. The
     # _tabulated mirror is ALWAYS full regardless.
-    plain = _build(full=_echo_full)             # echo (compact unless show_matrix)
+    plain = _build(full=_echo_full, smith=_show_smith)
     hdr = f"--- Ranked Robin (RCV-RR / Copeland) Method ({seats_label}) ---"
     win = (f"Winner — Ranked Robin (RCV-RR): {winner}" if num_winners == 1
            else f"Winners — Ranked Robin (RCV-RR), {num_winners} seats "
@@ -2868,13 +2916,17 @@ def validate_star_rows(ballots_text, max_score=5):
 def run_election(
     csv_input,
     lot_numbers,
+    # Display defaults = the house DEFAULT_OPTIONS dict (keep in sync). The CLI
+    # passes every display kwarg explicitly; API callers get the house render.
+    # NOTE: the CLI's seats/candidate-count matrix auto-gate lives in main, not
+    # here — a multi-winner API caller should pass show_matrix=False itself.
     show_matrix=True,
-    matrix_finalists_only=False,
-    brief=False,
+    matrix_finalists_only=True,
+    brief=True,
     seats=1,
     method=None,
-    show_condorcet=True,
-    show_score_counts=True,
+    show_condorcet=False,
+    show_score_counts=False,
     collapse_ballots=True,
     count_separator="×",
     title=None,
@@ -2883,8 +2935,8 @@ def run_election(
     eligible_voters=None,
     quorum=None,
     blocs=None,
-    show_description=True,
-    show_runoff_percent=False,
+    show_description=False,
+    show_runoff_percent=True,
     full_report=False,
     src_path=None,
     display_method_name=None,
@@ -3411,47 +3463,23 @@ if __name__ == "__main__":
     # Leave empty [] to auto-generate based on CSV columns for quick testing.
     LOT_NUMBERS = []
 
-    # FLAG: Set to False to hide the Preference Matrix.
-    SHOW_MATRIX = False
-
-    # FLAG: Set to True to restrict the Preference Matrix to just the two
-    # finalists (the decisive runoff head-to-head). Requires SHOW_MATRIX.
-    MATRIX_FINALISTS_ONLY = False
-
-    # FLAG: Set to False to hide the [Condorcet Winner] line.
-    # Independent of SHOW_MATRIX — prints by default even when the matrix is off.
-    SHOW_CONDORCET = False
-
-    # NOTE: The [RCV-IRV, STAR, and Approval comparison] block is now ALWAYS
-    # printed, so this flag no longer gates it; it is kept only so existing
-    # YAML `options:` blocks that set show_irv still parse without error.
-    SHOW_IRV = False
-
-    # FLAG: Set to False to hide the scenario_description on screen (keeps it in
-    # the file). Use for a clean demo / recording — just ballots and tabulation.
-    SHOW_DESCRIPTION = True
-
-    # FLAG: Set to False to hide the per-candidate [Score Distribution] table.
-    SHOW_SCORE_COUNTS = False
-
-    # FLAG: Set to True to print a one-line runoff percentage summary after the
-    # Automatic Runoff winner — "Voters with a preference: N. <winner> a (x%) vs
-    # <other> b (y%); majority = m" — using the decided-voters denominator
-    # (Equal Support excluded). Off on screen by default (house "less is more");
-    # the always-full _tabulated copy forces it on.
-    SHOW_RUNOFF_PERCENT = False
-
-    # FLAG: Set to True for shorter output (collapses repetitive [STAR Voting: ...]
-    # section headers into plain sub-headings and drops the bare "[STAR Voting]").
-    BRIEF = True
-
-    # FLAG: Collapse identical ballots in the echo into "count × scores"
-    # (most common first). Set to False to echo every ballot individually.
-    COLLAPSE_BALLOTS = True
-
-    # FLAG: Separator for the collapsed count. "×" reads as "times";
-    # ":" matches the input weight syntax. Both round-trip ("x"/"X" also work).
-    COUNT_SEPARATOR = "×"
+    # DISPLAY DEFAULTS — pulled from the single DEFAULT_OPTIONS dict near the
+    # top of the file (the house style; edit THERE, not here). A YAML file's
+    # `options:` block can still override any of them per run, and `--full`
+    # puts the everything-on mirror render on screen instead.
+    SHOW_MATRIX = DEFAULT_OPTIONS["show_matrix"]
+    MATRIX_FINALISTS_ONLY = DEFAULT_OPTIONS["matrix_finalists_only"]
+    SHOW_CONDORCET = DEFAULT_OPTIONS["show_condorcet"]
+    # NOTE: The [RCV-IRV, STAR, and Approval comparison] block is ALWAYS
+    # printed; show_irv no longer gates it and is kept only so existing YAML
+    # `options:` blocks that set it still parse without error.
+    SHOW_IRV = DEFAULT_OPTIONS["show_irv"]
+    SHOW_DESCRIPTION = DEFAULT_OPTIONS["show_description"]
+    SHOW_SCORE_COUNTS = DEFAULT_OPTIONS["show_score_counts"]
+    SHOW_RUNOFF_PERCENT = DEFAULT_OPTIONS["show_runoff_percent"]
+    BRIEF = DEFAULT_OPTIONS["brief"]
+    COLLAPSE_BALLOTS = DEFAULT_OPTIONS["collapse_ballots"]
+    COUNT_SEPARATOR = DEFAULT_OPTIONS["count_separator"]
 
     # METHOD + SEATS.
     #   starvote.star  -> single-winner STAR (use SEATS = 1)
@@ -3479,6 +3507,9 @@ if __name__ == "__main__":
     #   python starvote_larry_hastings.py 01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml --save
     args = [a for a in sys.argv[1:]]
     SAVE_RESULTS = "--save" in args
+    # --full: put the everything-on render (the same one the _tabulated mirror
+    # always gets) on screen too, ignoring the defaults and the file's options.
+    FULL_RENDER = "--full" in args
     positional = [a for a in args if not a.startswith("-")]
     BALLOTS_FILE = positional[0] if positional else None
 
@@ -3677,9 +3708,14 @@ Memphis,Nashville,Chattanooga,Knoxville
         # Ranked Robin / RCV-RR comes BEFORE the RCV-IRV branch: a file labeled
         # Ranked Robin has ranked ballots too, but must be counted round-robin.
         if _is_rr:
+            _rr_opts = dict(election.get("options") or {})
+            if FULL_RENDER:
+                # --full: the mirror's render on screen (matrix + Smith block).
+                _rr_opts.update(show_matrix=True, show_smith_set=True,
+                                collapse_ballots=True)
             run_ranked_robin(csv_input, BALLOTS_FILE,
                              lot_numbers=election.get("lot_numbers"),
-                             options=election.get("options"),
+                             options=_rr_opts,
                              num_winners=(election.get("seats") or 1))
             sys.exit(0)
 
@@ -3780,7 +3816,10 @@ Memphis,Nashville,Chattanooga,Knoxville
             # the STAR path: provenance header + original file + results).
             import contextlib as _ctx
             import io as _io
-            _file_opts = election.get("options") or {}
+            _file_opts = dict(election.get("options") or {})
+            if FULL_RENDER:
+                # --full: the mirror's render on screen (co-approval matrix on).
+                _file_opts.update(show_matrix=True, collapse_ballots=True)
             # On-screen render honors the file's own options (co-approval matrix
             # only if it sets show_matrix — house "less is more" default).
             _buf = _io.StringIO()
@@ -3816,6 +3855,15 @@ Memphis,Nashville,Chattanooga,Knoxville
             SEATS = election["seats"]
         if election["method"] is not None:
             METHOD = election["method"]
+
+        # Auto-adjusted defaults (before the file's own options, which still
+        # win): the preference matrix is a SINGLE-WINNER concept — a Bloc/PR
+        # report with a "Top 2 Finalist" grid is misleading — and with only
+        # two candidates it merely echoes the runoff, so both cases default
+        # the matrix off. A file can still force it with `show_matrix: true`.
+        if SEATS > 1 or len(_hdr_names) == 2:
+            SHOW_MATRIX = False
+            MATRIX_FINALISTS_ONLY = False
 
         # A YAML `options:` block can override the display flags. Example:
         #   options:
@@ -3915,7 +3963,10 @@ Memphis,Nashville,Chattanooga,Knoxville
                 raise
             return w, b.getvalue()
 
-        # On-screen render: honors the file's own options.
+        # On-screen render: the global defaults, adjusted by the file's own
+        # options — or the everything-on mirror render when --full was passed.
+        if FULL_RENDER:
+            run_kwargs.update(FULL_RENDER_OVERRIDES)
         winners, out = _capture(run_kwargs)
         sys.stdout.write(out)  # display on screen
 
@@ -3923,18 +3974,7 @@ Memphis,Nashville,Chattanooga,Knoxville
         # render (every analysis on, maximum verbosity) regardless of the file's
         # own options — only the on-screen echo above honors those options.
         full_kwargs = dict(run_kwargs)
-        full_kwargs.update(
-            show_matrix=True,
-            matrix_finalists_only=False,
-            show_condorcet=True,
-            show_score_counts=True,
-            show_runoff_percent=True,
-            brief=False,
-            collapse_ballots=True,  # collapsed counts are clearer than a raw dump
-            show_irv=True,
-            show_description=True,  # the saved file always keeps the full context
-            full_report=True,  # expand the runoff line into the "Runoff math" funnel
-        )
+        full_kwargs.update(FULL_RENDER_OVERRIDES)
         _, file_out = _capture(full_kwargs)
 
         # The '_tabulated' file is the ORIGINAL election file copied as-is,

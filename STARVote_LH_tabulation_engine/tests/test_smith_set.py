@@ -160,9 +160,13 @@ def test_mirror_always_has_it_echo_does_not(tmp_path):
 
 
 def test_show_smith_set_option_opts_the_echo_in(tmp_path):
+    # show_matrix: false alongside it proves the two options stay separate —
+    # the Smith block can be opted in without dragging the matrix along.
+    # (The matrix is on by default since 2026-08-09, hence the explicit off.)
     src = tmp_path / "rr_smith_on.yaml"
     src.write_text(RR_YAML.replace(
-        "ballots: |-", "options:\n  show_smith_set: true\nballots: |-"),
+        "ballots: |-",
+        "options:\n  show_matrix: false\n  show_smith_set: true\nballots: |-"),
         encoding="utf-8")
     r = _run(src)
     assert r.returncode == 0, r.stderr

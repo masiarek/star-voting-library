@@ -13,8 +13,10 @@ Locks the optional runoff percentage summary, in BOTH of its two forms:
     shares of the decided voters.
 
 Behaviour locked here:
-  * the on-screen line is OFF by default (house "less is more");
-  * it is ON when `options: { show_runoff_percent: true }`;
+  * the on-screen line is ON by default (house default since 2026-08-09 —
+    case files carry no `options:` block; the engine defaults ARE the house
+    style);
+  * a file can still opt OUT with `options: { show_runoff_percent: false }`;
   * the always-full `_tabulated` copy carries the funnel regardless of the
     file option;
   * the funnel does NOT appear on screen (echo stays a single line).
@@ -64,11 +66,11 @@ def _run_cli(path):
     )
 
 
-def _write(tmp_path, with_option):
+def _write(tmp_path, with_option, value="true"):
     d = tmp_path / "d"
     d.mkdir()
     p = d / "case.yaml"
-    opt = "options:\n  show_runoff_percent: true\n" if with_option else ""
+    opt = f"options:\n  show_runoff_percent: {value}\n" if with_option else ""
     p.write_text(f"voting_method: STAR\nnum_winners: 1\n{opt}ballots: |-\n{BALLOTS}")
     return p
 
@@ -145,10 +147,22 @@ def test_tabulated_copy_has_funnel(tmp_path):
         assert frag in txt, f"missing {frag!r} in:\n{txt}"
 
 
-# --- negative: each form stays out of the other render ----------------------
+# --- the default, and the opt-out ------------------------------------------
 
-def test_line_absent_on_screen_by_default(tmp_path):
+def test_line_present_on_screen_by_default(tmp_path):
+    # Flipped 2026-08-09: the engine's own defaults are the house style, so a
+    # file with NO options block shows the two-line summary. (The funnel still
+    # never appears on screen — that stays mirror-only.)
     proc = _run_cli(_write(tmp_path, with_option=False))
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    assert EXPECTED in proc.stdout, proc.stdout
+    assert FUNNEL_HEADER not in proc.stdout, proc.stdout
+
+
+def test_line_suppressed_when_option_false(tmp_path):
+    # The per-file override still wins — opting OUT hides the line on screen
+    # (the _tabulated funnel is forced regardless; see the funnel test above).
+    proc = _run_cli(_write(tmp_path, with_option=True, value="false"))
     assert proc.returncode == 0, proc.stdout + proc.stderr
     assert "Voters with a preference" not in proc.stdout, proc.stdout
     assert FUNNEL_HEADER not in proc.stdout, proc.stdout

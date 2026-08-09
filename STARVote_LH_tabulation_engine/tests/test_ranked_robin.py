@@ -42,8 +42,8 @@ def test_canonical_ranked_robin_file():
     assert "Round-Robin — every pair" in out          # the pairwise table
     assert "Ballots:" in out                            # ballots are shown
     assert "Winner — Ranked Robin (RCV-RR): Ben" in out
-    # This file sets options: { show_matrix: true }, so the echo opts INTO the
-    # full pairwise matrix. The _tabulated mirror always has it regardless.
+    # The full pairwise matrix is ON by default (flipped 2026-08-09 — the
+    # round-robin table IS the method). The _tabulated mirror always has it.
     assert "Pairwise (Round-Robin) Matrix" in out
     tab = (REPO_ROOT / "05_Ranked_Robin" / "02_Examples" / "cases" / "cases_tabulated"
            / "ranked_robin_consensus_center_tabulated.txt")
@@ -53,26 +53,28 @@ def test_canonical_ranked_robin_file():
     assert "Legend: For - Equal Support - Against" in mirror
 
 
-def test_echo_matrix_is_opt_in(tmp_path):
-    """Default echo is compact (no matrix); show_matrix opts it in. The mirror
-    always has the matrix either way."""
+def test_echo_matrix_default_on_with_opt_out(tmp_path):
+    """The pairwise matrix is ON by default (flipped 2026-08-09 — the table IS
+    the method, and case files carry no options); show_matrix: false still
+    gives the compact echo. The mirror has the matrix either way."""
     base = ("voting_method: RankedRobin\nnum_winners: 1\nballots: |-\n"
             "  3:Ada>Ben>Cara\n  2:Ben>Cara>Ada\n  2:Cara>Ben>Ada\n")
-    # default (no options) → compact echo, no matrix
-    f1 = tmp_path / "compact.yaml"
+    # default (no options) → the echo includes the matrix
+    f1 = tmp_path / "default.yaml"
     f1.write_text(base)
     r1 = _run(f1)
     assert r1.returncode == 0, r1.stderr
-    assert "Pairwise (Round-Robin) Matrix" not in r1.stdout
+    assert "Pairwise (Round-Robin) Matrix" in r1.stdout
+    # options: { show_matrix: false } → compact echo, no matrix on screen —
+    # but the always-full mirror still carries it.
+    f2 = tmp_path / "compact.yaml"
+    f2.write_text(base + "options:\n  show_matrix: false\n")
+    r2 = _run(f2)
+    assert r2.returncode == 0, r2.stderr
+    assert "Pairwise (Round-Robin) Matrix" not in r2.stdout
     hits = list(tmp_path.parent.rglob("compact_tabulated.txt"))
     assert hits, "no _tabulated mirror was written"
     assert "Pairwise (Round-Robin) Matrix" in hits[0].read_text()
-    # options: { show_matrix: true } → echo includes the matrix
-    f2 = tmp_path / "full.yaml"
-    f2.write_text(base + "options:\n  show_matrix: true\n")
-    r2 = _run(f2)
-    assert r2.returncode == 0, r2.stderr
-    assert "Pairwise (Round-Robin) Matrix" in r2.stdout
 
 
 def test_collapse_and_separator_options(tmp_path):
