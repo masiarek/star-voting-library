@@ -26,6 +26,7 @@ How this repo is laid out, how to run it, how the voting methods dispatch, and w
 | [**Docs hub** (`07_Concepts/`)](../00_START_HERE.md) | The docs hub — [curriculum](../CURRICULUM.md), concept pages, [glossary](../GLOSSARY.md), [terminology](../tips/TIPS_terminology.md), and [organization conventions](../../YAML_library/ORGANIZATION.md). |
 | [**Conversation scripts**](conversation_scripts.md) | Larry ↔ Adam debate / teaching scripts — index; episodes live beside their topics. |
 | Test suite (`…/tests/`) | The [pytest suite + pre-commit hook](../../STARVote_LH_tabulation_engine/tests/README.md). |
+| [**Upstream bug reports**](upstream_bug_reports.md) | Follow-up list for every bug **we** filed against a project we don't own — BetterVoting, Larry's `starvote`, GitHub Pages — with state and a one-liner to re-check them. Comparing engines finds bugs; this is where they don't get forgotten. |
 
 ---
 
