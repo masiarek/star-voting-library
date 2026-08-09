@@ -14,7 +14,6 @@ election:
     Live results: https://bettervoting.com/f4cjpy/results (all races LH<->BV confirmed).
     Lesson: bv2159_f4cjpy_brams_irv_pathologies.md
     Live on BetterVoting: https://bettervoting.com/f4cjpy/results (BV-confirmed; STAR is race 1).
-  options: {show_irv: true, collapse_ballots: true, count_separator: "×"}
   races:
   - race_id: '0'
     race_description: "Brams AMS-1982; IRV elects B, Condorcet winner is G"

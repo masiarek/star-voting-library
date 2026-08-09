@@ -12,17 +12,6 @@ election:
     Paper. Sincere ballots. The whole point is that 'majority rule' can be intransitive.
     Level 301. Lesson: bv2157_mmcmpy_condorcet_cycle_rps.md
     Live on BetterVoting: https://bettervoting.com/mmcmpy/results (BV-confirmed; STAR is race 1).
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: true
-    show_condorcet: true
-    show_score_counts: false
-    show_irv: true
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "Condorcet cycle; STAR elects Rock"

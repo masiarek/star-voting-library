@@ -13,17 +13,6 @@ election:
     Rare (STAR is ~98% Condorcet-efficient in spatial models) but structural. Level 301.
     Cross-ref: STAR_three_winner_notions. Lesson: bv2156_3grpbb_star_misses_condorcet.md
     Live on BetterVoting: https://bettervoting.com/3grpbb/results (BV-confirmed; STAR is race 1).
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: true
-    show_condorcet: true
-    show_score_counts: false
-    show_irv: true
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "STAR elects Ada; Cleo is the Condorcet winner"

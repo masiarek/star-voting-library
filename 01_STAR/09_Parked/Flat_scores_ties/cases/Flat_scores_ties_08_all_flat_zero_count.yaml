@@ -5,17 +5,6 @@ election:
     3-way tie LH resolves by lot to Anchovy. BetterVoting mis-files ALL FIVE as abstentions,
     so its ballot count reads 0. Intersects #1407, BV126 #1052, BV200 #1035. Level 301.
     Lesson: 09_Parked/Flat_scores_ties/README.md#case-08  (BV id pending).
-  options:
-    show_description: false
-    show_matrix: false
-    matrix_finalists_only: true
-    show_condorcet: false
-    show_score_counts: true
-    show_irv: false
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: false
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "BV id pending"

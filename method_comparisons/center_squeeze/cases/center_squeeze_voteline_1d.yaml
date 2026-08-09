@@ -11,17 +11,6 @@ election:
     Ranked Robin all pick Green. Scores are a reasonable 1-D spatial model (own side
     5, adjacent center 3, far side 0-1). Weights are percentages x10. Level 201/301.
     Lesson: 06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: true
-    show_condorcet: true
-    show_score_counts: false
-    show_irv: true
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "1-D spectrum: Red (left) / Green (center) / Yellow (right)"

@@ -19,17 +19,6 @@ election:
     JSON-v2 export in PR #1419). Precedent: the Ranked Robin analog, rr_tiebreak_lh_vs_bv.md.
     Level 201/301. Lesson: 09_Parked/Flat_scores_ties/README.md#case-05
     BV: https://bettervoting.com/xmyf7k/results
-  options:
-    show_description: false
-    show_matrix: false
-    matrix_finalists_only: true
-    show_condorcet: false
-    show_score_counts: true
-    show_irv: false
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: false
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "https://bettervoting.com/xmyf7k/results"
