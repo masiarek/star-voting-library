@@ -234,6 +234,7 @@ LH:coop_board_scores_sss,"Co-op board — 0–5 score ballot, sss",1,single-race
 LH:copeland_half_credit_decides,Ranked Robin — the half-point for a draw decides the election (LH-only),1,single-race,30,RankedRobin,LH-only
 LH:copeland_vs_clones_c5_b3,"Copeland picks one, composition-consistency demands all five (tournament solutions)",1,single-race,3,RankedRobin,LH-only
 LH:count_simplicity_star_vs_irv,"Same winner, very different counts — STAR adds, IRV eliminates",1,single-race,40,STAR,LH-only
+LH:count_vs_weight_slates_c9_b66,"Three slates, five seats — the count-vs-weight fingerprint",1,single-race,66,STAR_PR,LH-only
 LH:crowded_field_c3_approval,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by Approval",1,single-race,65,Approval,LH-only
 LH:crowded_field_c3_irv,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by RCV-IRV",1,single-race,65,IRV,LH-only
 LH:crowded_field_c3_ranked_robin,"Crowded field, rung 3 — 3 candidates, 65 voters, counted by Ranked Robin",1,single-race,65,RankedRobin,LH-only

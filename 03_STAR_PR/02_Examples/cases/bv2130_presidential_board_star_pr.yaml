@@ -9,10 +9,16 @@ scenario_description: |-
   LH allocated reproduces BetterVoting's first SIX seats exactly (Bernie Sanders,
   Al Gore, Barack Obama, Cornel West, Chase Oliver, Kamala Harris). The SEVENTH
   seat diverges: LH elects Claudia De La Cruz, BetterVoting elected Karina Garcia
-  (both Socialism & Liberation). In LH's exact allocated math Claudia is clearly
-  ahead (34.26 vs 34.00 reweighted), yet BV's result carries tieBreakType
-  "random" — so seat 7 is either a genuine allocated-implementation difference or
-  a near-tie BV broke by chance. Flagged as an LH-vs-BV divergence to investigate.
+  (both Socialism & Liberation), with Claudia ahead in LH's exact math (34.26 vs
+  34.00 reweighted). RESOLVED 2026-08-09: this is a genuine implementation
+  difference, and BetterVoting is right. The LH engine fills allocation quotas by
+  ballot COUNT instead of ballot weight (reported as starvote issue #20), which
+  is what inflates Claudia here; under weight-true accounting Karina is strictly
+  ahead, and today's production sandbox re-elects her deterministically, no tie
+  in the round. The tieBreakType "random" that pointed the old note toward a
+  chance tiebreak was a red herring — BV's Allocated Score stamps it on every
+  result, tie or none (bettervoting issue #1507). Full story:
+  03_STAR_PR/03_Criteria/allocated_count_vs_weight.
 
 num_winners: 7
 voting_method: allocated

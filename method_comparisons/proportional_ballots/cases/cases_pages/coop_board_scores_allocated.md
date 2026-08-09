@@ -36,6 +36,18 @@ An approval ballot cannot see a floor. Everything below the threshold --
 Ben's steady 2s from the whole room -- is erased, and a bare 3 counts
 exactly as much as a 5.
 
+CORRECTION (2026-08-09): "Both score tabulations elect -> Ben, Chris, Dana"
+holds on this engine but NOT on BetterVoting, whose Allocated Score elects
+Chris, Ben, AMY -- verified live. The difference is a confirmed bug in this
+engine's allocation round (it fills quotas by ballot COUNT, not ballot
+weight; reported as starvote issue #20): after Ben's seat it leaves 0.4 of
+a quota unspent on Member 4's ballot, and that unspent weight is what lifts
+Dana over Amy here (LH: Dana 8.6 vs Amy 8.2; correct accounting: Amy 7.8 vs
+Dana 7.0 -- no ties either way). The Ben-vs-Ella threshold lesson is
+unaffected: Ben is seated on the score ballot under either accounting, Ella
+only on approval. expected_winners below records THIS engine's output; see
+03_STAR_PR/03_Criteria/allocated_count_vs_weight for the full story.
+
 ## Ballots
 
 Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
@@ -215,6 +227,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
+- [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [coop_board_approval](coop_board_approval.md) · [coop_board_scores_sss](coop_board_scores_sss.md)
