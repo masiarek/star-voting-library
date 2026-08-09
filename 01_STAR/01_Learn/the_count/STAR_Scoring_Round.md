@@ -14,20 +14,24 @@
 
 This is *utilitarian aggregation* — it rewards **total** support. A candidate rated a solid 4 by almost everyone can out-total a candidate given 5 by a passionate few and 0 by the rest. Whether that top-total candidate actually *wins* is the runoff's job, not the scoring round's.
 
+The block as the engine prints it — five candidates, five ballots:
+
+```text title="Abridged — the Scoring Round block only"
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Clara         -- 21 -- First place
+   Alice         -- 15 -- Second place
+   Diego         -- 10
+   Bruno         --  6
+   Erin          --  6
+ Clara and Alice advance.
 ```
-Scoring Round
-  The two highest-scoring candidates advance to the next round.
-    Carmen -- 15 (average 5)     -- First place
-    Andre  -- 12 (average 4)     -- Second place
-    David  --  8 (average 2+2/3)
-    Ella   --  1 (average 1/3)
-    Blake  --  0 (average 0)
-  Carmen and Andre advance.
-```
+
+(From [`03d_c5_b5_style-gallery-five-more`](../../02_Examples/cases/cases_pages/03d_c5_b5_style-gallery-five-more.md) — the whole count, matrix and all, is one click away.)
 
 ## Totals decide — averages are just for reading
 
-The report prints each candidate's **total** and, in parentheses, the **average** per ballot. **The total is what ranks them and picks the finalists;** the average is a readability aid (it says "about how many stars per voter"). With every ballot scoring every candidate, total and average rank candidates the same way — but it's the *total* the engine advances on.
+The scoring lines print each candidate's **total**, and **the total is what ranks them and picks the finalists.** An *average* would add no information here: with every ballot scoring every candidate, total and average (total ÷ ballots) rank the candidates in exactly the same order. If you want per-candidate averages — a handy "about how many stars per voter" reading aid — the full report's **`[Score Distribution]` table** has an `Avg` column: [how to read it](../reporting/reporting_LH/score_distribution.md). (That average excludes ballots that left the candidate blank, so it can differ slightly from total ÷ ballots. Larry's upstream `starvote` CLI can also add `(average …)` to the score lines themselves — an opt-in this repo's CLI doesn't use → [the starvote file format](../../../07_Concepts/tabulation_engines/LH_starvote/starvote_file_format.md).)
 
 ## Equal scores are allowed — and honest scoring is safe
 
@@ -59,7 +63,7 @@ The scoring round only ever produces **two finalists**. It deliberately does **n
 
 **"Does a blank count as 0, or as 'no opinion'?"** As **0** — the lowest score. A blank is the same as scoring that candidate 0; there's no separate "skip this candidate" that removes them from the total.
 
-**"Why totals, not averages?"** Since every ballot scores every candidate, total and average rank candidates identically — and the total is the honest measure of *how much support across the whole electorate*. The report prints the average only as a reading aid.
+**"Why totals, not averages?"** Since every ballot scores every candidate, total and average rank candidates identically — and the total is the honest measure of *how much support across the whole electorate*. The Scoring Round lines print totals only; averages appear as a reading aid in the full report's `[Score Distribution]` table.
 
 **"Can I give two candidates the same score?"** Yes — equal scores are allowed and never penalized. If both reach the runoff, your ballot is [Equal Support](../../../07_Concepts/GLOSSARY.md) between them.
 

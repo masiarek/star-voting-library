@@ -47,7 +47,7 @@ averages = {
 }
 ```
 
-And it is *displayed* not as a decimal but as an exact **mixed number**, through a trio of helpers — `split_int_or_fraction_as_str`, `measure_int_or_fraction_as_str`, and `format_int_or_fraction` (`starvote/__init__.py:168`, `:213`, `:263`). Those split a `Fraction` into `integer`, `+`, `numerator`, `/denominator` parts and column-align all four. So in the engine's own scoring round, Cara's average renders as:
+And it is *displayed* not as a decimal but as an exact **mixed number**, through a trio of helpers — `split_int_or_fraction_as_str`, `measure_int_or_fraction_as_str`, and `format_int_or_fraction` (`starvote/__init__.py:168`, `:213`, `:263`). Those split a `Fraction` into `integer`, `+`, `numerator`, `/denominator` parts and column-align all four. So when the scoring round's averages are switched on (upstream's `print averages` option — **off by default**, and never set by this repo's CLI, whose Scoring Round lines stay totals-only), Cara's average renders as:
 
 ```
 1 +1/4
