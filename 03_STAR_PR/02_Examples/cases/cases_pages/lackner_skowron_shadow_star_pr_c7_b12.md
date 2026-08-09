@@ -122,13 +122,10 @@ Count × A,B,C,D,E,F,G
 [Allocated Score Voting: Round 2: Ballot allocation round: Round 2]
  Remaining allocation quota is 2.
  Allocating 3 ballots at score 25/8.
- This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 66.67% of these ballots.
- Keeping these ballots, but multiplying their weights by 1/3.
- 3 ballots reweighted from 5/8 to 5/24.
+ These ballots carry a remaining weight of 15/8.
 
 [Allocated Score Voting: Round 3]
- Tabulating 11 remaining ballots.
+ Tabulating 8 remaining ballots.
 Count × A,B,C,D,E,F,G
     3 × 5,5,0,0,0,0,0
     3 × 5,0,5,0,0,0,0
@@ -143,9 +140,10 @@ Count × A,B,C,D,E,F,G
 
 [Allocated Score Voting: Round 3: Ballot allocation round: Round 1]
  Allocating 3 ballots at score 25/8.
+ These ballots carry a remaining weight of 15/8.
 
 [Allocated Score Voting: Round 4]
- Tabulating 8 remaining ballots.
+ Tabulating 5 remaining ballots.
 Count × A,B,C,D,E,F,G
     3 × 5,5,0,0,0,0,0
     3 × 5,0,5,0,0,0,0
@@ -166,18 +164,15 @@ Count × A,B,C,D,E,F,G
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-        Note: B and C tied at 20 in the Scoring Round, and the lot rung (the
-              ballots could not separate them) advanced B. The * marks who
-              advanced, not who scored highest.
-
-                 |     * A      |    * B      |      C      |      D      |      E      |      F      |      G      |
+        Informational only — not part of the 4-winner count below,
+        so no Top-2 finalists are marked.
+                 |       A      |      B      |      C      |      D      |      E      |      F      |      G      |
 ---------------------------------------------------------------------------------------------------------------------
-           * A > |     ---      | 5 -  6 -  1 | 5 -  6 -  1 | 6 -  6 -  0 | 8 -  3 -  1 | 8 -  2 -  2 | 8 -  3 -  1 |
-           * B > |  1 -  6 -  5 |    ---      | 3 -  6 -  3 | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
+             A > |     ---      | 5 -  6 -  1 | 5 -  6 -  1 | 6 -  6 -  0 | 8 -  3 -  1 | 8 -  2 -  2 | 8 -  3 -  1 |
+             B > |  1 -  6 -  5 |    ---      | 3 -  6 -  3 | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
              C > |  1 -  6 -  5 | 3 -  6 -  3 |    ---      | 4 -  6 -  2 | 4 -  7 -  1 | 3 -  8 -  1 | 4 -  7 -  1 |
              D > |  0 -  6 -  6 | 2 -  6 -  4 | 2 -  6 -  4 |    ---      | 2 -  9 -  1 | 2 -  8 -  2 | 2 -  9 -  1 |
              E > |  1 -  3 -  8 | 1 -  7 -  4 | 1 -  7 -  4 | 1 -  9 -  2 |    ---      | 1 -  9 -  2 | 1 - 10 -  1 |

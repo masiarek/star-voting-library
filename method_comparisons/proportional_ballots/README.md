@@ -12,14 +12,16 @@
 
 | Ballot | Tabulation | Committee |
 |---|---|---|
-| **0–5 scores** | [Allocated Score](../../03_STAR_PR/01_Learn/STAR_PR/allocated_score.md) | **Ben**, Chris, Dana |
+| **0–5 scores** | [Allocated Score](../../03_STAR_PR/01_Learn/STAR_PR/allocated_score.md) | **Ben**, Chris, Amy |
 | **0–5 scores** | [SSS](../../03_STAR_PR/01_Learn/STAR_PR/sequentially_spent_score.md) | **Ben**, Chris, Dana |
 | Yes/No | seq-Phragmén | Chris, Dana, **Ella** |
 | Yes/No | PAV | Chris, Dana, **Ella** |
 | Yes/No | seqPAV | Chris, Dana, **Ella** |
 | Yes/No | AV *(bloc — majoritarian, for reference)* | Chris, Dana, **Ella** |
 
-Chris and Dana are seated by everything. The third seat goes to **Ben on scores and Ella on approvals**, and *every* rule on each side agrees with its siblings — two independent score tabulations against three independent proportional approval rules. This is not one method being eccentric; it is the two ballots disagreeing.
+Chris is seated by everything. **Ben is seated by both score rules and by no approval rule; Ella by all four approval rules and neither score rule.** That Ben-for-Ella trade is the finding, and it is carried by the ballot, not by any one method's eccentricity.
+
+The score side does split its own third chair — Amy on Allocated Score, Dana on SSS. That is a genuine [allocated-vs-SSS divergence](../../03_STAR_PR/02_Examples/method_divergences/README.md) (the two rules retire Ben's supporters' weight differently), and it arrived here honestly: until the fork's 2026-08-09 [count-vs-weight fix](../../03_STAR_PR/03_Criteria/allocated_count_vs_weight/README.md) the engine's Allocated Score also said Dana, and the two score rules appeared to agree. Weight-true accounting — confirmed live against BetterVoting production — elects Amy. The Ben/Ella contrast is untouched by any of this.
 
 ## Why Ben and Ella swap
 
@@ -60,11 +62,11 @@ The proportional approval rules are not in the LH engine — they come from Mart
 
 | Case | Ballot | Method | Winners | Read · run |
 |---|---|---|---|---|
-| Co-op board — scores | 0–5 | `allocated` | Ben, Chris, Dana | [count](cases/cases_pages/coop_board_scores_allocated.md) · [yaml](cases/coop_board_scores_allocated.yaml) |
+| Co-op board — scores | 0–5 | `allocated` | Amy, Ben, Chris | [count](cases/cases_pages/coop_board_scores_allocated.md) · [yaml](cases/coop_board_scores_allocated.yaml) |
 | Co-op board — scores | 0–5 | `sss` | Ben, Chris, Dana | [count](cases/cases_pages/coop_board_scores_sss.md) · [yaml](cases/coop_board_scores_sss.yaml) |
 | Co-op board — approvals | Yes/No | `Approval_Multi_Winner` (+ abcvoting) | Chris, Dana, Ella | [count](cases/cases_pages/coop_board_approval.md) · [yaml](cases/coop_board_approval.yaml) |
 
-**Where this comes from.** Original to this repo. Located by exhaustive random search over 0–5 profiles at 5 candidates / 9 voters / 3 seats, keeping only profiles where *both* score tabulations agreed with each other, *all three* proportional approval rules agreed with each other, and the two sides differed — so the divergence could not be blamed on any single method's tie-breaking or eccentricity. Every result is deterministic; no lot is involved.
+**Where this comes from.** Original to this repo. Located by exhaustive random search over 0–5 profiles at 5 candidates / 9 voters / 3 seats, keeping only profiles where both score tabulations agreed with each other, *all three* proportional approval rules agreed with each other, and the two sides differed. Every result is deterministic; no lot is involved. One honesty note: the search's "both score rules agree" filter ran on the pre-2026-08-09 engine, whose Allocated Score carried the [count-vs-weight bug](../../03_STAR_PR/03_Criteria/allocated_count_vs_weight/README.md) — under the fixed accounting the score rules split their third chair (Amy vs Dana), so this profile no longer satisfies the filter it was found with. The load-bearing property — Ben seated by every score rule, Ella by every approval rule, on the same opinions — holds under the fixed engine and is BetterVoting-confirmed.
 
 ## Related
 

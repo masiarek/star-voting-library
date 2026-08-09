@@ -136,16 +136,17 @@ Count × Ari,Bea,Cyrus,Dane
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |     Ari    |    Bea    | * Cyrus   |  * Dane   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ari    |    Bea    |   Cyrus   |    Dane   |
 -----------------------------------------------------------------
          Ari > |    ---     |4 - 0 - 3  |1 - 3 - 3  |2 - 0 - 5  |
          Bea > | 3 - 0 - 4  |   ---     |2 - 1 - 4  |4 - 1 - 2  |
-     * Cyrus > | 3 - 3 - 1  |4 - 1 - 2  |   ---     |4 - 0 - 3  |
-      * Dane > | 5 - 0 - 2  |2 - 1 - 4  |3 - 0 - 4  |   ---     |
+       Cyrus > | 3 - 3 - 1  |4 - 1 - 2  |   ---     |4 - 0 - 3  |
+        Dane > | 5 - 0 - 2  |2 - 1 - 4  |3 - 0 - 4  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Cyrus — matches the STAR winner

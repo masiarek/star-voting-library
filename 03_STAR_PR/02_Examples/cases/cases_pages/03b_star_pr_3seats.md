@@ -115,14 +115,15 @@ Count × Housing,Schools,Parks,Transit,SmallBiz,BigBiz,TaxCuts
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |  * Housing   | * Schools   |    Parks    |   Transit   |   SmallBiz  |    BigBiz   |   TaxCuts   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                 |    Housing   |   Schools   |    Parks    |   Transit   |   SmallBiz  |    BigBiz   |   TaxCuts   |
 ---------------------------------------------------------------------------------------------------------------------
-     * Housing > |     ---      |71 -  0 - 29 |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
-     * Schools > | 29 -  0 - 71 |    ---      |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
+       Housing > |     ---      |71 -  0 - 29 |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
+       Schools > | 29 -  0 - 71 |    ---      |87 -  0 - 13 |99 -  0 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
          Parks > | 13 -  0 - 87 |13 -  0 - 87 |    ---      |57 - 42 -  1 |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
        Transit > |  1 -  0 - 99 | 1 -  0 - 99 | 1 - 42 - 57 |    ---      |58 -  0 - 42 |58 -  0 - 42 |58 -  0 - 42 |
       SmallBiz > | 42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |42 -  0 - 58 |    ---      |83 -  0 - 17 |97 -  0 -  3 |

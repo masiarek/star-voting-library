@@ -30,14 +30,15 @@ TABULATION RESULTS
 === Misjudged queue — honest baseline ===
   HONEST BASELINE for the backfire pair. A different election: the 8-voter minority scores Amara 5 and Cleo 4; the 12-voter majority is only lukewarm on Amara (3) and wants Boris (5). Amara wins seat 1 with 76. The quota is charged from the top down, and the top score group is the MINORITY's own 5-star ballots — all 8 are spent in full before the majority is touched at all. Seat 2 goes to Boris. The minority's honest haul is Amara, whom they scored 5. Compare misjudged_queue_hylland.yaml and misjudged_queue_bury.yaml.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Amara    |  * Boris    |     Cleo    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Amara    |    Boris    |     Cleo    |
 -------------------------------------------------------------
-       * Amara > |     ---      | 8 -  0 - 12 |20 -  0 -  0 |
-       * Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
+         Amara > |     ---      | 8 -  0 - 12 |20 -  0 -  0 |
+         Boris > | 12 -  0 -  8 |    ---      |12 -  0 -  8 |
           Cleo > |  0 -  0 - 20 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

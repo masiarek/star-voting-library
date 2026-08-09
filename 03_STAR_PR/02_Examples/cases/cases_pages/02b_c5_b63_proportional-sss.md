@@ -98,14 +98,15 @@ Count × Alice,Ben,Cara,Dan,Eve
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Alice    |   * Ben     |     Cara    |     Dan     |     Eve     |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Alice    |     Ben     |     Cara    |     Dan     |     Eve     |
 -----------------------------------------------------------------------------------------
-       * Alice > |     ---      |18 - 24 - 21 |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
-         * Ben > | 21 - 24 - 18 |    ---      |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
+         Alice > |     ---      |18 - 24 - 21 |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
+           Ben > | 21 - 24 - 18 |    ---      |30 - 24 -  9 |39 -  0 - 24 |39 -  0 - 24 |
           Cara > |  9 - 24 - 30 | 9 - 24 - 30 |    ---      |39 -  0 - 24 |39 -  0 - 24 |
            Dan > | 24 -  0 - 39 |24 -  0 - 39 |24 -  0 - 39 |    ---      |15 - 39 -  9 |
            Eve > | 24 -  0 - 39 |24 -  0 - 39 |24 -  0 - 39 | 9 - 39 - 15 |    ---      |

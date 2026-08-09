@@ -27,14 +27,15 @@ TABULATION RESULTS
 === Free riding — the free ride (SSS) ===
   The free-riding ballots of free_ride_hylland_allocated.yaml, counted with Sequentially Spent Score. SSS spends score from the top down just as Allocated Score does, so it inherits the same cliff: the minority's 4-star ballots are reached later, or not at all, and the second seat moves from Bruno to Camila. SSS is not a defence against this.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
-       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+         Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
         Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

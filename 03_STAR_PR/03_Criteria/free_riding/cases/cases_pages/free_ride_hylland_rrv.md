@@ -64,14 +64,15 @@ Count × Anika,Bruno,Camila
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
-       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+         Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
         Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

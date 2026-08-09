@@ -123,16 +123,17 @@ Ada,Bruno,Cleo,Dov
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ada    |   Bruno   |    Cleo   |  * Dov    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ada    |   Bruno   |    Cleo   |    Dov    |
 -----------------------------------------------------------------
-       * Ada > |    ---     |4 - 1 - 2  |5 - 0 - 2  |3 - 4 - 0  |
+         Ada > |    ---     |4 - 1 - 2  |5 - 0 - 2  |3 - 4 - 0  |
        Bruno > | 2 - 1 - 4  |   ---     |2 - 1 - 4  |4 - 1 - 2  |
         Cleo > | 2 - 0 - 5  |4 - 1 - 2  |   ---     |2 - 1 - 4  |
-       * Dov > | 0 - 4 - 3  |2 - 1 - 4  |4 - 1 - 2  |   ---     |
+         Dov > | 0 - 4 - 3  |2 - 1 - 4  |4 - 1 - 2  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Ada — matches the STAR winner

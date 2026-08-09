@@ -138,15 +138,16 @@ TABULATION RESULTS
   method-welfare comparison. Regenerate byte-identically: python
   generate_ballot_styles.py --emit herb_council
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |     Anise    |  * Basil    |  * Chive    |     Dill    |    Endive   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anise    |    Basil    |    Chive    |     Dill    |    Endive   |
 -----------------------------------------------------------------------------------------
          Anise > |     ---      |16 -  0 - 20 |16 -  4 - 16 |16 -  4 - 16 | 5 - 28 -  3 |
-       * Basil > | 20 -  0 - 16 |    ---      | 6 - 26 -  4 |10 - 20 -  6 |20 -  0 - 16 |
-       * Chive > | 16 -  4 - 16 | 4 - 26 -  6 |    ---      | 8 - 23 -  5 |16 -  4 - 16 |
+         Basil > | 20 -  0 - 16 |    ---      | 6 - 26 -  4 |10 - 20 -  6 |20 -  0 - 16 |
+         Chive > | 16 -  4 - 16 | 4 - 26 -  6 |    ---      | 8 - 23 -  5 |16 -  4 - 16 |
           Dill > | 16 -  4 - 16 | 6 - 20 - 10 | 5 - 23 -  8 |    ---      |16 -  4 - 16 |
         Endive > |  3 - 28 -  5 |16 -  0 - 20 |16 -  4 - 16 |16 -  4 - 16 |    ---      |
 

@@ -87,14 +87,15 @@ Ana,Ben,Cleo
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |   * Ana    |  * Ben    |    Cleo   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ana    |    Ben    |    Cleo   |
 -----------------------------------------------------
-       * Ana > |    ---     |0 - 1 - 1  |1 - 0 - 1  |
-       * Ben > | 1 - 1 - 0  |   ---     |1 - 0 - 1  |
+         Ana > |    ---     |0 - 1 - 1  |1 - 0 - 1  |
+         Ben > | 1 - 1 - 0  |   ---     |1 - 0 - 1  |
         Cleo > | 1 - 0 - 1  |1 - 0 - 1  |   ---     |
 
 [Condorcet Winner]

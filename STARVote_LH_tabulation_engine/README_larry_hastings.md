@@ -53,7 +53,7 @@ Set under `options:` (top level or per race). All are booleans unless noted. The
 
 | Option | Default | Effect |
 |--------|---------|--------|
-| `show_matrix` | on | Show the Runoff (Preference) Matrix — the head-to-head / pairwise grid. Auto-suppressed for multi-winner and two-candidate races. |
+| `show_matrix` | on | Show the Runoff (Preference) Matrix — the head-to-head / pairwise grid. Auto-suppressed for multi-winner and two-candidate races. When a multi-winner race does render it (mirror, `--full`, or a file override) the grid prints unmarked as a plain "Preference Matrix" — the Top-2 finalist markers are a single-winner concept. |
 | `matrix_finalists_only` | on | Restrict the matrix to just the two finalists (the decisive runoff matchup). Requires `show_matrix`. |
 | `show_condorcet` | off | Show the `[Condorcet Winner]` line. |
 | `show_score_counts` | off | Show the per-candidate `[Score Distribution]` table. |
