@@ -796,6 +796,22 @@ reproduce loop is in the **`bettervoting` skill**.
   work out whether the other session's generator pruned it deliberately (is it also
   gone from *disk*? does anything still reference it?) or whether it's a half-finished
   state you'd be freezing.
+- **Adding an entry to a shared index file? Re-fetch and check `origin/master`
+  immediately before the commit — not just at the start of the task.**
+  `07_Concepts/GLOSSARY.md`, the `YAML_test_case_index` tables, `PARADOX_index.md`, a
+  folder README's case table: these are where sessions converge, because writing the
+  index entry is the natural *last* step of whoever built the thing being indexed.
+  Worktree isolation makes this **worse**, not better — a colleague's entry sits on
+  their branch with no trace in this working tree until they push, so the tree looks
+  empty right up to the moment it isn't. 2026-08-09: asked for a `Vote unitarity`
+  glossary entry, a main-tree session checked, correctly found none, and wrote one —
+  while the worktree session that had just built
+  `03_STAR_PR/03_Criteria/vote_unitarity/README.md` was writing its own as the last
+  step of that same job. Both were right when they looked; the two entries collided on
+  the merge an hour later and one was discarded. Note *what* was stale: the page was
+  already upstream when the task began, and the **entry** appeared between the first
+  check and the commit — which is exactly why the fetch has to be late. No git setting
+  prevents this; it is a coordination gap, not a merge conflict.
 - **Don't rewrite history to unpick a sweep**, even unpushed. A `reset`/`rebase` in a
   shared checkout drops the other session's commits into the working tree. Report the
   muddled attribution instead — the content is what matters, and it's recoverable.
