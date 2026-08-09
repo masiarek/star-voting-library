@@ -1,0 +1,49 @@
+election_title: Two bullet voters, two seats — Sequentially Spent Score
+voting_method: sss
+num_winners: 2
+
+scenario_description: |
+  The smallest known election where vote unitarity does real work: seven
+  voters, three candidates, two seats, counted by Sequentially Spent Score.
+
+  Round 1 seats Cy with 17 points against a Hare score quota of 17 1/2 —
+  no surplus, so every Cy supporter pays their FULL Cy score out of their
+  5-star budget. One ballot (2,2,5) gave Cy all 5 and exhausts to zero.
+
+  The two Amy bullet voters scored Cy 0. They spent nothing, so vote
+  unitarity — influence is only spent in exchange for representation
+  gained — says they keep their entire 5-star budgets. In round 2 those
+  budgets decide the seat: Amy 11 3/5 beats Bo 5 1/5.
+
+  This profile is also the regression case for a fork-fixed engine defect
+  (upstream larryhastings/starvote#19): an engine that silently drops the
+  zero-score ballots when another ballot exhausts elects Bo instead of Amy.
+  Correct SSS elects Amy and Cy.
+
+options:
+  show_description: false
+  show_matrix: false
+  matrix_finalists_only: false
+  show_condorcet: false
+  show_score_counts: false
+  show_irv: false
+  show_runoff_percent: true
+  brief: true
+  collapse_ballots: false
+  count_separator: "×"
+
+ballots: |-
+  Amy,Bo,Cy
+  0,5,3      # Bo fan, warm on Cy
+  5,0,0      # Amy bullet voter #1 — scores Cy 0
+  0,3,4      # Cy leaner
+  2,2,5      # Cy 5, no surplus — exhausts in round 1
+  5,1,0      # Amy bullet voter #2 — scores Cy 0
+  0,0,4      # Cy-only supporter
+  2,2,1      # spread-out moderate
+
+expected_winners:
+  - Amy
+  - Cy
+
+# file: two_bullet_voters_sss.yaml

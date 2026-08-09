@@ -2739,8 +2739,14 @@ def sequentially_spent_score(
                                     counts[key] += 1
                                     modified += 1
 
-                            remaining_decorated_ballots.append(t)
-                            remaining_weighted_ballots.append(weighted_ballot)
+                        # Fork fix (BUG_sss_zero_score_ballots.md): this append
+                        # must sit OUTSIDE `if score:`.  Ballots that scored the
+                        # winner 0 spent nothing and keep their full remaining
+                        # budget (vote unitarity) — they must survive the
+                        # rebuild too.  Only exhausted ballots (the `continue`
+                        # above) are dropped.
+                        remaining_decorated_ballots.append(t)
+                        remaining_weighted_ballots.append(weighted_ballot)
 
                     if allocated:
                         decorated_ballots = remaining_decorated_ballots

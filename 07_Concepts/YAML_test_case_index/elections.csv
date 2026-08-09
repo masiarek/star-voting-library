@@ -418,6 +418,7 @@ LH:tie_break_08_runoff_dead_rung_adversarial_lot,"Dead rung 04 — runoff tie, n
 LH:tie_break_09_five_star_tied_nonzero,Dead rung 05 — five-star rung alive but non-separating,1,single-race,2,STAR,LH-only
 LH:tilted_cycle_c3_b5_irv,"Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)",1,single-race,5,IRV,LH-only
 LH:tilted_cycle_c3_b5_rr,"Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)",1,single-race,5,RankedRobin,LH-only
+LH:two_bullet_voters_sss,"Two bullet voters, two seats — Sequentially Spent Score",1,single-race,7,STAR_PR,LH-only
 LH:two_officers_allocated,"Two officers, three candidates — Allocated Score",1,single-race,3,STAR_PR,LH-only
 LH:two_officers_rrv,"Two officers, three candidates — Reweighted Range Voting",1,single-race,3,STAR_PR,LH-only
 LH:two_officers_sss,"Two officers, three candidates — Sequentially Spent Score",1,single-race,3,STAR_PR,LH-only
