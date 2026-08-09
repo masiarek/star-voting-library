@@ -122,13 +122,10 @@ Count × A,B,C,D,E,F,G
 [Allocated Score Voting: Round 2: Ballot allocation round: Round 2]
  Remaining allocation quota is 2.
  Allocating 3 ballots at score 25/8.
- This allocation overfills the remaining quota.  Returning fractional surplus.
- Allocating only 66.67% of these ballots.
- Keeping these ballots, but multiplying their weights by 1/3.
- 3 ballots reweighted from 5/8 to 5/24.
+ These ballots carry a remaining weight of 15/8.
 
 [Allocated Score Voting: Round 3]
- Tabulating 11 remaining ballots.
+ Tabulating 8 remaining ballots.
 Count × A,B,C,D,E,F,G
     3 × 5,5,0,0,0,0,0
     3 × 5,0,5,0,0,0,0
@@ -143,9 +140,10 @@ Count × A,B,C,D,E,F,G
 
 [Allocated Score Voting: Round 3: Ballot allocation round: Round 1]
  Allocating 3 ballots at score 25/8.
+ These ballots carry a remaining weight of 15/8.
 
 [Allocated Score Voting: Round 4]
- Tabulating 8 remaining ballots.
+ Tabulating 5 remaining ballots.
 Count × A,B,C,D,E,F,G
     3 × 5,5,0,0,0,0,0
     3 × 5,0,5,0,0,0,0

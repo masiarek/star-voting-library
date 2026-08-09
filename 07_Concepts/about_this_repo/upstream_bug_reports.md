@@ -12,6 +12,7 @@ This is the follow-up list: every report **we** filed against a project we don't
 
 | Issue | Filed | State | What it is |
 |---|---|---|---|
+| [#1507](https://github.com/Equal-Vote/bettervoting/issues/1507) | 2026-08-09 | open | STAR-PR results always report `tieBreakType: "random"`, even with no tie — the mislabel that hid the count-vs-weight divergence for a year |
 | [#1487](https://github.com/Equal-Vote/bettervoting/issues/1487) | 2026-08-06 | open | Range-of-Scores chart and the page headline use different denominators on flat ballots |
 | [#1485](https://github.com/Equal-Vote/bettervoting/issues/1485) | 2026-08-06 | open | Record the abstention policy on the race, so an export says what was *allowed* |
 | [#1484](https://github.com/Equal-Vote/bettervoting/issues/1484) | 2026-08-06 | open | STAR Race Details tables use the second-highest scorer instead of the tiebreak runner-up |
@@ -33,6 +34,7 @@ Larry's engine, which this repo forks. Fork-side findings and their local fixes 
 
 | Issue | Filed | State | What it is |
 |---|---|---|---|
+| [#20](https://github.com/larryhastings/starvote/issues/20) | 2026-08-09 | open | Allocated Score fills the quota by ballot COUNT, not weight — diverges from the reference implementation the package ships (fixed in this fork; [the divergence page](../../03_STAR_PR/03_Criteria/allocated_count_vs_weight/README.md)) |
 | [#19](https://github.com/larryhastings/starvote/issues/19) | 2026-08-09 | open | SSS silently discards ballots that scored the winner 0, whenever any ballot exhausts in the same round |
 | [#18](https://github.com/larryhastings/starvote/issues/18) | 2026-08-04 | open | `UnbreakableTieError` message never interpolated (missing `f` prefix in `_star_round()`) |
 | [#17](https://github.com/larryhastings/starvote/issues/17) | 2026-06-17 | open | SSS returns different winners depending on `verbosity` — the one that changed results |

@@ -9,19 +9,20 @@ scenario_description: >
   for the quota: three party-line slates — 41 voters score only A1–A4 at 5,
   19 score only B1–B3, 6 score only C1–C2 — filling five seats. The Hare
   quota is 66/5 = 13.2, and the A slate holds 41/13.2 = 3.11 quotas, so the
-  proportional (Hamilton) answer is 3 A seats + 1 B + 1 C — which is what
-  BetterVoting's production tabulator and the published reference
-  implementation both elect (A1, A2, B1, A3, C1; confirmed live against
-  bettervoting.com on 2026-08-09). This engine instead elects a FOURTH A
-  (A1, A2, A3, A4, B1 — D'Hondt's answer) because its allocation round
-  measures the quota in ballot COUNTS: every A round retires
-  13.2/41 = 32.20% of the A ballots' remaining weight no matter how little
-  weight they still carry, so a big slate pays a geometrically shrinking
-  price per seat instead of a full quota. Within each slate the seat order
-  is lot-decided (the slate's candidates tie every round), which is why the
-  lot order is published in this file; the SEAT SPLIT between slates is
-  decided by the ballots alone. Full trace and the upstream reports: this
-  folder's README.
+  proportional (Hamilton) answer is 3 A seats + 1 B + 1 C — which
+  BetterVoting's production tabulator, the published reference
+  implementation, and this engine (since the fork's 2026-08-09
+  count-vs-weight fix) all elect; confirmed live against bettervoting.com
+  on 2026-08-09. Unpatched starvote (upstream issue #20, still open)
+  instead elects a FOURTH A — 4-1-0, D'Hondt's answer — because its
+  allocation round measures the quota in ballot COUNTS: every A round
+  retires 13.2/41 = 32.20% of the A ballots' remaining weight no matter how
+  little weight they still carry, so a big slate pays a geometrically
+  shrinking price per seat instead of a full quota. Within each slate the
+  seat order is lot-decided (the slate's candidates tie every round), which
+  is why the lot order is published in this file; the SEAT SPLIT between
+  slates is decided by the ballots alone. Full trace and the upstream
+  reports: this folder's README.
 lot_numbers: [A1, A2, A3, A4, B1, B2, B3, C1, C2]
 voting_method: allocated
 num_winners: 5
@@ -30,6 +31,7 @@ ballots: |-
   41:5,5,5,5,0,0,0,0,0   # slate A — 3.11 quotas
   19:0,0,0,0,5,5,5,0,0   # slate B — 1.44 quotas
   6:0,0,0,0,0,0,0,5,5    # slate C — 0.45 quotas
+expected_winners: [A1, A2, A3, B1, C1]
 
 # file: count_vs_weight_slates_c9_b66.yaml
 
@@ -38,7 +40,7 @@ TABULATION RESULTS
 ======================================================================
 
 === Three slates, five seats — the count-vs-weight fingerprint ===
-  A stress profile built to expose how an Allocated Score tabulator accounts for the quota: three party-line slates — 41 voters score only A1–A4 at 5, 19 score only B1–B3, 6 score only C1–C2 — filling five seats. The Hare quota is 66/5 = 13.2, and the A slate holds 41/13.2 = 3.11 quotas, so the proportional (Hamilton) answer is 3 A seats + 1 B + 1 C — which is what BetterVoting's production tabulator and the published reference implementation both elect (A1, A2, B1, A3, C1; confirmed live against bettervoting.com on 2026-08-09). This engine instead elects a FOURTH A (A1, A2, A3, A4, B1 — D'Hondt's answer) because its allocation round measures the quota in ballot COUNTS: every A round retires 13.2/41 = 32.20% of the A ballots' remaining weight no matter how little weight they still carry, so a big slate pays a geometrically shrinking price per seat instead of a full quota. Within each slate the seat order is lot-decided (the slate's candidates tie every round), which is why the lot order is published in this file; the SEAT SPLIT between slates is decided by the ballots alone. Full trace and the upstream reports: this folder's README.
+  A stress profile built to expose how an Allocated Score tabulator accounts for the quota: three party-line slates — 41 voters score only A1–A4 at 5, 19 score only B1–B3, 6 score only C1–C2 — filling five seats. The Hare quota is 66/5 = 13.2, and the A slate holds 41/13.2 = 3.11 quotas, so the proportional (Hamilton) answer is 3 A seats + 1 B + 1 C — which BetterVoting's production tabulator, the published reference implementation, and this engine (since the fork's 2026-08-09 count-vs-weight fix) all elect; confirmed live against bettervoting.com on 2026-08-09. Unpatched starvote (upstream issue #20, still open) instead elects a FOURTH A — 4-1-0, D'Hondt's answer — because its allocation round measures the quota in ballot COUNTS: every A round retires 13.2/41 = 32.20% of the A ballots' remaining weight no matter how little weight they still carry, so a big slate pays a geometrically shrinking price per seat instead of a full quota. Within each slate the seat order is lot-decided (the slate's candidates tie every round), which is why the lot order is published in this file; the SEAT SPLIT between slates is decided by the ballots alone. Full trace and the upstream reports: this folder's README.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
@@ -155,18 +157,19 @@ C2          6   0   0   0   0  60  |    30   0.5
 
 [Allocated Score Voting: Round 2: Ballot allocation round: Round 1]
  Allocating 41 ballots at score 139/41.
+ These ballots carry a remaining weight of 139/5.
  This allocation overfills the quota.  Returning fractional surplus.
- Allocating only 32.20% of these ballots.
- Keeping these ballots, but multiplying their weights by 139/205.
- 41 ballots reweighted from 139/205 to 19321/42025.
+ Allocating only 47.48% of these ballots.
+ Keeping these ballots, but multiplying their weights by 73/139.
+ 41 ballots reweighted from 139/205 to 73/205.
 
 [Allocated Score Voting: Round 3]
  The highest-scoring candidate wins a seat.
-   B1            -- 95        -- Tied for first place
-   B2            -- 95        -- Tied for first place
-   B3            -- 95        -- Tied for first place
-   A3            -- 94+51/205
-   A4            -- 94+51/205
+   B1            -- 95 -- Tied for first place
+   B2            -- 95 -- Tied for first place
+   B3            -- 95 -- Tied for first place
+   A3            -- 73
+   A4            -- 73
    C1            -- 30
    C2            -- 30
  There's a three-way tie for first.
@@ -195,8 +198,8 @@ C2          6   0   0   0   0  60  |    30   0.5
 
 [Allocated Score Voting: Round 4]
  The highest-scoring candidate wins a seat.
-   A3            -- 94+51/205 -- Tied for first place
-   A4            -- 94+51/205 -- Tied for first place
+   A3            -- 73 -- Tied for first place
+   A4            -- 73 -- Tied for first place
    C1            -- 30
    C2            -- 30
    B2            -- 29
@@ -219,24 +222,37 @@ C2          6   0   0   0   0  60  |    30   0.5
  Allocating 13+1/5 ballots.
 
 [Allocated Score Voting: Round 4: Ballot allocation round: Round 1]
- Allocating 41 ballots at score 19321/8405.
+ Allocating 41 ballots at score 73/41.
+ These ballots carry a remaining weight of 73/5.
  This allocation overfills the quota.  Returning fractional surplus.
- Allocating only 32.20% of these ballots.
- Keeping these ballots, but multiplying their weights by 139/205.
- 41 ballots reweighted from 19321/42025 to 2685619/8615125.
+ Allocating only 90.41% of these ballots.
+ Keeping these ballots, but multiplying their weights by 7/73.
+ 41 ballots reweighted from 73/205 to 7/205.
 
 [Allocated Score Voting: Round 5]
  The highest-scoring candidate wins a seat.
-   A4            -- 63+38044/42025 -- First place
-   C1            -- 30
-   C2            -- 30
+   C1            -- 30 -- Tied for first place
+   C2            -- 30 -- Tied for first place
    B2            -- 29
    B3            -- 29
- A4 wins a seat.
+   A4            --  7
+ There's a two-way tie for first.
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['C1', 'C2']
+  Resolved: ['C1'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
 
 [Allocated Score Voting: Winners — Allocated Score Voting Method (5 winners)]
  A1
  A2
  A3
- A4
  B1
+ C1

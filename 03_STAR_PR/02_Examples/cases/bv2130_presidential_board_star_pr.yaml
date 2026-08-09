@@ -6,17 +6,16 @@ scenario_description: |-
   candidates, 102 sparse ballots. The LH reference uses voting_method: allocated
   (BV's STAR_PR isn't a name LH recognizes — it maps to Allocated Score).
 
-  LH allocated reproduces BetterVoting's first SIX seats exactly (Bernie Sanders,
-  Al Gore, Barack Obama, Cornel West, Chase Oliver, Kamala Harris). The SEVENTH
-  seat diverges: LH elects Claudia De La Cruz, BetterVoting elected Karina Garcia
-  (both Socialism & Liberation), with Claudia ahead in LH's exact math (34.26 vs
-  34.00 reweighted). RESOLVED 2026-08-09: this is a genuine implementation
-  difference, and BetterVoting is right. The LH engine fills allocation quotas by
-  ballot COUNT instead of ballot weight (reported as starvote issue #20), which
-  is what inflates Claudia here; under weight-true accounting Karina is strictly
-  ahead, and today's production sandbox re-elects her deterministically, no tie
-  in the round. The tieBreakType "random" that pointed the old note toward a
-  chance tiebreak was a red herring — BV's Allocated Score stamps it on every
+  LH allocated now reproduces all SEVEN BetterVoting seats exactly (Bernie
+  Sanders, Al Gore, Barack Obama, Cornel West, Chase Oliver, Kamala Harris,
+  Karina Garcia). It didn't always: until the fork's 2026-08-09
+  count-vs-weight fix (upstream starvote issue #20), the engine elected
+  Claudia De La Cruz for seat 7 — count-based allocation left the Socialism
+  & Liberation math at Claudia 34.26 vs Karina 34.00, where weight-true
+  accounting puts Karina strictly ahead, deterministically (production
+  sandbox re-elects her with no tie in the round). The old note here blamed
+  "a near-tie BV broke by chance" because BV's export said tieBreakType
+  "random" — a red herring: BV's Allocated Score stamps that on every
   result, tie or none (bettervoting issue #1507). Full story:
   03_STAR_PR/03_Criteria/allocated_count_vs_weight.
 
@@ -134,6 +133,6 @@ expected_winners:
   - Cornel West (Independent)
   - Chase Oliver (Libertarian)
   - Kamala Harris (Democrat)
-  - Claudia De La Cruz (Socialism and Liberation)
+  - Karina Garcia (Socialism and Liberation)
 
 # file: bv2130_presidential_board_star_pr.yaml

@@ -2267,13 +2267,29 @@ def allocated_score_voting(
 
                             allocation_count = len(supporters) - score_start
 
+                            # Fork fix (BUG_allocated_count_vs_weight.md / upstream
+                            # issue #20): the quota is denominated in ballot WEIGHT,
+                            # not ballot count.  After a fractional surplus these
+                            # ballots carry weights < 1; charging the quota one full
+                            # ballot per row let a large bloc pay a geometrically
+                            # shrinking price per seat, where the reference
+                            # implementation (starvote/reference.py) retires one
+                            # full quota of weight per seat.
+                            allocation_weight = _fraction_or_int(
+                                sum(t[INDEX_WEIGHT] for t in supporters[score_start:])
+                            )
+
                             if options.verbosity:
                                 options.print(
                                     f"Allocating {allocation_count} ballot{pluralizer(allocation_count)} at score {score}."
                                 )
-                            if allocation_count <= quota:
+                                if allocation_weight != allocation_count:
+                                    options.print(
+                                        f"These ballots carry a remaining weight of {allocation_weight}."
+                                    )
+                            if allocation_weight <= quota:
                                 del supporters[score_start:]
-                                quota = _fraction_or_int(quota - allocation_count)
+                                quota = _fraction_or_int(quota - allocation_weight)
                                 # deleted some ballots, so we have to
                                 # recalculate both weighted_ballots and decorated_ballots
                                 recalculate_weighted_ballots = True
@@ -2281,13 +2297,13 @@ def allocated_score_voting(
                                     break
                                 continue
 
-                            # this group has more supporters than we need to fill the quota.
+                            # this group carries more weight than we need to fill the quota.
                             # reduce every supporter's vote by the surplus, then keep them in play.
                             # since this fills the quota, we always exit the loop after this.
                             score_group = supporters[score_start:]
 
                             weight_reduction_ratio = _fraction_or_int(
-                                quota, allocation_count
+                                quota, allocation_weight
                             )
                             one_minus_weight_reduction_ratio = (
                                 1 - weight_reduction_ratio
