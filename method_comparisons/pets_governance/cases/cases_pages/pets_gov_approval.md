@@ -40,7 +40,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/pets_gov_approval_
  Tabulating 22 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Dog, Cat, Fish, Bird, Rabbit, Hamster      (1 = approve; 0 / blank / marker = not approved)
+   columns = Dog, Cat, Fish, Bird, Rabbit, Hamster      (1 = approve; 0 = not approved)
     13 × 1,1,1,0,0,0
      9 × 0,0,0,1,1,1
 

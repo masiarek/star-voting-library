@@ -35,7 +35,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2132_ykjjhy_pet_
  Tabulating 22 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Dog, Cat, Fish      (1 = approve; 0 / blank / marker = not approved)
+   columns = Dog, Cat, Fish      (1 = approve; 0 = not approved)
      9 × 1,1,0
     13 × 0,1,1
 

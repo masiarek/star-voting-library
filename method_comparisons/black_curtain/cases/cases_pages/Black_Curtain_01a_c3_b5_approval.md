@@ -45,7 +45,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/Black_Curtain_01a_
  Tabulating 5 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ann, Bob, Cal      (1 = approve; 0 = not approved)
      3 × 0,1,1
      2 × 1,1,0
 

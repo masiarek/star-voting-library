@@ -75,7 +75,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2279_qywq7d_appr
  Tabulating 3 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Apple, Orange, Banana      (1 = approve; 0 / blank / marker = not approved)
+   columns = Apple, Orange, Banana      (1 = approve; 0 = not approved)
      2 × 0,1,1
      1 × 0,1,0
 

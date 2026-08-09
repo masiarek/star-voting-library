@@ -43,7 +43,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/chicken_approval_t
  Tabulating 100 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = A, B, C      (1 = approve; 0 / blank / marker = not approved)
+   columns = A, B, C      (1 = approve; 0 = not approved)
     60 × 1,1,0
     40 × 0,0,1
 

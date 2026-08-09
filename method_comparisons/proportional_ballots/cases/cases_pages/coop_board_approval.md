@@ -58,7 +58,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/coop_board_approva
  Tabulating 9 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Amy, Ben, Chris, Dana, Ella      (1 = approve; 0 / blank / marker = not approved)
+   columns = Amy, Ben, Chris, Dana, Ella      (1 = approve; 0 = not approved)
      1 × 1,0,1,1,1
      2 × 0,0,1,1,0
      2 × 0,1,1,0,1

@@ -66,7 +66,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/hillinger_t3_arbit
  Tabulating 7 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ada, Ben, Cora      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ada, Ben, Cora      (1 = approve; 0 = not approved)
      3 × 1,0,0
      2 × 0,1,1
      2 × 1,0,1

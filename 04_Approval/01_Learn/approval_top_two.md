@@ -31,7 +31,7 @@ Here's the instructive part. Suppose you tried to spare everyone the second trip
  Tabulating 5 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ann, Bob, Cal      (1 = approve; 0 = not approved)
    1,1,0
    0,1,1
    1,1,0

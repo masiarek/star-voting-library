@@ -76,7 +76,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/approval_sav_disjo
  Tabulating 10 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ada, Ben, Cleo, Dev      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ada, Ben, Cleo, Dev      (1 = approve; 0 = not approved)
      4 × 1,1,0,0
      3 × 0,0,1,0
      3 × 0,0,0,1

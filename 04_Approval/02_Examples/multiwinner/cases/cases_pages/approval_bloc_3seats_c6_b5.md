@@ -44,7 +44,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/approval_bloc_3sea
  Tabulating 5 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Adams, Brown, Clark, Davis, Evans, Foster      (1 = approve; 0 / blank / marker = not approved)
+   columns = Adams, Brown, Clark, Davis, Evans, Foster      (1 = approve; 0 = not approved)
      1 × 1,1,0,0,0,0
      1 × 0,1,1,1,0,0
      1 × 1,0,0,0,1,1

@@ -51,7 +51,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/ex13_approve4_tabu
  Tabulating 9 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ash, Beck, Cora      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ash, Beck, Cora      (1 = approve; 0 = not approved)
      3 × 1,1,0
      2 × 0,1,0
      4 × 0,0,1

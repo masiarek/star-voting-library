@@ -71,7 +71,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2177_v8r66y_appr
  Tabulating 20 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Purple, Green, Blue, Pink      (1 = approve; 0 / blank / marker = not approved)
+   columns = Purple, Green, Blue, Pink      (1 = approve; 0 = not approved)
      7 × 1,0,0,0
      7 × 0,1,1,1
      2 × 0,0,1,1

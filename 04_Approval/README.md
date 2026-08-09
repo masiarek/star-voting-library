@@ -40,7 +40,7 @@ Now add up the columns — a `1` is a point, a `0` is nothing:
  Tabulating 5 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ann, Bob, Cal      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ann, Bob, Cal      (1 = approve; 0 = not approved)
      2 × 1,1,0
      1 × 0,1,1
      1 × 0,1,0
@@ -111,7 +111,7 @@ So does **[Satisfaction Approval Voting (SAV)](01_Learn/Multiwinner_Approval/sat
 
 **The three-option variant** — [Combined Approval Voting (CAV)](../06_Other/Combined_Approval/README.md) adds an explicit **Against** to the ballot: For (+1) / abstain (0) / Against (−1), highest net wins. It lives in `06_Other/` because it isn't an EVC method, but it belongs to this family, and it carries the sharpest lesson about what a blank is worth — CAV reads an unmarked row as the *middle* grade where every other score ballot here reads it as the *lowest*, and a runnable pair of elections shows the same twelve voters reversing end-to-end on that one word.
 
-House rule: Approval ballots accept only `0`/`1` (blank / markers = not approved); the engine errors on 0–5 scores under `voting_method: Approval`.
+House rule: Approval ballots accept only `0`/`1`; the engine errors on 0–5 scores under `voting_method: Approval`. A blank cell counts as **not approved**, and so does any of the five [abstention markers](../01_STAR/01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md) — `-` blank, `~` race abstention, `&` candidate abstention, `?` spoiled, `%` spoiled and re-issued. The report echoes all of them as `0`, and names the ones a file actually used in a legend beneath the ballots.
 
 **Conversation scripts:** the Larry ↔ Adam series (STAR + RCV-IRV) is indexed in [Conversation scripts — index](../07_Concepts/about_this_repo/conversation_scripts.md).
 

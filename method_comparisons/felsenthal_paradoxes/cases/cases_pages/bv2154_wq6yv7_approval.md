@@ -50,7 +50,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2154_wq6yv7_appr
  Tabulating 15 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = April, Bruce, Clara      (1 = approve; 0 / blank / marker = not approved)
+   columns = April, Bruce, Clara      (1 = approve; 0 = not approved)
      6 × 1,0,0
      4 × 0,1,0
      1 × 1,0,1

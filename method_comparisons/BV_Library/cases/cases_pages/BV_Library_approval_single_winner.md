@@ -47,12 +47,15 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/BV_Library_approva
  Abstentions: 3 of 10 ballots approved no one (7 ballots cast an approval).
 
 Ballots:
-   columns = Alice, Bob, Carol, Dave      (1 = approve; 0 / blank / marker = not approved)
+   columns = Alice, Bob, Carol, Dave      (1 = approve; 0 = not approved)
      1 × 1,1,1,1
      2 × 0,1,1,1
      3 × 0,0,1,1
      1 × 0,0,0,1
      3 × 0,0,0,0
+
+[Legend] (these all count as not approved — the echo above shows them as 0)
+  -  Blank — no score / voter left the candidate blank
 
    Dave  -- 7 (70%) -- Elected
    Carol -- 6 (60%)

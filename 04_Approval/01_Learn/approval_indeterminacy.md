@@ -47,7 +47,7 @@ His Table 3 makes it concrete. Seven voters, three candidates. Here are the appr
  Tabulating 7 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ada, Ben, Cora      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ada, Ben, Cora      (1 = approve; 0 = not approved)
      3 × 1,0,0
      2 × 0,1,1
      2 × 1,0,1

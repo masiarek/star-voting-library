@@ -37,7 +37,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/felsenthal_ex6_par
  Tabulating 3 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Aria, Beau, Cole, Dean      (1 = approve; 0 / blank / marker = not approved)
+   columns = Aria, Beau, Cole, Dean      (1 = approve; 0 = not approved)
      2 × 1,1,1,0
      1 × 1,1,0,1
 

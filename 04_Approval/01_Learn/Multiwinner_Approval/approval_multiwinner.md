@@ -39,7 +39,7 @@ What bloc Approval does *not* do is represent minorities. Every voter influences
  Tabulating 6 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 = not approved)
      2 × 1,0,0,0
      2 × 1,1,0,0
      1 × 0,0,1,1

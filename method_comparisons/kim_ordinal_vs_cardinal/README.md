@@ -144,7 +144,7 @@ The two approval files are the payoff. They carry the **same 36 rankings** as ev
  Tabulating 36 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Almond, Berry, Cocoa      (1 = approve; 0 / blank / marker = not approved)
+   columns = Almond, Berry, Cocoa      (1 = approve; 0 = not approved)
     12 × 1,1,0
      8 × 0,1,0
      7 × 0,0,1

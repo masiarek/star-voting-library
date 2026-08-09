@@ -34,7 +34,7 @@ The ballots as marked — a filled **Yes** is a `1` in that candidate's column, 
  Tabulating 6 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 = not approved)
      2 × 1,0,0,0
      2 × 1,1,0,0
      1 × 0,0,1,1

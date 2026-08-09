@@ -61,7 +61,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/approval_bloc_2sea
  Tabulating 6 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 / blank / marker = not approved)
+   columns = Amy, Ben, Cora, Doug      (1 = approve; 0 = not approved)
      2 × 1,0,0,0
      2 × 1,1,0,0
      1 × 0,0,1,1

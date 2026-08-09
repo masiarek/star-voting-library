@@ -58,7 +58,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/hh41_01_approval_a
  Tabulating 100 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = A, B, C      (1 = approve; 0 / blank / marker = not approved)
+   columns = A, B, C      (1 = approve; 0 = not approved)
     60 × 1,1,0
     40 × 0,1,1
 

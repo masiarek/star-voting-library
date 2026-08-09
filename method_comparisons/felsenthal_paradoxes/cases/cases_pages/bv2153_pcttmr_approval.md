@@ -37,7 +37,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/bv2153_pcttmr_appr
  Tabulating 100 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Amos, Bella, Chad      (1 = approve; 0 / blank / marker = not approved)
+   columns = Amos, Bella, Chad      (1 = approve; 0 = not approved)
     51 × 1,1,0
     49 × 0,1,1
 

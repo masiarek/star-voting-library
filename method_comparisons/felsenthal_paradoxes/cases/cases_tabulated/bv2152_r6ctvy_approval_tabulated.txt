@@ -87,7 +87,7 @@ TABULATION RESULTS
  Tabulating 47 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Anna, Bert, Carla      (1 = approve; 0 / blank / marker = not approved)
+   columns = Anna, Bert, Carla      (1 = approve; 0 = not approved)
     18 × 1,0,0
      6 × 0,1,1
      8 × 1,1,0

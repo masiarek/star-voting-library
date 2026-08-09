@@ -56,7 +56,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/crowded_field_c5_a
  Tabulating 65 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ana, Bruno, Diego, Elsa, Greta      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ana, Bruno, Diego, Elsa, Greta      (1 = approve; 0 = not approved)
     16 × 1,1,0,0,0
     13 × 0,1,1,0,0
     21 × 0,0,1,1,0

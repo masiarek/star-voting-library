@@ -1475,7 +1475,7 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
               "voting_method to STAR.")
         sys.exit(1)
 
-    candidates, ballots, _ = parse_ballots_from_string(ballots_text)
+    candidates, ballots, display_rows = parse_ballots_from_string(ballots_text)
     if not ballots:
         print("Error: No valid ballots found in input.\n       Separate columns with commas (recommended), tabs, or consistent spaces —\n       e.g. a header 'A, B, C' then rows like '5, 4, 0'. Other delimiters (like\n       '|' or ';') aren't supported, and every row needs the same number of\n       values as the header.")
         sys.exit(1)
@@ -1515,7 +1515,7 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
             for b in ballots]
     print("\nBallots:")
     print(f"   columns = {', '.join(candidates)}"
-          "      (1 = approve; 0 / blank / marker = not approved)")
+          "      (1 = approve; 0 = not approved)")
     if _collapse:
         seen = []
         for r in rows:
@@ -1527,6 +1527,14 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
     else:
         for r in rows:
             print(f"   {r}")
+    # The echo above is pure 0/1 — a blank or a marker in the source file is
+    # normalized to 0 before it gets here, so the reader never sees one. Name
+    # only the marks the file actually used, with their meaning, instead of
+    # alluding to "a marker" that appears nowhere on screen.
+    print_marker_legend(
+        markers_used(display_rows),
+        caption="(these all count as not approved — the echo above shows them as 0)",
+    )
     print()
     name_w = max(len(c) for c in candidates)
     for i, c in enumerate(ranked):
@@ -2488,11 +2496,17 @@ def _append_ballot_flags(body_rows):
     return out
 
 
-def print_marker_legend(used):
-    """Print a legend explaining only the markers present in the data."""
+def print_marker_legend(used, caption="(these all count as score 0)"):
+    """
+    Print a legend explaining only the markers present in the data.
+
+    `caption` lets a 0/1 method say what a marker means *there* — on an Approval
+    ballot "counts as score 0" is true but roundabout; "not approved" is the
+    reader's word.
+    """
     if not used:
         return
-    print("\n[Legend] (these all count as score 0)")
+    print(f"\n[Legend] {caption}")
     for m in used:
         print(f"  {m}  {MARKER_MEANINGS[m]}")
 

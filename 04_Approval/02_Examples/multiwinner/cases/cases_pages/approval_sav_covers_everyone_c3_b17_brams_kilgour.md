@@ -85,7 +85,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/approval_sav_cover
  Tabulating 17 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ash, Bree, Cole      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ash, Bree, Cole      (1 = approve; 0 = not approved)
      5 × 1,1,0
      5 × 1,0,1
      4 × 0,1,0

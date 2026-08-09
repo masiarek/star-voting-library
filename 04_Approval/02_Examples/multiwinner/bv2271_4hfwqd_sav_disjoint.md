@@ -51,7 +51,7 @@ The `random` flag on race 2 is honest and harmless. In the second STAR round Cle
  Tabulating 10 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ada, Ben, Cleo, Dev      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ada, Ben, Cleo, Dev      (1 = approve; 0 = not approved)
      4 × 1,1,0,0
      3 × 0,0,1,0
      3 × 0,0,0,1

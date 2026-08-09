@@ -55,7 +55,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/ex15_approval_yes_
  Tabulating 35 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = Ada, Blair, Cosmo      (1 = approve; 0 / blank / marker = not approved)
+   columns = Ada, Blair, Cosmo      (1 = approve; 0 = not approved)
     15 × 0,1,1
      8 × 1,1,0
      7 × 1,0,1

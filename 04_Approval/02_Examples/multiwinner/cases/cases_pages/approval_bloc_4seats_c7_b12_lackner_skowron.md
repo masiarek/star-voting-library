@@ -60,7 +60,7 @@ Full report from the [`_tabulated` mirror](../cases_tabulated/approval_bloc_4sea
  Tabulating 12 ballots (any non-zero score = approval).
 
 Ballots:
-   columns = A, B, C, D, E, F, G      (1 = approve; 0 / blank / marker = not approved)
+   columns = A, B, C, D, E, F, G      (1 = approve; 0 = not approved)
      3 × 1,1,0,0,0,0,0
      3 × 1,0,1,0,0,0,0
      2 × 1,0,0,1,0,0,0
