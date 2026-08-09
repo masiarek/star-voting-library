@@ -124,7 +124,7 @@ That is not hypothetical here. This library asked the question and answered it: 
 
 ## Scenarios in this library
 
-Allocated Score is the STAR-PR method with real coverage here — **26 case files across 12 folders**, against seven for [SSS](sequentially_spent_score.md) and six for [RRV](reweighted_range_voting.md). Gathered:
+Allocated Score is the STAR-PR method with real coverage here — **26 case files across 12 folders**, against eight for [SSS](sequentially_spent_score.md) and six for [RRV](reweighted_range_voting.md). Gathered:
 
 | Scenario | What it shows | Read · run |
 |---|---|---|

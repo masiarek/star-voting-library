@@ -14,6 +14,8 @@ Think of each voter as holding a **budget of stars**. Seat the highest-scoring c
 
 That is the whole difference from Allocated Score, which sorts supporters into score groups and marks them represented group by group — 5-star group first, then 4-star — until the quota is filled, with only the final group split fractionally. SSS spreads the same cost across every supporter at once instead of exhausting them in tiers.
 
+The principle behind the budget has a name — **vote unitarity** (Keith Edmonds, the method's designer): influence is spent *only in exchange for representation gained*, so a voter who scored the winner 0 pays nothing and keeps their full budget for later rounds. The election where that rule visibly decides a seat: [the two bullet voters](../../03_Criteria/vote_unitarity/README.md).
+
 `voting_method: sss` plus `num_winners: k`.
 
 ## Watch it count
@@ -93,7 +95,7 @@ Count × Alice,Ben,Cara,Dan,Eve
 
 **Equal Vote's own assessment**, worth quoting with its lean stated: they describe SSS as innovative, easy to explain, and promising — but newer, and still a proposal for further study rather than a settled recommendation. It is one of the committee's **three finalists** (with Allocated Score and Sequential Monroe), and Allocated Score is the one they actually recommend. That is an advocacy body ranking methods it favors; the criteria themselves are standard and checkable.
 
-**Coverage here is thin, and that is worth saying plainly.** Seven case files use `sss`, against 26 for Allocated Score. Nothing about the method makes it hard to test — the gap is this library's, not SSS's.
+**Coverage here is thinner than Allocated Score's, and that is worth saying plainly.** Eight case files use `sss`, against 26 for Allocated Score. Nothing about the method makes it hard to test — the gap is this library's, not SSS's.
 
 ## Scenarios in this library
 
@@ -102,6 +104,7 @@ Count × Alice,Ben,Cara,Dan,Eve
 | **The 63-ballot baseline** | The count above, directly comparable with the [Allocated](allocated_score.md) and [RRV](reweighted_range_voting.md) runs on identical ballots. | [page](../../02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) · [yaml](../../02_Examples/cases/02b_c5_b63_proportional-sss.yaml) |
 | **Free riding** | SSS shares Allocated Score's cliff: the same one-star free ride flips the second seat here too. | [lesson](../../03_Criteria/free_riding/README.md) · [count](../../03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_sss.md) |
 | **STAR-PR, 3 seats** | A civic-priorities race — Housing, Schools, SmallBiz — counted on the same ballots as the STV file, which is what makes the [STV head-to-head](../../../method_comparisons/stv_vs_star_pr/README.md) possible. | [page](../../02_Examples/cases/cases_pages/03b_star_pr_3seats.md) · [yaml](../../02_Examples/cases/03b_star_pr_3seats.yaml) |
+| **The two bullet voters** | Vote unitarity deciding a seat: two voters who spent nothing on the round-1 winner keep their full budgets and elect Amy. Also the regression profile for a fork-fixed engine defect ([upstream #19](https://github.com/larryhastings/starvote/issues/19)). | [lesson](../../03_Criteria/vote_unitarity/README.md) · [page](../../03_Criteria/vote_unitarity/cases/cases_pages/two_bullet_voters_sss.md) · [yaml](../../03_Criteria/vote_unitarity/cases/two_bullet_voters_sss.yaml) |
 
 ## Related
 

@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**592 election files** (500 single-winner, 92 multi-winner) across 18 method(s).
+**593 election files** (500 single-winner, 93 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -18,7 +18,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Approval | 25 |
 | STV (proportional RCV) | 10 |
 | Bloc STAR | 2 |
-| STAR-PR (Sequential Selection) | 7 |
+| STAR-PR (Sequential Selection) | 8 |
 | Reweighted Range | 6 |
 | Allocated Score (STAR-PR) | 26 |
 | 3-2-1 | 1 |
@@ -521,7 +521,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`min_bloc_c3_b2`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/min_bloc_c3_b2.md) | `method_comparisons/bloc_vs_pr/cases/` | 2 | The smallest divergence — Bloc STAR → _Ana, Ben_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/min_bloc_c3_b2.yaml) |
 | [`blocs_bloc_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_bloc_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 | Left, Centre, Right — Bloc STAR fills the council | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_bloc_c9_b10.yaml) |
 
-## STAR-PR (Sequential Selection)  (7)
+## STAR-PR (Sequential Selection)  (8)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -529,6 +529,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`two_officers_sss`](../../03_STAR_PR/02_Examples/method_divergences/cases/cases_pages/two_officers_sss.md) | `03_STAR_PR/02_Examples/method_divergences/cases/` | 2 | Two officers, three candidates — Sequentially Spent Score → _Dana, Finn_ | [`.yaml`](../../03_STAR_PR/02_Examples/method_divergences/cases/two_officers_sss.yaml) |
 | [`free_ride_honest_sss`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_honest_sss.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — honest baseline (SSS) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_honest_sss.yaml) |
 | [`free_ride_hylland_sss`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_sss.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — the free ride (SSS) → _Anika, Camila_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_hylland_sss.yaml) |
+| [`two_bullet_voters_sss`](../../03_STAR_PR/03_Criteria/vote_unitarity/cases/cases_pages/two_bullet_voters_sss.md) | `03_STAR_PR/03_Criteria/vote_unitarity/cases/` | 2 | Two bullet voters, two seats — Sequentially Spent Score → _Amy, Cy_ | [`.yaml`](../../03_STAR_PR/03_Criteria/vote_unitarity/cases/two_bullet_voters_sss.yaml) |
 | [`02b_c5_b63_proportional-sss`](../../03_STAR_PR/02_Examples/cases/cases_pages/02b_c5_b63_proportional-sss.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Sequentially Spent Score → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02b_c5_b63_proportional-sss.yaml) |
 | [`03b_star_pr_3seats`](../../03_STAR_PR/02_Examples/cases/cases_pages/03b_star_pr_3seats.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — same 3-seat electorate as the STV demo → _Housing, Schools, SmallBiz_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/03b_star_pr_3seats.yaml) |
 | [`coop_board_scores_sss`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_scores_sss.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — 0–5 score ballot, sss → _Ben, Chris, Dana_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_scores_sss.yaml) |
