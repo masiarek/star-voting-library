@@ -146,5 +146,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 03_STAR_PR/03_Cr
 
 ## See also
 
-- [Exhausted ballots (conversation)](../../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
+- [Exhausted ballots (untangled)](../../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
