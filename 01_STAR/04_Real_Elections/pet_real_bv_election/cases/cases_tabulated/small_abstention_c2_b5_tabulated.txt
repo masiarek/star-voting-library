@@ -102,9 +102,11 @@ A,B
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-A          2  1  0  0  0  1    1  |    14   3.5
-B          2  0  0  0  0  2    1  |    10   2.5
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+A          2  1  0  0  0  1    1  |    14      2.8        3.5
+B          2  0  0  0  0  2    1  |    10      2.0        2.5
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

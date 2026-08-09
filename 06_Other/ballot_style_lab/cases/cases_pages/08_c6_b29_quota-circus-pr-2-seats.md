@@ -180,13 +180,15 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Amir       16   1   2   0   2   6    2  |    92   3.4
-Bree       12   6   1   1   1   8    0  |    90   3.1
-Cato        6   3   0   2   0  16    2  |    46   1.7
-Della       4   5   1   0   0  17    2  |    43   1.6
-Enzo        2   0   5   1   0  19    2  |    27   1.0
-Faye        0   4   3   0   1  19    2  |    26   1.0
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Amir       16   1   2   0   2   6    2  |    92      3.2        3.4
+Bree       12   6   1   1   1   8    0  |    90      3.1        3.1
+Cato        6   3   0   2   0  16    2  |    46      1.6        1.7
+Della       4   5   1   0   0  17    2  |    43      1.5        1.6
+Enzo        2   0   5   1   0  19    2  |    27      0.9        1.0
+Faye        0   4   3   0   1  19    2  |    26      0.9        1.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
  Hare quota is 29/2.
 ```
 

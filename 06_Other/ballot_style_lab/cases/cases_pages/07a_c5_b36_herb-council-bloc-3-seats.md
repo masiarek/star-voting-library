@@ -229,12 +229,14 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Anise      13   2   3   0   0  11    7  |    82   2.8
-Basil      20   0   0   0   3  12    1  |   103   2.9
-Chive      15   0   1   3   3  10    4  |    87   2.7
-Dill       12   3   1   1   6   9    4  |    83   2.6
-Endive     11   4   3   0   0  11    7  |    80   2.8
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Anise      13   2   3   0   0  11    7  |    82      2.3        2.8
+Basil      20   0   0   0   3  12    1  |   103      2.9        2.9
+Chive      15   0   1   3   3  10    4  |    87      2.4        2.7
+Dill       12   3   1   1   6   9    4  |    83      2.3        2.6
+Endive     11   4   3   0   0  11    7  |    80      2.2        2.8
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/07a_c5_b36_herb-council-bloc-3-seats_tabulated.txt) (regenerated on every run; every analysis forced on).

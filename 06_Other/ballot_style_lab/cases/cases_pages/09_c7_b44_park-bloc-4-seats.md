@@ -298,14 +298,16 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Aspen      15   7   3   1   3   7    8  |   117   3.3
-Birch       4   1   0   5   9  17    8  |    43   1.2
-Cedar      16   4   1   3   5  14    1  |   110   2.6
-Dogwood    17   5   3   1   2   8    8  |   118   3.3
-Elm        13   6   5   0   2  10    8  |   106   2.9
-Fir        13   4   1   6   5  14    1  |   101   2.3
-Ginkgo      8   0   0   4   4  20    8  |    52   1.4
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Aspen      15   7   3   1   3   7    8  |   117      2.7        3.3
+Birch       4   1   0   5   9  17    8  |    43      1.0        1.2
+Cedar      16   4   1   3   5  14    1  |   110      2.5        2.6
+Dogwood    17   5   3   1   2   8    8  |   118      2.7        3.3
+Elm        13   6   5   0   2  10    8  |   106      2.4        2.9
+Fir        13   4   1   6   5  14    1  |   101      2.3        2.3
+Ginkgo      8   0   0   4   4  20    8  |    52      1.2        1.4
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/09_c7_b44_park-bloc-4-seats_tabulated.txt) (regenerated on every run; every analysis forced on).

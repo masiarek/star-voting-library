@@ -34,14 +34,14 @@ eligible_voters: 10
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Anna | Ben | Cara |
-|:--|:--:|:--:|:--:|
-| <img src="../img/quorum_demo_c3_b6_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Anna 5, Ben 0, Cara 0."> | 5 | 0 | 0 |
-| <img src="../img/quorum_demo_c3_b6_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Anna 5, Ben 1, Cara 0."> | 5 | 1 | 0 |
-| <img src="../img/quorum_demo_c3_b6_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Anna 4, Ben 0, Cara 1."> | 4 | 0 | 1 |
-| <img src="../img/quorum_demo_c3_b6_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Anna 0, Ben 5, Cara 0."> | 0 | 5 | 0 |
-| <img src="../img/quorum_demo_c3_b6_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Anna 1, Ben 4, Cara 0."> | 1 | 4 | 0 |
-| <img src="../img/quorum_demo_c3_b6_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank ballot: an abstention — counts toward quorum, scores no one: Anna left blank (counts as 0), Ben left blank (counts as 0), Cara left blank (counts as 0)."> | - | - | - |
+| # | Ballot as marked | Anna | Ben | Cara |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/quorum_demo_c3_b6_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Anna 5, Ben 0, Cara 0."> | 5 | 0 | 0 |
+| 2 | <img src="../img/quorum_demo_c3_b6_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Anna 5, Ben 1, Cara 0."> | 5 | 1 | 0 |
+| 3 | <img src="../img/quorum_demo_c3_b6_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Anna 4, Ben 0, Cara 1."> | 4 | 0 | 1 |
+| 4 | <img src="../img/quorum_demo_c3_b6_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Anna 0, Ben 5, Cara 0."> | 0 | 5 | 0 |
+| 5 | <img src="../img/quorum_demo_c3_b6_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Anna 1, Ben 4, Cara 0."> | 1 | 4 | 0 |
+| 6 | <img src="../img/quorum_demo_c3_b6_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank ballot: an abstention — counts toward quorum, scores no one: Anna left blank (counts as 0), Ben left blank (counts as 0), Cara left blank (counts as 0)."> | - | - | - |
 
 The same ballots as the file records them:
 
@@ -126,10 +126,12 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Anna       2  1  0  0  1  1    1  |    15   3.0
-Ben        1  1  0  0  1  2    1  |    10   2.0
-Cara       0  0  0  0  1  4    1  |     1   0.2
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Anna       2  1  0  0  1  1    1  |    15      2.5        3.0
+Ben        1  1  0  0  1  2    1  |    10      1.7        2.0
+Cara       0  0  0  0  1  4    1  |     1      0.2        0.2
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/quorum_demo_c3_b6_tabulated.txt) (regenerated on every run; every analysis forced on).

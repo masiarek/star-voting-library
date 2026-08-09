@@ -39,16 +39,16 @@ The reporting options used below: STAR_reporting/reporting_LH/options.md
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Apple | Banana | Cherry |
-|:--|:--:|:--:|:--:|
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 0, Banana 5, Cherry 1."> | 0 | 5 | 1 |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — a true abstention: Apple left blank (counts as 0), Banana left blank (counts as 0), Cherry left blank (counts as 0)."> | - | - | - |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Apple: Apple 5, Banana 4, Cherry 1."> | 5 | 4 | 1 |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 4, Banana 5, Cherry 2."> | 4 | 5 | 2 |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-zero — cast, supports no one: Apple 0, Banana 0, Cherry 0."> | 0 | 0 | 0 |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-3s — flat, but fully engaged: Apple 3, Banana 3, Cherry 3."> | 3 | 3 | 3 |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 3, Banana 5, Cherry 0."> | 3 | 5 | 0 |
-| <img src="../img/flat_scores_abstention_c3_b8_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — Apple = Banana (Cherry 0): Apple 5, Banana 5, Cherry 0."> | 5 | 5 | 0 |
+| # | Ballot as marked | Apple | Banana | Cherry |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/flat_scores_abstention_c3_b8_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 0, Banana 5, Cherry 1."> | 0 | 5 | 1 |
+| 2 | <img src="../img/flat_scores_abstention_c3_b8_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — a true abstention: Apple left blank (counts as 0), Banana left blank (counts as 0), Cherry left blank (counts as 0)."> | - | - | - |
+| 3 | <img src="../img/flat_scores_abstention_c3_b8_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Apple: Apple 5, Banana 4, Cherry 1."> | 5 | 4 | 1 |
+| 4 | <img src="../img/flat_scores_abstention_c3_b8_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 4, Banana 5, Cherry 2."> | 4 | 5 | 2 |
+| 5 | <img src="../img/flat_scores_abstention_c3_b8_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-zero — cast, supports no one: Apple 0, Banana 0, Cherry 0."> | 0 | 0 | 0 |
+| 6 | <img src="../img/flat_scores_abstention_c3_b8_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — all-3s — flat, but fully engaged: Apple 3, Banana 3, Cherry 3."> | 3 | 3 | 3 |
+| 7 | <img src="../img/flat_scores_abstention_c3_b8_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers Banana: Apple 3, Banana 5, Cherry 0."> | 3 | 5 | 0 |
+| 8 | <img src="../img/flat_scores_abstention_c3_b8_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — Apple = Banana (Cherry 0): Apple 5, Banana 5, Cherry 0."> | 5 | 5 | 0 |
 
 The same ballots as the file records them:
 
@@ -135,10 +135,12 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Apple      2  1  2  0  0  2    1  |    20   2.9
-Banana     4  1  1  0  0  1    1  |    27   3.9
-Cherry     0  0  1  1  2  3    1  |     7   1.0
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Apple      2  1  2  0  0  2    1  |    20      2.5        2.9
+Banana     4  1  1  0  0  1    1  |    27      3.4        3.9
+Cherry     0  0  1  1  2  3    1  |     7      0.9        1.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/flat_scores_abstention_c3_b8_tabulated.txt) (regenerated on every run; every analysis forced on).

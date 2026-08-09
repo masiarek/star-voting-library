@@ -113,9 +113,11 @@ Dog,Cat
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Dog        2  1  0  0  0  2    1  |    14   2.8
-Cat        2  0  0  0  0  3    1  |    10   2.0
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Dog        2  1  0  0  0  2    1  |    14      2.3        2.8
+Cat        2  0  0  0  0  3    1  |    10      1.7        2.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

@@ -93,10 +93,12 @@ Apple,Banana,Cherry
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Apple      2  1  2  0  0  2    1  |    20   2.9
-Banana     4  1  1  0  0  1    1  |    27   3.9
-Cherry     0  0  1  1  2  3    1  |     7   1.0
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Apple      2  1  2  0  0  2    1  |    20      2.5        2.9
+Banana     4  1  1  0  0  1    1  |    27      3.4        3.9
+Cherry     0  0  1  1  2  3    1  |     7      0.9        1.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

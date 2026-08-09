@@ -2583,7 +2583,17 @@ def format_score_counts(candidates, ballots, max_score=5, display_rows=None):
     """Return the per-candidate score-distribution block as a string (or "" if
     there's nothing to show): how many ballots gave each score value, plus an Abs
     (abstained / left blank) bucket so a blank is not conflated with an explicit 0.
-    Avg is over ballots that actually scored the candidate.
+
+    Averages: when NO ballot abstained there is only one possible mean, printed as
+    `Avg`. When some did, the two readings diverge and BOTH are printed (with a
+    two-line note under the table), because a blank is counted one way by the
+    tabulation and the other way by the average:
+      * `Avg all`   = Total / every ballot cast — a blank scores 0 here, so this is
+                      simply the Total the Scoring Round ranks on, per ballot.
+      * `Avg rated` = Total / the ballots that actually scored the candidate (Abs
+                      excluded) — how they poll among voters who had an opinion.
+    Only the FIRST decides anything; the second explains a shape (unknown vs
+    disliked) that the totals alone can't show.
 
     Uses display_rows (which preserve the original markers) when available, so a
     blank/'~' counts in Abs rather than as a 0."""
@@ -2633,22 +2643,41 @@ def format_score_counts(candidates, ballots, max_score=5, display_rows=None):
     header = f"{'Candidate':<{name_w}}  {score_cells}"
     if show_abs:
         header += f"  {'Abs':>{abs_w}}"
-    lines.append(f"{header}  | {'Total':>{total_w}}  {'Avg':>4}")
+    # Average from an EXACT rational (totals and counts are ints), then round
+    # half-up to one decimal — not float division + {:.1f}, which uses
+    # round-half-to-EVEN and would print an exact 1.25 as a surprising "1.2".
+    # See STAR_reporting/score_distribution_and_averages.md.
+    def _avg(total, denominator):
+        if not denominator:
+            return Decimal("0.0")
+        return (Decimal(total) / Decimal(denominator)).quantize(
+            Decimal("0.1"), rounding=ROUND_HALF_UP)
+
+    # With no abstentions the two averages are arithmetically the same number, so
+    # one `Avg` column says everything; the second appears only where a blank can
+    # actually pull them apart. (Same conditional shape as the Abs column above.)
+    if show_abs:
+        lines.append(f"{header}  | {'Total':>{total_w}}  {'Avg all':>7}  {'Avg rated':>9}")
+    else:
+        lines.append(f"{header}  | {'Total':>{total_w}}  {'Avg':>4}")
     for c in candidates:
         cells = "  ".join(f"{counts[c][s]:>{cell_w}}" for s in scores)
         if show_abs:
             cells += f"  {abstain[c]:>{abs_w}}"
-        scored = n - abstain[c]
-        # Average from an EXACT rational (totals and scored are ints), then round
-        # half-up to one decimal — not float division + {:.1f}, which uses
-        # round-half-to-EVEN and would print an exact 1.25 as a surprising "1.2".
-        # See STAR_reporting/score_distribution_and_averages.md.
-        if scored:
-            avg = (Decimal(totals[c]) / Decimal(scored)).quantize(
-                Decimal("0.1"), rounding=ROUND_HALF_UP)
+        row = f"{c:<{name_w}}  {cells}  | {totals[c]:>{total_w}}"
+        if show_abs:
+            row += (f"  {_avg(totals[c], n):>7}"
+                    f"  {_avg(totals[c], n - abstain[c]):>9}")
         else:
-            avg = Decimal("0.0")
-        lines.append(f"{c:<{name_w}}  {cells}  | {totals[c]:>{total_w}}  {avg:>4}")
+            row += f"  {_avg(totals[c], n):>4}"
+        lines.append(row)
+    if show_abs:
+        lines.append(
+            "  Avg all   = Total / all ballots — a blank counts as 0, so this is the"
+            " Total the Scoring Round ranks on, per ballot.")
+        lines.append(
+            "  Avg rated = Total / the ballots that scored this candidate (Abs excluded)"
+            " — support among voters who had an opinion.")
     return "\n".join(lines)
 
 

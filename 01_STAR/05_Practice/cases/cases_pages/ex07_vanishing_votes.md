@@ -112,10 +112,12 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Aspen      3  1  1  1  0  2    1  |    24   3.0
-Birch      2  1  1  1  1  2    1  |    20   2.5
-Cedar      2  0  1  0  0  5    1  |    13   1.6
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Aspen      3  1  1  1  0  2    1  |    24      2.7        3.0
+Birch      2  1  1  1  1  2    1  |    20      2.2        2.5
+Cedar      2  0  1  0  0  5    1  |    13      1.4        1.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/ex07_vanishing_votes_tabulated.txt) (regenerated on every run; every analysis forced on).

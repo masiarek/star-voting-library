@@ -197,10 +197,12 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Ava        12   0   6   1   0  13    6  |    80   2.5
-Ben         7  14   1   3  11   2    0  |   111   2.9
-Cora       19   0   7   3   2   5    2  |   124   3.4
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Ava        12   0   6   1   0  13    6  |    80      2.1        2.5
+Ben         7  14   1   3  11   2    0  |   111      2.9        2.9
+Cora       19   0   7   3   2   5    2  |   124      3.3        3.4
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/05_c3_b38_squeeze-survives_tabulated.txt) (regenerated on every run; every analysis forced on).

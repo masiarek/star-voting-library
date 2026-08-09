@@ -129,13 +129,15 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                      Score
-Candidate       5  4  3  2  1  0  Abs  | Total   Avg
-Chocolate       0  1  0  0  1  0    0  |     5   2.5
-Chocolate Chip  1  0  0  0  0  1    0  |     5   2.5
-Fudge Brownie   0  1  0  0  0  1    0  |     4   2.0
-Vanilla         0  1  0  0  1  0    0  |     5   2.5
-Strawberry      1  0  0  1  0  0    0  |     7   3.5
-Mango           0  1  0  0  0  0    1  |     4   4.0
+Candidate       5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Chocolate       0  1  0  0  1  0    0  |     5      2.5        2.5
+Chocolate Chip  1  0  0  0  0  1    0  |     5      2.5        2.5
+Fudge Brownie   0  1  0  0  0  1    0  |     4      2.0        2.0
+Vanilla         0  1  0  0  1  0    0  |     5      2.5        2.5
+Strawberry      1  0  0  1  0  0    0  |     7      3.5        3.5
+Mango           0  1  0  0  0  0    1  |     4      2.0        4.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2180_fp62p2_ice_cream_ladder_tabulated.txt) (regenerated on every run; every analysis forced on).

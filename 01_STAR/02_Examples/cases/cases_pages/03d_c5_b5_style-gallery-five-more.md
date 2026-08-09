@@ -33,13 +33,13 @@ Lesson: 01_STAR/01_Learn/voting_styles/README.md
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Alice | Bruno | Clara | Diego | Erin |
-|:--|:--:|:--:|:--:|:--:|:--:|
-| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_1.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — approval-style: a yes/no threshold, only 0s and 5s: Alice 5, Bruno 0, Clara 5, Diego 0, Erin 0."> | 5 | 0 | 5 | 0 | 0 |
-| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_2.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — exaggerated compromise: Clara is the favorite, Alice a fearful 5: Alice 5, Bruno 1, Clara 5, Diego 2, Erin 0."> | 5 | 1 | 5 | 2 | 0 |
-| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_3.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — partial ballot: only knows Clara and Diego; blanks count as 0: Alice left blank (counts as 0), Bruno left blank (counts as 0), Clara 5, Diego 3, Erin left blank (counts as 0)."> | - | - | 5 | 3 | - |
-| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_4.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — compressed middle: everything 2s and 3s, nothing extreme: Alice 2, Bruno 2, Clara 3, Diego 2, Erin 3."> | 2 | 2 | 3 | 2 | 3 |
-| <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_5.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — null ballot: same score for everyone — no preference anywhere: Alice 3, Bruno 3, Clara 3, Diego 3, Erin 3."> | 3 | 3 | 3 | 3 | 3 |
+| # | Ballot as marked | Alice | Bruno | Clara | Diego | Erin |
+|:--:|:--|:--:|:--:|:--:|:--:|:--:|
+| 1 | <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_1.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — approval-style: a yes/no threshold, only 0s and 5s: Alice 5, Bruno 0, Clara 5, Diego 0, Erin 0."> | 5 | 0 | 5 | 0 | 0 |
+| 2 | <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_2.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — exaggerated compromise: Clara is the favorite, Alice a fearful 5: Alice 5, Bruno 1, Clara 5, Diego 2, Erin 0."> | 5 | 1 | 5 | 2 | 0 |
+| 3 | <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_3.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — partial ballot: only knows Clara and Diego; blanks count as 0: Alice left blank (counts as 0), Bruno left blank (counts as 0), Clara 5, Diego 3, Erin left blank (counts as 0)."> | - | - | 5 | 3 | - |
+| 4 | <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_4.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — compressed middle: everything 2s and 3s, nothing extreme: Alice 2, Bruno 2, Clara 3, Diego 2, Erin 3."> | 2 | 2 | 3 | 2 | 3 |
+| 5 | <img src="../img/03d_c5_b5_style-gallery-five-more_ballot_5.png" width="260" style="min-width:260px" alt="A 0–5 STAR ballot — null ballot: same score for everyone — no preference anywhere: Alice 3, Bruno 3, Clara 3, Diego 3, Erin 3."> | 3 | 3 | 3 | 3 | 3 |
 
 The same ballots as the file records them:
 
@@ -137,12 +137,14 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Alice      2  0  1  1  0  0    1  |    15   3.8
-Bruno      0  0  1  1  1  1    1  |     6   1.5
-Clara      3  0  2  0  0  0    0  |    21   4.2
-Diego      0  0  2  2  0  1    0  |    10   2.0
-Erin       0  0  2  0  0  2    1  |     6   1.5
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Alice      2  0  1  1  0  0    1  |    15      3.0        3.8
+Bruno      0  0  1  1  1  1    1  |     6      1.2        1.5
+Clara      3  0  2  0  0  0    0  |    21      4.2        4.2
+Diego      0  0  2  2  0  1    0  |    10      2.0        2.0
+Erin       0  0  2  0  0  2    1  |     6      1.2        1.5
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/03d_c5_b5_style-gallery-five-more_tabulated.txt) (regenerated on every run; every analysis forced on).

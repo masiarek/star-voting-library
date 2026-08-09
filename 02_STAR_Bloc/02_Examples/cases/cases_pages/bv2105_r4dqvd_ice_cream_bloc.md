@@ -182,10 +182,12 @@ Legend: For - Equal Support - Against
 
 [Score Distribution] (how many ballots gave each star rating)
                  Score
-Candidate   5  4  3  2  1  0  Abs  | Total   Avg
-Vanilla     1  0  0  1  1  0    1  |     8   2.7
-Chocolate   2  0  0  0  0  0    2  |    10   5.0
-Strawberry  1  1  0  0  0  0    2  |     9   4.5
+Candidate   5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Vanilla     1  0  0  1  1  0    1  |     8      2.0        2.7
+Chocolate   2  0  0  0  0  0    2  |    10      2.5        5.0
+Strawberry  1  1  0  0  0  0    2  |     9      2.3        4.5
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2105_r4dqvd_ice_cream_bloc_tabulated.txt) (regenerated on every run; every analysis forced on).

@@ -106,10 +106,12 @@ Count × Ada,Bruno,None of the Above
 
 [Score Distribution] (how many ballots gave each star rating)
                         Score
-Candidate          5  4  3  2  1  0  Abs  | Total   Avg
-Ada                2  0  0  0  0  4    0  |    10   1.7
-Bruno              0  0  0  0  2  4    0  |     2   0.3
-None of the Above  4  0  0  0  0  1    1  |    20   4.0
+Candidate          5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Ada                2  0  0  0  0  4    0  |    10      1.7        1.7
+Bruno              0  0  0  0  2  4    0  |     2      0.3        0.3
+None of the Above  4  0  0  0  0  1    1  |    20      3.3        4.0
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

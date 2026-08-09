@@ -86,10 +86,12 @@ Anna,Ben,Cara
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Anna       2  1  0  0  1  1    1  |    15   3.0
-Ben        1  1  0  0  1  2    1  |    10   2.0
-Cara       0  0  0  0  1  4    1  |     1   0.2
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Anna       2  1  0  0  1  1    1  |    15      2.5        3.0
+Ben        1  1  0  0  1  2    1  |    10      1.7        2.0
+Cara       0  0  0  0  1  4    1  |     1      0.2        0.2
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.

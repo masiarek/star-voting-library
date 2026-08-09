@@ -163,11 +163,13 @@ Count × Aaron,Beth,Caleb,Dana
 
 [Score Distribution] (how many ballots gave each star rating)
                    Score
-Candidate   5   4   3   2   1   0  Abs  | Total   Avg
-Aaron      13   6   3   4   3  13    5  |   109   2.6
-Beth       15   5   5   5   0  13    4  |   120   2.8
-Caleb      12   5   6   6   3  11    4  |   113   2.6
-Dana       12   4   7   7   1  12    4  |   112   2.6
+Candidate   5   4   3   2   1   0  Abs  | Total  Avg all  Avg rated
+Aaron      13   6   3   4   3  13    5  |   109      2.3        2.6
+Beth       15   5   5   5   0  13    4  |   120      2.6        2.8
+Caleb      12   5   6   6   3  11    4  |   113      2.4        2.6
+Dana       12   4   7   7   1  12    4  |   112      2.4        2.6
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 Scoring Round
  The two highest-scoring candidates advance to the next round.

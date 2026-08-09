@@ -82,12 +82,14 @@ Alice,Bruno,Clara,Diego,Erin
 
 [Score Distribution] (how many ballots gave each star rating)
                 Score
-Candidate  5  4  3  2  1  0  Abs  | Total   Avg
-Alice      2  0  1  1  0  0    1  |    15   3.8
-Bruno      0  0  1  1  1  1    1  |     6   1.5
-Clara      3  0  2  0  0  0    0  |    21   4.2
-Diego      0  0  2  2  0  1    0  |    10   2.0
-Erin       0  0  2  0  0  2    1  |     6   1.5
+Candidate  5  4  3  2  1  0  Abs  | Total  Avg all  Avg rated
+Alice      2  0  1  1  0  0    1  |    15      3.0        3.8
+Bruno      0  0  1  1  1  1    1  |     6      1.2        1.5
+Clara      3  0  2  0  0  0    0  |    21      4.2        4.2
+Diego      0  0  2  2  0  1    0  |    10      2.0        2.0
+Erin       0  0  2  0  0  2    1  |     6      1.2        1.5
+  Avg all   = Total / all ballots — a blank counts as 0, so this is the Total the Scoring Round ranks on, per ballot.
+  Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 
 Scoring Round
  The two highest-scoring candidates advance to the next round.
