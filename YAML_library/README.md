@@ -74,6 +74,8 @@ That optional half follows one rule — **store rich, display clean**. Keep the 
 
 → Every field, every option, the full marker table, and the house style rules: **[YAML Test Case — Authoring Template](YAML_authoring_template.md)**
 
+> **The answer key is a winner, not a report.** `expected_winners:` holds a name and nothing else — no scoring round, no runoff, no matrix — even though the engine's `--save` flag can embed the whole count, and the original schema did. The count lives in the generated `_tabulated.txt` mirror instead, for five reasons worth knowing before you're tempted to paste one in: **[What the file stores — and why the answer key isn't a report](what_the_file_stores.md)**
+
 ---
 
 ## How it works
