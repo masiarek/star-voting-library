@@ -554,6 +554,17 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   `bv<testid>_<bvid>_bv_export.json` — and put `bv_test_id` / `bv_election_id` /
   `bv_results_url` in **every** yaml of the set (that is what `build_bv_registry.py`
   reads, so all of them index individually).
+- **Filed a bug upstream? Add a row to `07_Concepts/about_this_repo/upstream_bug_reports.md`.**
+  Running one election through several engines is a good bug detector, so this repo files a
+  fair number of reports against projects it doesn't own — BetterVoting, Larry's `starvote`,
+  once GitHub Pages. They then get forgotten, because the page that motivated the report goes
+  on to say something else. That page is the standing follow-up list (18 rows as of
+  2026-08-09, 16 open), and it holds the API one-liner that re-checks every state at once.
+  Two rules: it tracks only reports **we opened** — not every upstream issue the repo cites,
+  which need no follow-up from us; and a **missing-guard** finding in BetterVoting goes to
+  Arend privately *before* it goes on any page (the `bettervoting-qa` ground rule outranks
+  the table). When one closes, the job isn't to flip the word — it's to ask what this repo
+  teaches that the fix invalidates.
 - **BetterVoting (BV) work → load the `bettervoting` skill.** Everything BV-specific lives
   there and loads on demand: minting with `create_bv_test_election.py` / `bv_election_specs.py`,
   fetching exports with `fetch_bv_export.py`, screenshots in `img/<bvid>_<what>.png`, the
