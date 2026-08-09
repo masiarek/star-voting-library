@@ -151,6 +151,8 @@ Count × Anika,Bruno,Camila
 
 Allocated Score does not charge supporters evenly. It sorts them by the score they gave and spends the quota **from the top down**, which in [the engine](../../../STARVote_LH_tabulation_engine/starvote/__init__.py) is two lines: ballots that scored the winner `0` are set aside as non-supporters and never charged at all, and the rest are sorted so the highest scores are spent first.
 
+That first half is not an accident — it is a design principle with a name. **[Vote unitarity](../vote_unitarity/README.md)** holds that influence should be spent *only in exchange for representation gained*, so a voter who scored the winner 0 pays nothing. It is a genuinely good rule, and it is why the [backfire case](#2-push-harder-and-it-backfires) below can guarantee itself an exemption by burying a candidate. The uncomfortable part is that the same rule which protects an honest non-supporter also protects a strategic one, and the count cannot tell them apart — a ballot marked 0 looks identical either way.
+
 That makes your exposure a **step function** of the score you gave:
 
 | | 5-star group | 4-star group | round-2 weight of the minority |
