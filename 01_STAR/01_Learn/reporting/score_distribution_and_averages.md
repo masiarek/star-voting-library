@@ -31,7 +31,9 @@ Each row is one candidate; the `Score` group header spans the star-value columns
 | `Avg all` | every ballot cast | The blank is scored **0**, exactly as the tabulation scores it. So this is just `Total` restated per ballot, and it ranks candidates in the Scoring Round's own order. **The only one that decides anything.** |
 | `Avg rated` | ballots that scored this candidate (`Abs` excluded) | Support among voters who had an opinion. Decides nothing — but it tells *unknown* apart from *disliked*, which the totals alone cannot. |
 
-An explicit `0` sits in the `0` column and drags **both** down; a blank sits in `Abs` and drags down only `Avg all`. The gap between the two columns is therefore the candidate's **abstention drag** — how much of a weak total is people not rating them rather than people rating them low. With no abstentions the two denominators are the same number, so the table prints one plain `Avg` and no note. → [reading the table](reporting_LH/score_distribution.md).
+An explicit `0` sits in the `0` column and drags **both** down; a blank sits in `Abs` and drags down only `Avg all`. The gap between the two columns is therefore the candidate's **abstention drag** — how much of a weak total is people not rating them rather than people rating them low. With no abstentions the two denominators are the same number, so the table prints one plain `Avg` and no note.
+
+**This page is about the *arithmetic* — exact rationals, and how they round.** The *choice of denominator* — why both readings are honest, what their gap measures, and why no exact-fraction column is printed — has its own page: [Score averages — which denominator, and why](score_averages.md). Reading the table column by column: [The Score Distribution table](reporting_LH/score_distribution.md).
 
 ## The thing that looked wrong
 
