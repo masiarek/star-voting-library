@@ -14,6 +14,11 @@
 > `election(..., verbosity=0) == election(..., verbosity=1) == election(..., verbosity=2)` for
 > `sss` / `allocated` / `rrv` / `bloc`, plus the exact proportional SSS outcome. Ledger row:
 > [LH_ENGINE_CHANGES.md §1](LH_ENGINE_CHANGES.md).
+>
+> **See also:** a second, distinct defect in the same allocation loop — zero-score ballots are
+> silently discarded whenever any ballot exhausts in the same round — is documented in
+> [BUG_sss_zero_score_ballots.md](BUG_sss_zero_score_ballots.md) (found 2026-08-08; the dedent
+> fix above preserved it at all verbosities).
 
 ## Summary
 
