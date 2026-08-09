@@ -160,9 +160,12 @@ the honest answer to "who is even in contention?".
    Smith set (6 of 6): Strawberry, Chocolate, Chocolate Chip, Vanilla, Fudge Brownie, Mango
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (Strawberry) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    RCV-IRV winner Strawberry is INSIDE the Smith set. ✓
@@ -233,9 +236,12 @@ the honest answer to "who is even in contention?".
    Smith set (6 of 6): Strawberry, Chocolate, Chocolate Chip, Vanilla, Fudge Brownie, Mango
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (Strawberry) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner Strawberry is INSIDE the Smith set. ✓

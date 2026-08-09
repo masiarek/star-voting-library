@@ -107,7 +107,12 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   deliberately NOT dragged along by RR's default-on matrix (a dedicated `smith`
   gate in the RR echo keeps them separate). Prints the **Smith set** (the smallest
   group whose every member beats every candidate outside it), says whether that's a
-  lone Condorcet winner or a top cycle, and whether the winner landed inside it.
+  lone Condorcet winner, a top **cycle**, an all-draws **dead heat**, or a **mixed**
+  group held open by draws (some members beat others but no loop closes — "not all
+  draws" does NOT imply "cycle"), and whether the winner landed inside it. The shape
+  call is one shared classifier (`_group_shape`, on `_all_pairs_draw` + the
+  beats-loop DFS) asked by both the RR winner line and the Smith block, so the two
+  lines can't contradict each other about the same matrix — keep it shared.
   **RCV-IRV mirrors get the same block automatically** (no option — the IRV path
   has no options plumbing). The two uses are opposite: RR is Smith-efficient so the
   block is descriptive; RCV-IRV is not, so it's a genuine pass/fail. Wording locked

@@ -203,3 +203,144 @@ def test_irv_mirror_flags_a_winner_outside_the_club():
     assert "Smith set (1 of 3): C" in text
     assert "RCV-IRV winner A is OUTSIDE the Smith set. ✗" in text
     assert "not Smith-efficient" in text
+
+
+# --------------------------------------------------------------------------
+# cycle vs dead heat vs mixed — the top sentence has to match the winner line
+#
+# A multi-member group has THREE possible shapes, not two. "Not all draws" does
+# not imply "cycle", and `_group_shape` is the one classifier both report lines
+# ask, so they cannot reach different verdicts about the same matrix.
+# --------------------------------------------------------------------------
+
+def test_a_multi_member_set_that_cycles_is_called_a_cycle():
+    """A genuine directed loop: "cycle" is the right word, and the block points at
+    cycle resolution because that is exactly what Minimax / Ranked Pairs / Schulze
+    argue about."""
+    cands = list("ABC")
+    block = "\n".join(lh.format_smith_set(
+        cands, _matrix(cands, {("A", "B"), ("B", "C"), ("C", "A")})))
+    assert "the top of the tournament is a\n   cycle," in block
+    assert "cycle_resolution.md" in block
+    assert "dead heat" not in block
+
+
+def test_an_all_draws_set_is_called_a_dead_heat_not_a_cycle():
+    """The bug this guards: every pair DRAWS, so there is no loop anywhere in the
+    matrix — calling that a "cycle" contradicted the Ranked Robin winner line a few
+    lines above, which already said "a dead heat (they draw head-to-head, not a
+    cycle)"."""
+    cands = list("ABC")
+    block = "\n".join(lh.format_smith_set(cands, _matrix(cands, set())))
+    assert "the top of the tournament is a\n   dead heat" in block
+    assert "No member beats another" in block
+    assert "cycle_resolution.md" not in block         # no loop ⇒ nothing to resolve
+    assert "rr_tiebreak_lh_vs_bv.md" in block         # a tiebreak decides it instead
+    # "NO Condorcet winner" is still true, and so is the set-not-a-person clause.
+    assert "NO Condorcet winner" in block
+    assert 'is a set, not a person' in block
+
+
+def test_co_top_leaders_who_draw_are_a_dead_heat_even_with_an_outsider():
+    """The set need not be the whole field: A and B draw each other and both beat C,
+    so the club is {A, B} and it is still a dead heat, not a cycle. ("No member beats
+    another" is scoped to the SET — its members do beat the outsider.)"""
+    cands = list("ABC")
+    block = "\n".join(lh.format_smith_set(cands, _matrix(
+        cands, {("A", "C"), ("B", "C")})))
+    assert "Smith set (2 of 3): A, B" in block
+    assert "dead heat" in block and "cycle_resolution.md" not in block
+
+
+def test_a_set_that_mixes_wins_and_draws_is_neither_a_cycle_nor_a_dead_heat():
+    """The THIRD shape, and the bug this section grew to cover: A beats B, B draws
+    C, C draws A, and A/B/C all beat D. The set is {A, B, C} — a win is in there,
+    so it is not a dead heat, but nothing beats around a loop, so it is not a cycle
+    either. It used to print "the top of the tournament is a cycle" and send the
+    reader to cycle resolution, which has no cycle here to resolve."""
+    cands = list("ABCD")
+    beats = {("A", "B")} | {(x, "D") for x in "ABC"}   # B/C and C/A draw
+    m = _matrix(cands, beats)
+    assert sorted(lh.smith_set(cands, m)) == ["A", "B", "C"]
+    block = "\n".join(lh.format_smith_set(cands, m))
+    assert "the top of the tournament is a\n   group held open by draws" in block
+    assert "no member beats them all — a draw" in block
+    assert "No loop closes either" in block
+    assert "cycle_resolution.md" not in block      # there is no loop to resolve
+    assert "rr_tiebreak_lh_vs_bv.md" in block      # a tiebreak decides it instead
+    assert "dead heat" not in block                # nor is it all-draws
+    # Still true, and still said, in every shape:
+    assert "NO Condorcet winner" in block
+    assert 'is a set, not a' in block
+
+
+def test_two_members_split_by_one_head_to_head_can_never_be_a_cycle():
+    """A 2-cycle is impossible — it would need A to beat B and B to beat A at once.
+    So a two-member group is either a draw (dead heat) or decided (mixed), never a
+    "Condorcet cycle". This is the shape that made the winner line say "a Condorcet
+    cycle (no candidate beats all others)" about two candidates one of whom plainly
+    beat the other."""
+    cands = list("AB")
+    assert lh._group_shape(cands, _matrix(cands, {("A", "B")})) == "mixed"
+    assert lh._group_shape(cands, _matrix(cands, set())) == "dead heat"
+
+
+def test_group_shape_is_the_one_classifier_for_all_three_shapes():
+    """The unit contract behind both report lines."""
+    cands = list("ABC")
+    assert lh._group_shape(cands, _matrix(cands, set())) == "dead heat"
+    assert lh._group_shape(
+        cands, _matrix(cands, {("A", "B"), ("B", "C"), ("C", "A")})) == "cycle"
+    assert lh._group_shape(cands, _matrix(cands, {("A", "B")})) == "mixed"
+    # A win over an OUTSIDER must not be mistaken for a win inside the group:
+    # {A, B} draw each other and both beat C, so {A, B} is still a dead heat.
+    abc = list("ABC")
+    assert lh._group_shape(
+        ["A", "B"], _matrix(abc, {("A", "C"), ("B", "C")})) == "dead heat"
+
+
+def test_the_winner_line_stops_calling_a_decided_pair_a_cycle():
+    """End-to-end on the live case the tiebreak doc tabulates: BV2176, where Green
+    and Blue tie on the tally and Green beats Blue head-to-head — the decisive
+    head-to-head BV itself uses at rung 2. Calling that "a Condorcet cycle (no
+    candidate beats all others)" was flatly false."""
+    src = (REPO_ROOT / "method_comparisons" / "postit_rcv_example" / "cases"
+           / "bv2176_p8dp28_ranked_robin.yaml")
+    r = _run(src)
+    assert r.returncode == 0, r.stderr
+    text = (src.parent / "cases_tabulated"
+            / "bv2176_p8dp28_ranked_robin_tabulated.txt").read_text(encoding="utf-8")
+    assert "tied on the tally, not a cycle" in text
+    assert "a Condorcet cycle (no candidate beats all others)" not in text
+    # The wider Smith set here IS a genuine cycle, and still says so — the two
+    # lines describe different groups, and both are now accurate.
+    assert "Smith set (4 of 4)" in text
+
+
+def test_dead_heat_predicate_is_shared_with_the_winner_line():
+    """One predicate, two report lines: `_all_pairs_draw` answers the dead-heat
+    question for both the Ranked Robin winner line and the Smith block, so the two
+    can never disagree about the same matrix."""
+    cands = list("ABC")
+    assert lh._all_pairs_draw(cands, _matrix(cands, set())) is True
+    assert lh._all_pairs_draw(cands, _matrix(
+        cands, {("A", "B"), ("B", "C"), ("C", "A")})) is False
+    # ...and end-to-end on the live case: 6 voters, 3 candidates, every pair 3-3.
+    src = (REPO_ROOT / "05_Ranked_Robin" / "03_Criteria" / "rr_tiebreaks" / "cases"
+           / "bv2261_y2fbpc_tiebreak_recorded_draws.yaml")
+    r = _run(src)
+    assert r.returncode == 0, r.stderr
+    text = (src.parent / "cases_tabulated"
+            / "bv2261_y2fbpc_tiebreak_recorded_draws_tabulated.txt"
+            ).read_text(encoding="utf-8")
+    assert "a dead heat (they draw head-to-head, not a cycle)" in text  # winner line
+    assert "the top of the tournament is a\n   dead heat" in text       # Smith block
+    assert "the top of the tournament is a\n   cycle," not in text      # the old bug
+    # The genuine-cycle companion keeps saying "cycle" — same wording, other branch.
+    cyc = (src.parent / "bv2261_y2fbpc_tiebreak_recorded_cycle.yaml")
+    assert _run(cyc).returncode == 0
+    ctext = (src.parent / "cases_tabulated"
+             / "bv2261_y2fbpc_tiebreak_recorded_cycle_tabulated.txt"
+             ).read_text(encoding="utf-8")
+    assert "a Condorcet cycle (no candidate beats all others)" in ctext
+    assert "the top of the tournament is a\n   cycle," in ctext

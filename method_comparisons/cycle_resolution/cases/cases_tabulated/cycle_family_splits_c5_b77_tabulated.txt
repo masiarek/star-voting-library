@@ -43,7 +43,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     5  Dana       1–3–0         1     -74  Ben
 
 Winner — Ranked Robin (RCV-RR): Ava
-   *** 2 candidates tie for the most wins (Ava, Ben) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (Ava, Ben) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
