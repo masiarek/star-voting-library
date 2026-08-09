@@ -23,13 +23,13 @@ Five voters, three candidates — Ann, Bob and Cal. Here is every ballot twice o
 <!-- ballots:approval_101_c3_b5 -->
 The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
 
-| Ballot as marked | Ann | Bob | Cal |
-|:--|:--:|:--:|:--:|
-| <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 1 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
-| <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 2 — approves Bob and Cal: Ann No, Bob Yes, Cal Yes."> | 0 | 1 | 1 |
-| <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 3 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
-| <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 4 — approves only Bob: Ann No, Bob Yes, Cal No."> | 0 | 1 | 0 |
-| <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 5 — approves Ann and Cal: Ann Yes, Bob No, Cal Yes."> | 1 | 0 | 1 |
+| # | Ballot as marked | Ann | Bob | Cal |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 1 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
+| 2 | <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 2 — approves Bob and Cal: Ann No, Bob Yes, Cal Yes."> | 0 | 1 | 1 |
+| 3 | <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 3 — approves Ann and Bob: Ann Yes, Bob Yes, Cal No."> | 1 | 1 | 0 |
+| 4 | <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 4 — approves only Bob: Ann No, Bob Yes, Cal No."> | 0 | 1 | 0 |
+| 5 | <img src="02_Examples/cases/img/approval_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Voter 5 — approves Ann and Cal: Ann Yes, Bob No, Cal Yes."> | 1 | 0 | 1 |
 <!-- /ballots -->
 
 Now add up the columns — a `1` is a point, a `0` is nothing:

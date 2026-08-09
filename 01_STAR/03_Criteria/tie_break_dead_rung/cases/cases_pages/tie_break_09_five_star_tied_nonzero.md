@@ -22,10 +22,10 @@ Compare case 03 (rung separates) and case 04 (rung dead).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ann | Ben |
-|:--|:--:|:--:|
-| <img src="../img/tie_break_09_five_star_tied_nonzero_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — one 5 for Ann: Ann 5, Ben 0."> | 5 | 0 |
-| <img src="../img/tie_break_09_five_star_tied_nonzero_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — one 5 for Ben: Ann 0, Ben 5."> | 0 | 5 |
+| # | Ballot as marked | Ann | Ben |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/tie_break_09_five_star_tied_nonzero_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — one 5 for Ann: Ann 5, Ben 0."> | 5 | 0 |
+| 2 | <img src="../img/tie_break_09_five_star_tied_nonzero_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — one 5 for Ben: Ann 0, Ben 5."> | 0 | 5 |
 
 The same ballots as the file records them:
 

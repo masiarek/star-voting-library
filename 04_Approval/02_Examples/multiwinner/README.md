@@ -18,14 +18,14 @@ The six ballots, as marked and as counted — note that the same Yes/No paper fi
 <!-- ballots:approval_bloc_2seats_c4_b6 -->
 The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
 
-| Ballot as marked | Amy | Ben | Cora | Doug |
-|:--|:--:|:--:|:--:|:--:|
-| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_1.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 1 — majority faction: bullet-approves Amy: Amy Yes, Ben No, Cora No, Doug No."> | 1 | 0 | 0 | 0 |
-| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_2.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 2 — majority faction: Amy and Ben: Amy Yes, Ben Yes, Cora No, Doug No."> | 1 | 1 | 0 | 0 |
-| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_3.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 3 — majority faction: Amy and Ben: Amy Yes, Ben Yes, Cora No, Doug No."> | 1 | 1 | 0 | 0 |
-| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_4.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 4 — majority faction: bullet-approves Amy: Amy Yes, Ben No, Cora No, Doug No."> | 1 | 0 | 0 | 0 |
-| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_5.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 5 — minority faction: Cora and Doug: Amy No, Ben No, Cora Yes, Doug Yes."> | 0 | 0 | 1 | 1 |
-| <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_6.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 6 — minority faction: bullet-approves Cora: Amy No, Ben No, Cora Yes, Doug No."> | 0 | 0 | 1 | 0 |
+| # | Ballot as marked | Amy | Ben | Cora | Doug |
+|:--:|:--|:--:|:--:|:--:|:--:|
+| 1 | <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_1.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 1 — majority faction: bullet-approves Amy: Amy Yes, Ben No, Cora No, Doug No."> | 1 | 0 | 0 | 0 |
+| 2 | <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_2.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 2 — majority faction: Amy and Ben: Amy Yes, Ben Yes, Cora No, Doug No."> | 1 | 1 | 0 | 0 |
+| 3 | <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_3.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 3 — majority faction: Amy and Ben: Amy Yes, Ben Yes, Cora No, Doug No."> | 1 | 1 | 0 | 0 |
+| 4 | <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_4.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 4 — majority faction: bullet-approves Amy: Amy Yes, Ben No, Cora No, Doug No."> | 1 | 0 | 0 | 0 |
+| 5 | <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_5.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 5 — minority faction: Cora and Doug: Amy No, Ben No, Cora Yes, Doug Yes."> | 0 | 0 | 1 | 1 |
+| 6 | <img src="cases/img/approval_bloc_2seats_c4_b6_ballot_6.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — Voter 6 — minority faction: bullet-approves Cora: Amy No, Ben No, Cora Yes, Doug No."> | 0 | 0 | 1 | 0 |
 <!-- /ballots -->
 
 <!-- report:approval_bloc_2seats_c4_b6 -->

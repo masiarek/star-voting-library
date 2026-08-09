@@ -21,11 +21,11 @@ Condorcet winner. Level 101. Full two-view lesson: Runoff_01_confirms_leader_r2p
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Aspen | Birch | Cedar |
-|:--|:--:|:--:|:--:|
-| <img src="../img/Runoff_01_confirms_leader_r2pvc9_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Aspen 5, Birch 2, Cedar 1."> | 5 | 2 | 1 |
-| <img src="../img/Runoff_01_confirms_leader_r2pvc9_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Aspen 2, Birch 5, Cedar 0."> | 2 | 5 | 0 |
-| <img src="../img/Runoff_01_confirms_leader_r2pvc9_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Aspen 5, Birch 3, Cedar 0."> | 5 | 3 | 0 |
+| # | Ballot as marked | Aspen | Birch | Cedar |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/Runoff_01_confirms_leader_r2pvc9_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Aspen 5, Birch 2, Cedar 1."> | 5 | 2 | 1 |
+| 2 | <img src="../img/Runoff_01_confirms_leader_r2pvc9_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Aspen 2, Birch 5, Cedar 0."> | 2 | 5 | 0 |
+| 3 | <img src="../img/Runoff_01_confirms_leader_r2pvc9_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Aspen 5, Birch 3, Cedar 0."> | 5 | 3 | 0 |
 
 The same ballots as the file records them:
 

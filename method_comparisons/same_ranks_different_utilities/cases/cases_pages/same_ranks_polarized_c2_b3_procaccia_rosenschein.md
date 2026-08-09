@@ -40,11 +40,11 @@ is exactly what the 0-5 ballot records and the ranking discards.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | A | B |
-|:--|:--:|:--:|
-| <img src="../img/same_ranks_polarized_c2_b3_procaccia_rosenschein_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — voter 1 — all-in for A: A 5, B 0."> | 5 | 0 |
-| <img src="../img/same_ranks_polarized_c2_b3_procaccia_rosenschein_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — voter 2 — devoted to B: A 0, B 5."> | 0 | 5 |
-| <img src="../img/same_ranks_polarized_c2_b3_procaccia_rosenschein_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — voter 3 — all-in for A: A 5, B 0."> | 5 | 0 |
+| # | Ballot as marked | A | B |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/same_ranks_polarized_c2_b3_procaccia_rosenschein_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — voter 1 — all-in for A: A 5, B 0."> | 5 | 0 |
+| 2 | <img src="../img/same_ranks_polarized_c2_b3_procaccia_rosenschein_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — voter 2 — devoted to B: A 0, B 5."> | 0 | 5 |
+| 3 | <img src="../img/same_ranks_polarized_c2_b3_procaccia_rosenschein_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — voter 3 — all-in for A: A 5, B 0."> | 5 | 0 |
 
 The same ballots as the file records them:
 

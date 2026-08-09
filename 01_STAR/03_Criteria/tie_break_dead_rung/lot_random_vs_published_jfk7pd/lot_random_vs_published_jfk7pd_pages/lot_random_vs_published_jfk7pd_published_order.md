@@ -25,10 +25,10 @@ argument for deterministic lot numbers (BV #1063). See the lesson md.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ada | Ben |
-|:--|:--:|:--:|
-| <img src="../img/lot_random_vs_published_jfk7pd_published_order_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ada 4, Ben 0."> | 4 | 0 |
-| <img src="../img/lot_random_vs_published_jfk7pd_published_order_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ada 0, Ben 4."> | 0 | 4 |
+| # | Ballot as marked | Ada | Ben |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/lot_random_vs_published_jfk7pd_published_order_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Ada 4, Ben 0."> | 4 | 0 |
+| 2 | <img src="../img/lot_random_vs_published_jfk7pd_published_order_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Ada 0, Ben 4."> | 0 | 4 |
 
 The same ballots as the file records them:
 

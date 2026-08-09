@@ -35,11 +35,11 @@ blocs:
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | DarkChoco | MilkChoco | Vanilla |
-|:--|:--:|:--:|:--:|
-| <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — love dark, like milk, no vanilla: DarkChoco 5, MilkChoco 4, Vanilla 0."> | 5 | 4 | 0 |
-| <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 10 voters — love milk, like dark, no vanilla: DarkChoco 4, MilkChoco 5, Vanilla 0."> | 4 | 5 | 0 |
-| <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 40 voters — love vanilla, mild on chocolate: DarkChoco 1, MilkChoco 0, Vanilla 5."> | 1 | 0 | 5 |
+| # | Ballot as marked | DarkChoco | MilkChoco | Vanilla |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — love dark, like milk, no vanilla: DarkChoco 5, MilkChoco 4, Vanilla 0."> | 5 | 4 | 0 |
+| 2 | <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 10 voters — love milk, like dark, no vanilla: DarkChoco 4, MilkChoco 5, Vanilla 0."> | 4 | 5 | 0 |
+| 3 | <img src="../img/vote_splitting_scenario3_outsider_wins_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 40 voters — love vanilla, mild on chocolate: DarkChoco 1, MilkChoco 0, Vanilla 5."> | 1 | 0 | 5 |
 
 The same ballots as the file records them:
 

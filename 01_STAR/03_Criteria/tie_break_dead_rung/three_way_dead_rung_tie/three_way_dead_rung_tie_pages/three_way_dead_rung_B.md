@@ -24,11 +24,11 @@ under a random tie-break is a 1-in-3 draw. See the lesson md.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | A | B | C |
-|:--|:--:|:--:|:--:|
-| <img src="../img/three_way_dead_rung_B_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: A 4, B 0, C 0."> | 4 | 0 | 0 |
-| <img src="../img/three_way_dead_rung_B_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 0, B 4, C 0."> | 0 | 4 | 0 |
-| <img src="../img/three_way_dead_rung_B_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: A 0, B 0, C 4."> | 0 | 0 | 4 |
+| # | Ballot as marked | A | B | C |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/three_way_dead_rung_B_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: A 4, B 0, C 0."> | 4 | 0 | 0 |
+| 2 | <img src="../img/three_way_dead_rung_B_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: A 0, B 4, C 0."> | 0 | 4 | 0 |
+| 3 | <img src="../img/three_way_dead_rung_B_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: A 0, B 0, C 4."> | 0 | 0 | 4 |
 
 The same ballots as the file records them:
 

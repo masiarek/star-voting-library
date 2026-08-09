@@ -48,11 +48,11 @@ lesson evaporates. Say which threshold a number came from.
 
 The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
 
-| Ballot as marked | Apple | Orange | Banana |
-|:--|:--:|:--:|:--:|
-| <img src="../img/bv2279_qywq7d_approval_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Boy 1 — approves the two he scored 3 and 4: Apple No, Orange Yes, Banana Yes."> | 0 | 1 | 1 |
-| <img src="../img/bv2279_qywq7d_approval_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Boy 2 — approves the two he scored 4 and 5: Apple No, Orange Yes, Banana Yes."> | 0 | 1 | 1 |
-| <img src="../img/bv2279_qywq7d_approval_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Boy 3 — approves only Orange; Banana was a 0: Apple No, Orange Yes, Banana No."> | 0 | 1 | 0 |
+| # | Ballot as marked | Apple | Orange | Banana |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/bv2279_qywq7d_approval_ballot_1.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Boy 1 — approves the two he scored 3 and 4: Apple No, Orange Yes, Banana Yes."> | 0 | 1 | 1 |
+| 2 | <img src="../img/bv2279_qywq7d_approval_ballot_2.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Boy 2 — approves the two he scored 4 and 5: Apple No, Orange Yes, Banana Yes."> | 0 | 1 | 1 |
+| 3 | <img src="../img/bv2279_qywq7d_approval_ballot_3.png" width="330" style="min-width:330px" alt="A Yes/No Approval ballot — Boy 3 — approves only Orange; Banana was a 0: Apple No, Orange Yes, Banana No."> | 0 | 1 | 0 |
 
 The same ballots as the file records them:
 

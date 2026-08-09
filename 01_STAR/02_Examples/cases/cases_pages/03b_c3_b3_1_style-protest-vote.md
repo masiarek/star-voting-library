@@ -19,11 +19,11 @@ scores only 0s and 1s, yet a winner still emerges (Almond) from the 1s.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Choco | Almond | Vanilla |
-|:--|:--:|:--:|:--:|
-| <img src="../img/03b_c3_b3_1_style-protest-vote_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — least-bad = Almond: Choco 0, Almond 1, Vanilla 0."> | 0 | 1 | 0 |
-| <img src="../img/03b_c3_b3_1_style-protest-vote_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — least-bad = Vanilla: Choco 0, Almond 0, Vanilla 1."> | 0 | 0 | 1 |
-| <img src="../img/03b_c3_b3_1_style-protest-vote_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — least-bad = Almond: Choco 0, Almond 1, Vanilla 0."> | 0 | 1 | 0 |
+| # | Ballot as marked | Choco | Almond | Vanilla |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/03b_c3_b3_1_style-protest-vote_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — least-bad = Almond: Choco 0, Almond 1, Vanilla 0."> | 0 | 1 | 0 |
+| 2 | <img src="../img/03b_c3_b3_1_style-protest-vote_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — least-bad = Vanilla: Choco 0, Almond 0, Vanilla 1."> | 0 | 0 | 1 |
+| 3 | <img src="../img/03b_c3_b3_1_style-protest-vote_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — least-bad = Almond: Choco 0, Almond 1, Vanilla 0."> | 0 | 1 | 0 |
 
 The same ballots as the file records them:
 

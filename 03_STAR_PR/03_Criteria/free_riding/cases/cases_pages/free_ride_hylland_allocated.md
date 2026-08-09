@@ -17,10 +17,10 @@ THE FREE RIDE. Identical to free_ride_honest_allocated.yaml except that the 8-vo
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Anika | Bruno | Camila |
-|:--|:--:|:--:|:--:|
-| <img src="../img/free_ride_hylland_allocated_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — 12-voter majority: unchanged, still honest: Anika 5, Bruno 4, Camila 0."> | 5 | 4 | 0 |
-| <img src="../img/free_ride_hylland_allocated_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — 8-voter minority FREE RIDING: Anika 4, not 5: Anika 4, Bruno 0, Camila 5."> | 4 | 0 | 5 |
+| # | Ballot as marked | Anika | Bruno | Camila |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/free_ride_hylland_allocated_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — 12-voter majority: unchanged, still honest: Anika 5, Bruno 4, Camila 0."> | 5 | 4 | 0 |
+| 2 | <img src="../img/free_ride_hylland_allocated_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — 8-voter minority FREE RIDING: Anika 4, not 5: Anika 4, Bruno 0, Camila 5."> | 4 | 0 | 5 |
 
 The same ballots as the file records them:
 

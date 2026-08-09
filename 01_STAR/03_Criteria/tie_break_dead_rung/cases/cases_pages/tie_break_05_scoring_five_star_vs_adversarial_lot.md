@@ -24,13 +24,13 @@ The expected winner (Ben) therefore proves the rung was consulted.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ann | Ben | Cara |
-|:--|:--:|:--:|:--:|
-| <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 1."> | 3 | 5 | 1 |
-| <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 0."> | 3 | 5 | 0 |
-| <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 3."> | 4 | 0 | 3 |
-| <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 4."> | 4 | 0 | 4 |
-| <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — low-score voter: Ann 0, Ben 1, Cara 1."> | 0 | 1 | 1 |
+| # | Ballot as marked | Ann | Ben | Cara |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 1."> | 3 | 5 | 1 |
+| 2 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 0."> | 3 | 5 | 0 |
+| 3 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 3."> | 4 | 0 | 3 |
+| 4 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 4."> | 4 | 0 | 4 |
+| 5 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — low-score voter: Ann 0, Ben 1, Cara 1."> | 0 | 1 | 1 |
 
 The same ballots as the file records them:
 

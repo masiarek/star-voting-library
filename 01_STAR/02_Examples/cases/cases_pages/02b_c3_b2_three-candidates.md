@@ -27,10 +27,10 @@ STAR rewards the broadly-liked compromise over a candidate that half the voters 
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Choco | Vanilla | Almond |
-|:--|:--:|:--:|:--:|
-| <img src="../img/02b_c3_b2_three-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline likes Choco (5) and Vanilla (3): Choco 5, Vanilla 3, Almond 0."> | 5 | 3 | 0 |
-| <img src="../img/02b_c3_b2_three-candidates_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — David likes Vanilla (5) best and Almond (4): Choco 0, Vanilla 5, Almond 4."> | 0 | 5 | 4 |
+| # | Ballot as marked | Choco | Vanilla | Almond |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/02b_c3_b2_three-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline likes Choco (5) and Vanilla (3): Choco 5, Vanilla 3, Almond 0."> | 5 | 3 | 0 |
+| 2 | <img src="../img/02b_c3_b2_three-candidates_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — David likes Vanilla (5) best and Almond (4): Choco 0, Vanilla 5, Almond 4."> | 0 | 5 | 4 |
 
 The same ballots as the file records them:
 

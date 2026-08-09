@@ -40,10 +40,10 @@ A neighbourhood association is filling **two board seats**. Anika is the beloved
 <!-- ballots:free_ride_honest_allocated -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Anika | Bruno | Camila |
-|:--|:--:|:--:|:--:|
-| <img src="cases/img/free_ride_honest_allocated_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — 12-voter majority: Anika 5, Bruno for seat 2: Anika 5, Bruno 4, Camila 0."> | 5 | 4 | 0 |
-| <img src="cases/img/free_ride_honest_allocated_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — 8-voter minority, honest: Anika 5, Camila for seat 2: Anika 5, Bruno 0, Camila 5."> | 5 | 0 | 5 |
+| # | Ballot as marked | Anika | Bruno | Camila |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="cases/img/free_ride_honest_allocated_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — 12-voter majority: Anika 5, Bruno for seat 2: Anika 5, Bruno 4, Camila 0."> | 5 | 4 | 0 |
+| 2 | <img src="cases/img/free_ride_honest_allocated_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — 8-voter minority, honest: Anika 5, Camila for seat 2: Anika 5, Bruno 0, Camila 5."> | 5 | 0 | 5 |
 <!-- /ballots -->
 
 The minority is 40% of the electorate and there are two seats, so on the face of it they have a claim to one of them. Whether they get it turns entirely on a number they are free to choose.
@@ -98,10 +98,10 @@ Now the 8 minority voters score Anika **4** instead of 5. Nothing else changes. 
 <!-- ballots:free_ride_hylland_allocated -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Anika | Bruno | Camila |
-|:--|:--:|:--:|:--:|
-| <img src="cases/img/free_ride_hylland_allocated_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — 12-voter majority: unchanged, still honest: Anika 5, Bruno 4, Camila 0."> | 5 | 4 | 0 |
-| <img src="cases/img/free_ride_hylland_allocated_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — 8-voter minority FREE RIDING: Anika 4, not 5: Anika 4, Bruno 0, Camila 5."> | 4 | 0 | 5 |
+| # | Ballot as marked | Anika | Bruno | Camila |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="cases/img/free_ride_hylland_allocated_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 12 voters — 12-voter majority: unchanged, still honest: Anika 5, Bruno 4, Camila 0."> | 5 | 4 | 0 |
+| 2 | <img src="cases/img/free_ride_hylland_allocated_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 8 voters — 8-voter minority FREE RIDING: Anika 4, not 5: Anika 4, Bruno 0, Camila 5."> | 4 | 0 | 5 |
 <!-- /ballots -->
 
 <!-- report:free_ride_hylland_allocated -->

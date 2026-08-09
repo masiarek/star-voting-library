@@ -32,11 +32,11 @@ and is simply neutral in a tie-break it has no preference in.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | A | B | C |
-|:--|:--:|:--:|:--:|
-| <img src="../img/equal_support_runoff_demo_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 40 voters — love BOTH A and B -&gt; helps advance them; neutral in the…: A 5, B 5, C 0."> | 5 | 5 | 0 |
-| <img src="../img/equal_support_runoff_demo_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 35 voters — prefer A over B -&gt; decides the runoff: A 5, B 3, C 0."> | 5 | 3 | 0 |
-| <img src="../img/equal_support_runoff_demo_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 25 voters — prefer C -&gt; no preference between A and B: A 0, B 0, C 5."> | 0 | 0 | 5 |
+| # | Ballot as marked | A | B | C |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/equal_support_runoff_demo_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 40 voters — love BOTH A and B -&gt; helps advance them; neutral in the…: A 5, B 5, C 0."> | 5 | 5 | 0 |
+| 2 | <img src="../img/equal_support_runoff_demo_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 35 voters — prefer A over B -&gt; decides the runoff: A 5, B 3, C 0."> | 5 | 3 | 0 |
+| 3 | <img src="../img/equal_support_runoff_demo_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — 25 voters — prefer C -&gt; no preference between A and B: A 0, B 0, C 5."> | 0 | 0 | 5 |
 
 The same ballots as the file records them:
 

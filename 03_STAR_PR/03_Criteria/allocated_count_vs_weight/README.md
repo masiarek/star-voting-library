@@ -19,11 +19,11 @@ Sixty-six voters, nine candidates in three party-line slates, five seats. Every 
 <!-- ballots:count_vs_weight_slates_c9_b66 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Scores (A1, A2, A3, A4, B1, B2, B3, C1, C2) |
-|:--|:--:|
-| <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_1.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 41 voters — slate A — 3.11 quotas: A1 5, A2 5, A3 5, A4 5, B1 0, B2 0, B3 0, C1 0, C2 0."> | `5, 5, 5, 5, 0, 0, 0, 0, 0` |
-| <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_2.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 19 voters — slate B — 1.44 quotas: A1 0, A2 0, A3 0, A4 0, B1 5, B2 5, B3 5, C1 0, C2 0."> | `0, 0, 0, 0, 5, 5, 5, 0, 0` |
-| <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_3.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 6 voters — slate C — 0.45 quotas: A1 0, A2 0, A3 0, A4 0, B1 0, B2 0, B3 0, C1 5, C2 5."> | `0, 0, 0, 0, 0, 0, 0, 5, 5` |
+| # | Ballot as marked | Scores (A1, A2, A3, A4, B1, B2, B3, C1, C2) |
+|:--:|:--|:--:|
+| 1 | <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_1.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 41 voters — slate A — 3.11 quotas: A1 5, A2 5, A3 5, A4 5, B1 0, B2 0, B3 0, C1 0, C2 0."> | `5, 5, 5, 5, 0, 0, 0, 0, 0` |
+| 2 | <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_2.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 19 voters — slate B — 1.44 quotas: A1 0, A2 0, A3 0, A4 0, B1 5, B2 5, B3 5, C1 0, C2 0."> | `0, 0, 0, 0, 5, 5, 5, 0, 0` |
+| 3 | <img src="cases/img/count_vs_weight_slates_c9_b66_ballot_3.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 6 voters — slate C — 0.45 quotas: A1 0, A2 0, A3 0, A4 0, B1 0, B2 0, B3 0, C1 5, C2 5."> | `0, 0, 0, 0, 0, 0, 0, 5, 5` |
 <!-- /ballots -->
 
 The Hare quota is 66 ÷ 5 = **13.2 ballots per seat**. Slate A's 41 voters hold 41 ÷ 13.2 = **3.11 quotas**, B holds 1.44, C holds 0.45. Under [largest-remainder (Hamilton) apportionment](https://en.wikipedia.org/wiki/Largest_remainder_method) that's **3 A + 1 B + 1 C**; under [D'Hondt](https://en.wikipedia.org/wiki/D%27Hondt_method), the divisor family that favors large parties, it's **4 A + 1 B + 0 C**. The whole point of Allocated Score's quota mechanism is to deliver the first answer.

@@ -22,9 +22,9 @@ Choose-One; the interesting cases start at three.
 
 The ballot as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Chocolate | Vanilla |
-|:--|:--:|:--:|
-| <img src="../img/01a_c2_b1_two-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline — Chocolate (5) over Vanilla (3): Chocolate 5, Vanilla 3."> | 5 | 3 |
+| # | Ballot as marked | Chocolate | Vanilla |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="../img/01a_c2_b1_two-candidates_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Caroline — Chocolate (5) over Vanilla (3): Chocolate 5, Vanilla 3."> | 5 | 3 |
 
 The same ballot as the file records it:
 

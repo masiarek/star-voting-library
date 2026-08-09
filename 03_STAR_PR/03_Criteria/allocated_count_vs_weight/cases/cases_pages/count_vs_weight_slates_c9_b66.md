@@ -19,11 +19,11 @@ A stress profile built to expose how an Allocated Score tabulator accounts for t
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Scores (A1, A2, A3, A4, B1, B2, B3, C1, C2) |
-|:--|:--:|
-| <img src="../img/count_vs_weight_slates_c9_b66_ballot_1.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 41 voters — slate A — 3.11 quotas: A1 5, A2 5, A3 5, A4 5, B1 0, B2 0, B3 0, C1 0, C2 0."> | `5, 5, 5, 5, 0, 0, 0, 0, 0` |
-| <img src="../img/count_vs_weight_slates_c9_b66_ballot_2.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 19 voters — slate B — 1.44 quotas: A1 0, A2 0, A3 0, A4 0, B1 5, B2 5, B3 5, C1 0, C2 0."> | `0, 0, 0, 0, 5, 5, 5, 0, 0` |
-| <img src="../img/count_vs_weight_slates_c9_b66_ballot_3.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 6 voters — slate C — 0.45 quotas: A1 0, A2 0, A3 0, A4 0, B1 0, B2 0, B3 0, C1 5, C2 5."> | `0, 0, 0, 0, 0, 0, 0, 5, 5` |
+| # | Ballot as marked | Scores (A1, A2, A3, A4, B1, B2, B3, C1, C2) |
+|:--:|:--|:--:|
+| 1 | <img src="../img/count_vs_weight_slates_c9_b66_ballot_1.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 41 voters — slate A — 3.11 quotas: A1 5, A2 5, A3 5, A4 5, B1 0, B2 0, B3 0, C1 0, C2 0."> | `5, 5, 5, 5, 0, 0, 0, 0, 0` |
+| 2 | <img src="../img/count_vs_weight_slates_c9_b66_ballot_2.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 19 voters — slate B — 1.44 quotas: A1 0, A2 0, A3 0, A4 0, B1 5, B2 5, B3 5, C1 0, C2 0."> | `0, 0, 0, 0, 5, 5, 5, 0, 0` |
+| 3 | <img src="../img/count_vs_weight_slates_c9_b66_ballot_3.png" width="220" style="min-width:220px" alt="A 0–5 STAR ballot — 6 voters — slate C — 0.45 quotas: A1 0, A2 0, A3 0, A4 0, B1 0, B2 0, B3 0, C1 5, C2 5."> | `0, 0, 0, 0, 0, 0, 0, 5, 5` |
 
 The same ballots as the file records them:
 

@@ -17,13 +17,13 @@ A real BetterVoting STAR election (**BV id `3w6v4b`**, captured 2026-06-28), two
 <!-- ballots:small_abstention_c2_b5 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | A | B |
-|:--|:--:|:--:|
-| <img src="cases/img/small_abstention_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers B: A 0, B 5."> | 0 | 5 |
-| <img src="cases/img/small_abstention_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 4, B 0."> | 4 | 0 |
-| <img src="cases/img/small_abstention_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — loves BOTH equally (a cast vote, not an abstention): A 5, B 5."> | 5 | 5 |
-| <img src="cases/img/small_abstention_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 5, B 0."> | 5 | 0 |
-| <img src="cases/img/small_abstention_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — the one true abstention: A left blank (counts as 0), B left blank (counts as 0)."> | - | - |
+| # | Ballot as marked | A | B |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="cases/img/small_abstention_c2_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers B: A 0, B 5."> | 0 | 5 |
+| 2 | <img src="cases/img/small_abstention_c2_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 4, B 0."> | 4 | 0 |
+| 3 | <img src="cases/img/small_abstention_c2_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Equal Support — loves BOTH equally (a cast vote, not an abstention): A 5, B 5."> | 5 | 5 |
+| 4 | <img src="cases/img/small_abstention_c2_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — prefers A: A 5, B 0."> | 5 | 0 |
+| 5 | <img src="cases/img/small_abstention_c2_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — blank — the one true abstention: A left blank (counts as 0), B left blank (counts as 0)."> | - | - |
 <!-- /ballots -->
 
 The **`5,5`** (ballot 3) is the one in dispute, and the **blank** (ballot 5) is what an abstention actually looks like: **nothing marked at all**.

@@ -70,11 +70,11 @@ point of the page this case backs.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Apple | Orange | Banana |
-|:--|:--:|:--:|:--:|
-| <img src="../img/bv2279_qywq7d_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
-| <img src="../img/bv2279_qywq7d_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
-| <img src="../img/bv2279_qywq7d_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
+| # | Ballot as marked | Apple | Orange | Banana |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/bv2279_qywq7d_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
+| 2 | <img src="../img/bv2279_qywq7d_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
+| 3 | <img src="../img/bv2279_qywq7d_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
 
 The same ballots as the file records them:
 

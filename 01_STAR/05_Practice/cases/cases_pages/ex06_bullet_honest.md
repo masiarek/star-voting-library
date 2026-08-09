@@ -29,17 +29,17 @@ Cash even on the honest ballots — the squeeze cameo; RR confirms Bree).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ari | Bree | Cash |
-|:--|:--:|:--:|:--:|
-| <img src="../img/ex06_bullet_honest_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 1 of 4 — honest: Bree really is a second choice: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
-| <img src="../img/ex06_bullet_honest_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 2 of 4 — same honest ballot: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
-| <img src="../img/ex06_bullet_honest_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 3 of 4 — same honest ballot: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
-| <img src="../img/ex06_bullet_honest_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 4 of 4 — same honest ballot: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
-| <img src="../img/ex06_bullet_honest_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 1 of 4 — Bree tolerable: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
-| <img src="../img/ex06_bullet_honest_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 2 of 4 — same ballot: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
-| <img src="../img/ex06_bullet_honest_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 3 of 4 — same ballot: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
-| <img src="../img/ex06_bullet_honest_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 4 of 4 — same ballot: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
-| <img src="../img/ex06_bullet_honest_ballot_9.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — The lone Bree fan — her Cash 1 outranks Ari's 0: Ari 0, Bree 5, Cash 1."> | 0 | 5 | 1 |
+| # | Ballot as marked | Ari | Bree | Cash |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/ex06_bullet_honest_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 1 of 4 — honest: Bree really is a second choice: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
+| 2 | <img src="../img/ex06_bullet_honest_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 2 of 4 — same honest ballot: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
+| 3 | <img src="../img/ex06_bullet_honest_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 3 of 4 — same honest ballot: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
+| 4 | <img src="../img/ex06_bullet_honest_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ari fan 4 of 4 — same honest ballot: Ari 5, Bree 3, Cash 0."> | 5 | 3 | 0 |
+| 5 | <img src="../img/ex06_bullet_honest_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 1 of 4 — Bree tolerable: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
+| 6 | <img src="../img/ex06_bullet_honest_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 2 of 4 — same ballot: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
+| 7 | <img src="../img/ex06_bullet_honest_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 3 of 4 — same ballot: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
+| 8 | <img src="../img/ex06_bullet_honest_ballot_8.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cash fan 4 of 4 — same ballot: Ari 0, Bree 2, Cash 5."> | 0 | 2 | 5 |
+| 9 | <img src="../img/ex06_bullet_honest_ballot_9.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — The lone Bree fan — her Cash 1 outranks Ari's 0: Ari 0, Bree 5, Cash 1."> | 0 | 5 | 1 |
 
 The same ballots as the file records them:
 

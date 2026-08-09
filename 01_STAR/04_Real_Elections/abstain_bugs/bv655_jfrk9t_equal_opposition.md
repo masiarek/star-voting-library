@@ -30,10 +30,10 @@ Options: **Option 1, Option 2**. `&` = the BetterVoting `null` (left blank).
 <!-- ballots:bv655_jfrk9t_equal_opposition -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Option 1 | Option 2 |
-|:--|:--:|:--:|
-| <img src="cases/img/bv655_jfrk9t_equal_opposition_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — explicit equal opposition (rejects both): Option 1 0, Option 2 0."> | 0 | 0 |
-| <img src="cases/img/bv655_jfrk9t_equal_opposition_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Option 1 = 5, Option 2 left blank: Option 1 5, Option 2 left blank (counts as 0)."> | 5 | & |
+| # | Ballot as marked | Option 1 | Option 2 |
+|:--:|:--|:--:|:--:|
+| 1 | <img src="cases/img/bv655_jfrk9t_equal_opposition_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — explicit equal opposition (rejects both): Option 1 0, Option 2 0."> | 0 | 0 |
+| 2 | <img src="cases/img/bv655_jfrk9t_equal_opposition_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Option 1 = 5, Option 2 left blank: Option 1 5, Option 2 left blank (counts as 0)."> | 5 | & |
 <!-- /ballots -->
 
 Ballot 1 marked both zeros deliberately; ballot 2 left Option 2 untouched. On the count they land in the same place — that's the bug.

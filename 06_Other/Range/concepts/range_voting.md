@@ -15,13 +15,13 @@ The ballot is a **score grid** — grade every candidate independently. Here is 
 <!-- ballots:range_101_0to9_c3_b5 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ash | Birch | Cedar |
-|:--|:--:|:--:|:--:|
-| <img src="../cases/img/range_101_0to9_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Birch a strong second: Ash 9, Birch 7, Cedar 0."> | 9 | 7 | 0 |
-| <img src="../cases/img/range_101_0to9_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Cedar barely registers: Ash 9, Birch 6, Cedar 1."> | 9 | 6 | 1 |
-| <img src="../cases/img/range_101_0to9_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Cedar's camp — Birch close behind: Ash 0, Birch 8, Cedar 9."> | 0 | 8 | 9 |
-| <img src="../cases/img/range_101_0to9_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch edges Cedar out: Ash 1, Birch 9, Cedar 8."> | 1 | 9 | 8 |
-| <img src="../cases/img/range_101_0to9_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch clearly ahead of Cedar: Ash 0, Birch 9, Cedar 7."> | 0 | 9 | 7 |
+| # | Ballot as marked | Ash | Birch | Cedar |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../cases/img/range_101_0to9_c3_b5_ballot_1.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Birch a strong second: Ash 9, Birch 7, Cedar 0."> | 9 | 7 | 0 |
+| 2 | <img src="../cases/img/range_101_0to9_c3_b5_ballot_2.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Ash's camp — Cedar barely registers: Ash 9, Birch 6, Cedar 1."> | 9 | 6 | 1 |
+| 3 | <img src="../cases/img/range_101_0to9_c3_b5_ballot_3.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Cedar's camp — Birch close behind: Ash 0, Birch 8, Cedar 9."> | 0 | 8 | 9 |
+| 4 | <img src="../cases/img/range_101_0to9_c3_b5_ballot_4.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch edges Cedar out: Ash 1, Birch 9, Cedar 8."> | 1 | 9 | 8 |
+| 5 | <img src="../cases/img/range_101_0to9_c3_b5_ballot_5.png" width="640" style="min-width:640px" alt="A 0–9 score ballot — Birch clearly ahead of Cedar: Ash 0, Birch 9, Cedar 7."> | 0 | 9 | 7 |
 <!-- /ballots -->
 
 Counting is a single sum: Birch 39, Cedar 25, Ash 19 → **Birch wins**, though nobody made it their favourite. No finalists, no rounds.
@@ -46,13 +46,13 @@ Because the difference is the paper and not the count, the *same* election reads
 <!-- ballots:range_101_c3_b5 -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Amy | Beth | Cole |
-|:--|:--:|:--:|:--:|
-| <img src="../cases/img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
-| <img src="../cases/img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
-| <img src="../cases/img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
-| <img src="../cases/img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
-| <img src="../cases/img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
+| # | Ballot as marked | Amy | Beth | Cole |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../cases/img/range_101_c3_b5_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Beth a solid second: Amy 5, Beth 4, Cole 0."> | 5 | 4 | 0 |
+| 2 | <img src="../cases/img/range_101_c3_b5_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Amy's camp — Cole barely registers: Amy 5, Beth 3, Cole 1."> | 5 | 3 | 1 |
+| 3 | <img src="../cases/img/range_101_c3_b5_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth a solid second: Amy 0, Beth 4, Cole 5."> | 0 | 4 | 5 |
+| 4 | <img src="../cases/img/range_101_c3_b5_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth edges Cole out: Amy 1, Beth 5, Cole 4."> | 1 | 5 | 4 |
+| 5 | <img src="../cases/img/range_101_c3_b5_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 score ballot — Cole's camp — Beth and Cole tied at the top: Amy 0, Beth 5, Cole 5."> | 0 | 5 | 5 |
 <!-- /ballots -->
 
 Same rule, same shape of result: Beth 21, Cole 15, Amy 11 → **Beth wins.** What the coarser scale costs is *resolution* — on 0–9 a voter can separate a 7 from a 6, and on 0–5 they cannot. That is not always harmless: compressing a 0–9 ballot to 0–5 can change who reaches STAR's runoff, and through that who wins — see [scale granularity can flip the winner](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md). Wider scales still (0–10, 0–99) work exactly the same way; our [Sullivan case](../cases/cases_pages/range_sullivan_score_c4_b10.md) runs 0–10.

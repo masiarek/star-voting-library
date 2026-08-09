@@ -59,11 +59,11 @@ A tiny illustration — Range Voting's **"three brothers split one fruit,"** whi
 <!-- ballots:bv2279_qywq7d_star -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Apple | Orange | Banana |
-|:--|:--:|:--:|:--:|
-| <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
-| <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
-| <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
+| # | Ballot as marked | Apple | Orange | Banana |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 1 — banana by a nose, orange close behind: Apple 1, Orange 3, Banana 4."> | 1 | 3 | 4 |
+| 2 | <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 2 — banana best, orange nearly as good: Apple 1, Orange 4, Banana 5."> | 1 | 4 | 5 |
+| 3 | <img src="../../method_comparisons/majoritarian_vs_utilitarian/cases/img/bv2279_qywq7d_star_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Boy 3 — orange is everything, banana is worthless: Apple 2, Orange 5, Banana 0."> | 2 | 5 | 0 |
 <!-- /ballots -->
 
 A **majority** (boys 1 & 2) put *banana* top → the **majoritarian** winner is banana, and it beats every rival head-to-head, so it is also the Condorcet winner. But *orange* maximizes **total satisfaction** (12 to banana's 9) because banana is worthless to boy 3 → the **utilitarian** winner is orange. Neither is "wrong"; they optimize different things.

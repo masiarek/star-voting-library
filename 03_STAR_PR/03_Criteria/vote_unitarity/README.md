@@ -21,15 +21,15 @@ Seven voters score Amy, Bo and Cy for a two-seat committee (`voting_method: sss`
 <!-- ballots:two_bullet_voters_sss -->
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Amy | Bo | Cy |
-|:--|:--:|:--:|:--:|
-| <img src="cases/img/two_bullet_voters_sss_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Bo fan, warm on Cy: Amy 0, Bo 5, Cy 3."> | 0 | 5 | 3 |
-| <img src="cases/img/two_bullet_voters_sss_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #1 — scores Cy 0: Amy 5, Bo 0, Cy 0."> | 5 | 0 | 0 |
-| <img src="cases/img/two_bullet_voters_sss_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy leaner: Amy 0, Bo 3, Cy 4."> | 0 | 3 | 4 |
-| <img src="cases/img/two_bullet_voters_sss_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy 5, no surplus — exhausts in round 1: Amy 2, Bo 2, Cy 5."> | 2 | 2 | 5 |
-| <img src="cases/img/two_bullet_voters_sss_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #2 — scores Cy 0: Amy 5, Bo 1, Cy 0."> | 5 | 1 | 0 |
-| <img src="cases/img/two_bullet_voters_sss_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy-only supporter: Amy 0, Bo 0, Cy 4."> | 0 | 0 | 4 |
-| <img src="cases/img/two_bullet_voters_sss_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — spread-out moderate: Amy 2, Bo 2, Cy 1."> | 2 | 2 | 1 |
+| # | Ballot as marked | Amy | Bo | Cy |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="cases/img/two_bullet_voters_sss_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Bo fan, warm on Cy: Amy 0, Bo 5, Cy 3."> | 0 | 5 | 3 |
+| 2 | <img src="cases/img/two_bullet_voters_sss_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #1 — scores Cy 0: Amy 5, Bo 0, Cy 0."> | 5 | 0 | 0 |
+| 3 | <img src="cases/img/two_bullet_voters_sss_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy leaner: Amy 0, Bo 3, Cy 4."> | 0 | 3 | 4 |
+| 4 | <img src="cases/img/two_bullet_voters_sss_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy 5, no surplus — exhausts in round 1: Amy 2, Bo 2, Cy 5."> | 2 | 2 | 5 |
+| 5 | <img src="cases/img/two_bullet_voters_sss_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Amy bullet voter #2 — scores Cy 0: Amy 5, Bo 1, Cy 0."> | 5 | 1 | 0 |
+| 6 | <img src="cases/img/two_bullet_voters_sss_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cy-only supporter: Amy 0, Bo 0, Cy 4."> | 0 | 0 | 4 |
+| 7 | <img src="cases/img/two_bullet_voters_sss_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — spread-out moderate: Amy 2, Bo 2, Cy 1."> | 2 | 2 | 1 |
 <!-- /ballots -->
 
 *(The cast breaks this repo's own naming advice — "Cy" is the house example of a name too short to be sturdy — because the profile is frozen: it is printed verbatim in the fork's bug report and in [upstream issue #19](https://github.com/larryhastings/starvote/issues/19), and same cast means same election.)*

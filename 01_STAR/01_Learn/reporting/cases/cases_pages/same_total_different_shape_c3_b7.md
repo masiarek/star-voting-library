@@ -35,15 +35,15 @@ Avocado takes the runoff 4-2 with one Equal Support ballot.
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Avocado | Bacon | Cheddar |
-|:--|:--:|:--:|:--:|
-| <img src="../img/same_total_different_shape_c3_b7_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — used the whole ballot — range 5: Avocado 5, Bacon 3, Cheddar 0."> | 5 | 3 | 0 |
-| <img src="../img/same_total_different_shape_c3_b7_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — used the whole ballot — range 5: Avocado 5, Bacon 4, Cheddar 0."> | 5 | 4 | 0 |
-| <img src="../img/same_total_different_shape_c3_b7_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — range 4: Avocado 5, Bacon 3, Cheddar 1."> | 5 | 3 | 1 |
-| <img src="../img/same_total_different_shape_c3_b7_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — scored everyone the same — range 0: Avocado 4, Bacon 4, Cheddar 4."> | 4 | 4 | 4 |
-| <img src="../img/same_total_different_shape_c3_b7_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — used the whole ballot — range 5: Avocado 0, Bacon 3, Cheddar 5."> | 0 | 3 | 5 |
-| <img src="../img/same_total_different_shape_c3_b7_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — range 4: Avocado 1, Bacon 4, Cheddar 5."> | 1 | 4 | 5 |
-| <img src="../img/same_total_different_shape_c3_b7_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — range 3: Avocado 5, Bacon 2, Cheddar 3."> | 5 | 2 | 3 |
+| # | Ballot as marked | Avocado | Bacon | Cheddar |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/same_total_different_shape_c3_b7_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — used the whole ballot — range 5: Avocado 5, Bacon 3, Cheddar 0."> | 5 | 3 | 0 |
+| 2 | <img src="../img/same_total_different_shape_c3_b7_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — used the whole ballot — range 5: Avocado 5, Bacon 4, Cheddar 0."> | 5 | 4 | 0 |
+| 3 | <img src="../img/same_total_different_shape_c3_b7_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — range 4: Avocado 5, Bacon 3, Cheddar 1."> | 5 | 3 | 1 |
+| 4 | <img src="../img/same_total_different_shape_c3_b7_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — scored everyone the same — range 0: Avocado 4, Bacon 4, Cheddar 4."> | 4 | 4 | 4 |
+| 5 | <img src="../img/same_total_different_shape_c3_b7_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — used the whole ballot — range 5: Avocado 0, Bacon 3, Cheddar 5."> | 0 | 3 | 5 |
+| 6 | <img src="../img/same_total_different_shape_c3_b7_ballot_6.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — range 4: Avocado 1, Bacon 4, Cheddar 5."> | 1 | 4 | 5 |
+| 7 | <img src="../img/same_total_different_shape_c3_b7_ballot_7.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — range 3: Avocado 5, Bacon 2, Cheddar 3."> | 5 | 2 | 3 |
 
 The same ballots as the file records them:
 

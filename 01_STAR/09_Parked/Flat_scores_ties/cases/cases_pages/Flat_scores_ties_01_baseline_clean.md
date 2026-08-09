@@ -19,10 +19,10 @@ Lesson: 09_Parked/Flat_scores_ties/README.md#case-01  (BV id pending).
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Apple | Banana | Cherry |
-|:--|:--:|:--:|:--:|
-| <img src="../img/Flat_scores_ties_01_baseline_clean_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Apple 5, Banana 3, Cherry 1."> | 5 | 3 | 1 |
-| <img src="../img/Flat_scores_ties_01_baseline_clean_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Apple 5, Banana 3, Cherry 1."> | 5 | 3 | 1 |
+| # | Ballot as marked | Apple | Banana | Cherry |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/Flat_scores_ties_01_baseline_clean_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Apple 5, Banana 3, Cherry 1."> | 5 | 3 | 1 |
+| 2 | <img src="../img/Flat_scores_ties_01_baseline_clean_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Apple 5, Banana 3, Cherry 1."> | 5 | 3 | 1 |
 
 The same ballots as the file records them:
 

@@ -26,13 +26,13 @@ ballots (five-star), case 02 by the pre-drawn lot. See
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Ann | Ben | Cara |
-|:--|:--:|:--:|:--:|
-| <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc — tops out at 4: Ann 3, Ben 4, Cara 1."> | 3 | 4 | 1 |
-| <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 4, Cara 0."> | 3 | 4 | 0 |
-| <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 3."> | 4 | 0 | 3 |
-| <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 4."> | 4 | 0 | 4 |
-| <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — low-score voter: Ann 0, Ben 1, Cara 1."> | 0 | 1 | 1 |
+| # | Ballot as marked | Ann | Ben | Cara |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc — tops out at 4: Ann 3, Ben 4, Cara 1."> | 3 | 4 | 1 |
+| 2 | <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 4, Cara 0."> | 3 | 4 | 0 |
+| 3 | <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 3."> | 4 | 0 | 3 |
+| 4 | <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 4."> | 4 | 0 | 4 |
+| 5 | <img src="../img/tie_break_06_scoring_dead_rung_adversarial_lot_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — low-score voter: Ann 0, Ben 1, Cara 1."> | 0 | 1 | 1 |
 
 The same ballots as the file records them:
 

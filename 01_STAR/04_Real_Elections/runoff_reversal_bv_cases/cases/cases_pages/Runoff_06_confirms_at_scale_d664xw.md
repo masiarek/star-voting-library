@@ -23,13 +23,13 @@ Runoff_06_confirms_at_scale_d664xw.md
 
 The ballots as marked — the filled bubble is the score given, and the score is the number in its column:
 
-| Ballot as marked | Wren | Yarrow | Zinnia |
-|:--|:--:|:--:|:--:|
-| <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Wren 5, Yarrow 2, Zinnia 0."> | 5 | 2 | 0 |
-| <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Wren 5, Yarrow 3, Zinnia 1."> | 5 | 3 | 1 |
-| <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Wren 5, Yarrow 2, Zinnia 0."> | 5 | 2 | 0 |
-| <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Wren 4, Yarrow 5, Zinnia 0."> | 4 | 5 | 0 |
-| <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Wren 2, Yarrow 1, Zinnia 5."> | 2 | 1 | 5 |
+| # | Ballot as marked | Wren | Yarrow | Zinnia |
+|:--:|:--|:--:|:--:|:--:|
+| 1 | <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 1: Wren 5, Yarrow 2, Zinnia 0."> | 5 | 2 | 0 |
+| 2 | <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 2: Wren 5, Yarrow 3, Zinnia 1."> | 5 | 3 | 1 |
+| 3 | <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 3: Wren 5, Yarrow 2, Zinnia 0."> | 5 | 2 | 0 |
+| 4 | <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 4: Wren 4, Yarrow 5, Zinnia 0."> | 4 | 5 | 0 |
+| 5 | <img src="../img/Runoff_06_confirms_at_scale_d664xw_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Voter 5: Wren 2, Yarrow 1, Zinnia 5."> | 2 | 1 | 5 |
 
 The same ballots as the file records them:
 
