@@ -65,17 +65,18 @@ TABULATION RESULTS
   NOTE: do not confuse this with BV130-r2 (election 9ff9jk), a separate 4-ballot
   retest built around a dead-rung lot tie — see bv130r2_dead_rung_bloc.md.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                        |      Johnny Cash    |    Elvis Presley   |   * Santa Claus    |   The Lesser Evil  | * Someone I Like   |   Apocalypse Now   |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                        |      Johnny Cash    |    Elvis Presley   |     Santa Claus    |   The Lesser Evil  |   Someone I Like   |   Apocalypse Now   |
 --------------------------------------------------------------------------------------------------------------------------------------------------------
           Johnny Cash > |         ---         |     4 - 2 - 3      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     2 - 7 - 0      |
         Elvis Presley > |      3 - 2 - 4      |        ---         |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |     5 - 0 - 4      |
-        * Santa Claus > |      9 - 0 - 0      |     9 - 0 - 0      |        ---         |     5 - 0 - 4      |     0 - 6 - 3      |     9 - 0 - 0      |
+          Santa Claus > |      9 - 0 - 0      |     9 - 0 - 0      |        ---         |     5 - 0 - 4      |     0 - 6 - 3      |     9 - 0 - 0      |
       The Lesser Evil > |      9 - 0 - 0      |     9 - 0 - 0      |     4 - 0 - 5      |        ---         |     4 - 0 - 5      |     9 - 0 - 0      |
-     * Someone I Like > |      9 - 0 - 0      |     9 - 0 - 0      |     3 - 6 - 0      |     5 - 0 - 4      |        ---         |     9 - 0 - 0      |
+       Someone I Like > |      9 - 0 - 0      |     9 - 0 - 0      |     3 - 6 - 0      |     5 - 0 - 4      |        ---         |     9 - 0 - 0      |
        Apocalypse Now > |      0 - 7 - 2      |     4 - 0 - 5      |     0 - 0 - 9      |     0 - 0 - 9      |     0 - 0 - 9      |        ---         |
 
 [Condorcet Winner]

@@ -26,14 +26,15 @@ TABULATION RESULTS
 === Free riding — honest baseline (SSS) ===
   The honest ballots of free_ride_honest_allocated.yaml, counted with Sequentially Spent Score instead. SSS reaches the same result — Anika and Bruno — so the free ride in free_ride_hylland_sss.yaml is a genuine change of outcome and not an artefact of the tabulation.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      |20 -  0 -  0 |12 -  8 -  0 |
-       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      |20 -  0 -  0 |12 -  8 -  0 |
+         Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
         Camila > |  0 -  8 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

@@ -52,11 +52,11 @@ git diff       starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvote
 
 The single most important improvement is that every run produces **two** outputs, tuned for two different readers:
 
-**1. The *on-screen report* — minimal by design.** What prints to the terminal honors the file's own `options:`, and our house default is *less is more*: show the rounds, the winner, and the one or two sections the example is teaching. Clean enough to put on a slide without overwhelming a first-time voter.
+**1. The *on-screen report* — minimal by design.** The engine's built-in defaults *are* the house *less-is-more* style: the rounds, the finalists matrix, the self-reconciling runoff line, the winner. Clean enough to put on a slide without overwhelming a first-time voter. (A file *may* still set `options:` to override any default, and the `--full` flag puts the mirror's everything-on render on screen for one run.)
 
 **2. The saved `_tabulated.txt` mirror — always maximal.** Every run *also* writes a plain-text copy into a sibling `<folder>_tabulated/` mirror, and that copy is **always rendered with every analysis on** — full N×N matrix, Condorcet line, score distribution, tiebreaker detail, the runoff funnel — *regardless of the file's options*. It also stamps the source name, the source's last-modified time, and when tabulation ran, so a stale record is obvious at a glance.
 
-The payoff: **the on-screen demo stays clean while the saved record stays complete.** You never have to choose between a readable on-screen report and a full audit trail — you get the right one in each place. (This is why house YAML files carry a deliberately *minimal* `options:` block: the mirror forces full detail anyway, so hand-maxing the on-screen report just adds noise.)
+The payoff: **the on-screen demo stays clean while the saved record stays complete.** You never have to choose between a readable on-screen report and a full audit trail — you get the right one in each place. (This is why house YAML files carry no `options:` block at all: the engine's defaults already render the house style, and the mirror forces full detail anyway, so hand-setting options just adds noise.)
 
 ## What the report adds on top of "the winner is X"
 

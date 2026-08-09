@@ -23,17 +23,6 @@ election:
     ballots; fixed by coercing skipped scores to 0 in PR #1431. Winner: Tom Steyer (D).
     Live results: https://bettervoting.com/gvdy42/results
     Lesson: Runoff_08_ca_governor_reversal_gvdy42.md
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: true
-    show_condorcet: false
-    show_score_counts: true
-    show_irv: false
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "https://bettervoting.com/gvdy42/results"

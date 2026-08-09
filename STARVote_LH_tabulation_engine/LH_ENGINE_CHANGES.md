@@ -48,7 +48,7 @@ The wrapper reads `voting_method` + `num_winners` and routes to the right tabula
 
 ## 3. New reports & presentation (the wrapper's analysis layer)
 
-All in `starvote_larry_hastings.py`; none touch the algorithm. On-screen **on-screen report** stays minimal (honors the file's `options:`); the saved **`_tabulated.txt` mirror** always renders every analysis on, stamped with source name + mtimes.
+All in `starvote_larry_hastings.py`; none touch the algorithm. The on-screen report renders the engine's built-in house defaults (a file's `options:` may still override any of them, and `--full` puts the mirror's everything-on render on screen); the saved **`_tabulated.txt` mirror** always renders every analysis on, stamped with source name + mtimes.
 
 | Report / feature | What it adds | Reference |
 |------------------|--------------|-----------|
@@ -62,6 +62,8 @@ All in `starvote_larry_hastings.py`; none touch the algorithm. On-screen **on-sc
 | **Condorcet line**, **lot-number tiebreak cascade** | On demand on screen, always in the mirror; tiebreak shown step by step (head-to-head → most 5s → lot). | `show_condorcet` · `tests/test_lot_number_tiebreak.py` |
 | **Color palette + round separators** | Distinct colors per phase; auto-off when piped / `NO_COLOR`. | — |
 | **`blocs:` vote-splitting check**, **quorum / eligible-voter** accounting | Extra STAR-race diagnostics. | — |
+| **House defaults built in** (2026-08-09) | `DEFAULT_OPTIONS` now *is* the house on-screen style: finalists matrix + runoff line on by default (matrix auto-suppressed for multi-winner and two-candidate races); case files carry no `options:` block (501 removed repo-wide, an `options:` override remains legal); new `--full` CLI flag puts the mirror's everything-on render on screen; `show_irv` is vestigial, accepted for parse-compat only. | `DEFAULT_OPTIONS` · `--full` |
+| **Multi-winner matrix renders unmarked** (2026-08-09) | The on-screen auto-gate hid the matrix for multi-winner races, but the always-full mirror / `--full` still carried a "Top 2 Finalist" grid from the silent seats=1 STAR analysis — a single-winner concept printed over a Bloc/PR count. Now any multi-winner render of the grid (mirror, `--full`, or a file's `show_matrix: true`) prints plain head-to-head data: retitled "Preference Matrix", no finalist markers or tiebreak note, and an "Informational only — not part of the N-winner count" legend line. 71 mirrors + generated pages regenerated. | `print_matrix(seats=…)` · `tests/test_default_render.py` |
 
 ## 4. Input ergonomics & clear errors
 

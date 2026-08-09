@@ -23,17 +23,6 @@ election:
     Support (counted in the score round, neutral in the runoff). Same winner (A);
     the single-ballot difference is the 5,5.
 
-  options:
-    show_description: false
-    show_matrix: false   # only two candidates: the finalists matrix just echoes the runoff
-    matrix_finalists_only: false
-    show_condorcet: false
-    show_score_counts: false
-    show_irv: false
-    show_runoff_percent: true   # this file is specifically about the runoff denominator
-    brief: true
-    collapse_ballots: false   # one row per voter — each ballot is a distinct teaching case
-    count_separator: "×"
 
   races:
   - race_id: '0'

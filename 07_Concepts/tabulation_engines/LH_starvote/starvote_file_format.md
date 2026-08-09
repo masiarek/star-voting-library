@@ -307,11 +307,6 @@ For anything that belongs in the library, use the house format — it is what th
 ```yaml
 election_title: "Bloc STAR — 3 candidates / 2 seats, tied at every rung"
 
-options:
-  brief: true
-  show_matrix: false
-  show_condorcet: false
-
 num_winners: 2
 voting_method: Bloc STAR
 ballots: |-
@@ -321,7 +316,7 @@ ballots: |-
   4,5,3
 ```
 
-The trade-off is legibility against tooling: `.starvote` keeps candidate names next to their scores, which is easier to hand-write and to review; the YAML block is positional but carries the repo's reporting options, expected winners, and teaching text. Use `.starvote` to sketch or to reproduce an upstream report, YAML for anything that ships.
+The trade-off is legibility against tooling: `.starvote` keeps candidate names next to their scores, which is easier to hand-write and to review; the YAML block is positional but carries the repo's reporting layer, expected winners, and teaching text. Use `.starvote` to sketch or to reproduce an upstream report, YAML for anything that ships.
 
 ## See also
 

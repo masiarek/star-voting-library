@@ -149,18 +149,15 @@ Arden,Blythe,Corin
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-        Note: Arden, Blythe and Corin tied at 12 in the Scoring Round, and the
-              lot rung (the ballots could not separate them) advanced Arden
-              and Blythe. The * marks who advanced, not who scored highest.
-
-               |  * Arden   | * Blythe  |   Corin   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |    Arden   |   Blythe  |   Corin   |
 -----------------------------------------------------
-     * Arden > |    ---     |1 - 0 - 2  |2 - 0 - 1  |
-    * Blythe > | 2 - 0 - 1  |   ---     |1 - 0 - 2  |
+       Arden > |    ---     |1 - 0 - 2  |2 - 0 - 1  |
+      Blythe > | 2 - 0 - 1  |   ---     |1 - 0 - 2  |
        Corin > | 1 - 0 - 2  |2 - 0 - 1  |   ---     |
 
 [Condorcet Winner]

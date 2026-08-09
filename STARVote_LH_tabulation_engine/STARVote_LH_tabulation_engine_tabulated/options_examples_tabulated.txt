@@ -10,7 +10,9 @@ num_winners: 1
 # ---------------------------------------------------------------------------
 # options: — every display/analysis toggle the engine understands.
 # Booleans accept: true/false, 1/0, yes/no, on/off.
-# All are optional; the values shown here are illustrative, not the defaults.
+# All are optional; the engine's built-in defaults (DEFAULT_OPTIONS) are the
+# house on-screen style, so ordinary case files set none of these. The values
+# here are illustrative — some match the defaults, some override them.
 # ---------------------------------------------------------------------------
 options:
   show_matrix: true            # show the pairwise Preference Matrix

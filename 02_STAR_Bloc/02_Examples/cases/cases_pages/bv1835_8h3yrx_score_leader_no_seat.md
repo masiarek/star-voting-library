@@ -281,14 +281,15 @@ Count × Ava,Bianca,Cedric,Deegan,Eli
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |    * Ava     |  * Bianca   |    Cedric   |    Deegan   |     Eli     |
+        Informational only — not part of the 4-winner count below,
+        so no Top-2 finalists are marked.
+                 |      Ava     |    Bianca   |    Cedric   |    Deegan   |     Eli     |
 -----------------------------------------------------------------------------------------
-         * Ava > |     ---      |49 -  0 - 51 |49 -  0 - 51 |49 -  0 - 51 |49 -  0 - 51 |
-      * Bianca > | 51 -  0 - 49 |    ---      |27 - 49 - 24 |51 -  0 - 49 |51 -  0 - 49 |
+           Ava > |     ---      |49 -  0 - 51 |49 -  0 - 51 |49 -  0 - 51 |49 -  0 - 51 |
+        Bianca > | 51 -  0 - 49 |    ---      |27 - 49 - 24 |51 -  0 - 49 |51 -  0 - 49 |
         Cedric > | 51 -  0 - 49 |24 - 49 - 27 |    ---      |51 -  0 - 49 |51 -  0 - 49 |
         Deegan > | 51 -  0 - 49 |49 -  0 - 51 |49 -  0 - 51 |    ---      |27 - 49 - 24 |
            Eli > | 51 -  0 - 49 |49 -  0 - 51 |49 -  0 - 51 |24 - 49 - 27 |    ---      |

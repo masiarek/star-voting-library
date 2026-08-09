@@ -102,14 +102,15 @@ Alice,Bruno,Clara
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Alice   | * Bruno   |   Clara   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |    Alice   |   Bruno   |   Clara   |
 -----------------------------------------------------
-     * Alice > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
-     * Bruno > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
+       Alice > |    ---     |2 - 0 - 1  |3 - 0 - 0  |
+       Bruno > | 1 - 0 - 2  |   ---     |3 - 0 - 0  |
        Clara > | 0 - 0 - 3  |0 - 0 - 3  |   ---     |
 
 [Condorcet Winner]

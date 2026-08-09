@@ -100,11 +100,12 @@ The repo's new [the pref_voting engine](../../STARVote_LH_tabulation_engine/tool
 
 ### Options for an RCV-RR YAML file — and what shows where
 
-The Ranked Robin path follows the same **minimal on-screen report / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **three** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
+The Ranked Robin path follows the same **minimal on-screen report / always-full `_tabulated`** discipline as STAR ([reading a STAR report](../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md)). It honors **four** `options:` (the rest of the STAR option block is silently ignored — it doesn't error, it just does nothing for RR):
 
 | Option | Default | Effect on RCV-RR |
 |--------|:-------:|------------------|
-| `show_matrix` | `false` | When `true`, the **on-screen report** also prints the full N×N pairwise matrix. The `_tabulated` mirror **always** includes it regardless. |
+| `show_matrix` | `true` | On by default — the **on-screen report** prints the full N×N pairwise matrix; `false` gives the compact echo without it. The `_tabulated` mirror **always** includes it regardless. |
+| `show_smith_set` | `false` | When `true`, the on-screen report adds the **Smith set** block. The `_tabulated` mirror **always** forces it on. |
 | `collapse_ballots` | `true` | `true` → identical ballots shown as `N × ballot`; `false` → one row per voter. |
 | `count_separator` | `×` | The glyph between the count and the ballot (`×`, `:`, or `x`/`X`). |
 
@@ -121,7 +122,7 @@ ballots: |-
   2:Cara>Ben>Ada
 ```
 
-The **on-screen report** (compact — no `show_matrix`) shows the ballots, the aligned head-to-head list, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
+The **on-screen report** shows the ballots, the aligned head-to-head list, the full N×N pairwise matrix, the win-loss record table, and the winner. The record table reports the **Copeland score** (`wins + ½·ties`, the academic standard) alongside the win-loss count and total margin:
 
 <!-- report:ranked_robin_intro_c3_b7 -->
 ```text
@@ -157,20 +158,7 @@ Winner — Ranked Robin (RCV-RR): Ben
    beats every opponent head-to-head — the Condorcet winner.
 ```
 <!-- /report -->
-The **`_tabulated` mirror** is identical *plus* the full N×N pairwise matrix — the Ranked Robin tally itself — inserted before the win-loss record (each cell reads `For - Equal Support - Against`, row vs column; the middle column is `0` here because these are strict ranks with no equal support):
-
-```text
---- Pairwise (Round-Robin) Matrix ---
-Head-to-head / pairwise comparison — the Ranked Robin tally
-Legend: For - Equal Support - Against   (row vs column)
-         |    Ada    |   Ben    |  Cara    |
---------------------------------------------
-   Ada > |    ---    |3 - 0 - 4 |3 - 0 - 4 |
-   Ben > | 4 - 0 - 3 |   ---    |5 - 0 - 2 |
-  Cara > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |
-```
-
-Add `options: { show_matrix: true }` to pull that matrix onto the screen too — which is what [`ranked_robin_consensus_center.yaml`](../02_Examples/cases/ranked_robin_consensus_center.yaml) does, since the matrix is the point of that worked example.
+The matrix — the Ranked Robin tally itself — reads `For - Equal Support - Against` in each cell, row vs column; the middle number is `0` here because these are strict ranks with no equal support. The **`_tabulated` mirror** is identical *plus* the forced-on **Smith set** block (`show_smith_set` — opt-in on screen, always in the mirror).
 
 > **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md).
 

@@ -73,7 +73,7 @@ Same 24 ballots, same scores, same everything — it tabulates identically. Put 
 One clarification keeps the comparison fair: **ABIF is a *ballot* file; our `.yaml` is a *test-case* file.** They correspond at only one layer.
 
 - **The ballot data** — the votelines above vs. our grid rows — is the layer that truly matches, and that's the comparison this page makes.
-- **Everything wrapped around the ballots differs in kind.** Our [YAML test case](../../YAML_library/YAML_authoring_template.md) also carries the **method** (`voting_method`), **seats** (`num_winners`), reporting **`options:`**, human context (`scenario_description`), and — the big one — an **answer key** (`expected_winners`) that CI enforces. ABIF's metadata is a lighter `{ … }` block (title, candidate list); it has no notion of "the winner this file must produce," because it describes *ballots*, it doesn't assert a *test*.
+- **Everything wrapped around the ballots differs in kind.** Our [YAML test case](../../YAML_library/YAML_authoring_template.md) also carries the **method** (`voting_method`), **seats** (`num_winners`), human context (`scenario_description`), and — the big one — an **answer key** (`expected_winners`) that CI enforces. ABIF's metadata is a lighter `{ … }` block (title, candidate list); it has no notion of "the winner this file must produce," because it describes *ballots*, it doesn't assert a *test*.
 
 So the honest mapping is **ABIF votelines ↔ our `ballots:` grid**, and our full file is the [one-artifact container](../../YAML_library/why_yaml_test_cases.md) that also says *how to count* and *what to expect*. The repo's [`convert_abif.py`](../../STARVote_LH_tabulation_engine/tools_adam/convert_abif.py) bridges exactly that ballot layer, both ways; the method-and-answer-key layer stays ours.
 
@@ -97,7 +97,7 @@ So the honest mapping is **ABIF votelines ↔ our `ballots:` grid**, and our ful
 
 **Where the YAML grid wins (and where it doesn't)**
 
-- **Spreadsheet-native and low-punctuation.** Header names the cast once; each row is one ballot; anyone who's used Sheets can read and edit it. Scores need only commas. YAML wraps the method, seats, and reporting options around it cleanly.
+- **Spreadsheet-native and low-punctuation.** Header names the cast once; each row is one ballot; anyone who's used Sheets can read and edit it. Scores need only commas. YAML wraps the method, seats, and answer key around it cleanly.
 - **But it's positional.** The header and the rows are *coupled* — a misaligned or reordered row is silently wrong, the one failure mode ABIF's self-describing lines don't have.
 - **And it's two sub-notations**, not one: a grid for scores, `A>B>C` for ranks. ABIF unifies both under a single grammar; the grid keeps them separate (which is arguably *clearer* for teaching, at the cost of universality).
 - **It's a house convention, not a community interchange spec.** YAML itself is universal; the ballot-grid *semantics* are ours.

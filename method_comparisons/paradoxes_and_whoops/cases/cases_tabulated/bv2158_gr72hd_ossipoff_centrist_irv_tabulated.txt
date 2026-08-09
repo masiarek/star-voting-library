@@ -19,7 +19,6 @@ election:
     Live results: https://bettervoting.com/gr72hd/results (all races LH<->BV confirmed).
     Lesson: bv2158_gr72hd_ossipoff_centrist_irv.md
     Live on BetterVoting: https://bettervoting.com/gr72hd/results (BV-confirmed; STAR is race 1).
-  options: {show_irv: true, collapse_ballots: true, count_separator: "×"}
   races:
   - race_id: '0'
     race_description: "Ossipoff 1-D centrist; IRV elects D, Condorcet winner is C"

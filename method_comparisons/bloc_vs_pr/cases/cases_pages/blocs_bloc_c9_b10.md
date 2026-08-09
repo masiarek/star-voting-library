@@ -154,14 +154,15 @@ L1,L2,L3,C1,C2,C3,R1,R2,R3
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    * L1    |   * L2    |     L3    |     C1    |     C2    |     C3    |     R1    |     R2    |     R3    |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+               |      L1    |     L2    |     L3    |     C1    |     C2    |     C3    |     R1    |     R2    |     R3    |
 -----------------------------------------------------------------------------------------------------------------------------
-        * L1 > |    ---     |2 - 6 - 2  |4 - 4 - 2  |6 - 0 - 4  |6 - 0 - 4  |6 - 0 - 4  |6 - 1 - 3  |6 - 2 - 2  |7 - 0 - 3  |
-        * L2 > | 2 - 6 - 2  |   ---     |4 - 4 - 2  |6 - 0 - 4  |6 - 0 - 4  |6 - 0 - 4  |6 - 2 - 2  |7 - 1 - 2  |7 - 1 - 2  |
+          L1 > |    ---     |2 - 6 - 2  |4 - 4 - 2  |6 - 0 - 4  |6 - 0 - 4  |6 - 0 - 4  |6 - 1 - 3  |6 - 2 - 2  |7 - 0 - 3  |
+          L2 > | 2 - 6 - 2  |   ---     |4 - 4 - 2  |6 - 0 - 4  |6 - 0 - 4  |6 - 0 - 4  |6 - 2 - 2  |7 - 1 - 2  |7 - 1 - 2  |
           L3 > | 2 - 4 - 4  |2 - 4 - 4  |   ---     |6 - 0 - 4  |6 - 0 - 4  |6 - 0 - 4  |6 - 1 - 3  |7 - 0 - 3  |6 - 2 - 2  |
           C1 > | 4 - 0 - 6  |4 - 0 - 6  |4 - 0 - 6  |   ---     |3 - 5 - 2  |5 - 3 - 2  |8 - 0 - 2  |8 - 0 - 2  |8 - 0 - 2  |
           C2 > | 4 - 0 - 6  |4 - 0 - 6  |4 - 0 - 6  |2 - 5 - 3  |   ---     |5 - 2 - 3  |8 - 0 - 2  |8 - 0 - 2  |8 - 0 - 2  |

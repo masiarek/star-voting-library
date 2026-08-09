@@ -30,14 +30,15 @@ TABULATION RESULTS
 === Free riding — the free ride fails (RRV) ===
   THE CONTROL THAT DOES NOT BREAK. The free-riding ballots of free_ride_hylland_allocated.yaml, counted with Reweighted Range Voting — and here the strategy FAILS. RRV's weight is a smooth function of the score you gave, 1/(1 + score/max), so dropping Anika from 5 to 4 moves a free rider from 1/2 to 5/9 rather than from 1/2 to 1. Camila climbs from 20 to 22.22 and still loses to Bruno's 24. Bruno keeps the seat that the quota methods handed to Camila. RRV is a divisor method with no score groups and therefore no cliff to jump.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |   * Anika    |  * Bruno    |    Camila   |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |     Anika    |    Bruno    |    Camila   |
 -------------------------------------------------------------
-       * Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
-       * Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
+         Anika > |     ---      |20 -  0 -  0 |12 -  0 -  8 |
+         Bruno > |  0 -  0 - 20 |    ---      |12 -  0 -  8 |
         Camila > |  8 -  0 - 12 | 8 -  0 - 12 |    ---      |
 
 [Condorcet Winner]

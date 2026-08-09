@@ -97,7 +97,7 @@ The matrix doesn't care which ballot style fed it, only *order*:
 
 ## Why this one idea earns its keep
 
-1. **It's the auditable heart of the count.** The matrix is a small fixed-size table anyone can recompute from the ballots — the annotated tour of a full report is [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md), and the display demo is [`04b_c4_b3_display-options-all`](../../01_STAR/02_Examples/cases/cases_pages/04b_c4_b3_display-options-all.md) (`show_matrix`).
+1. **It's the auditable heart of the count.** The matrix is a small fixed-size table anyone can recompute from the ballots — the annotated tour of a full report is [How to Read a STAR Result Report](../tabulation_engines/LH_starvote/reading_a_star_report.md), and the display demo is [`04b_c4_b3_display-options-all`](../../01_STAR/02_Examples/cases/cases_pages/04b_c4_b3_display-options-all.md).
 2. **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) reads its whole result off it** — most head-to-head wins takes the seat. The matrix isn't a supporting exhibit there; it *is* the tally.
 3. **It's why these counts are [summable](summability/README.md).** The election's matrix is the sum of the ballots' matrices — so a precinct's matrix is just a partial sum, and precinct tables **add** to the statewide result. That's the worked two-district demo in [Ranked Robin is summable](../../05_Ranked_Robin/01_Learn/RCV_RR_summability.md) and [STAR is summable](../../01_STAR/01_Learn/properties_and_limits/STAR_summability.md), and the very thing [IRV's count can't do](../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md): IRV has no per-ballot artifact that adds — its rounds depend on everyone else's ballots.
 

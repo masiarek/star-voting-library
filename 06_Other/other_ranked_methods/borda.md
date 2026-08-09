@@ -71,7 +71,7 @@ No — Borda is a real, century-old, sometimes-used method (it sits in the **Pos
 
 ## In this repo
 
-- The engine can *optionally* show this on a ranked Ranked Robin ballot — set `options: { show_borda: true }` to annotate each ballot with its positional points, clearly labeled as Borda (not scores, and not what RR actually counts — RR uses pairwise).
+- The [`pref_voting` engine](../../STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/README.md) reports the **Borda** winner as a bonus column beside Copeland on any example election — clearly labeled as Borda / positional points (not scores, and not what Ranked Robin actually counts — RR uses pairwise).
 - Borda is **not Condorcet** — and that's not an abstract criterion note, it's the objection Condorcet himself raised in 1788, with a worked 11-voter election you can run: [Condorcet's rebuttal to Borda](../../method_comparisons/borda_condorcet_1788/README.md). Borda's Condorcet-fixing cousins are [Baldwin & Nanson](../RCV_IRV/concepts/variants/RCV-IRV-Baldwin-Nanson.md).
 
 ## Related

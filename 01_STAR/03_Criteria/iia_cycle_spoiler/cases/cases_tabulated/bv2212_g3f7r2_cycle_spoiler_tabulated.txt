@@ -36,17 +36,6 @@ election:
 
     Live results: https://bettervoting.com/g3f7r2/results
     Lesson: bv2212_g3f7r2_cycle_spoiler.md
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: false   # the full pairwise grid IS the lesson (the cycle)
-    show_condorcet: true           # prints "No Condorcet winner (majority cycle …)"
-    show_score_counts: false
-    show_irv: false                # the [Divergence from STAR] block already names RCV-IRV = Carla
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "https://bettervoting.com/g3f7r2/results"

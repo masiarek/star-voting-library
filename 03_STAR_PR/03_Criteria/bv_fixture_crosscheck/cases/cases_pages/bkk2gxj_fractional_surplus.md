@@ -85,14 +85,15 @@ Count × Allison,Bill,Carmen,Doug
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                 |  * Allison   |   * Bill    |    Carmen   |     Doug    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                 |    Allison   |     Bill    |    Carmen   |     Doug    |
 ---------------------------------------------------------------------------
-     * Allison > |     ---      | 1 - 11 -  0 | 8 -  1 -  3 | 8 -  0 -  4 |
-        * Bill > |  0 - 11 -  1 |    ---      | 7 -  2 -  3 | 8 -  0 -  4 |
+       Allison > |     ---      | 1 - 11 -  0 | 8 -  1 -  3 | 8 -  0 -  4 |
+          Bill > |  0 - 11 -  1 |    ---      | 7 -  2 -  3 | 8 -  0 -  4 |
         Carmen > |  3 -  1 -  8 | 3 -  2 -  7 |    ---      | 8 -  0 -  4 |
           Doug > |  4 -  0 -  8 | 4 -  0 -  8 | 4 -  0 -  8 |    ---      |
 

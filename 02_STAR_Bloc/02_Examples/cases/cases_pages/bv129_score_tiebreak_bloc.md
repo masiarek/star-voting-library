@@ -107,15 +107,16 @@ Count × Andre,Blake,Carmen
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |  * Andre   |   Blake   | * Carmen  |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |    Andre   |   Blake   |   Carmen  |
 -----------------------------------------------------
-     * Andre > |    ---     |1 - 3 - 1  |0 - 0 - 5  |
+       Andre > |    ---     |1 - 3 - 1  |0 - 0 - 5  |
        Blake > | 1 - 3 - 1  |   ---     |0 - 0 - 5  |
-    * Carmen > | 5 - 0 - 0  |5 - 0 - 0  |   ---     |
+      Carmen > | 5 - 0 - 0  |5 - 0 - 0  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Carmen — matches the STAR winner

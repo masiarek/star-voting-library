@@ -140,16 +140,17 @@ Anika,Bo,Cora,Dev
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-               |    Anika   |   * Bo    |    Cora   |  * Dev    |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |    Anika   |     Bo    |    Cora   |    Dev    |
 -----------------------------------------------------------------
        Anika > |    ---     |4 - 1 - 2  |5 - 0 - 2  |4 - 0 - 3  |
-        * Bo > | 2 - 1 - 4  |   ---     |3 - 2 - 2  |1 - 4 - 2  |
+          Bo > | 2 - 1 - 4  |   ---     |3 - 2 - 2  |1 - 4 - 2  |
         Cora > | 2 - 0 - 5  |2 - 2 - 3  |   ---     |2 - 1 - 4  |
-       * Dev > | 3 - 0 - 4  |2 - 4 - 1  |4 - 1 - 2  |   ---     |
+         Dev > | 3 - 0 - 4  |2 - 4 - 1  |4 - 1 - 2  |   ---     |
 
 [Condorcet Winner]
   Condorcet Winner: Anika — STAR elected Dev instead (Anika was eliminated in the scoring round)

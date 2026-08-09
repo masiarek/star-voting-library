@@ -18,17 +18,6 @@ election:
     the ordinal (head-to-head) method is silent, and STAR's score intensity is the
     stronger tiebreak. Live results: https://bettervoting.com/vb3xv2/results
     Lesson: bv830_vb3xv2_no_condorcet_tie_score.md
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: false
-    show_condorcet: true
-    show_score_counts: false
-    show_irv: false
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: false
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "https://bettervoting.com/vb3xv2/results"

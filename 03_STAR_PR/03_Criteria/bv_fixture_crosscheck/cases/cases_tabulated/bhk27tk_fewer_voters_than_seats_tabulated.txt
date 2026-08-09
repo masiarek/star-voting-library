@@ -30,14 +30,15 @@ TABULATION RESULTS
 === BV fixture — fewer voters than seats ===
   BetterVoting's own unit-test fixture for Allocated Score ("Voters < Winners" in packages/backend/src/Tabulators/AllocatedScore.test.ts), cast as a real BetterVoting election and re-counted here. Two voters, three seats: a degenerate election that exists to prove the tabulator does something sane when the quota is smaller than a single ballot rather than dividing by zero or looping. Both engines seat Allison, Bill and Carmen.
 
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                |  * Allison  |  * Bill    |   Carmen   |    Doug    |
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+                |    Allison  |    Bill    |   Carmen   |    Doug    |
 ----------------------------------------------------------------------
-    * Allison > |     ---     | 1 - 1 - 0  | 2 - 0 - 0  | 2 - 0 - 0  |
-       * Bill > |  0 - 1 - 1  |    ---     | 2 - 0 - 0  | 2 - 0 - 0  |
+      Allison > |     ---     | 1 - 1 - 0  | 2 - 0 - 0  | 2 - 0 - 0  |
+         Bill > |  0 - 1 - 1  |    ---     | 2 - 0 - 0  | 2 - 0 - 0  |
        Carmen > |  0 - 0 - 2  | 0 - 0 - 2  |    ---     | 1 - 1 - 0  |
          Doug > |  0 - 0 - 2  | 0 - 0 - 2  | 0 - 1 - 1  |    ---     |
 

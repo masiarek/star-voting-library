@@ -163,15 +163,16 @@ Vanilla,Chocolate,Strawberry
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-                   |     Vanilla    | * Chocolate   | * Strawberry  |
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+                   |     Vanilla    |   Chocolate   |   Strawberry  |
 ---------------------------------------------------------------------
          Vanilla > |      ---       |  1 - 2 - 1    |  1 - 2 - 1    |
-     * Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
-    * Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
+       Chocolate > |   1 - 2 - 1    |     ---       |  1 - 3 - 0    |
+      Strawberry > |   1 - 2 - 1    |  0 - 3 - 1    |     ---       |
 
 [Condorcet Winner]
   No strict Condorcet winner; unbeaten candidates: Vanilla, Chocolate (pairwise ties)

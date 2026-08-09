@@ -13,17 +13,6 @@ election:
     a reversal isn't a small-numbers fluke. Maple leads on HOW MUCH; Olive wins on
     HOW MANY. Winner = the Condorcet winner. Level 101. Full two-view lesson:
     Runoff_04_reversal_at_scale_bfjqmg.md
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: true
-    show_condorcet: true
-    show_score_counts: false
-    show_irv: false
-    show_runoff_percent: true
-    brief: true
-    collapse_ballots: true
-    count_separator: "×"
   races:
   - race_id: '0'
     race_description: "https://bettervoting.com/bfjqmg/results"

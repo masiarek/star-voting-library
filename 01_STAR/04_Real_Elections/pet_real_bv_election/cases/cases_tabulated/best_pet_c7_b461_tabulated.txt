@@ -9,17 +9,6 @@ election:
     A real BetterVoting STAR election (BV id: pet) — 7 pets, 461 ballots.
     Converted from the BetterVoting JSON export; winner: Dog.
     How to read this report (LH): 01_STAR/01_Learn/reporting/reporting_LH/
-  options:
-    show_description: false
-    show_matrix: true
-    matrix_finalists_only: false
-    show_condorcet: false
-    show_score_counts: true
-    show_irv: false
-    brief: true
-    collapse_ballots: true
-    show_runoff_percent: true
-    count_separator: "×"
   races:
   - race_id: 990fd363-3ac6-4f1e-8a43-c2f7a821c6d9
     race_description: ""

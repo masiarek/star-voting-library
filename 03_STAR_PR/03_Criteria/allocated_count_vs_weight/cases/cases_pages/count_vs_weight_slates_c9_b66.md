@@ -223,18 +223,15 @@ Count × A1,A2,A3,A4,B1,B2,B3,C1,C2
 ### Full audit — preference matrix, Condorcet, and score distribution
 
 ```text
---- Runoff (Preference) Matrix ---
+--- Preference Matrix ---
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
-        * indicates Top 2 Finalist
-        Note: A1, A2, A3 and A4 tied at 205 in the Scoring Round, and the lot
-              rung (the ballots could not separate them) advanced A1 and A2.
-              The * marks who advanced, not who scored highest.
-
-                 |     * A1     |    * A2     |      A3     |      A4     |      B1     |      B2     |      B3     |      C1     |      C2     |
+        Informational only — not part of the 5-winner count below,
+        so no Top-2 finalists are marked.
+                 |       A1     |      A2     |      A3     |      A4     |      B1     |      B2     |      B3     |      C1     |      C2     |
 -------------------------------------------------------------------------------------------------------------------------------------------------
-          * A1 > |     ---      | 0 - 66 -  0 | 0 - 66 -  0 | 0 - 66 -  0 |41 -  6 - 19 |41 -  6 - 19 |41 -  6 - 19 |41 - 19 -  6 |41 - 19 -  6 |
-          * A2 > |  0 - 66 -  0 |    ---      | 0 - 66 -  0 | 0 - 66 -  0 |41 -  6 - 19 |41 -  6 - 19 |41 -  6 - 19 |41 - 19 -  6 |41 - 19 -  6 |
+            A1 > |     ---      | 0 - 66 -  0 | 0 - 66 -  0 | 0 - 66 -  0 |41 -  6 - 19 |41 -  6 - 19 |41 -  6 - 19 |41 - 19 -  6 |41 - 19 -  6 |
+            A2 > |  0 - 66 -  0 |    ---      | 0 - 66 -  0 | 0 - 66 -  0 |41 -  6 - 19 |41 -  6 - 19 |41 -  6 - 19 |41 - 19 -  6 |41 - 19 -  6 |
             A3 > |  0 - 66 -  0 | 0 - 66 -  0 |    ---      | 0 - 66 -  0 |41 -  6 - 19 |41 -  6 - 19 |41 -  6 - 19 |41 - 19 -  6 |41 - 19 -  6 |
             A4 > |  0 - 66 -  0 | 0 - 66 -  0 | 0 - 66 -  0 |    ---      |41 -  6 - 19 |41 -  6 - 19 |41 -  6 - 19 |41 - 19 -  6 |41 - 19 -  6 |
             B1 > | 19 -  6 - 41 |19 -  6 - 41 |19 -  6 - 41 |19 -  6 - 41 |    ---      | 0 - 66 -  0 | 0 - 66 -  0 |19 - 41 -  6 |19 - 41 -  6 |

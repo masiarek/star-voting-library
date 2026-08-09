@@ -38,17 +38,6 @@ election:
     accounting #740 is missing: "12 ballots cast − 5 no-preference = 7 voters with a
     preference" — the "stats for nerds" turnout breakdown #740 asks BV to add.
 
-  options:
-    show_description: false
-    show_matrix: false   # only two candidates: the finalists matrix just echoes the runoff
-    matrix_finalists_only: false
-    show_condorcet: false
-    show_score_counts: true    # this case is about the count — show the per-score + abstention column
-    show_irv: false
-    show_runoff_percent: true  # the self-reconciling turnout line is the whole point
-    brief: true
-    collapse_ballots: true     # weighted blocs (5 / 2 / 5) — group them so the turnout split is legible
-    count_separator: "×"
 
   races:
   - race_id: '0'
