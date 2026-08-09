@@ -1,3 +1,38 @@
+======================================================================
+SOURCE FILE:     bv2277_tqfdbg_mayor_rr.yaml
+TABULATED FILE:  bv2277_tqfdbg_mayor_rr_tabulated.txt
+======================================================================
+
+election_title: "The mayor's race (Ranked Robin) — Cora beats everyone head-to-head"
+scenario_description: >-
+  The identical 100 ballots as …_irv.yaml, counted by Ranked Robin (RCV-RR / Copeland).
+  Cora wins the round-robin 3-0: 67-33 over Ada, 69-31 over Blake, 84-16 over Dean.
+  She is the Condorcet winner, and she is the SECOND choice of every other bloc on the
+  ballot — which is exactly the information the paper's single-elimination model throws
+  away when it keeps only the top two first-choice finishers. Ranked Robin needs no
+  rounds, no elimination order and no transfers to see it; it reads every ballot in
+  every pairing, once.
+bv_test_id: BV2277
+bv_election_id: tqfdbg
+bv_results_url: https://bettervoting.com/tqfdbg/results
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+# Pairwise: Cora beats Ada 67-33, Blake 69-31, Dean 84-16  -> Copeland 3-0.
+# Blake beats Ada 67-33 and Dean 84-16; Ada beats Dean 84-16. No cycle.
+ballots: |-
+  33:Ada>Cora>Blake>Dean     # Ada's voters — Cora is their second choice
+  31:Blake>Cora>Ada>Dean     # Blake's voters — Cora is their second choice too
+  20:Cora>Blake>Ada>Dean     # the moderates, leaning Blake
+  16:Dean>Cora>Blake>Ada     # Dean's voters — Cora again
+expected_winners:
+  - Cora
+
+# file: bv2277_tqfdbg_mayor_rr.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 100 ballots (ranked ballots).
 

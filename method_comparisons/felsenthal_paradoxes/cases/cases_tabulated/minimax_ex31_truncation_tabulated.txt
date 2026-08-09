@@ -1,3 +1,34 @@
+======================================================================
+SOURCE FILE:     minimax_ex31_truncation.yaml
+TABULATED FILE:  minimax_ex31_truncation_tabulated.txt
+======================================================================
+
+election_title: "Minimax Ex.31 — truncation: the same 19 voters, four ballots cut to their top two"
+scenario_description: |-
+  Felsenthal's Minimax truncation example, and the one case on this page where the repo does NOT reproduce the paper's winner — for a reason worth reading. Source: Dan S. Felsenthal (2010), Appendix A10, Example 31 (credited to Hannu Nurmi, private communication 24.2.2010).
+  The same 19 voters as minimax_ex30_noshow_before.yaml, except the four C>A>B>D voters now state only their top two, C>A, saying nothing about B versus D. Felsenthal reports that this promotes C — the truncators' first choice — from loser to winner: the truncation paradox.
+  That result depends entirely on a CONVENTION for the pair those four voters left unstated. Felsenthal applies the equal-probability convention: an unstated pair counts half a vote to each side, which inflates B's worst loss from 11 to 13 and hands the smallest worst loss (12) to C. This repo, the LH engine and BetterVoting all use the other convention — a voter who said nothing about B versus D gets no say in B versus D — under which the pair simply drops out, B's worst loss stays 11, and Minimax still elects B. No paradox appears.
+  Both readings are defensible and the page states both; what is not defensible is quoting the result without the convention that produced it. Reproduce Felsenthal with: minimax_report.py --equal-prob, and the repo's reading by running the same tool without the flag.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
+  Tabulated here as Ranked Robin for the pairwise matrix; Ranked Robin elects A.
+paradoxes: [truncation, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  5:D>B>C>A
+  4:B>C>A>D
+  3:A>D>C>B
+  3:A>D>B>C
+  4:C>A
+expected_winners:
+  - A
+
+# file: minimax_ex31_truncation.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 19 ballots (ranked ballots).
 

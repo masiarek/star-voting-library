@@ -1,3 +1,33 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex10_amalgamated.yaml
+TABULATED FILE:  succ_elim_ex10_amalgamated_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.10 — amalgamated: every round ties, and the tie-break picks the winner"
+scenario_description: |-
+  The amalgamation half of Felsenthal's successive-elimination reinforcement example — and the case where this repo's count is more precise than the paraphrase it replaces. Source: Dan S. Felsenthal (2010), Appendix A4, Example 10.
+  All four ballots: District I's three (A>B>C>D, B>D>C>A, D>C>A>B) plus District II's one (C>D>B>A). Each district elected C on its own under the agenda B vs D, winner vs A, winner vs C.
+  Counted together, ALL THREE rounds are 2:2 ties. B vs D ties, the survivor vs A ties, the survivor vs C ties — so the elected candidate is decided entirely by the tie-break convention and not at all by the ballots. Breaking toward the earlier letter gives C, agreeing with both districts and producing NO paradox; breaking toward the candidate earlier on the agenda gives B, which neither district chose and which is the reinforcement failure. Felsenthal calls the break random and claims only that B CAN win, which is exactly right.
+  Worth stating plainly because the earlier prose here said "B beats D in round 1": it does not, that round is a 2:2 tie like the other two. The failure is real but conditional, and the condition is the tie-break rule. A four-voter electorate is small enough that a tie is unremarkable; the lesson is that the procedure has no way to resolve one from the ballots.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Tabulated as Ranked Robin, which elects C by a margin tiebreak inside a Copeland tie. Run the procedure both ways with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda B,D,A,C and --tiebreak agenda; the report re-runs the other convention itself and says when the winner moves.
+paradoxes: [multiple-districts, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  1:A>B>C>D
+  1:B>D>C>A
+  1:D>C>A>B
+  1:C>D>B>A
+expected_winners:
+  - C
+
+# file: succ_elim_ex10_amalgamated.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 4 ballots (ranked ballots).
 

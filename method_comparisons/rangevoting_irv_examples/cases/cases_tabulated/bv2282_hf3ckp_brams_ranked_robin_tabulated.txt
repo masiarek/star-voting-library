@@ -1,3 +1,52 @@
+======================================================================
+SOURCE FILE:     bv2282_hf3ckp_brams_ranked_robin.yaml
+TABULATED FILE:  bv2282_hf3ckp_brams_ranked_robin_tabulated.txt
+======================================================================
+
+election_title: "Brams 1982 — Ranked Robin on the identical ballots"
+
+scenario_description: |-
+  The SAME 21 ballots as bv2282_hf3ckp_brams_irv.yaml, not one mark changed, counted
+  by Ranked Robin instead of Hare elimination.
+
+  Hare eliminates G in round 2 and elects B 13-8. Ranked Robin elects G, who
+  beats B 14-7, N 13-8 and F 18-3 — every rival head-to-head.
+
+  Twenty-one ballots and four candidates: small enough that a skeptic can check
+  both counts by hand and satisfy themselves that the disagreement is real and
+  not an artifact of anyone's software.
+
+  TRIPLE-CHECKED, all three legs agreeing on G: this LH native tally,
+  BetterVoting's own RankedRobin.ts (live election hf3ckp, race 2 — frozen in
+  bv2282_hf3ckp_bv_export.json, tieBreakType 'none'), and pref_voting's
+  independent Copeland (ranked_robin_report.py — AGREE, unique leader G).
+
+  Live on BetterVoting (Test ID BV2282): https://bettervoting.com/hf3ckp
+  Live results: https://bettervoting.com/hf3ckp/results
+bv_test_id: BV2282
+bv_election_id: hf3ckp
+bv_results_url: https://bettervoting.com/hf3ckp/results
+voting_method: RankedRobin
+num_winners: 1
+
+# Identical ballot block to bv2282_hf3ckp_brams_irv.yaml — if you edit one, edit both.
+# Source profile: Brams (1982), via https://rangevoting.org/rangeVirv.html
+# section 12. Claim-checked in this folder's README.md.
+ballots: |-
+  7:B>G>N>F
+  6:G>B>N>F
+  5:N>G>B>F
+  3:F>N>G>B
+
+expected_winners:
+  - G
+
+# file: bv2282_hf3ckp_brams_ranked_robin.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 21 ballots (ranked ballots).
 

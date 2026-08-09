@@ -1,3 +1,32 @@
+======================================================================
+SOURCE FILE:     minimax_ex33_scc.yaml
+TABULATED FILE:  minimax_ex33_scc_tabulated.txt
+======================================================================
+
+election_title: "Minimax Ex.33 — SCC: drop a loser and the winner changes"
+scenario_description: |-
+  Felsenthal's Minimax subset-choice-condition example — the spoiler failure. Source: Dan S. Felsenthal (2010), Appendix A10, Example 33, adapted from P.C. Fishburn, "Paradoxes of Voting", American Political Science Review 68 (1974: 540).
+  Seven voters, four candidates: 3×(D>C>B>A), 2×(A>D>C>B), 2×(B>A>D>C). The social ordering cycles (A>D>C>B>A), so Minimax reaches for its second clause: worst pairwise losses are A 5, B 5, C 7, D 4, and D is elected on the smallest.
+  Now let B — who cannot win, and does not — leave the race before the vote. On the same ballots minus B, A is ranked first by 4 of 7, an absolute majority, and wins outright. Removing a LOSER changed the winner from D to A: the subset choice condition (SCC) failure, the formal version of what campaigns call a spoiler. Reproduce the second count with: minimax_report.py --drop B, which recomputes every pairwise from the same ballots.
+  At 4 candidates and 7 voters this is close to minimal — Brandt, Matthäus & Saile (2022) show a 3-candidate, 7-voter instance exists, so this one carries a single extra candidate.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
+  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; Ranked Robin also lands on D, by a different route — Copeland ties A and D at 2 wins each and the margin tiebreak separates them.
+paradoxes: [spoiler-scc, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  3:D>C>B>A
+  2:A>D>C>B
+  2:B>A>D>C
+expected_winners:
+  - D
+
+# file: minimax_ex33_scc.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 7 ballots (ranked ballots).
 

@@ -1,3 +1,61 @@
+======================================================================
+SOURCE FILE:     tilted_cycle_c3_b5_rr.yaml
+TABULATED FILE:  tilted_cycle_c3_b5_rr_tabulated.txt
+======================================================================
+
+election_title: "Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)"
+
+scenario_description: |-
+  The Fig. 1 profile from Brandt, Dong & Peters, "Condorcet-Consistent Choice
+  Among Three Candidates" (arXiv:2411.19857) — the SMALLEST electorate that can
+  produce a *tilted* (asymmetric) Condorcet cycle:
+
+      Ada beats Ben   4–1   (margin +3)
+      Ben beats Cara  3–2   (margin +1)
+      Cara beats Ada  3–2   (margin +1)
+
+  Every voter here is perfectly transitive; the electorate is not. Copeland
+  (Ranked Robin) ties all three at 1–1 — the "three-way dead rung" shape — and
+  falls through to LH's margins tiebreak, which is ALIVE here (+2 / 0 / −2), so
+  Ada wins deterministically without a lot.
+
+  The tilt is what makes this profile useful: on the SYMMETRIC 6-voter cycle
+  (reinforcement_paradox/cases/reinf_north_c3_b6_rr.yaml) every Condorcet method
+  returns all three candidates and even the margins rung is dead. Tilt it by one
+  voter and Copeland STILL ties all three, while the maximin family (Minimax /
+  Ranked Pairs / Schulze / Kemeny — one and the same rule at three candidates)
+  drops Ben and returns {Ada, Cara}. That is the minimal proof that Ranked
+  Robin's Copeland count is NOT in the maximin family.
+
+  Why 5 voters and why 3–1–1: see the minimality proof in the folder README —
+  the three cyclic margins always sum to at most n and share n's parity, so
+  n = 3 forces the symmetric (1,1,1) cycle, n = 4 admits NO cycle at all, and
+  n = 5 leaves (3,1,1) as the only tilted shape in existence.
+
+  LH-only by design: the Copeland three-way tie is exactly the case where
+  BetterVoting breaks ties at RANDOM, so a BV result here could not be frozen.
+
+  Companion: tilted_cycle_c3_b5_irv.yaml (same ballots, RCV-IRV → Cara).
+
+paradoxes: [condorcet-cycle]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ada, Ben, Cara]
+
+ballots: |-
+  2:Ada>Ben>Cara
+  1:Ben>Cara>Ada
+  2:Cara>Ada>Ben
+
+expected_winners:
+  - Ada
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 5 ballots (ranked ballots).
 

@@ -1,3 +1,36 @@
+======================================================================
+SOURCE FILE:     minimax_ex32_amalgamated.yaml
+TABULATED FILE:  minimax_ex32_amalgamated_tabulated.txt
+======================================================================
+
+election_title: "Minimax Ex.32 — amalgamated: both districts elected D, together they cannot"
+scenario_description: |-
+  The amalgamation half of Felsenthal's Minimax reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A10, Example 32.
+  All 14 ballots from both districts in one election: District I is Example 29's eleven voters (2×D>A>C>B, 3×D>B>A>C, 3×C>B>A>D, 1×B>A>C>D, 2×A>C>B>D), where Minimax elects D; District II is minimax_ex32_district2.yaml (2×D>A>B>C, 1×B>A>C>D), where D is the outright majority winner. Each district on its own elects D.
+  Counted together the matrix goes almost flat: four of the six pairs are DEAD HEATS at 7–7 (A–D, B–C, B–D, C–D), and the only decided pairs are B over A 8–6 and A over C 11–3. So B and D are both unbeaten and both suffer a worst opposition of 7 — they tie for the smallest, and Minimax has no further clause. D's two clean district wins dissolve into a coin flip with a candidate who won neither district. That is the reinforcement paradox, also called the inconsistency paradox.
+  The tie is the whole point, so this case is deliberately NOT determinate under Minimax and could never be published as a BetterVoting election with a meaningful winner. Note the electorate is EVEN (14), which is what allows exact pairwise ties at all; Felsenthal's other Minimax examples use odd electorates, where no pair can draw and the winning-votes and margins conventions cannot come apart.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
+  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; Ranked Robin has its own answer, B, reached by its own tiebreak.
+paradoxes: [multiple-districts, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  2:D>A>C>B
+  3:D>B>A>C
+  3:C>B>A>D
+  1:B>A>C>D
+  2:A>C>B>D
+  2:D>A>B>C
+  1:B>A>C>D
+expected_winners:
+  - B
+
+# file: minimax_ex32_amalgamated.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 14 ballots (ranked ballots).
 

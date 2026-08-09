@@ -1,3 +1,59 @@
+======================================================================
+SOURCE FILE:     bgg9qh9_most_wins_is_not_condorcet.yaml
+TABULATED FILE:  bgg9qh9_most_wins_is_not_condorcet_tabulated.txt
+======================================================================
+
+election_title: "Ranked Robin — winning the most matchups does NOT make you the Condorcet winner"
+scenario_description: >-
+  18 ranked ballots, 5 candidates, three equal blocs. A counterexample to a claim
+  that circulates in voting-reform discussion: "if you win head-to-head against
+  more candidates than anyone else, you must be the Condorcet winner."
+
+  Cora wins THREE of four matchups — strictly more than anyone else, not tied —
+  and finishes 3-1-0 with a Copeland score of 3 against everyone else's 2 or 1.
+  Cora is elected. And Amy beats Cora 12-6. So Cora is not the Condorcet winner,
+  and in fact there is no Condorcet winner here at all: the Smith set is all five
+  candidates.
+
+  Note what this does NOT depend on. There is not a single drawn matchup in the
+  profile, so the raw win count and the Copeland score coincide exactly. The claim
+  fails on its own terms — it is the converse error, not a technicality about how
+  draws are credited. What IS true is the one-way version: a Condorcet winner
+  always has the uniquely highest Copeland score. The converse does not follow.
+
+  Second lesson, free with the first: Cora has ZERO first-choice votes. The three
+  blocs lead with Blake, Amy and Diego, so first choices split 6-6-6-0-0. Cora is
+  the broadly-acceptable second choice nobody puts first, which is precisely why
+  Cora wins the round robin — and precisely why Choose-One and RCV-IRV cannot even
+  produce an answer here without a coin flip (both deadlock three ways at 6). That
+  is also why this is a single Ranked Robin race on BetterVoting rather than a
+  method line-up: the other methods' results here are not reproducible.
+
+  Live results: https://bettervoting.com/gg9qh9/results (election gg9qh9, BV2260).
+  Triple-checked — the LH engine, BetterVoting's RankedRobin.ts (see the frozen
+  _bv_export.json) and pref_voting's independent Copeland all elect Cora.
+
+bv_test_id: BV2260
+bv_election_id: gg9qh9
+bv_results_url: https://bettervoting.com/gg9qh9/results
+
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Amy, Blake, Cora, Diego, Erin]
+ballots: |-
+  6:Blake>Erin>Amy>Cora>Diego
+  6:Amy>Cora>Erin>Diego>Blake
+  6:Diego>Cora>Blake>Erin>Amy
+
+expected_winners:
+  - Cora
+
+# file: most_wins_is_not_condorcet.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 18 ballots (ranked ballots).
 

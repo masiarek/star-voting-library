@@ -1,3 +1,32 @@
+======================================================================
+SOURCE FILE:     minimax_ex30_noshow_before.yaml
+TABULATED FILE:  minimax_ex30_noshow_before_tabulated.txt
+======================================================================
+
+election_title: "Minimax Ex.30 — before: all 19 vote, Minimax elects B"
+scenario_description: |-
+  The BEFORE half of Felsenthal's Minimax no-show pair. Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A10, Example 30 (credited to Hannu Nurmi, private communication 22.2.2010).
+  19 voters, four candidates: 5×(D>B>C>A), 4×(B>C>A>D), 3×(A>D>C>B), 3×(A>D>B>C), 4×(C>A>B>D). The social ordering cycles (C>A>D>B>C), so there is no Condorcet winner and Minimax must fall back on its second clause — elect whoever's worst pairwise loss is smallest. Worst losses: A 13, B 11, C 12, D 14, so Minimax elects B. Then compare minimax_ex30_noshow_after.yaml, where three of the four C>A>B>D voters stay home and A wins instead — an outcome those absent voters PREFER to B. That is the no-show paradox, and read in the other direction it is the twin paradox.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table; this is an academic reproduction, not a scenario with a cast.
+  Minimax has no tabulator in the LH engine or on BetterVoting, so the file is tabulated here as Ranked Robin — which prints the full pairwise matrix, the exact object Minimax reads. Ranked Robin then breaks the Copeland tie by margin and elects A, not B: same matrix, different cycle-breaker. For the Minimax count itself run tools_adam/pref_voting_tabulation_engine/minimax_report.py, which is cross-checked against pref_voting.
+paradoxes: [no-show, twin, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  5:D>B>C>A
+  4:B>C>A>D
+  3:A>D>C>B
+  3:A>D>B>C
+  4:C>A>B>D
+expected_winners:
+  - A
+
+# file: minimax_ex30_noshow_before.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 19 ballots (ranked ballots).
 

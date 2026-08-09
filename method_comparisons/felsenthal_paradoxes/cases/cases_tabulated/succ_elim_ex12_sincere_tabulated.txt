@@ -1,3 +1,33 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex12_sincere.yaml
+TABULATED FILE:  succ_elim_ex12_sincere_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.12 — sincere: the A>B>C>D voter gets their last choice"
+scenario_description: |-
+  The SINCERE half of Felsenthal's successive-elimination truncation example. Source: Dan S. Felsenthal (2010), Appendix A4, Example 12.
+  Six voters, four candidates: 1×(A>B>C>D), 1×(C>B>A>D), 2×(C>D>B>A), 2×(D>A>B>C). Under the agenda B vs C, winner vs D, winner vs A: round 1 ties 3:3 and B survives on the earlier-letter convention; D beats B 4:2; D beats A 4:2. D is elected — the dead last choice of the voter who ranked A>B>C>D.
+  That voter can do better by revealing LESS. In succ_elim_ex12_truncated.yaml they name only A, dropping out of every round A does not contest. Their absence from round 1 lets C beat B, C then beats D, and the final round ties A against C with A surviving — so the truncating voter gets their FIRST choice instead of their last, by saying less. The truncation paradox.
+  What makes the mechanism visible here is that truncation is not a lie: the voter still ranks A top and says nothing false. They simply decline to help resolve contests among candidates they did not rank, and under an agenda procedure declining to participate in a round is a lever.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Successive elimination exists in neither the LH engine nor BetterVoting, so this file is tabulated as Ranked Robin, which elects C by a margin tiebreak inside a Copeland tie. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda B,C,D,A.
+paradoxes: [truncation, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  1:A>B>C>D
+  1:C>B>A>D
+  2:C>D>B>A
+  2:D>A>B>C
+expected_winners:
+  - C
+
+# file: succ_elim_ex12_sincere.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 6 ballots (ranked ballots).
 

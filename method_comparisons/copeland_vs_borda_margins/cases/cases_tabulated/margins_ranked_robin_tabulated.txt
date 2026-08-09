@@ -1,3 +1,40 @@
+======================================================================
+SOURCE FILE:     margins_ranked_robin.yaml
+TABULATED FILE:  margins_ranked_robin_tabulated.txt
+======================================================================
+
+election_title: "Margins matter — Ranked Robin (Copeland) ties all three"
+scenario_description: |-
+  Twelve gelato voters, three flavours, a rock-paper-scissors cycle: Almond beats Berry 7-5, Berry beats Cocoa 8-4, Cocoa beats Almond 7-5. Copeland counts WINS and throws the margins away, so every flavour goes 1-1-0 and the Copeland winning set is all three. That is the whole point of the profile: the same tournament, WEIGHTED by those margins, is the Borda count — and Borda separates them (Berry +2, Almond 0, Cocoa -2). LH breaks the Copeland tie by total margin (Berry +2) and elects Berry, which is exactly the margin-weighted answer; BetterVoting falls past its head-to-head rung on a 3-way tie and picks at RANDOM, so BV's crowned winner is a coin flip and only its pairwise matrix is freezable. Structural twin of the 304-ballot textbook profile in margins_paper_exact_304.yaml.
+bv_test_id: BV2251
+bv_election_id: kdjjkq
+bv_results_url: https://bettervoting.com/kdjjkq/results
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Almond, Berry, Cocoa]
+ballots: |-
+  Almond>Berry>Cocoa
+  Almond>Berry>Cocoa
+  Almond>Berry>Cocoa
+  Almond>Berry>Cocoa
+  Almond>Berry>Cocoa
+  Berry>Cocoa>Almond
+  Berry>Cocoa>Almond
+  Berry>Cocoa>Almond
+  Cocoa>Almond>Berry
+  Cocoa>Almond>Berry
+  Cocoa>Berry>Almond
+  Cocoa>Berry>Almond
+
+expected_winners:
+  - Berry
+
+# file: margins_ranked_robin.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 12 ballots (ranked ballots).
 

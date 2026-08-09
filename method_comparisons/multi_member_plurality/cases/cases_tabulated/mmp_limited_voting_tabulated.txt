@@ -1,3 +1,47 @@
+======================================================================
+SOURCE FILE:     mmp_limited_voting.yaml
+TABULATED FILE:  mmp_limited_voting_tabulated.txt
+======================================================================
+
+election_title: "Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1"
+scenario_description: |-
+  One of three races comparing the multi-member plurality family on the SAME 60/40
+  electorate (LH-only — see the set README). 10 voters, 3 seats: a 6-voter MAJORITY
+  (Home: Ada, Ben) and a 4-voter MINORITY (Away: Uma, Val).
+
+  LIMITED VOTING: each voter casts FEWER votes than there are seats — here up to 2
+  votes for 3 seats. Because a party can't fill every seat with its own supporters,
+  over-nominating splits the vote, so disciplined parties concentrate. Home uses
+  its 2 votes on Ada, Ben (6 each); Away concentrates all 4 of its voters behind
+  Uma (bullet — using just one of its two votes). The top three are Ada, Ben (6)
+  and Uma (4) — a clean 2-1 split, no tie. Limited Voting sits between Block Voting
+  (majority sweeps 3-0) and SNTV (minority tops the poll): capping votes-per-voter
+  below the seat count is what opens space for a concentrated minority.
+voting_method: Plurality
+num_winners: 3
+lot_numbers: [Ada, Ben, Cal, Uma, Val, Wren]
+# LH tabulates this as Limited Voting (Plurality family, auto-labelled from the
+# up-to-2-marks ballots). It is BV-BACKED: BetterVoting runs the same ballots as
+# multi-winner Approval and elects the same seats — see the BV2135 "Limited Voting
+# (as bloc Approval)" race.
+bv_test_id: BV2135
+bv_election_id: 3x4vrv
+bv_results_url: https://bettervoting.com/3x4vrv/results
+ballots: |-
+  Ada,Ben,Cal,Uma,Val,Wren
+  6: 1,1,0,0,0,0
+  4: 0,0,0,1,0,0
+expected_winners:
+  - Ada
+  - Ben
+  - Uma
+
+# file: mmp_limited_voting.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Multi-winner Plurality — 3 winners ---
  Tabulating 10 ballots (mixed votes/voter).
 

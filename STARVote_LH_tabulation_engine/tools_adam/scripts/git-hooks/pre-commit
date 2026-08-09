@@ -167,6 +167,8 @@ echo "pre-commit: running STAR YAML test suite…"
     tests/test_harness_selfcheck.py \
     tests/test_json_to_yaml_conversion.py \
     tests/test_lot_number_tiebreak.py \
+    tests/test_approval_mirror.py \
+    tests/test_composed_mirror.py \
     tests/test_readme_index_complete.py \
     tests/test_yaml_index_current.py \
     tests/test_catalog_current.py \
