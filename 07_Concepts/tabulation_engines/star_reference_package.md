@@ -137,7 +137,29 @@ For a configuration file whose scalars include **candidate names and contest tit
 
 **One exposure does remain.** `expected_winners:` *is* a YAML list, so a candidate named `No` would parse as `False`, and a **correct** result would fail the test harness — a false failure that looks like an engine bug. Checked across all 649 tracked files: **zero currently trigger it**, so this is latent rather than live. But note how easily it stops being latent: the natural way to add a ballot-measure case is a contest whose options are *Yes* and *No*.
 
-**Cheap fix, worth doing regardless of any of the above:** a hygiene check that fails when any `expected_winners` entry or `election_title` parses as something other than a string. Ten lines, and it closes the whole class.
+### 4. This was already solved once, and the solution was lost
+
+The trap above is not a new discovery. **The project used StrictYAML, deliberately, for exactly this reason — and it was dropped.**
+
+Commit `996016b` (2026-05-03) carries `from strictyaml import load, YAMLError` in live Python. The README of that era stated the rationale in as many words: StrictYAML *"securely handles the string-to-dictionary parse to avoid type coercion,"* handing the result to **Pydantic** for cross-field validation, with the pipeline *"serializing validated cases into strict JSON baselines for secondary systems."*
+
+Today: no `strictyaml` dependency anywhere in `pyproject.toml` or the lockfile, no import in any source file, no mention in any tracked document, and the engine parsing with `yaml.safe_load`. The code went first; the README paragraph was removed later in `26a8758`. Neither removal appears deliberate — this looks like drift as the project turned from "Better Voting Test Library" into a teaching library, not a decision anyone made.
+
+**Note what that earlier design already anticipated.** "Strict JSON baselines for secondary systems" is precisely the D3 conformance contract, and precisely the answer to *"a future implementation will want a JSON interface."* The May 2026 architecture had the right shape for a question this page took a long conversation to re-derive.
+
+### What to actually do about it
+
+Three options, and the cheapest two are not exclusive.
+
+| | Guarantee | Cost |
+|---|---|---|
+| **A hygiene check** — reject any `expected_winners` entry or `election_title` that parses as a non-string | Closes the known hole | ~10 lines, no dependency, minutes |
+| **Pydantic models over `safe_load`** — validate types and cross-field rules after parsing | Same practical guarantee, plus cross-field validation, **plus JSON Schema generation for free** | A day; but it *is* D3 |
+| **Restore StrictYAML** — no implicit typing at the parse boundary at all | The strongest guarantee, and the original intent | A schema, a dependency, and reformatting **32 files** |
+
+That last number is worth having measured: StrictYAML forbids flow style, so `expected_winners: [Ben]` would have to become a block list — and **only 32 of the 569 files use flow style; 537 are already block style.** The migration everyone assumes is expensive is two dozen mechanical edits.
+
+**Recommendation: the hygiene check now, Pydantic when D3 is built.** Pydantic covers the same hole, adds the cross-field validation the original design wanted, and emits the JSON Schema that the conformance contract and any non-Python implementation both need — one tool serving three items on this page. StrictYAML remains the purist answer and is cheaper than it looks; it is just narrower in what it buys.
 
 ## Sequencing
 
