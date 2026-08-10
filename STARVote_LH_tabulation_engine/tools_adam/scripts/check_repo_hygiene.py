@@ -599,6 +599,83 @@ def check_descriptions():
 
 
 # --------------------------------------------------------------------------- #
+# YAML implicit typing: candidate and contest NAMES must come back as strings.
+#
+# PyYAML resolves bare scalars with YAML 1.1 rules, so a name written without
+# quotes can be silently retyped on the way in:
+#
+#     No     -> False        Yes -> True         Off -> False
+#     null   -> None         1.10 -> 1.1         12:30 -> 750  (base 60)
+#
+# A ballot-measure contest whose options are Yes and No is the obvious way this
+# stops being hypothetical: `expected_winners: [No]` parses as `[False]`, so a
+# CORRECT result fails its own answer key and reads like an engine bug.
+#
+# The corpus is mostly protected by accident — candidate names live inside the
+# `ballots: |-` block literal, which YAML hands over as one opaque string for
+# the engine's own parser, so the scalar resolver never sees them. That is a
+# property of the schema, not a decision, and a tidier redesign promoting
+# candidates to a real YAML list would reintroduce the bug. `expected_winners`
+# and `election_title` ARE resolved scalars, and are the exposure.
+#
+# History: the project used StrictYAML for exactly this ("securely handles the
+# string-to-dictionary parse to avoid type coercion" — README, May 2026;
+# `from strictyaml import load` in 996016b). Both the code and the rationale
+# were dropped during a later rewrite. This is the cheap replacement; the fuller
+# one is Pydantic models, which would also emit the JSON Schema the conformance
+# contract wants. See 07_Concepts/tabulation_engines/star_reference_package.md.
+# --------------------------------------------------------------------------- #
+def _retyped(value):
+    """What YAML turned a name into, if it isn't a string — else None."""
+    if isinstance(value, str):
+        return None
+    if isinstance(value, bool):          # before int: bool IS an int in Python
+        return f"the boolean {value}"
+    if value is None:
+        return "null"
+    if isinstance(value, (int, float)):
+        return f"the number {value!r}"
+    return f"a {type(value).__name__}"
+
+
+def check_yaml_name_types():
+    """Return [(file, problem)] for election YAMLs whose candidate or contest
+    NAMES were silently retyped by YAML's implicit scalar rules."""
+    try:
+        import yaml as _yaml
+    except ImportError:  # pragma: no cover
+        return []
+    bad = []
+    for path in _yaml_teaching_files():
+        rel = os.path.relpath(path, REPO)
+        try:
+            data = _yaml.safe_load(open(path, encoding="utf-8").read())
+        except Exception:
+            continue        # malformed YAML is the negative suite's business
+        if not isinstance(data, dict):
+            continue
+        if "ballots" not in data and "grades" not in data:
+            continue        # not an election file
+
+        winners = data.get("expected_winners")
+        if winners is not None:
+            entries = winners if isinstance(winners, list) else [winners]
+            for i, name in enumerate(entries):
+                got = _retyped(name)
+                if got:
+                    bad.append((rel, f"expected_winners[{i}] parsed as {got} — YAML "
+                                     f"retyped a candidate name; quote it"))
+
+        # An absent or empty title is check_descriptions()' business, not ours;
+        # we only care about one that WAS given and came back as a non-string.
+        if "election_title" in data and data["election_title"] is not None:
+            got = _retyped(data["election_title"])
+            if got:
+                bad.append((rel, f"election_title parsed as {got} — quote it"))
+    return sorted(bad)
+
+
+# --------------------------------------------------------------------------- #
 # Terminology linter: mechanical enforcement of the house canon (CLAUDE.md).
 # Precision over recall — every rule here should be a near-certain mistake.
 # --------------------------------------------------------------------------- #
@@ -1440,6 +1517,20 @@ def main(argv):
         rc = 1
         print(f"repo-hygiene: ⚠️  weak/missing descriptions ({len(weak)}):")
         for rel, msg in weak:
+            print(f"   • {rel}\n       {msg}")
+    retyped = check_yaml_name_types()
+    if not retyped:
+        print("repo-hygiene: ✓ every candidate/contest name survives YAML as a string.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  names retyped by YAML ({len(retyped)}) — PyYAML "
+              "resolves bare scalars with YAML 1.1 rules, so an unquoted")
+        print("              `No` becomes False, `Yes` becomes True and `12:30` "
+              "becomes 750. A ballot-measure contest is the")
+        print("              obvious trip-wire: `expected_winners: [No]` parses as "
+              "`[False]`, so a CORRECT result fails its own")
+        print("              answer key and looks like an engine bug. Quote the name:")
+        for rel, msg in retyped:
             print(f"   • {rel}\n       {msg}")
     terms = check_terminology()
     if not terms:

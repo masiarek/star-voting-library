@@ -153,13 +153,15 @@ Three options, and the cheapest two are not exclusive.
 
 | | Guarantee | Cost |
 |---|---|---|
-| **A hygiene check** — reject any `expected_winners` entry or `election_title` that parses as a non-string | Closes the known hole | ~10 lines, no dependency, minutes |
+| ~~A hygiene check~~ — **built 2026-08-10**: `check_yaml_name_types()` rejects any `expected_winners` entry or `election_title` that parses as a non-string | Closes the known hole | done |
 | **Pydantic models over `safe_load`** — validate types and cross-field rules after parsing | Same practical guarantee, plus cross-field validation, **plus JSON Schema generation for free** | A day; but it *is* D3 |
 | **Restore StrictYAML** — no implicit typing at the parse boundary at all | The strongest guarantee, and the original intent | A schema, a dependency, and reformatting **32 files** |
 
 That last number is worth having measured: StrictYAML forbids flow style, so `expected_winners: [Ben]` would have to become a block list — and **only 32 of the 569 files use flow style; 537 are already block style.** The migration everyone assumes is expensive is two dozen mechanical edits.
 
-**Recommendation: the hygiene check now, Pydantic when D3 is built.** Pydantic covers the same hole, adds the cross-field validation the original design wanted, and emits the JSON Schema that the conformance contract and any non-Python implementation both need — one tool serving three items on this page. StrictYAML remains the purist answer and is cheaper than it looks; it is just narrower in what it buys.
+**Done: the hygiene check.** `check_yaml_name_types()` in [`check_repo_hygiene.py`](../../STARVote_LH_tabulation_engine/tools_adam/scripts/check_repo_hygiene.py), gated by [`test_md_links.py`](../../STARVote_LH_tabulation_engine/tests/test_md_links.py) with a non-vacuous companion that proves it fires on `No`, `Yes`, `12:30` and `null` while sparing a quoted `"No"` and the string `Nan`. All 649 tracked files pass, so the class is now closed going forward rather than merely known.
+
+**Still recommended: Pydantic when D3 is built.** Pydantic covers the same hole, adds the cross-field validation the original design wanted, and emits the JSON Schema that the conformance contract and any non-Python implementation both need — one tool serving three items on this page. StrictYAML remains the purist answer and is cheaper than it looks; it is just narrower in what it buys.
 
 ## Sequencing
 

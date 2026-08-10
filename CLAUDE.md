@@ -147,6 +147,25 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   (e.g., percentages or proportional seats). When you *do* weight, `Count` values
   must be **≥ 6** (avoid collision with 0–5 scores); scaling all weights ×N
   preserves STAR/proportional winners. See `07_Concepts/tips/TIPS_choosing_voter_counts.md`.
+- **QUOTE a candidate or contest name that YAML would retype — machine-checked**
+  (`check_yaml_name_types`, gated by `tests/test_md_links.py`, added 2026-08-10).
+  PyYAML resolves bare scalars with YAML 1.1 rules, so an unquoted `No` arrives as
+  `False`, `Yes` as `True`, `Off` as `False`, `null` as `None`, `1.10` as `1.1`, and
+  `12:30` as **750** (base 60). The corpus is mostly protected *by accident*:
+  candidate names live inside the `ballots: |-` block literal, which YAML hands over
+  as one opaque string for the engine's own parser, so the scalar resolver never sees
+  them — meaning a tidier-looking redesign that promoted candidates to a real YAML
+  list would **reintroduce** the bug. What is genuinely exposed is `expected_winners:`
+  and `election_title:`, which are resolved scalars; the check covers those. The
+  trip-wire is not exotic — the natural way to add a ballot-measure case is a contest
+  whose options are *Yes* and *No*, and then `expected_winners: [No]` parses as
+  `[False]`, so a **correct** winner fails its own answer key and reads like an engine
+  bug. History worth knowing: the project used **StrictYAML** for exactly this reason
+  (*"securely handles the string-to-dictionary parse to avoid type coercion"* — README,
+  May 2026; `from strictyaml import load` in `996016b`), and both the code and the
+  rationale were lost in a later rewrite. The fuller replacement is Pydantic models,
+  which would also emit the JSON Schema a conformance contract wants — see
+  [`star_reference_package.md`](07_Concepts/tabulation_engines/star_reference_package.md).
 - **A ballot's weight goes BEFORE the scores — machine-checked**
   (`check_ballot_weight_side`, gated by `tests/test_md_links.py`). One election is
   written one way everywhere: `Count × Ada,Ben,Cara` over `3 × 5,2,0`. That is the

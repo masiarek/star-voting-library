@@ -231,6 +231,67 @@ def test_grandfather_list_stays_empty():
     )
 
 
+def test_candidate_names_survive_yaml_as_strings():
+    """A candidate name must come back from the parser as a name.
+
+    PyYAML resolves bare scalars with YAML 1.1 rules, so `No` arrives as False,
+    `Yes` as True, `Off` as False, `null` as None, `1.10` as 1.1 and `12:30` as
+    750. The corpus is mostly protected by accident — candidate names live
+    inside the `ballots: |-` block literal, which YAML hands over as one opaque
+    string for the engine's own parser — but `expected_winners` and
+    `election_title` are real resolved scalars.
+
+    The project used StrictYAML for exactly this reason and lost it (see the
+    check's own comment). The trip-wire is not exotic: the natural way to add a
+    ballot-measure case is a contest whose options are Yes and No, and then a
+    CORRECT winner fails its own answer key and reads like an engine bug.
+    """
+    mod = _load_hygiene()
+    bad = mod.check_yaml_name_types()
+    assert not bad, (
+        f"{len(bad)} name(s) retyped by YAML — quote them:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in bad)
+    )
+
+
+def test_yaml_name_type_check_is_not_vacuous():
+    """Prove the gate fires on the coercions that matter and spares real names.
+
+    The names that must stay clean are the ones a naive check would flag: an
+    ordinary quoted string, and a name that merely *looks* typed (`Nan` is a
+    string to PyYAML, unlike `null`).
+    """
+    mod = _load_hygiene()
+    probe = REPO_ROOT / "01_STAR" / "02_Examples" / "cases" / "_yaml_type_probe.yaml"
+    probe.write_text(
+        "election_title: YAML type probe (delete me)\n"
+        "voting_method: STAR\n"
+        "num_winners: 1\n"
+        "scenario_description: >-\n"
+        "  A probe for the YAML implicit-typing gate; it is never tabulated and\n"
+        "  exists only so the check can be proven to fire on a real file.\n"
+        "ballots: |-\n"
+        "  Yes,No,Maybe\n"
+        "  5,2,0\n"
+        "expected_winners:\n"
+        '  - "No"\n'          # ok: quoted, stays a string
+        "  - Nan\n"           # ok: PyYAML leaves this a string
+        "  - No\n"            # caught: -> False
+        "  - Yes\n"           # caught: -> True
+        "  - 12:30\n"         # caught: -> 750 (base 60)
+        "  - null\n",         # caught: -> None
+        encoding="utf-8",
+    )
+    try:
+        hits = [msg for rel, msg in mod.check_yaml_name_types()
+                if rel.endswith("_yaml_type_probe.yaml")]
+    finally:
+        probe.unlink()
+    assert len(hits) == 4, f"expected the four retyped entries, got {hits}"
+    assert any("boolean False" in m for m in hits), hits
+    assert any("750" in m for m in hits), hits
+
+
 def test_ballot_weights_come_before_the_scores():
     """One election is written one way: the bloc count comes first.
 
