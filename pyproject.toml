@@ -15,6 +15,10 @@ dev = [
     "pytest>=8.0",
     "abcvoting>=2.0",
     "mypy>=2.0.0",
+    # Validates the published result contract (star_result.schema.json) against
+    # what the engine's --json mode actually emits. A schema nothing checks is
+    # documentation, not a contract.
+    "jsonschema>=4.21",
 ]
 # BV tooling extras, imported lazily by tools_adam scripts only: ballot-sheet
 # PDFs (playwright, segno) and candidate-name generation (faker).

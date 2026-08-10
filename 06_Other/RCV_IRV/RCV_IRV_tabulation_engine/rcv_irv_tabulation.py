@@ -338,37 +338,19 @@ def build_transfer_block(ranked_rows, result, total):
     return L
 
 
-def run(path, extras=False):
-    """Tabulate and print. Returns the transfer/inactive block as text (or None).
+def tabulate(path):
+    """Count the file and return the result data, printing NOTHING.
 
-    `extras` controls only whether that block is PRINTED. It is always returned,
-    so the LH engine can append it to the always-full `_tabulated` mirror while
-    the on-screen echo stays minimal — the same split the STAR side uses. The
-    standalone CLI passes extras=True: running this file directly is the
-    everything-on view.
+    Split out of `run()` so a machine-readable consumer (the JSON result
+    contract — see `STARVote_LH_tabulation_engine/result_json.py`) gets the
+    same rounds, the same eliminations and the same seeded tie ladder as the
+    printed report, instead of re-deriving them or scraping the text.
+
+    Returns a dict: title, seats, ranked_mode, candidates, ranked_rows
+    (weight, ranking), total ballots, and pyrankvote's `result`.
     """
-    # Elimination ties. pyrankvote's ladder (_cmp_candidate_vote_counts in
-    # pyrankvote/helpers.py) is better than "it flips a coin": on equal first
-    # choices it compares MOST SECOND CHOICES, then thirds, then fourths, and
-    # only reaches random.choice() once it runs out of ranks — structurally the
-    # same shape as the STAR engine's pairwise -> five-star -> lot ladder.
-    # Seed the RNG so that last rung is at least stable run to run; unseeded,
-    # the SAME ballots can elect DIFFERENT winners on consecutive runs, which is
-    # unacceptable for a library whose counts must reproduce.
-    #
-    # KNOWN LIMITATION, and do not overstate what the seed buys. sorted() feeds
-    # the comparator pairs in an order set by the input list, and that list is
-    # built in order of each candidate's FIRST APPEARANCE across the ballot
-    # rows. So a fixed seed pins the SEQUENCE of coin flips, not the CANDIDATE
-    # each flip lands on. When the ladder dies — every candidate tied at every
-    # rank, e.g. a perfect 3-cycle — the winner is the first row's first choice,
-    # and re-ordering the identical ballots elects somebody else. That is an
-    # ANONYMITY failure (who cast which ballot changed the result), and the
-    # report does not disclose it.
-    #
-    # Pinned by tests/test_rcv_irv_tie_order_sensitivity.py; explained in
-    # RCV_IRV_tabulation_engine/README.md ("Known limitation — elimination
-    # ties") and 07_Concepts/topics/ties/batch_elimination.md.
+    # Elimination ties: seed the RNG so the last rung is stable run to run.
+    # See run()'s note for what the seed does and does not buy.
     import random
     random.seed(0)
     title, ballots_text, num_winners = load_ballots_block(path)
@@ -404,6 +386,62 @@ def run(path, extras=False):
         total += weight
 
     if seats > 1:
+        result = pyrankvote.single_transferable_vote(
+            list(cand_objs.values()), pv_ballots, number_of_seats=seats
+        )
+    else:
+        result = pyrankvote.instant_runoff_voting(
+            list(cand_objs.values()), pv_ballots
+        )
+
+    return {
+        "title": title,
+        "seats": seats,
+        "ranked_mode": ranked_mode,
+        "candidates": candidates_names,
+        "ranked_rows": ranked_rows,
+        "total": total,
+        "result": result,
+    }
+
+
+def run(path, extras=False):
+    """Tabulate and print. Returns the transfer/inactive block as text (or None).
+
+    `extras` controls only whether that block is PRINTED. It is always returned,
+    so the LH engine can append it to the always-full `_tabulated` mirror while
+    the on-screen echo stays minimal — the same split the STAR side uses. The
+    standalone CLI passes extras=True: running this file directly is the
+    everything-on view.
+    """
+    # Elimination ties. pyrankvote's ladder (_cmp_candidate_vote_counts in
+    # pyrankvote/helpers.py) is better than "it flips a coin": on equal first
+    # choices it compares MOST SECOND CHOICES, then thirds, then fourths, and
+    # only reaches random.choice() once it runs out of ranks — structurally the
+    # same shape as the STAR engine's pairwise -> five-star -> lot ladder.
+    # Seed the RNG so that last rung is at least stable run to run; unseeded,
+    # the SAME ballots can elect DIFFERENT winners on consecutive runs, which is
+    # unacceptable for a library whose counts must reproduce.
+    #
+    # KNOWN LIMITATION, and do not overstate what the seed buys. sorted() feeds
+    # the comparator pairs in an order set by the input list, and that list is
+    # built in order of each candidate's FIRST APPEARANCE across the ballot
+    # rows. So a fixed seed pins the SEQUENCE of coin flips, not the CANDIDATE
+    # each flip lands on. When the ladder dies — every candidate tied at every
+    # rank, e.g. a perfect 3-cycle — the winner is the first row's first choice,
+    # and re-ordering the identical ballots elects somebody else. That is an
+    # ANONYMITY failure (who cast which ballot changed the result), and the
+    # report does not disclose it.
+    #
+    # Pinned by tests/test_rcv_irv_tie_order_sensitivity.py; explained in
+    # RCV_IRV_tabulation_engine/README.md ("Known limitation — elimination
+    # ties") and 07_Concepts/topics/ties/batch_elimination.md.
+    t = tabulate(path)
+    title, seats, total = t["title"], t["seats"], t["total"]
+    ranked_mode, ranked_rows = t["ranked_mode"], t["ranked_rows"]
+    result = t["result"]
+
+    if seats > 1:
         label = f"STV / Single Transferable Vote (multi-winner — {seats} seats)"
     else:
         label = "RCV / Instant-Runoff Voting (single winner)"
@@ -431,14 +469,6 @@ def run(path, extras=False):
               f"different but equally standard rule.)")
     print()
 
-    if seats > 1:
-        result = pyrankvote.single_transferable_vote(
-            list(cand_objs.values()), pv_ballots, number_of_seats=seats
-        )
-    else:
-        result = pyrankvote.instant_runoff_voting(
-            list(cand_objs.values()), pv_ballots
-        )
     print(result)
 
     winners = result.get_winners()

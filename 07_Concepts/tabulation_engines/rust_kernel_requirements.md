@@ -325,16 +325,18 @@ Everything in Track A and Track B is worth doing whether or not the Rust project
 
 ## Track A — repo work, in Python
 
-| # | Task | Exit criterion |
-|---|---|---|
-| A-1 | Define and document the JSON result schema | Written down, versioned, reviewed |
-| A-2 | Add a `--json` mode to the LH engine emitting it | Every Tier 1 case produces valid JSON |
-| A-3 | Backfill `expected_winners:` on the 48 ballot-carrying cases that lack it | 615 / 615 answered |
-| A-4 | Freeze the method-alias table | One documented list; the corpus normalized against it |
-| A-5 | Write the tiebreak ladders down, per method, per engine | Prose a stranger could implement from |
-| A-6 | Store a JSON fixture per case, generated and checked like the other mirrors | A drift test fails when one goes stale |
+| # | Task | Exit criterion | Status |
+|---|---|---|---|
+| A-1 | Define and document the JSON result schema | Written down, versioned, reviewed | **Done** (2026-08-10) — [`star_result.schema.json`](../../STARVote_LH_tabulation_engine/star_result.schema.json) + [the contract page](result_schema.md) |
+| A-2 | Add a `--json` mode to the LH engine emitting it | Every Tier 1 case produces valid JSON | **Done** (2026-08-10) — 556 of 571 ballot-carrying cases emit valid JSON and match their answer key; 6 are methods this engine does not count, 9 have no key |
+| A-3 | Backfill `expected_winners:` on the 48 ballot-carrying cases that lack it | 615 / 615 answered | Open |
+| A-4 | Freeze the method-alias table | One documented list; the corpus normalized against it | **Mostly done** — `classify_method()` is now the single source, read by both the CLI dispatch and the contract; the corpus is not yet normalized against it |
+| A-5 | Write the tiebreak ladders down, per method, per engine | Prose a stranger could implement from | Open — the contract *reports* the rung that fired; the ladders themselves are still undocumented |
+| A-6 | Store a JSON fixture per case, generated and checked like the other mirrors | A drift test fails when one goes stale | Open — [`tests/test_result_json.py`](../../STARVote_LH_tabulation_engine/tests/test_result_json.py) currently rebuilds and re-validates every case rather than diffing stored fixtures, which catches drift but not silent contract changes |
 
 A-1 and A-2 are the load-bearing ones. A-3 through A-5 are small.
+
+**What building A-1/A-2 turned up**, since it bears on the rest of this page: the contract is not just packaging. Extending the answer key past the winner immediately found a real defect — multi-winner Choose-One counts *marks* while single-winner Choose-One *spoils an overvote*, and deriving one from the other elected the wrong slate on five block-voting cases. That bug was invisible to 567 winner-only answer keys because it was introduced in the new code, but it is exactly the shape of thing a second implementation would hit and the old suite could not have caught in *either* engine. The tie-break field is the same argument: `tiebreaks: []` is a positive claim that no rung fired, and a right-winner-wrong-path result fails it.
 
 ## Track B — write the rules in prose, before code
 
@@ -479,9 +481,9 @@ Two different systems, two different scopes, and only one of them is a monster. 
 
 **What a team needs:** a published set of elections with known-correct results, broad enough to exercise every rule and every tie rung, that an implementation can be run against on day one.
 
-**What exists:** 615 case files, 567 with machine-checkable answer keys, already cross-verified across [the LH engine](LH_starvote/README.md), [BetterVoting](BV/README.md), [`pref_voting`](cross_checking_with_pref_voting.md), [`pyrankvote`](RCV_IRV/README.md), [RCTab](rctab.md), and [rcv-lab.org](rcv_lab_irv_crosscheck.md). This is, as far as this repo knows, the largest cross-verified STAR conformance corpus anywhere — and it is currently presented as teaching material rather than as a test suite.
+**What exists:** 615 case files, 567 with machine-checkable answer keys, already cross-verified across [the LH engine](LH_starvote/README.md), [BetterVoting](BV/README.md), [`pref_voting`](cross_checking_with_pref_voting.md), [`pyrankvote`](RCV_IRV/README.md), [RCTab](rctab.md), and [rcv-lab.org](rcv_lab_irv_crosscheck.md). This is, as far as this repo knows, the largest cross-verified STAR conformance corpus anywhere — and it was, until 2026-08-10, presented as teaching material rather than as a test suite. **The result contract and the implementer-facing front page now exist**: [the result contract](result_schema.md), `--json`, and a published schema. What remains is A-3 through A-6 and the executable specification (S-2).
 
-**The work:** finish Track A (the JSON result contract, the 48 missing answer keys, the alias table), then add a front page addressed to *implementers* rather than learners: here is the format, here is how to run your engine against it, here is what a pass means. Weeks, in Python, and it is the same work already recommended.
+**The work:** finish Track A (the 48 missing answer keys, normalizing the corpus against the alias table, the tie-break ladders in prose). Weeks, in Python, and it is the same work already recommended.
 
 **Why it is stone number one:** it is 90% done, it is unglamorous enough that nobody else will do it, and whoever holds the accepted test deck when a jurisdiction moves is in the room.
 

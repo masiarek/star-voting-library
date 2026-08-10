@@ -78,6 +78,8 @@ Tag every existing case with the clauses it exercises; generate the list of clau
 
 The existing corpus, re-fronted for a reviewer rather than a learner: the format, how to run your own engine against it, what a pass means, what each case proves. Plus the JSON result contract that makes engine comparison mechanical.
 
+**Started 2026-08-10.** The result contract half is built — [the result contract page](result_schema.md), a published [JSON Schema](../../STARVote_LH_tabulation_engine/star_result.schema.json), and `--json` on the engine, covering all six method families the engine counts. Still open: the 48 unanswered cases, per-case *what this proves* notes, and the executable specification (D1) an implementer would otherwise have to reverse-engineer from the cases.
+
 **Done when:** someone else's tabulator can be scored against it without asking us anything.
 
 ### D4 — A logic-and-accuracy test deck

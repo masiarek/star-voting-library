@@ -172,6 +172,101 @@ METHOD_BY_NAME = {
     "allocated score voting": starvote.allocated,
 }
 
+# ---------------------------------------------------------------------------
+# The method-alias table — ONE list, in one place.
+#
+# These name sets used to be spelled out inline in __main__'s dispatch, which
+# meant any second consumer (the JSON result builder, a conformance runner, a
+# survey script) had to copy them and could silently drift. `classify_method()`
+# is the single source: __main__ dispatches from it, and `result_json.py`
+# reports the normalized family in the machine-readable result.
+# ---------------------------------------------------------------------------
+IRV_NAMES = {"rcv", "irv", "rcv_irv", "rcv-irv", "rcv/irv",
+             "ranked_choice", "instant_runoff"}
+STV_NAMES = {"stv", "single_transferable_vote", "rcv_stv"}
+RANKED_ROBIN_NAMES = {"rankedrobin", "ranked_robin", "rcv_rr", "rcvrr", "rr",
+                      "copeland", "consensus", "consensus_voting",
+                      "consensus_choice"}
+PLURALITY_NAMES = {"plurality", "choose_one", "chooseone", "choose1",
+                   "fptp", "first_past_the_post"}
+APPROVAL_NAMES = {"approval", "approve", "av", "approval_voting",
+                  "approval_single_winner", "approval_multi_winner"}
+
+
+def ranked_ballot_body(ballots_text):
+    """The ballot rows with trailing '# comments' stripped.
+
+    Ranked detection keys on '>', and a comment may legitimately contain an
+    '->' arrow, so the test is always run against this body, never the raw text.
+    """
+    return "\n".join(ln.split("#")[0] for ln in (ballots_text or "").splitlines())
+
+
+def classify_method(method_name, ballots_text=""):
+    """Resolve a file's `voting_method:` (plus its ballot style) to one family.
+
+    Returns a dict with the normalized name, the boolean flags __main__'s
+    dispatch uses, and a single `family` label for machine-readable output:
+    `score` · `approval` · `plurality` · `ranked_robin` · `irv` · `stv`.
+
+    `known` is False for an explicit method name we do not recognize — the
+    caller decides whether that is an error (it is, in the CLI: silently
+    falling back to STAR turned typos into wrong counts).
+    """
+    import difflib
+
+    declared = str(method_name or "").strip()
+    lowered = declared.lower()
+    # Normalize BOTH hyphens and spaces to underscores so multi-word names
+    # ("Bloc STAR", "Ranked Robin") match the tables above and the score names.
+    norm = lowered.replace("-", "_").replace(" ", "_")
+
+    is_rcv = lowered in (IRV_NAMES | STV_NAMES)
+    is_stv = lowered in STV_NAMES
+    # Approval is matched fuzzily on purpose (tolerant of "Arroval").
+    is_approval = (
+        "approval" in norm
+        or norm in {"approve", "av"}
+        or bool(difflib.get_close_matches(norm, ["approval"], cutoff=0.6))
+    )
+    is_rr = norm in RANKED_ROBIN_NAMES
+    is_plurality = norm in PLURALITY_NAMES
+
+    known_score_names = {k.replace(" ", "_") for k in METHOD_BY_NAME}
+    known = bool(declared) and (
+        is_rcv or is_approval or is_rr or is_plurality
+        or norm in known_score_names
+    )
+
+    ranked_ballots = ">" in ranked_ballot_body(ballots_text)
+
+    if is_rr:
+        family = "ranked_robin"
+    elif is_plurality:
+        family = "plurality"
+    elif is_approval:
+        family = "approval"
+    elif is_stv:
+        family = "stv"
+    elif is_rcv or (not declared and ranked_ballots):
+        family = "irv"
+    else:
+        family = "score"
+
+    return {
+        "declared": declared or None,
+        "declared_lower": lowered,
+        "normalized": norm,
+        "family": family,
+        "is_rcv": is_rcv,
+        "is_stv": is_stv,
+        "is_approval": is_approval,
+        "is_rr": is_rr,
+        "is_plurality": is_plurality,
+        "ranked_ballots": ranked_ballots,
+        "known": known,
+    }
+
 
 def _find_race(data, race_index=0):
     """Locate the race-like mapping that holds `ballots`, tolerating both the
@@ -1685,6 +1780,34 @@ def _approval_raw_problems(ballots_text):
     return headers, problems
 
 
+def approval_tally(candidates, ballots, seats=1, priority=None):
+    """The Approval count itself — no printing.
+
+    Any non-zero mark is one approval; the `seats` most-approved candidates
+    win, ties broken by `priority` (the published lot order, else CSV column
+    order). Shared with `result_json.py` so the machine-readable result cannot
+    drift from the printed one.
+    """
+    counts = {c: sum(1 for b in ballots if b.get(c, 0) > 0) for c in candidates}
+    order = [c for c in (priority or candidates) if c in candidates]
+    for c in candidates:
+        if c not in order:
+            order.append(c)
+    ranked = sorted(candidates, key=lambda c: (-counts[c], order.index(c)))
+
+    seats = max(1, min(int(seats), len(candidates)))
+    winners = ranked[:seats]
+
+    total = len(ballots)
+    abstentions = sum(1 for b in ballots
+                      if all(b.get(c, 0) == 0 for c in candidates))
+    return {
+        "counts": counts, "order": order, "ranked": ranked,
+        "seats": seats, "winners": winners,
+        "total": total, "abstentions": abstentions,
+    }
+
+
 def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
     """
     Tabulate an Approval Voting election. Ballots are approvals, so ANY non-zero
@@ -1720,20 +1843,11 @@ def tabulate_approval(ballots_text, seats=1, priority=None, options=None):
         print("Error: No valid ballots found in input.\n       Separate columns with commas (recommended), tabs, or consistent spaces —\n       e.g. a header 'A, B, C' then rows like '5, 4, 0'. Other delimiters (like\n       '|' or ';') aren't supported, and every row needs the same number of\n       values as the header.")
         sys.exit(1)
 
-    counts = {c: sum(1 for b in ballots if b.get(c, 0) > 0) for c in candidates}
-    order = [c for c in (priority or candidates) if c in candidates]
-    for c in candidates:
-        if c not in order:
-            order.append(c)
-    ranked = sorted(candidates, key=lambda c: (-counts[c], order.index(c)))
-
-    seats = max(1, min(int(seats), len(candidates)))
-    winners = ranked[:seats]
+    t = approval_tally(candidates, ballots, seats=seats, priority=priority)
+    counts, order, ranked = t["counts"], t["order"], t["ranked"]
+    seats, winners = t["seats"], t["winners"]
+    total, abstentions = t["total"], t["abstentions"]
     label = "single winner" if seats == 1 else f"{seats} winners"
-
-    total = len(ballots)
-    abstentions = sum(1 for b in ballots
-                      if all(b.get(c, 0) == 0 for c in candidates))
 
     print(f"\n{COLOR_HEADER}--- Approval Voting ({label}) ---{COLOR_RESET}")
     print(f" Tabulating {total} ballots (any non-zero score = approval).")
@@ -1926,24 +2040,15 @@ def ballots_for_pairwise(ballots_text):
     return candidates, ballots, display_rows, False
 
 
-def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=None,
-                     silent=False, out_path=None, num_winners=1):
-    """Tabulate and report a Ranked Robin (RCV-RR / Copeland) election.
+def ranked_robin_tally(ballots_text, lot_numbers=None, num_winners=1):
+    """The Ranked Robin count itself — no printing, no files.
 
-    Ranked Robin reads the *whole* ballot: it compares every pair of candidates
-    head-to-head and elects whoever wins the most matchups (ties broken by total
-    margin, then by lot order). Prints the ballots, the round-robin (pairwise)
-    table, and each candidate's win-loss record. Accepts ranked ballots
-    ("A>B>C") or score ballots; both reduce to the same pairwise comparison.
-
-    `silent=True` suppresses the on-screen echo (used when generating the report
-    as an auxiliary mirror during a STAR run). `out_path` overrides the mirror
-    location (default: the standard '<stem>_tabulated.txt'); pass the method-tagged
-    aux path so the RR report doesn't clobber the STAR copy.
+    Split out of `run_ranked_robin()` so the machine-readable result
+    (`result_json.py`) reports the SAME record, the same Copeland scores and
+    the same seat order the printed report does, rather than a second
+    implementation of the ladder that can drift from it.
     """
-    from collections import Counter as _Counter
-
-    candidates, ballots, display_rows, _is_ranked = ballots_for_pairwise(ballots_text)
+    candidates, ballots, display_rows, is_ranked = ballots_for_pairwise(ballots_text)
     n = len(ballots)
     priority = [c for c in (lot_numbers or candidates) if c in candidates]
     for c in candidates:
@@ -1994,12 +2099,51 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     # then total margin, then lot). num_winners is clamped to the field size.
     num_winners = max(1, min(int(num_winners or 1), len(candidates)))
     winners = order[:num_winners]
-    seats_label = "single winner" if num_winners == 1 else f"{num_winners} winners"
     # Did the last seat come down to a lot tie-break? (Nth and (N+1)th identical on
     # Copeland score AND margin, so only the pre-published lot order separated them.)
     cutoff_lot_tie = (num_winners < len(candidates)
                       and cope[order[num_winners - 1]] == cope[order[num_winners]]
                       and margin[order[num_winners - 1]] == margin[order[num_winners]])
+
+    return {
+        "candidates": candidates, "ballots": ballots,
+        "display_rows": display_rows, "is_ranked": is_ranked,
+        "n": n, "priority": priority, "matrix": matrix,
+        "wins": wins, "losses": losses, "ties": ties, "margin": margin,
+        "raw_pairs": raw_pairs, "copeland": cope, "order": order,
+        "top": top, "leaders": leaders, "winner": winner, "winners": winners,
+        "num_winners": num_winners, "cutoff_lot_tie": cutoff_lot_tie,
+    }
+
+
+def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=None,
+                     silent=False, out_path=None, num_winners=1):
+    """Tabulate and report a Ranked Robin (RCV-RR / Copeland) election.
+
+    Ranked Robin reads the *whole* ballot: it compares every pair of candidates
+    head-to-head and elects whoever wins the most matchups (ties broken by total
+    margin, then by lot order). Prints the ballots, the round-robin (pairwise)
+    table, and each candidate's win-loss record. Accepts ranked ballots
+    ("A>B>C") or score ballots; both reduce to the same pairwise comparison.
+
+    `silent=True` suppresses the on-screen echo (used when generating the report
+    as an auxiliary mirror during a STAR run). `out_path` overrides the mirror
+    location (default: the standard '<stem>_tabulated.txt'); pass the method-tagged
+    aux path so the RR report doesn't clobber the STAR copy.
+    """
+    from collections import Counter as _Counter
+
+    t = ranked_robin_tally(ballots_text, lot_numbers=lot_numbers,
+                           num_winners=num_winners)
+    candidates, ballots = t["candidates"], t["ballots"]
+    display_rows, _is_ranked = t["display_rows"], t["is_ranked"]
+    n, priority, matrix = t["n"], t["priority"], t["matrix"]
+    wins, losses, ties, margin = t["wins"], t["losses"], t["ties"], t["margin"]
+    raw_pairs, cope, order = t["raw_pairs"], t["copeland"], t["order"]
+    top, leaders = t["top"], t["leaders"]
+    winner, winners = t["winner"], t["winners"]
+    num_winners, cutoff_lot_tie = t["num_winners"], t["cutoff_lot_tie"]
+    seats_label = "single winner" if num_winners == 1 else f"{num_winners} winners"
 
     # --- Aligned head-to-head list (names padded into columns) ---
     nw = max((len(c) for c in candidates), default=4)
@@ -2222,17 +2366,12 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     return winners if num_winners > 1 else winner
 
 
-def run_plurality_single(ballots_text, file_path=None, lot_numbers=None,
-                         silent=False, out_path=None):
-    """Single-winner Choose-One (Plurality) — counted the way it is actually run:
-    show the marked ballots, count the marks, most marks wins.
+def plurality_single_tally(ballots_text, lot_numbers=None):
+    """Single-winner Choose-One count — no printing.
 
-    This used to fall through to the STAR path, which is arithmetically
-    equivalent for single-mark ballots but prints a Scoring Round and an
-    Automatic Runoff — machinery choose-one does not have, and confusing on the
-    one method that has none. Row labels come from each ballot row's trailing
-    `#` comment when present ("# Sushi-lover"), so the printed grid matches the
-    ballot as a reader would draw it.
+    Note the rule this pins, which is NOT "each ballot's highest score": a
+    ballot marking two candidates is an OVERVOTE and counts for nobody. Shared
+    with `result_json.py` so the machine-readable result says the same.
     """
     candidates, ballots, _ = parse_ballots_from_string(ballots_text)
     priority = [c for c in (lot_numbers or candidates) if c in candidates]
@@ -2250,6 +2389,77 @@ def run_plurality_single(ballots_text, file_path=None, lot_numbers=None,
              for c in candidates}
     n = len(ballots)
     order = sorted(candidates, key=lambda c: (-votes[c], priority.index(c)))
+    top = votes[order[0]] if order else 0
+    tied = [c for c in order if votes[c] == top]
+    return {
+        "candidates": candidates, "ballots": ballots, "priority": priority,
+        "marks": marks, "overvotes": over, "blanks": blank,
+        "votes": votes, "n": n, "order": order,
+        "tied_at_top": tied,
+        "winner": (tied[0] if len(tied) == 1 else min(tied, key=priority.index))
+        if order else None,
+    }
+
+
+def plurality_multi_tally(ballots_text, lot_numbers=None, num_winners=2):
+    """Multi-winner Plurality (SNTV / Block / Limited) — no printing.
+
+    Every MARK is a vote here (unlike the single-winner rule above, which
+    spoils an overvote): the ballot styles differ, the tally does not, so the
+    variant is identified from votes-per-voter rather than counted differently.
+    """
+    candidates, ballots, _ = parse_ballots_from_string(ballots_text)
+    priority = [c for c in (lot_numbers or candidates) if c in candidates]
+    for c in candidates:
+        if c not in priority:
+            priority.append(c)
+    votes = {c: sum(1 for b in ballots if b.get(c, 0) > 0) for c in candidates}
+    order = sorted(candidates, key=lambda c: (-votes[c], priority.index(c)))
+    num_winners = max(1, min(int(num_winners or 1), len(candidates)))
+    winners = order[:num_winners]
+    n = len(ballots)
+    abstain = sum(1 for b in ballots if not any(b.get(c, 0) > 0 for c in candidates))
+    cutoff_lot_tie = (num_winners < len(candidates)
+                      and votes[order[num_winners - 1]] == votes[order[num_winners]])
+
+    # Which multi-member plurality variant this is, from votes-per-voter:
+    #   1 mark -> SNTV · k == seats -> Block voting · 1 < k < seats -> Limited.
+    per = [sum(1 for c in candidates if b.get(c, 0) > 0) for b in ballots]
+    cast = {k for k in per if k > 0}
+    k = next(iter(cast)) if len(cast) == 1 else None
+    if cast == {1}:
+        variant = "SNTV (single non-transferable vote)"
+    elif k == num_winners:
+        variant = "Block Voting (plurality-at-large)"
+    elif k is not None and 1 < k < num_winners:
+        variant = "Limited Voting"
+    else:
+        variant = "Multi-winner Plurality"
+    return {
+        "candidates": candidates, "ballots": ballots, "priority": priority,
+        "votes": votes, "order": order, "num_winners": num_winners,
+        "winners": winners, "n": n, "abstain": abstain,
+        "cutoff_lot_tie": cutoff_lot_tie, "votes_per_voter": k,
+        "variant": variant,
+    }
+
+
+def run_plurality_single(ballots_text, file_path=None, lot_numbers=None,
+                         silent=False, out_path=None):
+    """Single-winner Choose-One (Plurality) — counted the way it is actually run:
+    show the marked ballots, count the marks, most marks wins.
+
+    This used to fall through to the STAR path, which is arithmetically
+    equivalent for single-mark ballots but prints a Scoring Round and an
+    Automatic Runoff — machinery choose-one does not have, and confusing on the
+    one method that has none. Row labels come from each ballot row's trailing
+    `#` comment when present ("# Sushi-lover"), so the printed grid matches the
+    ballot as a reader would draw it.
+    """
+    t = plurality_single_tally(ballots_text, lot_numbers=lot_numbers)
+    candidates, ballots, priority = t["candidates"], t["ballots"], t["priority"]
+    marks, over, blank = t["marks"], t["overvotes"], t["blanks"]
+    votes, n, order = t["votes"], t["n"], t["order"]
 
     # Row labels come from each raw row's trailing `#` comment — usable only when
     # the rows map 1:1 to ballots (i.e. no weighted rows). Otherwise collapse
@@ -2330,37 +2540,15 @@ def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
     vote): each voter marks one candidate; the N candidates with the most
     first-choice votes win. Ties broken by lot order. (Single-winner Plurality
     goes through the STAR path, which is equivalent for one seat.)"""
-    candidates, ballots, _ = parse_ballots_from_string(ballots_text)
-    priority = [c for c in (lot_numbers or candidates) if c in candidates]
-    for c in candidates:
-        if c not in priority:
-            priority.append(c)
-    votes = {c: sum(1 for b in ballots if b.get(c, 0) > 0) for c in candidates}
-    order = sorted(candidates, key=lambda c: (-votes[c], priority.index(c)))
-    num_winners = max(1, min(int(num_winners or 1), len(candidates)))
-    winners = order[:num_winners]
-    n = len(ballots)
-    abstain = sum(1 for b in ballots if not any(b.get(c, 0) > 0 for c in candidates))
-    cutoff_lot_tie = (num_winners < len(candidates)
-                      and votes[order[num_winners - 1]] == votes[order[num_winners]])
-
-    # Identify which multi-member plurality variant this is, from votes-per-voter
-    # (the tally — top-N by marks — is identical; only the ballots differ):
-    #   1 mark        -> SNTV (single non-transferable vote)
-    #   k == seats    -> Block voting / plurality-at-large
-    #   1 < k < seats -> Limited voting
-    #   mixed / other -> generic multi-winner Plurality
-    per = [sum(1 for c in candidates if b.get(c, 0) > 0) for b in ballots]
-    cast = {k for k in per if k > 0}
-    k = next(iter(cast)) if len(cast) == 1 else None
-    if cast == {1}:
-        vlabel, vline = "SNTV (single non-transferable vote)", "First-choice votes"
-    elif k == num_winners:
-        vlabel, vline = "Block Voting (plurality-at-large)", "Votes"
-    elif k is not None and 1 < k < num_winners:
-        vlabel, vline = "Limited Voting", "Votes"
-    else:
-        vlabel, vline = "Multi-winner Plurality", "Votes"
+    t = plurality_multi_tally(ballots_text, lot_numbers=lot_numbers,
+                              num_winners=num_winners)
+    candidates, ballots, priority = t["candidates"], t["ballots"], t["priority"]
+    votes, order = t["votes"], t["order"]
+    num_winners, winners = t["num_winners"], t["winners"]
+    n, abstain, cutoff_lot_tie = t["n"], t["abstain"], t["cutoff_lot_tie"]
+    k, vlabel = t["votes_per_voter"], t["variant"]
+    vline = ("First-choice votes"
+             if vlabel.startswith("SNTV") else "Votes")
     banner = f"--- {vlabel} — {num_winners} winners ---"
     winners_line = f"Winners — {vlabel}, {num_winners} seats:"
 
@@ -3759,6 +3947,11 @@ if __name__ == "__main__":
     # --full: put the everything-on render (the same one the _tabulated mirror
     # always gets) on screen too, ignoring the defaults and the file's options.
     FULL_RENDER = "--full" in args
+    # --json: emit the machine-readable result contract and nothing else — no
+    # report, no `_tabulated` mirror. This is the surface a second engine (in
+    # any language) diffs against; see result_json.py and
+    # 07_Concepts/tabulation_engines/result_schema.md.
+    JSON_MODE = "--json" in args
     positional = [a for a in args if not a.startswith("-")]
     BALLOTS_FILE = positional[0] if positional else None
 
@@ -3785,6 +3978,15 @@ if __name__ == "__main__":
                 + "\n       _tabulated files are regenerated by re-running their YAML."
             )
             sys.exit(1)
+
+    if JSON_MODE:
+        if not BALLOTS_FILE:
+            print("Error: --json needs an election file "
+                  "(e.g. starvote_larry_hastings.py case.yaml --json).")
+            sys.exit(1)
+        import result_json
+        print(result_json.dumps(BALLOTS_FILE))
+        sys.exit(0)
 
     csv_input = """
 Memphis,Nashville,Chattanooga,Knoxville
@@ -3813,44 +4015,24 @@ Memphis,Nashville,Chattanooga,Knoxville
         # ballot style), so one command routes STAR / RCV-IRV / Approval files.
         import difflib
 
-        _mname = str(election.get("method_name") or "").strip().lower()
-        _is_rcv = _mname in {"rcv", "irv", "rcv_irv", "rcv-irv", "rcv/irv",
-                             "ranked_choice", "instant_runoff",
-                             "stv", "single_transferable_vote", "rcv_stv"}
-        # Approval and its explicit single/multi-winner variants, tolerant of
-        # typos like "Arroval". A name carrying "multi"/"single" must agree with
-        # num_winners (checked below).
-        # Normalize BOTH hyphens and spaces to underscores so multi-word method
-        # names ("Bloc STAR", "Ranked Robin") match `_known_score_names` below
-        # (which is built with spaces -> underscores). Without the space rule the
-        # validator rejected "Bloc STAR" even though METHOD_BY_NAME resolves it.
-        _norm = _mname.replace("-", "_").replace(" ", "_")
-        _is_approval = (
-            "approval" in _norm
-            or _norm in {"approve", "av"}
-            or bool(difflib.get_close_matches(_norm, ["approval"], cutoff=0.6))
-        )
-
-        # Ranked Robin (= RCV-RR = Copeland = Consensus Voting): a Condorcet
-        # round-robin on the SAME ranked ballot as RCV-IRV, but counted by
-        # head-to-head wins. First-class here so a ranked file labeled Ranked
-        # Robin prints the round-robin (ballots + pairwise table + win-loss
-        # record), NOT the IRV elimination rounds.
-        _is_rr = _norm in {
-            "rankedrobin", "ranked_robin", "rcv_rr", "rcvrr", "rr",
-            "copeland", "consensus", "consensus_voting", "consensus_choice",
-        }
-
-        # Choose-One (Plurality): an honest label for 0/1 single-mark ballots,
-        # tabulated via the STAR path (equivalent for single-mark ballots).
-        _is_plurality = _norm in {"plurality", "choose_one", "chooseone",
-                                  "choose1", "fptp", "first_past_the_post"}
+        # One alias table, defined once near METHOD_BY_NAME — see
+        # classify_method(). Approval is matched fuzzily (tolerant of typos like
+        # "Arroval"); a name carrying "multi"/"single" must agree with
+        # num_winners (checked below). Ranked Robin (= RCV-RR = Copeland =
+        # Consensus Voting) counts the SAME ranked ballot as RCV-IRV by
+        # head-to-head wins, so it is dispatched before the IRV branch below.
+        # Choose-One (Plurality) is an honest label for 0/1 single-mark ballots.
+        _cls = classify_method(election.get("method_name"), csv_input)
+        _mname = _cls["declared_lower"]
+        _norm = _cls["normalized"]
+        _is_rcv = _cls["is_rcv"]
+        _is_approval = _cls["is_approval"]
+        _is_rr = _cls["is_rr"]
+        _is_plurality = _cls["is_plurality"]
 
         # An EXPLICIT voting_method must be one we recognize. Silently falling
         # back to STAR turned typos ("STARR", "Aproval") into wrong counts.
-        _known_score_names = {k.replace(" ", "_") for k in METHOD_BY_NAME}
-        if _mname and not (_is_rcv or _is_approval or _is_rr or _is_plurality
-                           or _norm in _known_score_names):
+        if _mname and not _cls["known"]:
             _valid = ["STAR", "Approval", "RankedRobin", "RCV_IRV", "STV",
                       "Plurality", "Bloc STAR", "sss", "rrv", "allocated"]
             _close = difflib.get_close_matches(

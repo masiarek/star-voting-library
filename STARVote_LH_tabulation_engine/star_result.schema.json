@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://masiarek.github.io/star-voting-library/STARVote_LH_tabulation_engine/star_result.schema.json",
+  "title": "STAR-voting-library tabulation result",
+  "description": "The machine-readable result of counting ONE election file with ONE method. Emitted by `starvote_larry_hastings.py <file> --json`. An implementation conforms on a case when its result validates against this schema and agrees with the reference result on `result.winners` and on every `rounds` value the method actually uses. Prose contract, versioning policy and worked examples: 07_Concepts/tabulation_engines/result_schema.md",
+  "type": "object",
+  "required": ["schema_version", "source", "election", "result", "rounds"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Version of THIS contract, not of any engine. patch = wording; minor = field added (old readers keep working); major = field removed or re-meant."
+    },
+    "source": {
+      "type": "object",
+      "required": ["file", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "description": "Basename of the election file counted." },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Hash of the exact bytes counted. Two results are comparable only if this matches — it is what stops a stale fixture from being read as a disagreement."
+        }
+      }
+    },
+    "election": {
+      "type": "object",
+      "required": ["method", "family", "seats", "candidates", "ballots_cast"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": ["string", "null"] },
+        "declared_method": {
+          "type": ["string", "null"],
+          "description": "Verbatim `voting_method:` from the file, before alias resolution. null when the file declared none (the engine then defaults to STAR, or to RCV-IRV for ranked ballots)."
+        },
+        "method": {
+          "type": "string",
+          "description": "The declared method normalized (lowercased, hyphens and spaces to underscores). Alias table: classify_method() in starvote_larry_hastings.py."
+        },
+        "family": {
+          "type": "string",
+          "enum": ["score", "approval", "plurality", "ranked_robin", "irv", "stv"],
+          "description": "Which count ran. Determines which `rounds` keys are present."
+        },
+        "seats": { "type": "integer", "minimum": 1 },
+        "candidates": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "In ballot order (the header row's left-to-right sequence, or first appearance on ranked ballots). This order IS the default tie-break priority when no lot order is published."
+        },
+        "ballots_cast": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Ballots after weight expansion — a `12 × 5,0,3` row is twelve ballots, not one."
+        },
+        "max_score": {
+          "type": ["integer", "null"],
+          "description": "Score ceiling for score ballots (5 in this library — a teaching guardrail, not an engine limit). null for methods with no score scale."
+        },
+        "lot_order": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "The published tie-breaking lot, when the file pins one. null means ballot order was used."
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["winners"],
+      "additionalProperties": false,
+      "properties": {
+        "winners": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "In the order elected. For a single-winner method, exactly one."
+        },
+        "expected_winners": {
+          "type": ["array", "null"],
+          "description": "The file's own answer key, if it carries one. Not an output of the count — it is what the count is checked against."
+        },
+        "matches_expected": {
+          "type": ["boolean", "null"],
+          "description": "null when there is no answer key. 'We did not check' and 'we checked and it failed' must not look alike."
+        }
+      }
+    },
+    "rounds": {
+      "type": "object",
+      "description": "The count itself. Which keys appear is fixed by election.family: score -> scoring (+ finalists/runoff for single-winner STAR); approval -> approval, abstentions; plurality -> votes, variant, votes_per_voter; ranked_robin -> record, smith_set; irv/stv -> irv_rounds, elimination_order (+ quota for STV).",
+      "properties": {
+        "scoring": { "$ref": "#/$defs/tally" },
+        "finalists": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "The two candidates the Automatic Runoff actually used — which is NOT always the top two by score; see tiebreaks."
+        },
+        "runoff": {
+          "type": "object",
+          "required": ["finalists", "equal_support", "decided_voters", "majority"],
+          "properties": {
+            "finalists": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "object",
+                "required": ["candidate", "preferred_by"],
+                "properties": {
+                  "candidate": { "type": "string" },
+                  "preferred_by": { "type": "integer", "minimum": 0 }
+                }
+              }
+            },
+            "equal_support": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Ballots scoring the two finalists equally: no preference between them. Excluded from the denominator."
+            },
+            "decided_voters": { "type": "integer", "minimum": 0 },
+            "ballots_cast": { "type": "integer", "minimum": 0 },
+            "majority": {
+              "type": "integer",
+              "description": "Strict majority OF THE DECIDED VOTERS (decided // 2 + 1) — the denominator the report prints. Not a majority of ballots cast."
+            },
+            "tied": { "type": "boolean" }
+          }
+        },
+        "approval": { "$ref": "#/$defs/tally" },
+        "votes": { "$ref": "#/$defs/tally" },
+        "variant": {
+          "type": "string",
+          "description": "Which multi-member plurality this is (SNTV / Block / Limited). The tally is top-N by marks in every case; only the ballot differs."
+        },
+        "votes_per_voter": { "type": ["integer", "null"] },
+        "overvotes": {
+          "type": "integer",
+          "description": "Single-winner Choose-One only: ballots marking more than one candidate, which count for nobody."
+        },
+        "blanks": { "type": "integer" },
+        "abstentions": { "type": "integer" },
+        "undervotes": { "type": "integer" },
+        "record": {
+          "type": "array",
+          "description": "Ranked Robin, in finishing order.",
+          "items": {
+            "type": "object",
+            "required": ["candidate", "wins", "losses", "draws", "copeland", "margin"],
+            "properties": {
+              "candidate": { "type": "string" },
+              "wins": { "type": "integer" },
+              "losses": { "type": "integer" },
+              "draws": { "type": "integer" },
+              "copeland": {
+                "type": "number",
+                "description": "wins + 0.5 * draws — the academic tally, and what BetterVoting and pref_voting both score. Ranking on raw wins instead is the one convention that disagrees."
+              },
+              "margin": { "type": "integer" },
+              "beats": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "smith_set": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Smallest group whose every member beats everyone outside it. Descriptive for Ranked Robin (Smith-efficient); a genuine pass/fail for IRV."
+        },
+        "irv_rounds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["round", "tallies", "exhausted"],
+            "properties": {
+              "round": { "type": "integer", "minimum": 1 },
+              "tallies": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["candidate", "votes", "status"],
+                  "properties": {
+                    "candidate": { "type": "string" },
+                    "votes": { "type": "number" },
+                    "status": { "type": "string" }
+                  }
+                }
+              },
+              "exhausted": {
+                "type": "number",
+                "description": "Ballots that have stopped counting: cast minus still active. The number a round table never prints, and the one an IRV 'majority' has to be reconciled against."
+              },
+              "eliminated_this_round": { "type": "array", "items": { "type": "string" } },
+              "elected_this_round": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "elimination_order": {
+          "type": "array",
+          "description": "Read back from the count, never recomputed — a recomputed order can contradict the rounds above it when a tie was settled by the second-choices ladder.",
+          "items": {
+            "type": "object",
+            "required": ["round", "candidate"],
+            "properties": {
+              "round": { "type": "integer" },
+              "candidate": { "type": "string" }
+            }
+          }
+        },
+        "ballot_source": { "type": "string" },
+        "quota": {
+          "type": "object",
+          "description": "STV only. Two published Droop rules exist and they differ by one vote; name which one produced the count.",
+          "properties": {
+            "rule": { "type": "string" },
+            "value": { "type": "number" },
+            "hand_count_droop": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "tiebreaks": {
+      "type": "array",
+      "description": "Every point where the ballots alone did not decide. EMPTY is a real claim: it says nothing was broken by a rung. This is the field that makes a right-winner-wrong-path result detectable.",
+      "items": {
+        "type": "object",
+        "required": ["stage", "tied", "rung"],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": ["finalists", "winner", "seat_cutoff", "copeland_leaders", "elimination"]
+          },
+          "tied": { "type": "array", "items": { "type": "string" } },
+          "at": { "type": ["number", "string", "null"], "description": "The value they tied on." },
+          "rung": {
+            "type": "string",
+            "description": "Which rung resolved it. Free text because the ladders differ per method AND per engine — LH breaks a Copeland tie by total margin then lot, BetterVoting by head-to-head. That divergence is data, not an error."
+          },
+          "advanced": { "type": "array", "items": { "type": "string" } },
+          "eliminated": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "pairwise": {
+      "type": "object",
+      "description": "Full head-to-head matrix. Part of the count for Ranked Robin; informational for the others, but it is what a conformance run needs to check Condorcet and Smith claims about a result.",
+      "required": ["candidates", "prefer"],
+      "properties": {
+        "candidates": { "type": "array", "items": { "type": "string" } },
+        "prefer": {
+          "type": "object",
+          "description": "prefer[A][B] = how row A fares against column B.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["for", "equal_support", "against"],
+              "properties": {
+                "for": { "type": "integer" },
+                "equal_support": { "type": "integer" },
+                "against": { "type": "integer" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "engine": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "starvote_version": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "$defs": {
+    "tally": {
+      "type": "array",
+      "description": "One row per candidate, descending by value, ties in ballot order.",
+      "items": {
+        "type": "object",
+        "required": ["candidate", "value"],
+        "additionalProperties": false,
+        "properties": {
+          "candidate": { "type": "string" },
+          "value": { "type": "number" }
+        }
+      }
+    }
+  }
+}

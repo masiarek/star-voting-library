@@ -8,6 +8,10 @@ Every claim in this library is backed by a runnable election, and every election
 - **[BetterVoting](BV/README.md)** — the Equal Vote Coalition's live election platform. Real elections are imported from it and re-tabulated independently, turning them into regression cases.
 - **[RCV-IRV](RCV_IRV/README.md)** — the vendored `pyrankvote` engine that counts ranked ballots (IRV/STV), so ranked-vs-scored comparisons run on a real implementation of each side.
 
+## For implementers
+
+- **[The result contract — running your own engine against this library](result_schema.md)** — the one page here addressed to somebody writing a *different* tabulator. `--json` counts any case file into a versioned JSON object (winners, rounds, pairwise matrix, and which tie-break rung fired), so checking a second implementation is a `diff` instead of a reading exercise. Includes what a pass means, the five places correct implementations legitimately differ, and an honest list of what the suite does not yet cover.
+
 ## The cross-checks
 
 - **[BetterVoting and the LH engine — one election, two reports](bettervoting_and_the_engine.md)** — why the two independent implementations agree on winners, and the one bookkeeping detail where their reports can differ.
