@@ -26,7 +26,7 @@ Sincerely, here is where everyone lands:
 
 | Method | Sincere winner |
 |---|---|
-| Choose-One (Plurality) | **Dublin** (3 first choices) |
+| [Choose-One (Plurality)](../../06_Other/Plurality/README.md) | **Dublin** (3 first choices) |
 | [Borda](../../06_Other/other_ranked_methods/borda.md) | **Edinburgh** (17; Dublin 16, Cork 13, Athens 12, Bergen 12) |
 | Copeland / [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) | **Edinburgh** (3–1) |
 | [STAR](../../01_STAR/01_Learn/README.md) (ranks → 5/4/3/2/0) | **Dublin** (23; runoff 5–2 over Edinburgh) |

@@ -45,9 +45,9 @@ Now count the *same* five ballots every way. (Every winner here is engine-verifi
 
 | Method | What it reads | Winner |
 |---|---|:--:|
-| **Choose-One (Plurality)** | first choices only | Sushi |
-| **RCV-IRV (Hare)** | first choices, then eliminate the lowest | Sushi |
-| **Approval** | how many are OK with each | 🍕 **Pizza** |
+| **[Choose-One (Plurality)](../../06_Other/Plurality/README.md)** | first choices only | Sushi |
+| **[RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md)** | first choices, then eliminate the lowest | Sushi |
+| **[Approval](../../04_Approval/01_Learn/approval_voting.md)** | how many are OK with each | 🍕 **Pizza** |
 | **[Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md)** | every head-to-head matchup | 🍕 **Pizza** |
 | **[STAR](Why_STAR_Voting.md)** | total scores, then an automatic runoff | 🍕 **Pizza** |
 

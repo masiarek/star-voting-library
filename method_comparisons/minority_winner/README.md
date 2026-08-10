@@ -47,7 +47,7 @@ Both find **Cleo** — the candidate most people are genuinely happy with.
 
 | Method | What it reads | Winner |
 |---|---|:--:|
-| **Choose-One (Plurality)** | first choices only | Ada — *34%* |
+| **[Choose-One (Plurality)](../../06_Other/Plurality/README.md)** | first choices only | Ada — *34%* |
 | **[Ranked Robin](../../05_Ranked_Robin/01_Learn/why_ranked_robin.md)** | every head-to-head | ✅ **Cleo** |
 | **[STAR](../../01_STAR/01_Learn/STAR_start_here.md)** | scores, then a runoff | ✅ **Cleo** |
 

@@ -14,15 +14,17 @@ Every method in this table fills N seats without any notion of a fair share. Wha
 
 | Method | Ballot | How the seats are filled | Vote-splitting risk |
 |---|---|---|:--:|
-| **SNTV** (single non-transferable vote) | mark **1** candidate | top N by first choices | **severe** |
-| **Limited Voting** | mark **k < N** | top N by marks | high |
-| **Block Plurality** (plurality-at-large) | mark **N** | top N by marks | moderate |
-| **Bloc Approval** | mark **any number** | top N by approvals | low |
-| **Bloc Ranked Robin** | rank them | top N by head-to-head record | none |
+| **[SNTV](../../method_comparisons/multi_member_plurality/README.md)** (single non-transferable vote) | mark **1** candidate | top N by first choices | **severe** |
+| **[Limited Voting](../../method_comparisons/multi_member_plurality/README.md)** | mark **k < N** | top N by marks | high |
+| **[Block Plurality](../../method_comparisons/multi_member_plurality/README.md)** (plurality-at-large) | mark **N** | top N by marks | moderate |
+| **[Bloc Approval](../../04_Approval/01_Learn/Multiwinner_Approval/approval_multiwinner.md)** | mark **any number** | top N by approvals | low |
+| **[Bloc Ranked Robin](../../05_Ranked_Robin/README.md)** | rank them | top N by head-to-head record | none |
 | **[Block Preferential](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md)** | rank them | **sequential**: run IRV, seat the winner, remove, repeat | none |
 | **Bloc STAR** | score all **0–5** | **sequential**: run STAR, seat the winner, remove, repeat | none |
 
-The plurality family — [Block, Limited and SNTV](../../method_comparisons/multi_member_plurality/README.md) — differs *only* in votes per voter, and that one dial slides the outcome from majority sweep (3:0) to minority-tops-the-poll (2:1 with the minority leading) on the same 60/40 electorate.
+*Every method name links to where this library covers it — except Bloc STAR, which is this page's own subject ([the mechanics](bloc_star.md) are linked above).*
+
+The plurality family — Block, Limited and SNTV — differs *only* in votes per voter, and that one dial slides the outcome from majority sweep (3:0) to minority-tops-the-poll (2:1 with the minority leading) on the same 60/40 electorate.
 
 ## The structural difference: Bloc STAR is sequential
 
