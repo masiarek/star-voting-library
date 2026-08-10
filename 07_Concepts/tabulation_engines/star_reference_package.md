@@ -107,6 +107,24 @@ Worth being realistic about how that lands. Vendors are generally reluctant to t
 
 That third point resolves the language question that has been circling this whole discussion. **If the software's job is to be an oracle rather than a product, Python is entirely appropriate — and it already exists.** The single-static-binary argument applies only to a *shipped* adjunct tabulator on an air-gapped machine. Build the oracle in the language that already works; defer the packaging question to the path that actually needs it.
 
+### On licensing — MIT is the least of the obstacles
+
+The worry that a vendor would object to an open-source, MIT-licensed library is worth answering directly, because it points at the wrong risk.
+
+**MIT is the license a vendor wants**, if they are going to take code at all: permissive, no copyleft, no obligation to publish their own source, no viral scope. The license vendors object to is the GPL. And **the precedent runs the other way** — RCTab is open source and was approved; Virginia's review described it as the first open-source software to meet VVSG standards, noted its third-party modules as original, unmodified, and likewise open source, and treated open source as a **transparency virtue** rather than a liability.
+
+The real objections are not about the license text:
+
+- **Warranty and accountability.** MIT disclaims all warranty, and a vendor carrying certification liability cannot lean on "AS IS". This — not copyleft — is the reason they would rather reimplement from a specification than adopt code. It also reinforces the point above: sell the spec and the test deck, offer the implementation as an oracle.
+- **Certification baseline disturbance.** Any code entering a certified baseline triggers retesting, at a cost unrelated to licensing.
+- **Provenance.** Who wrote each line, and did they have the right to contribute it? A clean history and a DCO or CLA matter more to corporate counsel than the license name, and are worth putting in place *before* there are outside contributors rather than after.
+- **Coding standards.** Virginia's review examined design and coding standards explicitly. Outside code rarely matches a vendor's, and rewriting to match is often cheaper than reviewing.
+
+**Two concrete moves, both cheap:**
+
+1. **Dual-license the code MIT OR Apache-2.0.** Apache-2.0 adds an explicit patent grant, which corporate legal departments actively prefer and MIT lacks; the dual form is the Rust ecosystem's convention for exactly this reason and costs nothing to adopt. Note the inherited obligation either way: the engine derives from Larry Hastings' MIT-licensed `starvote` and must keep its attribution.
+2. **License the specification and the case corpus separately and even more permissively** — they are documents and data, not software, and the whole point is that a vendor, a lab, or a competing implementer can lift them without a conversation. Maximum reuse, no attribution friction inside someone's certification package. **These are the artifacts most likely to actually be used**, and they carry none of the objections above.
+
 ### The follow-up question worth asking directly
 
 The certification bodies and labs are approachable, and the cheapest possible research step is to ask them rather than infer. The EAC publishes explanatory guidance and a clearinghouse address; an accredited VSTL will discuss scope and rough cost. Two questions worth putting to them, in writing, early:
