@@ -19,4 +19,9 @@ Every claim in this library is backed by a runnable election, and every election
 - **[RCTab — the certified tabulator that counts real elections](rctab.md)** — the federally-tested engine actual US jurisdictions run on election night for RCV-IRV and STV. Wired up: our ranked cases convert to its CSV and run through it, and on the tie cases it agrees on every winner while being anonymous where our engine isn't.
 - **[RCVis (rcvis.com)](rcvis.md)** — the best-known US ranked-choice results *visualizer*: Sankey diagrams, round bars, Wikipedia-ready tables. The one entry on this shelf that does **no counting** — it renders a result some other engine produced, so it is a presentation tool and never a cross-check. Its format library `rcvformats` is MIT and reusable; the site itself is GPL-3.0.
 
+## Not built — an engine under consideration
+
+- **[A Rust tabulation kernel — goals and requirements](rust_kernel_requirements.md)** — the decision document: what such a kernel would be *for* (a menu of nine candidate goals, from in-browser counting to publishing encrypted ballots), the requirements each goal implies, and the preparation that is worth doing in Python whether or not any Rust is ever written. **Draft; nothing decided.**
+- **[A Rust tabulation kernel — scope](rust_kernel_scope.md)** — the companion: which methods a kernel would cover (91% of the library's cases in seven methods), what stays in Python permanently, the honest case against building it at all, and the porting hazards that would actually cost time.
+
 *Up: [07_Concepts](../README.md) · the vendored fork's own ledger: [LH_ENGINE_CHANGES.md](../../STARVote_LH_tabulation_engine/LH_ENGINE_CHANGES.md).*
