@@ -23,6 +23,28 @@ It's worth separating two things, because advocates and critics frequently blur 
 
 The second case is why the popular slogan is misleading even for voters whose ballots never exhaust: *some* voters whose favorite is eliminated get their next choice counted, and others don't — and which group you land in depends on elimination order, not on how you voted.
 
+### The second case, worked
+
+The minimal 27-voter [center-squeeze](RCV_IRV_center_squeeze.md) profile — every voter ranked all three candidates, so **not one ballot exhausts**:
+
+<!-- ballots:center_squeeze_irv -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+12:Left>Center>Right
+9:Right>Center>Left
+6:Center>Left>Right
+```
+<!-- /ballots -->
+
+Center has the fewest first choices, is eliminated in round 1, and its 6 ballots move to Left, who wins 18–9. Now count the rankings IRV actually read. The 9 `Right > Center > Left` voters are the clean case-2 group: Right survived to the deciding round and **lost**, so their ballots never transferred and their `Center` second choice was never consulted. The 12 `Left > Center > Right` voters' second choice went unread too, because Left won. **21 of 27 voters ranked Center second and IRV read none of it** — and Center beats Left head-to-head 15–12 and Right 18–9, so the count discarded the [Condorcet winner](../../../07_Concepts/topics/condorcet/README.md) without ever making the comparison.
+
+Run it: [`center_squeeze_irv.md`](../../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_irv.md) (Left wins) beside [`center_squeeze_star.md`](../../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_star.md) (same 27 voters, STAR elects Center).
+
+**In a real election:** Alaska's 2022 US House special is the same shape. Begich was eliminated and Palin reached the final round and lost — so the Palin-first ballots that ranked Begich second were never transferred and never read, even though Begich was the Condorcet winner. See [Alaska 2022 · 201](../../../method_comparisons/alaska_2022/alaska_201.md).
+
+The full taxonomy — which of these buckets are the voter's own doing and which are pure artifacts of the elimination order — is the deep dive: [**Exhausted / inactive ballots — 301**](exhausted_ballots_301.md).
+
 ## How exhaustion happens
 
 - **Voluntary truncation (bullet voting).** You chose to rank only some candidates (or one). A legitimate choice — but if those are eliminated, nothing transfers.
