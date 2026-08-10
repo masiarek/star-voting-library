@@ -70,4 +70,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [mmp_limited_voting](mmp_limited_voting.md) · [mmp_majority_ceiling](mmp_majority_ceiling.md) · [mmp_sntv](mmp_sntv.md)
+More cases in this set: [mmp_block_approval](mmp_block_approval.md) · [mmp_limited_voting](mmp_limited_voting.md) · [mmp_majority_block_runoff](mmp_majority_block_runoff.md) · [mmp_majority_ceiling](mmp_majority_ceiling.md) · [mmp_minority_sweep](mmp_minority_sweep.md) · [mmp_sntv](mmp_sntv.md) · [mmp_sweep_floor](mmp_sweep_floor.md)

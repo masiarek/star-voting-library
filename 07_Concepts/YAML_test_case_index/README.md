@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**595 election files** (499 single-winner, 96 multi-winner) across 18 method(s).
+**599 election files** (499 single-winner, 100 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -22,11 +22,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Reweighted Range | 6 |
 | Allocated Score (STAR-PR) | 27 |
 | 3-2-1 | 1 |
-| APPROVAL_MULTI_WINNER | 7 |
+| APPROVAL_MULTI_WINNER | 8 |
 | BLOC STAR | 29 |
 | CAV | 1 |
 | IRV | 19 |
-| PLURALITY | 29 |
+| PLURALITY | 32 |
 | RANGE | 4 |
 | RCV-IRV | 3 |
 | RR | 1 |
@@ -583,7 +583,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`321_tennessee_blank_encoding_c4_b100`](../../06_Other/three_two_one/cases/cases_pages/321_tennessee_blank_encoding_c4_b100.md) | `06_Other/three_two_one/cases/` | 1 | Tennessee capital by 3-2-1 Voting (blank = Bad) → _Nashville_ | [`.yaml`](../../06_Other/three_two_one/cases/321_tennessee_blank_encoding_c4_b100.yaml) |
 
-## APPROVAL_MULTI_WINNER  (7)
+## APPROVAL_MULTI_WINNER  (8)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -592,6 +592,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`approval_sav_disjoint_c4_b10_brams_kilgour`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_sav_disjoint_c4_b10_brams_kilgour.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | SAV vs AV — the same ballots elect two disjoint committees → _Ada, Ben_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_disjoint_c4_b10_brams_kilgour.yaml) |
 | [`pets_gov_approval`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_approval.md) | `method_comparisons/pets_governance/cases/` | 2 | Pets Governance — Committee by Approval (2 seats): majority again → _Dog, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_approval.yaml) |
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
+| [`mmp_block_approval`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_block_approval.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block approval voting — uncap the marks and the sweep reverses → _Dev, Enzo, Finn_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_block_approval.yaml) |
 | [`coop_board_approval`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_approval.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — Yes/No approval ballot (same nine voters) → _Chris, Dana, Ella_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_approval.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
@@ -659,7 +660,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (29)
+## PLURALITY  (32)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -690,8 +691,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`sntv_village_council`](../../method_comparisons/sntv_village_council/cases/cases_pages/sntv_village_council.md) | `method_comparisons/sntv_village_council/cases/` | 2 | Village Council by SNTV — a concentrated minority wins a seat → _Priya, Nora_ | [`.yaml`](../../method_comparisons/sntv_village_council/cases/sntv_village_council.yaml) |
 | [`mmp_block_voting`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_block_voting.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — Block Voting (3 seats): majority sweeps → _Ada, Ben, Cal_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_block_voting.yaml) |
 | [`mmp_limited_voting`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_limited_voting.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — Limited Voting (3 seats): majority 2, minority 1 → _Ada, Ben, Uma_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_limited_voting.yaml) |
+| [`mmp_majority_block_runoff`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_majority_block_runoff.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Majority block voting (round 2) — the runoff hands every seat to the runner-up → _Dev, Enzo, Finn_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_majority_block_runoff.yaml) |
 | [`mmp_majority_ceiling`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_majority_ceiling.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block Voting (3 seats): the majority ceiling — a unanimous candidate holds only 33% → _Alice, Bruno, Cleo_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_majority_ceiling.yaml) |
+| [`mmp_minority_sweep`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_minority_sweep.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Plurality block voting — a 44% minority sweeps all three seats → _Alma, Bram, Cleo_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_minority_sweep.yaml) |
 | [`mmp_sntv`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_sntv.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Multi-member plurality — SNTV (3 seats): the minority tops the poll → _Uma, Ada, Ben_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_sntv.yaml) |
+| [`mmp_sweep_floor`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_sweep_floor.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block voting — the smallest possible minority sweep (5 voters) → _Nora, Omar, Priya_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_sweep_floor.yaml) |
 
 ## RANGE  (4)
 

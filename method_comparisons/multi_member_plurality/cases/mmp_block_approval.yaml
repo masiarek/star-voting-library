@@ -1,0 +1,44 @@
+election_title: "Block approval voting — uncap the marks and the sweep reverses"
+scenario_description: |-
+  The same 9 voters as mmp_minority_sweep.yaml, with one rule changed: no cap on
+  how many candidates a voter may mark.
+
+  Under the 3-mark cap the two independent voters spend everything on Gus, Hugo
+  and Iris, and never get to say that they prefer Pine to Oak. Uncapped, they say
+  it: they approve their three independents AND the Pine slate. Nothing about
+  their opinion changed — only how much of it the ballot could hold.
+
+  That single extra sentence moves Dev, Enzo and Finn from 3 to 5 and hands Pine
+  all three seats. Oak's 4 marks are unchanged; Oak simply stops being the
+  largest number on the page.
+
+  The lesson is not "approval is better" — block approval is still a majoritarian
+  at-large method that can hand one bloc every seat, which is exactly what it does
+  here. The lesson is that in this family the WINNER IS AN ARTIFACT OF THE CAP.
+  Same voters, same opinions, three different answers: capped at 3 → Oak sweeps;
+  uncapped → Pine sweeps; capped at 3 but run in two rounds → Pine sweeps
+  (mmp_majority_block_runoff.yaml). For proportionality you need a different
+  count, not a different mark limit — see STAR-PR or STV.
+
+  Shrunk from the "Block approval voting" column of Wikipedia's block voting table
+  (10,000 voters, 12 candidates).
+voting_method: Approval_Multi_Winner
+num_winners: 3
+lot_numbers: [Alma, Bram, Cleo, Dev, Enzo, Finn, Gus, Hugo, Iris]
+ballots: |-
+  Alma,Bram,Cleo,Dev,Enzo,Finn,Gus,Hugo,Iris
+  1,1,1,0,0,0,0,0,0   # Oak voter — approves the Oak slate only
+  1,1,1,0,0,0,0,0,0   # Oak voter
+  1,1,1,0,0,0,0,0,0   # Oak voter
+  1,1,1,0,0,0,0,0,0   # Oak voter
+  0,0,0,1,1,1,0,0,0   # Pine voter — approves the Pine slate only
+  0,0,0,1,1,1,0,0,0   # Pine voter
+  0,0,0,1,1,1,0,0,0   # Pine voter
+  0,0,0,1,1,1,1,1,1   # independent voter — independents AND Pine
+  0,0,0,1,1,1,1,1,1   # independent voter
+expected_winners:
+  - Dev
+  - Enzo
+  - Finn
+
+# file: mmp_block_approval.yaml
