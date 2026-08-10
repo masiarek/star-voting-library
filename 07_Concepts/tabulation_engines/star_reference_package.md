@@ -100,6 +100,45 @@ The clean way to state it, and the reason this matters: **a CVR records the ball
 
 ---
 
+---
+
+## "But we use YAML" — the format is not the lesson, and there is a trap underneath
+
+Worth separating three things that ride together here.
+
+### 1. The lesson is separation, and this library does the opposite — correctly
+
+RCTab's config file names the rules, the candidates, the output metadata, and **the paths to the CVR files**. The ballots are somewhere else, because on election night they arrive from a scanner by the thousand.
+
+This library puts the ballots *inside* the same file as the configuration. That is right for what it is — one file is one complete, readable, self-contained election, which is what makes a case file teachable and testable. It is a **fixture format**, and fixture formats should be self-contained.
+
+A production tabulator needs the split, for a reason that is procedural rather than aesthetic: **the configuration is authored, reviewed, approved, and hashed *before* election day; the ballot data does not exist until after the polls close.** They have different lifecycles, different signers, and different audit trails, so they cannot live in one artifact. So: adopt the separation in the reference package's design, and do **not** propagate it back into the case library.
+
+### 2. YAML versus JSON, as a format, barely matters
+
+YAML 1.2 is a superset of JSON, and emitting JSON from the existing files is one line of code. If a lab or a vendor wants JSON, generate it. Migrating 649 case files would be work for no benefit.
+
+### 3. But YAML's implicit typing is a genuine certification-context hazard
+
+This is the part worth knowing, and it is not hypothetical — probed against this repo's own `yaml.safe_load`:
+
+| Written | Parsed as |
+|---|---|
+| `No` | `False` (bool) |
+| `Yes` | `True` (bool) |
+| `Off` | `False` (bool) |
+| `1.10` | `1.1` — the trailing zero is gone |
+| `12:30` | **`750`** — YAML 1.1 reads it as base-60 |
+| `null` | `None` |
+
+For a configuration file whose scalars include **candidate names and contest titles**, that is a live category of defect. JSON has no implicit typing: a string is a string. Where a reviewer must be certain that two independent parsers read the same bytes the same way, JSON's much smaller grammar is a real, defensible advantage — an attack-surface and determinism argument, not a style preference.
+
+**This repo is accidentally hardened against most of it, and a plausible "cleanup" would break that.** Candidate names and scores live inside the `ballots: |-` block literal, which YAML hands over as a single opaque string for the engine's own parser to read — so the scalar resolver never sees a candidate name. A tidier-looking redesign that promoted candidates to a proper YAML list would introduce the bug it currently avoids by construction. Worth writing down before someone improves it.
+
+**One exposure does remain.** `expected_winners:` *is* a YAML list, so a candidate named `No` would parse as `False`, and a **correct** result would fail the test harness — a false failure that looks like an engine bug. Checked across all 649 tracked files: **zero currently trigger it**, so this is latent rather than live. But note how easily it stops being latent: the natural way to add a ballot-measure case is a contest whose options are *Yes* and *No*.
+
+**Cheap fix, worth doing regardless of any of the above:** a hygiene check that fails when any `expected_winners` entry or `election_title` parses as something other than a string. Ten lines, and it closes the whole class.
+
 ## Sequencing
 
 **D1 → D2 → D3** is the spine, in that order, because D2 needs D1's clause numbers and D3 is D2 made presentable. D4 and D5 can be written at any point and are the two most likely to be read by someone outside this project. D6 waits on an answer nobody here can produce.
