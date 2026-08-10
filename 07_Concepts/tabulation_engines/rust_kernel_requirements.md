@@ -10,6 +10,8 @@
 >
 > **What Rust keeps a real claim to is a different project:** software that counts a real, high-stakes election under verifiable encryption. That is not this repo's job, it needs a funded independent audit, and it would have a different owner. The analysis below is kept because it is the argument for why — and so the question does not get re-opened from scratch.
 
+> **Superseded in scope, kept for the reasoning.** The exploration on this page converged on a much smaller and better-defined target: [the STAR reference package](star_reference_package.md), with the certification landscape in [what would it take to certify STAR Voting software?](certifying_star_software.md). Read those two first; this page is the argument that got there.
+>
 > **If this page looks like a monster: it is a register of opportunities, not a backlog with a due date.** Nothing here is blocking anything. Most of the "requirements gathering" it describes is **harvesting, not authoring** — the requirements are already encoded in 615 case files and six engines' worth of recorded disagreements, and the job is transcription, one method at a time.
 >
 > **The smallest real first step takes an evening and needs no decisions:** run the 48 ballot-carrying cases that have no `expected_winners:` line, check the results, and write the answers in. No schema, no spec, no document. That is the largest single chunk of rung 1, it is mechanical, it finishes, and it takes the corpus to 100% machine-checkable. Everything else on this page can wait indefinitely.
