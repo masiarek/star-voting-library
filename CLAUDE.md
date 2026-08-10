@@ -140,6 +140,33 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   **RCTab 2.0.0**, which reports the same transfers and the same shrinking
   thresholds. Wording locked by `tests/test_irv_transfers.py`. Changing the block
   means re-running every ranked case (179 files) and rebuilding pages.
+- **The machine-readable result contract (`--json`) — never re-derive a count into it**
+  (added 2026-08-10). `starvote_larry_hastings.py <case.yaml> --json` emits one versioned
+  JSON object per election — winners, the rounds that produced them, the pairwise matrix,
+  and which tie-break rung fired — built by
+  [`result_json.py`](STARVote_LH_tabulation_engine/result_json.py) against the published
+  [`star_result.schema.json`](STARVote_LH_tabulation_engine/star_result.schema.json).
+  The implementer-facing door is
+  [`result_schema.md`](07_Concepts/tabulation_engines/result_schema.md); it is Track A's
+  A-1/A-2 and the built half of D3 in
+  [`star_reference_package.md`](07_Concepts/tabulation_engines/star_reference_package.md).
+  **The one rule:** every number in it comes from the same function the printed report
+  calls. Five tallies were split out of their printers for exactly this —
+  `classify_method` (the method-alias table, one place, read by the CLI dispatch *and* the
+  contract), `ranked_robin_tally`, `approval_tally`, `plurality_single_tally` /
+  `plurality_multi_tally`, and `rcv_irv_tabulation.tabulate` — so adding a family means
+  extending the shared tally, **never** writing a second count inside `result_json.py`.
+  Two things the build proved, worth not re-learning: **multi-winner Choose-One counts
+  every MARK while single-winner Choose-One SPOILS an overvote**, so neither can be
+  derived from the other (it elected the wrong slate on five block-voting cases); and
+  `tiebreaks: []` is a **positive claim** that no rung fired — which is how a
+  right-winner-wrong-path result gets caught, and what 567 winner-only answer keys never
+  could. Locked by
+  [`tests/test_result_json.py`](STARVote_LH_tabulation_engine/tests/test_result_json.py)
+  (every case validates against the schema and meets its answer key through the JSON path;
+  `--json` must stay pure — JSON on stdout, no report, no `_tabulated` mirror). A method
+  the engine does not count (Range 0–9, CAV, 3-2-1) raises `UnsupportedMethod` rather than
+  being answered: "out of scope" must stay distinguishable from "wrong".
 - **Voter counts — keep examples SMALL.** Default to the *fewest ballots* that
   make the point; prefer **individual ballots** (one row per voter, a handful of
   them) over large weighted blocs. A 3-voter example that shows the effect beats a
