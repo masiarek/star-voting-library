@@ -1,3 +1,142 @@
+======================================================================
+SOURCE FILE:     cycle_vote_on_the_rule_rr_c5_b999.yaml
+TABULATED FILE:  cycle_vote_on_the_rule_rr_c5_b999_tabulated.txt
+======================================================================
+
+election_title: "Best Cycle-Breaking Rule — the cycle itself, and who each rule crowns"
+
+scenario_description: |-
+  The same 999 ballots as cycle_vote_on_the_rule_irv_c5_b999.yaml, counted as
+  Ranked Robin so the pairwise table is on screen. Reproduced from the "Best
+  Cycle-Breaking Rule" sample election published by RCV Lab (rcv-lab.org),
+  converted from its downloadable cast vote record. Synthetic — the source
+  config is stamped "RCV Lab synthetic", from "The Condorcet Paradox Society" —
+  and built to make exactly this point.
+
+  The candidates are the cycle-breaking rules themselves, and the ballots cycle:
+
+      Ranked Pairs   beats  Schulze Method   492-394   (margin  98)
+      Schulze Method beats  Minimax          542-341   (margin 201)
+      Minimax        beats  Ranked Pairs     466-413   (margin  53)
+
+  No Condorcet winner. Smith set = those same three. Copeland's Rule and Flip a
+  Coin lose to all three and to nobody but each other.
+
+  SO WHICH RULE WINS THE VOTE ABOUT RULES? Run the whole family and the answer
+  is less chaotic than the setup promises, which is the actual lesson:
+
+      Copeland (= Ranked Robin)   Minimax, Ranked Pairs, Schulze  (3-way tie)
+      Minimax                     Ranked Pairs
+      Ranked Pairs                Ranked Pairs
+      Schulze (beat path)         Ranked Pairs
+      Split Cycle                 Ranked Pairs
+      Stable Voting               Ranked Pairs
+      RCV-IRV                     Ranked Pairs
+
+  Every refined rule elects RANKED PAIRS, including Schulze and Minimax — each
+  voting for a rival over itself. The lone rule that cannot decide is
+  COPELAND'S RULE, which counts wins and losses only: all three cycle members
+  go 3-1, so it returns a three-way tie. It is also the candidate that finished
+  fourth, on 61 first choices.
+
+  AND THAT IS WHERE THIS ENGINE PARTS COMPANY. LH's Ranked Robin IS Copeland,
+  so it hits that same three-way tie and breaks it by TOTAL MARGIN — where
+  Schulze Method leads on +1327 to Ranked Pairs' +1264. So the report below
+  elects SCHULZE METHOD while every margin-reading rule above elects Ranked
+  Pairs. Not a bug in either: Copeland-plus-a-tiebreak is a different rule from
+  Minimax or Ranked Pairs, and a cycle is precisely where different rules are
+  allowed to differ. It is the cleanest demonstration in this folder of why the
+  refined rules were invented at all.
+
+  The tiebreak here is decided by margin, not by lot — the three totals are far
+  apart — so the result is reproducible from the file. lot_numbers is published
+  anyway, per house practice.
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ranked Pairs, Schulze Method, Minimax, Copeland's Rule, Flip a Coin]
+
+# The full 999-ballot CVR collapsed to 65 weighted blocs — identical to the
+# companion IRV file. Clean data: no overvotes, skipped ranks, or equal
+# rankings.
+ballots: |-
+  82:Ranked Pairs>Schulze Method
+  70:Schulze Method>Minimax
+  65:Minimax>Ranked Pairs
+  56:Ranked Pairs>Schulze Method>Minimax>Copeland's Rule
+  49:Schulze Method>Minimax>Ranked Pairs>Copeland's Rule
+  45:Schulze Method>Minimax>Ranked Pairs
+  44:Copeland's Rule>Flip a Coin
+  44:Minimax>Ranked Pairs>Schulze Method>Copeland's Rule
+  42:Ranked Pairs>Schulze Method>Minimax
+  41:Flip a Coin>Copeland's Rule
+  39:Schulze Method>Ranked Pairs
+  34:Ranked Pairs>Minimax
+  30:Minimax>Schulze Method>Ranked Pairs>Copeland's Rule
+  27:Minimax>Ranked Pairs>Schulze Method
+  23:Schulze Method>Ranked Pairs>Minimax>Copeland's Rule
+  21:Minimax>Schulze Method
+  20:Ranked Pairs>Minimax>Schulze Method
+  19:Schulze Method
+  18:Ranked Pairs>Minimax>Schulze Method>Copeland's Rule
+  18:Schulze Method>Ranked Pairs>Minimax
+  16:Minimax>Schulze Method>Ranked Pairs
+  16:Ranked Pairs
+  14:Minimax
+  12:Ranked Pairs>Schulze Method>Copeland's Rule>Minimax
+  12:Schulze Method>Minimax>Copeland's Rule>Ranked Pairs
+  11:Minimax>Ranked Pairs>Copeland's Rule>Schulze Method
+  11:Ranked Pairs>Schulze Method>Minimax>Copeland's Rule>Flip a Coin
+  9:Minimax>Ranked Pairs>Schulze Method>Copeland's Rule>Flip a Coin
+  9:Schulze Method>Minimax>Copeland's Rule
+  9:Schulze Method>Minimax>Ranked Pairs>Copeland's Rule>Flip a Coin
+  8:Ranked Pairs>Schulze Method>Copeland's Rule
+  7:Minimax>Ranked Pairs>Copeland's Rule
+  6:Schulze Method>Ranked Pairs>Minimax>Copeland's Rule>Flip a Coin
+  5:Minimax>Schulze Method>Ranked Pairs>Copeland's Rule>Flip a Coin
+  5:Ranked Pairs>Minimax>Schulze Method>Copeland's Rule>Flip a Coin
+  4:Copeland's Rule
+  4:Flip a Coin>Copeland's Rule>Ranked Pairs
+  4:Ranked Pairs>Copeland's Rule>Schulze Method
+  4:Schulze Method>Copeland's Rule>Minimax>Ranked Pairs
+  3:Copeland's Rule>Flip a Coin>Ranked Pairs
+  3:Copeland's Rule>Flip a Coin>Schulze Method
+  3:Flip a Coin
+  3:Minimax>Copeland's Rule
+  3:Schulze Method>Copeland's Rule
+  2:Copeland's Rule>Schulze Method>Minimax>Ranked Pairs
+  2:Flip a Coin>Copeland's Rule>Minimax
+  2:Flip a Coin>Copeland's Rule>Schulze Method
+  2:Minimax>Copeland's Rule>Ranked Pairs>Schulze Method
+  2:Minimax>Ranked Pairs>Copeland's Rule>Schulze Method>Flip a Coin
+  2:Ranked Pairs>Copeland's Rule>Schulze Method>Minimax
+  2:Ranked Pairs>Schulze Method>Copeland's Rule>Minimax>Flip a Coin
+  2:Schulze Method>Copeland's Rule>Minimax
+  2:Schulze Method>Minimax>Copeland's Rule>Ranked Pairs>Flip a Coin
+  2:Schulze Method>Ranked Pairs>Copeland's Rule
+  1:Copeland's Rule>Flip a Coin>Minimax
+  1:Copeland's Rule>Minimax
+  1:Copeland's Rule>Ranked Pairs>Schulze Method
+  1:Copeland's Rule>Ranked Pairs>Schulze Method>Minimax
+  1:Copeland's Rule>Schulze Method
+  1:Minimax>Copeland's Rule>Ranked Pairs>Schulze Method>Flip a Coin
+  1:Minimax>Schulze Method>Copeland's Rule
+  1:Ranked Pairs>Copeland's Rule
+  1:Ranked Pairs>Minimax>Copeland's Rule
+  1:Ranked Pairs>Minimax>Copeland's Rule>Schulze Method>Flip a Coin
+  1:Schulze Method>Ranked Pairs>Copeland's Rule>Minimax
+
+expected_winners:
+  - Schulze Method
+
+# Source: https://rcv-lab.org/sample-data/best-cycle-breaking-rule/best-cycle-breaking-rule_cvr.csv
+# file: cycle_vote_on_the_rule_rr_c5_b999.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 999 ballots (ranked ballots).
 

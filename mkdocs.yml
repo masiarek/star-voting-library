@@ -865,21 +865,29 @@ plugins:
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_fewV15_noise_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_fewV15_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_fewV15_noise_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_medV45_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_medV45_noise_1.md
-        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_medV45_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_medV45_noise_2.md
-        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md
+        # --- Four star_vs_rr_divergence samples retired 2026-08-09: under the
+        # corrected Copeland tally (draw = ½ each) their STAR and RR winners
+        # coincide, so they stopped demonstrating divergence. Old and current
+        # URLs both land on the set README (see its "Why 26, not 30?" note).
+        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_medV45_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C03_medV45_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV28_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV148_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV28_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV28_bloc_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_medV45_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_medV45_noise_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_medV45_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_medV45_noise_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV15_noise_1.md
-        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV28_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV28_bloc_2.md
+        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV28_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_largeV598_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_largeV598_bloc_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_medV149_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_medV149_bloc_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV15_noise_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV15_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV15_noise_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV28_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV28_bloc_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV29_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_fewV29_bloc_2.md
-        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV148_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV148_bloc_1.md
+        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV148_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV149_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV149_bloc_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV45_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV45_noise_1.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV45_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV45_noise_2.md

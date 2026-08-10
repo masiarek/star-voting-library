@@ -133,7 +133,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
-- [Exhausted ballots (conversation)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
+- [Exhausted ballots (untangled)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [copeland_vs_clones_c5_b3](copeland_vs_clones_c5_b3.md) · [five_answers_one_election_c4_b3](five_answers_one_election_c4_b3.md)

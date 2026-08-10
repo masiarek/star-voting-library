@@ -1,3 +1,35 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex9_pareto.yaml
+TABULATED FILE:  succ_elim_ex9_pareto_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A"
+scenario_description: |-
+  Felsenthal's flagship successive-elimination example, and the densest case in the whole appendix: one 11-voter profile that yields four different paradoxes depending on which single datum you vary. Source: Dan S. Felsenthal, "Review of Paradoxes Afflicting Various Voting Procedures Where One Out of m Candidates (m ≥ 2) Must Be Elected", University of Haifa / LSE, revised 26 May 2010; Appendix A4, Example 9.
+  11 voters, four candidates: 3×(A>B>C>D), 2×(C>A>B>D), 1×(C>D>A>B), 5×(D>A>B>C). The majority preference cycles (B>C>D>A>B), which is the precondition for everything below.
+  PARETO. Under the agenda D vs A, winner vs C, winner vs B: D beats A 6:5, C beats D 6:5, B beats C 8:3 — B is elected. But all 11 voters rank A above B, unanimously and without exception. A Pareto-dominated candidate wins.
+  PATH INDEPENDENCE. Same ballots, agenda A vs B, winner vs C, winner vs D: A beats B 11:0, A beats C 8:3, then D beats A 6:5 — D wins. Under a cycle the agenda-setter picks the winner, not the electorate.
+  SCC. Delete D, who wins nothing under the first agenda: A beats C 8:3 and then B 11:0, so A wins. A non-winner's mere presence decided the election.
+  NO-SHOW is the companion file succ_elim_ex9_noshow.yaml, where two of the D-first voters stay home and get A, whom they prefer to B.
+  Labels are Felsenthal's own, capitalized; this is an academic reproduction meant to be read beside the paper's table, not a scenario with a cast.
+  Successive elimination exists in neither the LH engine nor BetterVoting — it is a parliamentary procedure, not a ballot-box method — so this file is tabulated as Ranked Robin, which reads the same pairwise matrix the agenda consumes one pair at a time. Ranked Robin elects A, the candidate the agenda buried. Run the procedure itself with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py, whose --agenda and --drop flags reproduce all four readings above.
+paradoxes: [pareto, spoiler-scc, condorcet-cycle, no-show]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  3:A>B>C>D
+  2:C>A>B>D
+  1:C>D>A>B
+  5:D>A>B>C
+expected_winners:
+  - A
+
+# file: succ_elim_ex9_pareto.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 11 ballots (ranked ballots).
 
@@ -33,7 +65,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  C          1–2–0         1      -9  D
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 2 candidates tie for the most wins (A, D) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (A, D) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

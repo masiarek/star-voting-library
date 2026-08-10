@@ -1,3 +1,53 @@
+======================================================================
+SOURCE FILE:     reinf_south_ben_c3_b3_rr.yaml
+TABULATED FILE:  reinf_south_ben_c3_b3_rr_tabulated.txt
+======================================================================
+
+election_title: "Reinforcement — South district, Ben branch (3 voters, Ben is the clear Condorcet winner)"
+
+scenario_description: |-
+  A rotated companion to reinf_south_c3_b3_rr.yaml, built to complete the case
+  analysis in Zwicker's proof of Proposition 2.5 ("all Condorcet extension SCFs
+  for three or more alternatives violate reinforcement").
+
+  North (reinf_north_c3_b6_rr.yaml) is the perfectly symmetric 6-voter cycle, so
+  an anonymous, neutral rule can only call it a three-way tie: every candidate is
+  a co-winner. But a RESOLUTE engine — like the LH tabulator, which spends
+  neutrality on a published lot order — must name exactly one of them. Which one
+  it names decides which South district is needed to spring the contradiction.
+
+  North is invariant under the rotation Ada→Ben→Cara→Ada, so rotating the
+  original South gives the branch for each possible North winner. This file is the
+  BEN branch: Ben beats both rivals head-to-head here —
+
+      Ben beats Ada 2–1 · Ben beats Cara 3–0 · Ada beats Cara 3–0
+
+  so every method elects Ben. Ben is also a co-winner of North's dead heat, so
+  reinforcement demands Ben win the merged 9-voter election. He doesn't — ADA does
+  (see reinf_combined_ben_c3_b9_rr.yaml). The contradiction fires no matter which
+  way the cycle is resolved; that is the whole content of the proposition.
+
+  Branch companions: reinf_south_c3_b3_rr.yaml (Ada branch → combined elects Cara),
+  reinf_south_cara_c3_b3_rr.yaml (Cara branch → combined elects Ben).
+
+paradoxes: [multiple-districts]
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ada, Ben, Cara]
+
+ballots: |-
+  2:Ben>Ada>Cara
+  1:Ada>Ben>Cara
+
+expected_winners:
+  - Ben
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 3 ballots (ranked ballots).
 

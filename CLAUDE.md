@@ -112,7 +112,12 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   deliberately NOT dragged along by RR's default-on matrix (a dedicated `smith`
   gate in the RR echo keeps them separate). Prints the **Smith set** (the smallest
   group whose every member beats every candidate outside it), says whether that's a
-  lone Condorcet winner or a top cycle, and whether the winner landed inside it.
+  lone Condorcet winner, a top **cycle**, an all-draws **dead heat**, or a **mixed**
+  group held open by draws (some members beat others but no loop closes — "not all
+  draws" does NOT imply "cycle"), and whether the winner landed inside it. The shape
+  call is one shared classifier (`_group_shape`, on `_all_pairs_draw` + the
+  beats-loop DFS) asked by both the RR winner line and the Smith block, so the two
+  lines can't contradict each other about the same matrix — keep it shared.
   **RCV-IRV mirrors get the same block automatically** (no option — the IRV path
   has no options plumbing). The two uses are opposite: RR is Smith-efficient so the
   block is descriptive; RCV-IRV is not, so it's a genuine pass/fail. Wording locked
@@ -239,14 +244,24 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   MkDocs-impersonating `properdocs` package — investigate before raising those pins).
   `site/` is generated output — never commit.
   Details + known nits: `07_Concepts/about_this_repo/website_build.md`.
-  **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — use sparingly.**
-  They replace the *built* page at a URL while leaving the `.md` on disk intact, so
-  GitHub still renders the source but **the site never shows it**. Live case:
-  `05_Ranked_Robin/README.md` → `05_Ranked_Robin/01_Learn/ranked_robin.md`, because
-  the case folder is a top-level nav section and is where visitors land wanting "Ranked
-  Robin," but the page that *teaches* the method is the concept page. Whenever you add a
-  redirect, **move or mirror whatever the source said onto the destination** (here the
-  case index is mirrored under "Worked examples" on `ranked_robin.md`) and leave a
+  **Site-only redirects (`redirects.redirect_maps` in `mkdocs.yml`) — two kinds, only
+  one of them discretionary.** A redirect replaces the *built* page at a URL; if the
+  source `.md` is still on disk, GitHub keeps rendering it but **the site never shows
+  it**. The **relocation** kind is mandatory and permanent — the file really moved (the
+  `00_start_here/*` concept pages into their method folders is the big set) and the old
+  URL has to keep resolving forever, for the reason the reorganization bullet above
+  gives: a deleted redirect is an unfixable 404. As of 2026-08-09 every live entry in
+  the map is this kind. The **hide-a-live-page** kind — redirecting a page that still
+  exists, to push site visitors somewhere better — is the one to use sparingly, because
+  the reason for it can disappear out from under it. **Retired case, worth reading:**
+  `05_Ranked_Robin/README.md` → the Ranked Robin concept page, added back when the
+  concept pages sat in a separate `00_start_here` tree and the case folder was the only
+  top-level door for a visitor wanting "Ranked Robin"; the "one door per method"
+  reorganization moved the concepts *into* `05_Ranked_Robin`, so the folder's own README
+  became the method front door in the right place and the redirect only pushed readers
+  past it (retired 2026-08-04 — the story is kept as a comment where it used to sit in
+  `mkdocs.yml`). So: **re-check these after any reorganization**, and whenever you add
+  one, **move or mirror whatever the source said onto the destination** and leave a
   maintainer note in the redirected README — otherwise edits there silently never ship.
   Adding a plugin means updating **two** places: `mkdocs.yml` plugins and the `docs`
   dependency group in `pyproject.toml` (then `uv lock`). CI and the local preview both

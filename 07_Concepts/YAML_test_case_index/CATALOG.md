@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 501 elections, 680 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 497 elections, 676 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -267,21 +267,17 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `cycle_C03_fewV15_noise_1` | STAR vs RR divergence -- 3 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
 | `cycle_C03_fewV15_noise_2` | STAR vs RR divergence -- 3 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
 | `cycle_C03_medV45_noise_1` | STAR vs RR divergence -- 3 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
-| `cycle_C03_medV45_noise_2` | STAR vs RR divergence -- 3 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
-| `cycle_C05_fewV15_noise_1` | STAR vs RR divergence -- 5 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
 | `cycle_C05_fewV15_noise_2` | STAR vs RR divergence -- 5 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
 | `cycle_C05_fewV28_bloc_1` | STAR vs RR divergence -- 5 cands, 28 voters, cycle ( | 1 | single-race | 28 | STAR | LH-only |
 | `cycle_C05_medV45_noise_1` | STAR vs RR divergence -- 5 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
 | `cycle_C05_medV45_noise_2` | STAR vs RR divergence -- 5 cands, 45 voters, cycle ( | 1 | single-race | 45 | STAR | LH-only |
 | `cycle_C07_fewV15_noise_1` | STAR vs RR divergence -- 7 cands, 15 voters, cycle ( | 1 | single-race | 15 | STAR | LH-only |
-| `cycle_C07_fewV28_bloc_2` | STAR vs RR divergence -- 7 cands, 28 voters, cycle ( | 1 | single-race | 28 | STAR | LH-only |
 | `cycle_C07_largeV598_bloc_1` | STAR vs RR divergence -- 7 cands, 598 voters, cycle  | 1 | single-race | 598 | STAR | LH-only |
 | `cycle_C07_medV149_bloc_2` | STAR vs RR divergence -- 7 cands, 149 voters, cycle  | 1 | single-race | 149 | STAR | LH-only |
 | `cycle_C10_fewV15_noise_1` | STAR vs RR divergence -- 10 cands, 15 voters, cycle  | 1 | single-race | 15 | STAR | LH-only |
 | `cycle_C10_fewV15_noise_2` | STAR vs RR divergence -- 10 cands, 15 voters, cycle  | 1 | single-race | 15 | STAR | LH-only |
 | `cycle_C10_fewV28_bloc_1` | STAR vs RR divergence -- 10 cands, 28 voters, cycle  | 1 | single-race | 28 | STAR | LH-only |
 | `cycle_C10_fewV29_bloc_2` | STAR vs RR divergence -- 10 cands, 29 voters, cycle  | 1 | single-race | 29 | STAR | LH-only |
-| `cycle_C10_medV148_bloc_1` | STAR vs RR divergence -- 10 cands, 148 voters, cycle | 1 | single-race | 148 | STAR | LH-only |
 | `cycle_C10_medV149_bloc_2` | STAR vs RR divergence -- 10 cands, 149 voters, cycle | 1 | single-race | 149 | STAR | LH-only |
 | `cycle_C10_medV45_noise_1` | STAR vs RR divergence -- 10 cands, 45 voters, cycle  | 1 | single-race | 45 | STAR | LH-only |
 | `cycle_C10_medV45_noise_2` | STAR vs RR divergence -- 10 cands, 45 voters, cycle  | 1 | single-race | 45 | STAR | LH-only |
@@ -529,7 +525,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 416 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| single-race | 412 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | contested (multi-race) | 264 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`38b7fg`](https://bettervoting.com/38b7fg/results) |
 
 ### By seat class
@@ -538,7 +534,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | seat class | # races | example elections |
 |---|--:|---|
-| single-winner | 582 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| single-winner | 578 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | multi-winner | 98 | [`3494cb`](https://bettervoting.com/3494cb/results), [`39py93`](https://bettervoting.com/39py93/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`3yr2qd`](https://bettervoting.com/3yr2qd/results) |
 
 ### By ballot type
@@ -547,7 +543,7 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 
 | ballot type | # races | example elections |
 |---|--:|---|
-| score | 360 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
+| score | 356 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
 | ranked | 233 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
 | choose-one | 44 | [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`4h89vj`](https://bettervoting.com/4h89vj/results), [`4w96tr`](https://bettervoting.com/4w96tr/results) |
 | approval | 39 | [`4hfwqd`](https://bettervoting.com/4hfwqd/results), [`6mcgkq`](https://bettervoting.com/6mcgkq/results), `BV_Library_approval_single_winner`, `Black_Curtain_01a_c3_b5_approval` |
@@ -559,7 +555,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | character | # races | example elections |
 |---|--:|---|
-| majoritarian | 494 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
+| majoritarian | 490 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
 | Condorcet | 129 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
 | proportional | 57 | [`39py93`](https://bettervoting.com/39py93/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), [`8xwx43`](https://bettervoting.com/8xwx43/results), `02a_c5_b63_proportional-allocated-score` |
 
@@ -578,7 +574,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | method (family) | # races | example elections |
 |---|--:|---|
-| STAR | 312 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
+| STAR | 308 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results) |
 | RankedRobin | 129 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
 | IRV | 91 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3xgkck`](https://bettervoting.com/3xgkck/results), [`4htk44`](https://bettervoting.com/4htk44/results) |
 | Plurality | 44 | [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`4h89vj`](https://bettervoting.com/4h89vj/results), [`4w96tr`](https://bettervoting.com/4w96tr/results) |
@@ -596,7 +592,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 322 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| LH-only | 318 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
 | BV | 273 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | BV (no yaml) | 83 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results), [`3xgkck`](https://bettervoting.com/3xgkck/results) |
 | LH-only (exception) | 2 | `copeland_half_credit_decides`, `dead_heat_lot_tiebreak` |

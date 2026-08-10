@@ -320,3 +320,50 @@ def test_equal_rankings_are_ties(tmp_path):
         assert phantom not in out, f"phantom equal-rank candidate leaked: {phantom!r}"
     # The tie is scored as Equal Support in the matrix (middle column).
     assert "Equal Support" in out
+
+
+def test_ranked_robin_decided_leaders_are_not_called_a_cycle(tmp_path):
+    """The THIRD shape of a tie, and the one that read worst: Cara and Dan tie on
+    the Copeland tally, and Cara BEATS Dan head-to-head (2-1). That is not a dead
+    heat (there is a win in it) and it cannot be a Condorcet cycle (a 2-cycle would
+    need each to beat the other), yet the line used to announce "a Condorcet cycle
+    (no candidate beats all others)" — about two candidates one of whom beat the
+    other. Tying on the overall tally says nothing about the shape underneath."""
+    f = tmp_path / "mixed_leaders.yaml"
+    f.write_text(
+        "voting_method: RankedRobin\nnum_winners: 1\n"
+        "lot_numbers: [Ada, Ben, Cara, Dan]\nballots: |-\n"
+        "  Ada,Ben,Cara,Dan\n  0,0,0,1\n  0,0,3,1\n  3,3,1,0\n"
+    )
+    r = _run(f)
+    assert r.returncode == 0, r.stderr
+    assert "tie on the highest Copeland score" in r.stdout
+    assert "tied on the tally, not a cycle" in r.stdout
+    assert "Condorcet cycle" not in r.stdout
+    assert "dead heat" not in r.stdout
+    assert "Ranked Robin (RCV-RR): Cara" in r.stdout
+
+
+def test_copeland_winner_helper_matches_the_rr_report():
+    """`copeland_winner()` feeds the [Divergence from STAR] block, so it must use
+    the SAME key as `run_ranked_robin` — half-credit for draws included. When it
+    used raw wins, a STAR file could name one RCV-RR winner in its divergence
+    block while the very same ballots as a RankedRobin file elected another.
+
+    Profile: A ties C and beats B and D (Copeland 2.5); D holds as many RAW wins
+    (2, over B and C) with a bigger margin — so a raw-wins ranking crowned D even
+    though D had LOST to A head-to-head 37-20."""
+    sys.path.insert(0, str(ENGINE_DIR))
+    import starvote_larry_hastings as LH
+
+    cands = ["A", "B", "C", "D"]
+    rows = [(16, [3, 3, 5, 2]), (20, [1, 2, 3, 5]),
+            (21, [4, 1, 2, 2]), (15, [5, 1, 1, 5])]
+    ballots = [dict(zip(cands, scores)) for n, scores in rows for _ in range(n)]
+    assert LH.copeland_winner(cands, ballots, cands) == "A"
+
+    # ...and on a dead heat: Ada and Ben both 1–0–1 (Copeland 1.5, equal margin);
+    # the priority order breaks it to Ada, exactly as the RR report's lot does.
+    dc = ["Ada", "Ben", "Cara"]
+    db = [dict(zip(dc, s)) for s in ([5, 5, 0], [5, 5, 0], [4, 3, 1], [3, 4, 1])]
+    assert LH.copeland_winner(dc, db, dc) == "Ada"

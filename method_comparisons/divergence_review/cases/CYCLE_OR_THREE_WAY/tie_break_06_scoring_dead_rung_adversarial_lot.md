@@ -68,12 +68,11 @@ Legend: For - Equal Support - Against
   STAR                   = Ann
   Choose-One (Plurality) = Cara   (differs from STAR)
   RCV-IRV                = Cara   (differs from STAR)
+  RCV-RR                 = Ben   (differs from STAR)
   Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 5 ballots.
@@ -180,9 +179,12 @@ the honest answer to "who is even in contention?".
    Smith set (3 of 3): Ben, Ann, Cara
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (Ben) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    RCV-IRV winner Cara is INSIDE the Smith set. ✓
@@ -238,9 +240,12 @@ the honest answer to "who is even in contention?".
    Smith set (3 of 3): Ben, Ann, Cara
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (Ben) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner Ben is INSIDE the Smith set. ✓

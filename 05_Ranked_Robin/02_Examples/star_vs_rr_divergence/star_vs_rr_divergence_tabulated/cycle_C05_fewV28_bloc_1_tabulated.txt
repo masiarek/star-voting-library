@@ -3,9 +3,9 @@ SOURCE FILE:     cycle_C05_fewV28_bloc_1.yaml
 TABULATED FILE:  cycle_C05_fewV28_bloc_1_tabulated.txt
 ======================================================================
 
-election_title: "STAR vs RR divergence -- 5 cands, 28 voters, cycle (STAR A, RR C)"
+election_title: "STAR vs RR divergence -- 5 cands, 28 voters, cycle (STAR A, RR E)"
 scenario_description: |-
-  Auto-generated STAR-vs-Ranked-Robin divergence. 5 candidates, 28 voters, grouped (a few voter factions/blocs). STAR elects A; Ranked Robin elects C. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (C); STAR runs its two score-leaders off (A). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+  Auto-generated STAR-vs-Ranked-Robin divergence. 5 candidates, 28 voters, grouped (a few voter factions/blocs). STAR elects A; Ranked Robin elects E. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (E); STAR runs its two score-leaders off (A). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
 paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
@@ -24,8 +24,8 @@ expected_winners:
 TABULATION RESULTS
 ======================================================================
 
-=== STAR vs RR divergence -- 5 cands, 28 voters, cycle (STAR A, RR C) ===
-  Auto-generated STAR-vs-Ranked-Robin divergence. 5 candidates, 28 voters, grouped (a few voter factions/blocs). STAR elects A; Ranked Robin elects C. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (C); STAR runs its two score-leaders off (A). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
+=== STAR vs RR divergence -- 5 cands, 28 voters, cycle (STAR A, RR E) ===
+  Auto-generated STAR-vs-Ranked-Robin divergence. 5 candidates, 28 voters, grouped (a few voter factions/blocs). STAR elects A; Ranked Robin elects E. CAUSE = CONDORCET CYCLE: no candidate beats all others, so there is no 'right' winner. RR falls back on Copeland/margin (E); STAR runs its two score-leaders off (A). See the [Divergence from STAR] block below for RCV-IRV, Approval and Plurality on the same ballots.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison
@@ -51,7 +51,7 @@ Legend: For - Equal Support - Against
 
 [Divergence from STAR]
   STAR   = A
-  RCV-RR = C   (differs from STAR)
+  RCV-RR = E   (differs from STAR)
   Full round-by-round reports (generated for review):
   RCV-RR round-robin: star_vs_rr_divergence_tabulated/cycle_C05_fewV28_bloc_1_RCV-RR_tabulated.txt
 

@@ -1,3 +1,33 @@
+======================================================================
+SOURCE FILE:     minimax_ex30_noshow_after.yaml
+TABULATED FILE:  minimax_ex30_noshow_after_tabulated.txt
+======================================================================
+
+election_title: "Minimax Ex.30 — after: three C>A>B>D voters stay home, Minimax elects A"
+scenario_description: |-
+  The AFTER half of Felsenthal's Minimax no-show pair. Source: Dan S. Felsenthal (2010), Appendix A10, Example 30 (credited to Hannu Nurmi, private communication 22.2.2010) — see minimax_ex30_noshow_before.yaml for the setup.
+  The same electorate with three of the four C>A>B>D voters ABSENT: 16 voters now. Worst pairwise losses become A 10, B 11, C 12, D 11, so the smallest belongs to A and Minimax elects A. Those three voters ranked A second and B third, so by staying home they got a result they PREFER to the one their own ballots produced — the no-show paradox in its sharpest form. Read forward instead of backward it is the twin paradox: with one such voter A wins, and when the three "twin brothers" join, B does.
+  Nothing about the ballots changed. The only edit is which voters showed up, which is what makes this a conditional paradox in Felsenthal's sense rather than a surprising-but-static result.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
+  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; Ranked Robin elects D on these ballots, disagreeing with Minimax's A. For the Minimax count run tools_adam/pref_voting_tabulation_engine/minimax_report.py, which is cross-checked against pref_voting.
+paradoxes: [no-show, twin, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  5:D>B>C>A
+  4:B>C>A>D
+  3:A>D>C>B
+  3:A>D>B>C
+  1:C>A>B>D
+expected_winners:
+  - D
+
+# file: minimax_ex30_noshow_after.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 16 ballots (ranked ballots).
 
@@ -34,7 +64,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  C          1–2–0         1     -10  A
 
 Winner — Ranked Robin (RCV-RR): D
-   *** 2 candidates tie for the most wins (D, B) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (D, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

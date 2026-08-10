@@ -1,3 +1,43 @@
+======================================================================
+SOURCE FILE:     rr_blank_is_last_c4_b3.yaml
+TABULATED FILE:  rr_blank_is_last_c4_b3_tabulated.txt
+======================================================================
+
+election_title: "Ranked Robin — a blank is ranked LAST (and rank numbers don't matter)"
+scenario_description: |-
+  A tiny teaching case for the question that trips up newcomers: on a Ranked Robin
+  ballot, what happens to a candidate you leave BLANK — and does it matter whether
+  you rank your worst choice "last" or just leave them blank?
+
+  Answer: a blank is ranked below every candidate you DID rank, and it makes no
+  difference to the count whether you write that candidate in the last tier or
+  leave them blank. Ranked Robin reads only the PREFERENCE ORDER on each ballot,
+  never the numeric rank label — so "5th vs 6th vs blank" is a distinction without
+  a difference. Here Dan is ranked explicitly last by voter 1 and left blank by
+  voters 2 and 3, yet he is treated identically (dead last) in every head-to-head:
+  he loses all three pairwise contests 3–0. Ada beats everyone (the Condorcet
+  winner), so Ada wins outright.
+video_script: |-
+  The anti-Borda point. Newcomers fear that ranking a candidate "5th" vs leaving
+  them "blank/6th" changes the tally — as if rank NUMBERS were scored like Borda.
+  They aren't. RR only uses each ballot's order to decide who beats whom pairwise.
+  Dan explicit-last (voter 1) and Dan-blank (voters 2, 3) contribute identically.
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Ada, Ben, Cara, Dan]
+ballots: |-
+  1:Ada>Ben>Cara>Dan
+  1:Ada>Cara>Ben
+  1:Ben>Ada>Cara
+expected_winners:
+  - Ada
+
+# file: rr_blank_is_last_c4_b3.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 3 ballots (ranked ballots).
 

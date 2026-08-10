@@ -103,7 +103,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 ## See also
 
-- [Exhausted ballots (conversation)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
+- [Exhausted ballots (untangled)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [p3_manip_reversal_rr](p3_manip_reversal_rr.md) · [p3_manip_star](p3_manip_star.md) · [p3_sincere_ranked_robin](p3_sincere_ranked_robin.md) · [p3_sincere_star](p3_sincere_star.md)

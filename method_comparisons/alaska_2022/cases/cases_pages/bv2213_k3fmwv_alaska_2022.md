@@ -335,5 +335,5 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Methods disagree on this election](../../../divergence_review/cases/IRV_OUTLIER_RR_WITH_STAR/bv2213_k3fmwv_alaska_2022.md) — its entry in the divergence review ledger
 - [Center squeeze (topic hub)](../../../../07_Concepts/topics/center_squeeze/README.md)
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
-- [Exhausted ballots (conversation)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
+- [Exhausted ballots (untangled)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

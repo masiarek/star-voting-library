@@ -1,3 +1,31 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex10_district1.yaml
+TABULATED FILE:  succ_elim_ex10_district1_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.10 — District I: three voters, the agenda elects C"
+scenario_description: |-
+  District I of Felsenthal's successive-elimination reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A4, Example 10.
+  Three voters, four candidates: A>B>C>D, B>D>C>A, D>C>A>B. Under the agenda B vs D, winner vs A, winner vs C the rounds run B beats D 2:1, A beats B 2:1, C beats A 2:1 — C is elected.
+  District II (succ_elim_ex10_district2.yaml) is a single voter who also produces C. Both districts elect C; their union need not, and that is the paradox — see succ_elim_ex10_amalgamated.yaml, where every round ties and the winner becomes an artifact of the tie-break rule.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Successive elimination exists in neither the LH engine nor BetterVoting, so this file is tabulated as Ranked Robin, which reads the same pairwise matrix. Ranked Robin elects B here, by a margin tiebreak within a Copeland tie — a different answer from the agenda's C, which is the ordinary state of affairs once the majority preference stops being transitive. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda B,D,A,C.
+paradoxes: [multiple-districts]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  1:A>B>C>D
+  1:B>D>C>A
+  1:D>C>A>B
+expected_winners:
+  - B
+
+# file: succ_elim_ex10_district1.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 3 ballots (ranked ballots).
 
@@ -32,7 +60,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  C          1–2–0         1      -1  A
 
 Winner — Ranked Robin (RCV-RR): B
-   *** 2 candidates tie for the most wins (B, D) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (B, D) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

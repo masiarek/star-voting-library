@@ -169,8 +169,9 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  Pink       1–2–0         1      -5  Purple
 
 Winner — Ranked Robin (RCV-RR): Blue
-   *** 2 candidates tie for the most wins (Green, Blue) — a Condorcet cycle
-   (no candidate beats all others). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a
+   cycle (some of them beat others head-to-head, but no loop closes). Resolved by
+   total margin, then lot order.
 ```
 
 BetterVoting's live result for the same race: **Green** (Copeland 2, elected via the head-to-head rung of its ladder).

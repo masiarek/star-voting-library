@@ -1,3 +1,62 @@
+======================================================================
+SOURCE FILE:     five_answers_one_election_c4_b3.yaml
+TABULATED FILE:  five_answers_one_election_c4_b3_tabulated.txt
+======================================================================
+
+election_title: "Five defensible answers, one three-ballot election (tournament solutions)"
+scenario_description: >-
+  The smallest election that makes the whole tournament-solutions literature
+  necessary. Three voters, four candidates, ballots that are just one ranking
+  rotated: A>B>C>D, B>C>D>A, D>A>B>C. Every head-to-head is decided (no ties),
+  so the pairwise results form a genuine TOURNAMENT — a complete directed graph.
+  There is no Condorcet winner: D beats A, so the top of the graph cycles.
+  Now the famous C1 rules, which read ONLY that graph, split five ways:
+  Top cycle / Schwartz = {A, B, C, D} (everyone); Uncovered set = Banks set =
+  Bipartisan set = {A, B, D} (C is COVERED — B beats C and beats everyone C
+  beats, so C is strictly redundant); Copeland set = {A, B} (both win 2, C and D
+  win 1); Slater set = Markov set = {A}. Five different answers to "who should
+  win," each with a published defense, from three ballots.
+  Ranked Robin is the Copeland set, so the LH engine lands on {A, B} and must
+  break the tie — by TOTAL MARGIN, electing B (+3 vs A's +1). That step is the
+  lesson: margins are not in the tournament. The moment Ranked Robin consults
+  them it has left C1 and is reading C2 information, and it elects B where
+  Slater and Markov both elect A.
+  This is Figure 3.3 of Brandt, Brill & Harrenstein, "Tournament Solutions"
+  (Handbook of Computational Social Choice, 2016, ch. 3), turned back into
+  ballots — the chapter gives the graph, and McGarvey's theorem guarantees some
+  profile produces it; this three-voter rotation is one. Candidate labels are
+  kept as bare A/B/C/D deliberately, matching the figure, so the book can be
+  read side by side with the tabulation. Verified two ways: the LH engine's
+  Ranked Robin below, and pref_voting's independent C1 module via
+  tournament_solutions_report.py.
+  This is also the picture every write-up of the subject opens with. Wikipedia's
+  "Tournament solution" leads with A = {1,2,3,4} and the pairs (1,2) (1,4) (2,4)
+  (3,1) (3,2) (4,3); read 3=A, 1=B, 2=C, 4=D and that is this matrix, arrow for
+  arrow. Not a coincidence: there are exactly four tournaments on four vertices
+  up to relabelling and only ONE is strongly connected, so every four-candidate
+  election with a cycling top and no pairwise ties draws this graph.
+  LH-only as a file, but NOT because BetterVoting can't count it — the earlier
+  note claiming that was wrong. Exactly two candidates tie and they played each
+  other, so BV's head-to-head rung settles it deterministically (tieBreakType
+  "none") and elects A, where LH's margin rung elects B. The same profile is
+  live on BV under tree names as BV2270 (8h4bvh): Alder=A, Birch=B, Cedar=C,
+  Dogwood=D. Three tabulators, three positions: BV -> A, LH -> B,
+  pref_voting -> the leader set {A, B}, declining to choose.
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  A>B>C>D
+  B>C>D>A
+  D>A>B>C
+expected_winners:
+  - B
+
+# file: five_answers_one_election_c4_b3.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 3 ballots (ranked ballots).
 
@@ -32,7 +91,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     4  C          1–2–0         1      -3  D
 
 Winner — Ranked Robin (RCV-RR): B
-   *** 2 candidates tie for the most wins (A, B) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (A, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

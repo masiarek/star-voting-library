@@ -1,3 +1,81 @@
+======================================================================
+SOURCE FILE:     bv15_4h89vj_plurality_abstain.yaml
+TABULATED FILE:  bv15_4h89vj_plurality_abstain_tabulated.txt
+======================================================================
+
+# BetterVoting registry (machine-readable; the tabulation engine ignores these).
+bv_test_id: BV15
+bv_election_id: 4h89vj
+bv_results_url: https://bettervoting.com/4h89vj/results
+
+election:
+  election_title: "BV15 — Plurality + abstentions: the turnout undercount (Andre/Blake, 12 ballots)"
+  election_description: |-
+    A REAL BetterVoting election (BV id 4h89vj), "B15 - Basic - 2 candidates -
+    Plurality - Abstain". Live results: https://bettervoting.com/4h89vj/results
+    Frozen raw export: bv15_4h89vj_plurality_abstain_bv_export.json.
+
+    This is the Plurality instance of BetterVoting issue #740
+    (github.com/Equal-Vote/bettervoting/issues/740 — note: bettervoting#740, the
+    repo moved from star-server, the NUMBER stayed). #740 is a REPORTING gap, not
+    a tabulation error: BetterVoting's results widget shows only the MEANINGFUL
+    ballots as "voters" and drops the fully-abstained ones from the headline
+    turnout. The winner is right; the displayed voter count is short by exactly
+    the number of abstentions.
+
+    Twelve ballots, two candidates (choose-one):
+
+      Count × Andre,Blake
+          5 × 1,0   Andre  (a choose-one vote for Andre)
+          2 × 0,1   Blake  (a choose-one vote for Blake)
+          5 × -,-   blank  — true abstentions (no vote for anyone)
+
+    BetterVoting's own summaryData (in the frozen export) counts it CORRECTLY:
+    nTallyVotes = 7, nAbstentions = 5 (7 + 5 = 12 cast). Andre 5, Blake 2 -> Andre
+    wins. So the data is present; #740 is only that the results UI never surfaces
+    the 5 abstentions / the 12-ballot total — it reports the 7 as if that were
+    turnout.
+
+    This file matches BV's method: Plurality (choose-one, 0/1 ballots). (An earlier
+    version modelled it as STAR 5/0, on the mistaken belief that the LH engine had
+    no Plurality method — it does: `run_plurality_single` for one seat, SNTV for
+    several.) The choose-one report prints the accounting #740 is missing, in the
+    form choose-one actually has — marks, blanks, and the total, which reconcile:
+    "Andre 5 · Blake 2", "(5 ballot(s) marked nobody.)", "Andre (5 of 12 marks)" —
+    5 + 2 + 5 = 12. That is the "stats for nerds" turnout breakdown #740 asks BV to
+    add: the 5 abstentions are named, and the winner's share is stated against all
+    12 ballots cast rather than against the 7 that BV displays as turnout.
+
+
+  races:
+  - race_id: '0'
+    race_description: ""
+    num_winners: 1
+    voting_method: Plurality
+    ballots: |-
+      Andre,Blake
+      1,0
+      1,0
+      1,0
+      1,0
+      1,0
+      0,1
+      0,1
+      -,-
+      -,-
+      -,-
+      -,-
+      -,-
+    expected_results:
+      winners:
+      - Andre
+
+# file: bv15_4h89vj_plurality_abstain.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 12 ballots.
 

@@ -1,3 +1,38 @@
+======================================================================
+SOURCE FILE:     bv2138_cxrf8v_ranked_robin.yaml
+TABULATED FILE:  bv2138_cxrf8v_ranked_robin_tabulated.txt
+======================================================================
+
+election_title: "No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently"
+scenario_description: |-
+  One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Copeland ties Abby and Brad. LH breaks the tie by total margin → Abby; BetterVoting breaks it head-to-head (Brad beats Abby 463–458) → Brad. A documented LH-vs-BV tiebreak DIVERGENCE: expected_winners is LH's Abby; BV's live result is Brad.
+bv_test_id: BV2138
+bv_election_id: cxrf8v
+bv_results_url: https://bettervoting.com/cxrf8v/results
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Dave, Cora, Abby, Brad, Erin]
+ballots: |-
+  98:Abby>Cora>Erin>Dave>Brad
+  64:Brad>Abby>Erin>Cora>Dave
+  12:Brad>Abby>Erin>Dave>Cora
+  98:Brad>Erin>Abby>Cora>Dave
+  13:Brad>Erin>Abby>Dave>Cora
+  125:Brad>Erin>Dave>Abby>Cora
+  124:Cora>Abby>Erin>Dave>Brad
+  76:Cora>Erin>Abby>Dave>Brad
+  21:Dave>Abby>Brad>Erin>Cora
+  30:Dave>Brad>Abby>Erin>Cora
+  98:Dave>Brad>Erin>Cora>Abby
+  139:Dave>Cora>Abby>Brad>Erin
+  23:Dave>Cora>Brad>Abby>Erin
+expected_winners:
+  - Abby
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 921 ballots (ranked ballots).
 
@@ -48,7 +83,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
     5  Cora       0–4–0         0      -4  —
 
 Winner — Ranked Robin (RCV-RR): Abby
-   *** 2 candidates tie for the most wins (Abby, Brad) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 2 candidates tie for the most wins (Abby, Brad) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

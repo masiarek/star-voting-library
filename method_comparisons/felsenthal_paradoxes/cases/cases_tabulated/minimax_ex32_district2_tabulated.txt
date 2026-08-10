@@ -1,3 +1,30 @@
+======================================================================
+SOURCE FILE:     minimax_ex32_district2.yaml
+TABULATED FILE:  minimax_ex32_district2_tabulated.txt
+======================================================================
+
+election_title: "Minimax Ex.32 — District II: three voters, D wins outright"
+scenario_description: |-
+  District II of Felsenthal's Minimax reinforcement example. Source: Dan S. Felsenthal (2010), Appendix A10, Example 32.
+  Three voters, four candidates: 2×(D>A>B>C), 1×(B>A>C>D). D is ranked first by an absolute majority, so D is the Condorcet winner and every reasonable method — Minimax included — elects D. There is no paradox in this district on its own; it is one of the two halves that produce one when combined.
+  District I is Example 29's eleven voters (bv2167_f3dxq9_star.yaml), where Minimax also elects D. Both districts elect D separately. Amalgamate them and Minimax no longer does — see minimax_ex32_amalgamated.yaml, where the worst losses of B and D tie and the winner falls to a lot. That is the reinforcement paradox: a method can be unanimous across districts and undecided over their union.
+  Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table, and they match Example 29's cast because District I IS Example 29.
+  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; with a Condorcet winner present both methods agree on D.
+paradoxes: [multiple-districts]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  2:D>A>B>C
+  1:B>A>C>D
+expected_winners:
+  - D
+
+# file: minimax_ex32_district2.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 3 ballots (ranked ballots).
 

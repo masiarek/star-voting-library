@@ -1,3 +1,33 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex12_truncated.yaml
+TABULATED FILE:  succ_elim_ex12_truncated_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.12 — truncated: naming only A turns last place into first"
+scenario_description: |-
+  The TRUNCATED half of Felsenthal's successive-elimination truncation example. Source: Dan S. Felsenthal (2010), Appendix A4, Example 12 — see succ_elim_ex12_sincere.yaml for the sincere profile.
+  The same six voters, except the one who sincerely ranked A>B>C>D now names only A. Under the same agenda B vs C, winner vs D, winner vs A: with that voter no longer expressing a B-vs-C preference, round 1 goes to C 3:2 instead of tying; C then beats D 3:2; and the final round ties A against C 3:3, where A survives on the earlier-letter convention. A is elected.
+  Sincerely, this voter got D — their last choice. Truncating, they get A — their first. Saying less about the bottom of the ballot was worth three places at the top: the truncation paradox.
+  Two honest caveats. The final round is a 3:3 tie, so A's win rests on the earlier-letter convention; under the earlier-on-the-agenda reading C would survive instead, and the paradox would be a smaller one (C rather than D, still an improvement for the truncator, but not their first choice). And the mechanism is specific to procedures that let a ballot sit out a round: the voter is not misrepresenting a preference, only withholding one.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Tabulated as Ranked Robin for the pairwise matrix. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda B,C,D,A, and add --tiebreak agenda to see the other reading.
+paradoxes: [truncation, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  1:A
+  1:C>B>A>D
+  2:C>D>B>A
+  2:D>A>B>C
+expected_winners:
+  - C
+
+# file: succ_elim_ex12_truncated.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 6 ballots (ranked ballots).
 
@@ -41,9 +71,12 @@ the honest answer to "who is even in contention?".
    Smith set (4 of 4): C, D, A, B
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (C) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner C is INSIDE the Smith set. ✓

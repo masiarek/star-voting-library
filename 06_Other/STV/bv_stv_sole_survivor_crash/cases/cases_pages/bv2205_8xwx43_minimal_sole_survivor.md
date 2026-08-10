@@ -92,7 +92,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 06_Other/STV/bv_
 ## See also
 
 - [Ties & tie-breaking (topic hub)](../../../../../07_Concepts/topics/ties/README.md)
-- [Exhausted ballots (conversation)](../../../../RCV_IRV/concepts/exhausted_ballots_301.md)
+- [Exhausted ballots (untangled)](../../../../RCV_IRV/concepts/exhausted_ballots_301.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [bv2203_gvtg2h_flag_probe](bv2203_gvtg2h_flag_probe.md) · [bv2204_39py93_control_standing_hopefuls](bv2204_39py93_control_standing_hopefuls.md)

@@ -1,3 +1,29 @@
+======================================================================
+SOURCE FILE:     p3_manip_reversal_rr.yaml
+TABULATED FILE:  p3_manip_reversal_rr_tabulated.txt
+======================================================================
+
+election_title: "P3 manipulated — Zwicker's complete reversal makes Dublin a 4-0 Condorcet winner"
+scenario_description: |-
+  The book's own printed manipulation. One of the two sincere Athens>Bergen>Cork>Dublin>Edinburgh voters completely REVERSES their ballot to Edinburgh>Dublin>Cork>Bergen>Athens. That single reversed ballot flips two knife-edge 4-3 contests (Athens vs Dublin and Cork vs Dublin), and Dublin goes from 2-2 to 4-0: a symmetric Copeland score of +4, the maximum possible for five candidates, and now an outright Condorcet winner. The manipulator has replaced their LAST choice (Edinburgh) with their 4th (Dublin) — a strict gain — by submitting a ballot that misrepresents every single pairwise preference they hold. IMPORTANT for this repo: Ranked Robin IS Copeland plus a tiebreak, so the book's showcase manipulation is a manipulation of a method this library advocates.
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Athens, Bergen, Cork, Dublin, Edinburgh]
+ballots: |-
+  2:Edinburgh>Cork>Athens>Dublin>Bergen
+  3:Dublin>Edinburgh>Bergen>Cork>Athens
+  1:Athens>Bergen>Cork>Dublin>Edinburgh
+  1:Edinburgh>Dublin>Cork>Bergen>Athens
+
+expected_winners:
+  - Dublin
+
+# file: p3_manip_reversal_rr.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 7 ballots (ranked ballots).
 

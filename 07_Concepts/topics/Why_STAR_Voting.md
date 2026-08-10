@@ -39,7 +39,7 @@ The automatic runoff guarantees the winner beats the runner-up head-to-head: amo
 
 ### 6. Simple to vote
 
-The 0–5 scale is the familiar five-star rating — movies, rideshares, now elections. Two features make it forgiving. **Equal scores are allowed:** rate two candidates the same when you feel the same about them, so you're never forced to invent a preference you don't have ([Equal Support](../GLOSSARY.md)). And you can't accidentally spoil your ballot the way a ranked overvote can — ballot-error rates are low, and there are no [exhausted](../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md) (discarded) ballots in the runoff. A real filled-in ballot looks familiar, not novel.
+The 0–5 scale is the familiar five-star rating — movies, rideshares, now elections. Two features make it forgiving. **Equal scores are allowed:** rate two candidates the same when you feel the same about them, so you're never forced to invent a preference you don't have ([Equal Support](../../01_STAR/01_Learn/reference/are_equal_score_votes_discounted.md)). And you can't accidentally spoil your ballot the way a ranked overvote can — ballot-error rates are low, and there are no [exhausted](../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md) (discarded) ballots in the runoff. A real filled-in ballot looks familiar, not novel.
 
 ### 7. Easy to count and verify
 

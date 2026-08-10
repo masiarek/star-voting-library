@@ -1,3 +1,36 @@
+======================================================================
+SOURCE FILE:     03_real_record0_c6_b5.yaml
+TABULATED FILE:  03_real_record0_c6_b5_tabulated.txt
+======================================================================
+
+election_title: "No Condorcet winner and Ranked Robin"
+scenario_description: >-
+  STAR elects B; so does Ranked Robin. But NO candidate beats all five rivals head-to-head, so there is no Condorcet winner (the Condorcet column in the sweep CSV is blank). 
+  
+  Ranked Robin still produces a winner —  whoever wins the most matchups — and that is B.
+voting_method: rr   # = RCV-RR / Copeland — round-robin on the same score ballots
+num_winners: 1
+lot_numbers: [A, B, C, D, E, F]
+# Same five score ballots STAR tabulated (STAR winner = B). Ranked Robin reads them
+# pairwise; the win-loss record shows nobody is 5-0 (no Condorcet winner) and B has the
+# best record. Lesson: 05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md
+ballots: |-
+  A,B,C,D,E,F
+  3,3,0,2,4,3
+  3,2,3,2,4,1
+  4,1,2,1,0,4
+  2,4,5,4,1,2
+  0,5,0,5,2,3
+
+expected_winners:
+  - B
+
+# file: 03_real_record0_c6_b5.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 5 ballots (score ballots).
 

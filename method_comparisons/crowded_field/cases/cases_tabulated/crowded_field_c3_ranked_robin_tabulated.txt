@@ -1,3 +1,45 @@
+======================================================================
+SOURCE FILE:     crowded_field_c3_ranked_robin.yaml
+TABULATED FILE:  crowded_field_c3_ranked_robin_tabulated.txt
+======================================================================
+
+election_title: "Crowded field, rung 3 — 3 candidates, 65 voters, counted by Ranked Robin"
+
+scenario_description: |-
+  RUNG 1, counted by Ranked Robin. Diego beats Ana 49–16 and Greta 50–15: a clean
+  Condorcet winner and a Smith set of one. Agrees with crowded_field_c3_star.yaml and
+  with every other method at this rung.
+
+  Same 65 voters and the same fixed candidate positions as crowded_field_c3_star.yaml;
+  this file hands them a ranked ballot instead of a 0–5 one.
+
+  Construction: build_ladder.py in this folder. 65 voters in seven blocs at 0, 4, 8, 12,
+  16, 20, 24 (sizes 6, 10, 13, 9, 12, 8, 7); candidates fixed at Ana 1 · Bruno 6 ·
+  Clara 9 · Diego 11 · Elsa 14 · Felix 16 · Greta 22; utility = minus distance; scores =
+  each bloc's own min-max scaling onto 0–5. Nothing is tuned, and no count at any rung is
+  settled by a tie-break.
+
+voting_method: RankedRobin
+num_winners: 1
+
+lot_numbers: [Ana, Diego, Greta]
+
+ballots: |-
+  6:Ana>Diego>Greta    # bloc at 0
+  10:Ana>Diego>Greta    # bloc at 4
+  13:Diego>Ana>Greta    # bloc at 8
+  9:Diego>Greta>Ana    # bloc at 12
+  12:Diego>Greta>Ana    # bloc at 16
+  8:Greta>Diego>Ana    # bloc at 20
+  7:Greta>Diego>Ana    # bloc at 24
+
+expected_winners:
+  - Diego
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 65 ballots (ranked ballots).
 

@@ -61,7 +61,7 @@ The scoring round only ever produces **two finalists**. It deliberately does **n
 
 **"Why totals, not averages?"** Since every ballot scores every candidate, total and average rank candidates identically — and the total is the honest measure of *how much support across the whole electorate*. The report prints the average only as a reading aid.
 
-**"Can I give two candidates the same score?"** Yes — equal scores are allowed and never penalized. If both reach the runoff, your ballot is [Equal Support](../../../07_Concepts/GLOSSARY.md) between them.
+**"Can I give two candidates the same score?"** Yes — equal scores are allowed and never penalized. If both reach the runoff, your ballot is [Equal Support](../reference/are_equal_score_votes_discounted.md) between them.
 
 **"Should I give my favorite 5 and everyone else 0?"** You *can*, but it usually **forfeits your say in the runoff.** If your favorite doesn't make the top two, all-0s means you've expressed no preference among the candidates who *did* — so give the "acceptable" candidates 3s and 4s so your full vote lands on the better finalist. Honest scoring is also the strong strategy. → **Watch it backfire on real ballots:** [Bullet voting backfires](../../05_Practice/ex06_bullet_backfire.md) shows the same nine voters twice, drawn ballot by ballot — honestly, and then with four of them zeroing their second choice. The zeroing works exactly as intended (it knocks the compromise out of the runoff) and then hands the election to the candidate those four scored **0**.
 

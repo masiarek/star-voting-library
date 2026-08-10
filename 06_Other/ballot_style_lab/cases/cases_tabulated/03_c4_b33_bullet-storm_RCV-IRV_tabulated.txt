@@ -44,9 +44,11 @@ the honest answer to "who is even in contention?".
    Smith set (2 of 4): Astrid, Carla
    Outside (2):        Boris, Dolores
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   dead heat (its members DRAW each other head-to-head), so the strongest
+   "candidate" is a set, not a person. No member beats another, so there is no
+   loop for Minimax / Ranked Pairs / Schulze to disagree about — which member
+   wins is left to the tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    RCV-IRV winner Astrid is INSIDE the Smith set. ✓
       Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
    Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a

@@ -1,3 +1,33 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex9_noshow.yaml
+TABULATED FILE:  succ_elim_ex9_noshow_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.9 — two D voters stay home and get a better result"
+scenario_description: |-
+  The no-show variant of Felsenthal's Example 9. Source: Dan S. Felsenthal (2010), Appendix A4, Example 9 — see succ_elim_ex9_pareto.yaml for the full 11-voter profile and the other three paradoxes it carries.
+  The same electorate with two of the five D>A>B>C voters ABSENT: 9 voters. Their absence breaks the cycle, A becomes the Condorcet winner outright, and the procedure elects A from any agenda whatever — under D vs A, winner vs C, winner vs B the rounds run A beats D 5:4, A beats C 6:3, A beats B 9:0.
+  With all 11 present the same agenda elects B. Both absent voters rank A second and B third, so staying home got them a strictly better outcome than voting did: the no-show paradox. Nothing about anyone's preferences changed — only the turnout.
+  Note what makes this readable: once two D ballots are gone the profile has a Condorcet winner, and successive elimination is Condorcet-consistent, so the agenda stops mattering. All of Example 9's pathology lives in the cycle.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Tabulated as Ranked Robin for the pairwise matrix the agenda consumes pair by pair; Ranked Robin also elects A, as any Condorcet method must here. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py.
+paradoxes: [no-show, condorcet-winner]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  3:A>B>C>D
+  2:C>A>B>D
+  1:C>D>A>B
+  3:D>A>B>C
+expected_winners:
+  - A
+
+# file: succ_elim_ex9_noshow.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 9 ballots (ranked ballots).
 

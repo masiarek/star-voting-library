@@ -1,3 +1,43 @@
+======================================================================
+SOURCE FILE:     bv2278_8cdkkc_five_way_rr.yaml
+TABULATED FILE:  bv2278_8cdkkc_five_way_rr_tabulated.txt
+======================================================================
+
+election_title: "Kissel's five-way example (Ranked Robin) — the same ballots elect C"
+scenario_description: >-
+  The identical ballots as …_irv.yaml — the five-candidate field from p.5 of Adam
+  Kissel's "Can Ranked-Choice Voting Work? A Conservative Approach" — counted by
+  Ranked Robin (RCV-RR / Copeland) instead of instant runoff. Every ballot is read in
+  every pairing, so the A voters' and B voters' second choices DO get counted, and C
+  wins the round-robin 4-0: 511-489 over A, 700-300 over B, 808-192 over D, 991-9 over
+  E. This is the direct refutation of the paper's claim that denying some voters their
+  second choice is "essentially the same in all forms of RCV" — it is a property of
+  ELIMINATION, not of the ranked ballot. Nothing about the ballots changed; only the
+  count did.
+bv_test_id: BV2278
+bv_election_id: 8cdkkc
+bv_results_url: https://bettervoting.com/8cdkkc/results
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+# Pairwise: C beats A 511-489, B 700-300, D 808-192, E 991-9  -> Copeland 4-0.
+# A beats B 609-391, D 508-492, E; B beats D 502-498, E; D beats E.
+# No cycle, no pairwise tie: C is the unique Condorcet winner.
+ballots: |-
+  306:A>C>D>B>E     # A-partisans — moderate C is their second choice
+  300:B>C>D>A>E     # B-partisans — moderate C is their second choice too
+  111:C>A>B>D>E     # moderates leaning A
+   91:C>B>A>D>E     # moderates leaning B
+  183:D>A>C>B>E     # D's voters lean A
+    9:E>D>C>A>B     # the <1% candidate the paper says is eliminated first
+expected_winners:
+  - C
+
+# file: bv2278_8cdkkc_five_way_rr.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 1000 ballots (ranked ballots).
 

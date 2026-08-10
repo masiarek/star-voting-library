@@ -1,3 +1,83 @@
+======================================================================
+SOURCE FILE:     bv2280_37yf8x_rr_top5.yaml
+TABULATED FILE:  bv2280_37yf8x_rr_top5_tabulated.txt
+======================================================================
+
+election_title: "Nine candidates, 25 voters — ranking only five, counted by Ranked Robin"
+
+scenario_description: |-
+  THE CAP CHANGES THE WINNER. Same 25 voters, same Ranked Robin rule as
+  bv2280_37yf8x_rr_full.yaml. The only difference is that each voter may name
+  five candidates instead of nine — and Gus wins instead of Finn.
+
+  Finn is the Condorcet winner on the electorate's real preferences. What the cap removes
+  is the evidence: only 16 of the 25 voters can fit Finn into five names at all. For the
+  other 9 Finn is simply absent from the paper, and an absent candidate wins no
+  head-to-head.
+
+  This is the reversal worth remembering. A ranked ballot is usually called the more
+  expressive one, and at full resolution it is. Capped at five names out of nine it
+  records 3,620 distinct opinions where the 0–5 score ballot records 10,077,696 — and
+  here it loses an answer that six rungs kept.
+
+  Convention, stated: a candidate left unranked is counted as beaten by everyone the
+  voter did rank, and tied with everyone else the voter left off. Other treatments split
+  that unstated pair half-and-half. It is a choice, not arithmetic, and it belongs in
+  any quotation of this result.
+
+  Construction: build_cases.py in this folder. 25 voters and 9 candidates at frozen
+  positions on one spectrum — Ada −0.73 · Ben −0.37 · Cleo −0.18 · Dev −0.17 ·
+  Emma −0.11 · Finn +0.24 · Gus +0.41 · Hugo +0.80 · Iris +0.84; utility = minus the
+  distance; scores = each voter's own min-max scaling onto 0–5; rankings = those same
+  utilities in order. Nothing is tuned to the result, and **no count in this folder is
+  settled by a tie-break** — that was a search constraint, so every winner here survives
+  any lot rule.
+
+voting_method: RankedRobin
+num_winners: 1
+
+bv_test_id: BV2280
+bv_election_id: 37yf8x
+bv_results_url: https://bettervoting.com/37yf8x/results
+
+lot_numbers: [Ada, Ben, Cleo, Dev, Emma, Finn, Gus, Hugo, Iris]
+
+ballots: |-
+  Ben>Cleo>Dev>Ada>Emma    # voter at -0.43
+  Gus>Hugo>Iris>Finn>Emma    # voter at +0.60
+  Ada>Ben>Cleo>Dev>Emma    # voter at -0.67
+  Iris>Hugo>Gus>Finn>Emma    # voter at +0.89
+  Finn>Gus>Emma>Dev>Cleo    # voter at +0.18
+  Emma>Dev>Cleo>Ben>Finn    # voter at -0.13
+  Gus>Hugo>Iris>Finn>Emma    # voter at +0.59
+  Hugo>Iris>Gus>Finn>Emma    # voter at +0.72
+  Gus>Finn>Emma>Hugo>Iris    # voter at +0.34
+  Hugo>Iris>Gus>Finn>Emma    # voter at +0.69
+  Finn>Gus>Emma>Dev>Cleo    # voter at +0.23
+  Ben>Cleo>Dev>Emma>Ada    # voter at -0.30
+  Ben>Ada>Cleo>Dev>Emma    # voter at -0.51
+  Iris>Hugo>Gus>Finn>Emma    # voter at +0.89
+  Emma>Dev>Cleo>Finn>Ben    # voter at -0.05
+  Gus>Hugo>Iris>Finn>Emma    # voter at +0.60
+  Finn>Gus>Emma>Dev>Cleo    # voter at +0.28
+  Ben>Cleo>Dev>Emma>Ada    # voter at -0.40
+  Hugo>Gus>Iris>Finn>Emma    # voter at +0.62
+  Ada>Ben>Cleo>Dev>Emma    # voter at -0.63
+  Finn>Gus>Emma>Dev>Cleo    # voter at +0.27
+  Ada>Ben>Cleo>Dev>Emma    # voter at -0.61
+  Ada>Ben>Cleo>Dev>Emma    # voter at -1.33
+  Cleo>Dev>Emma>Ben>Finn    # voter at -0.23
+  Ada>Ben>Cleo>Dev>Emma    # voter at -1.82
+
+expected_winners:
+  - Gus
+
+# file: bv2280_37yf8x_rr_top5.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 25 ballots (ranked ballots).
 

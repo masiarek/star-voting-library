@@ -1,3 +1,33 @@
+======================================================================
+SOURCE FILE:     succ_elim_ex11_twin_before.yaml
+TABULATED FILE:  succ_elim_ex11_twin_before_tabulated.txt
+======================================================================
+
+election_title: "Successive elimination Ex.11 — before: six voters, the agenda elects C"
+scenario_description: |-
+  The BEFORE half of Felsenthal's successive-elimination twin example. Source: Dan S. Felsenthal (2010), Appendix A4, Example 11, crediting H. Moulin, "Axioms of Cooperative Decision Making" (1988b: 54).
+  Six voters, three candidates: 2×(A>B>C), 2×(B>C>A), 1×(C>A>B), 1×(C>B>A). Under the agenda A vs B, winner vs C: round 1 ties 3:3 and A survives on the earlier-letter convention; round 2 C beats A 4:2. C is elected.
+  Now give the single C>B>A voter a TWIN — one more voter with the identical ranking. See succ_elim_ex11_twin_after.yaml: B becomes the Condorcet winner and the procedure elects B from any agenda. The original C>B>A voter ranked C first and B second, so the arrival of someone who votes exactly as they do cost them their first choice. That is the twin paradox, and it is stranger than the no-show paradox because the added ballot is a perfect copy of one already cast.
+  Note the round-1 tie: with six voters A and B split 3:3, so C's victory here already leans on a convention. The paradox does not depend on it — B wins outright after the twin joins — but it is worth seeing that the "before" state was itself precarious.
+  Labels are Felsenthal's own, capitalized, so the case can be read beside the paper's table.
+  Successive elimination exists in neither the LH engine nor BetterVoting, so this file is tabulated as Ranked Robin, which elects B — already disagreeing with the agenda's C before any twin arrives. Run the procedure with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py --agenda A,B,C.
+paradoxes: [twin, condorcet-cycle]
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  2:A>B>C
+  2:B>C>A
+  1:C>A>B
+  1:C>B>A
+expected_winners:
+  - B
+
+# file: succ_elim_ex11_twin_before.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 6 ballots (ranked ballots).
 
@@ -36,9 +66,12 @@ the honest answer to "who is even in contention?".
    Smith set (3 of 3): B, C, A
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   group held open by draws, so the strongest "candidate" is a set, not a
+   person. Some members DO beat others, but no member beats them all — a draw
+   blocks the sweep. No loop closes either, so there is no cycle for Minimax /
+   Ranked Pairs / Schulze to resolve: which member wins is left to the
+   tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Note: the Copeland leaders (B) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
    Ranked Robin (RCV-RR) winner B is INSIDE the Smith set. ✓

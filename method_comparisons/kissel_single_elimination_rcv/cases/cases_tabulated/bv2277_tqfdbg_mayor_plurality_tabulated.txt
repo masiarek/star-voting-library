@@ -1,3 +1,41 @@
+======================================================================
+SOURCE FILE:     bv2277_tqfdbg_mayor_plurality.yaml
+TABULATED FILE:  bv2277_tqfdbg_mayor_plurality_tabulated.txt
+======================================================================
+
+election_title: "BV2277 — The mayor's race (Choose-One): Ada wins on 33%"
+scenario_description: >-
+  The Choose-One (Plurality) race of BV2277 (BetterVoting election tqfdbg) — the same
+  100-voter mayor's race as the IRV, Ranked Robin and STAR races, with every voter
+  marking only their first choice. Ada wins with 33 of 100, the largest pile and
+  nowhere near a majority. She also LOSES head-to-head to two of the three people she
+  just beat: Cora 67-33 and Blake 67-33. This is the baseline the other three races
+  are measured against — and the reason a jurisdiction goes looking for a better count
+  in the first place. Adam Kissel's "single-elimination RCV" is one such attempt; it
+  improves on this (it elects Blake, who at least beats Ada head-to-head) but still
+  misses Cora, the candidate who beats everyone.
+  Live results: https://bettervoting.com/tqfdbg/results
+bv_test_id: BV2277
+bv_election_id: tqfdbg
+bv_results_url: https://bettervoting.com/tqfdbg/results
+voting_method: Plurality
+num_winners: 1
+# One mark each: Ada 33, Blake 31, Cora 20, Dean 16. Ada wins with 33%.
+ballots: |-
+  Count:Ada,Blake,Cora,Dean
+  33:1,0,0,0     # Ada's voters
+  31:0,1,0,0     # Blake's voters
+  20:0,0,1,0     # the moderates
+  16:0,0,0,1     # Dean's voters
+expected_winners:
+  - Ada
+
+# file: bv2277_tqfdbg_mayor_plurality.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Choose-One / Plurality Voting Method (single winner) ---
  Tabulating 100 ballots.
 

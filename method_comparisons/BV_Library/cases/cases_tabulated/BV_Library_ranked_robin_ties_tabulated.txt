@@ -1,3 +1,35 @@
+======================================================================
+SOURCE FILE:     BV_Library_ranked_robin_ties.yaml
+TABULATED FILE:  BV_Library_ranked_robin_ties_tabulated.txt
+======================================================================
+
+election_title: "BV parity — Ranked Robin: Copeland tie broken by tiebreak order"
+scenario_description: |-
+  Ported from BetterVoting's tabulator unit tests (RankedRobin.test.ts :: "Ties").
+  Alice and Bob split the head-to-head (3-3), tying on Copeland score; BetterVoting
+  breaks the tie by tiebreak (lot) order and elects Alice. Rank ballots (1 = best)
+  converted to scores for the LH engine (rank 1->4, 2->3, 3->2, 4->1).
+
+num_winners: 1
+voting_method: RankedRobin
+ballots: |-
+  Alice,Bob,Carol,Dave
+  4,3,2,1
+  4,3,2,1
+  4,3,2,1
+  3,4,2,1
+  3,4,2,1
+  3,4,2,1
+
+expected_winners:
+  - Alice
+
+# file: BV_Library_ranked_robin_ties.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 6 ballots (score ballots).
 
@@ -40,9 +72,11 @@ the honest answer to "who is even in contention?".
    Smith set (2 of 4): Alice, Bob
    Outside (2):        Carol, Dave
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   dead heat (its members DRAW each other head-to-head), so the strongest
+   "candidate" is a set, not a person. No member beats another, so there is no
+   loop for Minimax / Ranked Pairs / Schulze to disagree about — which member
+   wins is left to the tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Ranked Robin (RCV-RR) winner Alice is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

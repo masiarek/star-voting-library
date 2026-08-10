@@ -1,3 +1,65 @@
+======================================================================
+SOURCE FILE:     bv2261_y2fbpc_tiebreak_recorded_draws.yaml
+TABULATED FILE:  bv2261_y2fbpc_tiebreak_recorded_draws_tabulated.txt
+======================================================================
+
+election_title: "BV2261 race 1 — a perfectly balanced electorate: every pair draws, the tiebreak is recorded"
+scenario_description: >-
+  Six voters, three candidates, and the most evenly balanced electorate that can
+  exist: all six possible rankings of Anika, Beto and Cleo appear exactly once. Every
+  head-to-head therefore draws 3-3, every candidate goes 0-0-2 for a Copeland score of
+  1, and every margin is +0. Ranked Robin's deterministic rungs — Copeland score, then
+  total margin — both tie, so the count falls through to the rung of last resort.
+
+  THE POINT OF THIS CASE is what that last rung leaves behind. BetterVoting calls its
+  rung "random", and it is unpredictable from the ballots — but it is NOT lost and it is
+  NOT re-rolled. shuffleCandidatesForRandomTiebreak.ts seeds a deterministic PRNG
+  (TinyRand) with (rawVoteCount + hash(raceId)) >>> 0, shuffles the candidates ONCE, and
+  writes each candidate's position back as tieBreakOrder; the shuffled order ships in the
+  results JSON as `perm`. So the export publishes the WHOLE tiebreak sequence — winner
+  and runners-up — and a re-tally returns the same answer (verified: re-fetched, perm
+  and tieBreakOrder byte-identical).
+
+  BV recorded perm [Anika, Beto, Cleo] for this race and elected Anika. This file pins
+  lot_numbers to that recorded order, so LH's own lot rung replays BV's draw exactly —
+  same winner, same full ordering. Companion race (a Condorcet cycle, different perm):
+  bv2261_y2fbpc_tiebreak_recorded_cycle.yaml. Lesson:
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md
+  Live results: https://bettervoting.com/y2fbpc/results
+
+# Machine-readable BV fields — build_bv_registry.py reads these.
+# (Two YAMLs share one export: this election has two races, LH tabulates one at a time.)
+bv_test_id: BV2261
+bv_election_id: y2fbpc
+bv_results_url: https://bettervoting.com/y2fbpc/results
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+# Pinned to BetterVoting's recorded random perm for race 1, ["Anika", "Beto", "Cleo"],
+# so LH's lot rung reproduces BV's frozen draw: Anika first -> Anika. The companion
+# cycle race drew a DIFFERENT perm ([Anika, Cleo, Beto]) from the same ballots and the
+# same candidates — that is the per-race offset in the seed, working as designed.
+lot_numbers: [Anika, Beto, Cleo]
+# Records: all three 0-0-2, Copeland 1, margin +0 — every pair draws 3-3. LH ladder:
+#   Copeland tie -> margin tie -> lot (= BV's perm) -> Anika. BV: tieBreakType "random",
+#   perm [Anika, Beto, Cleo] -> Anika. Same winner, same full order.
+ballots: |-
+  Anika>Beto>Cleo
+  Anika>Cleo>Beto
+  Beto>Anika>Cleo
+  Beto>Cleo>Anika
+  Cleo>Anika>Beto
+  Cleo>Beto>Anika
+
+expected_winners:
+  - Anika
+
+# file: bv2261_y2fbpc_tiebreak_recorded_draws.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 6 ballots (ranked ballots).
 
@@ -38,9 +100,11 @@ the honest answer to "who is even in contention?".
    Smith set (3 of 3): Anika, Beto, Cleo
    Outside (0):        —
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   dead heat (its members DRAW each other head-to-head), so the strongest
+   "candidate" is a set, not a person. No member beats another, so there is no
+   loop for Minimax / Ranked Pairs / Schulze to disagree about — which member
+   wins is left to the tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Ranked Robin (RCV-RR) winner Anika is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is

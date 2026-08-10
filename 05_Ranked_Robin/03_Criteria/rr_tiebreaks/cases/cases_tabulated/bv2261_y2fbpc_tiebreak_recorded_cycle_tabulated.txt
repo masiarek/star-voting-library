@@ -1,3 +1,67 @@
+======================================================================
+SOURCE FILE:     bv2261_y2fbpc_tiebreak_recorded_cycle.yaml
+TABULATED FILE:  bv2261_y2fbpc_tiebreak_recorded_cycle_tabulated.txt
+======================================================================
+
+election_title: "BV2261 race 2 — a Condorcet cycle: every pair has a winner, and the tiebreak is still recorded"
+scenario_description: >-
+  The same six voters and the same three candidates as race 1, arranged the other way.
+  Here nothing draws: Anika beats Beto 4-2, Beto beats Cleo 4-2, and Cleo beats Anika
+  4-2 — a textbook Condorcet cycle. Every candidate goes 1-1-0 for a Copeland score of
+  1, and because every matchup is 4-2 every margin is +0 as well. So Ranked Robin
+  arrives at exactly the same dead end as race 1 by the opposite route: draws there,
+  a cycle here, and in both cases no deterministic rung can separate the field.
+
+  THE POINT OF THE PAIR is that BetterVoting's rung of last resort is deterministic and
+  fully published. Its "random" tiebreak seeds TinyRand with
+  (rawVoteCount + hash(raceId)) >>> 0, shuffles once, and reports the resulting order as
+  `perm` with each candidate's index as tieBreakOrder — so the export records the entire
+  sequence, not just the winner, and re-tallying returns the same answer.
+
+  Note what the raceId term in that seed buys: this race and race 1 have identical
+  candidates and identical ballot counts, yet BV drew a DIFFERENT order — [Anika, Cleo,
+  Beto] here against [Anika, Beto, Cleo] there. Without the per-race offset every race
+  on a multi-method poll would share one tiebreak order.
+
+  This file pins lot_numbers to this race's recorded perm, so LH's lot rung replays BV's
+  draw exactly. Companion race (every pair draws):
+  bv2261_y2fbpc_tiebreak_recorded_draws.yaml. Lesson:
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2261_y2fbpc_tiebreak_recorded.md
+  Live results: https://bettervoting.com/y2fbpc/results
+
+# Machine-readable BV fields — build_bv_registry.py reads these.
+# (Two YAMLs share one export: this election has two races, LH tabulates one at a time.)
+bv_test_id: BV2261
+bv_election_id: y2fbpc
+bv_results_url: https://bettervoting.com/y2fbpc/results
+
+voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
+num_winners: 1
+# Pinned to BetterVoting's recorded random perm for race 2, ["Anika", "Cleo", "Beto"] —
+# note the order differs from race 1's perm even though the candidates and the ballot
+# count are identical (the raceId offset in the seed). Anika is first here too, so both
+# races elect Anika; what differs is the recorded RUNNER-UP order, which the export
+# publishes just as explicitly.
+lot_numbers: [Anika, Cleo, Beto]
+# Records: all three 1-1-0, Copeland 1, margin +0 — Anika>Beto, Beto>Cleo, Cleo>Anika,
+#   all 4-2. LH ladder: Copeland tie -> margin tie -> lot (= BV's perm) -> Anika.
+#   BV: tieBreakType "random", perm [Anika, Cleo, Beto] -> Anika. Same winner, same
+#   full order. Which member of a cycle *should* win is the open question Minimax /
+#   Ranked Pairs / Schulze answer differently — see concepts/cycle_resolution.md.
+ballots: |-
+  2:Anika>Beto>Cleo
+  2:Beto>Cleo>Anika
+  2:Cleo>Anika>Beto
+
+expected_winners:
+  - Anika
+
+# file: bv2261_y2fbpc_tiebreak_recorded_cycle.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 6 ballots (ranked ballots).
 

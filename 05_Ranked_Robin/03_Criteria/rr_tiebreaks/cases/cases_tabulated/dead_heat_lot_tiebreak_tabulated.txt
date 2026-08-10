@@ -1,3 +1,46 @@
+======================================================================
+SOURCE FILE:     dead_heat_lot_tiebreak.yaml
+TABULATED FILE:  dead_heat_lot_tiebreak_tabulated.txt
+======================================================================
+
+election_title: "Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only)"
+scenario_description: >-
+  4 score ballots, 3 candidates. Ada and Ben are a perfect head-to-head TIE: two
+  voters score them EQUAL (Equal Support — no preference), the other two split one
+  each, so the matchup is 1-1. Both beat Cara outright. So Ada and Ben each go
+  1-0-1 (Copeland 1.5) AND their total margins are identical (+4). Ranked Robin
+  walks the FULL tiebreak ladder — most wins (tie) -> total margin (tie) -> lot
+  order — and only the pre-published lot [Ada, Ben, Cara] settles it, in Ada's
+  favor. Showcases the Equal Support column and the +1/2 Copeland credit that no
+  other case in the set exercises.
+
+  LH-ONLY ON PURPOSE. This case is exactly where the LH and BetterVoting tiebreak
+  rules DIVERGE. LH: most wins -> margin -> lot (fully deterministic). BetterVoting
+  RankedRobin.ts: most wins -> head-to-head (2-way only) -> RANDOM. Here the two
+  leaders tie each other head-to-head too, so BV would fall through to a random
+  pick — un-freezable — which is why there is no BV election for this case. See
+  05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
+
+voting_method: RankedRobin
+num_winners: 1
+lot_numbers: [Ada, Ben, Cara]
+lh_only_reason: "BetterVoting breaks this exact tie at RANDOM (head-to-head is also tied), so its winner can't be frozen/reproduced. LH resolves it deterministically by margin then lot — the whole point of the case — so it is LH-only by design."
+ballots: |-
+  Ada,Ben,Cara
+  5,5,0
+  5,5,0
+  4,3,1
+  3,4,1
+
+expected_winners:
+  - Ada
+
+# file: dead_heat_lot_tiebreak.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
 --- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
  Tabulating 4 ballots (score ballots).
 
@@ -36,9 +79,11 @@ the honest answer to "who is even in contention?".
    Smith set (2 of 3): Ada, Ben
    Outside (1):        Cara
    More than one member ⇒ NO Condorcet winner: the top of the tournament is a
-   cycle, so the strongest "candidate" is a set, not a person. Which member of
-   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
-   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   dead heat (its members DRAW each other head-to-head), so the strongest
+   "candidate" is a set, not a person. No member beats another, so there is no
+   loop for Minimax / Ranked Pairs / Schulze to disagree about — which member
+   wins is left to the tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
    Ranked Robin (RCV-RR) winner Ada is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
