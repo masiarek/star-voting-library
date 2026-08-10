@@ -3,7 +3,16 @@ Ready-to-paste GitHub issue for  github.com/Equal-Vote/bettervoting
 
 STATUS: FILED as Equal-Vote/bettervoting#1478 (2026-08-04).
   https://github.com/Equal-Vote/bettervoting/issues/1478
-This file is the source/archive copy.
+This file is the source/archive copy — kept VERBATIM as the record of what was
+sent. Do not edit the report text below to fix the error noted next.
+
+SUPERSEDED IN PART (2026-08-09): the rule and the 2/2 counts are right, but the
+report identifies the wrong ballot as the dropped one. BV's `score` is a sum, so
+w3vvff's Vanilla 3 / Chocolate 5 / Strawberry 4 is [1,null,null] + [2,5,4] — the
+partial ballot WAS counted, and the ballot dropped alongside the blank one is the
+all-5s. The correction is posted on #1478 and stated on the case page; the minimal
+fully-marked probe is filed as #1508 (BV2283, hb4qvv). See
+  ../../01_STAR/04_Real_Elections/pet_real_bv_election/small_abstention_c2_b5_lesson.md
 
 Links point at the public masiarek/star-voting-library repo so the ballots,
 the frozen exports, and the independent tabulation are all inspectable.

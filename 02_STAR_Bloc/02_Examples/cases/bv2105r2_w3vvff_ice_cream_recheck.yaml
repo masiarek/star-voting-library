@@ -35,13 +35,27 @@ scenario_description: |-
   2025 run, with Vanilla's score again averaged over 2 ballots instead of 3.
   This file is the pinned correct count.
 
-  IS IT A BUG OR THE POLICY? Stated fairly: bettervoting#884 made an ALL-EQUAL
-  ballot an abstention, and a ballot bearing a SINGLE mark is trivially all-equal,
-  so this may be that policy working as written. The counter-argument is that BV's
-  own tally treats a blank as 0 — so "Vanilla 1, blank, blank" is really
-  "Vanilla 1, Chocolate 0, Strawberry 0", which is NOT all-equal and strictly
-  prefers Vanilla. Scope: partial ballots whose non-blank marks are all equal.
-  Partial ballots with two or more distinct marks count correctly.
+  CORRECTION (2026-08-09) — THE DROPPED BALLOT IS THE ALL-5s ONE. This file first
+  read the 2/2 as "the 1,-,- probe was filed as an abstention." Reading w3vvff back
+  live settles it the other way: BV reports Vanilla 3, Chocolate 5, Strawberry 4,
+  and c.score is a plain SUM (tallyVotes.reduce(... + vote.marks[c.id], 0) in
+  Tabulators/Util.ts), so those totals are exactly [1,null,null] + [2,5,4]. The
+  PARTIAL BALLOT WAS COUNTED; the ballot dropped alongside the blank one is 5,5,5.
+  It follows from the code too — makeAbstentionTest maps blanks with `m ?? 0`
+  before testing, so the probe is [1,0,0], not all-equal, never caught. It hid
+  because a sum over 1 and 2 and a floored average over 5 and 2 both print 3.
+  The discriminating probe is a FULLY MARKED flat ballot, which is why the minimal
+  2-candidate 5,5 case exists: BV2283 (hb4qvv), filed as bettervoting#1508, with
+  the correction also posted to #1478.
+
+  IS IT A BUG OR THE POLICY? bettervoting#884 made an ALL-EQUAL ballot an
+  abstention, and makeAbstentionTest(markAllEqualAsAbstention=true) is that
+  decision implemented — so the CLASSIFICATION is policy working as written. What
+  #884 did not decide is whether such a ballot's SCORES should be dropped from the
+  totals. Classification and exclusion are separable, but filterInitialVotes
+  returns as soon as a test matches, so one flag does both, and the published
+  result stops reconciling with the ballots (Vanilla 3 where they say 8). That
+  narrower ask is what #1508 puts.
 
   WHY A NEW ELECTION WAS NEEDED (rather than re-fetching r4dqvd). Re-fetching the
   2025 election also returns 2/2, but r4dqvd is `closed` and its stored

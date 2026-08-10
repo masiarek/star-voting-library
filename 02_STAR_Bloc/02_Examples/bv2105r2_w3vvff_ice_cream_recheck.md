@@ -4,7 +4,13 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105r2_w3vvff_ice_cream_recheck.md)
 <!-- case-meta:end -->
 
-*A deliberate re-run of [BV2105](bv2105_r4dqvd_ice_cream_bloc.md) (`r4dqvd`) on **exactly the same four ballots**, cast again on 2026-08-04 so they are counted by **today's** tabulator. The question it settles: a year on, does BetterVoting still file a real partial ballot as an abstention? **It does.** The fresh election returns `nTallyVotes 2 / nAbstentions 2`, identical to 2025.*
+*A deliberate re-run of [BV2105](bv2105_r4dqvd_ice_cream_bloc.md) (`r4dqvd`) on **exactly the same four ballots**, cast again on 2026-08-04 so they are counted by **today's** tabulator. The question it was built to settle: a year on, does BetterVoting still drop a cast ballot from the tally? **It does** — the fresh election returns `nTallyVotes 2 / nAbstentions 2`, identical to 2025. Which ballot it drops turned out to be the opposite of what this page first said; see the correction below.*
+
+> **Correction — the dropped ballot is the all-5s one, not the partial one** (2026-08-09). This page originally read the `2 / 2` as *"the `1,-,-` probe was filed as an abstention."* Reading `w3vvff` back live settles it the other way. It reports **Vanilla 3, Chocolate 5, Strawberry 4**, and `c.score` is a plain **sum** (`tallyVotes.reduce((score, vote) => score + vote.marks[c.id], 0)` in `Tabulators/Util.ts`) — those totals are exactly `[1, null, null]` + `[2, 5, 4]`. **The partial ballot was counted.** The ballot dropped alongside the fully blank one was **`5,5,5`**.
+>
+> It follows from the code as well as the arithmetic: a ballot record carries a slot per candidate, and `makeAbstentionTest` maps blanks with `m ?? 0`, so the probe's marks are `[1, 0, 0]` — not all-equal, never caught by the test. Which is precisely [the argument this page already made](#is-this-a-bug-or-the-documented-policy) for why it *shouldn't* be caught. BetterVoting agrees; the page just credited it to the wrong ballot.
+>
+> The reason it hid so well: on this profile a **sum over `1` and `2`** and a **floored average over `5` and `2`** both print `3`. The two readings are indistinguishable from the displayed numbers, and only the source separates them. The probe that *does* discriminate is a **fully marked** flat ballot, which is why the minimal 2-candidate `5,5` case exists — filed as [#1508](https://github.com/Equal-Vote/bettervoting/issues/1508), with the correction posted to [#1478](https://github.com/Equal-Vote/bettervoting/issues/1478) too. Same rule (`markAllEqualAsAbstention`), same `2 / 2`, different ballot. See [The minimal case](../../01_STAR/04_Real_Elections/pet_real_bv_election/small_abstention_c2_b5_lesson.md).
 
 > **What this case is NOT about.** The library used to attribute this miscount to [bettervoting#1056](https://github.com/Equal-Vote/bettervoting/issues/1056). That was a mis-citation, corrected 2026-08-04. **#1056 is a different defect on the same demo election** — a `401` blocking JSON/CSV download and Race Details, introduced by the Editable Ballots work ([#979](https://github.com/Equal-Vote/bettervoting/issues/979)) and correctly closed via [#1058](https://github.com/Equal-Vote/bettervoting/issues/1058). They share only the BV2105 test-document name. The counting defect on this page is a separate bug, filed 2026-08-04 as **[#1478](https://github.com/Equal-Vote/bettervoting/issues/1478)** on the strength of this election ([report archive](bv2105r2_bv_github_issue.md)).
 
@@ -45,13 +51,19 @@ Winners **Chocolate, Strawberry**, and they were never in question — Chocolate
 | `nAbstentions` | 2 | **2** | **1** ✗ |
 | Vanilla `score` | 3 | **3** | total **8**, avg **2.7** ✗ |
 
-The two BetterVoting columns are identical. The `1,-,-` ballot is still filed as an abstention alongside the genuinely blank one, and Vanilla's reported figure is still an average over **2** ballots rather than 3 — the single `1` never enters the sum. (BV floors the average for display: Strawberry's 9/2 shows as `4`, Vanilla's 7/2 as `3`.)
+The two BetterVoting columns are identical: a year on, two of four cast ballots are still excluded from the tally, and the published totals still don't reconcile with the ballots in the box.
+
+**Which two** is the part this page got wrong at first (see the correction at the top). BV's `score` is a **sum**, so Vanilla 3 / Chocolate 5 / Strawberry 4 is `[1, 0, 0]` + `[2, 5, 4]`: the `1,-,-` probe **was** counted, and the ballot dropped alongside the blank one is **`5,5,5`** — the most engaged ballot in the box, scoring every flavour at the maximum. LH counts all four, one abstention, Vanilla total 8.
 
 ### Is this a bug, or the documented policy?
 
-Worth stating fairly, because it cuts against the simple reading. [#884](https://github.com/Equal-Vote/bettervoting/issues/884) established that a ballot whose marks are **all equal** counts as an abstention. A ballot bearing a *single* mark is **trivially** all-equal, so it falls through the same test — meaning this may be the policy working exactly as written, not a coding slip.
+Worth stating fairly, because it cuts against the simple reading. [#884](https://github.com/Equal-Vote/bettervoting/issues/884) established that a ballot whose marks are **all equal** counts as an abstention, and `makeAbstentionTest(markAllEqualAsAbstention = true)` is that decision implemented. So the classification is **policy working as written**, not a coding slip.
 
-The argument that it is nonetheless wrong: **BetterVoting's own tally treats a blank as 0.** So `Vanilla 1, blank, blank` is not a ballot with one mark and two unknowns — it is a ballot reading Vanilla 1, Chocolate 0, Strawberry 0, which strictly prefers Vanilla to both. Under the all-equal rule *as applied to the scores it actually counts*, that ballot is not all-equal at all, and it plainly expresses a preference. Note the scope: this concerns partial ballots whose non-blank marks are all equal. Partial ballots with two or more distinct marks count correctly.
+Two questions were tangled together here, and separating them is what the correction above buys:
+
+**Does the rule catch a partial ballot?** *No* — and this page argued it shouldn't, on the grounds that **BetterVoting's own tally treats a blank as 0**, so `Vanilla 1, blank, blank` reads as Vanilla 1, Chocolate 0, Strawberry 0 and strictly prefers Vanilla. That argument turns out to describe what BV already does: `makeAbstentionTest` maps blanks with `m ?? 0` before testing, so the probe is `[1, 0, 0]` and is counted. Partial ballots are fine.
+
+**Should an all-equal ballot's scores be dropped from the totals?** *That* is the live question, and #884 didn't decide it. Classifying a ballot as an abstention and **excluding it from `tallyVotes`** are separable, but `filterInitialVotes` returns as soon as a test matches, so one flag does both. The consequence is a published result that no hand count agrees with — Vanilla 3 where the ballots say 8. That is the narrow ask in [#1508](https://github.com/Equal-Vote/bettervoting/issues/1508): keep whatever classification #884 settled on, but let the scores through.
 
 ## The LH report (the correct count)
 
