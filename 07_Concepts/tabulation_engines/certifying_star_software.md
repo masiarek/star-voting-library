@@ -92,6 +92,20 @@ What does a recount of a STAR contest do, given the runoff pair depends on the s
 
 ---
 
+### How much of RCTab's design should a STAR equivalent copy?
+
+Most of the shape, none of the specifics. RCTab is **Java, Gradle, JDK 21, MPL-2.0** — and its architecture is worth studying because **it was shaped by certification, not by elegance.** Five ideas are worth taking outright:
+
+1. **The contest is defined by a JSON configuration file, not by code** — rules, candidate roster, CVR paths, output metadata. This is the most important design decision in the whole product: rule variations become *data*, so a jurisdiction's local rules do not require new software, and the config itself becomes an auditable artifact that can be hashed and archived alongside the result.
+2. **Three outputs: a summary CSV, a summary JSON, and a detailed audit log** documenting how each ballot was treated. The audit log is what a reviewer wants and what this library's engine does not currently produce — its output is a *human-readable teaching report*, which is a different thing.
+3. **Multiple CVR input formats, plus conversion to NIST CDF** as an explicit feature.
+4. **Configuration validation as a first-class function** — refuse to run on a bad config rather than produce a plausible wrong answer. This library's engine already takes that philosophy seriously; it would carry over directly.
+5. **A GUI over the configuration, not over the tabulation**, plus a CLI. Election staff are not command-line users, and the GUI's job is validation and data entry, not counting.
+
+What not to copy: the language and build stack, the RCV-specific rule variations, and — importantly — **the round-based output model.** RCV produces N rounds; STAR produces two well-defined stages. Forcing STAR's scoring round and automatic runoff into a "rounds" table would misrepresent the method to satisfy an inherited format.
+
+**The meta-lesson matters more than any of the five.** RCTab's design is what tabulation software looks like when the audience is a test lab and an election official. This repo's engine is what it looks like when the audience is a learner. A STARTab is therefore **not "the LH engine with a GUI"** — it is a different product with a different output contract, and the honest reference package should say so rather than imply the existing engine is nearly there.
+
 ---
 
 # "A STARTab" — the goal that finally has a shape

@@ -40,6 +40,26 @@ Two things keep getting treated as one goal:
 
 Each is a document. Each is finishable. Each is worth having on its own.
 
+### D0 — The vocabulary map
+
+**Do this before anything else, because every other document uses the words.** This library, and BetterVoting, say **race**; the standard term is **contest**. That single slip is enough to mark an implementation statement as amateur to a lab reviewer, and there are a dozen more like it.
+
+A one-page table mapping this repo's teaching vocabulary to the standard vocabulary used by NIST and the EAC:
+
+| Here | Standard |
+|---|---|
+| race | **Contest** (specifically a `CandidateContest`) |
+| the thing a voter marks | `Candidate` + `ContestSelection` |
+| a ballot, as cast | **`CastVoteRecord`** |
+| the score a voter gave | `SelectionPosition` (its value) |
+| precinct | `GpUnit` / `ReportingUnit` |
+| voting method | **`VoteVariation`** |
+| winner | the contest result; a candidate is *elected* |
+
+Authoritative sources exist to align against — NIST's [election glossary](https://pages.nist.gov/ElectionGlossary/) and the [CVR common data format](https://pages.nist.gov/CastVoteRecords/). This is cheap, it is a day's work, and it buys credibility that no amount of correct arithmetic will.
+
+**It does not mean changing the teaching pages.** "Race" is the word readers use, and the [voice rules](../../CONTRIBUTING.md) say meet people where they are. It means the *certification-facing* documents speak the reviewer's language, and that the map between the two is written down once so neither drifts.
+
 ### D1 — The clause-numbered specification
 
 Enough to implement STAR correctly **without reading any implementation**. Every tie rung, every ballot-marking edge case, every reporting obligation. Each clause numbered, each clause citing the case file that pins it.
@@ -70,7 +90,13 @@ The highest-leverage document nobody has written. Because the EAC defines no req
 
 ### D6 — The CVR mapping
 
-How a 0–5 score ballot is represented in a cast vote record — NIST CDF, and whatever the vendor exports look like. **Blocked on the pivotal open question** (see below), and honest about it: if the answer is that no certified scanner can export a STAR CVR without a firmware change, that fact belongs in this document rather than being discovered later.
+How a 0–5 score ballot is represented in a cast vote record — NIST CDF, and whatever the vendor exports look like.
+
+**Partly unblocked already, and the news is good.** NIST's CVR common data format defines a `VoteVariation` enumeration for how a contest is tabulated, and **`range` is one of its values** — alongside approval, cumulative, RCV, plurality, and `other` (paired with `OtherVoteVariation` for anything unlisted). The format also allows **multiple `SelectionPosition` instances per candidate**, explicitly for vote variations where a voter marks more than one option per candidate — which is the structure a score grid needs.
+
+The clean way to state it, and the reason this matters: **a CVR records the ballot, not the tabulation.** A STAR ballot *is* a range ballot; the automatic runoff is a downstream counting rule the format never needs to know about — exactly as a ranked CVR is neutral between IRV, Ranked Robin, and STV. So the likely mapping is `VoteVariation: range` at the record layer, with STAR named in the implementation statement, and `other` available if a reviewer wants the contest labelled explicitly.
+
+**What remains genuinely unknown is not the format but the product:** whether any certified scanner *emits* such a CVR today. That is a vendor question, and it is the pivotal one below.
 
 ---
 
@@ -120,10 +146,15 @@ The real objections are not about the license text:
 - **Provenance.** Who wrote each line, and did they have the right to contribute it? A clean history and a DCO or CLA matter more to corporate counsel than the license name, and are worth putting in place *before* there are outside contributors rather than after.
 - **Coding standards.** Virginia's review examined design and coding standards explicitly. Outside code rarely matches a vendor's, and rewriting to match is often cheaper than reviewing.
 
-**Two concrete moves, both cheap:**
+**What RCTab actually chose is worth knowing: MPL-2.0**, not MIT — the Mozilla Public License, a *file-level* copyleft. Modifications to MPL-licensed files must be published under MPL, but those files can be combined with proprietary code in a larger work without infecting it. For election software that is a deliberate and rather good bargain: **the counting logic stays inspectable no matter who ships it, while commercial integration stays possible.** MIT would let a vendor fork the tabulator and never show what they changed about how votes are counted — which, for voting software specifically, is the wrong default. One caveat on the precedent: RCTab was *procured by a state*, not incorporated by a vendor, so its license has not actually been tested against commercial integration.
 
-1. **Dual-license the code MIT OR Apache-2.0.** Apache-2.0 adds an explicit patent grant, which corporate legal departments actively prefer and MIT lacks; the dual form is the Rust ecosystem's convention for exactly this reason and costs nothing to adopt. Note the inherited obligation either way: the engine derives from Larry Hastings' MIT-licensed `starvote` and must keep its attribution.
-2. **License the specification and the case corpus separately and even more permissively** — they are documents and data, not software, and the whole point is that a vendor, a lab, or a competing implementer can lift them without a conversation. Maximum reuse, no attribution friction inside someone's certification package. **These are the artifacts most likely to actually be used**, and they carry none of the objections above.
+**Three artifacts, three different answers — pick per artifact, not once for everything:**
+
+1. **The specification and the case corpus: maximally permissive** (CC0 or CC-BY). They are documents and data, not software; the entire point is that a vendor, a lab, or a competing implementer can lift them without a conversation or an attribution obligation buried inside a certification package. **These are the artifacts most likely to actually be used**, and they carry none of the objections above.
+2. **A shipped tabulator: MPL-2.0, following RCTab.** Same niche, same reasoning, and a reviewer has already seen it approved once — which is worth something on its own.
+3. **A library or oracle intended for adoption: MIT or Apache-2.0.** Apache-2.0 adds an explicit patent grant that corporate counsel prefers and MIT lacks; dual `MIT OR Apache-2.0` is the Rust ecosystem convention for exactly this reason.
+
+The inherited obligation applies throughout: the engine derives from Larry Hastings' MIT-licensed `starvote`, and MIT's attribution travels into any of these (MIT being permissive, relicensing a derivative under MPL is allowed as long as that notice survives).
 
 ### The follow-up question worth asking directly
 
