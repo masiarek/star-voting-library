@@ -12,6 +12,7 @@ This is the follow-up list: every report **we** filed against a project we don't
 
 | Issue | Filed | State | What it is |
 |---|---|---|---|
+| [#1508](https://github.com/Equal-Vote/bettervoting/issues/1508) | 2026-08-09 | open | A ballot scoring every candidate the same (`5,5`) is dropped from the STAR tally as an abstention, so its scores never reach the totals. Minimal case, [BV2283 `hb4qvv`](https://bettervoting.com/hb4qvv/results); supersedes the diagnosis in #1478 |
 | [#1507](https://github.com/Equal-Vote/bettervoting/issues/1507) | 2026-08-09 | open | STAR-PR results always report `tieBreakType: "random"`, even with no tie — the mislabel that hid the count-vs-weight divergence for a year |
 | [#1487](https://github.com/Equal-Vote/bettervoting/issues/1487) | 2026-08-06 | open | Range-of-Scores chart and the page headline use different denominators on flat ballots |
 | [#1485](https://github.com/Equal-Vote/bettervoting/issues/1485) | 2026-08-06 | open | Record the abstention policy on the race, so an export says what was *allowed* |
@@ -52,7 +53,7 @@ Larry's engine, which this repo forks. Fork-side findings and their local fixes 
 States go stale silently — nobody emails us when an issue closes. To re-check every row at once:
 
 ```bash
-for r in "Equal-Vote/bettervoting 1487 1485 1484 1478 1417 1407 1379 1090 1086 1063 1052 904 894 778" "larryhastings/starvote 19 18 17"; do set -- $r; repo=$1; shift; for n in "$@"; do curl -s "https://api.github.com/repos/$repo/issues/$n" | python3 -c "import json,sys; d=json.load(sys.stdin); print(f\"{d['state']:8} $repo#{d['number']}  {d['title'][:70]}\")"; done; done
+for r in "Equal-Vote/bettervoting 1508 1507 1487 1485 1484 1478 1417 1407 1379 1090 1086 1063 1052 904 894 778" "larryhastings/starvote 20 19 18 17"; do set -- $r; repo=$1; shift; for n in "$@"; do curl -s "https://api.github.com/repos/$repo/issues/$n" | python3 -c "import json,sys; d=json.load(sys.stdin); print(f\"{d['state']:8} $repo#{d['number']}  {d['title'][:70]}\")"; done; done
 ```
 
 The GitHub Pages one is a discussion, not an issue, so it isn't in that loop — open it and look.

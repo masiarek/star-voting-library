@@ -158,4 +158,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/04_Real_
 - [Ballot & terminology basics](../../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [bv15_4h89vj_plurality_abstain](bv15_4h89vj_plurality_abstain.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)
+More cases in this set: [abstention_reconciliation_min_c2_b6](abstention_reconciliation_min_c2_b6.md) · [best_pet_c7_b461](best_pet_c7_b461.md) · [bv15_4h89vj_plurality_abstain](bv15_4h89vj_plurality_abstain.md) · [bv2283_hb4qvv_all_equal_recheck](bv2283_hb4qvv_all_equal_recheck.md) · [small_abstention_c2_b5](small_abstention_c2_b5.md)

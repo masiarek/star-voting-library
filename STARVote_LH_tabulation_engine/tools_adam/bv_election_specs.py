@@ -6051,7 +6051,79 @@ BRAMS_1982_SPEC = {
 }
 
 
-ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# --- The minimal all-equal-ballot probe (re-cast of 3w6v4b, June 2026) -----------
+# Two candidates, five ballots, single-winner STAR. One voter scores BOTH candidates
+# 5 — the maximum, for everyone — and BetterVoting's STAR tabulator files that ballot
+# as an abstention and drops it from the tally. Root cause is one line, verified on
+# master 2026-08-09: Star.ts passes makeAbstentionTest(TRUE), and Util.ts then tests
+#   marks.every(m => m === marks[0])
+# i.e. "every mark equal" rather than "every mark zero". STAR and AllocatedScore
+# (STAR_PR) pass true; Approval, Plurality, IRV and RankedRobin pass the default
+# false, so only the score methods drop these ballots.
+#
+# Why re-cast rather than cite 3w6v4b: that election is in state 'draft', so its
+# public /results page is not a link a BV dev can just open. Same five ballots,
+# same names (it is the same election), minted 'open' so the issue is clickable.
+#
+# The two candidates are deliberately A and B: this is the same election as 3w6v4b
+# re-cast, and a matched pair keeps its cast (CLAUDE.md). enable_write_in MUST stay
+# False — a write-in adds a candidate slot, the probe ballot becomes 5,5,0, and
+# "all marks equal" stops firing, which would hide the very thing being measured.
+ALL_EQUAL_BALLOT_MINIMAL_SPEC = {
+    "test_id": "BV2283",
+    "title": "Score both candidates 5 (STAR, 2 candidates): is that a vote or an abstention?",
+    "enable_write_in": False,
+    "description": (
+        "Two candidates, five ballots, scored 0-5, single-winner STAR. This is a "
+        "re-cast of an election from June 2026 (bettervoting.com/3w6v4b) on exactly "
+        "the same five ballots, so they are counted by today's tabulator. "
+        "Each ballot is a different KIND of ballot. One voter gives A 0 and B 5. One "
+        "gives A 4 and B 0. One gives A 5 and B 0. One leaves the whole ballot blank, "
+        "which is what an abstention actually looks like: nothing marked at all. And "
+        "one voter scores BOTH candidates 5 - maximum support for everyone - which is "
+        "the ballot this election is about. "
+        "The winner is not in question and does not depend on any of this: A wins. A "
+        "ballot that scores every candidate the same adds the same amount to every "
+        "candidate, so it cannot change who leads the scoring round, and it expresses "
+        "no preference between the two finalists, so it is neutral in the runoff. "
+        "What the election measures is the COUNT, not the winner. Read it off the "
+        "tallied-ballot and abstention counts on the results page, and off the score "
+        "totals. COUNTED looks like 4 tallied / 1 abstention, with A on 14 and B on "
+        "10. DROPPED looks like 3 tallied / 2 abstentions, with A on 9 and B on 5 - "
+        "the 5,5 voter's ten points missing from a published total that a hand count "
+        "would not agree with. "
+        "Two candidates is an unusual STAR race, and that is the point: with only two "
+        "candidates a 5,5 IS a flat ballot, so the rule fires on the simplest possible "
+        "example. The ballot is still worth collecting - it says 'I like both of these "
+        "a lot', which a choose-one ballot cannot say. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/"
+        "01_STAR/04_Real_Elections/pet_real_bv_election/small_abstention_c2_b5_lesson.html)"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["A", "B"],
+    # `None` serialises to JSON null — a blank slot, NOT a zero. The difference
+    # between ballot 3 and ballot 5 is the whole experiment; do not "clean up".
+    "ballots": [
+        [0, 5],                 # prefers B
+        [4, 0],                 # prefers A
+        [5, 5],                 # THE PROBE — maximum support for both
+        [5, 0],                 # prefers A
+        [None, None],           # fully blank — a TRUE abstention
+    ],
+    "expected": (
+        "Winner A either way. The count is the probe. FIXED looks like nTallyVotes 4 / "
+        "nAbstentions 1, A 14, B 10. STILL BROKEN looks like nTallyVotes 3 / "
+        "nAbstentions 2, A 9, B 5 - the shape 3w6v4b recorded in June 2026 and the "
+        "shape the code on master still produces. LH counts 5 ballots, 1 abstention, "
+        "A 14, B 10, runoff A 2 - B 1 with 2 Equal Support. "
+        "Test ID BV2283; re-cast of 3w6v4b; evidence for the all-equal-ballot issue "
+        "(companion to bettervoting#1478, #1470, #1407)."
+    ),
+}
+
+
+ELECTIONS: list = [ALL_EQUAL_BALLOT_MINIMAL_SPEC]
 # Previously: [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 -> qycpbx, BV2282 -> hf3ckp
 #   Created as designed, two races each on the same ballots (303 and 21 ballots).
 #   BV agrees with LH on all four races: IRV -> D and RankedRobin -> C on the 303,

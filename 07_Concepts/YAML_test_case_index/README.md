@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**590 election files** (496 single-winner, 94 multi-winner) across 18 method(s).
+**591 election files** (497 single-winner, 94 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 270 |
+| STAR | 271 |
 | RCV-IRV (Hare) | 49 |
 | Ranked Robin (RCV-RR / Copeland) | 100 |
 | Approval | 25 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (270)
+## STAR  (271)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -113,6 +113,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml) |
 | [`abstention_reconciliation_min_c2_b6`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/abstention_reconciliation_min_c2_b6.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | Abstention vs Equal Support — the minimal reconciliation case → _Dog_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml) |
 | [`best_pet_c7_b461`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/best_pet_c7_b461.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | What Makes the Best Pet? → _Dog_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/best_pet_c7_b461.yaml) |
+| [`bv2283_hb4qvv_all_equal_recheck`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/bv2283_hb4qvv_all_equal_recheck.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | BV2283 — Score both candidates 5 (STAR, 2 candidates): a vote, or an abstention? → _A_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/bv2283_hb4qvv_all_equal_recheck.yaml) |
 | [`flat_scores_abstention_c3_b8`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/flat_scores_abstention_c3_b8.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | BV Abstentions and flat scores (Apple/Banana/Cherry, 8 ballots) → _Banana_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/flat_scores_abstention_c3_b8.yaml) |
 | [`small_abstention_c2_b5`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/small_abstention_c2_b5.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | Equal Support vs Abstention — minimal STAR test (A/B, 5 ballots) → _A_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/small_abstention_c2_b5.yaml) |
 | [`Runoff_01_confirms_leader_r2pvc9`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_01_confirms_leader_r2pvc9.md) | `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/` | 1 | Runoff 01 — Runoff confirms the leader (control) → _Aspen_ | [`.yaml`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_01_confirms_leader_r2pvc9.yaml) |

@@ -39,6 +39,7 @@ AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_suppor
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/best_pet_c7_b461.yaml,7,461,Dog,Dog,Cat,Dog,Dog,Dog,Dog,Dog,Dog,360,True,False,False
+AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/bv2283_hb4qvv_all_equal_recheck.yaml,2,5,A,A,A,A,A,A,A,A,A,1,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/flat_scores_abstention_c3_b8.yaml,3,8,Banana,Banana,Banana,Banana,Banana,Banana,Banana,Banana,Banana,2,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/small_abstention_c2_b5.yaml,2,5,A,A,A,A,A,A,A,A,A,1,False,False,False
 AGREE,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_01_confirms_leader_r2pvc9.yaml,3,3,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,0,False,False,False

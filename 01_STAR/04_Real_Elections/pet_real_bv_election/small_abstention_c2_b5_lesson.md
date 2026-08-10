@@ -2,7 +2,9 @@
 
 **One line:** the tightest possible demonstration. Two candidates, five ballots. One voter scores **both** candidates **5** — maximum support for everyone — and BetterVoting files that ballot as an **abstention**. An [independent STAR engine](../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) (the [LH `starvote`](../../../07_Concepts/GLOSSARY.md) tabulator) counts it as **Equal Support** and still elects the same winner.
 
-> Filed with BetterVoting: **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**.
+> **Filed with BetterVoting as [Equal-Vote/bettervoting#1508](https://github.com/Equal-Vote/bettervoting/issues/1508)** (2026-08-09) — this election, with BV's own source quoted. It came out of the broader pets reconciliation, [#1407](https://github.com/Equal-Vote/bettervoting/issues/1407).
+>
+> **▶ Live on BetterVoting:** the same five ballots, re-cast on 2026-08-09 so today's tabulator counts them — [vote](https://bettervoting.com/hb4qvv) · **[results ↗](https://bettervoting.com/hb4qvv/results)** (election `hb4qvv`, BV2283). Still **3 tallied / 2 abstentions**, A on 9 instead of 14. The June capture below (`3w6v4b`) is in `draft` state, so its results page won't open for anyone else — that is why the re-cast exists. Repo case: [`bv2283_hb4qvv_all_equal_recheck.md`](cases/cases_pages/bv2283_hb4qvv_all_equal_recheck.md).
 
 This is the **2-candidate** member of the pair. Its richer sibling, which adds a third candidate to show that BetterVoting's rule is "*any* flat ballot = abstention" (it even drops an engaged `3,3,3`), is [When "no preference" gets called an "abstention"](small_case_abstention_lesson.md). At full scale: the 461-ballot [pet race](README.md).
 
@@ -49,6 +51,27 @@ BetterVoting's own result, from the export:
 ```
 
 With only two candidates, a `5,5` ballot *is* flat (every candidate equal), so BetterVoting's "flat = abstention" rule flags it directly. That's what makes this the cleanest one-sentence statement of the problem — though it can look like a harmless edge case, which is exactly why the 3-candidate sibling matters: there, a flat `3,3,3` is dropped while a genuine `5,5,0` no-preference ballot is kept, proving the two ideas are different.
+
+## The rule, in one line
+
+This isn't guesswork about BetterVoting's intent — the rule is a single expression in its tabulator, and it says "every mark **equal**" where you'd expect "every mark **zero**":
+
+```ts
+// packages/backend/src/Tabulators/Util.ts  (verified on master, 2026-08-09)
+export const makeAbstentionTest = (markAllEqualAsAbstention: boolean = false) => {
+	return [
+		'nAbstentions',
+		(vote: rawVote) => {
+			const marks = Object.values(vote.marks).map(m => m ?? 0);
+			return marks.every(m => m === (markAllEqualAsAbstention ? marks[0] : 0));
+		}
+	] as const;
+}
+```
+
+Two details finish the picture. `filterInitialVotes` **returns** as soon as a test matches, so a matching ballot is tallied under `nAbstentions` and never enters the score totals — the scores are *dropped*, not merely relabelled. And the `true` is passed by exactly two tabulators, `Star.ts` and `AllocatedScore.ts` (STAR_PR); Approval, Plurality, IRV and Ranked Robin pass the default `false`. So **an Approval voter who approves everyone is counted; a STAR voter who scores everyone 5 is not.**
+
+That asymmetry also marks the limit of the "harmless" reading. In single-winner STAR an all-equal ballot adds the same amount to every candidate and states no preference in the runoff, so it genuinely cannot change the winner — the totals are wrong, the outcome isn't. STAR_PR has no such protection: `AllocatedScore.ts` sets `quota = V / nWinners` from the count of *tallied* ballots, so dropping ballots shrinks the quota and moves the surplus arithmetic that decides seats.
 
 ## What the LH engine prints
 
