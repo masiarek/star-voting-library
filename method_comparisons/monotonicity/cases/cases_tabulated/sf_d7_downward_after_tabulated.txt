@@ -71,6 +71,30 @@ Blank Votes     5652  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Engardio
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 36626 of 36626 ballots still active; majority = 18314
+   Melgar eliminated with 11652:
+      → (no continuing ranking)   5652  ← these ballots go inactive
+      → Nguyen                 3500
+      → Engardio               2500
+
+FINAL ROUND — 30974 of 36626 ballots still active (5652 inactive); majority = 15488
+   Engardio              15819  (51.1% of the still-active)  ← elected
+   Nguyen                15155  (48.9% of the still-active)
+   Never exhausted, never transferred:
+      13460 ballots held by Nguyen carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 5652 of 36626 (15.4%).
+   Engardio's 15819 is a majority of the 30974 still active but only 43.2% of all 36626 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

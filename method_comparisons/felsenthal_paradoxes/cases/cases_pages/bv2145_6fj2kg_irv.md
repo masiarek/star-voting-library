@@ -61,6 +61,27 @@ Ada                0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ben
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 17 of 17 ballots still active; majority = 9
+   Ada eliminated with 5:
+      → Ben                       3
+      → Cleo                      2
+
+FINAL ROUND — 17 of 17 ballots still active; majority = 9
+   Ben                       9  (52.9% of the still-active)  ← elected
+   Cleo                      8  (47.1% of the still-active)
+   Never exhausted, never transferred:
+      8 ballots held by Cleo carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 17 (0.0%).
+   Ben's 9 is a majority of the 17 still active AND of all 17 cast (52.9%).
 ```
 <!-- --8<-- [end:report] -->
 

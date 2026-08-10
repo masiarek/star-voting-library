@@ -69,6 +69,26 @@ James              0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Peter
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 11 of 11 ballots still active; majority = 6
+   James eliminated with 2:
+      → Peter                     2
+
+FINAL ROUND — 11 of 11 ballots still active; majority = 6
+   Peter                     6  (54.5% of the still-active)  ← elected
+   Paul                      5  (45.5% of the still-active)
+   Never exhausted, never transferred:
+      5 ballots held by Paul carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 11 (0.0%).
+   Peter's 6 is a majority of the 11 still active AND of all 11 cast (54.5%).
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

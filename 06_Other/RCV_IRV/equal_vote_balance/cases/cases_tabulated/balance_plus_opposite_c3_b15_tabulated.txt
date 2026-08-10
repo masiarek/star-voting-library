@@ -59,6 +59,26 @@ Bruno              0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ada
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 15 of 15 ballots still active; majority = 8
+   Bruno eliminated with 4:
+      → Ada                       4
+
+FINAL ROUND — 15 of 15 ballots still active; majority = 8
+   Ada                      10  (66.7% of the still-active)  ← elected
+   Cyrus                     5  (33.3% of the still-active)
+   Never exhausted, never transferred:
+      5 ballots held by Cyrus carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 15 (0.0%).
+   Ada's 10 is a majority of the 15 still active AND of all 15 cast (66.7%).
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

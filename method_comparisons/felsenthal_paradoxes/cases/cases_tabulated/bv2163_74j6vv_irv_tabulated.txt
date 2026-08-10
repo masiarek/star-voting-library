@@ -62,6 +62,30 @@ Blank Votes       17  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   B
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 103 of 103 ballots still active; majority = 52
+   D eliminated with 17:
+      → (no continuing ranking)     17  ← these ballots go inactive
+
+ROUND 2 — 86 of 103 ballots still active (17 inactive); majority = 44
+   C eliminated with 24:
+      → B                        24
+
+FINAL ROUND — 86 of 103 ballots still active (17 inactive); majority = 44
+   B                        53  (61.6% of the still-active)  ← elected
+   A                        33  (38.4% of the still-active)
+   Never exhausted, never transferred:
+      33 ballots held by A carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 17 of 103 (16.5%).
+   B's 53 is a majority of the 86 still active AND of all 103 cast (51.5%).
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

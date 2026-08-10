@@ -69,6 +69,30 @@ Blank Votes       12  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Peltola
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 200 of 200 ballots still active; majority = 101
+   Begich eliminated with 57:
+      → Palin                    29
+      → Peltola                  16
+      → (no continuing ranking)     12  ← these ballots go inactive
+
+FINAL ROUND — 188 of 200 ballots still active (12 inactive); majority = 95
+   Peltola                  96  (51.1% of the still-active)  ← elected
+   Palin                    92  (48.9% of the still-active)
+   Never exhausted, never transferred:
+      69 ballots held by Palin carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 12 of 200 (6.0%).
+   Peltola's 96 is a majority of the 188 still active but only 48.0% of all 200 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
 ```
 <!-- --8<-- [end:report] -->
 

@@ -66,6 +66,26 @@ Left               0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Center
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 34 of 34 ballots still active; majority = 18
+   Left eliminated with 10:
+      → Center                   10
+
+FINAL ROUND — 34 of 34 ballots still active; majority = 18
+   Center                   21  (61.8% of the still-active)  ← elected
+   Right                    13  (38.2% of the still-active)
+   Never exhausted, never transferred:
+      13 ballots held by Right carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 34 (0.0%).
+   Center's 21 is a majority of the 34 still active AND of all 34 cast (61.8%).
 ```
 <!-- --8<-- [end:report] -->
 

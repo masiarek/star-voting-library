@@ -459,6 +459,47 @@ Blank Votes      602  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Kiss
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 8974 of 8974 ballots still active; majority = 4488
+   Simpson eliminated with 35:
+      → Kiss                     19
+      → Montroll                  6
+      → Wright                    6
+      → (no continuing ranking)      4  ← these ballots go inactive
+   WriteIn eliminated with 36:
+      → Montroll                 13
+      → (no continuing ranking)     11  ← these ballots go inactive
+      → Kiss                      7
+      → Wright                    5
+   Smith eliminated with 1306:
+      → Montroll                472
+      → Kiss                    370
+      → Wright                  332
+      → (no continuing ranking)    132  ← these ballots go inactive
+
+ROUND 2 — 8827 of 8974 ballots still active (147 inactive); majority = 4414
+   Montroll eliminated with 2553:
+      → Kiss                   1332
+      → Wright                  766
+      → (no continuing ranking)    455  ← these ballots go inactive
+
+FINAL ROUND — 8372 of 8974 ballots still active (602 inactive); majority = 4187
+   Kiss                   4313  (51.5% of the still-active)  ← elected
+   Wright                 4059  (48.5% of the still-active)
+   Never exhausted, never transferred:
+      2918 ballots held by Wright carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 602 of 8974 (6.7%).
+   Kiss's 4313 is a majority of the 8372 still active but only 48.1% of all 8974 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
 ```
 <!-- --8<-- [end:report] -->
 

@@ -3992,21 +3992,31 @@ Memphis,Nashville,Chattanooga,Knoxville
                 import contextlib as _ctx
                 import io as _io
                 _buf = _io.StringIO()
+                _transfers = None
                 try:
                     with _ctx.redirect_stdout(_buf):
-                        rcv_irv_tabulation.run(BALLOTS_FILE)
+                        # extras=False: the transfer/inactive block is RETURNED
+                        # for the always-full mirror, not printed to screen.
+                        _transfers = rcv_irv_tabulation.run(BALLOTS_FILE)
                 except SystemExit:
                     sys.stdout.write(_buf.getvalue())  # don't swallow errors
                     raise
                 _out = _buf.getvalue()
                 sys.stdout.write(_out)
-                # Append the Smith-set analysis to the MIRROR only (the on-screen
-                # echo stays minimal, house rule). RCV-IRV is not Smith-efficient,
-                # so this is a genuine pass/fail: did the eliminations walk out of
-                # the set that collectively beats everyone else? The winner is read
-                # back from the vendored engine's own report rather than recomputed,
-                # so the two can never contradict each other on a tie-break.
-                _mirror = _out
+                # Two analyses ride the MIRROR only, so the on-screen echo stays
+                # minimal (house rule) while the `_tabulated` copy renders
+                # maximum info. `--full` puts both on screen.
+                #   1. Where the votes went + how many stopped counting: the two
+                #      numbers pyrankvote's round tables never print.
+                #   2. The Smith set. RCV-IRV is not Smith-efficient, so this is a
+                #      genuine pass/fail: did the eliminations walk out of the set
+                #      that collectively beats everyone else? The winner is read
+                #      back from the vendored engine's own report rather than
+                #      recomputed, so the two can never contradict each other on a
+                #      tie-break.
+                _extras = []
+                if _transfers:
+                    _extras.append(_transfers)
                 try:
                     _cands, _bals, _, _ = ballots_for_pairwise(csv_input)
                     _wnames = []
@@ -4023,9 +4033,15 @@ Memphis,Nashville,Chattanooga,Knoxville
                         winner=_wnames[0] if len(_wnames) == 1 else None,
                         method_label="RCV-IRV", smith_efficient=False)
                     if _blk:
-                        _mirror = _out.rstrip("\n") + "\n\n" + "\n".join(_blk) + "\n"
+                        _extras.append("\n".join(_blk))
                 except Exception:
                     pass
+                _mirror = _out
+                if _extras:
+                    _mirror = (_out.rstrip("\n") + "\n\n"
+                               + "\n\n".join(_extras) + "\n")
+                    if FULL_RENDER:
+                        sys.stdout.write("\n" + "\n\n".join(_extras) + "\n")
                 try:
                     write_composed_tabulated(BALLOTS_FILE, _mirror)
                 except Exception:

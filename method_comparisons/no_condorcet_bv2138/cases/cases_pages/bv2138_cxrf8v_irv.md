@@ -70,6 +70,30 @@ Erin               0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Dave
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 921 of 921 ballots still active; majority = 461
+   Erin eliminated with 0:
+      → (held no ballots)
+   Abby eliminated with 98:
+      → Dave                     98
+   Cora eliminated with 200:
+      → Dave                    200
+
+FINAL ROUND — 921 of 921 ballots still active; majority = 461
+   Dave                    609  (66.1% of the still-active)  ← elected
+   Brad                    312  (33.9% of the still-active)
+   Never exhausted, never transferred:
+      312 ballots held by Brad carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 921 (0.0%).
+   Dave's 609 is a majority of the 921 still active AND of all 921 cast (66.1%).
 ```
 <!-- --8<-- [end:report] -->
 

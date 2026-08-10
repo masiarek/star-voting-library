@@ -125,6 +125,44 @@ Blank Votes       23  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Birch
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 100 of 100 ballots still active; majority = 51
+   Fir eliminated with 7:
+      → Elm                       4
+      → (no continuing ranking)      3  ← these ballots go inactive
+
+ROUND 2 — 97 of 100 ballots still active (3 inactive); majority = 49
+   Dogwood eliminated with 12:
+      → Birch                     8
+      → (no continuing ranking)      4  ← these ballots go inactive
+
+ROUND 3 — 93 of 100 ballots still active (7 inactive); majority = 47
+   Elm eliminated with 13:
+      → (no continuing ranking)      8  ← these ballots go inactive
+      → Birch                     5
+
+ROUND 4 — 85 of 100 ballots still active (15 inactive); majority = 43
+   Cedar eliminated with 18:
+      → Birch                    10
+      → (no continuing ranking)      8  ← these ballots go inactive
+
+FINAL ROUND — 77 of 100 ballots still active (23 inactive); majority = 39
+   Birch                    47  (61.0% of the still-active)  ← elected
+   Ash                      30  (39.0% of the still-active)
+   Never exhausted, never transferred:
+      20 ballots held by Ash carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 23 of 100 (23.0%).
+   Birch's 47 is a majority of the 77 still active but only 47.0% of all 100 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

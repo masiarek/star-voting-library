@@ -122,6 +122,24 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   has no options plumbing). The two uses are opposite: RR is Smith-efficient so the
   block is descriptive; RCV-IRV is not, so it's a genuine pass/fail. Wording locked
   by `tests/test_smith_set.py`; concept page `07_Concepts/topics/smith_set.md`.
+- **The RCV-IRV transfer block** (added 2026-08-10, no option — mirror-always,
+  screen under `--full`, same contract as the Smith block). `pyrankvote` prints
+  each round as a column of totals, which omits the two numbers this repo's
+  exhausted-ballot and center-squeeze pages are *about*: where a transferred vote
+  came FROM, and how many ballots have stopped counting — so IRV's "majority" can
+  finally be reconciled against all ballots cast instead of asserted. Built by
+  `build_transfer_block()` in `rcv_irv_tabulation.py`. Three rules it encodes:
+  **the eliminations are read back from `pyrankvote`, never recomputed** (else the
+  block can contradict the table above it on a tie settled by the second-choices
+  ladder); **the final round transfers nothing** whatever its Status column says —
+  the runner-up is marked "Rejected" but the count has already stopped, so instead
+  of inventing a round the block names the ballots that stayed active to the end
+  and still had a lower ranking go unread (the *nonexhausted-untransferred* case);
+  and **STV gets no block at all**, because surplus transfers are fractional and
+  are not modelled — silence beats a plausible wrong number. Verified against
+  **RCTab 2.0.0**, which reports the same transfers and the same shrinking
+  thresholds. Wording locked by `tests/test_irv_transfers.py`. Changing the block
+  means re-running every ranked case (179 files) and rebuilding pages.
 - **Voter counts — keep examples SMALL.** Default to the *fewest ballots* that
   make the point; prefer **individual ballots** (one row per voter, a handful of
   them) over large weighted blocs. A 3-voter example that shows the effect beats a

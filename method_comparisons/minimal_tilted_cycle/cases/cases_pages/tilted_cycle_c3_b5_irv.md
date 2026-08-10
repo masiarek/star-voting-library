@@ -69,6 +69,26 @@ Ben                0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Cara
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 5 of 5 ballots still active; majority = 3
+   Ben eliminated with 1:
+      → Cara                      1
+
+FINAL ROUND — 5 of 5 ballots still active; majority = 3
+   Cara                      3  (60.0% of the still-active)  ← elected
+   Ada                       2  (40.0% of the still-active)
+   Never exhausted, never transferred:
+      2 ballots held by Ada carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 5 (0.0%).
+   Cara's 3 is a majority of the 5 still active AND of all 5 cast (60.0%).
 ```
 <!-- --8<-- [end:report] -->
 

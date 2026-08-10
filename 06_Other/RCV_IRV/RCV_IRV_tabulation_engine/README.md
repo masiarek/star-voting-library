@@ -10,6 +10,17 @@ python rcv_irv_tabulation.py example_tennessee.yaml
 
 Any STAR-style YAML works, since ballots are read as scores and converted to ranks on the fly.
 
+## Transfers and inactive ballots
+
+`pyrankvote` renders each round as a column of totals and nothing else, which leaves out the two numbers this library's teaching pages argue about most: **where a transferred vote came from**, and **how many ballots have stopped counting** — the second being what makes IRV's "majority" a majority of a shrinking denominator. `build_transfer_block()` adds both, walking each held ballot to its next surviving preference and reconciling the winner's total against *all* ballots cast, not only the still-active ones.
+
+Two design points worth knowing before you read one:
+
+- **The eliminations are read back from `pyrankvote`, never recomputed.** Only the destinations are worked out here. Recomputing the eliminations would let the block contradict the table directly above it whenever an elimination tie is settled by the second-choices ladder — exactly the count a reader would be consulting the block to understand.
+- **The final round transfers nothing**, whatever its Status column says. `pyrankvote` marks every non-winner "Rejected" in the last table, but the count has already stopped. Instead of inventing a transfer, the block names the ballots that stayed active to the end and *still* had a lower ranking go unread — the "nonexhausted, untransferred" case in [Exhausted ballots](../concepts/RCV_IRV_exhausted_ballots.md).
+
+STV gets no block (surplus transfers are fractional and are not modelled), nor does a count that eliminated nobody. Running this file directly prints it; through the STAR engine it goes to the `_tabulated` mirror only, or to the screen under `--full`. Wording is locked by [`tests/test_irv_transfers.py`](../../../STARVote_LH_tabulation_engine/tests/test_irv_transfers.py), and the numbers are cross-checked against RCTab — see [`rctab.md`](../../../07_Concepts/tabulation_engines/rctab.md).
+
 ## Score → rank conversion
 
 IRV needs *ranked* ballots, but the YAML stores *scores* (0..5). Each ballot is converted with these rules:

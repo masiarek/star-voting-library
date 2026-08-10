@@ -63,6 +63,29 @@ Casey              0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Avery
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 100 of 100 ballots still active; majority = 51
+   Casey eliminated with 6:
+      → Avery                     3
+      → Blake                     3
+
+FINAL ROUND — 100 of 100 ballots still active; majority = 51
+   Avery                    50  (50.0% of the still-active)  ← elected
+   Blake                    50  (50.0% of the still-active)
+   Never exhausted, never transferred:
+      50 ballots held by Blake carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 100 (0.0%).
+   Avery's 50 is a majority of the 100 still active but only 50.0% of all 100 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
 ```
 <!-- --8<-- [end:report] -->
 

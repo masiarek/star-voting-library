@@ -74,6 +74,26 @@ Clara              0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Amy
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 3 of 3 ballots still active; majority = 2
+   Clara eliminated with 1:
+      → Amy                       1
+
+FINAL ROUND — 3 of 3 ballots still active; majority = 2
+   Amy                       2  (66.7% of the still-active)  ← elected
+   Bruno                     1  (33.3% of the still-active)
+   Never exhausted, never transferred:
+      1 ballot held by Bruno carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 3 (0.0%).
+   Amy's 2 is a majority of the 3 still active AND of all 3 cast (66.7%).
 ```
 <!-- --8<-- [end:report] -->
 

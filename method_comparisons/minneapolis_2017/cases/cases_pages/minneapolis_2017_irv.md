@@ -2779,6 +2779,199 @@ Blank Votes                  22810  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Jacob Frey
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 104484 of 104484 ballots still active; majority = 52243
+   Theron Preston Washington eliminated with 0:
+      → (held no ballots)
+   Christopher Zimmerman eliminated with 1:
+      → Nekima Levy-Pounds        1
+   Ian Simpson eliminated with 119:
+      → (no continuing ranking)     26  ← these ballots go inactive
+      → Tom Hoch                 12
+      → Captain Jack Sparrow     11
+      → Jacob Frey               10
+      → Ronald Lischeid          10
+      → Betsy Hodges              8
+      → L.A. Nik                  8
+      → Troy Benjegerdes          8
+      → Aswar Rahman              6
+      → Nekima Levy-Pounds        6
+      → Raymond Dehn              6
+      → Al Flowers                3
+      → David John Wilson         3
+      → David Rosenfeld           1
+      → Gregg A. Iverson          1
+   Charlie Gers eliminated with 1233:
+      → (no continuing ranking)    334  ← these ballots go inactive
+      → L.A. Nik                218
+      → Tom Hoch                175
+      → Jacob Frey              108
+      → Ronald Lischeid          81
+      → Captain Jack Sparrow     63
+      → Betsy Hodges             52
+      → David John Wilson        38
+      → Raymond Dehn             37
+      → Undeclared Write-ins     32
+      → Aswar Rahman             26
+      → Troy Benjegerdes         18
+      → David Rosenfeld          15
+      → Nekima Levy-Pounds       15
+      → Gregg A. Iverson         11
+      → Al Flowers               10
+
+ROUND 2 — 104124 of 104484 ballots still active (360 inactive); majority = 52063
+   Undeclared Write-ins eliminated with 169:
+      → (no continuing ranking)    124  ← these ballots go inactive
+      → Jacob Frey               10
+      → Betsy Hodges              6
+      → Tom Hoch                  6
+      → Captain Jack Sparrow      5
+      → David John Wilson         4
+      → David Rosenfeld           3
+      → Raymond Dehn              3
+      → Al Flowers                2
+      → Gregg A. Iverson          2
+      → Nekima Levy-Pounds        2
+      → Ronald Lischeid           1
+      → Troy Benjegerdes          1
+   L.A. Nik eliminated with 838:
+      → (no continuing ranking)    368  ← these ballots go inactive
+      → Tom Hoch                 95
+      → Ronald Lischeid          91
+      → Jacob Frey               66
+      → Captain Jack Sparrow     57
+      → David John Wilson        42
+      → Betsy Hodges             23
+      → Troy Benjegerdes         21
+      → Gregg A. Iverson         15
+      → Al Flowers               13
+      → Aswar Rahman             12
+      → Nekima Levy-Pounds       12
+      → Raymond Dehn             12
+      → David Rosenfeld          11
+
+ROUND 3 — 103632 of 104484 ballots still active (852 inactive); majority = 51817
+   Troy Benjegerdes eliminated with 232:
+      → (no continuing ranking)     78  ← these ballots go inactive
+      → Jacob Frey               28
+      → Captain Jack Sparrow     22
+      → Ronald Lischeid          20
+      → Raymond Dehn             19
+      → Tom Hoch                 17
+      → Nekima Levy-Pounds       13
+      → Betsy Hodges             10
+      → David John Wilson         9
+      → Al Flowers                8
+      → David Rosenfeld           6
+      → Gregg A. Iverson          2
+   Aswar Rahman eliminated with 795:
+      → (no continuing ranking)    174  ← these ballots go inactive
+      → Tom Hoch                119
+      → Jacob Frey              113
+      → Nekima Levy-Pounds       98
+      → Raymond Dehn             87
+      → Betsy Hodges             78
+      → Al Flowers               59
+      → Captain Jack Sparrow     21
+      → David John Wilson        12
+      → Ronald Lischeid          12
+      → David Rosenfeld          11
+      → Gregg A. Iverson         11
+
+ROUND 4 — 103380 of 104484 ballots still active (1104 inactive); majority = 51691
+   David John Wilson eliminated with 328:
+      → (no continuing ranking)    155  ← these ballots go inactive
+      → Captain Jack Sparrow     42
+      → Jacob Frey               31
+      → Tom Hoch                 27
+      → Betsy Hodges             16
+      → Nekima Levy-Pounds       14
+      → Raymond Dehn             14
+      → Ronald Lischeid          12
+      → David Rosenfeld          11
+      → Gregg A. Iverson          6
+   Al Flowers eliminated with 806:
+      → (no continuing ranking)    202  ← these ballots go inactive
+      → Nekima Levy-Pounds      140
+      → Betsy Hodges            126
+      → Tom Hoch                115
+      → Raymond Dehn             94
+      → Jacob Frey               67
+      → Captain Jack Sparrow     28
+      → Gregg A. Iverson         15
+      → David Rosenfeld          10
+      → Ronald Lischeid           9
+
+ROUND 5 — 103023 of 104484 ballots still active (1461 inactive); majority = 51512
+   Gregg A. Iverson eliminated with 398:
+      → (no continuing ranking)    158  ← these ballots go inactive
+      → Betsy Hodges             82
+      → Jacob Frey               58
+      → Tom Hoch                 45
+      → Raymond Dehn             27
+      → David Rosenfeld          14
+      → Ronald Lischeid          14
+   Captain Jack Sparrow eliminated with 687:
+      → (no continuing ranking)    365  ← these ballots go inactive
+      → Tom Hoch                 74
+      → Jacob Frey               65
+      → Betsy Hodges             56
+      → Raymond Dehn             50
+      → David Rosenfeld          43
+      → Ronald Lischeid          34
+   Nekima Levy-Pounds eliminated with 16016:
+      → Raymond Dehn           5387
+      → Betsy Hodges           3987
+      → Jacob Frey             2699
+      → (no continuing ranking)   1841  ← these ballots go inactive
+      → Tom Hoch               1816
+      → David Rosenfeld         232
+      → Ronald Lischeid          54
+
+ROUND 6 — 100659 of 104484 ballots still active (3825 inactive); majority = 50330
+   Ronald Lischeid eliminated with 659:
+      → (no continuing ranking)    480  ← these ballots go inactive
+      → Tom Hoch                 69
+      → Jacob Frey               45
+      → Betsy Hodges             37
+      → Raymond Dehn             28
+   David Rosenfeld eliminated with 833:
+      → (no continuing ranking)    432  ← these ballots go inactive
+      → Raymond Dehn            163
+      → Betsy Hodges            115
+      → Jacob Frey               64
+      → Tom Hoch                 59
+
+ROUND 7 — 99747 of 104484 ballots still active (4737 inactive); majority = 49874
+   Tom Hoch eliminated with 22751:
+      → Jacob Frey             9888
+      → (no continuing ranking)   6169  ← these ballots go inactive
+      → Betsy Hodges           3364
+      → Raymond Dehn           3330
+
+ROUND 8 — 93578 of 104484 ballots still active (10906 inactive); majority = 46790
+   Betsy Hodges eliminated with 26865:
+      → (no continuing ranking)  11904  ← these ballots go inactive
+      → Raymond Dehn           7613
+      → Jacob Frey             7348
+
+FINAL ROUND — 81674 of 104484 ballots still active (22810 inactive); majority = 40838
+   Jacob Frey            46704  (57.2% of the still-active)  ← elected
+   Raymond Dehn          34970  (42.8% of the still-active)
+   Never exhausted, never transferred:
+      27801 ballots held by Raymond Dehn carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 22810 of 104484 (21.8%).
+   Jacob Frey's 46704 is a majority of the 81674 still active but only 44.7% of all 104484 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
 ```
 <!-- --8<-- [end:report] -->
 

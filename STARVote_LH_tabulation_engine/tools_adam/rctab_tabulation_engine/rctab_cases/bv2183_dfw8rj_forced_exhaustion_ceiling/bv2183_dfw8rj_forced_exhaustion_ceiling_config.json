@@ -1,0 +1,81 @@
+{
+  "tabulatorVersion": "2.0.0",
+  "outputSettings": {
+    "contestName": "BV2183 \u2014 Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap)",
+    "outputDirectory": "output",
+    "contestDate": "",
+    "contestJurisdiction": "star-voting-library",
+    "contestOffice": "",
+    "tabulateByBatch": false,
+    "tabulateByPrecinct": false,
+    "generateCdfJson": false
+  },
+  "cvrFileSources": [
+    {
+      "filePath": "bv2183_dfw8rj_forced_exhaustion_ceiling.csv",
+      "contestId": "",
+      "firstVoteColumnIndex": "2",
+      "firstVoteRowIndex": "2",
+      "batchColumnIndex": "",
+      "precinctColumnIndex": "",
+      "overvoteDelimiter": "",
+      "provider": "genericCsv",
+      "overvoteLabel": "",
+      "skippedRankLabel": "",
+      "undeclaredWriteInLabel": "",
+      "treatBlankAsUndeclaredWriteIn": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Ada",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Cleo",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Ben",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Dev",
+      "excluded": false,
+      "aliases": []
+    },
+    {
+      "name": "Eli",
+      "excluded": false,
+      "aliases": []
+    }
+  ],
+  "rules": {
+    "tiebreakMode": "useCandidateOrder",
+    "overvoteRule": "alwaysSkipToNextRank",
+    "randomSeed": "",
+    "winnerElectionMode": "singleWinnerMajority",
+    "numberOfWinners": "1",
+    "nonIntegerWinningThreshold": false,
+    "hareQuota": false,
+    "multiSeatBottomsUpPercentageThreshold": "",
+    "decimalPlacesForVoteArithmetic": "4",
+    "minimumVoteThreshold": "0",
+    "maxSkippedRanksAllowed": "unlimited",
+    "maxRankingsAllowed": "5",
+    "doesFirstRoundDetermineThreshold": false,
+    "batchElimination": false,
+    "continueUntilTwoCandidatesRemain": false,
+    "stopTabulationEarlyAfterRound": "",
+    "exhaustOnDuplicateCandidate": false,
+    "rulesDescription": "Converted from bv2183_dfw8rj_forced_exhaustion_ceiling.yaml by rctab_convert.py | candidate order: ballot",
+    "treatBlankAsUndeclaredWriteIn": false
+  },
+  "_starVotingLibrary": {
+    "sourceYaml": "method_comparisons/paradoxes_and_whoops/cases/bv2183_dfw8rj_forced_exhaustion_ceiling.yaml",
+    "ballotsConverted": 50
+  }
+}

@@ -95,6 +95,36 @@ Blank Votes        3  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Purple
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 20 of 20 ballots still active; majority = 11
+   Pink eliminated with 3:
+      → (no continuing ranking)      1  ← these ballots go inactive
+      → Green                     1
+      → Purple                    1
+
+ROUND 2 — 19 of 20 ballots still active (1 inactive); majority = 10
+   Blue eliminated with 4:
+      → (no continuing ranking)      2  ← these ballots go inactive
+      → Green                     1
+      → Purple                    1
+
+FINAL ROUND — 17 of 20 ballots still active (3 inactive); majority = 9
+   Purple                    9  (52.9% of the still-active)  ← elected
+   Green                     8  (47.1% of the still-active)
+   Never exhausted, never transferred:
+      8 ballots held by Green carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 3 of 20 (15.0%).
+   Purple's 9 is a majority of the 17 still active but only 45.0% of all 20 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

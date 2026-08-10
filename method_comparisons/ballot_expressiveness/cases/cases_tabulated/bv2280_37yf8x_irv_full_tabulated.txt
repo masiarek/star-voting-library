@@ -178,6 +178,51 @@ Dev                0  Rejected
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ben
 
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 25 of 25 ballots still active; majority = 13
+   Dev eliminated with 0:
+      → (held no ballots)
+   Cleo eliminated with 1:
+      → Emma                      1
+
+ROUND 2 — 25 of 25 ballots still active; majority = 13
+   Iris eliminated with 2:
+      → Hugo                      2
+
+ROUND 3 — 25 of 25 ballots still active; majority = 13
+   Emma eliminated with 3:
+      → Ben                       2
+      → Finn                      1
+
+ROUND 4 — 25 of 25 ballots still active; majority = 13
+   Gus eliminated with 4:
+      → Hugo                      3
+      → Finn                      1
+
+ROUND 5 — 25 of 25 ballots still active; majority = 13
+   Ada eliminated with 5:
+      → Ben                       5
+
+ROUND 6 — 25 of 25 ballots still active; majority = 13
+   Finn eliminated with 6:
+      → Hugo                      4
+      → Ben                       2
+
+FINAL ROUND — 25 of 25 ballots still active; majority = 13
+   Ben                      13  (52.0% of the still-active)  ← elected
+   Hugo                     12  (48.0% of the still-active)
+   Never exhausted, never transferred:
+      12 ballots held by Hugo carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 25 (0.0%).
+   Ben's 13 is a majority of the 25 still active AND of all 25 cast (52.0%).
+
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".

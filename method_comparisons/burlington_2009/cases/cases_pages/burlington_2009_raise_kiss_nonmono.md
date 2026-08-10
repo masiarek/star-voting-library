@@ -463,6 +463,47 @@ Blank Votes      966  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Montroll
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 8974 of 8974 ballots still active; majority = 4488
+   Simpson eliminated with 35:
+      → Kiss                     19
+      → Montroll                  6
+      → Wright                    6
+      → (no continuing ranking)      4  ← these ballots go inactive
+   WriteIn eliminated with 36:
+      → Montroll                 13
+      → (no continuing ranking)     11  ← these ballots go inactive
+      → Kiss                      7
+      → Wright                    5
+   Smith eliminated with 1306:
+      → Montroll                472
+      → Kiss                    370
+      → Wright                  332
+      → (no continuing ranking)    132  ← these ballots go inactive
+
+ROUND 2 — 8827 of 8974 ballots still active (147 inactive); majority = 4414
+   Wright eliminated with 2543:
+      → Montroll               1510
+      → (no continuing ranking)    819  ← these ballots go inactive
+      → Kiss                    214
+
+FINAL ROUND — 8008 of 8974 ballots still active (966 inactive); majority = 4005
+   Montroll               4063  (50.7% of the still-active)  ← elected
+   Kiss                   3945  (49.3% of the still-active)
+   Never exhausted, never transferred:
+      3511 ballots held by Kiss carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 966 of 8974 (10.8%).
+   Montroll's 4063 is a majority of the 8008 still active but only 45.3% of all 8974 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
 ```
 <!-- --8<-- [end:report] -->
 

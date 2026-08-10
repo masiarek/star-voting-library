@@ -58,6 +58,28 @@ Cat                0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Fish
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 32 of 32 ballots still active; majority = 17
+   Cat eliminated with 0:
+      → (held no ballots)
+   Bird eliminated with 9:
+      → Fish                      9
+
+FINAL ROUND — 32 of 32 ballots still active; majority = 17
+   Fish                     19  (59.4% of the still-active)  ← elected
+   Dog                      13  (40.6% of the still-active)
+   Never exhausted, never transferred:
+      13 ballots held by Dog carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 32 (0.0%).
+   Fish's 19 is a majority of the 32 still active AND of all 32 cast (59.4%).
 ```
 <!-- --8<-- [end:report] -->
 

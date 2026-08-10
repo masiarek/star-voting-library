@@ -75,6 +75,28 @@ Blank Votes     1695  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Melgar
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 36626 of 36626 ballots still active; majority = 18314
+   Nguyen eliminated with 10855:
+      → Melgar                 6909
+      → Engardio               2251
+      → (no continuing ranking)   1695  ← these ballots go inactive
+
+FINAL ROUND — 34931 of 36626 ballots still active (1695 inactive); majority = 17466
+   Melgar                18561  (53.1% of the still-active)  ← elected
+   Engardio              16370  (46.9% of the still-active)
+   Never exhausted, never transferred:
+      16370 ballots held by Engardio carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 1695 of 36626 (4.6%).
+   Melgar's 18561 is a majority of the 34931 still active AND of all 36626 cast (50.7%).
 ```
 <!-- --8<-- [end:report] -->
 

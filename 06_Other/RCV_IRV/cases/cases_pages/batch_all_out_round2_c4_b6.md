@@ -84,6 +84,28 @@ Dev                0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Alex
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 6 of 6 ballots still active; majority = 4
+   Dev eliminated with 0:
+      → (held no ballots)
+   Colin eliminated with 2:
+      → Alex                      2
+
+FINAL ROUND — 6 of 6 ballots still active; majority = 4
+   Alex                      4  (66.7% of the still-active)  ← elected
+   Bella                     2  (33.3% of the still-active)
+   Never exhausted, never transferred:
+      2 ballots held by Bella carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 6 (0.0%).
+   Alex's 4 is a majority of the 6 still active AND of all 6 cast (66.7%).
 ```
 <!-- --8<-- [end:report] -->
 

@@ -60,6 +60,26 @@ Cyrus              0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Bruno
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 9 of 9 ballots still active; majority = 5
+   Cyrus eliminated with 2:
+      → Bruno                     2
+
+FINAL ROUND — 9 of 9 ballots still active; majority = 5
+   Bruno                     6  (66.7% of the still-active)  ← elected
+   Ada                       3  (33.3% of the still-active)
+   Never exhausted, never transferred:
+      3 ballots held by Ada carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 9 (0.0%).
+   Bruno's 6 is a majority of the 9 still active AND of all 9 cast (66.7%).
 ```
 <!-- --8<-- [end:report] -->
 

@@ -56,6 +56,26 @@ Anderson           0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Carter
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 100 of 100 ballots still active; majority = 51
+   Anderson eliminated with 20:
+      → Carter                   20
+
+FINAL ROUND — 100 of 100 ballots still active; majority = 51
+   Carter                   55  (55.0% of the still-active)  ← elected
+   Reagan                   45  (45.0% of the still-active)
+   Never exhausted, never transferred:
+      45 ballots held by Reagan carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 100 (0.0%).
+   Carter's 55 is a majority of the 100 still active AND of all 100 cast (55.0%).
 ```
 <!-- --8<-- [end:report] -->
 

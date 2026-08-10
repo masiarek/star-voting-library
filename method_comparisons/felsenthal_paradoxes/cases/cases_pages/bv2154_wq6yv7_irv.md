@@ -59,6 +59,26 @@ Bruce              0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Clara
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 15 of 15 ballots still active; majority = 8
+   Bruce eliminated with 4:
+      → Clara                     4
+
+FINAL ROUND — 15 of 15 ballots still active; majority = 8
+   Clara                     9  (60.0% of the still-active)  ← elected
+   April                     6  (40.0% of the still-active)
+   Never exhausted, never transferred:
+      6 ballots held by April carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 15 (0.0%).
+   Clara's 9 is a majority of the 15 still active AND of all 15 cast (60.0%).
 ```
 <!-- --8<-- [end:report] -->
 

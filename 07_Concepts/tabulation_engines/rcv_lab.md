@@ -126,6 +126,42 @@ Blank Votes          113  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Ranked Pairs
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 999 of 999 ballots still active; majority = 500
+   Flip a Coin eliminated with 52:
+      → (no continuing ranking)     44  ← these ballots go inactive
+      → Ranked Pairs              4
+      → Minimax                   2
+      → Schulze Method            2
+   Copeland's Rule eliminated with 61:
+      → (no continuing ranking)     48  ← these ballots go inactive
+      → Schulze Method            6
+      → Ranked Pairs              5
+      → Minimax                   2
+
+ROUND 2 — 907 of 999 ballots still active (92 inactive); majority = 454
+   Minimax eliminated with 262:
+      → Ranked Pairs            168
+      → Schulze Method           73
+      → (no continuing ranking)     21  ← these ballots go inactive
+
+FINAL ROUND — 886 of 999 ballots still active (113 inactive); majority = 444
+   Ranked Pairs            492  (55.5% of the still-active)  ← elected
+   Schulze Method          394  (44.5% of the still-active)
+   Never exhausted, never transferred:
+      348 ballots held by Schulze Method carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 113 of 999 (11.3%).
+   Ranked Pairs's 492 is a majority of the 886 still active but only 49.2% of all 999 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
 ```
 <!-- /report -->
 

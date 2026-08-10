@@ -121,6 +121,40 @@ Elsa               0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   Clara
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 65 of 65 ballots still active; majority = 33
+   Elsa eliminated with 0:
+      → (held no ballots)
+   Ana eliminated with 6:
+      → Bruno                     6
+
+ROUND 2 — 65 of 65 ballots still active; majority = 33
+   Diego eliminated with 9:
+      → Clara                     9
+
+ROUND 3 — 65 of 65 ballots still active; majority = 33
+   Felix eliminated with 12:
+      → Greta                    12
+
+ROUND 4 — 65 of 65 ballots still active; majority = 33
+   Bruno eliminated with 16:
+      → Clara                    16
+
+FINAL ROUND — 65 of 65 ballots still active; majority = 33
+   Clara                    38  (58.5% of the still-active)  ← elected
+   Greta                    27  (41.5% of the still-active)
+   Never exhausted, never transferred:
+      27 ballots held by Greta carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 65 (0.0%).
+   Clara's 38 is a majority of the 65 still active AND of all 65 cast (58.5%).
 ```
 <!-- --8<-- [end:report] -->
 

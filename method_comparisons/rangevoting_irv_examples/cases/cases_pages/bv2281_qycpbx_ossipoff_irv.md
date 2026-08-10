@@ -118,6 +118,34 @@ E                  0  Rejected
 
 Winner(s) — RCV / Instant-Runoff Voting (single winner)
   D
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 303 of 303 ballots still active; majority = 152
+   E eliminated with 49:
+      → D                        49
+
+ROUND 2 — 303 of 303 ballots still active; majority = 152
+   A eliminated with 50:
+      → B                        50
+
+ROUND 3 — 303 of 303 ballots still active; majority = 152
+   C eliminated with 100:
+      → D                       100
+
+FINAL ROUND — 303 of 303 ballots still active; majority = 152
+   D                       202  (66.7% of the still-active)  ← elected
+   B                       101  (33.3% of the still-active)
+   Never exhausted, never transferred:
+      101 ballots held by B carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 0 of 303 (0.0%).
+   D's 202 is a majority of the 303 still active AND of all 303 cast (66.7%).
 ```
 <!-- --8<-- [end:report] -->
 
