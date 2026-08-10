@@ -2,7 +2,19 @@
 
 **Level: reference · deep dive**
 
-**Status: DRAFT — decisions open.** This is a working document, not a plan of record. Its companion [A Rust tabulation kernel — scope](rust_kernel_scope.md) argues *what* such a kernel should and should not contain; this page works the step before that, which is deciding what the thing is **for**, and then deriving requirements from the answer instead of inventing them.
+> **Decision, 2026-08-10: no Rust kernel for this library. Python stays.**
+>
+> The reasoning is in [Why Python is the right language for a test library](#why-python-is-the-right-language-for-a-test-library) below, and it is short: a teaching-and-test library's dominant costs are authoring speed, readability, and staying inside the Python social-choice ecosystem that supplies its cross-checks. Rust's advantages buy nothing there and its costs land on the thing done most often.
+>
+> **What survives the decision is Track A** — the JSON result contract, the 48 missing answer keys, the alias table, the written tiebreak ladders. Those were always worth doing in Python, and they are now the whole recommendation.
+>
+> **What Rust keeps a real claim to is a different project:** software that counts a real, high-stakes election under verifiable encryption. That is not this repo's job, it needs a funded independent audit, and it would have a different owner. The analysis below is kept because it is the argument for why — and so the question does not get re-opened from scratch.
+
+> **If this page looks like a monster: it is a register of opportunities, not a backlog with a due date.** Nothing here is blocking anything. Most of the "requirements gathering" it describes is **harvesting, not authoring** — the requirements are already encoded in 615 case files and six engines' worth of recorded disagreements, and the job is transcription, one method at a time.
+>
+> **The smallest real first step takes an evening and needs no decisions:** run the 48 ballot-carrying cases that have no `expected_winners:` line, check the results, and write the answers in. No schema, no spec, no document. That is the largest single chunk of rung 1, it is mechanical, it finishes, and it takes the corpus to 100% machine-checkable. Everything else on this page can wait indefinitely.
+
+**Status: analysis retained; decision recorded above.** This is a working document, not a plan of record. Its companion [A Rust tabulation kernel — scope](rust_kernel_scope.md) argues *what* such a kernel should and should not contain; this page works the step before that, which is deciding what the thing is **for**, and then deriving requirements from the answer instead of inventing them.
 
 Nothing below should be built yet. Part 3 is the only section with work in it that is worth doing regardless of how the decision goes.
 
@@ -186,6 +198,22 @@ Plausibly, and it is the right ambition — but on a much longer fuse than the k
 **And the standing caution applies doubly here.** A demo on this library's teaching site can be labelled a toy. The same code inside a platform people run real elections on cannot, and must not ship without an independent cryptographic audit. If that audit is not fundable, the honest answer is that step 3 stops at a prototype — which is still worth building, and should say so on its own front page.
 
 ---
+
+## Why Python is the right language for a test library
+
+This is the conclusion the goal menu above arrives at, so it belongs before the table rather than after it.
+
+**A test-and-teaching library's dominant cost is authoring, not running.** The things done weekly here are: add a case, add a method, change a report's wording, write a one-off cross-check script, regenerate 782 mirrors. Python is close to optimal for every one of those, and Rust's compile-edit cycle taxes exactly the operation performed most. The things Rust is good at — memory safety, throughput, fearless concurrency — describe risks this project does not have. Python has never produced a wrong winner here; the bugs that were found were *semantic* (a quota filled by ballot count instead of ballot weight), and no type system catches those.
+
+**The code is teaching material, and Python reads like pseudocode.** A reader can follow [`starvote_larry_hastings.py`](../../STARVote_LH_tabulation_engine/starvote_larry_hastings.py) and see the runoff happen. The same logic in Rust, wrapped in lifetimes and `Result` plumbing, is a worse artifact for the audience this library exists to serve — and legibility of the count is not incidental to the argument this repo makes, it *is* the argument.
+
+**The cross-check ecosystem is Python, and that is the methodology.** `pref_voting`, `abcvoting`, `pyrankvote` — the independent referees that make a result here trustworthy rather than self-confirming are all Python libraries, callable in one import. A Rust kernel would move the engine away from its own referees and turn a function call into a subprocess and a serialization format. For a project whose entire credibility rests on engines checking each other, that is the wrong direction.
+
+**Where Rust does keep a claim: real elections, not test libraries.** High-stakes tabulation under verifiable encryption is a genuinely different problem, with different requirements (auditability of the *implementation*, memory safety as a security property, a crypto ecosystem Python lacks) — and it is bigger than a moonshot, not smaller. It needs a funded independent audit before it counts a single real vote. It is not this repo's job, and pretending otherwise would be the kind of overreach this library exists to call out in other people's claims.
+
+### One honest amendment
+
+The strongest argument for Rust above was G1 — counting in the reader's browser — on the premise that WASM is the only route. **That premise is not quite true.** [Pyodide](https://pyodide.org/) runs CPython in WebAssembly today and could load the existing engine essentially unchanged. The cost is size: a multi-megabyte runtime against a few hundred kilobytes for a purpose-built Rust kernel. That is a real difference for a documentation site, but it is a *tradeoff*, not an impossibility — and the Python route reuses code that already exists and is already correct. **If in-browser counting is ever wanted, price Pyodide first.** Reaching for a second language to gain a capability the first language already has, more slowly, is the definition of a premature rewrite.
 
 ## Where Rust is actually the right tool
 
@@ -382,11 +410,164 @@ Effort figures are honest orders of magnitude for evenings and weekends, not est
 
 ---
 
+# Part 5 — Stepping stones for a future professional implementation
+
+The decision above says this library does not build election infrastructure. That is not the same as being unable to help build it. The question worth answering is: *what can one person produce, now, that makes a future funded team's job materially cheaper and their result more trustworthy?*
+
+## The reframe: a professional team's bottleneck is not the code
+
+Tabulating STAR is not hard. A competent team implements the count in a week. What takes years — and what kills projects — is everything around it:
+
+- there is **no implementable specification** of STAR, only advocacy prose and reference code;
+- there is **no published test deck**, so conformance has to be invented before it can be demonstrated;
+- **edge cases are undocumented folklore** scattered across implementations that quietly disagree;
+- **certification** wants evidence in formats nobody has produced for a score method;
+- **auditability** for score methods is a thin literature.
+
+Every one of those is a documentation-and-data problem, not a software-engineering problem. Every one of them is squarely within reach of one person with a large case library and six engines' worth of divergence knowledge. And — the key property — **every one of them is language-neutral**, so it serves a Rust team, a C++ team, or a vendor equally.
+
+That is the whole strategy: **do not write the implementation; write the things that make anyone's implementation cheaper, and its correctness checkable by someone who did not write it.**
+
+## For real elections, requirements are inherited, not gathered
+
+Gathering requirements for a high-stakes election system genuinely is a monster — but only if you imagine starting from a blank page. You would not be. For actual elections the requirements already exist, in force, written by other people:
+
+- **VVSG 2.0** (the federal Voluntary Voting System Guidelines) and the EAC-accredited test labs that administer it;
+- **state certification statutes**, which differ per state and are the real gate;
+- **HAVA and ADA accessibility** obligations;
+- **ballot-secrecy, chain-of-custody, canvass, recount, and audit law**.
+
+None of that is authored by a volunteer, and no individual should try. But here is the useful part: **those frameworks are method-agnostic, and every one of them has slots that must be filled in per voting method.** For plurality those slots were filled decades ago. For RCV-IRV they have been filled recently and painfully, jurisdiction by jurisdiction. **For STAR they are empty.**
+
+That converts an unbounded task into an enumerable one. You do not invent the taxonomy — you take an existing framework's table of contents and answer, section by section, *"what would this say for a score ballot?"* For example:
+
+- What does a **logic-and-accuracy test deck** for a STAR contest contain?
+- What is an **overvote** on a 0–5 ballot — and is there such a thing?
+- What does a **recount** of a STAR contest do differently, given the runoff depends on the scoring round?
+- What does the **canvass report** show, and what must be reportable **per precinct**? (This is where [summability](../topics/summability/README.md) stops being a theoretical virtue and becomes a procurement requirement.)
+- How is a **tie** resolved as a matter of law, and does the statutory procedure match what the engines do?
+- What does a **risk-limiting audit** of a two-stage count look like? (S-5.)
+
+That list is finite, it is knowable, and answering any single item is a page — not a program. It is also the exact material a future professional team would otherwise spend a year assembling, and the one contribution here that no amount of funding shortens, because it requires knowing the method deeply rather than knowing procurement.
+
+**The honest boundary:** these pages would be *drafts for practitioners to argue with*, not authoritative guidance, and should say so on their face. That is not a weakness — a well-posed draft is how this kind of document gets written at all.
+
+## Scope it as a tabulator and the identity problem disappears
+
+The instinct that authentication and credentialing at scale — millions of records, privacy, security — is a monster is correct. The resolution is the one already reached: **think of it as a county-level tabulation engine, where the county manages everything else.** That is not a convenient dodge. It is how US election systems are actually architected, and the separation is deliberate.
+
+A jurisdiction already owns, and does not want a vendor touching:
+
+- voter registration and eligibility (the state voter database);
+- authenticating the voter at the polling place (pollbooks — a solved, separate product);
+- issuing ballots, and the procedures that keep them secret;
+- chain of custody for paper.
+
+**The tabulator sits downstream of all of it and is blind to identity by design.** Its input is a set of anonymous cast vote records from scanners; it never sees a voter, never holds a credential, never stores a name. That blindness is a *security property*, not a gap — a tabulator that could link a ballot to a voter would be disqualifying.
+
+So the requirements shrink to a bounded, unglamorous list: integrity of the CVR set, deterministic and reproducible output, audit logging, logic-and-accuracy testability, and correct arithmetic. No identity system, no millions of records, no privacy architecture. That is a scope one person can meaningfully write specifications *for*, which is the whole of Part 5.
+
+**And it explains why the encrypted-tally moonshot is a genuinely different animal.** End-to-end verifiability works by putting the voter *back* into the system — they need a tracker to confirm their own ballot was counted — which reintroduces exactly the identity, credentialing, and coercion problems that county tabulation architecture spent decades designing out. That is why G8 belongs to the online and organizational world ([BetterVoting](BV/README.md)'s ground), not to county election night, and why its hardest problems are social rather than mathematical.
+
+Two different systems, two different scopes, and only one of them is a monster. Keep them apart.
+
+## The stones, in order of leverage
+
+### S-1. The conformance suite — mostly already built, badly framed
+
+**What a team needs:** a published set of elections with known-correct results, broad enough to exercise every rule and every tie rung, that an implementation can be run against on day one.
+
+**What exists:** 615 case files, 567 with machine-checkable answer keys, already cross-verified across [the LH engine](LH_starvote/README.md), [BetterVoting](BV/README.md), [`pref_voting`](cross_checking_with_pref_voting.md), [`pyrankvote`](RCV_IRV/README.md), [RCTab](rctab.md), and [rcv-lab.org](rcv_lab_irv_crosscheck.md). This is, as far as this repo knows, the largest cross-verified STAR conformance corpus anywhere — and it is currently presented as teaching material rather than as a test suite.
+
+**The work:** finish Track A (the JSON result contract, the 48 missing answer keys, the alias table), then add a front page addressed to *implementers* rather than learners: here is the format, here is how to run your engine against it, here is what a pass means. Weeks, in Python, and it is the same work already recommended.
+
+**Why it is stone number one:** it is 90% done, it is unglamorous enough that nobody else will do it, and whoever holds the accepted test deck when a jurisdiction moves is in the room.
+
+### S-2. The executable specification
+
+**What a team needs:** a document precise enough to implement from, without reading anyone's source code.
+
+**What exists:** the rules are distributed across concept pages, engine source, and commit messages. [Track B](#track-b-write-the-rules-in-prose-before-code) above is the seed of this.
+
+**The work:** one page per method answering, exhaustively — what the ballot is; how the tally proceeds; **what happens at every tie rung, including when no rung resolves**; how blanks, abstentions, spoiled ballots, overvotes, equal scores, and truncated rankings are treated; and what the count must report. Each rule cites the case file that pins it. Ambiguities get written down *as ambiguities* rather than resolved silently.
+
+**Why it matters more than it sounds:** a spec whose every clause has a runnable case attached is a rare object. It also does something no advocacy document can — it makes STAR *procurable*, because a jurisdiction cannot buy what it cannot describe in a contract.
+
+### S-3. Interoperability with the formats real elections use
+
+**What a team needs:** to read and write what actual jurisdictions exchange — NIST's Election Results Common Data Format and Cast Vote Records CDF ([SP 1500-100](https://www.nist.gov/publications/election-results-common-data-format-specification-version-10) and the CVR specification), which is what certified systems and audit tooling speak.
+
+**What exists:** the repo already converts cases to [RCTab](rctab.md)'s CSV and [rcv-lab.org](rcv_lab_irv_crosscheck.md)'s format, so the pattern is established. Nothing speaks NIST CDF.
+
+**The work:** an exporter from the case library to CVR CDF, and an importer back. Bounded, testable against the existing corpus, and it does something disproportionate — it makes 615 STAR elections readable by software that already exists, instantly.
+
+**The open question worth answering publicly:** *does the CVR CDF even express a 0–5 score ballot cleanly?* If it does, say so with a worked example. If it does not, that gap is itself a finding, and a comment worth filing.
+
+### S-4. The divergence catalog
+
+**What a team needs:** the list of places correct implementations legitimately disagree, so they can choose deliberately instead of discovering it in production.
+
+**What exists:** a great deal, scattered — the [upstream bug reports](../about_this_repo/upstream_bug_reports.md), the divergence ledger, the LH-versus-BV tiebreak comparison, the Minimax "worst loss" readings, the Majority Judgment tie-break disagreement, the allocated-score quota bug.
+
+**The work:** one page per divergence: the two behaviours, the case that separates them, which engines do which, and whether either is *wrong* or both are defensible. This is the institutional memory of the whole project, and it currently lives in commit messages.
+
+### S-5. Audit groundwork
+
+**What a team needs:** an answer to *"how do you audit this?"* — asked by every election official, immediately, and currently answered thinly for score methods.
+
+**The work:** start with the write-up, not the code — a risk-limiting-audit prospectus for STAR in the [research-topics companion repo](https://github.com/masiarek/star-voting-research-topics). What does an RLA of a scoring round look like? Of a runoff whose finalists depend on the scoring round? Is a two-stage audit sound? Then, if it goes anywhere, a reference sampling implementation.
+
+**Why it ranks here rather than higher:** it is genuinely hard and genuinely open, so it is the one stone that might not be placeable. It is also the one a jurisdiction will ask for first.
+
+### S-6. The administrative artifacts
+
+**What a team needs, and nobody writes:** ballot layout that survives contact with real voters, instructions in plain language, the operational definition of an overvote or a damaged ballot on a score ballot, poll-worker procedure, and what the canvass report should show.
+
+**Why include it:** none of this is code, all of it is required, and it is the part a software team is worst at. Some already exists in this library's [ballot art and voting-styles work](../../01_STAR/01_Learn/README.md).
+
+## The rule that makes these stones and not pebbles
+
+**Everything above is written to be consumed by an implementation that does not exist yet, in a language nobody has chosen.** JSON schemas, prose specs, NIST CDF, case files, papers. No stone should require the reader to run Python, and none should assume the eventual system is Rust either — that guess could easily be wrong, and it does not matter.
+
+The corollary is the thing to resist: **do not build half of the eventual system as a demonstration.** A half-finished Rust kernel is not a stepping stone, it is a liability a professional team would delete on day one — while a conformance suite they can run against their own code on day one is something they will thank you for and cite.
+
+## What this looks like in practice
+
+Nothing new gets started. The next three things are already on the list:
+
+1. **Track A**, reframed as S-1 — the JSON contract, the 48 answer keys, the alias table, the tiebreak ladders. In Python, useful immediately, and the foundation of every other stone.
+2. **S-2**, one method at a time, starting with STAR, each clause citing its case.
+3. **S-3**, one exporter, to find out whether the format even fits.
+
+S-4 is continuous. S-5 begins as a prospectus. S-6 happens when the teaching content pulls it in.
+
+**And the honest expectation:** the professional team may never materialize, or may arrive in fifteen years and ignore all of it. Every stone above is chosen so that it is worth having anyway — a better test corpus, a written specification, a wider set of readers, a real paper. That is the same principle as the ladder in Part 4: order the work so that stopping is never a loss.
+
+## Prototyping in Python as preparation — what that actually means
+
+The natural next thought is *"keep developing, in Python, but with Rust in mind."* That is right, and it is worth being precise about it, because "with Rust in mind" can mean two very different things and only one of them is useful.
+
+**It does not mean writing Rust-flavoured Python.** No hand-rolled `Result` monad, no avoiding exceptions on principle, no rejecting comprehensions for explicit loops. Python that imitates Rust's syntax is worse Python and does not make the eventual port easier. Syntax does not port; **design does.**
+
+**It means rehearsing the architecture, in Python, where mistakes are cheap.** Four things are worth prototyping, and each is a real improvement to the Python on its own terms:
+
+1. **A pure kernel module, beside the existing engine rather than replacing it.** One `tabulate(election) -> Outcome` function with no printing, no file access, no module-level state. If that separation cannot be made cleanly in Python — where nothing is stopping it — it would not be made in Rust either, and discovering that costs a weekend here instead of a rewrite there. This is the single highest-value prototype, because **the kernel/reporting boundary is the entire portable idea.**
+2. **A ballot entry that is an enum, not an integer.** Blank, race abstention, candidate abstention, spoiled, spoiled-and-reissued all tabulate as zero but mean different things, and this is precisely the place Python lets the distinction be quietly dropped and Rust would not. Making it an `Enum` in Python is both a rehearsal of Rust's `match` and, independently, a correctness improvement the library already wants (FR-3).
+3. **Frozen, fully annotated dataclasses for `Election` and `Outcome`, checked under strict `mypy`.** Immutability by default, no `None`-as-sentinel, `Optional` spelled out. This is the design discipline Rust enforces, adopted voluntarily, and it makes the Python better regardless.
+4. **The JSON result contract.** Language-neutral by construction, so it is the one artifact that ports at zero cost — which is why it is rung 1 of the ladder and stone S-1 both.
+
+**The test for whether a "Rust prep" change is worth making:** *would this still be an improvement if Rust never happens?* Enum ballot entries — yes. A pure kernel boundary — yes. Frozen dataclasses and strict typing — yes. The JSON contract — yes. A custom `Result` type, or contorting the report renderer — no, and those are the ones to refuse. Anything justified *only* by a future port fails the ladder principle from Part 4, because the future port is the step most likely never to be taken.
+
+Done this way, the prototype is not a detour on the road to Rust. It is stone S-1 and S-2 being placed, in the language best suited to placing them, with the side effect that a future implementer — in Rust or anything else — inherits a design that has already been tested against 615 elections.
+
+---
+
 ## Open decisions
 
 | # | Decision | Recommended default |
 |---|---|---|
-| D-1 | Primary goal | **G1 (WASM in-browser counting)** — it is the only goal that gives readers something new, it is the shared prefix of G8's first two rungs, and it produces the artifact BV could later adopt. G3 and G6 fall out for free; G8 stays the stated long-term ambition without being promised |
+| D-1 | Primary goal | **DECIDED 2026-08-10 — none; no Rust kernel.** Python is the right language for a test-and-teaching library. Track A proceeds in Python. Had a goal been picked, it would have been G1 — and even that is weakened by the Pyodide amendment above |
+| D-1c | If in-browser counting is wanted later | Price [Pyodide](https://pyodide.org/) against a Rust kernel before assuming a second language is needed |
 | D-1a | Is G8 (encrypted tallying) announced as a roadmap item? | No. M0 exists as a concept page; M1 ships as a labelled toy or not at all |
 | D-1b | Is anything offered to BetterVoting before it works here? | No — documentation first, kernel second, crypto only as a conversation |
 | D-2 | Spec-derived or code-derived implementation | Spec-derived, or drop G3 and say so |
