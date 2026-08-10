@@ -59,6 +59,7 @@ On the same three ballots these three can each pick a *different* winner (LeGran
 - **Hare** is the original name for **Instant-Runoff Voting (IRV)** — in this repo, **RCV-IRV**. Count first choices, eliminate the candidate with the fewest, repeat until someone has a majority. Intuitive, but **not** Condorcet-consistent, and the source of the repo's recurring critiques: **center squeeze**, **non-monotonicity**, and **exhausted ballots**. It looks at the *least* ballot information at any one step.
 - **Coombs** is Hare *in reverse*: each round eliminate the candidate with the most **last-place** votes. Often elects a strong compromise candidate, but also **not** Condorcet-consistent.
 - **Carey** (a generalization of Craig Carey's three-candidate IFPP) eliminates **all** below-average first-rank candidates each step, not just one. Like Hare, it can **punish sincere voting** — LeGrand's Katy/Luke/Mary example shows both Hare and Carey rewarding strategic ballots.
+- **For several seats, this family splits in two** — and the ballot is identical either way. [**STV**](../../06_Other/STV/README.md) elects against a quota and transfers only the *surplus*, which makes it proportional; [**block preferential voting**](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md) re-runs the whole Hare count once per seat, striking each winner from every ballot and spending nothing, which makes it majoritarian enough to sweep. "Multi-winner RCV" names both.
 
 ## Family 3 — Graduated majority
 

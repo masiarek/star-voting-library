@@ -17,7 +17,7 @@ graph LR
     R --> SEQ["Sequential elimination<br/>(instant-runoff shape)"]
     R --> PW["Pairwise / Condorcet<br/>(no elimination)"]
     R --> POS["Positional<br/>(no elimination)"]
-    R --> MW["Multi-winner<br/>(proportional)"]
+    R --> MW["Multi-winner"]
 
     SEQ --> F1["eliminate by<br/>FEWEST first choices"]
     SEQ --> FL["eliminate by<br/>MOST last choices"]
@@ -36,7 +36,8 @@ graph LR
     PW --> CMORE["Schulze · Ranked Pairs ·<br/>Minimax ✅"]
     POS --> BORDA["Borda"]
     POS --> BUCK["Bucklin"]
-    MW --> STV["STV — Hare,<br/>proportional"]
+    MW --> STV["STV — Hare + quota,<br/>proportional"]
+    MW --> BPV["Block preferential —<br/>Hare per seat,<br/>majoritarian"]
 
     %% stroke-only highlighting: hard-coded fills break dark mode (the site theme
     %% controls label color, so light fills get light text); borders work in both.
@@ -91,9 +92,15 @@ This is why a precise reference says not just "IRV" but the **whole rule set** �
 
 ---
 
-## Multi-winner: the same Hare family, renamed STV
+## Multi-winner: *two* ways to run Hare over several seats
 
-For several seats at once, the Hare idea becomes the **Single Transferable Vote (STV)** — proportional, not majoritarian. Instead of "win a majority," a candidate must **reach a quota** (the Droop quota, `⌊total ÷ (seats + 1)⌋ + 1`); a candidate over quota is elected and the **surplus** above it transfers to next choices, while last-place candidates are eliminated and transfer downward, until every seat is filled. Run STV with a single seat and it reduces exactly to **IRV-Hare** — siblings, not separate inventions. (FairVote promotes IRV-Hare for one seat and STV for many; both are "RCV.")
+For several seats at once, the Hare idea splits in two — and the split is not about the ballot, which is identical, but about **what happens to a winning candidate's votes**.
+
+**Single Transferable Vote (STV)** — proportional. Instead of "win a majority," a candidate must **reach a quota** (the Droop quota, `⌊total ÷ (seats + 1)⌋ + 1`); a candidate over quota is elected and only the **surplus** above it transfers to next choices, while last-place candidates are eliminated and transfer downward, until every seat is filled. The quota is what spends a winner's support, and spending it is what leaves room for a minority to seat someone. Run STV with a single seat and it reduces exactly to **IRV-Hare** — siblings, not separate inventions. (FairVote promotes IRV-Hare for one seat and STV for many; both are "RCV.")
+
+**[Block preferential voting](RCV-IRV-block-preferential.md)** — majoritarian. Run a complete IRV count, seat the winner, **strike them from every ballot**, and run the whole count again for the next seat. Nothing is spent: the majority that elected the first winner is intact for the second, so a cohesive majority takes **every** seat. Used for the Australian Senate 1919–1948, before STV replaced it.
+
+Same ranked ballot, opposite results on the same votes — which is why "multi-winner RCV" is not a specification. See the [runnable pair](../../../../method_comparisons/block_preferential/README.md): twelve voters, two seats, block preferential 2–0 and STV 1–1.
 
 ---
 
@@ -105,6 +112,7 @@ For several seats at once, the Hare idea becomes the **Single Transferable Vote 
 | The elimination rule is the actual point (comparing variants, this page) | **RCV-IRV (Hare)** — names the exact rule |
 | Statutes, specs, academic papers, or any place a reader could assume Coombs/BTR/Baldwin | **RCV-IRV (Hare)** + the ballot rules (rankings allowed, majority basis) |
 | Multi-winner / proportional | **STV** |
+| Multi-winner / majoritarian (at-large) | **Block preferential voting** — never bare "multi-winner RCV" |
 | The pairwise, no-elimination alternative | **RCV-RR** (Ranked Robin) |
 
 **Short version:** insisting on bare **RCV-IRV** is right for everyday use — it already rules out STV, Ranked Robin, Approval, and STAR. Escalate to **RCV-IRV (Hare)** only when the *elimination rule itself* is on the table, because that's the moment "RCV-IRV" stops being specific enough.
@@ -122,6 +130,7 @@ For several seats at once, the Hare idea becomes the **Single Transferable Vote 
 ## Learn more — external resources
 
 - [Instant-runoff voting — Wikipedia](https://en.wikipedia.org/wiki/Instant-runoff_voting)
+- [Block preferential voting — Wikipedia](https://en.wikipedia.org/wiki/Block_preferential_voting) · [Block voting (the umbrella class) — Wikipedia](https://en.wikipedia.org/wiki/Block_voting)
 - [Nanson's method — Wikipedia](https://en.wikipedia.org/wiki/Nanson%27s_method)
 - [Supplementary vote — Wikipedia](https://en.wikipedia.org/wiki/Supplementary_vote)
 - [Electoral Commission — changes to mayoral & PCC voting (Elections Act 2022)](https://www.electoralcommission.org.uk/news-and-views/elections-act/changes-voting-system-mayoral-and-pcc-elections)

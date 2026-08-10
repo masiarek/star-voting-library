@@ -1,0 +1,33 @@
+election_title: "Block preferential voting — seat 1 of 2 (bakery co-op board)"
+
+scenario_description: |-
+  BLOCK PREFERENTIAL VOTING (also called preferential block voting) is the
+  winner-take-all, multi-seat version of instant runoff: run a full IRV count,
+  seat the winner, strike that winner from every ballot, and run IRV again for
+  the next seat. Every voter helps decide every seat, so it is majoritarian —
+  NOT proportional, and not STV.
+  This file is SEAT 1: an ordinary RCV-IRV count on the whole 12-voter, four
+  candidate field. A 7-voter savoury-free majority (5 Almond-first + 2 Brioche
+  first) faces a 5-voter Croissant/Danish minority.
+  Round 1: Almond 5, Croissant 5, Brioche 2, Danish 0. Textbook Hare would drop
+  Danish alone (nothing to transfer), then Brioche, whose 2 ballots move to
+  Almond for 7 of 12 — a majority — and the first seat. The vendored pyrankvote
+  BATCHES the two: Brioche and Danish are both marked Rejected in round 1, since
+  their 2 combined votes cannot catch either leader. Same winner, one fewer
+  round printed.
+  Seat 2 continues in bpv_bakery_seat2_c3_b12.yaml, on these same ballots with
+  Almond struck out. The pair together IS one block-preferential count.
+  Lesson: 06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  5:Almond>Brioche>Croissant>Danish
+  2:Brioche>Almond>Croissant>Danish
+  5:Croissant>Danish>Almond>Brioche
+
+expected_winners:
+- Almond
+
+# file: bpv_bakery_seat1_c4_b12.yaml

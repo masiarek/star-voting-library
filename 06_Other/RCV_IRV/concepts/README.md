@@ -35,7 +35,7 @@ These are properties of **IRV the tabulation**, not of ranked ballots in general
 The [**variants/**](variants/README.md) subfolder — same ranked ballot, different elimination rule:
 
 - [Which RCV-IRV? — the variants & tie-breaks](variants/RCV_IRV_variants.md) · [family tree](variants/RCV_methods_family_tree.mermaid)
-- [BTR](variants/RCV-IRV-BTR.md) · [Baldwin & Nanson](variants/RCV-IRV-Baldwin-Nanson.md) (Borda-elimination, Condorcet-safe) · [Coombs](variants/RCV-IRV-Coombs.md) (eliminates on last choices) · [Contingent & Supplementary](variants/RCV-IRV-contingent-supplementary.md)
+- [BTR](variants/RCV-IRV-BTR.md) · [Baldwin & Nanson](variants/RCV-IRV-Baldwin-Nanson.md) (Borda-elimination, Condorcet-safe) · [Coombs](variants/RCV-IRV-Coombs.md) (eliminates on last choices) · [Contingent & Supplementary](variants/RCV-IRV-contingent-supplementary.md) · [Block Preferential](variants/RCV-IRV-block-preferential.md) (the same rule, re-run once per seat — majoritarian multi-winner, not STV)
 
 ## Case studies — RCV-IRV in the wild
 

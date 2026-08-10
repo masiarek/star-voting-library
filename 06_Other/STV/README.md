@@ -169,6 +169,8 @@ Portland's 2024 election is the notable recent one: other than Cambridge, it was
 
 **"RCV" names a ballot; "IRV" and "STV" name two different ways of counting it.** IRV fills one seat by elimination. STV fills several against a quota. Ranked Robin counts the same paper by pairwise comparison. Calling all of them "RCV" is the single most common confusion in this whole subject — sorted out at [Terminology](../../07_Concepts/tips/TIPS_terminology.md), with the wider map of what else can be done to a ranked ballot at [the ranked-ballot zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md).
 
+**The sibling that gets mistaken for STV** is [block preferential voting](../RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md) — the *other* multi-seat count for ranked ballots, which runs a full IRV count per seat and strikes each winner from every ballot. Nothing is spent against a quota, so a cohesive majority takes every seat. It ran the Australian Senate from 1919 until STV replaced it in 1948, and on [one twelve-voter election](../../method_comparisons/block_preferential/README.md) it returns 2–0 where STV returns 1–1. If someone says "multi-winner RCV," ask which of the two they mean.
+
 **And the question that comes before all of this:** whether you want a proportional body at all, rather than a majoritarian one that picks "the N best" — [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md). The score-ballot answer to the same question is [STAR-PR](../../03_STAR_PR/README.md), worked against STV on [one shared electorate](../../method_comparisons/stv_vs_star_pr/README.md) where both land on the identical slate.
 
 ---

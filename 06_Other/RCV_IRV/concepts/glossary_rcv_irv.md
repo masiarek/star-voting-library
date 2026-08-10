@@ -9,6 +9,7 @@ Method-specific terms for **RCV-IRV** and the ranked-ballot family. Shared, cros
 - **Exhausted ballot** — an **IRV-specific** term: a ballot set aside mid-count because all its ranked candidates were eliminated (Ranked Robin reads every rank, so it doesn't exhaust). → ["Exhausted Ballots" — What FairVote's Word Actually Hides](exhausted_ballots_301.md)
 - **Center squeeze** — a broadly-liked moderate eliminated early for lacking first-choice support; an IRV failure STAR and Ranked Robin avoid. → [Center Squeeze](RCV_IRV_center_squeeze.md)
 - **STV (Single Transferable Vote)** — the proportional, multi-winner tabulation of ranked ballots (the proportional cousin of IRV, not IRV itself).
+- **Block preferential voting** — the *majoritarian* multi-winner tabulation of the same ballots: a full IRV count per seat, each winner struck from every ballot and nothing spent, so a cohesive majority sweeps. Not STV, and not to be called "multi-winner RCV" without saying which. → [RCV-IRV (Block Preferential)](variants/RCV-IRV-block-preferential.md)
 - **Hare** — the ranked-transfer idea; single-winner = IRV, multi-winner = STV.
 
 *The shared criteria RCV-IRV fails or passes — **monotonicity**, **summability** (and its operational cost, [central tabulation](../../../07_Concepts/topics/central_tabulation.md)), the **Equal Vote criterion**, **later-no-harm** — are in the [main glossary](../../../07_Concepts/GLOSSARY.md#properties-criteria) (stated fairly, with caveats).*

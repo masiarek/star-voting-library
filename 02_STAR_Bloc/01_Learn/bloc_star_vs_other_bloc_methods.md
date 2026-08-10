@@ -1,6 +1,6 @@
 # Bloc STAR among the at-large methods
 
-**One line:** Bloc STAR is one of several ways to fill N seats majoritarianly — alongside Block Plurality, Limited Voting, SNTV, Bloc Approval and Bloc Ranked Robin. They all answer "who does the majority most want?", and they differ in what the ballot lets you say and how badly a side is punished for running too many candidates.
+**One line:** Bloc STAR is one of several ways to fill N seats majoritarianly — alongside Block Plurality, Limited Voting, SNTV, Bloc Approval, Bloc Ranked Robin and Block Preferential Voting. They all answer "who does the majority most want?", and they differ in what the ballot lets you say and how badly a side is punished for running too many candidates.
 
 → The other half of the map: [proportional methods](../../03_STAR_PR/01_Learn/README.md) · the fork itself: [Electing more than one, simply](../../07_Concepts/topics/electing_more_than_one.md) · the mechanics here: [Bloc STAR](bloc_star.md)
 
@@ -10,7 +10,7 @@
 
 ## The family
 
-Every method in this table fills N seats without any notion of a fair share. What separates them is the **ballot**, and one structural quirk of the count that only Bloc STAR has.
+Every method in this table fills N seats without any notion of a fair share. What separates them is the **ballot**, and one structural quirk of the count that only the bottom two rows have.
 
 | Method | Ballot | How the seats are filled | Vote-splitting risk |
 |---|---|---|:--:|
@@ -19,13 +19,16 @@ Every method in this table fills N seats without any notion of a fair share. Wha
 | **Block Plurality** (plurality-at-large) | mark **N** | top N by marks | moderate |
 | **Bloc Approval** | mark **any number** | top N by approvals | low |
 | **Bloc Ranked Robin** | rank them | top N by head-to-head record | none |
+| **[Block Preferential](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md)** | rank them | **sequential**: run IRV, seat the winner, remove, repeat | none |
 | **Bloc STAR** | score all **0–5** | **sequential**: run STAR, seat the winner, remove, repeat | none |
 
 The plurality family — [Block, Limited and SNTV](../../method_comparisons/multi_member_plurality/README.md) — differs *only* in votes per voter, and that one dial slides the outcome from majority sweep (3:0) to minority-tops-the-poll (2:1 with the minority leading) on the same 60/40 electorate.
 
 ## The structural difference: Bloc STAR is sequential
 
-Look at the "how the seats are filled" column again. Five of the six methods produce **one ranking of all candidates and cut it at N**. Bloc STAR can't: STAR's second round is a **head-to-head between exactly two finalists**, and there is no way to read "the top four" out of a two-person runoff. So it has to elect one seat, remove that candidate, and run the whole count again.
+Look at the "how the seats are filled" column again. Five of the seven methods produce **one ranking of all candidates and cut it at N**. Bloc STAR can't: STAR's second round is a **head-to-head between exactly two finalists**, and there is no way to read "the top four" out of a two-person runoff. So it has to elect one seat, remove that candidate, and run the whole count again.
+
+The one method that shares this shape is the ranked-ballot one, [block preferential voting](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md), and for the same reason: a majority threshold names *one* winner, so IRV has to be re-run per seat too. The three consequences below therefore apply to both — which makes block preferential voting the closest structural analogue Bloc STAR has, on a different piece of paper.
 
 Three things follow, and none of them are obvious from the family table:
 
@@ -75,5 +78,6 @@ And if the sweep is what you're trying to avoid, don't shop within this family a
 - [Bloc STAR](bloc_star.md) · [the majority sweep](majority_sweep.md) · [honest limits](bloc_honest_limits.md)
 - [Food-Truck Row](../../method_comparisons/food_truck_row/README.md) — one electorate, five counts, three outcomes
 - [Block, Limited & SNTV](../../method_comparisons/multi_member_plurality/README.md) — the plurality family on one 60/40 electorate
+- [Block preferential voting](../../method_comparisons/block_preferential/README.md) — the ranked member of the family, run: identical ballots sweep 2–0 under sequential IRV and split 1–1 under STV
 - [Pets Governance](../../method_comparisons/pets_governance/README.md) — six methods, one electorate, at 3 seats
 - [Approval — Multi-Winner](../../04_Approval/01_Learn/Multiwinner_Approval/approval_multiwinner.md) — bloc approval and its proportional adaptations

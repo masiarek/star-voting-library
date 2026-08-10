@@ -1,6 +1,6 @@
 # RCV-IRV variants — the sequential-elimination family
 
-"Instant runoff" names a *family*: methods that count ranked ballots by eliminating candidates one at a time. They differ in exactly one design choice — **which candidate is eliminated each round** — and that single choice changes the method's properties.
+"Instant runoff" names a *family*: methods that count ranked ballots by eliminating candidates one at a time. They differ in exactly one design choice — **which candidate is eliminated each round** — and that single choice changes the method's properties. (One page here varies a *different* dial: block preferential voting keeps Hare's elimination rule exactly and repeats the whole count once per seat.)
 
 **Start here → [Which RCV-IRV? — Hare and the Other Sequential-Elimination Methods](RCV_IRV_variants.md)**
 
@@ -11,5 +11,6 @@
 - [RCV-IRV (Coombs)](RCV-IRV-Coombs.md) — eliminate the *most-hated*, not the least-loved.
 - [RCV-IRV (Baldwin & Nanson)](RCV-IRV-Baldwin-Nanson.md) — Borda-elimination hybrids.
 - [RCV-IRV (Contingent & Supplementary Vote)](RCV-IRV-contingent-supplementary.md) — instant runoff compressed into one round, and what the rank cap discards.
+- [RCV-IRV (Block Preferential)](RCV-IRV-block-preferential.md) — instant runoff run once *per seat*: the multi-winner variant that is majoritarian, not STV.
 
 The family-tree diagram source lives in `RCV_methods_family_tree.mermaid`.

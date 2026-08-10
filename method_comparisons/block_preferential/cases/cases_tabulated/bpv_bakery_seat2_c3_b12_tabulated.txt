@@ -1,0 +1,62 @@
+======================================================================
+SOURCE FILE:     bpv_bakery_seat2_c3_b12.yaml
+TABULATED FILE:  bpv_bakery_seat2_c3_b12_tabulated.txt
+======================================================================
+
+election_title: "Block preferential voting — seat 2 of 2 (bakery co-op board)"
+
+scenario_description: |-
+  SEAT 2 of the block-preferential count begun in bpv_bakery_seat1_c4_b12.yaml.
+  Almond won seat 1, so Almond is struck from every ballot and the SAME twelve
+  voters — all of them, including the five who already got nothing — count
+  again for the second seat.
+  That is the whole difference between block preferential voting and STV. STV
+  would have spent the majority's ballots on the seat they already won; block
+  preferential voting hands them back at full strength. Brioche now holds 7 of
+  12 first preferences outright and takes seat 2 in a single round.
+  Final board: Almond and Brioche — both from the 7-voter (58%) majority. The
+  5-voter (42%) minority elects nobody. Run the same ballots under STV
+  (bpv_bakery_stv_c4_b12.yaml) and the seats split 1-1.
+  Lesson: 06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md
+
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  5:Brioche>Croissant>Danish
+  2:Brioche>Croissant>Danish
+  5:Croissant>Danish>Brioche
+
+expected_winners:
+- Brioche
+
+# file: bpv_bakery_seat2_c3_b12.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Block preferential voting — seat 2 of 2 (bakery co-op board)
+ Tabulating 12 ballots (ranked ballots).
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Brioche            7  Elected
+Croissant          5  Rejected
+Danish             0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Brioche
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Brioche
+   Outside (2):        Croissant, Danish
+   One member ⇒ Brioche is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Brioche is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md

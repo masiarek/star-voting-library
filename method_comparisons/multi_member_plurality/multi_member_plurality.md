@@ -39,9 +39,11 @@ This set's *point* is the Plurality-family framing (votes-per-voter), and our en
 - **SNTV** — Wikipedia: [Single non-transferable vote](https://en.wikipedia.org/wiki/Single_non-transferable_vote) · electowiki: [Single non-transferable vote](https://electowiki.org/wiki/Single_non-transferable_vote)
 - **Limited voting** — Wikipedia: [Limited voting](https://en.wikipedia.org/wiki/Limited_voting) · electowiki: [Limited voting (Wikipedia)](https://en.wikipedia.org/wiki/Limited_voting)
 - **Block voting** — Wikipedia: [Plurality block voting](https://en.wikipedia.org/wiki/Plurality_block_voting) · electowiki: [Bloc voting](https://electowiki.org/wiki/Bloc_voting)
+- **The class these belong to** — Wikipedia: [Block voting](https://en.wikipedia.org/wiki/Block_voting) (the umbrella: plurality block, approval block, two-round block, party block, and the ranked member below) · [Block preferential voting](https://en.wikipedia.org/wiki/Block_preferential_voting)
 
 ## See also
 
 - Folder overview: [multi_member_plurality — README](README.md)
 - The BV-backed SNTV instance: [Pets Governance — Bloc Plurality](../pets_governance/cases/cases_pages/pets_gov_bloc_plurality.md) ([yaml](../pets_governance/cases/pets_gov_bloc_plurality.yaml)) · the whole [governance set](../pets_governance/README.md)
+- The **ranked** member of the same class: [Block preferential voting](../block_preferential/README.md) — instant runoff run once per seat. Same majoritarian outcome as block voting, reached the long way round ([concept page](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md))
 - Proportional alternatives: [STV](../../06_Other/STV/README.md) · [STAR-PR](../../03_STAR_PR/README.md)

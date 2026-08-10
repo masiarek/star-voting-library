@@ -41,6 +41,7 @@ Proportional methods all rest on a **quota** — roughly "how many votes buys on
 ## Go deeper
 
 - **[Bloc STAR](../../02_STAR_Bloc/README.md)** — majoritarian multi-winner (the top-N extension of STAR)
+- **[Block preferential voting](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-block-preferential.md)** — the ranked-ballot answer to the *same* majoritarian question, and the one most often mistaken for STV. Worth knowing precisely because it proves the fork is decided by the **count**, not the ballot: [identical rankings](../../method_comparisons/block_preferential/README.md) sweep 2–0 under it and split 1–1 under STV
 - **[Proportional representation](../../03_STAR_PR/01_Learn/README.md)** — the proportional family (Allocated Score, SSS, RRV) and [STV vs STAR-PR](../../method_comparisons/stv_vs_star_pr/README.md) on the same electorate
 - **[Electing a committee](../../04_Approval/01_Learn/Multiwinner_Approval/abc_rules_intro.md)** — the same fork on the *approval* side, counting-only (a gentle companion)
 - **[Comparing multi-winner methods](comparing_multiwinner_methods.md)** — which pairs of methods can honestly be compared, and why "Bloc Approval vs STAR-PR" answers nothing
