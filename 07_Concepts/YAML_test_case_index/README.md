@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**599 election files** (499 single-winner, 100 multi-winner) across 18 method(s).
+**600 election files** (500 single-winner, 100 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 271 |
+| STAR | 272 |
 | RCV-IRV (Hare) | 51 |
 | Ranked Robin (RCV-RR / Copeland) | 100 |
 | Approval | 25 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (271)
+## STAR  (272)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -116,6 +116,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2283_hb4qvv_all_equal_recheck`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/bv2283_hb4qvv_all_equal_recheck.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | BV2283 — Score both candidates 5 (STAR, 2 candidates): a vote, or an abstention? → _A_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/bv2283_hb4qvv_all_equal_recheck.yaml) |
 | [`flat_scores_abstention_c3_b8`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/flat_scores_abstention_c3_b8.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | BV Abstentions and flat scores (Apple/Banana/Cherry, 8 ballots) → _Banana_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/flat_scores_abstention_c3_b8.yaml) |
 | [`small_abstention_c2_b5`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/small_abstention_c2_b5.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | Equal Support vs Abstention — minimal STAR test (A/B, 5 ballots) → _A_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/small_abstention_c2_b5.yaml) |
+| [`pres24_star_range_usage`](../../01_STAR/04_Real_Elections/pres24_range_usage/cases/cases_pages/pres24_star_range_usage.md) | `01_STAR/04_Real_Elections/pres24_range_usage/cases/` | 1 | US 2024 Presidential poll (BetterVoting pres24) - STAR race → _Kamala Harris (D)_ | [`.yaml`](../../01_STAR/04_Real_Elections/pres24_range_usage/cases/pres24_star_range_usage.yaml) |
 | [`Runoff_01_confirms_leader_r2pvc9`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_01_confirms_leader_r2pvc9.md) | `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/` | 1 | Runoff 01 — Runoff confirms the leader (control) → _Aspen_ | [`.yaml`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_01_confirms_leader_r2pvc9.yaml) |
 | [`Runoff_02_atom_reversal_yx9447`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_02_atom_reversal_yx9447.md) | `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/` | 1 | Runoff 02 — the atom (smallest runoff reversal) → _Boston_ | [`.yaml`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_02_atom_reversal_yx9447.yaml) |
 | [`Runoff_03_enthusiasts_vs_majority_rkgtpk`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/cases_pages/Runoff_03_enthusiasts_vs_majority_rkgtpk.md) | `01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/` | 1 | Runoff 03 — two enthusiasts vs the majority → _Eden_ | [`.yaml`](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_03_enthusiasts_vs_majority_rkgtpk.yaml) |

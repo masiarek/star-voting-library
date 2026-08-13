@@ -42,6 +42,7 @@ AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/best_pet_c7_b461.yaml
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/bv2283_hb4qvv_all_equal_recheck.yaml,2,5,A,A,A,A,A,A,A,A,A,1,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/flat_scores_abstention_c3_b8.yaml,3,8,Banana,Banana,Banana,Banana,Banana,Banana,Banana,Banana,Banana,2,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/small_abstention_c2_b5.yaml,2,5,A,A,A,A,A,A,A,A,A,1,False,False,False
+AGREE,01_STAR/04_Real_Elections/pres24_range_usage/cases/pres24_star_range_usage.yaml,8,2772,Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),Kamala Harris (D),1441,False,False,False
 AGREE,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_01_confirms_leader_r2pvc9.yaml,3,3,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,0,False,False,False
 AGREE,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_06_confirms_at_scale_d664xw.yaml,3,5,Wren,Wren,Wren,Wren,Wren,Wren,Wren,Wren,Wren,0,False,False,False
 AGREE,01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_08_ca_governor_reversal_gvdy42.yaml,61,319,Tom Steyer (D),Tom Steyer (D),Tom Steyer (D),Tom Steyer (D),Tom Steyer (D),Tom Steyer (D),Alicia Olivia Lapp (R),Tom Steyer (D),Tom Steyer (D),207,False,False,False
