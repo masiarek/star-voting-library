@@ -4,7 +4,11 @@
 
 *A measured answer, from real ballots. In Equal Vote's public [US 2024 Presidential poll](https://bettervoting.com/pres24) — 2,772 ballots, 8 candidates — **14.1% of STAR ballots never used both ends of the scale**. This page reproduces that figure exactly, then tests whether it changed anything. It did not, and the reason is specific and checkable rather than reassuring.*
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pres24) · **[results ↗](https://bettervoting.com/pres24/results)** (election `pres24`) · **[the full LH count ↗](cases/cases_pages/pres24_star_range_usage.md)** · ballots as an engine case: [`pres24_star_range_usage.yaml`](cases/pres24_star_range_usage.yaml) · [`_tabulated` mirror](cases/cases_tabulated/pres24_star_range_usage_tabulated.txt) · rerun the measurements: [`analyze_range_usage.py`](analyze_range_usage.py)
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pres24) · **[results ↗](https://bettervoting.com/pres24/results)** (election `pres24`)
+
+**▶ The full count:** **[the generated case page ↗](cases/cases_pages/pres24_star_range_usage.md)** (matrix, score distribution, every round) · [`_tabulated` mirror ↗](cases/cases_tabulated/pres24_star_range_usage_tabulated.txt) (4,649 lines)
+
+**▶ The data:** the 2,772 ballots as an engine case [`pres24_star_range_usage.yaml`](cases/pres24_star_range_usage.yaml) · rerun every figure on this page: [`analyze_range_usage.py`](analyze_range_usage.py)
 
 ---
 
@@ -92,7 +96,7 @@ The data supports the education framing over the validation framing, with one ca
 
 Verified three ways: this repo's engine, BetterVoting's own tabulation, and the independent script above. All agree on every score, every five-star count, and every pairwise total.
 
-```text title="Abridged for the lesson — the full 4,649-line report is linked above"
+```text title="Abridged for the lesson — this is an excerpt, not verbatim engine output"
 Scoring Round
    Kamala Harris (D)         -- 8250 -- First place
    Cornell West (I)          -- 4272 -- Second place
@@ -112,6 +116,8 @@ Automatic Runoff Round
    Voters with a preference: 2181 of 2772 (591 Equal Support).
    Kamala Harris (D) 1604 (74%) vs Cornell West (I) 577 (26%); majority = 1091.
 ```
+
+**Want the whole count?** The scoring round above is an excerpt. The full report — pairwise matrix, score distribution, every candidate's five-star count, all 2,772 ballots echoed — is on the **[generated case page](cases/cases_pages/pres24_star_range_usage.md)**, mirrored verbatim in [`pres24_star_range_usage_tabulated.txt`](cases/cases_tabulated/pres24_star_range_usage_tabulated.txt).
 
 **One reconciliation note, so the two engines can be compared line by line.** BetterVoting reports each candidate's score **10 points lower** than the engine above — 8,240 vs 8,250, and the same −10 on all eight. The cause is benign, already documented in this repo, and now confirmed at scale: **7 ballots score every candidate identically** (three all-0s, three all-3s, one all-1s), and BetterVoting treats a ballot with no preference at all as an **abstention**, excluding it from the score totals — the same divergence the [abstain, blank & zero handling](../abstain_bugs/README.md) set isolates on small constructed cases ([#884](https://github.com/Equal-Vote/bettervoting/issues/884)). This is that divergence appearing in 2,772 real ballots, where it moves every score by the same 10 points and decides nothing. Those 7 ballots contribute exactly 10 points to *every* candidate, so they cannot change any ranking, any pairwise comparison, or the winner. Excluding them, the two engines match to the point on all eight candidates and all eight five-star counts.
 
