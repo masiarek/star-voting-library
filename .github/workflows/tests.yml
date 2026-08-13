@@ -29,5 +29,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           enable-cache: true
-      - run: uv sync
+      # --group docs installs mkdocs: tests/test_search_console_file.py imports
+      # mkdocs_hooks and calls its on_files hook for real. Without it those two
+      # tests raise ModuleNotFoundError, which is a red suite rather than a
+      # skipped check — and skipping them would make the gate vacuous, since
+      # the failure they guard is invisible everywhere else.
+      - run: uv sync --group docs
       - run: uv run pytest -q
