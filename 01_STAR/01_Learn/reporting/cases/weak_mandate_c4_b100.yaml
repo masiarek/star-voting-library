@@ -1,0 +1,128 @@
+election_title: The seat nobody wanted — a field with no enthusiasm
+scenario_description: |-
+  A 100-ballot water-district board election in which nobody is popular. Two
+  candidates are widely known and widely disliked, one is barely known at all,
+  and one is a protest option. 82% of every score cast is a 1 or a 0; a
+  scattering of die-hards give a 4 or a 5. Somebody still has to win.
+
+  The point is not who won — it is what the report says about HOW they won.
+  Beth wins with 88 stars out of a possible 500: an average of 0.9 out of 5.
+  A Choose-One count would report "Beth, elected" and stop. STAR's scoring
+  round publishes the number that tells the winner to tread carefully, and
+  tells the next cycle's candidates that the seat is there for the taking.
+
+  Watch Colin's two averages. He is not disliked — he is unknown: 78 voters
+  left him blank, and the 22 who did rate him averaged 2.3, the highest real
+  support in the election. "Nobody has heard of him" and "everybody dislikes
+  him" produce nearly the same total, and only the Abs column tells them apart.
+
+voting_method: STAR   # STAR Voting - Single-winner
+
+num_winners: 1
+ballots: |-
+  Arlo,Beth,Colin,Dara
+     0,   0,   5,   0
+     1,   0,   -,   1
+     0,   1,   2,   0
+     1,   1,   -,   1
+     1,   0,   -,   2
+     2,   0,   -,   0
+     2,   0,   -,   1
+     0,   0,   4,   0
+     2,   0,   -,   0
+     1,   2,   -,   0
+     1,   1,   -,   1
+     0,   1,   0,   0
+     0,   2,   -,   0
+     0,   1,   0,   0
+     0,   1,   -,   0
+     1,   0,   -,   0
+     1,   5,   -,   0
+     1,   0,   -,   2
+     1,   2,   -,   0
+     0,   0,   -,   0
+     0,   1,   -,   0
+     1,   1,   -,   0
+     0,   1,   2,   0
+     1,   1,   4,   0
+     0,   2,   -,   0
+     1,   0,   -,   0
+     0,   1,   -,   0
+     0,   0,   -,   0
+     2,   0,   -,   0
+     2,   0,   -,   1
+     0,   0,   -,   0
+     2,   0,   -,   1
+     0,   0,   -,   0
+     1,   0,   2,   0
+     0,   0,   0,   0
+     0,   1,   2,   0
+     0,   1,   5,   0
+     0,   2,   -,   0
+     1,   0,   -,   1
+     5,   0,   -,   0
+     0,   1,   -,   0
+     0,   0,   -,   2
+     1,   4,   -,   0
+     1,   2,   -,   0
+     0,   1,   2,   0
+     1,   5,   -,   0
+     0,   1,   -,   0
+     2,   1,   -,   0
+     0,   1,   -,   2
+     2,   0,   -,   0
+     1,   1,   -,   0
+     1,   1,   -,   0
+     1,   1,   -,   1
+     0,   1,   -,   0
+     0,   1,   -,   0
+     0,   0,   4,   0
+     2,   0,   -,   0
+     1,   0,   -,   1
+     0,   1,   2,   0
+     0,   0,   -,   2
+     1,   0,   -,   0
+     2,   0,   -,   0
+     0,   2,   -,   0
+     0,   1,   -,   0
+     1,   5,   -,   0
+     2,   0,   -,   0
+     0,   0,   -,   2
+     0,   0,   -,   5
+     1,   2,   -,   0
+     1,   1,   -,   0
+     0,   1,   -,   1
+     2,   1,   -,   1
+     1,   1,   2,   0
+     0,   1,   5,   0
+     1,   0,   2,   0
+     0,   1,   -,   0
+     0,   1,   -,   0
+     0,   1,   -,   0
+     0,   1,   -,   0
+     1,   1,   -,   0
+     1,   4,   -,   0
+     0,   1,   -,   0
+     0,   0,   -,   2
+     0,   2,   -,   0
+     0,   2,   -,   0
+     0,   0,   0,   0
+     1,   1,   2,   0
+     1,   1,   -,   0
+     0,   1,   -,   0
+     2,   1,   -,   0
+     0,   0,   0,   0
+     0,   0,   -,   5
+     1,   0,   -,   4
+     2,   1,   -,   0
+     0,   1,   4,   0
+     0,   0,   2,   0
+     0,   1,   -,   0
+     1,   2,   -,   0
+     2,   0,   -,   0
+     0,   0,   -,   0
+
+expected_winners:
+  - Beth
+
+# file: weak_mandate_c4_b100.yaml

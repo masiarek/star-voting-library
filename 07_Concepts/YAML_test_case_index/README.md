@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**600 election files** (500 single-winner, 100 multi-winner) across 18 method(s).
+**601 election files** (501 single-winner, 100 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 272 |
+| STAR | 273 |
 | RCV-IRV (Hare) | 51 |
 | Ranked Robin (RCV-RR / Copeland) | 100 |
 | Approval | 25 |
@@ -31,11 +31,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (272)
+## STAR  (273)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`same_total_different_shape_c3_b7`](../../01_STAR/01_Learn/reporting/cases/cases_pages/same_total_different_shape_c3_b7.md) | `01_STAR/01_Learn/reporting/cases/` | 1 | Same-ish total, different shape — the sandwich vote → _Avocado_ | [`.yaml`](../../01_STAR/01_Learn/reporting/cases/same_total_different_shape_c3_b7.yaml) |
+| [`weak_mandate_c4_b100`](../../01_STAR/01_Learn/reporting/cases/cases_pages/weak_mandate_c4_b100.md) | `01_STAR/01_Learn/reporting/cases/` | 1 | The seat nobody wanted — a field with no enthusiasm → _Beth_ | [`.yaml`](../../01_STAR/01_Learn/reporting/cases/weak_mandate_c4_b100.yaml) |
 | [`02a_c3_b1_three-candidates`](../../01_STAR/02_Examples/cases/cases_pages/02a_c3_b1_three-candidates.md) | `01_STAR/02_Examples/cases/` | 1 | Three candidates, one ballot - single-winner STAR → _Choco_ | [`.yaml`](../../01_STAR/02_Examples/cases/02a_c3_b1_three-candidates.yaml) |
 | [`02b_c3_b2_three-candidates`](../../01_STAR/02_Examples/cases/cases_pages/02b_c3_b2_three-candidates.md) | `01_STAR/02_Examples/cases/` | 1 | Three candidates, two ballots - single-winner STAR → _Vanilla_ | [`.yaml`](../../01_STAR/02_Examples/cases/02b_c3_b2_three-candidates.yaml) |
 | [`03a_c3_b3_style-bullet-vote`](../../01_STAR/02_Examples/cases/cases_pages/03a_c3_b3_style-bullet-vote.md) | `01_STAR/02_Examples/cases/` | 1 | Voting styles — a valid STAR bullet vote (3 candidates) → _Vanilla_ | [`.yaml`](../../01_STAR/02_Examples/cases/03a_c3_b3_style-bullet-vote.yaml) |
