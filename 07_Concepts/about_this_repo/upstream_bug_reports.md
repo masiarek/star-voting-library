@@ -12,6 +12,7 @@ This is the follow-up list: every report **we** filed against a project we don't
 
 | Issue | Filed | State | What it is |
 |---|---|---|---|
+| [#1513](https://github.com/Equal-Vote/bettervoting/issues/1513) | 2026-08-14 | open | **Add Voters** keys its duplicate check on `email` alone, so in admin-managed-voter-ID mode every row collides on `""`: any list of 2+ rows is reported as duplicate emails and answering Yes adds one voter, discarding the rest silently. Found in the screen recording attached to [#1512](https://github.com/Equal-Vote/bettervoting/issues/1512) (someone else's issue, about scrolling). Test plan and a draft help page: [bettervoting-qa BV250](https://masiarek.github.io/bettervoting-qa/test_cases/BV250-post-fix-verification.html) |
 | [#1508](https://github.com/Equal-Vote/bettervoting/issues/1508) | 2026-08-09 | open | A ballot scoring every candidate the same (`5,5`) is dropped from the STAR tally as an abstention, so its scores never reach the totals. Minimal case, [BV2283 `hb4qvv`](https://bettervoting.com/hb4qvv/results); supersedes the diagnosis in #1478 |
 | [#1507](https://github.com/Equal-Vote/bettervoting/issues/1507) | 2026-08-09 | open | STAR-PR results always report `tieBreakType: "random"`, even with no tie — the mislabel that hid the count-vs-weight divergence for a year |
 | [#1487](https://github.com/Equal-Vote/bettervoting/issues/1487) | 2026-08-06 | open | Range-of-Scores chart and the page headline use different denominators on flat ballots |
