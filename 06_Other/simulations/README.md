@@ -6,6 +6,7 @@ This folder holds brute-force simulations that **measure** a claim instead of ci
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
 - **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md). Its `--chart` and `--why` modes back a second page: [Why more candidates make every method miss](../../07_Concepts/topics/condorcet/why_more_candidates_miss.md), which explains the field-size effect and works it through [one 65-voter election at 3, 5 and 7 candidates](../../method_comparisons/crowded_field/README.md). Its `--expressiveness` and `--ballot-counts` modes back a third: [What the ballot can and cannot say](../../07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md), which separates ballot resolution from tabulation rule and works it through [one 25-voter election on five different papers](../../method_comparisons/ballot_expressiveness/README.md).
+- **Strategic preservation of the sincere winner** — `strategic_cw_preservation.py`: the same question as above, but with voters allowed to lie ([jump to section](#strategic-cw-preservation-simulation)). Separates the sincere baseline, successful attacks and *backfired* attacks, which a single "does the sincere Condorcet winner still win" rate merges. Full writeup + the tables: [Formal compliance vs. strategic preservation](../../07_Concepts/topics/compliance_vs_strategic_preservation.md).
 - **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py`: in a two-stage reform (open primary → top N → good general), how often does the *primary* discard the consensus candidate? Full writeup + measured rates: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md) ([mechanics](#qualifying-round-primary-method-simulation)).
 
 ## Favorite-Betrayal (FBC) simulation
@@ -268,3 +269,39 @@ The headlines, for orientation:
 - **The CW is computed from utilities, not from any ballot** — reading it off the 0–5 ballot would grade STAR against a target its own ballot had shaped, and flatter Approval the same way.
 - Scores are min-max normalized per voter; that assumption is what produces the grid-loss effect above.
 - **Always report the model, the field size, and the voter count with the number.**
+
+---
+
+## Strategic CW preservation simulation
+
+`strategic_cw_preservation.py` — when voters lie, does the **sincere** [Condorcet winner](../../07_Concepts/topics/condorcet/README.md) still win? The script next door measures Condorcet efficiency on honest ballots; this one lets an adaptive strategic bloc attack the same electorates, and reports four numbers instead of one.
+
+### Why this exists
+
+A recurring argument runs: a [Smith](../../07_Concepts/topics/smith_set.md)-compliant method stays compliant with the ballots it was handed even after [burial](../../07_Concepts/topics/burial/README.md) has rearranged the pairwise structure those ballots report, so formal compliance may not discriminate between methods once strategy is allowed — simulations show very different rules preserving the sincere Condorcet winner at similar rates. The first half is simply true, and [Gibbard–Satterthwaite](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) already guarantees no method is strategy-proof. This script exists to test the second half, and finds the convergence **reproduces and then dissolves**: it is an artifact of methods starting from different honest baselines, and on the metric that produces it Plurality ties Ranked Robin.
+
+### What it measures
+
+Per method, conditioning on a unique sincere Condorcet winner: `sincere` (honest baseline), `held` (the CW still wins after the best attack), `paid` (an attack beat honesty *for the attackers*), `backfired` (it lost to honesty). The last two are what a single preservation rate merges.
+
+The attack model is deliberately generous — every non-CW candidate is tried as a challenger, the bloc is every voter who sincerely prefers that challenger, and the best attack is kept. Perfect polling, perfect discipline, free coordination. **The numbers are an upper bound on what strategy can achieve, not a forecast.**
+
+`--objective` is the experiment: `utility` (default) means a rational bloc submits only what beats voting honestly; `displace` means it unseats the CW at any cost to itself. `--price` runs both on the same electorates and prints the difference as a **deterrent**.
+
+### Controls, not results
+
+Three cells have answers known before the code runs, and `--selftest` asserts all three: Ranked Robin's `sincere` column must read exactly 100.0%; Plurality's winner must be bit-identical before and after burial; and a bloc that *shares* a favourite must never elect that favourite under RCV-IRV by burying the CW (later-no-harm, made testable). Under `--strategy compromise` Ranked Robin holds exactly 100.0% for a fourth reason that is also a theorem — raising a challenger the bloc already preferred changes no pairwise comparison with the CW.
+
+### Running it
+
+```bash
+uv run 06_Other/simulations/strategic_cw_preservation.py
+uv run 06_Other/simulations/strategic_cw_preservation.py --selftest
+uv run 06_Other/simulations/strategic_cw_preservation.py --price
+uv run 06_Other/simulations/strategic_cw_preservation.py --strategy compromise
+uv run 06_Other/simulations/strategic_cw_preservation.py --objective displace
+```
+
+### Caveats (read before quoting)
+
+One bloc attacks and nobody defends, so real preservation rates are higher. Every number is conditional on the electorate model — and under impartial culture the deterrent vanishes entirely (every `deterred` cell reads 0.0%), which is worth knowing before quoting any strategy result computed on it. `held` is a hit rate and says nothing about *how bad* the winner is when a method misses. Full discussion: [Formal compliance vs. strategic preservation](../../07_Concepts/topics/compliance_vs_strategic_preservation.md).
