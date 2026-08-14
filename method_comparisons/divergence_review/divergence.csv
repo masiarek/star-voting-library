@@ -98,8 +98,8 @@ AGREE,method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.ya
 AGREE,method_comparisons/split_voting/_main/06_sub_majority_not_spoiled.yaml,3,44,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,0,False,False,False
 AGREE,method_comparisons/summability_demo/cases/star_combined.yaml,3,6,Oak,Oak,Oak,Oak,Oak,Oak,Oak,,,0,False,False,True
 AGREE,method_comparisons/summability_demo/cases/star_district_A.yaml,3,3,Maple,Maple,Maple,Maple,Maple,Maple,Maple,Maple,Maple,0,False,False,False
+APPROVAL_OR_MINOR,01_STAR/01_Learn/reporting/cases/bv2284_8q3xcg_weak_mandate.yaml,4,100,Beth,Beth,Beth,Beth,Beth,Colin,Beth,Beth,Beth,17,False,False,False
 APPROVAL_OR_MINOR,01_STAR/01_Learn/reporting/cases/same_total_different_shape_c3_b7.yaml,3,7,Avocado,Avocado,Avocado,Avocado,Avocado,Bacon,Avocado,Avocado,Avocado,1,False,False,False
-APPROVAL_OR_MINOR,01_STAR/01_Learn/reporting/cases/weak_mandate_c4_b100.yaml,4,100,Beth,Beth,Beth,Beth,Beth,Colin,Beth,Beth,Beth,17,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vote.yaml,3,3,Almond,Almond,Almond,Almond,Almond,Choco,Almond,Almond,Almond,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/02_Examples/cases/04b_c4_b3_display-options-all.yaml,4,3,Strawberry,Strawberry,Strawberry,Strawberry,Strawberry,Vanilla,Strawberry,Strawberry,Strawberry,0,False,False,False

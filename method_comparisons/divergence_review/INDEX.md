@@ -28,7 +28,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (144 cases; identical library copies merged).
 
-**80 of these 144 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**81 of these 144 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -262,12 +262,12 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
 _Only Approval (or a minor method) differs — usually a threshold story, not an IRV one_
 
+- **[bv2284_8q3xcg_weak_mandate](cases/APPROVAL_OR_MINOR/bv2284_8q3xcg_weak_mandate.md)** — `01_STAR/01_Learn/reporting/cases/bv2284_8q3xcg_weak_mandate.yaml` (4c/100b)  ·  [BV ↗](https://bettervoting.com/8q3xcg/results)  
+    STAR=**Beth** · IRV=Beth · RR=Beth · Approval=Colin · Score=Beth · Condorcet=Beth  
+    _flags: 17 tied-score ballot(s)_
 - **[same_total_different_shape_c3_b7](cases/APPROVAL_OR_MINOR/same_total_different_shape_c3_b7.md)** — `01_STAR/01_Learn/reporting/cases/same_total_different_shape_c3_b7.yaml` (3c/7b)  
     STAR=**Avocado** · IRV=Avocado · RR=Avocado · Approval=Bacon · Score=Avocado · Condorcet=Avocado  
     _flags: 1 tied-score ballot(s)_
-- **[weak_mandate_c4_b100](cases/APPROVAL_OR_MINOR/weak_mandate_c4_b100.md)** — `01_STAR/01_Learn/reporting/cases/weak_mandate_c4_b100.yaml` (4c/100b)  
-    STAR=**Beth** · IRV=Beth · RR=Beth · Approval=Colin · Score=Beth · Condorcet=Beth  
-    _flags: 17 tied-score ballot(s)_
 - **[03b_c3_b3_1_style-protest-vote](cases/APPROVAL_OR_MINOR/03b_c3_b3_1_style-protest-vote.md)** — `01_STAR/02_Examples/cases/03b_c3_b3_1_style-protest-vote.yaml` (3c/3b)  
     STAR=**Almond** · IRV=Almond · RR=Almond · Approval=Choco · Score=Almond · Condorcet=Almond
 - **[03b_c3_b3_2_expand_style-protest-vote](cases/APPROVAL_OR_MINOR/03b_c3_b3_2_expand_style-protest-vote.md)** — `01_STAR/02_Examples/cases/03b_c3_b3_2_expand_style-protest-vote.yaml` (3c/3b)  

@@ -112,6 +112,7 @@ yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,
 8fvd2x,BV126 - “ties every time - every step” - Multiple tiebreakers,1,single-race,7,STAR,BV
 8h3yrx,"BV1835 — Committee election, 100 voters, 4 seats: the highest-scoring candidate wins no seat",1,single-race,100,STAR,BV
 8h4bvh,"BV2270 — Ranked Robin: two candidates tie on pairwise wins, and the head-to-head settles it",1,single-race,9,RankedRobin,BV
+8q3xcg,BV2284 — The seat nobody wanted — a field with no enthusiasm,1,single-race,100,STAR,BV
 8xwx43,"BV2205 — The sole-survivor STV finish — six voters, one seat, a tabulator edge case",1,single-race,6,STV,BV
 9dhv8y,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,1,single-race,62,STAR,BV
 9dx494,"BV2244 — The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep)",1,single-race,36,STAR,BV
@@ -444,7 +445,6 @@ LH:vote_splitting3,Vote splitting — two chocolates split the majority,1,single
 LH:vote_splitting_scenario1_spoiler,Vote splitting — scenario 1 of 3 — the spoiler strikes,1,single-race,90,STAR,LH-only
 LH:vote_splitting_scenario2_bloc_leads,Vote splitting — scenario 2 of 3 — no spoiler (bloc leader wins anyway),1,single-race,36,STAR,LH-only
 LH:vote_splitting_scenario3_outsider_wins,Vote splitting — scenario 3 of 3 — no spoiler (the outsider truly wins),1,single-race,62,STAR,LH-only
-LH:weak_mandate_c4_b100,The seat nobody wanted — a field with no enthusiasm,1,single-race,100,STAR,LH-only
 b4yr3v,BV2231 — FairVote-vs-STAR check: Washington 2010 honest — STAR elects the moderate Berkey,1,single-race,100,STAR,BV
 b6xrdr,"BV2207 — Favorite betrayal in STAR, 2 of 2 — nine voters demote their favorite and it pays",1,single-race,57,STAR,BV
 bfjqmg,Runoff_04 — the reversal holds at scale (67/33),1,single-race,9,STAR,BV

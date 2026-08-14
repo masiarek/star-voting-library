@@ -16,6 +16,12 @@ scenario_description: |-
   support in the election. "Nobody has heard of him" and "everybody dislikes
   him" produce nearly the same total, and only the Abs column tells them apart.
 
+  Live on BetterVoting (BV2284): https://bettervoting.com/8q3xcg/results
+
+bv_test_id: BV2284
+bv_election_id: 8q3xcg
+bv_results_url: https://bettervoting.com/8q3xcg/results
+
 voting_method: STAR   # STAR Voting - Single-winner
 
 num_winners: 1
@@ -125,4 +131,4 @@ ballots: |-
 expected_winners:
   - Beth
 
-# file: weak_mandate_c4_b100.yaml
+# file: bv2284_8q3xcg_weak_mandate.yaml

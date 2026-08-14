@@ -2,6 +2,8 @@
 
 **Level: 201 · deep dive**
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8q3xcg) · **[results ↗](https://bettervoting.com/8q3xcg/results)** (election `8q3xcg`, Test ID BV2284) — the same 100 ballots, counted by a tabulator nobody in this repo wrote.
+
 **One line:** every method answers *who won*; a score ballot also answers *how much anybody wanted them*, and when the answer is "0.9 stars out of 5" that number is a published fact about the winner rather than a matter of opinion — the one piece of information a Choose-One count structurally cannot produce.
 
 Companion pages: the table this reads from is [The Score Distribution table](reporting_LH/score_distribution.md); the two averages in it are [Score averages — which denominator, and why](score_averages.md); the same question one stage later is [Runoff percentages](../the_count/runoff_percentages.md).
@@ -14,7 +16,7 @@ Imagine a field where the candidates are disliked or simply unknown to most vote
 
 This case is built to be exactly that election: 100 ballots, four candidates, **82% of every score cast is a 1 or a 0**, with a scattering of die-hards who give a 4 or a 5.
 
-<!-- report:weak_mandate_c4_b100 -->
+<!-- report:bv2284_8q3xcg_weak_mandate -->
 ```text
 [Divergence from STAR]
   STAR     = Beth
@@ -147,8 +149,16 @@ Both, and the report is how you tell which one happened.
 
 So: recruit more candidates, and read `Avg rated` next to `Avg all` before concluding the field was bad. A low `Avg all` with a low `Avg rated` is a field voters knew and rejected. A low `Avg all` with a high `Avg rated` is a field voters never got to know.
 
+## The same ballots on BetterVoting
+
+The election is live as [BV2284 · `8q3xcg`](https://bettervoting.com/8q3xcg/results), so every number above can be checked against a tabulator nobody in this repo wrote. **Every score total agrees exactly** — Beth 88, Arlo 68, Colin 51, Dara 39 — as does the runoff (Beth 43, Arlo 27) and the finding that no tie-break rung fired (`tieBreakType: "none"`).
+
+One number does *not* agree, and it is worth knowing before you quote a percentage from either report: BV records **`nAbstentions: 8`, `nTallyVotes: 92`**, where the LH report counts all 100. The eight are the ballots that scored *every* candidate the same — the three all-zero protest ballots and the five that scored only zeros with Colin left blank. BV classifies a ballot with no internal preference as an abstention and drops it from its denominator; LH keeps it, on the grounds that showing up and rating everyone zero is a cast opinion. Neither is a miscount — the *scores* are identical — but it means BV's averages divide by 92 and ours by 100. That bookkeeping difference has its own page: [Where the two reports differ](reporting_diff_BV_LH.md).
+
+It is a fitting footnote for this particular election. In a field where 82% of marks are 0 or 1, the ballots that say *"none of these"* most clearly are exactly the ones a denominator has to decide what to do with.
+
 ## See also
 
 - [Preference vs support](../../../07_Concepts/scores_and_ranks/preference_vs_support.md) — the general form of this page: a mandate and a resignation can produce the same ranking.
 - [Abstention vs zero vs NOTA](../properties_and_limits/abstention_vs_zero_vs_nota.md) — what a blank actually means on a STAR ballot.
-- [Full count for this case](cases/cases_pages/weak_mandate_c4_b100.md) · [`_tabulated` mirror](cases/cases_tabulated/weak_mandate_c4_b100_tabulated.txt)
+- [Full count for this case](cases/cases_pages/bv2284_8q3xcg_weak_mandate.md) · [`_tabulated` mirror](cases/cases_tabulated/bv2284_8q3xcg_weak_mandate_tabulated.txt)

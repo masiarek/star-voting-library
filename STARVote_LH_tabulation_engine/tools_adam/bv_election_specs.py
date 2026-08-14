@@ -6123,6 +6123,58 @@ ALL_EQUAL_BALLOT_MINIMAL_SPEC = {
 }
 
 
+
+
+# --------------------------------------------------------------------------
+# A win with no mandate — a field with no enthusiasm (100 ballots, STAR).
+# Backs 01_STAR/01_Learn/reporting/weak_mandate.md. Blanks are None (JSON null),
+# NOT 0 — Colin's 78 blanks are the lesson (unknown != disliked), so they must
+# reach BV as abstentions or the case says nothing.
+# --------------------------------------------------------------------------
+WEAK_MANDATE_SPEC = {
+    "test_id": "BV2284",
+    "title": "The seat nobody wanted \u2014 a field with no enthusiasm",
+    "description": 'A 100-ballot board election in which nobody is popular. Two candidates are widely known and widely disliked, one is barely known at all, and one is a protest option. 82% of every score cast is a 1 or a 0, with a scattering of die-hards giving a 4 or a 5. Somebody still has to win.\n\nThe point is not who wins — it is what the result page can tell you about HOW they won. A Choose-One count would report the winner and stop, because one mark per ballot leaves no room to record that nobody was happy about it. A score ballot publishes the strength of the result alongside the winner: an average out of 5, and the number of voters who saw no difference between the two finalists.\n\nWatch Colin in the results. He is not disliked — he is unknown: most voters left him blank, and the few who did score him gave him the strongest support in the election. "Nobody has heard of him" and "everybody dislikes him" produce nearly the same total, and only the abstention count tells them apart. That is the signal that argues for more and better-known candidates next cycle.\n\nCandidates are fictional; the ballots are constructed to make the point, not drawn from a real election.\n\n[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/01_STAR/01_Learn/reporting/weak_mandate.html)',
+    "method": "STAR",
+    "num_winners": 1,
+    "enable_write_in": False,
+    "candidates": ["Arlo", "Beth", "Colin", "Dara"],
+    "ballots": [
+        [0, 0, 5, 0], [1, 0, None, 1], [0, 1, 2, 0], [1, 1, None, 1],
+        [1, 0, None, 2], [2, 0, None, 0], [2, 0, None, 1], [0, 0, 4, 0],
+        [2, 0, None, 0], [1, 2, None, 0], [1, 1, None, 1], [0, 1, 0, 0],
+        [0, 2, None, 0], [0, 1, 0, 0], [0, 1, None, 0], [1, 0, None, 0],
+        [1, 5, None, 0], [1, 0, None, 2], [1, 2, None, 0], [0, 0, None, 0],
+        [0, 1, None, 0], [1, 1, None, 0], [0, 1, 2, 0], [1, 1, 4, 0],
+        [0, 2, None, 0], [1, 0, None, 0], [0, 1, None, 0], [0, 0, None, 0],
+        [2, 0, None, 0], [2, 0, None, 1], [0, 0, None, 0], [2, 0, None, 1],
+        [0, 0, None, 0], [1, 0, 2, 0], [0, 0, 0, 0], [0, 1, 2, 0],
+        [0, 1, 5, 0], [0, 2, None, 0], [1, 0, None, 1], [5, 0, None, 0],
+        [0, 1, None, 0], [0, 0, None, 2], [1, 4, None, 0], [1, 2, None, 0],
+        [0, 1, 2, 0], [1, 5, None, 0], [0, 1, None, 0], [2, 1, None, 0],
+        [0, 1, None, 2], [2, 0, None, 0], [1, 1, None, 0], [1, 1, None, 0],
+        [1, 1, None, 1], [0, 1, None, 0], [0, 1, None, 0], [0, 0, 4, 0],
+        [2, 0, None, 0], [1, 0, None, 1], [0, 1, 2, 0], [0, 0, None, 2],
+        [1, 0, None, 0], [2, 0, None, 0], [0, 2, None, 0], [0, 1, None, 0],
+        [1, 5, None, 0], [2, 0, None, 0], [0, 0, None, 2], [0, 0, None, 5],
+        [1, 2, None, 0], [1, 1, None, 0], [0, 1, None, 1], [2, 1, None, 1],
+        [1, 1, 2, 0], [0, 1, 5, 0], [1, 0, 2, 0], [0, 1, None, 0],
+        [0, 1, None, 0], [0, 1, None, 0], [0, 1, None, 0], [1, 1, None, 0],
+        [1, 4, None, 0], [0, 1, None, 0], [0, 0, None, 2], [0, 2, None, 0],
+        [0, 2, None, 0], [0, 0, 0, 0], [1, 1, 2, 0], [1, 1, None, 0],
+        [0, 1, None, 0], [2, 1, None, 0], [0, 0, 0, 0], [0, 0, None, 5],
+        [1, 0, None, 4], [2, 1, None, 0], [0, 1, 4, 0], [0, 0, 2, 0],
+        [0, 1, None, 0], [1, 2, None, 0], [2, 0, None, 0], [0, 0, None, 0],
+    ],
+    "expected": (
+        "Beth wins. Scoring round Beth 88 / Arlo 68 / Colin 51 / Dara 39 out of a possible 500; "
+        "runoff Beth 43 vs Arlo 27 with 30 Equal Support ballots (70 voters with a preference). "
+        "Beth's average is 0.9 out of 5 - the mandate number the lesson is about. Colin is left "
+        "blank by 78 voters and averages 2.3 among the 22 who scored him. Beth is also the "
+        "Condorcet winner; Colin is the Condorcet loser. No ties, no tie-break rung fires."
+    ),
+}
+
 ELECTIONS: list = [ALL_EQUAL_BALLOT_MINIMAL_SPEC]
 # Previously: [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 -> qycpbx, BV2282 -> hf3ckp
 #   Created as designed, two races each on the same ballots (303 and 21 ballots).

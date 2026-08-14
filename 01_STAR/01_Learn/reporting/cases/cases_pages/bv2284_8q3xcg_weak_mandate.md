@@ -5,9 +5,11 @@ search:
 
 # The seat nobody wanted — a field with no enthusiasm
 
-*Generated from [`weak_mandate_c4_b100.yaml`](../weak_mandate_c4_b100.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+*Generated from [`bv2284_8q3xcg_weak_mandate.yaml`](../bv2284_8q3xcg_weak_mandate.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
 **Method:** [STAR (single winner)](../../../README.md) · **1 seat** · **Expected winner:** Beth
+
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8q3xcg) · **[results ↗](https://bettervoting.com/8q3xcg/results)** (election `8q3xcg` · test `BV2284`).
 
 ## Scenario
 
@@ -26,6 +28,8 @@ Watch Colin's two averages. He is not disliked — he is unknown: 78 voters
 left him blank, and the 22 who did rate him averaged 2.3, the highest real
 support in the election. "Nobody has heard of him" and "everybody dislikes
 him" produce nearly the same total, and only the Abs column tells them apart.
+
+Live on BetterVoting (BV2284): https://bettervoting.com/8q3xcg/results
 
 ## Ballots
 
@@ -243,12 +247,12 @@ Dara        2   1   0   7  11  79    0  |    39      0.4        0.4
   Avg rated = Total / the ballots that scored this candidate (Abs excluded) — support among voters who had an opinion.
 ```
 
-Everything in one file: the [`_tabulated` mirror](../cases_tabulated/weak_mandate_c4_b100_tabulated.txt) (regenerated on every run; every analysis forced on).
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bv2284_8q3xcg_weak_mandate_tabulated.txt) (regenerated on every run; every analysis forced on).
 
 Run it yourself:
 
 ```bash
-python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/01_Learn/reporting/cases/weak_mandate_c4_b100.yaml
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/01_Learn/reporting/cases/bv2284_8q3xcg_weak_mandate.yaml
 ```
 
 ## See also

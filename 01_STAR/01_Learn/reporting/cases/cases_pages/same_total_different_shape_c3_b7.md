@@ -149,4 +149,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/01_Learn
 - [Runoff reversal (worked set)](../../../../02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [weak_mandate_c4_b100](weak_mandate_c4_b100.md)
+More cases in this set: [bv2284_8q3xcg_weak_mandate](bv2284_8q3xcg_weak_mandate.md)

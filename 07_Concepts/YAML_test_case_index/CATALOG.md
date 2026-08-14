@@ -128,6 +128,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`8fvd2x`](https://bettervoting.com/8fvd2x/results) | BV126 - “ties every time - every step” - Multiple ti | 1 | single-race | 7 | STAR | BV |
 | [`8h3yrx`](https://bettervoting.com/8h3yrx/results) | BV1835 — Committee election, 100 voters, 4 seats: th | 1 | single-race | 100 | STAR | BV |
 | [`8h4bvh`](https://bettervoting.com/8h4bvh/results) | BV2270 — Ranked Robin: two candidates tie on pairwis | 1 | single-race | 9 | RankedRobin | BV |
+| [`8q3xcg`](https://bettervoting.com/8q3xcg/results) | BV2284 — The seat nobody wanted — a field with no en | 1 | single-race | 100 | STAR | BV |
 | [`8xwx43`](https://bettervoting.com/8xwx43/results) | BV2205 — The sole-survivor STV finish — six voters,  | 1 | single-race | 6 | STV | BV |
 | [`9dhv8y`](https://bettervoting.com/9dhv8y/results) | No-show paradox (2 of 2) — the 8 April fans vote; RC | 1 | single-race | 62 | STAR | BV |
 | [`9dx494`](https://bettervoting.com/9dx494/results) | BV2244 — The Herb Garden Council — Bloc STAR, 3 seat | 1 | single-race | 36 | STAR | BV |
@@ -460,7 +461,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `vote_splitting_scenario1_spoiler` | Vote splitting — scenario 1 of 3 — the spoiler strik | 1 | single-race | 90 | STAR | LH-only |
 | `vote_splitting_scenario2_bloc_leads` | Vote splitting — scenario 2 of 3 — no spoiler (bloc  | 1 | single-race | 36 | STAR | LH-only |
 | `vote_splitting_scenario3_outsider_wins` | Vote splitting — scenario 3 of 3 — no spoiler (the o | 1 | single-race | 62 | STAR | LH-only |
-| `weak_mandate_c4_b100` | The seat nobody wanted — a field with no enthusiasm | 1 | single-race | 100 | STAR | LH-only |
 | [`b4yr3v`](https://bettervoting.com/b4yr3v/results) | BV2231 — FairVote-vs-STAR check: Washington 2010 hon | 1 | single-race | 100 | STAR | BV |
 | [`b6xrdr`](https://bettervoting.com/b6xrdr/results) | BV2207 — Favorite betrayal in STAR, 2 of 2 — nine vo | 1 | single-race | 57 | STAR | BV |
 | [`bfjqmg`](https://bettervoting.com/bfjqmg/results) | Runoff_04 — the reversal holds at scale (67/33) | 1 | single-race | 9 | STAR | BV |
@@ -603,8 +603,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 327 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
-| BV | 275 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| LH-only | 326 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| BV | 276 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | BV (no yaml) | 83 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results), [`3xgkck`](https://bettervoting.com/3xgkck/results) |
 | LH-only (exception) | 2 | `copeland_half_credit_decides`, `dead_heat_lot_tiebreak` |
 
