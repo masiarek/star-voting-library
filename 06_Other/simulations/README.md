@@ -286,6 +286,8 @@ Per method, conditioning on a unique sincere Condorcet winner: `sincere` (honest
 
 The attack model is deliberately generous — every non-CW candidate is tried as a challenger, the bloc is every voter who sincerely prefers that challenger, and the best attack is kept. Perfect polling, perfect discipline, free coordination. **The numbers are an upper bound on what strategy can achieve, not a forecast.**
 
+`--smith` answers a separate question: when a burial succeeds, did it eject the sincere CW from the Smith set of the cast ballots (no completion rule can help) or leave them inside it (the completion rule decides)? Ejection turns out to be the minority regime — 19–36% of successful burials — at every field size from three candidates to nine.
+
 `--objective` is the experiment: `utility` (default) means a rational bloc submits only what beats voting honestly; `displace` means it unseats the CW at any cost to itself. `--price` runs both on the same electorates and prints the difference as a **deterrent**.
 
 ### Controls, not results

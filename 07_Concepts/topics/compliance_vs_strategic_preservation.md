@@ -135,6 +135,42 @@ faction2d   5   101 | RankedRobin       51.9%     35.6%     16.3%   37%
 
 **6. Under impartial culture, the deterrent vanishes entirely — every cell reads 0.0%.** In an electorate with no structure there is nothing for a mis-aimed burial to hit, so every attack that works also pays, and every method's `reachable` equals its `rational`. This matters because impartial culture is the model in which these simulations are most often run and the one in which [IRV scores best](condorcet/condorcet_efficiency_measured.md). It is a model that simultaneously manufactures cycles at rates no real electorate shows (`CW exists` drops to 76% at five candidates, against 97–99% in every structured model) and switches off the single mechanism that makes burial risky. Results quoted from it should say so.
 
+## Two burial regimes, and only one of them cares which completion rule you picked
+
+A natural objection to the "which completion rule?" framing is that by the time the completion rule runs, it may be too late: if the burial has pushed the sincere Condorcet winner **out of the Smith set of the cast ballots**, then every Smith-compliant rule is obliged to elect someone else, and swapping Ranked Pairs for Minimax or Benham or a fresh second round cannot rescue anything. That is a real and sharply-stated mechanism, and it is measurable — `--smith` splits successful burials into the two regimes:
+
+- **ejected** — the CW is gone from the reported Smith set. No completion rule can help. The choice is irrelevant.
+- **inside** — the CW is still in the reported Smith set and the completion rule picked someone else out of it. This is the regime where the choice of completion is the whole ballgame, and where the [Alaska 2022 burial](../../method_comparisons/condorcet_burial_alaska/README.md) lives: margin-based rules shrug that attack off, a Hare/runoff completion falls for it.
+
+Field size is swept because that is the variable the two regimes should trade on — a wider field gives a burial far more room to build a Smith set that excludes the CW outright. 1,200 elections per cell, 71 voters, rational bloc.
+
+```
+model       C     V |  displaced  ejected  inside |  ejected as % of displaced
+------------------------------------------------------------------------------
+spatial1d   3    71 |      19.6%     4.6%   15.1% |                      23.4%
+spatial1d   5    71 |      63.4%    11.8%   51.6% |                      18.7%
+spatial1d   7    71 |      79.9%    18.2%   61.6% |                      22.8%
+spatial1d   9    71 |      88.4%    22.8%   65.6% |                      25.8%
+
+spatial2d   3    71 |      24.8%     8.9%   15.9% |                      36.0%
+spatial2d   5    71 |      64.5%    18.5%   46.1% |                      28.6%
+spatial2d   7    71 |      80.5%    24.3%   56.2% |                      30.2%
+spatial2d   9    71 |      90.6%    24.3%   66.3% |                      26.9%
+
+faction2d   3    71 |      10.4%     2.9%    7.5% |                      28.2%
+faction2d   5    71 |      34.5%     7.1%   27.4% |                      20.5%
+faction2d   7    71 |      48.6%    10.8%   37.8% |                      22.3%
+faction2d   9    71 |      57.7%    12.6%   45.2% |                      21.8%
+```
+
+```bash
+uv run 06_Other/simulations/strategic_cw_preservation.py --smith --candidates 3 5 7 9 --voters 71
+```
+
+**Ejection is the minority regime at every field size tested, including nine candidates.** Between 19% and 36% of successful burials eject the CW from the reported Smith set; the other two-thirds to four-fifths leave the CW sitting inside it, where the completion rule decides. And the ejected *share* barely moves with the field — 23% to 26% in 1-D from three candidates to nine — even as the raw displacement rate climbs from 19.6% to 88.4%. A wider field makes burial far easier; it does not much change *where* the burial lands.
+
+The honest limit of this result: the attack measured here is a single coordinated bloc ranking the CW last. It is not an adaptive search over rank *and* score offsets by several factions best-responding to each other. Ejection is plainly something a more powerful search can buy — the question is how much, and that is the sharp form of the disagreement rather than a rhetorical one. Anyone reporting that burial routinely ejects the sincere winner from the Smith set should report the ejection rate next to the displacement rate, because the two come apart.
+
 ## Compromise: two exact controls, and what they prove
 
 Running the other strategy — a bloc consolidating behind a challenger rather than sinking the CW — produces two cells that read exactly 100.0%, and neither is luck.

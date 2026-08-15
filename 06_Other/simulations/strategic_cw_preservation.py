@@ -331,6 +331,96 @@ def price(rng, trials, cutoff, models, cands, voters):
                 print()
 
 
+# --- was the CW pushed OUT of the Smith set, or just past the completion rule? ---
+def smith_set(W):
+    """The Smith set from a pairwise matrix W[i, j] = ballots preferring i to j.
+
+    Smallest non-empty set whose every member beats every non-member. Computed as the
+    top cycle of "beats or ties": D[i, j] means j does not beat i, and after transitive
+    closure the Smith set is every candidate that reaches all the others. A lone
+    Condorcet winner comes back as a singleton, a 3-cycle as all three — both asserted
+    in --selftest, because a wrong Smith set here would silently reclassify every
+    failure in the table below.
+    """
+    C = W.shape[0]
+    D = ~(W.T > W)                                         # i beats or ties j
+    np.fill_diagonal(D, True)
+    for k in range(C):                                     # transitive closure
+        D |= D[:, [k]] & D[[k], :]
+    return set(np.flatnonzero(D.all(1)).tolist())
+
+
+def smith_mode(rng, trials, cutoff, models, cands, voters):
+    """Split burial's successes by WHERE they beat the Condorcet family.
+
+    A burial that unseats the sincere Condorcet winner can do it two very different
+    ways, and the difference decides whether the choice of completion rule matters at
+    all:
+
+      ejected   the CW is no longer in the Smith set OF THE CAST BALLOTS. Every
+                Smith-compliant rule is now obliged to elect someone else, so no
+                completion rule — Ranked Pairs, Minimax, Benham, a fresh second round —
+                could have rescued them. Completion choice is irrelevant here.
+      inside    the CW is still in the reported Smith set, and the completion rule
+                picked somebody else out of it. This is the regime where the choice of
+                completion is the whole ballgame, and where margin-based rules
+                famously shrug off burials that trip up other completions.
+
+    The attack searched is the one a Condorcet method faces: burial, rational bloc,
+    every challenger tried, scored against Ranked Robin. Field size is swept because
+    that is the variable the two regimes are expected to trade on — a wider field gives
+    a burial far more room to build a Smith set that excludes the CW outright.
+    """
+    print("Where does a successful burial beat the Condorcet family?  'ejected' = the")
+    print("sincere CW is no longer in the Smith set of the CAST ballots, so NO completion")
+    print("rule could elect them. 'inside' = the CW survives in the reported Smith set and")
+    print("the completion rule chose otherwise — the only regime where completion matters.\n")
+    head = (f"{'model':<10}{'C':>3}{'V':>6} | {'displaced':>10}{'ejected':>9}"
+            f"{'inside':>8} | {'ejected as % of displaced':>26}")
+    print(head)
+    print("-" * len(head))
+    for model in models:
+        for C in cands:
+            for V in voters:
+                have = displaced = ejected = inside = 0
+                for _ in range(trials):
+                    true_util = gen(rng, model, V, C)
+                    sincere = scores_from_util(true_util)
+                    cw = condorcet_winner(true_util)
+                    if cw < 0:
+                        continue
+                    have += 1
+                    honest = winners(true_util, sincere, cutoff)["RankedRobin"]
+                    if honest != cw:                       # control: cannot happen
+                        raise AssertionError("Copeland missed the Condorcet winner")
+                    best_gain, best_cast = 0.0, None
+                    for ch in range(C):
+                        if ch == cw:
+                            continue
+                        bloc = bloc_for(true_util, cw, ch)
+                        if bloc.size == 0:
+                            continue
+                        cu, cs = cast_ballots(true_util, sincere, bloc, cw, ch, "burial")
+                        w = winners(cu, cs, cutoff)["RankedRobin"]
+                        gain = (bloc_payoff(true_util, bloc, w)
+                                - bloc_payoff(true_util, bloc, honest))
+                        if gain > 1e-12 and gain > best_gain and w != cw:
+                            best_gain, best_cast = gain, cu
+                    if best_cast is None:
+                        continue
+                    displaced += 1
+                    # The Smith set the COMPLETION RULE would have been handed.
+                    if cw in smith_set(pairwise(best_cast)):
+                        inside += 1
+                    else:
+                        ejected += 1
+                d = displaced or 1
+                print(f"{model:<10}{C:>3}{V:>6} | {displaced/have*100:9.1f}%"
+                      f"{ejected/have*100:8.1f}%{inside/have*100:7.1f}% | "
+                      f"{ejected/d*100:25.1f}%")
+        print()
+
+
 # --- known-answer checks -------------------------------------------------------
 def selftest():
     """Everything here has an answer known before the code runs."""
@@ -424,6 +514,17 @@ def selftest():
     print(f"  no backfires under --objective utility -> {zero}  "
           f"{'ok' if zero else 'UNEXPECTED'}")
 
+    # 7. The Smith set behind --smith. A lone Condorcet winner must come back as a
+    #    singleton and a 3-cycle as all three; get this wrong and every failure in that
+    #    table is reclassified without anything complaining.
+    cw_W = np.array([[0, 9, 9], [1, 0, 6], [1, 4, 0]])     # A beats B and C
+    cyc_W = np.array([[0, 7, 3], [3, 0, 7], [7, 3, 0]])    # A>B>C>A
+    got_cw, got_cyc = smith_set(cw_W), smith_set(cyc_W)
+    good = got_cw == {0} and got_cyc == {0, 1, 2}
+    ok &= good
+    print(f"  smith_set: Condorcet winner -> {sorted(got_cw)}, 3-cycle -> "
+          f"{sorted(got_cyc)}  {'ok' if good else 'UNEXPECTED'}")
+
     print("\nSELFTEST", "PASSED" if ok else "FAILED")
     return 0 if ok else 1
 
@@ -448,11 +549,20 @@ def main():
                     help="instead of the sweep, contrast the two objectives: how many "
                          "burials are reachable, how many a rational bloc would cast, "
                          "and how big a coalition a successful one needs")
+    ap.add_argument("--smith", action="store_true",
+                    help="instead of the sweep, split successful burials into those "
+                         "that eject the sincere CW from the Smith set (no completion "
+                         "rule can help) and those that leave them inside it (where the "
+                         "completion rule decides), swept over field size")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
 
     if a.selftest:
         return selftest()
+    if a.smith:
+        smith_mode(np.random.default_rng(a.seed), a.trials, a.approval_cutoff,
+                   a.models, a.candidates, a.voters)
+        return 0
     if a.price:
         price(np.random.default_rng(a.seed), a.trials, a.approval_cutoff,
               a.models, a.candidates, a.voters)
