@@ -44,7 +44,7 @@ PAV is a **Thiele method**: each voter's satisfaction from a committee giving th
 | **AV** | utilitarian | `{a,b,c,d}` \| `{a,b,c,f}` | **18** | 9 \| 10 | 3 \| 2 |
 | **seq-Phragmén** | proportional | `{a,b,c,d}` | 18 | 9 | 3 |
 | **PAV** | proportional | `{a,b,c,f}` | 18 | 10 | 2 |
-| **[SAV](satisfaction_approval_voting.md)** | *beside the family* | `{a,b,c,f}` | 18 | 10 | 2 |
+| **SAV** | *beside the family* | `{a,b,c,f}` | 18 | 10 | 2 |
 | **CC** | egalitarian | `{a,e,f,g}` | 12 | **12** | **0** |
 
 Reading down the table you trade **total satisfaction** (AV-score falls 18 → 12) for **coverage** (uncovered falls 3 → 0). AV sits at the utilitarian pole, CC at the egalitarian pole, and the proportional rules (PAV, Phragmén) live in between — exactly the spectrum the book uses this example to introduce.
@@ -72,6 +72,25 @@ python 06_Other/abcvoting_tabulation_engine/abc_tabulation.py \
 # av -> {A,B,C,D}|{A,B,C,F} ; sav -> {A,B,C,F} ; pav -> {A,B,C,F}
 # cc -> {A,E,F,G} ; seqphragmen -> {A,B,C,D}
 ```
+
+## The rest of the family
+
+The five rules above are the ones this example separates cleanly. The book's own roster is thirteen, and the other eight are worth being able to name — several are the *deployed* form of a rule above, and one is the most important new rule of the last decade:
+
+| Rule | What it is | Relation to the five above |
+|---|---|---|
+| **seq-PAV** | greedily seat whoever adds most to the PAV score, never revisit | PAV's polynomial-time stand-in — and RRV's approval cousin |
+| **seq-CC** | the same greedy applied to CC's coverage objective | CC's polynomial-time stand-in |
+| **rev-seq-PAV** | start from the whole field and *remove* the least valuable candidate until `k` remain | PAV from the other end; often a different committee |
+| **Monroe** | assign every winner an equal-sized constituency of the voters they represent | not a Thiele method — proportional by *assignment* rather than by reweighting |
+| **Greedy Monroe** | fill those constituencies one at a time | Monroe's polynomial stand-in; the only rule in the book that fails **anonymity**, since it breaks ties by voter order |
+| **leximax-Phragmén** | minimise the largest voter load, then the second largest, and so on | seq-Phragmén's optimising form |
+| **Method of Equal Shares** | give every voter an equal budget; candidates must be *bought* | the headline result of the last decade — polynomial time **and** EJR, now running real participatory budgets in Poland and Switzerland |
+| **MAV** (Minimax Approval Voting) | minimise the **worst** voter's Hamming distance to the committee | egalitarian like CC, but measuring distance rather than coverage |
+
+All thirteen run on any approval YAML in this repo — pass the rule id to `--rules` (`seqcc`, `revseqpav`, `monroe`, `greedy-monroe`, `leximaxphragmen`, `equal-shares`, `minimaxav`).
+
+**Which of them keep their promises is a separate question, and it has its own folder:** [03_Criteria](../../03_Criteria/README.md) recomputes the book's Table 3.1 — Pareto efficiency, committee monotonicity, support monotonicity, consistency, strategyproofness and complexity for all thirteen — with every failure demonstrated by a runnable witness rather than transcribed.
 
 ## Going deeper
 
