@@ -4,7 +4,7 @@
 
 Chapter 2 of Lackner & Skowron's [*Multi-Winner Voting with Approval Preferences*](https://link.springer.com/book/10.1007/978-3-031-09016-5) introduces the approval-based committee (ABC) rules; this repo covers those in [`01_Learn/Multiwinner_Approval/`](../01_Learn/Multiwinner_Approval/README.md). Chapter 3 asks the harder question — **which of them keep their promises** — and answers it with one grid, Table 3.1.
 
-This folder is that grid, **recomputed rather than copied**. Every ✗ below is a theorem with a witness: a specific tiny approval profile on which the rule visibly misbehaves. The book prints those witnesses in Appendix A; [`abc_axiom_check.py`](../../06_Other/abcvoting_tabulation_engine/abc_axiom_check.py) replays all thirty of them through [`abcvoting`](https://github.com/martinlackner/abcvoting), Lackner's own peer-reviewed implementation, and the run is gated by [`tests/test_abc_axioms.py`](../../STARVote_LH_tabulation_engine/tests/test_abc_axioms.py).
+This folder is that grid, **recomputed rather than copied** — plus one page for the axiom Chapter 3 discusses but does not tabulate, [Condorcet committees](condorcet_committees.md), because on approval ballots the thing it asks for usually does not exist. Every ✗ below is a theorem with a witness: a specific tiny approval profile on which the rule visibly misbehaves. The book prints those witnesses in Appendix A; [`abc_axiom_check.py`](../../06_Other/abcvoting_tabulation_engine/abc_axiom_check.py) replays all thirty of them through [`abcvoting`](https://github.com/martinlackner/abcvoting), Lackner's own peer-reviewed implementation, and the run is gated by [`tests/test_abc_axioms.py`](../../STARVote_LH_tabulation_engine/tests/test_abc_axioms.py).
 
 ## Table 3.1, recomputed
 
@@ -52,6 +52,7 @@ And the two `?` cells turn out to be a genuine subtlety rather than a gap. Table
 | [Consistency](consistency.md) | Two electorates agree. Do they still agree when merged? — and the characterisation that makes this the deepest column in the table. |
 | [Inclusion-strategyproofness](inclusion_strategyproofness.md) | Can a voter do better by **misreporting** her approvals? AV alone says no. |
 | [Computational complexity](computational_complexity.md) | P or NP-hard — and why "just compute the optimum" is not available. |
+| [Condorcet committees](condorcet_committees.md) *(§3.2, not a Table 3.1 column)* | Lift "beats everyone head to head" to committees — and find that on approval ballots there is usually **nothing** that qualifies. |
 
 ## The runnable cases
 

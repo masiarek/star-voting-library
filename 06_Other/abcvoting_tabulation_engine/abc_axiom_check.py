@@ -560,6 +560,81 @@ def search_pareto(rule_id, trials, seed=0, max_cand=6, max_voters=6, max_k=3):
     return None
 
 
+# --------------------------------------------------------------------------
+# Condorcet committees (Darmann) - section 3.2 prose, NOT a Table 3.1 column
+# --------------------------------------------------------------------------
+
+#: Profiles the Condorcet-committee report runs on: the book's Pareto example and
+#: the Chapter 2 running instance, so both chapters are asked the same question.
+CONDORCET_PROFILES = [
+    ("Example 3.1 (the Monroe/Pareto profile)", 2,
+     [(2, "a"), (1, "ac"), (1, "ad"), (10, "bc"), (10, "bd")]),
+    ("Example 2.1 (the Chapter 2 running instance)", 4,
+     [(3, "ab"), (3, "ac"), (2, "ad"), (1, "bcf"), (1, "e"), (1, "f"), (1, "g")]),
+]
+
+
+def condorcet_report(profile, k, names):
+    """Darmann's Condorcet committees, and how far every committee falls short.
+
+    `W` is a **Condorcet committee** if for EVERY other committee `W'` there is a
+    majority of voters who each hold strictly more approved candidates in `W` than
+    in `W'`. Note what that is not: it is not "a majority prefers W on balance."
+    Each rival must be beaten by its own strict majority, and a voter indifferent
+    between the two -- the common case on approval ballots, where both committees
+    hold one of that voter's marks -- counts toward neither side.
+
+    Returns `(condorcet, weakest)`: the Condorcet committees, and for every
+    committee the smallest majority it can raise against any rival, with the rival
+    holding it there. That second value is the useful one when the answer is
+    "none exists", because it says by how much.
+    """
+    n = sum(1 for _ in profile)
+    m = len(names)
+    condorcet, weakest = [], {}
+    for w in itertools.combinations(range(m), k):
+        worst, worst_rival = None, None
+        for rival in itertools.combinations(range(m), k):
+            if rival == w:
+                continue
+            support = _strict_gainers(w, rival, profile)
+            if worst is None or support < worst:
+                worst, worst_rival = support, rival
+        weakest[w] = (worst, worst_rival)
+        if worst is not None and worst * 2 > n:
+            condorcet.append(w)
+    return condorcet, weakest
+
+
+def run_condorcet(verbose=False):
+    """Print the Condorcet-committee report for each profile in CONDORCET_PROFILES."""
+    print("\n--- Condorcet committees (Darmann; section 3.2) ---")
+    print("W is a Condorcet committee if EVERY rival committee is beaten by its own")
+    print("strict majority. Existence is not guaranteed, and deciding it is coNP-complete.")
+    for label, k, spec in CONDORCET_PROFILES:
+        profile, names = parse_profile(spec)
+        n = sum(1 for _ in profile)
+        total = len(list(itertools.combinations(range(len(names)), k)))
+        condorcet, weakest = condorcet_report(profile, k, names)
+        print("\n  " + label)
+        print("    " + fmt_profile(spec))
+        print(f"    k={k}, {n} voters, {total} committees, majority needs >{n / 2:g}")
+        if condorcet:
+            print("    Condorcet committee(s): "
+                  + " | ".join(fmt(w, names) for w in condorcet))
+        else:
+            w, (support, rival) = max(weakest.items(), key=lambda kv: kv[1][0])
+            print("    Condorcet committee: NONE")
+            print(f"    closest is {fmt(w, names)} - its weakest majority is "
+                  f"{support}/{n}, against {fmt(rival, names)}")
+        if verbose:
+            for w in sorted(weakest, key=lambda w: -weakest[w][0]):
+                support, rival = weakest[w]
+                print(f"      {fmt(w, names):12s} weakest majority {support}/{n} "
+                      f"vs {fmt(rival, names)}")
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -568,6 +643,9 @@ def main(argv=None):
     ap.add_argument("--search", type=int, metavar="TRIALS", default=0,
                     help="hunt for a Pareto violation on random small profiles for "
                          "each rule the book marks 'strong' (refutation only)")
+    ap.add_argument("--condorcet", action="store_true",
+                    help="report Darmann's Condorcet committees for the book's two "
+                         "profiles (section 3.2; not a Table 3.1 column)")
     args = ap.parse_args(argv)
 
     if not ABCVOTING_AVAILABLE:
@@ -590,6 +668,9 @@ def main(argv=None):
                 status = 1
             else:
                 print(f"  {rule_id}: no violation in {args.search} profiles (as expected)")
+
+    if args.condorcet:
+        run_condorcet(verbose=args.verbose)
 
     return status
 

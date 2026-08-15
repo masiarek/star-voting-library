@@ -133,3 +133,34 @@ def test_open_cells_are_exactly_the_tiebreak_dependent_ones():
             f"{w['rule']}: {len(paying)} paying / {len(non_paying)} non-paying "
             f"tied committees contradicts tiebreak_dependent="
             f"{w.get('tiebreak_dependent', False)}")
+
+
+def test_neither_book_profile_has_a_condorcet_committee():
+    """Darmann's Condorcet committee (section 3.2) is empty on both book profiles.
+
+    Unlike every tick in Table 3.1, this negative IS a proof: `condorcet_report`
+    is exhaustive over all C(m,k) committees, so "none exists" is established
+    rather than un-refuted. The margins are pinned too, because the page's whole
+    argument rests on their size — {a,b,c,d} needs >6 of 12 and can raise 2, and
+    the reason is that nine voters are INDIFFERENT between it and {a,b,c,e}.
+    If a change to the comparison ever inflates those, this fails loudly.
+    """
+    from abc_axiom_check import CONDORCET_PROFILES, condorcet_report, parse_profile
+
+    expected = {
+        2: (10, 24),   # Example 3.1: closest committee raises 10 of 24
+        4: (2, 12),    # Example 2.1: closest committee raises 2 of 12
+    }
+    assert len(CONDORCET_PROFILES) == 2
+    for _label, k, spec in CONDORCET_PROFILES:
+        profile, names = parse_profile(spec)
+        condorcet, weakest = condorcet_report(profile, k, names)
+        assert condorcet == [], f"k={k}: unexpected Condorcet committee {condorcet}"
+
+        best_support = max(support for support, _rival in weakest.values())
+        want_support, want_n = expected[k]
+        assert sum(1 for _ in profile) == want_n
+        assert best_support == want_support, (
+            f"k={k}: closest committee raises {best_support}/{want_n}, "
+            f"page says {want_support}")
+        assert best_support * 2 <= want_n, "a majority would make it Condorcet"
