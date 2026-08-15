@@ -74,6 +74,23 @@ Winner — Ranked Robin (RCV-RR): Ada
    *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 ```
 <!-- /report -->
+The same six results, drawn as a graph — one node per candidate, an arrow **A → B** meaning *A beats B head-to-head* (the margin rides on the arrow):
+
+```mermaid
+flowchart LR
+    subgraph club["The club"]
+        direction LR
+        Ada -->|"5 – 2"| Ben
+        Ben -->|"5 – 2"| Cara
+        Cara -->|"4 – 3"| Ada
+    end
+    Ada -->|"7 – 0"| Dave
+    Ben -->|"7 – 0"| Dave
+    Cara -->|"7 – 0"| Dave
+```
+
+Every arrow crossing the box points **outward**: that picture *is* the definition below, and the loop inside the box is why the club has three members instead of one.
+
 Now run the club-membership check, smallest group first:
 
 1. **`{Ada}`?** Not dominating — Cara beats Ada (4–3). A club member can't be losing to an outsider.

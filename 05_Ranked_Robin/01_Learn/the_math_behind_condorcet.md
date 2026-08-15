@@ -28,6 +28,16 @@ These generalize "the Condorcet winner" to the case where none exists.
 
 **The concept, worked:** [The Smith set — the smallest club that beats everyone outside it](../../07_Concepts/topics/smith_set.md) — the club-membership walkthrough on a runnable 4-candidate election (a 3-cycle plus a dominated outsider), the Smith-efficiency scorecard, and ISDA.
 
+## The whole order, not just the winner
+
+A pairwise matrix can be asked for an **order of finish**, not only a winner — and the same cycles that can leave "who won?" unanswered can leave "who came 2nd?" unanswered too.
+
+- A **Condorcet ranking** (*pairwise order*) is an order in which every candidate sits above everyone they beat head-to-head. It exists exactly when the tournament is **acyclic** — a stronger condition than "a Condorcet winner exists," which only needs a source at the top. Ada beating everyone while Ben, Cara and Dave cycle below her gives a Condorcet winner and **no** Condorcet ranking.
+- When no such order exists, the standard fallback is the **Smith ranking**: take the **Smith set** of the whole field, set it aside as the top tier, take the Smith set of what remains, and repeat. That ranks *tiers* rather than candidates, always exists, and collapses to the Condorcet ranking when there are no cycles at all.
+- What our engine prints is neither of those by name — it's the **Copeland ranking**, the win–loss standings of a Ranked Robin report. That agrees with the Condorcet ranking whenever one exists, but under a cycle it is a *different* ordering with a different meaning: the standings answer "who beat the most rivals?", the Smith ranking answers "who is still in contention?" — and the two can disagree about everyone below first place (the Smith set page's fine print works a five-candidate case where the Copeland leaders are two of the four candidates still in contention).
+
+The distinction matters most where the order *is* the product: shortlists, party lists, and any [multi-winner](../../07_Concepts/topics/electing_more_than_one.md) rule that seats the top N of a ranking rather than running a fresh count per seat.
+
 ## The cycle-resolving methods, mapped to their math
 
 | Method | What it does | The math it *is* |
