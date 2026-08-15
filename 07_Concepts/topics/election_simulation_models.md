@@ -52,6 +52,16 @@ So a method's measured score is only as trustworthy as the voter/strategy model 
 
 A common summary says "IC makes ties **and cycles** vanishingly rare in large elections." **Exact ties** do vanish as the electorate grows — but **cycles do not**: under IC the probability of *no Condorcet winner* converges to a *positive* limit (≈ **8.8%** for 3 candidates, rising with more candidates). And IC vs. IAC runs the *opposite* way often assumed: for 3 candidates in the large-electorate limit, **IC ≈ 8.77% vs. IAC ≈ 6.25%** (Gehrlein) — IC yields *more* cycles, not fewer. The right takeaway is just that **the model choice materially changes paradox rates**, so it must be stated.
 
+## The second standing caveat: a strategic number needs its sincere baseline
+
+The caveat above is about the electorate. This one is about the *ballots*, and it bites hardest on exactly the studies that look most sophisticated — the ones that let voters behave strategically.
+
+A simulation that reports **one** number per method under strategy ("how often does the sincere [Condorcet winner](condorcet/README.md) still win?") has merged three events that carry opposite weight: the method missing while every ballot is honest, an attack succeeding, and an attack backfiring on the people who cast it. The failure mode is not subtle and it is not hypothetical — on that single merged number, methods converge, and they converge because a method that is **bad on sincere ballots has less left for an attacker to take**. [Plurality](plurality.md) ties [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) on it, having lost nothing to the attack at all, because burial cannot reach a rule that reads one mark.
+
+So: **print the sincere column beside the strategic one, always.** The gap between them is the quantity the study is actually about; the strategic column alone is not interpretable. Two further columns are worth the trouble whenever a strategy is being modelled — whether the attack **paid or backfired for the attackers** (a method that punishes manipulation is doing something a hit rate cannot see), and **how large a coalition** the successful attack needed.
+
+Worked through, with the tables and a five-question checklist for reading anyone else's version: [formal compliance vs. strategic preservation of the sincere winner](compliance_vs_strategic_preservation.md). The sincere baselines themselves, for six methods across these models: [Condorcet efficiency, measured](condorcet/condorcet_efficiency_measured.md).
+
 ## In this repo
 
 Our test cases are **hand-crafted** (small, legible elections designed to isolate one behavior), not simulation-generated — the opposite end from VSE. The two are complementary: simulations answer "how *often* does a method go wrong across many electorates?", while our worked cases answer "*how* does it go wrong, concretely, on this ballot set?" (see [What makes a good winner?](what_makes_a_good_winner.md) and the [test-case catalog](../YAML_test_case_index/CATALOG.md)).

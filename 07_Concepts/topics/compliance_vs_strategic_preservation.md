@@ -219,8 +219,8 @@ So the fair two-sided statement, which is what the burial hub now carries:
 
 The five questions that decide whether a "methods converge under strategy" result means anything:
 
-1. **What is the sincere baseline for each method?** Without it, a method that is bad honestly is indistinguishable from a method that was successfully attacked.
-2. **What is the profile generator?** Impartial culture flatters IRV, manufactures cycles, and removes the deterrent. Structured models do none of those.
+1. **What is the sincere baseline for each method?** Without it, a method that is bad honestly is indistinguishable from a method that was successfully attacked — and the two land in the same column. Six methods, four models, three field sizes, honest ballots: [Condorcet efficiency, measured](condorcet/condorcet_efficiency_measured.md).
+2. **What is the profile generator?** [Impartial culture](election_simulation_models.md#the-standing-caveat-results-are-conditional-on-the-model) flatters IRV, manufactures cycles at rates no real electorate shows, and — as the tables above found — switches off the deterrent entirely. It is also the model on which *every* rule is provably close to information-free, so a method comparison computed on it is worth very little whichever way it comes out. Structured models do none of those. The full menu: [election simulation models](election_simulation_models.md).
 3. **What are the strategic blocs maximizing?** Displacing the sincere winner, or their own payoff? The gap between those two objectives is 20–37 points for some methods and 1 point for others — it is not a detail.
 4. **Which strategies were tested?** A burial-only study measures the one axis on which pairwise-completed methods can be made to look alike.
 5. **How large a coalition, and how much information, did a successful attack need?** A method attacked successfully by 5% of voters and one attacked successfully by 40% are not tied.
