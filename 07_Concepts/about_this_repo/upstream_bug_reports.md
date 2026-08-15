@@ -12,6 +12,7 @@ This is the follow-up list: every report **we** filed against a project we don't
 
 | Issue | Filed | State | What it is |
 |---|---|---|---|
+| [#1525](https://github.com/Equal-Vote/bettervoting/issues/1525) | 2026-08-15 | open | A table filtered to zero rows renders the *new-user* empty state, so a search that matches nothing reports the account as empty — on `/manage`, complete with a CREATE ELECTION button. It masks every search shortcoming as data loss, which is how it was found: an admin searching by election ID ([#1059](https://github.com/Equal-Vote/bettervoting/issues/1059), our PR [#1524](https://github.com/Equal-Vote/bettervoting/pull/1524)) was told they had no elections. Cases and prototypes: [bettervoting-qa BV2285](https://masiarek.github.io/bettervoting-qa/test_cases/BV2285-index.html) |
 | [#1513](https://github.com/Equal-Vote/bettervoting/issues/1513) | 2026-08-14 | open | **Add Voters** keys its duplicate check on `email` alone, so in admin-managed-voter-ID mode every row collides on `""`: any list of 2+ rows is reported as duplicate emails and answering Yes adds one voter, discarding the rest silently. Found in the screen recording attached to [#1512](https://github.com/Equal-Vote/bettervoting/issues/1512) (someone else's issue, about scrolling). Test plan and a draft help page: [bettervoting-qa BV250](https://masiarek.github.io/bettervoting-qa/test_cases/BV250-post-fix-verification.html) |
 | [#1508](https://github.com/Equal-Vote/bettervoting/issues/1508) | 2026-08-09 | open | A ballot scoring every candidate the same (`5,5`) is dropped from the STAR tally as an abstention, so its scores never reach the totals. Minimal case, [BV2283 `hb4qvv`](https://bettervoting.com/hb4qvv/results); supersedes the diagnosis in #1478 |
 | [#1507](https://github.com/Equal-Vote/bettervoting/issues/1507) | 2026-08-09 | open | STAR-PR results always report `tieBreakType: "random"`, even with no tie — the mislabel that hid the count-vs-weight divergence for a year |
@@ -54,7 +55,7 @@ Larry's engine, which this repo forks. Fork-side findings and their local fixes 
 States go stale silently — nobody emails us when an issue closes. To re-check every row at once:
 
 ```bash
-for r in "Equal-Vote/bettervoting 1508 1507 1487 1485 1484 1478 1417 1407 1379 1090 1086 1063 1052 904 894 778" "larryhastings/starvote 20 19 18 17"; do set -- $r; repo=$1; shift; for n in "$@"; do curl -s "https://api.github.com/repos/$repo/issues/$n" | python3 -c "import json,sys; d=json.load(sys.stdin); print(f\"{d['state']:8} $repo#{d['number']}  {d['title'][:70]}\")"; done; done
+for r in "Equal-Vote/bettervoting 1525 1513 1508 1507 1487 1485 1484 1478 1417 1407 1379 1090 1086 1063 1052 904 894 778" "larryhastings/starvote 20 19 18 17"; do set -- $r; repo=$1; shift; for n in "$@"; do curl -s "https://api.github.com/repos/$repo/issues/$n" | python3 -c "import json,sys; d=json.load(sys.stdin); print(f\"{d['state']:8} $repo#{d['number']}  {d['title'][:70]}\")"; done; done
 ```
 
 The GitHub Pages one is a discussion, not an issue, so it isn't in that loop — open it and look.
