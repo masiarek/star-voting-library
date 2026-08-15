@@ -1,0 +1,66 @@
+election_title: Monroe elects a committee every voter would trade away
+
+scenario_description: |-
+  Example 3.1 from Lackner & Skowron. Twenty-four voters, four candidates, two
+  seats. Two voters approve only A; one approves A and C; one approves A and D;
+  ten approve B and C; ten approve B and D.
+
+  Monroe's rule elects {C,D}, scoring 22 - it assigns each winner an
+  equal-sized constituency, and C and D each have exactly twelve voters to
+  represent. But {C,D} is DOMINATED by {A,B} in the book's sense (Definition
+  3.1): every one of the 24 voters approves someone in {A,B}, while only 22
+  approve someone in {C,D}. Nobody is worse off under {A,B} and two voters -
+  the two who approve A alone - go from no representative at all to one. Every
+  voter would weakly prefer {A,B}, and Monroe elects {C,D} anyway.
+
+  That is what Pareto efficiency forbids, and the example shows exactly WHY
+  Monroe fails it: equal-sized constituencies are a constraint, and a rule that
+  insists on the constraint must sometimes refuse a committee that is better
+  for everybody.
+
+  Approval Voting - the count in this file - is the control. B leads with 20;
+  C and D tie at 11 for the second seat, settled here by priority order. AV
+  never elects a dominated committee (Proposition A.1), which is the "strong"
+  in Table 3.1's Pareto column.
+
+  Reproduce the Monroe side:
+  python 06_Other/abcvoting_tabulation_engine/abc_axiom_check.py --verbose
+
+  Source: Lackner, M. & Skowron, P. (2023), "Multi-Winner Voting with Approval
+  Preferences", SpringerBriefs, doi:10.1007/978-3-031-09016-5, Example 3.1.
+
+lh_only_reason: "The lesson is what MONROE'S RULE does with these ballots, and Monroe exists on neither BetterVoting nor the LH engine - it is counted here by Lackner's own abcvoting library. The Approval count in this file is the control, and its second seat is a C/D tie that BetterVoting would break at random."
+
+voting_method: Approval_Multi_Winner
+num_winners: 2
+
+ballots: |-
+  A,B,C,D
+  1,0,0,0   # 2 voters — approve A only
+  1,0,0,0
+  1,0,1,0   # 1 voter — approves A and C
+  1,0,0,1   # 1 voter — approves A and D
+  0,1,1,0   # 10 voters — approve B and C
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,1,0
+  0,1,0,1   # 10 voters — approve B and D
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+  0,1,0,1
+
+expected_winners:
+  - B
+  - C

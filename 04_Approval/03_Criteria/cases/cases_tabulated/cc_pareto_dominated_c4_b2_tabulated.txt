@@ -1,0 +1,78 @@
+======================================================================
+SOURCE FILE:     cc_pareto_dominated_c4_b2.yaml
+TABULATED FILE:  cc_pareto_dominated_c4_b2_tabulated.txt
+======================================================================
+
+election_title: Chamberlin-Courant can elect a Pareto-dominated committee
+
+scenario_description: |-
+  The smallest counterexample in Lackner & Skowron's book: TWO voters, four
+  candidates, two seats. Voter 1 approves A, C and D; voter 2 approves B, C
+  and D.
+
+  Committee {C,D} gives EVERY voter two approved winners. Committee {A,B}
+  gives every voter exactly one. So {C,D} dominates {A,B} in the book's sense
+  (Definition 3.1): nobody is worse off and somebody is better off. A rule
+  that can return {A,B} is electing a committee that every single voter would
+  trade away.
+
+  Approval Voting - the count in this file - gets it right: C and D lead 2-2
+  against A and B at 1-1, so AV elects {C,D} outright. Chamberlin-Courant does
+  not, because CC only asks whether a voter has AT LEAST ONE approved winner.
+  Both voters are covered by {A,B} and both are covered by {C,D}, so CC scores
+  the two committees equally at 2 and returns both - the dominated one
+  included. That is Proposition A.1 in the book, and it is why CC is marked
+  only WEAKLY Pareto efficient in Table 3.1 while AV is marked strong.
+
+  Reproduce the CC side with the axiom checker:
+  python 06_Other/abcvoting_tabulation_engine/abc_axiom_check.py --verbose
+
+  Source: Lackner, M. & Skowron, P. (2023), "Multi-Winner Voting with Approval
+  Preferences", SpringerBriefs, doi:10.1007/978-3-031-09016-5, Proposition A.1.
+
+lh_only_reason: "The lesson is what CHAMBERLIN-COURANT does with these ballots, and CC exists on neither BetterVoting nor the LH engine - it is counted here by Lackner's own abcvoting library. The Approval count in this file is the control that shows AV avoiding the trap, not a BV-backable result."
+
+voting_method: Approval_Multi_Winner
+num_winners: 2
+
+ballots: |-
+  A,B,C,D
+  1,0,1,1   # voter 1 — approves A, C, D
+  0,1,1,1   # voter 2 — approves B, C, D
+
+expected_winners:
+  - C
+  - D
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (2 winners) ---
+ Tabulating 2 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = A, B, C, D      (1 = approve; 0 = not approved)
+     1 × 1,0,1,1
+     1 × 0,1,1,1
+
+   C -- 2 (100%) -- Elected
+   D -- 2 (100%) -- Elected
+   A -- 1 (50%)
+   B -- 1 (50%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   6 approvals across 2 ballots — average 3.0 of 4 (range 3–3).
+     approved 3: 2 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+      |   C    |   D    |   A    |   B    |
+   ----------------------------------------
+   C  |   --   |  100%  |  50%   |  50%   |
+   D  |  100%  |   --   |  50%   |  50%   |
+   A  |  100%  |  100%  |   --   |   0%   |
+   B  |  100%  |  100%  |   0%   |   --   |
+
+Winners — Approval Voting (2 winners)
+  C, D

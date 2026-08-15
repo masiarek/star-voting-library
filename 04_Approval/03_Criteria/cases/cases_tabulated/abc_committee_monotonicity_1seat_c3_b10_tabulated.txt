@@ -1,0 +1,91 @@
+======================================================================
+SOURCE FILE:     abc_committee_monotonicity_1seat_c3_b10.yaml
+TABULATED FILE:  abc_committee_monotonicity_1seat_c3_b10_tabulated.txt
+======================================================================
+
+election_title: Committee monotonicity (1 of 2) — one seat, and the consensus candidate takes it
+
+scenario_description: |-
+  Half of a matched pair. The SAME ten ballots are counted twice, once for one
+  seat and once for two: this file is the one-seat count, its companion
+  abc_committee_monotonicity_2seats_c3_b10.yaml is the two-seat count.
+
+  Ten voters, three candidates: two approve only A, three approve A and C,
+  three approve B and C, two approve only B. Approval counts: C 6, A 5, B 5.
+
+  For ONE seat, eleven of the thirteen rules in Lackner & Skowron's Table 3.1
+  elect the consensus candidate C - Approval Voting, CC, PAV, seq-PAV, seq-CC,
+  Monroe, Greedy Monroe, seq-Phragmen, leximax-Phragmen, the Method of Equal
+  Shares and MAV. C is the only candidate a majority approves, and she is
+  nobody's enemy. (SAV and rev-seq-PAV instead pick A or B here, because SAV
+  divides each ballot's vote among its marks: A and B score 3.5 to C's 3.)
+
+  The interesting half is the companion file. Committee monotonicity
+  (Definition 3.2) says that growing the committee from k to k+1 should ADD a
+  member, never reshuffle: the one-seat winner should still be seated when
+  there are two seats. Approval Voting and the sequential rules honour that.
+  Chamberlin-Courant, PAV, Monroe, leximax-Phragmen and MAV all elect {A,B} for
+  two seats and drop C entirely - the candidate who won outright when there was
+  a single seat is not even on the committee once a seat is ADDED. That is
+  Proposition A.2 in the book, and it is the ✗ in Table 3.1's committee
+  monotonicity column.
+
+  Reproduce it: python 06_Other/abcvoting_tabulation_engine/abc_axiom_check.py
+
+  Source: Lackner, M. & Skowron, P. (2023), "Multi-Winner Voting with Approval
+  Preferences", SpringerBriefs, doi:10.1007/978-3-031-09016-5, Proposition A.2.
+
+lh_only_reason: "The lesson is what CC / PAV / Monroe / leximax-Phragmen / MAV do across the two seat counts, and none of those rules exists on BetterVoting or in the LH engine - they are counted here by Lackner's own abcvoting library. The Approval count in this file is the control."
+
+voting_method: Approval
+num_winners: 1
+
+ballots: |-
+  A,B,C
+  1,0,0   # 2 voters — approve A only
+  1,0,0
+  1,0,1   # 3 voters — approve A and C
+  1,0,1
+  1,0,1
+  0,1,1   # 3 voters — approve B and C
+  0,1,1
+  0,1,1
+  0,1,0   # 2 voters — approve B only
+  0,1,0
+
+expected_winners:
+  - C
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 10 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = A, B, C      (1 = approve; 0 = not approved)
+     2 × 1,0,0
+     3 × 1,0,1
+     3 × 0,1,1
+     2 × 0,1,0
+
+   C -- 6 (60%) -- Elected
+   A -- 5 (50%)
+   B -- 5 (50%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   16 approvals across 10 ballots — average 1.6 of 3 (range 1–2).
+     approved 1: 4 ballots
+     approved 2: 6 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+      |   C    |   A    |   B    |
+   -------------------------------
+   C  |   --   |  50%   |  50%   |
+   A  |  60%   |   --   |   0%   |
+   B  |  60%   |   0%   |   --   |
+
+Winner — Approval Voting (single winner)
+  C

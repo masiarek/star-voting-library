@@ -28,6 +28,17 @@ On the repo's majority-sweep case (6 voters, 2 seats: a 4-voter majority behind 
 
 Same ballots, two philosophies: bloc `av` ties the majority's second candidate with the minority's first (the LH engine breaks that tie for the majority by priority order); every proportional rule gives the minority its seat **decisively**.
 
+## `abc_axiom_check.py` — the axioms, not just the winners
+
+[`abc_axiom_check.py`](abc_axiom_check.py) is the second tool here, and it answers a different question: not *who won* but *what the rule guarantees*. It encodes all thirty counterexample profiles from Lackner & Skowron's Appendix A and replays them, so the recomputed Table 3.1 in [04_Approval/03_Criteria](../../04_Approval/03_Criteria/README.md) is a computed result rather than a transcription.
+
+```bash
+python 06_Other/abcvoting_tabulation_engine/abc_axiom_check.py --verbose
+python 06_Other/abcvoting_tabulation_engine/abc_axiom_check.py --search 400
+```
+
+It implements Definitions 3.1–3.7 directly (dominance, committee monotonicity, both support-monotonicity variants, consistency, inclusion-strategyproofness) and is honest about the asymmetry: an `✗` cell is *demonstrated* by its witness, while a `✓` is *cited* — no finite replay proves a universal claim, which is what `--search` is for and what it cannot do. Gated by [`tests/test_abc_axioms.py`](../../STARVote_LH_tabulation_engine/tests/test_abc_axioms.py).
+
 Notes:
 
 - **Ties:** an ABC rule can return *several* tied committees; all are printed (`[N tied committees]`).

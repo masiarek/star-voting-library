@@ -1,0 +1,55 @@
+election_title: Committee monotonicity (2 of 2) — add a seat, and five rules drop the winner
+
+scenario_description: |-
+  The other half of a matched pair: the SAME ten ballots as
+  abc_committee_monotonicity_1seat_c3_b10.yaml, counted for TWO seats instead
+  of one.
+
+  Two voters approve only A, three approve A and C, three approve B and C, two
+  approve only B. Approval counts: C 6, A 5, B 5.
+
+  With one seat, eleven of the thirteen rules in Lackner & Skowron's Table 3.1
+  elect the consensus candidate C (SAV and rev-seq-PAV pick A or B instead).
+  Add a seat and the rules split:
+
+  - Approval Voting (the count in this file) keeps C and adds a second - so the
+    one-seat winner is still seated. AV is committee monotone.
+  - Chamberlin-Courant, PAV, Monroe, leximax-Phragmen and MAV all elect {A,B}
+    and DROP C. The candidate who won outright when there was one seat is not
+    on the committee once a seat is added.
+
+  That is what committee monotonicity (Definition 3.2) forbids, and the reason
+  it matters is practical rather than aesthetic: a body that expects to grow -
+  a hiring round that may fund one more post, a purchase list that may afford
+  one more item - cannot use a rule whose answer to "who else?" is "start over".
+
+  A and B tie at 5 for the second seat, so AV's own answer here is a tie the
+  engine settles by priority order; both tied committees contain C, which is
+  the only part the lesson rests on.
+
+  Reproduce it: python 06_Other/abcvoting_tabulation_engine/abc_axiom_check.py
+
+  Source: Lackner, M. & Skowron, P. (2023), "Multi-Winner Voting with Approval
+  Preferences", SpringerBriefs, doi:10.1007/978-3-031-09016-5, Proposition A.2.
+
+lh_only_reason: "The lesson is what CC / PAV / Monroe / leximax-Phragmen / MAV do across the two seat counts, and none of those rules exists on BetterVoting or in the LH engine - they are counted here by Lackner's own abcvoting library. The Approval count in this file is the control, and its second seat is a tie that BetterVoting would break at random."
+
+voting_method: Approval_Multi_Winner
+num_winners: 2
+
+ballots: |-
+  A,B,C
+  1,0,0   # 2 voters — approve A only
+  1,0,0
+  1,0,1   # 3 voters — approve A and C
+  1,0,1
+  1,0,1
+  0,1,1   # 3 voters — approve B and C
+  0,1,1
+  0,1,1
+  0,1,0   # 2 voters — approve B only
+  0,1,0
+
+expected_winners:
+  - A
+  - C
