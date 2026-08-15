@@ -107,7 +107,7 @@ A method satisfies the **Smith criterion** (is **Smith-efficient**) if its winne
 
 | Method | In the club? | Why |
 |--------|:---:|-----|
-| **[Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md) / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (margins, lot, or BV's random draw), the winner stays inside |
+| **Ranked Robin / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (margins, lot, or BV's random draw), the winner stays inside |
 | **Ranked Pairs, Schulze** | ✅ | the "serious" [cycle resolvers](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) are Smith-efficient by construction |
 | **Minimax** | ❌ | Condorcet-efficient, but in a 4+ candidate cycle its "least bad worst loss" pick can fall *outside* the Smith set — the classic fine-print failure |
 | **RCV-IRV (Hare)** | ❌ | not even Condorcet-efficient ([center squeeze](center_squeeze/README.md)), so Smith is out of reach |

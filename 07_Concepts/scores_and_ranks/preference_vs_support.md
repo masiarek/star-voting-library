@@ -59,6 +59,14 @@ A ranking is a race that records only the **finishing order** — not the **time
 3. **Consensus vs. compromise.** Support is how you tell a broadly-loved [consensus winner](../topics/what_makes_a_good_winner.md) from a barely-tolerated compromise — *even when they share the same preference order.*
 4. **STAR uses both, on purpose.** [STAR](../../01_STAR/01_Learn/STAR_start_here.md) reads **support** to pick the two finalists (the scoring round) and **preference** to choose between them (the [automatic runoff](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md)). Drop the support half and you're back to a ranked method that can't tell the sprinters from the crawlers. (And yes — the runoff deliberately blinds itself to support again, reverting to pure preference between the two finalists. By then support has done its one job: choosing *who* is in the runoff.)
 
+## One more thing only support can do: travel
+
+Every number a pairwise count produces is a statement about **two candidates on one set of ballots** — "4064 voters preferred Montroll to Kiss, in Burlington, in 2009." Take either candidate out of that contest and the number means nothing; there is no way to ask how this year's winner would have fared against last year's, or against someone who wasn't on the ballot. Ordinal data is **sealed inside its own election**.
+
+A support number isn't. An average score is a *candidate-level* statistic — the same shape as an approval rating, which is exactly why approval ratings exist as a public number that can be tracked across years and compared between people who never ran against each other, while "pairwise ratings" don't exist at all. It's the same property that lets a [scoring round](../../01_STAR/01_Learn/the_count/STAR_Scoring_Round.md) say a winner averaged 4.5/5 in one election and 1.9/5 in another and mean something by the comparison.
+
+Two honest edges on that. It is not a *criticism* of pairwise counting so much as a boundary — within one election, sealed data is all the count needs, and [electowiki](https://electowiki.org/wiki/Pairwise_preference) (advocacy-adjacent, and a Condorcet-friendly room at that) files this under criticism of its own preferred family. And the comparison is only ever as good as the shared scale, which is the assumption the [last section](#the-honest-cost-of-support) declines to wave away: comparing your 4 to my 4 across two *elections* leans on it harder than comparing them on one ballot.
+
 ## The comebacks, answered
 
 The example wins against a newcomer instantly. A prepared Condorcet advocate will knock on exactly three doors — so here they are, opened first. (In a debate, the side that concedes *first and precisely* keeps the frame.)

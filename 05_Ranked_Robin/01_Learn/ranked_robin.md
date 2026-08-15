@@ -166,7 +166,7 @@ The matrix — the Ranked Robin tally itself — reads `For - Equal Support - Ag
 
 | Name | Who calls it that |
 |------|-------------------|
-| **[Copeland's method](https://en.wikipedia.org/wiki/Copeland%27s_method)** | academic social-choice literature (order candidates by pairwise **wins − losses**) |
+| **Copeland's method** | academic social-choice literature (order candidates by pairwise **wins − losses**) |
 | **Ranked Robin** | the **Equal Vote Coalition** |
 | **Consensus Choice** | **Better Choices for Democracy** |
 | **RCV-RR** | this repo's house compound (ranked ballot + Ranked-Robin count) |

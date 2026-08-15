@@ -94,7 +94,7 @@ Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the
 
 | Rule | Winner(s) | Reads | Why |
 |---|:--|:--:|---|
-| **Copeland / [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md)** | Ada, Ben, Cara — *a three-way tie* | wins | every record is 1–1 |
+| **Copeland / Ranked Robin** | Ada, Ben, Cara — *a three-way tie* | wins | every record is 1–1 |
 | ↳ LH's Ranked Robin, after tie-break | **Ada** | +margins | total margin +2 / 0 / −2 |
 | **Minimax** (maximin) | **Ada, Cara** | margins | worst loss −1 each; Ben's is −3 |
 | **Ranked Pairs** | Ada, Cara | margins | the [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) — |
@@ -109,7 +109,7 @@ Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the
 | **Borda** | Ada | points | 6 / 5 / 4 |
 | **Bucklin** · **Coombs** | Ada | ranks | — |
 | **Plurality** | Ada, Cara | 1st choices | 2 / 2 / 1 |
-| **[RCV-IRV](../../06_Other/RCV_IRV/concepts/README.md)** | **Cara** | 1st choices | Ben out on 1, transfers to Cara → 3–2 |
+| **RCV-IRV** | **Cara** | 1st choices | Ben out on 1, transfers to Cara → 3–2 |
 
 Two things to take from that table.
 

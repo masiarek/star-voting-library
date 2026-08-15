@@ -49,7 +49,7 @@ All of them agree — trivially — whenever a [Condorcet winner](../../05_Ranke
 | Solution | Picks | Cost |
 |---|---|---|
 | **Top cycle** (Smith set) | the smallest group that beats everyone outside it | linear |
-| **[Uncovered set](uncovered_set.md)** | everyone who reaches every rival in **≤ 2 steps** — "I beat you, or I beat someone who beat you" | polynomial |
+| **Uncovered set** | everyone who reaches every rival in **≤ 2 steps** — "I beat you, or I beat someone who beat you" | polynomial |
 | **Banks set** | the tops of the maximal transitive sub-tournaments | **NP-complete** |
 | **Bipartisan set** | the support of the win-graph game's unique Nash equilibrium | polynomial (LP) |
 | **Copeland set** | **most head-to-head wins** ← this one is Ranked Robin | linear |
