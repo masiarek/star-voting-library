@@ -8,21 +8,21 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**601 election files** (501 single-winner, 100 multi-winner) across 18 method(s).
+**606 election files** (503 single-winner, 103 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 273 |
 | RCV-IRV (Hare) | 51 |
 | Ranked Robin (RCV-RR / Copeland) | 100 |
-| Approval | 25 |
+| Approval | 27 |
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
 | Reweighted Range | 6 |
 | Allocated Score (STAR-PR) | 27 |
 | 3-2-1 | 1 |
-| APPROVAL_MULTI_WINNER | 8 |
+| APPROVAL_MULTI_WINNER | 11 |
 | BLOC STAR | 29 |
 | CAV | 1 |
 | IRV | 19 |
@@ -470,7 +470,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`five_answers_one_election_c4_b3`](../../method_comparisons/tournament_solutions/cases/cases_pages/five_answers_one_election_c4_b3.md) | `method_comparisons/tournament_solutions/cases/` | 1 | Five defensible answers, one three-ballot election (tournament solutions) → _B_ | [`.yaml`](../../method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (25)
+## Approval  (27)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -479,6 +479,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ex13_bullet`](../../01_STAR/05_Practice/cases/cases_pages/ex13_bullet.md) | `01_STAR/05_Practice/cases/` | 1 | Exercise 13 — Where do you draw the line? Favorites only → _Cora_ | [`.yaml`](../../01_STAR/05_Practice/cases/ex13_bullet.yaml) |
 | [`ex15_approval_yes_no`](../../01_STAR/05_Practice/cases/cases_pages/ex15_approval_yes_no.md) | `01_STAR/05_Practice/cases/` | 1 | Exercise 15a — a Yes/No profile (which method is this?) → _Blair_ | [`.yaml`](../../01_STAR/05_Practice/cases/ex15_approval_yes_no.yaml) |
 | [`approval_101_c3_b5`](../../04_Approval/02_Examples/cases/cases_pages/approval_101_c3_b5.md) | `04_Approval/02_Examples/cases/` | 1 | Approval 101 — most approvals wins → _Bob_ | [`.yaml`](../../04_Approval/02_Examples/cases/approval_101_c3_b5.yaml) |
+| [`abc_committee_monotonicity_1seat_c3_b10`](../../04_Approval/03_Criteria/cases/cases_pages/abc_committee_monotonicity_1seat_c3_b10.md) | `04_Approval/03_Criteria/cases/` | 1 | Committee monotonicity (1 of 2) — one seat, and the consensus candidate takes it → _C_ | [`.yaml`](../../04_Approval/03_Criteria/cases/abc_committee_monotonicity_1seat_c3_b10.yaml) |
+| [`sav_strategy_bullet_vote_c5_b2`](../../04_Approval/03_Criteria/cases/cases_pages/sav_strategy_bullet_vote_c5_b2.md) | `04_Approval/03_Criteria/cases/` | 1 | SAV rewards a bullet vote — the two-voter manipulation → _A_ | [`.yaml`](../../04_Approval/03_Criteria/cases/sav_strategy_bullet_vote_c5_b2.yaml) |
 | [`BV_Library_approval_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_approval_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Approval: most approvals wins (single winner) → _Dave_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_approval_single_winner.yaml) |
 | [`hh41_01_approval_as_printed`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_01_approval_as_printed.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the approval count as printed: B wins with 100% → _B_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_01_approval_as_printed.yaml) |
 | [`hh41_05_majority_bullet_votes`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_05_majority_bullet_votes.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the majority bullet-votes instead: A wins, same electorate → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_05_majority_bullet_votes.yaml) |
@@ -585,13 +587,16 @@ Titles come from each file's **`election_title`** field (the convention — add 
 |------|--------|:------:|------------------|:--:|
 | [`321_tennessee_blank_encoding_c4_b100`](../../06_Other/three_two_one/cases/cases_pages/321_tennessee_blank_encoding_c4_b100.md) | `06_Other/three_two_one/cases/` | 1 | Tennessee capital by 3-2-1 Voting (blank = Bad) → _Nashville_ | [`.yaml`](../../06_Other/three_two_one/cases/321_tennessee_blank_encoding_c4_b100.yaml) |
 
-## APPROVAL_MULTI_WINNER  (8)
+## APPROVAL_MULTI_WINNER  (11)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`approval_bloc_2seats_c4_b6`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_2seats_c4_b6.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | Bloc Approval — 2 seats, majority sweep → _Amy, Ben_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_2seats_c4_b6.yaml) |
 | [`approval_sav_covers_everyone_c3_b17_brams_kilgour`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_sav_covers_everyone_c3_b17_brams_kilgour.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | SAV seats the pair that represents everybody; AV strands three voters → _Ash, Bree_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_covers_everyone_c3_b17_brams_kilgour.yaml) |
 | [`approval_sav_disjoint_c4_b10_brams_kilgour`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_sav_disjoint_c4_b10_brams_kilgour.md) | `04_Approval/02_Examples/multiwinner/cases/` | 2 | SAV vs AV — the same ballots elect two disjoint committees → _Ada, Ben_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_sav_disjoint_c4_b10_brams_kilgour.yaml) |
+| [`abc_committee_monotonicity_2seats_c3_b10`](../../04_Approval/03_Criteria/cases/cases_pages/abc_committee_monotonicity_2seats_c3_b10.md) | `04_Approval/03_Criteria/cases/` | 2 | Committee monotonicity (2 of 2) — add a seat, and five rules drop the winner → _A, C_ | [`.yaml`](../../04_Approval/03_Criteria/cases/abc_committee_monotonicity_2seats_c3_b10.yaml) |
+| [`cc_pareto_dominated_c4_b2`](../../04_Approval/03_Criteria/cases/cases_pages/cc_pareto_dominated_c4_b2.md) | `04_Approval/03_Criteria/cases/` | 2 | Chamberlin-Courant can elect a Pareto-dominated committee → _C, D_ | [`.yaml`](../../04_Approval/03_Criteria/cases/cc_pareto_dominated_c4_b2.yaml) |
+| [`monroe_pareto_dominated_c4_b24`](../../04_Approval/03_Criteria/cases/cases_pages/monroe_pareto_dominated_c4_b24.md) | `04_Approval/03_Criteria/cases/` | 2 | Monroe elects a committee every voter would trade away → _B, C_ | [`.yaml`](../../04_Approval/03_Criteria/cases/monroe_pareto_dominated_c4_b24.yaml) |
 | [`pets_gov_approval`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_approval.md) | `method_comparisons/pets_governance/cases/` | 2 | Pets Governance — Committee by Approval (2 seats): majority again → _Dog, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_approval.yaml) |
 | [`approval_bloc_3seats_c6_b5`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_3seats_c6_b5.md) | `04_Approval/02_Examples/multiwinner/cases/` | 3 | Bloc Approval — 3-seat city council at-large → _Adams, Brown, Clark_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml) |
 | [`mmp_block_approval`](../../method_comparisons/multi_member_plurality/cases/cases_pages/mmp_block_approval.md) | `method_comparisons/multi_member_plurality/cases/` | 3 | Block approval voting — uncap the marks and the sweep reverses → _Dev, Enzo, Finn_ | [`.yaml`](../../method_comparisons/multi_member_plurality/cases/mmp_block_approval.yaml) |

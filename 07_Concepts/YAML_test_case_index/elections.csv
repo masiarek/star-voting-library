@@ -187,6 +187,8 @@ LH:Flat_scores_ties_06_scoring_tie_4way,Flat scores 06 — scoring-round 4-way t
 LH:Flat_scores_ties_07_fully_flat,Flat scores 07 — fully flat ballots (the maximal tie + abstention trap),1,single-race,2,STAR,LH-only
 LH:Flat_scores_ties_08_all_flat_zero_count,Flat scores 08 — every ballot flat (BetterVoting counts 0),1,single-race,5,STAR,LH-only
 LH:RCV_ballot_example,RCV-IRV — a basic ranked-ballot example (3 candidates),1,single-race,100,IRV,LH-only
+LH:abc_committee_monotonicity_1seat_c3_b10,"Committee monotonicity (1 of 2) — one seat, and the consensus candidate takes it",1,single-race,10,Approval,LH-only
+LH:abc_committee_monotonicity_2seats_c3_b10,"Committee monotonicity (2 of 2) — add a seat, and five rules drop the winner",1,single-race,10,Approval,LH-only
 LH:abstention_reconciliation_min_c2_b6,Abstention vs Equal Support — the minimal reconciliation case,1,single-race,6,STAR,LH-only
 LH:abstentions,Abstentions — blank and abstaining ballots in STAR,1,single-race,6,STAR,LH-only
 LH:alabama_2seats,The Alabama paradox — 2 seats,1,single-race,5,STAR_PR,LH-only
@@ -219,6 +221,7 @@ LH:burlington_2009_raise_kiss_nonmono,"Burlington 2009, the raise — 750 Wright
 LH:burlington_2009_ranked_robin,"Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner",1,single-race,8974,RankedRobin,LH-only
 LH:cav_library_board_blank_is_zero_c3_b12,Library board on a blank-is-zero score ballot — the same twelve voters,1,single-race,12,Range,LH-only
 LH:cav_library_board_c3_b12,Library board by Combined Approval Voting — the newcomer nobody dislikes,1,single-race,12,CAV,LH-only
+LH:cc_pareto_dominated_c4_b2,Chamberlin-Courant can elect a Pareto-dominated committee,1,single-race,2,Approval,LH-only
 LH:center_squeeze_irv,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),1,single-race,27,IRV,LH-only
 LH:center_squeeze_star,Center squeeze — STAR elects the consensus (Center),1,single-race,27,STAR,LH-only
 LH:center_squeeze_voteline_1d,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),1,single-race,998,STAR,LH-only
@@ -356,6 +359,7 @@ LH:monotonicity_irv_after,Non-monotonicity (RCV-IRV) — part 2: raising X makes
 LH:monotonicity_irv_before,"Non-monotonicity (RCV-IRV) — part 1: baseline, X wins",1,single-race,34,IRV,LH-only
 LH:monotonicity_star_after,Monotonicity — STAR counterpart (AFTER — X still wins),1,single-race,34,STAR,LH-only
 LH:monotonicity_star_before,Monotonicity — STAR counterpart (BEFORE — X wins),1,single-race,34,STAR,LH-only
+LH:monroe_pareto_dominated_c4_b24,Monroe elects a committee every voter would trade away,1,single-race,24,Approval,LH-only
 LH:omr_opposition_decides,Ordered majority rule — the opposition decides the A-vs-B race (Toby Pereira's counterexample),1,single-race,100,IRV,LH-only
 LH:options_examples,Display-options reference — every reporting toggle (STAR),1,single-race,100,STAR,LH-only
 LH:p3_manip_compromise_rr,"P3 manipulated — the mild version: three adjacent swaps, no burial, same result",1,single-race,7,RankedRobin,LH-only
@@ -396,6 +400,7 @@ LH:same_matrix_p3_plurality,"Same matrix, different plurality — electorate P3:
 LH:same_matrix_p3_ranked_robin,"Same matrix, different plurality — electorate P3: Ranked Robin",1,single-race,12,RankedRobin,LH-only
 LH:same_mean_different_spread_c2_b5,"Same mean, different spread — the consensus candidate and the polarizing one",1,single-race,5,STAR,LH-only
 LH:same_total_different_shape_c3_b7,"Same-ish total, different shape — the sandwich vote",1,single-race,7,STAR,LH-only
+LH:sav_strategy_bullet_vote_c5_b2,SAV rewards a bullet vote — the two-voter manipulation,1,single-race,2,Approval,LH-only
 LH:sf_d7_downward_after,"Downward monotonicity (San Francisco D7 2020) — AFTER: rank the loser lower, he wins",1,single-race,36626,IRV,LH-only
 LH:sf_d7_downward_before,Downward monotonicity (San Francisco D7 2020) — BEFORE: Melgar wins,1,single-race,36626,IRV,LH-only
 LH:split_cycle_schulze_spoiler_c5_b40,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",1,single-race,40,RankedRobin,LH-only
