@@ -232,6 +232,14 @@ def build_payload(template, spec):
     elec = e.get("election") or e.get("Election") or e
     elec.pop("election_id", None)                 # let the backend assign a new id
     elec["owner_id"] = USER_ID
+    # Optional `state:` on the spec. `"draft"` mints a PRIVATE rehearsal: not listed
+    # publicly, still votable (BV counts draft ballots as test votes), and — unlike an
+    # open election — still editable, renameable and archivable afterwards, because
+    # editElection refuses any election whose state isn't draft. Reach for it when the
+    # run is checking mechanics rather than publishing a lesson; a real teaching
+    # election inherits the template's state and stays permanent.
+    if spec.get("state"):
+        elec["state"] = spec["state"]
     # Omit auth_key unless BV_AUTH_KEY=1 — see the long note at the top. Setting it
     # is what strips the admin sidebar from your own login, permanently.
     if USE_AUTH_KEY:
@@ -732,6 +740,10 @@ def dry_run(spec):
     mistakes it catches cost a permanent public artifact.)"""
     print(f"\n=== [DRY RUN] {spec['title']} ===")
     print(f"  election title  : {_effective_title(spec)}")
+    if spec.get("state"):
+        print(f"  state           : {spec['state']}"
+              + ("   (PRIVATE rehearsal — not publicly listed, still editable/archivable)"
+                 if spec["state"] == "draft" else ""))
     races = _race_specs(spec)
     nb = {len(rs["ballots"]) for rs in races}
     for i, rs in enumerate(races):
