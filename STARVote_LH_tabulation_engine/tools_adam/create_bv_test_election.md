@@ -34,7 +34,9 @@ Score range depends on the method: **Approval = 0/1**, **STAR / Bloc / STAR_PR =
 
 ## Auth (no credential stored)
 
-The BV backend requires **asymmetric RS256**: the election carries a PEM **public** key in `auth_key`, and the request's `custom_id_token` is a JWT signed with the matching **private** key. The script mints a fresh keypair per run — self-consistent, so **no real BV password or secret is used or stored**. (The old HS256 "secret == user id" recipe is stale.)
+There is nothing to authenticate. `POST /API/Elections` carries no auth middleware and takes `owner_id` straight from the request body, so **no BV password, secret, or token is used or stored**.
+
+The script used to set the election's `auth_key` (a PEM RS256 public key) and sign a matching `custom_id_token`. That was unnecessary — and harmful: an election with an `auth_key` makes BV substitute the custom-token identity for your Keycloak one on every election-scoped route, so your own login gets no roles and **the admin sidebar disappears**, permanently. It is omitted by default since 2026-08-15. Set `BV_AUTH_KEY=1` only for a run that needs owner-scoped reads (the non-fatal `/ballots` count check), knowing that election can never be administered or repaired afterwards. Full story: [Creating BV elections via the API](../../07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md#the-admin-gate-and-how-it-was-closed).
 
 `owner_id` is set from `BV_USER_ID` (default: Adam's real account, so elections appear in `/manage`). Override per run:
 

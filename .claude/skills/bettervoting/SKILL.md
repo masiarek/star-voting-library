@@ -151,9 +151,12 @@ only what is BV-specific, so non-BV sessions don't pay for it.
   `bv_election_specs.py`** (the specs live there, separate from the ~520-line engine),
   point its `ELECTIONS` list at what you want to create (empty = create nothing), and
   run `uv run …/create_bv_test_election.py`; it prints the new
-  `bettervoting.com/<id>` URLs. Auth is asymmetric **RS256** (the API requires a
-  PEM public key in `auth_key`; the script mints a fresh keypair and signs the
-  `custom_id_token` with the private key — no real account credential needed). It
+  `bettervoting.com/<id>` URLs. **No auth at all** — `POST /API/Elections` has no
+  auth middleware and reads `owner_id` from the body. Do NOT set the election's
+  `auth_key`: it makes BV swap your Keycloak identity for a custom-token one on
+  every election-scoped route, so your own login gets no roles and the admin
+  sidebar disappears — irreversibly, since `editElection` only accepts drafts.
+  Omitted by default since 2026-08-15 (`BV_AUTH_KEY=1` restores it). It
   saves the election object to `06_Other/_demo_dropbox/` AND auto-freezes the full
   export beside it. **The UI "Download JSON" click is obsolete (2026-07-23):**
   sibling `fetch_bv_export.py` assembles the exact same

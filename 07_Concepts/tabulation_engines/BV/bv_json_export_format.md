@@ -43,7 +43,7 @@ Present in all 210 exports that have the key. Values below are what the corpus a
 | `state` | enum | `open` (188) · `draft` (12) · `closed` (10). Results tabulate on demand — an election need not be closed. |
 | `races` | array | One object per contest. See below. |
 | `settings` | object | See below. |
-| `auth_key` | string \| absent | The RS256 public PEM. Present on only 22 exports; the API requires it at *create* time. |
+| `auth_key` | string \| absent | The RS256 public PEM. Present on only 22 exports. **Optional** at create time, and setting it strips the admin sidebar from the owner's own login for good — [why](bv_api_election_creation_notes.md#the-admin-gate-and-how-it-was-closed). Our script stopped sending it on 2026-08-15. |
 | `claim_key_hash` | sha-256 hex | Owner's claim key digest. |
 | `is_public` | bool \| null | `null` on 197 — meaning "not set", not "false". Listability is decided elsewhere. |
 | `create_date` | **ISO-8601 string** | e.g. `2026-07-30T02:14:33.849Z`. |

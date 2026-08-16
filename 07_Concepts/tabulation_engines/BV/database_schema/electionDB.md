@@ -25,7 +25,7 @@ ownership. Versioned with the `create_date` / `update_date` / `head` pattern (se
 | `state` | varchar | `draft \| finalized \| open \| closed \| archived`. |
 | `races` | json (**not null**) | `Race[]` — see nested types below. |
 | `settings` | json | `ElectionSettings` — see below. |
-| `auth_key` | varchar | RS256 public key (PEM) for API-created elections' custom token auth. |
+| `auth_key` | varchar | RS256 public key (PEM) for an election's custom-token auth. Optional — and load-bearing: when set, `electionSpecificAuth` replaces `req.user` with the custom-token identity on every election-scoped route, so the owner's Keycloak session grants no roles and the admin sidebar vanishes ([detail](../bv_api_election_creation_notes.md#the-admin-gate-and-how-it-was-closed)). |
 | `claim_key_hash` | varchar | Hash of the claim key (added 2024-01-27). |
 | `is_public` | boolean | Whether the election is publicly listed. |
 | `create_date` | varchar (**not null**) | First-created timestamp. |

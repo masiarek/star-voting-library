@@ -113,10 +113,30 @@ CONCURRENCY = max(1, int(os.environ.get("BV_CONCURRENCY", "8")))
 # "delete me" tag was never actionable — and it looked terrible in public.)
 TITLE_PREFIX = os.environ.get("BV_TITLE_PREFIX", "")
 
-# The backend now requires ASYMMETRIC auth: the election's `auth_key` must be a
-# PEM RS256 *public* key, and the identity token is signed with the matching
-# *private* key. We mint a fresh keypair per run (self-consistent: the create
-# request carries the public key AND a token the backend verifies against it).
+# ELECTION-SCOPED AUTH KEY — OFF BY DEFAULT since 2026-08-15. This is the switch
+# that decides whether YOUR OWN login can administer the election afterwards.
+#
+# Setting the election's `auth_key` turns that election into a custom-token
+# election. BV's `electionSpecificAuth` middleware then REPLACES `req.user` with
+# whatever verifies against this key, for that election only — your Keycloak
+# session is ignored, `voterAuth.roles` comes back `[]`, and the frontend's
+# Sidebar (`roles?.length > 0`) renders nothing. That is exactly the "no menu on
+# the left" symptom: the election still appears in /manage (that route is not
+# election-scoped, so it still matches owner_id) but every /:id and /:id/admin
+# page is roleless. Because we mint the keypair per run and throw the private key
+# away, nobody — not even this script — can re-authenticate as owner later, and
+# `editElection` refuses any election that isn't in `draft`, so the flag CANNOT
+# be undone once the election opens. Get it right at create time.
+#
+# `auth_key` is OPTIONAL: POST /Elections has no auth middleware at all and takes
+# `owner_id` verbatim from the body, so omitting it costs nothing at create time.
+# What it costs afterwards is the owner-scoped GETs — only the non-fatal
+# /ballots count check here, which now degrades to "HTTP 403 — skipped".
+# Set BV_AUTH_KEY=1 to restore the old behaviour for a run that needs those.
+USE_AUTH_KEY = os.environ.get("BV_AUTH_KEY", "").strip().lower() not in ("", "0", "false", "no")
+
+# A fresh keypair per run (self-consistent: the create request carries the public
+# key AND a token the backend verifies against it). Only sent when USE_AUTH_KEY.
 _KEY = rsa.generate_private_key(public_exponent=65537, key_size=2048)
 PRIVATE_PEM = _KEY.private_bytes(
     serialization.Encoding.PEM,
@@ -128,7 +148,7 @@ PUBLIC_PEM = _KEY.public_key().public_bytes(
 
 ID_TOKEN = jwt.encode({"email": f"{USER_ID}@example.com", "sub": USER_ID},
                       PRIVATE_PEM, algorithm="RS256")
-CREATE_COOKIES = {"custom_id_token": ID_TOKEN}
+CREATE_COOKIES = {"custom_id_token": ID_TOKEN} if USE_AUTH_KEY else {}
 
 
 # Election DATA (the specs + the bloc->ballot helpers) lives in a sibling module,
@@ -212,7 +232,12 @@ def build_payload(template, spec):
     elec = e.get("election") or e.get("Election") or e
     elec.pop("election_id", None)                 # let the backend assign a new id
     elec["owner_id"] = USER_ID
-    elec["auth_key"] = PUBLIC_PEM                  # PEM RS256 public key (backend requires)
+    # Omit auth_key unless BV_AUTH_KEY=1 — see the long note at the top. Setting it
+    # is what strips the admin sidebar from your own login, permanently.
+    if USE_AUTH_KEY:
+        elec["auth_key"] = PUBLIC_PEM              # PEM RS256 public key
+    else:
+        elec.pop("auth_key", None)                 # never inherit one from the template
     # Title = "trash delete test — BV<nnn> — <title>". The BV<nnn> Test ID is put
     # INTO the title so it's actually stored on BV (visible in /manage and the
     # export), not just in our local `expected` note.
@@ -254,14 +279,17 @@ def build_payload(template, spec):
                            for n in rs["candidates"]]
         races_out.append(r)
     elec["races"] = races_out
-    # NOTE: owner_id makes the election appear in /manage, but it does NOT grant
-    # UI admin access — BV's /admin page authorizes off a server-side role binding
-    # that only the authenticated (Keycloak) create flow writes, not off the
-    # election's owner_id/admin_ids. Setting admin_ids here was tested and IGNORED
-    # (xb8r6v had admin_ids=[owner] and was still denied; the working manual
-    # election had admin_ids=null). So API-created elections are public, listable,
-    # and exportable, but not UI-administrable from your real login. Don't bother
-    # setting admin_ids — it has no effect. (See the BV issue draft in git log.)
+    # NOTE (corrected 2026-08-15 — the earlier note here was a mis-diagnosis).
+    # `owner_id` alone DOES grant UI admin access: BV's electionPostAuthMiddleware
+    # pushes roles.owner when `election.owner_id == req.user.sub` (and admin when
+    # `admin_ids` contains req.user.email). There is no separate server-side role
+    # binding. What defeated both checks on the elections minted before 2026-08-15
+    # was `auth_key`: with it set, `req.user` is no longer your Keycloak identity
+    # at all, so owner_id and admin_ids are compared against nobody. That is why
+    # admin_ids "was tested and IGNORED" on xb8r6v — it could never have worked
+    # while auth_key was set, and the manual election it was compared against
+    # differed in auth_key too, not just admin_ids. Omit auth_key (the default
+    # now) and an API-created election is administrable from your real login.
     return {"Election": elec}                      # API expects capital "Election"
 
 

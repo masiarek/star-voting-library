@@ -4,7 +4,9 @@ Notes on [`create_bv_test_election.py`](../../../STARVote_LH_tabulation_engine/t
 
 ## How the script authenticates
 
-The BV backend requires **asymmetric RS256** auth for API creation: the election carries a PEM **public** key in `auth_key`, and the request's `custom_id_token` is a JWT signed with the matching **private** key. The script mints a fresh keypair per run — self-consistent, so no real BV account credential is stored or used. (The old HS256 "secret == user id" recipe is stale.)
+It doesn't — and **since 2026-08-15 it deliberately doesn't**, because authenticating was the thing that broke `/admin`.
+
+`POST /API/Elections` carries no auth middleware at all ([`elections.routes.ts`](https://github.com/Equal-Vote/bettervoting/blob/main/packages/backend/src/Routes/elections.routes.ts)) and takes `owner_id` verbatim from the request body, so creation needs no credential of any kind. The script used to *also* set the election's **`auth_key`** (a PEM RS256 public key) and sign a matching `custom_id_token`, on the belief that the backend required it. It does not: `auth_key` is optional in `electionValidation`, and setting it is what cost us UI admin access — see [the `/admin` gate](#the-admin-gate-and-how-it-was-closed) below. It is now **omitted by default**; `BV_AUTH_KEY=1` restores the old behaviour for a run that needs owner-scoped reads.
 
 The election's `owner_id` is whatever the script's `BV_USER_ID` says. **Set it to your real BetterVoting account id** so the elections it creates show up in your `/manage` list — the default is now Adam's account (`ea09e7c7-b00d-427a-bef8-32ade437d49d`, "Admin1"). That id is not a secret; it is the `owner_id` in every frozen `_bv_export.json` in this repo.
 
@@ -57,13 +59,13 @@ BetterVoting's **Ballot Data** export (the per-ballot CSV, `Ballot Data - <title
 
 So the `temp_id` is **server-side only** (dedup / vote-changing while voting); it is **not written into the exported ballot**. The tally export is a set of **anonymous ballots** — random `ballot_id` + scores, with nothing tying a ballot back to a voter. This is the good half of the secret-ballot property, and it complements the paper-side discussion in the [paper-ballot demo](../../../01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md) (serials / E2E-V): distinguishing ballots *while voting* without letting the tally re-identify a voter. (One residual: `ballot_id` is a stable handle for *that ballot*, so an external "voter X → ballot_id Y" record could re-link them — but the export itself provides no such map.)
 
-## What does NOT work — the `/admin` gate (a real BV limitation)
+## The /admin gate and how it was closed
 
-**You cannot administer an API-created election from the UI**, even though you own it. Opening `/<id>/admin` returns *"Only the users with admin access on the election can view this page."*
+**Until 2026-08-15, you could not administer an API-created election from the UI**, even though you owned it. `/<id>/admin` answered *"Only the users with admin access on the election can view this page,"* and — the symptom that finally exposed the cause — the whole **admin sidebar vanished** from `/<id>` and `/<id>/results` as well.
 
 ### What is behind that gate — the admin URL map
 
-The seven entries in the admin sidebar (`Sidebar.tsx`), and which of them the gate actually costs you:
+The seven entries in the admin sidebar ([`Sidebar.tsx`](https://github.com/Equal-Vote/bettervoting/blob/main/packages/frontend/src/components/Election/Sidebar.tsx)), and which of them the gate actually costs you:
 
 | Sidebar entry | URL | Behind the gate? |
 |---|---|---|
@@ -75,22 +77,66 @@ The seven entries in the admin sidebar (`Sidebar.tsx`), and which of them the ga
 | Preview Results *(draft)* / Live Results | `/<id>/results` | **public** |
 | Publish & Share | `/<id>/admin/publish` | 🔒 |
 
-Two things the table makes plain. **The two entries this repo actually uses are the two that are not admin pages** — `/<id>` to vote and `/<id>/results` to read the count are public URLs the sidebar merely links to, which is why the gate has never blocked the mint → export → freeze pipeline. And **the ballot and results labels flip with `election.state`**: a draft says *Preview*, an open election says *Live*, same two URLs either way. (An eighth entry, *Edit Election Roles* → `/<id>/admin/roles`, appears only when the `ELECTION_ROLES` feature flag is on.)
+Two things the table makes plain. **The two entries this repo actually uses are the two that are not admin pages** — `/<id>` to vote and `/<id>/results` to read the count are public URLs the sidebar merely links to, which is why the gate never blocked the mint → export → freeze pipeline. And **the ballot and results labels flip with `election.state`**: a draft says *Preview*, an open election says *Live*, same two URLs either way. (An eighth entry, *Edit Election Roles* → `/<id>/admin/roles`, appears only when the `ELECTION_ROLES` feature flag is on.)
 
-This was tested directly, and the result is counter-intuitive — two elections with the **same `owner_id` (my account)**:
+Note that the sidebar is *not* gated per-page. `Sidebar.tsx` renders the whole panel only when `voterAuth?.roles?.length > 0`, so an election you hold no role on shows **no menu at all** — including on the two pages you are perfectly entitled to see. That is why the bug reads as "the menu on the left is sometimes missing" rather than as an access-denied message.
 
-| Election | how created | `admin_ids` | `/admin` |
-|---|---|---|---|
-| `r4dqvd` (BV2105) | BV builder UI | `null` | ✅ full admin |
-| `xb8r6v` (throwaway) | API script | `[my account]` | ❌ denied |
+### The cause: our own `auth_key`, not BV's authorization
 
-The election that **works** has `admin_ids: null`; the one that's **denied** explicitly lists my account in `admin_ids`. So BV's `/admin` authorization reads **neither `owner_id` nor `admin_ids`** from the election record — it uses a server-side role/permission binding (`voterAuth.roles` / `permissions`, empty on the API-created one) that only the **authenticated (Keycloak) create flow** writes. Setting `admin_ids` in the create payload persists in the record but is **ignored** for authorization.
+The original write-up of this section concluded that BV's `/admin` "reads neither `owner_id` nor `admin_ids`" and must use a server-side role binding written only by the Keycloak create flow. **That was wrong**, and the experiment behind it had two independent flaws. The corrected account:
+
+Roles are computed in `electionPostAuthMiddleware` ([`elections.controllers.ts`](https://github.com/Equal-Vote/bettervoting/blob/main/packages/backend/src/Controllers/Election/elections.controllers.ts)) and they *do* read the election record:
+
+```ts
+if (req.user && req.election){
+  if((req.election.owner_id == req.user.sub && req.user.typ !== 'TEMP_ID') || tempUserAuth){
+    req.user_auth.roles.push(roles.owner)
+  }
+  if (req.election.admin_ids && req.election.admin_ids.includes(req.user.email)){
+    req.user_auth.roles.push(roles.admin)
+  }
+  …
+}
+```
+
+Everything hangs on `req.user`. Immediately upstream of it sits `electionSpecificAuth`, which runs on every **election-scoped** route:
+
+```ts
+const electionKey = req.election.auth_key;
+if (electionKey == null || electionKey == "") return next();   // ← the normal path
+var user = accountService.extractUserFromRequest(req, electionKey);
+req.user = user;                                                // ← REPLACES your identity
+```
+
+With an `auth_key` set, `req.user` is no longer your Keycloak identity. It becomes whatever verifies against *that election's* key — read from the `custom_id_token` cookie, which your browser has never had. `req.user` comes back `null`, so **neither** the `owner_id` test nor the `admin_ids` test is even reached, `voterAuth.roles` is `[]`, and the sidebar renders nothing.
+
+And `create_bv_test_election.py` set `auth_key` on every election it minted, from its first commit (2026-07-04) until this fix.
+
+**The two flaws in the original experiment**, worth naming because both are easy to repeat:
+
+1. **The confounder was never controlled.** The UI-created election and the API-created one differed in `auth_key`, not only in `admin_ids`. The conclusion "`admin_ids` is ignored" was drawn from the one variable that wasn't the cause.
+2. **`admin_ids` was populated with the wrong field.** The test set `admin_ids: [my account **id**]`, but the check is `admin_ids.includes(req.user.email)`. Even with no `auth_key`, that election would have been denied the *admin* role — though it would have had the *owner* role anyway, and so a sidebar.
+
+**Live confirmation** (2026-08-15, anonymous, no login needed): send a syntactically valid but unsigned `custom_id_token` cookie and see which elections try to verify it.
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" --cookie "custom_id_token=$BOGUS" https://bettervoting.com/API/Election/pet
+curl -s -o /dev/null -w "%{http_code}\n" --cookie "custom_id_token=$BOGUS" https://bettervoting.com/API/Election/8q3xcg
+```
+
+`pet` (UI-created, no `auth_key`) returns **200** — the middleware short-circuits and ignores the cookie. `8q3xcg` (BV2284, script-minted) returns **5xx** — it reaches `jwt.verify`, throws `Unauthorized`, and never gets to the role checks. Both return 200 with no cookie at all.
+
+### The fix, and what it cannot repair
+
+`auth_key` is **optional**: `POST /API/Elections` has no auth middleware, and `electionValidation` only checks the key's *shape* when one is present. So the script now omits it, and an API-created election is administrable from the account named in `owner_id`, sidebar and all. `BV_AUTH_KEY=1` restores the old behaviour for a run that needs owner-scoped reads — the only one left is the non-fatal `/ballots` count check, which otherwise degrades to *"HTTP 403 — skipped"*.
+
+**Elections minted before 2026-08-15 cannot be repaired.** Clearing `auth_key` means `PATCH /API/Election/{id}`, which requires the `canEditElection` permission — which requires a role — which requires the `custom_id_token` we can no longer produce, since the keypair was minted per run and discarded. Even holding the key would not be enough: `editElection` refuses outright when `state !== 'draft'`, and these elections are open. They stay listable, votable, exportable, and permanently menu-less until someone with DB access clears the column.
 
 **Consequences for the test-case workflow:**
 
-- API-created elections are public, listable, and exportable — enough for the reproduce-and-freeze pipeline (create → export → reproduce in LH → freeze `_bv_export.json`).
-- They are **not** UI-administrable from your real login: you cannot edit, close, **rename**, or **delete** them from the UI (no API endpoint either). Throwaways linger in `/manage` until a BV admin with DB access removes them.
-- Don't bother setting `admin_ids` in the payload — proven no-op for authz.
+- Nothing about the mint → export → freeze pipeline changes; it never used an admin page.
+- New elections gain **Duplicate**, **Archive**, description edits, and **Publish & Share** — none of which the ~120 elections minted between 2026-07-04 and 2026-08-15 will ever have.
+- If you do set `admin_ids`, populate it with an **email address**, not an account id.
 
 **Orphans awaiting BV-admin DB cleanup** (created via the API, undeletable by us):
 
@@ -105,35 +151,23 @@ The election that **works** has `admin_ids: null`; the one that's **denied** exp
 
 **Lesson (why the title guard exists):** because API elections are **public and permanent**, the title must be right on the *first* create — there is no rename or delete. `create_bv_test_election.py` now (a) prepends only the `BV<n>` Test ID (no "trash/delete/test" junk), and (b) runs a pre-check that **blocks junk/placeholder titles** and reminds you the title is permanent + public. Set `BV_ALLOW_JUNK_TITLE=1` only to override deliberately.
 
-## Ready-to-file BetterVoting GitHub issue
+## The residual upstream defect — draft, not filed
 
-If BV should fix this, the reproduction and evidence below are a clean report (paste into a new issue at `github.com/Equal-Vote/bettervoting`):
+Our own misuse explains our own elections, but a real BV defect sits underneath it, and it is a different one from the issue this page used to draft. Not filed yet; check [upstream bug reports](../../about_this_repo/upstream_bug_reports.md) before assuming otherwise.
 
----
+**Title:** An election with a custom `auth_key` is permanently un-administrable by its owner
 
-**Title:** Election owner can't access `/admin` — admin authorization ignores `owner_id` / `admin_ids`
+`electionSpecificAuth` overwrites `req.user` with the custom-token identity on every election-scoped route. When the request has no `custom_id_token` — an ordinary Keycloak-logged-in owner opening the page in a browser — `req.user` becomes `null` rather than falling back to the account identity, so `electionPostAuthMiddleware` grants no roles and `Sidebar.tsx` renders nothing. The owner sees the election in `/manage` (that route is not election-scoped) with no way to administer it.
 
-An election whose `owner_id` is my account appears in my `/manage` list, but opening `/<id>/admin` denies me: *"Only the users with admin access on the election can view this page."*
+It cannot be undone from either side: clearing `auth_key` needs `canEditElection`, which needs a role, and `editElection` additionally refuses any election whose state is not `draft`. An integration that sets `auth_key` at create time therefore locks its own owner out for the life of the election.
 
-**Repro:** Create an election via `POST /API/Elections` with `owner_id` set to my account id (second test: also `admin_ids: [my id]`). It appears in `/manage`, but `/<id>/admin` denies admin access.
+**Suggested fix:** keep the custom-token identity for *voter* authorization, but compute admin roles against the account identity — e.g. resolve the Keycloak user separately in `electionPostAuthMiddleware` instead of reading the possibly-overwritten `req.user`. A blanket fallback in `electionSpecificAuth` would be simpler but changes voter-identity semantics for custom-auth elections, so it is the worse of the two.
 
-**Evidence** — two elections, **same `owner_id` (my account)**:
-
-| Election | created via | `admin_ids` | `/admin` result |
-|---|---|---|---|
-| UI-created | builder UI | `null` | ✅ full admin |
-| API-created | `POST /API/Elections` | `[my account]` | ❌ denied |
-
-The election that **works** has `admin_ids: null`; the one that's **denied** explicitly lists me in `admin_ids`. So `/admin` authorization depends on neither `owner_id` nor `admin_ids`; it appears to use a server-side role binding written only by the authenticated create flow (`voterAuth.roles`/`permissions` are empty on the API-created election).
-
-**Impact:** I can see but not administer — edit, close, or **delete** — my own election. API-created elections can't be cleaned up from the UI.
-
-**Ask (any one of):** honor `owner_id`/`admin_ids` for `/admin` authorization; **or** provide a "claim" path to bind an owned election to my account; **or** document the intended behavior so the API-creation path is usable end-to-end.
-
----
+**Repro:** `POST /API/Elections` with `owner_id` = your account id and `auth_key` = any PEM RS256 public key; log in as that account and open `/<id>` — no sidebar, and `/<id>/admin` denies you.
 
 ## Related
 
 - [BV — BetterVoting (the live web app)](README.md)
 - The script + how to run it: [`create_bv_test_election.py` — tool guide](../../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.md)
 - The BV-backed case workflow is documented in the repo's `CLAUDE.md` (steps 3–4).
+
