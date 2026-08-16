@@ -1,0 +1,80 @@
+TestID,Scenario,Method,Status
+BV001a,Understanding STAR Ballot - full selections,STAR,Passed
+BV001c,STAR Scoring Round - clear winner,STAR,Passed
+BV001d,STAR Scoring Round - 2 way tie,STAR,
+BV10,Basic Runoff and Equal Preference Validation,STAR,Failed
+BV100,Worst-case STAR tiebreakers,STAR,MUST BE COMPLETED
+BV105,Condorcet Cycles & Center Squeeze,STAR / RCV-IRV,Pending
+BV11,Two candidates - full support for both,STAR,Failed
+BV110,Center Squeeze,STAR,
+BV113,"Hitler, Stalin, Washington",STAR,failed
+BV115,Basic - 3 candidates - STAR,STAR,
+BV120,Basic - 3 candidates - RCV-RR,RCV-RR,
+BV125,Basic - 3 candidates - RCV IRV,RCV IRV,
+BV126,ties every time - every step,STAR,Failed
+BV129,3 cand - 2 winners Bloc STAR - score tiebreaker,STAR Bloc,Failed
+BV130,6 cand - 3 winners (Bloc STAR),STAR Bloc,passed
+BV130-r1,6 cand - 3 winners retest,STAR Bloc,Failed
+BV130-r2,6 cand - 3 winners,STAR Bloc,Passed
+BV131,Guido example - Bloc STAR,STAR Bloc,Passed
+BV132,verify number of votes cast - bloc STAR,STAR Bloc,Failed
+BV135,Approval 101 - most approvals wins,Approval,
+BV14,Plurality - 2 candidates,Plurality,Passed
+BV140,examples for second round,,
+BV145,"Two candidates, three voters - no-preference",STAR,
+BV147,test Condorcet Cycle - Condorcet Paradox,STAR,Passed
+BV148,Math for Liberal Studies: Condorcet Method,RCV-RR,
+BV149,STAR fails to elect the Condorcet winner,STAR,
+BV15,Basic - 2 candidates - Plurality - Abstain,Plurality,Failed
+BV150,Rob Lanphier - STAR/IRV/Condorcet differ,Mix,pending
+BV151,Compare RCV-IRV and STAR - two races,Mix,Passed
+BV152,"RCV-IRV and STAR - Alice, Bob, Carol",Mix,pending
+BV155,Different winner Scoring vs Runoff,STAR,
+BV17,Basic - Plurality - 5 candidates,Plurality,Passed
+BV18,Basic - Plurality - 5 candidates - 2 seats,Plurality,Failed
+BV188,ties - STAR Voting (duplicate BV147),STAR,Passed
+BV19,Basic - Plurality - 5 cand - 2 seats - tie,Plurality,Failed
+BV190,First and Second Tiebreaker,,
+BV195,ties - unrealistic edge case,STAR,?
+BV20,Basic - 3 candidates - Approval,Approval,Failed
+BV200,Handling equal ties & equal preferences,STAR,Passed
+BV205,top scoring candidate different from winner,STAR,Passed
+BV210,Distribution of Equal Preferences report,STAR,Failed
+BV215,None of the above - nota wins,STAR,Passed (BV = LH)
+BV230,Show Preliminary Results,any,failed
+BV235,Results - percentage vs count,any,failed
+BV240a,preliminary-results disclaimer family,any,Not ready
+BV240b,preliminary-results disclaimer family,any,Not ready
+BV240c,preliminary-results disclaimer family,any,Not ready
+BV240d,preliminary-results disclaimer family,any,Not ready
+BV240e,preliminary-results disclaimer family,any,Not ready
+BV240f,preliminary-results disclaimer family,any,Not ready
+BV240g,preliminary-results disclaimer family,any,Not ready
+BV240h,preliminary-results disclaimer family,any,Not ready
+BV240i,preliminary-results disclaimer family,any,Not ready
+BV240j,preliminary-results disclaimer family,any,Not ready
+BV240k,preliminary-results disclaimer family,any,Not ready
+BV240l,preliminary-results disclaimer family,any,Not ready
+BV240m,preliminary-results disclaimer family,any,Not ready
+BV240n,preliminary-results disclaimer family,any,Not ready
+BV240o,preliminary-results disclaimer family,any,Not ready
+BV240p,preliminary-results disclaimer family,any,Not ready
+BV25,Basic - 5 candidates - Approval - 2 seats,Approval,Failed
+BV250,Delete entire Election,any,missing
+BV255,Delete a Race in Election - draft mode,any,Passed
+BV256,Delete a Race in Election - final mode,any,Passed
+BV26,Basic - 3 candidates - Approval - Weighted,Approval,Missing functionality
+BV260,Test Audit function - change log,any,missing
+BV265,Voter Status Report,,missing
+BV27,"Approval steering committee (7 cand, k=4)",Approval,na
+BV270,Browse elections archive (public offices),RCV IRV,?
+BV275,Display Report My Elections & Ballots,,New Feature requested
+BV305,Election is Archived - voting impossible,any,Passed
+BV320,Submitting Vote - Confirmation Screen,STAR,Passed
+BV340,Change Election Title and Description,any,Passed
+BV345,Change Race Title and Description (one race),any,Passed
+BV350,Change Race Title and Description (multi),any,Failed
+BV355,copy an election - change title,any,
+BV45,Multi-race - multiple scenarios,Mix,pending
+BV70,Ranked Robin - 12 candidates 12 ballots,RCV-RR,Passed
+BV90,scoring / runoff divergence,STAR,Passed

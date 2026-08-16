@@ -133,6 +133,8 @@ The failure mode to avoid is **publishing the sheet's shape as the site's shape*
 
 So: **keep the sheet as the backlog, don't ship its hierarchy.** One change would make it much stronger — add a column for **published doc URL**, so every row is either linked or visibly blank. That turns the sheet into a coverage dashboard you can sort by "unwritten," which is the thing you actually want from it.
 
+The join has since been run: [**BPML ↔ library reconciliation**](bpml/RECONCILIATION.md). The short version is that the sheet's *own* coverage column being 84% empty is the honest half — the surprise is the other direction, where 99% of the library's BV-backed cases are referenced by no BPML row at all. The sheet and the library are two inventories, not two views of one.
+
 **The one process diagram worth drawing** is the state machine, on the *Your election's five states* page — because it answers the "can I still…?" family all at once. One picture, not a notation:
 
 ```mermaid
