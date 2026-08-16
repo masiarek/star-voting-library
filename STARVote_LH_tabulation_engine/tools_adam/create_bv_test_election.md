@@ -50,7 +50,9 @@ The plain API GET the script saves lacks `Ballots`/`Results`. For the **frozen `
 
 ## Known limitation
 
-API-created elections are **public, listable, and exportable** — but **not UI-administrable** (you can't edit / close / delete them from `/admin`, even as the owner). BV authorizes admin off a server-side role binding written only by the authenticated create flow, not off `owner_id`/`admin_ids`. Full write-up + a ready-to-file BV issue: [Creating BetterVoting elections via the API](../../07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md).
+An election minted **open** is permanent: it can never be renamed, re-described, closed or deleted. `editElection` accepts only elections whose `state` is `draft`, and the UI has no delete control at all. So the title, the description and its backlink have to be right on the first create.
+
+Two things that are *no longer* limitations. API-created elections **are** administrable from the account named in `owner_id` — the sidebar was missing only because this script used to set the election's `auth_key`, which makes BV substitute a custom-token identity for your Keycloak one ([the full story](../../07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md#the-admin-gate-and-how-it-was-closed)). And a spec may carry `state: "draft"`, which mints a private rehearsal that stays editable and archivable — the way to try something without leaving a permanent public artifact.
 
 ## See also
 

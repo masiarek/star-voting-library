@@ -95,10 +95,12 @@ only what is BV-specific, so non-BV sessions don't pay for it.
   `Full lesson & tabulation: https://…` renders as plain grey text the reader has to
   copy-paste. 65 of the repo's frozen exports shipped that way and, descriptions being
   permanent, they stay unclickable — `--dry-run` now warns before you add a 66th.
-  **This MUST be set on the first create — BV descriptions are PERMANENT and CANNOT be
-  edited via the API afterward** (verified 2026-07-24: `PUT /API/Election/<id>` 404,
-  `POST …/edit` 502 — no owner-editable path; API-created elections aren't
-  administrable). So cases minted *without* the backlink can't be retrofitted (the
+  **This MUST be set on the first create for anything minted OPEN — an open
+  election's description can never be edited** (`editElection` refuses any election
+  whose `state !== 'draft'`; verified 2026-07-24 that `PUT /API/Election/<id>` 404s
+  and `POST …/edit` 502s). A **draft** mint is the exception and the escape hatch:
+  drafts stay editable, so `state: "draft"` on the spec buys you a rehearsal. Cases
+  minted open *without* the backlink can't be retrofitted (the
   ballot_style_lab set BV2234–2247 is in that boat — repo→BV works, BV→repo doesn't).
 - **Never choose a `BV<n>` by reading `BV_registry.md`'s "next free number."** That
   line is regenerated from *committed* files, so a concurrent session that has minted
@@ -190,13 +192,16 @@ only what is BV-specific, so non-BV sessions don't pay for it.
     only the `BV<n>` Test ID and runs a pre-check that blocks junk/placeholder
     titles. See `bv_api_election_creation_notes.md` (orphan list included).
   - **Set `owner_id` to your real BV account** (the script default is Adam's
-    `ea09e7c7-…`/Admin1) so the elections show up in `/manage`. **But** API-created
-    elections are public, listable, and exportable **only** — they are **NOT
-    UI-administrable** (you can't edit/close/**delete** them from `/admin`): BV
-    authorizes admin off a server-side role binding written only by the
-    authenticated create flow, not off `owner_id`/`admin_ids` (setting `admin_ids`
-    is a proven no-op). Full write-up + a ready-to-file BV issue:
-    `00_start_here/tabulation_engines/BV/bv_api_election_creation_notes.md`.
+    `ea09e7c7-…`/Admin1) — it is what puts the election in `/manage` **and** what
+    grants you the owner role, so the admin sidebar works. That second half was
+    broken from 2026-07-04 to 2026-08-15 by the script's own `auth_key`, not by BV;
+    see the auth note above. `admin_ids` also works, but it is matched against your
+    **email**, not your account id — the old "proven no-op" claim came from a test
+    that put an id there *and* set `auth_key`. Corrected write-up:
+    [`bv_api_election_creation_notes.md`](../../07_Concepts/tabulation_engines/BV/bv_api_election_creation_notes.md).
+  - **What is still permanent:** an election minted **open** can never be renamed,
+    re-described, closed or deleted — `editElection` takes drafts only, and there is
+    no delete button in the UI. Mint `state: "draft"` when the run is a rehearsal.
 
 ## Workflow — building a BV-backed test case
 
