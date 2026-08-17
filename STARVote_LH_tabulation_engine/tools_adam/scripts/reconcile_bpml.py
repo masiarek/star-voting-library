@@ -76,6 +76,59 @@ SEAM_METHOD = {
     "Multi-winner Plurality": "Plurality",
 }
 
+# The three seam rows that are CROSS-CUTTING rather than per-method: their evidence
+# is scattered across several methods, so a by-method index is the wrong target and
+# the list has to be curated by hand. Keyed by a substring of the L3 process name;
+# each entry is (TestID, case stem, why this case is on the list).
+# Every entry is validated against bv_cases.csv at run time -- a stem that stops
+# existing is reported, never silently dropped.
+CURATED: dict[str, list[tuple[str, str, str]]] = {
+    "Handling ties": [
+        ("BV126", "bv126_ties_every_step_8fvd2x", "every tiebreak rung fires in one election"),
+        ("BV2276", "bv2276_qhjyr2_second_finalist_tie", "tie for the second runoff slot"),
+        ("BV830", "bv830_vb3xv2_no_condorcet_tie_score", "tied with no Condorcet winner"),
+        ("BV129", "bv129_score_tiebreak_bloc", "score tiebreak, multi-winner"),
+        ("BV130-r2", "bv130r2_dead_rung_bloc", "a rung that cannot decide"),
+        ("BV750", "bv750_tie_breaking_bloc", "bloc tie-breaking end to end"),
+        ("BV2141", "bv2141_3r3yf7_four_degree_tie", "four-way tie on the Copeland record"),
+        ("BV2261", "bv2261_y2fbpc_tiebreak_recorded_draws", "BV's seeded shuffle is recorded and replayable"),
+        ("BV2262", "bv2262_2gvwr9_nine_way_dead_heat", "nine-way dead heat, all positions recorded"),
+        ("BV2257", "lunch_choose_one_dead_tie", "Choose-One dead tie"),
+    ],
+    "Distribution of Equal Support": [
+        ("BV11", "bv11_6xhfp8_full_equal_support", "every ballot scores both candidates equally"),
+        ("BV2283", "bv2283_hb4qvv_all_equal_recheck", "all-equal ballots, re-checked against BV"),
+        ("BV655", "bv655_jfrk9t_equal_opposition", "equal support on opposed blocs"),
+        ("BV2219", "bv2219_36f4v2_equal_opposite_base", "the base of the equal/opposite pair"),
+        ("BV2220", "bv2220_q8q9m7_equal_opposite_plus_cancel", "same election plus cancelling ballots"),
+    ],
+    "Preference Matrix": [
+        ("BV2270", "bv2270_8h4bvh_head_to_head_vs_margin", "head-to-head result vs margin -- the matrix's two readings"),
+        ("BV2140", "bv2140_48hjkv_most_pairwise_wins", "most pairwise wins across the grid"),
+        ("BV2260", "bgg9qh9_most_wins_is_not_condorcet", "most wins is NOT the Condorcet winner"),
+        ("BV2157", "bv2157_mmcmpy_condorcet_cycle_rps", "a cycle -- the hardest thing the grid has to render"),
+        ("BV2156", "bv2156_3grpbb_star_misses_condorcet", "STAR's winner differs from the grid's"),
+        ("BV2131", "bv2131_tennessee_condorcet_center_vqyqkr", "the Tennessee grid, centre candidate"),
+        ("BV2250", "condorcet_1788_star", "one historical election, three methods on one grid"),
+        ("BV1525", "bv1525_condorcet_loser_bloc", "Condorcet loser seated under bloc"),
+    ],
+}
+
+
+def validate_curated(repo) -> list[str]:
+    """Return a list of complaints -- curated entries that no longer match the registry."""
+    have = {(r.get("TestID", "").strip(), r.get("Case", "").strip()) for r in repo}
+    stems = {r.get("Case", "").strip() for r in repo}
+    out = []
+    for concern, entries in CURATED.items():
+        for tid, stem, _why in entries:
+            if stem not in stems:
+                out.append(f"{concern}: case stem not in registry -- {stem}")
+            elif (tid, stem) not in have:
+                out.append(f"{concern}: {stem} exists but not under {tid}")
+    return out
+
+
 # Defect rows to drop outright (see SCOPE.md). Matched on the L3 process name.
 DROP_ROWS = {
     "State / Status - Test",          # no test state exists; draft IS test mode
@@ -110,12 +163,19 @@ def _write_rescoped(bpml, repo, drive_ids, repo_ids) -> None:
 
             if is_counting(r):
                 scope = "Counting"
-                method = next((m for k, m in SEAM_METHOD.items()
-                               if k in r["L3_process"]), None)
-                n = counts.get(method, 0) if method else 0
-                verified = (f"library: {method} ({n} cases) — {LIB_INDEX}"
-                            if n else f"library — {LIB_INDEX}")
-                status = "covered" if n else "unchecked"
+                cur = next((v for k, v in CURATED.items()
+                            if k in r["L3_process"]), None)
+                if cur:
+                    ids = " ".join(dict.fromkeys(t for t, _s, _w in cur))
+                    verified = f"library: {len(cur)} curated cases — {ids} — {LIB_INDEX}"
+                    status = "covered"
+                else:
+                    method = next((m for k, m in SEAM_METHOD.items()
+                                   if k in r["L3_process"]), None)
+                    n = counts.get(method, 0) if method else 0
+                    verified = (f"library: {method} ({n} cases) — {LIB_INDEX}"
+                                if n else f"library — {LIB_INDEX}")
+                    status = "covered" if n else "unchecked"
             else:
                 scope = "Application"
                 if cell.lower() in GAP_MARKERS:
@@ -164,6 +224,9 @@ def main() -> int:
     repo_unreferenced = repo_ids - cited_ids
     drive_not_in_repo = drive_ids - repo_ids
     repo_not_in_drive = repo_ids - drive_ids
+
+    for complaint in validate_curated(repo):
+        print(f"  ! curated list drift — {complaint}")
 
     count_rows = [r for r in bpml if is_counting(r)]
     app_rows = [r for r in bpml if not is_counting(r)]
@@ -251,6 +314,26 @@ def main() -> int:
         cell = (r["test_case_cell"] or "").strip() or "—"
         a(f"| {r['L1']} | {r['L3_process']} | {cell} |")
     a("")
+    # --- the curated lists, with links computed from the registry -----------
+    page_of = {r["Case"].strip(): (r.get("MD") or "").strip() for r in repo}
+    meth_of = {r["Case"].strip(): (r.get("Method") or "").strip() for r in repo}
+    a("### The three cross-cutting rows, curated")
+    a("")
+    a("Six of the nine seam rows map onto a single method family. These three do not — "
+      "their evidence is scattered across methods, so the list is curated by hand and "
+      "every entry is re-validated against the registry on each run.")
+    a("")
+    for concern, entries in CURATED.items():
+        a(f"**{concern}** — {len(entries)} cases")
+        a("")
+        a("| Test id | Case | Method | Why it's on the list |")
+        a("|---|---|---|---|")
+        for tid, stem, why in entries:
+            md = page_of.get(stem, "")
+            label = f"[{stem}](../../../../{md})" if md else f"`{stem}`"
+            a(f"| `{tid}` | {label} | {meth_of.get(stem, '—')} | {why} |")
+        a("")
+
     a("**The consequence for the sheet: it should not gain 162 rows. It should gain nine links.** "
       "A counting row's verification is a whole family of elections in the library, not one id — "
       "so it points at [the by-method index](../../../YAML_test_case_index/README.md), and the "

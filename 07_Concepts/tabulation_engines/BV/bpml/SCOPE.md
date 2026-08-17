@@ -53,7 +53,17 @@ That also fixes the thing that made the sheet feel wrong to sort: today its Test
 
 Every "nonexistent" id above becomes a live link under the re-scope. Three rows that read as gaps today are in fact the best-covered things in the project.
 
-**Six of the nine resolve cleanly; three do not, and the generator says so.** Ranked Robin, Approval, STAR, Plurality, Bloc STAR and multi-winner Plurality each map onto a method family, so they come out `covered` with a count. The remaining three — *Verify Preference Matrix*, *Handling ties*, *Distribution of Equal Support* — are **cross-cutting concerns rather than method families**: the relevant cases are scattered across several methods, so a by-method index is the wrong target and they come out `unchecked` instead of being given a link that doesn't answer the question. Those three need a curated case list, which is the one piece of this that can't be generated.
+**Six of the nine resolve onto a method family. Three don't, and are curated instead.** Ranked Robin, Approval, STAR, Plurality, Bloc STAR and multi-winner Plurality each map onto one method, so their coverage is that method's case count. The remaining three — *Verify Preference Matrix*, *Handling ties*, *Distribution of Equal Support* — are **cross-cutting concerns rather than method families**: their evidence is scattered across several methods, so a by-method index would be a link that doesn't answer the question.
+
+Those three now carry hand-picked lists — **23 cases in total**, printed with links in [the reconciliation](RECONCILIATION.md#the-three-cross-cutting-rows-curated):
+
+| Row | Cases | Spans |
+|---|---:|---|
+| Handling ties | 10 | STAR, Bloc STAR, Ranked Robin, Plurality — every rung from a score tiebreak to a nine-way dead heat |
+| Distribution of Equal Support | 5 | STAR — from all-equal ballots to the equal/opposite cancelling pair |
+| Verify Preference Matrix | 8 | Ranked Robin, STAR, Bloc STAR — including a Condorcet cycle, the hardest grid to render |
+
+The lists live in `CURATED` in [`reconcile_bpml.py`](../../../../STARVote_LH_tabulation_engine/tools_adam/scripts/reconcile_bpml.py) and **every entry is re-validated against the registry on each run** — a case that is renamed, re-numbered or deleted is reported rather than silently dropped. The validator was checked against both failure modes (a stem that doesn't exist, and a real stem filed under the wrong test id) so it isn't vacuous. The page links are computed from the registry's own `MD` column, so they can't drift from where the cases actually live.
 
 ## The column spec
 

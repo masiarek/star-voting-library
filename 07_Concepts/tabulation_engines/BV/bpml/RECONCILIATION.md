@@ -63,6 +63,48 @@ The nine rows where they genuinely meet:
 | Establish Election Procedures | Handling ties | — |
 | Tabulation | Distribution of Equal Support report | — |
 
+### The three cross-cutting rows, curated
+
+Six of the nine seam rows map onto a single method family. These three do not — their evidence is scattered across methods, so the list is curated by hand and every entry is re-validated against the registry on each run.
+
+**Handling ties** — 10 cases
+
+| Test id | Case | Method | Why it's on the list |
+|---|---|---|---|
+| `BV126` | [bv126_ties_every_step_8fvd2x](../../../../01_STAR/03_Criteria/tie_break_dead_rung/cases/cases_pages/bv126_ties_every_step_8fvd2x.md) | STAR | every tiebreak rung fires in one election |
+| `BV2276` | [bv2276_qhjyr2_second_finalist_tie](../../../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2276_qhjyr2_second_finalist_tie.md) | STAR | tie for the second runoff slot |
+| `BV830` | [bv830_vb3xv2_no_condorcet_tie_score](../../../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md) | STAR | tied with no Condorcet winner |
+| `BV129` | [bv129_score_tiebreak_bloc](../../../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv129_score_tiebreak_bloc.md) | Bloc STAR | score tiebreak, multi-winner |
+| `BV130-r2` | [bv130r2_dead_rung_bloc](../../../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130r2_dead_rung_bloc.md) | Bloc STAR | a rung that cannot decide |
+| `BV750` | [bv750_tie_breaking_bloc](../../../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv750_tie_breaking_bloc.md) | Bloc STAR | bloc tie-breaking end to end |
+| `BV2141` | [bv2141_3r3yf7_four_degree_tie](../../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2141_3r3yf7_four_degree_tie.md) | RankedRobin | four-way tie on the Copeland record |
+| `BV2261` | [bv2261_y2fbpc_tiebreak_recorded_draws](../../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2261_y2fbpc_tiebreak_recorded_draws.md) | RankedRobin | BV's seeded shuffle is recorded and replayable |
+| `BV2262` | [bv2262_2gvwr9_nine_way_dead_heat](../../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2262_2gvwr9_nine_way_dead_heat.md) | RankedRobin | nine-way dead heat, all positions recorded |
+| `BV2257` | [lunch_choose_one_dead_tie](../../../../06_Other/Plurality/cases/cases_pages/lunch_choose_one_dead_tie.md) | Plurality | Choose-One dead tie |
+
+**Distribution of Equal Support** — 5 cases
+
+| Test id | Case | Method | Why it's on the list |
+|---|---|---|---|
+| `BV11` | [bv11_6xhfp8_full_equal_support](../../../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md) | STAR | every ballot scores both candidates equally |
+| `BV2283` | [bv2283_hb4qvv_all_equal_recheck](../../../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/bv2283_hb4qvv_all_equal_recheck.md) | STAR | all-equal ballots, re-checked against BV |
+| `BV655` | [bv655_jfrk9t_equal_opposition](../../../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md) | STAR | equal support on opposed blocs |
+| `BV2219` | [bv2219_36f4v2_equal_opposite_base](../../../../01_STAR/03_Criteria/equal_and_opposite/cases/cases_pages/bv2219_36f4v2_equal_opposite_base.md) | STAR | the base of the equal/opposite pair |
+| `BV2220` | [bv2220_q8q9m7_equal_opposite_plus_cancel](../../../../01_STAR/03_Criteria/equal_and_opposite/cases/cases_pages/bv2220_q8q9m7_equal_opposite_plus_cancel.md) | STAR | same election plus cancelling ballots |
+
+**Preference Matrix** — 8 cases
+
+| Test id | Case | Method | Why it's on the list |
+|---|---|---|---|
+| `BV2270` | [bv2270_8h4bvh_head_to_head_vs_margin](../../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md) | RankedRobin | head-to-head result vs margin -- the matrix's two readings |
+| `BV2140` | [bv2140_48hjkv_most_pairwise_wins](../../../../05_Ranked_Robin/02_Examples/condorcet_vs_ranked_robin/cases/cases_pages/bv2140_48hjkv_most_pairwise_wins.md) | RankedRobin | most pairwise wins across the grid |
+| `BV2260` | [bgg9qh9_most_wins_is_not_condorcet](../../../../05_Ranked_Robin/02_Examples/most_wins_vs_condorcet/cases/cases_pages/bgg9qh9_most_wins_is_not_condorcet.md) | RankedRobin | most wins is NOT the Condorcet winner |
+| `BV2157` | [bv2157_mmcmpy_condorcet_cycle_rps](../../../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2157_mmcmpy_condorcet_cycle_rps.md) | STAR | a cycle -- the hardest thing the grid has to render |
+| `BV2156` | [bv2156_3grpbb_star_misses_condorcet](../../../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2156_3grpbb_star_misses_condorcet.md) | STAR | STAR's winner differs from the grid's |
+| `BV2131` | [bv2131_tennessee_condorcet_center_vqyqkr](../../../../05_Ranked_Robin/02_Examples/rr_vs_irv_plurality/cases/cases_pages/bv2131_tennessee_condorcet_center_vqyqkr.md) | RankedRobin | the Tennessee grid, centre candidate |
+| `BV2250` | [condorcet_1788_star](../../../../method_comparisons/borda_condorcet_1788/cases/cases_pages/condorcet_1788_star.md) | STAR | one historical election, three methods on one grid |
+| `BV1525` | [bv1525_condorcet_loser_bloc](../../../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1525_condorcet_loser_bloc.md) | Bloc STAR | Condorcet loser seated under bloc |
+
 **The consequence for the sheet: it should not gain 162 rows. It should gain nine links.** A counting row's verification is a whole family of elections in the library, not one id — so it points at [the by-method index](../../../YAML_test_case_index/README.md), and the library's own count is the coverage number. See [SCOPE.md](SCOPE.md) for the re-scope and the resulting column spec.
 
 ## BPML rows that DO have a runnable case
