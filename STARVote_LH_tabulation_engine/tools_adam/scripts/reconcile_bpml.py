@@ -39,6 +39,18 @@ ID_RE = re.compile(r"\bBV\d+[a-z]?(?:-r\d+)?\b", re.I)
 GAP_MARKERS = {"missing", "missing document", "missing functionality",
                "missing functionality?"}
 
+# The scope split. A BPML row is about COUNTING votes (which the library verifies)
+# or about THE APPLICATION (which the Drive QA log verifies). Deciding this per row
+# is the whole re-scope: the two inventories have almost disjoint subject matter,
+# which is why joining them on test ids returned almost nothing.
+COUNTING_L1 = {"Voting Methods", "Tabulation", "Establish Election Procedures"}
+COUNTING_PROCESS_HINTS = ("Preference Matrix",)
+
+
+def is_counting(row: dict) -> bool:
+    return (row["L1"] in COUNTING_L1
+            or any(h in row["L3_process"] for h in COUNTING_PROCESS_HINTS))
+
 
 def _rows(path: Path) -> list[dict]:
     with path.open(newline="", encoding="utf-8-sig") as fh:
@@ -49,6 +61,77 @@ def _norm(tid: str) -> str:
     """BV0015 / bv15 / BV15 all key the same. Suffixes (-r2, a) are significant."""
     m = re.match(r"(?i)^bv0*(\d+)(.*)$", tid.strip())
     return f"BV{m.group(1)}{m.group(2).lower()}" if m else tid.strip().upper()
+
+
+LIB_INDEX = "https://github.com/masiarek/star-voting-library/blob/master/07_Concepts/YAML_test_case_index/README.md"
+
+# Which library method family verifies each seam row. Keyed by a substring of the
+# L3 process name; the value is the Method value in bv_cases.csv to count.
+SEAM_METHOD = {
+    "Ranked Robin": "RankedRobin",
+    "Single-Winner - Approval": "Approval",
+    "scoring/runoff divergence": "STAR",
+    "Plurality (chose one)": "Plurality",
+    "Bloc STAR": "Bloc STAR",
+    "Multi-winner Plurality": "Plurality",
+}
+
+# Defect rows to drop outright (see SCOPE.md). Matched on the L3 process name.
+DROP_ROWS = {
+    "State / Status - Test",          # no test state exists; draft IS test mode
+    "(unnamed - placeholder)",        # the sheet's "co to" placeholder
+}
+
+# L1 values to merge: {from: to}
+MERGE_L1 = {"Voter": "Electors (Voters)"}
+
+
+def _write_rescoped(bpml, repo, drive_ids, repo_ids) -> None:
+    """Emit bpml_rescoped.csv -- the proposed sheet, ready to import into Drive."""
+    counts = Counter(r.get("Method", "").strip() for r in repo)
+    out = BPML_DIR / "bpml_rescoped.csv"
+    n_drop = n_merge = 0
+    with out.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh, lineterminator="\n")
+        w.writerow(["L1", "L3_process", "Scope", "Help URL", "Spec",
+                    "Verified by", "Status", "Additional info"])
+        for r in bpml:
+            if r["L3_process"] in DROP_ROWS:
+                n_drop += 1
+                continue
+            l1 = r["L1"]
+            if l1 in MERGE_L1:
+                l1 = MERGE_L1[l1]
+                n_merge += 1
+            cell = (r["test_case_cell"] or "").strip()
+            spec = (r["doc_cell"] or "").strip()
+            if spec in GAP_MARKERS:
+                spec = ""
+
+            if is_counting(r):
+                scope = "Counting"
+                method = next((m for k, m in SEAM_METHOD.items()
+                               if k in r["L3_process"]), None)
+                n = counts.get(method, 0) if method else 0
+                verified = (f"library: {method} ({n} cases) — {LIB_INDEX}"
+                            if n else f"library — {LIB_INDEX}")
+                status = "covered" if n else "unchecked"
+            else:
+                scope = "Application"
+                if cell.lower() in GAP_MARKERS:
+                    verified, status = "", "gap"
+                else:
+                    ids = [_norm(m) for m in ID_RE.findall(cell)]
+                    verified = " ".join(ids)
+                    if not ids:
+                        status = "unchecked"
+                    elif any(i in repo_ids or i in drive_ids for i in ids):
+                        status = "covered"
+                    else:
+                        status = "gap"          # cites an id that exists nowhere
+            w.writerow([l1, r["L3_process"], scope, "", spec, verified, status, ""])
+    print(f"  wrote {out.relative_to(REPO)}  "
+          f"(dropped {n_drop} defect row(s), merged {n_merge} Voter row(s))")
 
 
 def main() -> int:
@@ -81,6 +164,9 @@ def main() -> int:
     repo_unreferenced = repo_ids - cited_ids
     drive_not_in_repo = drive_ids - repo_ids
     repo_not_in_drive = repo_ids - drive_ids
+
+    count_rows = [r for r in bpml if is_counting(r)]
+    app_rows = [r for r in bpml if not is_counting(r)]
 
     by_l1 = Counter(r["L1"] for r in bpml)
     untested = [r for r in bpml
@@ -140,6 +226,37 @@ def main() -> int:
     a("The Drive sheet is the older manual-QA range and stops in the low hundreds; the library's "
       "ids run to BV2284. They are not two views of one inventory — they are two inventories.")
     a("")
+    a("## Why the join returns almost nothing")
+    a("")
+    a("Not neglect — **disjoint subject matter**. Split the sheet's rows by what they are "
+      "actually about:")
+    a("")
+    a("| | rows | |")
+    a("|---|---:|---|")
+    a(f"| BPML rows about **the application** | {len(app_rows)} | {pct(len(app_rows), len(bpml))} |")
+    a(f"| BPML rows about **counting votes** | {len(count_rows)} | {pct(len(count_rows), len(bpml))} |")
+    a(f"| Library elections, every one about **counting votes** | {len(repo_ids)} | 100% |")
+    a("")
+    a("The sheet is overwhelmingly an **application** inventory — create an election, change a "
+      "race, upload voters, download a CSV, log in, archive. The library is entirely a "
+      "**tabulation** inventory — given these ballots, is this the right winner. Those are two "
+      "different testing activities, and no single test-id column can be the coverage map for "
+      "both.")
+    a("")
+    a("The nine rows where they genuinely meet:")
+    a("")
+    a("| L1 | Process | Currently cites |")
+    a("|---|---|---|")
+    for r in count_rows:
+        cell = (r["test_case_cell"] or "").strip() or "—"
+        a(f"| {r['L1']} | {r['L3_process']} | {cell} |")
+    a("")
+    a("**The consequence for the sheet: it should not gain 162 rows. It should gain nine links.** "
+      "A counting row's verification is a whole family of elections in the library, not one id — "
+      "so it points at [the by-method index](../../../YAML_test_case_index/README.md), and the "
+      "library's own count is the coverage number. See [SCOPE.md](SCOPE.md) for the re-scope and "
+      "the resulting column spec.")
+    a("")
 
     if in_repo:
         a("## BPML rows that DO have a runnable case")
@@ -194,6 +311,7 @@ def main() -> int:
       "[all cases by method](../../../YAML_test_case_index/README.md)")
 
     OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
+    _write_rescoped(bpml, repo, drive_ids, repo_ids)
     print(f"reconcile_bpml: {len(bpml)} process rows, {len(repo_ids)} registry cases")
     print(f"  cited ids: {len(cited_ids)}  in repo: {len(in_repo)}  "
           f"drive-only: {len(in_drive_only)}  nowhere: {len(nowhere)}")

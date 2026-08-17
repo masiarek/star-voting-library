@@ -37,6 +37,34 @@ The two inventories also barely overlap by construction:
 
 The Drive sheet is the older manual-QA range and stops in the low hundreds; the library's ids run to BV2284. They are not two views of one inventory — they are two inventories.
 
+## Why the join returns almost nothing
+
+Not neglect — **disjoint subject matter**. Split the sheet's rows by what they are actually about:
+
+| | rows | |
+|---|---:|---|
+| BPML rows about **the application** | 102 | 92% |
+| BPML rows about **counting votes** | 9 | 8% |
+| Library elections, every one about **counting votes** | 163 | 100% |
+
+The sheet is overwhelmingly an **application** inventory — create an election, change a race, upload voters, download a CSV, log in, archive. The library is entirely a **tabulation** inventory — given these ballots, is this the right winner. Those are two different testing activities, and no single test-id column can be the coverage map for both.
+
+The nine rows where they genuinely meet:
+
+| L1 | Process | Currently cites |
+|---|---|---|
+| Election | Verify Preference Matrix | BV705 |
+| Voting Methods | Ranked Robin - Single Winner | BV1550 |
+| Voting Methods | Single-Winner - Approval | — |
+| Voting Methods | Single-winner STAR - scoring/runoff divergence | BV90 |
+| Voting Methods | Plurality (chose one) - Single-winner | — |
+| Voting Methods | Multi-winner - Bloc STAR | — |
+| Voting Methods | Multi-winner Plurality | Multi-winner Plurality |
+| Establish Election Procedures | Handling ties | — |
+| Tabulation | Distribution of Equal Support report | — |
+
+**The consequence for the sheet: it should not gain 162 rows. It should gain nine links.** A counting row's verification is a whole family of elections in the library, not one id — so it points at [the by-method index](../../../YAML_test_case_index/README.md), and the library's own count is the coverage number. See [SCOPE.md](SCOPE.md) for the re-scope and the resulting column spec.
+
 ## BPML rows that DO have a runnable case
 
 | Test id | BPML process | Library case |
