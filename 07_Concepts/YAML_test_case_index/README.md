@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**606 election files** (503 single-winner, 103 multi-winner) across 18 method(s).
+**607 election files** (504 single-winner, 103 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 271 |
 | RCV-IRV (Hare) | 51 |
-| Ranked Robin (RCV-RR / Copeland) | 102 |
+| Ranked Robin (RCV-RR / Copeland) | 103 |
 | Approval | 27 |
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
@@ -363,7 +363,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (102)
+## Ranked Robin (RCV-RR / Copeland)  (103)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -393,6 +393,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`dead_heat_lot_tiebreak`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/dead_heat_lot_tiebreak.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | Ranked Robin — a dead heat that runs the whole tiebreak ladder (LH-only) → _Ada_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/dead_heat_lot_tiebreak.yaml) |
 | [`rr_degrees_finalists_vs_field`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/rr_degrees_finalists_vs_field.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | The 1st Degree counts the finalists only — and it elects someone else → _Alma_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/rr_degrees_finalists_vs_field.yaml) |
 | [`rr_degrees_three_way_cycle`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/rr_degrees_three_way_cycle.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | A three-way cycle has a deterministic answer — and BetterVoting draws lots for it → _Frank_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/rr_degrees_three_way_cycle.yaml) |
+| [`rr_degrees_what_counts_as_a_win`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/cases_pages/rr_degrees_what_counts_as_a_win.md) | `05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/` | 1 | What counts as a win — the rung before the 1st Degree → _Bella_ | [`.yaml`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/cases/rr_degrees_what_counts_as_a_win.yaml) |
 | [`BV_Library_ranked_robin_single_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_single_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Condorcet winner (equal ranks allowed) → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_single_winner.yaml) |
 | [`BV_Library_ranked_robin_ties`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_ranked_robin_ties.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — Ranked Robin: Copeland tie broken by tiebreak order → _Alice_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_ranked_robin_ties.yaml) |
 | [`hh41_02_preferences_ranked_robin`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_02_preferences_ranked_robin.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the assumed preferences, counted pairwise: A is the Condorcet winner → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_02_preferences_ranked_robin.yaml) |

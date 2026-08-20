@@ -1,0 +1,52 @@
+election_title: "What counts as a win — the rung before the 1st Degree"
+scenario_description: >-
+  Four voters rank four candidates, each with a different favourite, and two of
+  the six matchups end level: Aaron and Bella split 2-2, and so do Bella and
+  Caleb. Nobody ranked anyone equal — the draws come from the electorate
+  dividing evenly, which is the ordinary way a small round robin produces one.
+
+  That leaves two candidates at the top with different-shaped records:
+
+    Bella  1 win, 2 draws, 0 losses   — she is never beaten
+    Dana   2 wins, 0 draws, 1 loss    — beaten only by Bella
+
+  Ranked Robin's tie-break protocol has a famous four-degree ladder, but this
+  file is about the rule that runs BEFORE any of it: who is tied for the top in
+  the first place. The published definition is "elect the candidate who pairwise
+  beats the greatest number of candidates" — read literally, that counts wins
+  and nothing else, and the source's own worked example scores a candidate with
+  three wins and a draw as 3, not 3.5. Every implementation, this engine
+  included, instead scores a draw as half a win, which is the standard Copeland
+  tally.
+
+  The two readings elect different people here:
+
+    wins + half-draws   Bella 2.0, Dana 2.0 — tied, so both are FINALISTS, and
+                        the 1st Degree separates them on the margin of their own
+                        matchup (Bella beat Dana 3-1). BELLA is elected.
+    wins only           Dana 2, Bella 1, Aaron 1, Caleb 0 — no tie at all.
+                        DANA is elected outright, with no tie-breaker.
+
+  Note which way the literal reading errs: it elects Dana, who lost a matchup,
+  over Bella, who lost none. That is the reason to read it as loose drafting
+  rather than as a rule two engines got wrong — but it is a judgement call about
+  a published definition, not a finding, and it is written up as an open
+  question. Lesson: degrees_of_ties.md
+voting_method: RankedRobin
+num_winners: 1
+# Four strict rankings, no equal ranks anywhere; the two draws are 2-2 splits.
+#   Aaron - Bella  2-2 draw      Bella beats Dana  3-1
+#   Aaron beats Caleb  3-1       Dana  beats Aaron 3-1
+#   Bella - Caleb  2-2 draw      Dana  beats Caleb 3-1
+#   Copeland (wins + half-draws): Bella 2.0, Dana 2.0, Aaron 1.5, Caleb 0.5
+#   Copeland (wins only):         Dana 2, Bella 1, Aaron 1, Caleb 0
+ballots: |-
+  Aaron>Bella>Dana>Caleb
+  Dana>Aaron>Caleb>Bella
+  Bella>Dana>Aaron>Caleb
+  Caleb>Bella>Dana>Aaron
+
+expected_winners:
+  - Bella
+
+# file: rr_degrees_what_counts_as_a_win.yaml

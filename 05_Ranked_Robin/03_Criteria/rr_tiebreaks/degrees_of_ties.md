@@ -17,6 +17,8 @@ The Equal Vote Coalition's protocol ([electowiki, *Ranked Robin* → Degrees of 
 
 A win margin is just the pairwise result read as one number: the votes ranking you higher minus the votes ranking the other higher. Sum those over a pool and you get a figure that can be positive or negative, and that always sums to zero across the pool — which is the protocol's own argument that the 1st Degree winner is *majority preferred among finalists*, since somebody in the tie must be above zero.
 
+*(The ladder starts from "a tie for the most pairwise victories" — and what counts as a victory is itself unsettled when a matchup is drawn. That question sits below everything on this page and is taken up at the end: [what counts as a win](#the-rung-below-the-ladder-what-counts-as-a-win).)*
+
 **Two things about this ladder are easy to miss, and both change winners.**
 
 **The pool moves between the rungs.** The 1st Degree asks only about the finalists' matches with each other. The 2nd Degree asks about their matches with everybody. Those are different questions with different answers, and the protocol deliberately asks the narrow one first.
@@ -176,6 +178,101 @@ Two of those pages existed *because* of the disagreement. They are worth keeping
 ## A note on the source
 
 The protocol's own worked example of clone teaming does not follow it. [electowiki's clone-independence section](https://electowiki.org/wiki/Ranked_Robin) argues that a faction can convert a coin flip into a win by running clones, and concludes that after cloning "A1 wins after the tiebreaker". On those ballots the finalists are A1 and C, and C beats A1 head-to-head 21–12 — so the 1st Degree elects **C**, and the teaming attack backfires. The clones do still change the outcome (before cloning the count ends in a tie the degrees cannot separate), so clone independence still fails by crowding; what fails with it is the claim that teaming pays. It pays only against the total-margin reading, which is the 2nd Degree — the same mistake this engine was making. Worked in full in [clone independence](../clone_independence/README.md).
+
+## The rung below the ladder — what counts as a win
+
+Everything above starts from the same sentence: *"If there is a tie for the greatest number of pairwise victories…"* Read it again with a **drawn** matchup in mind, and it stops being obvious. A draw is not a victory. Is it nothing, or is it half of one?
+
+The two answers are not equivalent, and the protocol and its implementations are on opposite sides.
+
+**What the spec says.** The primary rule is not a tie-break at all — it is the whole tabulation, stated in one line: *"Elect the candidate who pairwise beats the greatest number of candidates."* Read literally that counts wins and ignores draws, and the source means it literally: in [its own four-degree example](bv2141_3r3yf7_four_degree_tie.md), Ava beats three candidates, draws with Bianca 29–29 and loses one — and the page scores her **3**.
+
+**What every implementation does.** All three engines this repo can reach score that same Ava **3.5**, because they use the standard Copeland tally, `wins + ½·draws`. Our own report prints it on exactly the example electowiki scores as 3:
+
+```text title="Abridged for the lesson — not verbatim engine output"
+    #  Candidate  W–L–T  Copeland  Margin
+    1  Ava        3–1–1       3.5     +55
+    2  Bianca     3–1–1       3.5     +55
+```
+
+BetterVoting's `RankedRobin.ts` awards the same half point, and so does `pref_voting`'s independent Copeland. Nobody implements the sentence as written.
+
+### It can change the winner
+
+On the four-degree example the disagreement is invisible in the outcome — Ava and Bianca have identical records, so they tie at 3 and at 3.5 alike, and the same two candidates go into the ladder. That is luck, not a general fact. Change the *shape* of the records and the two readings elect different people:
+
+<!-- ballots:rr_degrees_what_counts_as_a_win -->
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+Aaron>Bella>Dana>Caleb
+Dana>Aaron>Caleb>Bella
+Bella>Dana>Aaron>Caleb
+Caleb>Bella>Dana>Aaron
+```
+<!-- /ballots -->
+
+Four voters, four different favourites, no equal rankings anywhere — the two drawn matchups are just the electorate splitting 2–2, which is how a small round robin ordinarily produces one.
+
+<!-- report:rr_degrees_what_counts_as_a_win -->
+```text
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 4 ballots (ranked ballots).
+
+Ballots:
+     1 × Aaron > Bella > Dana > Caleb
+     1 × Dana > Aaron > Caleb > Bella
+     1 × Bella > Dana > Aaron > Caleb
+     1 × Caleb > Bella > Dana > Aaron
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Aaron  ties  Bella   2 – 2
+   Dana   beats Aaron   3 – 1
+   Aaron  beats Caleb   3 – 1
+   Bella  beats Dana    3 – 1
+   Bella  ties  Caleb   2 – 2
+   Dana   beats Caleb   3 – 1
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |   Aaron   |  Bella   |  Dana    |  Caleb   |
+--------------------------------------------------------
+  Aaron > |    ---    |2 - 0 - 2 |1 - 0 - 3 |3 - 0 - 1 |
+  Bella > | 2 - 0 - 2 |   ---    |3 - 0 - 1 |2 - 0 - 2 |
+   Dana > | 3 - 0 - 1 |1 - 0 - 3 |   ---    |3 - 0 - 1 |
+  Caleb > | 1 - 0 - 3 |2 - 0 - 2 |1 - 0 - 3 |   ---    |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Bella      1–0–2         2      +2            +2  Dana
+    2  Dana       2–1–0         2      +2            -2  Aaron, Caleb
+    3  Aaron      1–1–1       1.5      +0             —  Caleb
+    4  Caleb      0–2–1       0.5      -4             —  —
+
+Winner — Ranked Robin (RCV-RR): Bella
+   *** 2 candidates tie on the highest Copeland score (2): Bella, Dana — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Bella has the greatest sum of win margins over the other finalists (+2).
+```
+<!-- /report -->
+
+Read the **W–L–T** column, because that is where the whole question lives:
+
+| | record | wins + ½·draws | wins only |
+|---|---|---|---|
+| **Bella** | 1–0–2 — **never beaten** | **2.0** — tied for top | 1 — third |
+| **Dana** | 2–1–0 — beaten by Bella | **2.0** — tied for top | **2** — top, alone |
+
+Under the convention the engines use, Bella and Dana tie, both become finalists, and the 1st Degree separates them on their own matchup, which Bella won 3–1. **Bella is elected.** Under the sentence as written, there is no tie to break: Dana has two victories to Bella's one and **Dana is elected outright**, with the ladder never running at all.
+
+### Why this repo reads it as loose drafting
+
+Notice which way the literal reading errs. It elects **Dana, who lost a matchup, over Bella, who lost none.** A rule that seats a candidate ahead of someone nobody beat is doing something a round-robin scorer is not supposed to do, and it is far easier to believe the sentence was written for the ordinary case — where every matchup is decided and the two readings agree exactly — than that anyone intended that outcome.
+
+The half-point also has an argument of its own that the wins-only reading cannot match: `wins + ½·draws` and `wins − losses` are affine transforms of each other, so they always produce the *same ranking*. Raw wins is the odd rule out, agreeing with neither. That is the reasoning already written into this engine's `ranked_robin_tally`, and it is why a drawn matchup being worth half a win is the standard Copeland tally rather than a house choice.
+
+**So: this repo scores a draw as half a win, and says so wherever it prints a Copeland column.** But that is a judgement about a published definition, not a finding, and the definition it departs from is the method's own. It is recorded here as an open question rather than settled, and it is not filed as a defect against anyone: three independent implementations agreeing against a one-line summary is much more likely to be imprecise drafting than a bug replicated three times. What would close it is Equal Vote saying which they meant — the same posture this repo takes on [what to call the method](../../01_Learn/what_to_call_this_method.md), where the field is genuinely unresolved and our preference is an argument rather than a ruling.
+
+**If it were ever settled the other way**, the cost is bounded and knowable: nothing changes on any election whose every matchup was decided, and among the cases here only those with a drawn matchup *and* differently-shaped records at the top could move.
 
 ## Where the ladder still ends in a lot
 
