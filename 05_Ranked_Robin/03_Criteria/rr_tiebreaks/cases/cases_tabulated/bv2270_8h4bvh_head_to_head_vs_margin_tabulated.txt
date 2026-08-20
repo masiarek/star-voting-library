@@ -3,7 +3,7 @@ SOURCE FILE:     bv2270_8h4bvh_head_to_head_vs_margin.yaml
 TABULATED FILE:  bv2270_8h4bvh_head_to_head_vs_margin_tabulated.txt
 ======================================================================
 
-election_title: "BV2270 — a two-way Copeland tie where LH and BetterVoting elect DIFFERENT candidates"
+election_title: "BV2270 — the two-way Copeland tie that showed the engine was starting the ladder one rung too low"
 scenario_description: >-
   Nine voters rank four trees for a street-planting commission, and the count lands on the
   middle rung of the Ranked Robin tiebreak ladder — the rung the other cases in this folder
@@ -11,21 +11,26 @@ scenario_description: >-
   Cedar but loses to Dogwood; Birch beats Cedar and Dogwood but loses to Alder. Two wins
   each, Copeland 2. Cedar and Dogwood take one each.
 
-  A tie of exactly two is where LH and BetterVoting part company, and this file is the case
-  that makes the parting visible. Neither engine reaches for a lot here — both have a
-  deterministic rung available, and the rungs disagree:
+  A tie of exactly two used to be where LH and BetterVoting parted company, and this file is
+  the case that made the parting visible. Neither engine reaches for a lot here — both have
+  a deterministic rung available, and for two years the rungs disagreed:
 
-    LH  rung 2 = TOTAL MARGIN.   Birch +3 (6-3 over Cedar, 5-4 over Dogwood, 4-5 to Alder)
-                                 beats Alder +1 (5-4, 5-4, 4-5). LH elects BIRCH.
-    BV  rung 2 = HEAD-TO-HEAD.   Alder and Birch played each other and Alder won it 5-4,
-                                 so BetterVoting elects ALDER.
+    LH  (before 2026-08-19)  TOTAL MARGIN.  Birch +3 (6-3 over Cedar, 5-4 over Dogwood,
+                             4-5 to Alder) beats Alder +1 (5-4, 5-4, 4-5) -> BIRCH.
+    BV                       HEAD-TO-HEAD.  Alder and Birch played each other and Alder won
+                             it 5-4 -> ALDER.
 
-  Same ballots, same Copeland table, two derivable winners. This is a sharper divergence
-  than dead_heat_lot_tiebreak.yaml, where the ladders differ but both engines still end up
-  at a rung of last resort: here BOTH answers are computable from the ballots and they are
-  simply not the same answer. pref_voting's independent Copeland agrees with the tally and
-  declines to break the tie at all, returning the leader set {Alder, Birch} — which is the
-  honest position, since the disagreement is about the RULE, not about the count.
+  Ranked Robin's published protocol settles which of those is the method's own answer, and
+  it is not the one this engine was giving. The 1st Degree tiebreaker declares the tied
+  candidates FINALISTS and elects the one with the greatest sum of win margins over THE
+  OTHER FINALISTS — with exactly two finalists that sum is a single number, their own
+  head-to-head. Total margin over the whole field is the 2nd Degree, reached only when the
+  finalists are level against each other. So BetterVoting's rung was right and the engine's
+  was one rung too low; the engine was corrected on 2026-08-19 and now elects ALDER too.
+  pref_voting's independent Copeland still declines to break the tie at all, returning the
+  leader set {Alder, Birch} — the honest position for a library that implements the tally
+  and not the tiebreak. Read the full ladder in
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.
 
   Note also that the whole field is one Smith set: Alder>Birch>Dogwood>Alder cycles, so
   there is no Condorcet winner and the Copeland leaders understate how wide the contention
@@ -47,8 +52,8 @@ bv_results_url: https://bettervoting.com/8h4bvh/results
 
 voting_method: RankedRobin   # = RCV-RR / Copeland — round-robin on a ranked ballot
 num_winners: 1
-# No lot_numbers: neither engine reaches a lot rung here. LH separates the two leaders on
-# total margin; BV separates them head-to-head. The tiebreak ORDER BV recorded
+# No lot_numbers: neither engine reaches a lot rung here. Both separate the two leaders on
+# their head-to-head — the 1st Degree. The tiebreak ORDER BV recorded
 # (tieBreakOrder: Cedar 0, Birch 1, Dogwood 2, Alder 3) decides nothing about the winner —
 # it only decides the ROW ORDER on the results page, which is what makes the display defect
 # visible. tieBreakType in the export is "none".
@@ -56,7 +61,8 @@ num_winners: 1
 #   Dogwood 1-2-0 Copeland 1 margin -1; Cedar 1-2-0 Copeland 1 margin -3.
 #   Pairwise: Alder>Birch 5-4, Alder>Cedar 5-4, Dogwood>Alder 5-4, Birch>Cedar 6-3,
 #   Birch>Dogwood 5-4, Cedar>Dogwood 5-4. Smith set = all four.
-#   LH -> Birch (margin). BV -> Alder (head-to-head). pref_voting -> {Alder, Birch}.
+#   LH -> Alder (1st Degree; was Birch on the pre-2026-08-19 total-margin rung).
+#   BV -> Alder (head-to-head). pref_voting -> {Alder, Birch}, declining to choose.
 #
 # The three mirror-pair ballots (Alder>Birch>Cedar>Dogwood plus its exact reverse) were
 # cast on the live election to re-roll BV's display shuffle, which re-seeds on every vote.
@@ -69,7 +75,7 @@ ballots: |-
   1:Dogwood>Alder>Birch>Cedar
 
 expected_winners:
-  - Birch
+  - Alder
 
 # file: bv2270_8h4bvh_head_to_head_vs_margin.yaml
 
@@ -104,15 +110,15 @@ Legend: For - Equal Support - Against   (row vs column)
     Cedar > | 4 - 0 - 5 |3 - 0 - 6 |   ---    |5 - 0 - 4 |
   Dogwood > | 5 - 0 - 4 |4 - 0 - 5 |4 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Birch      2–1–0         2      +3  Dogwood, Cedar
-    2  Alder      2–1–0         2      +1  Birch, Cedar
-    3  Dogwood    1–2–0         1      -1  Alder
-    4  Cedar      1–2–0         1      -3  Dogwood
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Alder      2–1–0         2      +1            +1  Birch, Cedar
+    2  Birch      2–1–0         2      +3            -1  Cedar, Dogwood
+    3  Cedar      1–2–0         1      -3             —  Dogwood
+    4  Dogwood    1–2–0         1      -1             —  Alder
 
-Winner — Ranked Robin (RCV-RR): Birch
-   *** 2 candidates tie for the most wins (Alder, Birch) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Alder
+   *** 2 candidates tie for the most wins (Alder, Birch) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Alder has the greatest sum of win margins over the other finalists (+1).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -125,7 +131,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Alder, Birch) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Birch is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Alder is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

@@ -2,7 +2,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/p8dp28) · **[results ↗](https://bettervoting.com/p8dp28/results)** (election `p8dp28`, Test ID **BV2176**).
 
-The 20-voter election from Equal Vote's video **["Updated: How does RCV work? — With Post-its!"](https://youtu.be/Vte4nly_Neg)** — the whiteboard demo that walks through an RCV-IRV count sticky note by sticky note, then asks the question the count itself never asks: *was the eliminated candidate actually stronger head-to-head?* Four candidates (Purple, Green, Blue, Pink), one electorate, three tabulations live on BetterVoting: RCV-IRV elects **Purple**, STAR (on the video's own 0–5 scores) elects **Blue**, and Ranked Robin exposes a Condorcet cycle whose 2–1 tie the two engines break differently — **Green** on BetterVoting, **Blue** in the LH engine. Same ballots, three defensible winners: the tabulation decides. <!-- terminology-ok: bare RCV is inside the quoted video title -->
+The 20-voter election from Equal Vote's video **["Updated: How does RCV work? — With Post-its!"](https://youtu.be/Vte4nly_Neg)** — the whiteboard demo that walks through an RCV-IRV count sticky note by sticky note, then asks the question the count itself never asks: *was the eliminated candidate actually stronger head-to-head?* Four candidates (Purple, Green, Blue, Pink), one electorate, three tabulations live on BetterVoting: RCV-IRV elects **Purple**, STAR (on the video's own 0–5 scores) elects **Blue**, and Ranked Robin exposes a Condorcet cycle whose 2–1 tie goes to Green. Same ballots, three defensible winners: the tabulation decides. For two years this page said the Ranked Robin race split the engines — Green on BetterVoting, Blue in the LH engine — and that was a bug on our side, corrected below. <!-- terminology-ok: bare RCV is inside the quoted video title -->
 
 ## The ballots
 
@@ -35,16 +35,13 @@ The video then flips the round-2 elimination: *what if Green (7 votes) had gone 
 |---|---|:--:|:--:|:--|
 | Post-its 20 voters — STAR | STAR | **Blue** | **Blue** | 46/38/44/44; second-finalist tie → head-to-head Blue 10–3 Pink; runoff Blue 10–9 (Runoff Reversal) |
 | Post-its 20 voters — RCV-IRV | IRV | **Purple** | **Purple** | 7/6/4/3 → 8/7/4 → 9–8; 3 exhausted |
-| Post-its 20 voters — Ranked Robin | RankedRobin (Copeland) | **Green** | **Blue** | 2-way Copeland tie at 2–1 — the two ladders part ways (below) |
+| Post-its 20 voters — Ranked Robin | RankedRobin (Copeland) | **Green** | **Green** | 2-way Copeland tie at 2–1, settled by the finalists' own head-to-head (below) |
 
-## The Ranked Robin race — one tie, two ladders, both deterministic
+## The Ranked Robin race — a two-way tie, settled at the first rung
 
-There is **no Condorcet winner** here: the pairwise picture is a genuine cycle (Purple beats Green 9–8, Green beats Blue 7–4, Blue beats Purple 10–9 — and Pink beats Purple 12–8). Green and Blue each go **2–1** (Copeland 2), and that tie is exactly where [the two engines' tiebreak ladders diverge](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md):
+There is **no Condorcet winner** here: the pairwise picture is a genuine cycle (Purple beats Green 9–8, Green beats Blue 7–4, Blue beats Purple 10–9 — and Pink beats Purple 12–8). Green and Blue each go **2–1** (Copeland 2), so the tally stops and Ranked Robin's published [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) take over. With exactly two finalists the **1st Degree — greatest sum of win margins over the other finalists — is simply their own match**: Green beats Blue **7–4**, so Green wins the tie +3 to −3. BetterVoting reports the same, live, by the same reasoning.
 
-- **BetterVoting** (`RankedRobin.ts`): exactly 2 tied → their own head-to-head. Green beats Blue **7–4** → **Green**, deterministically (BV-confirmed live).
-- **LH** (`run_ranked_robin`): total margin. Blue +5 vs Green +4 → **Blue**, deterministically.
-
-Both ladders are deterministic on this profile, so the race is freezable — making BV2176 the **first live BetterVoting election to exhibit the documented ladder divergence** (the previous worked example, the dead-heat case, is LH-only because BV's ladder falls through to random there). The independent `pref_voting` Copeland check reports the leader *set* {Blue, Green}: both engines tie-broke inside it, consistently with their published rules.
+**This race is one of four live BetterVoting elections where the LH engine got that wrong**, and the one where it was written up at greatest length. Until 2026-08-19 the engine had no 1st Degree rung: it broke a Copeland tie by *total margin over the whole field* — the protocol's **2nd Degree** — where Blue's +5 edges Green's +4, and it elected **Blue**, the candidate who had just lost the finalists' match 4–7. The page you are reading described that as the two engines' "ladders parting ways," a difference of convention between two defensible rules. It was not a convention; it was a missing rung, and BetterVoting was the engine following the spec. The independent `pref_voting` Copeland check never took a side — it reports the leader *set* {Blue, Green} and declines — which is exactly why it could not catch this: a cross-check that only asks *"is the winner inside the tied set?"* passes both a correct and an incorrect tiebreak.
 
 ---
 
@@ -59,12 +56,12 @@ Both ladders are deterministic on this profile, so the race is freezable — mak
   Choose-One (Plurality) = Purple   (differs from STAR)
   RCV-IRV                = Purple   (differs from STAR)
   Approval               = Pink   (differs from STAR)
+  RCV-RR                 = Green   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: cases_tabulated/bv2176_p8dp28_star_RCV-IRV_tabulated.txt
+  RCV-RR round-robin: cases_tabulated/bv2176_p8dp28_star_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Purple)
@@ -150,9 +147,9 @@ Pink               0  Rejected
 Blank Votes        3  Rejected
 ```
 
-### Ranked Robin — the cycle, the 2–1 tie, and LH's margin rung
+### Ranked Robin — the cycle, the 2–1 tie, and the 1st Degree
 
-```
+```text title="Abridged for the lesson — the round-robin and win–loss blocks of the full report"
 Round-Robin — every pair, head-to-head (For – Against):
    Purple  beats Green     9 –  8
    Blue    beats Purple   10 –  9
@@ -161,20 +158,18 @@ Round-Robin — every pair, head-to-head (For – Against):
    Green   beats Pink      7 –  5
    Blue    beats Pink     10 –  3
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Blue       2–1–0         2      +5  Purple, Pink
-    2  Green      2–1–0         2      +4  Blue, Pink
-    3  Purple     1–2–0         1      -4  Green
-    4  Pink       1–2–0         1      -5  Purple
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Green      2–1–0         2      +4            +3  Blue, Pink
+    2  Blue       2–1–0         2      +5            -3  Pink, Purple
+    3  Pink       1–2–0         1      -5             —  Purple
+    4  Purple     1–2–0         1      -4             —  Green
 
-Winner — Ranked Robin (RCV-RR): Blue
-   *** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a
-   cycle (some of them beat others head-to-head, but no loop closes). Resolved by
-   total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Green
+   *** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Green has the greatest sum of win margins over the other finalists (+3).
 ```
 
-BetterVoting's live result for the same race: **Green** (Copeland 2, elected via the head-to-head rung of its ladder).
+Read the two margin columns against each other and the whole bug is one line wide: **Margin** is the 2nd Degree (whole field) and puts Blue ahead by one point; **vs finalists** is the 1st Degree and puts Green ahead by six. The protocol asks the narrow question first. BetterVoting's live result for the same race is **Green**, and has been since the election was minted.
 
 ---
 
@@ -186,9 +181,9 @@ BetterVoting's live result for the same race: **Green** (Copeland 2, elected via
 | RCV-IRV | [page](cases/cases_pages/bv2176_p8dp28_irv.md) · [bv2176_p8dp28_irv.yaml](cases/bv2176_p8dp28_irv.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_irv_tabulated.txt) |
 | Ranked Robin | [page](cases/cases_pages/bv2176_p8dp28_ranked_robin.md) · [bv2176_p8dp28_ranked_robin.yaml](cases/bv2176_p8dp28_ranked_robin.yaml) | [txt](cases/cases_tabulated/bv2176_p8dp28_ranked_robin_tabulated.txt) |
 
-Frozen BetterVoting export (Election + Ballots + Results): [bv2176_p8dp28_bv_export.json](cases/bv2176_p8dp28_bv_export.json) — BV's stored winners match every LH prediction (STAR Blue, RCV-IRV Purple, Ranked Robin **Green** — the ladder divergence, on the record).
+Frozen BetterVoting export (Election + Ballots + Results): [bv2176_p8dp28_bv_export.json](cases/bv2176_p8dp28_bv_export.json) — BV's stored winners are STAR **Blue**, RCV-IRV **Purple**, Ranked Robin **Green**, and the corrected LH engine now matches all three. The export was frozen while the third one still read as a disagreement, so it is also the receipt for the bug.
 
-Related: [the video](https://youtu.be/Vte4nly_Neg) · [LH vs BV on Ranked Robin ties](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · up: [method_comparisons](../README.md)
+Related: [the video](https://youtu.be/Vte4nly_Neg) · [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · up: [method_comparisons](../README.md)
 
 *BetterVoting result screenshots (View 1) can be dropped into `img/` as `img/p8dp28_<what>.png` and linked here.*
 

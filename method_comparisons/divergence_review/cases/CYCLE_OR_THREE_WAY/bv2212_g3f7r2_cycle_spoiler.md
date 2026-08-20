@@ -174,14 +174,14 @@ Legend: For - Equal Support - Against   (row vs column)
     Ben > |  6 -  0 - 17 |    ---      |16 -  0 -  7 |
   Carla > | 13 -  0 - 10 | 7 -  0 - 16 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Alice      1–1–0         1      +8  Ben
-    2  Ben        1–1–0         1      -2  Carla
-    3  Carla      1–1–0         1      -6  Alice
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Alice      1–1–0         1      +8            +8  Ben
+    2  Ben        1–1–0         1      -2            -2  Carla
+    3  Carla      1–1–0         1      -6            -6  Alice
 
 Winner — Ranked Robin (RCV-RR): Alice
-   *** 3 candidates tie for the most wins (Alice, Ben, Carla) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Alice, Ben, Carla) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Alice has the greatest sum of win margins over the other finalists (+8). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

@@ -177,14 +177,14 @@ Legend: For - Equal Support - Against   (row vs column)
   B > | 15 -  0 -  9 |    ---      | 7 -  0 - 17 |
   C > |  8 -  0 - 16 |17 -  0 -  7 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A          1–1–0         1      +2  C
-    2  C          1–1–0         1      +2  B
-    3  B          1–1–0         1      -4  A
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          1–1–0         1      +2            +2  C
+    2  C          1–1–0         1      +2            +2  B
+    3  B          1–1–0         1      -4            -4  A
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

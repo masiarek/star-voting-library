@@ -7,7 +7,7 @@ scenario_description: |-
   SCC. Delete D, who wins nothing under the first agenda: A beats C 8:3 and then B 11:0, so A wins. A non-winner's mere presence decided the election.
   NO-SHOW is the companion file succ_elim_ex9_noshow.yaml, where two of the D-first voters stay home and get A, whom they prefer to B.
   Labels are Felsenthal's own, capitalized; this is an academic reproduction meant to be read beside the paper's table, not a scenario with a cast.
-  Successive elimination exists in neither the LH engine nor BetterVoting — it is a parliamentary procedure, not a ballot-box method — so this file is tabulated as Ranked Robin, which reads the same pairwise matrix the agenda consumes one pair at a time. Ranked Robin elects A, the candidate the agenda buried. Run the procedure itself with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py, whose --agenda and --drop flags reproduce all four readings above.
+  Successive elimination exists in neither the LH engine nor BetterVoting — it is a parliamentary procedure, not a ballot-box method — so this file is tabulated as Ranked Robin, which reads the same pairwise matrix the agenda consumes one pair at a time. Ranked Robin ties A and D at 2 wins each and separates them the way the method says to — the finalists' own head-to-head, its 1st Degree — which D wins 6:5. So Ranked Robin elects D: not the Pareto-dominated B the first agenda produces, and not the A the third agenda produces, but the winner of the second. (Before 2026-08-19 the engine used total margin over the whole field here and reported A; that is Ranked Robin's 2nd Degree, reachable only when the finalists are level against each other — see 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.) Run the procedure itself with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py, whose --agenda and --drop flags reproduce all four readings above.
 paradoxes: [pareto, spoiler-scc, condorcet-cycle, no-show]
 voting_method: RankedRobin
 num_winners: 1
@@ -17,6 +17,6 @@ ballots: |-
   1:C>D>A>B
   5:D>A>B>C
 expected_winners:
-  - A
+  - D
 
 # file: succ_elim_ex9_pareto.yaml

@@ -190,7 +190,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Denver > | 0 - 0 - 5 |1 - 1 - 3 |2 - 1 - 2 |   ---    |2 - 1 - 2 |
      Erie > | 0 - 0 - 5 |1 - 1 - 3 |2 - 2 - 1 |2 - 1 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Boston     4–0–0         4      +7  Austin, Erie, Denver, Chicago
     2  Austin     3–1–0         3     +14  Erie, Denver, Chicago

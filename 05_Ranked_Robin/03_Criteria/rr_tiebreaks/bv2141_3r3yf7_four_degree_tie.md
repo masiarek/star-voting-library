@@ -16,7 +16,7 @@ Ava and Bianca each win **3** of 5 matchups (Copeland **3.5**), each with total 
 |--------|-----------------|-------------|
 | **Equal Vote 4-degree protocol** (electowiki) | wins → margin-over-finalists → margin-over-all → least-polarizing → **beatpath** | **Bianca** (beatpath 14 vs 7) |
 | **BetterVoting** `RankedRobin.ts` | wins → 2-way head-to-head → **random** | **random** — this draw: **Ava** |
-| **LH** `run_ranked_robin` | wins → total margin → **lot** (pre-published) | **Ava** (lot pinned to BV's draw) |
+| **LH** `run_ranked_robin` | wins → 1st Degree → 2nd Degree → **lot** (pre-published) | **Ava** (lot pinned to BV's draw) |
 
 The tie runs so deep that BetterVoting gives up and rolls dice. Its own results log says so verbatim:
 
@@ -109,24 +109,24 @@ Legend: For - Equal Support - Against   (row vs column)
    Fabio > | 32 -  4 - 45 |39 -  4 - 38 |16 -  9 - 56 |39 -  0 - 42 |    ---      |24 -  6 - 51 |
   Bianca > | 50 -  0 - 31 |35 -  9 - 37 |29 - 23 - 29 |39 - 14 - 28 |51 -  6 - 24 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ava        3–1–1       3.5     +55  Deegan, Eli, Fabio
-    2  Bianca     3–1–1       3.5     +55  Cedric, Eli, Fabio
-    3  Deegan     2–2–1       2.5      +7  Bianca, Eli
-    4  Cedric     2–2–1       2.5     -14  Ava, Fabio
-    5  Eli        2–3–0         2     -21  Cedric, Fabio
-    6  Fabio      1–4–0         1     -82  Deegan
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ava        3–1–1       3.5     +55             0  Deegan, Eli, Fabio
+    2  Bianca     3–1–1       3.5     +55             0  Cedric, Eli, Fabio
+    3  Deegan     2–2–1       2.5      +7             —  Bianca, Eli
+    4  Cedric     2–2–1       2.5     -14             —  Ava, Fabio
+    5  Eli        2–3–0         2     -21             —  Cedric, Fabio
+    6  Fabio      1–4–0         1     -82             —  Deegan
 
 Winner — Ranked Robin (RCV-RR): Ava
-   *** 2 candidates tie on the highest Copeland score (3.5): Ava, Bianca — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (3.5): Ava, Bianca — a dead heat (they draw head-to-head, not a cycle). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order.
 ```
 <!-- /report -->
 Full detail: [`bv2141_3r3yf7_four_degree_tie_tabulated.txt`](cases/cases_tabulated/bv2141_3r3yf7_four_degree_tie_tabulated.txt).
 
 ## The Ava–Bianca head-to-head is itself a tie
 
-The matrix shows why no simple rule works: **Ava vs Bianca is 29 – 29** (with 23 Equal Support). So BetterVoting's "break a 2-way tie by head-to-head" rung is *also* tied, and it falls through to random. LH's "break by total margin" rung is tied too (+55 = +55), so LH falls through to lot. Only the Equal Vote beatpath (4th degree) separates them — and it favors **Bianca** (14 vs 7), the answer neither engine here computes.
+The matrix shows why no simple rule works: **Ava vs Bianca is 29 – 29** (with 23 Equal Support). So BetterVoting's "break a 2-way tie by head-to-head" rung is *also* tied, and it falls through to random. LH runs both published degrees and they are tied too — 0 = 0 over the finalists, +55 = +55 over the field — so it falls through to its lot. Only the Equal Vote beatpath (4th degree) separates them — and it favors **Bianca** (14 vs 7), the answer neither engine here computes.
 
 ## A note on electowiki's published matrix
 
@@ -136,4 +136,4 @@ electowiki's *outcome* is correct (Ava/Bianca tie → Bianca by 4th degree), and
 
 - **LH native** `run_ranked_robin` — Ava/Bianca tie 3.5; lot (pinned to BV perm) → Ava.
 - **BetterVoting** `RankedRobin.ts` — Ava/Bianca tie 3.5; `tieBreakType: random` → Ava (this draw); records identical to LH.
-- **Equal Vote 4-degree protocol** (electowiki) — → Bianca (beatpath 14 vs 7); implemented by neither engine.
+- **Equal Vote 4-degree protocol** (electowiki) — → Bianca (beatpath 14 vs 7). LH implements the first two degrees ([since 2026-08-19](degrees_of_ties.md)); the 3rd and 4th are implemented by neither engine, and the protocol itself recommends a lot or a re-run over using them in a public election — which is exactly what both engines do here.

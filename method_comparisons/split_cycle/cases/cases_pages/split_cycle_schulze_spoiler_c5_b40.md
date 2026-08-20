@@ -7,7 +7,7 @@ search:
 
 *Generated from [`split_cycle_schulze_spoiler_c5_b40.yaml`](../split_cycle_schulze_spoiler_c5_b40.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Cascade
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Denali
 
 **Official tie-break (lot) order:** Arches > Bryce > Cascade > Denali > Everglade — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -47,8 +47,15 @@ Verified with pref_voting, both fields:
     method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml
   uv run …/cycle_resolution_report.py …/split_cycle_schulze_spoiler_c5_b40.yaml --drop Bryce
 
+Ranked Robin's own answer, for the record, is Denali: Copeland ties Denali and
+Cascade, and the 1st Degree tiebreaker asks how the two finalists did against
+each other — Denali beat Cascade 22-18. (Until 2026-08-19 this engine broke the
+tie on margins over the whole field, its 2nd Degree, and reported Cascade; see
+05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.) That answer is
+incidental to the lesson, which is about Schulze and Split Cycle.
+
 LH-only (no BetterVoting election): neither BV nor the LH engine implements
-Schulze or Split Cycle, and the LH Copeland result here is a tie. Lesson page:
+Schulze or Split Cycle, and the Copeland result here is a tie on the tally. Lesson page:
 07_Concepts/topics/condorcet/split_cycle.md
 
 ## Ballots
@@ -100,16 +107,16 @@ Legend: For - Equal Support - Against   (row vs column)
       Bryce > | 10 -  0 - 30 |18 -  0 - 22 | 0 -  0 - 40 |    ---      |29 -  0 - 11 |
      Arches > | 21 -  0 - 19 |29 -  0 - 11 |11 -  0 - 29 |11 -  0 - 29 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Cascade    3–1–0         3     +56  Arches, Everglade, Bryce
-    2  Denali     3–1–0         3      -8  Cascade, Everglade, Bryce
-    3  Arches     2–2–0         2     -16  Denali, Everglade
-    4  Everglade  1–3–0         1     +14  Bryce
-    5  Bryce      1–3–0         1     -46  Arches
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Denali     3–1–0         3      -8            +4  Cascade, Everglade, Bryce
+    2  Cascade    3–1–0         3     +56            -4  Arches, Everglade, Bryce
+    3  Arches     2–2–0         2     -16             —  Denali, Everglade
+    4  Everglade  1–3–0         1     +14             —  Bryce
+    5  Bryce      1–3–0         1     -46             —  Arches
 
-Winner — Ranked Robin (RCV-RR): Cascade
-   *** 2 candidates tie for the most wins (Denali, Cascade) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Denali
+   *** 2 candidates tie for the most wins (Denali, Cascade) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Denali has the greatest sum of win margins over the other finalists (+4).
 ```
 <!-- --8<-- [end:report] -->
 
@@ -127,7 +134,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Denali, Cascade) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Cascade is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Denali is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.
@@ -146,5 +153,6 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)

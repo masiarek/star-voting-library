@@ -190,11 +190,11 @@ Legend: For - Equal Support - Against   (row vs column)
      Dublin > |  3 - 0 - 4  | 5 - 0 - 2  | 3 - 0 - 4  |    ---     | 5 - 0 - 2  |
   Edinburgh > |  5 - 0 - 2  | 5 - 0 - 2  | 5 - 0 - 2  | 2 - 0 - 5  |    ---     |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Edinburgh  3–1–0         3      +6  Cork, Athens, Bergen
-    2  Dublin     2–2–0         2      +4  Edinburgh, Bergen
-    3  Cork       2–2–0         2      -2  Dublin, Athens
+    2  Cork       2–2–0         2      -2  Dublin, Athens
+    3  Dublin     2–2–0         2      +4  Edinburgh, Bergen
     4  Athens     2–2–0         2      -4  Dublin, Bergen
     5  Bergen     1–3–0         1      -4  Cork
 

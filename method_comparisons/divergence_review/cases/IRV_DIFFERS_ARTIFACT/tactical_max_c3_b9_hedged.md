@@ -173,7 +173,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 4 - 4 - 1 |   ---    |8 - 0 - 1 |
   Celia > | 4 - 0 - 5 |1 - 0 - 8 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Bruno      2–0–0         2     +10  Alma, Celia
     2  Alma       1–1–0         1      -2  Celia

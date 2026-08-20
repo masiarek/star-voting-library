@@ -3,11 +3,11 @@ search:
   exclude: true
 ---
 
-# BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV
+# BV2143 — Ranked Robin clone independence (2/2): the clones change the outcome, and hand it to C
 
 *Generated from [`bv2143_9pr3wr_teaming_fails.yaml`](../bv2143_9pr3wr_teaming_fails.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** A1
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** C
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9pr3wr) · **[results ↗](https://bettervoting.com/9pr3wr/results)** (election `9pr3wr` · test `BV2143`).
 
@@ -15,7 +15,7 @@ search:
 
 ## Scenario
 
-The electowiki clone-independence example, part 2 (teaming), BV-backed. Same election as BV2142 but the A-faction runs clones A1, A2. The two engines reach OPPOSITE winners from identical ballots: A1 and C tie at 5 wins. LH breaks it by total margin — A1 +134 beats C +104 — so LH elects A1, and the teaming attack SUCCEEDS (this file pins lot but margin already decides). BetterVoting breaks the 2-way tie by head-to-head instead, and C beats A1 21-12, so BV elects C (tieBreakType "none", log "C preferred over A1 in runoff") — the teaming attack FAILS on BV. Same ballots, different tiebreak, different winner: the clone failure is a property of the margin rule, not of Ranked Robin as such. LH-only clean pair: clone_teaming_02_post.yaml. Lesson: 05_Ranked_Robin/01_Learn/rr_clone_independence.md Live results: https://bettervoting.com/9pr3wr/results
+The electowiki clone-independence example, part 2 (teaming), BV-backed. Same election as BV2142 but the A-faction runs clones A1, A2. A1 and C tie at 5 wins, and Ranked Robin's 1st Degree tiebreaker compares the finalists with each other: C beats A1 21-12, so C is elected — on BetterVoting (tieBreakType "none", log "C preferred over A1 in runoff") and, since 2026-08-19, on this engine too. The clones still CHANGED THE OUTCOME (before cloning the count ends in a lot between A and B), so clone independence still fails by crowding; what fails with it is the attack, because the win goes to C rather than to the cloning faction. Until 2026-08-19 this engine broke the tie on total margin over the whole field — A1 +134 beats C +104 — and elected A1, which made the teaming attack look successful and made the two engines look like they disagreed about the method. They did not: total margin is Ranked Robin's 2nd Degree, and it is reached only when the finalists are level against each other. See 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md. LH-only clean pair: clone_teaming_02_post.yaml. Lesson: 05_Ranked_Robin/01_Learn/rr_clone_independence.md Live results: https://bettervoting.com/9pr3wr/results
 
 ## Ballots
 
@@ -77,18 +77,18 @@ Legend: For - Equal Support - Against   (row vs column)
    E > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |33 -  0 -  0 |
    F > |  0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 | 0 -  0 - 33 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A1         5–1–0         5    +134  B, A2, D, E, F
-    2  C          5–1–0         5    +104  A1, A2, D, E, F
-    3  B          4–2–0         4     +90  C, D, E, F
-    4  A2         4–2–0         4     +68  B, D, E, F
-    5  D          2–4–0         2     -66  E, F
-    6  E          1–5–0         1    -132  F
-    7  F          0–6–0         0    -198  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  C          5–1–0         5    +104            +9  A1, A2, D, E, F
+    2  A1         5–1–0         5    +134            -9  A2, B, D, E, F
+    3  A2         4–2–0         4     +68             —  B, D, E, F
+    4  B          4–2–0         4     +90             —  C, D, E, F
+    5  D          2–4–0         2     -66             —  E, F
+    6  E          1–5–0         1    -132             —  F
+    7  F          0–6–0         0    -198             —  —
 
-Winner — Ranked Robin (RCV-RR): A1
-   *** 2 candidates tie for the most wins (A1, C) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): C
+   *** 2 candidates tie for the most wins (A1, C) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: C has the greatest sum of win margins over the other finalists (+9).
 ```
 <!-- --8<-- [end:report] -->
 
@@ -106,7 +106,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (A1, C) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner A1 is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner C is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

@@ -84,14 +84,14 @@ Legend: For - Equal Support - Against   (row vs column)
    Beto > | 2 - 0 - 4 |   ---    |4 - 0 - 2 |
    Cleo > | 4 - 0 - 2 |2 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Anika      1–1–0         1      +0  Beto
-    2  Cleo       1–1–0         1      +0  Anika
-    3  Beto       1–1–0         1      +0  Cleo
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Anika      1–1–0         1      +0             0  Beto
+    2  Cleo       1–1–0         1      +0             0  Anika
+    3  Beto       1–1–0         1      +0             0  Cleo
 
 Winner — Ranked Robin (RCV-RR): Anika
-   *** 3 candidates tie for the most wins (Anika, Beto, Cleo) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Anika, Beto, Cleo) — a Condorcet cycle (no candidate beats all others). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

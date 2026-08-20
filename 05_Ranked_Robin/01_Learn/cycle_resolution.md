@@ -75,7 +75,7 @@ A nastier **five-candidate** cycle drives the point home — 77 voters, [runnabl
 
 | Method | Winner | |
 |---|---|---|
-| Ranked Robin / **Copeland** | **Ava** | Copeland ties Ava & Ben (both 3–1); the margin tiebreak picks Ava (+76 vs +24) |
+| Ranked Robin / **Copeland** | **Ben** | Copeland ties Ava & Ben (both 3–1); the [1st Degree](../03_Criteria/rr_tiebreaks/degrees_of_ties.md) asks how the two finalists did against each other, and Ben beat Ava 40–37 |
 | **Minimax** | **Ava** | her worst defeat (to Ben, by 3) is the field's mildest |
 | **Schulze** | **Ava** | strongest beatpaths run Ava's way |
 | **Ranked Pairs** | **Ben** | locks the biggest margins first, and they carry Ben |
@@ -94,7 +94,7 @@ Same ballots, and **Ranked Pairs stands alone at Ben** while every other rule le
 
 ## Where Ranked Robin and STAR fit
 
-- **Ranked Robin (Equal Vote)** is essentially **Copeland + a margins tiebreak** — a pragmatic choice: cycles are rare, so the simple win-loss count plus a sum-of-margins fallback is usually plenty. (Consensus Choice uses a different fallback, "Most Wins, Smallest Loss" — same family, different cycle rule.) See [Ranked Robin (RCV-RR / Copeland)](ranked_robin.md).
+- **Ranked Robin (Equal Vote)** is essentially **Copeland + a margins tiebreak**, and the margins are asked for in two stages — first among the tied candidates only, then across the whole field ([degrees of ties](../03_Criteria/rr_tiebreaks/degrees_of_ties.md)). A pragmatic choice: cycles are rare, so the simple win-loss count plus a margins fallback is usually plenty. (Consensus Choice uses a different fallback, "Most Wins, Smallest Loss" — same family, different cycle rule.) See [Ranked Robin (RCV-RR / Copeland)](ranked_robin.md).
 - **STAR is *not* a Condorcet method** and doesn't try to resolve cycles at all. Its score-then-runoff just produces a winner, which *can* differ from the Condorcet winner ([BV2156 (STAR's miss)](../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md)). The trade: these ranked methods capture *pure majority preference* but ignore *intensity*; STAR captures intensity (how much, not just which) at the cost of strict Condorcet guarantees. Neither is "the" right answer — it's a values choice.
 
 ## How often do cycles even happen?

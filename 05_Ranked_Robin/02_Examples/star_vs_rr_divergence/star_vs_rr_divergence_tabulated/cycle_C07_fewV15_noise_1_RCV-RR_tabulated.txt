@@ -55,14 +55,14 @@ Legend: For - Equal Support - Against   (row vs column)
   F > |  4 -  3 -  8 | 4 -  6 -  5 | 6 -  2 -  7 | 4 -  1 - 10 | 4 -  5 -  6 |    ---      | 5 -  0 - 10 |
   G > |  6 -  1 -  8 | 7 -  2 -  6 | 6 -  3 -  6 | 5 -  1 -  9 | 6 -  4 -  5 |10 -  0 -  5 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A          5–0–1       5.5     +12  G, C, E, B, F
-    2  D          4–0–2         5     +15  G, E, B, F
-    3  G          3–2–1       3.5      +1  E, B, F
+    1  A          5–0–1       5.5     +12  G, C, B, E, F
+    2  D          4–0–2         5     +15  G, B, E, F
+    3  G          3–2–1       3.5      +1  B, E, F
     4  C          2–2–2         3      +0  B, F
-    5  E          2–4–0         2      -4  C, F
-    6  B          2–4–0         2      -5  E, F
+    5  B          2–4–0         2      -5  E, F
+    6  E          2–4–0         2      -4  C, F
     7  F          0–6–0         0     -19  —
 
 Winner — Ranked Robin (RCV-RR): A

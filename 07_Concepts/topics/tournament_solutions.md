@@ -56,7 +56,7 @@ All of them agree — trivially — whenever a [Condorcet winner](../../05_Ranke
 | **Slater set** | the tops of the closest linear orderings (fewest arrows reversed) | **NP-hard** |
 | **Markov set** | who wins most often in a stay-at-the-table tournament (≈ PageRank) | polynomial |
 
-Two things a newcomer should take from that table. First, **"how hard is it to compute" varies wildly and doesn't track how sensible the rule is** — Banks and Slater are both intellectually respectable and both intractable, while Copeland is linear-time. Second, **most of these return a *set*, not a winner.** That's not a failure; irresoluteness is the normal state here. Getting to one name always takes information from outside the graph, or a lot.
+Two things a newcomer should take from that table. First, **"how hard is it to compute" varies wildly and doesn't track how sensible the rule is** — Banks and Slater are both intellectually respectable and both intractable, while Copeland is linear-time. Second, **most of these return a *set*, not a winner.** That's not a failure; irresoluteness is the normal state here. Getting to one name takes a further rule — usually information from outside the graph, or a lot, though a tie between exactly two candidates can be settled by an arrow the graph already contains, which is the fine distinction the next section turns on.
 
 The three axioms the literature actually argues about:
 
@@ -77,9 +77,11 @@ Which means the literature's verdicts on Copeland land directly on Ranked Robin,
 
 And one sharp point that falls out of the runnable case, which we haven't stated anywhere else in the repo:
 
-> **The moment Ranked Robin breaks a Copeland tie by margin, it has stopped being a tournament solution.** Margins are not in the tournament. LH's tiebreak ladder (wins → total margin → lot) is C1 for the first rung and **C2 from the second rung on**.
+> **The moment Ranked Robin's tie-break reads a margin, it has stopped being a tournament solution — but that moment is one rung later than it looks.** Margins are not in the tournament. Ranked Robin's published ladder is *wins → [1st Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) → 2nd Degree → lot*, and the 1st Degree asks for the greatest sum of win margins **over the other finalists**. With exactly **two** finalists that sum is a single match, so its sign is nothing but *who beat whom* — pure C1, an arrow the tournament already contains. With three or more finalists the same rung genuinely adds margins up, and the 2nd Degree (margins over the whole field) always does. So Ranked Robin is **C1 through a two-way 1st Degree, and C2 from there on**.
 
-That is not a criticism — a rule that has to name one winner needs something, and margin is a defensible and deterministic something. But it means "Ranked Robin is a C1 method" is only true up to the tie, and a careful critic will notice.
+That is not a criticism — a rule that has to name one winner needs something, and margin is a defensible and deterministic something. But it does mean the C1 claim has to be made carefully, in both directions: "Ranked Robin is a C1 method" is not true all the way down, and "Ranked Robin leaves C1 as soon as there is a tie" is not true either. Two-way ties are the common case, and on those the ladder stays inside the graph.
+
+**This paragraph used to say something stronger and simpler, and it was wrong.** Until 2026-08-19 the LH engine had no 1st Degree rung at all: it ranked tied candidates by total margin over the whole field — the 2nd Degree, applied in place of the first — so *every* tie left C1 immediately, and the page said so. Correcting the ladder changed the winner on 11 of the repo's 100 Ranked Robin cases, including the one worked below — every one of them a two-way tie whose head-to-head the old rung had overridden. The full story, and BetterVoting's opposite bug, are on the degrees page linked above.
 
 ### The three-ballot election with five defensible winners
 
@@ -102,19 +104,21 @@ A beats B and C; B beats C and D; C beats D; **D beats A** — so the top cycles
 
 Five answers, three ballots, every one of them published and defended. And then our engine has to pick one:
 
-```
-Win–loss record — Copeland score = wins + ½·ties:
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  B          2–1–0         2      +3  D, C
-    2  A          2–1–0         2      +1  B, C
-    3  D          1–2–0         1      -1  A
-    4  C          1–2–0         1      -3  D
+```text title="Abridged for the lesson — the win–loss table and winner line only"
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          2–1–0         2      +1            +1  B, C
+    2  B          2–1–0         2      +3            -1  C, D
+    3  C          1–2–0         1      -3             —  D
+    4  D          1–2–0         1      -1             —  A
 
-Winner — Ranked Robin (RCV-RR): B
-   *** 2 candidates tie for the most wins (A, B) — a Condorcet cycle. Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): A
+   *** 2 candidates tie for the most wins (A, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: A has the greatest sum of win margins over the other finalists (+1).
 ```
 
-**Ranked Robin elects B. Slater and Markov elect A.** Same ballots. B wins only because of the margin rung — the C2 step — and A beats B head-to-head. Neither answer is wrong; they optimize different things, and there is no fact of the matter to appeal to. Full report → [the runnable case](../../method_comparisons/tournament_solutions/README.md).
+Read the two margin columns against each other, because the whole point of the rung is that they disagree. **`Margin`** is each candidate's margin summed over the *whole field*: B leads it, +3 to A's +1. **`vs finalists`** — printed only when there is a tie for the lead, and only for the tied candidates — is the same sum restricted to the tie, which for two finalists is one match: A beat B, so it reads +1 and −1. The 1st Degree asks the second question, so **Ranked Robin elects A — and so do Slater and Markov.**
+
+Two things follow, and they pull in opposite directions. The cheerful one: on this election the tie-break consulted exactly one arrow of the tournament and nothing else, so Ranked Robin never left C1 here, and it landed where the two NP-hard rules land. The chastening one: **B was this engine's answer until 2026-08-19**, on the strength of that +3 — a total built partly out of B's matches with C and D, who were not in the tie at all. The five defensible winners in the table above were always a fact about the *tournament*; which of them our engine printed was, for a while, a fact about a bug. Full report → [the runnable case](../../method_comparisons/tournament_solutions/README.md).
 
 ### If you arrived from the textbook picture, it is this election
 
@@ -128,17 +132,19 @@ Read the six pairs through that table and you get `A>B`, `A>C`, `B>C`, `B>D`, `C
 
 **And it could hardly be otherwise.** There are exactly **four** tournaments on four vertices up to relabelling, and only **one** of them is strongly connected — the one where the top cycles. So the moment a four-candidate election has no [Condorcet winner](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md) *and* no pairwise ties, it draws this picture. It isn't a chosen example; it's the smallest thing the field has to talk about, which is why everyone draws it. Three voters produce it — that's the file above, and `uv run …/tournament_solutions_report.py` prints the graph and all seven solutions from those three ballots.
 
-**And you can vote in it.** The same profile — same four candidates, same six arrows, trees instead of letters — is a live public election: **[BV2270 `8h4bvh`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md)** (Alder = A, Birch = B, Cedar = C, Dogwood = D), minted for a different purpose and only later noticed to be this graph. Which makes it the cleanest demonstration on the page of what "the tournament doesn't decide it" costs in practice, because three real tabulators split three ways on those ballots:
+**And you can vote in it.** The same profile — same four candidates, same six arrows, trees instead of letters — is a live public election: **[BV2270 `8h4bvh`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md)** (Alder = A, Birch = B, Cedar = C, Dogwood = D), minted for a different purpose and only later noticed to be this graph. Which makes it the cleanest demonstration on the page of what "the tournament doesn't decide it" costs in practice — and of what it doesn't, since the two tabulators that will name a winner now name the same one:
 
 | Who is counting | Winner | On what rung |
 |---|---|---|
 | **BetterVoting** (`RankedRobin.ts`) | **A** (Alder) | Copeland tie → **head-to-head**, and A beat B |
-| **LH** (`starvote_larry_hastings.py`) | **B** (Birch) | Copeland tie → **total margin**, B +3 vs A +1 |
+| **LH** (`starvote_larry_hastings.py`) | **A** (Alder) | Copeland tie → **1st Degree**, which on two finalists *is* that head-to-head (A +1, B −1) |
 | **`pref_voting`** (independent Copeland) | *declines* | returns the leader set `{A, B}` |
 
-BetterVoting's frozen export settles it with `tieBreakType: "none"` and the log line `Alder preferred over Birch in runoff.` — no random rung, no seed, derivable from the ballots by anyone. So the two engines disagree **on the rule, not on the count**, which is [documented at length here](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md).
+BetterVoting's frozen export settles it with `tieBreakType: "none"` and the log line `Alder preferred over Birch in runoff.` — no random rung, no seed, derivable from the ballots by anyone.
 
-Worth noticing, and worth not over-reading: BV's cheap head-to-head rung lands on **A** — the same candidate **Slater and Markov** pick, after NP-hard work. That is a coincidence on this tournament, not a theorem; Copeland-plus-head-to-head is not Slater, and on a bigger graph they part company. But it is a fair reply to anyone who assumes the sophisticated rules and the practical ones are pulling in different directions.
+**This row is where the two engines used to disagree, and it was ours that was wrong.** LH elected Birch here until 2026-08-19, on a total margin of +3 to Alder's +1 — margin Birch had run up against Cedar and Dogwood, who were not in the tie. That disagreement was written up at length as a difference of *rule* between two defensible engines; [the page that did so](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) is still worth reading for the shape of the argument, with the correction in mind. What survives of it: BetterVoting implements this rung only for a **two-way** tie and has nothing for three or more, so the engines still part company on a bigger tie — LH walks the 2nd Degree and then its published lot, BV goes straight to a seeded shuffle.
+
+Worth noticing, and worth not over-reading: the cheap head-to-head rung lands on **A** — the same candidate **Slater and Markov** pick, after NP-hard work. That is a coincidence on this tournament, not a theorem; Copeland-plus-head-to-head is not Slater, and on a bigger graph they part company. But it is a fair reply to anyone who assumes the sophisticated rules and the practical ones are pulling in different directions.
 
 ## What this has to do with STAR: less than you'd hope, and precisely so
 

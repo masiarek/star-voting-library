@@ -7,11 +7,11 @@ search:
 
 *Generated from [`five_answers_one_election_c4_b3.yaml`](../five_answers_one_election_c4_b3.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** B
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** A
 
 ## Scenario
 
-The smallest election that makes the whole tournament-solutions literature necessary. Three voters, four candidates, ballots that are just one ranking rotated: A>B>C>D, B>C>D>A, D>A>B>C. Every head-to-head is decided (no ties), so the pairwise results form a genuine TOURNAMENT — a complete directed graph. There is no Condorcet winner: D beats A, so the top of the graph cycles. Now the famous C1 rules, which read ONLY that graph, split five ways: Top cycle / Schwartz = {A, B, C, D} (everyone); Uncovered set = Banks set = Bipartisan set = {A, B, D} (C is COVERED — B beats C and beats everyone C beats, so C is strictly redundant); Copeland set = {A, B} (both win 2, C and D win 1); Slater set = Markov set = {A}. Five different answers to "who should win," each with a published defense, from three ballots. Ranked Robin is the Copeland set, so the LH engine lands on {A, B} and must break the tie — by TOTAL MARGIN, electing B (+3 vs A's +1). That step is the lesson: margins are not in the tournament. The moment Ranked Robin consults them it has left C1 and is reading C2 information, and it elects B where Slater and Markov both elect A. This is Figure 3.3 of Brandt, Brill & Harrenstein, "Tournament Solutions" (Handbook of Computational Social Choice, 2016, ch. 3), turned back into ballots — the chapter gives the graph, and McGarvey's theorem guarantees some profile produces it; this three-voter rotation is one. Candidate labels are kept as bare A/B/C/D deliberately, matching the figure, so the book can be read side by side with the tabulation. Verified two ways: the LH engine's Ranked Robin below, and pref_voting's independent C1 module via tournament_solutions_report.py. This is also the picture every write-up of the subject opens with. Wikipedia's "Tournament solution" leads with A = {1,2,3,4} and the pairs (1,2) (1,4) (2,4) (3,1) (3,2) (4,3); read 3=A, 1=B, 2=C, 4=D and that is this matrix, arrow for arrow. Not a coincidence: there are exactly four tournaments on four vertices up to relabelling and only ONE is strongly connected, so every four-candidate election with a cycling top and no pairwise ties draws this graph. LH-only as a file, but NOT because BetterVoting can't count it — the earlier note claiming that was wrong. Exactly two candidates tie and they played each other, so BV's head-to-head rung settles it deterministically (tieBreakType "none") and elects A, where LH's margin rung elects B. The same profile is live on BV under tree names as BV2270 (8h4bvh): Alder=A, Birch=B, Cedar=C, Dogwood=D. Three tabulators, three positions: BV -> A, LH -> B, pref_voting -> the leader set {A, B}, declining to choose.
+The smallest election that makes the whole tournament-solutions literature necessary. Three voters, four candidates, ballots that are just one ranking rotated: A>B>C>D, B>C>D>A, D>A>B>C. Every head-to-head is decided (no ties), so the pairwise results form a genuine TOURNAMENT — a complete directed graph. There is no Condorcet winner: D beats A, so the top of the graph cycles. Now the famous C1 rules, which read ONLY that graph, split four ways (five, until 2026-08-19 — Ranked Robin's tiebreak used to supply a fifth answer, B, and that turned out to be an engine bug rather than a rule): Top cycle / Schwartz = {A, B, C, D} (everyone); Uncovered set = Banks set = Bipartisan set = {A, B, D} (C is COVERED — B beats C and beats everyone C beats, so C is strictly redundant); Copeland set = {A, B} (both win 2, C and D win 1); Slater set = Markov set = {A}. Five different answers to "who should win," each with a published defense, from three ballots. Ranked Robin is the Copeland set, so the engine lands on {A, B} and must break the tie. Its 1st Degree tiebreaker asks for the margins among the FINALISTS only, and with exactly two finalists that is a single number — their own head-to-head, which A wins 2-1. So Ranked Robin elects A, agreeing with Slater and Markov, and the tiebreak never leaves the tournament: who-beat-whom is C1 information, margins or no margins. Ranked Robin does leave C1, but one rung lower down. Its 2nd Degree compares margins over the WHOLE FIELD, and those are not in the tournament at all — on these ballots they run the other way (B +3 vs A's +1), which is exactly the answer this engine printed until 2026-08-19, when it was applying the 2nd Degree in place of the 1st. See 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md. This is Figure 3.3 of Brandt, Brill & Harrenstein, "Tournament Solutions" (Handbook of Computational Social Choice, 2016, ch. 3), turned back into ballots — the chapter gives the graph, and McGarvey's theorem guarantees some profile produces it; this three-voter rotation is one. Candidate labels are kept as bare A/B/C/D deliberately, matching the figure, so the book can be read side by side with the tabulation. Verified two ways: the LH engine's Ranked Robin below, and pref_voting's independent C1 module via tournament_solutions_report.py. This is also the picture every write-up of the subject opens with. Wikipedia's "Tournament solution" leads with A = {1,2,3,4} and the pairs (1,2) (1,4) (2,4) (3,1) (3,2) (4,3); read 3=A, 1=B, 2=C, 4=D and that is this matrix, arrow for arrow. Not a coincidence: there are exactly four tournaments on four vertices up to relabelling and only ONE is strongly connected, so every four-candidate election with a cycling top and no pairwise ties draws this graph. LH-only as a file, but NOT because BetterVoting can't count it — the earlier note claiming that was wrong. Exactly two candidates tie and they played each other, so BV's head-to-head rung settles it deterministically (tieBreakType "none") and elects A. The same profile is live on BV under tree names as BV2270 (8h4bvh): Alder=A, Birch=B, Cedar=C, Dogwood=D. The two engines now agree on A — BV's head-to-head rung IS the 1st Degree for two finalists — and pref_voting still declines to choose, returning the leader set {A, B}, which is the honest position for a library that implements the tally and not the tiebreak.
 
 ## Ballots
 
@@ -55,15 +55,15 @@ Legend: For - Equal Support - Against   (row vs column)
   C > | 1 - 0 - 2 |0 - 0 - 3 |   ---    |2 - 0 - 1 |
   D > | 2 - 0 - 1 |1 - 0 - 2 |1 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  B          2–1–0         2      +3  D, C
-    2  A          2–1–0         2      +1  B, C
-    3  D          1–2–0         1      -1  A
-    4  C          1–2–0         1      -3  D
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          2–1–0         2      +1            +1  B, C
+    2  B          2–1–0         2      +3            -1  C, D
+    3  C          1–2–0         1      -3             —  D
+    4  D          1–2–0         1      -1             —  A
 
-Winner — Ranked Robin (RCV-RR): B
-   *** 2 candidates tie for the most wins (A, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): A
+   *** 2 candidates tie for the most wins (A, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: A has the greatest sum of win margins over the other finalists (+1).
 ```
 <!-- --8<-- [end:report] -->
 
@@ -81,7 +81,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (A, B) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner B is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

@@ -93,11 +93,9 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Chicago   (differs from STAR)
   RCV-IRV                = Chicago   (differs from STAR)
   Approval               = Austin   (differs from STAR)
-  RCV-RR                 = Chicago   (differs from STAR)
+  RCV-RR                 = Boston   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
-        here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: cases_tabulated/star_elects_a_covered_candidate_c4_b5_RCV-IRV_tabulated.txt
   RCV-RR round-robin: cases_tabulated/star_elects_a_covered_candidate_c4_b5_RCV-RR_tabulated.txt

@@ -71,7 +71,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Paul > | 5 - 0 - 6 |   ---    |9 - 0 - 2 |
   James > | 5 - 0 - 6 |2 - 0 - 9 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Peter      2–0–0         2      +2  Paul, James
     2  Paul       1–1–0         1      +6  James

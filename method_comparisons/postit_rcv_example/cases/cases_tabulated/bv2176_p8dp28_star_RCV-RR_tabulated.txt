@@ -1,0 +1,58 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 20 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Purple, Green, Blue, Pink
+     7 × Purple > Green=Blue=Pink      (5, 0, 0, 0)
+     6 × Green > Blue > Pink > Purple      (0, 5, 4, 3)
+     2 × Blue > Pink > Purple=Green      (0, 0, 5, 4)
+     1 × Blue > Green > Pink > Purple      (0, 4, 5, 3)
+     1 × Blue > Purple > Green=Pink      (4, 0, 5, 0)
+     1 × Pink > Green > Purple > Blue      (3, 4, 0, 5)
+     1 × Pink > Purple > Green=Blue      (4, 0, 0, 5)
+     1 × Pink > Purple=Green=Blue      (0, 0, 0, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Purple  beats Green     9 –  8
+   Blue    beats Purple   10 –  9
+   Pink    beats Purple   12 –  8
+   Green   beats Blue      7 –  4
+   Green   beats Pink      7 –  5
+   Blue    beats Pink     10 –  3
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+           |    Purple    |   Green     |    Blue     |    Pink     |
+---------------------------------------------------------------------
+  Purple > |     ---      | 9 -  3 -  8 | 9 -  1 - 10 | 8 -  0 - 12 |
+   Green > |  8 -  3 -  9 |    ---      | 7 -  9 -  4 | 7 -  8 -  5 |
+    Blue > | 10 -  1 -  9 | 4 -  9 -  7 |    ---      |10 -  7 -  3 |
+    Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Green      2–1–0         2      +4            +3  Blue, Pink
+    2  Blue       2–1–0         2      +5            -3  Pink, Purple
+    3  Pink       1–2–0         1      -5             —  Purple
+    4  Purple     1–2–0         1      -4             —  Green
+
+Winner — Ranked Robin (RCV-RR): Green
+   *** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Green has the greatest sum of win margins over the other finalists (+3).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 4): Green, Blue, Purple, Pink
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Green, Blue) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Green is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   More: 07_Concepts/topics/smith_set.md

@@ -228,7 +228,7 @@ LH:center_squeeze_voteline_1d,Center squeeze — the voteline 1D spectrum (Red /
 LH:chicken_approval,"Chicken / Burr dilemma — Approval, honest: A and B tie 60-60 (the trap)",1,single-race,100,Approval,LH-only
 LH:chicken_star,Chicken / Burr dilemma — STAR resolves it (allies A & B beat C; A wins honestly),1,single-race,100,STAR,LH-only
 LH:clone_teaming_01_pre,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",1,single-race,33,RankedRobin,LH-only
-LH:clone_teaming_02_post,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,1,single-race,33,RankedRobin,LH-only
+LH:clone_teaming_02_post,"Clone independence (2/2) — teaming: A runs clones, and hands the win to C",1,single-race,33,RankedRobin,LH-only
 LH:coombs_ex18_monotonicity,Coombs Ex.18 — Bree is raised on four ballots and loses because of it,1,single-race,33,IRV,LH-only
 LH:coombs_ex20_amalgamated,"Coombs Ex.20 — amalgamated: both districts chose B, their union chooses A",1,single-race,41,IRV,LH-only
 LH:coombs_ex20_district1,"Coombs Ex.20 — District I: 34 voters, Coombs elects B",1,single-race,34,IRV,LH-only
@@ -264,8 +264,6 @@ LH:cycle_C05_fewV28_bloc_1,"STAR vs RR divergence -- 5 cands, 28 voters, cycle (
 LH:cycle_C05_medV45_noise_1,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR A, RR B)",1,single-race,45,STAR,LH-only
 LH:cycle_C05_medV45_noise_2,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR D, RR B)",1,single-race,45,STAR,LH-only
 LH:cycle_C07_fewV15_noise_1,"STAR vs RR divergence -- 7 cands, 15 voters, cycle (STAR D, RR A)",1,single-race,15,STAR,LH-only
-LH:cycle_C07_largeV598_bloc_1,"STAR vs RR divergence -- 7 cands, 598 voters, cycle (STAR C, RR E)",1,single-race,598,STAR,LH-only
-LH:cycle_C07_medV149_bloc_2,"STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C)",1,single-race,149,STAR,LH-only
 LH:cycle_C10_fewV15_noise_1,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR A, RR C)",1,single-race,15,STAR,LH-only
 LH:cycle_C10_fewV15_noise_2,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR J, RR F)",1,single-race,15,STAR,LH-only
 LH:cycle_C10_fewV28_bloc_1,"STAR vs RR divergence -- 10 cands, 28 voters, cycle (STAR C, RR F)",1,single-race,28,STAR,LH-only
@@ -388,6 +386,8 @@ LH:reversal_star_original,"Reversal symmetry — STAR, original: B (STAR does no
 LH:reversal_star_reversed,"Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)",1,single-race,24,STAR,LH-only
 LH:rr_blank_is_last_c4_b3,Ranked Robin — a blank is ranked LAST (and rank numbers don't matter),1,single-race,3,RankedRobin,LH-only
 LH:rr_combined,"Summability demo — Combined (A+B), counted by Ranked Robin",1,single-race,26,RankedRobin,LH-only
+LH:rr_degrees_finalists_vs_field,The 1st Degree counts the finalists only — and it elects someone else,1,single-race,26,RankedRobin,LH-only
+LH:rr_degrees_three_way_cycle,A three-way cycle has a deterministic answer — and BetterVoting draws lots for it,1,single-race,11,RankedRobin,LH-only
 LH:rr_district_A,"Summability demo — District A, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_district_B,"Summability demo — District B, counted by Ranked Robin",1,single-race,13,RankedRobin,LH-only
 LH:rr_vs_mwsl_cycle_c3_b32,"Ranked Robin vs Consensus Choice — the same cycle, two different winners",1,single-race,32,RankedRobin,LH-only

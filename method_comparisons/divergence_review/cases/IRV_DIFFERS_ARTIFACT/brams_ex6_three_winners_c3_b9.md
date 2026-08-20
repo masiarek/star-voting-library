@@ -192,7 +192,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bree > | 3 - 2 - 4 |   ---    |2 - 3 - 4 |
   Cole > | 3 - 4 - 2 |4 - 3 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cole       2–0–0         2      +3  Amos, Bree
     2  Amos       1–1–0         1      +0  Bree

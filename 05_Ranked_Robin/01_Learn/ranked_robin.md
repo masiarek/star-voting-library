@@ -90,7 +90,7 @@ Ranked Robin isn't a cure-all. Like all ranked methods it captures **order only,
 - **[Minimax / Simpson](../../07_Concepts/voting_paradoxes/minimax.md) is strictly more decisive**, precisely because it reads *margins* rather than win counts, and margins survive a cycle when win counts don't. The [minimal tilted cycle](../../method_comparisons/minimal_tilted_cycle/README.md) is the runnable proof: five voters, Copeland ties all three, minimax names a winner — and the information minimax used was on the ballots the whole time.
 - **Copeland winners always lie inside the [top cycle / Smith set](../../07_Concepts/topics/smith_set.md)**, so Copeland never elects badly in that sense; it just frequently declines to narrow the field further on its own.
 
-That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked Robin so easy to explain and to audit — a round-robin table anyone can read — and the same arithmetic is what makes it reach for a tiebreak more often than its Condorcet siblings. LH's ladder (margin → lot) is a deliberate patch on exactly this, and where the tie is genuinely forced, [no rule could have done better](../../07_Concepts/topics/ties/ties_are_forced.md).
+That's the honest trade. Copeland's whole-wins arithmetic is what makes Ranked Robin so easy to explain and to audit — a round-robin table anyone can read — and the same arithmetic is what makes it reach for a tiebreak more often than its Condorcet siblings. The method's own ladder (1st Degree → 2nd Degree → lot) is a deliberate patch on exactly this, and where the tie is genuinely forced, [no rule could have done better](../../07_Concepts/topics/ties/ties_are_forced.md).
 
 ## Now you can tabulate it — the `pref_voting` engine
 
@@ -148,7 +148,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 4 - 0 - 3 |   ---    |5 - 0 - 2 |
   Cara > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ben        2–0–0         2      +4  Cara, Ada
     2  Cara       1–1–0         1      -2  Ada
@@ -160,7 +160,7 @@ Winner — Ranked Robin (RCV-RR): Ben
 <!-- /report -->
 The matrix — the Ranked Robin tally itself — reads `For - Equal Support - Against` in each cell, row vs column; the middle number is `0` here because these are strict ranks with no equal support. The **`_tabulated` mirror** is identical *plus* the forced-on **Smith set** block (`show_smith_set` — opt-in on screen, always in the mirror).
 
-> **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break is **total margin, then lot order** — a deliberate, fully-reported choice (the record table shows the margin that settles it); it differs from Equal Vote's published hierarchy (Favorite / Copeland / Smith-Minimax), which we treat as one option among several until a standard settles. See [cycle resolution](cycle_resolution.md).
+> **Why this format.** The two conventions every source agrees on are the **preference (pairwise) matrix** and the **win-loss record** — Equal Vote leads with the record and calls the matrix the tool "for making sense of the ballot data," and the academic [Copeland](https://en.wikipedia.org/wiki/Copeland%27s_method) literature treats the outranking matrix as the standard presentation (row = "runner," column = "opponent," diagonal blank). We follow both, and add the academic **Copeland score** (`wins + ½·ties`) as an explicit column, since there's no finalized public-facing spec to defer to. Our tie-break follows Equal Vote's published [degrees of ties](../03_Criteria/rr_tiebreaks/degrees_of_ties.md) — **1st Degree** (each tied finalist's win margins over the other finalists), then **2nd Degree** (margins over the whole field), then a published **lot**, which is what the protocol itself recommends instead of its 3rd and 4th Degrees. The record table prints a **"vs finalists"** column whenever there is a tie for the lead, so the number that settles it is on the page. (Until 2026-08-19 the engine used total margin alone and skipped the 1st Degree; that changed the winner on 11 of this repo's 100 Ranked Robin cases.) See [cycle resolution](cycle_resolution.md).
 
 **Copeland = Ranked Robin = RCV-RR** — *the same core method wearing different brand names from different proponent groups:*
 

@@ -56,15 +56,15 @@ Legend: For - Equal Support - Against   (row vs column)
   C > |  5 -  0 - 11 | 4 -  0 - 12 |    ---      |10 -  0 -  6 |
   A > | 11 -  0 -  5 | 7 -  0 -  9 | 6 -  0 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  D          2–1–0         2      +6  B, C
-    2  B          2–1–0         2      +4  A, C
-    3  A          1–2–0         1      +0  D
-    4  C          1–2–0         1     -10  A
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  D          2–1–0         2      +6            +6  B, C
+    2  B          2–1–0         2      +4            -6  C, A
+    3  C          1–2–0         1     -10             —  A
+    4  A          1–2–0         1      +0             —  D
 
 Winner — Ranked Robin (RCV-RR): D
-   *** 2 candidates tie for the most wins (D, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the most wins (D, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: D has the greatest sum of win margins over the other finalists (+6).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

@@ -257,6 +257,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/01_Learn
 
 ## See also
 
+- [Methods disagree on this election](../../../../../method_comparisons/divergence_review/cases/APPROVAL_OR_MINOR/bv2284_8q3xcg_weak_mandate.md) — its entry in the divergence review ledger
 - [Condorcet efficiency (topic hub)](../../../../../07_Concepts/topics/condorcet/README.md)
 - [Ballot & terminology basics](../../../../../07_Concepts/topics/ballot_and_terminology_basics.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)

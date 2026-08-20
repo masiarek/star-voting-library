@@ -199,7 +199,7 @@ Legend: For - Equal Support - Against   (row vs column)
      Fillon > | 74 -  0 - 26 |50 - 25 - 25 |    ---      |24 - 51 - 25 |
   Melenchon > | 74 -  0 - 26 |51 - 24 - 25 |25 - 51 - 24 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Melenchon  3–0–0         3     +75  Fillon, LePen, Macron
     2  Fillon     2–1–0         2     +72  LePen, Macron

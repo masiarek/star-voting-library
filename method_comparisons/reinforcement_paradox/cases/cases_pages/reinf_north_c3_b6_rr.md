@@ -66,14 +66,14 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 2 - 0 - 4 |   ---    |4 - 0 - 2 |
   Cara > | 4 - 0 - 2 |2 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ada        1–1–0         1      +0  Ben
-    2  Ben        1–1–0         1      +0  Cara
-    3  Cara       1–1–0         1      +0  Ada
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ada        1–1–0         1      +0             0  Ben
+    2  Ben        1–1–0         1      +0             0  Cara
+    3  Cara       1–1–0         1      +0             0  Ada
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 ```
 <!-- --8<-- [end:report] -->
 

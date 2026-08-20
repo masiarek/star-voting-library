@@ -35,8 +35,15 @@ scenario_description: |-
       method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml
     uv run …/cycle_resolution_report.py …/split_cycle_schulze_spoiler_c5_b40.yaml --drop Bryce
 
+  Ranked Robin's own answer, for the record, is Denali: Copeland ties Denali and
+  Cascade, and the 1st Degree tiebreaker asks how the two finalists did against
+  each other — Denali beat Cascade 22-18. (Until 2026-08-19 this engine broke the
+  tie on margins over the whole field, its 2nd Degree, and reported Cascade; see
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.) That answer is
+  incidental to the lesson, which is about Schulze and Split Cycle.
+
   LH-only (no BetterVoting election): neither BV nor the LH engine implements
-  Schulze or Split Cycle, and the LH Copeland result here is a tie. Lesson page:
+  Schulze or Split Cycle, and the Copeland result here is a tie on the tally. Lesson page:
   07_Concepts/topics/condorcet/split_cycle.md
 
 paradoxes: [condorcet-cycle]
@@ -53,4 +60,4 @@ ballots: |-
   10:Cascade>Bryce>Arches>Denali>Everglade
 
 expected_winners:
-  - Cascade
+  - Denali

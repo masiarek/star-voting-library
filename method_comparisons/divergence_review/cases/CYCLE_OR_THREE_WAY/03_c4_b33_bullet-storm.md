@@ -232,15 +232,15 @@ Legend: For - Equal Support - Against   (row vs column)
     Carla > | 13 -  7 - 13 |16 -  9 -  8 |    ---      |14 - 15 -  4 |
   Dolores > |  5 - 15 - 13 | 6 - 20 -  7 | 4 - 15 - 14 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Carla      2–0–1       2.5     +18  Boris, Dolores
-    2  Astrid     2–0–1       2.5     +15  Boris, Dolores
-    3  Boris      1–2–0         1     -14  Dolores
-    4  Dolores    0–3–0         0     -19  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Carla      2–0–1       2.5     +18             0  Boris, Dolores
+    2  Astrid     2–0–1       2.5     +15             0  Boris, Dolores
+    3  Boris      1–2–0         1     -14             —  Dolores
+    4  Dolores    0–3–0         0     -19             —  —
 
 Winner — Ranked Robin (RCV-RR): Carla
-   *** 2 candidates tie on the highest Copeland score (2.5): Astrid, Carla — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (2.5): Astrid, Carla — a dead heat (they draw head-to-head, not a cycle). The finalists are level on margins against each other, so the 2nd Degree decides: Carla leads on margins over the whole field (+18).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

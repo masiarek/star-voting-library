@@ -825,7 +825,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Simpson > | 1309 - 2396 - 5269 | 843 - 2617 - 5514 | 591 - 2122 - 6261 | 721 - 2685 - 5568 |       ---         |3337 - 5476 -  161 |
    WriteIn > |  162 - 2751 - 6061 | 113 - 2714 - 6147 | 100 - 2218 - 6656 | 113 - 2806 - 6055 | 161 - 5476 - 3337 |       ---         |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Montroll   5–0–0         5  +15319  Kiss, Wright, Smith, Simpson, WriteIn
     2  Kiss       4–1–0         4  +10742  Wright, Smith, Simpson, WriteIn

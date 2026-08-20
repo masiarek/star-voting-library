@@ -72,7 +72,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Chattanooga > | 58 -  0 - 42  |32 -  0 - 68  |     ---      |83 -  0 - 17  |
     Knoxville > | 58 -  0 - 42  |32 -  0 - 68  |17 -  0 - 83  |     ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate    W–L–T  Copeland  Margin  Beats
     1  Nashville    3–0–0         3     +88  Chattanooga, Knoxville, Memphis
     2  Chattanooga  2–1–0         2     +46  Knoxville, Memphis

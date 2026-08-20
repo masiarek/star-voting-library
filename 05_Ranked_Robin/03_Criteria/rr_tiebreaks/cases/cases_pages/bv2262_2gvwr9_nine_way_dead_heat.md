@@ -108,20 +108,20 @@ Legend: For - Equal Support - Against   (row vs column)
     Hugo > | 7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |8 - 0 - 1 |
     Ivan > | 8 - 0 - 1 |7 - 0 - 2 |6 - 0 - 3 |5 - 0 - 4 |4 - 0 - 5 |3 - 0 - 6 |2 - 0 - 7 |1 - 0 - 8 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Boris      4–4–0         4      +0  Felix, Dmitri, Carmen, Elena
-    2  Felix      4–4–0         4      +0  Greta, Alice, Ivan, Hugo
-    3  Greta      4–4–0         4      +0  Boris, Alice, Ivan, Hugo
-    4  Dmitri     4–4–0         4      +0  Felix, Greta, Elena, Hugo
-    5  Carmen     4–4–0         4      +0  Felix, Greta, Dmitri, Elena
-    6  Alice      4–4–0         4      +0  Boris, Dmitri, Carmen, Elena
-    7  Ivan       4–4–0         4      +0  Boris, Dmitri, Carmen, Alice
-    8  Elena      4–4–0         4      +0  Felix, Greta, Ivan, Hugo
-    9  Hugo       4–4–0         4      +0  Boris, Carmen, Alice, Ivan
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Boris      4–4–0         4      +0             0  Felix, Dmitri, Carmen, Elena
+    2  Felix      4–4–0         4      +0             0  Greta, Alice, Ivan, Hugo
+    3  Greta      4–4–0         4      +0             0  Boris, Alice, Ivan, Hugo
+    4  Dmitri     4–4–0         4      +0             0  Felix, Greta, Elena, Hugo
+    5  Carmen     4–4–0         4      +0             0  Felix, Greta, Dmitri, Elena
+    6  Alice      4–4–0         4      +0             0  Boris, Dmitri, Carmen, Elena
+    7  Ivan       4–4–0         4      +0             0  Boris, Dmitri, Carmen, Alice
+    8  Elena      4–4–0         4      +0             0  Felix, Greta, Ivan, Hugo
+    9  Hugo       4–4–0         4      +0             0  Boris, Carmen, Alice, Ivan
 
 Winner — Ranked Robin (RCV-RR): Boris
-   *** 9 candidates tie for the most wins (Alice, Boris, Carmen, Dmitri, Elena, Felix, Greta, Hugo, Ivan) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 9 candidates tie for the most wins (Alice, Boris, Carmen, Dmitri, Elena, Felix, Greta, Hugo, Ivan) — a Condorcet cycle (no candidate beats all others). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 ```
 <!-- --8<-- [end:report] -->
 
@@ -159,4 +159,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 - [The tie-breaking ladder (full chain)](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [bv2141_3r3yf7_four_degree_tie](bv2141_3r3yf7_four_degree_tie.md) · [bv2261_y2fbpc_tiebreak_recorded_cycle](bv2261_y2fbpc_tiebreak_recorded_cycle.md) · [bv2261_y2fbpc_tiebreak_recorded_draws](bv2261_y2fbpc_tiebreak_recorded_draws.md) · [bv2270_8h4bvh_head_to_head_vs_margin](bv2270_8h4bvh_head_to_head_vs_margin.md) · [dead_heat_lot_tiebreak](dead_heat_lot_tiebreak.md)
+More cases in this set: [bv2141_3r3yf7_four_degree_tie](bv2141_3r3yf7_four_degree_tie.md) · [bv2261_y2fbpc_tiebreak_recorded_cycle](bv2261_y2fbpc_tiebreak_recorded_cycle.md) · [bv2261_y2fbpc_tiebreak_recorded_draws](bv2261_y2fbpc_tiebreak_recorded_draws.md) · [bv2270_8h4bvh_head_to_head_vs_margin](bv2270_8h4bvh_head_to_head_vs_margin.md) · [dead_heat_lot_tiebreak](dead_heat_lot_tiebreak.md) · [rr_degrees_finalists_vs_field](rr_degrees_finalists_vs_field.md) · [rr_degrees_three_way_cycle](rr_degrees_three_way_cycle.md) · [rr_degrees_what_counts_as_a_win](rr_degrees_what_counts_as_a_win.md)

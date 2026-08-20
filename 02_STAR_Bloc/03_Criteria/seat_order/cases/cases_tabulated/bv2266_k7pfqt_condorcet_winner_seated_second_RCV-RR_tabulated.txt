@@ -29,7 +29,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Cora > | 2 - 0 - 5 |2 - 2 - 3 |   ---    |2 - 1 - 4 |
     Dev > | 3 - 0 - 4 |2 - 4 - 1 |4 - 1 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Anika      3–0–0         3      +6  Dev, Bo, Cora
     2  Dev        2–1–0         2      +2  Bo, Cora

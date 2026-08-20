@@ -24,21 +24,23 @@ Same cast as the [reinforcement pair](../reinforcement_paradox/README.md) on pur
 
 [full report → `cases/cases_pages/tilted_cycle_c3_b5_rr.md`](cases/cases_pages/tilted_cycle_c3_b5_rr.md) · [`_tabulated` mirror](cases/cases_tabulated/tilted_cycle_c3_b5_rr_tabulated.txt)
 
-```
+```text title="Abridged for the lesson — the round-robin and win–loss blocks of the full report"
 Round-Robin — every pair, head-to-head (For – Against):
    Ada   beats Ben    4 – 1
    Cara  beats Ada    3 – 2
    Ben   beats Cara   3 – 2
 
 Win–loss record — Copeland score = wins + ½·ties:
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ada        1–1–0         1      +2  Ben
-    2  Cara       1–1–0         1      +0  Ada
-    3  Ben        1–1–0         1      -2  Cara
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ada        1–1–0         1      +2            +2  Ben
+    2  Cara       1–1–0         1      +0             0  Ada
+    3  Ben        1–1–0         1      -2            -2  Cara
 
 Winner — Ranked Robin (RCV-RR): Ada
    *** 3 candidates tie for the most wins — a Condorcet cycle.
 ```
+
+All three candidates are tied for the lead, so all three are *finalists* — which is the one shape where Ranked Robin's [1st Degree and 2nd Degree ask the same question](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md): margins over the other finalists and margins over the whole field are the same margins. The two columns above are identical for that reason, and this case is unaffected by the 2026-08-19 tie-break correction. It is worth knowing *why* it is unaffected, because a very similar profile with a fourth candidate outside the tie is not.
 
 Nobody is a [Condorcet winner](../../07_Concepts/topics/condorcet/README.md); nobody is a Condorcet loser. Every individual ballot is transitive. The intransitivity is manufactured purely by aggregation — that is the whole content of the word *cycle*.
 
@@ -95,7 +97,7 @@ Every winner below is computed, not asserted — Ranked Robin and RCV-IRV by the
 | Rule | Winner(s) | Reads | Why |
 |---|:--|:--:|---|
 | **Copeland / Ranked Robin** | Ada, Ben, Cara — *a three-way tie* | wins | every record is 1–1 |
-| ↳ LH's Ranked Robin, after tie-break | **Ada** | +margins | total margin +2 / 0 / −2 |
+| ↳ LH's Ranked Robin, after tie-break | **Ada** | +margins | 1st Degree margins +2 / 0 / −2 |
 | **Minimax** (maximin) | **Ada, Cara** | margins | worst loss −1 each; Ben's is −3 |
 | **Ranked Pairs** | Ada, Cara | margins | the [three-candidate collapse](../../07_Concepts/topics/condorcet/three_candidate_collapse.md) — |
 | **Schulze** (beat path) | Ada, Cara | margins | at *m* = 3 these are |
@@ -124,7 +126,8 @@ Ranked Robin's tie here has the shape of [the three-way dead rung](../../01_STAR
 | Rung | Symmetric 6-voter cycle | **This tilted 5-voter cycle** |
 |---|---|---|
 | Copeland (wins) | 1–1, 1–1, 1–1 — **dead** | 1–1, 1–1, 1–1 — **dead** |
-| Total margin | 0 / 0 / 0 — **dead** | +2 / 0 / −2 — **alive** → Ada |
+| 1st Degree (margins among the finalists) | 0 / 0 / 0 — **dead** | +2 / 0 / −2 — **alive** → Ada |
+| 2nd Degree (margins over the whole field) | 0 / 0 / 0 — **dead** | never reached (and identical here — the finalists *are* the field) |
 | Lot | decides the winner | never reached |
 
 So the tilt is doing double duty: it is what lets maximin separate the candidates, *and* it is what lets Ranked Robin finish deterministically instead of falling to a coin. The dead rung is real but shallow.
@@ -133,13 +136,13 @@ So the tilt is doing double duty: it is what lets maximin separate the candidate
 
 ## Why this case is LH-only
 
-No BetterVoting election backs it, deliberately. A Copeland three-way tie is precisely the case where [BV breaks the tie at **random**](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) (head-to-head, then random) while LH breaks it by margin, then lot. A random BV result cannot be frozen into a stable teaching artifact, so minting a permanent public election here would produce an unreproducible page. The [tie-break divergence page](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) covers that difference on its own terms.
+No BetterVoting election backs it, deliberately. A Copeland **three-way** tie is precisely the case BetterVoting has no rung for: its `RankedRobin.ts` implements the head-to-head comparison only when exactly two candidates are tied, so three or more fall straight past both published degrees to its seeded shuffle. That shuffle is *recorded* in the export but is a function of the ballot count and the race id, never of how anyone voted — so it cannot be derived from the ballots, and a case whose winner turns on it cannot be frozen into a stable teaching artifact. LH, since 2026-08-19, walks the real ladder: [1st Degree → 2nd Degree → lot](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md), and lands on Ada at the first rung. The gap on BetterVoting's side is filed as [bettervoting#1469](https://github.com/Equal-Vote/bettervoting/issues/1469).
 
 ## The cases
 
 | Case | Method | Winner | Page | Source |
 |---|---|:--:|---|---|
-| Tilted cycle, Ranked Robin | Ranked Robin (Copeland) | Ada *(after margins tie-break)* | [page](cases/cases_pages/tilted_cycle_c3_b5_rr.md) | [yaml](cases/tilted_cycle_c3_b5_rr.yaml) |
+| Tilted cycle, Ranked Robin | Ranked Robin (Copeland) | Ada *(after the 1st Degree tie-break)* | [page](cases/cases_pages/tilted_cycle_c3_b5_rr.md) | [yaml](cases/tilted_cycle_c3_b5_rr.yaml) |
 | Tilted cycle, RCV-IRV | RCV-IRV | Cara | [page](cases/cases_pages/tilted_cycle_c3_b5_irv.md) | [yaml](cases/tilted_cycle_c3_b5_irv.yaml) |
 
 Reproduce the wider table:

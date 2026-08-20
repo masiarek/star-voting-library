@@ -7,7 +7,7 @@ search:
 
 *Generated from [`cycle_schulze_vs_ranked_pairs_c4_b40.yaml`](../cycle_schulze_vs_ranked_pairs_c4_b40.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Ana
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** Bruno
 
 **Official tie-break (lot) order:** Ana > Bruno > Chloe > Diego — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
@@ -44,9 +44,16 @@ Verified with pref_voting:
   uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
     method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml
 
-LH-only (no BetterVoting election): the LH result is a Copeland tie, broken by
-margin then lot, and BV breaks the same tie at random — so this one cannot be
-frozen on BV. The companion case where every rule agrees:
+Ranked Robin's own answer is Bruno: Ana and Bruno tie on the tally, and the
+1st Degree tiebreaker asks how the two finalists did against each other — Bruno
+beat Ana by 4 — so Copeland lands with Ranked Pairs rather than with Minimax and
+Schulze. (Until 2026-08-19 this engine broke the tie on margins over the whole
+field, its 2nd Degree, and reported Ana; see
+05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.)
+
+LH-only (no BetterVoting election): BetterVoting resolves a two-way Copeland tie
+head-to-head and would agree, but the case is kept here as a rules comparison
+rather than a live election. The companion case where every rule agrees:
 cycle_copeland_ties_c4_b21.yaml
 
 ## Ballots
@@ -93,15 +100,15 @@ Legend: For - Equal Support - Against   (row vs column)
   Chloe > | 11 -  0 - 29 |11 -  0 - 29 |    ---      |26 -  0 - 14 |
   Diego > | 14 -  0 - 26 |25 -  0 - 15 |14 -  0 - 26 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ana        2–1–0         2     +26  Diego, Chloe
-    2  Bruno      2–1–0         2     +12  Ana, Chloe
-    3  Diego      1–2–0         1     -14  Bruno
-    4  Chloe      1–2–0         1     -24  Diego
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Bruno      2–1–0         2     +12            +4  Ana, Chloe
+    2  Ana        2–1–0         2     +26            -4  Chloe, Diego
+    3  Chloe      1–2–0         1     -24             —  Diego
+    4  Diego      1–2–0         1     -14             —  Bruno
 
-Winner — Ranked Robin (RCV-RR): Ana
-   *** 2 candidates tie for the most wins (Ana, Bruno) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Bruno
+   *** 2 candidates tie for the most wins (Ana, Bruno) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Bruno has the greatest sum of win margins over the other finalists (+4).
 ```
 <!-- --8<-- [end:report] -->
 
@@ -119,7 +126,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Ana, Bruno) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Ana is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Bruno is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.
@@ -138,6 +145,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Vote splitting (worked set)](../../../split_voting/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 

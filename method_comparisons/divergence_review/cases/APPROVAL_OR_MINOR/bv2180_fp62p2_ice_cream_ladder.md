@@ -220,7 +220,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Strawberry > |    1 - 0 - 1     |   1 - 0 - 1     |   1 - 0 - 1     |   2 - 0 - 0     |      ---        |   2 - 0 - 0     |
            Mango > |    1 - 0 - 1     |   1 - 0 - 1     |   1 - 0 - 1     |   0 - 1 - 1     |   0 - 0 - 2     |      ---        |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate       W–L–T  Copeland  Margin  Beats
     1  Strawberry      2–0–3       3.5      +4  Vanilla, Mango
     2  Chocolate       1–0–4         3      +1  Fudge Brownie

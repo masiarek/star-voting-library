@@ -5,7 +5,8 @@ scenario_description: |-
   Now let B — who cannot win, and does not — leave the race before the vote. On the same ballots minus B, A is ranked first by 4 of 7, an absolute majority, and wins outright. Removing a LOSER changed the winner from D to A: the subset choice condition (SCC) failure, the formal version of what campaigns call a spoiler. Reproduce the second count with: minimax_report.py --drop B, which recomputes every pairwise from the same ballots.
   At 4 candidates and 7 voters this is close to minimal — Brandt, Matthäus & Saile (2022) show a 3-candidate, 7-voter instance exists, so this one carries a single extra candidate.
   Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
-  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; Ranked Robin also lands on D, by a different route — Copeland ties A and D at 2 wins each and the margin tiebreak separates them.
+  Tabulated here as Ranked Robin for the pairwise matrix Minimax reads — and the two methods part company. Copeland ties A and D at 2 wins each, and Ranked Robin's 1st Degree tiebreaker asks only how the tied finalists did against EACH OTHER: A beat D 4:3, so Ranked Robin elects A — the same candidate who wins outright once the loser B leaves the race. Minimax elects D on the smallest worst-loss. Two Condorcet-family answers to one cycle, and the SCC failure is Minimax's, not Ranked Robin's.
+  (Before 2026-08-19 the engine broke this tie on total margin over the whole field and reported D, which reads as agreement with Minimax; that rung is Ranked Robin's 2nd Degree and is only reached when the finalists are level against each other. See 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.)
 paradoxes: [spoiler-scc, condorcet-cycle]
 voting_method: RankedRobin
 num_winners: 1
@@ -14,6 +15,6 @@ ballots: |-
   2:A>D>C>B
   2:B>A>D>C
 expected_winners:
-  - D
+  - A
 
 # file: minimax_ex33_scc.yaml

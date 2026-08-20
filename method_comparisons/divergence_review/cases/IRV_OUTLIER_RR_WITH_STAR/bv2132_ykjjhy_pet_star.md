@@ -174,7 +174,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Cat > | 13 -  0 -  9 |    ---      |15 -  0 -  7 |
   Fish > | 13 -  0 -  9 | 7 -  0 - 15 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cat        2–0–0         2     +12  Fish, Dog
     2  Fish       1–1–0         1      -4  Dog

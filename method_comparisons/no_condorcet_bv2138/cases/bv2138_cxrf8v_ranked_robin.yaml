@@ -1,6 +1,6 @@
-election_title: "No Condorcet Winner — Ranked Robin (Copeland): a tie LH and BV break differently"
+election_title: "No Condorcet Winner — Ranked Robin (Copeland): a two-way tie, settled head-to-head"
 scenario_description: |-
-  One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Copeland ties Abby and Brad. LH breaks the tie by total margin → Abby; BetterVoting breaks it head-to-head (Brad beats Abby 463–458) → Brad. A documented LH-vs-BV tiebreak DIVERGENCE: expected_winners is LH's Abby; BV's live result is Brad.
+  One of four races in the 'One Ranked Electorate, Many Tabulations' election (BV2138, bvid cxrf8v; BV-confirmed). 921 voters, five candidates, NO Condorcet winner (Smith set = Abby, Brad, Dave, Erin). Robert LeGrand's flagship 'the method decides' example: across ~15 methods the win splits five ways. Copeland ties Abby and Brad, and Ranked Robin's 1st Degree tiebreaker asks how the tied finalists did against each other: Brad beats Abby 463–458, so Brad is elected. Both engines agree, and BV's live result is Brad. This case was filed for years as an LH-vs-BV DIVERGENCE — the engine broke the tie on total margin over the whole field and answered Abby — until 2026-08-19, when the ladder was corrected to the method's own degrees and the divergence turned out to be a bug on our side, not a difference of opinion. See 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.
 bv_test_id: BV2138
 bv_election_id: cxrf8v
 bv_results_url: https://bettervoting.com/cxrf8v/results
@@ -22,4 +22,4 @@ ballots: |-
   139:Dave>Cora>Abby>Brad>Erin
   23:Dave>Cora>Brad>Abby>Erin
 expected_winners:
-  - Abby
+  - Brad

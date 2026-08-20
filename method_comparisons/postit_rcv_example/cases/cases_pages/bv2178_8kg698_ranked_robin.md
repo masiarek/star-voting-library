@@ -96,12 +96,12 @@ Legend: For - Equal Support - Against   (row vs column)
     Blue > | 10 -  1 -  9 | 6 -  9 -  5 |    ---      |10 -  7 -  3 |
     Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Blue       3–0–0         3      +9  Green, Purple, Pink
-    2  Green      1–2–0         1      +0  Pink
-    3  Purple     1–2–0         1      -4  Green
-    4  Pink       1–2–0         1      -5  Purple
+    1  Blue       3–0–0         3      +9  Pink, Green, Purple
+    2  Pink       1–2–0         1      -5  Purple
+    3  Green      1–2–0         1      +0  Pink
+    4  Purple     1–2–0         1      -4  Green
 
 Winner — Ranked Robin (RCV-RR): Blue
    beats every opponent head-to-head — the Condorcet winner.

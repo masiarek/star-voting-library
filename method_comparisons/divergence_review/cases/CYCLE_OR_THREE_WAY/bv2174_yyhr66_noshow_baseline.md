@@ -181,14 +181,14 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 18 -  0 - 36 |    ---      |34 -  0 - 20 |
   Celia > | 38 -  0 - 16 |20 -  0 - 34 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Celia      1–1–0         1      +8  April
-    2  April      1–1–0         1      -4  Bruno
-    3  Bruno      1–1–0         1      -4  Celia
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Celia      1–1–0         1      +8            +8  April
+    2  April      1–1–0         1      -4            -4  Bruno
+    3  Bruno      1–1–0         1      -4            -4  Celia
 
 Winner — Ranked Robin (RCV-RR): Celia
-   *** 3 candidates tie for the most wins (April, Bruno, Celia) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (April, Bruno, Celia) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Celia has the greatest sum of win margins over the other finalists (+8). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

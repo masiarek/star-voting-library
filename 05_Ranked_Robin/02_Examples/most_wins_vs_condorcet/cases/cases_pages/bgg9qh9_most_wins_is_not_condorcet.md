@@ -68,12 +68,12 @@ Legend: For - Equal Support - Against   (row vs column)
    Cora > | 12 -  0 -  6 |12 -  0 -  6 | 6 -  0 - 12 |    ---      |12 -  0 -  6 |
   Diego > | 12 -  0 -  6 | 6 -  0 - 12 | 6 -  0 - 12 | 6 -  0 - 12 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cora       3–1–0         3     +12  Blake, Erin, Diego
-    2  Amy        2–2–0         2      +0  Cora, Diego
-    3  Blake      2–2–0         2      +0  Amy, Erin
-    4  Erin       2–2–0         2      +0  Amy, Diego
+    2  Blake      2–2–0         2      +0  Erin, Amy
+    3  Erin       2–2–0         2      +0  Amy, Diego
+    4  Amy        2–2–0         2      +0  Cora, Diego
     5  Diego      1–3–0         1     -12  Blake
 
 Winner — Ranked Robin (RCV-RR): Cora

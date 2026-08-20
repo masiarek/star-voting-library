@@ -66,15 +66,15 @@ Legend: For - Equal Support - Against   (row vs column)
      Catan > |  6 -  0 -  4 | 3 -  0 -  7 |    ---      |10 -  0 -  0 |
   Dominion > |  0 -  0 - 10 | 0 -  0 - 10 | 0 -  0 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Azul       2–1–0         2     +12  Boggle, Dominion
-    2  Boggle     2–1–0         2     +10  Catan, Dominion
-    3  Catan      2–1–0         2      +8  Azul, Dominion
-    4  Dominion   0–3–0         0     -30  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Azul       2–1–0         2     +12            +2  Boggle, Dominion
+    2  Boggle     2–1–0         2     +10             0  Catan, Dominion
+    3  Catan      2–1–0         2      +8            -2  Azul, Dominion
+    4  Dominion   0–3–0         0     -30             —  —
 
 Winner — Ranked Robin (RCV-RR): Azul
-   *** 3 candidates tie for the most wins (Azul, Boggle, Catan) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Azul, Boggle, Catan) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Azul has the greatest sum of win margins over the other finalists (+2). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

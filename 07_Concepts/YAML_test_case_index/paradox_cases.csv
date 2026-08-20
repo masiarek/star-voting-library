@@ -8,8 +8,6 @@ Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 28 voters, cy
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_medV45_noise_1.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 5 cands, 45 voters, cycle (STAR D, RR B)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C05_medV45_noise_2.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 15 voters, cycle (STAR D, RR A)",STAR,D,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_fewV15_noise_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 598 voters, cycle (STAR C, RR E)",STAR,C,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_largeV598_bloc_1.yaml
-Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 149 voters, cycle (STAR F, RR C)",STAR,F,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C07_medV149_bloc_2.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV15_noise_1.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 15 voters, cycle (STAR J, RR F)",STAR,J,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV15_noise_2.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 28 voters, cycle (STAR C, RR F)",STAR,C,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C10_fewV28_bloc_1.yaml
@@ -114,13 +112,13 @@ SCC / spoiler,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner i
 SCC / spoiler,Conditional,Borda SCC Ex.15 — Choose-One: C wins on first choices,Plurality,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_plurality.yaml
 SCC / spoiler,Conditional,Borda SCC Ex.15 — STAR: C wins (and stays won when a loser exits),STAR,C,BV2161,q3h4fk,method_comparisons/felsenthal_paradoxes/cases/bv2161_q3h4fk_star.yaml
 SCC / spoiler,Conditional,Coombs Ex.22 — SCC: C drops out and A wins instead of B,RCV_IRV,A,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex22_scc.yaml
-SCC / spoiler,Conditional,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
-SCC / spoiler,Conditional,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
+SCC / spoiler,Conditional,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
+SCC / spoiler,Conditional,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
 Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
 Condorcet's paradox (cycle),Simple,"A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder",RankedRobin,Alder,,,method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml
-Condorcet's paradox (cycle),Simple,"The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots",RankedRobin,Ava,,,method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml
-Condorcet's paradox (cycle),Simple,"Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both",RankedRobin,Ana,,,method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml
+Condorcet's paradox (cycle),Simple,"The whole Condorcet family splits — Minimax & Schulze pick Ava, Ranked Pairs picks Ben, on one set of ballots",RankedRobin,Ben,,,method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml
+Condorcet's paradox (cycle),Simple,"Same ballots, different Condorcet rule — Schulze says Ana, Ranked Pairs says Bruno, Split Cycle says both",RankedRobin,Bruno,,,method_comparisons/cycle_resolution/cases/cycle_schulze_vs_ranked_pairs_c4_b40.yaml
 Condorcet's paradox (cycle),Simple,A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact,STAR,Ada,,,method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml
 Condorcet's paradox (cycle),Simple,Felsenthal Ex.3 District I — Runoff/IRV: Bruno wins the runoff,IRV,Bruno,BV2147,9gdrqg,method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_irv.yaml
 Condorcet's paradox (cycle),Simple,"Felsenthal Ex.3 Combined — Runoff/IRV: Bruno won both districts, Alma wins the whole",IRV,Alma,BV2149,byk9v2,method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_irv.yaml
@@ -136,19 +134,19 @@ Condorcet's paradox (cycle),Simple,"Minimax Ex.30 — after: three C>A>B>D voter
 Condorcet's paradox (cycle),Simple,"Minimax Ex.30 — before: all 19 vote, Minimax elects B",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_before.yaml
 Condorcet's paradox (cycle),Simple,"Minimax Ex.31 — truncation: the same 19 voters, four ballots cut to their top two",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex31_truncation.yaml
 Condorcet's paradox (cycle),Simple,"Minimax Ex.32 — amalgamated: both districts elected D, together they cannot",RankedRobin,B,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex32_amalgamated.yaml
-Condorcet's paradox (cycle),Simple,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
+Condorcet's paradox (cycle),Simple,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
 Condorcet's paradox (cycle),Simple,"Successive elimination Ex.10 — amalgamated: every round ties, and the tie-break picks the winner",RankedRobin,C,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex10_amalgamated.yaml
 Condorcet's paradox (cycle),Simple,"Successive elimination Ex.11 — before: six voters, the agenda elects C",RankedRobin,B,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex11_twin_before.yaml
 Condorcet's paradox (cycle),Simple,Successive elimination Ex.12 — sincere: the A>B>C>D voter gets their last choice,RankedRobin,C,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex12_sincere.yaml
 Condorcet's paradox (cycle),Simple,Successive elimination Ex.12 — truncated: naming only A turns last place into first,RankedRobin,C,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex12_truncated.yaml
-Condorcet's paradox (cycle),Simple,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
+Condorcet's paradox (cycle),Simple,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
 Condorcet's paradox (cycle),Simple,"Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV)",RCV-IRV,Cara,,,method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_irv.yaml
 Condorcet's paradox (cycle),Simple,"Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin)",RankedRobin,Ada,,,method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_rr.yaml
 Condorcet's paradox (cycle),Simple,"A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157)",STAR,Rock,BV2157,mmcmpy,method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml
 Condorcet's paradox (cycle),Simple,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,STAR,Bruno,BV2174,yyhr66,method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml
 Condorcet's paradox (cycle),Simple,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,STAR,April,BV2175,9dhv8y,method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml
 Condorcet's paradox (cycle),Simple,The Post-it RCV example (20 voters) — RCV-IRV: Purple wins the video's whiteboard count,IRV,Purple,BV2176,p8dp28,method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_irv.yaml
-Condorcet's paradox (cycle),Simple,"The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, and two ladders",RankedRobin,Blue,BV2176,p8dp28,method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_ranked_robin.yaml
+Condorcet's paradox (cycle),Simple,"The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, settled head-to-head",RankedRobin,Green,BV2176,p8dp28,method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_ranked_robin.yaml
 Condorcet's paradox (cycle),Simple,The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held,STAR,Blue,BV2176,p8dp28,method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml
 Condorcet's paradox (cycle),Simple,"The Post-it election, seven ways — Approval: Pink, if approving means any support",Approval,Pink,BV2177,v8r66y,method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml
 Condorcet's paradox (cycle),Simple,"The Post-it election, seven ways — Choose-One: Purple on 7 first choices",Plurality,Purple,BV2177,v8r66y,method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_plurality.yaml
@@ -157,7 +155,7 @@ Condorcet's paradox (cycle),Simple,"Reversal symmetry — RCV-IRV, original: A w
 Condorcet's paradox (cycle),Simple,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)",RCV_IRV,A,,,method_comparisons/reversal_symmetry/cases/reversal_irv_reversed.yaml
 Condorcet's paradox (cycle),Simple,"Reversal symmetry — STAR, original: B (STAR does not winner=loser here)",STAR,B,,,method_comparisons/reversal_symmetry/cases/reversal_star_original.yaml
 Condorcet's paradox (cycle),Simple,"Reversal symmetry — STAR, reversed: A (differs from original B — no winner=loser)",STAR,A,,,method_comparisons/reversal_symmetry/cases/reversal_star_reversed.yaml
-Condorcet's paradox (cycle),Simple,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",RankedRobin,Cascade,,,method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml
+Condorcet's paradox (cycle),Simple,"A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity",RankedRobin,Denali,,,method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml
 Non-monotonicity,Conditional,"Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses",RCV_IRV,Montroll,,,method_comparisons/burlington_2009/cases/burlington_2009_raise_kiss_nonmono.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 — Runoff/IRV: the Condorcet winner is eliminated first,IRV,Ben,BV2145,6fj2kg,method_comparisons/felsenthal_paradoxes/cases/bv2145_6fj2kg_irv.yaml
 Non-monotonicity,Conditional,Felsenthal Ex.2 after the raise — Runoff/IRV: Ben loses by GAINING support,IRV,Ada,BV2146,krk2px,method_comparisons/felsenthal_paradoxes/cases/bv2146_krk2px_irv.yaml
@@ -192,7 +190,7 @@ No-show paradox,Conditional,"Minimax Ex.30 — after: three C>A>B>D voters stay 
 No-show paradox,Conditional,"Minimax Ex.30 — before: all 19 vote, Minimax elects B",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex30_noshow_before.yaml
 No-show paradox,Conditional,MJ Ex.27 — two voters do better by staying home,?,,,,method_comparisons/felsenthal_paradoxes/cases/mj_ex27_noshow_twin.yaml
 No-show paradox,Conditional,Successive elimination Ex.9 — two D voters stay home and get a better result,RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_noshow.yaml
-No-show paradox,Conditional,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
+No-show paradox,Conditional,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
 No-show paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
 No-show paradox,Conditional,No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno,STAR,Bruno,BV2174,yyhr66,method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml
 No-show paradox,Conditional,No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice,STAR,April,BV2175,9dhv8y,method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml
@@ -220,9 +218,9 @@ Truncation paradox,Conditional,Successive elimination Ex.12 — sincere: the A>B
 Truncation paradox,Conditional,Successive elimination Ex.12 — truncated: naming only A turns last place into first,RankedRobin,C,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex12_truncated.yaml
 Truncation paradox,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
 Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
-Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV",RankedRobin,A1,BV2143,9pr3wr,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2143_9pr3wr_teaming_fails.yaml
+Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): the clones change the outcome, and hand it to C",RankedRobin,C,BV2143,9pr3wr,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2143_9pr3wr_teaming_fails.yaml
 Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
-Clone dependence / teaming,Conditional,Clone independence (2/2) — teaming: A runs clones and turns a coin flip into a win,RankedRobin,A1,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_02_post.yaml
+Clone dependence / teaming,Conditional,"Clone independence (2/2) — teaming: A runs clones, and hands the win to C",RankedRobin,C,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_02_post.yaml
 Favorite betrayal,Conditional,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
 Favorite betrayal,Conditional,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,STAR,Bluebell,BV2207,b6xrdr,01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml
 Favorite betrayal,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml
@@ -257,4 +255,4 @@ Majority criterion failure,Simple,MJ Ex.25 — the median elects y though a majo
 Majority criterion failure,Simple,Range Ex.23 — four paradoxes with two candidates: one enthusiast outvotes three majorities,?,,,,method_comparisons/felsenthal_paradoxes/cases/range_ex23_mean_overrules_majority.yaml
 Pareto-dominated winner,Simple,Felsenthal Ex.6 — Approval can elect a Pareto-dominated candidate (LH-only),Approval,Beau,,,method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_pareto_approval.yaml
 Pareto-dominated winner,Simple,Felsenthal Ex.6 — Ranked Robin: the Pareto-dominant Condorcet winner Aria (LH-only),RankedRobin,Aria,,,method_comparisons/felsenthal_paradoxes/cases/felsenthal_ex6_ranked_robin.yaml
-Pareto-dominated winner,Simple,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
+Pareto-dominated winner,Simple,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml

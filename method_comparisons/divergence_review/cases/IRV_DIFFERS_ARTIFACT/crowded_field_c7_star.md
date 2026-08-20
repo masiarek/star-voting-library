@@ -251,7 +251,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Felix > | 36 -  0 - 29 |36 -  0 - 29 |27 -  9 - 29 |27 -  0 - 38 |19 - 27 - 19 |    ---      |50 -  0 - 15 |
   Greta > | 27 -  9 - 29 |27 -  0 - 38 |15 - 12 - 38 |15 - 12 - 38 |15 -  0 - 50 |15 -  0 - 50 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Clara      6–0–0         6     +86  Diego, Elsa, Felix, Bruno, Ana, Greta
     2  Diego      5–1–0         5     +79  Elsa, Felix, Bruno, Ana, Greta

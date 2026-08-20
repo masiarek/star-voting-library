@@ -195,14 +195,14 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 15 -  0 - 17 |    ---      |18 -  0 - 14 |
    Cora > | 21 -  0 - 11 |14 -  0 - 18 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Cora       1–1–0         1      +6  Alma
-    2  Bruno      1–1–0         1      +2  Cora
-    3  Alma       1–1–0         1      -8  Bruno
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Cora       1–1–0         1      +6            +6  Alma
+    2  Bruno      1–1–0         1      +2            +2  Cora
+    3  Alma       1–1–0         1      -8            -8  Bruno
 
 Winner — Ranked Robin (RCV-RR): Cora
-   *** 3 candidates tie for the most wins (Alma, Bruno, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Alma, Bruno, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Cora has the greatest sum of win margins over the other finalists (+6). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

@@ -230,16 +230,31 @@ def report(path):
         # thrown them away (its .margin() raises), which is the point made just below.
         margins = ({cands[c]: sum(graph.margin(c, o) for o in range(len(cands)) if o != c)
                     for c in co} if ranks is not None else None)
-        best = max(margins, key=margins.get) if margins else None
+        # Ranked Robin's 1st Degree looks only at margins AMONG THE TIED CANDIDATES;
+        # the whole-field sum is its 2nd Degree and is reached only if the first ties.
+        # Keeping both here is the point of the closing note: for exactly two
+        # finalists the 1st Degree is a single head-to-head, so the tiebreak has not
+        # left the tournament at all — it is the 2nd Degree that reads C2 information.
+        first = ({cands[c]: sum(graph.margin(c, o) for o in co if o != c) for c in co}
+                 if ranks is not None else None)
+        best = max(first, key=first.get) if first else None
         out.append(f"The tournament does NOT decide this election: Copeland ties {{{names}}}.")
-        if margins:
-            out.append(f"LH's Ranked Robin breaks that tie by TOTAL MARGIN — "
-                       f"{', '.join(f'{k} {v:+d}' for k, v in margins.items())} — electing {best}.")
+        if first:
+            out.append(f"Ranked Robin's 1st Degree breaks that tie on margins among the tied "
+                       f"candidates — {', '.join(f'{k} {v:+d}' for k, v in first.items())} — "
+                       f"electing {best}.")
+            out.append(f"Its 2nd Degree, over the whole field, would say "
+                       f"{', '.join(f'{k} {v:+d}' for k, v in margins.items())} — reached only "
+                       f"if the 1st Degree ties.")
         else:
-            out.append("LH's Ranked Robin would break that tie by TOTAL MARGIN — which this")
-            out.append("graph no longer holds. Run the LH engine on the file for the margins.")
-        out.append("Margins are not in the tournament. The moment Ranked Robin reaches for")
-        out.append("them it has stepped out of C1 and is reading C2 information.")
+            out.append("Ranked Robin would break that tie on margins, which this graph no")
+            out.append("longer holds. Run the LH engine on the file for them.")
+        if len(co) == 2:
+            out.append("With exactly two tied candidates the 1st Degree IS their head-to-head,")
+            out.append("so this tiebreak stays inside the tournament. The 2nd Degree does not.")
+        else:
+            out.append("Margins are not in the tournament. The moment Ranked Robin reaches for")
+            out.append("them it has stepped out of C1 and is reading C2 information.")
     else:
         out.append(f"The tournament decides: Copeland returns the single winner "
                    f"{_names(co, cands)}, no tiebreak needed.")

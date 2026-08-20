@@ -101,9 +101,21 @@ def report(path):
     # all three the moment a pairwise tie exists (a draw is worth ½, not 0).
     cope = {c: len(wins[c]) + 0.5 * len(ties[c]) for c in cands}
     out.append("Win–loss record — Copeland = wins + ½·ties "
-               "(highest score wins; ties broken by total margin):")
-    ranked = sorted(cands, key=lambda c: (-cope[c], -margin[c],
-                                          priority.index(c) if c in priority else 1e9))
+               "(highest score wins; ties broken by the Ranked Robin degrees):")
+    # Ranked Robin's own ladder: 1st Degree = margins among the TIED FINALISTS,
+    # 2nd Degree = margins over the whole field, then lot. Same rungs and same
+    # order as `ranked_robin_tally` in the engine — this file is a cross-check, so
+    # a second, drifting copy of the ladder is exactly what it must not be.
+    # electowiki.org/wiki/Ranked_Robin#Degrees_of_ties
+    def _within(c, pool):
+        return sum(matrix[c][o][0] - matrix[c][o][1] for o in pool if o != c)
+    first_degree, ranked = {}, []
+    for score in sorted(set(cope.values()), reverse=True):
+        tier = [c for c in cands if cope[c] == score]
+        for c in tier:
+            first_degree[c] = _within(c, tier)
+        ranked += sorted(tier, key=lambda c: (-first_degree[c], -margin[c],
+                                              priority.index(c) if c in priority else 1e9))
     for c in ranked:
         w, l, t = len(wins[c]), len(losses[c]), len(ties[c])
         rec = f"{w}–{l}" + (f"–{t}t" if t else "")
@@ -128,9 +140,19 @@ def report(path):
         out.append(f"Winner — Ranked Robin: {winner}\n   {why}")
     else:
         out.append(f"Winner — Ranked Robin: {winner}")
+        if len([c for c in leaders if first_degree[c] == first_degree[winner]]) == 1:
+            how = (f"Broken by the 1st Degree tiebreaker: {winner} leads on win margins "
+                   f"over the other finalists ({first_degree[winner]:+d}).")
+        elif len([c for c in leaders if first_degree[c] == first_degree[winner]
+                  and margin[c] == margin[winner]]) == 1:
+            how = (f"The finalists are level against each other, so the 2nd Degree "
+                   f"decides: {winner} leads on margins over the whole field "
+                   f"({margin[winner]:+d}).")
+        else:
+            how = "Neither degree separates them — broken by lot order."
         out.append(f"   ⚠️  {len(leaders)} candidates tie on Copeland {top:g} "
-                   f"({', '.join(leaders)}) — a cycle or a dead heat. Broken by total "
-                   "margin, then lot order. (This is where Minimax / Ranked Pairs / "
+                   f"({', '.join(leaders)}) — a cycle or a dead heat. {how} "
+                   "(This is where Minimax / Ranked Pairs / "
                    "Schulze differ — see cycle_resolution.md.)")
 
     # --- Independent third opinion: pref_voting's Copeland (see module docstring).

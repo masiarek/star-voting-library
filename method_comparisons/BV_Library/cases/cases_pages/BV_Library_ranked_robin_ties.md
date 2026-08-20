@@ -62,15 +62,15 @@ Legend: For - Equal Support - Against   (row vs column)
   Carol > | 0 - 0 - 6 |0 - 0 - 6 |   ---    |6 - 0 - 0 |
    Dave > | 0 - 0 - 6 |0 - 0 - 6 |0 - 0 - 6 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Alice      2–0–1       2.5     +12  Carol, Dave
-    2  Bob        2–0–1       2.5     +12  Carol, Dave
-    3  Carol      1–2–0         1      -6  Dave
-    4  Dave       0–3–0         0     -18  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Alice      2–0–1       2.5     +12             0  Carol, Dave
+    2  Bob        2–0–1       2.5     +12             0  Carol, Dave
+    3  Carol      1–2–0         1      -6             —  Dave
+    4  Dave       0–3–0         0     -18             —  —
 
 Winner — Ranked Robin (RCV-RR): Alice
-   *** 2 candidates tie on the highest Copeland score (2.5): Alice, Bob — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (2.5): Alice, Bob — a dead heat (they draw head-to-head, not a cycle). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order.
 ```
 <!-- --8<-- [end:report] -->
 

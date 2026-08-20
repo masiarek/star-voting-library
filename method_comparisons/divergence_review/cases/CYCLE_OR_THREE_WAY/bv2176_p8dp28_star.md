@@ -75,10 +75,9 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Purple   (differs from STAR)
   RCV-IRV                = Purple   (differs from STAR)
   Approval               = Pink   (differs from STAR)
+  RCV-RR                 = Green   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Purple)
@@ -238,15 +237,15 @@ Legend: For - Equal Support - Against   (row vs column)
     Blue > | 10 -  1 -  9 | 4 -  9 -  7 |    ---      |10 -  7 -  3 |
     Pink > | 12 -  0 -  8 | 5 -  8 -  7 | 3 -  7 - 10 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Blue       2–1–0         2      +5  Purple, Pink
-    2  Green      2–1–0         2      +4  Blue, Pink
-    3  Purple     1–2–0         1      -4  Green
-    4  Pink       1–2–0         1      -5  Purple
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Green      2–1–0         2      +4            +3  Blue, Pink
+    2  Blue       2–1–0         2      +5            -3  Pink, Purple
+    3  Pink       1–2–0         1      -5             —  Purple
+    4  Purple     1–2–0         1      -4             —  Green
 
-Winner — Ranked Robin (RCV-RR): Blue
-   *** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Green
+   *** 2 candidates tie for the most wins (Green, Blue) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Green has the greatest sum of win margins over the other finalists (+3).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -259,7 +258,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Green, Blue) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Blue is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Green is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

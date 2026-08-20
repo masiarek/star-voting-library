@@ -64,11 +64,9 @@ Legend: For - Equal Support - Against
   Choose-One (Plurality) = Chicago   (differs from STAR)
   RCV-IRV                = Chicago   (differs from STAR)
   Approval               = Austin   (differs from STAR)
-  RCV-RR                 = Chicago   (differs from STAR)
+  RCV-RR                 = Boston   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
-        here — STAR need not elect the Condorcet candidate.
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Austin)
@@ -210,15 +208,15 @@ Legend: For - Equal Support - Against   (row vs column)
   Chicago > | 3 - 0 - 2 |2 - 0 - 3 |   ---    |3 - 0 - 2 |
    Denver > | 3 - 0 - 2 |2 - 0 - 3 |2 - 0 - 3 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Chicago    2–1–0         2      +1  Austin, Denver
-    2  Boston     2–1–0         2      -1  Chicago, Denver
-    3  Austin     1–2–0         1      +1  Boston
-    4  Denver     1–2–0         1      -1  Austin
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Boston     2–1–0         2      -1            +1  Chicago, Denver
+    2  Chicago    2–1–0         2      +1            -1  Denver, Austin
+    3  Denver     1–2–0         1      -1             —  Austin
+    4  Austin     1–2–0         1      +1             —  Boston
 
-Winner — Ranked Robin (RCV-RR): Chicago
-   *** 2 candidates tie for the most wins (Boston, Chicago) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Boston
+   *** 2 candidates tie for the most wins (Boston, Chicago) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Boston has the greatest sum of win margins over the other finalists (+1).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -231,7 +229,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Boston, Chicago) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Chicago is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Boston is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

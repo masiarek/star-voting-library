@@ -6,7 +6,7 @@
 
 *Ten friends rank four board games for the club's game night. When the count is done, every one of the top three games loses some head-to-head matchup — rock, paper, scissors, with a fourth game everyone ranks last. If nobody beats everybody, who deserves to win? Predict what Ranked Robin does before you peek — including every rung of its ladder.*
 
-**You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../07_Concepts/GLOSSARY.md) exists** · walking [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → total margin) to a *deterministic* answer inside a cycle.
+**You practice:** filling in a pairwise matrix from ranked ballots · detecting that **no [Condorcet winner](../../07_Concepts/GLOSSARY.md) exists** · walking [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin_vs_condorcet.md)'s tiebreak ladder (most wins → [margins among the tied finalists](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md)) to a *deterministic* answer inside a cycle.
 
 Work each part on paper before opening its solution. The YAML at the bottom is runnable; the `_tabulated` mirror is the full audit report. This is the set's one **ranked-ballot** exercise — the ballots are `Azul>Boggle>Catan>Dominion`-style rankings, not scores.
 

@@ -1,14 +1,19 @@
-election_title: "BV2143 — Ranked Robin clone independence (2/2): teaming succeeds on LH, FAILS on BV"
+election_title: "BV2143 — Ranked Robin clone independence (2/2): the clones change the outcome, and hand it to C"
 scenario_description: >-
   The electowiki clone-independence example, part 2 (teaming), BV-backed. Same
-  election as BV2142 but the A-faction runs clones A1, A2. The two engines reach
-  OPPOSITE winners from identical ballots: A1 and C tie at 5 wins. LH breaks it by
-  total margin — A1 +134 beats C +104 — so LH elects A1, and the teaming attack
-  SUCCEEDS (this file pins lot but margin already decides). BetterVoting breaks the
-  2-way tie by head-to-head instead, and C beats A1 21-12, so BV elects C
-  (tieBreakType "none", log "C preferred over A1 in runoff") — the teaming attack
-  FAILS on BV. Same ballots, different tiebreak, different winner: the clone
-  failure is a property of the margin rule, not of Ranked Robin as such. LH-only
+  election as BV2142 but the A-faction runs clones A1, A2. A1 and C tie at 5 wins,
+  and Ranked Robin's 1st Degree tiebreaker compares the finalists with each other:
+  C beats A1 21-12, so C is elected — on BetterVoting (tieBreakType "none", log
+  "C preferred over A1 in runoff") and, since 2026-08-19, on this engine too. The
+  clones still CHANGED THE OUTCOME (before cloning the count ends in a lot between
+  A and B), so clone independence still fails by crowding; what fails with it is
+  the attack, because the win goes to C rather than to the cloning faction.
+  Until 2026-08-19 this engine broke the tie on total margin over the whole field
+  — A1 +134 beats C +104 — and elected A1, which made the teaming attack look
+  successful and made the two engines look like they disagreed about the method.
+  They did not: total margin is Ranked Robin's 2nd Degree, and it is reached only
+  when the finalists are level against each other. See
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md. LH-only
   clean pair: clone_teaming_02_post.yaml. Lesson:
   05_Ranked_Robin/01_Learn/rr_clone_independence.md
   Live results: https://bettervoting.com/9pr3wr/results
@@ -19,15 +24,16 @@ paradoxes: [clone-teaming]
 voting_method: RankedRobin
 num_winners: 1
 lot_numbers: [A1, A2, B, C, D, E, F]
-# A1 & C tie at 5 wins. LH: margin A1 +134 > C +104 -> A1 (teaming succeeds).
-#   BV: 2-way head-to-head, C beats A1 21-12 -> C (teaming fails). Deterministic
-#   on BOTH engines, opposite winners.
+# A1 & C tie at 5 wins. 1st Degree = the finalists' head-to-head, C beats A1
+#   21-12 -> C on both engines (deterministic, no lot). Total margin (A1 +134 vs
+#   C +104) is the 2nd Degree and elects A1; that was this engine's answer before
+#   2026-08-19 and is the only reading under which teaming pays.
 ballots: |-
   12:A1>A2>B>C>D>E>F
   11:B>C>A1>A2>D>E>F
   10:C>A1>A2>B>D>E>F
 
 expected_winners:
-  - A1
+  - C
 
 # file: bv2143_9pr3wr_teaming_fails.yaml

@@ -180,14 +180,14 @@ Legend: For - Equal Support - Against   (row vs column)
   Beck > | 2 - 0 - 7 |   ---    |5 - 0 - 4 |
   Cora > | 6 - 0 - 3 |4 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ash        1–1–0         1      +2  Beck
-    2  Cora       1–1–0         1      +2  Ash
-    3  Beck       1–1–0         1      -4  Cora
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ash        1–1–0         1      +2            +2  Beck
+    2  Cora       1–1–0         1      +2            +2  Ash
+    3  Beck       1–1–0         1      -4            -4  Cora
 
 Winner — Ranked Robin (RCV-RR): Ash
-   *** 3 candidates tie for the most wins (Ash, Beck, Cora) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ash, Beck, Cora) — a Condorcet cycle (no candidate beats all others). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

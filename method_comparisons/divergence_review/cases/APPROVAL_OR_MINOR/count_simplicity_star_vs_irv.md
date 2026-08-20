@@ -199,7 +199,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Dana > |  7 -  0 - 33 | 7 -  0 - 33 | 7 -  0 - 33 |    ---      |34 -  0 -  6 |
     Evan > |  6 -  0 - 34 | 6 -  0 - 34 | 6 -  0 - 34 | 6 -  0 - 34 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Carmen     4–0–0         4    +100  Andre, Blake, Dana, Evan
     2  Andre      3–1–0         3     +56  Blake, Dana, Evan

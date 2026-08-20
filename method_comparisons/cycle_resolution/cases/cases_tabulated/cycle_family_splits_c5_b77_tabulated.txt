@@ -14,20 +14,24 @@ scenario_description: |-
 
   On these identical ballots the Condorcet family gives four different answers:
 
-      Copeland (Ranked Robin)  Ava, Ben   (tie — both go 2-2; LH breaks it by margin)
+      Copeland (Ranked Robin)  Ava, Ben   (tie — both go 2-2; the 1st Degree gives it to Ben)
       Minimax                  Ava
       Schulze (beat path)      Ava
       Ranked Pairs             Ben
       Split Cycle              Ava, Ben
 
   Minimax and Schulze land on Ava (her worst defeat is the mildest); Ranked Pairs
-  locks the biggest margins first and they carry Ben; Copeland can't separate the
-  two, and Split Cycle deliberately returns both. That is the entire lesson of the
+  locks the biggest margins first and they carry Ben; Copeland cannot separate the
+  two on the tally and hands it to Ben on its 1st Degree tiebreaker (Ben beat Ava
+  head-to-head, 40-37); Split Cycle deliberately returns both. That is the entire lesson of the
   cycle-resolution page in one election: "Condorcet method" names a FAMILY, and
   inside a cycle the family stops agreeing.
 
   The LH engine tabulates the Copeland column (= Ranked Robin) and breaks the
-  Ava/Ben tie by total margin, then lot. The other four rules are printed by:
+  Ava/Ben tie by Ranked Robin's own degrees — margins among the tied finalists
+  first, which for two finalists is their head-to-head — then margins over the
+  whole field, then lot. Until 2026-08-19 it started at the second of those and
+  reported Ava; see 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md. The other four rules are printed by:
     uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
       method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml
 
@@ -55,7 +59,7 @@ ballots: |-
   7:Ben>Ava>Cole>Ezra>Dana
 
 expected_winners:
-  - Ava
+  - Ben
 
 ======================================================================
 TABULATION RESULTS
@@ -97,16 +101,16 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 40 -  0 - 37 |40 -  0 - 37 |34 -  0 - 43 |    ---      |52 -  0 - 25 |
   Cole > | 23 -  0 - 54 |25 -  0 - 52 |46 -  0 - 31 |25 -  0 - 52 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ava        3–1–0         3     +76  Ezra, Cole, Dana
-    2  Ben        3–1–0         3     +24  Ava, Ezra, Cole
-    3  Ezra       2–2–0         2     +44  Cole, Dana
-    4  Cole       1–3–0         1     -70  Dana
-    5  Dana       1–3–0         1     -74  Ben
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ben        3–1–0         3     +24            +3  Ava, Ezra, Cole
+    2  Ava        3–1–0         3     +76            -3  Ezra, Cole, Dana
+    3  Ezra       2–2–0         2     +44             —  Cole, Dana
+    4  Cole       1–3–0         1     -70             —  Dana
+    5  Dana       1–3–0         1     -74             —  Ben
 
-Winner — Ranked Robin (RCV-RR): Ava
-   *** 2 candidates tie for the most wins (Ava, Ben) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Ben
+   *** 2 candidates tie for the most wins (Ava, Ben) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Ben has the greatest sum of win margins over the other finalists (+3).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -119,7 +123,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Ava, Ben) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Ava is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Ben is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

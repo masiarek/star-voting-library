@@ -5,17 +5,26 @@ scenario_description: >-
   rotated: A>B>C>D, B>C>D>A, D>A>B>C. Every head-to-head is decided (no ties),
   so the pairwise results form a genuine TOURNAMENT — a complete directed graph.
   There is no Condorcet winner: D beats A, so the top of the graph cycles.
-  Now the famous C1 rules, which read ONLY that graph, split five ways:
+  Now the famous C1 rules, which read ONLY that graph, split four ways (five,
+  until 2026-08-19 — Ranked Robin's tiebreak used to supply a fifth answer, B, and
+  that turned out to be an engine bug rather than a rule):
   Top cycle / Schwartz = {A, B, C, D} (everyone); Uncovered set = Banks set =
   Bipartisan set = {A, B, D} (C is COVERED — B beats C and beats everyone C
   beats, so C is strictly redundant); Copeland set = {A, B} (both win 2, C and D
   win 1); Slater set = Markov set = {A}. Five different answers to "who should
   win," each with a published defense, from three ballots.
-  Ranked Robin is the Copeland set, so the LH engine lands on {A, B} and must
-  break the tie — by TOTAL MARGIN, electing B (+3 vs A's +1). That step is the
-  lesson: margins are not in the tournament. The moment Ranked Robin consults
-  them it has left C1 and is reading C2 information, and it elects B where
-  Slater and Markov both elect A.
+  Ranked Robin is the Copeland set, so the engine lands on {A, B} and must break
+  the tie. Its 1st Degree tiebreaker asks for the margins among the FINALISTS
+  only, and with exactly two finalists that is a single number — their own
+  head-to-head, which A wins 2-1. So Ranked Robin elects A, agreeing with Slater
+  and Markov, and the tiebreak never leaves the tournament: who-beat-whom is C1
+  information, margins or no margins.
+  Ranked Robin does leave C1, but one rung lower down. Its 2nd Degree compares
+  margins over the WHOLE FIELD, and those are not in the tournament at all — on
+  these ballots they run the other way (B +3 vs A's +1), which is exactly the
+  answer this engine printed until 2026-08-19, when it was applying the 2nd
+  Degree in place of the 1st. See
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.
   This is Figure 3.3 of Brandt, Brill & Harrenstein, "Tournament Solutions"
   (Handbook of Computational Social Choice, 2016, ch. 3), turned back into
   ballots — the chapter gives the graph, and McGarvey's theorem guarantees some
@@ -33,10 +42,12 @@ scenario_description: >-
   LH-only as a file, but NOT because BetterVoting can't count it — the earlier
   note claiming that was wrong. Exactly two candidates tie and they played each
   other, so BV's head-to-head rung settles it deterministically (tieBreakType
-  "none") and elects A, where LH's margin rung elects B. The same profile is
-  live on BV under tree names as BV2270 (8h4bvh): Alder=A, Birch=B, Cedar=C,
-  Dogwood=D. Three tabulators, three positions: BV -> A, LH -> B,
-  pref_voting -> the leader set {A, B}, declining to choose.
+  "none") and elects A. The same profile is live on BV under tree names as
+  BV2270 (8h4bvh): Alder=A, Birch=B, Cedar=C, Dogwood=D. The two engines now
+  agree on A — BV's head-to-head rung IS the 1st Degree for two finalists —
+  and pref_voting still declines to choose, returning the leader set {A, B},
+  which is the honest position for a library that implements the tally and not
+  the tiebreak.
 voting_method: RankedRobin
 num_winners: 1
 ballots: |-
@@ -44,6 +55,6 @@ ballots: |-
   B>C>D>A
   D>A>B>C
 expected_winners:
-  - B
+  - A
 
 # file: five_answers_one_election_c4_b3.yaml

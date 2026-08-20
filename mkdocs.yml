@@ -874,6 +874,14 @@ plugins:
         05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_fewV28_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C10_medV148_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        # --- Two more retired 2026-08-19: the engine gained Ranked Robin's 1st
+        # Degree rung (margins among the tied finalists), which outranks the
+        # total-margin rung it had been using, and RR's winner on these two moved
+        # onto STAR's. Same treatment as the 2026-08-09 four.
+        05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_largeV598_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_largeV598_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_medV149_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
+        05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C07_medV149_bloc_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/README.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_2.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV15_noise_2.md
         05_Ranked_Robin/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV28_bloc_1.md: 05_Ranked_Robin/02_Examples/star_vs_rr_divergence/star_vs_rr_divergence_pages/cycle_C05_fewV28_bloc_1.md

@@ -169,7 +169,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Orange > | 3 - 0 - 0 |   ---    |1 - 0 - 2 |
   Banana > | 2 - 0 - 1 |2 - 0 - 1 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Banana     2–0–0         2      +2  Orange, Apple
     2  Orange     1–1–0         1      +2  Apple

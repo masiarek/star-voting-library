@@ -7,7 +7,7 @@ search:
 
 *Generated from [`minimax_ex33_scc.yaml`](../minimax_ex33_scc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** D
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../../../05_Ranked_Robin/01_Learn/README.md) · **1 seat** · **Expected winner:** A
 
 ## Scenario
 
@@ -16,7 +16,8 @@ Seven voters, four candidates: 3×(D>C>B>A), 2×(A>D>C>B), 2×(B>A>D>C). The soc
 Now let B — who cannot win, and does not — leave the race before the vote. On the same ballots minus B, A is ranked first by 4 of 7, an absolute majority, and wins outright. Removing a LOSER changed the winner from D to A: the subset choice condition (SCC) failure, the formal version of what campaigns call a spoiler. Reproduce the second count with: minimax_report.py --drop B, which recomputes every pairwise from the same ballots.
 At 4 candidates and 7 voters this is close to minimal — Brandt, Matthäus & Saile (2022) show a 3-candidate, 7-voter instance exists, so this one carries a single extra candidate.
 Labels are Felsenthal's own A/B/C/D so the case can be read side by side with the paper's table.
-Tabulated here as Ranked Robin for the pairwise matrix Minimax reads; Ranked Robin also lands on D, by a different route — Copeland ties A and D at 2 wins each and the margin tiebreak separates them.
+Tabulated here as Ranked Robin for the pairwise matrix Minimax reads — and the two methods part company. Copeland ties A and D at 2 wins each, and Ranked Robin's 1st Degree tiebreaker asks only how the tied finalists did against EACH OTHER: A beat D 4:3, so Ranked Robin elects A — the same candidate who wins outright once the loser B leaves the race. Minimax elects D on the smallest worst-loss. Two Condorcet-family answers to one cycle, and the SCC failure is Minimax's, not Ranked Robin's.
+(Before 2026-08-19 the engine broke this tie on total margin over the whole field and reported D, which reads as agreement with Minimax; that rung is Ranked Robin's 2nd Degree and is only reached when the finalists are level against each other. See 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.)
 
 ## Ballots
 
@@ -60,15 +61,15 @@ Legend: For - Equal Support - Against   (row vs column)
   B > | 2 - 0 - 5 |2 - 0 - 5 |   ---    |5 - 0 - 2 |
   A > | 4 - 0 - 3 |4 - 0 - 3 |2 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  D          2–1–0         2      +9  B, C
-    2  A          2–1–0         2      -1  D, C
-    3  B          1–2–0         1      -3  A
-    4  C          1–2–0         1      -5  B
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          2–1–0         2      -1            +1  D, C
+    2  D          2–1–0         2      +9            -1  C, B
+    3  C          1–2–0         1      -5             —  B
+    4  B          1–2–0         1      -3             —  A
 
-Winner — Ranked Robin (RCV-RR): D
-   *** 2 candidates tie for the most wins (D, A) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): A
+   *** 2 candidates tie for the most wins (D, A) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: A has the greatest sum of win margins over the other finalists (+1).
 ```
 <!-- --8<-- [end:report] -->
 
@@ -86,7 +87,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (D, A) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner D is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

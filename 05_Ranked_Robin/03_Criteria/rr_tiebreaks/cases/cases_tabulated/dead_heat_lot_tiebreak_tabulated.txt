@@ -64,14 +64,14 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 1 - 2 - 1 |   ---    |4 - 0 - 0 |
   Cara > | 0 - 0 - 4 |0 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ada        1–0–1       1.5      +4  Cara
-    2  Ben        1–0–1       1.5      +4  Cara
-    3  Cara       0–2–0         0      -8  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ada        1–0–1       1.5      +4             0  Cara
+    2  Ben        1–0–1       1.5      +4             0  Cara
+    3  Cara       0–2–0         0      -8             —  —
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order.
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

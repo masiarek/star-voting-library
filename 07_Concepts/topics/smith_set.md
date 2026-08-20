@@ -63,15 +63,15 @@ Legend: For - Equal Support - Against   (row vs column)
   Cara > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |7 - 0 - 0 |
   Dave > | 0 - 0 - 7 |0 - 0 - 7 |0 - 0 - 7 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ada        2–1–0         2      +9  Ben, Dave
-    2  Ben        2–1–0         2      +7  Cara, Dave
-    3  Cara       2–1–0         2      +5  Ada, Dave
-    4  Dave       0–3–0         0     -21  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ada        2–1–0         2      +9            +2  Ben, Dave
+    2  Ben        2–1–0         2      +7             0  Cara, Dave
+    3  Cara       2–1–0         2      +5            -2  Ada, Dave
+    4  Dave       0–3–0         0     -21             —  —
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Ada has the greatest sum of win margins over the other finalists (+2). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 ```
 <!-- /report -->
 The same six results, drawn as a graph — one node per candidate, an arrow **A → B** meaning *A beats B head-to-head* (the margin rides on the arrow):
@@ -107,7 +107,7 @@ A method satisfies the **Smith criterion** (is **Smith-efficient**) if its winne
 
 | Method | In the club? | Why |
 |--------|:---:|-----|
-| **Ranked Robin / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (margins, lot, or BV's random draw), the winner stays inside |
+| **Ranked Robin / Copeland** | ✅ | the best win–loss records *are* the top of the club — however the tie among them is then broken (the [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md), the lot, or BV's random draw), the winner stays inside |
 | **Ranked Pairs, Schulze** | ✅ | the "serious" [cycle resolvers](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) are Smith-efficient by construction |
 | **Minimax** | ❌ | Condorcet-efficient, but in a 4+ candidate cycle its "least bad worst loss" pick can fall *outside* the Smith set — the classic fine-print failure |
 | **RCV-IRV (Hare)** | ❌ | not even Condorcet-efficient ([center squeeze](center_squeeze/README.md)), so Smith is out of reach |

@@ -64,9 +64,11 @@ Legend: For - Equal Support - Against
   STAR                   = B
   Choose-One (Plurality) = A   (differs from STAR)
   RCV-IRV                = A   (differs from STAR)
-  RCV-RR                 = C   (differs from STAR)
+  RCV-RR                 = A   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
 
 --- STAR Voting Method (single winner) ---
  Tabulating 7 ballots.
@@ -186,15 +188,15 @@ Legend: For - Equal Support - Against   (row vs column)
   C > | 4 - 0 - 3 |2 - 0 - 5 |   ---    |7 - 0 - 0 |
   D > | 3 - 0 - 4 |2 - 0 - 5 |0 - 0 - 7 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  C          2–1–0         2      +5  A, D
-    2  A          2–1–0         2      +3  B, D
-    3  B          2–1–0         2      +3  C, D
-    4  D          0–3–0         0     -11  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          2–1–0         2      +3            +2  B, D
+    2  B          2–1–0         2      +3             0  C, D
+    3  C          2–1–0         2      +5            -2  A, D
+    4  D          0–3–0         0     -11             —  —
 
-Winner — Ranked Robin (RCV-RR): C
-   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+Winner — Ranked Robin (RCV-RR): A
+   *** 3 candidates tie for the most wins (A, B, C) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: A has the greatest sum of win margins over the other finalists (+2). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -205,7 +207,7 @@ the honest answer to "who is even in contention?".
    cycle, so the strongest "candidate" is a set, not a person. Which member of
    the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
-   Ranked Robin (RCV-RR) winner C is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

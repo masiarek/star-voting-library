@@ -33,7 +33,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Diego > |  0 -  8 - 10 | 9 -  0 -  9 | 3 -  1 - 14 |    ---      | 4 -  4 - 10 |
    Elena > | 10 -  0 -  8 |10 -  4 -  4 |10 -  0 -  8 |10 -  4 -  4 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Elena      4–0–0         4     +16  Carmen, Avery, Blake, Diego
     2  Carmen     3–1–0         3     +22  Avery, Blake, Diego

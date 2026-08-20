@@ -79,15 +79,15 @@ Legend: For - Equal Support - Against   (row vs column)
     Cedar > | 11 -  0 - 10 | 5 -  0 - 16 |    ---      |21 -  0 -  0 |
   Dogwood > |  0 -  0 - 21 | 0 -  0 - 21 | 0 -  0 - 21 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Alder      2–1–0         2     +29  Birch, Dogwood
-    2  Birch      2–1–0         2     +23  Cedar, Dogwood
-    3  Cedar      2–1–0         2     +11  Alder, Dogwood
-    4  Dogwood    0–3–0         0     -63  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Alder      2–1–0         2     +29            +8  Birch, Dogwood
+    2  Birch      2–1–0         2     +23            +2  Cedar, Dogwood
+    3  Cedar      2–1–0         2     +11           -10  Alder, Dogwood
+    4  Dogwood    0–3–0         0     -63             —  —
 
 Winner — Ranked Robin (RCV-RR): Alder
-   *** 3 candidates tie for the most wins (Alder, Birch, Cedar) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Alder, Birch, Cedar) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Alder has the greatest sum of win margins over the other finalists (+8). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

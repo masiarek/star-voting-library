@@ -230,16 +230,16 @@ Legend: For - Equal Support - Against   (row vs column)
   Copeland's Rule > |  149 - 127 - 723  | 145 - 132 - 722  | 151 - 159 - 689  |       ---        | 419 - 528 -  52  |
       Flip a Coin > |  103 - 148 - 748  | 103 - 146 - 750  | 103 - 180 - 716  |  52 - 528 - 419  |       ---        |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate        W–L–T  Copeland  Margin  Beats
-    1  Schulze Method   3–1–0         3   +1327  Minimax, Copeland's Rule, Flip a Coin
-    2  Ranked Pairs     3–1–0         3   +1264  Schulze Method, Copeland's Rule, Flip a Coin
-    3  Minimax          3–1–0         3   +1003  Ranked Pairs, Copeland's Rule, Flip a Coin
-    4  Copeland's Rule  1–3–0         1   -1322  Flip a Coin
-    5  Flip a Coin      0–4–0         0   -2272  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate        W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Schulze Method   3–1–0         3   +1327          +103  Minimax, Copeland's Rule, Flip a Coin
+    2  Ranked Pairs     3–1–0         3   +1264           +45  Schulze Method, Copeland's Rule, Flip a Coin
+    3  Minimax          3–1–0         3   +1003          -148  Ranked Pairs, Copeland's Rule, Flip a Coin
+    4  Copeland's Rule  1–3–0         1   -1322             —  Flip a Coin
+    5  Flip a Coin      0–4–0         0   -2272             —  —
 
 Winner — Ranked Robin (RCV-RR): Schulze Method
-   *** 3 candidates tie for the most wins (Ranked Pairs, Schulze Method, Minimax) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ranked Pairs, Schulze Method, Minimax) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Schulze Method has the greatest sum of win margins over the other finalists (+103). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

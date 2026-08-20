@@ -27,15 +27,15 @@ Legend: For - Equal Support - Against   (row vs column)
   Clover > | 2 - 0 - 3 |1 - 1 - 3 |   ---    |2 - 1 - 2 |
   Dahlia > | 3 - 0 - 2 |2 - 0 - 3 |2 - 1 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Basil      2–1–0         2      +2  Dahlia, Clover
-    2  Aster      2–1–0         2      +1  Basil, Clover
-    3  Dahlia     1–1–1       1.5      +0  Aster
-    4  Clover     0–2–1       0.5      -3  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Aster      2–1–0         2      +1            +1  Basil, Clover
+    2  Basil      2–1–0         2      +2            -1  Dahlia, Clover
+    3  Dahlia     1–1–1       1.5      +0             —  Aster
+    4  Clover     0–2–1       0.5      -3             —  —
 
-Winner — Ranked Robin (RCV-RR): Basil
-   *** 2 candidates tie for the most wins (Aster, Basil) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Aster
+   *** 2 candidates tie for the most wins (Aster, Basil) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Aster has the greatest sum of win margins over the other finalists (+1).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -48,7 +48,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (Aster, Basil) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner Basil is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner Aster is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

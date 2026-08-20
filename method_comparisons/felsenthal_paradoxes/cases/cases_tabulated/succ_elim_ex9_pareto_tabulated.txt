@@ -12,7 +12,7 @@ scenario_description: |-
   SCC. Delete D, who wins nothing under the first agenda: A beats C 8:3 and then B 11:0, so A wins. A non-winner's mere presence decided the election.
   NO-SHOW is the companion file succ_elim_ex9_noshow.yaml, where two of the D-first voters stay home and get A, whom they prefer to B.
   Labels are Felsenthal's own, capitalized; this is an academic reproduction meant to be read beside the paper's table, not a scenario with a cast.
-  Successive elimination exists in neither the LH engine nor BetterVoting — it is a parliamentary procedure, not a ballot-box method — so this file is tabulated as Ranked Robin, which reads the same pairwise matrix the agenda consumes one pair at a time. Ranked Robin elects A, the candidate the agenda buried. Run the procedure itself with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py, whose --agenda and --drop flags reproduce all four readings above.
+  Successive elimination exists in neither the LH engine nor BetterVoting — it is a parliamentary procedure, not a ballot-box method — so this file is tabulated as Ranked Robin, which reads the same pairwise matrix the agenda consumes one pair at a time. Ranked Robin ties A and D at 2 wins each and separates them the way the method says to — the finalists' own head-to-head, its 1st Degree — which D wins 6:5. So Ranked Robin elects D: not the Pareto-dominated B the first agenda produces, and not the A the third agenda produces, but the winner of the second. (Before 2026-08-19 the engine used total margin over the whole field here and reported A; that is Ranked Robin's 2nd Degree, reachable only when the finalists are level against each other — see 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.) Run the procedure itself with tools_adam/pref_voting_tabulation_engine/successive_elimination_report.py, whose --agenda and --drop flags reproduce all four readings above.
 paradoxes: [pareto, spoiler-scc, condorcet-cycle, no-show]
 voting_method: RankedRobin
 num_winners: 1
@@ -22,7 +22,7 @@ ballots: |-
   1:C>D>A>B
   5:D>A>B>C
 expected_winners:
-  - A
+  - D
 
 # file: succ_elim_ex9_pareto.yaml
 
@@ -57,15 +57,15 @@ Legend: For - Equal Support - Against   (row vs column)
   C > |  3 -  0 -  8 | 3 -  0 -  8 |    ---      | 6 -  0 -  5 |
   D > |  6 -  0 -  5 | 6 -  0 -  5 | 5 -  0 -  6 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A          2–1–0         2     +15  B, C
-    2  D          2–1–0         2      +1  A, B
-    3  B          1–2–0         1      -7  C
-    4  C          1–2–0         1      -9  D
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  D          2–1–0         2      +1            +1  A, B
+    2  A          2–1–0         2     +15            -1  B, C
+    3  B          1–2–0         1      -7             —  C
+    4  C          1–2–0         1      -9             —  D
 
-Winner — Ranked Robin (RCV-RR): A
-   *** 2 candidates tie for the most wins (A, D) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): D
+   *** 2 candidates tie for the most wins (A, D) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: D has the greatest sum of win margins over the other finalists (+1).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —
@@ -78,7 +78,7 @@ the honest answer to "who is even in contention?".
    about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
    Note: the Copeland leaders (A, D) are only part of the set — the
    win–loss table's top block understates how wide the contention is.
-   Ranked Robin (RCV-RR) winner A is INSIDE the Smith set. ✓
+   Ranked Robin (RCV-RR) winner D is INSIDE the Smith set. ✓
       Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
       the set outscores every outsider, so the top of the win–loss table is
       always inside the set, however the tie among them is then broken.

@@ -2,9 +2,9 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/cxrf8v) · **[results ↗](https://bettervoting.com/cxrf8v/results)** (election `cxrf8v`).
 
-*Robert LeGrand's flagship "the method decides everything" example, from his [ranked-ballot calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html). 921 voters rank five candidates, and there is **no Condorcet winner** — a top cycle. Across the ~15 ranked methods the win splits **five ways**. Run through the four tabulations BetterVoting supports, one electorate yields **three different winners** — and one of them is a documented LH-vs-BetterVoting tiebreak divergence.*
+*Robert LeGrand's flagship "the method decides everything" example, from his [ranked-ballot calculator](https://cs.angelo.edu/~rlegrand/rbvote/calc.html). 921 voters rank five candidates, and there is **no Condorcet winner** — a top cycle. Across the ~15 ranked methods the win splits **five ways**. Run through the four tabulations BetterVoting supports, one electorate yields **two different winners** — and for two years it looked like three, because this repo's engine broke the Ranked Robin tie by the wrong rung.*
 
-→ **Level: 301 · deep dive** — Curriculum [301.11](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [RR tiebreak: LH vs BV](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md).
+→ **Level: 301 · deep dive** — Curriculum [301.11](../../07_Concepts/CURRICULUM.md). See also: [the ranked-ballot method zoo](../../07_Concepts/topics/ranked_ballot_methods_zoo.md) · [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) · [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md).
 
 ## The electorate
 
@@ -28,7 +28,7 @@ There is **no Condorcet winner**: the pairwise contests form a cycle (the **Smit
 |---|---|---|
 | **IRV (Hare)** | **Dave** | LeGrand · pref_voting · LH · **BV** |
 | **STV, 1 seat** | **Dave** | LeGrand · LH · **BV** (= IRV single-winner) |
-| **Ranked Robin (Copeland)** | **Abby** (LH) / **Brad** (BV) | *see divergence below* |
+| **Ranked Robin (Copeland)** | **Brad** | LH · **BV** — *a Copeland tie, broken below* |
 | **STAR (ranks→scores)** | **Brad** | LH · **BV** |
 | Borda, Coombs, Baldwin, Raynaud, Schulze | Abby | LeGrand · pref_voting |
 | Nanson, Tideman (Ranked Pairs), Small | Brad | LeGrand · pref_voting |
@@ -37,20 +37,21 @@ There is **no Condorcet winner**: the pairwise contests form a cycle (the **Smit
 
 Every candidate in the Smith set wins under *some* method, and even the Condorcet **loser** Cora wins under Dodgson/Simpson (she loses every duel, but only barely). This is the strongest possible statement of the repo's thesis: **with no Condorcet winner, "who won?" has no method-independent answer.**
 
-## The Ranked Robin divergence: LH ≠ BetterVoting
+## The Ranked Robin tie — and the "divergence" that turned out to be our bug
 
-Copeland (Ranked Robin's core) **ties Abby and Brad** — each wins three head-to-heads and loses two. The two engines break that tie by different rules, and here the rules disagree:
+Copeland (Ranked Robin's core) **ties Abby and Brad**: each goes 3–1, beating three of the other four. The tally cannot separate them, so the tie goes to Ranked Robin's published [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) — and with exactly two finalists the **1st Degree is their own head-to-head**:
 
 ```
    Abby  beats Cora   461 – 460      Brad  beats Abby   463 – 458
    Abby  beats Erin   511 – 410      Brad  beats Cora   461 – 460
-   Abby  beats Dave   485 – 436      ...
+   Abby  beats Dave   485 – 436      Brad  beats Erin   623 – 298
 ```
 
-- **LH** breaks the Copeland tie by **total margin, then lot** → **Abby** (her wins are by larger margins).
-- **BetterVoting** breaks it **head-to-head** → **Brad** (Brad beats Abby directly, 463–458).
+**Brad beats Abby 463–458**, so Brad wins the tie at the first rung, +5 to −5. That is what BetterVoting has published on this election all along.
 
-Both are deterministic here; they simply encode different notions of "who deserves the tie." This is the same LH-vs-BV Ranked Robin tiebreak split documented in [`rr_tiebreak_lh_vs_bv.md`](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md). The `.yaml`'s `expected_winners` is LH's **Abby** (that's what the LH engine computes and the test suite checks); BetterVoting's live result is **Brad**. Note that STAR's automatic runoff *also* resolves Abby-vs-Brad head-to-head → Brad, so BV's Ranked Robin and STAR agree, and LH's Ranked Robin is the lone Abby.
+This page used to tell a different story. Until 2026-08-19 the LH engine had **no 1st Degree rung at all** — it ranked a Copeland tie by *total margin over the whole field*, which is the protocol's **2nd Degree**, and on these ballots Abby's +146 dwarfs Brad's +34. Not because Abby's wins are bigger — Brad's 623–298 over Erin is the largest margin anyone posts — but because Brad also absorbs a 312–609 hammering from Dave, who is not in the tie at all. So the engine elected the candidate who had lost the finalists' own match, on the strength of how a non-finalist had treated him, and the disagreement with BetterVoting was written up here as a difference of convention between two defensible ladders. It wasn't. One implementation was following the spec and the other was skipping a rung, and the one skipping it was ours. Two independent engines disagreeing is evidence that somebody is wrong — worth remembering the next time this repo finds a divergence and reaches for the word "convention."
+
+The lesson that survives is about method definitions, not about BetterVoting: **"break the tie by margins" is not a rule until you say margins over what.** Note also that STAR's automatic runoff resolves Abby-vs-Brad by the same head-to-head → Brad, so on this electorate Ranked Robin and STAR now agree, and the split is IRV/STV's Dave against everyone else's Brad.
 
 ## The rank→score conversion (STAR race)
 

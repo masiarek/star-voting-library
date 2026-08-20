@@ -170,14 +170,14 @@ Legend: For - Equal Support - Against   (row vs column)
   Boone > | 4 - 0 - 9 |   ---    |8 - 0 - 5 |
    Cass > | 9 - 0 - 4 |5 - 0 - 8 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Cass       1–1–0         1      +2  Amy
-    2  Amy        1–1–0         1      +0  Boone
-    3  Boone      1–1–0         1      -2  Cass
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Cass       1–1–0         1      +2            +2  Amy
+    2  Amy        1–1–0         1      +0             0  Boone
+    3  Boone      1–1–0         1      -2            -2  Cass
 
 Winner — Ranked Robin (RCV-RR): Cass
-   *** 3 candidates tie for the most wins (Amy, Boone, Cass) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Amy, Boone, Cass) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Cass has the greatest sum of win margins over the other finalists (+2). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

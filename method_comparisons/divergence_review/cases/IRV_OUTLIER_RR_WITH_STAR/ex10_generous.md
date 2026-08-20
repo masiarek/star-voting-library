@@ -174,7 +174,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bess > | 5 - 0 - 4 |   ---    |6 - 0 - 3 |
   Cato > | 3 - 0 - 6 |3 - 0 - 6 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Bess       2–0–0         2      +4  Amir, Cato
     2  Amir       1–1–0         1      +2  Cato

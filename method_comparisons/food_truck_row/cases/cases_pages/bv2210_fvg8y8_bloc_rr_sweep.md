@@ -66,7 +66,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Donut > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |    ---      |22 - 57 - 21 |
   Eclair > | 43 -  0 - 57 |43 -  0 - 57 |43 -  0 - 57 |21 - 57 - 22 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Arepa      4–0–0         4     +68  Bao, Churro, Donut, Eclair
     2  Bao        3–1–0         3     +30  Churro, Donut, Eclair

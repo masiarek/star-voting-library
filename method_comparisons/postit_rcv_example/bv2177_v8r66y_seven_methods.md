@@ -9,12 +9,12 @@ The same 20 voters as [the Post-it RCV example (BV2176)](bv2176_p8dp28_postit_rc
 | # | Race (BV) | Method | BV winner | How |
 |--:|---|---|:--:|:--|
 | 1 | STAR | STAR | **Blue** | scores 46/38/44/44; 44–44 second-finalist tie → head-to-head Blue 10–3 Pink; runoff **Blue 10–9 Purple** (a Runoff Reversal) |
-| 2 | Ranked Robin | RankedRobin (Copeland) | **Green** | cycle; Green and Blue tie 2–1; BV's head-to-head rung → Green 7–4 (LH's margin rung says **Blue** — [the ladder divergence](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md)) |
+| 2 | Ranked Robin | RankedRobin (Copeland) | **Green** | cycle; Green and Blue tie 2–1; the [1st Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) asks their own head-to-head → Green 7–4. Both engines agree (this repo's said **Blue** until 2026-08-19, on a rung that should not have been reached) |
 | 3 | Approval (approve = any support) | Approval | **Pink** | approvals 12/10/10/8 — the six Green fans' 3-for-their-last-choice carries Pink |
 | 4 | RCV-IRV | IRV | **Purple** | the video's whiteboard count: 7/6/4/3 → 8/7/4 → 9–8, 3 exhausted |
 | 5 | Choose-One | Plurality | **Purple** | 7 first choices (35%) |
 
-Read it as a ladder of how much of the ballot each method consults: **Choose-One** sees only first choices (Purple). **RCV-IRV** sees lower ranks, but only for candidates that survive its elimination order (still Purple — it never checks Blue vs Purple). **Ranked Robin** checks *every* head-to-head on the same ranked ballots (Green, on BV's tiebreak). **Approval** reads breadth of support but not strength (Pink). **STAR** reads strength *and* finishes with the head-to-head majority check (Blue). **The tabulation, not the ballot, decides.**
+Read it as a ladder of how much of the ballot each method consults: **Choose-One** sees only first choices (Purple). **RCV-IRV** sees lower ranks, but only for candidates that survive its elimination order (still Purple — it never checks Blue vs Purple). **Ranked Robin** checks *every* head-to-head on the same ranked ballots (Green, decided by the tied pair's own match). **Approval** reads breadth of support but not strength (Pink). **STAR** reads strength *and* finishes with the head-to-head majority check (Blue). **The tabulation, not the ballot, decides.**
 
 > *Completeness footnote:* the election also carries BV's two multi-winner methods pinned to 1 seat, purely so every BetterVoting tabulator runs on this ballot set. Neither adds to the single-winner argument: **STV at 1 seat is IRV** by construction (identical rounds → Purple), and **STAR-PR at 1 seat is plain Score voting** (its per-seat rule is score-only, no runoff → the score leader Purple, and STAR's Runoff Reversal vanishes — a reminder that the runoff, not the scores, is what makes STAR majoritarian). Details below.
 
@@ -24,7 +24,7 @@ The seven races use three ballot forms derived from one set of preferences — a
 
 - **Ranks → the video's 0–5 scores** (race 1): verified strictly order-consistent, ballot by ballot, with the video's rankings — but the *gap sizes* are editorial, and they matter. With the video's generous 5/4/3 down-ballot scores, Blue reaches the runoff and wins; re-score the same rankings stingily (5/2/1) and the scoring round is Purple 40, Green 34, Blue 32, Pink 26 — **STAR elects Purple**, agreeing with IRV. Preference *strength* is real information that ranks don't carry. Full analysis: [is the video fair and balanced?](postit_video_fair_and_balanced.md)
 - **Scores → approvals** (race 3): the video's scores use only 0/3/4/5, so "approve = any support" is unambiguous up to threshold 3 — and elects **Pink** (12). But approve only 4s and 5s and **Blue** wins (10/9/8/5); only 5s and **Purple** wins (7/6/4/3). Three defensible thresholds, three winners: *the conversion is the election.*
-- **Ranks as ranks** (races 2 and 4): even with no conversion at all, the ranked-ballot family splits — RCV-IRV elects Purple, Ranked Robin elects Green (BV) or Blue (LH). "RCV" names the ballot; the tabulation still decides.
+- **Ranks as ranks** (races 2 and 4): even with no conversion at all, the ranked-ballot family splits — RCV-IRV elects Purple, Ranked Robin elects Green. "RCV" names the ballot; the tabulation still decides.
 
 ## Footnote details: STV(1) and STAR-PR(1)
 

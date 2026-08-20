@@ -57,7 +57,7 @@ Legend: For - Equal Support - Against   (row vs column)
   B > | 1 - 0 - 2 |1 - 0 - 2 |   ---    |3 - 0 - 0 |
   C > | 1 - 0 - 2 |0 - 0 - 3 |0 - 0 - 3 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  D          3–0–0         3      +3  A, B, C
     2  A          2–1–0         2      +3  B, C

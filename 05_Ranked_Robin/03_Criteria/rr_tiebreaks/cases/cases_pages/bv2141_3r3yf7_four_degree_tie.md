@@ -90,17 +90,17 @@ Legend: For - Equal Support - Against   (row vs column)
    Fabio > | 32 -  4 - 45 |39 -  4 - 38 |16 -  9 - 56 |39 -  0 - 42 |    ---      |24 -  6 - 51 |
   Bianca > | 50 -  0 - 31 |35 -  9 - 37 |29 - 23 - 29 |39 - 14 - 28 |51 -  6 - 24 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ava        3–1–1       3.5     +55  Deegan, Eli, Fabio
-    2  Bianca     3–1–1       3.5     +55  Cedric, Eli, Fabio
-    3  Deegan     2–2–1       2.5      +7  Bianca, Eli
-    4  Cedric     2–2–1       2.5     -14  Ava, Fabio
-    5  Eli        2–3–0         2     -21  Cedric, Fabio
-    6  Fabio      1–4–0         1     -82  Deegan
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ava        3–1–1       3.5     +55             0  Deegan, Eli, Fabio
+    2  Bianca     3–1–1       3.5     +55             0  Cedric, Eli, Fabio
+    3  Deegan     2–2–1       2.5      +7             —  Bianca, Eli
+    4  Cedric     2–2–1       2.5     -14             —  Ava, Fabio
+    5  Eli        2–3–0         2     -21             —  Cedric, Fabio
+    6  Fabio      1–4–0         1     -82             —  Deegan
 
 Winner — Ranked Robin (RCV-RR): Ava
-   *** 2 candidates tie on the highest Copeland score (3.5): Ava, Bianca — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (3.5): Ava, Bianca — a dead heat (they draw head-to-head, not a cycle). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order.
 ```
 <!-- --8<-- [end:report] -->
 
@@ -142,4 +142,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 05_Ranked_Robin/
 - [The tie-breaking ladder (full chain)](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [bv2261_y2fbpc_tiebreak_recorded_cycle](bv2261_y2fbpc_tiebreak_recorded_cycle.md) · [bv2261_y2fbpc_tiebreak_recorded_draws](bv2261_y2fbpc_tiebreak_recorded_draws.md) · [bv2262_2gvwr9_nine_way_dead_heat](bv2262_2gvwr9_nine_way_dead_heat.md) · [bv2270_8h4bvh_head_to_head_vs_margin](bv2270_8h4bvh_head_to_head_vs_margin.md) · [dead_heat_lot_tiebreak](dead_heat_lot_tiebreak.md)
+More cases in this set: [bv2261_y2fbpc_tiebreak_recorded_cycle](bv2261_y2fbpc_tiebreak_recorded_cycle.md) · [bv2261_y2fbpc_tiebreak_recorded_draws](bv2261_y2fbpc_tiebreak_recorded_draws.md) · [bv2262_2gvwr9_nine_way_dead_heat](bv2262_2gvwr9_nine_way_dead_heat.md) · [bv2270_8h4bvh_head_to_head_vs_margin](bv2270_8h4bvh_head_to_head_vs_margin.md) · [dead_heat_lot_tiebreak](dead_heat_lot_tiebreak.md) · [rr_degrees_finalists_vs_field](rr_degrees_finalists_vs_field.md) · [rr_degrees_three_way_cycle](rr_degrees_three_way_cycle.md) · [rr_degrees_what_counts_as_a_win](rr_degrees_what_counts_as_a_win.md)

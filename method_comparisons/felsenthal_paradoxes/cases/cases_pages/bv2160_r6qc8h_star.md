@@ -42,9 +42,11 @@ The count, step by step — the rounds and how the winner is reached:
   STAR                   = B
   Choose-One (Plurality) = A   (differs from STAR)
   RCV-IRV                = A   (differs from STAR)
-  RCV-RR                 = C   (differs from STAR)
+  RCV-RR                 = A   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) sides with RCV-IRV, so STAR is the outlier
+        here — STAR need not elect the Condorcet candidate.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: cases_tabulated/bv2160_r6qc8h_star_RCV-IRV_tabulated.txt
   RCV-RR round-robin: cases_tabulated/bv2160_r6qc8h_star_RCV-RR_tabulated.txt

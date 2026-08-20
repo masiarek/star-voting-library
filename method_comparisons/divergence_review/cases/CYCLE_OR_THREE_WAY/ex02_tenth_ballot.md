@@ -210,16 +210,16 @@ Legend: For - Equal Support - Against   (row vs column)
    Dana > | 4 - 0 - 6 |4 - 1 - 5 |4 - 3 - 3 |   ---    |4 - 1 - 5 |
     Eli > | 5 - 0 - 5 |2 - 1 - 7 |5 - 0 - 5 |5 - 1 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Chris      2–1–1       2.5      +5  Alex, Bella
-    2  Alex       2–1–1       2.5      +4  Bella, Dana
-    3  Bella      2–2–0         2      -2  Eli, Dana
-    4  Eli        1–1–2         2      -4  Dana
-    5  Dana       1–3–0         1      -3  Chris
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Chris      2–1–1       2.5      +5            +2  Alex, Bella
+    2  Alex       2–1–1       2.5      +4            -2  Bella, Dana
+    3  Bella      2–2–0         2      -2             —  Eli, Dana
+    4  Eli        1–1–2         2      -4             —  Dana
+    5  Dana       1–3–0         1      -3             —  Chris
 
 Winner — Ranked Robin (RCV-RR): Chris
-   *** 2 candidates tie on the highest Copeland score (2.5): Alex, Chris — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (2.5): Alex, Chris — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Chris has the greatest sum of win margins over the other finalists (+2).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

@@ -6,7 +6,7 @@ The tabulatable evidence behind [Split Cycle — the method that hands the tie b
 |---|:--:|---|
 | [page](cases/cases_pages/split_cycle_schulze_spoiler_c5_b40.md) · [`split_cycle_schulze_spoiler_c5_b40.yaml`](cases/split_cycle_schulze_spoiler_c5_b40.yaml) | 40 | **Cascade beats Bryce 40–0** — not one voter prefers Bryce. Bryce wins nothing, ever. Yet Schulze elects **Cascade** without her on the ballot and **Everglade** with her on it. Split Cycle keeps Cascade in both fields. |
 
-Reproduced independently (this is **not** the paper's own profile — it's the smallest one a `pref_voting` search turned up), and **LH-only**: neither the LH engine nor BetterVoting implements Schulze or Split Cycle, and LH's Copeland result here is a tie.
+Reproduced independently (this is **not** the paper's own profile — it's the smallest one a `pref_voting` search turned up), and **LH-only**: neither the LH engine nor BetterVoting implements Schulze or Split Cycle, and the Copeland tally here ends in a tie. With Bryce on the ballot, Cascade and Denali both go 3–1, and Ranked Robin's [1st Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) reads the match they played — **Denali 22–18** — so the case's Ranked Robin winner is Denali. *(It was Cascade until 2026-08-19: Cascade's whole-field margin is +56 against Denali's −8, which is the 2nd Degree, and the engine was asking it first.)*
 
 ## Running it
 

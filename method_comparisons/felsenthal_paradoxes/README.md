@@ -35,6 +35,8 @@ The appendix is now fully covered: §A1 (Plurality, Ex.1), §A2 (plurality-with-
 
 None are BV-backed: BetterVoting offers none of these methods, and several are deliberately indeterminate (Minimax Ex.32, Coombs Ex.21 and successive elimination Ex.10 all end in genuine ties, which is the lesson). Ranked cases are tabulated under a supported method for their `_tabulated` mirror — Minimax and successive-elimination cases as **Ranked Robin**, because the pairwise matrix is exactly what both consume, and Coombs cases as **RCV-IRV**, the mirror-image count Coombs inverts. The five **grade-ballot** cases carry a `grades:` block instead of `ballots:`, keeping Felsenthal's 1–10 and A–J scales, which fit neither the engine's 0–5 validation nor BetterVoting; they have no mirror and no generated page, and their counts live on the concept pages.
 
+Two entries in the **LH count** column changed on 2026-08-19, when the engine's Ranked Robin tie-break was corrected to follow the published [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md): Minimax Ex.33 now counts **A** (was D) and successive elimination Ex.9 now counts **D** (was A). Both are two-way Copeland ties that the finalists' own head-to-head settles — A beat D 4:3 in the first, D beat A 6:5 in the second — and the old engine, which had no such rung, decided them on margins over the whole field instead. Nothing Felsenthal claims is affected; the RR column is this repo's own cross-count, not his.
+
 | Case | What it shows | Under its own rule | LH count |
 |---|---|---|---|
 | [Coombs Ex.18](cases/cases_pages/coombs_ex18_monotonicity.md) | NON-MONOTONICITY: four voters raise Bree and Bree loses — Dana is deleted first instead of Arlo | Coombs → Arlo (was Bree) | IRV → Arlo |
@@ -49,8 +51,8 @@ None are BV-backed: BetterVoting offers none of these methods, and several are d
 | [Minimax Ex.31](cases/cases_pages/minimax_ex31_truncation.md) | TRUNCATION — **convention-dependent**: Felsenthal's equal-probability reading elects C, this repo's reading keeps B | Minimax → C or B | RR → A |
 | [Minimax Ex.32 — District II](cases/cases_pages/minimax_ex32_district2.md) | 3 voters, D is the outright majority winner | Minimax → D | RR → D |
 | [Minimax Ex.32 — amalgamated](cases/cases_pages/minimax_ex32_amalgamated.md) | REINFORCEMENT: both districts chose D; combined, four of six pairs draw 7–7 and B/D tie | Minimax → **tie** | RR → B |
-| [Minimax Ex.33](cases/cases_pages/minimax_ex33_scc.md) | SCC: B drops out and A becomes the Condorcet winner instead of D | Minimax → D, then **A** | RR → D |
-| [Succ. elim. Ex.9](cases/cases_pages/succ_elim_ex9_pareto.md) | PARETO + PATH INDEPENDENCE + SCC: agenda `D,A,C,B` elects B, whom all 11 voters rank below A; agenda `A,B,C,D` elects D; dropping D elects A | SE → B / D / A by agenda | RR → A |
+| [Minimax Ex.33](cases/cases_pages/minimax_ex33_scc.md) | SCC: B drops out and A becomes the Condorcet winner instead of D | Minimax → D, then **A** | RR → A |
+| [Succ. elim. Ex.9](cases/cases_pages/succ_elim_ex9_pareto.md) | PARETO + PATH INDEPENDENCE + SCC: agenda `D,A,C,B` elects B, whom all 11 voters rank below A; agenda `A,B,C,D` elects D; dropping D elects A | SE → B / D / A by agenda | RR → D |
 | [Succ. elim. Ex.9 — no-show](cases/cases_pages/succ_elim_ex9_noshow.md) | Two D-first voters stay home, the cycle breaks, A wins from any agenda | SE → **A** | RR → A |
 | [Succ. elim. Ex.10 — District I](cases/cases_pages/succ_elim_ex10_district1.md) | Three voters, agenda `B,D,A,C` elects C | SE → C | RR → B |
 | [Succ. elim. Ex.10 — District II](cases/cases_pages/succ_elim_ex10_district2.md) | One voter; C is trivially the Condorcet winner | SE → C | RR → C |

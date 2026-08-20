@@ -61,7 +61,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Ben > | 7 - 0 - 5 |   ---    |7 - 0 - 5 |
   Cal > | 6 - 0 - 6 |5 - 0 - 7 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ben        2–0–0         2      +4  Ada, Cal
     2  Ada        0–1–1       0.5      -2  —

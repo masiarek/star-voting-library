@@ -69,7 +69,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Diego > | 49 -  0 - 16 |    ---      |50 -  0 - 15 |
   Greta > | 36 -  0 - 29 |15 -  0 - 50 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Diego      2–0–0         2     +68  Greta, Ana
     2  Greta      1–1–0         1     -28  Ana

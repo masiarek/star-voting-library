@@ -708,9 +708,26 @@ reproduce loop is in the **`bettervoting` skill**.
   inside that set (`CONSISTENT ✓`) — which is exactly the check you want, since the
   disagreement between engines is never about the tally, only about the tiebreak.
 
-  **Tiebreak ladder — LH and BV diverge at rung 2:** LH breaks a Copeland tie by
-  total margin → **lot** (`lot_numbers`, published in the YAML); BV by head-to-head
-  (2-way only) → its rung of last resort.
+  **Tiebreak ladder — the method publishes one, and follow it (corrected 2026-08-19).**
+  Ranked Robin's own protocol (electowiki, *Degrees of ties*) resolves a Copeland tie
+  by the **1st Degree** — each tied finalist's sum of win margins **over the other
+  finalists** — and only then by the **2nd Degree**, margins **over all candidates**.
+  It defines a 3rd and 4th Degree but explicitly does not recommend them for public
+  elections, preferring a lot. LH now implements exactly that: Copeland → 1st Degree
+  → 2nd Degree → **lot** (`lot_numbers`, published in the YAML). **Two things this
+  ordering makes true, both of which were got wrong for two years:** with exactly two
+  finalists the 1st Degree *is* their head-to-head, so **BV's head-to-head rung was
+  right and LH's total-margin rung was not** — the "LH vs BV rung 2 divergence"
+  documented across this repo was our bug, and correcting it changed the winner on
+  **11 of 100** RR cases, every one a two-way tie whose head-to-head was decisive;
+  and BV, which has no rung at all for 3+ tied candidates, sends every
+  three-candidate cycle straight to its shuffle (filed as bettervoting#1469, fix
+  written, parked behind the PR freeze). The remaining genuine divergence is only the
+  last rung: LH's published lot vs BV's seeded shuffle. Full account, with the two
+  discriminating cases:
+  `05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md`. The engine's win-loss
+  table prints a **"vs finalists"** column whenever there is a tie for the lead — that
+  column is the 1st Degree, and it is what makes the winner checkable by hand.
 
   **BV's JSON export records the tie-breaking SEQUENCE just fine — don't repeat the
   old "can't be frozen" claim** (corrected 2026-07-29). BV's rung 3 is labelled

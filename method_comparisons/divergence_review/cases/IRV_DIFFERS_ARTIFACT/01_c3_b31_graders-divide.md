@@ -183,14 +183,14 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 16 -  0 - 15 |    ---      |11 -  7 - 13 |
   Clara > | 13 -  4 - 14 |13 -  7 - 11 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Clara      1–1–0         1      +1  Bruno
-    2  Abby       1–1–0         1      +0  Clara
-    3  Bruno      1–1–0         1      -1  Abby
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Clara      1–1–0         1      +1            +1  Bruno
+    2  Abby       1–1–0         1      +0             0  Clara
+    3  Bruno      1–1–0         1      -1            -1  Abby
 
 Winner — Ranked Robin (RCV-RR): Clara
-   *** 3 candidates tie for the most wins (Abby, Bruno, Clara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Abby, Bruno, Clara) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Clara has the greatest sum of win margins over the other finalists (+1). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

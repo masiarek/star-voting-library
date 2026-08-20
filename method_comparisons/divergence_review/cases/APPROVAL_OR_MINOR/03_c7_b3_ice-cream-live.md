@@ -201,7 +201,7 @@ Legend: For - Equal Support - Against   (row vs column)
          Mango > |   0 - 1 - 2    |  0 - 1 - 2    |  0 - 2 - 1    |  1 - 2 - 0    |  1 - 2 - 0    |     ---       |  1 - 2 - 0    |
          Peach > |   0 - 1 - 2    |  0 - 1 - 2    |  0 - 2 - 1    |  0 - 3 - 0    |  0 - 2 - 1    |  0 - 2 - 1    |     ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate     W–L–T  Copeland  Margin  Beats
     1  ChocoAlm      6–0–0         6     +11  ChocoDrk, ChocoHzn, Mango, VanillaFrnch, VanillaClssc, Peach
     2  ChocoDrk      5–1–0         5      +9  ChocoHzn, Mango, VanillaFrnch, VanillaClssc, Peach

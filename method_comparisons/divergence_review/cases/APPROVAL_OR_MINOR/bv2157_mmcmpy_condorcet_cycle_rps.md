@@ -170,14 +170,14 @@ Legend: For - Equal Support - Against   (row vs column)
      Paper > | 33 -  0 - 67 |    ---      |68 -  0 - 32 |
   Scissors > | 65 -  0 - 35 |32 -  0 - 68 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Rock       1–1–0         1      +4  Paper
-    2  Paper      1–1–0         1      +2  Scissors
-    3  Scissors   1–1–0         1      -6  Rock
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Rock       1–1–0         1      +4            +4  Paper
+    2  Paper      1–1–0         1      +2            +2  Scissors
+    3  Scissors   1–1–0         1      -6            -6  Rock
 
 Winner — Ranked Robin (RCV-RR): Rock
-   *** 3 candidates tie for the most wins (Rock, Paper, Scissors) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Rock, Paper, Scissors) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Rock has the greatest sum of win margins over the other finalists (+4). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

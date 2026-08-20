@@ -1,12 +1,12 @@
-# BV2270 — the rung where the two engines elect different people
+# BV2270 — the rung the engine was missing
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Birch · [full count →](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md)
+**Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Alder · [full count →](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md)
 <!-- case-meta:end -->
 
 **Level: 301 · deep dive**
 
-*Every other case in this folder ties all the way to the bottom of the ladder, where LH draws a published lot and BetterVoting draws a seeded shuffle. This one stops on the **middle** rung — and that is where the two engines stop agreeing. Nine ballots, a two-way Copeland tie, no lot on either side, and **two different winners**: LH elects Birch on total margin, BetterVoting elects Alder head-to-head. Both answers are derivable from the ballots. They are simply not the same answer.*
+*Every other case in this folder ties all the way to the bottom of the ladder, where LH draws a published lot and BetterVoting draws a seeded shuffle. This one stops on the **middle** rung — and for two years the two engines stopped there with different answers. Nine ballots, a two-way Copeland tie, no lot on either side: BetterVoting elected Alder on the head-to-head, this engine elected Birch on total margin. Both were derivable from the ballots; only one was the method's own rule. Ranked Robin's [1st Degree tiebreaker](degrees_of_ties.md) asks for each finalist's margins **over the other finalists**, and with two finalists that is their head-to-head — so BetterVoting had it right, and the engine was corrected on 2026-08-19. Both now elect **Alder**.*
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/8h4bvh) · **[results ↗](https://bettervoting.com/8h4bvh/results)** (election `8h4bvh`).
 
@@ -41,18 +41,20 @@ Six matchups, every one of them decisive:
 
 Alder and Birch tie at the top on two wins each. Nothing in the Copeland column separates them, so both engines go to their next rung — and their next rungs are different questions.
 
-## Two rungs, two winners
+## Two questions, and the order they go in
 
-| | Rung 2 asks | Answer here | Winner |
+| | The question | Answer here | Elects |
 |---|---|---|---|
-| **LH** `run_ranked_robin` | *Who won by more, across all their matches?* | Birch **+3** vs Alder **+1** | **Birch** |
-| **BetterVoting** `RankedRobin.ts` | *Who won when these two played each other?* | Alder beat Birch **5 – 4** | **Alder** |
+| **1st Degree** — the protocol's first rung, and BetterVoting's only one | *Who won when these two played each other?* | Alder beat Birch **5 – 4** | **Alder** |
+| **2nd Degree** — reached only if the finalists are level against each other | *Who won by more, across all their matches?* | Birch **+3** vs Alder **+1** | Birch, if it were reached |
 
-Both are reasonable readings of "strongest". Total margin asks how a candidate did against the **whole field**; head-to-head asks the narrower question of what happened in the one match that is actually between the two of them. Birch's +3 is built on a 6–3 thrashing of Cedar — a win Alder never had the chance to match — while Alder's claim is that when the two tied candidates met, Alder won.
+The engine used to ask the second question first, which is the whole of the bug: it had no finalists-only rung at all.
 
-This is a sharper divergence than [the dead-heat case](dead_heat_lot_tiebreak.md), the other case in this folder where the ladders part: there they differ but both engines still fall through to a rung of last resort, which is why it stays LH-only — its winner turns on a draw that can't be derived from the ballots. Here **neither engine reaches for a lot**. Both stop on rung 2 with a computed answer, and the answers differ.
+Both are readings of "strongest", and that is why the disagreement looked respectable for so long. Total margin asks how a candidate did against the **whole field**; the head-to-head asks the narrower question of what happened in the one match that is actually between the two of them. Birch's +3 is built on a 6–3 thrashing of Cedar — a win Alder never had the chance to match — while Alder's claim is that when the two tied candidates met, Alder won. The method settles it: the narrow question comes first, and the wide one is held in reserve for finalists the narrow question cannot separate.
 
-**This is not the first live case of that** — [BV2176, the Post-it RCV example](../../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md), got there first, with Green (BV) against Blue (LH) inside a genuine three-way cycle. What BV2270 adds is that it is **purpose-built and minimal**: four candidates, nine ballots, six matchups you can check by hand in a minute, and no other moving part. BV2176 is the divergence found in the wild; this is the divergence on a bench.
+[The dead-heat case](dead_heat_lot_tiebreak.md) is where the ladders still genuinely part: there both degrees are exhausted and each engine falls through to its own rung of last resort — a published lot on one side, a seeded shuffle on the other — which is why it stays LH-only. Here **neither engine reaches for a lot**; both stop with a computed answer, and since the correction it is the same answer.
+
+**This was not the first live case of the disagreement** — [BV2176, the Post-it RCV example](../../../method_comparisons/postit_rcv_example/bv2176_p8dp28_postit_rcv_example.md), got there first, with Green (BV) against Blue (LH) inside a genuine three-way cycle, and it too now resolves to Green on both sides. What BV2270 adds is that it is **purpose-built and minimal**: four candidates, nine ballots, six matchups you can check by hand in a minute, and no other moving part. It was built to display a divergence, and it ended up being the case that proved which side of it was wrong.
 
 ## What the neutral third engine says
 
@@ -60,16 +62,16 @@ The repo's rule for Ranked Robin is to check every case three ways, and the thir
 
 ```
  pref_voting Copeland leader(s): Alder, Birch
- cross-check vs Ranked Robin winner (Birch): CONSISTENT ✓  (LH tie-broke within pref_voting's 2-way Copeland-leader set)
+ cross-check vs Ranked Robin winner (Alder): CONSISTENT ✓  (LH tie-broke within pref_voting's 2-way Copeland-leader set)
 ```
 
-It reproduces the tally exactly, reports the **whole leader set**, and declines to pick. That is the honest position, and it is the point of the case: the two engines do not disagree about the count. They agree on all six matchups, on both Copeland scores and on every margin. They disagree about **the rule for what to do next** — and no amount of re-counting will settle that.
+It reproduces the tally exactly, reports the **whole leader set**, and declines to pick. That is the honest position for a library that implements the tally and not the tiebreak — and it is what made the case readable while the engines disagreed: they never disagreed about the count. They agreed on all six matchups, on both Copeland scores and on every margin. What they disagreed about was **the rule for what to do next**, which no amount of re-counting could settle. Reading the method's published protocol did.
 
 ## Nobody actually wins here
 
 Worth saying plainly, because the win–loss table hides it: this field is a **[Condorcet cycle](../../01_Learn/cycle_resolution.md)**. Alder beats Birch, Birch beats Dogwood, Dogwood beats Alder. There is no [Condorcet winner](../../../07_Concepts/topics/condorcet/README.md), and the [Smith set](../../../07_Concepts/topics/smith_set.md) is **all four candidates** — even Cedar, sitting last on the Copeland table, belongs to the smallest group that beats everyone outside it, because there is no outside.
 
-So the top two rows of the record understate the contention. Ranked Robin is Smith-efficient, so whichever of Alder or Birch is picked is inside the set and the method has done its job; but "who *should* win a cycle" is exactly the question [Minimax, Ranked Pairs and Schulze answer differently](../../01_Learn/cycle_resolution.md), and rung 2 of a Copeland ladder is a very thin place to be answering it.
+So the top two rows of the record understate the contention. Ranked Robin is Smith-efficient, so whichever of Alder or Birch is picked is inside the set and the method has done its job; but "who *should* win a cycle" is exactly the question [Minimax, Ranked Pairs and Schulze answer differently](../../01_Learn/cycle_resolution.md), and a tiebreak rung is a very thin place to be answering it — which is an argument about Ranked Robin itself, not about which rung comes first.
 
 (The count embedded below is the lead section only. The engine's Smith-set analysis is one click away, in the folded audit on the [full page](cases/cases_pages/bv2270_8h4bvh_head_to_head_vs_margin.md).)
 
@@ -121,15 +123,15 @@ Legend: For - Equal Support - Against   (row vs column)
     Cedar > | 4 - 0 - 5 |3 - 0 - 6 |   ---    |5 - 0 - 4 |
   Dogwood > | 5 - 0 - 4 |4 - 0 - 5 |4 - 0 - 5 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Birch      2–1–0         2      +3  Dogwood, Cedar
-    2  Alder      2–1–0         2      +1  Birch, Cedar
-    3  Dogwood    1–2–0         1      -1  Alder
-    4  Cedar      1–2–0         1      -3  Dogwood
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Alder      2–1–0         2      +1            +1  Birch, Cedar
+    2  Birch      2–1–0         2      +3            -1  Cedar, Dogwood
+    3  Cedar      1–2–0         1      -3             —  Dogwood
+    4  Dogwood    1–2–0         1      -1             —  Alder
 
-Winner — Ranked Robin (RCV-RR): Birch
-   *** 2 candidates tie for the most wins (Alder, Birch) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+Winner — Ranked Robin (RCV-RR): Alder
+   *** 2 candidates tie for the most wins (Alder, Birch) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: Alder has the greatest sum of win margins over the other finalists (+1).
 ```
 <!-- /report -->
 

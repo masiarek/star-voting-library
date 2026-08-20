@@ -53,8 +53,12 @@ pytestmark = pytest.mark.skipif(not SAMPLES, reason="divergence sample set not p
 
 def test_discovery_not_vacuous():
     """If the glob silently stops finding samples, this test would pass by
-    checking nothing. The set is 30 files; allow it to grow, not vanish."""
-    assert len(SAMPLES) >= 25, f"only {len(SAMPLES)} samples found in {SAMPLE_DIR}"
+    checking nothing. Minted as 30 and down to 24: a sample is retired when an
+    engine correction dissolves its divergence (four on 2026-08-09, two more on
+    2026-08-19, both recorded in the set README). So the floor is slack enough
+    for that to keep happening without a red suite, and tight enough to catch a
+    glob that has stopped finding anything."""
+    assert len(SAMPLES) >= 20, f"only {len(SAMPLES)} samples found in {SAMPLE_DIR}"
 
 
 def test_both_flavours_are_represented():

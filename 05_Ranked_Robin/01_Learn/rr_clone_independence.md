@@ -21,16 +21,16 @@
 10:C>A>B>D>E>F
 ```
 
-A beats B (22–11), B beats C (23–10), C beats A (21–12) — a rock-paper-scissors cycle, so **no Condorcet winner**. Each of A, B, C also beats D, E, F, so all three tie at **4 wins**. Ranked Robin breaks the tie by total win margin — but **A and B tie there too** (+101 each), with C just behind (+95):
+A beats B (22–11), B beats C (23–10), C beats A (21–12) — a rock-paper-scissors cycle, so **no Condorcet winner**. Each of A, B, C also beats D, E, F, so all three tie at **4 wins**, and all three are *finalists*. Ranked Robin's [1st Degree tiebreaker](../03_Criteria/rr_tiebreaks/degrees_of_ties.md) compares their margins against each other only: A +2, B +2, C −4, so C is dropped and A and B are still level. Its 2nd Degree compares margins over the whole field — and **A and B tie there too** (+101 each, with C just behind at +95):
 
 ```
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A          4–1–0         4    +101  B, D, E, F
-    2  B          4–1–0         4    +101  C, D, E, F
-    3  C          4–1–0         4     +95  A, D, E, F
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          4–1–0         4    +101            +2  B, D, E, F
+    2  B          4–1–0         4    +101            +2  C, D, E, F
+    3  C          4–1–0         4     +95            -4  A, D, E, F
 ```
 
-So margin drops C, and the winner is a **coin flip between A and B** (resolved by lot). The A-faction has a 50% shot.
+Both degrees are exhausted with two candidates still level, so the winner is a **coin flip between A and B** (resolved here by a published lot). The A-faction has a 50% shot.
 
 ### After teaming — A runs clones and locks in the win
 
@@ -42,30 +42,32 @@ Now the A-faction fields two clones, A1 and A2, ranked together in A's old slot:
 10:C>A1>A2>B>D>E>F
 ```
 
-The extra body reshapes the margins. A1's margin jumps to **+134**, and by absorbing votes the A-team pushes **B out of the top tier** (B falls to 4 wins; A1 and C reach 5). A1 now beats C on margin outright — **no lot needed**:
+The extra body reshapes the field. By absorbing votes the A-team pushes **B out of the top tier** (B falls to 4 wins; A1 and C reach 5), so the finalists are now A1 and C rather than A, B and C — and with only two finalists there is no lot to reach: the 1st Degree is decisive. It just does not decide the way the A-faction wanted. A1's margin over the whole field jumps to **+134** against C's +104, but that is the *2nd Degree*, and it is never asked:
 
 ```
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A1         5–1–0         5    +134  B, A2, D, E, F
-    2  C          5–1–0         5    +104  A1, A2, D, E, F
-    3  B          4–2–0         4     +90  C, D, E, F
-    4  A2         4–2–0         4     +68  B, D, E, F
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  C          5–1–0         5    +104            +9  A1, A2, D, E, F
+    2  A1         5–1–0         5    +134            -9  A2, B, D, E, F
+    3  A2         4–2–0         4     +68             —  B, D, E, F
+    4  B          4–2–0         4     +90             —  C, D, E, F
 ```
 
-By "sacrificing" A2 to crowd out B, the A-faction converted a 50/50 coin flip into a **guaranteed A1 win**. That is a clone-independence (teaming) failure: running clones changed the outcome in the cloning faction's favor.
+**C beats A1 head-to-head, 21–12**, so the 1st Degree elects **C** and the attack backfires. Running the clones still changed the outcome — before cloning the count ends in a coin flip, after it a single candidate wins outright — so clone independence still fails here, by *crowding*: B was squeezed out of the finalist set by candidates who could not win. What fails with it is the claim that **teaming pays**. It pays only if the tie is settled on margins over the whole field, which is the 2nd Degree, and the 2nd Degree is out of reach while the 1st separates the finalists.
 
-> **This is not our construction alone.** The same failure was raised on [electowiki's Ranked Robin talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) in November 2021 by the contributor Kristomun, questioning the article's claim that clone failures have a limited range. Their version separates the two channels cleanly: **crowding** fails the *Copeland* component, while ordinary **teaming inside the Smith set** fails the *Borda* (margins) component — which is precisely the rung our case turns on. Worth knowing that the wart was documented by the method's own community, not just by its critics.
+> **electowiki's own worked example gets this wrong**, and this page repeated it until 2026-08-19. The article's clone-independence section concludes that after cloning "A1 wins after the tiebreaker" — which its own 1st Degree rule does not support, on its own ballots. So did this repo's engine, for the same reason: it had no 1st Degree rung and went straight to total margin. The correction is written up in [degrees of ties](../03_Criteria/rr_tiebreaks/degrees_of_ties.md).
 
-## The catch: the failure depends on the tiebreak
+> **This is not our construction alone.** The same failure was raised on [electowiki's Ranked Robin talk page](https://electowiki.org/wiki/Talk:Ranked_Robin) in November 2021 by the contributor Kristomun, questioning the article's claim that clone failures have a limited range. Their version separates the two channels cleanly: **crowding** fails the *Copeland* component, while ordinary **teaming inside the Smith set** fails the *Borda* (margins) component. That distinction is exactly the one the degrees ladder encodes — crowding reshapes who the finalists are, and margins only get consulted once they cannot be separated by their own matches. Worth knowing that the wart was documented by the method's own community, not just by its critics.
 
-Here is the part that matters for this repo. The teaming attack only works because Ranked Robin broke the tie by **margin**. Engines don't agree on that rung (see [rr_tiebreak_lh_vs_bv.md](rr_tiebreak_lh_vs_bv.md)):
+## The catch: the attack depends on which rung you use
 
-| Engine | 2-way tie rung | After-teaming winner |
-|--------|----------------|----------------------|
-| **Equal Vote protocol / LH** | total **margin** | **A1** — teaming succeeds |
-| **BetterVoting** `RankedRobin.ts` | **head-to-head** (else random) | **C** — teaming fails |
+Here is the part that matters for this repo. Whether teaming *pays* turns entirely on which rung settles the two-way tie (see [rr_tiebreak_lh_vs_bv.md](rr_tiebreak_lh_vs_bv.md) and [degrees of ties](../03_Criteria/rr_tiebreaks/degrees_of_ties.md)):
 
-After teaming, A1 and C tie at 5 wins, but **C beats A1 head-to-head, 21–12**. An engine that breaks a 2-way tie by head-to-head (BetterVoting) therefore elects **C**, not A1 — the attack backfires. An engine that breaks it by margin (LH, and the Equal Vote Coalition's published protocol) elects **A1** — the attack works. So "Ranked Robin fails clone independence by teaming" is true **of the margin tiebreak**, not of every Ranked Robin implementation. BetterVoting's simpler head-to-head/random tiebreak happens to resist this particular teaming (and, on the pre-clone 3-way tie, just picks at random).
+| Rung used on the two finalists | After-teaming winner |
+|--------|----------------------|
+| **1st Degree** — margins over the other finalists, i.e. their head-to-head. The protocol's rule, BetterVoting's rule, and this engine's rule since 2026-08-19 | **C** — the attack backfires |
+| **2nd Degree** — margins over the whole field. Correct only once the finalists are level against each other | **A1** — the attack pays |
+
+After teaming, A1 and C tie at 5 wins, and **C beats A1 head-to-head, 21–12**. So "Ranked Robin fails clone independence by teaming" needs restating: what the clones reliably do is **change the outcome by crowding out B**, which is a clone failure whichever rung you use. What they do not do, under the method as published, is deliver the win to the faction that ran them.
 
 ## Bottom line
 
@@ -73,5 +75,5 @@ Ranked Robin passes vote-splitting clone independence outright: **cloning a cand
 
 ## In this repo
 
-- LH-only case pair (deterministic teaming via margin): [`clone_teaming_01_pre`](../03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml) → A (lot), [`clone_teaming_02_post`](../03_Criteria/clone_independence/cases/clone_teaming_02_post.yaml) → A1 (margin).
-- BetterVoting companions (the divergence, where teaming fails): [BV2142 — pre](../03_Criteria/clone_independence/bv2142_4gfwdq_clone_cycle_pre.md) (BV random → C) and [BV2143 — teaming](../03_Criteria/clone_independence/bv2143_9pr3wr_teaming_fails.md) (BV head-to-head → C, teaming fails). Confirmed live: BV `4gfwdq` / `9pr3wr`.
+- LH-only case pair: [`clone_teaming_01_pre`](../03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml) → A (both degrees exhausted, so lot), [`clone_teaming_02_post`](../03_Criteria/clone_independence/cases/clone_teaming_02_post.yaml) → C (1st Degree).
+- BetterVoting companions: [BV2142 — pre](../03_Criteria/clone_independence/bv2142_4gfwdq_clone_cycle_pre.md) (BV has no degrees for a 3-way tie, so random → C) and [BV2143 — teaming](../03_Criteria/clone_independence/bv2143_9pr3wr_teaming_fails.md) (BV head-to-head → C). Confirmed live: BV `4gfwdq` / `9pr3wr`. Both engines now elect C after teaming; before 2026-08-19 this engine said A1.

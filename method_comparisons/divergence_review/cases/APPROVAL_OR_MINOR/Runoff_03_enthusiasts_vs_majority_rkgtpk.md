@@ -192,7 +192,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Gale > | 0 - 0 - 5 |1 - 1 - 3 |2 - 1 - 2 |   ---    |2 - 2 - 1 |
    Hazel > | 0 - 0 - 5 |0 - 2 - 3 |1 - 2 - 2 |1 - 2 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Eden       4–0–0         4      +8  Dakota, Gale, Flynn, Hazel
     2  Dakota     3–1–0         3     +14  Gale, Flynn, Hazel

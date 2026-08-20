@@ -324,7 +324,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Hugo > | 13 -  0 - 12 | 9 -  4 - 12 | 8 -  1 - 16 | 8 -  1 - 16 | 8 -  1 - 16 | 8 -  0 - 17 | 4 -  4 - 17 |    ---      | 1 - 24 -  0 |
   Iris > | 13 -  0 - 12 | 9 -  3 - 13 | 8 -  1 - 16 | 8 -  1 - 16 | 8 -  1 - 16 | 8 -  0 - 17 | 4 -  4 - 17 | 0 - 24 -  1 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Finn       8–0–0         8     +35  Emma, Gus, Cleo, Dev, Ben, Hugo, Iris, Ada
     2  Emma       6–1–1       6.5     +37  Cleo, Dev, Ben, Hugo, Iris, Ada

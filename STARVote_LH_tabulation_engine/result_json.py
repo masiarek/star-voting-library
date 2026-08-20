@@ -291,6 +291,7 @@ def _build_ranked_robin(el, cls):
             "draws": len(t["ties"][c]),
             "copeland": t["copeland"][c],
             "margin": t["margin"][c],
+            "first_degree_margin": t["first_degree"][c],
             "beats": list(t["wins"][c]),
         }
         for c in t["order"]
@@ -303,9 +304,11 @@ def _build_ranked_robin(el, cls):
             "stage": "copeland_leaders",
             "tied": list(t["leaders"]),
             "at": t["copeland"][t["leaders"][0]],
-            # LH's ladder: total margin, then the published lot. (BetterVoting's
-            # rung 2 is head-to-head instead — a documented divergence.)
-            "rung": "total margin, then lot",
+            # Ranked Robin's own ladder: 1st Degree (margins among the tied
+            # finalists), then 2nd Degree (margins over the whole field), then the
+            # published lot. `rung` names the one that actually fired, so a
+            # right-winner-wrong-path result is still detectable.
+            "rung": t["rung"] or "none",
             "advanced": [c for c in t["leaders"] if c in t["winners"]],
             "eliminated": [c for c in t["leaders"] if c not in t["winners"]],
         })

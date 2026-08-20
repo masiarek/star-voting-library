@@ -165,7 +165,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Boston > | 2 - 0 - 1 |   ---    |2 - 0 - 1 |
    Cairo > | 0 - 0 - 3 |1 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Boston     2–0–0         2      +2  Austin, Cairo
     2  Austin     1–1–0         1      +2  Cairo

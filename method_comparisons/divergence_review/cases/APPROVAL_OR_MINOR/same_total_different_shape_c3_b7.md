@@ -174,7 +174,7 @@ Legend: For - Equal Support - Against   (row vs column)
     Bacon > | 2 - 1 - 4 |   ---    |3 - 1 - 3 |
   Cheddar > | 2 - 1 - 4 |3 - 1 - 3 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Avocado    2–0–0         2      +4  Bacon, Cheddar
     2  Bacon      0–1–1       0.5      -2  —

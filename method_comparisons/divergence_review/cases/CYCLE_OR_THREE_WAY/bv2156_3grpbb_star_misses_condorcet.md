@@ -171,7 +171,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bruno > | 35 - 25 - 40 |    ---      |35 -  0 - 65 |
    Cleo > | 60 -  0 - 40 |65 -  0 - 35 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cleo       2–0–0         2     +50  Ada, Bruno
     2  Ada        1–1–0         1     -15  Bruno

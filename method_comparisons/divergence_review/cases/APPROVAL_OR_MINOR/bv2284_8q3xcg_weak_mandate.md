@@ -290,7 +290,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Colin > | 17 - 39 - 44 |17 - 35 - 48 |    ---      |17 - 62 - 21 |
    Dara > | 11 - 49 - 40 |16 - 31 - 53 |21 - 62 - 17 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Beth       3–0–0         3     +84  Arlo, Dara, Colin
     2  Arlo       2–1–0         2     +40  Dara, Colin

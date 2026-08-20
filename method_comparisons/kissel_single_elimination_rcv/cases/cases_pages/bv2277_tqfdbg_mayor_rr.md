@@ -59,7 +59,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Blake > | 67 -  0 - 33 |31 -  0 - 69 |    ---      |84 -  0 - 16 |
    Dean > | 16 -  0 - 84 |16 -  0 - 84 |16 -  0 - 84 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cora       3–0–0         3    +140  Blake, Ada, Dean
     2  Blake      2–1–0         2     +64  Ada, Dean

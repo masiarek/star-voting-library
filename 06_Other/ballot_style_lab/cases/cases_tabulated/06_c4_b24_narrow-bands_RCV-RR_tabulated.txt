@@ -40,15 +40,15 @@ Legend: For - Equal Support - Against   (row vs column)
   Coral > |  6 - 16 -  2 | 8 -  7 -  9 |    ---      | 9 -  7 -  8 |
    Dune > |  9 -  4 - 11 | 4 - 15 -  5 | 8 -  7 -  9 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Coral      2–1–0         2      +4  Azure, Dune
-    2  Beige      2–1–0         2      +1  Coral, Dune
-    3  Azure      2–1–0         2      -1  Beige, Dune
-    4  Dune       0–3–0         0      -4  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Coral      2–1–0         2      +4            +3  Azure, Dune
+    2  Beige      2–1–0         2      +1             0  Coral, Dune
+    3  Azure      2–1–0         2      -1            -3  Beige, Dune
+    4  Dune       0–3–0         0      -4             —  —
 
 Winner — Ranked Robin (RCV-RR): Coral
-   *** 3 candidates tie for the most wins (Azure, Beige, Coral) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Azure, Beige, Coral) — a Condorcet cycle (no candidate beats all others). Resolved by the 1st Degree tiebreaker: Coral has the greatest sum of win margins over the other finalists (+3). (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

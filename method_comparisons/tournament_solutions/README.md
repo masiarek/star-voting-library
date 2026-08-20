@@ -4,13 +4,13 @@ The tabulatable evidence behind [Tournament solutions — the theory of the win-
 
 The first two cases are the *textbook's own figures* turned back into ballots — Brandt, Brill & Harrenstein, "Tournament Solutions," ch. 3 of the [Handbook of Computational Social Choice](https://procaccia.info/wp-content/uploads/2020/03/comsoc.pdf) (2016). The chapter draws graphs; [McGarvey's theorem](../../07_Concepts/topics/tournament_solutions.md) guarantees some electorate produces each one, and these three-voter profiles are the smallest we found that do. Candidate labels stay bare `A`–`E` on purpose, matching the figures, so the book can be read beside the tabulation.
 
-All three files are **LH-only**, but only two of them for a reason. The `copeland_vs_clones` case needs no live tally at all; its point is a disagreement between two published rules. The `star_elects_a_covered_candidate` case has an engine-independent STAR result, but its Ranked Robin comparison line depends on which tiebreak ladder you run.
+All three files are **LH-only**, but only two of them for a reason. The `copeland_vs_clones` case needs no live tally at all; its point is a disagreement between two published rules. The `star_elects_a_covered_candidate` case has an engine-independent STAR result, and its Ranked Robin comparison line rests on a two-way Copeland tie (Boston and Chicago at 2–1) that the [1st Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) settles for **Boston**, still inside the uncovered set.
 
-**`five_answers` is the exception, and its old rationale was wrong** (corrected 2026-08-05). It used to say the case couldn't go to BetterVoting because BV breaks Ranked Robin ties at random — but BV's [random rung is never reached here](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md): exactly two candidates tie, they played each other, and A beat B, so BV's **head-to-head** rung settles it and elects **A** with `tieBreakType: "none"`. The result is fully derivable from the ballots. In fact this election is **already live** — [BV2270 `8h4bvh`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md) is this exact profile under tree names (Alder = A, Birch = B, Cedar = C, Dogwood = D), minted for an unrelated display bug and only later recognized as the same graph. So don't mint another one: **BV → A, LH → B, `pref_voting` → `{A, B}` and declines**, all on these three ballots.
+**`five_answers` is the exception, and its rationale has now been wrong twice.** It first said the case couldn't go to BetterVoting because BV breaks Ranked Robin ties at random — but BV's random rung is never reached here: exactly two candidates tie, they played each other, and A beat B, so BV's **head-to-head** rung settles it and elects **A** with `tieBreakType: "none"` (corrected 2026-08-05). The second correction is bigger: this page then reported **LH → B** as an equally defensible reading of the same tie, and it was not. Head-to-head between two finalists *is* Ranked Robin's [1st Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md); the LH engine simply had no such rung and jumped to the 2nd Degree, total margin over the whole field. Since 2026-08-19 it elects **A** as well. In fact this election is **already live** — [BV2270 `8h4bvh`](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/bv2270_8h4bvh_head_to_head_vs_margin.md) is this exact profile under tree names (Alder = A, Birch = B, Cedar = C, Dogwood = D), minted for an unrelated display bug and only later recognized as the same graph. So don't mint another one: **BV → A, LH → A, `pref_voting` → `{A, B}` and declines**, all on these three ballots.
 
 | Case (source) | Ballots | What it shows |
 |---|:--:|---|
-| [page](cases/cases_pages/five_answers_one_election_c4_b3.md) · [`five_answers_one_election_c4_b3.yaml`](cases/five_answers_one_election_c4_b3.yaml) | 3 | **Five different defensible winners from one election.** Top cycle `{A,B,C,D}` · uncovered = Banks = bipartisan `{A,B,D}` · Copeland `{A,B}` · Slater = Markov `{A}`. Ranked Robin lands on `{A,B}` and breaks it by **margin**, electing **B** — where Slater and Markov both elect A. (Chapter Figure 3.3.) |
+| [page](cases/cases_pages/five_answers_one_election_c4_b3.md) · [`five_answers_one_election_c4_b3.yaml`](cases/five_answers_one_election_c4_b3.yaml) | 3 | **Four defensible answers to "who should win," from three ballots.** Top cycle `{A,B,C,D}` · uncovered = Banks = bipartisan `{A,B,D}` · Copeland `{A,B}` · Slater = Markov `{A}`. Ranked Robin lands on `{A,B}` and breaks it by the **1st Degree** — A beat B head-to-head — electing **A**, agreeing with Slater and Markov. (Chapter Figure 3.3.) |
 | [`star_elects_a_covered_candidate_c4_b5.yaml`](cases/star_elects_a_covered_candidate_c4_b5.yaml) | 5 | **STAR lands outside the [uncovered set](../../07_Concepts/topics/uncovered_set.md)** — the weakest structural filter there is. Chicago beats Denver *and* beats Austin, the only city Denver beats, so **Denver is covered**; the uncovered set is `{Austin, Boston, Chicago}` and STAR elects the fourth. Strict ballots throughout, so no result is a tie-breaking artifact. Both halves stated: no graph-only rule would elect Denver, but Denver is **not** Pareto-dominated and outscores two of the three. Ranked Robin stays inside, as it must |
 | [`copeland_vs_clones_c5_b3.yaml`](cases/copeland_vs_clones_c5_b3.yaml) | 3 | **Copeland vs composition-consistency.** `{A,B,C}` is a component inside a bigger cycle, so "choose the best from the best components" forces a solution to return **all five**; uncovered, Banks and bipartisan do. Copeland returns **`{D}`** alone and Ranked Robin elects D outright — the published failure of composition-consistency, and the arithmetic behind RR's [teaming weakness](../../05_Ranked_Robin/01_Learn/rr_clone_independence.md). (Chapter Figures 3.1–3.2.) |
 
@@ -28,14 +28,23 @@ The other six solutions have no LH implementation. This repo tool prints them al
 uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/tournament_solutions_report.py method_comparisons/tournament_solutions/cases/five_answers_one_election_c4_b3.yaml
 ```
 
-Its closing line is the one that matters for this library:
+What matters for this library is what happens *after* the tournament runs out. The LH engine prints both rungs side by side, and they point opposite ways:
 
+```text title="Abridged for the lesson — the win–loss block of the full report"
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          2–1–0         2      +1            +1  B, C
+    2  B          2–1–0         2      +3            -1  C, D
+    3  C          1–2–0         1      -3             —  D
+    4  D          1–2–0         1      -1             —  A
+
+Winner — Ranked Robin (RCV-RR): A
+   *** 2 candidates tie for the most wins (A, B) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: A has the greatest sum of win margins over the other finalists (+1).
 ```
-The tournament does NOT decide this election: Copeland ties {A, B}.
-LH's Ranked Robin breaks that tie by TOTAL MARGIN — A +1, B +3 — electing B.
-Margins are not in the tournament. The moment Ranked Robin reaches for
-them it has stepped out of C1 and is reading C2 information.
-```
+
+The **`vs finalists`** column is the [1st Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md), and with exactly two finalists it holds one number: their own match, which A wins 2–1. That is who-beat-whom — **still C1 information**, so on this profile the tiebreak never leaves the tournament. The **`Margin`** column is the 2nd Degree, margins over the whole field, and *those* are not in the tournament at all: they run the other way (B +3 to A's +1), which is exactly the answer this engine printed until 2026-08-19, when it was applying the 2nd Degree in place of the 1st. So Ranked Robin does step out of C1 to break a tie — one rung further down than this page used to claim, and only when the finalists' own matches leave them level.
+
+(The standalone `tournament_solutions_report.py` still closes with the pre-fix line about total margin electing B; its summary has not been brought forward yet.)
 
 ## Two caveats the tool prints for you
 

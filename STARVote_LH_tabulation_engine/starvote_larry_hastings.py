@@ -2090,19 +2090,61 @@ def ranked_robin_tally(ballots_text, lot_numbers=None, num_winners=1):
     # convention wins−losses are affine transforms of each other, so they always
     # give the SAME ranking; raw wins is the odd one out.
     cope = {c: len(wins[c]) + 0.5 * len(ties[c]) for c in candidates}
-    order = sorted(candidates, key=lambda c: (-cope[c], -margin[c],
-                                              priority.index(c)))
+
+    # Ranked Robin's tie-break ladder, in the order the METHOD defines it —
+    # electowiki.org/wiki/Ranked_Robin#Degrees_of_ties, the Equal Vote protocol:
+    #
+    #   1st Degree  the tied candidates are FINALISTS; elect the one with the
+    #               greatest sum of win margins over THE OTHER FINALISTS.
+    #   2nd Degree  still tied: the greatest sum of win margins over ALL candidates.
+    #   then        lot (the spec stops here for public elections; it defines a 3rd
+    #               and 4th Degree but recommends lots or a re-run instead).
+    #
+    # The pool is the whole point, and getting it wrong changes winners. Until
+    # 2026-08-19 this engine ranked ties by TOTAL margin — the 2nd Degree — with
+    # no 1st Degree at all, which meant a candidate could lose the finalists' own
+    # head-to-head and still be elected because they had run up a bigger score
+    # against an also-ran. That fired on 11 of this repo's 100 Ranked Robin
+    # cases, every one of them a two-way tie whose head-to-head was decisive: for
+    # exactly two finalists the 1st Degree IS the head-to-head, which is why
+    # BetterVoting's head-to-head rung was right and this engine's was not.
+    # See 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.
+    def _margin_over(c, pool):
+        """Sum of win margins for `c` over the other candidates in `pool`."""
+        return sum(matrix[c][o][0] - matrix[c][o][1] for o in pool if o != c)
+
+    # Rank within each Copeland tier by the degrees, so row 1 of the printed
+    # record table is always the winner (a separate winner rule and display sort
+    # is how a report ends up contradicting its own table).
+    first_degree, order = {}, []
+    for score in sorted(set(cope.values()), reverse=True):
+        tier = [c for c in candidates if cope[c] == score]
+        for c in tier:
+            first_degree[c] = _margin_over(c, tier)
+        order += sorted(tier, key=lambda c: (-first_degree[c], -margin[c],
+                                             priority.index(c)))
     top = cope[order[0]]
     leaders = [c for c in candidates if cope[c] == top]
     winner = order[0]
-    # Bloc Ranked Robin: for N seats, elect the top N by the same rule (most wins,
-    # then total margin, then lot). num_winners is clamped to the field size.
+    # Which rung actually decided it — reported, and read by result_json.py.
+    if len(leaders) == 1:
+        rung = None
+    elif len([c for c in leaders if first_degree[c] == first_degree[winner]]) == 1:
+        rung = "1st Degree"
+    elif len([c for c in leaders if first_degree[c] == first_degree[winner]
+              and margin[c] == margin[winner]]) == 1:
+        rung = "2nd Degree"
+    else:
+        rung = "lot"
+    # Bloc Ranked Robin: for N seats, elect the top N by the same ladder.
+    # num_winners is clamped to the field size.
     num_winners = max(1, min(int(num_winners or 1), len(candidates)))
     winners = order[:num_winners]
     # Did the last seat come down to a lot tie-break? (Nth and (N+1)th identical on
-    # Copeland score AND margin, so only the pre-published lot order separated them.)
+    # Copeland score AND both degrees, so only the pre-published lot separated them.)
     cutoff_lot_tie = (num_winners < len(candidates)
                       and cope[order[num_winners - 1]] == cope[order[num_winners]]
+                      and first_degree[order[num_winners - 1]] == first_degree[order[num_winners]]
                       and margin[order[num_winners - 1]] == margin[order[num_winners]])
 
     return {
@@ -2111,6 +2153,7 @@ def ranked_robin_tally(ballots_text, lot_numbers=None, num_winners=1):
         "n": n, "priority": priority, "matrix": matrix,
         "wins": wins, "losses": losses, "ties": ties, "margin": margin,
         "raw_pairs": raw_pairs, "copeland": cope, "order": order,
+        "first_degree": first_degree, "rung": rung,
         "top": top, "leaders": leaders, "winner": winner, "winners": winners,
         "num_winners": num_winners, "cutoff_lot_tie": cutoff_lot_tie,
     }
@@ -2121,8 +2164,9 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     """Tabulate and report a Ranked Robin (RCV-RR / Copeland) election.
 
     Ranked Robin reads the *whole* ballot: it compares every pair of candidates
-    head-to-head and elects whoever wins the most matchups (ties broken by total
-    margin, then by lot order). Prints the ballots, the round-robin (pairwise)
+    head-to-head and elects whoever wins the most matchups (ties broken by the
+    method's own degrees — margins among the tied finalists, then margins over
+    the whole field — and only then by lot order). Prints the ballots, the round-robin (pairwise)
     table, and each candidate's win-loss record. Accepts ranked ballots
     ("A>B>C") or score ballots; both reduce to the same pairwise comparison.
 
@@ -2140,6 +2184,7 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     n, priority, matrix = t["n"], t["priority"], t["matrix"]
     wins, losses, ties, margin = t["wins"], t["losses"], t["ties"], t["margin"]
     raw_pairs, cope, order = t["raw_pairs"], t["copeland"], t["order"]
+    first_degree, rung = t["first_degree"], t["rung"]
     top, leaders = t["top"], t["leaders"]
     winner, winners = t["winner"], t["winners"]
     num_winners, cutoff_lot_tie = t["num_winners"], t["cutoff_lot_tie"]
@@ -2156,20 +2201,30 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
     # --- Aligned win-loss record table (with Copeland score + margin columns) ---
     def _beats(c):
         return ", ".join(sorted(wins[c], key=lambda x: order.index(x))) or "—"
-    HC, HR, HK, HM = "Candidate", "W–L–T", "Copeland", "Margin"
+    HC, HR, HK, HM, HF = "Candidate", "W–L–T", "Copeland", "Margin", "vs finalists"
     recs = {c: f"{len(wins[c])}–{len(losses[c])}–{len(ties[c])}" for c in candidates}
     cand_w = max(nw, len(HC))
     rec_w = max(max((len(r) for r in recs.values()), default=0), len(HR))
     cope_w = max(max((len(f"{cope[c]:g}") for c in candidates), default=1), len(HK))
     marg_w = max(max((len(f"{margin[c]:+d}") for c in candidates), default=2), len(HM))
+    # The 1st Degree column earns its space only when there IS a tie for the lead:
+    # it is the number that decides the winner, and without it the table looks like
+    # it contradicts itself (the Margin column can point at a different candidate,
+    # because that column is the 2nd Degree). Blank for everyone but the finalists —
+    # a margin among finalists means nothing to a candidate who isn't one.
+    _fin_col = len(leaders) > 1
+    _fin = {c: ((f"{first_degree[c]:+d}" if first_degree[c] else "0")
+                if c in leaders else "—") for c in candidates}
+    fin_w = max(max((len(v) for v in _fin.values()), default=1), len(HF)) if _fin_col else 0
     record_lines = [
         f"   {'#':>2}  {HC:<{cand_w}}  {HR:<{rec_w}}  {HK:>{cope_w}}  "
-        f"{HM:>{marg_w}}  Beats"
+        f"{HM:>{marg_w}}  " + (f"{HF:>{fin_w}}  " if _fin_col else "") + "Beats"
     ]
     for idx, c in enumerate(order, 1):
         record_lines.append(
             f"   {idx:>2}  {c:<{cand_w}}  {recs[c]:<{rec_w}}  "
-            f"{cope[c]:>{cope_w}g}  {margin[c]:>+{marg_w}d}  {_beats(c)}")
+            f"{cope[c]:>{cope_w}g}  {margin[c]:>+{marg_w}d}  "
+            + (f"{_fin[c]:>{fin_w}}  " if _fin_col else "") + f"{_beats(c)}")
 
     # Full N×N pairwise matrix — the Ranked Robin tally itself (the summable
     # heart of the count). Each cell reads For - Equal Support - Against for the
@@ -2251,7 +2306,8 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
             L += _matrix_lines()
             L.append("")
         L.append("Win–loss record — Copeland score = wins + ½·ties "
-                 "(highest score wins; ties broken by total margin, then lot order):")
+                 "(highest score wins; ties broken by the Ranked Robin degrees, "
+                 "then lot order):")
         L += record_lines
         L.append("")
         if num_winners > 1:
@@ -2308,18 +2364,31 @@ def run_ranked_robin(ballots_text, file_path=None, lot_numbers=None, options=Non
                       if not any(ties[l] for l in leaders) else
                       f"tie on the highest Copeland score ({top:g}): "
                       + ", ".join(leaders))
+            # Name the rung that actually fired. "Resolved by total margin" was
+            # both the old ladder and the old wording; the ladder now starts one
+            # rung earlier (margins among the finalists), so the report has to
+            # say which rung separated them or the reader cannot check the answer.
+            if rung == "1st Degree":
+                how = (f"Resolved by the 1st Degree tiebreaker: {winner} has the greatest "
+                       f"sum of win margins over the other finalists "
+                       f"({first_degree[winner]:+d}).")
+            elif rung == "2nd Degree":
+                how = (f"The finalists are level on margins against each other, so the 2nd "
+                       f"Degree decides: {winner} leads on margins over the whole field "
+                       f"({margin[winner]:+d}).")
+            else:
+                how = ("Neither the 1st nor the 2nd Degree tiebreaker separates them — "
+                       "resolved by lot order.")
             if shape == "dead heat":
                 L.append(f"   *** {len(leaders)} candidates {tie_on} — a dead heat (they "
-                         "draw head-to-head, not a cycle). Resolved by total margin, then "
-                         "lot order.")
+                         f"draw head-to-head, not a cycle). {how}")
             elif shape == "mixed":
                 L.append(f"   *** {len(leaders)} candidates {tie_on} — tied on the tally, "
-                         "not a cycle (some of them beat others head-to-head, but no loop "
-                         "closes). Resolved by total margin, then lot order.")
+                         f"not a cycle (some of them beat others head-to-head, but no loop "
+                         f"closes). {how}")
             else:
                 L.append(f"   *** {len(leaders)} candidates {tie_on} — a Condorcet cycle "
-                         "(no candidate beats all others). Resolved by total margin, then "
-                         "lot order. (This is "
+                         f"(no candidate beats all others). {how} (This is "
                          "where Minimax / Ranked Pairs / Schulze differ — see "
                          "05_Ranked_Robin/01_Learn/cycle_resolution.md.)")
         if smith_on or _show_smith:
@@ -2610,12 +2679,17 @@ def copeland_winner(candidates, ballots, priority):
     """
     Ranked Robin (RCV-RR / Copeland) winner from score ballots: the candidate with
     the highest Copeland score (win = 1, DRAW = ½ to each side), ties broken by
-    total pairwise margin, then by `priority` order. Mirrors run_ranked_robin's
-    tally exactly — including the half-credit for draws, so the [Divergence from
-    STAR] block can never name a different RCV-RR winner than the RR report does
-    (ranking by raw wins disagreed with the report the moment any matchup was
-    drawn). Unlike a Condorcet winner it ALWAYS returns a name (a cycle is
-    resolved by margin / priority), or None if unavailable.
+    Ranked Robin's own degrees — 1st Degree (margins among the tied finalists),
+    then 2nd Degree (margins over the whole field) — then by `priority` order.
+    Mirrors run_ranked_robin's ladder exactly, so the [Divergence from STAR]
+    block can never name a different RCV-RR winner than the RR report does.
+    That promise has been broken twice by the same shape of drift: once by
+    ranking on raw wins while the report ranked on Copeland, and again on
+    2026-08-19, when the report gained its 1st Degree rung and this function did
+    not — a STAR page then printed "RCV-RR = Abby" beside its own RR mirror
+    saying Brad. Change one, change both. Unlike a Condorcet winner it ALWAYS
+    returns a name (a cycle is resolved by the degrees / priority), or None if
+    unavailable.
     """
     if not candidates or not ballots:
         return None
@@ -2640,7 +2714,12 @@ def copeland_winner(candidates, ballots, priority):
             else:                       # a draw is half a win to BOTH sides
                 cope[a] += 0.5
                 cope[b] += 0.5
-    return min(candidates, key=lambda c: (-cope[c], -margin[c], order.index(c)))
+    top = max(cope.values())
+    finalists = [c for c in candidates if cope[c] == top]
+    first_degree = {c: sum(matrix[c][o][0] - matrix[c][o][1]
+                           for o in finalists if o != c) for c in finalists}
+    return min(finalists, key=lambda c: (-first_degree[c], -margin[c],
+                                         order.index(c)))
 
 
 def print_method_comparison(candidates, ballots, star_winner, priority,

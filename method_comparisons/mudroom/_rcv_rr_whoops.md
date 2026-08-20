@@ -9,7 +9,7 @@
 
 ## 🥇 The signature flaw: cycles
 
-- **No Condorcet winner exists.** A majority prefers A>B, B>C, *and* C>A — rock-paper-scissors, so "elect the head-to-head winner" has nothing to elect. Ranked Robin falls back on a tiebreak (most wins → margin → lot), which is a *choice*, not a discovery. → [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md); a live one in the [reversal-symmetry case](../reversal_symmetry/README.md) (that 24-voter electorate is a cycle). This is [Gibbard](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) collecting his due — no method escapes it, RR included.
+- **No Condorcet winner exists.** A majority prefers A>B, B>C, *and* C>A — rock-paper-scissors, so "elect the head-to-head winner" has nothing to elect. Ranked Robin falls back on a tiebreak (most wins → [1st Degree → 2nd Degree](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) → lot), which is a *choice*, not a discovery. → [cycle resolution](../../05_Ranked_Robin/01_Learn/cycle_resolution.md); a live one in the [reversal-symmetry case](../reversal_symmetry/README.md) (that 24-voter electorate is a cycle). This is [Gibbard](../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) collecting his due — no method escapes it, RR included.
 
 ## 🥈 Order without strength
 
@@ -17,7 +17,7 @@
 
 ## 🥉 The bureaucratic whoops
 
-- **Tie-broken by lot — and engines disagree.** Copeland ties get resolved by total margin, then a random lot; and LH breaks a Copeland tie differently from BetterVoting (margin→lot vs head-to-head→random), so the "winner" of a knife-edge RR race can depend on *which counter you use*. → [RR tiebreak, LH vs BV](../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md).
+- **Tie-broken by lot — and nobody implemented the ladder.** Ranked Robin ships with a four-rung tie-break protocol, and for two years *neither* engine in this repo ran it: BetterVoting handles only a two-way tie and shuffles anything bigger, while this library's own engine skipped straight to the whole-field margin rung and could hand the race to a candidate who lost the finalists' own match. Both are now known bugs rather than rival conventions — ours [fixed on 2026-08-19](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md), BV's filed as [#1469](https://github.com/Equal-Vote/bettervoting/issues/1469) — but the mud stands: a method whose tie-break is subtle enough that two independent implementations both got it wrong is a method whose knife-edge races were decided by *which counter you used*. → [degrees of ties](../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md).
 - **Copeland's clone wrinkles.** Simple win-counting can be nudged by adding clone candidates in some constructions. → [RR clone independence](../../05_Ranked_Robin/01_Learn/rr_clone_independence.md).
 
 ---
@@ -28,6 +28,7 @@ The fair version, because the Mudroom insists:
 
 - **Cycles are genuinely rare** (~1–5% in realistic models and empirical data), and *every* method must resolve them somehow — RR is not uniquely cursed here.
 - RR **avoids** the failures that actually bite in real elections — it has *no* center squeeze and *no* non-monotonicity, which is more than IRV can say.
+- **The tie-break mud lands on the counters, not on the method.** Ranked Robin's degrees of ties were published, worked and four rungs deep the whole time; two implementations failed to follow them, in opposite directions. That is an argument for reading the spec, not against the method — and this repo's engine was one of the two, which is why the story is told here rather than filed under someone else's failures.
 - The intensity-blindness is the honest cost of a *ranked* ballot; it's why STAR pairs scores with a runoff — a real distinction, not a knock that makes RR "bad."
 - RR remains a strong, summable, honest method and the repo's genuine bridge to RCV voters. Mud thrown; respect intact.
 

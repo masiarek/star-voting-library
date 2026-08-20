@@ -4,7 +4,7 @@
 **Method:** [Ranked Robin (RCV-RR / Copeland)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ada · [full count →](cases/cases_pages/dead_heat_lot_tiebreak.md)
 <!-- case-meta:end -->
 
-*Four score ballots, three candidates, engineered so **every** deterministic rung ties. Ada and Ben tie each other head-to-head **and** tie on total margin, and both beat Cara — so Ranked Robin walks its full ladder (most wins → total margin → **lot order**) and only the pre-published lot settles it. This is the one case in the set that exercises the **Equal Support** column and the **+½ Copeland** credit — and the one case that is **LH-only on purpose**, because it's exactly where the LH and BetterVoting tiebreaks diverge.*
+*Four score ballots, three candidates, engineered so **every** deterministic rung ties. Ada and Ben tie each other head-to-head **and** tie on total margin, and both beat Cara — so Ranked Robin walks its full ladder — most wins → [1st Degree](degrees_of_ties.md) (margins over the other finalists) → 2nd Degree (margins over the whole field) → **lot order** — and only the pre-published lot settles it. This is the one case in the set that exercises the **Equal Support** column and the **+½ Copeland** credit — and the one case that is **LH-only on purpose**, because it's exactly where the LH and BetterVoting tiebreaks diverge.*
 
 Reference: [`dead_heat_lot_tiebreak.yaml`](cases/dead_heat_lot_tiebreak.yaml) (`expected_winners: [Ada]`). No BetterVoting election — see "Why LH-only" below.
 
@@ -38,7 +38,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 1 - 2 - 1 |   ---    |4 - 0 - 0 |
   Cara > | 0 - 0 - 4 |0 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Ada        1–0–1       1.5      +4  Cara
     2  Ben        1–0–1       1.5      +4  Cara
@@ -47,7 +47,7 @@ Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties
 Winner — Ranked Robin (RCV-RR): Ada
 ```
 
-Read the Ada↔Ben cell: **`1 - 2 - 1`** — one voter each way, and **2 Equal Support** (the indifferent voters). For equals Against, so it's a **tie**, worth **½** to each in Copeland (1 win over Cara + ½ = **1.5**). Ada and Ben are identical on wins (1) *and* on margin (+4), so only the pre-published **lot `[Ada, Ben, Cara]`** breaks it → **Ada**.
+Read the Ada↔Ben cell: **`1 - 2 - 1`** — one voter each way, and **2 Equal Support** (the indifferent voters). For equals Against, so it's a **tie**, worth **½** to each in Copeland (1 win over Cara + ½ = **1.5**). Ada and Ben are identical on wins (1), on their margin against each other (0 — they drew) *and* on total margin (+4), so both degrees are exhausted and only the pre-published **lot `[Ada, Ben, Cara]`** breaks it → **Ada**.
 
 This is the only case that lights up the Equal Support column and the ½-Copeland credit, and the only one that reaches the **lot** rung — the full deterministic ladder in four ballots.
 
@@ -57,8 +57,8 @@ The LH engine and BetterVoting resolve this **differently**, which is the whole 
 
 | | Tiebreak ladder |
 |---|---|
-| **LH** `run_ranked_robin` | most wins → total **margin** → **lot order** — fully deterministic |
-| **BetterVoting** `RankedRobin.ts` | most wins → **head-to-head** (2-way only) → **random** |
+| **LH** `run_ranked_robin` | most wins → **1st Degree** → **2nd Degree** → **lot order** — fully deterministic |
+| **BetterVoting** `RankedRobin.ts` | most wins → **head-to-head** (2-way only, = the 1st Degree) → **random** |
 
 Here the two leaders tie *each other* head-to-head, so BV's 2-way rule can't resolve them and it falls through to a **random** pick — which can't be frozen into a reproducible `_bv_export.json`. So this case documents the **LH** ladder specifically; BetterVoting would agree that Ada and Ben are co-leaders but would not deterministically choose between them. Full write-up: [rr_tiebreak_lh_vs_bv.md](../../01_Learn/rr_tiebreak_lh_vs_bv.md).
 
@@ -67,7 +67,7 @@ Here the two leaders tie *each other* head-to-head, so BV's 2-way rule can't res
 The winner note distinguishes a dead heat from a real cycle:
 
 ```text
-*** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+*** 2 candidates tie on the highest Copeland score (1.5): Ada, Ben — a dead heat (they draw head-to-head, not a cycle). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order.
 ```
 
 Ada and Ben both *beat* Cara and *tie* each other (no beat-around-the-loop), so the engine says **dead heat**, not "Condorcet cycle" — the latter is reserved for a genuine directed loop (rock-paper-scissors). See [rr_tiebreak_lh_vs_bv.md](../../01_Learn/rr_tiebreak_lh_vs_bv.md).

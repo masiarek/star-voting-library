@@ -67,11 +67,11 @@ Legend: For - Equal Support - Against   (row vs column)
    Bruno > | 15 -  0 - 15 |15 -  0 - 15 | 8 -  0 - 22 |    ---      |16 -  0 - 14 |
   Carmen > | 21 -  0 -  9 |21 -  0 -  9 |14 -  0 - 16 |14 -  0 - 16 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Alice      2–1–1       2.5     +34  Dmitri, Elena
-    2  Carmen     2–2–0         2     +20  Alice, Elena
-    3  Dmitri     2–2–0         2      -4  Carmen, Bruno
+    2  Dmitri     2–2–0         2      -4  Carmen, Bruno
+    3  Carmen     2–2–0         2     +20  Alice, Elena
     4  Bruno      1–1–2         2     -12  Carmen
     5  Elena      1–2–1       1.5     -38  Dmitri
 

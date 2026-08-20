@@ -62,15 +62,15 @@ Legend: For - Equal Support - Against   (row vs column)
   C > |  8 -  0 - 11 | 7 -  0 - 12 |    ---      |13 -  0 -  6 |
   A > | 14 -  0 -  5 |10 -  0 -  9 | 6 -  0 - 13 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  A          2–1–0         2      +3  D, B
-    2  D          2–1–0         2      -3  B, C
-    3  B          1–2–0         1      +1  C
-    4  C          1–2–0         1      -1  A
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  A          2–1–0         2      +3            +9  D, B
+    2  D          2–1–0         2      -3            -9  B, C
+    3  B          1–2–0         1      +1             —  C
+    4  C          1–2–0         1      -1             —  A
 
 Winner — Ranked Robin (RCV-RR): A
-   *** 2 candidates tie for the most wins (D, A) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by total margin, then lot order.
+   *** 2 candidates tie for the most wins (D, A) — tied on the tally, not a cycle (some of them beat others head-to-head, but no loop closes). Resolved by the 1st Degree tiebreaker: A has the greatest sum of win margins over the other finalists (+9).
 ```
 <!-- --8<-- [end:report] -->
 

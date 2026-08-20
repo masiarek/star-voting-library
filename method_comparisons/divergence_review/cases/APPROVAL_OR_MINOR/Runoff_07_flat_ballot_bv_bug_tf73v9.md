@@ -171,7 +171,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Blair > | 2 - 1 - 1 |   ---    |2 - 1 - 1 |
    Cleo > | 0 - 1 - 3 |1 - 1 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Blair      2–0–0         2      +2  Alex, Cleo
     2  Alex       1–1–0         1      +2  Cleo

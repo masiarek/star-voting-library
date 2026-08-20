@@ -1,4 +1,4 @@
-election_title: "The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, and two ladders"
+election_title: "The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, settled head-to-head"
 
 scenario_description: |-
   One of three races in the Post-it RCV example (BV2176, bvid p8dp28;
@@ -6,15 +6,16 @@ scenario_description: |-
   every-pair head-to-head. The pairwise picture is a genuine Condorcet cycle —
   Purple beats Green 9-8, Green beats Blue 7-4, Blue beats Purple 10-9 (and
   Pink beats Purple 12-8) — so no candidate beats all others, and Green and
-  Blue tie on record at 2-1 (Copeland 2). This is the documented spot where
-  the two engines' tiebreak ladders part ways
-  (05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md), and BOTH stay
-  deterministic here: BetterVoting's ladder (exactly 2 tied -> their own
-  head-to-head) elects GREEN, who beats Blue 7-4 — BV-confirmed, freezable;
-  the LH ladder below (total margin, then lot) elects BLUE (+5 vs Green's +4).
-  Same ballots, same 2-1 tie, two defensible winners — the first live
-  BetterVoting election to exhibit the ladder divergence. expected_winners
-  records the LH result (Blue); the frozen BV export records Green.
+  Blue tie on record at 2-1 (Copeland 2). Ranked Robin's 1st Degree tiebreaker
+  looks at how the tied finalists did against EACH OTHER — Green beats Blue 7-4 —
+  so GREEN is elected, deterministically, and both engines say so. The frozen BV
+  export records Green too.
+  This case spent months on file as the first live BetterVoting election to show
+  an LH-vs-BV ladder divergence: the engine used to break the tie on total margin
+  over the whole field and answered BLUE (+5 vs Green's +4). That rung is Ranked
+  Robin's 2nd Degree, reachable only when the finalists are level against each
+  other, and applying it first was an engine bug, corrected 2026-08-19. See
+  05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md.
 
   Live results: https://bettervoting.com/p8dp28/results
   Companion races: bv2176_p8dp28_star.yaml, bv2176_p8dp28_irv.yaml.
@@ -52,6 +53,6 @@ ballots: |-
   Pink
 
 expected_winners:
-  - Blue   # LH ladder (margin +5); BetterVoting's ladder (head-to-head among the tied pair) elects Green
+  - Green   # LH ladder (margin +5); BetterVoting's ladder (head-to-head among the tied pair) elects Green
 
 # file: bv2176_p8dp28_ranked_robin.yaml

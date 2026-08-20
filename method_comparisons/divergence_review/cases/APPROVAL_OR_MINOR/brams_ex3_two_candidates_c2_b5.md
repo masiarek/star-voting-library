@@ -157,7 +157,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Alan > |    ---    |2 - 0 - 3 |
   Beth > | 3 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Beth       1–0–0         1      +1  Alan
     2  Alan       0–1–0         0      -1  —

@@ -227,7 +227,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Elsa > | 36 - 13 - 16 |36 -  0 - 29 |27 -  0 - 38 |    ---      |50 -  0 - 15 |
   Greta > | 27 -  9 - 29 |27 -  0 - 38 |15 -  0 - 50 |15 -  0 - 50 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Diego      4–0–0         4     +99  Elsa, Bruno, Ana, Greta
     2  Elsa       3–1–0         3     +51  Bruno, Ana, Greta

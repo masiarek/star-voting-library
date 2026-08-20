@@ -199,7 +199,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Begich > |  93 -  23 -  84 |      ---       |107 -  25 -  68 |
     Palin > |  92 -  12 -  96 | 68 -  25 - 107 |      ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Begich     2–0–0         2     +48  Peltola, Palin
     2  Peltola    1–1–0         1      -5  Palin

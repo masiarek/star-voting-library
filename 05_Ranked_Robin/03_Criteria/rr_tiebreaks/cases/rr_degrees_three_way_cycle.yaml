@@ -1,0 +1,50 @@
+election_title: "A three-way cycle has a deterministic answer — and BetterVoting draws lots for it"
+scenario_description: >-
+  Eleven voters, three candidates, one rock-paper-scissors cycle: Dre beats
+  Edith 7-4, Edith beats Frank 6-5, Frank beats Dre 9-2. All three tie at one
+  matchup win, so all three are finalists and Ranked Robin reaches for its 1st
+  Degree tiebreaker — the sum of each finalist's win margins over the other
+  finalists:
+
+    Frank  (+7) + (-1) = +6      <- elected
+    Edith  (-3) + (+1) = -2
+    Dre    (+3) + (-7) = -4
+
+  Frank is elected, deterministically, from the ballots alone. Note how lopsided
+  it is: Frank's +6 on 11 ballots is a 54-point swing, and he is the only
+  finalist with a positive sum, which the protocol argues is what "majority
+  preferred among finalists" means.
+
+  BetterVoting elects nobody in particular. Its tabulator has a rung for exactly
+  two tied candidates and nothing for three, so this count falls to the random
+  rung and returns whoever happens to sit first in the shuffled candidate order —
+  enter the same election with the candidates listed as Edith, Frank, Dre and the
+  page reports Edith. That is bettervoting#1469, and it is not a corner case:
+  with three candidates and no drawn matchups, EVERY Condorcet cycle is a
+  three-way Copeland tie, so the two-way rung can never fire on one.
+
+  This engine has answered Frank since 2026-08-19; before that it used total
+  margin over the whole field, which on three candidates is the same pool as the
+  finalists and happens to agree. The case that separates the two pools is the
+  companion, rr_degrees_finalists_vs_field.yaml. Lesson: degrees_of_ties.md
+voting_method: RankedRobin
+num_winners: 1
+# Copeland 1 each. 1st Degree: Frank +6, Edith -2, Dre -4 -> Frank.
+#   Individual ballots rather than three blocs: eleven rows, small enough to read.
+ballots: |-
+  Dre>Edith>Frank
+  Dre>Edith>Frank
+  Edith>Frank>Dre
+  Edith>Frank>Dre
+  Edith>Frank>Dre
+  Edith>Frank>Dre
+  Frank>Dre>Edith
+  Frank>Dre>Edith
+  Frank>Dre>Edith
+  Frank>Dre>Edith
+  Frank>Dre>Edith
+
+expected_winners:
+  - Frank
+
+# file: rr_degrees_three_way_cycle.yaml

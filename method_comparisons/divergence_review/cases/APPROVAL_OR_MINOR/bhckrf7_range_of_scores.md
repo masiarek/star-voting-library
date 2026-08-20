@@ -157,7 +157,7 @@ Legend: For - Equal Support - Against   (row vs column)
       Bob Bossy > |    1 - 2 - 0    |      ---       |   0 - 2 - 1    |
    Cal Creative > |    1 - 2 - 0    |   1 - 2 - 0    |      ---       |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate      W–L–T  Copeland  Margin  Beats
     1  Cal Creative   2–0–0         2      +2  Bob Bossy, Ann Ambitious
     2  Bob Bossy      1–1–0         1      +0  Ann Ambitious

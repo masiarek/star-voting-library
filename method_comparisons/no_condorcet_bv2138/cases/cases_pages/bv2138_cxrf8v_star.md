@@ -46,12 +46,12 @@ The count, step by step — the rounds and how the winner is reached:
   STAR     = Brad
   RCV-IRV  = Dave   (differs from STAR)
   Approval = Erin   (differs from STAR)
-  RCV-RR   = Abby   (differs from STAR)
   Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
         method difference, not a tie-breaking artifact.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: cases_tabulated/bv2138_cxrf8v_star_RCV-IRV_tabulated.txt
-  RCV-RR round-robin: cases_tabulated/bv2138_cxrf8v_star_RCV-RR_tabulated.txt
 
 [Runoff Reversal]
  - Score Round Winner(s) = (Abby)

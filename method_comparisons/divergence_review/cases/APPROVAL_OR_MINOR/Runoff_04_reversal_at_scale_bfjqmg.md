@@ -165,7 +165,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Olive > | 6 - 0 - 3 |   ---    |6 - 0 - 3 |
    Pine > | 0 - 0 - 9 |3 - 0 - 6 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Olive      2–0–0         2      +6  Maple, Pine
     2  Maple      1–1–0         1      +6  Pine

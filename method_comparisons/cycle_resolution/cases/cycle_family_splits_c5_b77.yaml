@@ -9,20 +9,24 @@ scenario_description: |-
 
   On these identical ballots the Condorcet family gives four different answers:
 
-      Copeland (Ranked Robin)  Ava, Ben   (tie — both go 2-2; LH breaks it by margin)
+      Copeland (Ranked Robin)  Ava, Ben   (tie — both go 2-2; the 1st Degree gives it to Ben)
       Minimax                  Ava
       Schulze (beat path)      Ava
       Ranked Pairs             Ben
       Split Cycle              Ava, Ben
 
   Minimax and Schulze land on Ava (her worst defeat is the mildest); Ranked Pairs
-  locks the biggest margins first and they carry Ben; Copeland can't separate the
-  two, and Split Cycle deliberately returns both. That is the entire lesson of the
+  locks the biggest margins first and they carry Ben; Copeland cannot separate the
+  two on the tally and hands it to Ben on its 1st Degree tiebreaker (Ben beat Ava
+  head-to-head, 40-37); Split Cycle deliberately returns both. That is the entire lesson of the
   cycle-resolution page in one election: "Condorcet method" names a FAMILY, and
   inside a cycle the family stops agreeing.
 
   The LH engine tabulates the Copeland column (= Ranked Robin) and breaks the
-  Ava/Ben tie by total margin, then lot. The other four rules are printed by:
+  Ava/Ben tie by Ranked Robin's own degrees — margins among the tied finalists
+  first, which for two finalists is their head-to-head — then margins over the
+  whole field, then lot. Until 2026-08-19 it started at the second of those and
+  reported Ava; see 05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md. The other four rules are printed by:
     uv run STARVote_LH_tabulation_engine/tools_adam/pref_voting_tabulation_engine/cycle_resolution_report.py \
       method_comparisons/cycle_resolution/cases/cycle_family_splits_c5_b77.yaml
 
@@ -50,4 +54,4 @@ ballots: |-
   7:Ben>Ava>Cole>Ezra>Dana
 
 expected_winners:
-  - Ava
+  - Ben

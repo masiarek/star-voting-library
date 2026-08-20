@@ -64,13 +64,13 @@ Legend: For - Equal Support - Against   (row vs column)
      Dublin > |  5 - 0 - 2  | 4 - 0 - 3  | 4 - 0 - 3  |    ---     | 6 - 0 - 1  |
      Bergen > |  2 - 0 - 5  | 5 - 0 - 2  | 3 - 0 - 4  | 1 - 0 - 6  |    ---     |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Dublin     4–0–0         4     +10  Edinburgh, Cork, Athens, Bergen
-    2  Edinburgh  3–1–0         3      +6  Cork, Athens, Bergen
-    3  Cork       1–3–0         1      -4  Athens
-    4  Athens     1–3–0         1      -6  Bergen
-    5  Bergen     1–3–0         1      -6  Cork
+    1  Dublin     4–0–0         4     +10  Edinburgh, Bergen, Cork, Athens
+    2  Edinburgh  3–1–0         3      +6  Bergen, Cork, Athens
+    3  Bergen     1–3–0         1      -6  Cork
+    4  Cork       1–3–0         1      -4  Athens
+    5  Athens     1–3–0         1      -6  Bergen
 
 Winner — Ranked Robin (RCV-RR): Dublin
    beats every opponent head-to-head — the Condorcet winner.

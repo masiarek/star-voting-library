@@ -67,20 +67,20 @@ Legend: For - Equal Support - Against   (row vs column)
   R2 > | 2 - 2 - 6 |2 - 1 - 7 |3 - 0 - 7 |2 - 0 - 8 |2 - 0 - 8 |2 - 0 - 8 |0 - 8 - 2 |   ---    |2 - 6 - 2 |
   R3 > | 3 - 0 - 7 |2 - 1 - 7 |2 - 2 - 6 |2 - 0 - 8 |2 - 0 - 8 |2 - 0 - 8 |0 - 8 - 2 |2 - 6 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  L2         7–0–1       7.5     +22  L3, C1, C2, C3, R1, R2, R3
-    2  L1         7–0–1       7.5     +19  L3, C1, C2, C3, R1, R2, R3
-    3  L3         6–2–0         6     +13  C1, C2, C3, R1, R2, R3
-    4  C1         5–3–0         5     +16  C2, C3, R1, R2, R3
-    5  C2         4–4–0         4     +13  C3, R1, R2, R3
-    6  C3         3–5–0         3      +7  R1, R2, R3
-    7  R1         2–6–0         2     -24  R2, R3
-    8  R2         0–7–1       0.5     -33  —
-    9  R3         0–7–1       0.5     -33  —
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  L2         7–0–1       7.5     +22             0  L3, C1, C2, C3, R1, R2, R3
+    2  L1         7–0–1       7.5     +19             0  L3, C1, C2, C3, R1, R2, R3
+    3  L3         6–2–0         6     +13             —  C1, C2, C3, R1, R2, R3
+    4  C1         5–3–0         5     +16             —  C2, C3, R1, R2, R3
+    5  C2         4–4–0         4     +13             —  C3, R1, R2, R3
+    6  C3         3–5–0         3      +7             —  R1, R2, R3
+    7  R1         2–6–0         2     -24             —  R2, R3
+    8  R2         0–7–1       0.5     -33             —  —
+    9  R3         0–7–1       0.5     -33             —  —
 
 Winner — Ranked Robin (RCV-RR): L2
-   *** 2 candidates tie on the highest Copeland score (7.5): L1, L2 — a dead heat (they draw head-to-head, not a cycle). Resolved by total margin, then lot order.
+   *** 2 candidates tie on the highest Copeland score (7.5): L1, L2 — a dead heat (they draw head-to-head, not a cycle). The finalists are level on margins against each other, so the 2nd Degree decides: L2 leads on margins over the whole field (+22).
 
 --- Smith Set (the generalized Condorcet winner) ---
 The smallest group whose every member beats every candidate outside it —

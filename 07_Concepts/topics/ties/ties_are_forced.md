@@ -73,17 +73,17 @@ Legend: For - Equal Support - Against   (row vs column)
    Ben > | 2 - 0 - 4 |   ---    |4 - 0 - 2 |
   Cara > | 4 - 0 - 2 |2 - 0 - 4 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
-    #  Candidate  W–L–T  Copeland  Margin  Beats
-    1  Ada        1–1–0         1      +0  Ben
-    2  Ben        1–1–0         1      +0  Cara
-    3  Cara       1–1–0         1      +0  Ada
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  vs finalists  Beats
+    1  Ada        1–1–0         1      +0             0  Ben
+    2  Ben        1–1–0         1      +0             0  Cara
+    3  Cara       1–1–0         1      +0             0  Ada
 
 Winner — Ranked Robin (RCV-RR): Ada
-   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Resolved by total margin, then lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
+   *** 3 candidates tie for the most wins (Ada, Ben, Cara) — a Condorcet cycle (no candidate beats all others). Neither the 1st nor the 2nd Degree tiebreaker separates them — resolved by lot order. (This is where Minimax / Ranked Pairs / Schulze differ — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.)
 ```
 <!-- /report -->
-`n = 6`, `m = 3`; 2 and 3 both divide 6 and both sit in `(1, 3]`. The theorem says a tie is unavoidable here, and the engine lands on one: three candidates, identical records, identical margins. Ada wins **only** because the lot order says so. Full report: [the generated page](../../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md).
+`n = 6`, `m = 3`; 2 and 3 both divide 6 and both sit in `(1, 3]`. The theorem says a tie is unavoidable here, and the engine lands on one: three candidates, identical records, and identical margins at *both* degrees of the tie-break, which is why its winner line says neither degree separates them. Ada wins **only** because the lot order says so. Full report: [the generated page](../../../method_comparisons/reinforcement_paradox/cases/cases_pages/reinf_north_c3_b6_rr.md).
 
 **The score-ballot analogue is here too.** [`three_way_dead_rung_A`](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_A.md) is the same rotation on a STAR ballot — `4,0,0 / 0,4,0 / 0,0,4`, with `n = 3`, `m = 3` — and STAR ties at every rung it has: totals 4–4–4, pairwise 2–2–2, five-star `0–0–0` (the [dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md)), then the lot.
 
@@ -97,17 +97,20 @@ Winner — Ranked Robin (RCV-RR): Ada
 | [Three-way dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md) | 3 | 3 | 3 | **yes** | every STAR rung ties → lot |
 | [Minimal tilted cycle](../../../method_comparisons/minimal_tilted_cycle/README.md) | 5 | 3 | none (5 is prime) | **no** | Copeland *scores* tie — margin breaks it, no lot needed |
 
-That last row is the sharp one, and it puts a theorem underneath a distinction the [tilted-cycle page](../../../method_comparisons/minimal_tilted_cycle/README.md) already found empirically. At `n = 5, m = 3` the theorem grants **no excuse** — a resolute neutral-anonymous-Pareto rule provably exists at that size — and none is needed, because the profile still carries information to decide with. Both [maximin](../../voting_paradoxes/minimax.md) and LH's own margin rung use it.
+That last row is the sharp one, and it puts a theorem underneath a distinction the [tilted-cycle page](../../../method_comparisons/minimal_tilted_cycle/README.md) already found empirically. At `n = 5, m = 3` the theorem grants **no excuse** — a resolute neutral-anonymous-Pareto rule provably exists at that size — and none is needed, because the profile still carries information to decide with. Both [maximin](../../voting_paradoxes/minimax.md) and the [1st Degree](../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) rung of Ranked Robin's tie-break use it.
 
 **And you can see the difference in the engine output.** Compare the two cycles at the rung where they part:
 
 | Rung | Symmetric 6-voter cycle (**forced**) | Tilted 5-voter cycle (**not forced**) |
 |---|---|---|
 | Copeland (wins) | 1–1, 1–1, 1–1 — dead | 1–1, 1–1, 1–1 — dead |
-| Total margin | `+0 / +0 / +0` — **dead** | `+2 / 0 / −2` — **alive** → Ada |
+| **1st Degree** — margins over the other finalists | `0 / 0 / 0` — **dead** | `+2 / 0 / −2` — **alive** → Ada |
+| **2nd Degree** — margins over the whole field | `+0 / +0 / +0` — **dead** | never reached |
 | Lot | **decides the winner** | never reached |
 
-Both look like three-way ties at the top. Only one of them *is* one. In the six-voter case the symmetry has drained the profile of every asymmetry a rule could grab, and the lot is not a shortcut — it is the only thing left. In the five-voter case the tie is one rung deep and the ballots still distinguish the candidates. **A dead margin row is the theorem showing up in the output.**
+Both cycles tie the *whole field*, so on these two elections the two degrees happen to ask the same question — the finalists **are** everybody — and the engine's `vs finalists` and `Margin` columns agree number for number. They come apart only when a finalist has run up a score against somebody outside the tie, which is exactly the seam that made this engine's pre-2026-08-19 ladder wrong.
+
+Both look like three-way ties at the top. Only one of them *is* one. In the six-voter case the symmetry has drained the profile of every asymmetry a rule could grab, and the lot is not a shortcut — it is the only thing left. In the five-voter case the tie is one rung deep and the ballots still distinguish the candidates. **A margin row that is dead at both degrees is the theorem showing up in the output.**
 
 ## Four ways out — and what each one costs
 
@@ -121,7 +124,9 @@ Zwicker lists the four approaches the literature takes. The useful part is that 
 | 3 | **Return the tied set** | you now need a *set extension principle* to say what a voter prefers between two tied sets — and [Duggan–Schwartz](../gibbard_satterthwaite_theorem.md#allowing-ties-does-not-escape-it-duggan-and-schwartz) proves this buys indecisiveness, not strategyproofness | `pref_voting`'s Copeland, which reports a **leader set** `{Blue, Green}` and stops |
 | 4 | **Assume ties don't happen** | nothing, until it decides a seat | the honest default for a first pass at a new concept |
 
-**This reframes the LH-vs-BetterVoting divergence.** [That page](../../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) documents the two engines electing different winners from identical ballots and treats it as a discrepancy to pin down. It is better read as **two defensible answers to a forced choice**: LH took approach 1 and paid in neutrality; BetterVoting took approach 2 and paid in determinism; `pref_voting`, consulted as the third opinion, takes approach 3 and declines to choose at all. Nobody is wrong. The theorem says one of them had to give something up, and they gave up different things.
+**This reframes the LH-vs-BetterVoting divergence — but only the part of it that was ever a choice.** [That page](../../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) documents the two engines electing different winners from identical ballots and treats it as a discrepancy to pin down. Most of it turned out to be a bug on our side. Ranked Robin publishes a tie-break protocol of its own — [degrees of ties](../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) — whose **1st Degree** ranks the tied candidates by their win margins *against each other*, which for exactly two of them is simply their head-to-head. BetterVoting was doing that rung; this engine had no such rung until 2026-08-19 and went straight to margins over the whole field, so it could override a head-to-head the protocol had already settled. Corrected, the two agree on every two-way tie, and 11 of this repo's 100 Ranked Robin cases changed winner.
+
+What is left is smaller and sharper. BetterVoting has no degree rung at all for **three or more** tied candidates and sends those to its shuffle — a gap, filed as [bettervoting#1469](https://github.com/Equal-Vote/bettervoting/issues/1469), rather than an answer. The genuinely forced choice sits one rung further down, at the profiles on this page: both degrees dead, the ballots with nothing left to say. There LH takes approach 1 and pays in neutrality, BetterVoting's shuffle is approach 2 and pays in determinism, and `pref_voting`, consulted as the third opinion, takes approach 3 and declines to choose at all. *There* nobody is wrong — the theorem says one of them had to give something up, and they gave up different things. Above that rung, "the engines disagree about the rule" was doing work the word *bug* should have been doing.
 
 **All four answer the same question, and there is a second one.** Every approach in the table above resolves a tie at the *end* of the count. A method that **eliminates** a candidate each round can also tie in the *middle* — two candidates tied for last, and whichever one you cut changes every round that follows. None of the four is written for that, and the standard answer to it, [Parallel Universe Tiebreaking](parallel_universe_tiebreaking.md), is not on Zwicker's list: it runs every legal elimination order and elects the union. It does not escape this menu so much as **defer** to it — a PUT winner set with two members lands you back at approach 3, but with the ambiguity now visible in the report instead of buried in round two.
 
@@ -176,6 +181,6 @@ Three, because this result is easy to overstate:
 - [Ties & Tie-Breaking hub](README.md) · [Why build "silly" tie elections?](why_contrived_tie_cases.md) · [Tie-Breaking: STAR vs RCV-IRV](tiebreaking_star_vs_irv.md)
 - [May's theorem](../mays_theorem.md) — the two-candidate positive result, whose *positive responsiveness* condition is exactly what breaks the ties this theorem doesn't force
 - [Social welfare function](../social_welfare_function.md) — Pareto and IIA stated properly · [Does Arrow apply to STAR?](../arrow_theorem_and_star.md) · [Gibbard–Satterthwaite](../gibbard_satterthwaite_theorem.md)
-- [Ranked Robin tiebreaks — LH vs BetterVoting](../../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md)
+- [Degrees of ties](../../../05_Ranked_Robin/03_Criteria/rr_tiebreaks/degrees_of_ties.md) — Ranked Robin's own published ladder, and the two engines that got it wrong · [Ranked Robin tiebreaks — LH vs BetterVoting](../../../05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md) · [cycle resolution](../../../05_Ranked_Robin/01_Learn/cycle_resolution.md)
 - [The minimal tilted cycle](../../../method_comparisons/minimal_tilted_cycle/README.md) · [the reinforcement paradox pair](../../../method_comparisons/reinforcement_paradox/README.md) · [the three-way dead rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md)
 - [Glossary](../../GLOSSARY.md) — anonymity, neutrality, nonimposition, resolute, lot numbers

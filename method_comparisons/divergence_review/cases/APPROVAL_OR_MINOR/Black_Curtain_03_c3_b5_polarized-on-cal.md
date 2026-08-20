@@ -163,7 +163,7 @@ Legend: For - Equal Support - Against   (row vs column)
   Bob > | 0 - 0 - 5 |   ---    |2 - 0 - 3 |
   Cal > | 3 - 0 - 2 |3 - 0 - 2 |   ---    |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Cal        2–0–0         2      +2  Ann, Bob
     2  Ann        1–1–0         1      +4  Bob

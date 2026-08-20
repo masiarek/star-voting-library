@@ -171,7 +171,7 @@ Legend: For - Equal Support - Against   (row vs column)
    Berry > |  9 - 20 -  7 |    ---      |20 -  9 -  7 |
    Cocoa > |  9 -  7 - 20 | 7 -  9 - 20 |    ---      |
 
-Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by total margin, then lot order):
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
     #  Candidate  W–L–T  Copeland  Margin  Beats
     1  Berry      2–0–0         2     +15  Almond, Cocoa
     2  Almond     1–1–0         1      +9  Cocoa
