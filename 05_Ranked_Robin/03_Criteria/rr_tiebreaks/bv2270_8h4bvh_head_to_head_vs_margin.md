@@ -77,7 +77,7 @@ So the top two rows of the record understate the contention. Ranked Robin is Smi
 
 ## Why this election exists — and a warning about its results page
 
-BV2270 was minted to demonstrate a **display** defect in BetterVoting, reported as [bettervoting#1480](https://github.com/Equal-Vote/bettervoting/issues/1480). The results page highlights winners by **row position**, but the winner comes from the ladder — and here those disagree:
+BV2270 was minted to demonstrate a **display** defect in BetterVoting, reported as [bettervoting#1480](https://github.com/Equal-Vote/bettervoting/issues/1480) — closed 2026-08-20 as by-design, on the stated convention that the frontend trusts the backend's candidate order. Under that convention the mismatch below is the *backend's*: every other BetterVoting tabulator delivers a winners-first order (STAR and Approval re-sort via `runBlocTabulator`'s `evaluate`, IRV via `sortCandidates(…, roundResults)`, Allocated Score with its own elected-first permutation), and Ranked Robin is the one that doesn't — so nothing on this page changes, and the caveat below stands until a backend fix lands. The results page highlights winners by **row position**, but the winner comes from the ladder — and here those disagree:
 
 <img alt="BetterVoting results for BV2270: the heading reads 'Alder wins!' while the star in the bar chart sits on Birch, both at 67%" src="img/8h4bvh_result.png" width="640">
 
