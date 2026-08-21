@@ -23,6 +23,18 @@ literature's running example).
 
 ## Ballots
 
+The ballots as marked — a filled **Yes** is a `1` in that candidate's column, a filled **No** a `0`:
+
+| # | Ballot as marked | Adams | Brown | Clark | Davis | Evans | Foster |
+|:--:|:--|:--:|:--:|:--:|:--:|:--:|:--:|
+| 1 | <img src="../img/approval_bloc_3seats_c6_b5_ballot_1.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — voter 1 — Adams, Brown: Adams Yes, Brown Yes, Clark No, Davis No, Evans No, Foster No."> | 1 | 1 | 0 | 0 | 0 | 0 |
+| 2 | <img src="../img/approval_bloc_3seats_c6_b5_ballot_2.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — voter 2 — Brown, Clark, Davis: Adams No, Brown Yes, Clark Yes, Davis Yes, Evans No, Foster No."> | 0 | 1 | 1 | 1 | 0 | 0 |
+| 3 | <img src="../img/approval_bloc_3seats_c6_b5_ballot_3.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — voter 3 — Adams, Evans, Foster: Adams Yes, Brown No, Clark No, Davis No, Evans Yes, Foster Yes."> | 1 | 0 | 0 | 0 | 1 | 1 |
+| 4 | <img src="../img/approval_bloc_3seats_c6_b5_ballot_4.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — voter 4 — Adams, Brown, Clark: Adams Yes, Brown Yes, Clark Yes, Davis No, Evans No, Foster No."> | 1 | 1 | 1 | 0 | 0 | 0 |
+| 5 | <img src="../img/approval_bloc_3seats_c6_b5_ballot_5.png" width="260" style="min-width:260px" alt="A Yes/No Approval ballot — voter 5 — Clark, Davis, Evans: Adams No, Brown No, Clark Yes, Davis Yes, Evans Yes, Foster No."> | 0 | 0 | 1 | 1 | 1 | 0 |
+
+The same ballots as the file records them:
+
 Row 1 = candidate names; each later row is one voter's approvals (`1` = approve, `0`/blank = not approved).
 
 ```text
