@@ -12,6 +12,7 @@ Deliberate placeholders — link a screenshot you haven't captured yet as
 `img/REPLACE_<what>.png` — are skipped by convention.
 """
 import importlib.util
+import os
 import sys
 from pathlib import Path
 
@@ -597,3 +598,132 @@ def test_bv_results_link_check_is_not_vacuous():
         source=("planted.md",
                 "**[results ↗](https://bettervoting.com/3494cb/results)**", "3494cb"))
     assert not ok, f"a correct house lead line must pass, got {ok}"
+
+
+# --------------------------------------------------------------------------- #
+# The three hygiene checks that main() prints but no test called.
+#
+# `check_repo_hygiene.py` is run by the pre-commit hook as `"$PY" … || true`, so
+# on its own it can only ever print. A check nobody calls from a test is a green
+# line: it cannot fail a commit, and it cannot fail CI. check_bv_results_links
+# shipped in exactly that state and had to be gated afterwards; a sweep of the
+# module then found three more, each guarding a rule CLAUDE.md spells out at
+# length —
+#
+#   check_anchors     the GitHub-vs-MkDocs slug difference (` — `, `&`, `/`, `:`
+#                     slug to a DOUBLE hyphen on GitHub and a SINGLE one on the
+#                     site; the site is canonical, so the repo is full of links
+#                     that resolve on exactly one of the two surfaces)
+#   check_levels      the one legal shape of a **Level:** tag, which is what
+#                     makes the page-voice rule enforceable at all
+#   check_bv_case_md  every BV-backed case has a write-up page to link
+#
+# Each pair below is a gate plus a probe. The probe points the module's REPO at
+# a tmp tree and plants the failure, which needs no production-code change and
+# writes nothing into the working tree — an untracked probe file in a teaching
+# folder is exactly what a peer's pathspec commit or the hook's auto-staging
+# would sweep up.
+#
+# Repointing REPO cannot leak into the gates: `_load_hygiene()` execs the module
+# afresh on every call, so each test holds its own instance with its own REPO.
+# test_probe_repo_does_not_leak asserts that rather than trusting it — if the
+# loader were ever memoised, every gate after the first probe would start
+# checking an empty tmp tree and pass for the emptiest possible reason.
+# --------------------------------------------------------------------------- #
+def _probe(tmp_path, files):
+    """Run the checks against a synthetic repo. Returns the loaded module."""
+    mod = _load_hygiene()
+    for name, text in files.items():
+        p = tmp_path / name
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(text, encoding="utf-8")
+    mod.REPO = str(tmp_path)
+    return mod
+
+
+def test_every_anchor_link_points_at_a_real_heading():
+    mod = _load_hygiene()
+    broken = mod.check_anchors()
+    assert not broken, (
+        f"{len(broken)} link(s) whose #anchor matches no heading:\n" +
+        "\n".join(f"  {f}  ->  ({raw})" + (f"   did you mean #{fix}?" if fix else "")
+                  for f, raw, fix in broken)
+    )
+
+
+def test_anchor_check_is_not_vacuous(tmp_path):
+    mod = _probe(tmp_path, {
+        "a.md": "# A\n\n[bad](b.md#no-such-heading)\n[good](b.md#b-heading)\n",
+        "b.md": "# B heading\n",
+    })
+    hits = mod.check_anchors()
+    assert [h[1] for h in hits] == ["b.md#no-such-heading"], (
+        f"exactly the dangling anchor must be caught, got {hits}"
+    )
+
+
+def test_every_level_tag_uses_the_canonical_shape():
+    mod = _load_hygiene()
+    bad = mod.check_levels()
+    assert not bad, (
+        f"{len(bad)} malformed **Level:** tag(s) — want "
+        "`**Level: <101|201|301|401|range|reference> · "
+        "<for voters|for presenters|for debaters|deep dive>**`:\n" +
+        "\n".join(f"  {rel}:{ln}  {found}" for rel, ln, found in bad)
+    )
+
+
+def test_level_check_is_not_vacuous(tmp_path):
+    mod = _probe(tmp_path, {
+        "bad.md": "# T\n\n**Level: 101**\n",                    # no audience
+        "ok.md": "# T\n\n**Level: 201 · deep dive**\n",
+    })
+    hits = mod.check_levels()
+    assert [(r, f) for r, _ln, f in hits] == [("bad.md", "**Level: 101**")], (
+        f"the audience-less tag must be caught and the well-formed one left "
+        f"alone, got {hits}"
+    )
+
+
+def test_every_bv_backed_case_has_a_write_up():
+    mod = _load_hygiene()
+    missing = mod.check_bv_case_md()
+    assert not missing, (
+        f"{len(missing)} BV-backed case(s) with no write-up page:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in missing)
+    )
+
+
+def test_bv_case_md_check_is_not_vacuous(tmp_path):
+    mod = _probe(tmp_path, {
+        "orphan.yaml": "election_title: T\nbv_election_id: abc123\n"
+                       "ballots: |-\n  A,B\n  5,0\n",
+        "documented.yaml": "election_title: T\nbv_election_id: def456\n"
+                           "ballots: |-\n  A,B\n  5,0\n",
+        "documented.md": "# Documented\n",
+    })
+    hits = mod.check_bv_case_md()
+    assert [r for r, _m in hits] == ["orphan.yaml"], (
+        f"only the undocumented case must be caught, got {hits}"
+    )
+
+
+def test_probe_repo_does_not_leak(tmp_path):
+    """A probe's tmp REPO must not become the next gate's REPO.
+
+    The probes above repoint `mod.REPO`. That is safe only because
+    `_load_hygiene()` re-execs the module every call, so the mutation dies with
+    the instance. If that ever changed — a module-level cache, a switch to a
+    plain import — the leak would be invisible: the gates would keep passing,
+    against an empty directory.
+    """
+    hijacked = _load_hygiene()
+    hijacked.REPO = str(tmp_path)
+    fresh = _load_hygiene()
+    assert fresh.REPO != str(tmp_path), (
+        "_load_hygiene() handed back a module still pointing at a probe's tmp "
+        "tree — every gate in this file is now checking an empty directory"
+    )
+    assert os.path.isdir(os.path.join(fresh.REPO, "01_STAR")), (
+        f"a freshly loaded module must point at the real repo, got {fresh.REPO}"
+    )
