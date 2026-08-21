@@ -1,5 +1,7 @@
 # Properties and limits — what STAR guarantees, and what it doesn't
 
+**Level: 201 → 301 · deep dive**
+
 The honest half of the pitch: the formal properties STAR satisfies, the criteria it deliberately trades away, and the edge behaviors worth knowing before a debate.
 
 **Start with [STAR's honest limits](STAR_honest_limits.md)** — the page that concedes everything worth conceding, on purpose.

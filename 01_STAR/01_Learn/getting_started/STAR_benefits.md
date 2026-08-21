@@ -1,5 +1,7 @@
 # The benefits of STAR Voting
 
+**Level: 101 · for voters**
+
 *One better ballot, and a whole list of election problems just… go away. You score each candidate 0–5 — like a five-star review — and the count does the rest. Here's the quick, exciting version of what that buys you.*
 
 → Want the **complete case, with every objection answered**? That's [Why STAR Voting](../../../07_Concepts/topics/Why_STAR_Voting.md). Just want the **mechanics**? [STAR — start here](../STAR_start_here.md).

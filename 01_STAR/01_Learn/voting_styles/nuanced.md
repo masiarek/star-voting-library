@@ -1,5 +1,7 @@
 # "Nuanced" — the full range, honestly
 
+**Level: 101 · for voters**
+
 *A 5 where you love, a 1 where you don't, a genuine tie where you're torn, a blank where there's nothing to say. The ballot used the way it was designed.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

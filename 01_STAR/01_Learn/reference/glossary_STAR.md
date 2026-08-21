@@ -1,5 +1,7 @@
 # Glossary — STAR Voting
 
+**Level: reference · for voters**
+
 Method-specific terms for **STAR** (Score Then Automatic Runoff). Shared, cross-method vocabulary (monotonicity, Condorcet, summability, the Equal Vote criterion, spoiler / vote-splitting…) lives in the [main glossary](../../../07_Concepts/GLOSSARY.md) — this page only defines what's specific to STAR.
 
 - **STAR** — Score Then Automatic Runoff: score every candidate 0–5; the two highest totals advance to an automatic head-to-head runoff. → [STAR — start here](../STAR_start_here.md)

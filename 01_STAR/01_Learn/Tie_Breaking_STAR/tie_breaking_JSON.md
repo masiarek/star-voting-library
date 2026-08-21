@@ -1,5 +1,7 @@
 # Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML
 
+**Level: reference · deep dive**
+
 **One line:** a BetterVoting export **pre-draws the official tie-break order** and ships it inside the results JSON; the converter reads it and writes it into the YAML as `lot_numbers:`, so our re-tabulation reproduces BetterVoting's exact winner — even when a tie comes down to the lot.
 
 → For the *rest* of the export — `Election`, `Ballots`, and everything in `Results` other than the lot — see [The BetterVoting JSON export, field-by-field](../../../07_Concepts/tabulation_engines/BV/bv_json_export_format.md).

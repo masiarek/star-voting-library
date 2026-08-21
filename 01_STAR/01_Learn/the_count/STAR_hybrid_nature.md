@@ -1,5 +1,7 @@
 # STAR's Hybrid Nature — Expressive Scoring + a Majority Runoff
 
+**Level: 201 · deep dive**
+
 **One line:** STAR is deliberately a *hybrid*. It takes the **expressiveness** of a score ballot (say *how much* you like each candidate, not just an order) and pairs it with the **legitimacy** of a majority runoff (the winner is the one more voters actually prefer between the top two). Score to find the finalists; majority to pick the winner.
 
 In the formal language of the field, that means STAR combines a **cardinal** ballot (scores — *how much*) with an **ordinal** decision (the head-to-head runoff — *which one*). As Clelland (2023) puts it, STAR is *"a combination of cardinal and ordinal voting systems,"* first introduced in 2014 — ([arXiv:2303.00108](https://arxiv.org/abs/2303.00108); she uses it to explain why STAR gave a robust result on the [Alaska 2022 ballots](../../../method_comparisons/alaska_2022/README.md) where pure-cardinal Approval did not).

@@ -1,5 +1,7 @@
 # "Exaggerated Compromise" — a fearful 5 for the front-runner
 
+**Level: 101 · for voters**
+
 *Your favorite gets a 5. So does the candidate you'd honestly rate a 3 — because you're afraid your favorite can't win and you want insurance.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

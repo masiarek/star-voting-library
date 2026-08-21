@@ -1,5 +1,7 @@
 # The Preference Matrix (head-to-head) and the Condorcet check
 
+**Level: reference · deep dive**
+
 **One line:** the **Preference Matrix** shows every candidate against every other, one pair at a time — how many voters **prefer** each, and how many rated them **equal**. It's how you check whether STAR's winner is also the **Condorcet winner** (the candidate who beats everyone head-to-head).
 
 → Hub: [STAR Reporting](../README.md) · the full report: [How the LH engine reports](README.md) · the no-preference bucket: [Runoff percentages](../../the_count/runoff_percentages.md) · [`GLOSSARY`](../../../../07_Concepts/GLOSSARY.md).

@@ -1,5 +1,7 @@
 # LH reporting options — the defaults, `--full`, and the rare override
 
+**Level: reference · deep dive**
+
 **One line:** the engine decides **what the on-screen report shows** with a built-in set of house defaults — case files carry **no `options:` block** (dropped repo-wide 2026-08-09); a file *can* still set one to override a default, but that is reserved for the option-demo files and deliberate special renders. Display only — none of this ever changes the *result*.
 
 → Up: [How the LH engine reports](README.md) · hub: [STAR Reporting](../README.md) · house policy: [CLAUDE.md — working guidance for this repo](../../../../CLAUDE.md).

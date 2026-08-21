@@ -1,5 +1,7 @@
 # STAR Is Summable — Add Up Precinct Totals
 
+**Level: 201 · deep dive**
+
 **One line:** a method is *summable* (precinct-summable) if you can get the final result by **adding up independent precinct totals**. STAR is summable, which makes it precinct-auditable and gives meaningful early/partial results.
 
 → Cross-method **topic hub**: [Summability](../../../07_Concepts/topics/summability/README.md) (STAR / Ranked Robin / IRV side by side). The method that is *not* summable is RCV-IRV — [`IRV's lack of summability`](../../../06_Other/RCV_IRV/concepts/RCV_IRV_lack_of_summability.md). Glossary: [`summability`](../../../07_Concepts/GLOSSARY.md).

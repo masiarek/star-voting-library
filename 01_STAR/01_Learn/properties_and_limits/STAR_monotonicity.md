@@ -1,5 +1,7 @@
 # STAR Is Monotone — More Support Never Backfires
 
+**Level: 201 · deep dive**
+
 **One line:** under **STAR**, raising a candidate's score can **never** cause them to lose, and lowering it can never cause them to win. Honest support always helps the candidate it's given to. STAR satisfies the **monotonicity** criterion.
 
 → The method that *fails* this is RCV-IRV — see [`IRV non-monotonicity`](../../../06_Other/RCV_IRV/concepts/RCV_IRV_non_monotonicity.md) (where more first-place votes can defeat the winner). Glossary: [`monotonicity`](../../../07_Concepts/GLOSSARY.md).

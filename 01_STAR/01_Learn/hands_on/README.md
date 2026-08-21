@@ -1,5 +1,7 @@
 # STAR Voting — hands-on
 
+**Level: reference · for presenters**
+
 Do STAR, don't just read about it. Three ways to make the method tangible for a class, a club, a council, or a skeptical uncle — from printing real paper ballots to counting an election with a pencil.
 
 - **[Run a paper-ballot STAR demo](running_a_paper_ballot_demo.md)** — the crowd favorite. Create an election on **[BetterVoting](https://bettervoting.com)**, print matching **paper ballots** (a print-ready PDF, with a live "scan to vote" QR and the election id baked in) from its export, let the room vote on paper and/or by phone, **hand-count**, and check it against BetterVoting's official tally. Two independent counts that agree. Tool: [`bv_ballot_sheet.py`](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet.py) ([spec](../../../STARVote_LH_tabulation_engine/tools_adam/bv_ballot_sheet_FSD.md)).

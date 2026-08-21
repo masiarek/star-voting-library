@@ -1,5 +1,7 @@
 # Three Notions of "Winner" — Condorcet, Score, and Runoff
 
+**Level: 201 · deep dive**
+
 **One line:** the word *winner* isn't one thing. In a single election, three reasonable definitions can point at **three different candidates** — and STAR's job is to choose among them on purpose, not by accident.
 
 → Related: the simpler two-way case, [Runoff Reversal](../../02_Examples/runoff_overturns_leader/README.md) (score leader ≠ STAR winner). Glossary: [`Condorcet winner`](../../../07_Concepts/GLOSSARY.md).

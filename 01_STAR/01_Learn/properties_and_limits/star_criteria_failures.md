@@ -1,5 +1,7 @@
 # Every voting criterion STAR fails — with a worked example for each
 
+**Level: 301 · deep dive**
+
 *The honest, one-stop index: each formal criterion STAR does **not** satisfy, what STAR does instead, and a **runnable example** — the reader page, the tabulatable `.yaml`, the live BetterVoting election (BV id), and the frozen `_bv_export.json` where one exists. The prose companion (why each tradeoff is deliberate, and the defenders' replies) is [STAR's honest limits](STAR_honest_limits.md); this page is the **checklist with receipts**.*
 
 > **Read this fairly.** No method satisfies every criterion — [Arrow](../../../07_Concepts/topics/arrow_theorem_and_star.md) and [Gibbard–Satterthwaite](../../../07_Concepts/topics/gibbard_satterthwaite_theorem.md) prove it. STAR **passes** the ones that bite most in real elections — **no center squeeze, monotone (mono-raise), no spoiler/vote-splitting in practice, precinct-summable, no Condorcet loser, favorite-betrayal-resistant** — and the failures below are mostly *rare, constructed, or deliberate tradeoffs*. This is the "safety datasheet" ([Voting 401](../../../07_Concepts/curriculum/CURRICULUM_401.md)), not a verdict.

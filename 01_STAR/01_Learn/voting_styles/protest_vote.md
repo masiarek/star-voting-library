@@ -1,5 +1,7 @@
 # "Protest Vote" — nothing for anyone, except one least-bad 1
 
+**Level: 101 · for voters**
+
 *Every row blank but one, and that one gets a single star. Displeasure, on the record — with a preference of last resort.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

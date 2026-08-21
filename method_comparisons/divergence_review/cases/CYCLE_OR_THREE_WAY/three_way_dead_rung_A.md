@@ -95,9 +95,9 @@ Scoring Round
 
 Scoring Round: First tiebreaker
  The two candidates preferred in the most head-to-head matchups advance.
-   A             -- 2 -- Tied for first place
-   B             -- 2 -- Tied for first place
-   C             -- 2 -- Tied for first place
+   A             -- 0 -- Tied for first place
+   B             -- 0 -- Tied for first place
+   C             -- 0 -- Tied for first place
    Equal Support -- 0
  There's still a three-way tie for first.
 

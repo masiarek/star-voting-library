@@ -1,5 +1,7 @@
 # Welcome to STAR Voting 👋
 
+**Level: 101 · for voters**
+
 **New here? You're in exactly the right place.** No background needed, about five minutes, and nothing partisan. By the end you'll know what STAR Voting is — and *feel* why it picks winners people actually like.
 
 And here's the whole thing on paper — one voter's finished STAR ballot:

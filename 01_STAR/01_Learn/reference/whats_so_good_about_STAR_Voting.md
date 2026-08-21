@@ -1,6 +1,8 @@
 # What's So Good About STAR Voting?
 ### A recorded conversation — Larry (curious host) & Adam (expert)
 
+**Level: 101 · for voters**
+
 A spoken, demo-driven conversation for a live recording. **Larry** asks the questions a smart newcomer would ask; **Adam** answers and drives the live demos. Cues in the margin:
 
 - **[DEMO]** — run a file from this repo live on screen (the STAR engine).

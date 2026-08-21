@@ -1,5 +1,7 @@
 # Abstention vs. a zero vs. "None of the Above" — three different things
 
+**Level: 201 · deep dive**
+
 Three ballot situations look similar on a STAR score sheet but mean genuinely different things. Confusing them is behind a lot of "why is the count off?" questions, so here they are side by side.
 
 ## The three cases

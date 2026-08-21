@@ -1,5 +1,7 @@
 # STAR Voting FAQ — the mechanics, answered with worked examples
 
+**Level: 201 · for voters**
+
 The [official STAR Voting FAQ](https://www.starvoting.org/faq) answers dozens of questions in prose. This page mirrors the **mechanics** questions — the ones about *how the count works* — and answers each with a **runnable example**: a small YAML election you can tabulate yourself, with the engine's own output shown inline. The aim is an **impartial walk-through of the mechanics**: where STAR fails a criterion or carries an honest tradeoff, this page says so and links a worked case, rather than arguing the method. (For the case *for* STAR, see [Why STAR Voting?](../../../07_Concepts/topics/Why_STAR_Voting.md); for its limits, [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md).)
 
 For the **political, legal, and historical** questions (cost, constitutionality, security, the League of Women Voters, presidential use, Oregon history…), the [official FAQ](https://www.starvoting.org/faq) is the right source — those aren't things a tabulation engine can demonstrate.

@@ -1,5 +1,7 @@
 # The Automatic Runoff Round
 
+**Level: 201 · deep dive**
+
 **One line:** STAR's second step. The Scoring Round picks the **two finalists**; the **Automatic Runoff** then looks *only* at those two and gives each ballot's full vote to whichever finalist it scored higher. **The finalist more voters prefer wins** — which is not always the one with the most stars. That second step is the whole point of STAR (**S**core **T**hen **A**utomatic **R**unoff).
 
 → Round 1: [The Scoring Round](STAR_Scoring_Round.md) · the whole report, section by section: [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md) · how it's displayed: [STAR Reporting](../reporting/README.md).

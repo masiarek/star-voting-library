@@ -1,5 +1,7 @@
 # "Ranked" — using each score once, like a ranking
 
+**Level: 101 · for voters**
+
 *5, 4, 3, 2, 1 — every score used exactly once, top choice to last. A ranking, volunteered onto a scored ballot.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

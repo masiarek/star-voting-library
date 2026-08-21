@@ -1,5 +1,7 @@
 # Reading the Runoff Percentages — Two Denominators, One Winner
 
+**Level: 201 · deep dive**
+
 **One line:** in the Automatic Runoff, the *same* vote count is shown as **two different percentages** — out of **all** voters, and out of only the voters who **expressed a preference** between the two finalists. The winner needs a majority of the second group, not the first. The gap between the two numbers is the **Equal Support** voters, who scored both finalists the same.
 
 → Part of [The Automatic Runoff Round](STAR_Automatic_Runoff.md) (the round this percentage summarizes). The no-preference bucket is [`Equal Support`](../../../07_Concepts/GLOSSARY.md); why those ballots still count is [Are equal-score votes discounted?](../reference/are_equal_score_votes_discounted.md). Reading the whole report: [How to read a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).

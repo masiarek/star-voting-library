@@ -1,5 +1,7 @@
 # Equal Vote's optional *Condorcet Tiebreaker*
 
+**Level: 301 · deep dive**
+
 **One line:** Equal Vote publishes **two** hand-count tiebreaker protocols for STAR — the recommended **5-Star Tiebreaker** and an optional **Condorcet Tiebreaker**. The Condorcet one walks a Copeland-style ladder — **matches won → total preference votes → win margin → random** — and it is a *tiebreaker*, **not** a claim that STAR elects the Condorcet winner.
 
 > Source: **[starvoting.org/condorcet_tiebreaker](https://www.starvoting.org/condorcet_tiebreaker)** (Equal Vote Coalition — advocacy-adjacent, but a factual protocol doc). This page documents and works it; the [full ladder](tie_breaking.md) is the LH engine's chain, and [BetterVoting's automated protocol](https://docs.bettervoting.com/help/ties.html) is a third.

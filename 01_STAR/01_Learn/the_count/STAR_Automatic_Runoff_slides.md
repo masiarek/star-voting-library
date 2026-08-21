@@ -1,5 +1,7 @@
 # The Automatic Runoff — slide outline
 
+**Level: reference · for presenters**
+
 A presentation deck for STAR's second step, built to **scale 101 → 201 → 301**: open plain-language for a general audience, then add the machinery (reversal, Equal Support, two denominators) for a technical/debate crowd. Stop wherever your audience is.
 
 - **Format:** one slide per `##` heading; bullets are the on-slide text, `> Notes:` is the speaker note (don't put it on the slide).

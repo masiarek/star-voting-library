@@ -1,5 +1,7 @@
 # "Traditional" — the choose-one habit, transplanted
 
+**Level: 101 · for voters**
+
 *One 5 for your favorite, every other row left blank. The familiar single-choice vote, written on a 5-star ballot.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

@@ -1,5 +1,7 @@
 # "Approval-style" — only 0s and 5s, across the whole field
 
+**Level: 101 · for voters**
+
 *Every candidate gets either full marks or nothing. A yes/no threshold, drawn wherever you choose to draw it.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

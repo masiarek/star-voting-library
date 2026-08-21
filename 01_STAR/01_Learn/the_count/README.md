@@ -1,5 +1,7 @@
 # The count — how a STAR election is tabulated, step by step
 
+**Level: 201 · deep dive**
+
 STAR = **S**core **T**hen **A**utomatic **R**unoff. These pages walk the two rounds in order, then answer the questions the second round always raises.
 
 - **[The Scoring Round](STAR_Scoring_Round.md)** — add up the 0–5 scores; the two highest totals become the finalists.

@@ -1,5 +1,7 @@
 # "Compressed Middle" — everything 2s and 3s, nothing extreme
 
+**Level: 101 · for voters**
+
 *Mild preferences, honestly recorded. No candidate gets full marks, none gets a zero, and the whole ballot fits in a one-point band.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

@@ -1,5 +1,7 @@
 # STAR Voting — resources & further watching
 
+**Level: reference · for voters**
+
 *A curated set of good outside explainers, videos, and official guides for STAR Voting. Most are made by **advocates** (Equal Vote / STAR Voting and allied groups) — read them for the clear explanations, and keep this library's [honest-limits](../properties_and_limits/STAR_honest_limits.md) pages beside them for the caveats. For the runnable, example-first version of everything below, start with [STAR — start here](../STAR_start_here.md).*
 
 ## Watch (short → longer)

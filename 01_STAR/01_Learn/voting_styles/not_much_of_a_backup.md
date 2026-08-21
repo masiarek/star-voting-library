@@ -1,5 +1,7 @@
 # "Not Much of a Backup" — a 5, then a grudging 1
 
+**Level: 101 · for voters**
+
 *Favorite at 5, a reluctant second at just 1, everyone else blank. A backup with the volume turned way down.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

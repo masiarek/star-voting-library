@@ -1,5 +1,7 @@
 # Reporting true ties
 
+**Level: 201 · deep dive**
+
 **One line:** a **true tie** is when two candidates are genuinely equal at a step — same score, or an equal split in the runoff. This page is about how a tie **shows up in the reports**; the mechanics of *breaking* one (the full ladder, lot order, imported `tieBreakType`) are the canonical [STAR Tie-Breaking](../Tie_Breaking_STAR/tie_breaking.md) deep-dive.
 
 → Hub: [STAR Reporting](README.md) · [How the LH engine reports](reporting_LH/README.md) · [How BetterVoting reports](reporting_BV/README.md) · imported tie data: [tie-break JSON](../Tie_Breaking_STAR/tie_breaking_JSON.md).

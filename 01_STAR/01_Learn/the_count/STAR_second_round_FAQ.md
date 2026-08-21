@@ -1,5 +1,7 @@
 # The STAR second round — FAQ, and how to answer twisted claims
 
+**Level: 201 → 301 · for debaters**
+
 *Everything people push back on about STAR's **automatic runoff** (the "second round"), sorted into what's a fair point, what's misleading, and what's simply false — plus the one honest philosophical trade-off worth conceding.*
 
 → Mechanics: [The Automatic Runoff](STAR_Automatic_Runoff.md) · [Why two rounds?](../STAR_start_here.md) · the caveats: [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md) · official: [starvoting.org/why_the_runoff](https://www.starvoting.org/why_the_runoff).

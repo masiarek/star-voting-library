@@ -100,9 +100,9 @@ Scoring Round
 
 Scoring Round: First tiebreaker
  The candidate preferred in the most head-to-head matchups advances.
-   Chocolate      -- 2 -- Tied for second place
-   Chocolate Chip -- 2 -- Tied for second place
-   Vanilla        -- 2 -- Tied for second place
+   Chocolate      -- 0 -- Tied for second place
+   Chocolate Chip -- 0 -- Tied for second place
+   Vanilla        -- 0 -- Tied for second place
    Equal Support  -- 0
  There's still a three-way tie for second.
 

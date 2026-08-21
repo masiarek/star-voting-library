@@ -1,5 +1,7 @@
 # "Null Ballot" — every candidate the same score
 
+**Level: 101 · for voters**
+
 *A legal, counted ballot that has no effect on anything. The one way to fill out a STAR ballot that says nothing at all.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

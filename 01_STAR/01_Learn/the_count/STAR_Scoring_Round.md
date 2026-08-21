@@ -1,5 +1,7 @@
 # The Scoring Round
 
+**Level: 201 · deep dive**
+
 **One line:** STAR's **first** step. Add up every candidate's stars across all ballots; the **two highest-scoring candidates become the Finalists** and advance to the [Automatic Runoff](STAR_Automatic_Runoff.md). That's the whole first round — simple addition. The scoring round measures *how much* support each candidate has; the runoff then decides *how many* voters prefer each finalist (**S**core **T**hen **A**utomatic **R**unoff).
 
 → Round 2: [The Automatic Runoff](STAR_Automatic_Runoff.md) · the whole report: [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md) · the two-step count vs IRV: [Tabulation, step by step](../../../07_Concepts/topics/tabulation_star_vs_irv.md).

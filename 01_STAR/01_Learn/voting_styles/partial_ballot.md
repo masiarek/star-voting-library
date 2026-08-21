@@ -1,5 +1,7 @@
 # "Partial Ballot" — score the ones you know, leave the rest
 
+**Level: 101 · for voters**
+
 *Two candidates you've actually heard of get real scores. The others stay blank, because you have no opinion to give them.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

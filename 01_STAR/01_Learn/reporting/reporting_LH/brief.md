@@ -1,5 +1,7 @@
 # The `brief` option — with and without
 
+**Level: reference · deep dive**
+
 **One line:** `brief: true` strips the repetitive **`[STAR Voting: …]`** prefix from every section header, because the method is already named in the top banner. It changes only the *display* — every number is identical.
 
 → Up: [LH reporting options](options.md) · [How the LH engine reports](README.md) · hub: [STAR Reporting](../README.md)

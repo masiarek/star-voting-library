@@ -1,5 +1,7 @@
 # The Score Distribution table — and the one float that sneaks in
 
+**Level: reference · deep dive**
+
 *How the `[Score Distribution]` block is built, why the engine is otherwise obsessively float-free (exact `Fraction` arithmetic, mixed-number display), and why the **Avg** column is the single place that quietly breaks that rule — which is exactly why `1.25` can print as `1.2`.*
 
 Part of the [STAR reporting](reporting_ties.md) notes. Companion to [Reading a STAR report](../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).

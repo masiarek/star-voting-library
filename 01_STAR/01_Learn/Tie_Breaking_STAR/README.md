@@ -1,5 +1,7 @@
 # Tie-Breaking in STAR
 
+**Level: 201 → 301 · deep dive**
+
 How STAR resolves exact ties — the official tiebreaker ladder ("rungs"), what each rung compares, and how ties are recorded and reproduced in this library's YAML cases and in BetterVoting exports.
 
 **Start here → [STAR Tie-Breaking — The Full Chain](tie_breaking.md)**

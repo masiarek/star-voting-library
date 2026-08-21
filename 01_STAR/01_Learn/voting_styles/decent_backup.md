@@ -1,5 +1,7 @@
 # "Decent Backup" — a 5 for your favorite, a 4 for your insurance
 
+**Level: 101 · for voters**
+
 *Favorite at 5, a strong second at 4, everyone else blank. The everyday super-power of a scored ballot.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

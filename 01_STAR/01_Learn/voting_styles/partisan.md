@@ -1,5 +1,7 @@
 # "Partisan" — the whole slate at 5, nobody else
 
+**Level: 101 · for voters**
+
 *Every candidate on your side gets a 5; every other row stays blank. A party-line vote, written in stars.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

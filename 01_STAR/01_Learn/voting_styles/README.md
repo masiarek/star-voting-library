@@ -1,5 +1,7 @@
 # The STAR Ballot — and every legal way to fill it out
 
+**Level: 101 · for voters**
+
 *One ballot, scored 0–5. This page shows what a STAR ballot actually looks like, then the gallery of legal ways to fill it out — from a plain choose-one vote to a fully expressive spread — and what each one says to the count. There is no wrong way to fill out a STAR ballot. Thirteen named styles here; [the ballot itself allows 4,650](#is-that-all-of-them).*
 
 ---

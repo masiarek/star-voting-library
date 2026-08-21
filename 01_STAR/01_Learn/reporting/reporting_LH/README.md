@@ -1,5 +1,7 @@
 # How the LH engine reports a STAR result
 
+**Level: reference · deep dive**
+
 **One line:** the LH `starvote` engine prints a **full text audit report** — every number that produced the winner, in order — and saves a maximal `_tabulated.txt` copy of it. This page is the reporting-lens summary; the section-by-section walk is [Reading a STAR report](../../../../07_Concepts/tabulation_engines/LH_starvote/reading_a_star_report.md).
 
 → Hub: [STAR Reporting](../README.md) · the engine itself: [BetterVoting and the LH engine](../../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) · [`GLOSSARY`](../../../../07_Concepts/GLOSSARY.md).

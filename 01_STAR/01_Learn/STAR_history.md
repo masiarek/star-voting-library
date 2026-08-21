@@ -1,5 +1,7 @@
 # A short history of STAR Voting
 
+**Level: 101 · for voters**
+
 *STAR is a genuinely new method — younger than the smartphone. It was proposed in 2014, named in its current form a few years later, and has spread mostly through party and organizational elections while its municipal ballot measures have so far fallen short. Here's the timeline, with the honest caveat that the fullest origin story comes from STAR's own advocates.*
 
 ---

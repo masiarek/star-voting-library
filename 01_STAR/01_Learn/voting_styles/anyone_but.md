@@ -1,5 +1,7 @@
 # "Anyone But…" — every candidate at 5 except the one
 
+**Level: 101 · for voters**
+
 *Fives across the board, one row left blank. A ballot with a single, emphatic message: not that one.*
 
 ← One of thirteen [voting styles](README.md). Every style is legal and counted; this page is what this one means, when it fits, and what it trades away.

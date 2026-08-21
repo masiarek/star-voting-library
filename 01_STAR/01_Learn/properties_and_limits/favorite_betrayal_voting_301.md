@@ -1,6 +1,8 @@
 # Favorite Betrayal — Does *Only* RCV Avoid It?
 ### Voting 301 · advanced · the deep-dive behind the *"You Never Have to Betray Your Favorite"* slide
 
+**Level: 301 · deep dive**
+
 This is the hardest-to-keep-straight idea in the whole STAR-vs-RCV debate, so this file goes slow and over-explains on purpose. If you only remember one thing:
 
 > **"Favorite Betrayal" and "Later-No-Harm" are two DIFFERENT promises. RCV-IRV keeps the second one and breaks the first. People — including RCV advocates — mix them up constantly.**

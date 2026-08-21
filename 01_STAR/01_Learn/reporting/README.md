@@ -1,5 +1,7 @@
 # STAR Reporting — reading and comparing results
 
+**Level: 201 · deep dive**
+
 **One line:** how a STAR result is *reported* — the numbers (scores, runoff counts, percentages), what a "no preference" ballot means (**Equal Support** vs **abstention**), and how the two reports in this repo — **BetterVoting**'s visual display and the **LH `starvote` engine**'s text report — present the same election (and where they occasionally diverge).
 
 This folder is a **hub**: short, reporting-focused pages that link out to the canonical deep-dives rather than restate them.

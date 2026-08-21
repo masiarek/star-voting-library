@@ -1,5 +1,7 @@
 # How BetterVoting reports a STAR result
 
+**Level: reference · deep dive**
+
 **One line:** BetterVoting (bettervoting.com) shows a **live, visual** result — interactive bar/pie charts plus "Race Details" tables — for the same STAR election the LH engine prints as text. Same method, same winner; a friendlier, less exhaustive view.
 
 → Hub: [STAR Reporting](../README.md) · **panel by panel: [How to read a BetterVoting results page](../../../../07_Concepts/tabulation_engines/BV/reading_a_bv_results_page.md)** · the mapping in full: [BetterVoting and the LH engine](../../../../07_Concepts/tabulation_engines/bettervoting_and_the_engine.md) · the percentages: [Runoff percentages](../../the_count/runoff_percentages.md).

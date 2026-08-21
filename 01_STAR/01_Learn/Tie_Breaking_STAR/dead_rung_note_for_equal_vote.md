@@ -1,6 +1,8 @@
 # The "dead rung" in STAR's official tiebreaker ladder
 
-All examples below are engine-verified and reproducible; the runnable files are listed at the end.*
+**Level: 301 · for debaters**
+
+*All examples below are engine-verified and reproducible; the runnable files are listed at the end.*
 
 ## Summary
 

@@ -1,5 +1,7 @@
 # STAR Voting — Honest Limits
 
+**Level: 201 → 301 · for debaters**
+
 **One line:** STAR is strong but **not perfect**. It is not Condorcet-compliant, not favorite-betrayal-proof, gives up Later-No-Harm by design, can fail the strict Majority Criterion (favoring a broad-consensus winner over a polarizing majority-favorite), leaves a narrow residual of vote-splitting, and — like *every* method ([Gibbard](../../../07_Concepts/topics/gibbard_satterthwaite_theorem.md)) — can be gamed at the margins. None of these are secret; conceding them honestly is why the rest of the case is trustworthy.
 
 → **The checklist with receipts:** [Every voting criterion STAR fails](star_criteria_failures.md) — a table of each criterion, a runnable example, and its `.yaml` / BV id / `_bv_export.json`. (This page is the *prose* — the why; that page is the *index* — the where.)
