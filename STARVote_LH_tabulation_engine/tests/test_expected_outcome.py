@@ -162,14 +162,61 @@ def test_outcome_reaches_the_election_contract():
         assert doc["expected"] == {"outcome": "rejected"}, path.name
 
 
-def test_contradicting_key_is_linted():
-    """`no_winner` plus a winners list is incoherent, and must be caught."""
+def _hygiene():
     import importlib.util
     hygiene_path = ENGINE_DIR / "tools_adam" / "scripts" / "check_repo_hygiene.py"
     spec = importlib.util.spec_from_file_location("hygiene_outcome", hygiene_path)
     mod = importlib.util.module_from_spec(spec)
     sys.modules["hygiene_outcome"] = mod
     spec.loader.exec_module(mod)
+    return mod
 
+
+def test_corpus_has_no_contradicting_key():
+    """The lint, run over the real tree.
+
+    NOTE this is a gate only because THIS test calls it. The pre-commit hook
+    runs check_repo_hygiene.py as `... || true`, so nothing the script reports
+    can fail a commit on its own — a check nobody calls from a test prints a
+    green line and enforces nothing.
+    """
+    mod = _hygiene()
     assert not mod.check_expected_outcome(), "the corpus itself has a bad key"
     assert set(mod.EXPECTED_OUTCOMES) == {"elected", "no_winner", "rejected"}
+
+
+# (source, should_flag) — every way the key can be written wrong, and two ways
+# it can be written right.
+_PROBES = [
+    ("expected_outcome: no_winner\nexpected_winners: [Ada]\n", True),   # contradiction
+    ("expected_outcome: rejected\nexpected_winners: [Ada]\n", True),    # contradiction
+    ("expected_outcome: elected\n", True),                              # elects whom?
+    ("expected_outcome: nobody_won\n", True),                           # not a legal value
+    ("expected_outcome: no_winner\n", False),                           # fine
+    ("expected_winners: [Ada]\n", False),                               # key absent: fine
+]
+
+
+@pytest.mark.parametrize("body,should_flag", _PROBES,
+                         ids=[f"{'flag' if f else 'ok'}-{i}" for i, (_, f) in enumerate(_PROBES)])
+def test_the_lint_is_not_vacuous(tmp_path, body, should_flag):
+    """Prove the detector actually detects — the hole the test above leaves.
+
+    `test_corpus_has_no_contradicting_key` passes when the lint returns nothing,
+    which is also what it would do if the lint were broken into always returning
+    nothing. So feed it each malformed shape and require the right verdict for
+    each. Same posture as tests/test_harness_selfcheck.py, and the same lesson
+    that came out of the BV results-link check being shipped ungated.
+
+    `_yaml_teaching_files` is patched to a tmp file, so this touches no file in
+    the repo — which matters in a checkout several sessions are committing from.
+    """
+    mod = _hygiene()
+    probe = tmp_path / "probe.yaml"
+    probe.write_text(body + "ballots: |-\n  Ada,Ben\n  5,2\n", encoding="utf-8")
+    mod._yaml_teaching_files = lambda: [str(probe)]
+
+    found = mod.check_expected_outcome()
+    assert bool(found) == should_flag, (
+        f"lint returned {found!r} for:\n{body}"
+    )
