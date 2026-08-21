@@ -4,7 +4,7 @@
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/vx89hj) · **[results ↗](https://bettervoting.com/vx89hj/results)** (election `vx89hj` · test `BV2285`).
 
-Backing files: [`_A`](three_way_dead_rung_A.yaml) (elects A, and reproduces the live BV result) · [`_B`](three_way_dead_rung_B.yaml) (elects B) · [`_C`](three_way_dead_rung_C.yaml) (elects C). Parent set: [The "dead rung"](../README.md).
+**Three case files, one election.** The same three ballots are stored three times, differing in a single line — the published `lot_numbers:` order — so the identical votes elect A, B, or C. All three are listed under [The ballots](#the-ballots) below. Parent set: [The "dead rung"](../README.md).
 
 ---
 
@@ -25,13 +25,13 @@ A, B, C
 
 Nothing on the ballots distinguishes A, B, or C. The result is decided **entirely by the lot order**:
 
-| Published lot order | Winner |
-|---------------------|:------:|
-| `[A, B, C]` | **A** |
-| `[B, C, A]` | **B** |
-| `[C, A, B]` | **C** |
+| Case (page) | Published lot order | Winner | src |
+|---|---|:--:|:--:|
+| [`three_way_dead_rung_A`](three_way_dead_rung_tie_pages/three_way_dead_rung_A.md) | `[A, B, C]` | **A** | [`.yaml`](three_way_dead_rung_A.yaml) |
+| [`three_way_dead_rung_B`](three_way_dead_rung_tie_pages/three_way_dead_rung_B.md) | `[B, C, A]` | **B** | [`.yaml`](three_way_dead_rung_B.yaml) |
+| [`three_way_dead_rung_C`](three_way_dead_rung_tie_pages/three_way_dead_rung_C.md) | `[C, A, B]` | **C** | [`.yaml`](three_way_dead_rung_C.yaml) |
 
-All three verified against the engine. A **random** tie-break (BetterVoting's `tieBreakType: "random"`) draws one of the three; a **deterministic published** lot fixes it in advance. The live election below is one such draw — it landed on `A, B, C`, which is why the `_A` file reproduces it.
+All three verified against the engine. A **random** tie-break (BetterVoting's `tieBreakType: "random"`) draws one of the three; a **deterministic published** lot fixes it in advance. The live election below is one such draw — it landed on `A, B, C`, which is why the `three_way_dead_rung_A` case reproduces it.
 
 ---
 
@@ -102,7 +102,7 @@ python STARVote_LH_tabulation_engine/tools_adam/bv_replay_tiebreak.py \
 # seed 2132743651 -> recomputed ['A','B','C'] ; BV recorded ['A','B','C'] ; MATCH yes
 ```
 
-So the result *is* reproducible after the fact — that part of the auditability gap is closed. What is **not** closed is the part [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) asks for: the order is a function of the ballot **count** and the race id, never of how anyone voted, and it isn't knowable until the count runs. A voter cannot check it in advance; a losing candidate cannot have predicted it. Pinning `lot_numbers: [A, B, C]` in [`_A`](three_way_dead_rung_A.yaml) replays BV's draw exactly — which is the point: the draw is *recordable*, so it may as well be *published first*.
+So the result *is* reproducible after the fact — that part of the auditability gap is closed. What is **not** closed is the part [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) asks for: the order is a function of the ballot **count** and the race id, never of how anyone voted, and it isn't knowable until the count runs. A voter cannot check it in advance; a losing candidate cannot have predicted it. Pinning `lot_numbers: [A, B, C]` in [`three_way_dead_rung_A.yaml`](three_way_dead_rung_A.yaml) replays BV's draw exactly — which is the point: the draw is *recordable*, so it may as well be *published first*.
 
 ### One genuine engine divergence: the pairwise rung
 

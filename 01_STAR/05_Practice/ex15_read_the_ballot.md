@@ -188,11 +188,11 @@ Two profiles, two lessons about what marks can carry. A **Yes/No** ballot buys a
 python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/05_Practice/cases/ex15_approval_yes_no.yaml
 ```
 
-| Case | Method | Winner | Shows |
-|---|---|---|---|
-| [`ex15_approval_yes_no`](cases/cases_pages/ex15_approval_yes_no.md) | Approval | **Blair** | The count, the shares, the approval distribution |
-| [`ex15_approval_pairwise`](cases/cases_pages/ex15_approval_pairwise.md) | STAR (5/0) | **Blair** | The same ballots pairwise — approval order = Condorcet order |
-| [`ex15_score_profile`](cases/cases_pages/ex15_score_profile.md) | STAR | **Clara** | The scoring round as the Score count; every method agrees |
+| Case (page) | Method | Winner | Shows | src |
+|---|---|---|---|:--:|
+| [`ex15_approval_yes_no`](cases/cases_pages/ex15_approval_yes_no.md) | Approval | **Blair** | The count, the shares, the approval distribution | [`.yaml`](cases/ex15_approval_yes_no.yaml) |
+| [`ex15_approval_pairwise`](cases/cases_pages/ex15_approval_pairwise.md) | STAR (5/0) | **Blair** | The same ballots pairwise — approval order = Condorcet order | [`.yaml`](cases/ex15_approval_pairwise.yaml) |
+| [`ex15_score_profile`](cases/cases_pages/ex15_score_profile.md) | STAR | **Clara** | The scoring round as the Score count; every method agrees | [`.yaml`](cases/ex15_score_profile.yaml) |
 
 ## See also
 

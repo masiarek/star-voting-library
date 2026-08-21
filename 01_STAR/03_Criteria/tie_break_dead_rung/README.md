@@ -22,12 +22,12 @@ AUTOMATIC RUNOFF winner:    score    → five-star → lot
 
 ## The four cases
 
-| File | Round | 5 present? | Second rung (five-star) | Decided by | Winner |
-|---|---|:--:|---|---|---|
-| [`tie_break_01_scoring_five_star_breaks`](cases/cases_pages/tie_break_01_scoring_five_star_breaks.md) | Scoring | yes | Ben 1, Cara 0 → Ben advances | **five-star** | Alice |
-| [`tie_break_02_scoring_no_fives_to_lot`](cases/cases_pages/tie_break_02_scoring_no_fives_to_lot.md)  | Scoring | no  | Ben 0, Cara 0 → still tied | **lot** | Alice |
-| [`tie_break_03_runoff_no_fives_to_lot`](cases/cases_pages/tie_break_03_runoff_no_fives_to_lot.md)   | Runoff  | no  | Alice 0, Ben 0 → still tied | **lot** | Alice |
-| [`tie_break_04_runoff_five_star_breaks`](cases/cases_pages/tie_break_04_runoff_five_star_breaks.md)  | Runoff  | yes | Alice 1, Ben 0 → Alice wins | **five-star** | Alice |
+| Case (page) | Round | 5 present? | Second rung (five-star) | Decided by | Winner | src |
+|---|---|:--:|---|---|---|:--:|
+| [`tie_break_01_scoring_five_star_breaks`](cases/cases_pages/tie_break_01_scoring_five_star_breaks.md) | Scoring | yes | Ben 1, Cara 0 → Ben advances | **five-star** | Alice | [`.yaml`](cases/tie_break_01_scoring_five_star_breaks.yaml) |
+| [`tie_break_02_scoring_no_fives_to_lot`](cases/cases_pages/tie_break_02_scoring_no_fives_to_lot.md)  | Scoring | no  | Ben 0, Cara 0 → still tied | **lot** | Alice | [`.yaml`](cases/tie_break_02_scoring_no_fives_to_lot.yaml) |
+| [`tie_break_03_runoff_no_fives_to_lot`](cases/cases_pages/tie_break_03_runoff_no_fives_to_lot.md)   | Runoff  | no  | Alice 0, Ben 0 → still tied | **lot** | Alice | [`.yaml`](cases/tie_break_03_runoff_no_fives_to_lot.yaml) |
+| [`tie_break_04_runoff_five_star_breaks`](cases/cases_pages/tie_break_04_runoff_five_star_breaks.md)  | Runoff  | yes | Alice 1, Ben 0 → Alice wins | **five-star** | Alice | [`.yaml`](cases/tie_break_04_runoff_five_star_breaks.yaml) |
 
 Cases 01/02 are the **same** tie shape one point apart (5s vs capped at 4); 03/04 likewise. Note the eventual **winner is Alice in all four** — the point isn't who wins these toy races, it's **which rung decides**. In a closer election that difference chooses the winner (see the scale-granularity case in [Scale granularity can flip the winner (a 301 case)](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md)).
 
@@ -35,13 +35,13 @@ Cases 01/02 are the **same** tie shape one point apart (5s vs capped at 4); 03/0
 
 Cases 01–04 teach, but they can't *catch a regression*: Alice wins whether or not the engine consults five-star. Cases 05–09 close that hole — each sets `lot_numbers:` to favor the **wrong** candidate, so the expected winner is only elected if the ladder runs in the right order. If the engine ever skipped a rung (or consulted the lot early), these tests fail.
 
-| File | Round | Rung state | Lot favors | Winner proves |
-|---|---|---|---|---|
-| [`tie_break_05_scoring_five_star_vs_adversarial_lot`](cases/cases_pages/tie_break_05_scoring_five_star_vs_adversarial_lot.md) | Scoring | alive (Ben 2, Cara 1) | Cara | **Ben** — five-star outranks the lot; Ben then wins the runoff |
-| [`tie_break_06_scoring_dead_rung_adversarial_lot`](cases/cases_pages/tie_break_06_scoring_dead_rung_adversarial_lot.md) | Scoring | dead (all ≤ 4) | Cara | **Ann** — lot advances Cara, who loses the runoff to Ann |
-| [`tie_break_07_runoff_five_star_vs_adversarial_lot`](cases/cases_pages/tie_break_07_runoff_five_star_vs_adversarial_lot.md) | Runoff | alive (Ann 1, Ben 0) | Ben | **Ann** — five-star outranks the lot |
-| [`tie_break_08_runoff_dead_rung_adversarial_lot`](cases/cases_pages/tie_break_08_runoff_dead_rung_adversarial_lot.md) | Runoff | dead (both top out at 4) | Ben | **Ben** — the lot, not column order, resolves it |
-| [`tie_break_09_five_star_tied_nonzero`](cases/cases_pages/tie_break_09_five_star_tied_nonzero.md) | Runoff | alive but **non-separating** (one 5 each) | Ben | **Ben** — a rung can run, count real votes, and decide nothing |
+| Case (page) | Round | Rung state | Lot favors | Winner proves | src |
+|---|---|---|---|---|:--:|
+| [`tie_break_05_scoring_five_star_vs_adversarial_lot`](cases/cases_pages/tie_break_05_scoring_five_star_vs_adversarial_lot.md) | Scoring | alive (Ben 2, Cara 1) | Cara | **Ben** — five-star outranks the lot; Ben then wins the runoff | [`.yaml`](cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml) |
+| [`tie_break_06_scoring_dead_rung_adversarial_lot`](cases/cases_pages/tie_break_06_scoring_dead_rung_adversarial_lot.md) | Scoring | dead (all ≤ 4) | Cara | **Ann** — lot advances Cara, who loses the runoff to Ann | [`.yaml`](cases/tie_break_06_scoring_dead_rung_adversarial_lot.yaml) |
+| [`tie_break_07_runoff_five_star_vs_adversarial_lot`](cases/cases_pages/tie_break_07_runoff_five_star_vs_adversarial_lot.md) | Runoff | alive (Ann 1, Ben 0) | Ben | **Ann** — five-star outranks the lot | [`.yaml`](cases/tie_break_07_runoff_five_star_vs_adversarial_lot.yaml) |
+| [`tie_break_08_runoff_dead_rung_adversarial_lot`](cases/cases_pages/tie_break_08_runoff_dead_rung_adversarial_lot.md) | Runoff | dead (both top out at 4) | Ben | **Ben** — the lot, not column order, resolves it | [`.yaml`](cases/tie_break_08_runoff_dead_rung_adversarial_lot.yaml) |
+| [`tie_break_09_five_star_tied_nonzero`](cases/cases_pages/tie_break_09_five_star_tied_nonzero.md) | Runoff | alive but **non-separating** (one 5 each) | Ben | **Ben** — a rung can run, count real votes, and decide nothing | [`.yaml`](cases/tie_break_09_five_star_tied_nonzero.yaml) |
 
 05/06 are again the same tie *shape* — Ann leads, Ben and Cara tie for the second finalist slot and tie pairwise — with and without 5s in the tied pair. Here that difference **changes the elected winner** (Ben vs Ann), not just the deciding rung.
 
@@ -55,11 +55,11 @@ Every case file in this folder carries `expected_winners:` and is auto-discovere
 
 The most common confusion: *if the 5s tie, doesn't STAR then look at the 4s?* **No** — the second rung counts **only score-5 votes** and jumps straight to the lot. These three generated files make that concrete by lowering the score **cap** while keeping the exact same tie shape. In every one, the tied pair (Ben, Cara) still ties on points and pairwise, the five-star rung reads `0–0`, and the lot advances the second finalist — the 4s (or 3s, or 2s) never get a say:
 
-| Cap | Ballots (Ann, Ben, Cara) | Five-star rung | Decided by | Page |
-|:--:|--------------------------|:--:|---|---|
-| 4 | `4,4,1` / `4,0,3` | 0–0 | lot | [cap 4](cases/cases_pages/dead_rung_scoring_dead_cap4.md) |
-| 3 | `3,3,1` / `3,0,2` | 0–0 | lot | [cap 3](cases/cases_pages/dead_rung_scoring_dead_cap3.md) |
-| 2 | `2,2,1` / `2,0,1` | 0–0 | lot | [cap 2](cases/cases_pages/dead_rung_scoring_dead_cap2.md) |
+| Cap | Ballots (Ann, Ben, Cara) | Five-star rung | Decided by | Page | src |
+|:--:|--------------------------|:--:|---|---|:--:|
+| 4 | `4,4,1` / `4,0,3` | 0–0 | lot | [cap 4](cases/cases_pages/dead_rung_scoring_dead_cap4.md) | [`.yaml`](cases/dead_rung_scoring_dead_cap4.yaml) |
+| 3 | `3,3,1` / `3,0,2` | 0–0 | lot | [cap 3](cases/cases_pages/dead_rung_scoring_dead_cap3.md) | [`.yaml`](cases/dead_rung_scoring_dead_cap3.yaml) |
+| 2 | `2,2,1` / `2,0,1` | 0–0 | lot | [cap 2](cases/cases_pages/dead_rung_scoring_dead_cap2.md) | [`.yaml`](cases/dead_rung_scoring_dead_cap2.yaml) |
 
 The top row, running. Nobody in this election scores above a **4**, so watch the **Second tiebreaker**: it counts fives, finds none, prints `Ben 0 / Cara 0`, and hands the tie to the lot — while the 4s sitting right there on both ballots are never consulted.
 

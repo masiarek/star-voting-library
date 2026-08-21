@@ -74,6 +74,27 @@ So the fair verdict: rb-j has found a genuine edge of STAR's strategy space and 
 
 ## The runnable cases
 
+| Ref | Case (page) | Electorate · ballot | Method | → | src |
+|:--:|---|---|---|---|:--:|
+| `s1` | [`bv2221_2kcwbw_sincere`](cases/cases_pages/bv2221_2kcwbw_sincere.md) | thin moderate · sincere | STAR | Beth (CW) | [`.yaml`](cases/bv2221_2kcwbw_sincere.yaml) |
+| `s2` | [`bv2222_rfyk46_510_thin_star`](cases/cases_pages/bv2222_rfyk46_510_thin_star.md) | thin moderate · 5-1-0 | STAR | Ana | [`.yaml`](cases/bv2222_rfyk46_510_thin_star.yaml) |
+| `s3` | [`bv2222_rfyk46_510_thin_irv`](cases/cases_pages/bv2222_rfyk46_510_thin_irv.md) | thin moderate · ranked | RCV-IRV | Ana | [`.yaml`](cases/bv2222_rfyk46_510_thin_irv.yaml) |
+| `s4` | [`bv2223_dyh93j_510_real_star`](cases/cases_pages/bv2223_dyh93j_510_real_star.md) | real moderate · 5-1-0 | STAR | Beth (CW) | [`.yaml`](cases/bv2223_dyh93j_510_real_star.yaml) |
+| `s5` | [`bv2223_dyh93j_510_real_irv`](cases/cases_pages/bv2223_dyh93j_510_real_irv.md) | real moderate · ranked | RCV-IRV | Ana | [`.yaml`](cases/bv2223_dyh93j_510_real_irv.yaml) |
+
+**"Everyone votes 5-1-0 ⇒ STAR = IRV" is false as a general statement.** 5-1-0 STAR fails only in a *sub-region* — a moderate whose base is thin enough that even the pooled 1s can't lift them past a pole. Outside that region the 1s carry real weight, and 5-1-0 STAR is strictly **more** moderate-friendly than IRV. STAR degraded-by-strategy is still not IRV.
+
+## The honest bottom line
+
+- **Conceded, squarely:** STAR is not strategy-proof (no method is — Gibbard). Under *coordinated* 5-1-0 min-max voting **and** a thin moderate base, STAR can fail the Condorcet winner just as IRV does. rb-j is right about the mechanism.
+- **But it's a strategic-equilibrium argument, not a sincere-ballot one.** On sincere ballots STAR elects the CW ([`s1`](cases/cases_pages/bv2221_2kcwbw_sincere.md)); the failure needs universal coordination on min-max, a thin moderate base, *and* accurate anticipation of who can beat whom. Misjudge it and 5-1-0 backfires — starving a moderate you needed can hand the seat to the candidate you loathe.
+- **And the "1s are noise" premise is wrong** ([`s4`](cases/cases_pages/bv2223_dyh93j_510_real_star.md)): they lift moderates into runoffs, which is precisely why STAR ≠ IRV even under the strategic ballot.
+- **The 0-5-0 escalation** rb-j floats (bullet-vote the moderate, abandon your doomed favorite) is [favorite betrayal](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) — which STAR permits and doesn't deny. But it demands even more information and coordination, and the [FBC simulation](../../06_Other/simulations/README.md) finds attempted betrayal **backfires ~98% of the time** under STAR. "You *can* betray your favorite" and "betrayal *pays*" are different claims; STAR's case rests on the second being rare.
+
+So the fair verdict: rb-j has found a genuine edge of STAR's strategy space and named it precisely — credit to him. What the counting adds is the boundary of that edge (thin base only) and the correction that STAR-under-5-1-0 is *IRV-like, not IRV-identical*. The Condorcet answer — "just always elect the CW" — carries its own bill: cycles need a completion method (there's no canonical one), and the CW can be a weakly-supported compromise. That's a values trade, honestly stated, not a knockout for either side.
+
+## The runnable cases
+
 | File | Electorate · ballot | Method | → |
 |---|---|---|---|
 | [`s1`](cases/cases_pages/bv2221_2kcwbw_sincere.md) | thin moderate · sincere | STAR | Beth (CW) |

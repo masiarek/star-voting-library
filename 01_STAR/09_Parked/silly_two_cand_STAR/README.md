@@ -20,12 +20,12 @@ That's why the [`STAR — start here`](../../01_Learn/STAR_start_here.md) page a
 
 ## The files
 
-| Page | What it isolates |
-|---|---|
-| [`01a_c2_b1_two-candidates`](cases/cases_pages/01a_c2_b1_two-candidates.md) | The smallest possible STAR election — one voter, two flavors. |
-| [`01a_c2_b2_two-candidates`](cases/cases_pages/01a_c2_b2_two-candidates.md) | The same, with a second ballot. *(Live on BetterVoting: [`my82v6`](https://bettervoting.com/my82v6/results).)* |
-| [`01b_c2_b2_two-candidates`](cases/cases_pages/01b_c2_b2_two-candidates.md) | A 5-and-0 ballot added. |
-| [`01c_c2_b3_two-candidates`](cases/cases_pages/01c_c2_b3_two-candidates.md) | Equal Support ("I like both flavors") at its smallest. |
+| Case (page) | What it isolates | src |
+|---|---|:--:|
+| [`01a_c2_b1_two-candidates`](cases/cases_pages/01a_c2_b1_two-candidates.md) | The smallest possible STAR election — one voter, two flavors. | [`.yaml`](cases/01a_c2_b1_two-candidates.yaml) |
+| [`01a_c2_b2_two-candidates`](cases/cases_pages/01a_c2_b2_two-candidates.md) | The same, with a second ballot. *(Live on BetterVoting: [`my82v6`](https://bettervoting.com/my82v6/results).)* | [`.yaml`](cases/01a_c2_b2_two-candidates.yaml) |
+| [`01b_c2_b2_two-candidates`](cases/cases_pages/01b_c2_b2_two-candidates.md) | A 5-and-0 ballot added. | [`.yaml`](cases/01b_c2_b2_two-candidates.yaml) |
+| [`01c_c2_b3_two-candidates`](cases/cases_pages/01c_c2_b3_two-candidates.md) | Equal Support ("I like both flavors") at its smallest. | [`.yaml`](cases/01c_c2_b3_two-candidates.yaml) |
 
 Equal Support and the runoff denominator are taught *properly* — with a real field of candidates — back in the [teaching progression](../../02_Examples/README.md) ([equal_support_runoff_demo](../../02_Examples/cases/cases_pages/equal_support_runoff_demo.md)) and the [pet election](../../04_Real_Elections/pet_real_bv_election/README.md).
 

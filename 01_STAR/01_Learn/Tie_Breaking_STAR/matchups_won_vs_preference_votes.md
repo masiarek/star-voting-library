@@ -195,7 +195,7 @@ Only the **Scoring Round: First tiebreaker** block moved. Everything above it (b
 
 The tied candidates are pairwise *tied with each other*, so nobody wins a pair and Copeland reads `0` across the board. The old tally still printed a non-zero number, because a drawn matchup still contains ballots with an opinion, and it counted those. This is also where the new explanatory line appears, so the row is not mistaken for the five-star rung's `0 / 0 / 0` two lines below.
 
-| Case | Ballots | Tied at | Before — preference votes | After — matchups won | Below rung 1 |
+| Case (page) | Ballots | Tied at | Before — preference votes | After — matchups won | Below rung 1 |
 |---|---|---|---|---|---|
 | [`bv126_ties_every_step_8fvd2x`](../../03_Criteria/tie_break_dead_rung/cases/cases_pages/bv126_ties_every_step_8fvd2x.md) | 7 | Amy · Brian · Chuck at 29 | `2 / 2 / 2` | `0 / 0 / 0` | unchanged |
 | [`three_way_dead_rung_A`](../../03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie_pages/three_way_dead_rung_A.md) | 3 | A · B · C at 4 | `2 / 2 / 2` | `0 / 0 / 0` | unchanged |
@@ -234,7 +234,7 @@ The last two are the sharp ones, and they are the same failure the [probe case](
 
 Here the tied candidates genuinely beat each other in a cycle, so Copeland is `1` apiece (or lopsided when the cycle is broken). The old numbers were larger and, in two cases, *ordered differently* — which is what let rung 1 decide something it should have passed on.
 
-| Case | Ballots | Tied at | Before — preference votes | After — matchups won | Below rung 1 |
+| Case (page) | Ballots | Tied at | Before — preference votes | After — matchups won | Below rung 1 |
 |---|---|---|---|---|---|
 | [`b484mbm_tie_every_rung`](../../../02_STAR_Bloc/02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md) | 3, 2 seats | Arden · Blythe · Corin at 12 | `3 / 3 / 3` | `1 / 1 / 1` | unchanged |
 | [`edelman_perfect_component_c3_b30`](../../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/edelman_perfect_component_c3_b30.md) | 30 | Ada · Ben · Cara at 70 | `30 / 30 / 30` | `1 / 1 / 1` | unchanged |
@@ -278,7 +278,7 @@ Azure, Beige and Coral are a three-cycle: each wins exactly one matchup, so the 
 
 Fully flat or fully indifferent ballots make the two readings agree at zero, so these three mirrors changed by exactly one added line. They are in the list because they are the ones that motivated the line: on a page teaching the dead rung, a `0 / 0 / 0` at rung 1 and a `0 / 0 / 0` at rung 2 mean different things, and now only one of them says why.
 
-| Case | Ballots | Tied at | Before | After | Change |
+| Case (page) | Ballots | Tied at | Before | After | Change |
 |---|---|---|---|---|---|
 | [`Flat_scores_ties_06_scoring_tie_4way`](../../09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_06_scoring_tie_4way.md) | 2 | Ava · Ben · Cara · Dan at 10 | `0 / 0 / 0 / 0` | `0 / 0 / 0 / 0` | all-draws line added |
 | [`Flat_scores_ties_07_fully_flat`](../../09_Parked/Flat_scores_ties/cases/cases_pages/Flat_scores_ties_07_fully_flat.md) | 2 | Ararat · Blanc · Cook at 10 | `0 / 0 / 0` | `0 / 0 / 0` | all-draws line added |
