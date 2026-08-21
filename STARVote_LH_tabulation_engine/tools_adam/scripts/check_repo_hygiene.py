@@ -931,8 +931,34 @@ def _bv_case_pages(yaml_path):
     return [c for c in cands if os.path.exists(c)]
 
 
-def check_bv_results_links():
-    """Return [(page_rel, why)] for BV-backed write-ups not linking their election."""
+def _bv_link_verdict(text, eid, page_rel):
+    """`[(page_rel, why)]` if this page text fails to link `eid`, else `[]`.
+
+    Split out from the walk so a test can hand it synthetic content: a gate that
+    only ever runs over a passing repo is indistinguishable from a gate that
+    returns [] unconditionally, which is the failure this whole check exists to
+    talk about.
+    """
+    if re.search(r"\]\(https://bettervoting\.com/%s/results\)" % re.escape(eid), text):
+        return []
+    other = set(re.findall(r"\]\(https://bettervoting\.com/"
+                           r"([A-Za-z0-9]+)(?:/results)?\)", text))
+    other.discard(eid)
+    why = (f"links BV election(s) {sorted(other)} but not its own `{eid}`"
+           if other else
+           f"no clickable link to https://bettervoting.com/{eid}/results")
+    return [(page_rel, why)]
+
+
+def check_bv_results_links(source=None):
+    """Return [(page_rel, why)] for BV-backed write-ups not linking their election.
+
+    `source` is a (page_rel, text, election_id) triple for tests — checks just
+    that synthetic page instead of walking the repo.
+    """
+    if source is not None:
+        page_rel, text, eid = source
+        return _bv_link_verdict(text, eid, page_rel)
     try:
         import yaml as _yaml
     except ImportError:  # pragma: no cover
@@ -963,22 +989,12 @@ def check_bv_results_links():
             _test, eid, _url = _bv_ids.resolve(yp, data)
             if not eid:
                 continue
-            want = re.compile(r"\]\(https://bettervoting\.com/%s/results\)"
-                              % re.escape(eid))
             for page in _bv_case_pages(yp):
                 try:
                     text = open(page, encoding="utf-8").read()
                 except OSError:
                     continue
-                if want.search(text):
-                    continue
-                other = set(re.findall(r"\]\(https://bettervoting\.com/"
-                                       r"([A-Za-z0-9]+)(?:/results)?\)", text))
-                other.discard(eid)
-                why = (f"links BV election(s) {sorted(other)} but not its own "
-                       f"`{eid}`" if other else
-                       f"no clickable link to https://bettervoting.com/{eid}/results")
-                bad.append((os.path.relpath(page, REPO), why))
+                bad += _bv_link_verdict(text, eid, os.path.relpath(page, REPO))
     return sorted(set(bad))
 
 

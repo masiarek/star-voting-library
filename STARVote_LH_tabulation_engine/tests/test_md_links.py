@@ -538,3 +538,62 @@ def test_redirect_map_check_is_not_vacuous():
     assert "first at line 5" in dup[0], (
         f"a duplicate finding must say where the first key was, got: {dup[0]}"
     )
+
+
+def test_bv_backed_pages_link_their_live_election():
+    """A BV-backed case page must link its own election's /results, clickably.
+
+    CLAUDE.md and the `bettervoting` skill both require this — "not just the
+    bare election id" — and for a long time nothing enforced it, which is how
+    31 pages drifted: 17 with no link at all (build_yaml_pages.py guessed the
+    bvid from the FILENAME with a regex that wants it in the middle, so every
+    `<descriptor>_<bvid>` case matched nothing), and 14 hand-authored
+    companions naming their bvid only in backticks.
+
+    The check asks for the right ID, not merely for the presence of a link,
+    because the worst instance had a link: the same filename guess read the
+    descriptor word "verify" out of bv132_verify_votes_bloc and published
+    https://bettervoting.com/verify, which 400s. A confident link to an
+    election that does not exist is a wrong claim on a teaching page, and it
+    survived precisely because it looked right — bold, in house form, and
+    nobody had reason to click it.
+    """
+    mod = _load_hygiene()
+    bad = mod.check_bv_results_links()
+    assert not bad, (
+        f"{len(bad)} BV-backed write-up(s) not linking their election:\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in bad) +
+        "\n(Add the house lead line under the page's case-meta block:\n"
+        "  **▶ Live on BetterVoting:** [vote](https://bettervoting.com/<bvid>) · "
+        "**[results ↗](https://bettervoting.com/<bvid>/results)** (election `<bvid>`).)"
+    )
+
+
+def test_bv_results_link_check_is_not_vacuous():
+    """The gate must fail on both shapes it exists to catch.
+
+    A check that only ever runs over a passing repo is indistinguishable from
+    one that returns [] unconditionally — and this gate spent its first
+    commit in exactly that state, warned-but-never-tested, which is the same
+    rot it was written to end. So: plant a page with no link, and plant one
+    linking the WRONG election, and require a finding for each.
+    """
+    mod = _load_hygiene()
+
+    silent = mod.check_bv_results_links(
+        source=("planted.md", "The election is `3494cb`.", "3494cb"))
+    assert silent, "a page naming its bvid only in backticks must be caught"
+    assert "no clickable link" in silent[0][1], silent
+
+    wrong = mod.check_bv_results_links(
+        source=("planted.md",
+                "**[results ↗](https://bettervoting.com/verify/results)**", "3494cb"))
+    assert wrong, "a page linking the WRONG election must be caught"
+    assert "verify" in wrong[0][1] and "3494cb" in wrong[0][1], (
+        f"the finding must name both the linked and the expected election: {wrong[0][1]}"
+    )
+
+    ok = mod.check_bv_results_links(
+        source=("planted.md",
+                "**[results ↗](https://bettervoting.com/3494cb/results)**", "3494cb"))
+    assert not ok, f"a correct house lead line must pass, got {ok}"
