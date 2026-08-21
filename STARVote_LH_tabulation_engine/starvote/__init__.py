@@ -1909,7 +1909,12 @@ def _star_round(options, ballots, candidates=None):
         if len(scores) == 1:
             if verbosity:
                 options.print("Only one candidate, they win.")
-            return list(scores)[0][0]
+            # FORK FIX (2026-08-21): `_scoring_round` returns a *dict*
+            # (`_sort_score_dict` rebuilds one), so `list(scores)[0]` is already
+            # the candidate NAME -- indexing it again took the name's first
+            # CHARACTER, and an unopposed race for `Ada` elected `A`.
+            # See FORK_NOTES.md; regression: tests/test_single_candidate.py.
+            return list(scores)[0]
 
         first, second, tie = _compute_first_and_second_from_score(scores, None)
 

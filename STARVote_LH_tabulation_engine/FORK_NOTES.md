@@ -52,6 +52,16 @@ git diff --stat starvote-upstream-2.1.6 -- STARVote_LH_tabulation_engine/starvot
 - **Why upstream:** it's the *voting algorithm's* tiebreak mechanics, so it lives in `starvote/` (per the table above), not our wrapper. Consider offering it to Larry.
 - **Regression guard:** the four `01_STAR/03_Criteria/tie_break_dead_rung/` cases exercise the five-star rung firing vs. falling through to the lot in both rounds.
 
+### Bug fix — an unopposed race elected the first LETTER of the candidate's name (2026-08-21)
+
+- **File/location:** `starvote/__init__.py`, `_star_round()`, the "Only one candidate, they win." short-circuit.
+- **What changed:** `return list(scores)[0][0]` → `return list(scores)[0]`.
+- **Effect:** `_scoring_round()` returns a **dict** (`_sort_score_dict` rebuilds one), so `list(scores)[0]` is already the candidate's *name*; the second index took that name's first **character**. A single-winner STAR race with one candidate on the ballot elected `A` for `Ada`, `Z` for `Zebra`. Everything downstream inherited it — the winner line, and the `[Runoff Reversal]` block comparing `(Ada)` against `(A)` and reporting a reversal that did not happen. Confined to **single-winner STAR with exactly one candidate**: Bloc/PR paths reach their last seat by a different route and were checked to be correct.
+- **Why it survived:** not one of this library's ballot-carrying cases is uncontested, so the whole suite was blind to it — while an **uncontested seat** is one of the most ordinary things a real ballot carries.
+- **Found by:** [`tools_adam/tie_taxonomy_sweep.py`](tools_adam/tie_taxonomy_sweep.py), probing degenerate election shapes alongside the tie sweep it was built for.
+- **Why upstream:** it is the engine's own return value, so it lives in `starvote/`. **Not yet reported to Larry** — worth an issue (it is the third slip found in `_star_round`, after [#18](https://github.com/larryhastings/starvote/issues/18)).
+- **Regression guard:** [`tests/test_single_candidate.py`](tests/test_single_candidate.py), which asserts on multi-character names in every case — a one-letter candidate passes even with the bug.
+
 ### Bug fix — SSS ballot allocation gated on verbosity (2026-08)
 
 - **File/location:** `starvote/__init__.py`, `sequentially_spent_score()`, the "Ballot allocation round" block.
