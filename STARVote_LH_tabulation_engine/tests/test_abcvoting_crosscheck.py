@@ -10,6 +10,10 @@ Cross-checks the LH engine's Approval tabulation against Martin Lackner's
    committee — an independent witness for the LH approval tally.
 2. Pins the proportionality demo: on the majority-sweep case, SPAV / PAV /
    seq-Phragmén must elect Amy + Cora (minority seat), NOT the av sweep.
+3. Pins the tie contract: every rule runs irresolute (resolute=False), so a
+   seqpav / seqphragmen tie comes back as several committees instead of being
+   broken silently by column order (abcvoting's default for its sequential
+   rules); a rule with no irresolute form is flagged, not faked.
 """
 import pathlib
 import sys
@@ -78,3 +82,30 @@ def test_proportional_rules_break_the_sweep():
     for rule in ("seqpav", "pav", "seqphragmen"):
         assert result[rule] == [["Amy", "Cora"]], (
             f"{rule} returned {result[rule]}, expected [['Amy', 'Cora']]")
+
+
+def test_sequential_rules_surface_their_ties():
+    """The wrapper passes resolute=False to EVERY rule. abcvoting's sequential
+    rules default to resolute=True and break a candidate tie by smallest index
+    — ballot-header column order here — with no marker. On the 3-seat council
+    case bloc av is decisive, but seqpav and seqphragmen leave THREE committees
+    open; a resolute run would return only the first of them, silently."""
+    path = REPO_ROOT / "04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml"
+    result = tabulate_abc(path, rules=("av", "seqpav", "seqphragmen"))
+    assert result["av"] == [["Adams", "Brown", "Clark"]]
+    open_three = [["Adams", "Brown", "Clark"], ["Adams", "Brown", "Evans"],
+                  ["Brown", "Clark", "Evans"]]
+    for rule in ("seqpav", "seqphragmen"):
+        assert sorted(result[rule]) == open_three, (
+            f"{rule} returned {result[rule]} — a resolute (column-order) "
+            "tie-break would show only the first committee")
+    assert result["_meta"]["resolute_only"] == []
+
+
+def test_rule_without_irresolute_form_is_flagged():
+    """greedy-monroe is DEFINED by a tiebreaking order, so abcvoting refuses
+    resolute=False for it; the wrapper falls back to resolute and records it."""
+    path = REPO_ROOT / "04_Approval/02_Examples/multiwinner/cases/approval_bloc_3seats_c6_b5.yaml"
+    result = tabulate_abc(path, rules=("greedy-monroe",))
+    assert len(result["greedy-monroe"]) == 1
+    assert result["_meta"]["resolute_only"] == ["greedy-monroe"]

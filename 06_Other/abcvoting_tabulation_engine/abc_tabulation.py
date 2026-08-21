@@ -23,7 +23,23 @@ Programmatic:
     result = tabulate_abc("path/to/election.yaml")   # dict: rule -> [committee, ...]
 
 Requires: pip install abcvoting  (optional dependency; importers should guard).
-Ties: a rule may return SEVERAL tied committees; all are reported.
+
+Ties: EVERY rule is asked for its full set of winning committees
+(`resolute=False`, passed explicitly), so a rule may return SEVERAL tied
+committees; all are reported, and more than one prints `[N tied committees]`.
+The explicit flag matters because abcvoting's own default differs by rule:
+`av` / `sav` / `pav` already default to the full set, but the SEQUENTIAL rules
+(`seqpav`, `seqphragmen`, also `equal-shares`) default to `resolute=True`,
+which breaks a candidate tie by SMALLEST CANDIDATE INDEX — with this loader,
+left-to-right ballot-header column order — and returns the one committee that
+tie-break produces, tie unmentioned. This wrapper inherited those defaults
+until 2026-08-20 (found against abcvoting 2.19.2), so a `seqpav` /
+`seqphragmen` committee quoted from an earlier run may carry a silent
+column-order tie-break. A rule with no irresolute form at all
+(`greedy-monroe`, which is DEFINED by a tiebreaking order) falls back to
+resolute and the report line says so. `abc_axiom_check.py` keeps the resolute
+convention on purpose — it replays the book's counterexamples, which are
+stated under it.
 """
 import argparse
 import os
@@ -97,7 +113,7 @@ def load_approval_election(path):
 
 
 def tabulate_abc(path, rules=DEFAULT_RULES, seats=None):
-    """Run each ABC rule; return {rule: [sorted name-list per tied committee]}."""
+    """Run each ABC rule irresolute; return {rule: [sorted name-list per tied committee]}."""
     names, voters, file_seats = load_approval_election(path)
     k = seats if seats is not None else file_seats
     profile = Profile(len(names))
@@ -106,11 +122,26 @@ def tabulate_abc(path, rules=DEFAULT_RULES, seats=None):
     nonempty = [v for v in voters if v]
     profile.add_voters(nonempty)
     out = {}
+    resolute_only = []
     for rule in rules:
-        committees = abcrules.compute(rule, profile, committeesize=k)
+        # Always ask for the FULL set of winning committees. The sequential
+        # rules (seqpav, seqphragmen, equal-shares, ...) default to
+        # resolute=True in abcvoting, which breaks a candidate tie by smallest
+        # index — ballot-header column order here — and would hand back one
+        # committee where the ballots determine several (module docstring).
+        try:
+            committees = abcrules.compute(rule, profile, committeesize=k,
+                                          resolute=False)
+        except NotImplementedError:
+            # e.g. greedy-monroe: DEFINED by a tiebreaking order, so abcvoting
+            # refuses resolute=False for it. Take its one committee, flag it.
+            committees = abcrules.compute(rule, profile, committeesize=k,
+                                          resolute=True)
+            resolute_only.append(rule)
         out[rule] = [sorted(names[i] for i in c) for c in committees]
     out["_meta"] = {"names": names, "seats": k, "ballots": len(voters),
-                    "empty_ballots": len(voters) - len(nonempty)}
+                    "empty_ballots": len(voters) - len(nonempty),
+                    "resolute_only": resolute_only}
     return out
 
 
@@ -128,6 +159,8 @@ def _print_report(path, result):
         longname = abcrules.Rule(rule).longname if ABCVOTING_AVAILABLE else rule
         pretty = "  |  ".join(", ".join(c) for c in committees)
         tie = f"  [{len(committees)} tied committees]" if len(committees) > 1 else ""
+        if rule in meta.get("resolute_only", ()):
+            tie += "  [resolute — this rule has no irresolute form]"
         print(f"   {rule:12s} {longname:42s} ->  {pretty}{tie}")
     print("   (av = bloc Approval, the LH engine's method; "
           "seqpav/pav/seqphragmen are proportional.)")

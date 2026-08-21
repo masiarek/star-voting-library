@@ -47,9 +47,13 @@ two different treatments, and conflating them silently changes answers:
   which solver `abcvoting` happens to use.
 - Rules defined SEQUENTIALLY (seq-PAV, seq-CC, rev-seq-PAV, seq-Phragmen, Greedy
   Monroe, Method of Equal Shares) are resolute by construction once candidate
-  ties are broken alphabetically, which is what `abcvoting`'s `resolute=True`
-  does. Asking those for their irresolute set instead would return every
-  committee reachable under SOME tiebreaking and lose the counterexample.
+  ties are broken by a fixed order. `abcvoting`'s `resolute=True` breaks them by
+  SMALLEST CANDIDATE INDEX — which coincides with the book's alphabetical
+  convention here only because `parse_profile` numbers the candidates a, b, c,
+  ... in index order; on arbitrary names, index order is ballot-header column
+  order, not alphabetical (the reason `abc_tabulation.py` runs every rule
+  irresolute instead). Asking those rules for their irresolute set would return
+  every committee reachable under SOME tiebreaking and lose the counterexample.
 """
 from __future__ import annotations
 

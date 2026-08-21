@@ -41,7 +41,7 @@ It implements Definitions 3.1–3.7 directly (dominance, committee monotonicity,
 
 Notes:
 
-- **Ties:** an ABC rule can return *several* tied committees; all are printed (`[N tied committees]`).
+- **Ties:** every rule is run **irresolute** (`resolute=False`, passed explicitly) — an ABC rule can return *several* tied committees, and all are printed (`[N tied committees]`). The flag is explicit because the library's *sequential* rules (`seqpav`, `seqphragmen`, `equal-shares`) default to resolute, silently breaking a candidate tie by smallest index — ballot-header column order here; until 2026-08-20 the wrapper inherited that default, so `seqpav` / `seqphragmen` results quoted from earlier runs may hide a tie. A rule with no irresolute form (`greedy-monroe`) falls back to resolute and its line says so.
 - **Empty ballots** (no approvals) can't affect any ABC rule; they are dropped and the count reported.
 - `abcvoting` offers many more rules (`monroe`, `cc`, `lexcc`, `rule-x`/MES, …) — pass any rule id via `--rules`. Exact PAV/Monroe use an ILP solver on large instances; the repo's small teaching cases compute instantly.
 - Tested by [`tests/test_abcvoting_crosscheck.py`](../../STARVote_LH_tabulation_engine/tests/test_abcvoting_crosscheck.py) (skips cleanly if `abcvoting` isn't installed).
