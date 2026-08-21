@@ -187,7 +187,7 @@ Note this changes nothing about the scope in [the companion page](rust_kernel_sc
 
 Plausibly, and it is the right ambition — but on a much longer fuse than the kernel, and the blocker is not code.
 
-**What makes it attractive:** BetterVoting is an *online* platform, which is exactly where "trust us, we counted it right" is weakest. End-to-end verifiability is the strongest available answer, and the niche is under-served — [Helios](https://heliosvoting.org/) has held it for fifteen years and shows its age. A STAR platform that could say *"the encrypted ballots are published; verify the count yourself"* would have something no competitor has.
+**What makes it attractive:** BetterVoting is an *online* platform, which is exactly where "trust us, we counted it right" is weakest. End-to-end verifiability is the strongest available answer, and the niche is under-served — [Helios](https://vote.heliosvoting.org) has held it for fifteen years and shows its age. A STAR platform that could say *"the encrypted ballots are published; verify the count yourself"* would have something no competitor has.
 
 **What makes it hard has nothing to do with Rust:** threshold decryption needs **trustees**, and trustees are people. Who holds the key shares for a housing co-op board election? Who convenes them if one loses a laptop? Helios stayed niche largely because that ceremony is heavy for exactly the small-organization elections these platforms serve. Solve the trustee problem and the cryptography is the easy half; leave it unsolved and a perfect implementation is unusable.
 
