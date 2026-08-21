@@ -2608,7 +2608,8 @@ def run_plurality_multi(ballots_text, file_path=None, lot_numbers=None,
     """Multi-winner Plurality — SNTV / Bloc Plurality (single non-transferable
     vote): each voter marks one candidate; the N candidates with the most
     first-choice votes win. Ties broken by lot order. (Single-winner Plurality
-    goes through the STAR path, which is equivalent for one seat.)"""
+    runs its own choose-one report via run_plurality_single — it no longer
+    falls through to the STAR path.)"""
     t = plurality_multi_tally(ballots_text, lot_numbers=lot_numbers,
                               num_winners=num_winners)
     candidates, ballots, priority = t["candidates"], t["ballots"], t["priority"]

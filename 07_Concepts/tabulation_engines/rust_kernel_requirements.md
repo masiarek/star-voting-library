@@ -6,7 +6,7 @@
 >
 > The reasoning is in [Why Python is the right language for a test library](#why-python-is-the-right-language-for-a-test-library) below, and it is short: a teaching-and-test library's dominant costs are authoring speed, readability, and staying inside the Python social-choice ecosystem that supplies its cross-checks. Rust's advantages buy nothing there and its costs land on the thing done most often.
 >
-> **What survives the decision is Track A** — the JSON result contract, the 48 missing answer keys, the alias table, the written tiebreak ladders. Those were always worth doing in Python, and they are now the whole recommendation.
+> **What survives the decision is Track A** — the JSON result contract, the 48 missing answer keys, the alias table, the [written tiebreak ladders](tiebreak_ladders.md) (done 2026-08-20). Those were always worth doing in Python, and they are now the whole recommendation.
 >
 > **What Rust keeps a real claim to is a different project:** software that counts a real, high-stakes election under verifiable encryption. That is not this repo's job, it needs a funded independent audit, and it would have a different owner. The analysis below is kept because it is the argument for why — and so the question does not get re-opened from scratch.
 

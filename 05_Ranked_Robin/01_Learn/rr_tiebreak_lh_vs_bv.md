@@ -91,6 +91,7 @@ Both lead with the *tie*, not a verdict; "cycle" is reserved for a genuine loop.
 - [Ranked Robin (the method)](ranked_robin.md) · [cycle resolution](cycle_resolution.md) · [ranked_robin_vs_condorcet.md](ranked_robin_vs_condorcet.md)
 - **This same Copeland-margin logic is offered as an optional *STAR* tiebreaker** — Equal Vote's [Condorcet Tiebreaker](../../01_STAR/01_Learn/Tie_Breaking_STAR/condorcet_tiebreaker.md) runs a mini round-robin (most head-to-head wins → margin) among candidates STAR's own rounds left tied. Ranked Robin is this arithmetic as a *whole method*; there it is a *subroutine* firing only on an exact STAR tie.
 - BetterVoting tabulation engine notes: [`tabulation_engines/BV/tabulation_engine/README.md`](../../07_Concepts/tabulation_engines/BV/tabulation_engine/README.md) (the `RankedRobin.ts` row: *"2-way tie → head-to-head; else random"*)
+- Every method's ladders, engine by engine: [tiebreak_ladders.md](../../07_Concepts/tabulation_engines/tiebreak_ladders.md) — this page's comparison generalized to STAR, RCV-IRV, Approval, Plurality, and the PR family.
 - [Glossary](../../07_Concepts/GLOSSARY.md)
 
 # file: rr_tiebreak_lh_vs_bv.md

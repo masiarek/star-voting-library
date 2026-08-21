@@ -78,7 +78,7 @@ Tag every existing case with the clauses it exercises; generate the list of clau
 
 The existing corpus, re-fronted for a reviewer rather than a learner: the format, how to run your own engine against it, what a pass means, what each case proves. Plus the JSON result contract that makes engine comparison mechanical.
 
-**Started 2026-08-10.** The result contract half is built — [the result contract page](result_schema.md), a published [JSON Schema](../../STARVote_LH_tabulation_engine/star_result.schema.json), and `--json` on the engine, covering all six method families the engine counts. Still open: the 48 unanswered cases, per-case *what this proves* notes, and the executable specification (D1) an implementer would otherwise have to reverse-engineer from the cases.
+**Started 2026-08-10.** The result contract half is built — [the result contract page](result_schema.md), a published [JSON Schema](../../STARVote_LH_tabulation_engine/star_result.schema.json), and `--json` on the engine, covering all six method families the engine counts. The tiebreak ladders — every method, every engine, as prose — are written too ([tiebreak_ladders.md](tiebreak_ladders.md), 2026-08-20): that is the D1 clause set an implementer could least afford to reverse-engineer from cases. Still open: the 48 unanswered cases, per-case *what this proves* notes, and the rest of the executable specification (D1).
 
 **Done when:** someone else's tabulator can be scored against it without asking us anything.
 

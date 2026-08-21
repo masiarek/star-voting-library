@@ -11,6 +11,7 @@ Every claim in this library is backed by a runnable election, and every election
 ## For implementers
 
 - **[The result contract — running your own engine against this library](result_schema.md)** — the one page here addressed to somebody writing a *different* tabulator. `--json` counts any case file into a versioned JSON object (winners, rounds, pairwise matrix, and which tie-break rung fired), so checking a second implementation is a `diff` instead of a reading exercise. Includes what a pass means, the five places correct implementations legitimately differ, and an honest list of what the suite does not yet cover.
+- **[Tiebreak ladders — every method, every engine](tiebreak_ladders.md)** — the reference the result contract leans on: each engine's tie-break ladder rung by rung (LH, BetterVoting, `pyrankvote`, RCTab, `pref_voting`, `abcvoting`), the four floors a ladder can end on, who discloses what, and the fine print that bites (hidden column-order fallbacks, the recorded-but-not-derivable shuffle, the stale-fixture date).
 
 ## The cross-checks
 

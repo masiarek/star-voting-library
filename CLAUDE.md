@@ -686,16 +686,20 @@ reproduce loop is in the **`bettervoting` skill**.
   (aliases `RCV_RR` / `Copeland` / `Consensus`) prints the round-robin report
   (ballots + pairwise table + win-loss record), flags a Condorcet cycle, and
   writes its `_tabulated` mirror — it does **not** fall through to the IRV rounds.
-  **Bloc RR (multi-winner):** `num_winners > 1` now elects the **top-N by record**
-  (most wins → margin → lot), printing a seats list and flagging a lot-decided
+  **Bloc RR (multi-winner):** `num_winners > 1` now elects the **top-N by the
+  same ladder as single-winner RR** (Copeland → 1st Degree → 2nd Degree → lot),
+  printing a seats list and flagging a lot-decided
   last seat — it no longer silently downgrades to one winner. **Multi-winner
   Plurality = SNTV / Bloc Plurality** (`run_plurality_multi`): `Plurality` +
   `num_winners > 1` elects the top-N by first-choice count (ties → lot);
-  single-winner Plurality still routes through the STAR path. So LH multi-winner
+  single-winner Plurality prints its own choose-one report (`run_plurality_single`
+  — it no longer falls through to the STAR path). So LH multi-winner
   coverage is now complete for BV's bloc set: STAR→**Bloc STAR**,
   Approval→**Approval_Multi_Winner**, RankedRobin→**Bloc RR**, Plurality→**SNTV**,
   plus STV and STAR_PR/allocated/sss/rrv. (The old "LH has no Plurality" caveat is
-  retired — single-winner via STAR path, multi-winner via SNTV.)
+  retired — single-winner via `run_plurality_single`, multi-winner via SNTV.
+  The full tie-break ladders, per method and per engine, are written down in
+  `07_Concepts/tabulation_engines/tiebreak_ladders.md`.)
   **RR triple-check — always cross-verify a Ranked Robin case three ways:** this
   native tally, BetterVoting's `RankedRobin.ts` (the frozen `_bv_export.json`
   Results), and **`pref_voting`'s independent Copeland** via
