@@ -63,25 +63,27 @@ Count × A,B,C,D,E,F,G,H,I,J
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   F             -- 14 -- First place
-   C             --  7 -- Tied for second place
-   D             --  7 -- Tied for second place
+   C             -- 0 -- Tied for first place
+   D             -- 0 -- Tied for first place
+   F             -- 0 -- Tied for first place
    Equal Support -- 14
- F advances, but there's still a two-way tie for second.
+ There's still a three-way tie for first.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
- The candidate with the most votes of score 5 advances.
-   C             -- 14 -- Tied for second place
-   D             -- 14 -- Tied for second place
- There's still a two-way tie for second.
+ The two candidates with the most votes of score 5 advance.
+   C             -- 14 -- Tied for first place
+   D             -- 14 -- Tied for first place
+   F             -- 14 -- Tied for first place
+ There's still a three-way tie for first.
 
 *** No official tie-breaking lot numbers were provided.
     Ties are resolved using a fallback order: CSV column order.
     Lot-number priority order: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 
 [Tiebreaker: Lot Number Priority]
-  Tie among: ['C', 'D']
-  Resolved: ['C'] (selected by lot-number priority).
+  Tie among: ['C', 'D', 'F']
+  Resolved: ['C', 'D'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
   ⚠ The ballots did not break this tie: the deterministic rungs
@@ -93,25 +95,25 @@ Count × A,B,C,D,E,F,G,H,I,J
 
 [STAR Voting: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
-   C             -- 7 -- Tied for first place
-   F             -- 7 -- Tied for first place
-   Equal Support -- 14
+   C             -- 0 -- Tied for first place
+   D             -- 0 -- Tied for first place
+   Equal Support -- 28
  There's a two-way tie for first.
 
 [STAR Voting: Automatic Runoff Round: First tiebreaker]
  The highest-scoring candidate wins.
    C             -- 119 -- Tied for first place
-   F             -- 119 -- Tied for first place
+   D             -- 119 -- Tied for first place
  There's still a two-way tie for first.
 
 [STAR Voting: Automatic Runoff Round: Second tiebreaker]
  The candidate with the most votes of score 5 wins.
    C             -- 14 -- Tied for first place
-   F             -- 14 -- Tied for first place
+   D             -- 14 -- Tied for first place
  There's still a two-way tie for first.
 
 [Tiebreaker: Lot Number Priority]
-  Tie among: ['C', 'F']
+  Tie among: ['C', 'D']
   Resolved: ['C'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
@@ -135,17 +137,17 @@ Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
         Note: C, D and F tied at 119 in the Scoring Round, and the lot rung
-              (the ballots could not separate them) advanced C and F. The *
+              (the ballots could not separate them) advanced C and D. The *
               marks who advanced, not who scored highest.
 
-                 |       A      |      B      |    * C      |      D      |      E      |    * F      |      G      |      H      |      I      |      J      |
+                 |       A      |      B      |    * C      |    * D      |      E      |      F      |      G      |      H      |      I      |      J      |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
              A > |     ---      | 0 - 14 - 14 | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  0 - 21 | 0 -  7 - 21 |14 -  0 - 14 | 0 -  7 - 21 | 0 -  7 - 21 | 0 -  7 - 21 |
              B > | 14 - 14 -  0 |    ---      | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  0 - 21 | 0 -  7 - 21 |14 -  0 - 14 | 0 -  7 - 21 | 0 -  7 - 21 | 0 -  7 - 21 |
            * C > | 28 -  0 -  0 |28 -  0 -  0 |    ---      | 0 - 28 -  0 |14 -  0 - 14 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |28 -  0 -  0 |14 - 14 -  0 |
-             D > | 28 -  0 -  0 |28 -  0 -  0 | 0 - 28 -  0 |    ---      |14 -  0 - 14 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |28 -  0 -  0 |14 - 14 -  0 |
+           * D > | 28 -  0 -  0 |28 -  0 -  0 | 0 - 28 -  0 |    ---      |14 -  0 - 14 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |28 -  0 -  0 |14 - 14 -  0 |
              E > | 21 -  0 -  7 |21 -  0 -  7 |14 -  0 - 14 |14 -  0 - 14 |    ---      | 7 -  7 - 14 |21 -  0 -  7 | 7 - 14 -  7 |14 -  7 -  7 |14 -  7 -  7 |
-           * F > | 21 -  7 -  0 |21 -  7 -  0 | 7 - 14 -  7 | 7 - 14 -  7 |14 -  7 -  7 |    ---      |21 -  0 -  7 | 7 - 21 -  0 |21 -  7 -  0 |14 - 14 -  0 |
+             F > | 21 -  7 -  0 |21 -  7 -  0 | 7 - 14 -  7 | 7 - 14 -  7 |14 -  7 -  7 |    ---      |21 -  0 -  7 | 7 - 21 -  0 |21 -  7 -  0 |14 - 14 -  0 |
              G > | 14 -  0 - 14 |14 -  0 - 14 | 7 -  7 - 14 | 7 -  7 - 14 | 7 -  0 - 21 | 7 -  0 - 21 |    ---      | 7 -  0 - 21 |14 -  0 - 14 | 7 -  7 - 14 |
              H > | 21 -  7 -  0 |21 -  7 -  0 | 7 -  7 - 14 | 7 -  7 - 14 | 7 - 14 -  7 | 0 - 21 -  7 |21 -  0 -  7 |    ---      |14 - 14 -  0 | 7 - 21 -  0 |
              I > | 21 -  7 -  0 |21 -  7 -  0 | 0 -  0 - 28 | 0 -  0 - 28 | 7 -  7 - 14 | 0 -  7 - 21 |14 -  0 - 14 | 0 - 14 - 14 |    ---      | 0 - 14 - 14 |

@@ -68,11 +68,12 @@ Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The candidate preferred in the most head-to-head matchups advances.
-   Chocolate      -- 2 -- Tied for second place
-   Chocolate Chip -- 2 -- Tied for second place
-   Vanilla        -- 2 -- Tied for second place
+   Chocolate      -- 0 -- Tied for second place
+   Chocolate Chip -- 0 -- Tied for second place
+   Vanilla        -- 0 -- Tied for second place
    Equal Support  -- 0
  There's still a three-way tie for second.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The candidate with the most votes of score 5 advances.

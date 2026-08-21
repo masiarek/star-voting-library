@@ -110,11 +110,12 @@ Chuck      5  0  1  0  1  0  |    29   4.1
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   Amy           -- 2 -- Tied for first place
-   Brian         -- 2 -- Tied for first place
-   Chuck         -- 2 -- Tied for first place
+   Amy           -- 0 -- Tied for first place
+   Brian         -- 0 -- Tied for first place
+   Chuck         -- 0 -- Tied for first place
    Equal Support -- 5
  There's still a three-way tie for first.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The two candidates with the most votes of score 5 advance.

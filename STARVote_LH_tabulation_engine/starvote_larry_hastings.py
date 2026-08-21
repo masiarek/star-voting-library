@@ -1490,7 +1490,13 @@ def resolve_finalists(ballots, order_map=None, maximum_score=5):
 
     # Rung 1: of the tied candidates, whoever wins the most head-to-head
     # matchups. This is the rung that most often decides a real election.
-    preferences, _no_preference = starvote._preference_round(ballots, tie)
+    # Three or more tied: the rung is matchups WON (whoever loses the most is
+    # eliminated), not summed pairwise preference votes. Same guard as
+    # starvote._star_round, so this replay cannot disagree with the count.
+    if len(tie) > 2:
+        preferences, _no_preference = starvote._matchups_won_round(ballots, tie)
+    else:
+        preferences, _no_preference = starvote._preference_round(ballots, tie)
     first, second, tie = starvote._compute_first_and_second_from_score(
         preferences, first
     )

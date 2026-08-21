@@ -36,7 +36,7 @@ flowchart TD
     A["Ballots (each candidate scored 0–5)"] --> B["Scoring Round: sum every candidate's scores"]
     B --> C{"Clear top two?"}
     C -->|yes| E["Two finalists advance"]
-    C -->|"tie for a finalist slot"| D1{"Pairwise separates the tied?"}
+    C -->|"tie for a finalist slot"| D1{"Matchups won separates?<br/>(losers of the most are eliminated,<br/>repeat with the survivors)"}
     D1 -->|yes| E
     D1 -->|no| D2{"Five-star (most 5s) separates?"}
     D2 -->|yes| E
@@ -69,6 +69,7 @@ The left spine (all "yes") is the ordinary election: a clean top two and a decis
 | Runoff tie → five-star **tied non-zero → lot** | rung runs, decides nothing | [dead-rung case 09](../../../01_STAR/03_Criteria/tie_break_dead_rung/README.md) |
 | **Fully flat** (no preference anywhere) | ties at both loci at once | [`Flat_scores_ties_07`](../../../01_STAR/09_Parked/Flat_scores_ties/README.md#case-07) |
 | **k-way symmetric** (rotation) | any of k wins by lot; divergence (k−1)/k | [three-way dead-rung](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md) |
+| Scoring tie → **rung 1 eliminates**, survivors go on | 3+ tied, partial separation — the branch symmetry cannot test | [matchups-won probe](../../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/tie_break_ladder_matchups_eliminate_loser.md) |
 
 Generate your own along any branch with [`generate_dead_rung_scenarios.py`](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md).
 

@@ -131,4 +131,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/03_Crite
 - [Runoff reversal (worked set)](../../../../02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [bv2180_fp62p2_ice_cream_ladder](bv2180_fp62p2_ice_cream_ladder.md) · [bv2276_qhjyr2_second_finalist_tie](bv2276_qhjyr2_second_finalist_tie.md)
+More cases in this set: [bv2180_fp62p2_ice_cream_ladder](bv2180_fp62p2_ice_cream_ladder.md) · [bv2276_qhjyr2_second_finalist_tie](bv2276_qhjyr2_second_finalist_tie.md) · [tie_break_ladder_matchups_eliminate_loser](tie_break_ladder_matchups_eliminate_loser.md)

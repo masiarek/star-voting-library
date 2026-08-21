@@ -35,6 +35,7 @@ AGREE,01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot
 AGREE,01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_B.yaml,3,3,B,B,B,B,B,B,B,,,0,False,False,True
 AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/bv2276_qhjyr2_second_finalist_tie.yaml,4,5,Ana,Ana,Cora,Ana,Ana,Ana,Ana,Ana,Ana,2,True,False,False
 AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml,3,3,B,B,C,B,B,B,B,,B,1,True,False,True
+AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/tie_break_ladder_matchups_eliminate_loser.yaml,4,5,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False

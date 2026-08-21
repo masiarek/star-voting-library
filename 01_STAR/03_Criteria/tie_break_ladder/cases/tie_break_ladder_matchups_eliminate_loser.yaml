@@ -1,0 +1,44 @@
+election_title: "Matchups won, not preference votes — the rung that eliminates a Condorcet loser"
+
+scenario_description: |-
+  A four-way scoring-round tie in which the FIRST rung has to do real work, and the
+  two plausible readings of that rung disagree.
+  All four candidates finish the scoring round on 11. Ada, Ben and Cara form a
+  head-to-head cycle (Ada beats Ben, Ben beats Cara, Cara beats Ada); Doug loses to
+  all three, so he is the Condorcet loser. But Doug also holds the most maximum-score
+  votes — two 5s to everyone else's one.
+  The published Equal Vote protocol resolves a tie of three or more by "comparing the
+  tied candidates head to head and eliminating the candidate(s) who lost the most
+  match-ups", so Doug goes out on rung 1 with zero matchups won and never reaches the
+  five-star rung. Read the rung instead as a SUM of pairwise preference votes and all
+  four tie at 6, Doug survives to rung 2, and his two 5s carry him into the runoff —
+  a candidate no voter majority prefers over anyone.
+  This case exists to hold the engine to the first reading. A symmetric tie cannot
+  test it, because perfect symmetry ties both statistics; the tie has to be
+  asymmetric in matchups and symmetric in score, which is what these five ballots do.
+  Note what the answer key can and cannot see: Ada wins under BOTH readings, because
+  a candidate who loses every matchup also loses the runoff he was wrongly advanced
+  into. What changes is the FINALIST PAIR — Ada vs Ben when the rung is read
+  correctly, Doug vs Ada when it is not — so the guard here is the _tabulated mirror
+  (checked by tests/test_tabulated_mirrors_current.py), not expected_winners. A
+  regression shows up as "Doug -- 0" disappearing from the first tiebreaker.
+  The lot order is published so nothing in the case depends on column order.
+  See 07_Concepts/tabulation_engines/tiebreak_ladders.md and
+  01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md.
+
+lot_numbers: [Ada, Ben, Cara, Doug]
+
+num_winners: 1
+voting_method: STAR
+ballots: |-
+  Ada,Ben,Cara,Doug
+  0,0,0,5      # Doug bloc — a 5 for Doug, nothing for anyone else
+  0,0,0,5      # Doug bloc
+  5,4,2,1      # Ada first
+  2,5,4,0      # Ben first
+  4,2,5,0      # Cara first
+
+expected_winners:
+  - Ada
+
+# file: tie_break_ladder_matchups_eliminate_loser.yaml

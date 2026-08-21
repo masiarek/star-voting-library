@@ -57,11 +57,17 @@ Count × A,B,C,D,E
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   A             -- 28 -- First place
-   E             -- 28 -- Second place
-   C             -- 21
-   Equal Support --  0
- A and E advance.
+   E             -- 1 -- First place
+   A             -- 0 -- Tied for second place
+   C             -- 0 -- Tied for second place
+   Equal Support -- 0
+ E advances, but there's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   A             -- 14 -- Second place
+   C             --  7
+ E and A advance.
 
 [STAR Voting: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
@@ -94,7 +100,7 @@ Count × A,B,C,D,E
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
-        Note: A, C and E tied at 70 in the Scoring Round, and the head-to-head
+        Note: A, C and E tied at 70 in the Scoring Round, and the five-star
               rung advanced A and E. The * marks who advanced, not who scored
               highest.
 

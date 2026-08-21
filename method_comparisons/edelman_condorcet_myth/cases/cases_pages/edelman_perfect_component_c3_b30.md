@@ -67,10 +67,10 @@ Count × Ada,Ben,Cara
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   Ada           -- 30 -- Tied for first place
-   Ben           -- 30 -- Tied for first place
-   Cara          -- 30 -- Tied for first place
-   Equal Support --  0
+   Ada           -- 1 -- Tied for first place
+   Ben           -- 1 -- Tied for first place
+   Cara          -- 1 -- Tied for first place
+   Equal Support -- 0
  There's still a three-way tie for first.
 
 [STAR Voting: Scoring Round: Second tiebreaker]

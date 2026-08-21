@@ -15,6 +15,7 @@ Here, five-star and score do their job, so LH and BetterVoting **agree determini
 | [Tied for the second finalist **(BV2276, `qhjyr2`)**](bv2276_qhjyr2_second_finalist_tie.md) | Ana/Ben/Cora/Dev | STAR | Ana | **pairwise** (scoring) — the first rung, on its own |
 | [Ice cream ladder **(BV2180, `fp62p2`)**](bv2180_fp62p2_ice_cream_ladder.md) | ice cream | STAR | Strawberry | five-star (scoring), then score (runoff) — lot never reached |
 | [No Condorcet winner — top-two tie **(BV830, `vb3xv2`)**](bv830_vb3xv2_no_condorcet_tie_score.md) | A/B/C (abstract) | STAR | B | score (runoff) — a head-to-head tie the Condorcet standard can't break |
+| [Matchups won, not preference votes](cases/cases_pages/tie_break_ladder_matchups_eliminate_loser.md) | Ada/Ben/Cara/Doug | STAR | Ada | **matchups won** (scoring) — eliminates the Condorcet loser before the five-star rung can rescue him |
 
 Read them in that order: BV2276 is the ladder at its shortest (one rung, done), BV2180 is what happens when that rung *can't* decide and five-star takes over, and BV830 moves the tie from the scoring round into the runoff.
 

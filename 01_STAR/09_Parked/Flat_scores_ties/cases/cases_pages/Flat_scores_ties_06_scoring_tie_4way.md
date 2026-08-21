@@ -56,6 +56,7 @@ Count × Ava,Ben,Cara,Dan,Eve
    Dan           -- 0 -- Tied for first place
    Equal Support -- 2
  There's still a four-way tie for first.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The two candidates with the most votes of score 5 advance.

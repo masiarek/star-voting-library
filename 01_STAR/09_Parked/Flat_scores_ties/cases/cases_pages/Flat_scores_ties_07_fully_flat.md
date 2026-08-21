@@ -62,6 +62,7 @@ Count × Ararat,Blanc,Cook
    Cook          -- 0 -- Tied for first place
    Equal Support -- 2
  There's still a three-way tie for first.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The two candidates with the most votes of score 5 advance.

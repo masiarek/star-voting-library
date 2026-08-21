@@ -70,11 +70,12 @@ Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The candidate preferred in the most head-to-head matchups advances.
-   Chocolate      -- 2 -- Tied for second place
-   Chocolate Chip -- 2 -- Tied for second place
-   Vanilla        -- 2 -- Tied for second place
+   Chocolate      -- 0 -- Tied for second place
+   Chocolate Chip -- 0 -- Tied for second place
+   Vanilla        -- 0 -- Tied for second place
    Equal Support  -- 0
  There's still a three-way tie for second.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The candidate with the most votes of score 5 advances.
@@ -156,4 +157,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/03_Crite
 - [Runoff reversal (worked set)](../../../../02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [bv2276_qhjyr2_second_finalist_tie](bv2276_qhjyr2_second_finalist_tie.md) · [bv830_vb3xv2_no_condorcet_tie_score](bv830_vb3xv2_no_condorcet_tie_score.md)
+More cases in this set: [bv2276_qhjyr2_second_finalist_tie](bv2276_qhjyr2_second_finalist_tie.md) · [bv830_vb3xv2_no_condorcet_tie_score](bv830_vb3xv2_no_condorcet_tie_score.md) · [tie_break_ladder_matchups_eliminate_loser](tie_break_ladder_matchups_eliminate_loser.md)

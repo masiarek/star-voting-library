@@ -24,7 +24,8 @@ The thing to hold onto: **the random "lot" order is the *last* resort, not the f
 SCORING ROUND  — choose the two finalists
   0. Two highest total scores advance.
   └─ tie for the last finalist slot?
-     1. PAIRWISE     — advance whoever is preferred in the most head-to-head matchups
+     1. PAIRWISE     — of the tied, count MATCHUPS WON against each other;
+                       whoever loses the most is eliminated, repeat as needed
      2. FIVE-STAR    — still tied? advance whoever has the most score-5 votes
      3. LOT ORDER    — still tied? the highest-priority lot number advances
 
@@ -39,6 +40,8 @@ AUTOMATIC RUNOFF  — choose the winner from the two finalists
 **The same two ladders as a picture:** [a map of every tie case](../../../07_Concepts/topics/ties/why_contrived_tie_cases.md#a-map-of-every-tie-case-single-winner-star) — a flowchart of every branch from a clean win down to the lot, each one with the probe case that isolates it.
 
 Note the two ladders are **not** identical. In the Scoring Round, pairwise is the *first* tiebreaker; in the Runoff, total score is the first tiebreaker. Five-star is the second tiebreaker in both. The lot is the floor of both.
+
+> **"Matchups won" is not "preference votes" — and with three or more tied they differ.** The rung asks, for each *pair* of tied candidates, which one more **ballots** preferred, and then counts pairs. It does not add up how often a candidate was the preferred one across all pairs. With exactly two tied the two readings coincide (one pair, one comparison). With three or more they can disagree, and the disagreement is not academic: a candidate who loses *every* head-to-head can collect the same preference-vote total as candidates who win theirs, and then be advanced by the five-star rung. The protocol closes that door by making the rung **eliminative** — whoever loses the most matchups goes out, and the survivors face the next rung. Worked case: [Matchups won, not preference votes](../../03_Criteria/tie_break_ladder/cases/cases_pages/tie_break_ladder_matchups_eliminate_loser.md).
 
 > **Why the swap — the elegant part.** Each round breaks its tie with the *other* round's yardstick, because **the measure that tied can't be the one that separates**. The Scoring Round ranks by *total score*, so a scoring-round tie means the scores are **equal** — score can't break it, so STAR asks the runoff's question instead: *whom do more voters prefer head-to-head?* (**pairwise**). The Runoff decides by *head-to-head preference*, so a runoff tie means the preference is **equal** — preference can't break it, so STAR falls back to the scoring round's measure: *who had the higher total score?* (**score**). (Put differently: pairwise *is* the runoff, so it can't also break the runoff; score *is* the scoring round, so it can't also break the scoring round.) Only after that shared **five-star** rung, and finally the **lot**.
 
@@ -113,11 +116,12 @@ Chocolate,Chocolate Chip,Fudge Brownie,Vanilla,Strawberry,Mango
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The candidate preferred in the most head-to-head matchups advances.
-   Chocolate      -- 2 -- Tied for second place
-   Chocolate Chip -- 2 -- Tied for second place
-   Vanilla        -- 2 -- Tied for second place
+   Chocolate      -- 0 -- Tied for second place
+   Chocolate Chip -- 0 -- Tied for second place
+   Vanilla        -- 0 -- Tied for second place
    Equal Support  -- 0
  There's still a three-way tie for second.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The candidate with the most votes of score 5 advances.

@@ -137,10 +137,17 @@ Count × Azure,Beige,Coral,Dune
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   Beige         -- 18 -- First place
-   Coral         -- 14 -- Second place
-   Azure         -- 12
-   Equal Support --  5
+   Azure         -- 1 -- Tied for first place
+   Beige         -- 1 -- Tied for first place
+   Coral         -- 1 -- Tied for first place
+   Equal Support -- 5
+ There's still a three-way tie for first.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The two candidates with the most votes of score 5 advance.
+   Beige         -- 8 -- First place
+   Coral         -- 3 -- Second place
+   Azure         -- 1
  Beige and Coral advance.
 
 [STAR Voting: Automatic Runoff Round]
@@ -169,7 +176,7 @@ Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
         Note: Azure, Beige and Coral tied at 61 in the Scoring Round, and the
-              head-to-head rung advanced Beige and Coral. The * marks who
+              five-star rung advanced Beige and Coral. The * marks who
               advanced, not who scored highest.
 
                  |     Azure    |  * Beige    |  * Coral    |     Dune    |

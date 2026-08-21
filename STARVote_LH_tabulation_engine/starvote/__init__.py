@@ -1673,6 +1673,75 @@ def _maximum_score_count_round(ballots, maximum_score, candidates):
     return scores
 
 
+def _matchups_won_round(ballots, candidates):
+    """
+    Tabulates a "matchups won" round (a Copeland score over the tied group).
+
+    This function returns a 2-tuple:
+        (scores, no_preference)
+
+    "scores" is a dict mapping candidate to the number of head-to-head
+    matchups that candidate WON against the other candidates in the group.
+    A matchup is won by whichever candidate more BALLOTS preferred; a
+    matchup that both candidates tie is won by neither.
+
+    "no_preference" counts ballots that expressed no preference between
+    any pair of candidates in the group, exactly as _preference_round does.
+
+    This is deliberately NOT the same statistic as _preference_round().
+    _preference_round sums, over every ballot and every pair, how often a
+    candidate was the preferred one -- it aggregates ballot-level pairwise
+    wins.  This function first decides each matchup by counting ballots,
+    then counts matchups.  With exactly two candidates the two agree, which
+    is why the Automatic Runoff still uses _preference_round.  With three or
+    more they differ, and it is this one that implements the published STAR
+    tiebreaker rung: "comparing the tied candidates head to head and
+    eliminating the candidate(s) who lost the most match-ups".
+
+    For example, given a group of four in which A, B and C form a cycle and
+    D loses to all three, this returns {'A': 2, 'B': 2, 'C': 2, 'D': 0} --
+    so D is eliminated -- where _preference_round can score all four equally
+    and let D survive to the next rung.
+    """
+    candidates = list(candidates)
+    wins = {candidate: 0 for candidate in candidates}
+    no_preference = 0
+
+    # Count, per pair, how many ballots preferred each side.
+    pair_votes = {}
+    for i, candidate0 in enumerate(candidates):
+        for candidate1 in candidates[i + 1 :]:
+            pair_votes[(candidate0, candidate1)] = [0, 0]
+
+    for ballot in ballots:
+        ballot_get = ballot.get
+        expressed_a_preference = False
+        for (candidate0, candidate1), votes in pair_votes.items():
+            score0 = ballot_get(candidate0, 0)
+            score1 = ballot_get(candidate1, 0)
+            if score0 == score1:
+                continue
+            expressed_a_preference = True
+            if score0 > score1:
+                votes[0] += 1
+            else:
+                votes[1] += 1
+        if not expressed_a_preference:
+            no_preference += 1
+
+    for (candidate0, candidate1), (votes0, votes1) in pair_votes.items():
+        if votes0 > votes1:
+            wins[candidate0] += 1
+        elif votes1 > votes0:
+            wins[candidate1] += 1
+        # an exactly-drawn matchup is won by neither
+
+    scores = list(wins.items())
+    _sort_score_list(scores)
+
+    return (dict(scores), no_preference)
+
+
 def _preference_round(ballots, candidates):
     """
     Tabulates a "preference round".
@@ -1851,7 +1920,18 @@ def _star_round(options, ballots, candidates=None):
 
         if tie:
             with score_tiebreaker_1_heading():
-                scores, no_preference = _preference_round(ballots, tie)
+                # With three or more candidates tied, the published STAR
+                # protocol eliminates whoever lost the most head-to-head
+                # MATCHUPS -- which is not the same as who collected the most
+                # pairwise preference votes.  With exactly two tied the two
+                # measures agree, and _preference_round's output (vote counts
+                # plus Equal Support) is the more informative one to print.
+                if len(tie) > 2:
+                    scores, no_preference = _matchups_won_round(ballots, tie)
+                    all_drawn = scores and not any(scores.values())
+                else:
+                    scores, no_preference = _preference_round(ballots, tie)
+                    all_drawn = False
                 first, second, tie = _compute_first_and_second_from_score(scores, first)
                 if verbosity:
                     options.print_scores(
@@ -1862,6 +1942,15 @@ def _star_round(options, ballots, candidates=None):
                         no_preference=no_preference,
                         advance=True,
                     )
+                    if all_drawn:
+                        # Nobody won a matchup <=> every matchup was drawn.
+                        # Say so: an all-zero row here means something quite
+                        # different from an all-zero row on the five-star rung
+                        # below, where zero means the rung had nothing to count.
+                        options.print(
+                            "Every head-to-head among the tied candidates is a draw,"
+                            " so none of them won a matchup."
+                        )
 
             if tie:
                 with score_tiebreaker_2_heading():

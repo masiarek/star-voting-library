@@ -65,11 +65,12 @@ A,B,C
 
 [STAR Voting: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   A             -- 2 -- Tied for first place
-   B             -- 2 -- Tied for first place
-   C             -- 2 -- Tied for first place
+   A             -- 0 -- Tied for first place
+   B             -- 0 -- Tied for first place
+   C             -- 0 -- Tied for first place
    Equal Support -- 0
  There's still a three-way tie for first.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [STAR Voting: Scoring Round: Second tiebreaker]
  The two candidates with the most votes of score 5 advance.

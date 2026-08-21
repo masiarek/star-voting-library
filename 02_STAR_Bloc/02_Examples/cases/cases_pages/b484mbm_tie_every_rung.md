@@ -78,9 +78,9 @@ Arden,Blythe,Corin
 
 [Bloc STAR: Round 1: Scoring Round: First tiebreaker]
  The two candidates preferred in the most head-to-head matchups advance.
-   Arden         -- 3 -- Tied for first place
-   Blythe        -- 3 -- Tied for first place
-   Corin         -- 3 -- Tied for first place
+   Arden         -- 1 -- Tied for first place
+   Blythe        -- 1 -- Tied for first place
+   Corin         -- 1 -- Tied for first place
    Equal Support -- 0
  There's still a three-way tie for first.
 

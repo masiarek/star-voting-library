@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**607 election files** (504 single-winner, 103 multi-winner) across 18 method(s).
+**608 election files** (505 single-winner, 103 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 271 |
+| STAR | 272 |
 | RCV-IRV (Hare) | 51 |
 | Ranked Robin (RCV-RR / Copeland) | 103 |
 | Approval | 27 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (271)
+## STAR  (272)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -109,6 +109,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2180_fp62p2_ice_cream_ladder`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2180_fp62p2_ice_cream_ladder.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Ice cream ladder — a STAR tie in both rounds, settled without the lot (BV2180, fp62p2) → _Strawberry_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv2180_fp62p2_ice_cream_ladder.yaml) |
 | [`bv2276_qhjyr2_second_finalist_tie`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv2276_qhjyr2_second_finalist_tie.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Tied for the second finalist — the head-to-head rung settles it (BV2276, qhjyr2) → _Ana_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv2276_qhjyr2_second_finalist_tie.yaml) |
 | [`bv830_vb3xv2_no_condorcet_tie_score`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/bv830_vb3xv2_no_condorcet_tie_score.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | No Condorcet winner (top-two tie) — STAR breaks it by score (BV830, vb3xv2) → _B_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_score.yaml) |
+| [`tie_break_ladder_matchups_eliminate_loser`](../../01_STAR/03_Criteria/tie_break_ladder/cases/cases_pages/tie_break_ladder_matchups_eliminate_loser.md) | `01_STAR/03_Criteria/tie_break_ladder/cases/` | 1 | Matchups won, not preference votes — the rung that eliminates a Condorcet loser → _Ada_ | [`.yaml`](../../01_STAR/03_Criteria/tie_break_ladder/cases/tie_break_ladder_matchups_eliminate_loser.yaml) |
 | [`bhckrf7_range_of_scores`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bhckrf7_range_of_scores.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | hckrf7 — Range of Scores counts 3 ballots on a page that says 1 voter → _Cal Creative_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml) |

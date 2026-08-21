@@ -69,6 +69,7 @@ Count × a,b,c
    c             -- 0 -- Tied for first place
    Equal Support -- 3
  There's still a three-way tie for first.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 [Bloc STAR: Round 1: Scoring Round: Second tiebreaker]
  The two candidates with the most votes of score 5 advance.
