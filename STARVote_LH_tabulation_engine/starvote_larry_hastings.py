@@ -100,6 +100,20 @@ class LotNumberTiebreaker(Tiebreaker):
         self.order_map = {}
         self.info_printed = False
         self.expl = ""
+        # Every call starvote made, in order — one entry per
+        # `[Tiebreaker: Lot Number Priority]` banner the report prints. Kept
+        # because a caller that never reads the printed report still has to be
+        # able to say a lot fired and where: `result_json.py` reported
+        # `tiebreaks: []` — a POSITIVE claim that no rung ran — on 23 of the 39
+        # cases in this library whose seat the lot actually decided,
+        # single-winner ones included. starvote calls the lot from five places
+        # — a STAR round's Scoring Round and its Automatic Runoff, both of
+        # which Bloc STAR runs once per seat, plus one per PR method — and the
+        # only one the builder could see was the first, replayed by
+        # `resolve_finalists()` on single-winner races. Recording the calls
+        # here is the one honest fix: the count is not re-derived, it is read off
+        # the object that broke the tie. See `events` in result_json._lot_ties.
+        self.events = []
 
     def initialize(self, options, ballots):
         # Determine candidate order from the first ballot keys
@@ -136,6 +150,25 @@ class LotNumberTiebreaker(Tiebreaker):
         # Sort tied candidates by their assigned lot number priority
         ranked = sorted(tie, key=lambda c: self.order_map.get(c, float("inf")))
         winners = ranked[:desired]
+
+        # Recorded whether or not we print: a silent run is still a run that
+        # reached the lot, and the machine-readable contract has to say so.
+        # `header` is starvote's own section label ("Bloc STAR: Round 2:
+        # Automatic Runoff Round"), which is what names the round and the
+        # ladder step; `text` is the tie description it raised with.
+        header = getattr(options, "header", None)
+        text = str(exception)
+        if header and text.startswith(f"{header}: "):
+            text = text[len(header) + 2:]
+        self.events.append({
+            "method": getattr(getattr(options, "method", None), "name", None),
+            "header": header,
+            "text": text,
+            "tied": list(tie),
+            "desired": desired,
+            "advanced": list(winners),
+            "eliminated": [c for c in tie if c not in winners],
+        })
 
         if not self.silent:
             print("\n[Tiebreaker: Lot Number Priority]")

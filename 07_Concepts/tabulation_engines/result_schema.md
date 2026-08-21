@@ -25,7 +25,7 @@ Here is a whole result, for the [Tennessee capital](../../01_STAR/02_Examples/ca
 ```json title="Abridged for the lesson — the pairwise matrix is omitted"
 {
   "$schema": "https://masiarek.github.io/star-voting-library/STARVote_LH_tabulation_engine/star_result.schema.json",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "source": {
     "file": "09_c4_b100_tennessee-capital.yaml",
     "sha256": "356c519bd232dc0484f1574dffc3be3342083c30ad8b4ddc9d026df82f4c58e1"
@@ -84,6 +84,15 @@ An implementation **conforms on a case** when its result:
 
 Point 4 is the one that does the work the answer keys could not. An empty `tiebreaks` array is a positive claim: *the ballots alone decided this, no rung fired.* An engine that reaches for a tie-break where the reference did not has a bug even when it lands on the same winner — and that is precisely the bug a winner-only comparison cannot see.
 
+**What a fired rung looks like.** The lot is the rung this engine can always name, because `LotNumberTiebreaker` is the object that broke the tie and the builder reads its log rather than recomputing anything:
+
+```json
+{ "stage": "finalists", "tied": ["Arden", "Blythe", "Corin"], "at": 12,
+  "rung": "lot", "advanced": ["Blythe", "Arden"], "eliminated": ["Corin"], "round": 1 }
+```
+
+That is [`b484mbm`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md) — three candidates, two seats, 12 = 12 = 12 and every deterministic rung level, so the lot filled both seats. `stage` says what the tie was *for*: `finalists` for a slot in the Automatic Runoff of a STAR round, `winner` for the seat itself — a runoff that tied, or, in the PR family, the round's weighted score total, which has no runoff anywhere on its path. `round` names the selection round for the methods that fill one seat per round (Bloc STAR, `allocated`, `sss`, `rrv`) and is absent for single-winner STAR, which has only one. `at` is the value they tied on wherever the builder holds that number and `null` where it does not: a PR round's weighted total is not recoverable without re-deriving the count, and inventing it would be worse than saying nothing.
+
 Point 3 is scoped to the method on purpose. A Bloc STAR count has no Automatic Runoff, so `rounds.runoff` is absent rather than zero: reporting a number the method never computed is worse than reporting nothing.
 
 ## The six families
@@ -117,6 +126,8 @@ These are the ones worth reading before you conclude your engine is wrong. Each 
 
 `schema_version` is the version of **this contract**, not of any engine. Patch means wording. Minor means a field was **added** — a stored fixture must keep validating across a minor bump, which is the whole point of publishing the number. Major means a field was removed or its meaning changed, and your reader breaks.
 
+**1.1.0 (2026-08-21)** is so far the only bump. `tiebreaks[]` gained the optional `round` field — the additive half — and, the half that matters, the score path began reporting the **lot** rung at all. Before it, the only tie the builder could see was the finalists ladder that `resolve_finalists()` replays for single-winner STAR, so a Bloc or PR seat bought by lot, and a single-winner Automatic Runoff bought by lot, both emitted `tiebreaks: []` — which point 4 above defines as the positive claim that the ballots alone decided. **23 cases in this library made that claim falsely**, among them `lot_tiebreak_published_order.yaml` and the whole [dead-rung set](../../01_STAR/03_Criteria/tie_break_dead_rung/README.md), whose entire subject is the lot. Any result captured before that date is stale rather than divergent, exactly like the Ranked Robin fixtures above: re-emit it before reading a difference as a disagreement.
+
 `source.sha256` hashes the exact bytes counted. Two results are comparable only when it matches; it is what stops a stale fixture from being read as a disagreement.
 
 ## What is still missing
@@ -125,11 +136,12 @@ Stated plainly, because a conformance suite that oversells itself is worse than 
 
 - **48 ballot-carrying cases have no answer key** (615 total, 567 answered). They emit results; `result.matches_expected` is `null` rather than `false` — *we did not check* must not read as *we checked and it passed*.
 - **Six methods in the repo are out of scope for this engine** — Range at 0–9, CAV, 3-2-1, and the [grade methods](../../06_Other/Majority_Judgment/README.md) — and are refused with an `UnsupportedMethod` error rather than answered. They are counted elsewhere in the repo; they are not part of this contract yet.
+- **Below the lot, a multi-winner count's ladder is invisible.** `tiebreaks` names every tie the *lot* settled, on every seat; for single-winner STAR it also names the rung that settled the finalists — `head-to-head` or `five-star` — because `resolve_finalists()` replays that ladder against starvote's own round functions. There is no equivalent replay for a Bloc STAR round or a PR round: those rungs run inside starvote's counting functions, which report nothing back, and rebuilding them in the builder would mean re-deriving the count, which this contract does not do anywhere. So a Bloc seat settled at the five-star rung still reads here as a seat nothing was broken for. It is the one remaining way the array can understate what happened.
 - **There is no executable specification.** The rules are still distributed across concept pages and engine source, so an implementation currently has to be written from the cases plus prose. That is [D1 of the reference package](star_reference_package.md), and it is the next thing that matters.
 - **The input format has no published schema.** This contract covers the *result*; the *case file* is still validated by hand-rolled checks — including a [genuine YAML typing hazard](star_reference_package.md#3-but-yamls-implicit-typing-is-a-genuine-certification-context-hazard) where an unquoted `No` on a ballot measure parses as `False`. Pydantic models would close that and emit the input schema, and it is the same day's work.
 
 ## What checks this page
 
-[`tests/test_result_json.py`](../../STARVote_LH_tabulation_engine/tests/test_result_json.py) runs the whole corpus through the builder on every commit: every case validates against the published schema, every answer key is met through the JSON path specifically, the runoff funnel reconciles, `--json` stays pure, and an unsupported method is refused rather than guessed at. A schema nothing checks is documentation, not a contract.
+[`tests/test_result_json.py`](../../STARVote_LH_tabulation_engine/tests/test_result_json.py) runs the whole corpus through the builder on every commit: every case validates against the published schema, every answer key is met through the JSON path specifically, the runoff funnel reconciles, every `[Tiebreaker: Lot Number Priority]` banner the printed report shows has exactly one matching `rung: "lot"` entry in the JSON — no more, so the finalists replay cannot double-count a banner it shares, and no fewer — `--json` stays pure, and an unsupported method is refused rather than guessed at. A schema nothing checks is documentation, not a contract.
 
 *Up: [Tabulation engines](README.md) · the wider plan: [the STAR reference package](star_reference_package.md) · why this is the highest-leverage piece: [Rust kernel requirements, G6](rust_kernel_requirements.md).*

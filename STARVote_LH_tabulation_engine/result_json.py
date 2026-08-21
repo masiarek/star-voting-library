@@ -27,6 +27,7 @@ CLI:  starvote_larry_hastings.py <file.yaml> --json
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -42,7 +43,7 @@ import starvote_larry_hastings as w  # noqa: E402
 #   major — a field removed or its meaning changed (old readers break).
 # A stored fixture must keep validating across a minor bump; that is the whole
 # point of publishing a number here.
-SCHEMA_VERSION = "1.0.0"
+SCHEMA_VERSION = "1.1.0"   # 1.1.0: the LOT rung is reported, + tiebreaks[].round
 SCHEMA_ID = (
     "https://masiarek.github.io/star-voting-library/"
     "STARVote_LH_tabulation_engine/star_result.schema.json"
@@ -125,6 +126,89 @@ def _pairwise(candidates, ballots):
     return {"candidates": list(candidates), "prefer": prefer}
 
 
+# starvote's own section label for a selection round: "Bloc STAR: Round 2:
+# Automatic Runoff Round", "Allocated Score Voting: Round 5". Single-winner
+# STAR has no round number and matches nothing, which is the right answer.
+_ROUND_RE = re.compile(r"\bRound (\d+)\b")
+
+
+def _lot_ties(tiebreaker, method, scores, runoff, single_winner_star):
+    """The lot-rung ties the count actually hit, read off the tiebreaker that
+    broke them — never recomputed.
+
+    `LotNumberTiebreaker` is the tiebreaker of last resort: starvote reaches it
+    only when every deterministic rung has come back equal, so every event it
+    logged is a `rung: "lot"`, and each one printed a
+    `[Tiebreaker: Lot Number Priority]` banner in the report. Until this existed
+    the builder could see exactly one kind of tie — the finalists ladder
+    `resolve_finalists()` replays for single-winner STAR — so a Bloc/PR seat or
+    a single-winner RUNOFF decided by lot emitted `tiebreaks: []`, which the
+    contract defines as the positive claim that no rung fired. 39 cases in this
+    library reach the lot; 23 of them made that claim falsely — among them
+    `lot_tiebreak_published_order.yaml`, whose whole subject is the lot — and
+    the other 16 reported the finalists tie but not a later runoff tie on the
+    same count.
+
+    What this still cannot see, stated plainly because the array is a claim:
+    the rungs BELOW the lot on a multi-winner count. STAR and Bloc STAR run
+    head-to-head and five-star inside starvote's own round functions, which
+    report nothing back; `resolve_finalists()` replays them for single-winner
+    STAR — that is where "head-to-head" and "five-star" come from — and there
+    is no equivalent for a Bloc round or a PR round without re-deriving the
+    count, which this module does not do.
+    """
+    out = []
+    pr_family = method in (starvote.allocated, starvote.sss, starvote.rrv)
+    for e in tiebreaker.events:
+        where = f"{e.get('header') or ''}: {e.get('text') or ''}".lower()
+        tied = list(e["tied"])
+
+        # Which ladder step tied. STAR and Bloc STAR run a whole STAR round per
+        # seat, so the tie is either for a FINALIST slot or for the Automatic
+        # Runoff that decides the seat. The PR family has a single rung per
+        # seat — the round's weighted score total — and a tie on it goes
+        # straight to the lot, with no runoff anywhere on the path.
+        stage = "winner" if (pr_family or "runoff" in where) else "finalists"
+
+        # Single-winner STAR already reports this tie through
+        # `resolve_finalists()`, which can also name the rung BELOW the lot.
+        # Reporting it twice would double-count the one banner it printed.
+        if stage == "finalists" and single_winner_star:
+            continue
+
+        at = None
+        if stage == "finalists":
+            # The score they tied on. Bloc re-scores the survivors over the
+            # same unweighted ballots each round, so a candidate's total does
+            # not move between rounds — but if the tied candidates ever
+            # disagree here, say nothing rather than a number from the wrong
+            # round.
+            values = {scores.get(c) for c in tied}
+            if len(values) == 1 and None not in values:
+                at = values.pop()
+        elif runoff and {f["candidate"] for f in runoff["finalists"]} == set(tied):
+            counts = {f["preferred_by"] for f in runoff["finalists"]}
+            if len(counts) == 1:
+                at = counts.pop()
+        # PR family: the round's weighted total is not a number the builder
+        # holds, and inventing one would be re-deriving the count. `at` stays
+        # null; the round number below says which round to read it from.
+
+        entry = {
+            "stage": stage,
+            "tied": tied,
+            "at": at,
+            "rung": "lot",
+            "advanced": list(e["advanced"]),
+            "eliminated": list(e["eliminated"]),
+        }
+        found = _ROUND_RE.search(e.get("header") or "")
+        if found:
+            entry["round"] = int(found.group(1))
+        out.append(entry)
+    return out
+
+
 def _score_rows(counts, candidates):
     """[{candidate, value}] in descending value, then ballot-column order."""
     idx = {c: i for i, c in enumerate(candidates)}
@@ -155,13 +239,15 @@ def _build_score(el, cls):
     winners = [str(x) for x in (result if isinstance(result, (list, tuple))
                                 else [result])]
 
-    rounds = {"scoring": _score_rows(starvote._scoring_round(ballots), candidates)}
+    scores = starvote._scoring_round(ballots)
+    rounds = {"scoring": _score_rows(scores, candidates)}
     tiebreaks = []
 
     # The Automatic Runoff is a single-winner STAR concept. A Bloc/PR count
     # elects by a different rule, so reporting "the runoff" there would be a
     # number the method never used.
-    if method is starvote.star and seats == 1:
+    single_winner_star = method is starvote.star and seats == 1
+    if single_winner_star:
         priority = lot or candidates
         order_map = {c: i for i, c in enumerate(priority)}
         finalists, ft = w.resolve_finalists(ballots, order_map,
@@ -193,6 +279,14 @@ def _build_score(el, cls):
                 "majority": decided // 2 + 1 if decided else 0,
                 "tied": prefs.get(a, 0) == prefs.get(b, 0),
             }
+
+    # Every rung the LOT decided, on every seat — the one place the printed
+    # report and this contract used to disagree. Appended after the finalists
+    # entry above so the array reads in the order the report prints the
+    # banners: round 1's finalists tie, then round 1's runoff tie, then
+    # round 2's, and so on.
+    tiebreaks += _lot_ties(tiebreaker, method, scores, rounds.get("runoff"),
+                           single_winner_star)
 
     return winners, rounds, _pairwise(candidates, ballots), tiebreaks, len(ballots), candidates
 

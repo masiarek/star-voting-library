@@ -23,6 +23,8 @@ What is checked:
   * an unsupported method is refused as unsupported, not answered wrongly.
 """
 
+import contextlib
+import io
 import json
 import subprocess
 import sys
@@ -35,6 +37,7 @@ REPO_ROOT = ENGINE_DIR.parent
 sys.path.insert(0, str(ENGINE_DIR))
 
 import result_json  # noqa: E402
+import starvote  # noqa: E402
 import starvote_larry_hastings as w  # noqa: E402
 
 jsonschema = pytest.importorskip("jsonschema")
@@ -214,6 +217,104 @@ def test_tiebreak_rung_is_reported(tmp_path):
     assert tb and tb[0]["stage"] == "finalists"
     assert set(tb[0]["tied"]) >= {"Ada", "Ben"}
     assert tb[0]["rung"] in {"head-to-head", "five-star", "lot"}
+
+
+# ---------------------------------------------------------------------------
+# the LOT rung — the tie the contract used to swallow
+# ---------------------------------------------------------------------------
+#
+# `tiebreaks: []` is a POSITIVE claim that no rung fired, and until 2026-08-21
+# the score path made it falsely on 23 cases: the builder could see only the
+# finalists ladder `resolve_finalists()` replays for single-winner STAR, so a
+# Bloc/PR seat decided by lot — and a single-winner Automatic RUNOFF decided by
+# lot — reported nothing at all. These pin both halves.
+
+MULTIWINNER_LOT_CASE = (
+    REPO_ROOT / "02_STAR_Bloc" / "02_Examples" / "cases"
+    / "b484mbm_tie_every_rung.yaml"
+)
+SINGLE_WINNER_LOT_CASE = (
+    REPO_ROOT / "YAML_library" / "1_positive" / "lot_tiebreak_published_order.yaml"
+)
+
+
+def test_multiwinner_lot_decided_seat_is_reported():
+    """Bloc STAR, 3 candidates / 2 seats, tied at every rung: 12 = 12 = 12.
+
+    Nothing in the ballots separates the three, so the lot fills both seats.
+    A result that said `tiebreaks: []` here would be claiming the votes decided
+    an election the file's own description calls "the smallest election that
+    ties all the way down".
+    """
+    assert MULTIWINNER_LOT_CASE.exists(), f"case moved: {MULTIWINNER_LOT_CASE}"
+    doc = result_json.build(MULTIWINNER_LOT_CASE)
+    assert doc["election"]["seats"] == 2
+    assert doc["result"]["matches_expected"] is True
+    tb = doc["tiebreaks"]
+    assert tb, "a lot-decided seat reported no tiebreak at all"
+    t = tb[0]
+    assert t["rung"] == "lot"
+    assert set(t["tied"]) == {"Arden", "Blythe", "Corin"}
+    assert t["advanced"] == doc["result"]["winners"]
+    # The score they tied on, and the round it happened in — a multi-winner
+    # entry that named neither would not say which seat was bought by lot.
+    assert t["at"] == 12
+    assert t["round"] == 1
+
+
+def test_single_winner_runoff_lot_is_reported():
+    """The same gap on the single-winner path, which is the easier one to miss.
+
+    Two candidates tie on score, so they are simply both finalists and there is
+    no finalists tie to break — then the runoff ties 1-1, five-star ties, and
+    the published lot picks the winner. `resolve_finalists()` sees none of it.
+    """
+    assert SINGLE_WINNER_LOT_CASE.exists(), f"case moved: {SINGLE_WINNER_LOT_CASE}"
+    doc = result_json.build(SINGLE_WINNER_LOT_CASE)
+    assert doc["rounds"]["runoff"]["tied"] is True
+    tb = doc["tiebreaks"]
+    assert tb, "the lot decided the winner and tiebreaks was empty"
+    t = tb[0]
+    assert t["stage"] == "winner" and t["rung"] == "lot"
+    assert t["advanced"] == doc["result"]["winners"]
+    # One round, so no round number to report — absent, not zero.
+    assert "round" not in t
+
+
+def test_every_lot_banner_has_a_json_entry():
+    """The mirror claim, over the whole score corpus.
+
+    `LotNumberTiebreaker` prints one `[Tiebreaker: Lot Number Priority]` banner
+    per tie it breaks. The contract must carry exactly that many `rung: "lot"`
+    entries — no more (the finalists ladder replay must not double-count the
+    banner it shares) and no fewer. Run as one sweep rather than 300 parametrized
+    cases so a regression names every file it broke at once.
+    """
+    mismatched = []
+    for path in CASES:
+        el = w.load_election(str(path))
+        if w.classify_method(el.get("method_name"), el["ballots"])["family"] != "score":
+            continue
+        try:
+            doc = result_json.build(path)
+        except result_json.UnsupportedMethod:
+            continue
+        _cands, ballots, _ = w.parse_ballots_from_string(el["ballots"])
+        buf = io.StringIO()
+        loud = w.LotNumberTiebreaker(lot_numbers=el.get("lot_numbers") or [],
+                                     silent=False)
+        with contextlib.redirect_stdout(buf):
+            starvote.election(
+                el["method"] or starvote.star, ballots, seats=el["seats"] or 1,
+                maximum_score=result_json.MAX_SCORE, tiebreaker=loud,
+                verbosity=1, print=lambda *a, **k: None,
+            )
+        banners = buf.getvalue().count("[Tiebreaker: Lot Number Priority]")
+        lots = [t for t in doc["tiebreaks"] if t["rung"] == "lot"]
+        if banners != len(lots):
+            mismatched.append(f"{path.name}: {banners} banner(s), "
+                              f"{len(lots)} lot entr(ies)")
+    assert not mismatched, "report and contract disagree:\n  " + "\n  ".join(mismatched)
 
 
 def test_family_dispatch_uses_one_alias_table():

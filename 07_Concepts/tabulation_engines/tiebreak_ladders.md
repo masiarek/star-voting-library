@@ -142,7 +142,7 @@ Cross-cutting details that have each cost someone a wrong conclusion, collected:
 
 ## For implementers — the conformance rule
 
-The [result contract](result_schema.md) draws the operational conclusion from all of the above: `tiebreaks[].rung` is deliberately free text, because rung *names* legitimately differ between correct engines. A conformance run should compare (1) the tied set, (2) the outcome, and (3) whether a rung fired **at all** — an empty `tiebreaks: []` is a positive claim that the ballots alone decided, and an engine that reaches for a tiebreak where the reference did not has a bug even when it lands on the same winner. And date your fixtures: any Ranked Robin result captured before 2026-08-19 predates the 1st-Degree rung and is stale rather than divergent.
+The [result contract](result_schema.md) draws the operational conclusion from all of the above: `tiebreaks[].rung` is deliberately free text, because rung *names* legitimately differ between correct engines. A conformance run should compare (1) the tied set, (2) the outcome, and (3) whether a rung fired **at all** — an empty `tiebreaks: []` is a positive claim that the ballots alone decided, and an engine that reaches for a tiebreak where the reference did not has a bug even when it lands on the same winner. And date your fixtures twice over: any Ranked Robin result captured before 2026-08-19 predates the 1st-Degree rung, and any *score* result captured before 2026-08-21 predates the contract reporting the **lot** rung at all — on 23 cases here, `b484mbm_tie_every_rung` and `bv750_tie_breaking_bloc` among them, `tiebreaks: []` was being emitted for a seat the lot had bought. Both are stale rather than divergent; re-emit before reading a difference as a disagreement.
 
 ---
 

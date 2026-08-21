@@ -236,6 +236,10 @@
             "type": "string",
             "description": "Which rung resolved it. Free text because the ladders differ per method AND per engine — LH breaks a Copeland tie by total margin then lot, BetterVoting by head-to-head. That divergence is data, not an error."
           },
+          "round": {
+            "type": "integer",
+            "description": "The selection round the tie happened in, for the methods that fill one seat per round (Bloc STAR, allocated, sss, rrv). Absent when the method has only one round, so a single-winner result carries no such key. Added in 1.1.0."
+          },
           "advanced": { "type": "array", "items": { "type": "string" } },
           "eliminated": { "type": "array", "items": { "type": "string" } }
         }

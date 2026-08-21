@@ -161,7 +161,19 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   derived from the other (it elected the wrong slate on five block-voting cases); and
   `tiebreaks: []` is a **positive claim** that no rung fired — which is how a
   right-winner-wrong-path result gets caught, and what 567 winner-only answer keys never
-  could. Locked by
+  could. A claim that strong has to be *earned*, and for a year it was not: the builder
+  could see one kind of tie (the finalists ladder `resolve_finalists()` replays for
+  single-winner STAR), so every seat the **lot** bought — a Bloc/PR seat, and a
+  single-winner Automatic Runoff too — emitted `tiebreaks: []`, on **23 cases**, most of
+  them cases whose whole subject is the lot. Fixed 2026-08-21 (schema **1.1.0**, +
+  `tiebreaks[].round`) the only way that respects the never-re-derive rule:
+  `LotNumberTiebreaker` now logs its own calls in `self.events`, and `_lot_ties()` reads
+  that log — the count is not replayed, it is *read off the object that broke the tie*.
+  The invariant to keep is a mirror one, and it is tested over the whole score corpus:
+  **one `rung: "lot"` entry per `[Tiebreaker: Lot Number Priority]` banner the report
+  prints** — no fewer, and no more (the finalists replay must not double-count the banner
+  it shares). Still invisible, and said so in print: the rungs *below* the lot inside a
+  Bloc/PR round, which run in starvote's own counting functions and report nothing back. Locked by
   [`tests/test_result_json.py`](STARVote_LH_tabulation_engine/tests/test_result_json.py)
   (every case validates against the schema and meets its answer key through the JSON path;
   `--json` must stay pure — JSON on stdout, no report, no `_tabulated` mirror). A method
