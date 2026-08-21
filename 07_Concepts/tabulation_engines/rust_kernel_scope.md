@@ -29,7 +29,7 @@ The porting cost is low because the hard part is already done — not the code, 
 | tracked `.yaml` files | 649 |
 | of those, carrying a `ballots:` or `grades:` block | 615 |
 | carrying `expected_winners:` (the machine-checkable answer key) | 567 |
-| ballot-carrying, **no** `expected_winners:` yet | 48 |
+| ballot-carrying, **no** `expected_winners:` at the time of writing — see item 2 below: only 4 were real cases, keyed 2026-08-20 | 48 |
 | `_tabulated.txt` mirrors | 782 |
 | Python in the main engine | 4,257 lines — **1 class, 57 functions** |
 
