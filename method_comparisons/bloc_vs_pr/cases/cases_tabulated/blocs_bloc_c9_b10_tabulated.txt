@@ -25,6 +25,7 @@ ballots: |-
   1,2,2,5,4,5,2,1,2   # Centre voter 2
   0,0,0,2,2,1,5,5,4   # Right voter 1
   0,0,0,1,2,2,5,4,5   # Right voter 2
+expected_winners: [L1, L2, L3]
 
 # file: blocs_bloc_c9_b10.yaml
 

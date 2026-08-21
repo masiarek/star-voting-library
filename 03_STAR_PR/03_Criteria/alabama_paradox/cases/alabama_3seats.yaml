@@ -16,5 +16,6 @@ ballots: |-
   1,0,4,3
   0,5,5,3
   5,5,0,0
+expected_winners: [Aster, Basil, Clover]
 
 # file: alabama_3seats.yaml

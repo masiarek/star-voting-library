@@ -7,7 +7,7 @@ search:
 
 *Generated from [`alabama_3seats.yaml`](../alabama_3seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../01_Learn/README.md) · **3 seats**
+**Method:** [Allocated Score (proportional STAR)](../../../../01_Learn/README.md) · **3 seats** · **Expected winners:** Aster, Basil, Clover
 
 ## Scenario
 

@@ -6,7 +6,7 @@
 >
 > The reasoning is in [Why Python is the right language for a test library](#why-python-is-the-right-language-for-a-test-library) below, and it is short: a teaching-and-test library's dominant costs are authoring speed, readability, and staying inside the Python social-choice ecosystem that supplies its cross-checks. Rust's advantages buy nothing there and its costs land on the thing done most often.
 >
-> **What survives the decision is Track A** — the JSON result contract, the 48 missing answer keys, the alias table, the [written tiebreak ladders](tiebreak_ladders.md) (done 2026-08-20). Those were always worth doing in Python, and they are now the whole recommendation.
+> **What survives the decision is Track A** — the JSON result contract, the 48 missing answer keys (closed 2026-08-20 — see [the scope note's item 2](rust_kernel_scope.md) for how few were real), the alias table, the [written tiebreak ladders](tiebreak_ladders.md) (done 2026-08-20). Those were always worth doing in Python, and they are now the whole recommendation.
 >
 > **What Rust keeps a real claim to is a different project:** software that counts a real, high-stakes election under verifiable encryption. That is not this repo's job, it needs a funded independent audit, and it would have a different owner. The analysis below is kept because it is the argument for why — and so the question does not get re-opened from scratch.
 
@@ -14,7 +14,7 @@
 >
 > **If this page looks like a monster: it is a register of opportunities, not a backlog with a due date.** Nothing here is blocking anything. Most of the "requirements gathering" it describes is **harvesting, not authoring** — the requirements are already encoded in 615 case files and six engines' worth of recorded disagreements, and the job is transcription, one method at a time.
 >
-> **The smallest real first step takes an evening and needs no decisions:** run the 48 ballot-carrying cases that have no `expected_winners:` line, check the results, and write the answers in. No schema, no spec, no document. That is the largest single chunk of rung 1, it is mechanical, it finishes, and it takes the corpus to 100% machine-checkable. Everything else on this page can wait indefinitely.
+> **The smallest real first step takes an evening and needs no decisions:** run the 48 ballot-carrying cases that have no `expected_winners:` line, check the results, and write the answers in. No schema, no spec, no document. That is the largest single chunk of rung 1, it is mechanical, it finishes, and it takes the corpus to 100% machine-checkable. Everything else on this page can wait indefinitely. *(Done 2026-08-20, and it took minutes rather than an evening — the 48 dissolved on inspection into negative fixtures, demo inputs, two no-winner-by-design cases the key format cannot express, and just 4 real cases, now keyed; the accounting is in [the scope note's item 2](rust_kernel_scope.md).)*
 
 **Status: analysis retained; decision recorded above.** This is a working document, not a plan of record. Its companion [A Rust tabulation kernel — scope](rust_kernel_scope.md) argues *what* such a kernel should and should not contain; this page works the step before that, which is deciding what the thing is **for**, and then deriving requirements from the answer instead of inventing them.
 

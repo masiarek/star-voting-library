@@ -25,6 +25,8 @@ ballots: |-
   1,2,2,5,4,5,2,1,2   # Centre voter 2
   0,0,0,2,2,1,5,5,4   # Right voter 1
   0,0,0,1,2,2,5,4,5   # Right voter 2
+# Seat 1's scoring tie (L1 = L2) resolves by the column-order lot fallback — deterministic.
+expected_winners: [C1, L1, L2]
 
 # file: blocs_pr_c9_b10.yaml
 

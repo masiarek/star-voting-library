@@ -7,7 +7,7 @@ search:
 
 *Generated from [`blocs_pr_c9_b10.yaml`](../blocs_pr_c9_b10.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats**
+**Method:** [Allocated Score (proportional STAR)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** C1, L1, L2
 
 ## Scenario
 

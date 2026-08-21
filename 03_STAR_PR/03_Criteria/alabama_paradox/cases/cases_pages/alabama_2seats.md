@@ -7,7 +7,7 @@ search:
 
 *Generated from [`alabama_2seats.yaml`](../alabama_2seats.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Allocated Score (proportional STAR)](../../../../01_Learn/README.md) · **2 seats**
+**Method:** [Allocated Score (proportional STAR)](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Basil, Dahlia
 
 ## Scenario
 
