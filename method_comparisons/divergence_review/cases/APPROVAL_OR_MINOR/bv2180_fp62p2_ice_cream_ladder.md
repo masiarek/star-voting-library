@@ -105,6 +105,7 @@ Scoring Round: First tiebreaker
    Vanilla        -- 0 -- Tied for second place
    Equal Support  -- 0
  There's still a three-way tie for second.
+ Every head-to-head among the tied candidates is a draw, so none of them won a matchup.
 
 Scoring Round: Second tiebreaker
  The candidate with the most votes of score 5 advances.
