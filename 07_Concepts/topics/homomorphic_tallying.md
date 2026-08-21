@@ -5,7 +5,7 @@ tags:
 
 # Counting under encryption — can a STAR election be tallied without opening the ballots?
 
-*Yes — and the reason is worth understanding, because it is a genuine structural advantage of score methods over elimination methods. But STAR has one wrinkle that nobody mentions: **the scoring round is the easy case; the automatic runoff is not.** This page explains why, and how the wrinkle is resolved.*
+*Yes — and the reason is worth understanding, because it is a genuine structural advantage of score methods over elimination methods. But STAR has one wrinkle that nobody mentions: **the scoring round is the easy case; the automatic runoff is not.** This page explains why, and the two routes that resolve it.*
 
 **Level: 301 → 401 · deep dive** Companion: [summability](summability/README.md) (the property this rests on) · [voter verifiability and receipt-freeness](../GLOSSARY.md) · [STAR's honest limits](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md).
 
@@ -58,6 +58,34 @@ Trivial sizes for an organizational election.
 
 **The bonus:** those indicators *are* the full [pairwise preference matrix](pairwise_counting.md). So a verifiable STAR election gets the **Condorcet check** — and [Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md) itself — for free, on the same encrypted data.
 
+## The other route — hide the tally instead of decrypting it
+
+The construction above has a cost this page owed you earlier: **it decrypts more than the winner.** Score totals *and* the whole pairwise matrix become public. For a public election that is not a leak at all — voters expect the numbers, and the matrix is the Condorcet check people keep asking for. For a seven-person board or a jury, it is a great deal of information about a very small number of people.
+
+There is a published line of work that attacks the comparison problem head-on rather than routing around it: **tally-hiding** e-voting, where the count runs under [secure multi-party computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation) and only the *result* is ever revealed.
+
+- **[Ordinos](https://eprint.iacr.org/2020/405)** (Küsters, Liedtke, Müller, Rausch, Vogt — IEEE EuroS&P 2020) publishes only the winner or the ranking, never the per-candidate counts, using *an MPC protocol for greater-than tests*. That is exactly the operation additive encryption cannot perform, and exactly the operation STAR's runoff needs.
+- **[A toolbox for verifiable tally-hiding e-voting systems](https://eprint.iacr.org/2021/491)** (Cortier, Gaudry, Yang — ESORICS 2022) builds MPC-plus-verifiable-mixnet schemes for D'Hondt, Condorcet, STV and Majority Judgment. The Condorcet instantiation is the nearest published relative of what a STAR runoff needs.
+- **[Kryvos](https://eprint.iacr.org/2022/1132)** (Huber, Küsters, Krips, Liedtke, Müller, Rausch, Reisert, Vogt — ACM CCS 2022) is the efficiency-minded relaxation, and the distinction is worth keeping straight: *publicly* tally-hiding means the authorities **do** learn the full tally internally and publish only the result. A weaker guarantee than Ordinos's, and cheaper to run.
+
+The two routes trade off like this:
+
+| | Carry the pairwise matrix | Tally-hiding MPC |
+|---|---|---|
+| **The runoff comparison costs** | **nothing** — the voter's own device does it in plaintext | an MPC greater-than test, under encryption |
+| **What gets published** | score totals **and** the whole pairwise matrix | the winner (or the ranking), and nothing else |
+| **Crypto needed** | partial HE + zero-knowledge proofs | MPC, sometimes mixnets as well |
+| **Built for STAR?** | no — the sketch above | no — but the machinery is published and instantiated for other methods |
+| **Suits** | public elections, where the totals are wanted anyway | small high-privacy electorates — boards, juries, committees |
+
+Neither route has been worked out for STAR. The point of naming them together is that **"the runoff is a comparison" is a known problem with known answers** — not an exotic obstacle peculiar to this method.
+
+## Careful — "STAR-Vote" is a different thing entirely
+
+[STAR-Vote](https://arxiv.org/abs/1211.1904) (Benaloh, Byrne, Kortum, McBurnett, Pereira, Stark, Wallach, 2012) stands for **Secure, Transparent, Auditable, and Reliable**. It is a *polling-place architecture* — a DRE-style interface, a paper trail, end-to-end verifiability, ballot-level risk-limiting audits — and it has nothing whatever to do with Score Then Automatic Runoff. It does use homomorphic tallying, which makes the collision maximally confusing.
+
+Two practical consequences. A literature search for "homomorphic STAR voting" fills up with STAR-Vote hits, so **the apparent absence of prior work on the method is partly an artefact of the name** — search *score voting*, *range voting* and *tally-hiding* instead before concluding anything about a gap. And when writing to cryptographers, spell out **Score Then Automatic Runoff** on first mention rather than trusting the acronym to land.
+
 ## Why this is an argument for STAR
 
 The asymmetry with elimination methods is structural, and it is the [summability](summability/README.md) property showing up again in cryptography:
@@ -77,7 +105,7 @@ Read these before repeating any of the above as a selling point:
 - **It is not an argument for internet voting.** Both the [US Vote Foundation's E2E-V study](https://www.usvotefoundation.org/E2E-VIV) (2015) and the National Academies' *Securing the Vote* (2018) concluded internet voting is not ready for public elections **even with** end-to-end verifiability. The technology suits in-person paper systems and lower-stakes organizational elections.
 - **Trustees are a trust assumption**, not its absence: *k* of *n* colluding can decrypt.
 - **Verifiability fights receipt-freeness.** A voter must be able to check their ballot counted *without* being able to **prove to anyone else** what it said — or you have rebuilt the vote-buying market the [secret ballot](../GLOSSARY.md) abolished. Systems square this by proving *inclusion* without revealing *content*.
-- **Nobody has built this for STAR.** ElectionGuard, [Helios](https://heliosvoting.org) and [Belenios](https://www.belenios.org) all handle additive tallies; **none handles a STAR runoff.** The pairwise-matrix construction above is a **design direction**, not a deployed system, a published protocol, or a peer-reviewed result. Treat it as a sketch for cryptographers to review and pull apart — the underlying pieces (disjunctive range proofs, threshold ElGamal, homomorphic counting) are all standard, but "assembled from standard parts" is not the same as "proven correct."
+- **Nobody has built this for STAR.** ElectionGuard, [Helios](https://heliosvoting.org) and [Belenios](https://www.belenios.org) all handle additive tallies; **none handles a STAR runoff.** The pairwise-matrix construction above is a **design direction**, not a deployed system, a published protocol, or a peer-reviewed result. Treat it as a sketch for cryptographers to review and pull apart — the underlying pieces (disjunctive range proofs, threshold ElGamal, homomorphic counting) are all standard, but "assembled from standard parts" is not the same as "proven correct." Note carefully what the tally-hiding route above does *not* change: the machinery for counting a comparison under encryption is peer-reviewed and instantiated — just never for this method. **The gap is STAR-shaped, not machinery-shaped.**
 
 ## Related
 
