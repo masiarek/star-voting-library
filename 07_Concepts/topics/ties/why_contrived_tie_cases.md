@@ -11,12 +11,12 @@ Part of the [Ties & Tie-Breaking](README.md) hub · companion to [STAR Tie-Break
 A deliberately-degenerate election isn't pedantry — it's the same move as a unit test that feeds a function `0`, `-1`, and `MAX_INT`. Five concrete payoffs:
 
 1. **It isolates one behavior.** A real election changes a dozen things at once. A two-ballot tie changes *nothing but the tie*, so whatever the engine does next is unambiguously the tie-break — nothing else can be causing it.
-2. **It makes a real bug reproducible.** The contrived `jfk7pd` ballots are what turned "STAR sometimes shows something weird on ties" into a one-click repro that surfaced actual defects — the `NaN` display, the "no ballots have been cast" message, the silent random tie-break. The ballots are fake; the bugs they flushed out are real.
+2. **It makes a real bug reproducible.** The contrived [`jfk7pd`](https://bettervoting.com/jfk7pd/results) ballots — two of them, still live on BetterVoting — are what turned "STAR sometimes shows something weird on ties" into a one-click repro that surfaced actual defects: the `NaN` display, the "no ballots have been cast" message, the silent random tie-break. The ballots are fake; the bugs they flushed out are real.
 3. **It pins down the spec.** "What *should* happen when every rung ties?" is a real design question. A minimal case forces a definite, documented answer (here: the pre-published lot decides) instead of leaving it to whatever the code happens to do.
 4. **It teaches the concept.** The clearest way to explain the "dead rung," or why each round breaks its tie with the *other* round's yardstick, is the smallest election that shows it. Big elections bury the lesson in noise.
 5. **It becomes a regression test.** Once captured with an expected winner, the case guards the engine forever: if someone later reorders the tie-break cascade, these tiny files fail immediately.
 
-**What each of your two examples isolates:**
+**What each of the two examples above isolates:**
 
 - **`5,5,5` then `4,4,4`** — every voter rates *all* candidates equally, so no ballot expresses any preference at all. Totals tie, every pairwise is "Equal Support," five-star ties: a **fully flat** dead heat. It probes *"what happens when the ballots say literally nothing to separate anyone?"* (See [Flat scores, ties & tie-breaking](../../../01_STAR/09_Parked/Flat_scores_ties/README.md).)
 - **`4,0,0 / 0,4,0 / 0,0,4`** — a perfect rotation: three equal, mutually symmetric camps, and (capped at 4) **no 5s**, so the five-star rung is a *dead rung*. It probes *"a genuine k-way symmetric tie with no cardinal signal to break it"* — the 3-candidate analog of `jfk7pd`. (See [the three-way dead-rung tie](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md).)
