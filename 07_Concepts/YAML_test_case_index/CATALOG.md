@@ -521,7 +521,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`v9rhhr`](https://bettervoting.com/v9rhhr/results) | BV2247 — Replant the Park — Bloc STAR with 7 trees,  | 1 | single-race | 44 | STAR | BV |
 | [`vb3xv2`](https://bettervoting.com/vb3xv2/results) | BV830 — No Condorcet winner (top-two tie) — STAR bre | 1 | single-race | 3 | STAR | BV |
 | [`vqyqkr`](https://bettervoting.com/vqyqkr/results) | Tennessee capital — Ranked Robin (RR/Condorcet = Nas | 1 | single-race | 100 | RankedRobin | BV |
-| [`vx89hj`](https://bettervoting.com/vx89hj/results) | Three-way dead-rung tie — published order A,B,C elec | 1 | single-race | 3 | STAR | BV |
+| [`vx89hj`](https://bettervoting.com/vx89hj/results) | BV2285 — Three candidates, three possible winners —  | 1 | single-race | 3 | STAR | BV |
 | [`w3vvff`](https://bettervoting.com/w3vvff/results) | BV2105-r2 — Favorite ice cream (Bloc STAR): the part | 1 | single-race | 4 | STAR | BV |
 | [`w9f4vd`](https://bettervoting.com/w9f4vd/results) | BV2236 — Bullet Storm — a bullet-voting electorate a | 1 | single-race | 33 | STAR | BV |
 | [`xgkw3w`](https://bettervoting.com/xgkw3w/results) | Runoff_05 - Reversal with Equal Support | 1 | single-race | 5 | STAR | BV |

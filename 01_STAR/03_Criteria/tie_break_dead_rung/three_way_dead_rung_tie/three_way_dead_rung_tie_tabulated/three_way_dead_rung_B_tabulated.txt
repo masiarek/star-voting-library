@@ -10,8 +10,15 @@ scenario_description: |-
   three_way_dead_rung_A.yaml (A 4/0/0, B 0/4/0, C 0/0/4 — totals 4-4-4, all
   pairwise 1-1, no 5s so the five-star rung is dead). Only the lot order changes:
   here it is [B, C, A], so B wins. Same ballots as _A (which elects A) and _C
-  (which elects C) — the winner is entirely a function of the lot order, which
-  under a random tie-break is a 1-in-3 draw. See the lesson md.
+  (which elects C) — the winner is entirely a function of the lot order.
+
+  This file is a COUNTERFACTUAL and carries no BV election id on purpose. The
+  ballots are live on BetterVoting as BV2285 (vx89hj), but BV drew the order
+  A, B, C on that one run and elected A; a public election can only ever show
+  the draw it got. This file is what the identical ballots do under a different
+  pre-published order — the run BV cannot show you. Under a random draw the
+  three orders are equally likely, so an auditor re-counting has a 2-in-3 chance
+  of disagreeing with the certified winner. See the lesson md.
 
 num_winners: 1
 voting_method: STAR
@@ -36,8 +43,15 @@ TABULATION RESULTS
   three_way_dead_rung_A.yaml (A 4/0/0, B 0/4/0, C 0/0/4 — totals 4-4-4, all
   pairwise 1-1, no 5s so the five-star rung is dead). Only the lot order changes:
   here it is [B, C, A], so B wins. Same ballots as _A (which elects A) and _C
-  (which elects C) — the winner is entirely a function of the lot order, which
-  under a random tie-break is a 1-in-3 draw. See the lesson md.
+  (which elects C) — the winner is entirely a function of the lot order.
+
+  This file is a COUNTERFACTUAL and carries no BV election id on purpose. The
+  ballots are live on BetterVoting as BV2285 (vx89hj), but BV drew the order
+  A, B, C on that one run and elected A; a public election can only ever show
+  the draw it got. This file is what the identical ballots do under a different
+  pre-published order — the run BV cannot show you. Under a random draw the
+  three orders are equally likely, so an auditor re-counting has a 2-in-3 chance
+  of disagreeing with the certified winner. See the lesson md.
 
 --- Runoff (Preference) Matrix ---
 Head-to-head / pairwise comparison

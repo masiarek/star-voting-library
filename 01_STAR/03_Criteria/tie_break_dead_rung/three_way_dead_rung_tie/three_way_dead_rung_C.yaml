@@ -6,8 +6,14 @@ scenario_description: |-
   pairwise 1-1, no 5s so the five-star rung is dead). Only the lot order changes:
   here it is [C, A, B], so C wins. Same ballots as _A (elects A) and _B (elects
   B): three candidates, three possible winners, chosen entirely by the lot order.
-  A random tie-break would pick one at 1-in-3; a published lot fixes it. See the
-  lesson md and BV #1063.
+
+  Like _B, this file is a COUNTERFACTUAL and carries no BV election id on
+  purpose. The ballots are live on BetterVoting as BV2285 (vx89hj), where the
+  seeded shuffle drew A, B, C and elected A. C never got its turn — not because
+  the voters ruled it out (they scored it exactly what they scored the other
+  two) but because the draw put it third. That is the whole argument for a
+  deterministic, pre-published lot: it fixes the order in advance instead of
+  discovering it at count time. See the lesson md and BV #1063.
 
 num_winners: 1
 voting_method: STAR

@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** A
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vx89hj) · **[results ↗](https://bettervoting.com/vx89hj/results)** (election `vx89hj` · test `BV2285`).
+
 **Official tie-break (lot) order:** A > B > C — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario
@@ -20,8 +22,19 @@ five-star rung is a DEAD RUNG (0-0-0). Nothing on the ballots separates the
 three — the winner is decided ONLY by the lot order. This file pins the
 published order [A, B, C], so A wins. Its siblings (_B, _C) use rotated orders
 and elect B and C from the identical ballots: three candidates, three possible
-winners. A random tie-break (BetterVoting's tieBreakType) would pick one of the
-three; a deterministic published lot fixes it. See the lesson md and BV #1063.
+winners.
+
+These exact ballots are now live on BetterVoting as BV2285 (vx89hj). BV's
+tie-break is a SEEDED SHUFFLE labelled "random", and on this election it drew
+the order A, B, C — the same order this file publishes — so BV also elects A
+and this file reproduces the live result exactly. Do not read that agreement as
+the ballots choosing A: it is one draw out of three, recorded rather than
+derived. Two things the live election shows that the 2-candidate jfk7pd cannot:
+the lot fires TWICE (once to pick which two of the three advance to the runoff,
+once to settle the runoff), and BV logs
+"pairwise_too_many_candidates" — it skips the head-to-head rung entirely once
+3+ candidates are tied, where this engine runs it and reads 0-0-0. See the
+lesson md and BV #1063.
 
 ## Ballots
 
@@ -184,6 +197,7 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 01_STAR/03_Crite
 - [Methods disagree on this election](../../../../../method_comparisons/divergence_review/cases/CYCLE_OR_THREE_WAY/three_way_dead_rung_A.md) — its entry in the divergence review ledger
 - [Ties & tie-breaking (topic hub)](../../../../../07_Concepts/topics/ties/README.md)
 - [The tie-breaking ladder (full chain)](../../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Runoff reversal (worked set)](../../../../02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
 
 More cases in this set: [three_way_dead_rung_B](three_way_dead_rung_B.md) · [three_way_dead_rung_C](three_way_dead_rung_C.md)

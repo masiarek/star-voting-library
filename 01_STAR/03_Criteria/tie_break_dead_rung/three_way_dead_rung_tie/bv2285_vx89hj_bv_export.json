@@ -1,0 +1,378 @@
+{
+  "Election": {
+    "election_id": "vx89hj",
+    "title": "BV2285 — Three candidates, three possible winners — a STAR tie no rung can break",
+    "description": "Three voters, three candidates, and a perfect rotation. The first voter scores A a 4 and leaves B and C on 0; the second does the same for B; the third does the same for C. That is the whole election.\n\nIt deadlocks at every step a STAR count has. All three candidates finish the scoring round on 4 points. Every head-to-head is 1-1. And because the highest score anyone gave is a 4 rather than a 5, the five-star tiebreaker comes back 0-0-0 - a \"dead rung\": the step that exists to separate tied candidates has nothing to count, because it counts fives and never steps down to fours.\n\nNothing on these ballots distinguishes A from B from C, and that is not a defect in STAR. It is what these voters actually said. A perfectly symmetric electorate defeats every voting method there is; no count can manufacture a preference the ballots do not contain.\n\nWhat this election is for is the step AFTER the deadlock. Please ignore who won. The winner here is a product of the tiebreak order, not of the votes, and the same three ballots counted under a different order elect somebody else. What is worth reading is that the result RECORDS the order it used (the perm / tieBreakOrder fields of the exported result), so this particular outcome can be reproduced and audited after the fact.\n\nWatch for the tiebreak firing TWICE. With only two candidates - see bettervoting.com/jfk7pd, the same phenomenon one candidate smaller - both candidates are finalists automatically, so a tie can only be settled once, in the runoff. With three, the count must first decide WHICH TWO advance to the automatic runoff, and then settle the runoff between them. Two separate places for chance to enter one small election.\n\nThe linked lesson runs these identical ballots through an independent STAR engine three times, under three pre-published lot orders - A,B,C then B,C,A then C,A,B - and elects A, then B, then C. Three candidates, three winners, one set of votes. That is the case for drawing and publishing the lot order BEFORE counting instead of drawing it at count time, which is issue #1063 on the BetterVoting tracker.\n\n[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.html)",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2285 — Three candidates, three possible winners — a STAR tie no rung can break",
+        "race_id": "c7cc69ab-0b6d-4f7e-9fd6-5dd70288bb14",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+            "candidate_name": "A"
+          },
+          {
+            "candidate_id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+            "candidate_name": "B"
+          },
+          {
+            "candidate_id": "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e",
+            "candidate_name": "C"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-08-21T23:13:59.475Z",
+    "update_date": "1787354039475",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-b7p8kr8j",
+      "election_id": "vx89hj",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "c7cc69ab-0b6d-4f7e-9fd6-5dd70288bb14",
+          "scores": [
+            {
+              "candidate_id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+              "score": 0
+            },
+            {
+              "candidate_id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+              "score": 4
+            },
+            {
+              "candidate_id": "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-kwrthdyq",
+      "election_id": "vx89hj",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "c7cc69ab-0b6d-4f7e-9fd6-5dd70288bb14",
+          "scores": [
+            {
+              "candidate_id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+              "score": 4
+            },
+            {
+              "candidate_id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+              "score": 0
+            },
+            {
+              "candidate_id": "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-v7byqqph",
+      "election_id": "vx89hj",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "c7cc69ab-0b6d-4f7e-9fd6-5dd70288bb14",
+          "scores": [
+            {
+              "candidate_id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+              "score": 0
+            },
+            {
+              "candidate_id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+              "score": 0
+            },
+            {
+              "candidate_id": "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+          "name": "A",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 0,
+            "6551ab4f-86e7-468a-aaeb-4aa48d670685": 1,
+            "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 1
+          },
+          "winsAgainst": {
+            "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+            "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+            "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+          "name": "B",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 1,
+            "6551ab4f-86e7-468a-aaeb-4aa48d670685": 0,
+            "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 1
+          },
+          "winsAgainst": {
+            "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+            "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+            "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e",
+          "name": "C",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 1,
+            "6551ab4f-86e7-468a-aaeb-4aa48d670685": 1,
+            "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 0
+          },
+          "winsAgainst": {
+            "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+            "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+            "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+          },
+          "score": 4,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+              "name": "A",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 0,
+                "6551ab4f-86e7-468a-aaeb-4aa48d670685": 1,
+                "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 1
+              },
+              "winsAgainst": {
+                "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+                "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+                "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+              },
+              "score": 4,
+              "fiveStarCount": 0
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+              "name": "B",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 1,
+                "6551ab4f-86e7-468a-aaeb-4aa48d670685": 0,
+                "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 1
+              },
+              "winsAgainst": {
+                "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+                "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+                "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+              },
+              "score": 4,
+              "fiveStarCount": 0
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "random",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.score_tied",
+              "names": [
+                "A",
+                "B",
+                "C"
+              ],
+              "score": 4
+            },
+            {
+              "key": "tabulation_logs.star.pairwise_too_many_candidates"
+            },
+            {
+              "key": "tabulation_logs.star.five_star_tied",
+              "names": [
+                "A",
+                "B",
+                "C"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.random_first",
+              "name": "A",
+              "tiebreak_candidate_names": "A, B, C"
+            },
+            {
+              "key": "tabulation_logs.star.random_second",
+              "name": "B",
+              "tiebreak_candidate_names": "A, B, C"
+            },
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_tiebreak",
+              "names": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tied",
+              "names": [
+                "A",
+                "B"
+              ],
+              "votes": 1,
+              "equal_votes": 1
+            },
+            {
+              "key": "tabulation_logs.star.runoff_score_tie",
+              "names": [
+                "A",
+                "B"
+              ],
+              "stars": 4
+            },
+            {
+              "key": "tabulation_logs.star.runoff_five_star_tie",
+              "names": [
+                "A",
+                "B"
+              ],
+              "votes": 0
+            },
+            {
+              "key": "tabulation_logs.star.runoff_random",
+              "winner": "A",
+              "runner_up": "B",
+              "tiebreak_candidate_names": "A, B, C"
+            },
+            {
+              "key": "tabulation_logs.star.runoff_tiebreak",
+              "winner": "A",
+              "runner_up": "B"
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+            "name": "A",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 0,
+              "6551ab4f-86e7-468a-aaeb-4aa48d670685": 1,
+              "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 1
+            },
+            "winsAgainst": {
+              "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+              "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+              "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+            "name": "B",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 1,
+              "6551ab4f-86e7-468a-aaeb-4aa48d670685": 0,
+              "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 1
+            },
+            "winsAgainst": {
+              "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+              "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+              "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e",
+            "name": "C",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": 1,
+              "6551ab4f-86e7-468a-aaeb-4aa48d670685": 1,
+              "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": 0
+            },
+            "winsAgainst": {
+              "cb12dec5-acdc-41c1-b776-a939b3ccd6c1": false,
+              "6551ab4f-86e7-468a-aaeb-4aa48d670685": false,
+              "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e": false
+            },
+            "score": 4,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 3
+      },
+      "tieBreakType": "random",
+      "perm": [
+        "cb12dec5-acdc-41c1-b776-a939b3ccd6c1",
+        "6551ab4f-86e7-468a-aaeb-4aa48d670685",
+        "3cd3f6e8-3a94-4254-8641-ae47e69e0e7e"
+      ]
+    }
+  ]
+}

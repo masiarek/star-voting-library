@@ -6175,7 +6175,110 @@ WEAK_MANDATE_SPEC = {
     ),
 }
 
-ELECTIONS: list = [ALL_EQUAL_BALLOT_MINIMAL_SPEC]
+
+
+# --------------------------------------------------------------------------
+# BV2285 — the three-way dead-rung tie. Backs
+# 01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/ (the trio
+# _A / _B / _C, identical ballots, three different published lot orders, three
+# different winners). The 3-candidate analog of jfk7pd, which is the same
+# phenomenon at 2 candidates and is already on BV.
+#
+# This is a case whose WINNER turns on the tiebreak, so per the bettervoting
+# skill it is minted only because the RECORDING MECHANISM is the subject: the
+# description says in as many words to ignore who won and read the recorded
+# order instead. Two things make it worth having on BV rather than LH-only:
+# with 3 candidates BV's tiebreak has to fire TWICE (once to pick the two
+# finalists, once to settle the runoff), which the 2-candidate jfk7pd cannot
+# show; and it is a live, public, clickable instance of the argument for
+# pre-published lot numbers (bettervoting#1063).
+#
+# Candidates are deliberately bare A/B/C: the lesson IS the perfect symmetry,
+# names would be noise, and the repo case files already use these names, so the
+# BV election is a byte-faithful mirror of them (house precedent: BV2273 A/B,
+# BV2278 and BV2281 A-E, BV2283 A/B).
+# enable_write_in MUST stay False — a fourth candidate slot would break the
+# three-way rotation the whole election is built on.
+# --------------------------------------------------------------------------
+THREE_WAY_DEAD_RUNG_SPEC = {
+    "test_id": "BV2285",
+    "title": "Three candidates, three possible winners — a STAR tie no rung can break",
+    "enable_write_in": False,
+    "description": (
+        "Three voters, three candidates, and a perfect rotation. The first voter "
+        "scores A a 4 and leaves B and C on 0; the second does the same for B; the "
+        "third does the same for C. That is the whole election.\n\n"
+        "It deadlocks at every step a STAR count has. All three candidates finish "
+        "the scoring round on 4 points. Every head-to-head is 1-1. And because the "
+        "highest score anyone gave is a 4 rather than a 5, the five-star tiebreaker "
+        "comes back 0-0-0 - a \"dead rung\": the step that exists to separate tied "
+        "candidates has nothing to count, because it counts fives and never steps "
+        "down to fours.\n\n"
+        "Nothing on these ballots distinguishes A from B from C, and that is not a "
+        "defect in STAR. It is what these voters actually said. A perfectly "
+        "symmetric electorate defeats every voting method there is; no count can "
+        "manufacture a preference the ballots do not contain.\n\n"
+        "What this election is for is the step AFTER the deadlock. Please ignore "
+        "who won. The winner here is a product of the tiebreak order, not of the "
+        "votes, and the same three ballots counted under a different order elect "
+        "somebody else. What is worth reading is that the result RECORDS the order "
+        "it used (the perm / tieBreakOrder fields of the exported result), so this "
+        "particular outcome can be reproduced and audited after the fact.\n\n"
+        "Watch for the tiebreak firing TWICE. With only two candidates - see "
+        "bettervoting.com/jfk7pd, the same phenomenon one candidate smaller - both "
+        "candidates are finalists automatically, so a tie can only be settled once, "
+        "in the runoff. With three, the count must first decide WHICH TWO advance "
+        "to the automatic runoff, and then settle the runoff between them. Two "
+        "separate places for chance to enter one small election.\n\n"
+        "The linked lesson runs these identical ballots through an independent STAR "
+        "engine three times, under three pre-published lot orders - A,B,C then "
+        "B,C,A then C,A,B - and elects A, then B, then C. Three candidates, three "
+        "winners, one set of votes. That is the case for drawing and publishing the "
+        "lot order BEFORE counting instead of drawing it at count time, which is "
+        "issue #1063 on the BetterVoting tracker.\n\n"
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/"
+        "01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/"
+        "three_way_dead_rung_tie.html)"
+    ),
+    "method": "STAR",
+    "num_winners": 1,
+    "candidates": ["A", "B", "C"],
+    # A perfect rotation, capped at 4 so the five-star rung is DEAD (0-0-0).
+    # Do not "improve" a 4 into a 5 — that is the entire experiment.
+    "ballots": [
+        [4, 0, 0],              # voter 1 loves A
+        [0, 4, 0],              # voter 2 loves B
+        [0, 0, 4],              # voter 3 loves C
+    ],
+    "expected": (
+        "A three-way tie at every deterministic rung, resolved only by BV's tiebreak. "
+        "Scoring round A 4 / B 4 / C 4; every pairwise 1-1; five-star 0-0-0 (dead rung). "
+        "tieBreakType should read 'random' (BV's seeded shuffle), and the tiebreak must "
+        "fire twice: once to advance two of the three to the automatic runoff, once to "
+        "settle that runoff. WHICH candidate wins is not a prediction and is not the "
+        "point - it is whichever the drawn order puts first. LH reproduces any of the "
+        "three: pin lot_numbers to BV's perm and it elects BV's winner. "
+        "Test ID BV2285; 3-candidate analog of jfk7pd; evidence for bettervoting#1063."
+    ),
+}
+
+
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [THREE_WAY_DEAD_RUNG_SPEC]   # BV2285 -> vx89hj
+#   Created as designed: 3 candidates, 3 rotation ballots, one STAR race. BV tied all
+#   three at 4 in the scoring round and fell through to its tiebreak, which drew the
+#   order A, B, C — the same order three_way_dead_rung_A.yaml publishes, so LH's _A file
+#   reproduces the live result exactly (and _B / _C stay counterfactual, with no bv fields).
+#   Two things worth having on a public election rather than only in LH: the lot fires
+#   TWICE (random_first/random_second choose the finalist pair, then runoff_random settles
+#   the runoff) — the 2-candidate jfk7pd structurally cannot show that; and BV logs
+#   `pairwise_too_many_candidates`, i.e. it SKIPS the head-to-head rung once 3+ candidates
+#   are tied, where LH runs it and reads 0/0/0. They agree here only because perfect
+#   symmetry ties the pairwise rung too. Shuffle independently reproduced by
+#   bv_replay_tiebreak.py (seed 2132743651 -> ['A','B','C'], MATCH).
+#   Backs 01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/.
+# Previously: [ALL_EQUAL_BALLOT_MINIMAL_SPEC]   # BV2283 -> hb4qvv (already minted;
+#   the list was left pointing at it rather than returned to resting state).
 # Previously: [OSSIPOFF_303_SPEC, BRAMS_1982_SPEC]   # BV2281 -> qycpbx, BV2282 -> hf3ckp
 #   Created as designed, two races each on the same ballots (303 and 21 ballots).
 #   BV agrees with LH on all four races: IRV -> D and RankedRobin -> C on the 303,
