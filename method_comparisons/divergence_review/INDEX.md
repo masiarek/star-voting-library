@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **247** single-winner STAR elections (skipped 230 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **147** (60%) diverge from STAR under at least one method; **100** agree across the board.
+- Scanned **248** single-winner STAR elections (skipped 235 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **148** (60%) diverge from STAR under at least one method; **100** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 31 |
 | STAR_OUTLIER_RR_WITH_IRV | 10 |
 | IRV_DIFFERS_ARTIFACT | 15 |
-| CYCLE_OR_THREE_WAY | 37 |
+| CYCLE_OR_THREE_WAY | 38 |
 | APPROVAL_OR_MINOR | 54 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (144 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (145 cases; identical library copies merged).
 
-**82 of these 144 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**82 of these 145 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -177,7 +177,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Berry** · IRV=Almond · RR=Berry · Approval=Berry · Score=Berry · Condorcet=Berry  
     _flags: 36 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Berry, strict=Almond)_
 
-### CYCLE_OR_THREE_WAY — 35
+### CYCLE_OR_THREE_WAY — 36
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -257,6 +257,8 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Ana** · IRV=Ana · RR=Beth · Approval=Ana · Score=Ana · Condorcet=Beth
 - **[star_elects_a_covered_candidate_c4_b5](cases/CYCLE_OR_THREE_WAY/star_elects_a_covered_candidate_c4_b5.md)** — `method_comparisons/tournament_solutions/cases/star_elects_a_covered_candidate_c4_b5.yaml` (4c/5b)  
     STAR=**Denver** · IRV=Chicago · RR=Chicago · Approval=Austin · Score=Austin · Condorcet=none
+- **[zero_support_star](cases/CYCLE_OR_THREE_WAY/zero_support_star.md)** — `method_comparisons/zero_support_election/cases/zero_support_star.yaml` (5c/3b)  
+    STAR=**Ada** · IRV=Dev · RR=Ada · Approval=Ada · Score=Ada · Condorcet=none
 
 ### APPROVAL_OR_MINOR — 54
 

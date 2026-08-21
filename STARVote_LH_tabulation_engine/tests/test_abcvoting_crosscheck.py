@@ -14,6 +14,9 @@ Cross-checks the LH engine's Approval tabulation against Martin Lackner's
    seqpav / seqphragmen tie comes back as several committees instead of being
    broken silently by column order (abcvoting's default for its sequential
    rules); a rule with no irresolute form is flagged, not faked.
+4. Pins one place the two libraries answer different questions: an election in
+   which every ballot approves nobody is a lot-decided tie to the LH engine and
+   an invalid profile to abcvoting.
 """
 import pathlib
 import sys
@@ -62,13 +65,58 @@ def test_discovery_not_vacuous():
     assert len(CASES) >= 2, f"only {len(CASES)} approval cases discovered: {IDS}"
 
 
+def _approves_nobody(path):
+    """True when not one ballot on the file marks an approval.
+
+    `abcvoting` builds its `Profile` from approval SETS, so a ballot approving
+    nobody contributes no voter at all — an election where every ballot is
+    empty arrives as a profile of length zero.
+    """
+    d = yaml.safe_load(path.read_text())
+    rows = [ln.split("#")[0].strip()
+            for ln in str(d.get("ballots", "")).splitlines()[1:]]
+    return all(set(r.replace(",", "").replace(" ", "")) <= {"0", ""}
+               for r in rows if r)
+
+
 @pytest.mark.parametrize("path,expected", CASES, ids=IDS)
 def test_av_matches_lh_expected_winners(path, expected):
     """abcvoting `av` == the LH-verified expected winners (ties: expected
-    committee must be among the tied committees)."""
-    committees = tabulate_abc(path, rules=("av",))["av"]
+    committee must be among the tied committees).
+
+    One case is answered by a refusal instead of a committee — see
+    `test_abcvoting_refuses_an_election_with_no_approvals` below. That is a
+    real difference between the two libraries, so it is asserted here rather
+    than skipped past.
+    """
+    try:
+        committees = tabulate_abc(path, rules=("av",))["av"]
+    except ValueError as exc:
+        assert "no voters" in str(exc) and _approves_nobody(path), (
+            f"{path.name}: abcvoting refused a profile that does have "
+            f"approvals — {exc}")
+        return
     assert expected in [sorted(c) for c in committees], (
         f"{path.name}: abcvoting av returned {committees}, expected {expected}")
+
+
+def test_abcvoting_refuses_an_election_with_no_approvals():
+    """The zero-support election is not a tie to `abcvoting` — it is not an
+    election.
+
+    Three ballots are cast and every one of them approves nobody. The LH engine
+    counts it (0 approvals each, candidate priority order elects Ada, and the
+    report says so); `abcvoting` builds its profile from approval sets, sees
+    zero voters, and raises. Neither is wrong — they answer different questions
+    — but a cross-check that quietly skipped this would hide the sharpest
+    disagreement in the corpus. The teaching page:
+    method_comparisons/zero_support_election/README.md
+    """
+    path = (REPO_ROOT / "method_comparisons" / "zero_support_election" / "cases"
+            / "zero_support_approval.yaml")
+    assert path.exists(), f"case moved: {path}"
+    with pytest.raises(ValueError, match="no voters"):
+        tabulate_abc(path, rules=("av",))
 
 
 def test_proportional_rules_break_the_sweep():

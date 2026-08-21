@@ -25,6 +25,8 @@ STAR has two rounds, and they react to the scale very differently:
 
 So "unorthodox STAR" isn't just cosmetic: it's a real knob that trades **more expressiveness** for **more room to exaggerate** and a **less familiar ballot**.
 
+**And the knob turns the other way, with a different consequence.** Narrow the range voters actually use — Hillinger's three-level ballot, or just an electorate that only ever writes 0, 1 and 2 — and the round that suffers is not the scoring round but the **tie-break ladder**. STAR's second tiebreaker counts ballots at the *maximum* of the scale, so an electorate that never writes a 5 has no second rung at all, and ties drop from the first rung straight to the lot: measured across 20,000 elections per scale, the lot buys the seat in 10% of full-scale runoff ties and 57% of `{0,1,2}` ones. Worse, the same four ballots elect **different winners** depending only on whether `maximum_score` is 5 or 2 — the numbers on the paper are identical; what changes is which number the paper calls the top. [Coarse ballots and the tie ladder](../../../07_Concepts/topics/ties/coarse_ballots_and_the_tie_ladder.md).
+
 ## Worked example — STAR on a 0–10 ballot
 
 Take the ten 0–10 ballots from the [Range/Score worked comparison](../../../06_Other/Range/concepts/range_voting.md) (Sullivan's Example 5.2) and run them through **STAR** instead of pure Range — Larry Hastings' engine at `maximum_score=10`:

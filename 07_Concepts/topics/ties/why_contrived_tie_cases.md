@@ -74,6 +74,8 @@ The left spine (all "yes") is the ordinary election: a clean top two and a decis
 Generate your own along any branch with [`generate_dead_rung_scenarios.py`](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md).
 
 > **This map is v1 — single-winner STAR only.** Natural extensions later: abstentions / quorum interactions, multi-winner (Bloc / proportional) tie handling, and the RCV-IRV elimination-tie branch (see [Tie-Breaking: STAR vs. RCV-IRV](tiebreaking_star_vs_irv.md)).
+>
+> **Two of those are now done, by machine.** [Coarse ballots and the tie ladder](coarse_ballots_and_the_tie_ladder.md) sweeps 445,154 small elections across Bloc STAR, the proportional STAR family, Ranked Robin and Approval as well as single-winner STAR, classifying every tie against this map. Nothing it found needed a new branch — including the **partial-separation** case this table calls *"the branch symmetry cannot test"*, which turns out to be a shape rather than a rung and to recur under every method. It also reaches the abstention corner from below: the all-zeros election, where nobody scores anybody. RCV-IRV is still out; that branch has [its own pages](parallel_universe_tiebreaking.md).
 
 ## See also
 

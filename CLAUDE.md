@@ -172,8 +172,22 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   The invariant to keep is a mirror one, and it is tested over the whole score corpus:
   **one `rung: "lot"` entry per `[Tiebreaker: Lot Number Priority]` banner the report
   prints** — no fewer, and no more (the finalists replay must not double-count the banner
-  it shares). Still invisible, and said so in print: the rungs *below* the lot inside a
-  Bloc/PR round, which run in starvote's own counting functions and report nothing back. Locked by
+  it shares). **The mirror gap closed the same day (schema 1.2.0):** 1.1.0 taught the
+  builder to see the *lot*, but a runoff tie broken by a **deterministic** rung fires no lot
+  event and belongs to neither replay, so **16 more cases** emitted `tiebreaks: []` on an
+  election whose report says in full *"Automatic Runoff Round: First tiebreaker"* — including
+  `bv830_vb3xv2_no_condorcet_tie_score` and `tie_break_04_runoff_five_star_breaks`, files
+  named for the rung the JSON did not mention (12 `score`, 4 `five-star`). `resolve_runoff()`
+  is the mirror of `resolve_finalists()` — same replay discipline, starvote's own round
+  functions — and the mirror invariant is tested too: `rounds.runoff.tied` and a
+  `stage: "winner"` entry must agree in **both** directions, so a swallowed tie and an
+  invented one both fail. It was found by pointing
+  [`tie_taxonomy_sweep.py`](STARVote_LH_tabulation_engine/tools_adam/tie_taxonomy_sweep.py)
+  at the contract — a quarter-million coarse-scale elections, every tie classified against the
+  published taxonomy — which is the general lesson: a claim this strong needs something
+  adversarial aimed at it, not more cases that happen to agree. Still invisible, and said so
+  in print: the rungs *below* the lot inside a Bloc/PR round, which run in starvote's own
+  counting functions and report nothing back. Locked by
   [`tests/test_result_json.py`](STARVote_LH_tabulation_engine/tests/test_result_json.py)
   (every case validates against the schema and meets its answer key through the JSON path;
   `--json` must stay pure — JSON on stdout, no report, no `_tabulated` mirror). A method
