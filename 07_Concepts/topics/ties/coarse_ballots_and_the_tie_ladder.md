@@ -2,7 +2,7 @@
 
 **Level: 301 · deep dive**
 
-**One line:** shrink the range voters actually use — 0/1/2 instead of the full 0–5 — and ties stop being exotic; three quarters of a million such elections, counted across the Equal Vote methods and classified one by one, produced **no tie category this library did not already have a lesson for**, but they did show that a coarse ballot quietly *shortens* the ladder, so the lot decides both more often and one rung earlier.
+**One line:** shrink the range voters actually use — 0/1/2 instead of the full 0–5 — and ties stop being exotic; over a million such elections, counted across the Equal Vote methods and classified one by one, produced **no tie category this library did not already have a lesson for**, but they did show that a coarse ballot quietly *shortens* the ladder, so the lot decides both more often and one rung earlier.
 
 Companion to [Why build "silly" tie elections?](why_contrived_tie_cases.md), which maps the branches by hand for single-winner STAR. This page is the machine version of the same question, widened to Bloc, proportional STAR, Ranked Robin and Approval — and it is what finally answered the *"is that map complete?"* the older page left open.
 
@@ -126,9 +126,11 @@ Coarse does not have to mean *low*. Run the same sweep on scales that keep the 5
 So the two halves of the experiment answer different halves of the question:
 
 | Sweep | Elections | Unmapped | Categories reached | What it is good for |
-|---|---|---|---|---|
+|---|---:|---:|---:|---|
 | coarse-low — `{0,1,2}`, `{0,1,5}` | 445,154 | **0** | 21 of 25 | ties are dense, and the lot decides them |
 | top-heavy — `{4,5}`, `{3,4,5}`, `{0,4,5}`, `{0,5}`, `{5}` | 272,012 | **0** | **25 of 25** | ties are dense *and* the ballots still settle them |
+| constructed shapes — the next section | 340,620 | **0** | **25 of 25** | ties by design rather than by collision |
+| **total** | **1,057,786** | **0** | | |
 
 That is worth stating as a claim about STAR rather than about the sweep: **the five-star rung is the part of the ladder that depends on the electorate's habits, not on the electorate's size.** Two publics can be equally indecisive and land in completely different places — one where the votes finish the job, one where the lot does — purely on whether the top of the scale gets used. `{0,5}` is the case with a name: an **approval-shaped** STAR ballot, where every candidate gets either full support or none — what a strategically-pressured electorate drifts toward — and on a plain draw it keeps the rung alive. (Tighten it further, to one 5 and the rest 0, and you have true **bullet voting**, which is a shape rather than a scale and behaves quite differently — see the next section.)
 
@@ -147,6 +149,8 @@ Three candidates, four voters, single-winner STAR, full 0–5 scale unless the r
 | `clone` | one candidate's column copied onto another | 2,000 | 55.0% | 60.5% | 87.6% |
 | `mirror` | each ballot paired with its reflection | 2,000 | **100%** | **100%** | 32.4% |
 | `mirror`, scores `{0,5}` | the same, on a symmetric two-value scale | 2,000 | **100%** | **100%** | **100%** |
+
+Run as a sweep in its own right — all five shapes, three and four candidates, three to six voters, one and two seats, on `{0,1,2}` and the full scale — the constructed profiles produce **340,620 elections, zero unmapped, and all 25 categories**. They are the densest tie source in the tool by a wide margin (107,685 PR-round lot ties alone), and they are the only run that reaches every category *without* needing a top-heavy scale, because `flat` and `mirror` manufacture the score ties that let the five-star rung matter.
 
 `rotation` reports the same rates at three voters and at six — k voters per rotation changes the size of the electorate, not its symmetry, which is the point Moulin's construction is making.
 
