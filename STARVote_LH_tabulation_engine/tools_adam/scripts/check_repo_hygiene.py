@@ -1441,6 +1441,86 @@ def check_claude_md_paths(source=None):
     return bad
 
 
+# --------------------------------------------------------------------------- #
+# Redirect-map checker: every `redirect_maps` entry in mkdocs.yml must point at
+# a page that exists, and no key may appear twice. A missing destination is not
+# cosmetic — `mkdocs-redirects` warns on it and `mkdocs build --strict` turns the
+# warning into an abort, so the docs deploy goes red for every push after it.
+# A duplicate key is the quieter half of the same trap: PyYAML keeps the LAST
+# value, so an older entry that still points at a page somebody has since
+# deleted silently overrides the newer one that points somewhere live. That is
+# exactly how the deploy was red for 14 commits (2026-08-20/21): 04a8eea deleted
+# two generated pages and redirected both their URL forms to the folder README,
+# but two reorg-era entries with the same keys (2026-08-02) were left in place
+# and won. CLAUDE.md's reorganization note said to "assert every destination
+# exists on disk afterward" — by hand. This is that assertion.
+# The keys are published URLs and are NOT checked for existence: a redirect
+# exists precisely because its key no longer does.
+# --------------------------------------------------------------------------- #
+_REDIRECT_ENTRY = re.compile(r"^(\s+)([^\s#][^\s:]*):\s+(\S+)\s*$")
+
+
+def _redirect_map_entries(text):
+    """[(line_no, key, destination)] for the entries under `redirect_maps:`.
+
+    Text-level on purpose: mkdocs.yml carries `!!python/name:` tags that
+    `yaml.safe_load` refuses, and a real YAML load would collapse the duplicate
+    keys this check exists to report."""
+    entries, block_indent = [], None
+    for i, line in enumerate(text.splitlines(), 1):
+        stripped = line.strip()
+        if block_indent is None:
+            if stripped == "redirect_maps:":
+                block_indent = len(line) - len(line.lstrip())
+            continue
+        if not stripped or stripped.startswith("#"):
+            continue
+        if len(line) - len(line.lstrip()) <= block_indent:
+            break                           # dedented: the map is over
+        m = _REDIRECT_ENTRY.match(line)
+        if m:
+            entries.append((i, m.group(2), m.group(3)))
+    return entries
+
+
+def check_redirect_maps(source=None):
+    """Return sorted [(mkdocs.yml:line, msg)] for redirect entries whose
+    destination is missing (aborts the strict docs build) or whose key is a
+    duplicate (PyYAML keeps the last one; the earlier entry is silently dead).
+
+    `source` overrides the file read, for the non-vacuity test, so that test
+    never writes to the real mkdocs.yml in a checkout other sessions share.
+    Destinations are resolved against the repo root either way; an `#anchor`
+    is stripped first, and an external `http(s)://` destination is not ours to
+    check."""
+    if source is None:
+        path_ = os.path.join(REPO, "mkdocs.yml")
+        if not os.path.exists(path_):
+            return []
+        with open(path_, encoding="utf-8") as fh:
+            text = fh.read()
+    else:
+        text = source
+    bad, seen = [], {}
+    for line_no, key, dest in _redirect_map_entries(text):
+        target = dest.split("#", 1)[0]
+        if not target.startswith(("http://", "https://")) and \
+                not os.path.exists(os.path.join(REPO, target)):
+            bad.append((f"mkdocs.yml:{line_no}",
+                        f"redirect destination `{dest}` does not exist — "
+                        f"`mkdocs build --strict` aborts the docs deploy on it. "
+                        f"Repoint the VALUE; the key is a published URL and stays."))
+        if key in seen:
+            first_line, first_dest = seen[key]
+            bad.append((f"mkdocs.yml:{line_no}",
+                        f"duplicate redirect key `{key}` (first at line "
+                        f"{first_line} → `{first_dest}`): PyYAML keeps the LAST "
+                        f"value, so the earlier entry is silently dead. Keep one."))
+        else:
+            seen[key] = (line_no, dest)
+    return sorted(bad)
+
+
 def main(argv):
     rc = 0
     hits = scan()
@@ -1624,6 +1704,19 @@ def main(argv):
         print("              session take their instructions from, so a path that "
               "rots there is followed for weeks before anyone notices:")
         for rel, msg in claude_paths:
+            print(f"   • {rel}\n       {msg}")
+    redirect_hits = check_redirect_maps()
+    if not redirect_hits:
+        print("repo-hygiene: ✓ every mkdocs.yml redirect points at a page that "
+              "exists, and no key repeats.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  mkdocs.yml redirect problems ({len(redirect_hits)}) "
+              "— a missing destination aborts `mkdocs build --strict` (the docs")
+        print("              deploy was red for 14 commits on 2026-08-20/21 over two "
+              "stale duplicates); a duplicate key is silently resolved to")
+        print("              its LAST value:")
+        for rel, msg in redirect_hits:
             print(f"   • {rel}\n       {msg}")
     # exit non-zero so a caller *can* gate on it; the pre-commit hook runs it
     # warn-only, and tests/test_md_links.py gates on the link half.

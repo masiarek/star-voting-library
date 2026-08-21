@@ -483,3 +483,58 @@ def test_proper_nouns_spelled_with_rcv_are_not_terminology_violations():
         "must be exempt, and scrubbing it must not swallow a real violation on the "
         f"same line. got lines {lines}"
     )
+
+
+def test_redirect_maps_are_sound():
+    """Every `redirect_maps` entry in mkdocs.yml must point at a page that
+    exists, and no key may appear twice.
+
+    A missing destination is a red docs deploy: `mkdocs-redirects` warns and
+    `--strict` aborts on the warning, for every push until someone notices.
+    A duplicate key is how the missing destination hides — PyYAML keeps the
+    LAST value, so an old entry still pointing at a since-deleted page silently
+    overrides the newer one that points somewhere live. That is the 2026-08-20
+    story: 04a8eea deleted two generated pages and redirected both their URL
+    forms to the folder README, two reorg-era entries with the same keys were
+    left behind and won, and the deploy stayed red for 14 commits. CLAUDE.md
+    said to assert every destination exists "by hand"; this is that assertion.
+    """
+    mod = _load_hygiene()
+    bad = mod.check_redirect_maps()
+    assert not bad, (
+        f"{len(bad)} mkdocs.yml redirect problem(s):\n" +
+        "\n".join(f"  {rel}\n      {msg}" for rel, msg in bad)
+    )
+
+
+def test_redirect_map_check_is_not_vacuous():
+    """Prove it fires on both halves, and only there.
+
+    Must NOT fire: a live destination, a destination with an `#anchor` (the
+    anchor is stripped before the file is looked up), an external URL, and a
+    comment line inside the block. Must fire once each: a destination that does
+    not exist, and a key that appears twice — and the duplicate finding has to
+    say where the first one was, or it isn't actionable. The probe is passed
+    in rather than written to the real mkdocs.yml: this checkout is shared.
+    """
+    mod = _load_hygiene()
+    hits = mod.check_redirect_maps(source=(
+        "plugins:\n"
+        "  - redirects:\n"
+        "      redirect_maps:\n"
+        "        # a comment inside the block\n"
+        "        old/a.md: 07_Concepts/GLOSSARY.md\n"            # ok: live
+        "        old/b.md: 07_Concepts/GLOSSARY.md#some-anchor\n"  # ok: anchor
+        "        old/e.md: https://example.org/elsewhere\n"       # ok: external
+        "        old/c.md: 07_Concepts/no_such_page.md\n"         # caught: missing
+        "        old/a.md: 07_Concepts/CURRICULUM.md\n"           # caught: duplicate
+        "markdown_extensions:\n"
+        "  - toc\n"
+    ))
+    assert len(hits) == 2, f"expected exactly two findings, got {hits}"
+    missing = [m for _rel, m in hits if "no_such_page" in m]
+    dup = [m for _rel, m in hits if "duplicate" in m]
+    assert missing and dup, hits
+    assert "first at line 5" in dup[0], (
+        f"a duplicate finding must say where the first key was, got: {dup[0]}"
+    )

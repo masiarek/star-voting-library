@@ -272,7 +272,11 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
      but that also leaves every *value* pointing into the folder you just moved.
      Those already-published URLs then 404 — the exact outcome the redirects
      exist to prevent. Freeze the keys, repoint the values by hand, and assert
-     every destination exists on disk afterward.
+     every destination exists on disk afterward — **machine-checked since
+     2026-08-21** (`check_redirect_maps` in `check_repo_hygiene.py`, gated by
+     `tests/test_md_links.py`), which also refuses a *duplicate* key: PyYAML
+     keeps the last value, which is how two 2026-08-02 leftovers kept the docs
+     deploy red for 14 commits after `04a8eea` deleted their targets.
   2. **Fix segment-wise paths in Python.** `REPO_ROOT / "01_STAR" / "_main"`
      contains no literal `01_STAR/_main`, so the literal pass cannot see it, and
      a glob over the now-missing directory yields **nothing without erroring** —
