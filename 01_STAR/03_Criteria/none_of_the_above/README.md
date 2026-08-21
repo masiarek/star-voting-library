@@ -1,5 +1,7 @@
 # 01_STAR / none_of_the_above — when "None of the Above" wins
 
+**Level: 201 · for voters**
+
 What happens when voters can formally reject the whole field? BetterVoting supports a **None of the Above (NOTA)** option, and STAR counts it like any other candidate — so it can top the scores *and* win the runoff. This folder holds the constructed protest election that demonstrates it.
 
 | Case | Level | What it shows | src |

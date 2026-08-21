@@ -1,5 +1,7 @@
 # 01_STAR/03_Criteria/favorite_betrayal — the worked STAR favorite-betrayal pair
 
+**Level: 301 · for debaters**
+
 The rare construction [favorite_betrayal_voting_301.md](../../01_Learn/properties_and_limits/favorite_betrayal_voting_301.md) describes but — until now — never showed with numbers: **STAR is not formally FBC-compliant, and its leak lives in the runoff.** Your scores don't just support candidates; they pick the two *finalists*. In a delicately balanced electorate, the score you give your favorite can be exactly what keeps your compromise **out** of the runoff — and then the only repair is scoring your favorite lower. That's a favorite betrayal, it happens here, and it pays.
 
 This is the repo's concession case. We show STAR's own criterion failure at full volume, with the live elections to click — because the credibility of every center-squeeze page in this repo is bought by pages like this one.

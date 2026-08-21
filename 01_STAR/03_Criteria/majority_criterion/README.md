@@ -1,5 +1,7 @@
 # 01_STAR/03_Criteria/majority_criterion — the Majority Criterion, in two tiny elections
 
+**Level: 201 · for debaters**
+
 Two 5-voter STAR elections that isolate STAR's **Majority-Criterion** behavior — and, in doing so, demonstrate the **Relaxed Majority Criterion** (the "needs *two* rivals, not one" point). Same voters both times; only the majority's generosity to a *second* candidate changes.
 
 | Case (sheet id) | The majority backs… | Winner | Shows |

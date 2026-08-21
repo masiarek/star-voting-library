@@ -1,5 +1,7 @@
 # 01_STAR/03_Criteria/tie_break_ladder — the STAR tiebreak ladder, worked
 
+**Level: 201 · deep dive**
+
 The **happy-path** side of STAR tie-breaking: elections that **tie but never reach the lot**, because the deterministic rungs (pairwise / score, then five-star) settle everything. This is the live, BV-backed home for the worked example in **[the tie-breaking ladder doc](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)**.
 
 Contrast the two neighbours:

@@ -1,5 +1,7 @@
 # Equal & opposite — the equally weighted vote, made runnable
 
+**Level: 201 · deep dive**
+
 *The Equal Vote Coalition's "Test of Balance" in one picture: **two voters with exact-opposite opinions on every candidate cancel out completely.** If a race was tied before their two ballots, it's tied after — neither outweighed the other. That's what an **equally weighted vote** means, and it's the reason STAR has no forced vote-splitting. This folder makes the demonstration runnable: a base election, then the same election with the two mirror ballots added — the winner never moves. The concept, in full: [The Equally Weighted Vote — the Test of Balance](../../01_Learn/properties_and_limits/equally_weighted_vote.md).*
 
 **▶ Live on BetterVoting:** base — [vote](https://bettervoting.com/36f4v2) · **[results ↗](https://bettervoting.com/36f4v2/results)** (`36f4v2`, BV2219) · plus-cancel — [vote](https://bettervoting.com/q8q9m7) · **[results ↗](https://bettervoting.com/q8q9m7/results)** (`q8q9m7`, BV2220). Two elections differing only by the two mirror ballots — both elect Comet.

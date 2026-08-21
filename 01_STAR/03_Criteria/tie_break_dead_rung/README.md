@@ -1,5 +1,7 @@
 # The "dead rung" — when STAR's five-star tiebreaker can't fire
 
+**Level: 201 → 301 · deep dive**
+
 *A dozen tiny constructed elections — plus real BetterVoting races that hit the same thing — isolating one fact: STAR's **five-star** tiebreaker counts votes equal to the **scale maximum (5)**. If none of the tied candidates earned a 5, the rung reads `0–0` and the tie falls through to the **lot** — in **both** rounds.*
 
 Backs the "dead rung" section of the canonical [STAR Tie-Breaking — The Full Chain](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md) (Level 301). Run any file:

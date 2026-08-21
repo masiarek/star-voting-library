@@ -1,5 +1,7 @@
 # 01_STAR/03_Criteria/iia_cycle_spoiler — STAR's IIA limit under a Condorcet cycle
 
+**Level: 301 · deep dive**
+
 STAR's honest **Independence-of-Irrelevant-Alternatives** (IIA) limit, shown mechanically: when the electorate has a genuine Condorcet cycle (no candidate beats everyone), a candidate who *cannot win* can still change *who does*, because their presence changes which two candidates reach STAR's automatic runoff. No strategy required — the ballots are perfectly sincere.
 
 | Case | What it shows | Live | Source |
