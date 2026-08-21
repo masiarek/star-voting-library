@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Wren
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d664xw) · **[results ↗](https://bettervoting.com/d664xw/results)** (election `d664xw`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id d664xw), captured 2026-06-28. The closing

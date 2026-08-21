@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Boston
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/yx9447) · **[results ↗](https://bettervoting.com/yx9447/results)** (election `yx9447`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id yx9447), captured 2026-06-28. The smallest

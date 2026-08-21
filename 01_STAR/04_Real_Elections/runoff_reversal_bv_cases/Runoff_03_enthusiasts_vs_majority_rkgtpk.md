@@ -4,6 +4,8 @@
 **Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Eden · [full count →](cases/cases_pages/Runoff_03_enthusiasts_vs_majority_rkgtpk.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rkgtpk) · **[results ↗](https://bettervoting.com/rkgtpk/results)** (election `rkgtpk`).
+
 **Level 201 · a reversal in a bigger field (the "narrow-but-deep" pattern).** Five candidates, five voters. Two voters are **Dakota enthusiasts** — their 5s push Dakota to the top of the Scoring Round (22 stars). But the other three prefer **Eden**, so Eden wins the Automatic Runoff 3–2. Dakota leads on *how much*; Eden wins on *how many*. (Eden is also the Condorcet winner — a calm case.)
 
 Where [Runoff 02](Runoff_02_atom_reversal_yx9447.md) had a *broadly-liked* leader, this one has an *intense-minority* leader — the other face of the same reversal. → teaching guide: [Teaching Runoff Reversal — a step-by-step guide](../../02_Examples/runoff_overturns_leader/teaching_runoff_reversal.md) · concept: [The Automatic Runoff Round](../../01_Learn/the_count/STAR_Automatic_Runoff.md) · [`Runoff Reversal`](../../../07_Concepts/GLOSSARY.md).

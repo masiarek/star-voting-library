@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Eden
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rkgtpk) · **[results ↗](https://bettervoting.com/rkgtpk/results)** (election `rkgtpk`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id rkgtpk), captured 2026-06-28. A reversal in a

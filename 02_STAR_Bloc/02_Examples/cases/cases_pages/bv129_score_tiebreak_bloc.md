@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Carmen, Andre
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/btmydt) · **[results ↗](https://bettervoting.com/btmydt/results)** (election `btmydt` · test `BV129`).
+
 ## Scenario
 
 The LH reference for BetterVoting test BV129 (real election btmydt). Bloc STAR,

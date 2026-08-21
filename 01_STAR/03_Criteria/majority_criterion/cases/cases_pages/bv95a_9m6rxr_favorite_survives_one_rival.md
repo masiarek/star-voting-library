@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Ada
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9m6rxr) · **[results ↗](https://bettervoting.com/9m6rxr/results)** (election `9m6rxr`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9m6rxr) · **[results ↗](https://bettervoting.com/9m6rxr/results)** (election `9m6rxr` · test `BV95a`).
 
 ## Scenario
 

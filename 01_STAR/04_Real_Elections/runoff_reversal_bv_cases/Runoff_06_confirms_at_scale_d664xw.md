@@ -4,6 +4,8 @@
 **Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Wren · [full count →](cases/cases_pages/Runoff_06_confirms_at_scale_d664xw.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/d664xw) · **[results ↗](https://bettervoting.com/d664xw/results)** (election `d664xw`).
+
 **Level 101 · the closing control.** After four reversals, the reassurance: here the Scoring-Round leader **Wren** is *also* the candidate most voters prefer, so the Automatic Runoff **confirms** the leader, 4–1. *How much* and *how many* point at the same candidate — no reversal. (Wren is the Condorcet winner.)
 
 This is the bookend to [Runoff 01](Runoff_01_confirms_leader_r2pvc9.md): most of the time the runoff just agrees with the score round. The reversals (02–05) are the exception — the safeguard catching the cases where intensity and majority preference diverge.

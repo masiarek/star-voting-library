@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Blair
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tf73v9) · **[results ↗](https://bettervoting.com/tf73v9/results)** (election `tf73v9`).
+
 ## Scenario
 
 ⚠️ WORK IN PROGRESS — illustration pending a BetterVoting fix

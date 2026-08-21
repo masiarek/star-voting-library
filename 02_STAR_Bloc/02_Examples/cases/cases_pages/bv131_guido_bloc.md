@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Cand2, Cand3
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kbh3d9) · **[results ↗](https://bettervoting.com/kbh3d9/results)** (election `kbh3d9` · test `BV131`).
+
 **Official tie-break (lot) order:** Cand2 > Cand1 > Cand3 — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

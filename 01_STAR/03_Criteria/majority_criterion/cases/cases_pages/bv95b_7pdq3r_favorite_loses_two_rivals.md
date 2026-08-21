@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Bruno
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7pdq3r) · **[results ↗](https://bettervoting.com/7pdq3r/results)** (election `7pdq3r`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/7pdq3r) · **[results ↗](https://bettervoting.com/7pdq3r/results)** (election `7pdq3r` · test `BV95b`).
 
 ## Scenario
 

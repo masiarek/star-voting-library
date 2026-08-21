@@ -4,6 +4,8 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** C, B · [full count →](cases/cases_pages/bv132_verify_votes_bloc.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3494cb) · **[results ↗](https://bettervoting.com/3494cb/results)** (election `3494cb` · test `BV132`).
+
 *BetterVoting reports the wrong number of voters on a Bloc STAR election: it drops the two "flat" ballots (every candidate scored the same) as abstentions. The winners are still correct — the bug is the vote count / turnout, not the result.*
 
 Reference files: [`bv132_verify_votes_bloc.yaml`](cases/bv132_verify_votes_bloc.yaml) (LH, `expected_winners: [C, B]`) · frozen export [`bv132_verify_votes_bloc_bv_export.json`](cases/bv132_verify_votes_bloc_bv_export.json) (BV election `3494cb`). Backs sheet row **BV132**.

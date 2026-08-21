@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** A, C
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fk38pk) · **[results ↗](https://bettervoting.com/fk38pk/results)** (election `fk38pk` · test `BV1815`).
+
 ## Scenario
 
 The LH reference for BetterVoting test BV1815 (a real election, id fk38pk,

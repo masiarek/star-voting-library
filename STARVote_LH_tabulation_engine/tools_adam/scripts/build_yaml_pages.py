@@ -43,6 +43,7 @@ _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if _SCRIPT_DIR not in sys.path:
     sys.path.insert(0, _SCRIPT_DIR)
 import build_style_ballot_images as ballot_art  # noqa: E402
+import _bv_ids  # noqa: E402
 
 def _find_repo(start):
     p = os.path.dirname(os.path.abspath(start))
@@ -644,13 +645,22 @@ def render(yaml_path, siblings):
     L.append("")
     L.append(_meta_line(disp, docs, seats, winners, page_dir))
     # BV-backed case -> the house live-results lead line (CLAUDE.md rule).
-    bv_id = data.get("bv_election_id") if isinstance(data, dict) else None
-    if not bv_id and isinstance(data, dict):
-        m = re.match(r"^bv\w+_([a-z0-9]{6})_", os.path.basename(yaml_path))
-        bv_id = m.group(1) if m else None
+    # Resolved by `_bv_ids`, which is the ONE place that answers "is this case
+    # backed by a live BV election, and what is its id?" — the `bv_election_id:`
+    # field, else the `election_id` inside the sibling frozen `_bv_export.json`.
+    # This page used to guess the id from the filename instead (`^bv\w+_(\w{6})_`),
+    # which `_bv_ids` refuses to do on purpose: a six-letter *descriptor* would be
+    # published as a bvid, minting a confident link to an election that does not
+    # exist. The guess also had a blind spot the export never has — it wants the
+    # bvid in the MIDDLE, so every case named `<descriptor>_<bvid>` (the whole
+    # Runoff_NN set, bv126_ties_every_step_8fvd2x) silently shipped no link at
+    # all, 17 pages' worth. Nothing relied on the guess: no case in the repo
+    # resolves a bvid from its filename that the export does not already assert.
+    bv_test, bv_id, _bv_url = _bv_ids.resolve(yaml_path, data)
+    bv_id = bv_id or None
     # The test id rides along in the same parenthetical: it identifies this case
     # in the BV tracker, and a section of its own for one machine id was thin.
-    bv_test = data.get("bv_test_id") if isinstance(data, dict) else None
+    bv_test = bv_test or None
     if bv_id:
         ids = f"election `{bv_id}`" + (f" · test `{bv_test}`" if bv_test else "")
         L.append("")

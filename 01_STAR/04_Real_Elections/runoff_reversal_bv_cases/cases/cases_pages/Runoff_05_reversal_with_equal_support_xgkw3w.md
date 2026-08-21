@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Sage
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xgkw3w) · **[results ↗](https://bettervoting.com/xgkw3w/results)** (election `xgkw3w`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id xgkw3w), captured 2026-06-28. The first

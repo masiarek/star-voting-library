@@ -4,6 +4,8 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Carmen, Andre · [full count →](cases/cases_pages/bv129_score_tiebreak_bloc.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/btmydt) · **[results ↗](https://bettervoting.com/btmydt/results)** (election `btmydt` · test `BV129`).
+
 *A clean Bloc STAR result where the second seat is decided by the **score** tiebreaker (deterministic — no lot). LH and BetterVoting agree: **Carmen, Andre**. BV129's "Failed" is only the method-name label ([#1086](https://github.com/Equal-Vote/bettervoting/issues/1086)), not the count.*
 
 Reference files: [`bv129_score_tiebreak_bloc.yaml`](cases/bv129_score_tiebreak_bloc.yaml) (`expected_winners: [Carmen, Andre]`) · frozen export [`bv129_score_tiebreak_bloc_bv_export.json`](cases/bv129_score_tiebreak_bloc_bv_export.json) (BV `btmydt`). Backs sheet row **BV129**.

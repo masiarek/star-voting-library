@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Banana
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/dq2dmm) · **[results ↗](https://bettervoting.com/dq2dmm/results)** (election `dq2dmm`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id dq2dmm), captured 2026-06-28. The canonical

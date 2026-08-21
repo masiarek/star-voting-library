@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** A
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3w6v4b) · **[results ↗](https://bettervoting.com/3w6v4b/results)** (election `3w6v4b`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id 3w6v4b), captured 2026-06-28, run as the

@@ -4,6 +4,8 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Dan, Ada, Eve · [full count →](cases/cases_pages/bv130r2_dead_rung_bloc.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9ff9jk) · **[results ↗](https://bettervoting.com/9ff9jk/results)** (election `9ff9jk` · test `BV130-r2`).
+
 *A real BetterVoting election (id `9ff9jk`) built directly from this repo's tuned dead-rung scenario: 6 candidates, 3 seats, 4 ballots, and nothing scored above 4. Seat 1 is a perfect Ada/Dan tie that dies at every deterministic rung and falls to the lot. BetterVoting's random draw elected **Dan, Ada, Eve**; a pre-published order would elect **Ada, Dan, Eve** — same three winners, the tied pair's seats swapped.*
 
 > **Which BV130 is this?** This is **BV130-r2** (the retest, election `9ff9jk`, marked **Passed**) — a *different* election from the original **BV130**, which is a 9-ballot "Someone I Like / Santa Claus / The Lesser Evil" case backing the star-server#731 *reporting* issue (tabs → numbered pages). See [`bv130_bloc_pagination_731.md`](bv130_bloc_pagination_731.md) for that one. This page is purely about the tie behavior; the outcome itself is valid (a random draw among a genuine tie), which is why the tracker marks it Passed.

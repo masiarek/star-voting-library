@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Dog
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/pet) · **[results ↗](https://bettervoting.com/pet/results)** (election `pet`).
+
 ## Scenario
 
 A real BetterVoting STAR election (BV id: pet) — 7 pets, 461 ballots.

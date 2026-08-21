@@ -4,6 +4,8 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Cand2, Cand3 · [full count →](cases/cases_pages/bv131_guido_bloc.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/kbh3d9) · **[results ↗](https://bettervoting.com/kbh3d9/results)** (election `kbh3d9` · test `BV131`).
+
 *Marked "Passed" in the sheet, but seat 1 is a **perfect lot-decided tie** — the Bloc analog of [`jfk7pd`](../../01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md). BetterVoting broke it with a random draw (Cand2), and — the reporting catch — its top-level `tieBreakType` says "none" anyway.*
 
 Reference files: [`bv131_guido_bloc.yaml`](cases/bv131_guido_bloc.yaml) (`expected_winners: [Cand2, Cand3]`) · frozen export [`bv131_guido_bloc_bv_export.json`](cases/bv131_guido_bloc_bv_export.json) (BV `kbh3d9`). Backs sheet row **BV131**.

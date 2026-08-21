@@ -4,6 +4,8 @@
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** A, C · [full count →](cases/cases_pages/bv1815_bloc_3c2s_basic.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/fk38pk) · **[results ↗](https://bettervoting.com/fk38pk/results)** (election `fk38pk` · test `BV1815`).
+
 *A real BetterVoting election (id `fk38pk`, marked **Passed**) labeled "basic / simple" — but it quietly exercises the **score tiebreaker** at the second seat. LH and BetterVoting agree: winners **A, C**.*
 
 Reference files: [`bv1815_bloc_3c2s_basic.yaml`](cases/bv1815_bloc_3c2s_basic.yaml) (`expected_winners: [A, C]`) · frozen export [`bv1815_bloc_3c2s_basic_bv_export.json`](cases/bv1815_bloc_3c2s_basic_bv_export.json) (BV `fk38pk`). Backs sheet row **BV1815**.

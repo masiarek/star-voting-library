@@ -9,7 +9,7 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** C, B
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/verify) · **[results ↗](https://bettervoting.com/verify/results)** (election `verify`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/3494cb) · **[results ↗](https://bettervoting.com/3494cb/results)** (election `3494cb` · test `BV132`).
 
 ## Scenario
 

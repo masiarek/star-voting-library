@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Aspen
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/r2pvc9) · **[results ↗](https://bettervoting.com/r2pvc9/results)** (election `r2pvc9`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id r2pvc9), captured 2026-06-28. The control

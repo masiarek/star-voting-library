@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Amy
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/8fvd2x) · **[results ↗](https://bettervoting.com/8fvd2x/results)** (election `8fvd2x` · test `BV126`).
+
 **Official tie-break (lot) order:** Amy > Chuck > Brian — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 
 ## Scenario

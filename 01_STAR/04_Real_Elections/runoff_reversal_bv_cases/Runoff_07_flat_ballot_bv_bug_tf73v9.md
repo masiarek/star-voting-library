@@ -4,6 +4,8 @@
 **Method:** [STAR (single winner)](../../01_Learn/README.md) · **1 seat** · **Expected winner:** Blair · [full count →](cases/cases_pages/Runoff_07_flat_ballot_bv_bug_tf73v9.md)
 <!-- case-meta:end -->
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/tf73v9) · **[results ↗](https://bettervoting.com/tf73v9/results)** (election `tf73v9`).
+
 > ⚠️ **Work in progress — illustration pending a BetterVoting fix.** This is the **one case in the set where the two reports do *not* fully agree.** They agree on the *winner* (Blair), but BetterVoting mis-files a flat ballot as an *abstention*, so the abstention count, the Equal-Support count, and the score totals differ. Tracked as **[Equal-Vote/bettervoting#1407](https://github.com/Equal-Vote/bettervoting/issues/1407)**; kept here as a teaching illustration until it's fixed.
 
 A reversal (Alex leads the scoring round, **Blair** wins the runoff) that *also* contains a **flat ballot** (`3,3,3` — every candidate equal). That one ballot is where the two engines part ways.

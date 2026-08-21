@@ -517,7 +517,12 @@ ELECTION_KEYS = {
     # synonym for the teaching text was normalized away 2026-08-01.
     "scenario_description", "election_description",
     "voting_method", "num_winners", "ballots",
-    "expected_winners", "expected_results",
+    # expected_winners names WHO won. expected_outcome says whether anyone did
+    # at all — the two answers `expected_winners:` structurally cannot give:
+    # a count that completes and seats nobody (a quorum failure), and a file the
+    # engine must REFUSE to count. Before it existed those cases carried no key
+    # and so asserted nothing. See EXPECTED_OUTCOMES below.
+    "expected_winners", "expected_outcome", "expected_results",
     "options", "lot_numbers", "eligible_voters", "quorum", "blocs",
     "paradoxes", "video_script",
     "election",  # the nested BetterVoting export schema
@@ -562,6 +567,60 @@ def check_top_level_keys():
             if hint:
                 msg += f" — did you mean `{hint}:`?"
             bad.append((rel, msg))
+    return sorted(bad)
+
+
+# The three answers a case file can give about who was elected. `elected` is the
+# default and needs `expected_winners:`; the other two FORBID it, because naming
+# a winner while claiming nobody won is a self-contradicting answer key.
+EXPECTED_OUTCOMES = {
+    "elected":    "the count completes and seats these winners (needs expected_winners)",
+    "no_winner":  "the count completes and seats NOBODY — a quorum failure; the engine exits 0",
+    "rejected":   "the engine must REFUSE to count this file at all; it exits 1",
+}
+
+
+def check_expected_outcome():
+    """Return [(file, problem)] for a malformed or self-contradicting answer key.
+
+    `expected_outcome:` is only worth having if it cannot be written incoherently,
+    so three things are enforced: the value is one of the three documented words;
+    a `no_winner`/`rejected` file does NOT also name winners; and an explicit
+    `elected` does. (Omitting the key entirely stays legal — that is the ordinary
+    case, and it means "elected", asserted by `expected_winners:` as before.)
+    """
+    try:
+        import yaml as _yaml
+    except ImportError:  # pragma: no cover
+        return []
+    bad = []
+    for path in _yaml_teaching_files():
+        rel = os.path.relpath(path, REPO)
+        try:
+            data = _yaml.safe_load(open(path, encoding="utf-8").read())
+        except Exception:
+            continue        # malformed YAML is the negative suite's business
+        if not isinstance(data, dict):
+            continue
+        outcome = data.get("expected_outcome")
+        if outcome is None:
+            continue
+        if outcome not in EXPECTED_OUTCOMES:
+            import difflib
+            hint = difflib.get_close_matches(str(outcome), sorted(EXPECTED_OUTCOMES), n=1)
+            msg = f"expected_outcome: {outcome!r} is not one of {sorted(EXPECTED_OUTCOMES)}"
+            if hint:
+                msg += f" — did you mean {hint[0]!r}?"
+            bad.append((rel, msg))
+            continue
+        has_winners = data.get("expected_winners") is not None
+        if outcome in ("no_winner", "rejected") and has_winners:
+            bad.append((rel, f"expected_outcome: {outcome} contradicts expected_winners: "
+                             f"{data['expected_winners']!r} — a file that elects nobody "
+                             "cannot also name a winner"))
+        elif outcome == "elected" and not has_winners:
+            bad.append((rel, "expected_outcome: elected needs expected_winners: to name them "
+                             "(or drop the key — absent means the same thing)"))
     return sorted(bad)
 
 
@@ -825,6 +884,102 @@ def check_bv_case_md():
                                      f"(neither {base}.md nor {os.path.basename(dirpath)}"
                                      f"_pages/{base}.md)"))
     return sorted(missing)
+
+
+# --------------------------------------------------------------------------- #
+# BV live-results links: a BV-backed case's write-up must link the live election
+# CLICKABLY (CLAUDE.md / the `bettervoting` skill: "Every BV-backed case `.md`
+# links the live BetterVoting results — clickably"). Naming the bvid in a code
+# span is not enough; the whole point is that a reader can click through from
+# the lesson to the real tabulated outcome.
+#
+# The rule was written down and nothing enforced it, so it rotted in the two
+# ways an unenforced rule always does — silently, and asymmetrically:
+#
+#   * 17 GENERATED pages had no link at all, because build_yaml_pages.py
+#     guessed the bvid from the filename (`^bv\w+_([a-z0-9]{6})_`) instead of
+#     asking `_bv_ids`. That regex wants the bvid in the MIDDLE, so every case
+#     named `<descriptor>_<bvid>` — the whole Runoff_NN set,
+#     bv126_ties_every_step_8fvd2x — matched nothing and shipped bare.
+#   * 1 generated page had a link to an election that DOES NOT EXIST: the same
+#     guess read the descriptor word "verify" out of bv132_verify_votes_bloc and
+#     published https://bettervoting.com/verify, which 400s. That is the failure
+#     `_bv_ids`'s docstring predicts in as many words, and it is worse than a
+#     missing link — a missing link is a small loss, a confident link to the
+#     wrong election is a wrong claim on a teaching page.
+#   * 14 HAND-AUTHORED companions named their bvid only in backticks.
+#
+# So the gate checks the id, not just the presence of a link: the href must be
+# the bvid `_bv_ids` resolves from the case (its `bv_election_id:` field, else
+# the frozen `_bv_export.json` — never the filename). A page that links some
+# OTHER election still fails, which is what catches the "verify" class.
+#
+# Scope: BV-backed exactly when `_bv_ids` yields an election id, i.e. something
+# in the repo actually ASSERTS one. A `bv…` filename or a lone `bv_test_id`
+# names a QA row, not a public election, so there is nothing to link to.
+# --------------------------------------------------------------------------- #
+def _bv_case_pages(yaml_path):
+    """The write-up pages for a case: its generated page + any hand-authored
+    companion of the same stem (folder top, or one level up when sources live
+    in `cases/`). Each must carry the link independently — a reader lands on
+    either one."""
+    d, base = os.path.dirname(yaml_path), os.path.basename(yaml_path).rsplit(".", 1)[0]
+    cands = [os.path.join(d, "cases_pages", base + ".md"),
+             os.path.join(d, os.path.basename(d) + "_pages", base + ".md"),
+             os.path.join(d, base + ".md"),
+             os.path.join(os.path.dirname(d), base + ".md")]
+    return [c for c in cands if os.path.exists(c)]
+
+
+def check_bv_results_links():
+    """Return [(page_rel, why)] for BV-backed write-ups not linking their election."""
+    try:
+        import yaml as _yaml
+    except ImportError:  # pragma: no cover
+        return []
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    try:
+        import _bv_ids
+    except ImportError:  # pragma: no cover
+        return []
+    bad = []
+    for dirpath, dirnames, filenames in os.walk(REPO):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        rel_dir = os.path.relpath(dirpath, REPO)
+        if rel_dir != "." and _skip(rel_dir):
+            continue
+        if "negative" in rel_dir:
+            continue
+        for fn in sorted(filenames):
+            if not fn.endswith((".yaml", ".yml")):
+                continue
+            yp = os.path.join(dirpath, fn)
+            try:
+                data = _yaml.safe_load(open(yp, encoding="utf-8"))
+            except Exception:
+                continue
+            if not isinstance(data, dict):
+                continue
+            _test, eid, _url = _bv_ids.resolve(yp, data)
+            if not eid:
+                continue
+            want = re.compile(r"\]\(https://bettervoting\.com/%s/results\)"
+                              % re.escape(eid))
+            for page in _bv_case_pages(yp):
+                try:
+                    text = open(page, encoding="utf-8").read()
+                except OSError:
+                    continue
+                if want.search(text):
+                    continue
+                other = set(re.findall(r"\]\(https://bettervoting\.com/"
+                                       r"([A-Za-z0-9]+)(?:/results)?\)", text))
+                other.discard(eid)
+                why = (f"links BV election(s) {sorted(other)} but not its own "
+                       f"`{eid}`" if other else
+                       f"no clickable link to https://bettervoting.com/{eid}/results")
+                bad.append((os.path.relpath(page, REPO), why))
+    return sorted(set(bad))
 
 
 # --------------------------------------------------------------------------- #
@@ -1590,6 +1745,15 @@ def main(argv):
               "a typo here silently un-tests the case:")
         for rel, msg in bad_keys:
             print(f"   • {rel}\n       {msg}")
+    bad_outcome = check_expected_outcome()
+    if not bad_outcome:
+        print("repo-hygiene: ✓ every expected_outcome: agrees with its expected_winners:.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  self-contradicting answer keys ({len(bad_outcome)}) — "
+              "a file cannot both elect nobody and name a winner:")
+        for rel, msg in bad_outcome:
+            print(f"   • {rel}\n       {msg}")
     weak = check_descriptions()
     if not weak:
         print("repo-hygiene: ✓ every teaching YAML has a real description.")
@@ -1639,6 +1803,17 @@ def main(argv):
         rc = 1
         print(f"repo-hygiene: ⚠️  BV cases missing their .md page ({len(no_md)}):")
         for rel, msg in no_md:
+            print(f"   • {rel}\n       {msg}")
+    nolink = check_bv_results_links()
+    if not nolink:
+        print("repo-hygiene: ✓ every BV-backed write-up links its live results page.")
+    else:
+        rc = 1
+        print(f"repo-hygiene: ⚠️  BV write-ups not linking their election ({len(nolink)}) — "
+              "a bvid in backticks isn't clickable; add the house lead line")
+        print("              `**▶ Live on BetterVoting:** [vote](…/<bvid>) · "
+              "**[results ↗](…/<bvid>/results)** (election `<bvid>`).`:")
+        for rel, msg in nolink:
             print(f"   • {rel}\n       {msg}")
     unlisted = check_pages_indexed()
     if not unlisted:

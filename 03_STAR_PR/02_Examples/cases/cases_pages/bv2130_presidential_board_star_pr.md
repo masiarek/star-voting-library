@@ -9,6 +9,8 @@ search:
 
 **Method:** [Allocated Score (proportional STAR)](../../../01_Learn/README.md) · **7 seats** · **Expected winners:** Bernie Sanders (Democrat), Al Gore (Democrat), Barack Obama (Democrat), Cornel West (Independent), Chase Oliver (Libertarian), Kamala Harris (Democrat), Karina Garcia (Socialism and Liberation)
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bvhchj) · **[results ↗](https://bettervoting.com/bvhchj/results)** (election `bvhchj` · test `BV2130`).
+
 ## Scenario
 
 Real BetterVoting election bvhchj ("Presidential Board Election"), race 1:

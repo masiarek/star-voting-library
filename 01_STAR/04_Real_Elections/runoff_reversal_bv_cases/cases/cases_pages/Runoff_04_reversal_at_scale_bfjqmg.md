@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_Learn/README.md) · **1 seat** · **Expected winner:** Olive
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/bfjqmg) · **[results ↗](https://bettervoting.com/bfjqmg/results)** (election `bfjqmg`).
+
 ## Scenario
 
 A REAL BetterVoting election (BV id bfjqmg), captured 2026-06-28. The atom
