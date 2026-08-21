@@ -727,3 +727,97 @@ def test_probe_repo_does_not_leak(tmp_path):
     assert os.path.isdir(os.path.join(fresh.REPO, "01_STAR")), (
         f"a freshly loaded module must point at the real repo, got {fresh.REPO}"
     )
+
+
+# --------------------------------------------------------------------------- #
+# The meta-gate: no check in check_repo_hygiene.py may be untested.
+#
+# The hook runs the module as `"$PY" … || true`, so a check nobody calls from a
+# test is not a gate — it is a line of output that a session may or may not
+# scroll past. FIVE were in that state and were found one at a time, by hand,
+# across a single evening: check_bv_results_links (shipped ungated in the very
+# commit that added it, to enforce a rule that had rotted for exactly this
+# reason), check_expected_outcome (called, but asserted only that it found
+# nothing), and then check_anchors / check_levels / check_bv_case_md, turned up
+# only because someone thought to sweep the module.
+#
+# check_anchors is the one that shows the cost. It exists specifically for the
+# GitHub-vs-MkDocs slug split, a class that produces a link resolving on one
+# surface and 404ing on the other — invisible on both until a reader clicks. It
+# caught a real instance that evening, and only because a human read the hook's
+# printed output.
+#
+# This test is that sweep, encoded, so it never has to be done by hand again and
+# fails CLOSED: add a check and CI tells you it has no test, rather than the
+# check quietly printing green forever.
+#
+# What it proves and what it does not: a check must have at least one test that
+# both CALLS it and contains an assert — so "called and the result thrown away"
+# fails. It cannot tell whether the assertion is meaningful; `assert not
+# check_x()` passes both when the check works and when it is broken to return
+# nothing. That is what the per-check `…_is_not_vacuous` probes are for. The two
+# together are the claim: every check is reachable from a test, and every check
+# has been shown to fail on something.
+# --------------------------------------------------------------------------- #
+def _hygiene_checks():
+    """Every public `check_*` defined in check_repo_hygiene.py."""
+    import ast
+    tree = ast.parse(Path(HYGIENE).read_text(encoding="utf-8"))
+    return {n.name for n in tree.body
+            if isinstance(n, ast.FunctionDef) and n.name.startswith("check_")}
+
+
+def _asserting_callers():
+    """{check name: ["file::test_fn", …]} for tests that call it AND assert."""
+    import ast
+    from collections import defaultdict
+    checks, cov = _hygiene_checks(), defaultdict(list)
+    for path in sorted(Path(__file__).parent.glob("*.py")):
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        for fn in (n for n in ast.walk(tree) if isinstance(n, ast.FunctionDef)):
+            if not any(isinstance(x, ast.Assert) for x in ast.walk(fn)):
+                continue
+            for call in (c for c in ast.walk(fn) if isinstance(c, ast.Call)):
+                f = call.func
+                name = f.attr if isinstance(f, ast.Attribute) else getattr(f, "id", None)
+                if name in checks:
+                    cov[name].append(f"{path.name}::{fn.name}")
+    return cov
+
+
+def test_every_hygiene_check_is_gated_by_a_test():
+    checks, cov = _hygiene_checks(), _asserting_callers()
+    orphans = sorted(checks - set(cov))
+    assert not orphans, (
+        f"{len(orphans)} hygiene check(s) that no test calls:\n" +
+        "\n".join(f"  {c}" for c in orphans) +
+        "\n\ncheck_repo_hygiene.py runs from the pre-commit hook as `… || true`, "
+        "so a check no test calls cannot fail anything — it only prints. Add a "
+        "test that calls it and asserts, plus a probe that plants a violation "
+        "and requires it to be caught (see the `…_is_not_vacuous` tests here)."
+    )
+
+
+def test_the_meta_gate_can_actually_see_an_orphan():
+    """The sweep must fail on an untested check, or it is decoration.
+
+    _asserting_callers() only counts a test that CALLS the check and contains an
+    assert, so the two ways coverage rots both register: a check with no test at
+    all, and a check called by a test that forgot to assert on it.
+    """
+    checks, cov = _hygiene_checks(), _asserting_callers()
+    assert checks, "no checks discovered — the AST scan is broken, not the module"
+    invented = "check_a_rule_nobody_wrote_a_test_for"
+    assert invented not in cov, "fixture name collided with a real test"
+    # Membership, not equality: if the module really does grow an orphan, the
+    # gate above is the test that should fail. This one is only asking whether
+    # the sweep can SEE an orphan, and must keep answering that either way —
+    # a self-check that goes red for someone else's reason gets muted.
+    assert invented in ((checks | {invented}) - set(cov)), (
+        "an untested check must show up as an orphan"
+    )
+    # …and a check that IS covered must not be reported as one.
+    covered = sorted(cov)
+    assert covered and covered[0] not in (checks - set(cov)), (
+        f"{covered[0]} has an asserting test but the sweep called it an orphan"
+    )
