@@ -28,6 +28,36 @@ A **ladder** is the ordered sequence of comparisons an engine applies to an exac
 
 RCTab deserves its own sentence here, because it treats the whole question as configuration: `tiebreakMode` is a **required, named setting** — `random`, `stopCountingAndAsk`, `previousRoundCountsThenRandom`, `previousRoundCountsThenAsk`, `useCandidateOrder`, `generatePermutation` — which turns everything this page documents about the other engines into a declared choice. That is the posture of software that counts real elections.
 
+### The four floors — what each one spends
+
+The rungs above the floor are arguments about the ballots. The floor is where that runs out, and the engine has to spend something instead. [Ties Are Forced](../topics/ties/ties_are_forced.md) proves the bill is unavoidable — no anonymous, neutral, Paretian rule always names one winner — so the only real question is which axiom goes, and whether the engine says so.
+
+```mermaid
+flowchart TD
+    T["Every deterministic rung has tied<br/>the ballots have nothing left to say"]
+    T --> Q{"Name a single<br/>winner anyway?"}
+
+    Q -->|"no"| F4["RETURN THE TIED SET<br/>pref_voting the library · the abcvoting wrapper<br/>Range · an exhausted Majority Judgment<br/>spends RESOLUTENESS"]
+    Q -->|"yes"| D{"Where does the deciding<br/>order come from?"}
+
+    D -->|"published<br/>before the count"| F1["PUBLISHED LOT ORDER<br/>the LH engine · this repo's pref_voting tools<br/>spends NEUTRALITY<br/>publicly, and in advance"]
+    D -->|"drawn by the software,<br/>then recorded"| F2["SEEDED SHUFFLE<br/>BetterVoting, every method<br/>spends BALLOT-DEPENDENCE<br/>replayable, but no ballot moved it"]
+    D -->|"whatever order the file<br/>happened to be in"| F3["INPUT ORDER<br/>vendored pyrankvote<br/>spends ANONYMITY<br/>reorder identical ballots, new winner"]
+
+    F1 --> OK(["A declared choice — the theorem says one<br/>axiom has to go, and these three say which"])
+    F2 --> OK
+    F4 --> OK
+    F3 --> BUG(["Not a choice anyone made,<br/>and no report says it happened"])
+```
+
+Three readings the picture is for:
+
+- **The split at the bottom is the whole point.** The published lot, the seeded shuffle and returning the tied set are three answers to a forced question, and an engine picking a different one is not a bug — it is [Zwicker's menu](../topics/ties/ties_are_forced.md#four-ways-out-and-what-each-one-costs), priced. Input order is not on that menu. Nobody chose to let data-entry order elect a candidate; it is what a seeded coin does when the seed pins the *sequence* of flips but not what each flip lands on. That is why the conformance rule below compares the tied set and the outcome rather than rung names — and why "our floors differ" and "one of us is broken" have to stay separable.
+- **The costs are demonstrated here, not asserted.** The published lot really does spend neutrality: the [three-way dead-rung trio](../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md) is three files with identical ballots and three different `lot_numbers:`, electing three different winners. Input order's anonymity failure is pinned by [`test_rcv_irv_tie_order_sensitivity.py`](../../STARVote_LH_tabulation_engine/tests/test_rcv_irv_tie_order_sensitivity.py) on a plain two-candidate dead heat.
+- **The same dependency sits on two different floors.** `pref_voting` the library declines and hands back the tied set; this repo's report tools built on it apply a lot order. The floor is a property of the *caller*, not of the algorithm — which is exactly the shape of the [silent tiebreak](../topics/ties/silent_tiebreak.md), where a wrapper inherited a per-rule default it never mentioned.
+
+RCTab is the outlier that proves the point: it has no fixed floor, because `tiebreakMode` is a **required, named setting** — the choice this diagram maps is one an official has to make on the record before the count runs.
+
 ---
 
 ## STAR — two rounds, two ladders
