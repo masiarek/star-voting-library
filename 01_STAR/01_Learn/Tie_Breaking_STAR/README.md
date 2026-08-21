@@ -10,6 +10,7 @@ How STAR resolves exact ties — the official tiebreaker ladder ("rungs"), what 
 
 - [STAR Tie-Breaking — The Full Chain](tie_breaking.md) — the complete ladder, rung by rung, with worked examples for ties in the scoring round and the runoff.
 - [The "dead rung" in STAR's official tiebreaker ladder](dead_rung_note_for_equal_vote.md) — a rung that can never decide anything, documented for Equal Vote.
+- [Matchups won vs. preference votes](matchups_won_vs_preference_votes.md) — the same rung read two ways: why they agree at two tied candidates, diverge at three, and how the wrong reading advances a Condorcet loser.
 - [Tie-Breaking in BetterVoting JSON — Format & Mapping to YAML](tie_breaking_JSON.md) — where BV exports record tie information and how it maps onto this library's `lot_numbers`.
 - [Equal Vote's optional *Condorcet Tiebreaker*](condorcet_tiebreaker.md) — the **third** protocol (matches-won → total preference votes → win margin → random), an alternative to the 5-Star Tiebreaker for hand counts, worked on two examples; and why a Condorcet *tiebreaker* is **not** Condorcet *compliance*.
 
