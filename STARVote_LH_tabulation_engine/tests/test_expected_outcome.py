@@ -210,23 +210,38 @@ def test_the_probe_loader_is_not_memoised():
     a, b = _hygiene(), _hygiene()
     assert a is not b, "_hygiene() returned the same module twice — probes now leak"
 
+    # Baseline captured BEFORE poisoning, and compared fresh-against-fresh, so
+    # this can only go red for its own reason. An absolute threshold ("> 500
+    # files") would also fail whenever the corpus shrank for unrelated reasons —
+    # a test that can go red for someone else's reason is one that earns a `-k`
+    # exclusion and then stops meaning anything (yaml-1f, 2026-08-21).
+    baseline = len(list(b._yaml_teaching_files()))
     a._yaml_teaching_files = lambda: []
     fresh = _hygiene()
-    assert fresh._yaml_teaching_files() != [], "a patched instance leaked into a fresh load"
-    assert len(list(fresh._yaml_teaching_files())) > 500, "the walk lost the corpus"
+    assert len(list(fresh._yaml_teaching_files())) == baseline, (
+        "a patched instance leaked into a fresh load — every probe after the "
+        "first is now running against an empty tree and passing vacuously"
+    )
 
 
-def test_the_lint_walk_reaches_the_keyed_cases():
+def test_the_lint_walk_reaches_every_keyed_case():
     """A probe proves the PREDICATE works; this proves the gate is wired.
 
     `test_corpus_has_no_contradicting_key` passes when the lint finds nothing —
     which is also what it would report if `_yaml_teaching_files()` had stopped
-    covering the folders these two cases live in. So require the real walk to
-    actually reach them.
+    covering the folders these cases live in. So require the real walk to reach
+    them.
+
+    Derived from the keyed cases rather than hard-coded names, which also ties
+    the two discovery mechanisms together: this file finds cases by rglob, the
+    lint finds them by TEACHING_ROOTS, and a keyed case landing in a folder only
+    one of them covers is exactly the silent gap worth catching.
     """
-    walked = {Path(p).name for p in _hygiene()._yaml_teaching_files()}
-    for case in ("quorum_fail_demo_c3_b6.yaml", "bv2269_t488h9_race_nobody_can_lose.yaml"):
-        assert case in walked, f"the lint's walk never sees {case}"
+    walked = {Path(p).resolve() for p in _hygiene()._yaml_teaching_files()}
+    keyed = NO_WINNER + REJECTED
+    assert keyed, "no keyed cases to check"
+    missing = [p.name for p in keyed if p.resolve() not in walked]
+    assert not missing, f"the lint's walk never sees {missing} — the gate is not wired to them"
 
 
 @pytest.mark.parametrize("body,should_flag", _PROBES,
