@@ -197,6 +197,38 @@ _PROBES = [
 ]
 
 
+def test_the_probe_loader_is_not_memoised():
+    """The precondition the probes below silently depend on (yaml-1f, 2026-08-21).
+
+    Each probe patches `_yaml_teaching_files` on the module it gets back. That is
+    only safe because `_hygiene()` re-execs the source every call, so the patch
+    dies with that instance. If the loader were ever memoised — or swapped for a
+    plain `import` — the FIRST probe's patch would persist, and every test after
+    it would run against an empty tmp tree and pass for the emptiest possible
+    reason. That failure would be invisible: all green, nothing checked.
+    """
+    a, b = _hygiene(), _hygiene()
+    assert a is not b, "_hygiene() returned the same module twice — probes now leak"
+
+    a._yaml_teaching_files = lambda: []
+    fresh = _hygiene()
+    assert fresh._yaml_teaching_files() != [], "a patched instance leaked into a fresh load"
+    assert len(list(fresh._yaml_teaching_files())) > 500, "the walk lost the corpus"
+
+
+def test_the_lint_walk_reaches_the_keyed_cases():
+    """A probe proves the PREDICATE works; this proves the gate is wired.
+
+    `test_corpus_has_no_contradicting_key` passes when the lint finds nothing —
+    which is also what it would report if `_yaml_teaching_files()` had stopped
+    covering the folders these two cases live in. So require the real walk to
+    actually reach them.
+    """
+    walked = {Path(p).name for p in _hygiene()._yaml_teaching_files()}
+    for case in ("quorum_fail_demo_c3_b6.yaml", "bv2269_t488h9_race_nobody_can_lose.yaml"):
+        assert case in walked, f"the lint's walk never sees {case}"
+
+
 @pytest.mark.parametrize("body,should_flag", _PROBES,
                          ids=[f"{'flag' if f else 'ok'}-{i}" for i, (_, f) in enumerate(_PROBES)])
 def test_the_lint_is_not_vacuous(tmp_path, body, should_flag):
