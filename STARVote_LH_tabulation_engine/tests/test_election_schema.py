@@ -373,21 +373,31 @@ def test_row_width_matches_the_roster(path):
 
 
 def test_answer_keys_survive_the_id_mapping():
-    """A key that names real candidates must come through as ids, not vanish.
+    """Every answer key a case file carries must reach the emitted document.
 
-    `expected` is omitted when a name does not resolve — the honest answer for a
-    YAML-coerced key, and a silent hole if it ever happened in bulk. Detect the
-    key the way the engine does rather than by grepping the text: two case files
-    DISCUSS `expected_winners:` in prose while deliberately carrying none, and a
-    text match reads those as dropped keys.
+    Two shapes of key exist. `expected_winners:` names WHO won and must come
+    through as candidate ids. `expected_outcome:` says whether anyone won at all
+    and must come through verbatim. A file carrying neither must get no
+    `expected` block — "we did not check" and "we checked" must not look alike.
+
+    Detect the key the way the engine does rather than by grepping the text: two
+    case files DISCUSS `expected_winners:` in prose while carrying none.
     """
-    carried, dropped, keyless = [], [], []
+    carried, dropped, keyless, by_outcome = [], [], [], []
     for path in CASES:
         doc = election_json.build(path)
+        raw = election_json._raw_yaml(path)
+        outcome = raw.get("expected_outcome")
+
+        if outcome in ("no_winner", "rejected"):
+            assert doc.get("expected") == {"outcome": outcome}, path.name
+            assert "winners" not in doc["expected"], f"{path.name}: nobody won, yet winners listed"
+            by_outcome.append(path.name)
+            continue
+
         try:
             key = _expected_winners(path)
         except KeyError:                       # a grade file has no race to find
-            raw = json.loads(json.dumps(election_json._raw_yaml(path), default=str))
             key = raw.get("expected_winners")
         if key is None:
             keyless.append(path.name)
@@ -398,13 +408,12 @@ def test_answer_keys_survive_the_id_mapping():
     assert len(carried) > 550, f"only {len(carried)} answer keys carried through"
     assert not dropped, f"answer keys silently dropped: {dropped[:8]}"
 
-    # The two the format genuinely cannot express — the quorum failure that
-    # elects nobody, and the 3-seats/3-candidates race the engine refuses. They
-    # carry no `expected_winners:` because the key has no way to say "nobody" or
-    # "this must not tabulate". `expected.outcome` in the schema is the slot for
-    # them; filling it needs a new key in the CASE FILE, not a change here.
-    assert "quorum_fail_demo_c3_b6.yaml" in keyless
-    assert "bv2269_t488h9_race_nobody_can_lose.yaml" in keyless
+    # The two cases a winners list structurally cannot describe: the quorum
+    # failure that completes and seats nobody, and the race the engine refuses
+    # outright. Before `expected_outcome:` existed they carried no key at all
+    # and asserted nothing; now they assert the strongest thing about them.
+    assert "quorum_fail_demo_c3_b6.yaml" in by_outcome
+    assert "bv2269_t488h9_race_nobody_can_lose.yaml" in by_outcome
 
 
 def test_emit_is_pure_json_on_stdout():

@@ -54,6 +54,9 @@ ballots: |-
   2,5,4
   4,1,5
 
-# No expected_winners: the LH engine refuses this file by design (exit 1), so it
-# has no winners to expect. BV's three are recorded in scenario_description and
-# frozen in bv2269_t488h9_race_nobody_can_lose_bv_export.json.
+# The LH engine REFUSES this file by design (exit 1: 3 seats cannot be filled from
+# 3 candidates), so it has no winners to expect. `rejected` is the answer key for
+# that — "this must not tabulate" is a claim, and it is now a checked one.
+# BV's three winners are recorded in scenario_description and frozen in
+# bv2269_t488h9_race_nobody_can_lose_bv_export.json.
+expected_outcome: rejected

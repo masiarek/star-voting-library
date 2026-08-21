@@ -359,6 +359,14 @@ def build(path):
         **doc,
     }
 
+    # `expected_outcome:` answers the question `expected_winners:` structurally
+    # cannot: whether ANYONE was elected. `no_winner` and `rejected` forbid a
+    # winners list (the hygiene lint enforces that), so they are terminal here.
+    declared = raw.get("expected_outcome")
+    if declared in ("no_winner", "rejected"):
+        doc["expected"] = {"outcome": declared}
+        return doc
+
     try:
         expected = _expected_winners(path)
     except KeyError:

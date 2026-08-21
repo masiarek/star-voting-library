@@ -88,6 +88,7 @@ Display never changes the winner or the numbers. The per-option reference (for t
 | `num_winners` | recommended (defaults to 1 with a NOTE) | Seats to fill. Multi-winner needs a multi-winner method. |
 | `ballots` | **yes** | The ballot grid (see rules below). Must be a literal block: write `ballots: \|-` and indent every row. |
 | `expected_winners` | **yes, for a test case** | Top-level list of winner name(s). This is the key the automated test suite discovers and asserts. |
+| `expected_outcome` | optional | Whether anyone was elected **at all** — the answer `expected_winners` structurally cannot give. Three values: `elected` (the default; needs `expected_winners`), `no_winner` (the count completes and seats nobody — a quorum failure; the engine exits 0), `rejected` (the engine must refuse the file; it exits 1). `no_winner` and `rejected` **forbid** `expected_winners` — a file cannot elect nobody and also name a winner. Omit the key for an ordinary case. Enforced against real engine behaviour by [`tests/test_expected_outcome.py`](../STARVote_LH_tabulation_engine/tests/test_expected_outcome.py). |
 | `expected_results` | optional | Richer answer key — per-round scores, the runoff, turnout/quorum figures — beyond the bare winner. Emitted by the BetterVoting converter; the engine reads it the same way. |
 | `election_title` | optional | One-line human title, printed as the report header. |
 | `scenario_description` | optional | Printable context — the teaching text (shown only if `show_description: true`; always in `_tabulated`). |

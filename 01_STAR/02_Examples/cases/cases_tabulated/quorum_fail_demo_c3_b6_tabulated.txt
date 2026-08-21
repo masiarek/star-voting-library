@@ -35,7 +35,10 @@ ballots: |-
   1, 4, 0
   -, -, -    # blank ballot: still counts toward turnout (but turnout is short here)
 
-# No expected_winners: quorum is not met, so no winner is declared.
+# Quorum is not met, so the count completes and seats NOBODY. `expected_winners:`
+# has no way to say that, which is why this file asserted nothing until
+# `expected_outcome:` existed. The two keys are mutually exclusive.
+expected_outcome: no_winner
 
 # file: quorum_fail_demo_c3_b6.yaml
 
