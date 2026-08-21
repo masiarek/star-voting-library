@@ -317,6 +317,75 @@ def test_every_lot_banner_has_a_json_entry():
     assert not mismatched, "report and contract disagree:\n  " + "\n  ".join(mismatched)
 
 
+# ---------------------------------------------------------------------------
+# the RUNOFF's deterministic rungs — the other half of the same gap
+# ---------------------------------------------------------------------------
+#
+# The 2026-08-21 fix above taught the contract to see the LOT. It still could
+# not see a runoff tie that a *deterministic* rung resolved: those fire no lot
+# event, and `resolve_finalists()` replays the other ladder. So 16 committed
+# cases emitted `tiebreaks: []` on an election whose printed report says in full
+# "Automatic Runoff Round: First tiebreaker" — among them the very files named
+# for the rung the JSON did not mention. `resolve_runoff()` (schema 1.2.0)
+# replays that ladder the same way, and these pin it.
+
+RUNOFF_SCORE_CASE = (
+    REPO_ROOT / "01_STAR" / "03_Criteria" / "tie_break_ladder" / "cases"
+    / "bv830_vb3xv2_no_condorcet_tie_score.yaml"
+)
+RUNOFF_FIVE_STAR_CASE = (
+    REPO_ROOT / "01_STAR" / "03_Criteria" / "tie_break_dead_rung" / "cases"
+    / "tie_break_04_runoff_five_star_breaks.yaml"
+)
+
+
+def test_runoff_score_rung_is_reported():
+    """A 1-1 runoff broken by the higher total score — rung 1 of the second ladder."""
+    assert RUNOFF_SCORE_CASE.exists(), f"case moved: {RUNOFF_SCORE_CASE}"
+    doc = result_json.build(RUNOFF_SCORE_CASE)
+    assert doc["rounds"]["runoff"]["tied"] is True
+    tb = [t for t in doc["tiebreaks"] if t["stage"] == "winner"]
+    assert len(tb) == 1, "a tied runoff reported no winner-stage rung"
+    assert tb[0]["rung"] == "score"
+    assert tb[0]["advanced"] == doc["result"]["winners"]
+    # `at` is the PREFERENCE count they tied on, not the score that broke it —
+    # the number the runoff tied at is what makes the entry checkable by hand.
+    assert tb[0]["at"] == doc["rounds"]["runoff"]["finalists"][0]["preferred_by"]
+
+
+def test_runoff_five_star_rung_is_reported():
+    """The same locus, one rung lower: most ballots at the scale maximum."""
+    assert RUNOFF_FIVE_STAR_CASE.exists(), f"case moved: {RUNOFF_FIVE_STAR_CASE}"
+    doc = result_json.build(RUNOFF_FIVE_STAR_CASE)
+    tb = [t for t in doc["tiebreaks"] if t["stage"] == "winner"]
+    assert len(tb) == 1 and tb[0]["rung"] == "five-star"
+    assert tb[0]["advanced"] == doc["result"]["winners"]
+
+
+def test_every_tied_runoff_reports_exactly_one_rung():
+    """The mirror claim over the corpus, in both directions.
+
+    `rounds.runoff.tied` and a `stage: "winner"` entry are two statements about
+    the same moment, made by two different parts of the builder. A tied runoff
+    with no entry is the swallowed tie this fix is for; an entry with no tied
+    runoff would mean the replay invented one.
+    """
+    mismatched = []
+    for path in CASES:
+        try:
+            doc = result_json.build(path)
+        except result_json.UnsupportedMethod:
+            continue
+        runoff = doc["rounds"].get("runoff")
+        if runoff is None:
+            continue
+        entries = [t for t in doc["tiebreaks"] if t["stage"] == "winner"]
+        if runoff["tied"] != (len(entries) == 1):
+            mismatched.append(f"{path.name}: runoff tied={runoff['tied']}, "
+                              f"{len(entries)} winner-stage entr(ies)")
+    assert not mismatched, "runoff and tiebreaks disagree:\n  " + "\n  ".join(mismatched)
+
+
 def test_family_dispatch_uses_one_alias_table():
     """`classify_method` is the single source — the JSON's `family` must be it.
 

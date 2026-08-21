@@ -13,9 +13,10 @@ engines and conformance becomes `diff`, not eyeballing.
 
 **The rule that keeps it honest:** this module NEVER re-derives a count. Every
 number comes from the same function the printed report calls —
-`starvote._scoring_round`, `resolve_finalists`, `ranked_robin_tally`,
-`approval_tally`, `first_choice_counts`, `rcv_irv_tabulation.tabulate`. A
-number that appears here and not there is a bug in this file.
+`starvote._scoring_round`, `resolve_finalists`, `resolve_runoff`,
+`ranked_robin_tally`, `approval_tally`, `first_choice_counts`,
+`rcv_irv_tabulation.tabulate`. A number that appears here and not there is a
+bug in this file.
 
 Contract, versioning and worked examples:
     07_Concepts/tabulation_engines/result_schema.md
@@ -43,7 +44,7 @@ import starvote_larry_hastings as w  # noqa: E402
 #   major — a field removed or its meaning changed (old readers break).
 # A stored fixture must keep validating across a minor bump; that is the whole
 # point of publishing a number here.
-SCHEMA_VERSION = "1.1.0"   # 1.1.0: the LOT rung is reported, + tiebreaks[].round
+SCHEMA_VERSION = "1.2.0"   # 1.2.0: the Automatic Runoff's rungs are reported too
 SCHEMA_ID = (
     "https://masiarek.github.io/star-voting-library/"
     "STARVote_LH_tabulation_engine/star_result.schema.json"
@@ -170,10 +171,12 @@ def _lot_ties(tiebreaker, method, scores, runoff, single_winner_star):
         # straight to the lot, with no runoff anywhere on the path.
         stage = "winner" if (pr_family or "runoff" in where) else "finalists"
 
-        # Single-winner STAR already reports this tie through
-        # `resolve_finalists()`, which can also name the rung BELOW the lot.
-        # Reporting it twice would double-count the one banner it printed.
-        if stage == "finalists" and single_winner_star:
+        # Single-winner STAR already reports both of its ties through the
+        # replays -- `resolve_finalists()` for the scoring round,
+        # `resolve_runoff()` for the Automatic Runoff -- and those can also
+        # name the rung BELOW the lot. Reporting either here as well would
+        # double-count the one banner the report printed.
+        if single_winner_star:
             continue
 
         at = None
@@ -279,6 +282,27 @@ def _build_score(el, cls):
                 "majority": decided // 2 + 1 if decided else 0,
                 "tied": prefs.get(a, 0) == prefs.get(b, 0),
             }
+            # The SECOND ladder. Until 1.2.0 nothing reported it: the lot
+            # tiebreaker logged its own calls and `resolve_finalists()` replayed
+            # the scoring round, but a runoff tie broken by the score or
+            # five-star rung fired no lot event and belonged to neither replay,
+            # so the count emitted `tiebreaks: []` -- the contract's positive
+            # claim that the ballots alone decided -- on an election whose
+            # printed report says in full "Automatic Runoff Round: First
+            # tiebreaker". Sixteen committed cases did that, `bv830_..._tie_score`
+            # and `tie_break_04_runoff_five_star_breaks` among them: files whose
+            # entire subject is the rung the JSON did not mention.
+            _winner, rt = w.resolve_runoff(ballots, finalists, order_map,
+                                           maximum_score=MAX_SCORE)
+            if rt:
+                tiebreaks.append({
+                    "stage": "winner",
+                    "tied": list(rt["tied"]),
+                    "at": rt["preferred_by"],
+                    "rung": rt["rung"],
+                    "advanced": list(rt["advanced"]),
+                    "eliminated": list(rt["eliminated"]),
+                })
 
     # Every rung the LOT decided, on every seat — the one place the printed
     # report and this contract used to disagree. Appended after the finalists
