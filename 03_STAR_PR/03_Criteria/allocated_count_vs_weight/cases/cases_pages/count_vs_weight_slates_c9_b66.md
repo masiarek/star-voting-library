@@ -72,12 +72,13 @@ Count × A1,A2,A3,A4,B1,B2,B3,C1,C2
   Resolved: ['A1'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie: Allocated Score Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
 
 [Allocated Score Voting: Round 1: Ballot allocation round]
  Allocating 13+1/5 ballots.
@@ -106,12 +107,13 @@ Count × A1,A2,A3,A4,B1,B2,B3,C1,C2
   Resolved: ['A2'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie: Allocated Score Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
 
 [Allocated Score Voting: Round 2: Ballot allocation round]
  Allocating 13+1/5 ballots.
@@ -140,12 +142,13 @@ Count × A1,A2,A3,A4,B1,B2,B3,C1,C2
   Resolved: ['B1'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie: Allocated Score Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
 
 [Allocated Score Voting: Round 3: Ballot allocation round]
  Allocating 13+1/5 ballots.
@@ -172,12 +175,13 @@ Count × A1,A2,A3,A4,B1,B2,B3,C1,C2
   Resolved: ['A3'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie: Allocated Score Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
 
 [Allocated Score Voting: Round 4: Ballot allocation round]
  Allocating 13+1/5 ballots.
@@ -204,12 +208,13 @@ Count × A1,A2,A3,A4,B1,B2,B3,C1,C2
   Resolved: ['C1'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie: Allocated Score Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
 
 [Allocated Score Voting: Winners — Allocated Score Voting Method (5 winners)]
  A1

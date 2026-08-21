@@ -145,15 +145,58 @@ class LotNumberTiebreaker(Tiebreaker):
             # the pre-published lot order chose among the tied candidates. Flag it
             # the way method divergences are flagged — a strange phenomenon worth
             # naming rather than burying in the tiebreak trace.
-            print("\n[Lot-decided tie — rare]")
-            print("  ⚠ The ballots did not break this tie: the deterministic rungs")
-            print("    (pairwise / score, then five-star) all came back equal, so the")
-            print("    pre-published LOT order chose among the tied candidates — the")
-            print("    result here was set by lot, not by the votes. Usually the")
-            print('    "dead rung": no tied candidate held a score-5 vote (five-star')
-            print("    counts fives, not fours). Verify the tied candidates' 5-counts.")
+            for line in self.lot_banner(options):
+                print(line)
 
         return winners
+
+    # The banner's middle sentence — WHICH rungs came back equal — is a fact
+    # about the PATH that reached the lot, not about the election, and starvote
+    # has two kinds of path. STAR and Bloc STAR run the official ladder first
+    # (head-to-head, then five-star — see `star_voting` in the vendored module)
+    # and call this tiebreaker only when every rung tied. The three PR-family
+    # methods — Allocated Score, SSS, RRV — call `break_tie` the moment a
+    # selection round's weighted score total ties: no pairwise rung, no
+    # five-star rung, straight from the tie to the lot. Until 2026-08-21 one
+    # hard-coded STAR sentence served every path, so a PR-family mirror claimed
+    # rungs that never ran (the Lackner–Skowron shadow case is where it was
+    # caught). The banner now reads `options.method` — the method starvote is
+    # actually running — so the sentence cannot drift from the ladder again.
+    # Wording locked by tests/test_lot_number_tiebreak.py; the ladders
+    # themselves: 07_Concepts/tabulation_engines/tiebreak_ladders.md.
+    def lot_banner(self, options):
+        """The `[Lot-decided tie — rare]` banner, worded for the path that
+        reached the lot (see the note above). Returns the lines to print."""
+        method = getattr(options, "method", None)
+        lines = ["", "[Lot-decided tie — rare]"]
+        if method in (starvote.allocated, starvote.sss, starvote.rrv):
+            lines += [
+                f"  ⚠ The ballots did not break this tie: {method.name} has one",
+                "    deterministic rung per seat — the round's weighted score total —",
+                "    and the tied candidates came back equal on it, so the pre-published",
+                "    LOT order chose among them — the result here was set by lot, not by",
+                "    the votes. No head-to-head or five-star rung runs on this path: a",
+                "    tie on the weighted total goes straight to the lot. Verify the tied",
+                "    candidates' totals in the round above.",
+            ]
+        elif method in (starvote.star, starvote.bloc):
+            lines += [
+                "  ⚠ The ballots did not break this tie: the deterministic rungs",
+                "    (pairwise / score, then five-star) all came back equal, so the",
+                "    pre-published LOT order chose among the tied candidates — the",
+                "    result here was set by lot, not by the votes. Usually the",
+                '    "dead rung": no tied candidate held a score-5 vote (five-star',
+                "    counts fives, not fours). Verify the tied candidates' 5-counts.",
+            ]
+        else:
+            # A path this banner has not been taught: say only what is true on
+            # every path, and name no rungs.
+            lines += [
+                "  ⚠ The ballots did not break this tie, so the pre-published LOT",
+                "    order chose among the tied candidates — the result here was set",
+                "    by lot, not by the votes.",
+            ]
+        return lines
 
 
 # ---

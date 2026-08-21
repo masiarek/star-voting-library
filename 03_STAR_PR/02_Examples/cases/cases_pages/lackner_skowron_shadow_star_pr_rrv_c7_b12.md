@@ -100,12 +100,13 @@ Count × A,B,C,D,E,F,G
   Resolved: ['B'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie: Reweighted Range Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
 
 [Reweighted Range Voting: Round 2: Reweighing Ballots]
  Reweighted 4 ballots:

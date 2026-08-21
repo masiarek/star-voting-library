@@ -294,6 +294,9 @@ def test_yaml_lot_numbers_override_column_order(tmp_path):
 # --- 4. The "lot-decided tie" echo flag ------------------------------------
 
 FLAG = "[Lot-decided tie — rare]"
+# STAR's own rung sentence. Byte-locked: ~45 committed mirrors carry it, and the
+# PR-family test below proves it is printed on STAR's path ALONE.
+STAR_RUNG_SENTENCE = "(pairwise / score, then five-star) all came back equal"
 
 
 def _run_cli(path):
@@ -313,7 +316,8 @@ def test_flag_fires_when_the_lot_decides(tmp_path):
     assert proc.returncode == 0, proc.stderr
     assert FLAG in proc.stdout, (
         "lot-decided tie was not flagged in the engine output:\n" + proc.stdout)
-    # The flag names the mechanism (five-star counts 5s, not 4s).
+    # The flag names STAR's ladder and the mechanism (five-star counts 5s, not 4s).
+    assert STAR_RUNG_SENTENCE in proc.stdout, proc.stdout
     assert "five-star" in proc.stdout and "not fours" in proc.stdout
 
 
@@ -337,6 +341,50 @@ election:
     assert proc.returncode == 0, proc.stderr
     assert FLAG not in proc.stdout, (
         "flag printed on an election the ballots resolved cleanly:\n" + proc.stdout)
+
+
+# --- 4b. The banner names the rungs that actually ran on its path ----------
+#
+# starvote's three PR-family methods call the lot the moment a selection
+# round's weighted score total ties — no head-to-head rung, no five-star rung —
+# while STAR and Bloc STAR reach it only after the official ladder. Until
+# 2026-08-21 one hard-coded STAR sentence served every path, so a PR-family
+# mirror claimed rungs that never ran. The fixture is a three-candidate,
+# two-seat election whose first seat is a dead heat on raw score (Ada 10,
+# Ben 10, Cara 5) — all it takes to reach the lot on these paths.
+
+PR_FAMILY_TIE_YAML = """\
+election_title: Lot banner on a PR-family path
+voting_method: {method}
+num_winners: 2
+lot_numbers: [Ada, Ben, Cara]
+ballots: |-
+  Ada,Ben,Cara
+  5,5,0
+  5,5,0
+  0,0,5
+"""
+
+
+@pytest.mark.parametrize("method, name", [
+    ("allocated", "Allocated Score Voting"),
+    ("sss", "Sequentially Spent Score"),
+    ("rrv", "Reweighted Range Voting"),
+])
+def test_flag_names_the_rungs_that_ran_on_the_pr_family(tmp_path, method, name):
+    """On Allocated Score / SSS / RRV the banner must name THAT path's ladder —
+    one rung, the round's weighted score total, then the lot — and must not
+    borrow STAR's sentence or STAR's dead-rung advice."""
+    case = _write(tmp_path, f"{method}.yaml",
+                  PR_FAMILY_TIE_YAML.format(method=method))
+    proc = _run_cli(case)
+    assert proc.returncode == 0, proc.stderr
+    assert FLAG in proc.stdout, proc.stdout
+    assert f"{name} has one" in proc.stdout, proc.stdout
+    assert "the round's weighted score total" in proc.stdout, proc.stdout
+    assert "goes straight to the lot" in proc.stdout, proc.stdout
+    assert STAR_RUNG_SENTENCE not in proc.stdout, proc.stdout
+    assert "not fours" not in proc.stdout, proc.stdout
 
 
 # --- 5. Library pair: the BV-drawn order vs the new published order ---------
