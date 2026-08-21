@@ -50,6 +50,8 @@ flowchart TD
     F3 --> BUG(["Not a choice anyone made,<br/>and no report says it happened"])
 ```
 
+*Static copy for slides:* [`img/tiebreak_floors.svg`](img/tiebreak_floors.svg) — rendered from the block above with `npx @mermaid-js/mermaid-cli -i <file>.mmd -o tiebreak_floors.svg`. Nothing keeps the two in step, so re-render it if you edit the diagram.
+
 Three readings the picture is for:
 
 - **The split at the bottom is the whole point.** The published lot, the seeded shuffle and returning the tied set are three answers to a forced question, and an engine picking a different one is not a bug — it is [Zwicker's menu](../topics/ties/ties_are_forced.md#four-ways-out-and-what-each-one-costs), priced. Input order is not on that menu. Nobody chose to let data-entry order elect a candidate; it is what a seeded coin does when the seed pins the *sequence* of flips but not what each flip lands on. That is why the conformance rule below compares the tied set and the outcome rather than rung names — and why "our floors differ" and "one of us is broken" have to stay separable.
