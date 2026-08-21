@@ -152,7 +152,7 @@ Three candidates, four voters, single-winner STAR, full 0–5 scale unless the r
 
 Run as a sweep in its own right — all five shapes, three and four candidates, three to six voters, one and two seats, on `{0,1,2}` and the full scale — the constructed profiles produce **340,620 elections, zero unmapped, and all 25 categories**. They are the densest tie source in the tool by a wide margin (107,685 PR-round lot ties alone), and they are the only run that reaches every category *without* needing a top-heavy scale, because `flat` and `mirror` manufacture the score ties that let the five-star rung matter.
 
-`rotation` reports the same rates at three voters and at six — k voters per rotation changes the size of the electorate, not its symmetry, which is the point Moulin's construction is making.
+`rotation` reports the same rates at three voters and at six — k voters per rotation changes the size of the electorate, not its symmetry, which is the point Moulin's construction is making. One member of that family is now a **live public election**: [BV2285 `vx89hj`](https://bettervoting.com/vx89hj/results), the three rotation ballots `4,0,0 / 0,4,0 / 0,0,4`, with BetterVoting's own draw recorded in its export — so the shape this flag generates by the dozen can be checked once against a tabulator nobody here wrote ([the case](../../../01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_tie.md)).
 
 **The mirrored electorate is the interesting one**, because it ties everything and *still lets the ballots decide two times in three*. Reflecting a ballot through the middle of the scale does three things at once, and they are worth separating:
 
