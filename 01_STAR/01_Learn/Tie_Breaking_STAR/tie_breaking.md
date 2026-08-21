@@ -34,6 +34,8 @@ AUTOMATIC RUNOFF  — choose the winner from the two finalists
      3. LOT ORDER    — still tied? the highest-priority lot number wins
 ```
 
+**The same two ladders as a picture:** [a map of every tie case](../../../07_Concepts/topics/ties/why_contrived_tie_cases.md#a-map-of-every-tie-case-single-winner-star) — a flowchart of every branch from a clean win down to the lot, each one with the probe case that isolates it.
+
 Note the two ladders are **not** identical. In the Scoring Round, pairwise is the *first* tiebreaker; in the Runoff, total score is the first tiebreaker. Five-star is the second tiebreaker in both. The lot is the floor of both.
 
 > **Why the swap — the elegant part.** Each round breaks its tie with the *other* round's yardstick, because **the measure that tied can't be the one that separates**. The Scoring Round ranks by *total score*, so a scoring-round tie means the scores are **equal** — score can't break it, so STAR asks the runoff's question instead: *whom do more voters prefer head-to-head?* (**pairwise**). The Runoff decides by *head-to-head preference*, so a runoff tie means the preference is **equal** — preference can't break it, so STAR falls back to the scoring round's measure: *who had the higher total score?* (**score**). (Put differently: pairwise *is* the runoff, so it can't also break the runoff; score *is* the scoring round, so it can't also break the scoring round.) Only after that shared **five-star** rung, and finally the **lot**.

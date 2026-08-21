@@ -75,6 +75,29 @@ Legend: For - Equal Support - Against   (* = Top-2 Finalist)
 
 Read the top row: **Almond beats Berry 6–3** (with 1 Equal Support) and **beats Cocoa 7–3** — here Almond happens to be the [Condorcet](../properties_and_limits/STAR_three_winner_notions.md) winner (beats everyone head-to-head), so the runoff lands on the same candidate. The matrix is also how you **audit** STAR against itself: in other elections it exposes when the score-and-runoff winner is **not** the Condorcet winner (a real STAR failure — [the Condorcet winner who scores third](../../../method_comparisons/paradoxes_and_whoops/bv2156_3grpbb_star_misses_condorcet.md)) or when there's no Condorcet winner at all (a [cycle](../../../05_Ranked_Robin/01_Learn/ranked_robin.md)). It's the same pairwise grid a Condorcet method reads.
 
+## Q: What happens if there's a tie?
+
+It doesn't go to a coin flip first. An exact tie falls through a **fixed ladder of deterministic tests**, and only if *every* rung is still level does a pre-drawn **lot order** settle it. STAR has two rounds, so it has two ladders: a **Scoring Round** tie (who takes the last finalist slot) breaks on **pairwise → five-star → lot**, and an **Automatic Runoff** tie breaks on **score → five-star → lot**. The swap is the elegant part — *the measure that tied can't be the one that separates*, so each round borrows the other round's yardstick. A scoring tie means the totals are equal, so STAR asks the runoff's question instead: whom do more voters prefer head-to-head (read straight off the matrix above)? A runoff tie means the preference is equal, so it falls back to total score. Here is the first rung doing the whole job, in a 5-voter election where Ben and Cora tie at 14 for the second finalist slot:
+
+```text title="Abridged — excerpted from the full report"
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ana           -- 15 -- First place
+   Ben           -- 14 -- Tied for second place
+   Cora          -- 14 -- Tied for second place
+   Dev           -- 11
+ Ana advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Cora          -- 3 -- Second place
+   Ben           -- 2
+   Equal Support -- 0
+ Ana and Cora advance.
+```
+
+Note what a tie is **not**: an *Equal Support* ballot isn't a tie — that's one voter declining to separate the two finalists (the equal-scores question above), and the runoff can still finish 6–3. A tie is the *count* landing exactly level. Two honest caveats. **The five-star rung can be dead:** it counts votes at the scale maximum — literally a `5` — so if none of the tied candidates earned one, it reads `0–0`, separates nobody, and the tie drops straight to the lot without ever stepping down to the 4s; in low-scoring or coarse-scaled contests the lot therefore decides earlier and more often than the ladder's length suggests ([the dead-rung cases](../../03_Criteria/tie_break_dead_rung/README.md)). **And the floor differs by engine:** this library's engine ends on a *published* lot order, so even a lot-decided winner stays reproducible from the file, while BetterVoting ends on a seeded shuffle — recorded, but never a function of how anyone voted. Full ladder rung by rung, worked examples with ties in both rounds, and the LH-vs-BetterVoting comparison: [STAR Tie-Breaking — the full chain](../Tie_Breaking_STAR/tie_breaking.md). The election above is [Tied for the second finalist (BV2276, `qhjyr2`)](../../03_Criteria/tie_break_ladder/bv2276_qhjyr2_second_finalist_tie.md). If you would rather see it as a picture, every branch of both ladders is drawn in [a map of every tie case](../../../07_Concepts/topics/ties/why_contrived_tie_cases.md#a-map-of-every-tie-case-single-winner-star).
+
 ## Q: Does STAR fail Later-No-Harm? Should I "bury" a strong second choice?
 
 STAR **fails** Later-No-Harm (LNH): honestly scoring a second choice can, in constructions, help that candidate beat your favorite in the runoff. That's a real, admitted property — worth stating plainly, not waving away. Two things put it in context, without denying it: (1) LNH and the **Favorite-Betrayal Criterion** are *provably incompatible* — **no** method satisfies both, so every system fails one of the pair, and the two are routinely confused. (2) Whether *deliberately* burying a rival pays in STAR is a measurable question, not a rhetorical one: a brute-force [simulation](../../../06_Other/simulations/README.md) finds it rarely helps and backfires more often than it works, because under-scoring a strong rival risks electing someone you like even less. So it's a genuine tradeoff STAR accepts and this repo *quantifies* rather than dismisses — see [Favorite Betrayal — Voting 301](../properties_and_limits/favorite_betrayal_voting_301.md) and [STAR's honest limits](../properties_and_limits/STAR_honest_limits.md).
