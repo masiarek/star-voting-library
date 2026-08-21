@@ -274,6 +274,39 @@ The half-point also has an argument of its own that the wins-only reading cannot
 
 **If it were ever settled the other way**, the cost is bounded and knowable: nothing changes on any election whose every matchup was decided, and among the cases here only those with a drawn matchup *and* differently-shaped records at the top could move.
 
+## Why not just run Copeland again?
+
+The rung directly after the tie is a **margin**, and that is worth pausing on, because there is an obvious-looking alternative the protocol does not take: run Copeland a second time. Score each tied candidate by the Copeland scores of the opponents they *defeated*, and let whoever beat the stronger field take it. That is a real published rule — **second-order Copeland** — and it carries a selling point margins cannot match: it makes manipulating the count NP-hard, so a party trying to reverse-engineer the ballots it needs has a genuinely hard problem to solve.
+
+It also does not work, at exactly the field size where a tie is most likely to arrive.
+
+Enumerate every way three candidates' matchups can come out — win, draw or loss on each of the three pairs, 27 patterns in all — and **six** of them tie for the Copeland lead. A second Copeland round separates **none** of the six:
+
+| Pairwise outcome | Copeland | 2nd-order | net | |
+|---|---|---|---|---|
+| A>B · A=C · C>B | A 1.5, C 1.5 | A 0, C 0 | A 0, C 0 | still tied |
+| A>B · C>A · B>C *(cycle)* | A 1, B 1, C 1 | A 1, B 1, C 1 | A 0, B 0, C 0 | still tied |
+| A=B · A>C · B>C | A 1.5, B 1.5 | A 0, B 0 | A 0, B 0 | still tied |
+| A=B · A=C · B=C *(all draws)* | A 1, B 1, C 1 | A 0, B 0, C 0 | A 0, B 0, C 0 | still tied |
+| B>A · A>C · C>B *(cycle)* | A 1, B 1, C 1 | A 1, B 1, C 1 | A 0, B 0, C 0 | still tied |
+| B>A · C>A · B=C | B 1.5, C 1.5 | B 0, C 0 | B 0, C 0 | still tied |
+
+Both score columns are shown because the literature carries two readings of the second-order score — the Copeland scores of the opponents you beat, or that minus the scores of the opponents who beat you — and on this evidence the choice never matters, which is its own small result. The reason is plain enough to check by hand: with three candidates, two contenders level on Copeland have beaten the same *number* of opponents, and the only opponent outside the tie is the lone third candidate, so their defeated sets carry identical weight. A second round has nothing to read that the first round did not already spend.
+
+Widen the field and the rule does start to bite, because the tied candidates can at last have beaten *different* people — it settles 38% of four-candidate ties and 76% of five-candidate ties. But that is backwards from where the help is wanted. Ties concentrate in small fields, and the three-candidate cycle — the case BetterVoting still sends straight to its shuffle ([#1469](https://github.com/Equal-Vote/bettervoting/issues/1469)) — is precisely the one a second Copeland round can never touch.
+
+[The eleven-ballot cycle above](#bettervoting-every-three-candidate-cycle-goes-to-lot) is the runnable instance, and it is the same one BetterVoting sends to its shuffle: Dre, Edith and Frank each finish 1–1–0, each beats exactly one opponent, and every opponent beaten is worth the same Copeland 1. Second-order Copeland returns three 1s and stops. The 1st Degree returns Frank, +6.
+
+So margins are what is left, and the ladder's shape stops looking like a preference and starts looking like the only option: margins read information the win counts throw away, and they are available at every field size, including the one where second-order Copeland goes silent.
+
+The enumeration is exhaustive rather than sampled, and it loses nothing by working on pairwise patterns instead of ballots — by [McGarvey's theorem](../../../07_Concepts/topics/tournament_solutions.md) every complete pattern is produced by some electorate, and the three patterns above that contain a draw need only an even one. Reproduce it with [`second_order_copeland_sweep.py`](../../../STARVote_LH_tabulation_engine/tools_adam/second_order_copeland_sweep.py):
+
+```bash
+.venv/bin/python STARVote_LH_tabulation_engine/tools_adam/second_order_copeland_sweep.py --show 3
+```
+
+*Second-order Copeland is not a straw man — it stood in the Wikipedia article on Copeland's method until 2021, when it was removed on the grounds that it "[has] the drawback of not being likely to resolve ties in the first place. In particular, if a tie arises in a 3-way election, then a second Copeland round never resolves it" ([Talk:Copeland's method](https://en.wikipedia.org/wiki/Talk:Copeland%27s_method), Colin.champion, 22 January 2021). The claim was asserted there without a demonstration; the table above is the demonstration, and it holds under both readings of the score.*
+
 ## Where the ladder still ends in a lot
 
 Correcting the rungs does not make Ranked Robin decisive, and a fix that always decided would be the wrong fix. [BV2141](bv2141_3r3yf7_four_degree_tie.md) is electowiki's own "needs all four degrees" example: Ava and Bianca tie at 3 wins, tie at 0 on the 1st Degree and at +55 on the 2nd, and only the 4th Degree beatpath separates them — which the protocol does not recommend using. That case still ends at the lot, on both engines, and it is the regression test that keeps the fix honest.
