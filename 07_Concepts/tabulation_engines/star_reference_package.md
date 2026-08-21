@@ -80,6 +80,8 @@ The existing corpus, re-fronted for a reviewer rather than a learner: the format
 
 **Started 2026-08-10.** The result contract half is built — [the result contract page](result_schema.md), a published [JSON Schema](../../STARVote_LH_tabulation_engine/star_result.schema.json), and `--json` on the engine, covering all six method families the engine counts. The tiebreak ladders — every method, every engine, as prose — are written too ([tiebreak_ladders.md](tiebreak_ladders.md), 2026-08-20): that is the D1 clause set an implementer could least afford to reverse-engineer from cases. The "48 unanswered cases" also closed 2026-08-20: on inspection only 4 were real teaching cases (now keyed and engine-verified); the rest were negative fixtures, demo inputs, and two no-winner-by-design cases the key format cannot express — the accounting is in [the scope note's item 2](rust_kernel_scope.md). Still open: per-case *what this proves* notes, the rest of the executable specification (D1), and an answer-key form for *"no winner"*.
 
+**The input half is now designed too, 2026-08-21** — [the election contract](input_schema.md) plus [`star_election.schema.json`](../../STARVote_LH_tabulation_engine/star_election.schema.json), with one worked illustration per method. **Proposed, not built:** no emitter writes it, and the single piece of code it waits on is an `--emit-election-json` mode on the LH engine. It exists because the result contract compares two counts while silently assuming the two engines read the same election — an assumption §2 below shows does not survive a second YAML parser.
+
 **Done when:** someone else's tabulator can be scored against it without asking us anything.
 
 ### D4 — A logic-and-accuracy test deck
@@ -116,9 +118,13 @@ This library puts the ballots *inside* the same file as the configuration. That 
 
 A production tabulator needs the split, for a reason that is procedural rather than aesthetic: **the configuration is authored, reviewed, approved, and hashed *before* election day; the ballot data does not exist until after the polls close.** They have different lifecycles, different signers, and different audit trails, so they cannot live in one artifact. So: adopt the separation in the reference package's design, and do **not** propagate it back into the case library.
 
-### 2. YAML versus JSON, as a format, barely matters
+### 2. YAML versus JSON barely matters for *emitting* — and matters a great deal for *ingesting*
 
 YAML 1.2 is a superset of JSON, and emitting JSON from the existing files is one line of code. If a lab or a vendor wants JSON, generate it. Migrating 649 case files would be work for no benefit.
+
+**But that symmetry breaks the moment a second implementation reads the same file.** PyYAML is YAML **1.1**; every YAML parser in the Rust, Go and modern JS ecosystems is YAML **1.2 core schema**. Probed directly (PyYAML 6.0.3 vs `serde_yaml` 0.9.34), `No` → `False` on one side and `"No"` on the other, `12:30` → `750` vs `"12:30"`, `007` → `7` vs `"007"`. The port is *more correct* every time, which is exactly the problem: conformance means agreeing with the reference, so the correct implementation is the one scored as divergent. That is not a style question — it is the same certification-context determinism argument as §3 below, arriving through a different door, and `source.sha256` cannot see it because the **bytes** are identical.
+
+The fix is not to migrate the corpus. It is to generate a normalized JSON document from the reference reader and let every other engine consume that, so the bespoke ballot DSL keeps exactly one implementation, forever, in Python. Design, with one illustration per method: [the election contract](input_schema.md).
 
 ### 3. But YAML's implicit typing is a genuine certification-context hazard
 

@@ -1,0 +1,390 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://masiarek.github.io/star-voting-library/STARVote_LH_tabulation_engine/star_election.schema.json",
+  "title": "STAR-voting-library election (tabulator input)",
+  "description": "ONE contest, counted ONE way: the normalized, language-neutral input a tabulator reads. Companion to star_result.schema.json — that one describes what a count PRODUCES, this one describes what it CONSUMES. Prose contract, per-method illustrations and design rationale: 07_Concepts/tabulation_engines/input_schema.md. STATUS: proposed. No emitter writes this yet; the reference reader is still the YAML case file.",
+  "type": "object",
+  "required": ["schema_version", "election", "candidates", "ballots"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Version of THIS contract, not of any engine. patch = wording; minor = field added (old readers keep working); major = field removed or re-meant. A reader that does not understand the MAJOR version must refuse the document rather than count it — RCTab's posture, and the right one."
+    },
+    "source": {
+      "type": "object",
+      "description": "Provenance of the document, when it was generated from something else (a YAML case file, a CVR export). Absent for a hand-authored election.",
+      "required": ["file", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "description": "Basename of the file this was generated from." },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Hash of the source bytes. NOTE what this does and does not prove: it proves two engines read the same BYTES. It does not prove they read the same ELECTION — two YAML parsers on different YAML versions resolve `No` and `12:30` differently from identical bytes. Hashing THIS document instead is what closes that gap."
+        },
+        "generator": { "type": "string", "description": "What wrote this document, e.g. `starvote_larry_hastings.py --emit-election-json`." }
+      }
+    },
+    "election": {
+      "type": "object",
+      "required": ["method", "family", "seats", "ballot"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": ["string", "null"] },
+        "declared_method": {
+          "type": ["string", "null"],
+          "description": "Verbatim method name from the source file, before alias resolution. Kept for traceability; never counted on."
+        },
+        "method": {
+          "type": "string",
+          "description": "The method, normalized (lowercased, hyphens and spaces to underscores). One value, no aliases: a tabulator reading THIS document never runs the alias table. Alias resolution happens once, in the emitter.",
+          "enum": [
+            "star", "bloc_star", "allocated", "sss", "rrv", "score", "range",
+            "approval", "approval_multi_winner", "cav",
+            "plurality", "sntv", "block_plurality", "limited",
+            "ranked_robin", "rcv_irv", "stv",
+            "majority_judgment", "3_2_1"
+          ]
+        },
+        "family": {
+          "type": "string",
+          "enum": ["score", "approval", "plurality", "ranked_robin", "irv", "stv", "grade"],
+          "description": "Which count runs. Fixes which `rules` keys are legal. Matches star_result.schema.json's families, plus `grade` — which that contract has no counter for but this one can still express."
+        },
+        "seats": { "type": "integer", "minimum": 1 },
+        "ballot": {
+          "$ref": "#/$defs/ballot_spec",
+          "description": "The piece of paper. Declared ONCE, here — never per row. This is what makes a mixed score/ranked ballot set unrepresentable rather than merely invalid."
+        },
+        "eligible_voters": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "Electorate size, when a quorum rule needs it. Not the number of ballots cast — that is len(ballots) after weight expansion."
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "description": "In ballot-column order. That order IS the tie-break floor when no lot order is published, so it is data, not presentation.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.:-]{1,64}$",
+            "description": "Stable machine identifier. Ballots and lot orders reference THIS, never the display name — which is what makes a candidate legitimately named `No`, `007`, `12:30` or `Ω` harmless everywhere downstream."
+          },
+          "name": { "type": "string", "description": "Display name. Arbitrary text. Never a key, never parsed, never coerced." },
+          "code": { "type": ["string", "null"], "description": "Short code as it appears in a source CVR, when that differs from the name (RCTab's `code`)." },
+          "withdrawn": {
+            "type": "boolean",
+            "default": false,
+            "description": "Candidate is on the ballot paper but excluded from the count (withdrew after printing). Marks for them are read and discarded, which is NOT the same as their never appearing — RCTab's `excluded`."
+          }
+        }
+      }
+    },
+    "ballots": {
+      "type": "array",
+      "description": "One entry per distinct ballot pattern. `count` is how many voters cast that pattern. Every entry's shape is fixed by election.ballot.type — see the conditional subschemas below.",
+      "items": { "type": "object" }
+    },
+    "rules": {
+      "type": "object",
+      "description": "Choices that can change the winner and are NOT determined by the method name alone. Keys are constrained by election.family; a key foreign to the family is an error, not an ignored field. Following RCTab, anything here that can move a winner is stated rather than defaulted.",
+      "additionalProperties": false,
+      "properties": {
+        "tiebreak_protocol": {
+          "type": "string",
+          "enum": ["official", "condorcet"],
+          "description": "STAR only. `official` = Equal Vote's Official Tiebreaker Protocol (score, then head-to-head matchups won, then five-star). `condorcet` = the optional published Condorcet Tiebreaker for hand counts (matches-won, preference votes, win margin, random) — implemented by neither engine in this library."
+        },
+        "copeland_draw_value": {
+          "type": "number",
+          "enum": [0, 0.5],
+          "description": "Ranked Robin only. 0.5 = wins + half a draw, what every implementation actually does. 0 = wins alone, what Ranked Robin's published definition literally says. The two come apart the moment one head-to-head is drawn, BEFORE any tie-break rung is reached."
+        },
+        "quota": {
+          "type": "string",
+          "enum": ["droop_exact", "droop_hand_count", "hare"],
+          "description": "STV only. `droop_exact` = votes/(seats+1). `droop_hand_count` = floor(votes/(seats+1))+1, the Irish/Scottish rule, one vote higher. They elect different people on real ballot sets."
+        },
+        "overvote_rule": {
+          "type": "string",
+          "enum": ["always_skip_to_next_rank", "exhaust_immediately", "exhaust_if_multiple_continuing"],
+          "description": "Ranked families. What to do with a ballot ranking two candidates at the same position. RCTab requires this; it changes winners."
+        },
+        "max_skipped_ranks": {
+          "type": ["integer", "string"],
+          "description": "Ranked families. How many blank rank positions a ballot may skip before it stops counting. Integer, or \"unlimited\"."
+        },
+        "batch_elimination": {
+          "type": "boolean",
+          "description": "IRV/STV. Eliminate every candidate who cannot mathematically catch up, in one round. Changes the elimination ORDER a report shows even when it does not change the winner."
+        },
+        "continue_until_two": {
+          "type": "boolean",
+          "description": "IRV. Keep eliminating until exactly two remain, rather than stopping at a majority."
+        },
+        "decimal_places": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20,
+          "description": "PR families (allocated, sss, rrv, STV). Fixed-point precision for surplus and reweighting arithmetic. RCTab requires this and it is the right answer: NOT floats (summation order leaks) and NOT rationals (unbounded denominators, and no jurisdiction hand-checks a fraction). Declared precision is reproducible AND hand-auditable."
+        },
+        "ungraded": {
+          "type": "string",
+          "enum": ["bottom_of_scale", "excluded"],
+          "description": "Grade methods only. What an ungraded candidate receives. `bottom_of_scale` is the Balinski-Laraki convention and is the entire mechanism of the truncation paradox — it is a rule, not bookkeeping."
+        }
+      }
+    },
+    "tiebreak": {
+      "type": "object",
+      "description": "What happens when every deterministic rung has come back level. Ties Are Forced: something must sit at the floor, so the floor is named here rather than left to an engine default.",
+      "additionalProperties": false,
+      "properties": {
+        "floor": {
+          "type": "string",
+          "enum": ["published_lot", "candidate_order", "seeded_shuffle", "irresolute"],
+          "default": "candidate_order",
+          "description": "`published_lot` needs lot_order. `candidate_order` falls back to the candidates array. `seeded_shuffle` needs seed. `irresolute` returns the tied set and declines — what pref_voting and abcvoting do, and a legitimate answer."
+        },
+        "lot_order": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Candidate ids, earliest wins. The draw published BEFORE the count — which is what makes the result reproducible by a reader holding only this file."
+        },
+        "seed": {
+          "type": ["integer", "null"],
+          "description": "For seeded_shuffle. Recorded so a shuffle is replayable — but note it is never derivable from how anyone voted."
+        }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "description": "The answer key. NOT an input to the count — it is what the count is checked against. Absent means the document asserts nothing.",
+      "required": ["outcome"],
+      "additionalProperties": false,
+      "properties": {
+        "outcome": {
+          "type": "string",
+          "enum": ["elected", "no_winner", "rejected"],
+          "description": "`elected` = these winners. `no_winner` = the count completes and seats nobody (quorum failure). `rejected` = the document must NOT tabulate at all (a negative fixture). The YAML `expected_winners:` list can express only the first, which is why two cases in this library assert nothing today."
+        },
+        "winners": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Candidate ids, in the order elected. Required when outcome is `elected`."
+        },
+        "reason": { "type": "string", "description": "Why, for no_winner / rejected. Free text for a human; not compared." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "outcome": { "const": "elected" } } },
+          "then": { "required": ["winners"] }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "election": { "properties": { "ballot": { "properties": { "type": { "const": "score" } } } } } }
+      },
+      "then": { "properties": { "ballots": { "items": { "$ref": "#/$defs/score_row" } } } }
+    },
+    {
+      "if": {
+        "properties": { "election": { "properties": { "ballot": { "properties": { "type": { "const": "approval" } } } } } }
+      },
+      "then": { "properties": { "ballots": { "items": { "$ref": "#/$defs/approval_row" } } } }
+    },
+    {
+      "if": {
+        "properties": { "election": { "properties": { "ballot": { "properties": { "type": { "const": "choose" } } } } } }
+      },
+      "then": { "properties": { "ballots": { "items": { "$ref": "#/$defs/choose_row" } } } }
+    },
+    {
+      "if": {
+        "properties": { "election": { "properties": { "ballot": { "properties": { "type": { "const": "ranking" } } } } } }
+      },
+      "then": { "properties": { "ballots": { "items": { "$ref": "#/$defs/ranking_row" } } } }
+    },
+    {
+      "if": {
+        "properties": { "election": { "properties": { "ballot": { "properties": { "type": { "const": "grade" } } } } } }
+      },
+      "then": { "properties": { "ballots": { "items": { "$ref": "#/$defs/grade_row" } } } }
+    }
+  ],
+  "$defs": {
+    "ballot_spec": {
+      "type": "object",
+      "required": ["type"],
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "required": ["type", "min", "max"],
+          "properties": {
+            "type": { "const": "score" },
+            "min": { "type": "integer", "description": "Bottom of the scale. 0 for STAR. NEGATIVE is legal and meant — Combined Approval is a real -1/0/+1 ballot, and encoding it as 0/1/2 to fit a parser that cannot take a minus sign misrepresents the paper." },
+            "max": { "type": "integer", "description": "Top of the scale. 5 in this library, which is a TEACHING guardrail and not an engine limit — Larry's starvote is range-parametric. Never bake 0..=5 into a type." }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": { "const": "approval" },
+            "form": {
+              "type": "string",
+              "enum": ["double_bubble", "single_bubble"],
+              "default": "double_bubble",
+              "description": "`double_bubble` = the Yes/No paper this library draws, where an explicit No and an unmarked candidate are distinguishable marks. `single_bubble` = mark-or-nothing, where they are not."
+            }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["type", "marks_allowed"],
+          "properties": {
+            "type": { "const": "choose" },
+            "marks_allowed": { "type": "integer", "minimum": 1, "description": "1 = Choose-One. seats = Block. between = Limited. This number, not the seat count, is what the paper permits." },
+            "overvote": {
+              "type": "string",
+              "enum": ["spoil", "count_all"],
+              "default": "spoil",
+              "description": "A ballot with more marks than allowed. Single-winner Choose-One SPOILS it — it counts for nobody. This cannot be derived from the multi-winner rule, and deriving it elected the wrong slate on five block-voting cases in this library."
+            }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": { "const": "ranking" },
+            "equal_ranks": { "type": "string", "enum": ["allowed", "forbidden"], "default": "allowed" },
+            "truncation": { "type": "string", "enum": ["allowed", "forbidden"], "default": "allowed", "description": "Whether a ballot may rank fewer than all candidates. Truncation is where exhausted ballots come from." },
+            "max_rankings": { "type": ["integer", "string"], "description": "Positions the paper offers. An integer is a real constraint — a 3-rank grid on a 6-candidate contest manufactures exhausted ballots. \"unlimited\" for a full ranking." }
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["type", "scale"],
+          "properties": {
+            "type": { "const": "grade" },
+            "scale": {
+              "type": "array",
+              "minItems": 2,
+              "items": { "type": "string" },
+              "description": "The grade words, WORST FIRST. Words, not numbers: Balinski-Laraki's claim is not `six levels` but a shared common language, so the scale travels with the ballot rather than being a constant."
+            }
+          }
+        }
+      ]
+    },
+
+    "count": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1,
+      "description": "How many voters cast this exact pattern. Weight goes with the row, never appended after the marks."
+    },
+    "note": { "type": "string", "description": "Human annotation carried through from a source comment. Never counted." },
+
+    "score_entry": {
+      "description": "One cell of a score ballot: an integer within [min,max], null for blank, or a named marker. Markers all TABULATE as the bottom of the scale — the distinction they preserve is what the voter did, which is the entire subject of several cases here.",
+      "oneOf": [
+        { "type": "integer" },
+        { "type": "null" },
+        { "type": "string", "enum": ["abstain_race", "abstain_candidate", "spoiled", "spoiled_reissued"] }
+      ]
+    },
+    "score_row": {
+      "type": "object",
+      "required": ["scores"],
+      "additionalProperties": false,
+      "properties": {
+        "count": { "$ref": "#/$defs/count" },
+        "note": { "$ref": "#/$defs/note" },
+        "scores": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/score_entry" },
+          "description": "One entry per candidate, in candidates order. Length MUST equal the candidates array — a short row is an error, never a silent zero-fill. JSON Schema cannot express equality between two array lengths, so this one rule is checked by the reader, not by validation; tests/test_election_schema.py asserts it over every published example."
+        }
+      }
+    },
+
+    "approval_row": {
+      "type": "object",
+      "required": ["approvals"],
+      "additionalProperties": false,
+      "properties": {
+        "count": { "$ref": "#/$defs/count" },
+        "note": { "$ref": "#/$defs/note" },
+        "approvals": {
+          "type": "array",
+          "description": "One entry per candidate, in candidates order. true = Yes, false = an explicit No, null = neither bubble filled. On a double-bubble paper those are three distinct marks that all count the same and mean different things.",
+          "items": { "type": ["boolean", "null"] }
+        }
+      }
+    },
+
+    "choose_row": {
+      "type": "object",
+      "required": ["marks"],
+      "additionalProperties": false,
+      "properties": {
+        "count": { "$ref": "#/$defs/count" },
+        "note": { "$ref": "#/$defs/note" },
+        "marks": {
+          "type": "array",
+          "items": { "type": "boolean" },
+          "description": "One entry per candidate, in candidates order. More true values than ballot.marks_allowed is an overvote, resolved by ballot.overvote."
+        }
+      }
+    },
+
+    "ranking_row": {
+      "type": "object",
+      "required": ["ranking"],
+      "additionalProperties": false,
+      "properties": {
+        "count": { "$ref": "#/$defs/count" },
+        "note": { "$ref": "#/$defs/note" },
+        "ranking": {
+          "type": "array",
+          "description": "Ordered rank levels, best first; each level is the set of candidate ids tied at it. ALWAYS array-of-arrays, so an equal rank is structural rather than a syntax special case, and a truncated ballot is just a shorter list. Preference is expressed ONCE, by position — never also by a number, which is where ABIF's hybrid form gets two sources of truth for one fact.",
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "grade_row": {
+      "type": "object",
+      "required": ["grades"],
+      "additionalProperties": false,
+      "properties": {
+        "count": { "$ref": "#/$defs/count" },
+        "note": { "$ref": "#/$defs/note" },
+        "grades": {
+          "type": "array",
+          "description": "One entry per candidate, in candidates order; each a word from ballot.scale, or null for ungraded (resolved by rules.ungraded). One row per VOTER — a grade source file is transposed, and the emitter transposes it back.",
+          "items": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}
