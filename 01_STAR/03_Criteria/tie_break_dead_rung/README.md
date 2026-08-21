@@ -59,6 +59,71 @@ The most common confusion: *if the 5s tie, doesn't STAR then look at the 4s?* **
 | 3 | `3,3,1` / `3,0,2` | 0–0 | lot | [cap 3](cases/cases_pages/dead_rung_scoring_dead_cap3.md) |
 | 2 | `2,2,1` / `2,0,1` | 0–0 | lot | [cap 2](cases/cases_pages/dead_rung_scoring_dead_cap2.md) |
 
+The top row, running. Nobody in this election scores above a **4**, so watch the **Second tiebreaker**: it counts fives, finds none, prints `Ben 0 / Cara 0`, and hands the tie to the lot — while the 4s sitting right there on both ballots are never consulted.
+
+<!-- report:dead_rung_scoring_dead_cap4 -->
+```text
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 2 ballots.
+Ann,Ben,Cara
+  4,  4,   1
+  4,  0,   3
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ann           -- 8 -- First place
+   Ben           -- 4 -- Tied for second place
+   Cara          -- 4 -- Tied for second place
+ Ann advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Ben           -- 1 -- Tied for second place
+   Cara          -- 1 -- Tied for second place
+   Equal Support -- 0
+ There's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   Ben           -- 0 -- Tied for second place
+   Cara          -- 0 -- Tied for second place
+ There's still a two-way tie for second.
+
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
+    Lot-number priority order: ['Ann', 'Ben', 'Cara']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ben', 'Cara']
+  Resolved: ['Ben'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: the deterministic rungs
+    (pairwise / score, then five-star) all came back equal, so the
+    pre-published LOT order chose among the tied candidates — the
+    result here was set by lot, not by the votes. Usually the
+    "dead rung": no tied candidate held a score-5 vote (five-star
+    counts fives, not fours). Verify the tied candidates' 5-counts.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ann           -- 1 -- First place
+   Ben           -- 0
+   Equal Support -- 1
+ Ann wins.
+   Runoff math:
+     2  ballots cast
+   − 1  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Ann 1 (100%)  ·  Ben 0 (0%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Ann
+```
+<!-- /report -->
+
 Only an actual **5** revives the rung (that's the `alive` case). These were built with [`generate_dead_rung_scenarios.py`](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.py) (`--round scoring --rung dead --cap {4,3,2}`); see its [write-up](../../../STARVote_LH_tabulation_engine/tools_adam/generate_dead_rung_scenarios.md) for the alive/tied/adversarial variants.
 
 ## A real one from BetterVoting — `jfk7pd` (random vs. published lot)
