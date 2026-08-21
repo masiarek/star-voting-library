@@ -13,13 +13,13 @@ search:
 
 ## Scenario
 
-The SAME shape as case 01 with every top score capped at 4: Ben and Cara
-still tie on points (9-9) and pairwise (2-2) for the second finalist slot —
-but now NOBODY scored the maximum, so the five-star rung reads 0-0 and is
-a DEAD RUNG. The tie falls through to the lot, which favors Cara; Ann then
-beats Cara in the runoff 3-1.
-One point of enthusiasm is the whole difference: case 01 is decided by
-ballots (five-star), case 02 by the pre-drawn lot. See
+The SAME tie shape as case 01 — Ann leads, Ben and Cara tie for the second
+finalist slot (9-9) and tie pairwise (2-2) — but here no score in the tied
+pair reaches the 0-5 maximum, so the five-star rung reads 0-0 and is a DEAD
+RUNG. The tie falls through to the lot, which favors Cara; Ann then beats
+Cara in the runoff 3-1.
+Whether the tied pair holds any 5s is the whole difference: case 01 is
+decided by ballots (five-star), case 02 by the pre-drawn lot. See
 01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md.
 
 ## Ballots

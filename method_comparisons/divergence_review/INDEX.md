@@ -148,7 +148,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     _flags: 4 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Bruno, strict=Alma)_
 - **[tie_break_05_scoring_five_star_vs_adversarial_lot](cases/IRV_DIFFERS_ARTIFACT/tie_break_05_scoring_five_star_vs_adversarial_lot.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml` (3c/5b)  
     STAR=**Ben** · IRV=Cara · RR=Ben · Approval=Ann · Score=Ann · Condorcet=none  
-    _flags: 2 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ben, strict=Cara)_
+    _flags: 1 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Ben, strict=Cara)_
 - **[01_c3_b31_graders-divide](cases/IRV_DIFFERS_ARTIFACT/01_c3_b31_graders-divide.md)** — `06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml` (3c/31b)  ·  [BV ↗](https://bettervoting.com/4jmgrd/results)  
     STAR=**Clara** · IRV=Bruno · RR=Clara · Approval=Abby · Score=Bruno · Condorcet=none  
     _flags: 9 tied-score ballot(s); RR conv-sensitive (weak=Clara, strict=Bruno)_

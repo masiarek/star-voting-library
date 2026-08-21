@@ -5,10 +5,10 @@
 Ballots:
    the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
    the source score ballot follows in () per column: Ann, Ben, Cara
-     1 ×   Ben > Ann > Cara      (3, 5, 1)
+     1 ×   Ben > Ann > Cara      (3, 5, 2)
      1 ×   Ben > Ann      (3, 5, 0)
      1 ×   Ann > Cara      (4, 0, 3)
-     1 ×   Cara > Ann      (4, 0, 4)
+     1 ×   Cara > Ann      (4, 0, 5)
      1 ×   Cara > Ben      (0, 1, 1)
 
 ROUND 1

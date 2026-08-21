@@ -26,10 +26,10 @@ The ballots as marked — the filled bubble is the score given, and the score is
 
 | # | Ballot as marked | Ann | Ben | Cara |
 |:--:|:--|:--:|:--:|:--:|
-| 1 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 1."> | 3 | 5 | 1 |
+| 1 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_1.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 2."> | 3 | 5 | 2 |
 | 2 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_2.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Ben bloc: Ann 3, Ben 5, Cara 0."> | 3 | 5 | 0 |
 | 3 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_3.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 3."> | 4 | 0 | 3 |
-| 4 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 4."> | 4 | 0 | 4 |
+| 4 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_4.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — Cara bloc: Ann 4, Ben 0, Cara 5."> | 4 | 0 | 5 |
 | 5 | <img src="../img/tie_break_05_scoring_five_star_vs_adversarial_lot_ballot_5.png" width="330" style="min-width:330px" alt="A 0–5 STAR ballot — low-score voter: Ann 0, Ben 1, Cara 1."> | 0 | 1 | 1 |
 
 The same ballots as the file records them:
@@ -38,10 +38,10 @@ Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` pr
 
 ```text
 Ann,Ben,Cara
-3,5,1   # Ben bloc
+3,5,2   # Ben bloc
 3,5,0   # Ben bloc
 4,0,3   # Cara bloc
-4,0,4   # Cara bloc
+4,0,5   # Cara bloc
 0,1,1   # low-score voter
 ```
 
@@ -56,7 +56,7 @@ The count, step by step — the rounds and how the winner is reached:
   Choose-One (Plurality) = Cara   (differs from STAR)
   RCV-IRV                = Cara   (differs from STAR)
   Approval               = Ann   (differs from STAR)
-  Note: 2 of 5 ballots (40%) had equal non-zero scores, so their ranks were
+  Note: 1 of 5 ballots (20%) had equal non-zero scores, so their ranks were
         decided by candidate priority order. The RCV-IRV result may be an
         artifact of score-to-rank tie-breaking rather than a deep
         difference.
@@ -78,17 +78,30 @@ The count, step by step — the rounds and how the winner is reached:
 [STAR Voting]
  Tabulating 5 ballots.
 Ann,Ben,Cara
-  3,  5,   1
+  3,  5,   2
   3,  5,   0
   4,  0,   3
-  4,  0,   4
+  4,  0,   5
   0,  1,   1
 
 [STAR Voting: Scoring Round]
  The two highest-scoring candidates advance to the next round.
    Ann           -- 14 -- First place
-   Ben           -- 11 -- Second place
-   Cara          --  9
+   Ben           -- 11 -- Tied for second place
+   Cara          -- 11 -- Tied for second place
+ Ann advances, but there's a two-way tie for second.
+
+[STAR Voting: Scoring Round: First tiebreaker]
+ The candidate preferred in the most head-to-head matchups advances.
+   Ben           -- 2 -- Tied for second place
+   Cara          -- 2 -- Tied for second place
+   Equal Support -- 1
+ There's still a two-way tie for second.
+
+[STAR Voting: Scoring Round: Second tiebreaker]
+ The candidate with the most votes of score 5 advances.
+   Ben           -- 2 -- Second place
+   Cara          -- 1
  Ann and Ben advance.
 
 [STAR Voting: Automatic Runoff Round]
@@ -116,11 +129,15 @@ Ann,Ben,Cara
 Head-to-head / pairwise comparison
 Legend: For - Equal Support - Against
         * indicates Top 2 Finalist
+        Note: Ben and Cara tied at 11 in the Scoring Round, and the five-star
+              rung advanced Ben. The * marks who advanced, not who scored
+              highest.
+
                |   * Ann    |  * Ben    |    Cara   |
 -----------------------------------------------------
-       * Ann > |    ---     |2 - 0 - 3  |3 - 1 - 1  |
+       * Ann > |    ---     |2 - 0 - 3  |3 - 0 - 2  |
        * Ben > | 3 - 0 - 2  |   ---     |2 - 1 - 2  |
-        Cara > | 1 - 1 - 3  |2 - 1 - 2  |   ---     |
+        Cara > | 2 - 0 - 3  |2 - 1 - 2  |   ---     |
 
 [Condorcet Winner]
   No strict Condorcet winner; weak Condorcet winner: Ben — matches the STAR winner
@@ -133,7 +150,7 @@ Legend: For - Equal Support - Against
 Candidate  5  4  3  2  1  0  | Total   Avg
 Ann        0  2  2  0  0  1  |    14   2.8
 Ben        2  0  0  0  1  2  |    11   2.2
-Cara       0  1  1  0  2  1  |     9   1.8
+Cara       1  0  1  1  1  1  |    11   2.2
 ```
 
 Everything in one file: the [`_tabulated` mirror](../cases_tabulated/tie_break_05_scoring_five_star_vs_adversarial_lot_tabulated.txt) (regenerated on every run; every analysis forced on).

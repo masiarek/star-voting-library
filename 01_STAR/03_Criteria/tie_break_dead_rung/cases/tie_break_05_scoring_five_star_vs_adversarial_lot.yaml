@@ -15,10 +15,10 @@ lot_numbers: [Cara, Ann, Ben]   # lot favors Cara — five-star must outrank it
 
 ballots: |-
   Ann,Ben,Cara
-  3,5,1   # Ben bloc
+  3,5,2   # Ben bloc
   3,5,0   # Ben bloc
   4,0,3   # Cara bloc
-  4,0,4   # Cara bloc
+  4,0,5   # Cara bloc
   0,1,1   # low-score voter
 
 expected_winners:

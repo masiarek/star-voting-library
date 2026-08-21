@@ -1,6 +1,6 @@
 # The "dead rung" — when STAR's five-star tiebreaker can't fire
 
-*Four tiny constructed elections that isolate one fact: STAR's **five-star** tiebreaker counts votes equal to the **scale maximum (5)**. If none of the tied candidates earned a 5, the rung reads `0–0` and the tie falls through to the **lot** — in **both** rounds.*
+*A dozen tiny constructed elections — plus real BetterVoting races that hit the same thing — isolating one fact: STAR's **five-star** tiebreaker counts votes equal to the **scale maximum (5)**. If none of the tied candidates earned a 5, the rung reads `0–0` and the tie falls through to the **lot** — in **both** rounds.*
 
 Backs the "dead rung" section of the canonical [STAR Tie-Breaking — The Full Chain](../../01_Learn/Tie_Breaking_STAR/tie_breaking.md) (Level 301). Run any file:
 
@@ -22,10 +22,10 @@ AUTOMATIC RUNOFF winner:    score    → five-star → lot
 
 | File | Round | 5 present? | Second rung (five-star) | Decided by | Winner |
 |---|---|:--:|---|---|---|
-| `tie_break_01_scoring_five_star_breaks` | Scoring | yes | Ben 1, Cara 0 → Ben advances | **five-star** | Alice |
-| `tie_break_02_scoring_no_fives_to_lot`  | Scoring | no  | Ben 0, Cara 0 → still tied | **lot** | Alice |
-| `tie_break_03_runoff_no_fives_to_lot`   | Runoff  | no  | Alice 0, Ben 0 → still tied | **lot** | Alice |
-| `tie_break_04_runoff_five_star_breaks`  | Runoff  | yes | Alice 1, Ben 0 → Alice wins | **five-star** | Alice |
+| [`tie_break_01_scoring_five_star_breaks`](cases/cases_pages/tie_break_01_scoring_five_star_breaks.md) | Scoring | yes | Ben 1, Cara 0 → Ben advances | **five-star** | Alice |
+| [`tie_break_02_scoring_no_fives_to_lot`](cases/cases_pages/tie_break_02_scoring_no_fives_to_lot.md)  | Scoring | no  | Ben 0, Cara 0 → still tied | **lot** | Alice |
+| [`tie_break_03_runoff_no_fives_to_lot`](cases/cases_pages/tie_break_03_runoff_no_fives_to_lot.md)   | Runoff  | no  | Alice 0, Ben 0 → still tied | **lot** | Alice |
+| [`tie_break_04_runoff_five_star_breaks`](cases/cases_pages/tie_break_04_runoff_five_star_breaks.md)  | Runoff  | yes | Alice 1, Ben 0 → Alice wins | **five-star** | Alice |
 
 Cases 01/02 are the **same** tie shape one point apart (5s vs capped at 4); 03/04 likewise. Note the eventual **winner is Alice in all four** — the point isn't who wins these toy races, it's **which rung decides**. In a closer election that difference chooses the winner (see the scale-granularity case in [Scale granularity can flip the winner (a 301 case)](../../../07_Concepts/scores_and_ranks/scale_granularity_flips_the_winner.md)).
 
@@ -35,15 +35,19 @@ Cases 01–04 teach, but they can't *catch a regression*: Alice wins whether or 
 
 | File | Round | Rung state | Lot favors | Winner proves |
 |---|---|---|---|---|
-| `tie_break_05_scoring_five_star_vs_adversarial_lot` | Scoring | alive (Ben 2, Cara 1) | Cara | **Ben** — five-star outranks the lot; Ben then wins the runoff |
-| `tie_break_06_scoring_dead_rung_adversarial_lot` | Scoring | dead (all ≤ 4) | Cara | **Ann** — lot advances Cara, who loses the runoff to Ann |
-| `tie_break_07_runoff_five_star_vs_adversarial_lot` | Runoff | alive (Ann 1, Ben 0) | Ben | **Ann** — five-star outranks the lot |
-| `tie_break_08_runoff_dead_rung_adversarial_lot` | Runoff | dead (both top out at 4) | Ben | **Ben** — the lot, not column order, resolves it |
-| `tie_break_09_five_star_tied_nonzero` | Runoff | alive but **non-separating** (one 5 each) | Ben | **Ben** — a rung can run, count real votes, and decide nothing |
+| [`tie_break_05_scoring_five_star_vs_adversarial_lot`](cases/cases_pages/tie_break_05_scoring_five_star_vs_adversarial_lot.md) | Scoring | alive (Ben 2, Cara 1) | Cara | **Ben** — five-star outranks the lot; Ben then wins the runoff |
+| [`tie_break_06_scoring_dead_rung_adversarial_lot`](cases/cases_pages/tie_break_06_scoring_dead_rung_adversarial_lot.md) | Scoring | dead (all ≤ 4) | Cara | **Ann** — lot advances Cara, who loses the runoff to Ann |
+| [`tie_break_07_runoff_five_star_vs_adversarial_lot`](cases/cases_pages/tie_break_07_runoff_five_star_vs_adversarial_lot.md) | Runoff | alive (Ann 1, Ben 0) | Ben | **Ann** — five-star outranks the lot |
+| [`tie_break_08_runoff_dead_rung_adversarial_lot`](cases/cases_pages/tie_break_08_runoff_dead_rung_adversarial_lot.md) | Runoff | dead (both top out at 4) | Ben | **Ben** — the lot, not column order, resolves it |
+| [`tie_break_09_five_star_tied_nonzero`](cases/cases_pages/tie_break_09_five_star_tied_nonzero.md) | Runoff | alive but **non-separating** (one 5 each) | Ben | **Ben** — a rung can run, count real votes, and decide nothing |
 
-05/06 are again the same tie shape one point apart — but here that one point of enthusiasm **changes the elected winner** (Ben vs Ann), not just the deciding rung. Case 09 adds the subtler failure mode: the rung isn't dead, it's *uninformative* — equal nonzero five-star counts fall through to the lot just like `0–0` does.
+05/06 are again the same tie *shape* — Ann leads, Ben and Cara tie for the second finalist slot and tie pairwise — with and without 5s in the tied pair. Here that difference **changes the elected winner** (Ben vs Ann), not just the deciding rung.
 
-All nine files carry `expected_winners:` and are auto-discovered by `test_single_winner_positive.py`.
+Note what 05/06 *can't* be, unlike 01/02 and 03/04: a one-point edit. Handing a tied candidate a 5 also hands them a point, which breaks the very tie the rung is supposed to settle — so an alive/dead pair always has to pay the point back somewhere else (here Cara's `1 → 2` and `4 → 5`). That arithmetic is the dead rung in miniature: **the rung's input and the tie's existence are made of the same numbers.**
+
+Case 09 adds the subtler failure mode: the rung isn't dead, it's *uninformative* — equal nonzero five-star counts fall through to the lot just like `0–0` does.
+
+Every case file in this folder carries `expected_winners:` and is auto-discovered by `test_single_winner_positive.py`.
 
 ## The cap ladder — "so what about the 4s?"
 
@@ -62,6 +66,8 @@ Only an actual **5** revives the rung (that's the `alive` case). These were buil
 A live BetterVoting election that hit exactly this: two candidates, two ballots (Ada 4/0, Ben 0/4), tied at every rung with **no 5s** (a dead rung), which BV resolved by a **random** draw (`tieBreakType: random`) and elected Ben. Import the same ballots with a deterministic **published** lot order and Ada wins — same votes, different winner. Written up as a shareable brief for the BV team: [A lot-decided STAR tie in BetterVoting (jfk7pd)](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd.md) — with the frozen export and both tabulatable YAMLs ([BV-order → Ben](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml), [published → Ada](lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_published_order.yaml)).
 
 **Does it scale past two candidates?** Yes — the phenomenon is about *symmetry*, not candidate count. The [three-way dead-rung tie](three_way_dead_rung_tie/three_way_dead_rung_tie.md) (A 4/0/0, B 0/4/0, C 0/0/4) is the 3-candidate analog: three candidates, **three** possible winners by lot, and a random draw now diverges from a published order **2/3** of the time — `(k−1)/k` for a `k`-way tie. More candidates never fix it; they can make the divergence worse and add a second place (the finalist choice) for the lot to bite.
+
+**And one where every rung dies, not just this one.** [BV126 — ties at every step](bv126_ties_every_step_8fvd2x.md) is a real BetterVoting race running case 09's failure mode at full length: three candidates tie at 29 points, tie pairwise 2–2–2, and hold **five 5s each** — so the five-star rung runs, counts real votes, separates nobody, and the lot picks both finalists. Then the runoff ties too, and the same three rungs die again in the same order. A ladder can be fully alive and still decide nothing. It also shows the second half of the problem: BetterVoting drops the five flat `5,5,5` ballots as abstentions, so the two engines agree on **Amy** only because those ballots couldn't have changed it.
 
 > **Why build these deliberately-degenerate elections at all?** They're *probes*, not forecasts — the fastest way to isolate one tie behavior, make a real bug reproducible, pin the spec, and lock a regression test. See [Why Build "Silly" Tie Elections?](../../../07_Concepts/topics/ties/why_contrived_tie_cases.md) (with a flow-chart map of every tie case).
 
