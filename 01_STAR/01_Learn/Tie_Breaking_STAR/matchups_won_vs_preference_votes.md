@@ -160,7 +160,7 @@ The lesson generalises past this rung: when a tally is reported as wrong because
 | **Vendored `starvote` before the fix** | summed pairwise preference votes, printed under a label naming matchups |
 | **BetterVoting** | skips the rung entirely when more than two are tied and goes straight to five-star ([#1379](https://github.com/Equal-Vote/bettervoting/issues/1379)) |
 
-So until 2026-08-21 **neither** engine this library runs implemented the published rung, in two different ways — one skipped it, the other substituted a different statistic under its name. The full ladder comparison, engine by engine, is in [tiebreak ladders](../../../07_Concepts/tabulation_engines/tiebreak_ladders.md#star--two-rounds-two-ladders).
+So until 2026-08-21 **neither** engine this library runs implemented the published rung, in two different ways — one skipped it, the other substituted a different statistic under its name. The full ladder comparison, engine by engine, is in [tiebreak ladders](../../../07_Concepts/tabulation_engines/tiebreak_ladders.md#star-two-rounds-two-ladders).
 
 ## Why the existing tie probes could not catch it
 

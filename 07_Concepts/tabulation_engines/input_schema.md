@@ -16,7 +16,7 @@ This page is addressed to **implementers**, like its companion. If you are here 
 
 A schema is only assessable against a purpose. [The requirements page](rust_kernel_requirements.md) puts it sharply: *"Each candidate goal produces a materially different library. Two co-primary goals is the same as no goal."* So this one names its goal rather than leaving it implicit.
 
-**This schema is built for [G6 — a shared conformance suite](rust_kernel_requirements.md#g6--a-shared-conformance-suite-that-other-projects-adopt)**, the goal that page calls *"quietly the highest-leverage on this list, and the least glamorous."* It is also the goal that **survived** the 2026-08-10 decision that this library gets no Rust kernel: Track A is Python work that is worth doing whether or not any Rust is ever written, and this is Track A. The Rust section further down exists because a reference implementation is how you prove a suite is implementable by someone who did not write the Python — not because a kernel is planned.
+**This schema is built for [G6 — a shared conformance suite](rust_kernel_requirements.md#g6-a-shared-conformance-suite-that-other-projects-adopt)**, the goal that page calls *"quietly the highest-leverage on this list, and the least glamorous."* It is also the goal that **survived** the 2026-08-10 decision that this library gets no Rust kernel: Track A is Python work that is worth doing whether or not any Rust is ever written, and this is Track A. The Rust section further down exists because a reference implementation is how you prove a suite is implementable by someone who did not write the Python — not because a kernel is planned.
 
 What that choice buys, and what it costs, under the other goals:
 
