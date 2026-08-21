@@ -76,7 +76,7 @@ parent: BetterVoting Documentation
 This matters because moving files is expensive here and re-parenting is free:
 
 - Six doc URLs are hardcoded in the app (see the table above), two as deep anchors. A move breaks them and needs a coordinated frontend PR.
-- **Redirects do not work today.** `redirect_from:` in front matter emits nothing, because `_config.yml` has no `plugins:` key. Verified both ways: with no `plugins:` entry the build produces no redirect stub; adding `plugins: [jekyll-redirect-from]` makes it work (the gem is already in the bundle via `github-pages`). So **before moving any published page, enable the plugin first** — otherwise the old URL just 404s.
+- **Redirects work — since 2026-08-20** (PR #1535 added `plugins: [jekyll-redirect-from]` to `_config.yml`; before that, `redirect_from:` in front matter emitted nothing and the old URL just 404'd). Put the old address in the moved page's front matter, as a `redirect_from:` list entry (`- /help/old_name.html`), and the build writes a stub there with a `<meta http-equiv="refresh">` to the new one. Re-verified on a live build 2026-08-21. Two limits: the entry has to stay forever (the old address works only while it is listed), and **a redirect is per-page, not per-anchor** — renaming a heading still breaks `ties.html#random-tie-breakers` and `faq.html#write-in-scores-not-counted`, which the app links directly.
 
 Default answer to "should we create folders?": **no — restructure the sidebar with `parent:`.** Folders are storage; the sidebar is the information architecture, and only one of them is visible to users.
 
@@ -147,4 +147,4 @@ gh pr create --repo Equal-Vote/bettervoting --base main --head masiarek:<branch>
 - **Keep the web-UI flow as the recommended default in anything you write.** Arend recommends editing on GitHub for small changes, and he's right — local preview is the second gear for new pages and structural work, not a replacement. Framing it as a fix for a broken process reads badly.
 - Batch by section, not by page — 60 pages as 60 PRs will stall. And get the nav structure agreed *before* filling it, or every content PR relitigates placement.
 
-**Open PRs** (check state before assuming): [#1501](https://github.com/Equal-Vote/bettervoting/pull/1501) local preview + Liquid fix.
+**Merged, and now the toolchain** (check state before assuming): [#1501](https://github.com/Equal-Vote/bettervoting/pull/1501) local preview + Liquid fix (adds `docs/Gemfile` and `repository:`), [#1535](https://github.com/Equal-Vote/bettervoting/pull/1535) redirects. So the preview command above needs no Gemfile shuttling any more — `docs/Gemfile` is on `main`.
