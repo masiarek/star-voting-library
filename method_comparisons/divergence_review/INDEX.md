@@ -28,7 +28,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (144 cases; identical library copies merged).
 
-**81 of these 144 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**82 of these 144 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -197,7 +197,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 - **[lot_random_vs_published_jfk7pd_bv_order](cases/CYCLE_OR_THREE_WAY/lot_random_vs_published_jfk7pd_bv_order.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/lot_random_vs_published_jfk7pd/lot_random_vs_published_jfk7pd_bv_order.yaml` (2c/2b)  ·  [BV ↗](https://bettervoting.com/jfk7pd/results)  
     STAR=**Ben** · IRV=Ada · RR=Ben · Approval=Ben · Score=Ben · Condorcet=none  
     _also at: `YAML_library/1_positive/lot_tiebreak_bv_order.yaml`_
-- **[three_way_dead_rung_A](cases/CYCLE_OR_THREE_WAY/three_way_dead_rung_A.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml` (3c/3b)  
+- **[three_way_dead_rung_A](cases/CYCLE_OR_THREE_WAY/three_way_dead_rung_A.md)** — `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_A.yaml` (3c/3b)  ·  [BV ↗](https://bettervoting.com/vx89hj/results)  
     STAR=**A** · IRV=B · RR=A · Approval=A · Score=A · Condorcet=none  
     _also at: `01_STAR/03_Criteria/tie_break_dead_rung/three_way_dead_rung_tie/three_way_dead_rung_C.yaml`_
 - **[ex02_nine_ballots](cases/CYCLE_OR_THREE_WAY/ex02_nine_ballots.md)** — `01_STAR/05_Practice/cases/ex02_nine_ballots.yaml` (5c/9b)  

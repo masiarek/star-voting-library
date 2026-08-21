@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://masiarek.github.io/star-voting-library/STARVote_LH_tabulation_engine/star_election.schema.json",
   "title": "STAR-voting-library election (tabulator input)",
-  "description": "ONE contest, counted ONE way: the normalized, language-neutral input a tabulator reads. Companion to star_result.schema.json — that one describes what a count PRODUCES, this one describes what it CONSUMES. Prose contract, per-method illustrations and design rationale: 07_Concepts/tabulation_engines/input_schema.md. STATUS: proposed. No emitter writes this yet; the reference reader is still the YAML case file.",
+  "description": "ONE contest, counted ONE way: the normalized, language-neutral input a tabulator reads. Companion to star_result.schema.json — that one describes what a count PRODUCES, this one describes what it CONSUMES. Emitted by `starvote_larry_hastings.py <file> --emit-election-json` (builder: election_json.py). Prose contract, per-method illustrations and design rationale: 07_Concepts/tabulation_engines/input_schema.md. An implementation conforms on a case when the ballots it reads from this document are the ballots the reference engine read from the source file — which is what tests/test_election_schema.py asserts over the whole corpus.",
   "type": "object",
   "required": ["schema_version", "election", "candidates", "ballots"],
   "additionalProperties": false,

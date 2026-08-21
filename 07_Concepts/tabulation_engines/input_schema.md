@@ -6,9 +6,9 @@
 
 This page is addressed to **implementers**, like its companion. If you are here to learn STAR, start at [01_STAR](../../01_STAR/README.md) instead.
 
-> **Status: proposed. Nothing emits this yet.**
+> **Status: built. `--emit-election-json` ships, and the whole corpus goes through it.**
 >
-> [`result_schema.md`](result_schema.md) documents something that ships — `--json` works today. This page documents a **design**, published so it can be argued with before anything is built on it. The reference reader is still the YAML case file, and the schema below has no producer. What exists is the schema, the illustrations, and a test asserting they agree. The one piece of code it waits on is named at the [bottom](#what-would-have-to-be-built).
+> Every one of this library's **593** case files emits a document that validates against the published schema — including the **7 grade files**, which the [result contract](result_schema.md) cannot express at all. And on all **586** files with countable ballots, the ballots rebuilt from the JSON are **identical** to the ones the engine parsed: same ballots, same order, same weights. That last check is the one that matters, and it is [what makes this a contract](#what-checks-this-page) rather than a proposal.
 
 ---
 
@@ -463,25 +463,43 @@ Four properties, each earned by something above:
 
 ---
 
-## What would have to be built
+## Emitting one
 
-One thing, and it is small: **`--emit-election-json` on the LH engine**, the input mirror of `--json`. It reads a case file through the existing reader and writes this document.
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py <case.yaml> --emit-election-json
+```
 
-That is what makes the whole design work, because it means the bespoke ballot DSL — the header row, the `Count:` prefix, the `×`, the `>` rankings, the markers, the `#,` comments, and the whitespace-alignment rescue that 183 files depend on — keeps **exactly one implementation, forever, in Python.** No second engine ever parses it, in any language. And the document it emits can be hashed, which is the thing `source.sha256` cannot do for YAML bytes read by two different parsers.
+JSON on stdout and nothing else — no report, no `_tabulated` mirror written as a side effect, the same purity contract `--json` keeps. From Python, `election_json.build(path)` returns the same object as a dict. The builder is [`election_json.py`](../../STARVote_LH_tabulation_engine/election_json.py).
 
-Then the corpus keeps its authoring format unchanged, and every other engine reads JSON.
+**The point of it is subtraction.** The bespoke ballot DSL — the header row, the `Count:` prefix, the `×`, the `>` rankings, the five markers, the `#,` comments, and the whitespace-alignment rescue that 183 files depend on — now has **exactly one implementation, forever, in Python.** No second engine parses it, in any language. And the document it emits can be hashed, which is the thing `source.sha256` could never do for YAML bytes read by two different parsers.
+
+It inherits the result contract's discipline: **it never re-parses a ballot.** Candidates, weights, markers and rank levels all come back from the functions the printed report itself calls — `load_election`, `classify_method`, `parse_ballots_from_string` (whose `display_rows` are what keep a marker visible), and `ballots_for_pairwise` for ranked ballots. A ballot that appears here differently from the report is a bug in the emitter.
+
+**It does not tabulate**, which is why it is a separate module rather than a mode of `result_json.py`. Describing an election is easier than counting one, so this contract reaches methods the result contract must refuse: Range at 0–9, CAV, and the grade methods all emit cleanly and none of them is countable by this engine.
+
+Two things the build settled that were open in the design:
+
+- **The scale is inferred, because a case file never declares one.** 0–5 is the house convention, enforced by `validate_star_rows(max_score=5)` — so the emitter assumes it and then *widens* it to fit the data, which is how [`range_101_0to9_c3_b5`](../../06_Other/Range/cases/range_101_0to9_c3_b5.yaml) keeps its 0–9 range instead of being silently clipped. Making that explicit in the emitted document is half the reason to emit one. **The CAV illustration above is the format's native form, not the emitter's output:** that case file encodes −1/0/+1 offset as 2/1/0 because the shared parser cannot read a minus sign, and the emitter faithfully reproduces the offset rather than second-guessing it. Fixing that is a case-file change.
+- **Aliases collapse here, once.** `classify_method` normalizes case and separators but deliberately keeps `rr`, `bloc`, `irv`, `consensus`. The published contract has one name per method, so a reader of the JSON never runs an alias table.
 
 ## What is still missing
 
 Stated plainly, on the same principle as the result contract:
 
-- **No emitter, so nothing validates real cases yet.** The test below checks the schema against the illustrations on this page, which proves the schema is coherent and self-consistent — not that it can express all 612 files. Expect the conversion to find edge cases; the `3-2-1` and multi-race files are the likely first casualties.
-- **Multi-contest files are out of scope by construction.** 30 case files use the older nested `election:` / `races:` shape, and each becomes N documents. Nothing yet says how the N are named or related.
+- **The answer key still cannot say "nobody" — from the YAML side.** `expected.outcome` exists here precisely for the [quorum failure](../../01_STAR/02_Examples/cases/quorum_fail_demo_c3_b6.yaml) that elects nobody and the [three-seats/three-candidates race](../../02_STAR_Bloc/02_Examples/cases/bv2269_t488h9_race_nobody_can_lose.yaml) the engine refuses outright. Both carry no `expected_winners:` at all, because the key has no way to express them — so the emitter honestly emits no `expected` block. Filling it needs a **new key in the case file**, which is a change to the documented YAML schema and 593 files' contract, not a change to the emitter. Those two are the only ones; every other answer key in the library comes through.
 - **`rules` is scoped by convention, not by the schema.** The keys are constrained as a set and each is documented with its family, but the schema does not yet *forbid* `quota` on a STAR contest. That wants the same `if`/`then` treatment `ballot.type` already gets, and is the first thing to tighten.
+- **The emitter reads one contest per file, which is all the corpus has.** 31 files use the older nested `election:` / `races:` shape and the reader takes race 0; exactly one file carries two races, and it is a [negative fixture](../../YAML_library/2_negative/neg_two_races_in_one_file.yaml) asserting that two races in one file is an *error*. So the one-document-one-contest rule costs nothing today — but nothing yet says how N documents from one file would be named or related, and that is the shape a real multi-contest ballot would need.
+- **A `rules` value is what this engine does, not what the file asked for.** `copeland_draw_value: 0.5` and `quota: "droop_exact"` are emitted because that is what the LH engine implements — the YAML never states either. They are honest descriptions of the count the reference produces, and they will need to become real case-file keys before a file can ask for the *other* convention.
 - **No CVR profile.** [D6 of the reference package](star_reference_package.md) is the mapping onto NIST CDF, and this schema is deliberately not it — a fixture format and a jurisdiction interchange format are different documents with different readers.
 
 ## What checks this page
 
-[`tests/test_election_schema.py`](../../STARVote_LH_tabulation_engine/tests/test_election_schema.py) parses every JSON block on this page, validates each against the published schema, and asserts the negative cases too — that a ranked row inside a score contest is **rejected**, and that `outcome: "elected"` without a winners array is **rejected**. A schema nothing checks is documentation, not a contract.
+[`tests/test_election_schema.py`](../../STARVote_LH_tabulation_engine/tests/test_election_schema.py) — 1,843 checks, in three layers.
+
+**The page.** Every JSON block above is parsed and validated against the published schema, so an illustration cannot drift from the contract it illustrates.
+
+**The corpus.** All 593 case files are emitted and validated. Then the check that actually earns the word *contract*: for each of the 586 files with countable ballots, the engine's ballot list is **rebuilt from the emitted JSON alone** and required to be identical — same ballots, same order, same weights. Validating against a schema proves a document is well-*formed*; it says nothing about whether it describes the same election. This does, and it is the assertion a second implementation is entitled to rely on.
+
+**The refusals.** A schema that accepts everything is documentation. So the negatives are asserted too: a ranked row inside a score contest is **rejected**, `outcome: "elected"` without a winners array is **rejected**, a score ballot with no declared scale is **rejected**, a method *alias* (`STAR` rather than `star`) is **rejected**, a raw YAML marker glyph (`"~"` rather than `"abstain_race"`) is **rejected**, and a typo'd method (`STARR`) raises `UnsupportedMethod` rather than being guessed at. Meanwhile a negative scale (`min: -1`, for Combined Approval) and a Range 0–9 ballot are **accepted**, because the format's job is to describe elections this engine cannot count.
 
 *Up: [Tabulation engines](README.md) · the output half: [the result contract](result_schema.md) · the wider plan: [the STAR reference package](star_reference_package.md) · the consumer this was designed for: [Rust kernel scope](rust_kernel_scope.md).*

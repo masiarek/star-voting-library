@@ -441,7 +441,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `three_neighbors_allocated` | Three neighbors, two seats — Allocated Score | 1 | single-race | 3 | STAR_PR | LH-only |
 | `three_neighbors_rrv` | Three neighbors, two seats — Reweighted Range Voting | 1 | single-race | 3 | STAR_PR | LH-only |
 | `three_neighbors_sss` | Three neighbors, two seats — Sequentially Spent Scor | 1 | single-race | 3 | STAR_PR | LH-only |
-| `three_way_dead_rung_A` | Three-way dead-rung tie — published order A,B,C elec | 1 | single-race | 3 | STAR | LH-only |
 | `three_way_dead_rung_B` | Three-way dead-rung tie — published order B,C,A elec | 1 | single-race | 3 | STAR | LH-only |
 | `three_way_dead_rung_C` | Three-way dead-rung tie — published order C,A,B elec | 1 | single-race | 3 | STAR | LH-only |
 | `three_winners_cw_score_runoff` | Three notions of "winner" disagree — Condorcet, Scor | 1 | single-race | 5 | STAR | LH-only |
@@ -522,6 +521,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`v9rhhr`](https://bettervoting.com/v9rhhr/results) | BV2247 — Replant the Park — Bloc STAR with 7 trees,  | 1 | single-race | 44 | STAR | BV |
 | [`vb3xv2`](https://bettervoting.com/vb3xv2/results) | BV830 — No Condorcet winner (top-two tie) — STAR bre | 1 | single-race | 3 | STAR | BV |
 | [`vqyqkr`](https://bettervoting.com/vqyqkr/results) | Tennessee capital — Ranked Robin (RR/Condorcet = Nas | 1 | single-race | 100 | RankedRobin | BV |
+| [`vx89hj`](https://bettervoting.com/vx89hj/results) | Three-way dead-rung tie — published order A,B,C elec | 1 | single-race | 3 | STAR | BV |
 | [`w3vvff`](https://bettervoting.com/w3vvff/results) | BV2105-r2 — Favorite ice cream (Bloc STAR): the part | 1 | single-race | 4 | STAR | BV |
 | [`w9f4vd`](https://bettervoting.com/w9f4vd/results) | BV2236 — Bullet Storm — a bullet-voting electorate a | 1 | single-race | 33 | STAR | BV |
 | [`xgkw3w`](https://bettervoting.com/xgkw3w/results) | Runoff_05 - Reversal with Equal Support | 1 | single-race | 5 | STAR | BV |
@@ -610,8 +610,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 328 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
-| BV | 276 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| LH-only | 327 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| BV | 277 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | BV (no yaml) | 83 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results), [`3xgkck`](https://bettervoting.com/3xgkck/results) |
 | LH-only (exception) | 7 | `abc_committee_monotonicity_1seat_c3_b10`, `abc_committee_monotonicity_2seats_c3_b10`, `cc_pareto_dominated_c4_b2`, `copeland_half_credit_decides` |
 
