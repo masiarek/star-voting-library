@@ -82,7 +82,7 @@ Full audit copy: [`_main_tabulated/bv131_guido_bloc_tabulated.txt`](cases/cases_
 ## Two findings
 
 1. **Non-reproducible (cf. [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) / [#1417](https://github.com/Equal-Vote/bettervoting/issues/1417)).** With the column-order fallback (no lot order) LH elects **Cand1** for seat 1, not Cand2 — same ballots, different winner, decided only by the tie-break order. BV's `random` draw happened to pick Cand2.
-2. **Reporting mislabel.** The result's top-level `tieBreakType: "none"` contradicts round 0's `tieBreakType: "random"`. The summary should surface that a seat was lot-decided (cf. [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379) and the results-view transparency ask). So "Passed" is optimistic — the winner was a coin toss, undisclosed at the top level.
+2. **Reporting mislabel.** The result's top-level `tieBreakType: "none"` contradicts round 0's `tieBreakType: "random"`. The summary should surface that a seat was lot-decided (cf. [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379) and the results-view transparency ask). So "Passed" is optimistic — the winner was a coin toss, undisclosed at the top level. Filed 2026-08-20 as [#1582](https://github.com/Equal-Vote/bettervoting/issues/1582).
 
 ## Related
 

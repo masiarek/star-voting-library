@@ -143,7 +143,7 @@ The summary on top of it is what misleads:
 - **[BV131](../02_Examples/bv131_guido_bloc.md)** — seat 1 is decided by lot, the election is marked "Passed", and the top-level `tieBreakType` reads `none`. Nothing on the results page says a coin was tossed.
 - **[BV130-r2](../02_Examples/bv130r2_dead_rung_bloc.md)** — same shape: a genuine random draw settled seat 1 (`perm` puts Dan ahead of Ada), `tieBreakType` still `none`.
 
-So when a Bloc result matters, **read the export's `perm` and `tieBreakOrder`, not the banner.** A reader who trusts `tieBreakType` will believe an election was decided by voters when it was decided by a shuffle.
+So when a Bloc result matters, **read the export's `perm` and `tieBreakOrder`, not the banner.** A reader who trusts `tieBreakType` will believe an election was decided by voters when it was decided by a shuffle. Filed upstream on 2026-08-20 as [#1582](https://github.com/Equal-Vote/bettervoting/issues/1582): the bloc driver copies `tieBreakType` from the final seat only (`Util.ts:312–316`), and the per-seat values survive in `roundResults` — so the fix is a summary rule, not a re-count.
 
 Two adjacent BV defects the same case set turned up, worth knowing because they change the *count* rather than the label: flat / no-preference ballots being dropped entirely ([BV132](../02_Examples/bv132_verify_votes_bloc.md), [#1073](https://github.com/Equal-Vote/bettervoting/issues/1073)) and an all-identical-ballot election tallying `nTallyVotes: 0` ([BV750](../02_Examples/bv750_tie_breaking_bloc.md), [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052)).
 

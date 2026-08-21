@@ -82,7 +82,7 @@ Full audit copy: [`_main_tabulated/bv130r2_dead_rung_bloc_tabulated.txt`](cases/
 ## Two findings
 
 1. **Non-reproducible (cf. [#1063](https://github.com/Equal-Vote/bettervoting/issues/1063) / [#1417](https://github.com/Equal-Vote/bettervoting/issues/1417)).** With a *published* lot order `[Ada, Ben, Cara, Dan, Eve, Finn]` the seat-1 tie breaks for **Ada**, giving **Ada, Dan, Eve** — the same three winners, but seats 1 and 2 swap between the tied pair. Which candidate takes which seat is decided purely by the draw; BV's `random` happened to pick Dan.
-2. **Reporting mislabel.** The result's top-level `tieBreakType: "none"` contradicts a seat that was decided by the lot (cf. [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379)). The summary should surface that a seat was lot-decided.
+2. **Reporting mislabel.** The result's top-level `tieBreakType: "none"` contradicts a seat that was decided by the lot (cf. [#1379](https://github.com/Equal-Vote/bettervoting/issues/1379)). The summary should surface that a seat was lot-decided. Filed 2026-08-20 as [#1582](https://github.com/Equal-Vote/bettervoting/issues/1582).
 
 ## Related
 
