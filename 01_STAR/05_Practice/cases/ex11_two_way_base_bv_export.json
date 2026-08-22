@@ -2,7 +2,7 @@
   "Election": {
     "election_id": "ggg7hd",
     "title": "BV2197 — Recruit a Spoiler (1 of 2) — the two-way base race",
-    "description": "From the exercises set of the STAR education repo (github.com/masiarek/star-voting-library, 01_STAR/05_Practice/) — predict-then-peek problems with hidden solutions; this election is the live, vote-able copy of its exercise. The spoiler pair's base case (exercise ex11): a straight two-way race, nine voters — Alba's camp of five (Alba 5, Brett 0), Brett's camp of four (Brett 5, Alba 0). Alba wins under Choose-One (5-4) and STAR (25-20; runoff 5-4) alike: with two names, every reasonable method is majority rule. Part 2 (BV2198) adds Axl — a near-clone of Alba recruited by Brett's campaign to split her vote — and asks which counting rules fall for it. LH-verified.",
+    "description": "From the exercises set of the STAR education repo (github.com/masiarek/star-voting-library, 01_STAR/exercises/) — predict-then-peek problems with hidden solutions; this election is the live, vote-able copy of its exercise. The spoiler pair's base case (exercise ex11): a straight two-way race, nine voters — Alba's camp of five (Alba 5, Brett 0), Brett's camp of four (Brett 5, Alba 0). Alba wins under Choose-One (5-4) and STAR (25-20; runoff 5-4) alike: with two names, every reasonable method is majority rule. Part 2 (BV2198) adds Axl — a near-clone of Alba recruited by Brett's campaign to split her vote — and asks which counting rules fall for it. LH-verified.",
     "frontend_url": "",
     "start_time": null,
     "end_time": null,

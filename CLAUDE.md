@@ -640,6 +640,24 @@ taxonomy from memory:** see `07_Concepts/tips/TIPS_terminology.md` and `GLOSSARY
   `bv<testid>_<bvid>_bv_export.json` — and put `bv_test_id` / `bv_election_id` /
   `bv_results_url` in **every** yaml of the set (that is what `build_bv_registry.py`
   reads, so all of them index individually).
+- **A frozen `_bv_export.json` records what BetterVoting PERMANENTLY stores — never migrate it**
+  (learned the hard way 2026-08-22). BV descriptions cannot be edited, so the frozen export
+  is the repo's only evidence of what a public, unchangeable artifact actually says. Its
+  paths are therefore *historical*, exactly like `mkdocs.yml`'s redirect keys, and for the
+  same reason. The 2026-08-02 reorganization rewrote paths inside **22** of them, because
+  `migrate_concept_links.py` has `.json` in its `TEXT_EXT` — so the frozen copies read
+  `01_STAR/05_Practice/` while the live BV descriptions still say `01_STAR/exercises/`. Two
+  harms, and the second is the nastier: the file asserts something BV never said, *and* the
+  edit conceals that BV's permanent text now names a folder that does not exist. The script
+  now skips `*_bv_export.json` (`SKIP_FILE_SUFFIXES`), and the 22 were restored from the live
+  API. **To audit:** fetch `/API/Election/<bvid>` for every `bv_election_id:` in the corpus
+  and diff `description` against the frozen copy — they must be identical. Worth knowing what
+  the same sweep found *undamaged*: all 38 clickable `masiarek.github.io` URLs inside BV
+  descriptions still resolve, because `redirects.redirect_maps` covers them. It is the **bare
+  path** references that rot, since nothing redirects those — 23 live elections (BV2188–2209,
+  all minted before the reorganization) name four folders that no longer exist. Those are
+  permanent and unfixable; the lesson for new mints is to put the *published URL* in a
+  description, never a bare repo path.
 - **Filed a bug upstream? Add a row to `07_Concepts/about_this_repo/upstream_bug_reports.md`.**
   Running one election through several engines is a good bug detector, so this repo files a
   fair number of reports against projects it doesn't own — BetterVoting, Larry's `starvote`,

@@ -34,6 +34,15 @@ REPO = Path(__file__).resolve().parent  # overridden by --repo
 TEXT_EXT = {".md", ".py", ".yaml", ".yml", ".json", ".txt", ".css", ".html"}
 SKIP_DIRS = {".git", "site", ".venv", "__pycache__", ".claude", "node_modules"}
 
+# Frozen BetterVoting exports are NOT repo files — they are the immutable record
+# of what BV permanently stores, and BV descriptions can never be edited. Rewriting
+# a path inside one makes it assert something BV never said, and (worse) hides the
+# fact that the live description now names a folder that no longer exists. The
+# 2026-08-02 reorganization did exactly that to 22 of them, because ".json" is in
+# TEXT_EXT: the frozen copies read "01_STAR/05_Practice/" while BV still says
+# "01_STAR/exercises/". Never migrate these.
+SKIP_FILE_SUFFIXES = ("_bv_export.json",)
+
 # [text](target)  and  [text]: target  and  src="target" / href="target"
 MD_LINK = re.compile(r"(\[[^\]]*\]\()([^)\s]+?)((?:\s+\"[^\"]*\")?\))")
 MD_REFDEF = re.compile(r"^(\s*\[[^\]]+\]:\s+)(\S+)", re.M)
@@ -45,6 +54,8 @@ def iter_text_files(repo: Path):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
         for fn in filenames:
             p = Path(dirpath) / fn
+            if p.name.endswith(SKIP_FILE_SUFFIXES):
+                continue
             if p.suffix.lower() in TEXT_EXT:
                 yield p
 

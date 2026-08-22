@@ -2,7 +2,7 @@
   "Election": {
     "election_id": "7q6by8",
     "title": "BV2208 — Burial in Ranked Robin, 1 of 2 — sincere ballots: Beryl beats everyone",
-    "description": "From the STAR education repo (github.com/masiarek/star-voting-library, 05_Ranked_Robin/03_Criteria/burial/) — the worked burial pair: Ranked Robin's signature strategic wart, shown honestly. Sincere ballots. A design club of 42 ranks four gemstones. Beryl is the Condorcet winner: 27-15 over Amber, 33-9 over Coral, 27-15 over Diamond — a clean 3-0 record; Amber runs second at 2-1. No cycle, no tie, nothing to break. The companion election (2 of 2) shows what happens when the 15 Amber-first voters bury Beryl — rank her LAST below candidates they honestly like less — and flip the two wins she holds by slim margins. LH-verified; pref_voting Copeland agrees (unique winner).",
+    "description": "From the STAR education repo (github.com/masiarek/star-voting-library, 05_Ranked_Robin/burial/) — the worked burial pair: Ranked Robin's signature strategic wart, shown honestly. Sincere ballots. A design club of 42 ranks four gemstones. Beryl is the Condorcet winner: 27-15 over Amber, 33-9 over Coral, 27-15 over Diamond — a clean 3-0 record; Amber runs second at 2-1. No cycle, no tie, nothing to break. The companion election (2 of 2) shows what happens when the 15 Amber-first voters bury Beryl — rank her LAST below candidates they honestly like less — and flip the two wins she holds by slim margins. LH-verified; pref_voting Copeland agrees (unique winner).",
     "frontend_url": "",
     "start_time": null,
     "end_time": null,
