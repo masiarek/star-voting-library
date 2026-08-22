@@ -1,0 +1,58 @@
+--- Ranked Robin (RCV-RR / Copeland) Method (single winner) ---
+ Tabulating 74 ballots (score ballots).
+
+Ballots:
+   the ranking Ranked Robin reads ("=" = tied); source scores follow in () per column: Alice, Bilal, Cato, Delia
+    18 × Alice=Bilal=Cato > Delia      (5, 5, 5, 4)
+    10 × Alice=Bilal > Delia > Cato      (5, 5, 3, 4)
+    10 × Alice=Cato > Delia > Bilal      (5, 3, 5, 4)
+    16 × Bilal=Cato=Delia > Alice      (4, 5, 5, 5)
+    20 × Delia > Alice=Bilal=Cato      (4, 4, 4, 5)
+
+Round-Robin — every pair, head-to-head (For – Against):
+   Bilal  beats Alice   16 – 10
+   Cato   beats Alice   16 – 10
+   Alice  beats Delia   38 – 36
+   Bilal  ties  Cato    10 – 10
+   Delia  beats Bilal   30 – 28
+   Delia  beats Cato    30 – 28
+
+--- Pairwise (Round-Robin) Matrix ---
+Head-to-head / pairwise comparison — the Ranked Robin tally
+Legend: For - Equal Support - Against   (row vs column)
+          |    Alice     |   Bilal     |    Cato     |   Delia     |
+--------------------------------------------------------------------
+  Alice > |     ---      |10 - 48 - 16 |10 - 48 - 16 |38 -  0 - 36 |
+  Bilal > | 16 - 48 - 10 |    ---      |10 - 54 - 10 |28 - 16 - 30 |
+   Cato > | 16 - 48 - 10 |10 - 54 - 10 |    ---      |28 - 16 - 30 |
+  Delia > | 36 -  0 - 38 |30 - 16 - 28 |30 - 16 - 28 |    ---      |
+
+Win–loss record — Copeland score = wins + ½·ties (highest score wins; ties broken by the Ranked Robin degrees, then lot order):
+    #  Candidate  W–L–T  Copeland  Margin  Beats
+    1  Delia      2–1–0         2      +2  Bilal, Cato
+    2  Bilal      1–1–1       1.5      +4  Alice
+    3  Cato       1–1–1       1.5      +4  Alice
+    4  Alice      1–2–0         1     -10  Delia
+
+Winner — Ranked Robin (RCV-RR): Delia
+   the most head-to-head wins (2).
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (4 of 4): Delia, Bilal, Cato, Alice
+   Outside (0):        —
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   cycle, so the strongest "candidate" is a set, not a person. Which member of
+   the set should win is exactly what Minimax / Ranked Pairs / Schulze disagree
+   about — see 05_Ranked_Robin/01_Learn/cycle_resolution.md.
+   Note: the Copeland leaders (Delia) are only part of the set — the
+   win–loss table's top block understates how wide the contention is.
+   Ranked Robin (RCV-RR) winner Delia is INSIDE the Smith set. ✓
+      Guaranteed: Ranked Robin (Copeland) is Smith-efficient — every member of
+      the set outscores every outsider, so the top of the win–loss table is
+      always inside the set, however the tie among them is then broken.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md

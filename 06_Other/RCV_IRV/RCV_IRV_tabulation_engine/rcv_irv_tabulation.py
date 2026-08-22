@@ -362,6 +362,12 @@ def tabulate(path):
     # misread as a real ranked ballot. (Mirrors the STAR engine.)
     _detect = "\n".join(line.split("#")[0] for line in ballots_text.splitlines())
     ranked_mode = ">" in _detect
+    # An '=' on a ranked ballot is an EQUAL RANK, and IRV has no way to count one:
+    # parse_ranked_ballots flattens `a=b` to `a>b` in ballot-column order. That is a
+    # real answer to a question nobody asked, so it must never be silent -- the note
+    # below is printed alongside the count, and names the rules that would count the
+    # ballot as cast. See 06_Other/RCV_IRV/concepts/variants/RCV-IRV-equal-rank.md.
+    equal_ranks = ranked_mode and "=" in _detect
     if ranked_mode:
         candidates_names, parsed = parse_ranked_ballots(ballots_text)
     else:
@@ -398,6 +404,7 @@ def tabulate(path):
         "title": title,
         "seats": seats,
         "ranked_mode": ranked_mode,
+        "equal_ranks": equal_ranks,
         "candidates": candidates_names,
         "ranked_rows": ranked_rows,
         "total": total,
@@ -439,6 +446,7 @@ def run(path, extras=False):
     t = tabulate(path)
     title, seats, total = t["title"], t["seats"], t["total"]
     ranked_mode, ranked_rows = t["ranked_mode"], t["ranked_rows"]
+    equal_ranks = t["equal_ranks"]
     result = t["result"]
 
     if seats > 1:
@@ -452,6 +460,13 @@ def run(path, extras=False):
     source = ("ranked ballots" if ranked_mode
               else "converted from score ballots; 0 = unranked")
     print(f" Tabulating {total} ballots ({source}).")
+    if equal_ranks:
+        print(" NOTE: some ballots mark two candidates EQUAL, which instant runoff")
+        print("   cannot represent -- a tie is an overvote. Those ties were broken by")
+        print("   ballot-column order to produce the count below, so this result is")
+        print("   one reading of the ballots, not the ballots as cast. To count them")
+        print("   as cast, use Approval-IRV or Split-IRV:")
+        print("   tools_adam/pref_voting_tabulation_engine/approval_irv_report.py")
     if seats > 1:
         # Name the quota the COUNT applies, not a different one.
         # pyrankvote's single_transferable_vote uses the EXACT Droop quota

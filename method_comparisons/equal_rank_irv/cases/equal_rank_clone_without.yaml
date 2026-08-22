@@ -1,0 +1,16 @@
+election_title: "Equal ranks — Costa withdraws, and Split-IRV's winner flips to Alma"
+scenario_description: |-
+  The clone-free half of Figure 9 from Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407). Same 45 voters, same cast, same ballots as equal_rank_clone_with.yaml with exactly one change: Costa is not running. Same cast because it is the same election with one thing changed.
+  With the clone gone, Split-IRV elects Alma; with the clone in the race it elects the Chen/Costa ticket. Nothing about how anyone feels changed — only how many names their top preference was spread across. That flip is Split-IRV failing independence of clones, the axiom Tideman proved ordinary strict-ballot IRV satisfies and that gives instant runoff its main claim over Choose-One voting. Approval-IRV keeps the axiom (Theorem 3.2) and elects Alma in both files.
+  STAR elects Alma here and in the companion file, so the clone is inert for STAR too — worth stating plainly rather than claiming: a score ballot already lets a voter rate two allies identically, so adding one changes no total that was not already recorded.
+  For the Approval-IRV and Split-IRV counts run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py.
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Count:Alma,Bruno,Chen
+  27:5,0,5    # Alma and Chen equal-first
+  12:3,5,0    # Bruno first, Alma second
+  6:3,0,5     # Chen first, Alma second
+expected_winners: [Alma]
+
+# file: equal_rank_clone_without.yaml

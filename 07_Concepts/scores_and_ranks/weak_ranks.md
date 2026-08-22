@@ -18,6 +18,8 @@ In the PrefLib data taxonomy these are the **TOC / TOI** types (Ties allowed, Co
 
 Which ranked methods allow it? Condorcet methods — [Ranked Robin](../../05_Ranked_Robin/01_Learn/ranked_robin.md), Schulze, Ranked Pairs, Minimax — allow equal ranks and compare candidates head-to-head. Borda and Bucklin usually allow ties too. **RCV-IRV (Hare) and STV do not** — on those a tie is an overvote.
 
+That last line is a fact about every jurisdiction that runs instant runoff, but it is a **design choice, not a mathematical necessity**. IRV *can* be extended to weak orders, in two natural ways, and a 2024 result proves they are not equally good — the one that keeps independence of clones is not the one organizations actually deploy. See [RCV-IRV with equal ranks](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-equal-rank.md), with [six runnable cases](../../method_comparisons/equal_rank_irv/README.md).
+
 ## Why it matters
 
 - **Honest indifference.** A voter can express "no preference" between two candidates instead of guessing an order.

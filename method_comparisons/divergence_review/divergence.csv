@@ -78,6 +78,9 @@ AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_combined.yam
 AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_north.yaml,3,5,Ana,Ana,Ana,Ana,Ana,Ana,Ana,Ana,Ana,0,False,False,False
 AGREE,method_comparisons/districting_cost/cases/b38b7fg_districting_south.yaml,3,4,Beto,Beto,Beto,Beto,Beto,Beto,Beto,Beto,Beto,0,False,False,False
 AGREE,method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml,3,30,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
+AGREE,method_comparisons/equal_rank_irv/cases/equal_rank_clone_with.yaml,4,45,Alma,Alma,Costa,Alma,Alma,Alma,Alma,Alma,Alma,33,True,False,False
+AGREE,method_comparisons/equal_rank_irv/cases/equal_rank_clone_without.yaml,3,45,Alma,Alma,Chen,Alma,Alma,Alma,Alma,Alma,Alma,27,True,False,False
+AGREE,method_comparisons/equal_rank_irv/cases/equal_rank_five_voters.yaml,4,5,Aida,Aida,Bram,Aida,Aida,Aida,Aida,Aida,Aida,3,True,False,False
 AGREE,method_comparisons/fairvote_condorcet_claims/cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml,3,100,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,Liberal,0,False,False,False
 AGREE,method_comparisons/fairvote_star_whitepaper/cases/bv2229_7j2bqf_french_2017_honest.yaml,4,100,Macron,Macron,Macron,Macron,Macron,Macron,Macron,Macron,Macron,26,False,False,False
 AGREE,method_comparisons/fairvote_star_whitepaper/cases/bv2231_b4yr3v_wa_2010_honest.yaml,3,100,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,Berkey,0,False,False,False
@@ -176,6 +179,7 @@ CYCLE_OR_THREE_WAY,06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml,4
 CYCLE_OR_THREE_WAY,YAML_library/1_positive/lot_tiebreak_bv_order.yaml,2,2,Ben,Ada,Ada,Ben,Ben,Ben,Ben,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/BV_Library/cases/BV_Library_star_runoff_tie_score_resolves.yaml,2,2,Bill,Bill,Bill,Allison,Allison,Allison,Bill,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml,3,12,Almond,Cocoa,Cocoa,Berry,Berry,Berry,Berry,,,0,False,False,True
+CYCLE_OR_THREE_WAY,method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_consecutive.yaml,4,74,Alice,Alice,Delia,Delia,Alice,Alice,Alice,,Alice,74,True,True,True
 CYCLE_OR_THREE_WAY,method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml,3,100,Harper,Berkey,Berkey,Harper,Harper,Harper,Rieger,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml,3,17,Bruno,Bruno,Bruno,Cora,Cora,Cora,Cora,,,0,False,False,True
 CYCLE_OR_THREE_WAY,method_comparisons/felsenthal_paradoxes/cases/bv2149_byk9v2_star.yaml,3,32,Bruno,Alma,Alma,Cora,Cora,Cora,Cora,,,0,False,False,True
@@ -209,6 +213,8 @@ IRV_DIFFERS_ARTIFACT,method_comparisons/approval_majority_criterion/cases/hh41_0
 IRV_DIFFERS_ARTIFACT,method_comparisons/brams_grading_paradox/cases/brams_ex6_three_winners_c3_b9.yaml,3,9,Cole,Amos,Cole,Cole,Amos,Amos,Amos,Cole,Amos,9,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/crowded_field/cases/crowded_field_c5_star.yaml,5,65,Diego,Elsa,Diego,Diego,Diego,Diego,Diego,Diego,Diego,23,True,False,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/crowded_field/cases/crowded_field_c7_star.yaml,7,65,Clara,Felix,Felix,Clara,Clara,Diego,Clara,Clara,Clara,65,False,False,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_wide_gaps.yaml,4,74,Delia,Alice,Delia,Delia,Alice,Delia,Delia,,Alice,54,True,True,True
+IRV_DIFFERS_ARTIFACT,method_comparisons/equal_rank_irv/cases/equal_rank_majority_alternative.yaml,4,200,Basil,Amira,Basil,Basil,Amira,Basil,Basil,Basil,Amira,94,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml,4,100,Melenchon,LePen,Melenchon,Melenchon,Fillon,Fillon,Melenchon,Melenchon,,100,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml,3,36,Berry,Almond,Berry,Berry,Almond,Berry,Berry,Berry,Almond,36,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b4_three_dogs_star.yaml,5,60,Labrador,Golden Retriever,Golden Retriever,Labrador,Labrador,Labrador,Labrador,Labrador,Labrador,26,False,False,False

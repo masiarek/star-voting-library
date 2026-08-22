@@ -1,0 +1,18 @@
+election_title: "Equal ranks — Costa joins Chen's ticket, and Split-IRV hands them the win"
+scenario_description: |-
+  Figure 9 of Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407): the profile on which Split-IRV fails independence of clones. The paper's counts are tripled so every bloc clears the house minimum of 6; scaling every weight by the same factor leaves every winner unchanged.
+  Chen and Costa are perfect clones — every voter rates them identically, which is what "clone" means, and why they share an initial here. The matched file equal_rank_clone_without.yaml is the SAME election with Costa withdrawn, so the pair reads as one election with one thing changed.
+  Split-IRV, round 1 with Costa running: Bruno 12, Chen 12, Costa 12, Alma 9. The 27 voters who rate Alma, Chen and Costa equal-first split their one point three ways, which leaves Alma the lowest and eliminates her immediately; the clone pair goes on to win. Withdraw Costa and those same 27 voters split two ways instead: Chen 19.5, Alma 13.5, Bruno 12, so BRUNO goes out first and Alma wins the final pairing. Adding a clone of a loser changed the winner: that is exactly the spoiler effect independence of clones forbids, and Split-IRV is the generalization actually deployed in the field — the John Muir Trust and the London Mathematical Society have used it for trustee and council elections since the late 1990s.
+  Approval-IRV is clone-independent (Theorem 3.2) and elects Alma in both files. So does STAR: the extra identical ballot column adds nothing to the scoring round that was not already there, which is the same reason Approval-IRV survives the test.
+  One honest wrinkle the file shows rather than hides: perfect clones cast IDENTICAL ballots, so Chen and Costa post identical score totals and STAR's second finalist slot is a genuine tie. The runoff is unaffected — Alma beats either of them on the same ballots — but the tiebreaker banner in the report is real, not a defect in the case.
+  For the Approval-IRV and Split-IRV counts run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py; --drop Costa reproduces the companion file's count from this one.
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Count:Alma,Bruno,Chen,Costa
+  27:5,0,5,5    # Alma and the whole Chen/Costa ticket equal-first
+  12:3,5,0,0    # Bruno first, Alma second, the ticket last
+  6:3,0,5,5     # the ticket first, Alma second, Bruno last
+expected_winners: [Alma]
+
+# file: equal_rank_clone_with.yaml

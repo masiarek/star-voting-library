@@ -6,15 +6,15 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **254** single-winner STAR elections (skipped 253 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **149** (59%) diverge from STAR under at least one method; **105** agree across the board.
+- Scanned **260** single-winner STAR elections (skipped 253 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **152** (58%) diverge from STAR under at least one method; **108** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 31 |
 | STAR_OUTLIER_RR_WITH_IRV | 10 |
-| IRV_DIFFERS_ARTIFACT | 16 |
-| CYCLE_OR_THREE_WAY | 38 |
+| IRV_DIFFERS_ARTIFACT | 18 |
+| CYCLE_OR_THREE_WAY | 39 |
 | APPROVAL_OR_MINOR | 54 |
 
 ## Score→rank conversion (recorded both ways)
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (146 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (149 cases; identical library copies merged).
 
-**83 of these 146 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**83 of these 149 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -127,7 +127,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
     _flags: 1 tied-score ballot(s)_
 
-### IRV_DIFFERS_ARTIFACT — 16
+### IRV_DIFFERS_ARTIFACT — 18
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -170,6 +170,12 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[crowded_field_c7_star](cases/IRV_DIFFERS_ARTIFACT/crowded_field_c7_star.md)** — `method_comparisons/crowded_field/cases/crowded_field_c7_star.yaml` (7c/65b)  
     STAR=**Clara** · IRV=Felix · RR=Clara · Approval=Diego · Score=Clara · Condorcet=Clara  
     _flags: 65 tied-score ballot(s)_
+- **[equal_rank_cohesive_wide_gaps](cases/IRV_DIFFERS_ARTIFACT/equal_rank_cohesive_wide_gaps.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_wide_gaps.yaml` (4c/74b)  
+    STAR=**Delia** · IRV=Alice · RR=Delia · Approval=Delia · Score=Delia · Condorcet=none  
+    _flags: 54 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Delia, strict=Alice)_
+- **[equal_rank_majority_alternative](cases/IRV_DIFFERS_ARTIFACT/equal_rank_majority_alternative.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_majority_alternative.yaml` (4c/200b)  
+    STAR=**Basil** · IRV=Amira · RR=Basil · Approval=Basil · Score=Basil · Condorcet=Basil  
+    _flags: 94 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Basil, strict=Amira)_
 - **[bv2230_2hqmrd_french_2017_burial](cases/IRV_DIFFERS_ARTIFACT/bv2230_2hqmrd_french_2017_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml` (4c/100b)  ·  [BV ↗](https://bettervoting.com/2hqmrd/results)  
     STAR=**Melenchon** · IRV=LePen · RR=Melenchon · Approval=Fillon · Score=Melenchon · Condorcet=Melenchon  
     _flags: 100 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Melenchon, strict=Fillon)_
@@ -180,7 +186,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
     STAR=**Labrador** · IRV=Golden Retriever · RR=Labrador · Approval=Labrador · Score=Labrador · Condorcet=Labrador  
     _flags: 26 tied-score ballot(s)_
 
-### CYCLE_OR_THREE_WAY — 36
+### CYCLE_OR_THREE_WAY — 37
 
 _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
 
@@ -221,6 +227,9 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
 - **[margins_star](cases/CYCLE_OR_THREE_WAY/margins_star.md)** — `method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml` (3c/12b)  ·  [BV ↗](https://bettervoting.com/kdjjkq/results)  
     STAR=**Almond** · IRV=Cocoa · RR=Berry · Approval=Berry · Score=Berry · Condorcet=none
+- **[equal_rank_cohesive_consecutive](cases/CYCLE_OR_THREE_WAY/equal_rank_cohesive_consecutive.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_consecutive.yaml` (4c/74b)  
+    STAR=**Alice** · IRV=Alice · RR=Delia · Approval=Alice · Score=Alice · Condorcet=none  
+    _flags: 74 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Delia, strict=Alice)_
 - **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/24b623/results)  
     STAR=**Harper** · IRV=Berkey · RR=Harper · Approval=Harper · Score=Rieger · Condorcet=none
 - **[bv2147_9gdrqg_star](cases/CYCLE_OR_THREE_WAY/bv2147_9gdrqg_star.md)** — `method_comparisons/felsenthal_paradoxes/cases/bv2147_9gdrqg_star.yaml` (3c/17b)  ·  [BV ↗](https://bettervoting.com/9gdrqg/results)  

@@ -1,0 +1,167 @@
+======================================================================
+SOURCE FILE:     solid_coalition_quota_gets_nothing.yaml
+TABULATED FILE:  solid_coalition_quota_gets_nothing_tabulated.txt
+======================================================================
+
+election_title: "A full quota rates Dinah 5 and prefers her to everyone — and she wins no seat"
+scenario_description: |-
+  Nine voters, four candidates, three seats, counted by Allocated Score. Three of the nine — exactly one Hare quota — score Dinah a 5 and score every other candidate strictly lower. In the language of the proportional-representation literature those three are a SOLID COALITION for Dinah, and Proportionality for Solid Coalitions (PSC) says a solid coalition holding a full quota must win a seat. Allocated Score elects Arun, Bela and Curtis. Dinah gets nothing.
+  The mechanism is visible in the round-by-round report and is the interesting part. Dinah's three supporters do not only support Dinah — two of them give Arun a 4. Arun wins the first seat on total score, and his quota is filled from the highest-scoring ballots available: one at score 5, then the score-4 group, which is where those two Dinah voters sit. Their ballots are spent, reweighted to a third of their value, and by round 2 the coalition no longer has a full quota of unspent support to elect anyone with. The seat was not lost to a rival faction; it was consumed paying for a candidate they merely liked.
+  Why this file exists: the library's own page on [what "proportional" actually means] says that quota-owning schools — and it lists Allocated Score among them — "hand a cohesive quota-sized faction a seat by construction." That sentence is the design philosophy, sourced from electowiki's taxonomy, and it is a fair description of the intent. It is not a theorem, and this file is why the distinction matters. PSC is an ORDINAL axiom: it reads only the order on a ballot. Allocated Score is a CARDINAL method: it runs on the magnitudes. A ballot's ordinal projection is not what the method counts, so an ordinal guarantee does not follow from a cardinal design, however quota-shaped.
+  Provenance, stated plainly because it changes how much the file is worth: this profile was FOUND BY RANDOM SEARCH over 0-5 ballots, not constructed to make a point, and it is one witness rather than a characterization. Violations turned up in roughly 1 in 100 random 9-voter, 4-candidate, 3-seat profiles under the weakest reading of the axiom (Hare quota, strict solid commitment); requiring every coalition member to score their candidate a full 5, as here, they turned up in roughly 1 in 1700. What the file establishes is the existence claim — Allocated Score does not satisfy PSC — and nothing about how often it matters in real elections, which is a separate and unanswered question.
+  This is also NOT the free-riding result already documented in this folder's sibling page. Free riding is a strategy: withhold a star from a sure winner and get your ballot back. Every ballot here is sincere. The two share a mechanism — which score group a ballot is spent from — and make opposite points, one about manipulation and one about a guarantee that was never there.
+  The related single-winner axiom, and the paper that motivated this check, are in method_comparisons/equal_rank_irv/README.md: respect for cohesive majorities is generalized PSC at one seat and one candidate, and STAR fails that too.
+voting_method: allocated
+num_winners: 3
+ballots: |-
+  Arun,Bela,Curtis,Dinah
+  3,1,4,0
+  3,4,0,5    # solid for Dinah — but a 4 for Arun, which is what spends this ballot
+  0,4,4,0
+  4,0,0,5    # solid for Dinah — and a 4 for Arun
+  4,3,2,1
+  5,3,5,0
+  3,5,2,3
+  2,1,2,1
+  4,0,0,5    # solid for Dinah — and a 4 for Arun
+expected_winners: [Arun, Bela, Curtis]
+
+# file: solid_coalition_quota_gets_nothing.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== A full quota rates Dinah 5 and prefers her to everyone — and she wins no seat ===
+  Nine voters, four candidates, three seats, counted by Allocated Score. Three of the nine — exactly one Hare quota — score Dinah a 5 and score every other candidate strictly lower. In the language of the proportional-representation literature those three are a SOLID COALITION for Dinah, and Proportionality for Solid Coalitions (PSC) says a solid coalition holding a full quota must win a seat. Allocated Score elects Arun, Bela and Curtis. Dinah gets nothing.
+  The mechanism is visible in the round-by-round report and is the interesting part. Dinah's three supporters do not only support Dinah — two of them give Arun a 4. Arun wins the first seat on total score, and his quota is filled from the highest-scoring ballots available: one at score 5, then the score-4 group, which is where those two Dinah voters sit. Their ballots are spent, reweighted to a third of their value, and by round 2 the coalition no longer has a full quota of unspent support to elect anyone with. The seat was not lost to a rival faction; it was consumed paying for a candidate they merely liked.
+  Why this file exists: the library's own page on [what "proportional" actually means] says that quota-owning schools — and it lists Allocated Score among them — "hand a cohesive quota-sized faction a seat by construction." That sentence is the design philosophy, sourced from electowiki's taxonomy, and it is a fair description of the intent. It is not a theorem, and this file is why the distinction matters. PSC is an ORDINAL axiom: it reads only the order on a ballot. Allocated Score is a CARDINAL method: it runs on the magnitudes. A ballot's ordinal projection is not what the method counts, so an ordinal guarantee does not follow from a cardinal design, however quota-shaped.
+  Provenance, stated plainly because it changes how much the file is worth: this profile was FOUND BY RANDOM SEARCH over 0-5 ballots, not constructed to make a point, and it is one witness rather than a characterization. Violations turned up in roughly 1 in 100 random 9-voter, 4-candidate, 3-seat profiles under the weakest reading of the axiom (Hare quota, strict solid commitment); requiring every coalition member to score their candidate a full 5, as here, they turned up in roughly 1 in 1700. What the file establishes is the existence claim — Allocated Score does not satisfy PSC — and nothing about how often it matters in real elections, which is a separate and unanswered question.
+  This is also NOT the free-riding result already documented in this folder's sibling page. Free riding is a strategy: withhold a star from a sure winner and get your ballot back. Every ballot here is sincere. The two share a mechanism — which score group a ballot is spent from — and make opposite points, one about manipulation and one about a guarantee that was never there.
+  The related single-winner axiom, and the paper that motivated this check, are in method_comparisons/equal_rank_irv/README.md: respect for cohesive majorities is generalized PSC at one seat and one candidate, and STAR fails that too.
+
+--- Preference Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+               |     Arun   |    Bela   |   Curtis  |   Dinah   |
+-----------------------------------------------------------------
+        Arun > |    ---     |6 - 0 - 3  |5 - 2 - 2  |4 - 2 - 3  |
+        Bela > | 3 - 0 - 6  |   ---     |3 - 3 - 3  |5 - 1 - 3  |
+      Curtis > | 2 - 2 - 5  |3 - 3 - 3  |   ---     |5 - 0 - 4  |
+       Dinah > | 3 - 2 - 4  |3 - 1 - 5  |4 - 0 - 5  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Arun — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Dinah — loses every head-to-head matchup
+
+--- Allocated Score Voting Method (3 winners) ---
+[Allocated Score Voting]
+ Tabulating 9 ballots to fill 3 seats.
+Count × Arun,Bela,Curtis,Dinah
+    2 ×    4,   0,     0,    5
+    1 ×    3,   1,     4,    0
+    1 ×    3,   4,     0,    5
+    1 ×    0,   4,     4,    0
+    1 ×    4,   3,     2,    1
+    1 ×    5,   3,     5,    0
+    1 ×    3,   5,     2,    3
+    1 ×    2,   1,     2,    1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Arun       1  3  3  1  0  1  |    28   3.1
+Bela       1  2  2  0  2  2  |    21   2.3
+Curtis     1  2  0  3  0  3  |    19   2.1
+Dinah      3  0  1  0  2  3  |    20   2.2
+ Hare quota is 3.
+
+[Allocated Score Voting: Round 1]
+ The highest-scoring candidate wins a seat.
+   Arun          -- 28 -- First place
+   Bela          -- 21
+   Dinah         -- 20
+   Curtis        -- 19
+ Arun wins a seat.
+
+[Allocated Score Voting: Round 1: Ballot allocation round]
+ Allocating 3 ballots.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 1]
+ Allocating 1 ballot at score 5.
+
+[Allocated Score Voting: Round 1: Ballot allocation round: Round 2]
+ Remaining allocation quota is 2.
+ Allocating 3 ballots at score 4.
+ This allocation overfills the remaining quota.  Returning fractional surplus.
+ Allocating only 66.67% of these ballots.
+ Keeping these ballots, but multiplying their weights by 1/3.
+ 3 ballots reweighted from 1 to 1/3.
+
+[Allocated Score Voting: Round 2]
+ Tabulating 8 remaining ballots.
+Count × Arun,Bela,Curtis,Dinah
+    2 ×    4,   0,     0,    5
+    1 ×    3,   1,     4,    0
+    1 ×    3,   4,     0,    5
+    1 ×    0,   4,     4,    0
+    1 ×    4,   3,     2,    1
+    1 ×    5,   3,     5,    0
+    1 ×    3,   5,     2,    3
+    1 ×    2,   1,     2,    1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Arun       1  3  3  1  0  1  |    28   3.1
+Bela       1  2  2  0  2  2  |    21   2.3
+Curtis     1  2  0  3  0  3  |    19   2.1
+Dinah      3  0  1  0  2  3  |    20   2.2
+ The highest-scoring candidate wins a seat.
+   Bela          -- 16     -- First place
+   Curtis        -- 12+2/3
+   Dinah         -- 12+2/3
+ Bela wins a seat.
+
+[Allocated Score Voting: Round 2: Ballot allocation round]
+ Allocating 3 ballots.
+
+[Allocated Score Voting: Round 2: Ballot allocation round: Round 1]
+ Allocating 1 ballot at score 5.
+
+[Allocated Score Voting: Round 2: Ballot allocation round: Round 2]
+ Remaining allocation quota is 2.
+ Allocating 2 ballots at score 4.
+
+[Allocated Score Voting: Round 3]
+ Tabulating 5 remaining ballots.
+Count × Arun,Bela,Curtis,Dinah
+    2 ×    4,   0,     0,    5
+    1 ×    3,   1,     4,    0
+    1 ×    3,   4,     0,    5
+    1 ×    0,   4,     4,    0
+    1 ×    4,   3,     2,    1
+    1 ×    5,   3,     5,    0
+    1 ×    3,   5,     2,    3
+    1 ×    2,   1,     2,    1
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Arun       1  3  3  1  0  1  |    28   3.1
+Bela       1  2  2  0  2  2  |    21   2.3
+Curtis     1  2  0  3  0  3  |    19   2.1
+Dinah      3  0  1  0  2  3  |    20   2.2
+ The highest-scoring candidate wins a seat.
+   Curtis        -- 6+2/3 -- First place
+   Dinah         -- 4+2/3
+ Curtis wins a seat.
+
+[Allocated Score Voting: Winners — Allocated Score Voting Method (3 winners)]
+ Arun
+ Bela
+ Curtis

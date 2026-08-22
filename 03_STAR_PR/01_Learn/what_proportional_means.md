@@ -83,7 +83,7 @@ The criterion difference isn't arithmetic trivia — it follows from which *scho
 | **Thiele** | reweight ballots by how much representation they've already got | Reweighted Range Voting, Sequential Proportional Approval, Single Distributed Vote |
 | **Phragmén** | spread the "load" of electing winners evenly across voters | Sequential Phragmén, Sequential Ebert |
 
-Quota-owning schools (PSC/Monroe, Unitary) hand a cohesive quota-sized faction a seat by construction. **Thiele-school methods don't make that promise** — they equalize satisfaction rather than allocate quotas — which is precisely why RRV fails the Hare Quota Criterion above. Not a bug in RRV; a different answer to what "proportional" should mean.
+Quota-owning schools (PSC/Monroe, Unitary) hand a cohesive quota-sized faction a seat by construction. **That is the design philosophy, not a theorem, and the difference is checkable:** PSC is an *ordinal* axiom and Allocated Score is a *cardinal* method, so the guarantee does not actually follow — [here is a nine-voter election where a full quota rates its candidate a 5, prefers her to everyone, and wins no seat](../03_Criteria/solid_coalitions/README.md). **Thiele-school methods don't make that promise** — they equalize satisfaction rather than allocate quotas — which is precisely why RRV fails the Hare Quota Criterion above. Not a bug in RRV; a different answer to what "proportional" should mean.
 
 Worth knowing that the taxonomy is itself unsettled at the edges: electowiki flags both RRV and Sequentially Shrinking Quota as *"may not be strictly"* their family but following from the theory, and lists the **stable winner set** philosophy with no known method at all — it is an open question whether a Hare-stable winner set always exists.
 

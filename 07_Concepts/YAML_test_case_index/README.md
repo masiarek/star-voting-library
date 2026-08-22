@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**648 election files** (532 single-winner, 116 multi-winner) across 18 method(s).
+**655 election files** (538 single-winner, 117 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 279 |
+| STAR | 285 |
 | RCV-IRV (Hare) | 56 |
 | Ranked Robin (RCV-RR / Copeland) | 107 |
 | Approval | 31 |
@@ -20,7 +20,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
 | Reweighted Range | 6 |
-| Allocated Score (STAR-PR) | 28 |
+| Allocated Score (STAR-PR) | 29 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 11 |
 | BLOC STAR | 41 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (279)
+## STAR  (285)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -229,6 +229,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`b38b7fg_districting_south`](../../method_comparisons/districting_cost/cases/cases_pages/b38b7fg_districting_south.md) | `method_comparisons/districting_cost/cases/` | 1 | Two chapters, one delegate — Southside chapter (4 members) → _Beto_ | [`.yaml`](../../method_comparisons/districting_cost/cases/b38b7fg_districting_south.yaml) |
 | [`bv2173_gmfv4c_edelman_saari_cancellation`](../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/bv2173_gmfv4c_edelman_saari_cancellation.md) | `method_comparisons/edelman_condorcet_myth/cases/` | 1 | Edelman's 'Myth of the Condorcet Winner' 81 voters — the score count says Ben, the majorities say Ada → _Ada_ | [`.yaml`](../../method_comparisons/edelman_condorcet_myth/cases/bv2173_gmfv4c_edelman_saari_cancellation.yaml) |
 | [`edelman_perfect_component_c3_b30`](../../method_comparisons/edelman_condorcet_myth/cases/cases_pages/edelman_perfect_component_c3_b30.md) | `method_comparisons/edelman_condorcet_myth/cases/` | 1 | A perfect 'Condorcet component' (30 voters) — every count ties; any winner is an artifact → _Ada_ | [`.yaml`](../../method_comparisons/edelman_condorcet_myth/cases/edelman_perfect_component_c3_b30.yaml) |
+| [`equal_rank_clone_with`](../../method_comparisons/equal_rank_irv/cases/cases_pages/equal_rank_clone_with.md) | `method_comparisons/equal_rank_irv/cases/` | 1 | Equal ranks — Costa joins Chen's ticket, and Split-IRV hands them the win → _Alma_ | [`.yaml`](../../method_comparisons/equal_rank_irv/cases/equal_rank_clone_with.yaml) |
+| [`equal_rank_clone_without`](../../method_comparisons/equal_rank_irv/cases/cases_pages/equal_rank_clone_without.md) | `method_comparisons/equal_rank_irv/cases/` | 1 | Equal ranks — Costa withdraws, and Split-IRV's winner flips to Alma → _Alma_ | [`.yaml`](../../method_comparisons/equal_rank_irv/cases/equal_rank_clone_without.yaml) |
+| [`equal_rank_cohesive_consecutive`](../../method_comparisons/equal_rank_irv/cases/cases_pages/equal_rank_cohesive_consecutive.md) | `method_comparisons/equal_rank_irv/cases/` | 1 | Equal ranks — 38 of 74 rally to Alice, and consecutive scores elect her → _Alice_ | [`.yaml`](../../method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_consecutive.yaml) |
+| [`equal_rank_cohesive_wide_gaps`](../../method_comparisons/equal_rank_irv/cases/cases_pages/equal_rank_cohesive_wide_gaps.md) | `method_comparisons/equal_rank_irv/cases/` | 1 | Equal ranks — the same 74 voters use the whole scale, and Delia wins → _Delia_ | [`.yaml`](../../method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_wide_gaps.yaml) |
+| [`equal_rank_five_voters`](../../method_comparisons/equal_rank_irv/cases/cases_pages/equal_rank_five_voters.md) | `method_comparisons/equal_rank_irv/cases/` | 1 | Equal ranks — five voters, and the two generalizations of IRV disagree → _Aida_ | [`.yaml`](../../method_comparisons/equal_rank_irv/cases/equal_rank_five_voters.yaml) |
+| [`equal_rank_majority_alternative`](../../method_comparisons/equal_rank_irv/cases/cases_pages/equal_rank_majority_alternative.md) | `method_comparisons/equal_rank_irv/cases/` | 1 | Equal ranks — a bare majority puts Amira top, and Basil still wins → _Basil_ | [`.yaml`](../../method_comparisons/equal_rank_irv/cases/equal_rank_majority_alternative.yaml) |
 | [`bv2168_6w2gq7_fairvote_40_15_40_moderate_cw`](../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.md) | `method_comparisons/fairvote_condorcet_claims/cases/` | 1 | FairVote's own hypothetical (45/12/43) — the moderate IS the majority's pairwise choice → _Moderate_ | [`.yaml`](../../method_comparisons/fairvote_condorcet_claims/cases/bv2168_6w2gq7_fairvote_40_15_40_moderate_cw.yaml) |
 | [`bv2169_2jrfpg_fairvote_shifted_left_liberal_cw`](../../method_comparisons/fairvote_condorcet_claims/cases/cases_pages/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.md) | `method_comparisons/fairvote_condorcet_claims/cases/` | 1 | Same three candidates, electorate shifts left — the 'strong liberal' IS the Condorcet winner → _Liberal_ | [`.yaml`](../../method_comparisons/fairvote_condorcet_claims/cases/bv2169_2jrfpg_fairvote_shifted_left_liberal_cw.yaml) |
 | [`bv2229_7j2bqf_french_2017_honest`](../../method_comparisons/fairvote_star_whitepaper/cases/cases_pages/bv2229_7j2bqf_french_2017_honest.md) | `method_comparisons/fairvote_star_whitepaper/cases/` | 1 | FairVote white paper — French 2017 (HONEST): STAR elects the centrist Macron → _Macron_ | [`.yaml`](../../method_comparisons/fairvote_star_whitepaper/cases/bv2229_7j2bqf_french_2017_honest.yaml) |
@@ -571,7 +577,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (28)
+## Allocated Score (STAR-PR)  (29)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -595,6 +601,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`02a_c5_b63_proportional-allocated-score`](../../03_STAR_PR/02_Examples/cases/cases_pages/02a_c5_b63_proportional-allocated-score.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — Allocated Score Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02a_c5_b63_proportional-allocated-score.yaml) |
 | [`alabama_3seats`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/cases_pages/alabama_3seats.md) | `03_STAR_PR/03_Criteria/alabama_paradox/cases/` | 3 | The Alabama paradox — 3 seats → _Aster, Basil, Clover_ | [`.yaml`](../../03_STAR_PR/03_Criteria/alabama_paradox/cases/alabama_3seats.yaml) |
 | [`bhk27tk_fewer_voters_than_seats`](../../03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/cases_pages/bhk27tk_fewer_voters_than_seats.md) | `03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/` | 3 | BV fixture — fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../03_STAR_PR/03_Criteria/bv_fixture_crosscheck/cases/bhk27tk_fewer_voters_than_seats.yaml) |
+| [`solid_coalition_quota_gets_nothing`](../../03_STAR_PR/03_Criteria/solid_coalitions/cases/cases_pages/solid_coalition_quota_gets_nothing.md) | `03_STAR_PR/03_Criteria/solid_coalitions/cases/` | 3 | A full quota rates Dinah 5 and prefers her to everyone — and she wins no seat → _Arun, Bela, Curtis_ | [`.yaml`](../../03_STAR_PR/03_Criteria/solid_coalitions/cases/solid_coalition_quota_gets_nothing.yaml) |
 | [`07b_c5_b36_herb-council-pr-3-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/07b_c5_b36_herb-council-pr-3-seats.md) | `06_Other/ballot_style_lab/cases/` | 3 | The Herb Garden Council — Allocated Score / STAR-PR, 3 seats (each quota seats someone) → _Anise, Basil, Chive_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/07b_c5_b36_herb-council-pr-3-seats.yaml) |
 | [`BV_Library_star_pr_voters_fewer_than_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_voters_fewer_than_seats.md) | `method_comparisons/BV_Library/cases/` | 3 | BV parity — STAR_PR (Allocated Score): fewer voters than seats → _Allison, Bill, Carmen_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_voters_fewer_than_seats.yaml) |
 | [`blocs_pr_c9_b10`](../../method_comparisons/bloc_vs_pr/cases/cases_pages/blocs_pr_c9_b10.md) | `method_comparisons/bloc_vs_pr/cases/` | 3 | Left, Centre, Right — Proportional STAR fills the council → _C1, L1, L2_ | [`.yaml`](../../method_comparisons/bloc_vs_pr/cases/blocs_pr_c9_b10.yaml) |

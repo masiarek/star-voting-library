@@ -1,0 +1,20 @@
+election_title: "Equal ranks — the same 74 voters use the whole scale, and Delia wins"
+scenario_description: |-
+  The twin of equal_rank_cohesive_consecutive.yaml: the SAME 74 voters, the SAME preference order over Alice, Bilal, Cato and Delia — Figure 11 of Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407) — with exactly one thing changed. Every voter now uses the full width of the 0-5 scale instead of consecutive numbers: a top class is still 5, but everything the voter is not enthusiastic about drops toward 0.
+  Check it: each row below induces the same indifference classes as the matching row in the companion file. Row 1 is still Alice=Bilal=Cato > Delia. Row 5 is still Delia > Alice=Bilal=Cato. Nobody reordered anybody. Only the gaps moved.
+  STAR elects DELIA. The companion file, same order, elected Alice. And 38 of these 74 voters rank Alice in their top class, so by the paper's respect-for-cohesive-majorities axiom the winner had to be Alice, Bilal or Cato — Delia is precisely the candidate that cohesive majority excluded. Approval-IRV, which the paper proves satisfies the axiom, elects inside the permitted set on both files. Split-IRV elects Delia on both.
+  So this file is the witness for a claim this library should state about its own preferred method rather than wait to be told: STAR does not satisfy respect for cohesive majorities. The axiom is defined on weak orders, a score ballot induces one, and here is a perfectly ordinary 0-5 profile that breaks it. That is not a defect peculiar to STAR — the paper proves no Condorcet method that reads only pairwise margins satisfies the axiom either (Proposition 3.4), so Ranked Robin, Schulze, Ranked Pairs and Minimax are all outside it. Approval-IRV's claim is genuinely unusual, and worth reporting straight.
+  One reading note, so the report does not surprise anyone: Bilal and Cato post identical score totals here, so STAR's second finalist slot is settled by lot. It does not touch the result — Delia beats Bilal 30-28 and Cato 30-28 on the same ballots, so the lot picks the loser of the runoff either way.
+  For the Approval-IRV and Split-IRV counts, and the axiom check itself, run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py.
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Count:Alice,Bilal,Cato,Delia
+  18:5,5,5,0    # Alice, Bilal and Cato equal-first
+  10:5,5,0,3    # Alice and Bilal equal-first
+  10:5,0,5,3    # Alice and Cato equal-first
+  16:0,5,5,5    # Bilal, Cato and Delia equal-first
+  20:0,0,0,5    # Delia alone on top
+expected_winners: [Delia]
+
+# file: equal_rank_cohesive_wide_gaps.yaml

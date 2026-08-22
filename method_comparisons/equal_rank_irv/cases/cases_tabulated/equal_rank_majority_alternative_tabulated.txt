@@ -1,0 +1,105 @@
+======================================================================
+SOURCE FILE:     equal_rank_majority_alternative.yaml
+TABULATED FILE:  equal_rank_majority_alternative_tabulated.txt
+======================================================================
+
+election_title: "Equal ranks — a bare majority puts Amira top, and Basil still wins"
+scenario_description: |-
+  Figure 10 of Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407), cast as a 200-member co-op electing a general manager. The paper's percentages are doubled so every bloc count clears the house minimum of 6; scaling every weight by the same factor leaves every winner unchanged.
+  The profile is built to embarrass an axiom that sounds obvious. Amira sits in the TOP indifference class of 102 of 200 voters — 94 who rate her equal-first with Basil, plus 8 who put her alone on top — so a rule that promised "elect a candidate a majority ranks first" would have to elect Amira. But look at the same ballots the other way: 98 voters strictly prefer Basil to Amira, and only 8 strictly prefer Amira to Basil. The other 94 rate them equal. Basil is the Condorcet winner.
+  This is the profile the paper uses to argue that "select some majority alternative" is the WRONG axiom for equal-rank ballots, and that its own weaker axiom — respect for cohesive majorities — is the right one. Split-IRV elects Amira (splitting the 94 equal-first ballots half a point each drops Basil to last and eliminates him in round 1). Approval-IRV elects Basil. So does STAR, and so does the pairwise count.
+  Why the file is a SCORE case and not a ranked one: a 0-5 ballot expresses a weak order natively — two 5s are an equal-first, exactly as "Amira=Basil" is — so the paper's profile can be recorded here without inventing a ballot type. The scores below are one reading of the paper's ordinal profile, and a reading does add information the paper's weak order does not carry. That freedom was measured rather than assumed: across 20,000 random strictly-decreasing 0-5 encodings of this same weak order, STAR elects Basil in 98.5% and never elects anyone else (the remaining 1.5% are exact scoring ties). Basil is not an artifact of the numbers chosen.
+  For the Approval-IRV and Split-IRV counts on these same ballots run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py — nothing in the LH engine or on BetterVoting counts either rule, because deployed instant runoff rejects an equal rank as an overvote.
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Count:Amira,Basil,Cora,Dmitri
+  94:5,5,2,0    # Amira and Basil equal-first, then Cora, then Dmitri
+  8:5,4,2,0     # the only bloc that strictly prefers Amira to Basil
+  50:0,4,5,2    # Cora first, Basil a strong second
+  48:0,4,2,5    # Dmitri first, Basil a strong second
+expected_winners: [Basil]
+
+# file: equal_rank_majority_alternative.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Equal ranks — a bare majority puts Amira top, and Basil still wins ===
+  Figure 10 of Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407), cast as a 200-member co-op electing a general manager. The paper's percentages are doubled so every bloc count clears the house minimum of 6; scaling every weight by the same factor leaves every winner unchanged.
+  The profile is built to embarrass an axiom that sounds obvious. Amira sits in the TOP indifference class of 102 of 200 voters — 94 who rate her equal-first with Basil, plus 8 who put her alone on top — so a rule that promised "elect a candidate a majority ranks first" would have to elect Amira. But look at the same ballots the other way: 98 voters strictly prefer Basil to Amira, and only 8 strictly prefer Amira to Basil. The other 94 rate them equal. Basil is the Condorcet winner.
+  This is the profile the paper uses to argue that "select some majority alternative" is the WRONG axiom for equal-rank ballots, and that its own weaker axiom — respect for cohesive majorities — is the right one. Split-IRV elects Amira (splitting the 94 equal-first ballots half a point each drops Basil to last and eliminates him in round 1). Approval-IRV elects Basil. So does STAR, and so does the pairwise count.
+  Why the file is a SCORE case and not a ranked one: a 0-5 ballot expresses a weak order natively — two 5s are an equal-first, exactly as "Amira=Basil" is — so the paper's profile can be recorded here without inventing a ballot type. The scores below are one reading of the paper's ordinal profile, and a reading does add information the paper's weak order does not carry. That freedom was measured rather than assumed: across 20,000 random strictly-decreasing 0-5 encodings of this same weak order, STAR elects Basil in 98.5% and never elects anyone else (the remaining 1.5% are exact scoring ties). Basil is not an artifact of the numbers chosen.
+  For the Approval-IRV and Split-IRV counts on these same ballots run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py — nothing in the LH engine or on BetterVoting counts either rule, because deployed instant runoff rejects an equal rank as an overvote.
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                    |       Amira     |    * Basil     |    * Cora      |     Dmitri     |
+------------------------------------------------------------------------------------------
+            Amira > |       ---       |  8 -  94 -  98 |102 -   0 -  98 |102 -   0 -  98 |
+          * Basil > |  98 -  94 -   8 |      ---       |150 -   0 -  50 |152 -   0 -  48 |
+           * Cora > |  98 -   0 - 102 | 50 -   0 - 150 |      ---       |152 -   0 -  48 |
+           Dmitri > |  98 -   0 - 102 | 48 -   0 - 152 | 48 -   0 - 152 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Basil — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Dmitri — loses every head-to-head matchup
+
+[Divergence from STAR]
+  STAR                   = Basil
+  Choose-One (Plurality) = Amira   (differs from STAR)
+  RCV-IRV                = Amira   (differs from STAR)
+  Note: 94 of 200 ballots (47%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/equal_rank_majority_alternative_RCV-IRV_tabulated.txt
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 200 ballots.
+Count × Amira,Basil,Cora,Dmitri
+   94 ×     5,    5,   2,     0
+   50 ×     0,    4,   5,     2
+   48 ×     0,    4,   2,     5
+    8 ×     5,    4,   2,     0
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+Amira      102    0    0    0    0   98  |   510   2.6
+Basil       94  106    0    0    0    0  |   894   4.5
+Cora        50    0    0  150    0    0  |   550   2.8
+Dmitri      48    0    0   50    0  102  |   340   1.7
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Basil         -- 894 -- First place
+   Cora          -- 550 -- Second place
+   Amira         -- 510
+   Dmitri        -- 340
+ Basil and Cora advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Basil         -- 150 -- First place
+   Cora          --  50
+   Equal Support --   0
+ Basil wins.
+   Runoff math:
+     200  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     200  voters with a preference  (majority = 101)
+           Basil 150 (75%)  ·  Cora 50 (25%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Basil

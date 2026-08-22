@@ -35,6 +35,8 @@ The voter did nothing different in the second and third pictures. Whether that h
 
 This matters because two of the things people most often *assume* RCV does — let me mark ties, and compare everyone head-to-head — are exactly what RCV-IRV does **not** do. Those belong to *other* ranked methods.
 
+**Fine print worth having in a debate, though:** "IRV cannot take equal ranks" describes every deployed instant runoff, not the mathematics. The rule generalizes to weak orders in exactly two ways — one full point to each tied top choice, or one point split between them — and the choice is consequential: only the first keeps [independence of clones](../../05_Ranked_Robin/01_Learn/rr_clone_independence.md), which is IRV's own headline claim. → [RCV-IRV with equal ranks](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-equal-rank.md) · [the cases](../../method_comparisons/equal_rank_irv/README.md).
+
 ## Which ranked methods allow equal ranks? Which are pairwise?
 
 | Method | Equal ranks? | How it counts | Pairwise (head-to-head)? |

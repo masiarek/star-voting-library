@@ -1,0 +1,37 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Equal ranks — a bare majority puts Amira top, and Basil still wins
+ Tabulating 200 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Amira, Basil, Cora, Dmitri
+    94 ×   Amira > Basil > Cora      (5, 5, 2, 0)
+     8 ×   Amira > Basil > Cora      (5, 4, 2, 0)
+    50 ×   Cora > Basil > Dmitri      (0, 4, 5, 2)
+    48 ×   Dmitri > Basil > Cora      (0, 4, 2, 5)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Amira            102  Elected
+Cora              50  Rejected
+Dmitri            48  Rejected
+Basil              0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Amira
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Basil
+   Outside (3):        Amira, Cora, Dmitri
+   One member ⇒ Basil is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Amira is OUTSIDE the Smith set. ✗
+      Every member of the set (Basil) beats Amira head-to-head, yet
+      RCV-IRV elected Amira anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.
