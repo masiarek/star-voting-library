@@ -1,0 +1,28 @@
+election_title: "BV2286 — Ballot B (three dogs on the paper): RCV-IRV elects the Golden Retriever"
+scenario_description: >-
+  Race 4 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg).
+  The same sixty voters, ranked. A ranked ballot lets a dog voter say "any dog before
+  the cat", so the three-way split does not hand the seat to the cat the way Choose-One
+  did in race 3 — IRV keeps it on the dog side. It does not, however, find the
+  candidate this electorate most prefers: Parrot goes first, then the German Shepherd,
+  and in round 3 the LABRADOR is eliminated on 14 first choices — one round before it
+  would have won. Its ballots transfer to the Golden Retriever, which takes the final
+  round 34-26 over the Cat. The Labrador beats every rival head-to-head (see the Ranked
+  Robin race), so this is the familiar shape: IRV eliminates on first choices, and a
+  candidate can be everyone's acceptable second while holding too few firsts to survive.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+voting_method: RCV_IRV
+num_winners: 1
+ballots: |-
+  14:Labrador>Golden Retriever>German Shepherd>Cat>Parrot
+  12:Golden Retriever>Labrador>German Shepherd>Cat>Parrot
+  8:German Shepherd>Golden Retriever>Labrador>Parrot>Cat
+  20:Cat>Labrador>Golden Retriever>German Shepherd>Parrot
+  6:Parrot>Cat>Golden Retriever>German Shepherd>Labrador
+expected_winners:
+  - Golden Retriever
+
+# file: bv2286_p2wggg_b2_three_dogs_irv.yaml

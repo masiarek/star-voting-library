@@ -1,0 +1,32 @@
+election_title: "BV2286 — Ballot B (three dogs on the paper): Choose-One elects the CAT on 33%"
+scenario_description: >-
+  Race 3 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg),
+  and the point of the whole set. The SAME sixty voters as races 1-2, with the same
+  opinions, face the same question — but the dog side's internal disagreement is now
+  written onto the paper as three breeds. Each voter still gets one mark, so the 34
+  dog people (57% of the room) spread theirs over three names: Labrador 14, Golden
+  Retriever 12, German Shepherd 8. The 20 cat people are undivided. Cat wins with 20
+  of 60 marks — 33% — while a 57% majority of the room are dog people. Nobody changed
+  their mind between race 2 and race 3; only the number of names the dog side had did.
+  That is vote splitting, and it is a property of the CANDIDATE LIST, not of the topic
+  and not of how anyone voted. Every other counting rule in this election holds the
+  seat on the dog side.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+blocs:
+  Dogs: [Labrador, Golden Retriever, German Shepherd]
+voting_method: Plurality
+num_winners: 1
+ballots: |-
+  Count:Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+  14:1,0,0,0,0   # dog people who lead with the Labrador
+  12:0,1,0,0,0   # dog people who lead with the Golden Retriever
+  8:0,0,1,0,0    # dog people who lead with the German Shepherd
+  20:0,0,0,1,0   # cat people — undivided
+  6:0,0,0,0,1    # parrot people
+expected_winners:
+  - Cat
+
+# file: bv2286_p2wggg_b1_three_dogs_plurality.yaml

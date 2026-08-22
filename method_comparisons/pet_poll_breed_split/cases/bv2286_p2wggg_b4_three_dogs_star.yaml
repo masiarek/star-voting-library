@@ -1,0 +1,32 @@
+election_title: "BV2286 — Ballot B (three dogs on the paper): STAR elects the Labrador"
+scenario_description: >-
+  Race 6 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg).
+  The same sixty voters, scoring every candidate 0-5. A dog voter can give all three
+  breeds a high score, so the split that cost the dog side the seat in race 3 never
+  happens: the three dogs take the top three places in the Scoring Round (Labrador 188,
+  Golden Retriever 180, German Shepherd 150) with the Cat fourth on 144. The two
+  leaders advance and the Automatic Runoff goes to the Labrador 34-26, with no Equal
+  Support — every ballot expressed a preference between the two finalists. The Labrador
+  is also the Condorcet winner, beating every rival head-to-head including the Cat
+  34-26 (confirmed in race 7). Note what the runoff did that the scoring round alone
+  could not: it asked which finalist more voters actually PREFER, rather than which
+  collected the most generous scores.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+blocs:
+  Dogs: [Labrador, Golden Retriever, German Shepherd]
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Count:Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+  14:5,4,3,1,0   # Labrador camp — but any dog beats the cat
+  12:4,5,3,1,0   # Golden camp
+  8:3,4,5,0,1    # Shepherd camp
+  20:2,1,1,5,1   # cat people — the Labrador is the tolerable dog
+  6:1,2,2,3,5    # parrot people
+expected_winners:
+  - Labrador
+
+# file: bv2286_p2wggg_b4_three_dogs_star.yaml

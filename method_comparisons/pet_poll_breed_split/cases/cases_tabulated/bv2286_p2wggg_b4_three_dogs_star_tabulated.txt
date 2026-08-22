@@ -1,0 +1,127 @@
+======================================================================
+SOURCE FILE:     bv2286_p2wggg_b4_three_dogs_star.yaml
+TABULATED FILE:  bv2286_p2wggg_b4_three_dogs_star_tabulated.txt
+======================================================================
+
+election_title: "BV2286 — Ballot B (three dogs on the paper): STAR elects the Labrador"
+scenario_description: >-
+  Race 6 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg).
+  The same sixty voters, scoring every candidate 0-5. A dog voter can give all three
+  breeds a high score, so the split that cost the dog side the seat in race 3 never
+  happens: the three dogs take the top three places in the Scoring Round (Labrador 188,
+  Golden Retriever 180, German Shepherd 150) with the Cat fourth on 144. The two
+  leaders advance and the Automatic Runoff goes to the Labrador 34-26, with no Equal
+  Support — every ballot expressed a preference between the two finalists. The Labrador
+  is also the Condorcet winner, beating every rival head-to-head including the Cat
+  34-26 (confirmed in race 7). Note what the runoff did that the scoring round alone
+  could not: it asked which finalist more voters actually PREFER, rather than which
+  collected the most generous scores.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+blocs:
+  Dogs: [Labrador, Golden Retriever, German Shepherd]
+voting_method: STAR
+num_winners: 1
+ballots: |-
+  Count:Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+  14:5,4,3,1,0   # Labrador camp — but any dog beats the cat
+  12:4,5,3,1,0   # Golden camp
+  8:3,4,5,0,1    # Shepherd camp
+  20:2,1,1,5,1   # cat people — the Labrador is the tolerable dog
+  6:1,2,2,3,5    # parrot people
+expected_winners:
+  - Labrador
+
+# file: bv2286_p2wggg_b4_three_dogs_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== BV2286 — Ballot B (three dogs on the paper): STAR elects the Labrador ===
+  Race 6 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg). The same sixty voters, scoring every candidate 0-5. A dog voter can give all three breeds a high score, so the split that cost the dog side the seat in race 3 never happens: the three dogs take the top three places in the Scoring Round (Labrador 188, Golden Retriever 180, German Shepherd 150) with the Cat fourth on 144. The two leaders advance and the Automatic Runoff goes to the Labrador 34-26, with no Equal Support — every ballot expressed a preference between the two finalists. The Labrador is also the Condorcet winner, beating every rival head-to-head including the Cat 34-26 (confirmed in race 7). Note what the runoff did that the scoring round alone could not: it asked which finalist more voters actually PREFER, rather than which collected the most generous scores. Live results: https://bettervoting.com/p2wggg/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                         |      * Labrador      | * Golden Retriever  |   German Shepherd   |         Cat         |        Parrot       |
+-----------------------------------------------------------------------------------------------------------------------------------------
+            * Labrador > |         ---          |    34 -  0 - 26     |    46 -  0 - 14     |    34 -  0 - 26     |    54 -  0 -  6     |
+    * Golden Retriever > |     26 -  0 - 34     |        ---          |    26 - 26 -  8     |    34 -  0 - 26     |    34 - 20 -  6     |
+       German Shepherd > |     14 -  0 - 46     |     8 - 26 - 26     |        ---          |    34 -  0 - 26     |    34 - 20 -  6     |
+                   Cat > |     26 -  0 - 34     |    26 -  0 - 34     |    26 -  0 - 34     |        ---          |    46 -  0 - 14     |
+                Parrot > |      6 -  0 - 54     |     6 - 20 - 34     |     6 - 20 - 34     |    14 -  0 - 46     |        ---          |
+
+[Condorcet Winner]
+  Condorcet Winner: Labrador — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Parrot — loses every head-to-head matchup
+
+[Divergence from STAR]
+  STAR                   = Labrador
+  Choose-One (Plurality) = Cat   (differs from STAR)
+  RCV-IRV                = Golden Retriever   (differs from STAR)
+  Note: 26 of 60 ballots (43%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2286_p2wggg_b4_three_dogs_star_RCV-IRV_tabulated.txt
+
+[Vote-splitting check]
+  Choose-One first choices: Cat 20, Labrador 14, Golden Retriever 12, German Shepherd 8, Parrot 6
+  Plurality winner: Cat (20, 33.3%)
+  Bloc 'Dogs' = Labrador, Golden Retriever, German Shepherd: combined 34 (56.7%); winner Cat is OUTSIDE it.
+  => VOTE SPLITTING: the 'Dogs' bloc is an outright majority (34 vs Cat's
+     20) but split across 3 candidates, so Cat won Choose-One. STAR elected
+     Labrador.
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 60 ballots.
+Count × Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+   20 ×        2,               1,              1,  5,     1
+   14 ×        5,               4,              3,  1,     0
+   12 ×        4,               5,              3,  1,     0
+    8 ×        3,               4,              5,  0,     1
+    6 ×        1,               2,              2,  3,     5
+
+[Score Distribution] (how many ballots gave each star rating)
+                          Score
+Candidate          5   4   3   2   1   0  | Total   Avg
+Labrador          14  12   8  20   6   0  |   188   3.1
+Golden Retriever  12  22   0   6  20   0  |   180   3.0
+German Shepherd    8   0  26   6  20   0  |   150   2.5
+Cat               20   0   6   0  26   8  |   144   2.4
+Parrot             6   0   0   0  28  26  |    58   1.0
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Labrador         -- 188 -- First place
+   Golden Retriever -- 180 -- Second place
+   German Shepherd  -- 150
+   Cat              -- 144
+   Parrot           --  58
+ Labrador and Golden Retriever advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Labrador         -- 34 -- First place
+   Golden Retriever -- 26
+   Equal Support    --  0
+ Labrador wins.
+   Runoff math:
+     60  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     60  voters with a preference  (majority = 31)
+           Labrador 34 (57%)  ·  Golden Retriever 26 (43%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Labrador

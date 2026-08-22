@@ -1,0 +1,71 @@
+======================================================================
+SOURCE FILE:     bv2286_p2wggg_b3_three_dogs_approval.yaml
+TABULATED FILE:  bv2286_p2wggg_b3_three_dogs_approval_tabulated.txt
+======================================================================
+
+election_title: "BV2286 — Ballot B (three dogs on the paper): Approval elects the Golden Retriever"
+scenario_description: >-
+  Race 5 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg).
+  The same sixty voters, approving every candidate they would be happy with. Because a
+  dog voter can approve more than one dog, the three-way split of race 3 simply does
+  not occur — the dog side's support adds up instead of dividing. The Golden Retriever
+  wins with 34 of 60 (57%): it is the one breed approved by voters from all three dog
+  camps, where the Labrador is approved by two of them (26) and the German Shepherd by
+  one (8). Cat holds its undivided 26. Approval finds the broadest reach; it does not
+  ask which of two candidates more voters actually prefer, which is the job STAR's
+  automatic runoff does in race 6 — and there the answer is the Labrador.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+voting_method: Approval
+num_winners: 1
+ballots: |-
+  Count:Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+  14:1,1,0,0,0   # Labrador camp — the Golden is fine too
+  12:1,1,0,0,0   # Golden camp — the Labrador is fine too
+  8:0,1,1,0,0    # Shepherd camp — the Golden is fine too
+  20:0,0,0,1,0   # cat people
+  6:0,0,0,1,1    # parrot people — a cat would do
+expected_winners:
+  - Golden Retriever
+
+# file: bv2286_p2wggg_b3_three_dogs_approval.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (single winner) ---
+ Tabulating 60 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Labrador, Golden Retriever, German Shepherd, Cat, Parrot      (1 = approve; 0 = not approved)
+    26 × 1,1,0,0,0
+     8 × 0,1,1,0,0
+    20 × 0,0,0,1,0
+     6 × 0,0,0,1,1
+
+   Golden Retriever -- 34 (57%) -- Elected
+   Labrador         -- 26 (43%)
+   Cat              -- 26 (43%)
+   German Shepherd  -- 8 (13%)
+   Parrot           -- 6 (10%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   100 approvals across 60 ballots — average 1.7 of 5 (range 1–2).
+     approved 1: 20 ballots
+     approved 2: 40 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+                     | Golden Retriever |     Labrador     |       Cat        | German Shepherd  |      Parrot      |
+   ------------------------------------------------------------------------------------------------------------------
+   Golden Retriever  |        --        |       76%        |        0%        |       24%        |        0%        |
+   Labrador          |       100%       |        --        |        0%        |        0%        |        0%        |
+   Cat               |        0%        |        0%        |        --        |        0%        |       23%        |
+   German Shepherd   |       100%       |        0%        |        0%        |        --        |        0%        |
+   Parrot            |        0%        |        0%        |       100%       |        0%        |        --        |
+
+Winner — Approval Voting (single winner)
+  Golden Retriever

@@ -1,0 +1,66 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  BV2286 — Ballot B (three dogs on the paper): STAR elects the Labrador
+ Tabulating 60 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Labrador, Golden Retriever, German Shepherd, Cat, Parrot
+    14 ×   Labrador > Golden Retriever > German Shepherd > Cat      (5, 4, 3, 1, 0)
+    12 ×   Golden Retriever > Labrador > German Shepherd > Cat      (4, 5, 3, 1, 0)
+     8 ×   German Shepherd > Golden Retriever > Labrador > Parrot      (3, 4, 5, 0, 1)
+    20 ×   Cat > Labrador > Golden Retriever > German Shepherd > Parrot      (2, 1, 1, 5, 1)
+     6 ×   Parrot > Cat > Golden Retriever > German Shepherd > Labrador      (1, 2, 2, 3, 5)
+
+ROUND 1
+Candidate           Votes  Status
+----------------  -------  --------
+Cat                    20  Hopeful
+Labrador               14  Hopeful
+Golden Retriever       12  Hopeful
+German Shepherd         8  Hopeful
+Parrot                  6  Rejected
+
+ROUND 2
+Candidate           Votes  Status
+----------------  -------  --------
+Cat                    26  Hopeful
+Labrador               14  Hopeful
+Golden Retriever       12  Hopeful
+German Shepherd         8  Rejected
+Parrot                  0  Rejected
+
+ROUND 3
+Candidate           Votes  Status
+----------------  -------  --------
+Cat                    26  Hopeful
+Golden Retriever       20  Hopeful
+Labrador               14  Rejected
+German Shepherd         0  Rejected
+Parrot                  0  Rejected
+
+FINAL RESULT
+Candidate           Votes  Status
+----------------  -------  --------
+Golden Retriever       34  Elected
+Cat                    26  Rejected
+Labrador                0  Rejected
+German Shepherd         0  Rejected
+Parrot                  0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Golden Retriever
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): Labrador
+   Outside (4):        Golden Retriever, German Shepherd, Cat, Parrot
+   One member ⇒ Labrador is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Golden Retriever is OUTSIDE the Smith set. ✗
+      Every member of the set (Labrador) beats Golden Retriever head-to-head, yet
+      RCV-IRV elected Golden Retriever anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

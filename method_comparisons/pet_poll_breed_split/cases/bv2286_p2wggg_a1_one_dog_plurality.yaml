@@ -1,0 +1,29 @@
+election_title: "BV2286 — Ballot A (one dog on the paper): Choose-One elects Dog outright"
+scenario_description: >-
+  Race 1 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg).
+  This is the shape a typical best-pet poll uses, and the shape Equal.Vote's own
+  meta_pets uses: ONE name per animal family. Sixty pet owners — 34 dog people
+  (57%), 20 cat people, 6 parrot people. Each voter gets one mark, and the dog
+  side has exactly one name to put it on, so Dog wins with 34 of 60 — an outright
+  majority. There is no vote splitting here and there cannot be: splitting needs
+  two or more similar candidates drawing from one pool of voters, and this ballot
+  offers the dog side a single name. Compare race 3
+  (bv2286_p2wggg_b1_three_dogs_plurality), where the SAME sixty voters face the
+  same question with three dog breeds on the paper and Choose-One elects the Cat.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+voting_method: Plurality
+num_winners: 1
+ballots: |-
+  Count:Dog,Cat,Parrot
+  14:1,0,0   # Labrador-first dog people — one dog on the ballot, so all one mark
+  12:1,0,0   # Golden-Retriever-first dog people
+  8:1,0,0    # German-Shepherd-first dog people
+  20:0,1,0   # cat people
+  6:0,0,1    # parrot people
+expected_winners:
+  - Dog
+
+# file: bv2286_p2wggg_a1_one_dog_plurality.yaml

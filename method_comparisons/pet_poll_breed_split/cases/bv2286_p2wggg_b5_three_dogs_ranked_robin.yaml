@@ -1,0 +1,27 @@
+election_title: "BV2286 — Ballot B (three dogs on the paper): Ranked Robin confirms the Labrador"
+scenario_description: >-
+  Race 7 of 7 in the BV2286 "Three dogs and a cat" election (BetterVoting p2wggg).
+  The same sixty ranked ballots as race 4, counted head-to-head instead of by
+  elimination. The Labrador wins every one of its four matchups — over the Golden
+  Retriever 34-26, the German Shepherd 46-14, the Cat 34-26 and the Parrot 54-6 — for a
+  4-0-0 record and an unambiguous Condorcet winner. This race is the answer key for the
+  whole election: it names the candidate this electorate most prefers, with no
+  elimination order and no runoff to argue about. STAR (race 6) finds it; RCV-IRV
+  (race 4) eliminates it in round 3; Choose-One (race 3) elects the Cat, which the
+  Labrador beats head-to-head by the same 34-26.
+  Live results: https://bettervoting.com/p2wggg/results
+bv_test_id: BV2286
+bv_election_id: p2wggg
+bv_results_url: https://bettervoting.com/p2wggg/results
+voting_method: RankedRobin
+num_winners: 1
+ballots: |-
+  14:Labrador>Golden Retriever>German Shepherd>Cat>Parrot
+  12:Golden Retriever>Labrador>German Shepherd>Cat>Parrot
+  8:German Shepherd>Golden Retriever>Labrador>Parrot>Cat
+  20:Cat>Labrador>Golden Retriever>German Shepherd>Parrot
+  6:Parrot>Cat>Golden Retriever>German Shepherd>Labrador
+expected_winners:
+  - Labrador
+
+# file: bv2286_p2wggg_b5_three_dogs_ranked_robin.yaml

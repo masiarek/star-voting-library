@@ -88,6 +88,7 @@ AGREE,method_comparisons/felsenthal_paradoxes/cases/bv2163_74j6vv_star.yaml,4,10
 AGREE,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a0_plurality.yaml,3,36,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,0,False,False,False
 AGREE,method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_star.yaml,4,100,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,Cora,0,False,False,False
 AGREE,method_comparisons/minority_winner/cases/bv2215_2p33qq_minority_winner.yaml,3,100,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,Cleo,0,False,False,False
+AGREE,method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_a2_one_dog_star.yaml,3,60,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_lukewarm_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,B,A,A,0,False,False,False
 AGREE,method_comparisons/same_ranks_different_utilities/cases/same_ranks_polarized_c2_b3_procaccia_rosenschein.yaml,2,3,A,A,A,A,A,A,A,A,A,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/00_plurality_vs_majority.yaml,3,100,Blake,Blake,Blake,Blake,Blake,Blake,Blake,Blake,Blake,0,False,False,False
@@ -206,6 +207,7 @@ IRV_DIFFERS_ARTIFACT,method_comparisons/crowded_field/cases/crowded_field_c5_sta
 IRV_DIFFERS_ARTIFACT,method_comparisons/crowded_field/cases/crowded_field_c7_star.yaml,7,65,Clara,Felix,Felix,Clara,Clara,Diego,Clara,Clara,Clara,65,False,False,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/fairvote_star_whitepaper/cases/bv2230_2hqmrd_french_2017_burial.yaml,4,100,Melenchon,LePen,Melenchon,Melenchon,Fillon,Fillon,Melenchon,Melenchon,,100,True,True,False
 IRV_DIFFERS_ARTIFACT,method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml,3,36,Berry,Almond,Berry,Berry,Almond,Berry,Berry,Berry,Almond,36,True,True,False
+IRV_DIFFERS_ARTIFACT,method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b4_three_dogs_star.yaml,5,60,Labrador,Golden Retriever,Golden Retriever,Labrador,Labrador,Labrador,Labrador,Labrador,Labrador,26,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/02_Examples/cases/09_c4_b100_tennessee-capital.yaml,4,100,Nashville,Knoxville,Knoxville,Nashville,Nashville,Nashville,Nashville,Nashville,Nashville,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/02_Examples/cases/bv2184_fyy886_lunch_vote.yaml,3,5,Pizza,Sushi,Sushi,Pizza,Pizza,Pizza,Pizza,Pizza,Pizza,0,False,False,False
 IRV_OUTLIER_RR_WITH_STAR,01_STAR/05_Practice/cases/ex03_five_verdicts.yaml,3,9,Cherry,Banana,Banana,Cherry,Cherry,Cherry,Cherry,Cherry,Cherry,0,False,False,False

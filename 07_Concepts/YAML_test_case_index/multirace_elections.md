@@ -838,6 +838,20 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2282 — Rank all four - RCV-IRV (instant runoff) | IRV | 4 | **B** | [results ↗](https://bettervoting.com/hf3ckp/results) |
 | BV2282 — Rank all four - Ranked Robin (Copeland) | RankedRobin | 4 | **G** | [results ↗](https://bettervoting.com/hf3ckp/results) |
 
+## BV2286 — Three dogs and a cat — does the ballot show vote splitting, or hide it?
+
+**Election** [`p2wggg`](https://bettervoting.com/p2wggg/results) · **7 races** · **60 ballots** · [frozen export](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2286 — Ballot A: one dog on the paper — Choose-One | Plurality | 3 | **Dog** | [results ↗](https://bettervoting.com/p2wggg/results) |
+| BV2286 — Ballot A: one dog on the paper — STAR | STAR | 3 | **Dog** | [results ↗](https://bettervoting.com/p2wggg/results) |
+| BV2286 — Ballot B: three dogs on the paper — Choose-One | Plurality | 5 | **Cat** | [results ↗](https://bettervoting.com/p2wggg/results) |
+| BV2286 — Ballot B: three dogs on the paper — RCV-IRV | IRV | 5 | **Golden Retriever** | [results ↗](https://bettervoting.com/p2wggg/results) |
+| BV2286 — Ballot B: three dogs on the paper — Approval | Approval | 5 | **Golden Retriever** | [results ↗](https://bettervoting.com/p2wggg/results) |
+| BV2286 — Ballot B: three dogs on the paper — STAR | STAR | 5 | **Labrador** | [results ↗](https://bettervoting.com/p2wggg/results) |
+| BV2286 — Ballot B: three dogs on the paper — Ranked Robin | RankedRobin | 5 | **Labrador** | [results ↗](https://bettervoting.com/p2wggg/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

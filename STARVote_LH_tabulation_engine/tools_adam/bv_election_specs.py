@@ -2906,6 +2906,97 @@ _EX_TRIO_3 = [
 ]
 
 
+
+# ── BREED SPLIT — the pet poll with clones on the ballot ────────────────────
+# Answers a live Equal Vote question (Slack, 2026-08-21): meta_pets elects Dog
+# under nearly every method, so the flagship demo never shows vote splitting.
+# The proposed cause was the TOPIC; the actual cause is the CANDIDATE LIST —
+# seven candidates, zero clones, one dog on the paper. A one-mark ballot cannot
+# split a family that has only one name in it, so no pattern of incoming votes
+# could ever produce the split. This election proves it by running ONE set of 60
+# voters over TWO candidate lists: races 1-2 are today's shape (Dog/Cat/Parrot),
+# races 3-7 the same people with the dog side's internal disagreement written
+# onto the paper. Every voter votes all seven races, so the export itself is the
+# proof that the electorate never changed.
+_BREED_CANDS_A = ["Dog", "Cat", "Parrot"]
+_BREED_CANDS_B = ["Labrador", "Golden Retriever", "German Shepherd", "Cat", "Parrot"]
+
+# The five blocs, in the SAME order in every race (a voter is one row index
+# across all seven): 14 Labrador-first, 12 Golden-first, 8 Shepherd-first
+# (34 dog people = 57%), 20 cat people, 6 parrot people.
+_BREED_A_PLUR  = _expand([(14, [1, 0, 0]), (12, [1, 0, 0]), (8, [1, 0, 0]),
+                          (20, [0, 1, 0]), (6, [0, 0, 1])])
+_BREED_A_STAR  = _expand([(14, [5, 1, 0]), (12, [5, 1, 0]), (8, [5, 0, 1]),
+                          (20, [2, 5, 1]), (6, [2, 3, 5])])
+_BREED_B_PLUR  = _expand([(14, [1, 0, 0, 0, 0]), (12, [0, 1, 0, 0, 0]), (8, [0, 0, 1, 0, 0]),
+                          (20, [0, 0, 0, 1, 0]), (6, [0, 0, 0, 0, 1])])
+_BREED_B_STAR  = _expand([(14, [5, 4, 3, 1, 0]), (12, [4, 5, 3, 1, 0]), (8, [3, 4, 5, 0, 1]),
+                          (20, [2, 1, 1, 5, 1]), (6, [1, 2, 2, 3, 5])])
+_BREED_B_APPR  = _expand([(14, [1, 1, 0, 0, 0]), (12, [1, 1, 0, 0, 0]), (8, [0, 1, 1, 0, 0]),
+                          (20, [0, 0, 0, 1, 0]), (6, [0, 0, 0, 1, 1])])
+# Ranks, 1 = top. Lab>Gold>Shep>Cat>Parrot / Gold>Lab>Shep>Cat>Parrot /
+# Shep>Gold>Lab>Parrot>Cat / Cat>Lab>Gold>Shep>Parrot / Parrot>Cat>Gold>Shep>Lab
+_BREED_B_RANK  = _expand([(14, [1, 2, 3, 4, 5]), (12, [2, 1, 3, 4, 5]), (8, [3, 2, 1, 5, 4]),
+                          (20, [2, 3, 4, 1, 5]), (6, [5, 3, 4, 2, 1])])
+
+_BREED_SPLIT = {
+    "test_id": "BV2286",
+    "title": "Three dogs and a cat — does the ballot show vote splitting, or hide it?",
+    "description": (
+        "Sixty pet owners with fixed opinions, asked the same question twice. Thirty-four "
+        "of them are dog people (a 57% majority), twenty are cat people, six want a parrot. "
+        "Races 1-2 put ONE dog on the ballot, the way a typical best-pet poll does: "
+        "Choose-One elects Dog with an outright 57% majority and STAR elects Dog too — "
+        "every method agrees and there is nothing to see. Races 3-7 ask the SAME sixty "
+        "voters the same question with the dog side's internal disagreement written onto "
+        "the paper — Labrador, Golden Retriever, German Shepherd — and Choose-One elects "
+        "the CAT, with 20 of 60 marks (33%), while 57% of the room are dog people. Nobody "
+        "changed their mind between race 2 and race 3; the dog side merely had three names "
+        "to spread one mark over. That is vote splitting, and it is a property of the "
+        "CANDIDATE LIST, not of the topic or of how anyone voted: a ballot with one name "
+        "per family has nothing to split, so no set of votes can ever make the split "
+        "appear. On the split ballot the five counting rules return three different "
+        "winners — Choose-One the Cat, RCV-IRV and Approval the Golden Retriever, STAR and "
+        "Ranked Robin the Labrador, which beats every rival head-to-head (the Condorcet "
+        "winner) including the cat 34-26. Every voter votes all seven races, so this "
+        "export is itself the proof that the electorate never changed. "
+        "[Full lesson & tabulation]"
+        "(https://masiarek.github.io/star-voting-library/method_comparisons/pet_poll_breed_split/index.html)"
+    ),
+    "races": [
+        {"title": "Ballot A: one dog on the paper — Choose-One",
+         "method": "Plurality", "num_winners": 1,
+         "candidates": _BREED_CANDS_A, "ballots": _BREED_A_PLUR},
+        {"title": "Ballot A: one dog on the paper — STAR",
+         "method": "STAR", "num_winners": 1,
+         "candidates": _BREED_CANDS_A, "ballots": _BREED_A_STAR},
+        {"title": "Ballot B: three dogs on the paper — Choose-One",
+         "method": "Plurality", "num_winners": 1,
+         "candidates": _BREED_CANDS_B, "ballots": _BREED_B_PLUR},
+        {"title": "Ballot B: three dogs on the paper — RCV-IRV",
+         "method": "IRV", "num_winners": 1, "max_rankings": 5,
+         "candidates": _BREED_CANDS_B, "ballots": _BREED_B_RANK},
+        {"title": "Ballot B: three dogs on the paper — Approval",
+         "method": "Approval", "num_winners": 1,
+         "candidates": _BREED_CANDS_B, "ballots": _BREED_B_APPR},
+        {"title": "Ballot B: three dogs on the paper — STAR",
+         "method": "STAR", "num_winners": 1,
+         "candidates": _BREED_CANDS_B, "ballots": _BREED_B_STAR},
+        {"title": "Ballot B: three dogs on the paper — Ranked Robin",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 5,
+         "candidates": _BREED_CANDS_B, "ballots": _BREED_B_RANK},
+    ],
+    "enable_write_in": False,   # the candidate LIST is the subject — lock it
+    "expected": (
+        "Ballot A: Choose-One -> Dog 34/60 (57%); STAR -> Dog (scores 222/144/58, "
+        "runoff 34-26 over Cat). Ballot B: Choose-One -> Cat 20/60 (33%); RCV-IRV -> "
+        "Golden Retriever (Labrador eliminated round 3 on 14 first choices); Approval "
+        "-> Golden Retriever 34 (57%); STAR -> Labrador (scores 188/180/150/144/58, "
+        "runoff 34-26 over Golden Retriever, no Equal Support); Ranked Robin -> "
+        "Labrador 4-0-0, the Condorcet winner. LH-verified on all seven races."
+    ),
+}
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
@@ -6264,6 +6355,15 @@ THREE_WAY_DEAD_RUNG_SPEC = {
 
 
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [_BREED_SPLIT]   # BV2286 -> p2wggg
+#   Created as designed, 60 ballots × 7 races. BV agrees with LH on every race:
+#   Ballot A (Dog/Cat/Parrot) -> Dog under Choose-One (34/60, 57%) and Dog under
+#   STAR; Ballot B (Labrador/Golden Retriever/German Shepherd/Cat/Parrot) -> Cat
+#   under Choose-One (20/60, 33%), Golden Retriever under RCV-IRV and Approval,
+#   Labrador under STAR and Ranked Robin. Same 60 voters in both halves — each
+#   casts one ballot across all seven races — so the export itself proves the
+#   electorate never changed and only the candidate list did. Backs
+#   method_comparisons/pet_poll_breed_split/README.md.
 # Previously: [THREE_WAY_DEAD_RUNG_SPEC]   # BV2285 -> vx89hj
 #   Created as designed: 3 candidates, 3 rotation ballots, one STAR race. BV tied all
 #   three at 4 in the scoring round and fell through to its tiebreak, which drew the

@@ -6,6 +6,8 @@
 
 *Nobody changed their mind. Nobody was added or removed. The only thing that changed is how many names the dog side had on the ballot.*
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/p2wggg) · **[results ↗](https://bettervoting.com/p2wggg/results)** (election `p2wggg`, Test ID **BV2286** — all seven races, every one agreeing with the LH engine). Sixty voters cast one ballot covering all seven races, so the export itself is the proof that the electorate never changed between Ballot A and Ballot B.
+
 → The concept: [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md) · the runnable set: [vote-splitting & spoilers](../split_voting/README.md) · how often it happens for real: [the 2022 count, read honestly](../split_voting/how_often_does_vote_splitting_happen.md) · the other pet polls: [four methods](../pet_poll_four_methods/README.md) · [four winners](../pet_poll_four_winners/README.md)
 
 ---
@@ -52,6 +54,123 @@ Rows are candidates, columns are counting rules — one electorate, read five wa
 **Choose-One is the only rule that hands the win to the cat**, and it does it for the textbook reason: 34 dog voters were allowed one mark each and had three names to spread it over, so their largest pile (14) came in under the cat's undivided 20.
 
 **Labrador is the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md)** — it beats every other candidate head-to-head, including the cat 34–26 — and STAR and Ranked Robin both find it. RCV-IRV lands on the Golden Retriever: the Labrador is eliminated in the third round with 14 first choices, one round before it would have won. Approval also elects the Golden Retriever, the dog with the broadest reach across the three breed camps.
+
+### Run them yourself
+
+| # | Race | Winner | Read · run |
+|:-:|------|:------:|:--:|
+| 1 | Ballot A — Choose-One | **Dog** (34/60, 57%) | [page](cases/cases_pages/bv2286_p2wggg_a1_one_dog_plurality.md) · [`.yaml`](cases/bv2286_p2wggg_a1_one_dog_plurality.yaml) |
+| 2 | Ballot A — STAR | **Dog** | [page](cases/cases_pages/bv2286_p2wggg_a2_one_dog_star.md) · [`.yaml`](cases/bv2286_p2wggg_a2_one_dog_star.yaml) |
+| 3 | Ballot B — Choose-One | **Cat** (20/60, 33%) | [page](cases/cases_pages/bv2286_p2wggg_b1_three_dogs_plurality.md) · [`.yaml`](cases/bv2286_p2wggg_b1_three_dogs_plurality.yaml) |
+| 4 | Ballot B — RCV-IRV | **Golden Retriever** | [page](cases/cases_pages/bv2286_p2wggg_b2_three_dogs_irv.md) · [`.yaml`](cases/bv2286_p2wggg_b2_three_dogs_irv.yaml) |
+| 5 | Ballot B — Approval | **Golden Retriever** (34, 57%) | [page](cases/cases_pages/bv2286_p2wggg_b3_three_dogs_approval.md) · [`.yaml`](cases/bv2286_p2wggg_b3_three_dogs_approval.yaml) |
+| 6 | Ballot B — STAR | **Labrador** | [page](cases/cases_pages/bv2286_p2wggg_b4_three_dogs_star.md) · [`.yaml`](cases/bv2286_p2wggg_b4_three_dogs_star.yaml) |
+| 7 | Ballot B — Ranked Robin | **Labrador** (4–0–0) | [page](cases/cases_pages/bv2286_p2wggg_b5_three_dogs_ranked_robin.md) · [`.yaml`](cases/bv2286_p2wggg_b5_three_dogs_ranked_robin.yaml) |
+
+Every winner is cross-checked: **LH engine = BetterVoting** on all seven races, and the Ranked Robin result is confirmed a third time by `pref_voting`'s independent Copeland implementation (`AGREE ✓`, unique Copeland winner).
+
+### The scored ballots (Ballot B)
+
+<!-- ballots:bv2286_p2wggg_b4_three_dogs_star -->
+*(No ballot art for `bv2286_p2wggg_b4_three_dogs_star` — draw it with `build_style_ballot_images.py --from-yaml method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b4_three_dogs_star.yaml`.)*
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Count:Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+14:5,4,3,1,0   # Labrador camp — but any dog beats the cat
+12:4,5,3,1,0   # Golden camp
+8:3,4,5,0,1    # Shepherd camp
+20:2,1,1,5,1   # cat people — the Labrador is the tolerable dog
+6:1,2,2,3,5    # parrot people
+```
+<!-- /ballots -->
+
+### The count that elects the cat
+
+<!-- report:bv2286_p2wggg_b1_three_dogs_plurality -->
+```text
+--- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 60 ballots.
+
+                   Labrador  Golden Retriever  German Shepherd   Cat   Parrot 
+  14 ×                X             -                 -           -      -    
+  12 ×                -             X                 -           -      -    
+  8 ×                 -             -                 X           -      -    
+  20 ×                -             -                 -           X      -    
+  6 ×                 -             -                 -           -      X    
+
+  Count the marks:  Cat 20 · Labrador 14 · Golden Retriever 12 · German Shepherd 8 · Parrot 6
+
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Cat   (20 of 60 marks)
+```
+<!-- /report -->
+
+### The same voters under STAR
+
+The engine's `[Vote-splitting check]` states the verdict in numbers, because the case file declares the three dogs as a bloc:
+
+<!-- report:bv2286_p2wggg_b4_three_dogs_star -->
+```text
+[Divergence from STAR]
+  STAR                   = Labrador
+  Choose-One (Plurality) = Cat   (differs from STAR)
+  RCV-IRV                = Golden Retriever   (differs from STAR)
+  Note: 26 of 60 ballots (43%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bv2286_p2wggg_b4_three_dogs_star_RCV-IRV_tabulated.txt
+
+[Vote-splitting check]
+  Choose-One first choices: Cat 20, Labrador 14, Golden Retriever 12, German Shepherd 8, Parrot 6
+  Plurality winner: Cat (20, 33.3%)
+  Bloc 'Dogs' = Labrador, Golden Retriever, German Shepherd: combined 34 (56.7%); winner Cat is OUTSIDE it.
+  => VOTE SPLITTING: the 'Dogs' bloc is an outright majority (34 vs Cat's
+     20) but split across 3 candidates, so Cat won Choose-One. STAR elected
+     Labrador.
+
+--- STAR Voting Method (single winner) ---
+
+[STAR Voting]
+ Tabulating 60 ballots.
+Count × Labrador,Golden Retriever,German Shepherd,Cat,Parrot
+   20 ×        2,               1,              1,  5,     1
+   14 ×        5,               4,              3,  1,     0
+   12 ×        4,               5,              3,  1,     0
+    8 ×        3,               4,              5,  0,     1
+    6 ×        1,               2,              2,  3,     5
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Labrador         -- 188 -- First place
+   Golden Retriever -- 180 -- Second place
+   German Shepherd  -- 150
+   Cat              -- 144
+   Parrot           --  58
+ Labrador and Golden Retriever advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Labrador         -- 34 -- First place
+   Golden Retriever -- 26
+   Equal Support    --  0
+ Labrador wins.
+   Runoff math:
+     60  ballots cast
+   −  0  Equal Support (no preference between the two finalists)
+     ──
+     60  voters with a preference  (majority = 31)
+           Labrador 34 (57%)  ·  Golden Retriever 26 (43%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Labrador
+```
+<!-- /report -->
 
 ## The recipe, if you want to build one of these
 

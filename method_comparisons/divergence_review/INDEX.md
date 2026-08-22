@@ -6,14 +6,14 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Base rate
 
-- Scanned **248** single-winner STAR elections (skipped 235 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
-- **148** (60%) diverge from STAR under at least one method; **100** agree across the board.
+- Scanned **250** single-winner STAR elections (skipped 240 non-eligible files: multi-winner / Approval / RR / RCV / ranked-ballot / unparseable).
+- **149** (60%) diverge from STAR under at least one method; **101** agree across the board.
 
 | Bucket | Count |
 |---|---:|
 | IRV_OUTLIER_RR_WITH_STAR | 31 |
 | STAR_OUTLIER_RR_WITH_IRV | 10 |
-| IRV_DIFFERS_ARTIFACT | 15 |
+| IRV_DIFFERS_ARTIFACT | 16 |
 | CYCLE_OR_THREE_WAY | 38 |
 | APPROVAL_OR_MINOR | 54 |
 
@@ -26,9 +26,9 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 ## Cases by bucket
 
-Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (145 cases; identical library copies merged).
+Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (146 cases; identical library copies merged).
 
-**82 of these 145 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**83 of these 146 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -127,7 +127,7 @@ _STAR is the outlier — Ranked Robin sides with RCV-IRV (show it anyway, for ev
     STAR=**Ben** · IRV=Ada · RR=Ada · Approval=Ben · Score=Ben · Condorcet=Ada  
     _flags: 1 tied-score ballot(s)_
 
-### IRV_DIFFERS_ARTIFACT — 15
+### IRV_DIFFERS_ARTIFACT — 16
 
 _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or flips under reversed priority) — log, do NOT bark on IRV_
 
@@ -176,6 +176,9 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[bv2275_6mcgkq_a1_negative](cases/IRV_DIFFERS_ARTIFACT/bv2275_6mcgkq_a1_negative.md)** — `method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_a1_negative.yaml` (3c/36b)  ·  [BV ↗](https://bettervoting.com/6mcgkq/results)  
     STAR=**Berry** · IRV=Almond · RR=Berry · Approval=Berry · Score=Berry · Condorcet=Berry  
     _flags: 36 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Berry, strict=Almond)_
+- **[bv2286_p2wggg_b4_three_dogs_star](cases/IRV_DIFFERS_ARTIFACT/bv2286_p2wggg_b4_three_dogs_star.md)** — `method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b4_three_dogs_star.yaml` (5c/60b)  ·  [BV ↗](https://bettervoting.com/p2wggg/results)  
+    STAR=**Labrador** · IRV=Golden Retriever · RR=Labrador · Approval=Labrador · Score=Labrador · Condorcet=Labrador  
+    _flags: 26 tied-score ballot(s)_
 
 ### CYCLE_OR_THREE_WAY — 36
 

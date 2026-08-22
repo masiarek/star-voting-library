@@ -61,6 +61,7 @@ m3hb6y,"BV2214 — Alaska 2022 GENERAL (reduced model) — IRV got it right: all
 mmcmpy,"BV2157 — Rock, Paper, Scissors — a Condorcet cycle: STAR and IRV pick Rock, Approval picks Paper",3,contested (multi-race),100,"Approval, IRV, STAR",BV
 mvxbxr,"BV2217 — Pineapple progression 2/3 — Choose-One elects Pineapple on 25%, but STAR, Approval & Ranked Robin elect Cheese",4,contested (multi-race),100,"Approval, Plurality, RankedRobin, STAR",BV
 mxfmhm,BV2144 — Felsenthal's plurality paradoxes — the absolute loser wins Choose-One; STAR elects the Condorcet winner,2,contested (multi-race),7,"Plurality, STAR",BV
+p2wggg,"BV2286 — Three dogs and a cat — does the ballot show vote splitting, or hide it?",7,contested (multi-race),60,"Approval, IRV, Plurality, RankedRobin, STAR",BV
 p8dp28,BV2176 — The Post-it RCV example (20 voters) — RCV-IRV elects Purple; STAR and the head-to-head favor Blue,3,contested (multi-race),20,"IRV, RankedRobin, STAR",BV
 pcttmr,BV2153 — Felsenthal's Absolute Majority paradox — a majority's first choice loses the approval count,3,contested (multi-race),100,"Approval, IRV, RankedRobin",BV
 pp2q4q,"BV2170 — The centrist a majority prefers, squeezed out — a symmetric Condorcet electorate, four ways",4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
