@@ -62,7 +62,13 @@ The profile generators behind `pref_voting`'s `generate_profile`, so a defect he
 
 | Issue | Filed | State | What it is |
 |---|---|---|---|
-| [#6](https://github.com/COMSOC-Community/prefsampling/issues/6) | 2026-08-22 | open | Seeding the Euclidean samplers degenerates them, silently. `GAUSSIAN_BALL` returns **one point repeated** `num_points` times (the seed is pinned inside `inner_sampler_args`, and `ball_resampling`'s outer loop advances it only on a *rejected* draw — which with `sigma=0.33` against radius `0.5` almost never happens); separately, `sample_election_positions` passes the same seed to both position calls, so **candidates land exactly on the first voters** on 4 of the 6 spaces. Unseeded calls are fine, which inverts the usual expectation that seeding only fixes the stream. Found because 20,000 seeded spatial elections reported a suspiciously clean **0.00% Condorcet cycles** in every cell — every voter on one point is every voter equidistant from every candidate, so all ballots tie and fall back to index order. Correct rates are 0.15–1.25%: [how often does each Condorcet method tie?](../topics/ties/how_often_condorcet_methods_tie.md) |
+| [#6](https://github.com/COMSOC-Community/prefsampling/issues/6) | 2026-08-22 | open | Seeding the Euclidean samplers degenerates them, silently. `GAUSSIAN_BALL` returns **one point repeated** `num_points` times (the seed is pinned inside `inner_sampler_args`, and `ball_resampling`'s outer loop advances it only on a *rejected* draw — which with `sigma=0.33` against radius `0.5` almost never happens); separately, `sample_election_positions` passes the same seed to both position calls, so **candidates land exactly on the first voters** — on 4 of 6 spaces at unequal counts, and on **all six, including the default**, when `num_voters == num_candidates`. Per-side seed arguments are clobbered, so there is no caller-side workaround. Unseeded calls are fine, which inverts the usual expectation that seeding only fixes the stream. Found because 20,000 seeded spatial elections reported a suspiciously clean **0.00% Condorcet cycles** in every cell — every voter on one point is every voter equidistant from every candidate, so all ballots tie and fall back to index order. Correct rates are 0.15–1.25%: [how often does each Condorcet method tie?](../topics/ties/how_often_condorcet_methods_tie.md) |
+
+## pref_voting — [voting-tools/pref_voting](https://github.com/voting-tools/pref_voting/issues)
+
+| Issue | Filed | State | What it is |
+|---|---|---|---|
+| [#186](https://github.com/voting-tools/pref_voting/issues/186) | 2026-08-22 | open | Downstream half of prefsampling [#6](https://github.com/COMSOC-Community/prefsampling/issues/6): `generate_profile(probmodel="euclidean", seed=…)` inherits both degeneracies. `space="gaussian_ball"` returns **the same profile for every seed** (300 seeds → 1 profile); `uniform_cube` / `gaussian_cube` / `unbounded_gaussian` put candidate *j* on voter *j* (200/200); the default `uniform_ball` escapes **unless** `num_voters == num_candidates`, when every space collides. `generate_spatial_profile` uses global `np.random` and is unaffected |
 
 ## GitHub Pages
 
@@ -77,7 +83,7 @@ The profile generators behind `pref_voting`'s `generate_profile`, so a defect he
 States go stale silently — nobody emails us when an issue closes. To re-check every row at once:
 
 ```bash
-for r in "Equal-Vote/bettervoting 1582 1525 1513 1508 1507 1488 1487 1486 1485 1484 1480 1478 1471 1470 1469 1468 1456 1444 1434 1432 1421 1420 1417 1407 1379 1090 1086 1063 1052 904 894 778" "larryhastings/starvote 20 19 18 17" "COMSOC-Community/prefsampling 6"; do set -- $r; repo=$1; shift; for n in "$@"; do curl -s "https://api.github.com/repos/$repo/issues/$n" | python3 -c "import json,sys; d=json.load(sys.stdin); print(f\"{d['state']:8} $repo#{d['number']}  {d['title'][:70]}\")"; done; done
+for r in "Equal-Vote/bettervoting 1582 1525 1513 1508 1507 1488 1487 1486 1485 1484 1480 1478 1471 1470 1469 1468 1456 1444 1434 1432 1421 1420 1417 1407 1379 1090 1086 1063 1052 904 894 778" "larryhastings/starvote 20 19 18 17" "COMSOC-Community/prefsampling 6" "voting-tools/pref_voting 186"; do set -- $r; repo=$1; shift; for n in "$@"; do curl -s "https://api.github.com/repos/$repo/issues/$n" | python3 -c "import json,sys; d=json.load(sys.stdin); print(f\"{d['state']:8} $repo#{d['number']}  {d['title'][:70]}\")"; done; done
 ```
 
 The GitHub Pages one is a discussion, not an issue, so it isn't in that loop — open it and look.
