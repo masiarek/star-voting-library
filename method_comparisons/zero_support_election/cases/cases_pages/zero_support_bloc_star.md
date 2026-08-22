@@ -50,10 +50,10 @@ The count, step by step — the rounds and how the winner is reached:
 [Divergence from STAR]
   STAR    = Ada
   RCV-IRV = Dev   (differs from STAR)
-  Note: no ballots had tied scores, so RCV-IRV vs STAR here is a genuine
-        method difference, not a tie-breaking artifact.
-  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
-        outlier — the classic center-squeeze signature.
+  Note: no ballot scored anybody above 0, so not one ballot ranks anyone and
+        RCV-IRV has nothing to count — its winner came from its own tiebreak
+        among candidates all holding 0 votes. This divergence is noise, not
+        a method difference.
   Full round-by-round reports (generated for review):
   RCV-IRV rounds: cases_tabulated/zero_support_bloc_star_RCV-IRV_tabulated.txt
 

@@ -2947,8 +2947,26 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
         print(textwrap.fill(text, width=76, initial_indent="  ",
                             subsequent_indent="        "))
 
+    # A ballot that scores everybody 0 ranks NOBODY: score 0 = unranked, so the
+    # converted ranking is empty. If that is EVERY ballot, no ranking exists for
+    # IRV to count, and pyrankvote's winner is its own tiebreak among candidates
+    # who all hold 0 votes. That is the strongest possible artifact — and it is
+    # invisible to `tie_ballots`, which by design counts only ties between RANKED
+    # (non-zero) candidates, so the profile scores 0 tied ballots and the old code
+    # read that as "no ties anywhere" and printed the exact opposite of the truth.
+    ranked_ballots = sum(
+        1 for b in ballots if any(b.get(c, 0) > 0 for c in candidates)
+    )
+
     if irv_diff:
-        if tie_ballots:
+        if not ranked_ballots:
+            _note(
+                f"Note: no ballot scored anybody above 0, so not one ballot "
+                f"ranks anyone and RCV-IRV has nothing to count — its winner "
+                f"came from its own tiebreak among candidates all holding 0 "
+                f"votes. This divergence is noise, not a method difference."
+            )
+        elif tie_ballots:
             pct = (100 * tie_ballots / total) if total else 0
             _note(
                 f"Note: {tie_ballots} of {total} ballots ({pct:.0f}%) had equal "
@@ -2962,7 +2980,11 @@ def print_method_comparison(candidates, ballots, star_winner, priority,
                 f"genuine method difference, not a tie-breaking artifact."
             )
         # Where does Ranked Robin land? That's the tell for who's the outlier.
-        if not rr_diff:
+        # Skipped on a profile nobody ranked: a "center squeeze" needs somebody
+        # to be squeezed, and agreement between two lot draws is not evidence.
+        if not ranked_ballots:
+            pass
+        elif not rr_diff:
             _note(
                 "Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the "
                 "lone outlier — the classic center-squeeze signature."
