@@ -8,13 +8,13 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**642 election files** (526 single-winner, 116 multi-winner) across 18 method(s).
+**644 election files** (528 single-winner, 116 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 279 |
 | RCV-IRV (Hare) | 53 |
-| Ranked Robin (RCV-RR / Copeland) | 105 |
+| Ranked Robin (RCV-RR / Copeland) | 107 |
 | Approval | 30 |
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
@@ -373,7 +373,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (105)
+## Ranked Robin (RCV-RR / Copeland)  (107)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -474,6 +474,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`same_matrix_p2_ranked_robin`](../../method_comparisons/same_matrix_different_plurality/cases/cases_pages/same_matrix_p2_ranked_robin.md) | `method_comparisons/same_matrix_different_plurality/cases/` | 1 | Same matrix, different plurality — electorate P2: Ranked Robin → _Ben_ | [`.yaml`](../../method_comparisons/same_matrix_different_plurality/cases/same_matrix_p2_ranked_robin.yaml) |
 | [`same_matrix_p3_ranked_robin`](../../method_comparisons/same_matrix_different_plurality/cases/cases_pages/same_matrix_p3_ranked_robin.md) | `method_comparisons/same_matrix_different_plurality/cases/` | 1 | Same matrix, different plurality — electorate P3: Ranked Robin → _Ben_ | [`.yaml`](../../method_comparisons/same_matrix_different_plurality/cases/same_matrix_p3_ranked_robin.yaml) |
 | [`split_cycle_schulze_spoiler_c5_b40`](../../method_comparisons/split_cycle/cases/cases_pages/split_cycle_schulze_spoiler_c5_b40.md) | `method_comparisons/split_cycle/cases/` | 1 | A candidate nobody prefers still flips the winner — Schulze's spoiler, and Split Cycle's immunity → _Denali_ | [`.yaml`](../../method_comparisons/split_cycle/cases/split_cycle_schulze_spoiler_c5_b40.yaml) |
+| [`07g_apples_full_menu_ranked_robin`](../../method_comparisons/split_voting/_main/_main_pages/07g_apples_full_menu_ranked_robin.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 4 — the same nine voters, head-to-head: Ranked Robin confirms Gala → _Gala_ | [`.yaml`](../../method_comparisons/split_voting/_main/07g_apples_full_menu_ranked_robin.yaml) |
+| [`08c_smallest_spoiler_ranked_robin`](../../method_comparisons/split_voting/_main/_main_pages/08c_smallest_spoiler_ranked_robin.md) | `method_comparisons/split_voting/_main/` | 1 | The smallest spoiler, head-to-head — the majority Choose-One threw away → _Milk Chocolate_ | [`.yaml`](../../method_comparisons/split_voting/_main/08c_smallest_spoiler_ranked_robin.yaml) |
 | [`rr_combined`](../../method_comparisons/summability_demo/cases/cases_pages/rr_combined.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — Combined (A+B), counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_combined.yaml) |
 | [`rr_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/rr_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — District A, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_district_A.yaml) |
 | [`rr_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/rr_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — District B, counted by Ranked Robin → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/rr_district_B.yaml) |

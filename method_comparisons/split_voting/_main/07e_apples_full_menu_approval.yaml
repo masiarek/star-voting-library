@@ -10,7 +10,10 @@ scenario_description: |-
   who is acceptable to the most people, STAR asks that and then checks which of
   the top two more voters actually prefer. On this electorate they agree, which
   is the common case. The point of this rung is not which expressive method you
-  pick — it is that EVERY ballot allowing more than one mark ends the split.
+  pick — it is that every ballot here which collects support for more than one
+  candidate LET the majority end the split, and on these ballots all of them did.
+  Not a guarantee in general: 05a is a score ballot whose faction split itself
+  anyway, and a Borda ballot positively rewards running clones.
   Live results: https://bettervoting.com/vq78wk/results
 
 bv_test_id: BV2293

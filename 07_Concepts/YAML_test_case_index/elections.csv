@@ -24,7 +24,7 @@
 923q3d,"BV2190 — Two Districts, One Mayor (III of III) — the combined city: Carmen wins where Avery swept both districts",2,contested (multi-race),18,"RankedRobin, STAR",BV
 93gjx6,"BV2198 — Recruit a Spoiler (2 of 2) — the clone enters, and only Choose-One falls for it",4,contested (multi-race),9,"IRV, Plurality, RankedRobin, STAR",BV
 97hbpw,"BV2151 — Felsenthal's No-Show paradox (2 of 2) — two supporters stay home, and their side does better",3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
-9cff2d,"The smallest spoiler — seven friends, three flavours, and a minority winner",2,contested (multi-race),7,"Plurality, STAR",BV
+9cff2d,"The smallest spoiler — seven friends, three flavours, and a minority winner",3,contested (multi-race),7,"Plurality, RankedRobin, STAR",BV
 9gdrqg,BV2147 — Felsenthal's Reinforcement paradox (I of III) — District I: the runoff elects Bruno,2,contested (multi-race),17,"IRV, STAR",BV
 9kffcv,"BV2273 — Same ranks, different utilities — two elections a ranked ballot cannot tell apart",3,contested (multi-race),3,"RankedRobin, STAR",BV
 9vxcj7,"BV2165 — Coombs' No-Show electorate (1 of 2) — everyone votes: STAR picks Boone, Choose-One picks Cass",2,contested (multi-race),15,"Plurality, STAR",BV
@@ -80,7 +80,7 @@ rq2c3g,"BV2292 — Bloc STAR vs STAR-PR - fourteen candidates, six seats",2,cont
 t4by6x,"BV2254 — Reinforcement paradox: two towns pick Ada, together pick Cara",2,contested (multi-race),9,"RankedRobin, STAR",BV
 tqfdbg,BV2277 — The Mayor's Race — the third-place candidate who beats everyone head-to-head,4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",7,contested (multi-race),20,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
-vq78wk,Rung 1 — two candidates: nothing can split,6,contested (multi-race),9,"Approval, IRV, Plurality, STAR",BV
+vq78wk,Rung 1 — two candidates: nothing can split,7,contested (multi-race),9,"Approval, IRV, Plurality, RankedRobin, STAR",BV
 vthdwc,BV2291 — Bloc STAR vs STAR-PR - no faction has a majority,2,contested (multi-race),101,"STAR, STAR_PR",BV
 vxwjc4,BV2288 — Bloc STAR vs STAR-PR - the score leader shut out of every seat,2,contested (multi-race),5,"STAR, STAR_PR",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV

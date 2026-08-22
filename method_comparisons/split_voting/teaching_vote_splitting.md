@@ -12,7 +12,7 @@
 
 **Open in Choose-One. Every time.**
 
-Vote splitting is a *failure of choose-one voting*. STAR cannot demonstrate it, because under STAR nothing splits — so a lesson that opens with STAR is describing a problem the room has never felt, and teaching the cure as a feature rather than as a repair. Let the split happen to your audience first. Then fix it.
+Vote splitting is a *failure of choose-one voting*. STAR cannot demonstrate it, because under STAR nothing splits *by force* — so a lesson that opens with STAR is describing a problem the room has never felt, and teaching the cure as a feature rather than as a repair. Let the split happen to your audience first. Then fix it.
 
 And when you fix it, the sentence is **not** *"STAR counts better."* It is:
 
@@ -26,11 +26,11 @@ All three are real BetterVoting elections. Put the results link on screen; the r
 
 | | Election | Size | The number | Level |
 |---|---|:--:|---|:--:|
-| **BV2294** | [The smallest spoiler ↗](https://bettervoting.com/vjp3fj/results) · [vote](https://bettervoting.com/vjp3fj) | 3 cand × 7 | Vanilla wins on **43%** | 101 |
+| **BV2296** | [The smallest spoiler ↗](https://bettervoting.com/9cff2d/results) · [vote](https://bettervoting.com/9cff2d) | 3 cand × 7 | Vanilla wins on **43%** | 101 |
 | **BV2293** | [Seven apples and a banana ↗](https://bettervoting.com/vq78wk/results) · [vote](https://bettervoting.com/vq78wk) | 8 cand × 9 | Banana wins on **22%** | 201 |
 | **BV2295** | [Fizzy or sweet? ↗](https://bettervoting.com/8xrpyp/results) · [vote](https://bettervoting.com/8xrpyp) | 7 cand × 7 | Two same-size groups, opposite verdicts | 301 |
 
-Every race is cross-checked: **BetterVoting and the LH engine agree on all eleven.**
+Every race is cross-checked: **BetterVoting and the LH engine agree on all twelve**, and both Ranked Robin results are confirmed a third time by `pref_voting`'s independent Copeland implementation.
 
 ---
 
@@ -43,8 +43,9 @@ Every race is cross-checked: **BetterVoting and the LH engine agree on all eleve
 | # | Rung | Use | What they should feel |
 |:-:|---|---|---|
 | 1 | Two candidates — nothing can split | [`07a`](_main/_main_pages/07a_apples_two_candidates.md) | Majority rule. Every method agrees. *This is the baseline.* |
-| 2 | The smallest spoiler | [`08a`](_main/_main_pages/08a_smallest_spoiler_plurality.md) · [BV ↗](https://bettervoting.com/vjp3fj/results) | Vanilla wins on 43% — and every chocolate lover had it **last** |
-| 3 | The same seven friends, scoring | [`08b`](_main/_main_pages/08b_smallest_spoiler_star.md) | The information was there all along; the ballot just never collected it |
+| 2 | The smallest spoiler | [`08a`](_main/_main_pages/08a_smallest_spoiler_plurality.md) · [BV ↗](https://bettervoting.com/9cff2d/results) | Vanilla wins on 43% — and every chocolate lover had it **last** |
+| 3 | The same seven friends, scoring | [`08b`](_main/_main_pages/08b_smallest_spoiler_star.md) | Vanilla finishes **last of three** and never reaches the runoff — the information was there all along; the ballot just never collected it |
+| 4 | The majority Choose-One threw away | [`08c`](_main/_main_pages/08c_smallest_spoiler_ranked_robin.md) | **Either** chocolate beats Vanilla head-to-head 4–3 |
 
 **They can now do:** spot the shape (several similar options, one distinct one) on a real ballot, and say why the winner's percentage matters.
 
@@ -63,7 +64,8 @@ This level is the one most explanations skip, and skipping it is what makes the 
 | 1 | Six names: the vote splits and **costs nothing** | [`07b`](_main/_main_pages/07b_apples_six_candidates.md) | Gala wins on **33%**, apple vote divided five ways, and nothing went wrong. **Splitting ≠ spoiled.** |
 | 2 | Eight names: now it costs everything | [`07c`](_main/_main_pages/07c_apples_full_menu.md) | Banana on **22%** while 78% wanted an apple |
 | 3 | Name the spoilers | same | Pink Lady and McIntosh got **one vote each**. Neither could win. Both changed who did. *That is the definition.* |
-| 4 | The same nine voters, expressively | [`07d` STAR](_main/_main_pages/07d_apples_full_menu_star.md) · [`07e` Approval](_main/_main_pages/07e_apples_full_menu_approval.md) · [`07f` RCV-IRV](_main/_main_pages/07f_apples_full_menu_irv.md) | All of them elect Gala. Under STAR, Banana finishes **last of eight** |
+| 4 | The same nine voters, expressively | [`07d` STAR](_main/_main_pages/07d_apples_full_menu_star.md) · [`07e` Approval](_main/_main_pages/07e_apples_full_menu_approval.md) · [`07f` RCV-IRV](_main/_main_pages/07f_apples_full_menu_irv.md) · [`07g` Ranked Robin](_main/_main_pages/07g_apples_full_menu_ranked_robin.md) | All four elect Gala. Under STAR, Banana finishes **last of eight** |
+| 4b | The answer key | [`07g`](_main/_main_pages/07g_apples_full_menu_ranked_robin.md) | Gala is **7–0** head-to-head and Banana is **0–7** — Choose-One elected the **Condorcet loser** |
 | 5 | The control | [`06`](_main/_main_pages/06_sub_majority_not_spoiled.md) | A 41% winner that nothing spoiled — same warning signs, opposite verdict |
 | 6 | STAR's own limit | [`05a`](_main/_main_pages/05a_residual_split_bullet-voting.md) → [`05b`](_main/_main_pages/05b_residual_split_expressive-fix.md) | A faction that bullet-votes can still split itself. The cure is in the voters' hands |
 
@@ -133,10 +135,19 @@ Dark Chocolate   2
 
 ```text
 Milk Chocolate  20      Dark Chocolate  18      Vanilla  15
-Runoff:  Milk Chocolate 4  ·  Vanilla 3
+```
+
+**Point at Vanilla's 15.** *"Vanilla just came last. The flavour that won the first election is now bottom of three — and it doesn't even make the runoff. The two chocolates take both finalist slots."*
+
+**7:00 — The runoff.** *"STAR's second step: the top two scorers go to an automatic runoff, and every ballot counts for whichever finalist it scored higher. No second trip to the polls."*
+
+```text
+Runoff:  Milk Chocolate 4  ·  Dark Chocolate 2  ·  Equal Support 1
 ```
 
 *"Same people. Same opinions. Nothing added except the ability to say 'I'd take either.'"*
+
+> **Do not say "the four chocolate lovers reunited."** They didn't — they split 2–2 between the two chocolates, because they genuinely disagree about chocolate. The margin comes from two vanilla voters leaning mildly toward milk. The score ballot didn't end their disagreement; it stopped their disagreement costing them the election. If someone asks "so which chocolate did the four want?", that's the honest answer, and it's a better one.
 
 **8:00 — Land it.** *"Now imagine that's not ice cream."* Stop. Do not name a party or a candidate — the room will do it themselves, and it lands far harder when they do.
 
@@ -244,6 +255,34 @@ No — it is about *any* two similar candidates, which is most often two candida
 
 ---
 
+## The rest of the library — every splitting case, and its job
+
+The three levels above use one cast each. These are everything else the repo has on the subject, so you can swap a scenario to fit your audience without rebuilding the lesson.
+
+**How big can the field get?** The largest is the **[pineapple progression](../minority_winner_progression/README.md)** — a pizza menu grown from 3 toppings to **11**, where the Choose-One winner's mandate shrinks from 34% to **11%** while Cheese, everybody's easy second, wins every whole-ballot count at every rung. Three live BV elections, one per rung. That is the large-field demo; the fruit basket (8 candidates on 9 ballots) is the *small-ballot* one. Use pineapple when you want the shrinking-mandate curve, the fruit basket when you want every voter visible on one slide.
+
+| Case | Field | The job |
+|---|:--:|---|
+| [Pineapple progression](../minority_winner_progression/README.md) | 3 → 4 → **11** | **The large field.** The winner's mandate shrinks to 11% as the menu grows; the whole-ballot winner never changes |
+| [Crowded field](../crowded_field/README.md) | 3 → 5 → **7** | 65 voters who never change their minds; at seven candidates **four different methods elect four different people** |
+| [Minority winner](../minority_winner/README.md) | 3 | The canonical 34%-wins case, 100 voters so the count *is* the percent |
+| [`00` Plurality vs majority](_main/_main_pages/00_plurality_vs_majority.md) | 3 | "Most votes" and "over half" are different bars — where the gap comes from |
+| [`01` Political left split](_main/_main_pages/01_political_left_split.md) | 4 | The political version: a 66% coalition splits three ways, a 34% Conservative wins |
+| [`02` Ice cream chocolate split](_main/_main_pages/02_icecream_chocolate_split.md) | 4 | The 100-voter chocolate/vanilla version — percentages rather than headcounts |
+| [`03` Lunch: veggie vs meat](_main/_main_pages/03_lunch_veggie_vs_meat.md) | 4 | A 70% veggie majority loses to a single burger |
+| [`04` Star Wars](_main/_main_pages/04_star_wars_vote_split.md) | 3 | Skywalker and Leia split the Rebel vote; the one you actually preferred wins under STAR |
+| [`06` Sub-majority, not spoiled](_main/_main_pages/06_sub_majority_not_spoiled.md) | 3 | **The control.** A 41% winner nothing spoiled — mandatory at 201 |
+| [`05a`](_main/_main_pages/05a_residual_split_bullet-voting.md) → [`05b`](_main/_main_pages/05b_residual_split_expressive-fix.md) | 3 | STAR's residual split, and its cure |
+| [Food-truck row](../food_truck_row/README.md) | 5, **2 seats** | The multi-seat version: a 57% majority splits three ways and takes **zero of two seats** under SNTV |
+| [SNTV village council](../sntv_village_council/README.md) | multi-seat | Why SNTV jurisdictions develop candidate-rationing machine politics |
+| [ex11 — Recruit a spoiler](../../01_STAR/05_Practice/ex11_recruit_a_spoiler.md) | 2 → 3 | The attack, run as a strategy exercise across three counting rules |
+| [Scenario 1 / 2 / 3](../../01_STAR/02_Examples/README.md) | 3 | Spoiler · bloc-leader-wins-anyway · outsider-truly-wins — the three outcomes side by side |
+| [Residual vote splitting](../../01_STAR/01_Learn/properties_and_limits/residual_vote_splitting.md) | — | The concept page behind `05a`/`05b` |
+
+**A caution on reuse:** two chocolate-vs-vanilla elections now exist — the 100-voter [`02`](_main/_main_pages/02_icecream_chocolate_split.md) and the 7-friend [`08a`](_main/_main_pages/08a_smallest_spoiler_plurality.md). Under the house [one-election-per-page rule](../../07_Concepts/tips/TIPS_canonical_elections.md) they must never appear on the same page. Lead with `08a` (smaller, BV-backed, and the 101 set-piece); `02` is the one to reach for when you specifically want percentages out of 100.
+
+---
+
 ## Three different things are called "vote splitting" — say which one you mean
 
 This trips up more reading than any other thing on the topic, and a room that has googled the term beforehand may arrive with the wrong one. All three are real, all three are called vote splitting in print, and only the first is what this page teaches.
@@ -301,6 +340,6 @@ If someone brings [FairVote's spoiler article](https://fairvote.org/defining-the
 - **Spoiler ≠ IIA.** They are genuinely different, and reform advocates do conflate them.
 - **RCV-IRV does prevent the classic vote-splitting spoiler.** Our own ranked race in [BV2293 ↗](https://bettervoting.com/vq78wk/results) elects Gala.
 
-Then the one claim that does not hold: *"Palin did not spoil the race for Begich, because she did not split the Republican vote."* Alaska 2022's own ballots say otherwise — **Begich beat Peltola head-to-head 93,052 to 79,558**, and was eliminated anyway for holding too few first choices while the Republican-leaning vote was divided with Palin. That is vote splitting deciding an elimination order, which is FairVote's own definition applied to their own example. The article's rebuttal — that many Begich voters ranked Peltola second — shows the electorate was not cleanly partisan, which is true and does not rescue the claim.
+Then the one claim that does not hold: *"Palin did not spoil the race for Begich, because she did not split the Republican vote."* Alaska 2022's own cast vote record says otherwise ([Clelland et al., arXiv:2303.00108](https://arxiv.org/abs/2303.00108)) — **Begich beat Peltola head-to-head 87,859 to 79,451**, and was eliminated anyway for holding too few first choices while the Republican-leaning vote was divided with Palin. That is vote splitting deciding an elimination order, which is FairVote's own definition applied to their own example. The article's rebuttal — that many Begich voters ranked Peltola second — shows the electorate was not cleanly partisan, which is true and does not rescue the claim.
 
 The deeper move to name, politely: the article defines "spoiler" narrowly enough (*"votes in a majority bloc splintered between several candidates"*) that no real electorate, which is never cleanly blocked, can ever qualify. A definition that cannot be satisfied by any actual election is not a definition worth defending. The repo's worked count is [Alaska 2022](../alaska_2022/README.md); the standing pattern for this kind of response is [FairVote's Condorcet article, counted](../fairvote_condorcet_claims/README.md).

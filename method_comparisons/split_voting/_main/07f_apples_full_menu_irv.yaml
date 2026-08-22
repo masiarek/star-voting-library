@@ -13,9 +13,12 @@ scenario_description: |-
 
   One honest caveat about this particular file: seven candidates start tied on a
   single first choice each, so the early elimination ORDER is settled by
-  tie-breaking rather than by the voters. The eventual winner is robust to that
-  (every apple's ballots flow to other apples), but do not quote the round-by-
-  round sequence as if the voters chose it.
+  tie-breaking rather than by the voters. What IS robust is that an APPLE wins:
+  no ballot exhausts, and Banana can never overtake one. WHICH apple is not
+  robust — break the round-one tie against Gala and every apple ballot flows to
+  Granny Smith, who wins 7-2 instead. Both engines that ran this file (LH and
+  BetterVoting) happened to break toward Gala, and they reached it by different
+  elimination orders. Quote the winner, not the round-by-round sequence.
   Live results: https://bettervoting.com/vq78wk/results
 
 bv_test_id: BV2293

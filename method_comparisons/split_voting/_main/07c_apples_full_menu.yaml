@@ -10,13 +10,22 @@ scenario_description: |-
   Nobody voted strategically. Two candidates joined the ballot.
 
   Look at where the two newcomers finished: Pink Lady and McIntosh got one vote
-  each. Neither could win. Both changed who did. That is exactly what the word
+  each. Neither could win. TOGETHER they changed who did — and the word matters:
+  add either one alone to rung 2 and the race deadlocks at Gala 2, Banana 2
+  rather than flipping, so it takes the pair. That is exactly what the word
   SPOILER means — not a candidate who wins unfairly, but one who cannot win and
-  alters the result anyway.
+  alters the result anyway. (It is also why the ladder skips seven names: that
+  rung is the 2-2 dead heat.)
+
+  And Banana is not merely a minority winner. It is the CONDORCET LOSER — every
+  single apple beats it head-to-head. Choose-One elected the one candidate this
+  electorate would reject in any pairing you care to run.
 
   The general rule, visible across rungs 1-3: the rival takes the lead the moment
   no single member of the split side holds more first choices than the rival
-  does. Adding candidates cannot help the side doing the adding.
+  does. Under Choose-One, adding candidates cannot help the side doing the
+  adding. (State the method — it is not a universal law. A Borda ballot rewards
+  running clones, which is the mirror-image failure called teaming.)
   Live results: https://bettervoting.com/vq78wk/results
 
 bv_test_id: BV2293

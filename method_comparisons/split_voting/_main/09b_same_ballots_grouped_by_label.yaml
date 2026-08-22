@@ -4,12 +4,18 @@ scenario_description: |-
   the four FIZZY drinks instead of the four sweet ones.
 
   Fizzy holds 4 of 7 first choices — the identical headcount the sugar grouping
-  holds, spread the same way across four candidates. And the engine reports NO
+  holds. (Not spread the same way: sugar divides 1+1+1+1, fizzy 2+1+1+0 —
+  Sparkling Water is nobody's favourite. The headcount is what matches.) And the engine reports NO
   spoiler, because the fizzy front-runner (Diet Cola) simply won.
 
   Run this beside 09a and read the two [Vote-splitting check] blocks together.
   Same ballots. Same winner. Opposite verdict. A category is not a clone set.
 
+  Live results: https://bettervoting.com/8xrpyp/results
+
+bv_test_id: BV2295
+bv_election_id: 8xrpyp
+bv_results_url: https://bettervoting.com/8xrpyp/results
 blocs:
   Fizzy (a label, not a clone set): [Cola, Root Beer, Diet Cola, Sparkling Water]
 

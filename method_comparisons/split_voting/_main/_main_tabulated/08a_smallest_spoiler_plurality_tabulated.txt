@@ -21,11 +21,11 @@ scenario_description: |-
   (Allow THREE similar candidates and the floor drops to five voters: 1 + 1 + 1
   against 2, a 40% winner. Fewer voters, more candidates — see the fruit-basket
   ladder, where seven apples and a banana bring it down to 22% on nine ballots.)
-  Live results: https://bettervoting.com/vjp3fj/results
+  Live results: https://bettervoting.com/9cff2d/results
 
-bv_test_id: BV2294
-bv_election_id: vjp3fj
-bv_results_url: https://bettervoting.com/vjp3fj/results
+bv_test_id: BV2296
+bv_election_id: 9cff2d
+bv_results_url: https://bettervoting.com/9cff2d/results
 blocs:
   Chocolate: [Milk Chocolate, Dark Chocolate]
 

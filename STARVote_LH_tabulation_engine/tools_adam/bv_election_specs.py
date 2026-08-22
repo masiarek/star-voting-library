@@ -3146,6 +3146,61 @@ _VS_FIZZY = {
                  "finalists Cola & Lemonade, runoff 4-3). LH-verified on both races."),
 }
 
+
+# BV2296 supersedes BV2294 (vjp3fj), whose permanent description narrated the
+# Automatic Runoff as "Milk Chocolate 4-3" over Vanilla. It is not: Vanilla
+# scores 15, finishes LAST of three and never reaches the runoff, which is Milk
+# 4 - Dark 2 with one Equal Support. 4-3 is the Milk-vs-Vanilla HEAD-TO-HEAD.
+# BV descriptions cannot be edited, so the fix is a fresh election. vjp3fj stays
+# up as an orphan; no repo page links it.
+_VS_SMALL2_C = ["Milk Chocolate", "Dark Chocolate", "Vanilla"]
+_VS_SMALL2_PLUR = [[1,0,0],[1,0,0],[0,1,0],[0,1,0],[0,0,1],[0,0,1],[0,0,1]]
+_VS_SMALL2_STAR = [[5,4,0],[5,3,0],[4,5,0],[3,5,0],[0,0,5],[1,0,5],[2,1,5]]
+_VS_SMALL2_RANK = [[1,2,3],[1,2,3],[2,1,3],[2,1,3],[2,3,1],[2,3,1],[2,3,1]]
+
+_VS_SMALLEST2 = {
+    "test_id": "BV2296",
+    "title": "The smallest spoiler — seven friends, three flavours, one minority winner",
+    "description": (
+        "The smallest election in which two similar candidates can cost their own side the "
+        "win, and the 101 rung of this repo's vote-splitting lesson. Seven friends pick ONE tub "
+        "of ice cream. Four want chocolate, three want vanilla — and the chocolate four are "
+        "divided over WHICH chocolate. RACE 1, Choose-One: Vanilla 3, Milk Chocolate 2, Dark "
+        "Chocolate 2. Vanilla wins with 3 of 7 (43%) and all four chocolate lovers had it dead "
+        "last. RACE 2 hands the identical seven friends a 0-5 ballot. Nothing about their "
+        "opinions changes; the ballot simply records what one mark could not — that a chocolate "
+        "lover likes BOTH chocolates. Scores: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. "
+        "Watch where Vanilla lands: the Choose-One winner finishes LAST of three and is shut out "
+        "of the runoff entirely, because the two chocolates take both finalist slots. The "
+        "Automatic Runoff is Milk Chocolate 4, Dark Chocolate 2, with one voter at Equal "
+        "Support. Read that 4 carefully — it is NOT the chocolate four reunited. Those four "
+        "split 2-2 between the chocolates, exactly as they should, because they genuinely "
+        "disagree about chocolate; the margin comes from two vanilla voters leaning mildly "
+        "toward milk. The score ballot did not end their disagreement, it stopped their "
+        "disagreement costing them the election. RACE 3 counts the same seven ballots "
+        "head-to-head: Milk Chocolate beats Dark 5-2 and Vanilla 4-3, so it is the Condorcet "
+        "winner — and either chocolate beats Vanilla 4-3, which is the majority Choose-One threw "
+        "away. Why seven voters is the floor for this shape: the rival needs more marks than "
+        "either similar candidate alone and fewer than both together, and 2 + 2 against 3 is the "
+        "cheapest arithmetic that does it — fewer and the race either ties or the chocolate side "
+        "stops being a majority. " + _VS_LESSON
+    ),
+    "races": [
+        {"title": "One mark each (Choose-One)", "method": "Plurality", "num_winners": 1,
+         "candidates": _VS_SMALL2_C, "ballots": _VS_SMALL2_PLUR},
+        {"title": "The same seven friends, scoring 0-5 (STAR)", "method": "STAR",
+         "num_winners": 1, "candidates": _VS_SMALL2_C, "ballots": _VS_SMALL2_STAR},
+        {"title": "The same seven friends, head-to-head (Ranked Robin)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _VS_SMALL2_C,
+         "ballots": _VS_SMALL2_RANK},
+    ],
+    "enable_write_in": False,
+    "expected": ("Choose-One -> Vanilla 3 of 7 (43%). STAR -> Milk Chocolate (scores 20/18/15, "
+                 "Vanilla LAST and shut out; runoff Milk 4 - Dark 2, 1 Equal Support). Ranked "
+                 "Robin -> Milk Chocolate, the Condorcet winner (beats Dark 5-2, Vanilla 4-3). "
+                 "LH-verified on all three races. Supersedes BV2294."),
+}
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
@@ -6836,7 +6891,7 @@ _BWF_SPEC = {
 }
 
 
-ELECTIONS: list = [_VS_SMALLEST, _VS_FIZZY]   # resting state — point this at a spec only for the run that mints it
+ELECTIONS: list = [_VS_SMALLEST2]   # resting state — point this at a spec only for the run that mints it
 # Previously: [_BCW_SPEC, _BSL_SPEC, _BDM_SPEC, _BHC_SPEC, _BNM_SPEC, _BWF_SPEC]
 #   BV2287 -> xbk9bq, BV2288 -> vxwjc4, BV2289 -> xpr4wk, BV2290 -> 2cdvm6,
 #   BV2291 -> vthdwc, BV2292 -> rq2c3g. All six created as designed, 406 ballots

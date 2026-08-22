@@ -5,18 +5,35 @@ scenario_description: |-
   what the single mark could not — that a chocolate lover likes BOTH chocolates
   and does not want vanilla.
 
-  Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. Automatic
-  Runoff: Milk Chocolate 4, Vanilla 3 — the four chocolate lovers, no longer
-  divided against themselves.
+  Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15 — and note
+  where Vanilla lands. The Choose-One winner finishes LAST of three and is shut
+  out of the runoff entirely; the two chocolates take BOTH finalist slots, which
+  is the split disappearing in the most visible way it can. The Automatic Runoff
+  is therefore Milk Chocolate 4, Dark Chocolate 2, with one voter at Equal
+  Support.
+
+  Read the runoff line carefully, because it is easy to narrate wrongly: the 4 is
+  NOT "the four chocolate lovers reunited". Those four split 2-2 between the two
+  chocolates, exactly as they should — they disagree about chocolate. The margin
+  comes from two of the vanilla voters leaning mildly toward milk. What the score
+  ballot fixed was not the chocolate lovers' disagreement; it was that their
+  disagreement no longer costs them the election.
+
+  Head-to-head, either chocolate beats Vanilla 4-3. (The permanent BetterVoting
+  description for the SUPERSEDED BV2294 said "the runoff goes to Milk Chocolate
+  4-3" — that 4-3
+  is this Milk-versus-Vanilla head-to-head, not the Automatic Runoff, which is
+  Milk versus Dark. BV descriptions cannot be edited, so BV2296 was minted to
+  replace it and states the runoff correctly.)
 
   This is the whole argument in seven ballots. Choose-One did not count the
   chocolate votes wrongly. It never asked the question whose answer would have
   changed the result.
-  Live results: https://bettervoting.com/vjp3fj/results
+  Live results: https://bettervoting.com/9cff2d/results
 
-bv_test_id: BV2294
-bv_election_id: vjp3fj
-bv_results_url: https://bettervoting.com/vjp3fj/results
+bv_test_id: BV2296
+bv_election_id: 9cff2d
+bv_results_url: https://bettervoting.com/9cff2d/results
 blocs:
   Chocolate: [Milk Chocolate, Dark Chocolate]
 

@@ -1,0 +1,32 @@
+election_title: "The smallest spoiler, head-to-head — the majority Choose-One threw away"
+scenario_description: |-
+  The same seven friends as 08a and 08b, counted pair by pair. This is the
+  cleanest statement of what Choose-One discarded.
+
+  Milk Chocolate beats Dark Chocolate 5-2 and beats Vanilla 4-3 — the Condorcet
+  winner. Dark Chocolate also beats Vanilla 4-3. So a majority of these seven
+  friends preferred EITHER chocolate to the vanilla that won the Choose-One
+  count. Vanilla did not merely win with a minority; it won against a candidate
+  a majority preferred to it, and there were two such candidates.
+
+  No rounds, no eliminations, no runoff to explain — just every pair counted.
+  Cross-checked against pref_voting's independent Copeland implementation.
+  Live results: https://bettervoting.com/9cff2d/results
+
+bv_test_id: BV2296
+bv_election_id: 9cff2d
+bv_results_url: https://bettervoting.com/9cff2d/results
+voting_method: RankedRobin
+num_winners: 1
+
+ballots: |-
+  1:Milk Chocolate>Dark Chocolate>Vanilla
+  1:Milk Chocolate>Dark Chocolate>Vanilla
+  1:Dark Chocolate>Milk Chocolate>Vanilla
+  1:Dark Chocolate>Milk Chocolate>Vanilla
+  1:Vanilla>Milk Chocolate>Dark Chocolate
+  1:Vanilla>Milk Chocolate>Dark Chocolate
+  1:Vanilla>Milk Chocolate>Dark Chocolate
+
+expected_winners:
+  - Milk Chocolate

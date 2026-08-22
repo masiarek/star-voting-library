@@ -9,7 +9,7 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Milk Chocolate
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vjp3fj) · **[results ↗](https://bettervoting.com/vjp3fj/results)** (election `vjp3fj` · test `BV2294`).
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/9cff2d) · **[results ↗](https://bettervoting.com/9cff2d/results)** (election `9cff2d` · test `BV2296`).
 
 ## Scenario
 
@@ -18,14 +18,31 @@ marking one. Nothing about their opinions changed; the ballot simply records
 what the single mark could not — that a chocolate lover likes BOTH chocolates
 and does not want vanilla.
 
-Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. Automatic
-Runoff: Milk Chocolate 4, Vanilla 3 — the four chocolate lovers, no longer
-divided against themselves.
+Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15 — and note
+where Vanilla lands. The Choose-One winner finishes LAST of three and is shut
+out of the runoff entirely; the two chocolates take BOTH finalist slots, which
+is the split disappearing in the most visible way it can. The Automatic Runoff
+is therefore Milk Chocolate 4, Dark Chocolate 2, with one voter at Equal
+Support.
+
+Read the runoff line carefully, because it is easy to narrate wrongly: the 4 is
+NOT "the four chocolate lovers reunited". Those four split 2-2 between the two
+chocolates, exactly as they should — they disagree about chocolate. The margin
+comes from two of the vanilla voters leaning mildly toward milk. What the score
+ballot fixed was not the chocolate lovers' disagreement; it was that their
+disagreement no longer costs them the election.
+
+Head-to-head, either chocolate beats Vanilla 4-3. (The permanent BetterVoting
+description for the SUPERSEDED BV2294 said "the runoff goes to Milk Chocolate
+4-3" — that 4-3
+is this Milk-versus-Vanilla head-to-head, not the Automatic Runoff, which is
+Milk versus Dark. BV descriptions cannot be edited, so BV2296 was minted to
+replace it and states the runoff correctly.)
 
 This is the whole argument in seven ballots. Choose-One did not count the
 chocolate votes wrongly. It never asked the question whose answer would have
 changed the result.
-Live results: https://bettervoting.com/vjp3fj/results
+Live results: https://bettervoting.com/9cff2d/results
 
 ## Parameters (from the YAML)
 
@@ -146,4 +163,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [00_plurality_vs_majority](00_plurality_vs_majority.md) · [01_political_left_split](01_political_left_split.md) · [02_icecream_chocolate_split](02_icecream_chocolate_split.md) · [03_lunch_veggie_vs_meat](03_lunch_veggie_vs_meat.md) · [04_star_wars_vote_split](04_star_wars_vote_split.md) · [05a_residual_split_bullet-voting](05a_residual_split_bullet-voting.md) · [05b_residual_split_expressive-fix](05b_residual_split_expressive-fix.md) · [06_sub_majority_not_spoiled](06_sub_majority_not_spoiled.md) · [07a_apples_two_candidates](07a_apples_two_candidates.md) · [07b_apples_six_candidates](07b_apples_six_candidates.md) · [07c_apples_full_menu](07c_apples_full_menu.md) · [07d_apples_full_menu_star](07d_apples_full_menu_star.md) · [07e_apples_full_menu_approval](07e_apples_full_menu_approval.md) · [07f_apples_full_menu_irv](07f_apples_full_menu_irv.md) · [08a_smallest_spoiler_plurality](08a_smallest_spoiler_plurality.md) · [09a_clones_are_voters_not_labels](09a_clones_are_voters_not_labels.md) · [09b_same_ballots_grouped_by_label](09b_same_ballots_grouped_by_label.md)
+More cases in this set: [00_plurality_vs_majority](00_plurality_vs_majority.md) · [01_political_left_split](01_political_left_split.md) · [02_icecream_chocolate_split](02_icecream_chocolate_split.md) · [03_lunch_veggie_vs_meat](03_lunch_veggie_vs_meat.md) · [04_star_wars_vote_split](04_star_wars_vote_split.md) · [05a_residual_split_bullet-voting](05a_residual_split_bullet-voting.md) · [05b_residual_split_expressive-fix](05b_residual_split_expressive-fix.md) · [06_sub_majority_not_spoiled](06_sub_majority_not_spoiled.md) · [07a_apples_two_candidates](07a_apples_two_candidates.md) · [07b_apples_six_candidates](07b_apples_six_candidates.md) · [07c_apples_full_menu](07c_apples_full_menu.md) · [07d_apples_full_menu_star](07d_apples_full_menu_star.md) · [07e_apples_full_menu_approval](07e_apples_full_menu_approval.md) · [07f_apples_full_menu_irv](07f_apples_full_menu_irv.md) · [07g_apples_full_menu_ranked_robin](07g_apples_full_menu_ranked_robin.md) · [08a_smallest_spoiler_plurality](08a_smallest_spoiler_plurality.md) · [08c_smallest_spoiler_ranked_robin](08c_smallest_spoiler_ranked_robin.md) · [09a_clones_are_voters_not_labels](09a_clones_are_voters_not_labels.md) · [09b_same_ballots_grouped_by_label](09b_same_ballots_grouped_by_label.md)
