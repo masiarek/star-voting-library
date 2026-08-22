@@ -70,6 +70,46 @@ Even utility-first, the *conversion* to a ballot is a modeling choice with real 
 
 Sampling ballots directly hides this step; sampling utilities forces you to make it explicit — which is a feature, not a burden.
 
+## Measured: what STAR's scale rule costs
+
+The bullet above says min-max *assumes* each voter uses the full 0–5 range. That assumption has a natural-looking alternative, and the alternative is what most spatial write-ups actually reach for — so it is worth knowing what choosing between them does to the answer. Given a distance matrix, two rules turn it into a 0–5 ballot:
+
+- **Global** — `U = 5 × (1 − d / d_max)`, one `d_max` shared by the whole electorate, rounded and clamped. The scale is *absolute*: a 5 means "close in the space," not "my favourite." This is the obvious rule and the one that circulates alongside descriptions of the [Euclidean samplers](euclidean_spaces.md).
+- **Per-voter min-max** — your nearest candidate gets 5, your furthest 0, everyone else proportionally between. What this repo's simulations use, and what STAR's own voter guidance describes.
+
+They are not close. Measured over 4,000 elections, 101 voters, 4 candidates on a `uniform_cube`, by [`score_encoding_stability.py`](../../06_Other/simulations/score_encoding_stability.py):
+
+| score | global `d_max` | per-voter min-max | min-max on `−d²` |
+|---|---|---|---|
+| 0 | 1.8% | 29.5% | 28.1% |
+| 1 | 13.4% | 10.4% | 7.5% |
+| 2 | 27.4% | 10.8% | 9.0% |
+| 3 | 31.0% | 10.5% | 10.5% |
+| 4 | 22.7% | 9.6% | 12.5% |
+| 5 | 3.6% | 29.2% | 32.5% |
+
+A global `d_max` has to be wide enough for the furthest possible pair, so for a typical voter every candidate sits well inside it and the ballot compresses into the middle of the scale: **81% of all marks land in {2,3,4}**, and the endpoints — the two scores a real STAR voter uses most — nearly vanish. Two consequences follow, and neither is voter behaviour:
+
+- **Dead ballots.** **2.5% of voters** score every candidate identically and express no preference at all. They are not abstaining; the encoding erased them. Min-max cannot do this — your nearest is always 5 and your furthest always 0 unless you are exactly equidistant, so the figure there is 0.00%.
+- **Inflated [Equal Support](../../01_STAR/01_Learn/the_count/STAR_Automatic_Runoff.md).** Compression pushes far more voters into the no-preference bucket in the runoff: **32.4% against 11.4%**, roughly a threefold overstatement of how indecisive the same electorate is.
+
+And the winner moves. Across the six spaces, the global rule and min-max elect **different candidates** this often, from identical positions:
+
+| space | winner differs |
+|---|---|
+| `gaussian_ball` | 6.8% |
+| `uniform_cube` | 7.1% |
+| `gaussian_cube` | 7.2% |
+| `uniform_ball` | 7.9% |
+| `unbounded_gaussian` | 10.3% |
+| `uniform_sphere` | **27.2%** |
+
+`uniform_sphere` is the warning shot — an electorate of pure factions, where more than one election in four turns on the conversion arithmetic alone. `unbounded_gaussian` deserves its own note: it has **no maximum distance**, so a global `d_max` is not merely inadvisable there but undefined, and any implementation is quietly substituting the observed maximum for a quantity that does not exist.
+
+Linear versus quadratic loss is the smaller decision of the two — min-max on `−d` and on `−d²` disagree 4.3% of the time — but it is still a decision, and still unstated in most write-ups.
+
+**The rule this repo follows:** name the conversion rule beside the number, exactly as the electorate model is named beside it. A winner quoted from a single encoding is a claim about the encoding as much as about the method — and where the choice is genuinely arbitrary, sample the encodings and report a win rate rather than a winner.
+
 ## Why welfare metrics *require* utilities
 
 The clincher: [**Voter Satisfaction Efficiency / Bayesian regret**](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) scores a method by *how much utility the average voter gets from the winner*, versus the best-possible winner. That number is **undefined** without cardinal utilities. If you start from random ballots, you have no utilities, so you literally cannot compute "how good was this winner" — you can only compare methods to each other, not to the ideal. Utility-first is what makes welfare measurement possible.
@@ -84,6 +124,7 @@ So: your `[0,1]`-utility instinct is the correct, more-scientific one — "more 
 
 ## Related
 
+- [`score_encoding_stability.py`](../../06_Other/simulations/score_encoding_stability.py) · [the six Euclidean spaces](euclidean_spaces.md) — what the distance→score rule costs, measured
 - [Election simulation models](election_simulation_models.md) — the menu of *utility* models (spatial, IC/IAC, Mallows, Plackett–Luce, Yee)
 - [The spatial model — voters and candidates as points on a map](spatial_voting_model.md) — the geometry rung 3 rests on: issue space, distance-as-utility, Yee diagrams
 - [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) · [the simulations folder](../../06_Other/simulations/README.md) — utility-first in practice

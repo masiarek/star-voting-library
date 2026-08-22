@@ -3,6 +3,7 @@
 This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md).
 
 - **The six Euclidean spaces** — `euclidean_spaces.py`: not a measurement but the *reference* for everything else here — what `uniform_ball`, `gaussian_cube`, `unbounded_gaussian` and the rest actually draw, implemented from their definitions, cross-checked against `prefsampling`, and plotted ([jump to section](#the-six-euclidean-spaces)). Concept page: [The six Euclidean spaces](../../07_Concepts/topics/euclidean_spaces.md).
+- **What the distance→score rule costs** — `score_encoding_stability.py`: a spatial model hands you a distance, not a ballot, and the rule that converts one to the other is an unstated modelling choice. Measures how much it moves the STAR winner — 6.8% to 27.2% depending on the space ([jump to section](#what-the-distancescore-rule-costs)). Writeup: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md#measured-what-stars-scale-rule-costs).
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
@@ -27,6 +28,24 @@ Two findings worth knowing before picking a model:
 
 - **`gaussian_cube` is barely clustered at all** at the library's default parameters — 21% of points inside the inner half-radius against `uniform_cube`'s 20% — because a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval. It discards **85% of its draws** to achieve that. `gaussian_ball` (36%) is the one that actually clusters.
 - **Seeding these samplers breaks them**, in `prefsampling` 0.1.24. That is why this script cross-checks *unseeded* and draws its own points. Filed as [prefsampling#6](https://github.com/COMSOC-Community/prefsampling/issues/6) and [pref_voting#186](https://github.com/voting-tools/pref_voting/issues/186); short version on the [concept page](../../07_Concepts/topics/euclidean_spaces.md), full mechanism in the [companion QA repo](https://masiarek.github.io/bettervoting-qa/analysis/prefsampling-seeding/index.html).
+
+## What the distance→score rule costs
+
+`score_encoding_stability.py` picks up where `euclidean_spaces.py` stops. That script says where the points come from; this one asks what happens **after** — because a spatial model produces a *distance*, and STAR needs an integer 0–5. The line of code that bridges them is the least-discussed step in the whole pipeline, and it is not neutral.
+
+Two rules are in circulation. A **global `d_max`** (`U = 5 × (1 − d / d_max)`, one denominator for everyone) treats the scale as absolute. **Per-voter min-max** gives your nearest candidate 5 and your furthest 0 — what every other script here uses, and what STAR's voter guidance describes.
+
+```bash
+python score_encoding_stability.py                  # uniform_cube, all three encodings
+python score_encoding_stability.py --all-spaces     # every one of the six
+python score_encoding_stability.py --banker         # numpy's round-half-to-even
+```
+
+Three findings:
+
+- **The winner moves.** From *identical* positions, the two rules elect different candidates 6.8%–10.3% of the time across five of the six spaces, and **27.2%** on `uniform_sphere` — an electorate of pure factions, where more than one election in four turns on the conversion arithmetic alone.
+- **A global `d_max` erases voters.** It has to span the furthest possible pair, so a typical ballot compresses into the middle of the scale: 81% of marks land in {2,3,4}, and **2.5% of voters** score every candidate identically — expressing nothing. Min-max cannot do this (0.00%). It also inflates Equal Support in the runoff about threefold. Note too that `unbounded_gaussian` has no maximum distance at all, so a global `d_max` there is undefined and any implementation is silently substituting the observed maximum.
+- **Banker's rounding is a red herring here.** `numpy.round` tips half-integers toward even, but `--banker` and half-up produce *identical* distributions and winners: sampled float distances essentially never land on a boundary. It bites hand-built worked examples with round coordinates, not simulations — a documentation hazard, not a modelling one.
 
 ## Favorite-Betrayal (FBC) simulation
 
