@@ -114,8 +114,12 @@ Inactive ballots at the final round: 0 of 60 (0.0%).
 The smallest group whose every member beats every candidate outside it —
 the honest answer to "who is even in contention?".
    Smith set (1 of 5): Labrador
-   Outside (4):        Golden, Retriever, German, Shepherd, Cat, Parrot
+   Outside (4):        Golden Retriever, German Shepherd, Cat, Parrot
    One member ⇒ Labrador is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Golden Retriever is OUTSIDE the Smith set. ✗
+      Every member of the set (Labrador) beats Golden Retriever head-to-head, yet
+      RCV-IRV elected Golden Retriever anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
    More: 07_Concepts/topics/smith_set.md
 ```
 

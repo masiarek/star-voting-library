@@ -1084,6 +1084,25 @@ def _normalize_ballot_separators(text):
         return text
     if any(("," in s or "\t" in s) for _, s in content):
         return text  # already delimited — don't touch it
+    if any(">" in s for _, s in content):
+        # RANKED ballots have no columns to align, so a space inside one is part
+        # of a candidate's NAME and never a delimiter. Without this the rescue
+        # reads "14:Labrador>Golden Retriever>German Shepherd>Cat>Parrot" as
+        # three whitespace tokens, finds every ballot equally "ragged" (each
+        # ranks the same five names, so each splits the same way), calls that a
+        # uniform grid and rewrites it to "…>Golden, Retriever>German,
+        # Shepherd>…". The column-count guard below cannot catch it: it is
+        # designed for a score grid, where a two-word header makes the header
+        # WIDER than its rows — on ranked ballots the two-word name sits on
+        # every line, so the counts agree and the guard waves it through.
+        # Damage is silent, because the mangling is CONSISTENT: the winner is
+        # still right, and only the printed names give it away — the Smith
+        # block rendered "Outside (4): Golden, Retriever, German, Shepherd,
+        # Cat, Parrot", six tokens for four candidates, two of them nonsense.
+        # (`--json` was the one caller that failed loudly: the answer key
+        # "Golden Retriever" no longer matched any emitted candidate, so
+        # election_json dropped the `expected` block entirely.)
+        return text
     token_lists = [(i, s.split()) for i, s in content]
     counts = {len(toks) for _, toks in token_lists}
     if len(counts) != 1 or counts == {1}:
