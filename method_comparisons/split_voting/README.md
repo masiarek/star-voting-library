@@ -121,10 +121,10 @@ Here is the part most explanations skip, and skipping it is what makes the argum
 Nine people choose one fruit for the office basket. Seven want an apple, two want a banana. **Their opinions never change.** All that changes is how many apple varieties are on the list.
 
 | Rung | Names on the ballot | Choose-One result | Verdict |
-|:--:|---|---|---|
-| **1** | Gala · Banana | **Gala 7–2** (78%) | Nothing can split. At two candidates every reasonable method is majority rule. [`07a`](_main/_main_pages/07a_apples_two_candidates.md) |
-| **2** | + Granny Smith, Fuji, Honeycrisp, Red Delicious | **Gala 3**, Banana 2, four apples 1 each — **33%** | The apple vote splits **five ways** and it costs them **nothing.** [`07b`](_main/_main_pages/07b_apples_six_candidates.md) |
-| **3** | + Pink Lady, McIntosh | **Banana 2 of 9 — 22%** | Now it costs them everything. [`07c`](_main/_main_pages/07c_apples_full_menu.md) |
+|---|---|---|---|
+| **1** · 2 names ([page](_main/_main_pages/07a_apples_two_candidates.md) · [run](_main/07a_apples_two_candidates.yaml)) | Gala · Banana | **Gala 7–2** (78%) | Nothing can split. At two candidates every reasonable method is majority rule. |
+| **2** · 6 names ([page](_main/_main_pages/07b_apples_six_candidates.md) · [run](_main/07b_apples_six_candidates.yaml)) | + Granny Smith, Fuji, Honeycrisp, Red Delicious | **Gala 3**, Banana 2, four apples 1 each — **33%** | The apple vote splits **five ways** and it costs them **nothing.** |
+| **3** · 8 names ([page](_main/_main_pages/07c_apples_full_menu.md) · [run](_main/07c_apples_full_menu.yaml)) | + Pink Lady, McIntosh | **Banana 2 of 9 — 22%** | Now it costs them everything. |
 
 **Rung 2 is the load-bearing one.** A winner on 33%, the losers holding twice as much between them, the vote visibly divided — and nothing went wrong at all. Gala is the candidate every whole-ballot method elects on the full menu, and the Condorcet winner besides.
 
