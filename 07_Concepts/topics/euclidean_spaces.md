@@ -8,7 +8,7 @@ tags:
 
 *Every [spatial simulation](spatial_voting_model.md) starts by scattering voters and candidates as points and letting each voter prefer whoever is nearest. **Where those points come from** is a named parameter — `uniform_ball`, `gaussian_cube`, `unbounded_gaussian` and three more — and the names turn up in this repo's own results without anyone ever saying what they mean. This page says what they mean. They are simpler than they sound: all six fit in about forty lines of arithmetic, and the differences between them are visible in a single picture.*
 
-**Level: 201 · deep dive** Companion: [The spatial model](spatial_voting_model.md) (the concept) · [Election simulation models](election_simulation_models.md) (the full menu, of which this is model **B** in close-up) · [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) (why you sample positions at all).
+**Level: 201 · deep dive** Companion: [The spatial model](spatial_voting_model.md) (the concept) · [Election simulation models](election_simulation_models.md) (the full menu, of which this is model **B** in close-up) · [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) (why you sample positions at all) · [Statistical cultures](statistical_cultures.md) (the non-spatial samplers, and what their parameters do).
 
 ## The picture first
 

@@ -31,7 +31,7 @@ tags:
 - **Plackett-Luce** — each candidate has a "strength" `γ`; `P(A ranked 1st) = γ_A / Σγ`, then repeat for 2nd place among the rest. Common in machine-learning "learning-to-rank." ([Wikipedia](https://en.wikipedia.org/wiki/Plackett%E2%80%93Luce_model))
 - **Pólya-Eggenberger (urn) models** — draw a ballot for A, return it *plus an extra* A: "the rich get richer." Produces heavy **bloc/clustering** correlation naturally, modeling social influence — no geometry needed. ([Wikipedia](https://en.wikipedia.org/wiki/P%C3%B3lya_urn_model))
 
-*You don't have to write any of these samplers: all five ship in `pref_voting`'s profile generators — the same library this repo already leans on for its [independent Copeland cross-check](../../05_Ranked_Robin/01_Learn/ranked_robin.md), so it's already a dependency. ([docs](https://pref-voting.readthedocs.io/en/latest/generate_profiles.html))*
+*You don't have to write any of these samplers: all but IANC ship in `pref_voting`'s profile generators — the same library this repo already leans on for its [independent Copeland cross-check](../../05_Ranked_Robin/01_Learn/ranked_robin.md), so it's already a dependency. ([docs](https://pref-voting.readthedocs.io/en/latest/generate_profiles.html)) What those samplers are actually called, what each one's parameter does, and the three that are commonly quoted wrongly: [Statistical cultures](statistical_cultures.md) — which also measures how much the choice moves a result.*
 
 ### B. Spatial (geometric / ideological) models — the realistic "gold standard"
 

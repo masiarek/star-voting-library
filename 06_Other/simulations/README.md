@@ -3,6 +3,7 @@
 This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md).
 
 - **The six Euclidean spaces** — `euclidean_spaces.py`: not a measurement but the *reference* for everything else here — what `uniform_ball`, `gaussian_cube`, `unbounded_gaussian` and the rest actually draw, implemented from their definitions, cross-checked against `prefsampling`, and plotted ([jump to section](#the-six-euclidean-spaces)). Concept page: [The six Euclidean spaces](../../07_Concepts/topics/euclidean_spaces.md).
+- **Statistical cultures** — `statistical_cultures.py`: the other reference script — what `impartial`, `urn alpha=0.1`, `norm-Mallows phi=0.5` and the structured domains actually produce, measured, with fourteen anchors checked against values known in advance ([jump to section](#statistical-cultures)). Concept page: [Statistical cultures](../../07_Concepts/topics/statistical_cultures.md).
 - **What the distance→score rule costs** — `score_encoding_stability.py`: a spatial model hands you a distance, not a ballot, and the rule that converts one to the other is an unstated modelling choice. Measures how much it moves the STAR winner — 6.8% to 27.2% depending on the space ([jump to section](#what-the-distancescore-rule-costs)). Writeup: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md#measured-what-stars-scale-rule-costs).
 - **How many rungs does a score ballot need?** — `score_resolution.py`: the other half of that same seam. Holds the normalization fixed and varies the *resolution* — 0/1, 0–2, 0–3, 0–5, 0–9, 0–99, and a voter with infinite precision ([jump to section](#how-many-rungs-does-a-score-ballot-need)). Welfare saturates by three or four rungs; the cut *placement* turns out to matter more than the rung count at low resolution. Writeup: [Continuous model, discrete ballot](../../07_Concepts/topics/continuous_model_discrete_ballot.md).
 - **Flat vs Zipf-weighted axes** — `dimension_weighting.py`: does a many-equal-axes electorate really make every method agree, and does Zipf weighting fix it? ([jump to section](#flat-vs-zipf-weighted-axes)). Direction confirmed, magnitude overstated, and the mechanism usually given for it is measurably wrong. Writeup: [The spatial model](../../07_Concepts/topics/spatial_voting_model.md#making-it-realistic-not-all-axes-weigh-the-same).
@@ -30,6 +31,24 @@ Two findings worth knowing before picking a model:
 
 - **`gaussian_cube` is barely clustered at all** at the library's default parameters — 21% of points inside the inner half-radius against `uniform_cube`'s 20% — because a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval. It discards **85% of its draws** to achieve that. `gaussian_ball` (36%) is the one that actually clusters.
 - **Seeding these samplers breaks them**, in `prefsampling` 0.1.24. That is why this script cross-checks *unseeded* and draws its own points. Filed as [prefsampling#6](https://github.com/COMSOC-Community/prefsampling/issues/6) and [pref_voting#186](https://github.com/voting-tools/pref_voting/issues/186); short version on the [concept page](../../07_Concepts/topics/euclidean_spaces.md), full mechanism in the [companion QA repo](https://masiarek.github.io/bettervoting-qa/analysis/prefsampling-seeding/index.html).
+
+## Statistical cultures
+
+`statistical_cultures.py` is the second reference script, and the non-spatial half of the same job. Where `euclidean_spaces.py` answers *"where do the voters' points come from?"*, this one answers *"what if there are no points at all?"* — the named distributions over whole preference profiles that the literature quotes as `impartial culture`, `urn alpha=0.1`, `norm-Mallows phi=0.5`, always with a parameter and rarely with an explanation.
+
+```bash
+python statistical_cultures.py             # the dial table
+python statistical_cultures.py --verify    # 14 anchors known before the run
+python statistical_cultures.py --normalise # why raw Mallows phi drifts as m grows
+python statistical_cultures.py --peaks     # Conitzer and Walsh are not the same
+```
+
+Two findings, both from the main table:
+
+- **Impartial Culture is a knife-edge.** Moving from IC to norm-Mallows φ = 0.75 drops mean ballot disagreement by 7% — invisible to the eye — and drops the no-Condorcet-winner rate from **16.65% to 0.80%**. The famous IC paradox rates describe one exact point, not "electorates where voters disagree a lot."
+- **Disagreement does not cause cycles; structure does.** `group_separable` scores **0.500** on disagreement, identical to IC, and yet produces a Condorcet winner **every time** against IC's 16.65% failure rate. The single-peaked and single-crossing domains are 0.00% too — which is why a sweep confined to structured domains will conclude that cycle-resolution rules are interchangeable.
+
+The verification is worth a note of its own: the obvious IAC check — does `urn(alpha=1/m!)` match `impartial_anonymous`? — is **vacuous**, because `prefsampling` implements the latter as the former, so it compares a function with itself. The script checks the definition instead, enumerating all 56 anonymous profiles for 3 voters and 3 candidates and confirming the urn spreads uniformly over them. Full writeup: [Statistical cultures](../../07_Concepts/topics/statistical_cultures.md).
 
 ## What the distance→score rule costs
 
