@@ -10,7 +10,7 @@ A constructed protest election that tests BetterVoting's **None of the Above** (
 
 ## What it teaches
 
-1. **None of the Above is a real candidate.** On BetterVoting it's the special `c-nota` candidate, scored 0–5 like anyone else — not a spoiler flag. Here a protest majority scores it 5 and it **wins outright**. Neither BetterVoting nor the Larry Hastings engine gives a NOTA win any special handling (no "no winner / re-run" state); both just elect "None of the Above." Whether that's intended is an open BetterVoting question (see *Open question* below).
+1. **None of the Above is a real candidate.** On BetterVoting it's the special `c-nota` candidate, scored 0–5 like anyone else — not a spoiler flag. Here a protest majority scores it 5 and it **wins outright**. Neither BetterVoting nor the Larry Hastings engine gives a NOTA win any special handling (no "no winner / re-run" state); both just elect "None of the Above." That is **deliberate on BetterVoting's side** — see [below](#by-design-and-what-that-puts-on-you).
 
 2. **Flat `0` vs `null` abstention.** Most rejections here are an explicit `0`. Ballot 2 instead leaves None of the Above **unscored** — BetterVoting stores that as `score: null` ("didn't score this candidate"), which is *distinct* from `0`. In the LH engine that per-candidate abstention is the `&` marker (tabulates as 0, but kept separate in the record — see the `Abs` column below). A single unscored candidate does **not** make the whole ballot an abstention (BetterVoting reported `nAbstentions: 0`). The full concept — how a zero, an abstention, and a NOTA vote differ — is in the lesson [Abstention vs. a zero vs. "None of the Above"](../../01_Learn/properties_and_limits/abstention_vs_zero_vs_nota.md).
 
@@ -78,6 +78,10 @@ Count × Ada,Bruno,None of the Above
 
 Full engine detail: [`bv215_26khr3_nota_wins_tabulated.txt`](cases/cases_tabulated/bv215_26khr3_nota_wins_tabulated.txt). Frozen BetterVoting export: [`bv215_26khr3_nota_wins_bv_export.json`](cases/bv215_26khr3_nota_wins_bv_export.json). Tabulatable source: [`bv215_26khr3_nota_wins.yaml`](cases/bv215_26khr3_nota_wins.yaml).
 
-## Open question (BetterVoting)
+## By design — and what that puts on you
 
-Seating "None of the Above" as the winner is easy to read as unintended — a NOTA option usually exists so voters can say *no candidate should be seated*. Filed as a clarification question: is a NOTA win meant to seat NOTA, or should it produce a "no candidate selected / re-run" outcome? → **[Equal-Vote/bettervoting#1421](https://github.com/Equal-Vote/bettervoting/issues/1421)**. This sits inside a wider cluster of BetterVoting abstain/blank/zero tickets — see the [BV abstain issue index](../../../07_Concepts/tabulation_engines/BV/abstain_issues_index.md).
+Seating "None of the Above" as the winner is easy to read as unintended: a NOTA option usually exists so voters can say *no candidate should be seated*. We asked, as **[Equal-Vote/bettervoting#1421](https://github.com/Equal-Vote/bettervoting/issues/1421)**, and the answer (2026-08-19, closed not-planned) is that it is intentional — if NOTA wins, the next steps are *"up to the bylaws of the organization running the election"*, and further handling is *"out of scope for the BetterVoting site."*
+
+So this is a design stance rather than a defect, and the consequence lands on whoever convenes the election: **a NOTA option only means something if your bylaws say what a NOTA win does.** The platform will seat it and stop. If the intended outcome is a re-run, a vacancy, or a re-opened nomination period, that has to be written down somewhere other than the ballot — nothing in the count will produce it, and nothing in the result will flag that a decision is owed. Worth deciding *before* the election, since the result page reads exactly like an ordinary win.
+
+This sits inside a wider cluster of BetterVoting abstain/blank/zero tickets — see the [BV abstain issue index](../../../07_Concepts/tabulation_engines/BV/abstain_issues_index.md).
