@@ -8,7 +8,7 @@ tags:
 
 *A 301 methodology note. When you run simulations to **compare** voting methods, the single most consequential decision is **where you inject the randomness**. Sampling random ballots (e.g. scores drawn uniformly from {0,1,2,3,4,5}) quietly rigs the comparison. Sampling random **utilities** and then *deriving* each ballot is the defensible approach — and it's what this repo's simulations already do.*
 
-**Level: 301 · deep dive** Companion: [Election simulation models](election_simulation_models.md) (which *utility* model to use, once you're sampling utilities) · [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) (a worked application).
+**Level: 301 · deep dive** Companion: [Election simulation models](election_simulation_models.md) (which *utility* model to use, once you're sampling utilities) · [Continuous model, discrete ballot](continuous_model_discrete_ballot.md) (the *other* knob on the conversion step: how many rungs, and where the cuts fall) · [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) (a worked application).
 
 ## The question: what is the random *primitive*?
 
@@ -125,6 +125,7 @@ So: your `[0,1]`-utility instinct is the correct, more-scientific one — "more 
 ## Related
 
 - [`score_encoding_stability.py`](../../06_Other/simulations/score_encoding_stability.py) · [the six Euclidean spaces](euclidean_spaces.md) — what the distance→score rule costs, measured
+- [Continuous model, discrete ballot](continuous_model_discrete_ballot.md) · [`score_resolution.py`](../../06_Other/simulations/score_resolution.py) — the quantization half of the same step: how many rungs a score ballot needs, and why the cut points matter more than the count
 - [Election simulation models](election_simulation_models.md) — the menu of *utility* models (spatial, IC/IAC, Mallows, Plackett–Luce, Yee)
 - [The spatial model — voters and candidates as points on a map](spatial_voting_model.md) — the geometry rung 3 rests on: issue space, distance-as-utility, Yee diagrams
 - [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md) · [the simulations folder](../../06_Other/simulations/README.md) — utility-first in practice

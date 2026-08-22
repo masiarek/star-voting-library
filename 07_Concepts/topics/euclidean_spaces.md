@@ -106,6 +106,7 @@ The one-sentence version, which generalises well past this bug: **a seed is not 
 - [The spatial model](spatial_voting_model.md) — the concept these six spaces implement
 - [Election simulation models](election_simulation_models.md) — the full menu; the non-geometric models (impartial culture, Mallows, urn) are family **A**
 - [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — the methodology rule that makes positions the right primitive
+- [Continuous model, discrete ballot](continuous_model_discrete_ballot.md) — what happens *after* a space hands you a distance: the two lossy steps between a real number and a 0–5 mark
 - [The statistics you actually need](statistics_for_voting.md) — mean vs median, variance, and why correlated electorates matter
 - [How often do Condorcet methods tie?](ties/how_often_condorcet_methods_tie.md) — the sweep that found the seeding bug
 - [Simulations in this repo](../../06_Other/simulations/README.md) — every script, and what each measures

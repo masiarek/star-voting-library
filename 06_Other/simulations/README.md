@@ -4,6 +4,8 @@ This folder holds brute-force simulations that **measure** a claim instead of ci
 
 - **The six Euclidean spaces** — `euclidean_spaces.py`: not a measurement but the *reference* for everything else here — what `uniform_ball`, `gaussian_cube`, `unbounded_gaussian` and the rest actually draw, implemented from their definitions, cross-checked against `prefsampling`, and plotted ([jump to section](#the-six-euclidean-spaces)). Concept page: [The six Euclidean spaces](../../07_Concepts/topics/euclidean_spaces.md).
 - **What the distance→score rule costs** — `score_encoding_stability.py`: a spatial model hands you a distance, not a ballot, and the rule that converts one to the other is an unstated modelling choice. Measures how much it moves the STAR winner — 6.8% to 27.2% depending on the space ([jump to section](#what-the-distancescore-rule-costs)). Writeup: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md#measured-what-stars-scale-rule-costs).
+- **How many rungs does a score ballot need?** — `score_resolution.py`: the other half of that same seam. Holds the normalization fixed and varies the *resolution* — 0/1, 0–2, 0–3, 0–5, 0–9, 0–99, and a voter with infinite precision ([jump to section](#how-many-rungs-does-a-score-ballot-need)). Welfare saturates by three or four rungs; the cut *placement* turns out to matter more than the rung count at low resolution. Writeup: [Continuous model, discrete ballot](../../07_Concepts/topics/continuous_model_discrete_ballot.md).
+- **Flat vs Zipf-weighted axes** — `dimension_weighting.py`: does a many-equal-axes electorate really make every method agree, and does Zipf weighting fix it? ([jump to section](#flat-vs-zipf-weighted-axes)). Direction confirmed, magnitude overstated, and the mechanism usually given for it is measurably wrong. Writeup: [The spatial model](../../07_Concepts/topics/spatial_voting_model.md#making-it-realistic-not-all-axes-weigh-the-same).
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
@@ -46,6 +48,37 @@ Three findings:
 - **The winner moves.** From *identical* positions, the two rules elect different candidates 6.8%–10.3% of the time across five of the six spaces, and **27.2%** on `uniform_sphere` — an electorate of pure factions, where more than one election in four turns on the conversion arithmetic alone.
 - **A global `d_max` erases voters.** It has to span the furthest possible pair, so a typical ballot compresses into the middle of the scale: 81% of marks land in {2,3,4}, and **2.5% of voters** score every candidate identically — expressing nothing. Min-max cannot do this (0.00%). It also inflates Equal Support in the runoff about threefold. Note too that `unbounded_gaussian` has no maximum distance at all, so a global `d_max` there is undefined and any implementation is silently substituting the observed maximum.
 - **Banker's rounding is a red herring here.** `numpy.round` tips half-integers toward even, but `--banker` and half-up produce *identical* distributions and winners: sampled float distances essentially never land on a boundary. It bites hand-built worked examples with round coordinates, not simulations — a documentation hazard, not a modelling one.
+
+## How many rungs does a score ballot need?
+
+`score_resolution.py` is the sibling of the script above, turning the other knob. That one fixes the ballot at 0–5 and asks which *normalization* rule to use; this one fixes the normalization at per-voter min-max and asks how many **rungs** the ballot needs. The baseline is a voter with infinite precision — real-valued scores, no rounding — and every other row is the same rule quantized.
+
+```bash
+python score_resolution.py                       # the ladder, 4 candidates
+python score_resolution.py --sweep-candidates    # the ladder across field sizes
+python score_resolution.py --candidates 16 --equal-bands
+```
+
+Three findings:
+
+- **Welfare saturates at three or four rungs.** One bit (approval) costs real welfare — VSE 0.9743, the only row that does. From 0–3 upward, 0–3, 0–5, 0–9, 0–99 and infinite resolution are indistinguishable (spread 0.002, seed noise). More rungs keep changing *who* wins — 0–5 misses the infinite-precision winner 3.8% of the time and 0–99 0.5% of the time — while not improving *how good* the winner is: they are re-sorting near-ties. A changed winner is not by itself evidence of a defect.
+- **The pressure is the field size, not the rung count.** 0–5 differs from infinite precision 2.7% of the time on three candidates and 17.6% on sixteen. Six rungs sit comfortably past the knee for the field sizes single-winner elections actually have, which is the practical defence of the STAR ballot's scale.
+- **Where the cuts fall is a second choice, and at low resolution it dominates.** Rounding to the nearest of K+1 rungs gives half-width end bands and full-width interior ones, so at K=2 the middle rung is a catch-all covering *half* the voter's range. On sixteen candidates that collapses a three-level ballot to VSE 0.9120 — worse than one bit. The *same* three levels cut into equal-width bands score 0.9746. This is [Approval's cutoff problem](../../04_Approval/01_Learn/approval_honest_limits.md) reappearing inside a score encoder.
+
+## Flat vs Zipf-weighted axes
+
+`dimension_weighting.py` checks a claim this repo repeats and the simulation literature repeats more loudly: that a spatial model with many **equally weighted** axes makes every method elect the same candidate, and that scaling later axes down by Zipf's law restores realistic disagreement.
+
+```bash
+python dimension_weighting.py                        # 100-D, 5 candidates
+python dimension_weighting.py --dims 20 --candidates 8
+```
+
+The direction holds — four methods agree 85.3% of the time under flat axes and 41.8% under the strongest Zipf reading. Three corrections:
+
+- **"Every method agrees" overstates it.** Flat 100-D still disagrees 14.7% of the time on a five-candidate field.
+- **The usual mechanism is wrong.** It gets explained as the electorate becoming near-unanimous. Measured, voters are *just as divided* under both (mean pairwise rank correlation +0.272 vs +0.252). A flat model does not make **voters** agree, it makes **methods** agree. What moves is candidate separation: the utilitarian leader's lead over the runner-up falls from 27.7% of the field's spread to 16.3%, and methods split hairs on close races. Zipf does not abolish the centre either — a Condorcet winner still exists ~99.5% of the time in every model here.
+- **"Scale by Zipf" has two readings and the gap is most of the effect.** Variance ∝ 1/k leaves an effective dimension of 16.5; sd ∝ 1/k leaves 2.5. Only the second matches the gloss everyone attaches to it. Say which one a number came from.
 
 ## Favorite-Betrayal (FBC) simulation
 

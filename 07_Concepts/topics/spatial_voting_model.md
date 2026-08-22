@@ -49,8 +49,24 @@ This repo's simulations ([`fbc_simulation.py`](../../06_Other/simulations/fbc_si
 
 A *flat* spatial model (every dimension equally important, voters spread uniformly) has a surprising flaw: it makes the voting methods **agree too much**. The winner is usually the obvious central candidate, so Plurality, IRV, STAR, and Condorcet all pick the same person — and you'd wrongly conclude the method barely matters. Two refinements, which serious simulators use, restore realistic disagreement:
 
-- **Weight the dimensions unequally (salience).** Real ideology has one dominant axis (roughly left–right) and many minor ones. [Chris Smith's models](https://cdsmithus.medium.com/simulating-elections-with-spatial-voter-models-1ff50892390) scale the variance of successive dimensions down by **Zipf's law** — later axes matter progressively less — which brings the method disagreement back up to a realistic **35–85%** (versus near-unanimity when the axes are flat).
+- **Weight the dimensions unequally (salience).** Real ideology has one dominant axis (roughly left–right) and many minor ones. [Chris Smith's models](https://cdsmithus.medium.com/simulating-elections-with-spatial-voter-models-1ff50892390) scale the variance of successive dimensions down by **Zipf's law** — later axes matter progressively less — which brings the method disagreement back up to a realistic **35–85%**, against near-total *method* agreement when the axes are flat.
 - **Cluster the voters (communities of interest).** Instead of one uniform cloud, draw voters as a **mixture of Gaussians** — parties, regions, identity groups, with overlap. This is the "hierarchical clusters" model VSE uses; Smith's **Mixture of Zipf Gaussians (MoZG)** is a worked version (100 dimensions, clustered voters).
+
+**Measured, and two popular explanations don't survive it.** [`dimension_weighting.py`](../../06_Other/simulations/dimension_weighting.py) runs 100 dimensions, 101 voters, 5 candidates through four methods (Plurality, Approval, STAR, Copeland) under each weighting:
+
+| | flat | Zipf (variance ∝ 1/k) | Zipf (sd ∝ 1/k) |
+|---|---|---|---|
+| effective dimension | 100.0 | 16.5 | **2.5** |
+| all four methods agree | 85.3% | 67.0% | **41.8%** |
+| mean voter-pair rank correlation | +0.272 | +0.265 | +0.252 |
+| utilitarian leader's lead over the runner-up | 27.7% | 21.1% | **16.3%** |
+| a Condorcet winner exists | 99.7% | 99.3% | 99.7% |
+
+The direction holds and the effect is large. Three refinements the numbers force:
+
+- **"Every method agrees" overstates it** — flat 100-D still disagrees 14.7% of the time on a five-candidate field. Strong tendency, not collapse.
+- **The usual mechanism is wrong.** It gets explained as the electorate becoming near-unanimous — an obvious centre everyone likes. Voters are *just as divided* in both models (rank correlation +0.272 vs +0.252, unchanged). A flat model doesn't make **voters** agree; it makes **methods** agree. What actually moves is candidate separation: the utilitarian leader's lead falls from 27.7% of the field's spread to 16.3%, and methods split hairs on close races and agree on blowouts. Nor does Zipf abolish the centre — a Condorcet winner still exists ~99.5% of the time in every model here. (The "hyper-dense ball at the centre" version of the story is backwards too: a high-dimensional Gaussian concentrates on a thin *shell*, and the middle of the cloud is nearly empty.)
+- **"Scale by Zipf" has two readings and the gap between them is most of the effect.** Variance ∝ 1/k leaves an effective dimension of 16.5; sd ∝ 1/k leaves 2.5. Only the second matches the prose gloss everyone attaches to it ("one dominant axis and a few minor ones"), and the first lands halfway back to flat on every row. Say which one a number came from — the same discipline the [encoding step](continuous_model_discrete_ballot.md) needs one layer down.
 
 The lesson mirrors the [approval-cutoff sweep](../../method_comparisons/star_vs_approval_divergence.md): **how you set up the model decides whether the methods look identical or different.** So a simulation that concludes "the methods barely differ" may just have an unrealistically flat electorate — always ask how the dimensions were weighted and whether voters were clustered. (Code: [cdsmith/spatial-voting](https://github.com/cdsmith/spatial-voting).)
 
