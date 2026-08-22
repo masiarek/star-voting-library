@@ -534,4 +534,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Monotonicity (topic hub)](../../../../07_Concepts/topics/monotonicity/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [burlington_2009_irv](burlington_2009_irv.md) · [burlington_2009_ranked_robin](burlington_2009_ranked_robin.md)
+More cases in this set: [burlington_2009_irv](burlington_2009_irv.md) · [burlington_2009_irv_without_wright](burlington_2009_irv_without_wright.md) · [burlington_2009_ranked_robin](burlington_2009_ranked_robin.md)

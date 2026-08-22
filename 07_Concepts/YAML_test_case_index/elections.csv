@@ -203,6 +203,8 @@ LH:abstention_reconciliation_min_c2_b6,Abstention vs Equal Support — the minim
 LH:abstentions,Abstentions — blank and abstaining ballots in STAR,1,single-race,6,STAR,LH-only
 LH:alabama_2seats,The Alabama paradox — 2 seats,1,single-race,5,STAR_PR,LH-only
 LH:alabama_3seats,The Alabama paradox — 3 seats,1,single-race,5,STAR_PR,LH-only
+LH:alaska_2022_irv_with_palin,"Alaska 2022 special (reduced model), ranked ballots — RCV-IRV with all three candidates: Peltola wins",1,single-race,200,IRV,LH-only
+LH:alaska_2022_irv_without_palin,"Alaska 2022 special (reduced model), Palin deleted from every ballot — RCV-IRV now elects Begich",1,single-race,177,IRV,LH-only
 LH:alaska_buried_c3_b200,"Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't",1,single-race,200,IRV,LH-only
 LH:alaska_sincere_c3_b200,Alaska 2022 (sincere) — Begich is the Condorcet winner,1,single-race,200,IRV,LH-only
 LH:alaska_upward_after,"Upward monotonicity (Alaska 2022) — AFTER: raise the winner, she loses",1,single-race,200,IRV,LH-only
@@ -231,6 +233,7 @@ LH:brams_ex3_two_candidates_c2_b5,Brams Example 3 — two candidates: two loud f
 LH:brams_ex6_three_winners_c3_b9,"Brams Example 6 — three counts, three winners (STAR sides with head-to-head)",1,single-race,9,STAR,LH-only
 LH:brams_grading_paradox_c3_b3,Brams' grading paradox — the grade leader loses the runoff,1,single-race,3,STAR,LH-only
 LH:burlington_2009_irv,"Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third)",1,single-race,8974,IRV,LH-only
+LH:burlington_2009_irv_without_wright,"Burlington 2009 mayor, Wright deleted from every ballot — RCV-IRV now elects Montroll",1,single-race,8134,IRV,LH-only
 LH:burlington_2009_raise_kiss_nonmono,"Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses",1,single-race,8974,IRV,LH-only
 LH:burlington_2009_ranked_robin,"Burlington 2009 mayor — Ranked Robin: Montroll, a perfect 5-0 Condorcet winner",1,single-race,8974,RankedRobin,LH-only
 LH:cav_library_board_blank_is_zero_c3_b12,Library board on a blank-is-zero score ballot — the same twelve voters,1,single-race,12,Range,LH-only

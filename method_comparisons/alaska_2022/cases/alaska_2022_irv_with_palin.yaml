@@ -1,0 +1,33 @@
+election_title: "Alaska 2022 special (reduced model), ranked ballots — RCV-IRV with all three candidates: Peltola wins"
+paradoxes: [condorcet-winner]
+scenario_description: |-
+  The IIA / spoiler baseline. This is the SAME 200-voter reduced model of the
+  August 2022 Alaska US House special election as the STAR case in this folder
+  (bv2213_k3fmwv_alaska_2022.yaml), written as the ranked profile it came from —
+  the nine ballot types of Table 1 in Graham-Squire & McCune, "An Examination of
+  Ranked Choice Voting in the United States, 2004-2022" (arXiv:2301.12075),
+  scaled ~943:1. Nothing is added: the score file's 5/4/3 levels ARE these
+  rankings.
+  First choices: Peltola 80, Palin 63, Begich 57. RCV-IRV eliminates Begich,
+  12 ballots exhaust, and Peltola beats Palin 96-92. Winner: Peltola.
+  Its twin — alaska_2022_irv_without_palin.yaml — deletes Palin from every
+  ballot and changes nothing else. Begich then wins 93-84. Palin lost, and her
+  presence decided who won: an Independence-of-Irrelevant-Alternatives failure
+  on a real federal race, which is the claim-check behind
+  method_comparisons/fairvote_comparison_table/README.md.
+  Lesson: ../README.md
+voting_method: RCV_IRV
+num_winners: 1
+lh_only_reason: "The ranked half of a BV-backed pair — the same electorate is already live on BetterVoting as BV2213 (k3fmwv) in its score form. This file exists to make the with/without-Palin counterfactual runnable, and its twin is a counterfactual profile that was never cast, so neither belongs on BV."
+ballots: |-
+  50:Peltola>Begich
+  36:Palin>Begich
+  29:Begich>Palin
+  25:Peltola
+  23:Palin
+  16:Begich>Peltola
+  12:Begich
+  5:Peltola>Palin
+  4:Palin>Peltola>Begich
+expected_winners:
+  - Peltola

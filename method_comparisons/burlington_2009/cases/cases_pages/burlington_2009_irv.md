@@ -533,4 +533,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Condorcet efficiency (topic hub)](../../../../07_Concepts/topics/condorcet/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [burlington_2009_raise_kiss_nonmono](burlington_2009_raise_kiss_nonmono.md) · [burlington_2009_ranked_robin](burlington_2009_ranked_robin.md)
+More cases in this set: [burlington_2009_irv_without_wright](burlington_2009_irv_without_wright.md) · [burlington_2009_raise_kiss_nonmono](burlington_2009_raise_kiss_nonmono.md) · [burlington_2009_ranked_robin](burlington_2009_ranked_robin.md)

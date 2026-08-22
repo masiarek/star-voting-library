@@ -28,7 +28,7 @@ Score/Range voting has no single dominant US campaign; its main hub is the [Cent
 
 ## Reading advocacy claims critically — a worked example
 
-Advocacy pages (from every camp) mix solid points with overreach. The repo's worked example of checking one claim by claim: [FairVote's Condorcet article, claim-checked](condorcet/fairvote_condorcet_claim_check.md) — each quote verified, each checkable claim tabulated as a small election you can re-run.
+Advocacy pages (from every camp) mix solid points with overreach. The repo's worked example of checking one claim by claim: [FairVote's Condorcet article, claim-checked](condorcet/fairvote_condorcet_claim_check.md) — each quote verified, each checkable claim tabulated as a small election you can re-run. Every FairVote claim this repo has checked, with its verdict, is collected in the standing ledger: [FairVote's claims, checked](fairvote_claims_checked.md).
 
 The check cuts the other way too: [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) grades the popular *pro-cardinal* claim that "the voting scientists have proven RCV-IRV inferior" — noting that the most-cited experts (Smith, Brams, Quinn) are themselves advocates, and separating what the math proves from what it doesn't.
 

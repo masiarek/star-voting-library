@@ -24,6 +24,8 @@ Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 147 voters, d
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 7 cands, 45 voters, darkhorse (STAR E, RR A)",STAR,E,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C07_medV45_noise_1.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 598 voters, darkhorse (STAR G, RR F)",STAR,G,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C10_largeV598_bloc_1.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 10 cands, 599 voters, darkhorse (STAR B, RR E)",STAR,B,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/darkhorse_C10_largeV599_bloc_2.yaml
+Condorcet winner paradox,Simple,"Alaska 2022 special (reduced model), ranked ballots — RCV-IRV with all three candidates: Peltola wins",RCV_IRV,Peltola,,,method_comparisons/alaska_2022/cases/alaska_2022_irv_with_palin.yaml
+Condorcet winner paradox,Simple,"Alaska 2022 special (reduced model), Palin deleted from every ballot — RCV-IRV now elects Begich",RCV_IRV,Begich,,,method_comparisons/alaska_2022/cases/alaska_2022_irv_without_palin.yaml
 Condorcet winner paradox,Simple,"Alaska 2022 US House special (reduced model) — STAR & Ranked Robin elect Begich, the Condorcet winner RCV-IRV cut",STAR,Begich,BV2213,k3fmwv,method_comparisons/alaska_2022/cases/bv2213_k3fmwv_alaska_2022.yaml
 Condorcet winner paradox,Simple,"Alaska 2022 US House general (reduced model) — IRV got it right: all four counts elect the Condorcet winner, Peltola",STAR,Peltola,BV2214,m3hb6y,method_comparisons/alaska_2022_general/cases/bv2214_m3hb6y_alaska_2022_general.yaml
 Condorcet winner paradox,Simple,Hamlin & Hua §4.1 — the approval count as printed: B wins with 100%,Approval,B,,,method_comparisons/approval_majority_criterion/cases/hh41_01_approval_as_printed.yaml
@@ -31,6 +33,7 @@ Condorcet winner paradox,Simple,"Hamlin & Hua §4.1 — the assumed preferences,
 Condorcet winner paradox,Simple,Hamlin & Hua §4.1 — the same marks read pairwise: 60 of 100 voters express no preference,STAR,B,,,method_comparisons/approval_majority_criterion/cases/hh41_03_marks_read_pairwise.yaml
 Condorcet winner paradox,Simple,"Hamlin & Hua §4.1 — their own utility stipulation, on a 0-5 ballot: A 380, B 370, A wins",STAR,A,,,method_comparisons/approval_majority_criterion/cases/hh41_04_stipulated_utilities_star.yaml
 Condorcet winner paradox,Simple,"Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third)",RCV_IRV,Kiss,,,method_comparisons/burlington_2009/cases/burlington_2009_irv.yaml
+Condorcet winner paradox,Simple,"Burlington 2009 mayor, Wright deleted from every ballot — RCV-IRV now elects Montroll",RCV_IRV,Montroll,,,method_comparisons/burlington_2009/cases/burlington_2009_irv_without_wright.yaml
 Condorcet winner paradox,Simple,Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated),RCV_IRV,Left,,,method_comparisons/center_squeeze/cases/center_squeeze_irv.yaml
 Condorcet winner paradox,Simple,Center squeeze — STAR elects the consensus (Center),STAR,Center,,,method_comparisons/center_squeeze/cases/center_squeeze_star.yaml
 Condorcet winner paradox,Simple,Center squeeze — the voteline 1D spectrum (Red / Green / Yellow),STAR,Green,,,method_comparisons/center_squeeze/cases/center_squeeze_voteline_1d.yaml

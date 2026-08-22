@@ -1,0 +1,269 @@
+======================================================================
+SOURCE FILE:     burlington_2009_irv_without_wright.yaml
+TABULATED FILE:  burlington_2009_irv_without_wright_tabulated.txt
+======================================================================
+
+election_title: "Burlington 2009 mayor, Wright deleted from every ballot — RCV-IRV now elects Montroll"
+paradoxes: [condorcet-winner]
+scenario_description: |-
+  The spoiler counterfactual, on the real ballots. Take
+  burlington_2009_irv.yaml — the certified 2009 Burlington profile, PrefLib
+  dataset 00005 — and strike KURT WRIGHT, who did not win, out of every ballot.
+  Nothing else changes: no voter is given a preference they did not express and
+  no ballot is reordered. The 840 Wright-only bullet ballots have nothing left
+  to say and exhaust, leaving 8,134 tabulated.
+  RCV-IRV now elects ANDY MONTROLL, 4063-3476 over Kiss — the same two numbers
+  the full election's own pairwise matrix already reported for Montroll-vs-Kiss,
+  because with Wright gone the instant runoff IS that head-to-head. In the real
+  election IRV elected Kiss. So a losing candidate decided the outcome: an
+  Independence-of-Irrelevant-Alternatives failure on a certified municipal
+  result.
+  Note what this case is NOT. Wright (R) is not "similar" to Montroll (D), so
+  this is not vote-splitting between allies — it is the plain IIA test, and it
+  is the direct check on the claim that RCV "satisfies ... the Independence of
+  Irrelevant Alternatives ... criteria". For the version that is ALSO a
+  same-side spoiler, see the Alaska 2022 pair in ../../alaska_2022/cases/.
+  Reading it fairly: a real Wright withdrawal would have changed the campaign
+  and who turned out. This is the STRICT criterion test — hold the ballots
+  fixed, remove one candidate — which is what IIA asks and all a certified
+  ballot record can honestly support.
+  Lesson: ../README.md · claim check: ../../fairvote_comparison_table/README.md
+voting_method: RCV_IRV
+num_winners: 1
+lh_only_reason: "A counterfactual profile — 8,134 weighted ballots that were never cast in this form. Publishing it as a live BetterVoting election would present a hypothetical as a real contest."
+ballots: |-
+  458:Kiss>Montroll
+  472:Kiss
+  488:Smith
+  528:Montroll
+  345:Kiss>Montroll>Smith
+  326:Montroll>Kiss
+  405:Montroll>Smith
+  242:Montroll>Kiss>Smith
+  171:Kiss>Smith
+  445:Kiss>Montroll>Smith>Simpson
+  299:Smith>Montroll
+  185:Kiss>Smith>Montroll
+  206:Montroll>Smith>Simpson>Kiss
+  204:Kiss>Montroll>Simpson>Smith
+  349:Montroll>Smith>Kiss>Simpson
+  273:Smith>Montroll>Kiss>Simpson
+  257:Montroll>Smith>Kiss
+  166:Smith>Montroll>Simpson>Kiss
+  154:Smith>Kiss>Montroll
+  198:Smith>Montroll>Kiss
+  248:Kiss>Smith>Montroll>Simpson
+  101:Smith>Simpson>Montroll>Kiss
+  330:Montroll>Kiss>Smith>Simpson
+  198:Smith>Kiss>Montroll>Simpson
+  57:Kiss>Montroll>Simpson
+  108:Smith>Kiss
+  65:Montroll>Kiss>Simpson>Smith
+  31:Simpson
+  48:Kiss>Simpson>Montroll>Smith
+  61:Kiss>Smith>Simpson>Montroll
+  50:Montroll>Simpson>Smith>Kiss
+  23:Kiss>Simpson
+  51:Smith>Kiss>Simpson>Montroll
+  28:Smith>Simpson
+  18:Kiss>Simpson>Montroll
+  29:Smith>Simpson>Kiss>Montroll
+  20:Kiss>Smith>Simpson
+  30:Kiss>Simpson>Smith>Montroll
+  18:Montroll>Kiss>Simpson
+  13:Simpson>Smith>Montroll>Kiss
+  24:WriteIn
+  14:Simpson>Smith>Kiss>Montroll
+  19:Smith>Montroll>Simpson
+  9:Kiss>Smith>Montroll>Simpson>WriteIn
+  21:Montroll>Simpson>Kiss>Smith
+  9:Kiss>Montroll>Smith>Simpson>WriteIn
+  12:Montroll>Simpson>Smith
+  9:Simpson>Smith
+  10:Kiss>Simpson>Smith
+  25:Montroll>Smith>Simpson
+  12:Montroll>Simpson>Kiss
+  9:Smith>Kiss>Simpson
+  6:Kiss>Smith>Simpson>Montroll>WriteIn
+  6:Montroll>Kiss>Smith>Simpson>WriteIn
+  5:Smith>Kiss>Montroll>WriteIn>Simpson
+  7:Simpson>Montroll>Smith>Kiss
+  14:Smith>Simpson>Montroll
+  10:Montroll>WriteIn
+  4:Kiss>WriteIn>Montroll>Smith>Simpson
+  4:Simpson>Montroll>Kiss>Smith
+  4:Kiss>Smith>Montroll>WriteIn>Simpson
+  4:Simpson>Montroll>Kiss
+  5:Montroll>Smith>WriteIn
+  7:Smith>WriteIn
+  5:Kiss>WriteIn
+  12:Montroll>Simpson
+  3:Kiss>Montroll>Simpson>Smith>WriteIn
+  5:Montroll>Kiss>Smith>WriteIn
+  3:Kiss>Smith>WriteIn>Montroll>Simpson
+  3:Smith>Simpson>Montroll>Kiss>WriteIn
+  3:Smith>Montroll>Kiss>WriteIn>Simpson
+  4:Simpson>WriteIn
+  4:Montroll>Kiss>WriteIn
+  3:Smith>Montroll>WriteIn
+  4:Simpson>Kiss
+  4:WriteIn>Montroll
+  4:WriteIn>Kiss
+  7:Simpson>Kiss>Montroll>Smith
+  5:Smith>Kiss>Montroll>WriteIn
+  2:Smith>Kiss>Simpson>Montroll>WriteIn
+  2:Kiss>Simpson>Montroll>WriteIn>Smith
+  2:Montroll>Smith>WriteIn>Kiss
+  2:Smith>Montroll>Simpson>WriteIn
+  2:WriteIn>Montroll>Smith>Simpson>Kiss
+  2:WriteIn>Montroll>Smith>Kiss
+  2:WriteIn>Montroll>Smith>Kiss>Simpson
+  4:Smith>Montroll>Kiss>WriteIn
+  3:Montroll>Smith>Simpson>WriteIn
+  2:Montroll>Kiss>Smith>WriteIn>Simpson
+  2:Montroll>WriteIn>Kiss>Smith>Simpson
+  2:WriteIn>Montroll>Simpson>Smith>Kiss
+  2:Montroll>Smith>Kiss>Simpson>WriteIn
+  2:Smith>Kiss>WriteIn>Montroll>Simpson
+  4:Kiss>Montroll>WriteIn
+  3:WriteIn>Montroll>Kiss
+  2:Kiss>Smith>WriteIn
+  3:Smith>Simpson>Kiss
+  2:WriteIn>Montroll>Smith
+  2:Simpson>Kiss>Montroll
+  1:Simpson>Smith>Montroll>WriteIn
+  1:Kiss>WriteIn>Simpson>Smith
+  1:Kiss>Montroll>WriteIn>Simpson
+  1:Simpson>Smith>WriteIn>Montroll
+  1:Kiss>Montroll>Simpson>WriteIn
+  1:Montroll>WriteIn>Smith>Kiss>Simpson
+  1:Smith>Simpson>Montroll>WriteIn
+  1:WriteIn>Kiss>Smith>Simpson>Montroll
+  3:Kiss>Smith>Montroll>WriteIn
+  1:Montroll>Simpson>WriteIn>Kiss
+  1:Montroll>Simpson>Smith>Kiss>WriteIn
+  1:Smith>Simpson>WriteIn>Montroll>Kiss
+  1:Smith>Montroll>Kiss>Simpson>WriteIn
+  1:WriteIn>Smith>Simpson>Montroll
+  1:Montroll>Smith>Kiss>WriteIn
+  1:Simpson>Montroll>Kiss>WriteIn
+  1:Smith>Kiss>Montroll>Simpson>WriteIn
+  1:Montroll>Kiss>Simpson>Smith>WriteIn
+  1:Smith>WriteIn>Montroll>Simpson
+  1:Kiss>WriteIn>Smith>Montroll>Simpson
+  3:Simpson>Kiss>Smith>Montroll
+  1:WriteIn>Montroll>Smith>Simpson
+  2:Smith>Montroll>WriteIn>Simpson
+  1:Kiss>Simpson>WriteIn>Montroll
+  1:WriteIn>Smith>Kiss>Montroll
+  1:Smith>Simpson>Montroll>WriteIn>Kiss
+  1:Montroll>WriteIn>Simpson>Kiss
+  1:Kiss>WriteIn>Smith>Simpson
+  1:Smith>Kiss>Simpson>WriteIn
+  1:Kiss>Smith>Simpson>WriteIn>Montroll
+  1:WriteIn>Smith>Montroll>Simpson
+  1:Montroll>Kiss>Simpson>WriteIn>Smith
+  1:Simpson>Kiss>Montroll>WriteIn
+  2:Kiss>Simpson>Smith>WriteIn
+  1:Montroll>Kiss>WriteIn>Simpson
+  2:Kiss>Montroll>Smith>WriteIn
+  1:WriteIn>Simpson>Montroll>Kiss
+  2:Kiss>Simpson>Montroll>WriteIn
+  1:Kiss>Simpson>Montroll>Smith>WriteIn
+  1:WriteIn>Montroll>Kiss>Smith>Simpson
+  1:Montroll>WriteIn>Smith>Kiss
+  1:Smith>Montroll>Simpson>Kiss>WriteIn
+  1:Montroll>Simpson>WriteIn>Smith>Kiss
+  1:Smith>Montroll>WriteIn>Kiss
+  1:Simpson>Kiss>Smith>Montroll>WriteIn
+  2:WriteIn>Kiss>Montroll
+  1:Simpson>Kiss>Smith
+  1:Kiss>WriteIn>Montroll>Smith
+  2:Simpson>Montroll>Smith
+  1:Smith>WriteIn>Montroll
+  1:Smith>WriteIn>Simpson
+  1:Montroll>WriteIn>Simpson>Smith
+  1:Simpson>Montroll
+  1:Smith>Simpson>WriteIn
+  1:Simpson>Smith>Montroll
+  1:Simpson>Smith>Kiss
+  1:Kiss>Simpson>WriteIn
+  1:Montroll>WriteIn>Simpson
+  1:WriteIn>Simpson
+  1:Kiss>WriteIn>Montroll
+  1:WriteIn>Smith
+expected_winners:
+  - Montroll
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Burlington 2009 mayor, Wright deleted from every ballot — RCV-IRV now elects Montroll
+ Tabulating 8134 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Montroll        2911  Hopeful
+Kiss            2866  Hopeful
+Smith           2188  Rejected
+Simpson          113  Rejected
+WriteIn           56  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Montroll        4063  Elected
+Kiss            3476  Rejected
+Smith              0  Rejected
+Simpson            0  Rejected
+WriteIn            0  Rejected
+Blank Votes      595  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Montroll
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 8134 of 8134 ballots still active; majority = 4068
+   WriteIn eliminated with 56:
+      → (no continuing ranking)     26  ← these ballots go inactive
+      → Montroll                 22
+      → Kiss                      8
+   Simpson eliminated with 113:
+      → (no continuing ranking)     44  ← these ballots go inactive
+      → Montroll                 35
+      → Kiss                     34
+   Smith eliminated with 2188:
+      → Montroll               1095
+      → Kiss                    568
+      → (no continuing ranking)    525  ← these ballots go inactive
+
+FINAL ROUND — 7539 of 8134 ballots still active (595 inactive); majority = 3770
+   Montroll               4063  (53.9% of the still-active)  ← elected
+   Kiss                   3476  (46.1% of the still-active)
+   Never exhausted, never transferred:
+      2884 ballots held by Kiss carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 595 of 8134 (7.3%).
+   Montroll's 4063 is a majority of the 7539 still active but only 50.0% of all 8134 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 5): Montroll
+   Outside (4):        Kiss, Smith, Simpson, WriteIn
+   One member ⇒ Montroll is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Montroll is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md

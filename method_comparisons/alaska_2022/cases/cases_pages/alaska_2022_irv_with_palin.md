@@ -1,0 +1,131 @@
+---
+search:
+  exclude: true
+---
+
+# Alaska 2022 special (reduced model), ranked ballots — RCV-IRV with all three candidates: Peltola wins
+
+*Generated from [`alaska_2022_irv_with_palin.yaml`](../alaska_2022_irv_with_palin.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [RCV-IRV (Instant Runoff)](../../../../06_Other/RCV_IRV/concepts/README.md) · **1 seat** · **Expected winner:** Peltola
+
+## Scenario
+
+The IIA / spoiler baseline. This is the SAME 200-voter reduced model of the
+August 2022 Alaska US House special election as the STAR case in this folder
+(bv2213_k3fmwv_alaska_2022.yaml), written as the ranked profile it came from —
+the nine ballot types of Table 1 in Graham-Squire & McCune, "An Examination of
+Ranked Choice Voting in the United States, 2004-2022" (arXiv:2301.12075),
+scaled ~943:1. Nothing is added: the score file's 5/4/3 levels ARE these
+rankings.
+First choices: Peltola 80, Palin 63, Begich 57. RCV-IRV eliminates Begich,
+12 ballots exhaust, and Peltola beats Palin 96-92. Winner: Peltola.
+Its twin — alaska_2022_irv_without_palin.yaml — deletes Palin from every
+ballot and changes nothing else. Begich then wins 93-84. Palin lost, and her
+presence decided who won: an Independence-of-Irrelevant-Alternatives failure
+on a real federal race, which is the claim-check behind
+method_comparisons/fairvote_comparison_table/README.md.
+Lesson: ../README.md
+
+## Ballots
+
+Each row is one voter's ranking, most-preferred first (`N:` prefix = N identical ballots).
+
+```text
+50:Peltola>Begich
+36:Palin>Begich
+29:Begich>Palin
+25:Peltola
+23:Palin
+16:Begich>Peltola
+12:Begich
+5:Peltola>Palin
+4:Palin>Peltola>Begich
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+<!-- --8<-- [start:report] -->
+```text
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Alaska 2022 special (reduced model), ranked ballots — RCV-IRV with all three candidates: Peltola wins
+ Tabulating 200 ballots (ranked ballots).
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Peltola           80  Hopeful
+Palin             63  Hopeful
+Begich            57  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Peltola           96  Elected
+Palin             92  Rejected
+Begich             0  Rejected
+Blank Votes       12  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Peltola
+
+--- Transfers and inactive ballots (what the round tables leave out) ---
+The tables above give each candidate's round total but not where a
+transferred vote came FROM, nor how many ballots stopped counting.
+Both are recomputed from the ballots, using the eliminations the
+count above actually made.
+
+ROUND 1 — 200 of 200 ballots still active; majority = 101
+   Begich eliminated with 57:
+      → Palin                    29
+      → Peltola                  16
+      → (no continuing ranking)     12  ← these ballots go inactive
+
+FINAL ROUND — 188 of 200 ballots still active (12 inactive); majority = 95
+   Peltola                  96  (51.1% of the still-active)  ← elected
+   Palin                    92  (48.9% of the still-active)
+   Never exhausted, never transferred:
+      40 ballots held by Palin carried a lower ranking that was never read
+      (the count stopped here, so those preferences did nothing).
+
+Inactive ballots at the final round: 12 of 200 (6.0%).
+   Peltola's 96 is a majority of the 188 still active but only 48.0% of all 200 cast —
+   the 'majority' here is of a shrunken denominator. See
+   06_Other/RCV_IRV/concepts/RCV_IRV_exhausted_ballots.md
+```
+<!-- --8<-- [end:report] -->
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 3): Begich
+   Outside (2):        Peltola, Palin
+   One member ⇒ Begich is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Peltola is OUTSIDE the Smith set. ✗
+      Every member of the set (Begich) beats Peltola head-to-head, yet
+      RCV-IRV elected Peltola anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/alaska_2022_irv_with_palin_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_comparisons/alaska_2022/cases/alaska_2022_irv_with_palin.yaml
+```
+
+## See also
+
+- [Vote splitting (worked set)](../../../split_voting/README.md)
+- [Exhausted ballots (untangled)](../../../../06_Other/RCV_IRV/concepts/exhausted_ballots_301.md)
+- [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [alaska_2022_irv_without_palin](alaska_2022_irv_without_palin.md) · [bv2213_k3fmwv_alaska_2022](bv2213_k3fmwv_alaska_2022.md)

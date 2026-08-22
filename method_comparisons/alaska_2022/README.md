@@ -139,7 +139,7 @@ Full engine detail: [STAR report](cases/cases_tabulated/bv2213_k3fmwv_alaska_202
 
 The paper documents several failures in this one election; the reduced model reproduces each:
 
-- **Spoiler.** Remove the losing candidate Palin and **Begich wins** — a candidate who couldn't win changed who did.
+- **Spoiler.** Remove the losing candidate Palin and **Begich wins** — a candidate who couldn't win changed who did. Runnable as the strict Independence-of-Irrelevant-Alternatives test (delete one candidate, hold every ballot fixed): [with all three](cases/cases_pages/alaska_2022_irv_with_palin.md) elects Peltola 96–92 · [Palin deleted](cases/cases_pages/alaska_2022_irv_without_palin.md) elects Begich 93–84 — the same margin the pairwise grid above already reports, because with Palin gone the instant runoff *is* that head-to-head. This is the check behind [FairVote's comparison chart, claim-checked](../fairvote_comparison_table/README.md#3-resistance-to-spoilers-false-as-stated).
 - **Upward monotonicity.** Had ~6,000 Palin-bullet voters (≈6 in the model) instead ranked the *winner* Peltola first, Peltola would have **lost**: those votes eliminate Palin first, and Begich then beats Peltola. Ranking the winner higher defeats the winner.
 - **No-show / truncation.** Had ~5,400 `Palin › Begich` voters stayed home, Palin is eliminated first, Begich beats Peltola, and those voters get a *better* result by *not voting*.
 - **Majoritarian failure.** The winner holds only 48.4% of all ballots (48% here) once exhausted ballots are set aside.

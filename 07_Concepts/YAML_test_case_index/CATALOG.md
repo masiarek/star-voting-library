@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 537 elections, 737 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 540 elections, 740 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -219,6 +219,8 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `abstentions` | Abstentions — blank and abstaining ballots in STAR | 1 | single-race | 6 | STAR | LH-only |
 | `alabama_2seats` | The Alabama paradox — 2 seats | 1 | single-race | 5 | STAR_PR | LH-only |
 | `alabama_3seats` | The Alabama paradox — 3 seats | 1 | single-race | 5 | STAR_PR | LH-only |
+| `alaska_2022_irv_with_palin` | Alaska 2022 special (reduced model), ranked ballots  | 1 | single-race | 200 | IRV | LH-only |
+| `alaska_2022_irv_without_palin` | Alaska 2022 special (reduced model), Palin deleted f | 1 | single-race | 177 | IRV | LH-only |
 | `alaska_buried_c3_b200` | Alaska 2022 (Begich buried) — a manufactured cycle;  | 1 | single-race | 200 | IRV | LH-only |
 | `alaska_sincere_c3_b200` | Alaska 2022 (sincere) — Begich is the Condorcet winn | 1 | single-race | 200 | IRV | LH-only |
 | `alaska_upward_after` | Upward monotonicity (Alaska 2022) — AFTER: raise the | 1 | single-race | 200 | IRV | LH-only |
@@ -247,6 +249,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `brams_ex6_three_winners_c3_b9` | Brams Example 6 — three counts, three winners (STAR  | 1 | single-race | 9 | STAR | LH-only |
 | `brams_grading_paradox_c3_b3` | Brams' grading paradox — the grade leader loses the  | 1 | single-race | 3 | STAR | LH-only |
 | `burlington_2009_irv` | Burlington 2009 mayor — RCV-IRV: the real center squ | 1 | single-race | 8974 | IRV | LH-only |
+| `burlington_2009_irv_without_wright` | Burlington 2009 mayor, Wright deleted from every bal | 1 | single-race | 8134 | IRV | LH-only |
 | `burlington_2009_raise_kiss_nonmono` | Burlington 2009, the raise — 750 Wright voters rank  | 1 | single-race | 8974 | IRV | LH-only |
 | `burlington_2009_ranked_robin` | Burlington 2009 mayor — Ranked Robin: Montroll, a pe | 1 | single-race | 8974 | RankedRobin | LH-only |
 | `cav_library_board_blank_is_zero_c3_b12` | Library board on a blank-is-zero score ballot — the  | 1 | single-race | 12 | Range | LH-only |
@@ -565,7 +568,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 442 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| single-race | 445 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | contested (multi-race) | 295 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
 
 ### By seat class
@@ -574,7 +577,7 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | seat class | # races | example elections |
 |---|--:|---|
-| single-winner | 611 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| single-winner | 614 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | multi-winner | 126 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`3494cb`](https://bettervoting.com/3494cb/results), [`39py93`](https://bettervoting.com/39py93/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results) |
 
 ### By ballot type
@@ -584,7 +587,7 @@ What the voter marks: **score** (0–5), **ranked** (A>B>C), **approval** (0/1),
 | ballot type | # races | example elections |
 |---|--:|---|
 | score | 384 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
-| ranked | 245 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
+| ranked | 248 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
 | choose-one | 55 | [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`4h89vj`](https://bettervoting.com/4h89vj/results), [`4w96tr`](https://bettervoting.com/4w96tr/results) |
 | approval | 49 | [`4hfwqd`](https://bettervoting.com/4hfwqd/results), [`6mcgkq`](https://bettervoting.com/6mcgkq/results), `BV_Library_approval_single_winner`, `Black_Curtain_01a_c3_b5_approval` |
 | ? | 4 | `321_tennessee_blank_encoding_c4_b100`, `blocs_bloc_c9_b10`, `cav_library_board_c3_b12`, `min_bloc_c3_b2` |
@@ -595,7 +598,7 @@ A rough teaching cut: **majoritarian** (a majority can take every seat), **propo
 
 | character | # races | example elections |
 |---|--:|---|
-| majoritarian | 536 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| majoritarian | 539 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | Condorcet | 136 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
 | proportional | 65 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`39py93`](https://bettervoting.com/39py93/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), [`8xwx43`](https://bettervoting.com/8xwx43/results) |
 
@@ -616,7 +619,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 |---|--:|---|
 | STAR | 329 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
 | RankedRobin | 136 | [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
-| IRV | 95 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3xgkck`](https://bettervoting.com/3xgkck/results), [`4htk44`](https://bettervoting.com/4htk44/results) |
+| IRV | 98 | [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`37yf8x`](https://bettervoting.com/37yf8x/results), [`3xgkck`](https://bettervoting.com/3xgkck/results), [`4htk44`](https://bettervoting.com/4htk44/results) |
 | Plurality | 55 | [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3x4vrv`](https://bettervoting.com/3x4vrv/results), [`4h89vj`](https://bettervoting.com/4h89vj/results), [`4w96tr`](https://bettervoting.com/4w96tr/results) |
 | STAR_PR | 51 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`89wwvr`](https://bettervoting.com/89wwvr/results), `02a_c5_b63_proportional-allocated-score`, `02b_c5_b63_proportional-sss` |
 | Approval | 49 | [`4hfwqd`](https://bettervoting.com/4hfwqd/results), [`6mcgkq`](https://bettervoting.com/6mcgkq/results), `BV_Library_approval_single_winner`, `Black_Curtain_01a_c3_b5_approval` |
@@ -635,7 +638,7 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 | LH-only | 339 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
 | BV | 302 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results) |
 | BV (no yaml) | 89 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
-| LH-only (exception) | 7 | `abc_committee_monotonicity_1seat_c3_b10`, `abc_committee_monotonicity_2seats_c3_b10`, `cc_pareto_dominated_c4_b2`, `copeland_half_credit_decides` |
+| LH-only (exception) | 10 | `abc_committee_monotonicity_1seat_c3_b10`, `abc_committee_monotonicity_2seats_c3_b10`, `alaska_2022_irv_with_palin`, `alaska_2022_irv_without_palin` |
 
 ### Genuine LH-only exceptions
 
@@ -643,6 +646,9 @@ Cases that **cannot** be reproduced on BetterVoting — a real reason (missing B
 
 | Case | Method | Why it can't go to BV |
 |---|---|---|
+| Alaska 2022 special (reduced model), Palin d | IRV | A counterfactual profile — these ballots were never cast in this form. Publishing it as a live BetterVoting election would present a hypothetical as a real contest. |
+| Alaska 2022 special (reduced model), ranked  | IRV | The ranked half of a BV-backed pair — the same electorate is already live on BetterVoting as BV2213 (k3fmwv) in its score form. This file exists to make the with/without-Palin counterfactual runnable, and its twin is a counterfactual profile that was never cast, so neither belongs on BV. |
+| Burlington 2009 mayor, Wright deleted from e | IRV | A counterfactual profile — 8,134 weighted ballots that were never cast in this form. Publishing it as a live BetterVoting election would present a hypothetical as a real contest. |
 | Chamberlin-Courant can elect a Pareto-domina | Approval | The lesson is what CHAMBERLIN-COURANT does with these ballots, and CC exists on neither BetterVoting nor the LH engine - it is counted here by Lackner's own abcvoting library. The Approval count in this file is the control that shows AV avoiding the trap, not a BV-backable result. |
 | Committee monotonicity (1 of 2) — one seat,  | Approval | The lesson is what CC / PAV / Monroe / leximax-Phragmen / MAV do across the two seat counts, and none of those rules exists on BetterVoting or in the LH engine - they are counted here by Lackner's own abcvoting library. The Approval count in this file is the control. |
 | Committee monotonicity (2 of 2) — add a seat | Approval | The lesson is what CC / PAV / Monroe / leximax-Phragmen / MAV do across the two seat counts, and none of those rules exists on BetterVoting or in the LH engine - they are counted here by Lackner's own abcvoting library. The Approval count in this file is the control, and its second seat is a tie that BetterVoting would break at random. |

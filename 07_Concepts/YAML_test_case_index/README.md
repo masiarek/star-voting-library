@@ -8,12 +8,12 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**645 election files** (529 single-winner, 116 multi-winner) across 18 method(s).
+**648 election files** (532 single-winner, 116 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 279 |
-| RCV-IRV (Hare) | 53 |
+| RCV-IRV (Hare) | 56 |
 | Ranked Robin (RCV-RR / Copeland) | 107 |
 | Approval | 31 |
 | STV (proportional RCV) | 11 |
@@ -315,7 +315,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 | [`zero_support_star`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_star.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (STAR) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_star.yaml) |
 
-## RCV-IRV (Hare)  (53)
+## RCV-IRV (Hare)  (56)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -327,9 +327,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`street_trees_five_rounds_c6_b100`](../../06_Other/RCV_IRV/cases/cases_pages/street_trees_five_rounds_c6_b100.md) | `06_Other/RCV_IRV/cases/` | 1 | Street trees — five rounds, and the bar keeps dropping → _Birch_ | [`.yaml`](../../06_Other/RCV_IRV/cases/street_trees_five_rounds_c6_b100.yaml) |
 | [`balance_base_irv_c3_b9`](../../06_Other/RCV_IRV/equal_vote_balance/cases/cases_pages/balance_base_irv_c3_b9.md) | `06_Other/RCV_IRV/equal_vote_balance/cases/` | 1 | Equal-vote balance — base (IRV elects the Condorcet winner, Bruno) → _Bruno_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/cases/balance_base_irv_c3_b9.yaml) |
 | [`balance_plus_opposite_c3_b15`](../../06_Other/RCV_IRV/equal_vote_balance/cases/cases_pages/balance_plus_opposite_c3_b15.md) | `06_Other/RCV_IRV/equal_vote_balance/cases/` | 1 | Equal-vote balance — plus 3 opposite pairs (IRV flips to Ada) → _Ada_ | [`.yaml`](../../06_Other/RCV_IRV/equal_vote_balance/cases/balance_plus_opposite_c3_b15.yaml) |
+| [`alaska_2022_irv_with_palin`](../../method_comparisons/alaska_2022/cases/cases_pages/alaska_2022_irv_with_palin.md) | `method_comparisons/alaska_2022/cases/` | 1 | Alaska 2022 special (reduced model), ranked ballots — RCV-IRV with all three candidates: Peltola wins → _Peltola_ | [`.yaml`](../../method_comparisons/alaska_2022/cases/alaska_2022_irv_with_palin.yaml) |
+| [`alaska_2022_irv_without_palin`](../../method_comparisons/alaska_2022/cases/cases_pages/alaska_2022_irv_without_palin.md) | `method_comparisons/alaska_2022/cases/` | 1 | Alaska 2022 special (reduced model), Palin deleted from every ballot — RCV-IRV now elects Begich → _Begich_ | [`.yaml`](../../method_comparisons/alaska_2022/cases/alaska_2022_irv_without_palin.yaml) |
 | [`bpv_bakery_seat1_c4_b12`](../../method_comparisons/block_preferential/cases/cases_pages/bpv_bakery_seat1_c4_b12.md) | `method_comparisons/block_preferential/cases/` | 1 | Block preferential voting — seat 1 of 2 (bakery co-op board) → _Almond_ | [`.yaml`](../../method_comparisons/block_preferential/cases/bpv_bakery_seat1_c4_b12.yaml) |
 | [`bpv_bakery_seat2_c3_b12`](../../method_comparisons/block_preferential/cases/cases_pages/bpv_bakery_seat2_c3_b12.md) | `method_comparisons/block_preferential/cases/` | 1 | Block preferential voting — seat 2 of 2 (bakery co-op board) → _Brioche_ | [`.yaml`](../../method_comparisons/block_preferential/cases/bpv_bakery_seat2_c3_b12.yaml) |
 | [`burlington_2009_irv`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_irv.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor — RCV-IRV: the real center squeeze (Kiss wins, the Condorcet winner is third) → _Kiss_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_irv.yaml) |
+| [`burlington_2009_irv_without_wright`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_irv_without_wright.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009 mayor, Wright deleted from every ballot — RCV-IRV now elects Montroll → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_irv_without_wright.yaml) |
 | [`burlington_2009_raise_kiss_nonmono`](../../method_comparisons/burlington_2009/cases/cases_pages/burlington_2009_raise_kiss_nonmono.md) | `method_comparisons/burlington_2009/cases/` | 1 | Burlington 2009, the raise — 750 Wright voters rank Kiss first, and Kiss loses → _Montroll_ | [`.yaml`](../../method_comparisons/burlington_2009/cases/burlington_2009_raise_kiss_nonmono.yaml) |
 | [`center_squeeze_irv`](../../method_comparisons/center_squeeze/cases/cases_pages/center_squeeze_irv.md) | `method_comparisons/center_squeeze/cases/` | 1 | Center squeeze (RCV-IRV) — minimal 27-voter case (the moderate is eliminated) → _Left_ | [`.yaml`](../../method_comparisons/center_squeeze/cases/center_squeeze_irv.yaml) |
 | [`alaska_buried_c3_b200`](../../method_comparisons/condorcet_burial_alaska/cases/cases_pages/alaska_buried_c3_b200.md) | `method_comparisons/condorcet_burial_alaska/cases/` | 1 | Alaska 2022 (Begich buried) — a manufactured cycle; margin methods resist, TTR/Hare doesn't → _Peltola_ | [`.yaml`](../../method_comparisons/condorcet_burial_alaska/cases/alaska_buried_c3_b200.yaml) |

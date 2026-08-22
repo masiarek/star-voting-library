@@ -57,6 +57,14 @@ Wright     2543  Rejected
 
 Kiss's new support knocks *Wright* below Montroll in the semifinal; Montroll survives to the final and beats Kiss. **Kiss gained 750 first-place votes and lost the election he had won.** More support, worse result — the additional-support paradox on certified ballots. (The selection is engineered but not exotic: the 469 bullet-ballot moves erode Montroll's 587-vote head-to-head cushion by only 469, so his final-round win survives the raise. The mirror reading — roughly the same bloc *staying home* also elects Montroll, an outcome those Wright voters preferred to Kiss — is the [no-show paradox](../../07_Concepts/voting_paradoxes/no_show.md); Alaska 2022 repeated both patterns, worked in [favorite_betrayal_voting_301.md §4](../../01_STAR/01_Learn/properties_and_limits/favorite_betrayal_voting_301.md).)
 
+## The spoiler test: delete Wright, and Montroll wins
+
+The strict [Independence-of-Irrelevant-Alternatives](../../07_Concepts/topics/spoiler_effect.md) test is a thing you can *run*: strike a candidate who did not win out of every ballot, change nothing else, and see whether the winner moves. Strike **Wright** ([run it](cases/burlington_2009_irv_without_wright.yaml)) and it moves — from Kiss to **Montroll, 4,063–3,476**. The 840 Wright-only bullet ballots have nothing left to say and exhaust; nobody is handed a preference they did not express.
+
+Those two numbers are exactly the Montroll-over-Kiss row in the pairwise table above. With Wright gone, the instant runoff simply *is* that head-to-head — the counterfactual invents no election, it asks the question the count in force never did.
+
+This is the check behind [FairVote's comparison chart, claim-checked](../fairvote_comparison_table/README.md#3-resistance-to-spoilers-false-as-stated): the chart rates RCV **High** on spoiler resistance because it *"satisfies … the Independence of Irrelevant Alternatives … criteri[on]"*, and Burlington 2009 is one of the two elections FairVote itself names as its Condorcet failures. ([Alaska 2022](../alaska_2022/README.md) is the other, and its pair runs the same way.) Note what this case is *not*: Wright (R) and Montroll (D) are not allies, so this is a plain IIA failure rather than vote-splitting between similar candidates — Alaska is the one that is both.
+
 ## Reading this fairly
 
 - **Kiss won under the rules everyone campaigned under**, and IRV's defenders correctly note no method is paradox-free (Arrow — see the [social-choice shelf](../../07_Concepts/books/social_choice_theory.md)). The claim this page supports is narrower and stronger: center squeeze, non-monotonicity, and no-show are **IRV-specific mechanics** — on these very ballots, Ranked Robin (and any Condorcet count) elects Montroll, and the paradox files above stop being constructible.

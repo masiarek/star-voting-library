@@ -88,5 +88,6 @@ Each cell was cross-checked against Wikipedia's [Comparison of electoral systems
 
 - [What makes a good winner?](what_makes_a_good_winner.md) · [What makes a voting method good?](what_makes_a_voting_method_good.md) — the "which criteria matter" question
 - [Do the experts really think RCV-IRV is "bad"?](expert_consensus_and_irv.md) — why a table like this isn't a verdict
+- [FairVote's claims, checked](fairvote_claims_checked.md) — the standing ledger, including [its own comparison chart graded row by row](../../method_comparisons/fairvote_comparison_table/README.md); the grid format's hazards cut both ways and this page's caveat applies to ours too
 - Per-method honest limits: [STAR](../../01_STAR/01_Learn/properties_and_limits/STAR_honest_limits.md) · [Approval](../../04_Approval/01_Learn/approval_honest_limits.md) · [Ranked Robin](../../05_Ranked_Robin/01_Learn/RCV_RR_honest_limits.md)
 - [The ranked-ballot method zoo](ranked_ballot_methods_zoo.md) — the wider family and its own criterion table
