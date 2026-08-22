@@ -821,3 +821,143 @@ def test_the_meta_gate_can_actually_see_an_orphan():
     assert covered and covered[0] not in (checks - set(cov)), (
         f"{covered[0]} has an asserting test but the sweep called it an orphan"
     )
+
+
+# --------------------------------------------------------------------------- #
+# The other half of the meta-gate: "found nothing" is not evidence.
+#
+# test_every_hygiene_check_is_gated_by_a_test proves each check is reachable
+# from an assertion. It cannot tell whether the assertion means anything —
+# `assert not check_x()` is green when the check works AND when it is broken to
+# return nothing, which is exactly the shape check_expected_outcome had before
+# it was probed. So the two claims have to be made separately.
+#
+# Measuring that gap found four checks backed ONLY by an empty-result assertion,
+# and they are not minor: check_pages_indexed alone guards 82 folders' index
+# completeness, and had it silently returned [] every one of them could have
+# drifted with CI green. The four probes below plant a violation beside a
+# well-formed control, so each check is now shown to fail on something.
+# --------------------------------------------------------------------------- #
+_BAL = "ballots: |-\n  A,B\n  5,0\n"
+
+
+def test_description_check_is_not_vacuous(tmp_path):
+    mod = _load_hygiene()
+    thin = tmp_path / "thin.yaml"
+    full = tmp_path / "full.yaml"
+    thin.write_text("election_title: T\n" + _BAL, encoding="utf-8")
+    full.write_text(
+        "election_title: T\nscenario_description: |-\n"
+        "  A real description that says what this case demonstrates, which\n"
+        "  candidate wins and why, and what a reader should look for in it.\n"
+        + _BAL, encoding="utf-8")
+    mod.REPO = str(tmp_path)
+    mod._yaml_teaching_files = lambda: [str(thin), str(full)]
+    hits = mod.check_descriptions()
+    assert [r for r, _m in hits] == ["thin.yaml"], (
+        f"the description-less case must be caught and the full one left alone, "
+        f"got {hits}"
+    )
+
+
+def test_top_level_key_check_is_not_vacuous(tmp_path):
+    mod = _load_hygiene()
+    bad = tmp_path / "bad.yaml"
+    good = tmp_path / "good.yaml"
+    bad.write_text("election_title: T\nnot_a_real_key: 1\n" + _BAL, encoding="utf-8")
+    good.write_text("election_title: T\nnum_winners: 1\n" + _BAL, encoding="utf-8")
+    mod.REPO = str(tmp_path)
+    mod._yaml_teaching_files = lambda: [str(bad), str(good)]
+    hits = mod.check_top_level_keys()
+    assert [r for r, _m in hits] == ["bad.yaml"], (
+        f"only the undocumented key must be caught, got {hits}"
+    )
+    assert "not_a_real_key" in hits[0][1], hits
+
+
+def test_pasted_report_check_is_not_vacuous():
+    """A long engine-shaped fence on a page that NAMES its case must be caught.
+
+    And the two documented escapes must still work: `abridged` on the info
+    string (a deliberate compression) and a `<!-- report: -->` block (generated,
+    drift-tested elsewhere).
+    """
+    mod = _load_hygiene()
+    report = (
+        "--- STAR Voting Method (single winner) ---\n Tabulating 7 ballots.\n\n"
+        "Scoring Round\n   Amy    -- 29 -- Tied for first place\n"
+        "   Brian  -- 29 -- Tied for first place\n\n"
+        "Automatic Runoff Round\nWinner — STAR Voting Method (single winner)\n Amy\n")
+    mod._case_pages = lambda: {"my_case_stem"}
+    mod._hand_authored_pages = lambda: [
+        ("pasted.md", f"# L\n\nAbout my_case_stem.\n\n```text\n{report}```\n"),
+        ("labelled.md", "# L\n\nAbout my_case_stem.\n\n"
+                        '```text title="Abridged for the lesson — not verbatim '
+                        f'engine output"\n{report}```\n'),
+        ("generated.md", "# L\n\nAbout my_case_stem.\n\n"
+                         f"<!-- report:my_case_stem -->\n```text\n{report}```\n"
+                         "<!-- /report -->\n"),
+    ]
+    hits = mod.check_pasted_reports()
+    assert [r.split(":")[0] for r, _m in hits] == ["pasted.md"], (
+        f"the hand-pasted report must be caught, and the abridged and generated "
+        f"ones left alone, got {hits}"
+    )
+
+
+def test_pages_indexed_check_is_not_vacuous(tmp_path):
+    mod = _load_hygiene()
+    (tmp_path / "folder" / "folder_pages").mkdir(parents=True)
+    (tmp_path / "folder" / "README.md").write_text(
+        "# F\n\n[listed](folder_pages/listed.md)\n", encoding="utf-8")
+    (tmp_path / "folder" / "folder_pages" / "listed.md").write_text("# a\n", encoding="utf-8")
+    (tmp_path / "folder" / "folder_pages" / "forgotten.md").write_text("# b\n", encoding="utf-8")
+    mod.REPO = str(tmp_path)
+    mod.INDEX_COMPLETE_DIRS = {"folder": None}
+    hits = mod.check_pages_indexed()
+    assert len(hits) == 1 and "forgotten.md" in hits[0][1], (
+        f"the unlisted page must be caught and the listed one left alone, got {hits}"
+    )
+
+
+def test_every_hygiene_check_has_a_positive_assertion():
+    """Every check must be shown FAILING somewhere, not only passing.
+
+    Reachability (the gate above) plus this is the full claim. A check whose
+    every assertion negates its result — `assert not check_x()` — is green in
+    both the working and the broken-to-return-nothing case, so it is evidence
+    of nothing on its own. All 18 checks satisfy this today; a nineteenth
+    arriving with only an empty-result test will fail here, which is the point.
+    """
+    import ast
+
+    def negates(a):
+        t = a.test
+        if isinstance(t, ast.UnaryOp) and isinstance(t.op, ast.Not):
+            return True
+        if isinstance(t, ast.Compare) and len(t.comparators) == 1:
+            c = t.comparators[0]
+            return isinstance(c, (ast.List, ast.Tuple)) and not c.elts
+        return False
+
+    checks, positive = _hygiene_checks(), set()
+    for path in sorted(Path(__file__).parent.glob("*.py")):
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        for fn in (n for n in ast.walk(tree) if isinstance(n, ast.FunctionDef)):
+            asserts = [a for a in ast.walk(fn) if isinstance(a, ast.Assert)]
+            if not any(not negates(a) for a in asserts):
+                continue
+            for call in (c for c in ast.walk(fn) if isinstance(c, ast.Call)):
+                f = call.func
+                name = f.attr if isinstance(f, ast.Attribute) else getattr(f, "id", None)
+                if name in checks:
+                    positive.add(name)
+    thin = sorted(checks - positive)
+    assert not thin, (
+        f"{len(thin)} hygiene check(s) proved only by 'it found nothing':\n" +
+        "\n".join(f"  {c}" for c in thin) +
+        "\n\nAdd a `…_is_not_vacuous` probe: plant a violation beside a "
+        "well-formed control and require the finding to name exactly the "
+        "planted one. `assert not check_x()` alone is equally green when the "
+        "check works and when it is broken to return nothing."
+    )
