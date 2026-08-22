@@ -140,10 +140,10 @@ The same nine voters, the same eight names, four different ballots:
 
 | Ballot | Method | Winner |
 |---|---|---|
-| Score 0–5 | [STAR](_main/_main_pages/07d_apples_full_menu_star.md) | **Gala** — Banana finishes *last of eight*; runoff 6–3 |
-| Approve any number | [Approval](_main/_main_pages/07e_apples_full_menu_approval.md) | **Gala**, 7 of 9 |
-| Rank them | [RCV-IRV](_main/_main_pages/07f_apples_full_menu_irv.md) | **Gala** |
-| Rank them | [Ranked Robin](_main/_main_pages/07g_apples_full_menu_ranked_robin.md) | **Gala** — 7–0 head-to-head |
+| Score 0–5 | [STAR](_main/_main_pages/07d_apples_full_menu_star.md) · [run](_main/07d_apples_full_menu_star.yaml) | **Gala** — Banana finishes *last of eight*; runoff 6–3 |
+| Approve any number | [Approval](_main/_main_pages/07e_apples_full_menu_approval.md) · [run](_main/07e_apples_full_menu_approval.yaml) | **Gala**, 7 of 9 |
+| Rank them | [RCV-IRV](_main/_main_pages/07f_apples_full_menu_irv.md) · [run](_main/07f_apples_full_menu_irv.yaml) | **Gala** |
+| Rank them | [Ranked Robin](_main/_main_pages/07g_apples_full_menu_ranked_robin.md) · [run](_main/07g_apples_full_menu_ranked_robin.yaml) | **Gala** — 7–0 head-to-head |
 
 **Say this plainly: RCV-IRV fixes this spoiler.** Ending the classic vote-splitting spoiler is what instant-runoff was built to do, and it does it here. Its own known failure is [center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) — a *different* mechanism, where a broadly-liked compromise is eliminated for holding too few first choices — and this election is not an example of it.
 
