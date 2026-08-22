@@ -96,8 +96,9 @@ def spatial_sampler(dim):
     live upstream bug rather than a preference. That path routes to prefsampling
     0.1.24, whose GAUSSIAN_BALL sampler, WHEN GIVEN A SEED, returns ONE point
     repeated once per voter: 2,000 seeds produced 2,000 copies of one degenerate
-    profile in which every voter sits on the same spot, is therefore equidistant
-    from every candidate, and submits the identical index-order ranking. Every
+    profile in which every voter sits on the same spot -- and the candidates
+    collapse onto that same point, so every distance is zero and every voter
+    submits the identical index-order ranking. Every
     cell reported 0.00% cycles and looked like a tidy finding about spatial
     electorates. Unseeded calls vary fine, so seeding FOR REPRODUCIBILITY is what
     breaks it. Filed as https://github.com/COMSOC-Community/prefsampling/issues/6,
