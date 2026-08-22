@@ -80,8 +80,7 @@ Count × Ana,Cleo,Dev
    Ana           --  5
  There's a two-way tie for first.
 
-*** No official tie-breaking lot numbers were provided.
-    Ties are resolved using a fallback order: CSV column order.
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
     Lot-number priority order: ['Ana', 'Cleo', 'Dev']
 
 [Tiebreaker: Lot Number Priority]

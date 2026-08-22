@@ -1,5 +1,5 @@
 election_title: Resignation monotonicity — Hana resigns, and Gus loses his seat
-voting_method: Reweighted Range Voting
+voting_method: rrv
 num_winners: 3
 scenario_description: |-
   The same five voters and the same three seats as

@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**661 election files** (538 single-winner, 123 multi-winner) across 20 method(s).
+**661 election files** (538 single-winner, 123 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -19,10 +19,9 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
-| Reweighted Range | 6 |
-| Allocated Score (STAR-PR) | 29 |
+| Reweighted Range | 8 |
+| Allocated Score (STAR-PR) | 31 |
 | 3-2-1 | 1 |
-| ALLOCATED SCORE VOTING | 2 |
 | APPROVAL_MULTI_WINNER | 13 |
 | BLOC STAR | 41 |
 | CAV | 1 |
@@ -30,7 +29,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | PLURALITY | 39 |
 | RANGE | 4 |
 | RCV-IRV | 3 |
-| REWEIGHTED RANGE VOTING | 2 |
 | RR | 1 |
 
 ## STAR  (285)
@@ -568,7 +566,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`03b_star_pr_3seats`](../../03_STAR_PR/02_Examples/cases/cases_pages/03b_star_pr_3seats.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional STAR — same 3-seat electorate as the STV demo → _Housing, Schools, SmallBiz_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/03b_star_pr_3seats.yaml) |
 | [`coop_board_scores_sss`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_scores_sss.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — 0–5 score ballot, sss → _Ben, Chris, Dana_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_scores_sss.yaml) |
 
-## Reweighted Range  (6)
+## Reweighted Range  (8)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -577,9 +575,11 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`free_ride_honest_rrv`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_honest_rrv.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — honest baseline (RRV) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_honest_rrv.yaml) |
 | [`free_ride_hylland_rrv`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/free_ride_hylland_rrv.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Free riding — the free ride fails (RRV) → _Anika, Bruno_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/free_ride_hylland_rrv.yaml) |
 | [`02c_c5_b63_proportional-rrv`](../../03_STAR_PR/02_Examples/cases/cases_pages/02c_c5_b63_proportional-rrv.md) | `03_STAR_PR/02_Examples/cases/` | 3 | Proportional — Reweighted Range Voting → _Alice, Ben, Dan_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/02c_c5_b63_proportional-rrv.yaml) |
+| [`resign_rrv_after_hana_c4_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_rrv_after_hana_c4_b5.md) | `04_Approval/03_Criteria/cases/` | 3 | Resignation monotonicity — Hana resigns, and Gus loses his seat → _Fern, Ivan, Juno_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_rrv_after_hana_c4_b5.yaml) |
+| [`resign_rrv_seated_c5_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_rrv_seated_c5_b5.md) | `04_Approval/03_Criteria/cases/` | 3 | Resignation monotonicity — the three seats RRV fills → _Fern, Gus, Hana_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_rrv_seated_c5_b5.yaml) |
 | [`lackner_skowron_shadow_star_pr_rrv_c7_b12`](../../03_STAR_PR/02_Examples/cases/cases_pages/lackner_skowron_shadow_star_pr_rrv_c7_b12.md) | `03_STAR_PR/02_Examples/cases/` | 4 | Shadow STAR-PR (RRV) — Lackner & Skowron's running example (k=4) — matches PAV → _A, B, C, F_ | [`.yaml`](../../03_STAR_PR/02_Examples/cases/lackner_skowron_shadow_star_pr_rrv_c7_b12.yaml) |
 
-## Allocated Score (STAR-PR)  (29)
+## Allocated Score (STAR-PR)  (31)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -594,6 +594,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`misjudged_queue_bury`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/misjudged_queue_bury.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Misjudged queue — the free ride backfires → _Boris, Cleo_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/misjudged_queue_bury.yaml) |
 | [`misjudged_queue_honest`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/misjudged_queue_honest.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Misjudged queue — honest baseline → _Amara, Boris_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/misjudged_queue_honest.yaml) |
 | [`misjudged_queue_hylland`](../../03_STAR_PR/03_Criteria/free_riding/cases/cases_pages/misjudged_queue_hylland.md) | `03_STAR_PR/03_Criteria/free_riding/cases/` | 2 | Misjudged queue — the free ride achieves nothing → _Amara, Boris_ | [`.yaml`](../../03_STAR_PR/03_Criteria/free_riding/cases/misjudged_queue_hylland.yaml) |
+| [`resign_star_pr_after_bruno_c3_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_star_pr_after_bruno_c3_b5.md) | `04_Approval/03_Criteria/cases/` | 2 | Resignation monotonicity — Bruno resigns, and Ana loses her seat → _Cleo, Dev_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_star_pr_after_bruno_c3_b5.yaml) |
+| [`resign_star_pr_seated_c4_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_star_pr_seated_c4_b5.md) | `04_Approval/03_Criteria/cases/` | 2 | Resignation monotonicity — the board STAR-PR actually elects → _Ana, Bruno_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_star_pr_seated_c4_b5.yaml) |
 | [`08_c6_b29_quota-circus-pr-2-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/08_c6_b29_quota-circus-pr-2-seats.md) | `06_Other/ballot_style_lab/cases/` | 2 | Quota Circus — STAR-PR with cliff, slate and gentle ballots (6 cand, 2 seats) → _Amir, Bree_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/08_c6_b29_quota-circus-pr-2-seats.yaml) |
 | [`BV_Library_star_pr_basic_two_seats`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_basic_two_seats.md) | `method_comparisons/BV_Library/cases/` | 2 | BV parity — STAR_PR (Allocated Score): basic two-seat allocation → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_basic_two_seats.yaml) |
 | [`BV_Library_star_pr_fractional_surplus`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_pr_fractional_surplus.md) | `method_comparisons/BV_Library/cases/` | 2 | BV parity — STAR_PR (Allocated Score): fractional surplus reweighting → _Allison, Doug_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_pr_fractional_surplus.yaml) |
@@ -618,13 +620,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`321_tennessee_blank_encoding_c4_b100`](../../06_Other/three_two_one/cases/cases_pages/321_tennessee_blank_encoding_c4_b100.md) | `06_Other/three_two_one/cases/` | 1 | Tennessee capital by 3-2-1 Voting (blank = Bad) → _Nashville_ | [`.yaml`](../../06_Other/three_two_one/cases/321_tennessee_blank_encoding_c4_b100.yaml) |
-
-## ALLOCATED SCORE VOTING  (2)
-
-| Case (page) | Folder | Winners | Title / expected | src |
-|------|--------|:------:|------------------|:--:|
-| [`resign_star_pr_after_bruno_c3_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_star_pr_after_bruno_c3_b5.md) | `04_Approval/03_Criteria/cases/` | 2 | Resignation monotonicity — Bruno resigns, and Ana loses her seat → _Cleo, Dev_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_star_pr_after_bruno_c3_b5.yaml) |
-| [`resign_star_pr_seated_c4_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_star_pr_seated_c4_b5.md) | `04_Approval/03_Criteria/cases/` | 2 | Resignation monotonicity — the board STAR-PR actually elects → _Ana, Bruno_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_star_pr_seated_c4_b5.yaml) |
 
 ## APPROVAL_MULTI_WINNER  (13)
 
@@ -780,13 +775,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`ballot_expressiveness_c9_irv_top5`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/ballot_expressiveness_c9_irv_top5.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — ranking only five, counted by RCV-IRV → _Ben_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/ballot_expressiveness_c9_irv_top5.yaml) |
 | [`bv2280_37yf8x_irv_full`](../../method_comparisons/ballot_expressiveness/cases/cases_pages/bv2280_37yf8x_irv_full.md) | `method_comparisons/ballot_expressiveness/cases/` | 1 | Nine candidates, 25 voters — ranking all nine, counted by RCV-IRV → _Ben_ | [`.yaml`](../../method_comparisons/ballot_expressiveness/cases/bv2280_37yf8x_irv_full.yaml) |
 | [`tilted_cycle_c3_b5_irv`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_irv.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (RCV-IRV) → _Cara_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_irv.yaml) |
-
-## REWEIGHTED RANGE VOTING  (2)
-
-| Case (page) | Folder | Winners | Title / expected | src |
-|------|--------|:------:|------------------|:--:|
-| [`resign_rrv_after_hana_c4_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_rrv_after_hana_c4_b5.md) | `04_Approval/03_Criteria/cases/` | 3 | Resignation monotonicity — Hana resigns, and Gus loses his seat → _Fern, Ivan, Juno_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_rrv_after_hana_c4_b5.yaml) |
-| [`resign_rrv_seated_c5_b5`](../../04_Approval/03_Criteria/cases/cases_pages/resign_rrv_seated_c5_b5.md) | `04_Approval/03_Criteria/cases/` | 3 | Resignation monotonicity — the three seats RRV fills → _Fern, Gus, Hana_ | [`.yaml`](../../04_Approval/03_Criteria/cases/resign_rrv_seated_c5_b5.yaml) |
 
 ## RR  (1)
 

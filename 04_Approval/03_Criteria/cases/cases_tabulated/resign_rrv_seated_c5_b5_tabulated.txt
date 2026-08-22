@@ -4,7 +4,7 @@ TABULATED FILE:  resign_rrv_seated_c5_b5_tabulated.txt
 ======================================================================
 
 election_title: Resignation monotonicity — the three seats RRV fills
-voting_method: Reweighted Range Voting
+voting_method: rrv
 num_winners: 3
 scenario_description: |-
   Five voters, three seats, under Reweighted Range Voting — the other

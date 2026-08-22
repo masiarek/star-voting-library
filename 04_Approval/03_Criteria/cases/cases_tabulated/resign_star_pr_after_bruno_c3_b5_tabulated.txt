@@ -4,7 +4,7 @@ TABULATED FILE:  resign_star_pr_after_bruno_c3_b5_tabulated.txt
 ======================================================================
 
 election_title: Resignation monotonicity — Bruno resigns, and Ana loses her seat
-voting_method: Allocated Score Voting
+voting_method: allocated
 num_winners: 2
 scenario_description: |-
   The same five voters and the same two seats as
@@ -22,8 +22,12 @@ scenario_description: |-
 
   That is a failure of RESIGNATION MONOTONICITY (Oh & Peters, arXiv:2608.06156):
   re-running the rule after a winner resigns must not unseat a winner who stayed.
-  The failure is not a tie-break artefact — both counts have a unique answer under
-  every tie-breaking order.
+
+  The failure is not a tie-breaking artefact. Cleo and Dev do tie for the FIRST
+  seat here (10 apiece), so the lot decides which of them is seated first — but
+  whichever wins it, the other takes the second seat. The COMMITTEE {Cleo, Dev} is
+  the same under every tie-breaking order, and so is {Ana, Bruno} in the before
+  half; only the seating order is a coin flip.
 ballots: |-
   Ana,Cleo,Dev
   5,0,0     # the lone voter — Ana only
@@ -31,6 +35,7 @@ ballots: |-
   0,5,0     # bloc voter, Cleo wing
   0,0,5     # bloc voter, Dev wing
   0,0,5     # bloc voter, Dev wing
+lot_numbers: [Ana, Cleo, Dev]
 expected_winners: [Cleo, Dev]
 
 # file: resign_star_pr_after_bruno_c3_b5.yaml
@@ -55,8 +60,12 @@ TABULATION RESULTS
 
   That is a failure of RESIGNATION MONOTONICITY (Oh & Peters, arXiv:2608.06156):
   re-running the rule after a winner resigns must not unseat a winner who stayed.
-  The failure is not a tie-break artefact — both counts have a unique answer under
-  every tie-breaking order.
+
+  The failure is not a tie-breaking artefact. Cleo and Dev do tie for the FIRST
+  seat here (10 apiece), so the lot decides which of them is seated first — but
+  whichever wins it, the other takes the second seat. The COMMITTEE {Cleo, Dev} is
+  the same under every tie-breaking order, and so is {Ana, Bruno} in the before
+  half; only the seating order is a coin flip.
 
 --- Preference Matrix ---
 Head-to-head / pairwise comparison
@@ -108,8 +117,7 @@ Dev        2  0  0  0  0  3  |    10   2.0
    Ana           --  5
  There's a two-way tie for first.
 
-*** No official tie-breaking lot numbers were provided.
-    Ties are resolved using a fallback order: CSV column order.
+*(Ties are resolved by choosing the tied candidate with the highest-priority official lot number.)*
     Lot-number priority order: ['Ana', 'Cleo', 'Dev']
 
 [Tiebreaker: Lot Number Priority]

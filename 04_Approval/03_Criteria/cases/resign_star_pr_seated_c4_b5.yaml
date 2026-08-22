@@ -1,5 +1,5 @@
 election_title: Resignation monotonicity — the board STAR-PR actually elects
-voting_method: Allocated Score Voting
+voting_method: allocated
 num_winners: 2
 scenario_description: |-
   A two-seat board. Four of the five voters are one bloc: every one of them backs

@@ -1,5 +1,5 @@
 election_title: Resignation monotonicity — Bruno resigns, and Ana loses her seat
-voting_method: Allocated Score Voting
+voting_method: allocated
 num_winners: 2
 scenario_description: |-
   The same five voters and the same two seats as

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`resign_rrv_after_hana_c4_b5.yaml`](../resign_rrv_after_hana_c4_b5.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [reweighted](../../../../07_Concepts/README.md) · **3 seats** · **Expected winners:** Fern, Ivan, Juno
+**Method:** [Reweighted Range Voting (proportional STAR)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Fern, Ivan, Juno
 
 ## Scenario
 
