@@ -1,7 +1,7 @@
 # BV1815 — Bloc STAR, 3 candidates, 2 seats (seat 2 by score tiebreak)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** A, C · [full count →](cases/cases_pages/bv1815_bloc_3c2s_basic.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../01_Learn/README.md) · **2 seats** · **Expected winners:** A, C · [full count →](cases/cases_pages/bv1815_bloc_3c2s_basic.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/fk38pk) · **[results ↗](https://bettervoting.com/fk38pk/results)** (election `fk38pk` · test `BV1815`).

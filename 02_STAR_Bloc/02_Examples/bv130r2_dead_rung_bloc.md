@@ -1,7 +1,7 @@
 # BV130-r2 — 6 candidates / 3 winners, Bloc STAR: a dead-rung lot tie
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Dan, Ada, Eve · [full count →](cases/cases_pages/bv130r2_dead_rung_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../01_Learn/README.md) · **3 seats** · **Expected winners:** Dan, Ada, Eve · [full count →](cases/cases_pages/bv130r2_dead_rung_bloc.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9ff9jk) · **[results ↗](https://bettervoting.com/9ff9jk/results)** (election `9ff9jk` · test `BV130-r2`).

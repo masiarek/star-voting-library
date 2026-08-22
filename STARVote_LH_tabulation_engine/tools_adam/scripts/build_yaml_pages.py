@@ -65,7 +65,7 @@ METHOD_DOCS = {
     "approval":    ("Approval Voting", "04_Approval/01_Learn/README.md"),
     "rankedrobin": ("Ranked Robin (RCV-RR / Copeland)", "05_Ranked_Robin/01_Learn/README.md"),
     "rcv_irv":     ("RCV-IRV (Instant Runoff)", "06_Other/RCV_IRV/concepts/README.md"),
-    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "03_STAR_PR/01_Learn/README.md"),
+    "bloc":        ("Bloc STAR (multi-winner, majoritarian)", "02_STAR_Bloc/01_Learn/README.md"),
     "sss":         ("Sequentially Spent Score (proportional STAR)", "03_STAR_PR/01_Learn/README.md"),
     "rrv":         ("Reweighted Range Voting (proportional STAR)", "03_STAR_PR/01_Learn/README.md"),
     "allocated":   ("Allocated Score (proportional STAR)", "03_STAR_PR/01_Learn/README.md"),

@@ -1,0 +1,66 @@
+election_title: "Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented"
+
+scenario_description: |-
+  The widest shape in this folder: 175 voters, FOURTEEN candidates, SIX seats,
+  four groupings. Coast 38%, Valley 29%, Summit 22%, and three independents
+  scored moderately by everyone.
+
+    - Round 1: Lena 443 v Alma 411 — Lena wins 109-66.
+    - Round 2: Alma 411 v Bruno 397 — Alma wins 14-0 (161 of 175 voters express
+      no preference).
+    - Round 3: Bruno 397 v Mateo 390 — Mateo wins 109-66.
+    - Round 4: Bruno 397 v Clara 345 — Bruno wins 52-0 (123 no preference).
+    - Round 5: Clara 345 v Elsie 339 — Clara wins.
+    - Round 6: Dex takes the last seat.
+
+  Council: Lena, Alma, Mateo, Bruno, Clara, Dex — the two independents who
+  attract broad middling scores, plus ALL FOUR Coast candidates. Valley (29%) and
+  Summit (22%) elect nobody. Together that is 51% of the electorate with no seat.
+  No rung of the tie-break ladder is consulted.
+
+  This case exists to show three things a small example cannot.
+
+  ONE — bloc's amplification does not need a majority. Coast is 38% of the
+  electorate and takes 67% of the council, because it is the largest COHESIVE
+  group and every seat is decided by the same undivided electorate.
+
+  TWO — the runoffs mostly are not contests. Rounds 2 and 4 are settled by 14 and
+  52 voters respectively, because the remaining voters rate both finalists
+  identically. Only the rounds involving an independent split the electorate.
+
+  THREE — and this is the one that only appears at width: THE THREE PROPORTIONAL
+  METHODS DISAGREE WITH EACH OTHER here, which they do not do in any smaller case
+  in this folder.
+
+    Bloc STAR        : Lena, Alma, Mateo, Bruno, Clara, Dex
+    Allocated Score  : Alma, Bruno, Elsie, Frank, Ivan, Lena
+    Sequentially Spent Score : Alma, Bruno, Elsie, Frank, Ivan, Lena
+    Reweighted Range : Alma, Bruno, Elsie, Frank, Lena, Mateo
+
+  Allocated Score and Sequentially Spent Score both produce Coast 2, Valley 2,
+  Summit 1, independent 1 — proportional. Reweighted Range gives Summit's seat to
+  a second independent instead. "Proportional" names a family, not a single
+  answer, and the family only visibly splits when the field is wide enough to
+  give it room.
+
+num_winners: 6
+voting_method: Bloc STAR
+ballots: |-
+  Count:Alma,Bruno,Clara,Dex,Elsie,Frank,Greta,Hugo,Ivan,June,Karl,Lena,Mateo,Nora
+  52:5,5,4,4,0,0,0,0,0,0,0,2,2,1   # Coast loyalists
+  14:5,4,4,3,1,1,1,1,1,1,1,3,2,2   # Coast leaners
+  40:0,0,0,0,5,5,4,4,1,1,1,2,2,1   # Valley loyalists
+  11:1,1,1,1,5,4,4,3,0,0,0,3,2,2   # Valley leaners
+  30:1,1,1,1,1,1,1,1,5,5,4,2,2,1   # Summit loyalists
+  8:0,0,0,0,0,0,0,0,5,4,4,3,2,2    # Summit leaners
+  20:2,2,2,2,2,2,2,2,2,2,2,5,4,4   # independent-minded voters
+
+expected_winners:
+  - Lena
+  - Alma
+  - Mateo
+  - Bruno
+  - Clara
+  - Dex
+
+# file: bloc_widest_field.yaml

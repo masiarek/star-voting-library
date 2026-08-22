@@ -1,0 +1,134 @@
+======================================================================
+SOURCE FILE:     bloc_one_voter_council.yaml
+TABULATED FILE:  bloc_one_voter_council_tabulated.txt
+======================================================================
+
+election_title: "Bloc STAR — one voter fills a two-seat council"
+
+scenario_description: |-
+  The smallest Bloc STAR election that can be written down: one ballot, three
+  candidates, two seats. There is no arithmetic to do, which is the point — it
+  shows the MECHANISM with nothing else in the way.
+
+  Bloc STAR is single-winner STAR run once per seat, with the winner removed
+  each time and every ballot still counting at full weight.
+
+    - Seat 1: scores Ada 5, Ben 3, Cara 0. Ada and Ben are the finalists; the
+      one voter prefers Ada, so Ada wins the runoff 1-0.
+    - Seat 2: Ada is removed and the SAME ballot is counted again. Ben 3,
+      Cara 0. Ben wins the runoff 1-0.
+
+  Council: Ada and Ben. No rung of the tie-break ladder is consulted.
+
+  Read it as the definition, not as an election: one voter's ranking becomes the
+  whole council, in order. Every other case in this folder is this same loop with
+  more voters disagreeing inside it.
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Ada,Ben,Cara
+  5,3,0   # the only voter
+
+expected_winners:
+  - Ada
+  - Ben
+
+# file: bloc_one_voter_council.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Bloc STAR — one voter fills a two-seat council ===
+  The smallest Bloc STAR election that can be written down: one ballot, three
+  candidates, two seats. There is no arithmetic to do, which is the point — it
+  shows the MECHANISM with nothing else in the way.
+
+  Bloc STAR is single-winner STAR run once per seat, with the winner removed
+  each time and every ballot still counting at full weight.
+
+    - Seat 1: scores Ada 5, Ben 3, Cara 0. Ada and Ben are the finalists; the
+      one voter prefers Ada, so Ada wins the runoff 1-0.
+    - Seat 2: Ada is removed and the SAME ballot is counted again. Ben 3,
+      Cara 0. Ben wins the runoff 1-0.
+
+  Council: Ada and Ben. No rung of the tie-break ladder is consulted.
+
+  Read it as the definition, not as an election: one voter's ranking becomes the
+  whole council, in order. Every other case in this folder is this same loop with
+  more voters disagreeing inside it.
+
+--- Preference Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        Informational only — not part of the 2-winner count below,
+        so no Top-2 finalists are marked.
+               |     Ada    |    Ben    |    Cara   |
+-----------------------------------------------------
+         Ada > |    ---     |1 - 0 - 0  |1 - 0 - 0  |
+         Ben > | 0 - 0 - 1  |   ---     |1 - 0 - 0  |
+        Cara > | 0 - 0 - 1  |0 - 0 - 1  |   ---     |
+
+[Condorcet Winner]
+  Condorcet Winner: Ada — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Cara — loses every head-to-head matchup
+
+--- Bloc STAR Voting Method (2 winners) ---
+[Bloc STAR]
+ Tabulating 1 ballot to fill 2 seats.
+Ada,Ben,Cara
+  5,  3,   0
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Ada        1  0  0  0  0  0  |     5   5.0
+Ben        0  0  1  0  0  0  |     3   3.0
+Cara       0  0  0  0  0  1  |     0   0.0
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ada           -- 5 -- First place
+   Ben           -- 3 -- Second place
+   Cara          -- 0
+ Ada and Ben advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ada           -- 1 -- First place
+   Ben           -- 0
+   Equal Support -- 0
+ Ada wins.
+   Runoff math:
+     1  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Ada 1 (100%)  ·  Ben 0 (0%)
+
+──────────────────────────────────────────────────
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ben           -- 3 -- First place
+   Cara          -- 0 -- Second place
+ Ben and Cara advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ben           -- 1 -- First place
+   Cara          -- 0
+   Equal Support -- 0
+ Ben wins.
+   Runoff math:
+     1  ballots cast
+   − 0  Equal Support (no preference between the two finalists)
+     ─
+     1  voters with a preference  (majority = 1)
+           Ben 1 (100%)  ·  Cara 0 (0%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
+ Ada
+ Ben

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2267_my9jd9_council_before_dane.yaml`](../bv2267_my9jd9_council_before_dane.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Cyrus, Ari
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Cyrus, Ari
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/my9jd9) · **[results ↗](https://bettervoting.com/my9jd9/results)** (election `my9jd9` · test `BV2267`).
 

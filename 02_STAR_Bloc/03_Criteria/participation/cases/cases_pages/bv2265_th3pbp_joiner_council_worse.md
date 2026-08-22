@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2265_th3pbp_joiner_council_worse.yaml`](../bv2265_th3pbp_joiner_council_worse.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Ada, Dov
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Ada, Dov
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/th3pbp) · **[results ↗](https://bettervoting.com/th3pbp/results)** (election `th3pbp` · test `BV2265`).
 

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv1835_8h3yrx_score_leader_no_seat.yaml`](../bv1835_8h3yrx_score_leader_no_seat.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **4 seats** · **Expected winners:** Bianca, Cedric, Deegan, Eli
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../01_Learn/README.md) · **4 seats** · **Expected winners:** Bianca, Cedric, Deegan, Eli
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/8h3yrx) · **[results ↗](https://bettervoting.com/8h3yrx/results)** (election `8h3yrx` · test `BV1835`).
 

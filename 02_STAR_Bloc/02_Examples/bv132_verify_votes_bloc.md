@@ -1,7 +1,7 @@
 # BV132 — verify number of votes cast (Bloc STAR) · issue [#1073](https://github.com/Equal-Vote/bettervoting/issues/1073)
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** C, B · [full count →](cases/cases_pages/bv132_verify_votes_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../01_Learn/README.md) · **2 seats** · **Expected winners:** C, B · [full count →](cases/cases_pages/bv132_verify_votes_bloc.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3494cb) · **[results ↗](https://bettervoting.com/3494cb/results)** (election `3494cb` · test `BV132`).

@@ -1,0 +1,36 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Bloc STAR — the Condorcet winner never reaches a runoff
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Bex, Cyrus, Dov
+     1 ×   Bex > Cyrus > Ada > Dov      (4, 5, 5, 4)
+     1 ×   Bex      (0, 1, 0, 0)
+     1 ×   Ada > Dov > Bex      (4, 1, 0, 3)
+     1 ×   Bex > Cyrus > Ada      (1, 2, 2, 0)
+     1 ×   Ada > Cyrus > Dov      (4, 0, 4, 3)
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Bex                3  Elected
+Ada                2  Rejected
+Cyrus              0  Rejected
+Dov                0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Bex
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Bex
+   Outside (3):        Ada, Cyrus, Dov
+   One member ⇒ Bex is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Bex is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`race_nobody_can_lose_two_seat_control.yaml`](../race_nobody_can_lose_two_seat_control.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Abby, Bruno
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Abby, Bruno
 
 ## Scenario
 

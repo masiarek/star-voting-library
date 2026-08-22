@@ -1,0 +1,358 @@
+---
+search:
+  exclude: true
+---
+
+# Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented
+
+*Generated from [`bloc_widest_field.yaml`](../bloc_widest_field.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **6 seats** · **Expected winners:** Lena, Alma, Mateo, Bruno, Clara, Dex
+
+## Scenario
+
+The widest shape in this folder: 175 voters, FOURTEEN candidates, SIX seats,
+four groupings. Coast 38%, Valley 29%, Summit 22%, and three independents
+scored moderately by everyone.
+
+  - Round 1: Lena 443 v Alma 411 — Lena wins 109-66.
+  - Round 2: Alma 411 v Bruno 397 — Alma wins 14-0 (161 of 175 voters express
+    no preference).
+  - Round 3: Bruno 397 v Mateo 390 — Mateo wins 109-66.
+  - Round 4: Bruno 397 v Clara 345 — Bruno wins 52-0 (123 no preference).
+  - Round 5: Clara 345 v Elsie 339 — Clara wins.
+  - Round 6: Dex takes the last seat.
+
+Council: Lena, Alma, Mateo, Bruno, Clara, Dex — the two independents who
+attract broad middling scores, plus ALL FOUR Coast candidates. Valley (29%) and
+Summit (22%) elect nobody. Together that is 51% of the electorate with no seat.
+No rung of the tie-break ladder is consulted.
+
+This case exists to show three things a small example cannot.
+
+ONE — bloc's amplification does not need a majority. Coast is 38% of the
+electorate and takes 67% of the council, because it is the largest COHESIVE
+group and every seat is decided by the same undivided electorate.
+
+TWO — the runoffs mostly are not contests. Rounds 2 and 4 are settled by 14 and
+52 voters respectively, because the remaining voters rate both finalists
+identically. Only the rounds involving an independent split the electorate.
+
+THREE — and this is the one that only appears at width: THE THREE PROPORTIONAL
+METHODS DISAGREE WITH EACH OTHER here, which they do not do in any smaller case
+in this folder.
+
+  Bloc STAR        : Lena, Alma, Mateo, Bruno, Clara, Dex
+  Allocated Score  : Alma, Bruno, Elsie, Frank, Ivan, Lena
+  Sequentially Spent Score : Alma, Bruno, Elsie, Frank, Ivan, Lena
+  Reweighted Range : Alma, Bruno, Elsie, Frank, Lena, Mateo
+
+Allocated Score and Sequentially Spent Score both produce Coast 2, Valley 2,
+Summit 1, independent 1 — proportional. Reweighted Range gives Summit's seat to
+a second independent instead. "Proportional" names a family, not a single
+answer, and the family only visibly splits when the field is wide enough to
+give it room.
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Count:Alma,Bruno,Clara,Dex,Elsie,Frank,Greta,Hugo,Ivan,June,Karl,Lena,Mateo,Nora
+52:5,5,4,4,0,0,0,0,0,0,0,2,2,1   # Coast loyalists
+14:5,4,4,3,1,1,1,1,1,1,1,3,2,2   # Coast leaners
+40:0,0,0,0,5,5,4,4,1,1,1,2,2,1   # Valley loyalists
+11:1,1,1,1,5,4,4,3,0,0,0,3,2,2   # Valley leaners
+30:1,1,1,1,1,1,1,1,5,5,4,2,2,1   # Summit loyalists
+8:0,0,0,0,0,0,0,0,5,4,4,3,2,2    # Summit leaners
+20:2,2,2,2,2,2,2,2,2,2,2,5,4,4   # independent-minded voters
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+<!-- --8<-- [start:report] -->
+```text
+[Divergence from STAR]
+  STAR                   = Lena
+  Choose-One (Plurality) = Alma   (differs from STAR)
+  RCV-IRV                = Alma   (differs from STAR)
+  Approval               = Alma   (differs from STAR)
+  Note: 175 of 175 ballots (100%) had equal non-zero scores, so their ranks
+        were decided by candidate priority order. The RCV-IRV result may be
+        an artifact of score-to-rank tie-breaking rather than a deep
+        difference.
+  Note: Ranked Robin (RCV-RR) agrees with STAR, so RCV-IRV is the lone
+        outlier — the classic center-squeeze signature.
+  Full round-by-round reports (generated for review):
+  RCV-IRV rounds: cases_tabulated/bloc_widest_field_RCV-IRV_tabulated.txt
+
+--- Bloc STAR Voting Method (6 winners) ---
+
+[Bloc STAR]
+ Tabulating 175 ballots to fill 6 seats.
+Count × Alma,Bruno,Clara,Dex,Elsie,Frank,Greta,Hugo,Ivan,June,Karl,Lena,Mateo,Nora
+   52 ×    5,    5,    4,  4,    0,    0,    0,   0,   0,   0,   0,   2,    2,   1
+   40 ×    0,    0,    0,  0,    5,    5,    4,   4,   1,   1,   1,   2,    2,   1
+   30 ×    1,    1,    1,  1,    1,    1,    1,   1,   5,   5,   4,   2,    2,   1
+   20 ×    2,    2,    2,  2,    2,    2,    2,   2,   2,   2,   2,   5,    4,   4
+   14 ×    5,    4,    4,  3,    1,    1,    1,   1,   1,   1,   1,   3,    2,   2
+   11 ×    1,    1,    1,  1,    5,    4,    4,   3,   0,   0,   0,   3,    2,   2
+    8 ×    0,    0,    0,  0,    0,    0,    0,   0,   5,   4,   4,   3,    2,   2
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Lena          -- 443 -- First place
+   Alma          -- 411 -- Second place
+   Bruno         -- 397
+   Mateo         -- 390
+   Clara         -- 345
+   Elsie         -- 339
+   Dex           -- 331
+   Frank         -- 328
+   Greta         -- 288
+   Ivan          -- 284
+   Hugo          -- 277
+   June          -- 276
+   Nora          -- 268
+   Karl          -- 246
+ Lena and Alma advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Lena          -- 109 -- First place
+   Alma          --  66
+   Equal Support --   0
+ Lena wins.
+   Runoff math:
+     175  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     175  voters with a preference  (majority = 88)
+           Lena 109 (62%)  ·  Alma 66 (38%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Alma          -- 411 -- First place
+   Bruno         -- 397 -- Second place
+   Mateo         -- 390
+   Clara         -- 345
+   Elsie         -- 339
+   Dex           -- 331
+   Frank         -- 328
+   Greta         -- 288
+   Ivan          -- 284
+   Hugo          -- 277
+   June          -- 276
+   Nora          -- 268
+   Karl          -- 246
+ Alma and Bruno advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Alma          -- 14 -- First place
+   Bruno         --  0
+   Equal Support -- 161
+ Alma wins.
+   Runoff math:
+     175  ballots cast
+   − 161  Equal Support (no preference between the two finalists)
+     ───
+      14  voters with a preference  (majority = 8)
+           Alma 14 (100%)  ·  Bruno 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 3: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 397 -- First place
+   Mateo         -- 390 -- Second place
+   Clara         -- 345
+   Elsie         -- 339
+   Dex           -- 331
+   Frank         -- 328
+   Greta         -- 288
+   Ivan          -- 284
+   Hugo          -- 277
+   June          -- 276
+   Nora          -- 268
+   Karl          -- 246
+ Bruno and Mateo advance.
+
+[Bloc STAR: Round 3: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Mateo         -- 109 -- First place
+   Bruno         --  66
+   Equal Support --   0
+ Mateo wins.
+   Runoff math:
+     175  ballots cast
+   −   0  Equal Support (no preference between the two finalists)
+     ───
+     175  voters with a preference  (majority = 88)
+           Mateo 109 (62%)  ·  Bruno 66 (38%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 4: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Bruno         -- 397 -- First place
+   Clara         -- 345 -- Second place
+   Elsie         -- 339
+   Dex           -- 331
+   Frank         -- 328
+   Greta         -- 288
+   Ivan          -- 284
+   Hugo          -- 277
+   June          -- 276
+   Nora          -- 268
+   Karl          -- 246
+ Bruno and Clara advance.
+
+[Bloc STAR: Round 4: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Bruno         -- 52 -- First place
+   Clara         --  0
+   Equal Support -- 123
+ Bruno wins.
+   Runoff math:
+     175  ballots cast
+   − 123  Equal Support (no preference between the two finalists)
+     ───
+      52  voters with a preference  (majority = 27)
+           Bruno 52 (100%)  ·  Clara 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 5: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Clara         -- 345 -- First place
+   Elsie         -- 339 -- Second place
+   Dex           -- 331
+   Frank         -- 328
+   Greta         -- 288
+   Ivan          -- 284
+   Hugo          -- 277
+   June          -- 276
+   Nora          -- 268
+   Karl          -- 246
+ Clara and Elsie advance.
+
+[Bloc STAR: Round 5: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Clara         -- 66 -- First place
+   Elsie         -- 51
+   Equal Support -- 58
+ Clara wins.
+   Runoff math:
+     175  ballots cast
+   −  58  Equal Support (no preference between the two finalists)
+     ───
+     117  voters with a preference  (majority = 59)
+           Clara 66 (56%)  ·  Elsie 51 (44%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 6: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Elsie         -- 339 -- First place
+   Dex           -- 331 -- Second place
+   Frank         -- 328
+   Greta         -- 288
+   Ivan          -- 284
+   Hugo          -- 277
+   June          -- 276
+   Nora          -- 268
+   Karl          -- 246
+ Elsie and Dex advance.
+
+[Bloc STAR: Round 6: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Dex           -- 66 -- First place
+   Elsie         -- 51
+   Equal Support -- 58
+ Dex wins.
+   Runoff math:
+     175  ballots cast
+   −  58  Equal Support (no preference between the two finalists)
+     ───
+     117  voters with a preference  (majority = 59)
+           Dex 66 (56%)  ·  Elsie 51 (44%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (6 winners)]
+ Lena
+ Alma
+ Mateo
+ Bruno
+ Clara
+ Dex
+```
+<!-- --8<-- [end:report] -->
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Preference Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        Informational only — not part of the 6-winner count below,
+        so no Top-2 finalists are marked.
+                    |       Alma      |      Bruno     |      Clara     |       Dex      |      Elsie     |      Frank     |      Greta     |      Hugo      |      Ivan      |      June      |      Karl      |      Lena      |      Mateo     |      Nora      |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+             Alma > |       ---       | 14 - 161 -   0 | 66 - 109 -   0 | 66 - 109 -   0 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 77 -  20 -  78 | 77 -  20 -  78 | 77 -  20 -  78 | 66 -   0 - 109 | 66 -   0 - 109 | 66 -  30 -  79 |
+            Bruno > |   0 - 161 -  14 |      ---       | 52 - 123 -   0 | 66 - 109 -   0 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 77 -  20 -  78 | 77 -  20 -  78 | 77 -  20 -  78 | 66 -   0 - 109 | 66 -   0 - 109 | 66 -  30 -  79 |
+            Clara > |   0 - 109 -  66 |  0 - 123 -  52 |      ---       | 14 - 161 -   0 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 77 -  20 -  78 | 77 -  20 -  78 | 77 -  20 -  78 | 66 -   0 - 109 | 66 -   0 - 109 | 66 -  30 -  79 |
+              Dex > |   0 - 109 -  66 |  0 - 109 -  66 |  0 - 161 -  14 |      ---       | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 66 -  58 -  51 | 77 -  20 -  78 | 77 -  20 -  78 | 77 -  20 -  78 | 52 -  14 - 109 | 66 -   0 - 109 | 66 -  30 -  79 |
+            Elsie > |  51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 |      ---       | 11 - 164 -   0 | 51 - 124 -   0 | 51 - 124 -   0 | 51 -  86 -  38 | 51 -  86 -  38 | 51 -  86 -  38 | 51 -   0 - 124 | 51 -   0 - 124 | 51 -  30 -  94 |
+            Frank > |  51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 |  0 - 164 -  11 |      ---       | 40 - 135 -   0 | 51 - 124 -   0 | 51 -  86 -  38 | 51 -  86 -  38 | 51 -  86 -  38 | 51 -   0 - 124 | 51 -   0 - 124 | 51 -  30 -  94 |
+            Greta > |  51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 |  0 - 124 -  51 |  0 - 135 -  40 |      ---       | 11 - 164 -   0 | 51 -  86 -  38 | 51 -  86 -  38 | 51 -  86 -  38 | 51 -   0 - 124 | 51 -   0 - 124 | 51 -  30 -  94 |
+             Hugo > |  51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 | 51 -  58 -  66 |  0 - 124 -  51 |  0 - 124 -  51 |  0 - 164 -  11 |      ---       | 51 -  86 -  38 | 51 -  86 -  38 | 51 -  86 -  38 | 40 -  11 - 124 | 51 -   0 - 124 | 51 -  30 -  94 |
+             Ivan > |  78 -  20 -  77 | 78 -  20 -  77 | 78 -  20 -  77 | 78 -  20 -  77 | 38 -  86 -  51 | 38 -  86 -  51 | 38 -  86 -  51 | 38 -  86 -  51 |      ---       |  8 - 167 -   0 | 38 - 137 -   0 | 38 -   0 - 137 | 38 -   0 - 137 | 38 -  40 -  97 |
+             June > |  78 -  20 -  77 | 78 -  20 -  77 | 78 -  20 -  77 | 78 -  20 -  77 | 38 -  86 -  51 | 38 -  86 -  51 | 38 -  86 -  51 | 38 -  86 -  51 |  0 - 167 -   8 |      ---       | 30 - 145 -   0 | 38 -   0 - 137 | 38 -   0 - 137 | 38 -  40 -  97 |
+             Karl > |  78 -  20 -  77 | 78 -  20 -  77 | 78 -  20 -  77 | 78 -  20 -  77 | 38 -  86 -  51 | 38 -  86 -  51 | 38 -  86 -  51 | 38 -  86 -  51 |  0 - 137 -  38 |  0 - 145 -  30 |      ---       | 38 -   0 - 137 | 38 -   0 - 137 | 38 -  40 -  97 |
+             Lena > | 109 -   0 -  66 |109 -   0 -  66 |109 -   0 -  66 |109 -  14 -  52 |124 -   0 -  51 |124 -   0 -  51 |124 -   0 -  51 |124 -  11 -  40 |137 -   0 -  38 |137 -   0 -  38 |137 -   0 -  38 |      ---       | 53 - 122 -   0 |175 -   0 -   0 |
+            Mateo > | 109 -   0 -  66 |109 -   0 -  66 |109 -   0 -  66 |109 -   0 -  66 |124 -   0 -  51 |124 -   0 -  51 |124 -   0 -  51 |124 -   0 -  51 |137 -   0 -  38 |137 -   0 -  38 |137 -   0 -  38 |  0 - 122 -  53 |      ---       |122 -  53 -   0 |
+             Nora > |  79 -  30 -  66 | 79 -  30 -  66 | 79 -  30 -  66 | 79 -  30 -  66 | 94 -  30 -  51 | 94 -  30 -  51 | 94 -  30 -  51 | 94 -  30 -  51 | 97 -  40 -  38 | 97 -  40 -  38 | 97 -  40 -  38 |  0 -   0 - 175 |  0 -  53 - 122 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Lena — matches the STAR winner
+
+[Score Distribution] (how many ballots gave each star rating)
+                      Score
+Candidate    5    4    3    2    1    0  | Total   Avg
+Alma        66    0    0   20   41   48  |   411   2.3
+Bruno       52   14    0   20   41   48  |   397   2.3
+Clara        0   66    0   20   41   48  |   345   2.0
+Dex          0   52   14   20   41   48  |   331   1.9
+Elsie       51    0    0   20   44   60  |   339   1.9
+Frank       40   11    0   20   44   60  |   328   1.9
+Greta        0   51    0   20   44   60  |   288   1.6
+Hugo         0   40   11   20   44   60  |   277   1.6
+Ivan        38    0    0   20   54   63  |   284   1.6
+June        30    8    0   20   54   63  |   276   1.6
+Karl         0   38    0   20   54   63  |   246   1.4
+Lena        20    0   33  122    0    0  |   443   2.5
+Mateo        0   20    0  155    0    0  |   390   2.2
+Nora         0   20    0   33  122    0  |   268   1.5
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bloc_widest_field_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_widest_field.yaml
+```
+
+## See also
+
+- [Ties & tie-breaking (topic hub)](../../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Vote splitting (worked set)](../../../../../method_comparisons/split_voting/README.md)
+- [Runoff reversal (worked set)](../../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
+- [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [bloc_all_but_one](bloc_all_but_one.md) · [bloc_condorcet_winner_no_seat](bloc_condorcet_winner_no_seat.md) · [bloc_divided_majority](bloc_divided_majority.md) · [bloc_equal_support_seat](bloc_equal_support_seat.md) · [bloc_finalist_wins_nothing](bloc_finalist_wins_nothing.md) · [bloc_harborview_council](bloc_harborview_council.md) · [bloc_no_majority_bridge](bloc_no_majority_bridge.md) · [bloc_one_voter_council](bloc_one_voter_council.md) · [bloc_score_leader_shut_out](bloc_score_leader_shut_out.md)

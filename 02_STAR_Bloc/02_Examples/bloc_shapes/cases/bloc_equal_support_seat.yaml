@@ -1,0 +1,76 @@
+election_title: "Bloc STAR — a seat decided by 11 voters out of 31"
+
+scenario_description: |-
+  Thirty-one voters fill three seats from five pastries. The interesting seat is
+  the second one, and the interesting number is not who won but how many voters
+  had any say in it.
+
+    - Seat 1: Croissant 133, Almond 120, Brioche 117, Danish 20, Eclair 11.
+      Finalists Croissant and Almond; Croissant wins the runoff 25-6.
+    - Seat 2: Croissant is removed. Finalists Almond 120 and Brioche 117 — and
+      TWENTY of the thirty-one voters scored both of them 4. Those twenty express
+      no preference. The seat is decided 6-5 by the eleven voters who did
+      differentiate, and Almond takes it.
+    - Seat 3: Brioche 117 v Danish 20; Brioche wins 31-0.
+
+  Council: Croissant, Almond, Brioche. No rung of the tie-break ladder is
+  consulted.
+
+  The engine's runoff summary line states this in full rather than leaving the
+  denominator to be inferred: "Voters with a preference: 11 of 31 (20 Equal
+  Support). Almond 6 (55%) vs Brioche 5 (45%); majority = 6."
+
+  This is not a defect, and it is worth being precise about why. Equal Support is
+  a real expression: those twenty voters were asked which of Almond and Brioche
+  they preferred and answered "neither, equally". A method that forced them to
+  invent a preference would be recording something they did not say. But it does
+  mean a bloc seat can turn on a small slice of the electorate, and a report that
+  prints only "Almond 6, Brioche 5" would hide that.
+
+  All three proportional STAR methods elect the same three pastries here, in a
+  different seat order. This is one of the cases where the choice of method does
+  not change the outcome — included deliberately, because a folder of nothing but
+  divergences would misrepresent how often they happen.
+
+num_winners: 3
+voting_method: Bloc STAR
+ballots: |-
+  Almond,Brioche,Croissant,Danish,Eclair
+  4,4,5,1,0   # twenty voters rate Almond and Brioche identically
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  4,4,5,1,0
+  5,2,3,0,1   # six voters clearly prefer Almond
+  5,2,3,0,1
+  5,2,3,0,1
+  5,2,3,0,1
+  5,2,3,0,1
+  5,2,3,0,1
+  2,5,3,0,1   # five voters clearly prefer Brioche
+  2,5,3,0,1
+  2,5,3,0,1
+  2,5,3,0,1
+  2,5,3,0,1
+
+expected_winners:
+  - Croissant
+  - Almond
+  - Brioche
+
+# file: bloc_equal_support_seat.yaml

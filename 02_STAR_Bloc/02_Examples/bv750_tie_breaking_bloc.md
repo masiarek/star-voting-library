@@ -1,7 +1,7 @@
 # BV750 — Bloc STAR tie-breaking, every ballot identical · issue [#1052](https://github.com/Equal-Vote/bettervoting/issues/1052) family
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** c, a · [full count →](cases/cases_pages/bv750_tie_breaking_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../01_Learn/README.md) · **2 seats** · **Expected winners:** c, a · [full count →](cases/cases_pages/bv750_tie_breaking_bloc.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3yr2qd) · **[results ↗](https://bettervoting.com/3yr2qd/results)** (election `3yr2qd` · test `BV750`).

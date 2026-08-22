@@ -1,0 +1,55 @@
+election_title: "Bloc STAR — no faction has a majority, and the second-largest wins nothing"
+
+scenario_description: |-
+  One hundred and one voters fill FOUR seats from TEN candidates. No faction has
+  a majority: Blue 40%, Green 35%, Amber 26%. Jaya runs as an independent and is
+  nobody's favourite — every faction scores Jaya 3 or 4.
+
+    - Seat 1: Jaya 324 leads the scoring round outright, ahead of Ada 227 and
+      Bram 219. Jaya beats Ada in the runoff 61-40.
+    - Seat 2: Ada 227 v Bram 219 — both Blue. Ada wins 8-0, with 93 of the 101
+      voters expressing no preference between two candidates they scored equally.
+    - Seat 3: Bram 219 v Gita 190 — Gita (Amber) wins the runoff 54-47.
+    - Seat 4: Bram 219 v Dov 189 — Bram wins 60-41.
+
+  Council: Jaya, Ada, Gita, Bram. No rung of the tie-break ladder is consulted.
+
+  Two things here are worth slowing down for.
+
+  FIRST — Jaya. A candidate with no faction at all wins the first seat, on
+  breadth rather than depth: 3s and 4s from everybody add up to more than 5s from
+  40% of the electorate. That is the thing a 0-5 ballot can see and a choose-one
+  ballot cannot, and it is Bloc STAR working WELL. Jaya is elected under every
+  method tried here.
+
+  SECOND — Green. The second-largest faction, 35% of the electorate, elects
+  NOBODY. Its best candidate Dov scores 189, behind Bram's 219, so Dov only
+  reaches a runoff in the final round and loses it. Meanwhile Amber, at 26%, wins
+  a seat. Bloc STAR's seat allocation does not track faction size, and here it
+  is not even monotone in it: a smaller faction is represented and a larger one
+  is not.
+
+  Proportional STAR (Allocated Score, and both other PR methods) elects Ada, Dov,
+  Gita and Jaya — one seat for each of the three factions, plus the independent.
+  That is the clean statement of the difference: the same ballots, one count
+  answering "who is most liked?" four times over, the other asking "who is not
+  yet represented?"
+
+num_winners: 4
+voting_method: Bloc STAR
+ballots: |-
+  Count:Ada,Bram,Ceci,Dov,Esme,Finn,Gita,Hank,Ines,Jaya
+  32:5,5,4,0,0,0,1,1,1,3   # Blue loyalists
+  8:5,4,4,1,1,1,0,0,0,4    # Blue leaners
+  28:0,0,0,5,5,4,1,1,1,3   # Green loyalists
+  7:1,1,1,5,4,4,0,0,0,4    # Green leaners
+  20:1,1,1,0,0,0,5,5,4,3   # Amber loyalists
+  6:0,0,0,1,1,1,5,4,4,4    # Amber leaners
+
+expected_winners:
+  - Jaya
+  - Ada
+  - Gita
+  - Bram
+
+# file: bloc_no_majority_bridge.yaml

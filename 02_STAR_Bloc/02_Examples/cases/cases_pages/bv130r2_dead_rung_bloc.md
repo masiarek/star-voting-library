@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv130r2_dead_rung_bloc.yaml`](../bv130r2_dead_rung_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **3 seats** · **Expected winners:** Dan, Ada, Eve
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../01_Learn/README.md) · **3 seats** · **Expected winners:** Dan, Ada, Eve
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/9ff9jk) · **[results ↗](https://bettervoting.com/9ff9jk/results)** (election `9ff9jk` · test `BV130-r2`).
 

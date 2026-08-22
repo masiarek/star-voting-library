@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv131_guido_bloc.yaml`](../bv131_guido_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Cand2, Cand3
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Cand2, Cand3
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kbh3d9) · **[results ↗](https://bettervoting.com/kbh3d9/results)** (election `kbh3d9` · test `BV131`).
 

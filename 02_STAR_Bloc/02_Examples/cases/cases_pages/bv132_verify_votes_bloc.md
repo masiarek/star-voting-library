@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv132_verify_votes_bloc.yaml`](../bv132_verify_votes_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** C, B
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../01_Learn/README.md) · **2 seats** · **Expected winners:** C, B
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/3494cb) · **[results ↗](https://bettervoting.com/3494cb/results)** (election `3494cb` · test `BV132`).
 

@@ -1,7 +1,7 @@
 # BV2105-r2 — the partial ballot, re-counted a year later
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105r2_w3vvff_ice_cream_recheck.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../01_Learn/README.md) · **2 seats** · **Expected winners:** Chocolate, Strawberry · [full count →](cases/cases_pages/bv2105r2_w3vvff_ice_cream_recheck.md)
 <!-- case-meta:end -->
 
 *A deliberate re-run of [BV2105](bv2105_r4dqvd_ice_cream_bloc.md) (`r4dqvd`) on **exactly the same four ballots**, cast again on 2026-08-04 so they are counted by **today's** tabulator. The question it was built to settle: a year on, does BetterVoting still drop a cast ballot from the tally? **It does** — the fresh election returns `nTallyVotes 2 / nAbstentions 2`, identical to 2025. Which ballot it drops turned out to be the opposite of what this page first said; see the correction below.*

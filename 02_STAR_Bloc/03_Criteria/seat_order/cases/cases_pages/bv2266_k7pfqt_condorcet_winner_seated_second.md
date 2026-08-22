@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv2266_k7pfqt_condorcet_winner_seated_second.yaml`](../bv2266_k7pfqt_condorcet_winner_seated_second.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Dev, Anika
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Dev, Anika
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/k7pfqt) · **[results ↗](https://bettervoting.com/k7pfqt/results)** (election `k7pfqt` · test `BV2266`).
 

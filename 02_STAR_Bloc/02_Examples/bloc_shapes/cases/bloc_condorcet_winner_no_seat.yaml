@@ -1,0 +1,46 @@
+election_title: "Bloc STAR — the Condorcet winner never reaches a runoff"
+
+scenario_description: |-
+  Five voters fill two seats from four candidates. Bex beats every other
+  candidate head-to-head — Bex is the Condorcet winner — and wins no seat.
+
+  The reason is not that Bex loses a runoff. It is that Bex never gets INTO one.
+  Only the top two scorers advance to the automatic runoff, and Bex has the
+  lowest score of the four (9 points).
+
+    - Seat 1: scores Ada 13, Cyrus 11, Dov 10, Bex 9. Finalists Ada and Cyrus;
+      Cyrus wins the runoff 2-1 (two voters express no preference).
+    - Seat 2: Cyrus is removed. Ada 13, Dov 10, Bex 9. Finalists Ada and Dov;
+      Ada wins 3-0 (two express no preference).
+
+  Council: Cyrus and Ada. Bex is still last on score in both rounds and is never
+  a finalist. No rung of the tie-break ladder is consulted.
+
+  Head-to-head, Bex wins every pairing (see the preference matrix on the full
+  report) — which is exactly what "Condorcet winner" means. A scoring round is
+  not a head-to-head test, and Bex is the candidate voters mildly like but rarely
+  rate highly.
+
+  This is the MIRROR of bloc_score_leader_shut_out.yaml: there the passed-over
+  candidate leads on score and loses every runoff; here the passed-over candidate
+  would win every runoff and never gets into one. Those are the only two ways
+  Bloc STAR can pass someone over.
+
+  Proportional STAR (Allocated Score) elects Ada and Bex on these same ballots —
+  it seats the Condorcet winner that Bloc STAR misses.
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Ada,Bex,Cyrus,Dov
+  4,5,5,4   # rates most of the field highly
+  0,1,0,0   # only Bex gets a mark at all
+  4,1,0,3
+  1,2,2,0
+  4,0,4,3
+
+expected_winners:
+  - Cyrus
+  - Ada
+
+# file: bloc_condorcet_winner_no_seat.yaml

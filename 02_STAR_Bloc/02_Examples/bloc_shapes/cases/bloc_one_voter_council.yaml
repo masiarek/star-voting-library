@@ -1,0 +1,32 @@
+election_title: "Bloc STAR — one voter fills a two-seat council"
+
+scenario_description: |-
+  The smallest Bloc STAR election that can be written down: one ballot, three
+  candidates, two seats. There is no arithmetic to do, which is the point — it
+  shows the MECHANISM with nothing else in the way.
+
+  Bloc STAR is single-winner STAR run once per seat, with the winner removed
+  each time and every ballot still counting at full weight.
+
+    - Seat 1: scores Ada 5, Ben 3, Cara 0. Ada and Ben are the finalists; the
+      one voter prefers Ada, so Ada wins the runoff 1-0.
+    - Seat 2: Ada is removed and the SAME ballot is counted again. Ben 3,
+      Cara 0. Ben wins the runoff 1-0.
+
+  Council: Ada and Ben. No rung of the tie-break ladder is consulted.
+
+  Read it as the definition, not as an election: one voter's ranking becomes the
+  whole council, in order. Every other case in this folder is this same loop with
+  more voters disagreeing inside it.
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Ada,Ben,Cara
+  5,3,0   # the only voter
+
+expected_winners:
+  - Ada
+  - Ben
+
+# file: bloc_one_voter_council.yaml

@@ -7,7 +7,7 @@ search:
 
 *Generated from [`min_bloc_c3_b2.yaml`](../min_bloc_c3_b2.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Ana, Ben
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../02_STAR_Bloc/01_Learn/README.md) · **2 seats** · **Expected winners:** Ana, Ben
 
 ## Scenario
 

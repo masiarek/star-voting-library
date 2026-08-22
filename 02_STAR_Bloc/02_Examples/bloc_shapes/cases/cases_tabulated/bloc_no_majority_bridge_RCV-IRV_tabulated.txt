@@ -1,0 +1,59 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Bloc STAR — no faction has a majority, and the second-largest wins nothing
+ Tabulating 101 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ada, Bram, Ceci, Dov, Esme, Finn, Gita, Hank, Ines, Jaya
+    32 ×   Ada > Bram > Ceci > Jaya > Gita > Hank > Ines      (5, 5, 4, 0, 0, 0, 1, 1, 1, 3)
+     8 ×   Ada > Bram > Ceci > Jaya > Dov > Esme > Finn      (5, 4, 4, 1, 1, 1, 0, 0, 0, 4)
+    28 ×   Dov > Esme > Finn > Jaya > Gita > Hank > Ines      (0, 0, 0, 5, 5, 4, 1, 1, 1, 3)
+     7 ×   Dov > Esme > Finn > Jaya > Ada > Bram > Ceci      (1, 1, 1, 5, 4, 4, 0, 0, 0, 4)
+    20 ×   Gita > Hank > Ines > Jaya > Ada > Bram > Ceci      (1, 1, 1, 0, 0, 0, 5, 5, 4, 3)
+     6 ×   Gita > Hank > Ines > Jaya > Dov > Esme > Finn      (0, 0, 0, 1, 1, 1, 5, 4, 4, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Ada               40  Hopeful
+Dov               35  Hopeful
+Gita              26  Rejected
+Bram               0  Rejected
+Esme               0  Rejected
+Hank               0  Rejected
+Ceci               0  Rejected
+Finn               0  Rejected
+Ines               0  Rejected
+Jaya               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Ada               60  Elected
+Dov               41  Rejected
+Gita               0  Rejected
+Bram               0  Rejected
+Esme               0  Rejected
+Hank               0  Rejected
+Ceci               0  Rejected
+Finn               0  Rejected
+Ines               0  Rejected
+Jaya               0  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Ada
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 10): Jaya
+   Outside (9):        Ada, Bram, Ceci, Dov, Esme, Finn, Gita, Hank, Ines
+   One member ⇒ Jaya is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Ada is OUTSIDE the Smith set. ✗
+      Every member of the set (Jaya) beats Ada head-to-head, yet
+      RCV-IRV elected Ada anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

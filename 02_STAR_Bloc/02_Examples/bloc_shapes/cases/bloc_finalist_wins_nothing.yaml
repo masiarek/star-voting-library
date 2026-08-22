@@ -1,0 +1,41 @@
+election_title: "Bloc STAR — making the first runoff buys you nothing"
+
+scenario_description: |-
+  Seven voters fill two seats from three candidates. Blake is the second-highest
+  scorer overall AND one of the two finalists for seat 1 — and wins no seat at
+  all.
+
+    - Seat 1: scores Ada 31, Blake 23, Cleo 12. Ada and Blake are the finalists.
+      Ada wins the runoff 4-0 (three voters scored Ada and Blake equally, so they
+      express no preference between them).
+    - Seat 2: Ada is removed and the same seven ballots are counted again.
+      Blake 23, Cleo 12 — Blake still nearly doubles Cleo's score. But the seat
+      is filled by the RUNOFF, not the score, and Cleo beats Blake 4-3.
+
+  Council: Ada and Cleo. Blake finishes second in the scoring round of both
+  rounds and goes home empty-handed. No rung of the tie-break ladder is consulted.
+
+  The lesson: reaching the automatic runoff for seat 1 is not a down payment on
+  seat 2. Each seat is a fresh STAR election, and the only thing that carries
+  over is which candidates are still in the race.
+
+  Compare bloc_score_leader_shut_out.yaml, where the candidate passed over leads
+  the scoring round in EVERY round.
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Ada,Blake,Cleo
+  5,5,0   # three voters rate Ada and Blake equally
+  5,5,0
+  5,5,0
+  4,2,3   # four voters prefer Ada, then Cleo, then Blake
+  4,2,3
+  4,2,3
+  4,2,3
+
+expected_winners:
+  - Ada
+  - Cleo
+
+# file: bloc_finalist_wins_nothing.yaml

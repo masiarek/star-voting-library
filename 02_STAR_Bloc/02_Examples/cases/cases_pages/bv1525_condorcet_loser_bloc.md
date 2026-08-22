@@ -7,7 +7,7 @@ search:
 
 *Generated from [`bv1525_condorcet_loser_bloc.yaml`](../bv1525_condorcet_loser_bloc.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **4 seats** · **Expected winners:** First, Second, Third, Fourth
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../01_Learn/README.md) · **4 seats** · **Expected winners:** First, Second, Third, Fourth
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/dkj9dx) · **[results ↗](https://bettervoting.com/dkj9dx/results)** (election `dkj9dx` · test `BV1525`).
 

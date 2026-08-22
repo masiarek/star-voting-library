@@ -7,7 +7,7 @@ search:
 
 *Generated from [`zero_support_bloc_star.yaml`](../zero_support_bloc_star.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
 
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Ada, Ben
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../02_STAR_Bloc/01_Learn/README.md) · **2 seats** · **Expected winners:** Ada, Ben
 
 **Official tie-break (lot) order:** Ada > Ben > Cleo > Dev > Elsa — consulted only if every deterministic tiebreaker stays tied ([how the ladder works](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)).
 

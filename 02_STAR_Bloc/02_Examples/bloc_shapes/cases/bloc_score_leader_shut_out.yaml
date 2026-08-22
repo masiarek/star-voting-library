@@ -1,0 +1,43 @@
+election_title: "Bloc STAR — the score leader is shut out of every seat"
+
+scenario_description: |-
+  Five voters fill three seats from four candidates. Ada has the highest score in
+  the scoring round of ALL THREE rounds — 13 points, ahead of everyone, every
+  time — and finishes with no seat. The council is literally everybody else.
+
+    - Seat 1: Ada 13, Dev 12, Bo 10, Cleo 8. Finalists Ada and Dev. Dev wins the
+      runoff 3-2.
+    - Seat 2: Ada 13, Bo 10, Cleo 8. Finalists Ada and Bo. Bo wins 3-2.
+    - Seat 3: Ada 13, Cleo 8. Finalists Ada and Cleo. Cleo wins 3-2.
+
+  Council: Dev, Bo, Cleo. No rung of the tie-break ladder is consulted.
+
+  Every runoff is the same 3-2 split, because it is the same three voters each
+  time. Two voters score Ada 5; the other three prefer almost anyone to Ada. The
+  two 5s are enough to put Ada on top of the score board in every round, and
+  never enough to win a head-to-head against a three-voter majority.
+
+  This is the sharpest available demonstration that Bloc STAR is NOT "elect the
+  top N scorers". The scoring round only picks who gets to be in the runoff; the
+  runoff decides the seat, and it asks a different question — not "how highly is
+  this candidate rated?" but "how many voters prefer this candidate to that one?"
+
+  Proportional STAR (Allocated Score) elects Ada, Cleo and Dev on these same
+  ballots — it seats Ada first, precisely the candidate Bloc STAR shuts out.
+
+num_winners: 3
+voting_method: Bloc STAR
+ballots: |-
+  Ada,Bo,Cleo,Dev
+  5,1,0,2   # one of the two Ada enthusiasts
+  2,5,3,5
+  5,1,1,0   # the other Ada enthusiast
+  1,2,3,3
+  0,1,1,2
+
+expected_winners:
+  - Dev
+  - Bo
+  - Cleo
+
+# file: bloc_score_leader_shut_out.yaml

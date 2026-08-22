@@ -1,0 +1,87 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented
+ Tabulating 175 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Alma, Bruno, Clara, Dex, Elsie, Frank, Greta, Hugo, Ivan, June, Karl, Lena, Mateo, Nora
+    52 ×   Alma > Bruno > Clara > Dex > Lena > Mateo > Nora      (5, 5, 4, 4, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1)
+    14 ×   Alma > Bruno > Clara > Dex > Lena > Mateo > Nora > Elsie > Frank > Greta > Hugo > Ivan > June > Karl      (5, 4, 4, 3, 1, 1, 1, 1, 1, 1, 1, 3, 2, 2)
+    40 ×   Elsie > Frank > Greta > Hugo > Lena > Mateo > Ivan > June > Karl > Nora      (0, 0, 0, 0, 5, 5, 4, 4, 1, 1, 1, 2, 2, 1)
+    11 ×   Elsie > Frank > Greta > Hugo > Lena > Mateo > Nora > Alma > Bruno > Clara > Dex      (1, 1, 1, 1, 5, 4, 4, 3, 0, 0, 0, 3, 2, 2)
+    30 ×   Ivan > June > Karl > Lena > Mateo > Alma > Bruno > Clara > Dex > Elsie > Frank > Greta > Hugo > Nora      (1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 4, 2, 2, 1)
+     8 ×   Ivan > June > Karl > Lena > Mateo > Nora      (0, 0, 0, 0, 0, 0, 0, 0, 5, 4, 4, 3, 2, 2)
+    20 ×   Lena > Mateo > Nora > Alma > Bruno > Clara > Dex > Elsie > Frank > Greta > Hugo > Ivan > June > Karl      (2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 5, 4, 4)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Alma              66  Hopeful
+Elsie             51  Hopeful
+Ivan              38  Hopeful
+Lena              20  Rejected
+Bruno              0  Rejected
+Frank              0  Rejected
+June               0  Rejected
+Mateo              0  Rejected
+Clara              0  Rejected
+Greta              0  Rejected
+Karl               0  Rejected
+Nora               0  Rejected
+Dex                0  Rejected
+Hugo               0  Rejected
+
+ROUND 2
+Candidate      Votes  Status
+-----------  -------  --------
+Alma              86  Hopeful
+Elsie             51  Hopeful
+Ivan              38  Rejected
+Lena               0  Rejected
+Bruno              0  Rejected
+Frank              0  Rejected
+June               0  Rejected
+Mateo              0  Rejected
+Clara              0  Rejected
+Greta              0  Rejected
+Karl               0  Rejected
+Nora               0  Rejected
+Dex                0  Rejected
+Hugo               0  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Alma             116  Elected
+Elsie             51  Rejected
+Ivan               0  Rejected
+Lena               0  Rejected
+Bruno              0  Rejected
+Frank              0  Rejected
+June               0  Rejected
+Mateo              0  Rejected
+Clara              0  Rejected
+Greta              0  Rejected
+Karl               0  Rejected
+Nora               0  Rejected
+Dex                0  Rejected
+Hugo               0  Rejected
+Blank Votes        8  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Alma
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 14): Lena
+   Outside (13):       Alma, Bruno, Clara, Dex, Elsie, Frank, Greta, Hugo, Ivan, June, Karl, Mateo, Nora
+   One member ⇒ Lena is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Alma is OUTSIDE the Smith set. ✗
+      Every member of the set (Lena) beats Alma head-to-head, yet
+      RCV-IRV elected Alma anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

@@ -1,7 +1,7 @@
 # BV131 — Guido example (Bloc STAR): a hidden lot-decided tie
 
 <!-- case-meta:start — managed by build_yaml_pages.py; edit the YAML, not these lines -->
-**Method:** [Bloc STAR (multi-winner, majoritarian)](../../03_STAR_PR/01_Learn/README.md) · **2 seats** · **Expected winners:** Cand2, Cand3 · [full count →](cases/cases_pages/bv131_guido_bloc.md)
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../01_Learn/README.md) · **2 seats** · **Expected winners:** Cand2, Cand3 · [full count →](cases/cases_pages/bv131_guido_bloc.md)
 <!-- case-meta:end -->
 
 **▶ Live on BetterVoting:** [vote](https://bettervoting.com/kbh3d9) · **[results ↗](https://bettervoting.com/kbh3d9/results)** (election `kbh3d9` · test `BV131`).

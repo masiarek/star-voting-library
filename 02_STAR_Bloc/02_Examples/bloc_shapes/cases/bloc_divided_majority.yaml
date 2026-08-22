@@ -1,0 +1,56 @@
+election_title: "Bloc STAR — a divided majority wins nothing"
+
+scenario_description: |-
+  Twelve voters fill two seats. Seven of them (58%) favour the Maya/Miles/Mina
+  group; five (42%) favour Uma and Ugo. The minority takes BOTH seats.
+
+  Nothing unfair happens in the count. The majority is divided — its seven voters
+  split three ways over three candidates and score each other's favourites 0 —
+  so no single one of them ever gets near the top of the scoring round:
+
+    Uma 32, Ugo 27, Maya 15, Miles 10, Mina 10
+
+    - Seat 1: finalists Uma and Ugo — both from the five-voter minority. Uma wins
+      the runoff 5-0; the seven majority voters scored Uma and Ugo equally (1 and
+      1), so they express no preference and sit the runoff out entirely.
+    - Seat 2: Uma is removed. Ugo 27 still leads Maya 15. Ugo wins 9-3.
+
+  Council: Uma and Ugo. No rung of the tie-break ladder is consulted.
+
+  Two things are worth separating here. The first is ordinary vote splitting: a
+  group that spreads its support thin gets a weaker showing than the same group
+  united, and that is true under any method. The second is specific to BLOC — the
+  majority does not lose narrowly, it loses EVERYTHING, because each seat is
+  decided by the same undivided electorate and the minority wins each one on the
+  same 5 votes.
+
+  Note these ballots are sincere, not strategic. These voters genuinely rate only
+  their own candidate highly. This is not a clone-dependence failure in the
+  technical sense — Maya, Miles and Mina are not clones, because the voters who
+  like one of them do NOT like the other two.
+
+  Proportional STAR (Allocated Score) elects Maya and Uma on these same ballots —
+  one seat for each side, which is what 58/42 across two seats looks like.
+
+num_winners: 2
+voting_method: Bloc STAR
+ballots: |-
+  Maya,Miles,Mina,Uma,Ugo
+  5,0,0,1,1   # three voters for Maya only
+  5,0,0,1,1
+  5,0,0,1,1
+  0,5,0,1,1   # two voters for Miles only
+  0,5,0,1,1
+  0,0,5,1,1   # two voters for Mina only
+  0,0,5,1,1
+  0,0,0,5,4   # five voters back both Uma and Ugo
+  0,0,0,5,4
+  0,0,0,5,4
+  0,0,0,5,4
+  0,0,0,5,4
+
+expected_winners:
+  - Uma
+  - Ugo
+
+# file: bloc_divided_majority.yaml

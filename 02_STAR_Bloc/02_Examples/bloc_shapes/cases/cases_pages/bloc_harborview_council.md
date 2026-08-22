@@ -1,0 +1,292 @@
+---
+search:
+  exclude: true
+---
+
+# Bloc STAR — Harborview city council: a 52% slate takes all five seats
+
+*Generated from [`bloc_harborview_council.yaml`](../bloc_harborview_council.yaml) — do not edit by hand. Regenerate: `python STARVote_LH_tabulation_engine/tools_adam/scripts/build_yaml_pages.py`.*
+
+**Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **5 seats** · **Expected winners:** Ana, Beto, Cora, Dmitri, Elena
+
+## Scenario
+
+One hundred and eight voters fill FIVE at-large council seats from TWELVE
+candidates. The Harbor slate (Ana, Beto, Cora, Dmitri, Elena) is backed by 56
+of the 108 voters — 52%. It wins every seat.
+
+This is the majority sweep at a realistic municipal scale, and it is the single
+most important thing to understand about at-large bloc elections.
+
+  - Round 1: Ana 316 v Beto 304 — Ana wins.
+  - Round 2: Beto 304 v Cora 260 — Beto wins.
+  - Round 3: Cora 260 v Dmitri 248 — Cora wins.
+  - Round 4: Dmitri 248 v Elena 236 — Dmitri wins.
+  - Round 5: Elena 236 v Farid 230 — Elena wins 56-38 (60% of the 94 voters
+    with a preference; the 14 independents rate them equally).
+
+Council: Ana, Beto, Cora, Dmitri, Elena. The Ridge slate, backed by 38 of 108
+voters (35%), elects nobody. No rung of the tie-break ladder is consulted.
+
+Look at where the contests actually happen. Only ROUND 5 is a fight between the
+two slates. Rounds 1-4 are Harbor-versus-Harbor, because Harbor's five
+candidates occupy the top five score positions from the start — and in those
+rounds 96 of the 108 voters score both finalists identically and express no
+preference, so the seat is settled by the 12 Harbor-leaning voters who
+differentiate. A 52% majority does not merely win the council; it also decides
+the internal order, with everyone else sitting the runoffs out.
+
+Nothing has gone wrong. This is what a majoritarian method is FOR — it produces
+a body that speaks with one voice. It is also precisely the mechanism at issue
+in Voting Rights Act litigation over at-large seats, where a cohesive majority
+can shut a large minority out of a legislature entirely.
+
+All three proportional STAR methods elect Ana, Beto, Cora, Farid and Gina on
+these SAME ballots — Harbor 3, Ridge 2, which is close to the 52/35 split of
+the electorate. That contrast is the lesson; see the folder README.
+
+## Ballots
+
+Row 1 = candidate names; each later row is one voter's 0–5 scores (a `N ×` prefix = N identical ballots).
+
+```text
+Count:Ana,Beto,Cora,Dmitri,Elena,Farid,Gina,Hugo,Iris,Jonas,Kira,Luis
+44:5,5,4,4,4,0,0,0,0,1,1,1   # Harbor loyalists
+12:5,4,4,3,2,1,1,1,1,2,2,2   # Harbor leaners
+30:0,0,0,0,0,5,5,4,4,1,1,1   # Ridge loyalists
+8:1,1,1,1,1,5,4,4,3,2,2,2    # Ridge leaners
+14:2,2,2,2,2,2,2,2,2,5,5,4   # independents
+```
+
+## What the engine says
+
+The count, step by step — the rounds and how the winner is reached:
+
+<!-- --8<-- [start:report] -->
+```text
+--- Bloc STAR Voting Method (5 winners) ---
+
+[Bloc STAR]
+ Tabulating 108 ballots to fill 5 seats.
+Count × Ana,Beto,Cora,Dmitri,Elena,Farid,Gina,Hugo,Iris,Jonas,Kira,Luis
+   44 ×   5,   5,   4,     4,    4,    0,   0,   0,   0,    1,   1,   1
+   30 ×   0,   0,   0,     0,    0,    5,   5,   4,   4,    1,   1,   1
+   14 ×   2,   2,   2,     2,    2,    2,   2,   2,   2,    5,   5,   4
+   12 ×   5,   4,   4,     3,    2,    1,   1,   1,   1,    2,   2,   2
+    8 ×   1,   1,   1,     1,    1,    5,   4,   4,   3,    2,   2,   2
+
+[Bloc STAR: Round 1: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Ana           -- 316 -- First place
+   Beto          -- 304 -- Second place
+   Cora          -- 260
+   Dmitri        -- 248
+   Elena         -- 236
+   Farid         -- 230
+   Gina          -- 222
+   Hugo          -- 192
+   Iris          -- 184
+   Jonas         -- 184
+   Kira          -- 184
+   Luis          -- 170
+ Ana and Beto advance.
+
+[Bloc STAR: Round 1: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Ana           -- 12 -- First place
+   Beto          --  0
+   Equal Support -- 96
+ Ana wins.
+   Runoff math:
+     108  ballots cast
+   −  96  Equal Support (no preference between the two finalists)
+     ───
+      12  voters with a preference  (majority = 7)
+           Ana 12 (100%)  ·  Beto 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 2: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Beto          -- 304 -- First place
+   Cora          -- 260 -- Second place
+   Dmitri        -- 248
+   Elena         -- 236
+   Farid         -- 230
+   Gina          -- 222
+   Hugo          -- 192
+   Iris          -- 184
+   Jonas         -- 184
+   Kira          -- 184
+   Luis          -- 170
+ Beto and Cora advance.
+
+[Bloc STAR: Round 2: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Beto          -- 44 -- First place
+   Cora          --  0
+   Equal Support -- 64
+ Beto wins.
+   Runoff math:
+     108  ballots cast
+   −  64  Equal Support (no preference between the two finalists)
+     ───
+      44  voters with a preference  (majority = 23)
+           Beto 44 (100%)  ·  Cora 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 3: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Cora          -- 260 -- First place
+   Dmitri        -- 248 -- Second place
+   Elena         -- 236
+   Farid         -- 230
+   Gina          -- 222
+   Hugo          -- 192
+   Iris          -- 184
+   Jonas         -- 184
+   Kira          -- 184
+   Luis          -- 170
+ Cora and Dmitri advance.
+
+[Bloc STAR: Round 3: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Cora          -- 12 -- First place
+   Dmitri        --  0
+   Equal Support -- 96
+ Cora wins.
+   Runoff math:
+     108  ballots cast
+   −  96  Equal Support (no preference between the two finalists)
+     ───
+      12  voters with a preference  (majority = 7)
+           Cora 12 (100%)  ·  Dmitri 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 4: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Dmitri        -- 248 -- First place
+   Elena         -- 236 -- Second place
+   Farid         -- 230
+   Gina          -- 222
+   Hugo          -- 192
+   Iris          -- 184
+   Jonas         -- 184
+   Kira          -- 184
+   Luis          -- 170
+ Dmitri and Elena advance.
+
+[Bloc STAR: Round 4: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Dmitri        -- 12 -- First place
+   Elena         --  0
+   Equal Support -- 96
+ Dmitri wins.
+   Runoff math:
+     108  ballots cast
+   −  96  Equal Support (no preference between the two finalists)
+     ───
+      12  voters with a preference  (majority = 7)
+           Dmitri 12 (100%)  ·  Elena 0 (0%)
+
+──────────────────────────────────────────────────
+
+[Bloc STAR: Round 5: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Elena         -- 236 -- First place
+   Farid         -- 230 -- Second place
+   Gina          -- 222
+   Hugo          -- 192
+   Iris          -- 184
+   Jonas         -- 184
+   Kira          -- 184
+   Luis          -- 170
+ Elena and Farid advance.
+
+[Bloc STAR: Round 5: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Elena         -- 56 -- First place
+   Farid         -- 38
+   Equal Support -- 14
+ Elena wins.
+   Runoff math:
+     108  ballots cast
+   −  14  Equal Support (no preference between the two finalists)
+     ───
+      94  voters with a preference  (majority = 48)
+           Elena 56 (60%)  ·  Farid 38 (40%)
+
+[Bloc STAR: Winners — Bloc STAR Voting Method (5 winners)]
+ Ana
+ Beto
+ Cora
+ Dmitri
+ Elena
+```
+<!-- --8<-- [end:report] -->
+
+### Full audit — preference matrix, Condorcet, and score distribution
+
+```text
+--- Preference Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        Informational only — not part of the 5-winner count below,
+        so no Top-2 finalists are marked.
+                    |        Ana      |      Beto      |      Cora      |     Dmitri     |      Elena     |      Farid     |      Gina      |      Hugo      |      Iris      |      Jonas     |      Kira      |      Luis      |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+              Ana > |       ---       | 12 -  96 -   0 | 56 -  52 -   0 | 56 -  52 -   0 | 56 -  52 -   0 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -   0 -  52 | 56 -   0 -  52 | 56 -   0 -  52 |
+             Beto > |   0 -  96 -  12 |      ---       | 44 -  64 -   0 | 56 -  52 -   0 | 56 -  52 -   0 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -   0 -  52 | 56 -   0 -  52 | 56 -   0 -  52 |
+             Cora > |   0 -  52 -  56 |  0 -  64 -  44 |      ---       | 12 -  96 -   0 | 12 -  96 -   0 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -   0 -  52 | 56 -   0 -  52 | 56 -   0 -  52 |
+           Dmitri > |   0 -  52 -  56 |  0 -  52 -  56 |  0 -  96 -  12 |      ---       | 12 -  96 -   0 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -   0 -  52 | 56 -   0 -  52 | 56 -   0 -  52 |
+            Elena > |   0 -  52 -  56 |  0 -  52 -  56 |  0 -  96 -  12 |  0 -  96 -  12 |      ---       | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 56 -  14 -  38 | 44 -  12 -  52 | 44 -  12 -  52 | 44 -  12 -  52 |
+            Farid > |  38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 |      ---       |  8 - 100 -   0 | 38 -  70 -   0 | 38 -  70 -   0 | 38 -   0 -  70 | 38 -   0 -  70 | 38 -   0 -  70 |
+             Gina > |  38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 |  0 - 100 -   8 |      ---       | 30 -  78 -   0 | 38 -  70 -   0 | 38 -   0 -  70 | 38 -   0 -  70 | 38 -   0 -  70 |
+             Hugo > |  38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 |  0 -  70 -  38 |  0 -  78 -  30 |      ---       |  8 - 100 -   0 | 38 -   0 -  70 | 38 -   0 -  70 | 38 -   0 -  70 |
+             Iris > |  38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 | 38 -  14 -  56 |  0 -  70 -  38 |  0 -  70 -  38 |  0 - 100 -   8 |      ---       | 38 -   0 -  70 | 38 -   0 -  70 | 38 -   0 -  70 |
+            Jonas > |  52 -   0 -  56 | 52 -   0 -  56 | 52 -   0 -  56 | 52 -   0 -  56 | 52 -  12 -  44 | 70 -   0 -  38 | 70 -   0 -  38 | 70 -   0 -  38 | 70 -   0 -  38 |      ---       |  0 - 108 -   0 | 14 -  94 -   0 |
+             Kira > |  52 -   0 -  56 | 52 -   0 -  56 | 52 -   0 -  56 | 52 -   0 -  56 | 52 -  12 -  44 | 70 -   0 -  38 | 70 -   0 -  38 | 70 -   0 -  38 | 70 -   0 -  38 |  0 - 108 -   0 |      ---       | 14 -  94 -   0 |
+             Luis > |  52 -   0 -  56 | 52 -   0 -  56 | 52 -   0 -  56 | 52 -   0 -  56 | 52 -  12 -  44 | 70 -   0 -  38 | 70 -   0 -  38 | 70 -   0 -  38 | 70 -   0 -  38 |  0 -  94 -  14 |  0 -  94 -  14 |      ---       |
+
+[Condorcet Winner]
+  Condorcet Winner: Ana — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Iris — loses every head-to-head matchup
+
+[Score Distribution] (how many ballots gave each star rating)
+                   Score
+Candidate   5   4   3   2   1   0  | Total   Avg
+Ana        56   0   0  14   8  30  |   316   2.9
+Beto       44  12   0  14   8  30  |   304   2.8
+Cora        0  56   0  14   8  30  |   260   2.4
+Dmitri      0  44  12  14   8  30  |   248   2.3
+Elena       0  44   0  26   8  30  |   236   2.2
+Farid      38   0   0  14  12  44  |   230   2.1
+Gina       30   8   0  14  12  44  |   222   2.1
+Hugo        0  38   0  14  12  44  |   192   1.8
+Iris        0  30   8  14  12  44  |   184   1.7
+Jonas      14   0   0  20  74   0  |   184   1.7
+Kira       14   0   0  20  74   0  |   184   1.7
+Luis        0  14   0  20  74   0  |   170   1.6
+```
+
+Everything in one file: the [`_tabulated` mirror](../cases_tabulated/bloc_harborview_council_tabulated.txt) (regenerated on every run; every analysis forced on).
+
+Run it yourself:
+
+```bash
+python STARVote_LH_tabulation_engine/starvote_larry_hastings.py 02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_harborview_council.yaml
+```
+
+## See also
+
+- [Ties & tie-breaking (topic hub)](../../../../../07_Concepts/topics/ties/README.md)
+- [The tie-breaking ladder (full chain)](../../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
+- [Vote splitting (worked set)](../../../../../method_comparisons/split_voting/README.md)
+- [Runoff reversal (worked set)](../../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
+- [Glossary](../../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../../07_Concepts/YAML_test_case_index/README.md)
+
+More cases in this set: [bloc_all_but_one](bloc_all_but_one.md) · [bloc_condorcet_winner_no_seat](bloc_condorcet_winner_no_seat.md) · [bloc_divided_majority](bloc_divided_majority.md) · [bloc_equal_support_seat](bloc_equal_support_seat.md) · [bloc_finalist_wins_nothing](bloc_finalist_wins_nothing.md) · [bloc_no_majority_bridge](bloc_no_majority_bridge.md) · [bloc_one_voter_council](bloc_one_voter_council.md) · [bloc_score_leader_shut_out](bloc_score_leader_shut_out.md) · [bloc_widest_field](bloc_widest_field.md)
