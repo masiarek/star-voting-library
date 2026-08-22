@@ -3201,6 +3201,60 @@ _VS_SMALLEST2 = {
                  "LH-verified on all three races. Supersedes BV2294."),
 }
 
+
+# An UNBRANDED twin of the ladder (BV2293 vq78wk), for sharing outside this repo.
+# Same nine voters, same seven races, same numbers. Two deliberate deviations
+# from house convention, both because the branding IS the thing being removed:
+# no `test_id` (so no "BV#### — " rides the election or race titles) and no
+# masiarek.github.io backlink in the description. The description is therefore
+# written to stand completely on its own. Tracked internally by bvid only.
+_VS_LADDER_PLAIN = {
+    "title": "Seven apples and a banana — how vote splitting works",
+    "description": (
+        "Nine people choose ONE fruit for the office basket. Seven want an apple, two want a "
+        "banana, and NOBODY CHANGES THEIR MIND at any point in this election. The only thing "
+        "that changes is how many apple varieties are on the list.\n\n"
+        "Race 1 offers two names and the apple side wins 7-2 — with two candidates nothing can "
+        "split.\n\n"
+        "Race 2 offers six names. The apple vote divides five ways and Gala still wins, now on "
+        "33%. This is the rung most explanations skip: the vote IS splitting, and it has cost "
+        "the apple side nothing at all. Splitting is not the same as being spoiled.\n\n"
+        "Race 3 adds the last two varieties, Pink Lady and McIntosh — the true favourites of the "
+        "two voters who were still marking Gala. Both peel away, every apple ends on exactly one "
+        "mark, and BANANA WINS with 2 of 9. Twenty-two percent, while 78% of the room came in "
+        "wanting an apple. Look at where the two newcomers finished: one vote each. Neither "
+        "could win. Together they changed who did. That is what the word 'spoiler' means.\n\n"
+        "Races 4-7 hand the same nine voters a ballot that lets them say more than one thing — "
+        "scores, approvals, rankings — and the split disappears every time. STAR, Approval, "
+        "RCV-IRV and Ranked Robin all elect Gala, who beats every rival head-to-head. Under "
+        "STAR, Banana finishes LAST of eight in the scoring round. Banana is in fact the "
+        "Condorcet loser: every single apple beats it one-on-one.\n\n"
+        "The point is not that one method is better at arithmetic. Choose-One did not miscount "
+        "these voters. It never asked the question whose answer would have changed the result — "
+        "whether an apple lover would also be happy with a different apple. Every ballot in "
+        "races 4-7 asks it, and they all get the same answer."
+    ),
+    "races": [
+        {"title": "Two names on the ballot (choose one)", "method": "Plurality",
+         "num_winners": 1, "candidates": _VS_LADDER_A, "ballots": _VS_2_PLUR},
+        {"title": "Six names: the vote splits, and costs nothing (choose one)",
+         "method": "Plurality", "num_winners": 1, "candidates": _VS_LADDER_B, "ballots": _VS_6_PLUR},
+        {"title": "Eight names: the banana wins on 22% (choose one)",
+         "method": "Plurality", "num_winners": 1, "candidates": _VS_LADDER_C, "ballots": _VS_8_PLUR},
+        {"title": "The same nine voters, scoring 0-5 (STAR)", "method": "STAR",
+         "num_winners": 1, "candidates": _VS_LADDER_C, "ballots": _VS_8_STAR},
+        {"title": "The same nine voters, approving (Approval)", "method": "Approval",
+         "num_winners": 1, "candidates": _VS_LADDER_C, "ballots": _VS_8_APPR},
+        {"title": "The same nine voters, ranked (RCV-IRV)", "method": "IRV",
+         "num_winners": 1, "max_rankings": 8, "candidates": _VS_LADDER_C, "ballots": _VS_8_RANK},
+        {"title": "The same nine voters, head-to-head (Ranked Robin)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 8, "candidates": _VS_LADDER_C, "ballots": _VS_8_RANK},
+    ],
+    "enable_write_in": False,
+    "expected": ("Unbranded twin of BV2293. Identical numbers: 7-2 / Gala 33% / Banana 22%; "
+                 "STAR, Approval, RCV-IRV, Ranked Robin all -> Gala."),
+}
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
@@ -6891,7 +6945,17 @@ _BWF_SPEC = {
 }
 
 
-ELECTIONS: list = [_VS_SMALLEST2]   # resting state — point this at a spec only for the run that mints it
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [_VS_LADDER_PLAIN]   # (no BV number) -> mm38gt
+#   The UNBRANDED twin of BV2293 (vq78wk), minted 2026-08-22 for sharing in the
+#   Equal Vote Slack without leading with a link to this repo. Same nine voters,
+#   same seven races, identical numbers (7-2 / Gala 33% / Banana 22% / four
+#   expressive ballots all -> Gala); BV agrees with LH on all seven.
+#   Two DELIBERATE deviations from house convention, both because the branding is
+#   what was being removed: no `test_id` (minted via BV_ALLOW_NO_TESTID=1, the
+#   script's documented opt-out, so no "BV#### — " rides the election or race
+#   titles) and no masiarek.github.io backlink in the description, which is
+#   instead written to stand entirely on its own. Tracked by bvid only.   # resting state — point this at a spec only for the run that mints it
 # Previously: [_BCW_SPEC, _BSL_SPEC, _BDM_SPEC, _BHC_SPEC, _BNM_SPEC, _BWF_SPEC]
 #   BV2287 -> xbk9bq, BV2288 -> vxwjc4, BV2289 -> xpr4wk, BV2290 -> 2cdvm6,
 #   BV2291 -> vthdwc, BV2292 -> rq2c3g. All six created as designed, 406 ballots
