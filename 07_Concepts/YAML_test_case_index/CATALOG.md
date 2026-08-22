@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 537 elections, 734 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 536 elections, 734 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -36,9 +36,11 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`89wwvr`](https://bettervoting.com/89wwvr/results) | BV2199 — Two Seats, One Neighborhood — Bloc STAR swe | 2 | contested (multi-race) | 10 | STAR, STAR_PR | BV |
 | [`8cdkkc`](https://bettervoting.com/8cdkkc/results) | BV2278 — Five-Way Race — the moderate who beats both | 4 | contested (multi-race) | 1000 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`8kg698`](https://bettervoting.com/8kg698/results) | BV2178 — The Post-it election's round-2 switch, made | 4 | contested (multi-race) | 20 | IRV, Plurality, RankedRobin, STAR | BV |
+| [`8xrpyp`](https://bettervoting.com/8xrpyp/results) | Clones are made of voters, not labels — the sugar gr | 2 | contested (multi-race) | 7 | STAR | BV |
 | [`923q3d`](https://bettervoting.com/923q3d/results) | BV2190 — Two Districts, One Mayor (III of III) — the | 2 | contested (multi-race) | 18 | RankedRobin, STAR | BV |
 | [`93gjx6`](https://bettervoting.com/93gjx6/results) | BV2198 — Recruit a Spoiler (2 of 2) — the clone ente | 4 | contested (multi-race) | 9 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`97hbpw`](https://bettervoting.com/97hbpw/results) | BV2151 — Felsenthal's No-Show paradox (2 of 2) — two | 3 | contested (multi-race) | 9 | IRV, RankedRobin, STAR | BV |
+| [`9cff2d`](https://bettervoting.com/9cff2d/results) | The smallest spoiler — seven friends, three flavours | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
 | [`9gdrqg`](https://bettervoting.com/9gdrqg/results) | BV2147 — Felsenthal's Reinforcement paradox (I of II | 2 | contested (multi-race) | 17 | IRV, STAR | BV |
 | [`9kffcv`](https://bettervoting.com/9kffcv/results) | BV2273 — Same ranks, different utilities — two elect | 3 | contested (multi-race) | 3 | RankedRobin, STAR | BV |
 | [`9vxcj7`](https://bettervoting.com/9vxcj7/results) | BV2165 — Coombs' No-Show electorate (1 of 2) — every | 2 | contested (multi-race) | 15 | Plurality, STAR | BV |
@@ -94,7 +96,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`t4by6x`](https://bettervoting.com/t4by6x/results) | BV2254 — Reinforcement paradox: two towns pick Ada,  | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
 | [`tqfdbg`](https://bettervoting.com/tqfdbg/results) | BV2277 — The Mayor's Race — the third-place candidat | 4 | contested (multi-race) | 100 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`v8r66y`](https://bettervoting.com/v8r66y/results) | BV2177 — The Post-it election, seven ways — all four | 7 | contested (multi-race) | 20 | Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
-| [`vjp3fj`](https://bettervoting.com/vjp3fj/results) | The smallest spoiler — seven friends, three flavours | 2 | contested (multi-race) | 7 | Plurality, STAR | BV |
 | [`vq78wk`](https://bettervoting.com/vq78wk/results) | Rung 1 — two candidates: nothing can split | 6 | contested (multi-race) | 9 | Approval, IRV, Plurality, STAR | BV |
 | [`vthdwc`](https://bettervoting.com/vthdwc/results) | BV2291 — Bloc STAR vs STAR-PR - no faction has a maj | 2 | contested (multi-race) | 101 | STAR, STAR_PR | BV |
 | [`vxwjc4`](https://bettervoting.com/vxwjc4/results) | BV2288 — Bloc STAR vs STAR-PR - the score leader shu | 2 | contested (multi-race) | 5 | STAR, STAR_PR | BV |
@@ -138,7 +139,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`8h3yrx`](https://bettervoting.com/8h3yrx/results) | BV1835 — Committee election, 100 voters, 4 seats: th | 1 | single-race | 100 | STAR | BV |
 | [`8h4bvh`](https://bettervoting.com/8h4bvh/results) | BV2270 — Ranked Robin: two candidates tie on pairwis | 1 | single-race | 9 | RankedRobin | BV |
 | [`8q3xcg`](https://bettervoting.com/8q3xcg/results) | BV2284 — The seat nobody wanted — a field with no en | 1 | single-race | 100 | STAR | BV |
-| [`8xrpyp`](https://bettervoting.com/8xrpyp/results) | Clones are made of voters, not labels — the sugar gr | 1 | single-race | 7 | STAR | BV |
 | [`8xwx43`](https://bettervoting.com/8xwx43/results) | BV2205 — The sole-survivor STV finish — six voters,  | 1 | single-race | 6 | STV | BV |
 | [`9dhv8y`](https://bettervoting.com/9dhv8y/results) | No-show paradox (2 of 2) — the 8 April fans vote; RC | 1 | single-race | 62 | STAR | BV |
 | [`9dx494`](https://bettervoting.com/9dx494/results) | BV2244 — The Herb Garden Council — Bloc STAR, 3 seat | 1 | single-race | 36 | STAR | BV |
@@ -185,7 +185,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `06a_c9_b3_large-field-equal-support` | Large field (9 candidates) — STAR scales, and Equal  | 1 | single-race | 3 | STAR | LH-only |
 | `06b_c9_runoff-overturns-leader` | Large field (9 candidates) — the runoff OVERTURNS th | 1 | single-race | 3 | STAR | LH-only |
 | `09_c4_b100_tennessee-capital` | Tennessee Capital — classic STAR example | 1 | single-race | 100 | STAR | LH-only |
-| `09b_same_ballots_grouped_by_label` | The same seven voters, grouped by the FIZZY label in | 1 | single-race | 7 | STAR | LH-only |
 | `321_tennessee_blank_encoding_c4_b100` | Tennessee capital by 3-2-1 Voting (blank = Bad) | 1 | single-race | 100 | 3-2-1 | LH-only |
 | `BV_Library_approval_single_winner` | BV parity — Approval: most approvals wins (single wi | 1 | single-race | 10 | Approval | LH-only |
 | `BV_Library_plurality_single_winner` | BV parity — Plurality (choose-one): most first-marks | 1 | single-race | 14 | Plurality | LH-only |
@@ -565,8 +564,8 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 443 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
-| contested (multi-race) | 291 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
+| single-race | 441 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| contested (multi-race) | 293 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
 
 ### By seat class
 
@@ -632,8 +631,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 339 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
-| BV | 299 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results) |
+| LH-only | 338 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| BV | 300 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results) |
 | BV (no yaml) | 89 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
 | LH-only (exception) | 7 | `abc_committee_monotonicity_1seat_c3_b10`, `abc_committee_monotonicity_2seats_c3_b10`, `cc_pareto_dominated_c4_b2`, `copeland_half_credit_decides` |
 

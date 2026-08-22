@@ -37,6 +37,8 @@ Runnable tie cases (flat-score ballots engineered to tie) live in [`Flat_scores_
 
 **Why ties exist at all:** [Ties Are Forced](ties_are_forced.md) — the small impossibility theorem (Moulin 1983) proving that anonymity + neutrality + Pareto cannot coexist with always naming one winner, and that **every even electorate has a forced tie**. It supplies the theory the rest of this hub assumes: the four ways out, what each one costs, and why LH (fixed lot order), BetterVoting (random) and `pref_voting` (returns the tied set) are three defensible answers to a choice the theorem makes unavoidable.
 
+**How often each method ties, measured:** [How often does each Condorcet method tie?](how_often_condorcet_methods_tie.md) — this hub opens by saying tie frequency differs by method and never says by how much. It does now, on a conjecture left unanswered on [Talk:Copeland's method](https://en.wikipedia.org/wiki/Talk:Copeland%27s_method) since 2021. At a 101-voter electorate Copeland ties 2.6–3.2× as often as Schulze or Minimax, and given a cycle at three or four candidates it ties **always** — arithmetically, it cannot break one. But the conjecture **reverses** on an even electorate, which nobody in that discussion raised: drawn matchups are margins of zero, so the margin-readers go blind and Copeland's half-a-win still separates. On ten voters Copeland ties less than half as often as Schulze. Includes the sampler bug that first reported a clean, quotable, entirely false 0.00%.
+
 Glossary: [`lot numbers`](../../GLOSSARY.md) · [`dead rung`](../../GLOSSARY.md).
 
 ---

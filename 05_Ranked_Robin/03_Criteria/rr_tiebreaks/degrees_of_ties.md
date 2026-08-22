@@ -314,6 +314,7 @@ Correcting the rungs does not make Ranked Robin decisive, and a fix that always 
 ## Related
 
 - [rr_tiebreaks — the case set](README.md) · [Ranked Robin tie-breaks: LH vs BetterVoting](../../01_Learn/rr_tiebreak_lh_vs_bv.md)
+- [How often does each Condorcet method tie?](../../../07_Concepts/topics/ties/how_often_condorcet_methods_tie.md) — how much work this ladder is actually doing, measured against Schulze, Ranked Pairs, Minimax and Split Cycle
 - [Cycle resolution — why Minimax, Ranked Pairs and Schulze exist](../../01_Learn/cycle_resolution.md)
 - [Ranked Robin (the method)](../../01_Learn/ranked_robin.md) · [clone independence](../clone_independence/README.md)
 - Upstream: [bettervoting#1469](https://github.com/Equal-Vote/bettervoting/issues/1469) · [#1063 deterministic tie-breaking](https://github.com/Equal-Vote/bettervoting/issues/1063) · [our tracker row](../../../07_Concepts/about_this_repo/upstream_bug_reports.md)
