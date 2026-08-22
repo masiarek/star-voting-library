@@ -8,7 +8,7 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**622 election files** (516 single-winner, 106 multi-winner) across 18 method(s).
+**632 election files** (516 single-winner, 116 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
@@ -23,7 +23,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 28 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 11 |
-| BLOC STAR | 31 |
+| BLOC STAR | 41 |
 | CAV | 1 |
 | IRV | 19 |
 | PLURALITY | 35 |
@@ -614,11 +614,15 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`coop_board_approval`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_approval.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — Yes/No approval ballot (same nine voters) → _Chris, Dana, Ella_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_approval.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (31)
+## BLOC STAR  (41)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
 | [`ex12_bloc_sweep`](../../01_STAR/05_Practice/cases/cases_pages/ex12_bloc_sweep.md) | `01_STAR/05_Practice/cases/` | 2 | Exercise 12 — Two seats, one neighborhood: Bloc STAR sweeps → _Asa, Bram_ | [`.yaml`](../../01_STAR/05_Practice/cases/ex12_bloc_sweep.yaml) |
+| [`bloc_condorcet_winner_no_seat`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_condorcet_winner_no_seat.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 2 | Bloc STAR — the Condorcet winner never reaches a runoff → _Cyrus, Ada_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_condorcet_winner_no_seat.yaml) |
+| [`bloc_divided_majority`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_divided_majority.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 2 | Bloc STAR — a divided majority wins nothing → _Uma, Ugo_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_divided_majority.yaml) |
+| [`bloc_finalist_wins_nothing`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_finalist_wins_nothing.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 2 | Bloc STAR — making the first runoff buys you nothing → _Ada, Cleo_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_finalist_wins_nothing.yaml) |
+| [`bloc_one_voter_council`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_one_voter_council.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 2 | Bloc STAR — one voter fills a two-seat council → _Ada, Ben_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_one_voter_council.yaml) |
 | [`00_c3_b3_bloc-baseline-2-seats`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/00_c3_b3_bloc-baseline-2-seats.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | Bloc STAR baseline — 3 candidates, 2 seats (clean, no tiebreak) → _Alice, Bruno_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/00_c3_b3_bloc-baseline-2-seats.yaml) |
 | [`01_c4_b2_bloc-star-2-seats`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/01_c4_b2_bloc-star-2-seats.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | Bloc STAR Voting: 2-Seat Committee Election → _Don, Cal_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/01_c4_b2_bloc-star-2-seats.yaml) |
 | [`b484mbm_tie_every_rung`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/b484mbm_tie_every_rung.md) | `02_STAR_Bloc/02_Examples/cases/` | 2 | 3 candidates / 2 seats, Bloc STAR — tie at every rung (484mbm) → _Blythe, Arden_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/b484mbm_tie_every_rung.yaml) |
@@ -640,15 +644,21 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2210_fvg8y8_bloc_star_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_star_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc STAR: the same majority sweeps both seats → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_star_sweep.yaml) |
 | [`one_point_bloc_star`](../../method_comparisons/zero_support_election/cases/cases_pages/one_point_bloc_star.md) | `method_comparisons/zero_support_election/cases/` | 2 | One point — a single mark fills one seat and the lot fills the other (Bloc STAR) → _Ben, Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/one_point_bloc_star.yaml) |
 | [`zero_support_bloc_star`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_bloc_star.md) | `method_comparisons/zero_support_election/cases/` | 2 | Zero support — nobody scored anybody (Bloc STAR) → _Ada, Ben_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_bloc_star.yaml) |
+| [`bloc_equal_support_seat`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_equal_support_seat.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 3 | Bloc STAR — a seat decided by 11 voters out of 31 → _Croissant, Almond, Brioche_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_equal_support_seat.yaml) |
+| [`bloc_score_leader_shut_out`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_score_leader_shut_out.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 3 | Bloc STAR — the score leader is shut out of every seat → _Dev, Bo, Cleo_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_score_leader_shut_out.yaml) |
 | [`bv130_bloc_pagination_731`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130_bloc_pagination_731.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv130_bloc_pagination_731.yaml) |
 | [`bv130r2_dead_rung_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130r2_dead_rung_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv130r2_dead_rung_bloc.yaml) |
 | [`bv2269_t488h9_race_nobody_can_lose`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv2269_t488h9_race_nobody_can_lose.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV2269 — Three candidates, three seats: a race nobody can lose | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv2269_t488h9_race_nobody_can_lose.yaml) |
 | [`07a_c5_b36_herb-council-bloc-3-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/07a_c5_b36_herb-council-bloc-3-seats.md) | `06_Other/ballot_style_lab/cases/` | 3 | The Herb Garden Council — Bloc STAR, 3 seats (the majority can sweep) → _Basil, Chive, Dill_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/07a_c5_b36_herb-council-bloc-3-seats.yaml) |
 | [`pets_gov_bloc_star`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_bloc_star.md) | `method_comparisons/pets_governance/cases/` | 3 | Pets Governance — Council by Bloc STAR (3 seats): majority sweeps → _Dog, Fish, Cat_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_bloc_star.yaml) |
+| [`bloc_no_majority_bridge`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_no_majority_bridge.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 4 | Bloc STAR — no faction has a majority, and the second-largest wins nothing → _Jaya, Ada, Gita, Bram_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_no_majority_bridge.yaml) |
 | [`bv1525_condorcet_loser_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1525_condorcet_loser_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | BV1525 — 5 candidates / 4 winners, Bloc STAR (Condorcet-loser ties for seat 1) → _First, Second, Third, Fourth_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv1525_condorcet_loser_bloc.yaml) |
 | [`bv1835_8h3yrx_score_leader_no_seat`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv1835_8h3yrx_score_leader_no_seat.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | BV1835 — Bloc STAR, 100 voters, 4 seats: the score leader wins no seat → _Bianca, Cedric, Deegan, Eli_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv1835_8h3yrx_score_leader_no_seat.yaml) |
 | [`lackner_skowron_shadow_bloc_star_c7_b12`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/lackner_skowron_shadow_bloc_star_c7_b12.md) | `02_STAR_Bloc/02_Examples/cases/` | 4 | Shadow STAR (Bloc) — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/lackner_skowron_shadow_bloc_star_c7_b12.yaml) |
 | [`09_c7_b44_park-bloc-4-seats`](../../06_Other/ballot_style_lab/cases/cases_pages/09_c7_b44_park-bloc-4-seats.md) | `06_Other/ballot_style_lab/cases/` | 4 | Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards → _Dogwood, Aspen, Elm, Cedar_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/09_c7_b44_park-bloc-4-seats.yaml) |
+| [`bloc_all_but_one`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_all_but_one.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 5 | Bloc STAR — five seats, six candidates: the election that only excludes → _Ana, Cleo, Bram, Dov, Esme_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_all_but_one.yaml) |
+| [`bloc_harborview_council`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_harborview_council.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 5 | Bloc STAR — Harborview city council: a 52% slate takes all five seats → _Ana, Beto, Cora, Dmitri, Elena_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_harborview_council.yaml) |
+| [`bloc_widest_field`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_widest_field.md) | `02_STAR_Bloc/02_Examples/bloc_shapes/cases/` | 6 | Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented → _Lena, Alma, Mateo, Bruno, Clara, Dex_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_widest_field.yaml) |
 
 ## CAV  (1)
 

@@ -206,8 +206,18 @@ LH:ballot_expressiveness_c9_irv_top5,"Nine candidates, 25 voters — ranking onl
 LH:batch_all_out_condorcet_c3_b3,Batch elimination empties the field — with a Condorcet winner sitting there,1,single-race,3,IRV,LH-only
 LH:batch_all_out_cycle_c3_b3,Batch elimination empties the field — the perfect cycle,1,single-race,3,IRV,LH-only
 LH:batch_all_out_round2_c4_b6,The field empties in round two — and Pareto is what keeps Dev out of the tie,1,single-race,6,IRV,LH-only
+LH:bloc_all_but_one,"Bloc STAR — five seats, six candidates: the election that only excludes",1,single-race,7,STAR,LH-only
+LH:bloc_condorcet_winner_no_seat,Bloc STAR — the Condorcet winner never reaches a runoff,1,single-race,5,STAR,LH-only
+LH:bloc_divided_majority,Bloc STAR — a divided majority wins nothing,1,single-race,12,STAR,LH-only
+LH:bloc_equal_support_seat,Bloc STAR — a seat decided by 11 voters out of 31,1,single-race,31,STAR,LH-only
+LH:bloc_finalist_wins_nothing,Bloc STAR — making the first runoff buys you nothing,1,single-race,7,STAR,LH-only
+LH:bloc_harborview_council,Bloc STAR — Harborview city council: a 52% slate takes all five seats,1,single-race,108,STAR,LH-only
 LH:bloc_lot_path_dependence_a_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first),1,single-race,5,STAR,LH-only
 LH:bloc_lot_path_dependence_b_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot B: Omar first),1,single-race,5,STAR,LH-only
+LH:bloc_no_majority_bridge,"Bloc STAR — no faction has a majority, and the second-largest wins nothing",1,single-race,101,STAR,LH-only
+LH:bloc_one_voter_council,Bloc STAR — one voter fills a two-seat council,1,single-race,1,STAR,LH-only
+LH:bloc_score_leader_shut_out,Bloc STAR — the score leader is shut out of every seat,1,single-race,5,STAR,LH-only
+LH:bloc_widest_field,"Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented",1,single-race,175,STAR,LH-only
 LH:blocs_bloc_c9_b10,"Left, Centre, Right — Bloc STAR fills the council",1,single-race,10,bloc,LH-only
 LH:blocs_pr_c9_b10,"Left, Centre, Right — Proportional STAR fills the council",1,single-race,10,STAR_PR,LH-only
 LH:bpv_bakery_block_plurality_c4_b12,The same electorate under plurality block voting — the ranked ballot changed nothing,1,single-race,12,Plurality,LH-only
