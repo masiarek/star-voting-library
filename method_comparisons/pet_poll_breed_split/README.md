@@ -6,7 +6,7 @@
 
 *Nobody changed their mind. Nobody was added or removed. The only thing that changed is how many names the dog side had on the ballot.*
 
-**▶ Live on BetterVoting:** [vote](https://bettervoting.com/p2wggg) · **[results ↗](https://bettervoting.com/p2wggg/results)** (election `p2wggg`, Test ID **BV2286** — all seven races, every one agreeing with the LH engine). Sixty voters cast one ballot covering all seven races, so the export itself is the proof that the electorate never changed between Ballot A and Ballot B.
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/p2wggg) · **[results ↗](https://bettervoting.com/p2wggg/results)** (election `p2wggg`, Test ID **BV2286** — all seven races, every one agreeing with the LH engine). Sixty voters cast one ballot covering all seven races, so the export itself is the proof that the electorate never changed between the two. (BetterVoting's race titles call them **Ballot A** and **Ballot B**; on this page they are simply the **one-dog ballot** and the **three-dog ballot**.)
 
 → The concept: [the spoiler effect](../../07_Concepts/topics/spoiler_effect.md) · the runnable set: [vote-splitting & spoilers](../split_voting/README.md) · how often it happens for real: [the 2022 count, read honestly](../split_voting/how_often_does_vote_splitting_happen.md) · the other pet polls: [four methods](../pet_poll_four_methods/README.md) · [four winners](../pet_poll_four_winners/README.md)
 
@@ -28,7 +28,7 @@ So the fix isn't a new topic. The fix is **clones on the ballot** — and pets c
 
 Sixty pet owners, fixed opinions. Thirty-four are dog people (a 57% majority), twenty are cat people, six want a parrot. Among the dog people, tastes differ by breed: fourteen lead with a Labrador, twelve with a Golden Retriever, eight with a German Shepherd — but *all thirty-four prefer any dog to any cat.*
 
-| | Ballot A — *one dog on the paper* | Ballot B — *three dogs on the paper* |
+| | **The one-dog ballot** | **The three-dog ballot** |
 |---|---|---|
 | **Candidates** | Dog · Cat · Parrot | Labrador · Golden Retriever · German Shepherd · Cat · Parrot |
 | **Choose-One first choices** | **Dog 34** · Cat 20 · Parrot 6 | Cat 20 · Labrador 14 · Golden Retriever 12 · German Shepherd 8 · Parrot 6 |
@@ -36,9 +36,9 @@ Sixty pet owners, fixed opinions. Thirty-four are dog people (a 57% majority), t
 | **STAR winner** | **Dog** | **Labrador** |
 | **Anything to see?** | No. Every method agrees. | Yes. Four methods, **three different winners.** |
 
-Ballot A *is* the `meta_pets` problem, reproduced in miniature: one name per family, a dominant family, and every method returning the same answer. Ballot B is the same election with the dog side's internal disagreement written onto the paper — which is the normal condition of almost every real primary.
+The one-dog ballot *is* the `meta_pets` problem, reproduced in miniature: one name per family, a dominant family, and every method returning the same answer. The three-dog ballot is the same election with the dog side's internal disagreement written onto the paper — which is the normal condition of almost every real primary.
 
-## Ballot B, counted five ways
+## The three-dog ballot, counted five ways
 
 Rows are candidates, columns are counting rules — one electorate, read five ways ([the same-opinion line-up](../../07_Concepts/tips/TIPS_canonical_elections.md)):
 
@@ -59,17 +59,17 @@ Rows are candidates, columns are counting rules — one electorate, read five wa
 
 | # | Race | Winner | Read · run |
 |:-:|------|:------:|:--:|
-| 1 | Ballot A — Choose-One | **Dog** (34/60, 57%) | [page](cases/cases_pages/bv2286_p2wggg_a1_one_dog_plurality.md) · [`.yaml`](cases/bv2286_p2wggg_a1_one_dog_plurality.yaml) |
-| 2 | Ballot A — STAR | **Dog** | [page](cases/cases_pages/bv2286_p2wggg_a2_one_dog_star.md) · [`.yaml`](cases/bv2286_p2wggg_a2_one_dog_star.yaml) |
-| 3 | Ballot B — Choose-One | **Cat** (20/60, 33%) | [page](cases/cases_pages/bv2286_p2wggg_b1_three_dogs_plurality.md) · [`.yaml`](cases/bv2286_p2wggg_b1_three_dogs_plurality.yaml) |
-| 4 | Ballot B — RCV-IRV | **Golden Retriever** | [page](cases/cases_pages/bv2286_p2wggg_b2_three_dogs_irv.md) · [`.yaml`](cases/bv2286_p2wggg_b2_three_dogs_irv.yaml) |
-| 5 | Ballot B — Approval | **Golden Retriever** (34, 57%) | [page](cases/cases_pages/bv2286_p2wggg_b3_three_dogs_approval.md) · [`.yaml`](cases/bv2286_p2wggg_b3_three_dogs_approval.yaml) |
-| 6 | Ballot B — STAR | **Labrador** | [page](cases/cases_pages/bv2286_p2wggg_b4_three_dogs_star.md) · [`.yaml`](cases/bv2286_p2wggg_b4_three_dogs_star.yaml) |
-| 7 | Ballot B — Ranked Robin | **Labrador** (4–0–0) | [page](cases/cases_pages/bv2286_p2wggg_b5_three_dogs_ranked_robin.md) · [`.yaml`](cases/bv2286_p2wggg_b5_three_dogs_ranked_robin.yaml) |
+| 1 | one dog — Choose-One | **Dog** (34/60, 57%) | [page](cases/cases_pages/bv2286_p2wggg_a1_one_dog_plurality.md) · [`.yaml`](cases/bv2286_p2wggg_a1_one_dog_plurality.yaml) |
+| 2 | one dog — STAR | **Dog** | [page](cases/cases_pages/bv2286_p2wggg_a2_one_dog_star.md) · [`.yaml`](cases/bv2286_p2wggg_a2_one_dog_star.yaml) |
+| 3 | three dogs — Choose-One | **Cat** (20/60, 33%) | [page](cases/cases_pages/bv2286_p2wggg_b1_three_dogs_plurality.md) · [`.yaml`](cases/bv2286_p2wggg_b1_three_dogs_plurality.yaml) |
+| 4 | three dogs — RCV-IRV | **Golden Retriever** | [page](cases/cases_pages/bv2286_p2wggg_b2_three_dogs_irv.md) · [`.yaml`](cases/bv2286_p2wggg_b2_three_dogs_irv.yaml) |
+| 5 | three dogs — Approval | **Golden Retriever** (34, 57%) | [page](cases/cases_pages/bv2286_p2wggg_b3_three_dogs_approval.md) · [`.yaml`](cases/bv2286_p2wggg_b3_three_dogs_approval.yaml) |
+| 6 | three dogs — STAR | **Labrador** | [page](cases/cases_pages/bv2286_p2wggg_b4_three_dogs_star.md) · [`.yaml`](cases/bv2286_p2wggg_b4_three_dogs_star.yaml) |
+| 7 | three dogs — Ranked Robin | **Labrador** (4–0–0) | [page](cases/cases_pages/bv2286_p2wggg_b5_three_dogs_ranked_robin.md) · [`.yaml`](cases/bv2286_p2wggg_b5_three_dogs_ranked_robin.yaml) |
 
 Every winner is cross-checked: **LH engine = BetterVoting** on all seven races, and the Ranked Robin result is confirmed a third time by `pref_voting`'s independent Copeland implementation (`AGREE ✓`, unique Copeland winner).
 
-### The scored ballots (Ballot B)
+### The scored ballots (three-dog ballot)
 
 <!-- ballots:bv2286_p2wggg_b4_three_dogs_star -->
 *(No ballot art for `bv2286_p2wggg_b4_three_dogs_star` — draw it with `build_style_ballot_images.py --from-yaml method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b4_three_dogs_star.yaml`.)*
@@ -197,6 +197,6 @@ The ice-cream row is not hypothetical — it is live on BetterVoting as **[BV218
 
 **A live poll can't be made to split by voting in it.** If a demo's candidate list has no clones, no pattern of incoming ballots will produce vote splitting — the most you can manufacture is a *method divergence* (a score winner who loses the runoff), which is a different lesson and a weaker one. Splitting has to be designed into the candidate list before the first vote is cast.
 
-**Score-winner ≠ runoff-winner is a feature, not a wart.** A demo where the scoring round and the automatic runoff disagree is showing the audience precisely why the runoff exists: the scoring round finds the most broadly liked option, and the runoff checks it against which one more voters actually *prefer*. On Ballot B they agree (Labrador leads both). On `meta_pets` they don't — and that is worth two sentences, not an apology. See [the STAR scoring round](../../01_STAR/01_Learn/the_count/STAR_Scoring_Round.md) and [what makes a good winner](../../07_Concepts/topics/what_makes_a_good_winner.md).
+**Score-winner ≠ runoff-winner is a feature, not a wart.** A demo where the scoring round and the automatic runoff disagree is showing the audience precisely why the runoff exists: the scoring round finds the most broadly liked option, and the runoff checks it against which one more voters actually *prefer*. On the three-dog ballot they agree (Labrador leads both). On `meta_pets` they don't — and that is worth two sentences, not an apology. See [the STAR scoring round](../../01_STAR/01_Learn/the_count/STAR_Scoring_Round.md) and [what makes a good winner](../../07_Concepts/topics/what_makes_a_good_winner.md).
 
 **This is a constructed electorate.** The sixty ballots below are designed to be plausible, not sampled. They are here to prove the mechanism, not to measure how much America likes Labradors.
