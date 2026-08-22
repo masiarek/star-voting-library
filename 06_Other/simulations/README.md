@@ -2,12 +2,31 @@
 
 This folder holds brute-force simulations that **measure** a claim instead of citing a number we can't defend. Two rules — each a 301-level lesson in its own right: **always report the model and parameters with any number**, and **never let an arbitrary tiebreaker silently inflate a result**. A third, more foundational one — **sample voter *utilities* and derive each ballot from them; never draw random ballots** — is why every script here starts from `sample_utilities()`: [Simulate utilities, not ballots](../../07_Concepts/topics/simulate_utilities_not_ballots.md).
 
+- **The six Euclidean spaces** — `euclidean_spaces.py`: not a measurement but the *reference* for everything else here — what `uniform_ball`, `gaussian_cube`, `unbounded_gaussian` and the rest actually draw, implemented from their definitions, cross-checked against `prefsampling`, and plotted ([jump to section](#the-six-euclidean-spaces)). Concept page: [The six Euclidean spaces](../../07_Concepts/topics/euclidean_spaces.md).
 - **Favorite-Betrayal (FBC)** — `fbc_simulation.py` (below).
 - **Runoff Reversal frequency** — `runoff_reversal_simulation.py` ([jump to section](#runoff-reversal-frequency-simulation)).
 - **STAR vs Approval divergence** — `star_vs_approval_divergence.py`: how often sincere STAR and Approval elect *different* winners (spoiler: no single number — it depends on the electorate model and the approval cutoff). Full writeup + measured rates + worked examples: [How often do STAR and Approval disagree?](../../method_comparisons/star_vs_approval_divergence.md).
 - **Condorcet efficiency** — `condorcet_efficiency_simulation.py`: how often does each of six methods elect the Condorcet winner? ([jump to section](#condorcet-efficiency-simulation)). Full writeup + the table: [Condorcet efficiency, measured](../../07_Concepts/topics/condorcet/condorcet_efficiency_measured.md). Its `--chart` and `--why` modes back a second page: [Why more candidates make every method miss](../../07_Concepts/topics/condorcet/why_more_candidates_miss.md), which explains the field-size effect and works it through [one 65-voter election at 3, 5 and 7 candidates](../../method_comparisons/crowded_field/README.md). Its `--expressiveness` and `--ballot-counts` modes back a third: [What the ballot can and cannot say](../../07_Concepts/scores_and_ranks/ballot_expressiveness_measured.md), which separates ballot resolution from tabulation rule and works it through [one 25-voter election on five different papers](../../method_comparisons/ballot_expressiveness/README.md).
 - **Strategic preservation of the sincere winner** — `strategic_cw_preservation.py`: the same question as above, but with voters allowed to lie ([jump to section](#strategic-cw-preservation-simulation)). Separates the sincere baseline, successful attacks and *backfired* attacks, which a single "does the sincere Condorcet winner still win" rate merges. Full writeup + the tables: [Formal compliance vs. strategic preservation](../../07_Concepts/topics/compliance_vs_strategic_preservation.md).
 - **Does the qualifying round throw away the consensus winner?** — `primary_method_simulation.py`: in a two-stage reform (open primary → top N → good general), how often does the *primary* discard the consensus candidate? Full writeup + measured rates: [Does the qualifying round throw away the consensus winner?](../../method_comparisons/qualifying_round_primary_method.md) ([mechanics](#qualifying-round-primary-method-simulation)).
+
+## The six Euclidean spaces
+
+`euclidean_spaces.py` is the odd one out in this folder: it measures no voting claim. It answers the question every other script here quietly assumes an answer to — **where do the voters' points come from?**
+
+Every spatial run below scatters voters and candidates and lets each voter prefer whoever is nearest. The scatter has a named shape, and the names (`uniform_ball`, `uniform_sphere`, `uniform_cube`, `gaussian_ball`, `gaussian_cube`, `unbounded_gaussian`) travel through this repo's results without ever being defined. This script defines them by **implementing each one in a few lines from its own description**, then checking that implementation against `prefsampling`'s — so the explanation is verified rather than asserted.
+
+```bash
+python euclidean_spaces.py             # the stats table + cross-check
+python euclidean_spaces.py --gallery   # also draw img/euclidean_spaces.png
+```
+
+<img src="img/euclidean_spaces.png" width="640" alt="Six scatter plots of the Euclidean spaces: solid disc, bare ring, filled square, and three clustered variants.">
+
+Two findings worth knowing before picking a model:
+
+- **`gaussian_cube` is barely clustered at all** at the library's default parameters — 21% of points inside the inner half-radius against `uniform_cube`'s 20% — because a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval. It discards **85% of every draw** to achieve that. `gaussian_ball` (36%) is the one that actually clusters.
+- **Seeding these samplers breaks them**, in `prefsampling` 0.1.24. That is why this script cross-checks *unseeded* and draws its own points. Filed as [prefsampling#6](https://github.com/COMSOC-Community/prefsampling/issues/6) and [pref_voting#186](https://github.com/voting-tools/pref_voting/issues/186); short version on the [concept page](../../07_Concepts/topics/euclidean_spaces.md), full mechanism in the [companion QA repo](https://masiarek.github.io/bettervoting-qa/analysis/prefsampling-seeding/index.html).
 
 ## Favorite-Betrayal (FBC) simulation
 

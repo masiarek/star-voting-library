@@ -68,6 +68,7 @@ So: use the map to build intuition and to *predict*, then check the prediction a
 ## Related
 
 - [Election simulation models](election_simulation_models.md) — the full menu (spatial is model **B**), with the math prerequisites
+- [The six Euclidean spaces](euclidean_spaces.md) — this model in close-up: the six named shapes a simulated electorate is drawn from, drawn and measured
 - [Simulate utilities, not ballots](simulate_utilities_not_ballots.md) — why you sample spatial *utilities* and derive ballots
 - [Center squeeze](../../06_Other/RCV_IRV/concepts/RCV_IRV_center_squeeze.md) · [What makes a good winner?](what_makes_a_good_winner.md) — where the spatial picture pays off
 - [Distortion](distortion.md) — the theory that takes this model literally: the triangle inequality caps how much a ranked ballot can lose (3×, exactly)
