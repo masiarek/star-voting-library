@@ -11,6 +11,7 @@ scenario_description: |-
   Approval-IRV is clone-independent (Theorem 3.2) and elects Alma in both files. So does STAR: the extra identical ballot column adds nothing to the scoring round that was not already there, which is the same reason Approval-IRV survives the test.
   One honest wrinkle the file shows rather than hides: perfect clones cast IDENTICAL ballots, so Chen and Costa post identical score totals and STAR's second finalist slot is a genuine tie. The runoff is unaffected — Alma beats either of them on the same ballots — but the tiebreaker banner in the report is real, not a defect in the case.
   For the Approval-IRV and Split-IRV counts run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py; --drop Costa reproduces the companion file's count from this one.
+paradoxes: [clone-teaming, condorcet-winner]
 voting_method: STAR
 num_winners: 1
 ballots: |-

@@ -10,6 +10,7 @@ scenario_description: |-
   Approval-IRV gives one full point to EACH candidate in a ballot's top surviving class: Chloe is top on one ballot only, so she goes first; then Dante; then Aida beats Bram head-to-head. Aida wins. Split-IRV splits one point among a ballot's top choices instead, which costs Aida the two ballots she shares — she scores 1/2 + 1/3 and is eliminated FIRST — and Bram wins. Same five ballots, opposite answers, and the only difference is what a tie is worth.
   STAR elects Aida, agreeing with Approval-IRV and with the pairwise count (Aida is the Condorcet winner). That agreement is not an accident of the scores chosen: across 20,000 random strictly-decreasing 0-5 encodings of this weak order, STAR elects Aida in 92.9% and never elects Bram outright.
   The scores below are one reading of the paper's ordinal profile; the induced weak order is exactly the paper's Figure 3. For the Approval-IRV and Split-IRV counts run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py.
+paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
 ballots: |-

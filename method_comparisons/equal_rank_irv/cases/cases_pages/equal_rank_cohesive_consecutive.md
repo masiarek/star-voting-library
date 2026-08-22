@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Alice
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/j9wvv4) · **[results ↗](https://bettervoting.com/j9wvv4/results)** (election `j9wvv4` · test `BV2297`).
+
 ## Scenario
 
 Figure 11 of Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407), doubled so every bloc clears the house minimum of 6. Matched pair with equal_rank_cohesive_wide_gaps.yaml — the SAME 74 voters holding the SAME preference order, using the 0-5 scale differently. Same cast because it is the same election with one thing changed.

@@ -11,6 +11,10 @@ scenario_description: |-
   So this file is the witness for a claim this library should state about its own preferred method rather than wait to be told: STAR does not satisfy respect for cohesive majorities. The axiom is defined on weak orders, a score ballot induces one, and here is a perfectly ordinary 0-5 profile that breaks it. That is not a defect peculiar to STAR — the paper proves no Condorcet method that reads only pairwise margins satisfies the axiom either (Proposition 3.4), so Ranked Robin, Schulze, Ranked Pairs and Minimax are all outside it. Approval-IRV's claim is genuinely unusual, and worth reporting straight.
   One reading note, so the report does not surprise anyone: Bilal and Cato post identical score totals here, so STAR's second finalist slot is settled by lot. It does not touch the result — Delia beats Bilal 30-28 and Cato 30-28 on the same ballots, so the lot picks the loser of the runoff either way.
   For the Approval-IRV and Split-IRV counts, and the axiom check itself, run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py.
+paradoxes: [condorcet-cycle, majority-failure]
+bv_test_id: BV2297
+bv_election_id: j9wvv4
+bv_results_url: https://bettervoting.com/j9wvv4/results
 voting_method: STAR
 num_winners: 1
 ballots: |-

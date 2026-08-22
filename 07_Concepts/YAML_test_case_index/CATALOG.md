@@ -9,7 +9,7 @@ Two grains underlie every view here:
 
 Each race carries derived facets so you can slice: **ballot type** (score / ranked / approval / choose-one), **seat class** (single- vs multi-winner), and **character** (majoritarian / proportional / Condorcet). BV-only races with no yaml (e.g. Bloc Plurality) are pulled in from the frozen exports.
 
-**Totals:** 547 elections, 747 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
+**Totals:** 546 elections, 747 races. Full drill-down: [`races.csv`](races.csv) · [`elections.csv`](elections.csv). Related: [BV registry](BV_registry.md) · [multi-race index](multirace_elections.md) · [by method](README.md).
 
 ## Elections
 
@@ -70,6 +70,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`h93tm4`](https://bettervoting.com/h93tm4/results) | BV2171 — The Condorcet centrist, minimal form (8 vot | 7 | contested (multi-race) | 8 | Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
 | [`hf3ckp`](https://bettervoting.com/hf3ckp/results) | BV2282 — Brams's 21 — twenty-one ranked ballots, two | 2 | contested (multi-race) | 21 | IRV, RankedRobin | BV |
 | [`ht2c3g`](https://bettervoting.com/ht2c3g/results) | BV2216 — Pineapple progression 1/3 — Choose-One elec | 4 | contested (multi-race) | 99 | Approval, Plurality, RankedRobin, STAR | BV |
+| [`j9wvv4`](https://bettervoting.com/j9wvv4/results) | BV2297 — Same voters, same preference order - the sc | 2 | contested (multi-race) | 74 | STAR | BV |
 | [`jfrk9t`](https://bettervoting.com/jfrk9t/results) | BV655 - “equal opposition” vote - the “Same-Score Ba | 2 | contested (multi-race) | 2 | STAR | BV |
 | [`k3fmwv`](https://bettervoting.com/k3fmwv/results) | BV2213 — Alaska 2022 special, scaled model: STAR & R | 4 | contested (multi-race) | 200 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`kcf8vf`](https://bettervoting.com/kcf8vf/results) | BV2134 — Pets Governance: six positions, six methods | 6 | contested (multi-race) | 22 | Approval, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
@@ -328,8 +329,6 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | `edelman_perfect_component_c3_b30` | A perfect 'Condorcet component' (30 voters) — every  | 1 | single-race | 30 | STAR | LH-only |
 | `equal_rank_clone_with` | Equal ranks — Costa joins Chen's ticket, and Split-I | 1 | single-race | 45 | STAR | LH-only |
 | `equal_rank_clone_without` | Equal ranks — Costa withdraws, and Split-IRV's winne | 1 | single-race | 45 | STAR | LH-only |
-| `equal_rank_cohesive_consecutive` | Equal ranks — 38 of 74 rally to Alice, and consecuti | 1 | single-race | 74 | STAR | LH-only |
-| `equal_rank_cohesive_wide_gaps` | Equal ranks — the same 74 voters use the whole scale | 1 | single-race | 74 | STAR | LH-only |
 | `equal_rank_five_voters` | Equal ranks — five voters, and the two generalizatio | 1 | single-race | 5 | STAR | LH-only |
 | `equal_rank_majority_alternative` | Equal ranks — a bare majority puts Amira top, and Ba | 1 | single-race | 200 | STAR | LH-only |
 | `equal_support_runoff_demo` | Equal Support — counted in both rounds, neutral only | 1 | single-race | 100 | STAR | LH-only |
@@ -575,8 +574,8 @@ Whether a race sits in a single-contest election or a **contested** (multi-race)
 
 | single vs multi-race | # races | example elections |
 |---|--:|---|
-| single-race | 452 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
-| contested (multi-race) | 295 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
+| single-race | 450 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results), [`2hqmrd`](https://bettervoting.com/2hqmrd/results) |
+| contested (multi-race) | 297 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`37yf8x`](https://bettervoting.com/37yf8x/results) |
 
 ### By seat class
 
@@ -642,8 +641,8 @@ Canonical method family — e.g. Bloc STAR and STAR both normalize to STAR; allo
 
 | backing (BV vs LH-only) | # races | example elections |
 |---|--:|---|
-| LH-only | 346 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
-| BV | 302 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results) |
+| LH-only | 344 | `00_c3_b3_bloc-baseline-2-seats`, `00_plurality_vs_majority`, `01_c4_b2_bloc-star-2-seats`, `01_condorcet_winner` |
+| BV | 304 | [`24b623`](https://bettervoting.com/24b623/results), [`26khr3`](https://bettervoting.com/26khr3/results), [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2gvwr9`](https://bettervoting.com/2gvwr9/results) |
 | BV (no yaml) | 89 | [`2cdvm6`](https://bettervoting.com/2cdvm6/results), [`2jrfpg`](https://bettervoting.com/2jrfpg/results), [`2p33qq`](https://bettervoting.com/2p33qq/results), [`3grpbb`](https://bettervoting.com/3grpbb/results) |
 | LH-only (exception) | 10 | `abc_committee_monotonicity_1seat_c3_b10`, `abc_committee_monotonicity_2seats_c3_b10`, `alaska_2022_irv_with_palin`, `alaska_2022_irv_without_palin` |
 

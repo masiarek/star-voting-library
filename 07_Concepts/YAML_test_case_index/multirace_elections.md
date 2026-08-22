@@ -939,6 +939,15 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2296 — The same seven friends, scoring 0-5 (STAR) | STAR | 3 | **Milk Chocolate** | [results ↗](https://bettervoting.com/9cff2d/results) |
 | BV2296 — The same seven friends, head-to-head (Ranked Robin) | RankedRobin | 3 | **Milk Chocolate** | [results ↗](https://bettervoting.com/9cff2d/results) |
 
+## BV2297 — Same voters, same preference order - the scale decides the winner
+
+**Election** [`j9wvv4`](https://bettervoting.com/j9wvv4/results) · **2 races** · **74 ballots** · [frozen export](../../method_comparisons/equal_rank_irv/cases/bv2297_j9wvv4_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2297 — Consecutive scores - 74 voters, four candidates | STAR | 4 | **Alice** | [results ↗](https://bettervoting.com/j9wvv4/results) |
+| BV2297 — Wide gaps - the SAME 74 voters, the SAME order | STAR | 4 | **Delia** | [results ↗](https://bettervoting.com/j9wvv4/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -10,6 +10,7 @@ scenario_description: |-
   This is the profile the paper uses to argue that "select some majority alternative" is the WRONG axiom for equal-rank ballots, and that its own weaker axiom — respect for cohesive majorities — is the right one. Split-IRV elects Amira (splitting the 94 equal-first ballots half a point each drops Basil to last and eliminates him in round 1). Approval-IRV elects Basil. So does STAR, and so does the pairwise count.
   Why the file is a SCORE case and not a ranked one: a 0-5 ballot expresses a weak order natively — two 5s are an equal-first, exactly as "Amira=Basil" is — so the paper's profile can be recorded here without inventing a ballot type. The scores below are one reading of the paper's ordinal profile, and a reading does add information the paper's weak order does not carry. That freedom was measured rather than assumed: across 20,000 random strictly-decreasing 0-5 encodings of this same weak order, STAR elects Basil in 98.5% and never elects anyone else (the remaining 1.5% are exact scoring ties). Basil is not an artifact of the numbers chosen.
   For the Approval-IRV and Split-IRV counts on these same ballots run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py — nothing in the LH engine or on BetterVoting counts either rule, because deployed instant runoff rejects an equal rank as an overvote.
+paradoxes: [condorcet-winner]
 voting_method: STAR
 num_winners: 1
 ballots: |-

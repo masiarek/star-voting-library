@@ -4,6 +4,8 @@
 
 **Level: 301 · deep dive**
 
+**▶ Live on BetterVoting:** the cohesive-majority pair is election `j9wvv4` (BV2297) — [vote](https://bettervoting.com/j9wvv4) · **[results ↗](https://bettervoting.com/j9wvv4/results)**. One election, two races, the *same 74 voters* scored two ways: race 1 elects Alice, race 2 elects Delia.
+
 → the method: [RCV-IRV (Hare)](../../06_Other/RCV_IRV/concepts/RCV-IRV-Hare.md) · the ballot: [weak ranks](../../07_Concepts/scores_and_ranks/weak_ranks.md) · the variant page: [RCV-IRV with equal ranks](../../06_Other/RCV_IRV/concepts/variants/RCV-IRV-equal-rank.md) · the axiom it turns on: [independence of clones](../../05_Ranked_Robin/01_Learn/rr_clone_independence.md)
 
 ---
@@ -41,7 +43,7 @@ Every file below is a real 0-5 score election this engine counts, because **a sc
 | [Five voters, two answers](cases/cases_pages/equal_rank_five_voters.md) | The smallest election here where the two rules disagree. Aida is shared-first on two ballots, which under Split-IRV is what eliminates her. | **Aida** | Bram | **Aida** | [`yaml`](cases/equal_rank_five_voters.yaml) |
 | [A bare majority tops Amira — Basil still wins](cases/cases_pages/equal_rank_majority_alternative.md) | Why "elect a candidate a majority ranks first" is the *wrong* axiom: 102 of 200 rank Amira first, but 98 strictly prefer Basil and only 8 the reverse. | **Basil** | Amira | **Basil** | [`yaml`](cases/equal_rank_majority_alternative.yaml) |
 | [Costa joins Chen's ticket](cases/cases_pages/equal_rank_clone_with.md) · [and withdraws](cases/cases_pages/equal_rank_clone_without.md) | Independence of clones, as a matched pair. One clone enters and Split-IRV's winner flips from Alma to the Chen/Costa ticket. | **Alma** both | Chen/Costa → **Alma** | **Alma** both | [`yaml`](cases/equal_rank_clone_with.yaml) · [`yaml`](cases/equal_rank_clone_without.yaml) |
-| [38 of 74 rally to Alice — consecutive scores](cases/cases_pages/equal_rank_cohesive_consecutive.md) · [and wide gaps](cases/cases_pages/equal_rank_cohesive_wide_gaps.md) | Respect for cohesive majorities, and the encoding trap. Same 74 voters, same preference order, two legitimate uses of the 0-5 scale. | Bilal/Cato both | **Delia** both ❌ | **Alice** → **Delia** ❌ | [`yaml`](cases/equal_rank_cohesive_consecutive.yaml) · [`yaml`](cases/equal_rank_cohesive_wide_gaps.yaml) |
+| [38 of 74 rally to Alice — consecutive scores](cases/cases_pages/equal_rank_cohesive_consecutive.md) · [and wide gaps](cases/cases_pages/equal_rank_cohesive_wide_gaps.md) — **live: [BV2297 ↗](https://bettervoting.com/j9wvv4/results)** | Respect for cohesive majorities, and the encoding trap. Same 74 voters, same preference order, two legitimate uses of the 0-5 scale. | Bilal/Cato both | **Delia** both ❌ | **Alice** → **Delia** ❌ | [`yaml`](cases/equal_rank_cohesive_consecutive.yaml) · [`yaml`](cases/equal_rank_cohesive_wide_gaps.yaml) |
 
 Run any of them:
 
@@ -129,6 +131,8 @@ Three things, and the third one cuts the other way.
 **2. Where the paper's own axioms point, STAR usually goes.** On the two profiles built to separate good behavior from bad, STAR lands with Approval-IRV and against Split-IRV — Aida in the five-voter case, Basil in the majority-alternative case. Neither is a fluke of the scores chosen: across 20,000 random strictly-decreasing 0-5 encodings of each profile, STAR elects Basil **98.5%** of the time (and never anyone else) and Aida **92.9%**.
 
 **3. But STAR fails respect for cohesive majorities, and the fourth case is the witness.** 38 of 74 voters rank Alice in their top class, so the axiom permits Alice, Bilal or Cato and forbids Delia. Give those voters consecutive scores and STAR elects Alice; give them the same preference order with wide gaps and **STAR elects Delia** — the one candidate the majority excluded. Both files are ordinary 0-5 ballots inducing the identical weak order. Approval-IRV satisfies the axiom on both.
+
+**BetterVoting counts it the same way.** The claim in point 3 is load-bearing enough that it should not rest on this repo's own engine, so the pair is live as [BV2297](https://bettervoting.com/j9wvv4/results) — one election, two races, 74 ballots each. BV independently elects **Alice** in race 1 and **Delia** in race 2, matching the LH engine on both. One documented difference, and it is in the runner-up rather than the winner: Bilal and Cato tie at 220 for race 2's second finalist slot, LH's published lot picks Bilal and BV's seeded shuffle picks Cato (`tieBreakType: "random"`; race 1 reports `"none"`). Delia beats either of them 30–28, so the winner is tie-break-independent — which is what made the case mintable at all.
 
 That third point has a companion worth reading beside it: respect for cohesive majorities is **generalized PSC at one seat and one candidate**, and Allocated Score fails the multi-winner version too — see [solid coalitions and STAR-PR](../../03_STAR_PR/03_Criteria/solid_coalitions/README.md). And STAR is in wide company here: the paper's Proposition 3.4 proves **no rule that reads only pairwise margins can satisfy the axiom**, which rules out Schulze, Ranked Pairs and Minimax. Approval-IRV's claim to it is genuinely unusual.
 

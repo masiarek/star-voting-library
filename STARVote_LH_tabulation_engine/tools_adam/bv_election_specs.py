@@ -7021,7 +7021,74 @@ _BWF_SPEC = {
 }
 
 
-ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+
+# --------------------------------------------------------------------------- #
+# Equal ranks / the scale decides the winner - Figure 11 of Delemazure & Peters,
+# "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24).
+# Two races, SAME 74 voters, SAME preference order, two ways of using 0-5.
+# Repo cases: method_comparisons/equal_rank_irv/cases/
+#   equal_rank_cohesive_consecutive.yaml  -> race 1 (Alice)
+#   equal_rank_cohesive_wide_gaps.yaml    -> race 2 (Delia)
+# --------------------------------------------------------------------------- #
+_SCALE_CANDS = ['Alice', 'Bilal', 'Cato', 'Delia']
+_SCALE_CONSECUTIVE = _expand([
+    (18, [5, 5, 5, 4]),
+    (10, [5, 5, 3, 4]),
+    (10, [5, 3, 5, 4]),
+    (16, [4, 5, 5, 5]),
+    (20, [4, 4, 4, 5]),
+])
+_SCALE_WIDE_GAPS = _expand([
+    (18, [5, 5, 5, 0]),
+    (10, [5, 5, 0, 3]),
+    (10, [5, 0, 5, 3]),
+    (16, [0, 5, 5, 5]),
+    (20, [0, 0, 0, 5]),
+])
+_SCALE_SPEC = {
+    "test_id": "BV2297",
+    "title": "Same voters, same preference order - the scale decides the winner",
+    "description": (
+        "Seventy-four voters rate four candidates 0-5, and vote TWICE on the "
+        "identical opinion. In race 1 everyone uses consecutive scores. In race 2 "
+        "the SAME voters hold the SAME preference order but use the full width of "
+        "the scale, so what they are lukewarm about drops toward 0. Nobody "
+        "reorders anybody - only the gaps move. Race 1 elects Alice. Race 2 "
+        "elects Delia. "
+        "Thirty-eight of the seventy-four rate Alice in their top group, so Delia "
+        "is the one candidate that cohesive majority left out. The pair is a "
+        "worked example of something easy to say and hard to feel: a RANKING does "
+        "not determine a SCORE result. The gaps carry real information, and here "
+        "they decide the election. "
+        "In race 2 Bilal and Cato tie for the second finalist slot and the "
+        "tie-break picks one of them; Delia beats either 30-28, so the winner does "
+        "not depend on that tie. "
+        "The preference order is Figure 11 of Delemazure and Peters, "
+        "\"Generalizing Instant Runoff Voting to Allow Indifferences\" (EC 2024), "
+        "where it separates the two ways of extending instant runoff to ballots "
+        "that allow equal ranks. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/method_comparisons/equal_rank_irv/index.html)"
+    ),
+    "races": [
+        {"title": "Consecutive scores - 74 voters, four candidates",
+         "method": "STAR", "num_winners": 1,
+         "candidates": _SCALE_CANDS, "ballots": _SCALE_CONSECUTIVE},
+        {"title": "Wide gaps - the SAME 74 voters, the SAME order",
+         "method": "STAR", "num_winners": 1,
+         "candidates": _SCALE_CANDS, "ballots": _SCALE_WIDE_GAPS},
+    ],
+    "expected": (
+        "Race 1 (consecutive) -> Alice: scores Alice 334, Delia 332, Bilal 330, "
+        "Cato 330; runoff Alice 38 - Delia 36. Race 2 (wide gaps) -> Delia: "
+        "scores Delia 240, Bilal 220, Cato 220, Alice 190; Bilal/Cato tie for the "
+        "second finalist slot and Delia beats either 30-28. Both LH-verified. "
+        "Race 1 tieBreakType should be 'none'; race 2 will report a finalist "
+        "tie-break, which does not move the winner. "
+    ),
+}
+
+
+ELECTIONS: list = [_SCALE_SPEC]   # minting: the scale-decides-the-winner pair
 # Previously: _SPOILER_PAIR_PLAIN   # (no BV numbers) -> 2vt282 (base), jbwtqy (clone added)
 #   Unbranded twins of BV2197 (ggg7hd) / BV2198 (93gjx6), minted 2026-08-22 for the
 #   Equal Vote Slack. Identical ballots, identical results: base Choose-One and STAR

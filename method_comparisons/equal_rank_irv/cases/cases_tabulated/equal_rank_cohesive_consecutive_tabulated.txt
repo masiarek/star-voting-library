@@ -11,6 +11,10 @@ scenario_description: |-
   Two things follow, and the second one cuts against this library's own preferred method. First, a weak order does not determine a STAR result — the gaps carry real information and this profile is where that stops being a slogan. Second, STAR does NOT satisfy respect for cohesive majorities: the companion file is a legitimate 0-5 profile whose induced weak order is exactly the one above, and STAR elects the one candidate the cohesive majority excluded. Approval-IRV satisfies the axiom on both files; STAR satisfies it on one.
   A discrepancy worth recording, since this library runs the figures it cites. The paper writes that on this profile "Approval-IRV selects a" (Alice). Counted, Approval-IRV eliminates Delia, then ALICE, and ends in a 64-64 tie between Bilal and Cato. The theorem is untouched — Bilal and Cato are both inside the permitted set, so respect for cohesive majorities holds exactly as Theorem 3.5 says — but the illustrative sentence names the wrong candidate. The count is in the report; check it against the round table rather than taking this file's word for it.
   For the Approval-IRV and Split-IRV counts, and the axiom check itself, run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py.
+paradoxes: [condorcet-cycle]
+bv_test_id: BV2297
+bv_election_id: j9wvv4
+bv_results_url: https://bettervoting.com/j9wvv4/results
 voting_method: STAR
 num_winners: 1
 ballots: |-

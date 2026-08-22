@@ -4,6 +4,7 @@ scenario_description: |-
   With the clone gone, Split-IRV elects Alma; with the clone in the race it elects the Chen/Costa ticket. Nothing about how anyone feels changed — only how many names their top preference was spread across. That flip is Split-IRV failing independence of clones, the axiom Tideman proved ordinary strict-ballot IRV satisfies and that gives instant runoff its main claim over Choose-One voting. Approval-IRV keeps the axiom (Theorem 3.2) and elects Alma in both files.
   STAR elects Alma here and in the companion file, so the clone is inert for STAR too — worth stating plainly rather than claiming: a score ballot already lets a voter rate two allies identically, so adding one changes no total that was not already recorded.
   For the Approval-IRV and Split-IRV counts run tools_adam/pref_voting_tabulation_engine/approval_irv_report.py.
+paradoxes: [clone-teaming, condorcet-winner]
 voting_method: STAR
 num_winners: 1
 ballots: |-

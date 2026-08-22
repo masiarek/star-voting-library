@@ -9,6 +9,8 @@ search:
 
 **Method:** [STAR (single winner)](../../../../01_STAR/01_Learn/README.md) · **1 seat** · **Expected winner:** Delia
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/j9wvv4) · **[results ↗](https://bettervoting.com/j9wvv4/results)** (election `j9wvv4` · test `BV2297`).
+
 ## Scenario
 
 The twin of equal_rank_cohesive_consecutive.yaml: the SAME 74 voters, the SAME preference order over Alice, Bilal, Cato and Delia — Figure 11 of Théo Delemazure & Dominik Peters, "Generalizing Instant Runoff Voting to Allow Indifferences" (EC'24, arXiv:2404.11407) — with exactly one thing changed. Every voter now uses the full width of the 0-5 scale instead of consecutive numbers: a top class is still 5, but everything the voter is not enthusiastic about drops toward 0.

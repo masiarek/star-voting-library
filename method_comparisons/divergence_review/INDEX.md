@@ -28,7 +28,7 @@ Re-tabulates every **curated single-winner STAR** election under RCV-IRV, Ranked
 
 Review order is the teaching value of each bucket. Each case links to a full teaching `.md` (ballots + every method's report + a plain-English explanation) under `cases/`. Listing is **deduped** to one entry per distinct election (149 cases; identical library copies merged).
 
-**83 of these 149 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
+**85 of these 149 elections are live on BetterVoting** and carry a `BV ↗` link straight to the results page — so the divergence can be checked against a tabulator nobody in this repo wrote, not just re-read from our own output. Each case page repeats the link under its title.
 
 ### IRV_OUTLIER_RR_WITH_STAR — 30
 
@@ -170,7 +170,7 @@ _RCV-IRV differs but it's a score->rank tie-break artifact (tied ballots and/or 
 - **[crowded_field_c7_star](cases/IRV_DIFFERS_ARTIFACT/crowded_field_c7_star.md)** — `method_comparisons/crowded_field/cases/crowded_field_c7_star.yaml` (7c/65b)  
     STAR=**Clara** · IRV=Felix · RR=Clara · Approval=Diego · Score=Clara · Condorcet=Clara  
     _flags: 65 tied-score ballot(s)_
-- **[equal_rank_cohesive_wide_gaps](cases/IRV_DIFFERS_ARTIFACT/equal_rank_cohesive_wide_gaps.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_wide_gaps.yaml` (4c/74b)  
+- **[equal_rank_cohesive_wide_gaps](cases/IRV_DIFFERS_ARTIFACT/equal_rank_cohesive_wide_gaps.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_wide_gaps.yaml` (4c/74b)  ·  [BV ↗](https://bettervoting.com/j9wvv4/results)  
     STAR=**Delia** · IRV=Alice · RR=Delia · Approval=Delia · Score=Delia · Condorcet=none  
     _flags: 54 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Delia, strict=Alice)_
 - **[equal_rank_majority_alternative](cases/IRV_DIFFERS_ARTIFACT/equal_rank_majority_alternative.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_majority_alternative.yaml` (4c/200b)  
@@ -227,7 +227,7 @@ _Condorcet cycle / three-way split — genuinely hard case, no clean villain_
     STAR=**Bill** · IRV=Bill · RR=Allison · Approval=Allison · Score=Bill · Condorcet=none
 - **[margins_star](cases/CYCLE_OR_THREE_WAY/margins_star.md)** — `method_comparisons/copeland_vs_borda_margins/cases/margins_star.yaml` (3c/12b)  ·  [BV ↗](https://bettervoting.com/kdjjkq/results)  
     STAR=**Almond** · IRV=Cocoa · RR=Berry · Approval=Berry · Score=Berry · Condorcet=none
-- **[equal_rank_cohesive_consecutive](cases/CYCLE_OR_THREE_WAY/equal_rank_cohesive_consecutive.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_consecutive.yaml` (4c/74b)  
+- **[equal_rank_cohesive_consecutive](cases/CYCLE_OR_THREE_WAY/equal_rank_cohesive_consecutive.md)** — `method_comparisons/equal_rank_irv/cases/equal_rank_cohesive_consecutive.yaml` (4c/74b)  ·  [BV ↗](https://bettervoting.com/j9wvv4/results)  
     STAR=**Alice** · IRV=Alice · RR=Delia · Approval=Alice · Score=Alice · Condorcet=none  
     _flags: 74 tied-score ballot(s); IRV flips on reversed priority; RR conv-sensitive (weak=Delia, strict=Alice)_
 - **[bv2232_24b623_wa_2010_burial](cases/CYCLE_OR_THREE_WAY/bv2232_24b623_wa_2010_burial.md)** — `method_comparisons/fairvote_star_whitepaper/cases/bv2232_24b623_wa_2010_burial.yaml` (3c/100b)  ·  [BV ↗](https://bettervoting.com/24b623/results)  
