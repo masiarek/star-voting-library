@@ -93,6 +93,10 @@ Each of the six BV elections below counts the **same ballots twice**: one race a
 
 **All six Bloc STAR races match this engine exactly**, up to and including fourteen candidates over six seats and 175 ballots, every one reporting `tieBreakType: none`. Given that BV's own suite never runs STAR with more than one seat, that is worth having on record rather than assumed.
 
+<img alt="BetterVoting's result page for BV2290: 'Ana, Beto, Cora, Dmitri, and Elena win!', 108 voters, scoring round Ana 316, Beto 304, Cora 260, Dmitri 248, Elena 236, Farid 230; the automatic runoff shows Ana 11% against Beto with Equal Support at 89%." src="img/2cdvm6_bloc_star_result.png" width="640">
+
+That is [BV2290](https://bettervoting.com/2cdvm6/results), seat 1 of the Harborview sweep, and it makes the folder's least obvious point better than prose does. The scoring-round bars are the Harbor slate occupying the top five places. The runoff underneath is Ana against Beto — **two candidates from the same slate** — and the grey bar reports **Equal Support 89%**. Ninety-six of the 108 voters scored both finalists identically and expressed no preference at all; the seat was settled by the twelve who did. That is what the first four rounds of a sweep look like from the inside: not a contest between the factions, but the winning faction sorting out its own running order while everybody else sits out.
+
 The single ⚠ is not a count bug in either engine. It is the [last rung of the tie-break ladder](../../../07_Concepts/tabulation_engines/tiebreak_ladders.md) — LH's published lot against BV's seeded shuffle — landing on different candidates in the one case where Allocated Score produces an exact tie. Both engines agree on every *number* in that race; they disagree only about how to toss a coin. (BV labels every `STAR_PR` race `tieBreakType: "random"` whether or not a tie occurred — that mislabel is [bettervoting#1507](https://github.com/Equal-Vote/bettervoting/issues/1507), and it is why the label alone cannot tell you a tie happened. Here one did.)
 
 ## One case is aimed at the engine, not the reader
