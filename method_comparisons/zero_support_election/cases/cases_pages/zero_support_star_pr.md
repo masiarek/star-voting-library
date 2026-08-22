@@ -81,13 +81,12 @@ Count × Ada,Ben,Cleo,Dev,Elsa
   Resolved: ['Ada'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: Allocated Score Voting has one
-    deterministic rung per seat — the round's weighted score total —
-    and the tied candidates came back equal on it, so the pre-published
-    LOT order chose among them — the result here was set by lot, not by
-    the votes. No head-to-head or five-star rung runs on this path: a
-    tie on the weighted total goes straight to the lot. Verify the tied
-    candidates' totals in the round above.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [Allocated Score Voting: Round 1: Ballot allocation round]
  Allocating 1+1/2 ballots.
@@ -105,13 +104,12 @@ Count × Ada,Ben,Cleo,Dev,Elsa
   Resolved: ['Ben'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: Allocated Score Voting has one
-    deterministic rung per seat — the round's weighted score total —
-    and the tied candidates came back equal on it, so the pre-published
-    LOT order chose among them — the result here was set by lot, not by
-    the votes. No head-to-head or five-star rung runs on this path: a
-    tie on the weighted total goes straight to the lot. Verify the tied
-    candidates' totals in the round above.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [Allocated Score Voting: Winners — Allocated Score Voting Method (2 winners)]
  Ada
@@ -162,4 +160,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [zero_support_approval](zero_support_approval.md) · [zero_support_bloc_star](zero_support_bloc_star.md) · [zero_support_plurality](zero_support_plurality.md) · [zero_support_ranked_robin](zero_support_ranked_robin.md) · [zero_support_star](zero_support_star.md)
+More cases in this set: [one_point_bloc_star](one_point_bloc_star.md) · [zero_support_approval](zero_support_approval.md) · [zero_support_bloc_star](zero_support_bloc_star.md) · [zero_support_plurality](zero_support_plurality.md) · [zero_support_ranked_robin](zero_support_ranked_robin.md) · [zero_support_star](zero_support_star.md)

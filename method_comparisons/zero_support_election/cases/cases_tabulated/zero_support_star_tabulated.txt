@@ -142,12 +142,12 @@ Elsa       0  0  0  0  0  3  |     0   0.0
   Resolved: ['Ada', 'Ben'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [STAR Voting: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
@@ -173,12 +173,12 @@ Elsa       0  0  0  0  0  3  |     0   0.0
   Resolved: ['Ada'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [STAR Voting: Winner — STAR Voting Method (single winner)]
  Ada

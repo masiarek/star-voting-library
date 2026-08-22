@@ -101,12 +101,12 @@ Count × Ada,Ben,Cleo,Dev,Elsa
   Resolved: ['Ada', 'Ben'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [Bloc STAR: Round 1: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
@@ -132,12 +132,12 @@ Count × Ada,Ben,Cleo,Dev,Elsa
   Resolved: ['Ada'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 ──────────────────────────────────────────────────
 
@@ -172,12 +172,12 @@ Count × Ada,Ben,Cleo,Dev,Elsa
   Resolved: ['Ben', 'Cleo'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [Bloc STAR: Round 2: Automatic Runoff Round]
  The candidate preferred in the most head-to-head matchups wins.
@@ -203,12 +203,12 @@ Count × Ada,Ben,Cleo,Dev,Elsa
   Resolved: ['Ben'] (selected by lot-number priority).
 
 [Lot-decided tie — rare]
-  ⚠ The ballots did not break this tie: the deterministic rungs
-    (pairwise / score, then five-star) all came back equal, so the
-    pre-published LOT order chose among the tied candidates — the
-    result here was set by lot, not by the votes. Usually the
-    "dead rung": no tied candidate held a score-5 vote (five-star
-    counts fives, not fours). Verify the tied candidates' 5-counts.
+  ⚠ The ballots did not break this tie, and had nothing to break
+    it with: not one ballot scored ANY of these candidates above 0,
+    so every rung was comparing zero with zero. The pre-published
+    LOT order chose among them — the result here was set by lot,
+    not by the votes. Nothing to verify in the rounds above; this
+    is a tie for lack of support, not a close race.
 
 [Bloc STAR: Winners — Bloc STAR Voting Method (2 winners)]
  Ada
@@ -258,4 +258,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Ties & tie-breaking (topic hub)](../../../../07_Concepts/topics/ties/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [zero_support_approval](zero_support_approval.md) · [zero_support_plurality](zero_support_plurality.md) · [zero_support_ranked_robin](zero_support_ranked_robin.md) · [zero_support_star](zero_support_star.md) · [zero_support_star_pr](zero_support_star_pr.md)
+More cases in this set: [one_point_bloc_star](one_point_bloc_star.md) · [zero_support_approval](zero_support_approval.md) · [zero_support_plurality](zero_support_plurality.md) · [zero_support_ranked_robin](zero_support_ranked_robin.md) · [zero_support_star](zero_support_star.md) · [zero_support_star_pr](zero_support_star_pr.md)

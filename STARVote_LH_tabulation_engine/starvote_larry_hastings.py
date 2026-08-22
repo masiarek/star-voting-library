@@ -117,8 +117,19 @@ class LotNumberTiebreaker(Tiebreaker):
 
     def initialize(self, options, ballots):
         # Determine candidate order from the first ballot keys
-        first_ballot = next(iter(ballots))
+        ballots = list(ballots)
+        first_ballot = ballots[0]
         cands_in_csv_order = list(first_ballot.keys())
+
+        # Best score each candidate got from anybody. Kept for the banner: a tie
+        # among candidates whose best score is 0 is a tie for LACK OF SUPPORT,
+        # which is a different event from a close race that ran out of rungs,
+        # and the generic banner's advice ("verify the tied candidates'
+        # 5-counts") sends the reader hunting for a five that no ballot cast.
+        self.best_score = {
+            c: max((b.get(c, 0) or 0) for b in ballots)
+            for c in cands_in_csv_order
+        }
 
         # Check if the user provided lot numbers
         if not self.lot_numbers:
@@ -178,7 +189,7 @@ class LotNumberTiebreaker(Tiebreaker):
             # the pre-published lot order chose among the tied candidates. Flag it
             # the way method divergences are flagged — a strange phenomenon worth
             # naming rather than burying in the tiebreak trace.
-            for line in self.lot_banner(options):
+            for line in self.lot_banner(options, tie):
                 print(line)
 
         return winners
@@ -197,11 +208,34 @@ class LotNumberTiebreaker(Tiebreaker):
     # actually running — so the sentence cannot drift from the ladder again.
     # Wording locked by tests/test_lot_number_tiebreak.py; the ladders
     # themselves: 07_Concepts/tabulation_engines/tiebreak_ladders.md.
-    def lot_banner(self, options):
+    def lot_banner(self, options, tie=None):
         """The `[Lot-decided tie — rare]` banner, worded for the path that
         reached the lot (see the note above). Returns the lines to print."""
         method = getattr(options, "method", None)
         lines = ["", "[Lot-decided tie — rare]"]
+
+        # One cause the rung-by-rung wording gets wrong: every tied candidate
+        # scored 0 on every ballot. The rungs did all run and did all come back
+        # equal, so the generic sentence is not false — but it invites the
+        # reader to audit a close race, and there is no race. Deliberately
+        # per-TIE and not per-election: on a two-seat Bloc where one seat rests
+        # on a real preference and the other on nothing, an election-level
+        # "degenerate" verdict would be wrong about half the result, while this
+        # one lands on exactly the seat the lot paid for. Threshold-free by
+        # construction — the condition is "nobody scored anybody", not "hardly
+        # anybody did", so there is no support floor smuggled in here.
+        best = getattr(self, "best_score", None)
+        if tie and best and all(best.get(c, 1) == 0 for c in tie):
+            lines += [
+                "  ⚠ The ballots did not break this tie, and had nothing to break",
+                "    it with: not one ballot scored ANY of these candidates above 0,",
+                "    so every rung was comparing zero with zero. The pre-published",
+                "    LOT order chose among them — the result here was set by lot,",
+                "    not by the votes. Nothing to verify in the rounds above; this",
+                "    is a tie for lack of support, not a close race.",
+            ]
+            return lines
+
         if method in (starvote.allocated, starvote.sss, starvote.rrv):
             lines += [
                 f"  ⚠ The ballots did not break this tie: {method.name} has one",

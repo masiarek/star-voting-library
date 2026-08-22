@@ -1,0 +1,44 @@
+election_title: One point — a single mark fills one seat and the lot fills the other (Bloc STAR)
+scenario_description: |-
+  The zero-support ballots with one thing changed: voter 3 gives Ben a 1.
+
+  That single mark is the only support anybody expresses in the whole
+  election — one point out of a possible 75 (3 voters x 5 nominees x 5
+  points). It is enough to settle the first seat outright, and it changes
+  nothing at all about the second, which is still decided by lot.
+
+  The reason this file sits beside the all-zero six is that it is the HARDER
+  case to read, not the easier one. The all-zero reports look degenerate, so
+  nobody mistakes them for a mandate. This one looks decisive: the runoff
+  summary reads "Ben 1 (100%) vs Ada 0 (0%); majority = 1", because the
+  decided-voters denominator is the one voter who expressed a preference.
+  Every number on that line is correct and the impression it leaves is not.
+
+  It is also where a tempting rule fails. "Refuse to count an election with no
+  support" is easy to state while every score is 0 and impossible to state
+  here: seat 1 rests on a real, if tiny, preference that a returning officer
+  should report, and seat 2 rests on nothing at all. One election, both
+  answers, no threshold that separates them without being a policy number in
+  disguise. What the engine can do instead is what it does below — count it,
+  and say per seat which rung paid for it.
+
+  Same cast and same first two ballots as the zero-support set; see the README
+  for the six methods that count the unchanged version.
+
+
+voting_method: Bloc STAR
+num_winners: 2
+
+lot_numbers: [Ada, Ben, Cleo, Dev, Elsa]
+
+ballots: |-
+  Ada,Ben,Cleo,Dev,Elsa
+  0,0,0,0,0   # voter 1 — turned out, then scored every nominee 0
+  0,0,0,0,0   # voter 2 — a deliberate 0 is not a blank ballot
+  0,1,0,0,0   # voter 3 — one point for Ben, the only mark in the election
+
+expected_winners:
+  - Ben
+  - Ada
+
+# file: one_point_bloc_star.yaml
