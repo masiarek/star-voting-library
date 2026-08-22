@@ -29,6 +29,7 @@ bv_results_url: https://bettervoting.com/vjp3fj/results
 blocs:
   Chocolate: [Milk Chocolate, Dark Chocolate]
 
+paradoxes: [spoiler-scc, clone-teaming, condorcet-winner]
 voting_method: Plurality
 num_winners: 1
 

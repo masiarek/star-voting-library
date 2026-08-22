@@ -83,6 +83,8 @@ Condorcet winner paradox,Simple,"The Post-it switch, made real — Ranked Robin:
 Condorcet winner paradox,Simple,"The Post-it switch, made real — STAR: Blue, now also the score co-leader",STAR,Blue,BV2178,8kg698,method_comparisons/postit_rcv_example/cases/bv2178_8kg698_star.yaml
 Condorcet winner paradox,Simple,Preference vs Support — the center TOLERATED (wings score Blair 1),STAR,Alex,BV2225,ywx39y,method_comparisons/preference_vs_support/cases/bv2225_ywx39y_center_tolerated.yaml
 Condorcet winner paradox,Simple,Preference vs Support — the center SUPPORTED (wings score Blair 4),STAR,Blair,BV2226,82gg36,method_comparisons/preference_vs_support/cases/bv2226_82gg36_center_supported.yaml
+Condorcet winner paradox,Simple,Rung 3 — eight candidates: the banana wins on 22%,Plurality,Banana,BV2293,vq78wk,method_comparisons/split_voting/_main/07c_apples_full_menu.yaml
+Condorcet winner paradox,Simple,"The smallest spoiler — seven friends, three flavours, and a minority winner",Plurality,Vanilla,BV2294,vjp3fj,method_comparisons/split_voting/_main/08a_smallest_spoiler_plurality.yaml
 Condorcet winner paradox,Simple,"Condorcet centrist, minimal form (8 voters) — STAR elects Casey",STAR,Casey,BV2171,h93tm4,method_comparisons/symmetric_centrist_all_methods/cases/bv2171_h93tm4_star.yaml
 Condorcet winner paradox,Simple,"Condorcet centrist, full form (100 voters, 47/47/3/3) — STAR elects Casey",STAR,Casey,BV2172,bkwfjr,method_comparisons/symmetric_centrist_all_methods/cases/bv2172_bkwfjr_star.yaml
 Condorcet winner paradox,Simple,"Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock",IRV,Avery,BV2170,pp2q4q,method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_irv.yaml
@@ -114,6 +116,8 @@ SCC / spoiler,Conditional,Borda SCC Ex.15 — STAR: C wins (and stays won when a
 SCC / spoiler,Conditional,Coombs Ex.22 — SCC: C drops out and A wins instead of B,RCV_IRV,A,,,method_comparisons/felsenthal_paradoxes/cases/coombs_ex22_scc.yaml
 SCC / spoiler,Conditional,Minimax Ex.33 — SCC: drop a loser and the winner changes,RankedRobin,A,,,method_comparisons/felsenthal_paradoxes/cases/minimax_ex33_scc.yaml
 SCC / spoiler,Conditional,"Successive elimination Ex.9 — the agenda elects B, whom every voter ranks below A",RankedRobin,D,,,method_comparisons/felsenthal_paradoxes/cases/succ_elim_ex9_pareto.yaml
+SCC / spoiler,Conditional,Rung 3 — eight candidates: the banana wins on 22%,Plurality,Banana,BV2293,vq78wk,method_comparisons/split_voting/_main/07c_apples_full_menu.yaml
+SCC / spoiler,Conditional,"The smallest spoiler — seven friends, three flavours, and a minority winner",Plurality,Vanilla,BV2294,vjp3fj,method_comparisons/split_voting/_main/08a_smallest_spoiler_plurality.yaml
 Condorcet's paradox (cycle),Simple,"BV2142 — Ranked Robin clone independence (1/2): a no-Condorcet cycle, LH vs BV tiebreak",RankedRobin,A,BV2142,4gfwdq,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2142_4gfwdq_clone_cycle_pre.yaml
 Condorcet's paradox (cycle),Simple,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
 Condorcet's paradox (cycle),Simple,"A cycle Copeland can't break — three trails tie 1-1, and the refined rules all rescue Alder",RankedRobin,Alder,,,method_comparisons/cycle_resolution/cases/cycle_copeland_ties_c4_b21.yaml
@@ -221,6 +225,8 @@ Clone dependence / teaming,Conditional,"BV2142 — Ranked Robin clone independen
 Clone dependence / teaming,Conditional,"BV2143 — Ranked Robin clone independence (2/2): the clones change the outcome, and hand it to C",RankedRobin,C,BV2143,9pr3wr,05_Ranked_Robin/03_Criteria/clone_independence/cases/bv2143_9pr3wr_teaming_fails.yaml
 Clone dependence / teaming,Conditional,"Clone independence (1/2) — before cloning: A, B, C tie in a cycle",RankedRobin,A,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_01_pre.yaml
 Clone dependence / teaming,Conditional,"Clone independence (2/2) — teaming: A runs clones, and hands the win to C",RankedRobin,C,,,05_Ranked_Robin/03_Criteria/clone_independence/cases/clone_teaming_02_post.yaml
+Clone dependence / teaming,Conditional,Rung 3 — eight candidates: the banana wins on 22%,Plurality,Banana,BV2293,vq78wk,method_comparisons/split_voting/_main/07c_apples_full_menu.yaml
+Clone dependence / teaming,Conditional,"The smallest spoiler — seven friends, three flavours, and a minority winner",Plurality,Vanilla,BV2294,vjp3fj,method_comparisons/split_voting/_main/08a_smallest_spoiler_plurality.yaml
 Favorite betrayal,Conditional,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
 Favorite betrayal,Conditional,Favorite betrayal in STAR (2 of 2) — nine voters demote their favorite and it pays,STAR,Bluebell,BV2207,b6xrdr,01_STAR/03_Criteria/favorite_betrayal/cases/bv2207_b6xrdr_fbc_betrayal_pays.yaml
 Favorite betrayal,Conditional,Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159),RCV_IRV,,BV2159,f4cjpy,method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml

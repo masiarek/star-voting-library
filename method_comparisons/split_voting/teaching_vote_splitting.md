@@ -117,6 +117,16 @@ Dark Chocolate   2
 
 **4:30 — Name it.** *"Four of you wanted chocolate. All four ranked vanilla last. Vanilla won with three. Nobody cheated, nobody miscounted, nobody voted strategically. The chocolate four were simply not allowed to say they'd take either one."*
 
+**5:00 — Let them invent the workarounds.** *(cut this beat first if you are short)* Ask: *"You're one of the chocolate four. What do you do next year?"* Collect answers, and **name each one as you write it**:
+
+| They say | You write |
+|---|---|
+| "hold a chocolate-only vote first" | *that's a primary* |
+| "one of the chocolates should drop out" | *that's the get-out-of-the-race phone call* |
+| "agree in advance which chocolate we back" | *that's a party machine* |
+
+*"Every fix you just invented is something you've seen on the news. We have built an entire industry of workarounds for one property of this ballot."*
+
 **6:00 — The key sentence.** *"Choose-One didn't count your votes wrong. It never asked the question whose answer would have changed the result."*
 
 **6:30 — Fix it.** Same seven friends, score every flavour 0–5:
@@ -132,9 +142,21 @@ Runoff:  Milk Chocolate 4  ·  Vanilla 3
 
 **9:00 — Take questions.** See the objections list below.
 
-### The one moment this demo fails, and the recovery
+### The two ways this demo fails, and the recoveries
 
-Someone says: **"But those two chocolates are basically the same thing — of course that's a stupid ballot."**
+**Failure 1 — the sting doesn't land.** You reveal that four of seven wanted chocolate, and instead of wincing the room shrugs: *"So what? Most votes wins. Three beats two. That's how voting works."* If the sting misses, everything after it is a solution to a problem nobody has.
+
+**Recovery: don't argue, count.** Say: *"Fair enough. Let's make it simpler — forget the three flavours. Chocolate or vanilla, that's the whole ballot. Which do these seven friends pick?"* Walk the seven on your fingers — four chocolate, three vanilla — and write it:
+
+```text
+head-to-head:   chocolate 4  ·  vanilla 3
+```
+
+*"So on the simplest possible vote — the one where 'most votes wins' works perfectly — chocolate wins. Now put one more chocolate on the menu, and chocolate loses. The menu changed the winner. That's the bug."*
+
+This recovery is stronger than the beat that failed, because the objector's own rule delivers the verdict.
+
+**Failure 2 — someone attacks the ballot.** *"But those two chocolates are basically the same thing — of course that's a stupid ballot."*
 
 They are right, and it is the best thing that can happen to you. Do not defend the ballot. Say:
 
@@ -145,6 +167,10 @@ That turns the objection into your strongest point. Have it ready; you will get 
 ---
 
 ## The forty-five minute workshop
+
+**The design problem to plan for, because it decides the whole session:** *your room's own vote is not guaranteed to split.* A healthy room may simply agree. So run **two exhibits** — the room's live election, which teaches whatever it teaches, and the frozen ladder, which must split because it was built to. Say this out loud when you get there: *"your election may not have split; about one in eight real primaries did; here is one that has to."* **That sentence is itself the 201 lesson** — exposure is not the same as a flipped outcome — so teach it rather than apologising for it.
+
+> **The three BV links below are read-only exhibits.** They are frozen cases whose numbers the repo's pages quote. Send the room to *your* election to vote; send them to these only to look.
 
 **Materials:** printed ballots (see [Run a paper-ballot demo](../../01_STAR/01_Learn/hands_on/running_a_paper_ballot_demo.md) for the generator), a whiteboard, the three BV links on screen.
 

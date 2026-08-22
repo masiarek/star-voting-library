@@ -30,6 +30,7 @@ bv_results_url: https://bettervoting.com/vq78wk/results
 blocs:
   Apples: [Granny Smith, Gala, Fuji, Honeycrisp, Pink Lady, Red Delicious, McIntosh]
 
+paradoxes: [spoiler-scc, clone-teaming, condorcet-winner]
 voting_method: Plurality
 num_winners: 1
 
