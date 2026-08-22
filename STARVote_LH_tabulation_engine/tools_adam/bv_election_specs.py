@@ -2997,6 +2997,86 @@ _BREED_SPLIT = {
     ),
 }
 
+
+# ── VOTE SPLITTING — the teaching spine for method_comparisons/split_voting ──
+# Three elections backing the rewritten vote-splitting page at 101 / 201 / 301.
+# The ordering question they answer: you cannot show a fix for a problem the
+# reader has not felt, and STAR alone can never DEMONSTRATE vote splitting
+# (nothing splits), so every rung opens in Choose-One and adds the fix after.
+_VS_LADDER_A = ["Gala", "Banana"]
+_VS_LADDER_B = ["Granny Smith", "Gala", "Fuji", "Honeycrisp", "Red Delicious", "Banana"]
+_VS_LADDER_C = ["Granny Smith", "Gala", "Fuji", "Honeycrisp", "Pink Lady",
+                "Red Delicious", "McIntosh", "Banana"]
+
+# Nine voters, fixed opinions, in the SAME row order in every race.
+_VS_2_PLUR = _expand([(7, [1, 0]), (2, [0, 1])])
+_VS_6_PLUR = [[1,0,0,0,0,0], [0,1,0,0,0,0], [0,0,1,0,0,0], [0,0,0,1,0,0],
+              [0,1,0,0,0,0], [0,0,0,0,1,0], [0,1,0,0,0,0],
+              [0,0,0,0,0,1], [0,0,0,0,0,1]]
+_VS_8_PLUR = [[1,0,0,0,0,0,0,0], [0,1,0,0,0,0,0,0], [0,0,1,0,0,0,0,0], [0,0,0,1,0,0,0,0],
+              [0,0,0,0,1,0,0,0], [0,0,0,0,0,1,0,0], [0,0,0,0,0,0,1,0],
+              [0,0,0,0,0,0,0,1], [0,0,0,0,0,0,0,1]]
+_VS_8_STAR = [[5,4,2,2,1,1,2,0], [3,5,2,2,2,1,2,0], [3,4,5,2,2,1,2,0], [3,4,2,5,1,1,3,0],
+              [3,4,2,1,5,1,1,0], [2,4,2,1,1,5,1,1], [3,4,2,3,1,1,5,0],
+              [1,0,0,0,0,1,0,5], [1,0,0,0,0,0,0,5]]
+_VS_8_APPR = [[1,1,0,0,0,0,0,0], [1,1,0,0,0,0,0,0], [1,1,1,0,0,0,0,0], [1,1,0,1,0,0,1,0],
+              [1,1,0,0,1,0,0,0], [0,1,0,0,0,1,0,0], [1,1,0,1,0,0,1,0],
+              [0,0,0,0,0,0,0,1], [0,0,0,0,0,0,0,1]]
+_VS_8_RANK = [[1,2,3,5,6,7,4,8], [2,1,3,4,5,7,6,8], [3,2,1,4,5,7,6,8], [3,2,5,1,6,7,4,8],
+              [3,2,4,5,1,6,7,8], [3,2,4,6,7,1,8,5], [3,2,5,4,6,7,1,8],
+              [2,4,5,6,7,3,8,1], [2,3,4,5,6,7,8,1]]
+
+_VS_LESSON = ("Full lesson, every rung and the honest limits: "
+              "[Vote splitting & the spoiler effect]"
+              "(https://masiarek.github.io/star-voting-library/method_comparisons/split_voting/index.html)")
+
+_VS_LADDER = {
+    "test_id": "BVNEXT",
+    "title": "Seven apples and a banana — watch a spoiler appear one candidate at a time",
+    "description": (
+        "Nine people choose ONE fruit for the office basket. Seven want an apple, two want a "
+        "banana, and nobody changes their mind at any point in this election. All that changes "
+        "is how many apple varieties are on the list. Race 1 offers two names and the apple side "
+        "wins 7-2 — with two candidates nothing can split. Race 2 offers six names: the apple "
+        "vote divides five ways and Gala still wins, now on 33%, which is the rung most "
+        "explanations skip — the vote IS splitting and it has cost the apple side nothing yet. "
+        "Race 3 adds the last two varieties, Pink Lady and McIntosh, which are the true "
+        "favourites of the two voters still marking Gala. Both peel away, every apple ends on "
+        "exactly one mark, and BANANA WINS with 2 of 9 — twenty-two percent — while 78% of the "
+        "room came in wanting an apple. Look at where the two newcomers finished: one vote each. "
+        "Neither could win; both changed who did. That is what 'spoiler' means. Races 4-7 hand "
+        "the same nine voters a ballot that lets them say more than one thing — scores, "
+        "approvals, rankings — and the split disappears every time: STAR, Approval, RCV-IRV and "
+        "Ranked Robin all elect Gala, who beats every rival head-to-head. Under STAR, Banana "
+        "finishes LAST of eight in the scoring round. Choose-One did not miscount these voters. "
+        "It never asked the question whose answer would have changed the result. " + _VS_LESSON
+    ),
+    "races": [
+        {"title": "Rung 1 — two names on the paper (Choose-One)", "method": "Plurality",
+         "num_winners": 1, "candidates": _VS_LADDER_A, "ballots": _VS_2_PLUR},
+        {"title": "Rung 2 — six names: the vote splits and costs nothing (Choose-One)",
+         "method": "Plurality", "num_winners": 1, "candidates": _VS_LADDER_B, "ballots": _VS_6_PLUR},
+        {"title": "Rung 3 — eight names: the banana wins on 22% (Choose-One)",
+         "method": "Plurality", "num_winners": 1, "candidates": _VS_LADDER_C, "ballots": _VS_8_PLUR},
+        {"title": "Rung 4 — the same nine voters, scoring 0-5 (STAR)", "method": "STAR",
+         "num_winners": 1, "candidates": _VS_LADDER_C, "ballots": _VS_8_STAR},
+        {"title": "Rung 4 — the same nine voters, approving (Approval)", "method": "Approval",
+         "num_winners": 1, "candidates": _VS_LADDER_C, "ballots": _VS_8_APPR},
+        {"title": "Rung 4 — the same nine voters, ranked (RCV-IRV)", "method": "IRV",
+         "num_winners": 1, "max_rankings": 8, "candidates": _VS_LADDER_C, "ballots": _VS_8_RANK},
+        {"title": "Rung 4 — the same nine voters, head-to-head (Ranked Robin)",
+         "method": "RankedRobin", "num_winners": 1, "max_rankings": 8,
+         "candidates": _VS_LADDER_C, "ballots": _VS_8_RANK},
+    ],
+    "enable_write_in": False,   # the candidate LIST is the subject — lock it
+    "expected": (
+        "Rung 1 Gala 7-2. Rung 2 Gala 3 (33%), Banana 2, four apples 1 each. Rung 3 BANANA 2 of "
+        "9 (22%), every apple 1. Rung 4: STAR -> Gala (29/24/17/16/16/13/12, Banana LAST; runoff "
+        "Gala 6-3, no Equal Support); Approval -> Gala 7 (78%); RCV-IRV -> Gala; Ranked Robin -> "
+        "Gala (Condorcet winner). LH-verified on all seven races."
+    ),
+}
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
@@ -6435,9 +6515,11 @@ ELECTIONS: list = []   # resting state — point this at a spec only for the run
 # with num_winners > 1, which routes through runBlocTabulator) and once as
 # STAR_PR / Allocated Score. That puts the majoritarian/proportional divergence
 # on BetterVoting itself rather than only in the repo. Worth doing here in
-# particular: BV's own Star.test.ts passes nWinners = 1 in all twenty tests, so
+# particular: BV's Star.test.ts at origin/main is entirely single-winner — 18
+# tests, 7 calling Star(..., 1) and 11 calling singleWinnerStar directly — so
 # Bloc STAR is the one bloc path its suite never exercises (the shared loop IS
-# covered, via Approval/Plurality/RankedRobin).
+# covered, via Approval/Plurality/RankedRobin). Count that at origin/main, not
+# in a local bv-* clone; they range 18/19/20/22 on this file.
 # --------------------------------------------------------------------------
 
 _BCW_CANDS = ['Ada', 'Bex', 'Cyrus', 'Dov']
@@ -6685,15 +6767,18 @@ _BWF_SPEC = {
 }
 
 
-ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+ELECTIONS: list = [_VS_LADDER]   # resting state — point this at a spec only for the run that mints it
 # Previously: [_BCW_SPEC, _BSL_SPEC, _BDM_SPEC, _BHC_SPEC, _BNM_SPEC, _BWF_SPEC]
 #   BV2287 -> xbk9bq, BV2288 -> vxwjc4, BV2289 -> xpr4wk, BV2290 -> 2cdvm6,
 #   BV2291 -> vthdwc, BV2292 -> rq2c3g. All six created as designed, 406 ballots
 #   across 12 races. The headline: BV's Bloc STAR agrees with LH on ALL SIX bloc
 #   races — up to 14 candidates over 6 seats on 175 ballots — every one reporting
-#   tieBreakType 'none'. Worth having on record, since BV's own Star.test.ts
-#   passes nWinners = 1 in all twenty of its tests, so multi-winner STAR is the
-#   one bloc path its suite never runs.
+#   tieBreakType 'none'. Worth having on record, since BV's Star.test.ts at
+#   origin/main is entirely single-winner (18 tests: 7 x Star(..., 1), 11 x
+#   singleWinnerStar), so multi-winner STAR is the one bloc path its suite never
+#   runs. NOTE: an earlier pass in this repo said "20 tests / 13" — that counted
+#   the 2 describe() blocks as tests and miscounted the rest. Read the file at
+#   origin/main after a fetch; local clones range 18/19/20/22.
 #   STAR_PR matched on five of six. The exception is BV2291 (vthdwc), and it is
 #   NOT a count bug: once Jaya's Hare quota is spent, Ada and Bram hold exactly
 #   the same reweighted score (2727/16), as do Gita and Hank (303/2). LH's
