@@ -25,7 +25,7 @@ python euclidean_spaces.py --gallery   # also draw img/euclidean_spaces.png
 
 Two findings worth knowing before picking a model:
 
-- **`gaussian_cube` is barely clustered at all** at the library's default parameters — 21% of points inside the inner half-radius against `uniform_cube`'s 20% — because a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval. It discards **85% of every draw** to achieve that. `gaussian_ball` (36%) is the one that actually clusters.
+- **`gaussian_cube` is barely clustered at all** at the library's default parameters — 21% of points inside the inner half-radius against `uniform_cube`'s 20% — because a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval. It discards **85% of its draws** to achieve that. `gaussian_ball` (36%) is the one that actually clusters.
 - **Seeding these samplers breaks them**, in `prefsampling` 0.1.24. That is why this script cross-checks *unseeded* and draws its own points. Filed as [prefsampling#6](https://github.com/COMSOC-Community/prefsampling/issues/6) and [pref_voting#186](https://github.com/voting-tools/pref_voting/issues/186); short version on the [concept page](../../07_Concepts/topics/euclidean_spaces.md), full mechanism in the [companion QA repo](https://masiarek.github.io/bettervoting-qa/analysis/prefsampling-seeding/index.html).
 
 ## Favorite-Betrayal (FBC) simulation

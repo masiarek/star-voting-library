@@ -22,7 +22,7 @@ python 06_Other/simulations/euclidean_spaces.py --gallery
 
 ## Two questions, and every space is an answer to both
 
-Each space answers exactly two questions, and once you see them as a 3×2 grid the names stop being jargon:
+Each space answers exactly two questions, and once you see them as a shape × density grid the names stop being jargon:
 
 | | **evenly spread** (uniform) | **piled up in the middle** (Gaussian) |
 |---|---|---|
@@ -41,7 +41,7 @@ Radii and widths below are the library defaults: width 1, so a ball of radius 0.
 
 **`uniform_cube`** — the easy one. Draw each coordinate independently and uniformly from −0.5 to +0.5. That is it. Corners included, which in 2-D means the far corner sits at distance 0.707 — 41% further out than any point on the inscribed circle.
 
-**`uniform_ball`** — uniform over the *solid* disc/ball. Two steps, and the second is the one people get wrong. Pick a random **direction**: draw a Gaussian vector and normalise it, because a Gaussian is spherically symmetric and normalising it gives a direction with no preferred axis. Then pick a **radius** — and it must be `R × U^(1/d)`, not `R × U`. Volume grows like `r^d`, so a uniformly-drawn radius would crowd far too many points into the centre. In 2-D that exponent is `√U`.
+**`uniform_ball`** — uniform over the *solid* disc/ball. Two steps, and the second is the one people get wrong. Pick a random **direction**: draw a Gaussian vector and normalise it, because a Gaussian is spherically symmetric and normalising it gives a direction with no preferred axis. Then pick a **radius** — and it must be `R × U^(1/d)`, not `R × U`. Volume grows like `r^d`, so a uniformly-drawn radius would crowd far too many points into the centre. In 2-D that means `√U`.
 
 **`uniform_sphere`** — the same directions, but the radius fixed at `R`. Only the *shell*, which is why it draws as a bare ring. Every voter is exactly as extreme as every other and nobody is in the middle: a model of pure factions with no moderates. Note the name — in this library a **sphere is the surface, a ball is the solid**, and the two are different models, not two words for one thing.
 
@@ -70,9 +70,9 @@ unbounded_gaussian   clustered, no edge at all        1.254     11%    3%   100%
 
 **`inner`** is the honest test of clustering: the share of voters inside *half* the radius. A uniform 2-D ball scores exactly **25%**, because area grows as `r²` — and it does, which is the arithmetic checking itself. Anything meaningfully above 25% is real central clustering.
 
-And now the surprise. **`gaussian_cube` is barely clustered at all** — 21% against `uniform_cube`'s 20%, a mean radius of 0.375 against 0.382. At the library's default parameters a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval, because you are keeping only the middle of a bell that is twice as wide as the box. So the name promises a clustered electorate and the numbers deliver a uniform one — while discarding **85% of every draw** to do it. If you want clustering inside a box, either narrow the sigma or use `gaussian_ball`, whose 36% is the real thing.
+And now the surprise. **`gaussian_cube` is barely clustered at all** — 21% against `uniform_cube`'s 20%, a mean radius of 0.375 against 0.382. At the library's default parameters a `Normal(0, 1)` truncated to ±0.5 is nearly flat over that interval, because you are keeping only the middle of a bell that is twice as wide as the box: the centre of that box is only **1.28×** denser than its corners, where `gaussian_ball`'s centre is **3.2×** denser than its rim. So the name promises a clustered electorate and the numbers deliver a uniform one — while discarding **85% of its draws** to do it. If you want clustering inside a box, either narrow the sigma or use `gaussian_ball`, whose 36% is the real thing.
 
-The **`cross-check`** column re-draws the same space with `prefsampling`'s own implementation and compares the distributions. All six agree, which is what makes the forty lines trustworthy as an explanation of what the library actually does.
+The **`cross-check`** column re-draws the same space with `prefsampling`'s own implementation and compares the distributions. All six agree, which is what makes the forty lines trustworthy as an explanation of what the library actually does. (That column's max-diff decimals wobble between runs — the `prefsampling` side deliberately runs *unseeded*, because seeding it is [the trap below](#the-trap-seeding-these-breaks-them) — but the verdicts and every other column reproduce exactly from seed 42.)
 
 ## Which one should a simulation use?
 
@@ -82,7 +82,7 @@ There is no neutral choice, so the rule this repo follows is simply to **name th
 - **`unbounded_gaussian`** is the textbook bell curve, and fine unless unbounded outliers would distort your statistic.
 - **`uniform_cube`** is the common default in the literature and the easiest to reason about, but its corners are an artifact of the box, not a fact about voters.
 - **`uniform_sphere`** is a deliberate stress test — an electorate of pure factions — not a prediction.
-- **`gaussian_cube`** buys you almost nothing over `uniform_cube` at the default parameters, at seven times the cost.
+- **`gaussian_cube`** buys you almost nothing over `uniform_cube` at the default parameters, at seven times the sampling cost in 2-D — and the rejection bill only grows with dimension.
 
 The deeper caution belongs to the model as a whole rather than to any of the six: a low-dimensional spatial electorate makes a [Condorcet winner](condorcet/README.md) nearly certain and [cycles](../../05_Ranked_Robin/01_Learn/cycle_resolution.md) nearly impossible, so a purely spatial sweep never stress-tests the thing cycle-resolution exists for. [The spatial model's honest limits](spatial_voting_model.md#the-honest-limits) has the rest.
 
@@ -91,7 +91,7 @@ The deeper caution belongs to the model as a whole rather than to any of the six
 Setting a seed is the recommended practice — it is what makes a run reproducible. On these six samplers, in `prefsampling` 0.1.24, it is also what breaks them:
 
 - **`gaussian_ball` collapses to a single point, repeated.** Not "sometimes", not "approximately" — every voter lands on the same coordinates, for every seed.
-- **Candidate *j* lands exactly on voter *j*.** On four of the six spaces at unequal voter/candidate counts, and on **all six** when the counts are equal.
+- **Candidate *j* lands exactly on voter *j*.** On four of the six spaces at unequal voter/candidate counts, and on **all six** when the counts are equal — voters and candidates drawn from the same space, which is the only way `pref_voting` draws them.
 
 Both reach this repo through `pref_voting`'s `generate_profile(probmodel="euclidean", seed=…)`, and both are invisible: nothing errors, nothing warns, and the output is a perfectly well-formed profile. They were caught because a sweep of 20,000 seeded spatial elections reported a suspiciously clean **0.00% Condorcet cycles** in every single cell — the tell being not a wrong number but an *impossibly tidy* one. Correct rates are 0.15–1.25%: [how often do Condorcet methods tie?](ties/how_often_condorcet_methods_tie.md).
 
