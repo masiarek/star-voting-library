@@ -1,7 +1,9 @@
 # What's So Good About STAR Voting?
 ### A recorded conversation — Larry (curious host) & Adam (expert)
 
-**Level: 101 · for voters**
+**Level: 101 · for presenters**
+
+> 📄 **Just here to learn STAR?** Read [STAR — start here](../STAR_start_here.md) for the mechanics, [the benefits of STAR Voting](../getting_started/STAR_benefits.md) for the upside in a scannable list, or [Why STAR Voting](../../../07_Concepts/topics/Why_STAR_Voting.md) for the complete case with every objection answered. **This page is the spoken/video companion** — a recording script with live-demo cues, for someone *presenting* that material.
 
 A spoken, demo-driven conversation for a live recording. **Larry** asks the questions a smart newcomer would ask; **Adam** answers and drives the live demos. Cues in the margin:
 
@@ -172,6 +174,8 @@ Pacing target: ~25–30 min. Each segment can also stand alone as a short clip.
 | Summable / local tally? | Yes | **No** | **Yes** |
 | Accuracy (voter satisfaction) | ~72–86% | ~80–91% | **~91–98%** |
 | Strategy incentive | strong | weak | **lowest** |
+
+*Say the fine print out loud if anyone presses:* the accuracy row is **Voter Satisfaction Efficiency**, and the bands are ranges across simulation assumptions, not a single measured score — the source is [Wolk, Quinn & Ogren (2023)](wolk_quinn_ogren_2023.md), claim-checked on that page. The spoiler "No" means the **forced** kind — a coalition can no longer be split against its will; a [narrow self-inflicted residual](../properties_and_limits/residual_vote_splitting.md) remains. And "no exhausted ballots" is structural — every ballot counts in both rounds — not a claim that every voter expressed a preference between the finalists.
 
 **Larry:** And the honest caveat?
 
