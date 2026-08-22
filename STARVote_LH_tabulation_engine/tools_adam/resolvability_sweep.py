@@ -93,14 +93,19 @@ def spatial_sampler(dim):
     """Voters and candidates as Gaussian points; each voter ranks by distance.
 
     NOT `generate_profile(probmodel="euclidean", seed=...)`, and the reason is a
-    live bug rather than a preference. In pref_voting 1.18.1 / prefsampling, that
-    path takes `EuclideanSpace` enums and, WHEN GIVEN A SEED, collapses: 2,000
-    seeds produced 2,000 copies of one degenerate profile in which every voter
-    submits the identical ranking, so every cell reported 0.00% cycles and looked
-    like a tidy finding about spatial electorates. Unseeded it varies fine, and
-    handing it explicit position arrays varies fine, so the defect is in the
-    seeded enum path. Positions are therefore drawn here, from a numpy Generator
-    this script owns — which is also what makes the run reproducible.
+    live upstream bug rather than a preference. That path routes to prefsampling
+    0.1.24, whose GAUSSIAN_BALL sampler, WHEN GIVEN A SEED, returns ONE point
+    repeated once per voter: 2,000 seeds produced 2,000 copies of one degenerate
+    profile in which every voter sits on the same spot, is therefore equidistant
+    from every candidate, and submits the identical index-order ranking. Every
+    cell reported 0.00% cycles and looked like a tidy finding about spatial
+    electorates. Unseeded calls vary fine, so seeding FOR REPRODUCIBILITY is what
+    breaks it. Filed as https://github.com/COMSOC-Community/prefsampling/issues/6,
+    together with a second defect found alongside it: voters and candidates are
+    drawn from the same seeded stream, so candidates land exactly on the first
+    voters on four of the six spaces. Positions are therefore drawn here, from a
+    numpy Generator this script owns — which is also what makes the run
+    reproducible.
     """
     def sample(num_cands, num_voters, seed):
         rng = np.random.default_rng(seed)
