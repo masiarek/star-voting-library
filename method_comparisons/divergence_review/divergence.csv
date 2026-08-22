@@ -98,6 +98,10 @@ AGREE,method_comparisons/split_voting/_main/03_lunch_veggie_vs_meat.yaml,4,100,V
 AGREE,method_comparisons/split_voting/_main/05a_residual_split_bullet-voting.yaml,3,100,Cara,Cara,Cara,Cara,Cara,Cara,Cara,Cara,Cara,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.yaml,3,100,Ada,Ada,Ada,Ada,Ada,Ada,Ada,Ada,Ada,0,False,False,False
 AGREE,method_comparisons/split_voting/_main/06_sub_majority_not_spoiled.yaml,3,44,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,Aspen,0,False,False,False
+AGREE,method_comparisons/split_voting/_main/07d_apples_full_menu_star.yaml,8,9,Gala,Gala,Gala,Gala,Gala,Gala,Gala,Gala,Gala,8,False,False,False
+AGREE,method_comparisons/split_voting/_main/08b_smallest_spoiler_star.yaml,3,7,Milk Chocolate,Milk Chocolate,Milk Chocolate,Milk Chocolate,Milk Chocolate,Milk Chocolate,Milk Chocolate,Milk Chocolate,Milk Chocolate,0,False,False,False
+AGREE,method_comparisons/split_voting/_main/09a_clones_are_voters_not_labels.yaml,7,7,Cola,Cola,Cola,Cola,Cola,Cola,Cola,Cola,Cola,4,False,False,False
+AGREE,method_comparisons/split_voting/_main/09b_same_ballots_grouped_by_label.yaml,7,7,Cola,Cola,Cola,Cola,Cola,Cola,Cola,Cola,Cola,4,False,False,False
 AGREE,method_comparisons/summability_demo/cases/star_combined.yaml,3,6,Oak,Oak,Oak,Oak,Oak,Oak,Oak,,,0,False,False,True
 AGREE,method_comparisons/summability_demo/cases/star_district_A.yaml,3,3,Maple,Maple,Maple,Maple,Maple,Maple,Maple,Maple,Maple,0,False,False,False
 APPROVAL_OR_MINOR,01_STAR/01_Learn/reporting/cases/bv2284_8q3xcg_weak_mandate.yaml,4,100,Beth,Beth,Beth,Beth,Beth,Colin,Beth,Beth,Beth,17,False,False,False

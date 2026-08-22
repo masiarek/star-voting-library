@@ -1,0 +1,39 @@
+election_title: "The smallest spoiler, fixed — the same seven friends, scoring"
+scenario_description: |-
+  The identical seven friends from 08a, scoring each flavour 0-5 instead of
+  marking one. Nothing about their opinions changed; the ballot simply records
+  what the single mark could not — that a chocolate lover likes BOTH chocolates
+  and does not want vanilla.
+
+  Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. Automatic
+  Runoff: Milk Chocolate 4, Vanilla 3 — the four chocolate lovers, no longer
+  divided against themselves.
+
+  This is the whole argument in seven ballots. Choose-One did not count the
+  chocolate votes wrongly. It never asked the question whose answer would have
+  changed the result.
+  Live results: https://bettervoting.com/vjp3fj/results
+
+bv_test_id: BV2294
+bv_election_id: vjp3fj
+bv_results_url: https://bettervoting.com/vjp3fj/results
+blocs:
+  Chocolate: [Milk Chocolate, Dark Chocolate]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Milk Chocolate,Dark Chocolate,Vanilla
+  5,4,0   # milk first, dark is a close second, vanilla no thanks
+  5,3,0   # milk first, dark is fine, vanilla no thanks
+  4,5,0   # dark first, milk is a close second
+  3,5,0   # dark first, milk is fine
+  0,0,5   # vanilla only
+  1,0,5   # vanilla, and milk chocolate at a pinch
+  2,1,5   # vanilla, but not fussy
+
+expected_winners:
+  - Milk Chocolate
+
+# file: 08b_smallest_spoiler_star.yaml

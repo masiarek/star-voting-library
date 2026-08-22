@@ -1,0 +1,43 @@
+election_title: "Rung 4 — the same nine voters, scored 0-5: STAR elects Gala"
+scenario_description: |-
+  The identical nine voters and the identical eight-candidate menu as rung 3.
+  One thing changes: instead of one mark, each voter scores every candidate 0-5.
+
+  Nothing here is new information the voters invented for the occasion. The
+  scores simply write down what rung 3's ballot never asked: an apple person
+  likes ALL the apples and does not want the banana. Choose-One did not miscount
+  those opinions. It never collected them.
+
+  Scoring Round: Gala 29, Granny Smith 24, Fuji 17, Honeycrisp 16, McIntosh 16,
+  Pink Lady 13, Red Delicious 12, Banana 11 — the Choose-One winner finishes LAST
+  of eight. Gala and Granny Smith advance, and the Automatic Runoff goes to Gala
+  6-3 with nobody at Equal Support.
+
+  Gala is also the Condorcet winner: it beats every other candidate head-to-head.
+  Live results: https://bettervoting.com/vq78wk/results
+
+bv_test_id: BV2293
+bv_election_id: vq78wk
+bv_results_url: https://bettervoting.com/vq78wk/results
+blocs:
+  Apples: [Granny Smith, Gala, Fuji, Honeycrisp, Pink Lady, Red Delicious, McIntosh]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Granny Smith,Gala,Fuji,Honeycrisp,Pink Lady,Red Delicious,McIntosh,Banana
+  5,4,2,2,1,1,2,0   # Granny Smith first - but any apple beats a banana
+  3,5,2,2,2,1,2,0   # Gala first
+  3,4,5,2,2,1,2,0   # Fuji first
+  3,4,2,5,1,1,3,0   # Honeycrisp first
+  3,4,2,1,5,1,1,0   # Pink Lady first
+  2,4,2,1,1,5,1,1   # Red Delicious first
+  3,4,2,3,1,1,5,0   # McIntosh first
+  1,0,0,0,0,1,0,5   # banana person
+  1,0,0,0,0,0,0,5   # banana person
+
+expected_winners:
+  - Gala
+
+# file: 07d_apples_full_menu_star.yaml

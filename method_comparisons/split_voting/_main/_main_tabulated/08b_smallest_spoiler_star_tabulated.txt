@@ -1,0 +1,133 @@
+======================================================================
+SOURCE FILE:     08b_smallest_spoiler_star.yaml
+TABULATED FILE:  08b_smallest_spoiler_star_tabulated.txt
+======================================================================
+
+election_title: "The smallest spoiler, fixed — the same seven friends, scoring"
+scenario_description: |-
+  The identical seven friends from 08a, scoring each flavour 0-5 instead of
+  marking one. Nothing about their opinions changed; the ballot simply records
+  what the single mark could not — that a chocolate lover likes BOTH chocolates
+  and does not want vanilla.
+
+  Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. Automatic
+  Runoff: Milk Chocolate 4, Vanilla 3 — the four chocolate lovers, no longer
+  divided against themselves.
+
+  This is the whole argument in seven ballots. Choose-One did not count the
+  chocolate votes wrongly. It never asked the question whose answer would have
+  changed the result.
+  Live results: https://bettervoting.com/vjp3fj/results
+
+bv_test_id: BV2294
+bv_election_id: vjp3fj
+bv_results_url: https://bettervoting.com/vjp3fj/results
+blocs:
+  Chocolate: [Milk Chocolate, Dark Chocolate]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Milk Chocolate,Dark Chocolate,Vanilla
+  5,4,0   # milk first, dark is a close second, vanilla no thanks
+  5,3,0   # milk first, dark is fine, vanilla no thanks
+  4,5,0   # dark first, milk is a close second
+  3,5,0   # dark first, milk is fine
+  0,0,5   # vanilla only
+  1,0,5   # vanilla, and milk chocolate at a pinch
+  2,1,5   # vanilla, but not fussy
+
+expected_winners:
+  - Milk Chocolate
+
+# file: 08b_smallest_spoiler_star.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== The smallest spoiler, fixed — the same seven friends, scoring ===
+  The identical seven friends from 08a, scoring each flavour 0-5 instead of
+  marking one. Nothing about their opinions changed; the ballot simply records
+  what the single mark could not — that a chocolate lover likes BOTH chocolates
+  and does not want vanilla.
+
+  Scoring Round: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. Automatic
+  Runoff: Milk Chocolate 4, Vanilla 3 — the four chocolate lovers, no longer
+  divided against themselves.
+
+  This is the whole argument in seven ballots. Choose-One did not count the
+  chocolate votes wrongly. It never asked the question whose answer would have
+  changed the result.
+  Live results: https://bettervoting.com/vjp3fj/results
+
+--- Runoff (Preference) Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        * indicates Top 2 Finalist
+                       |  * Milk Chocolate  | * Dark Chocolate  |      Vanilla      |
+-------------------------------------------------------------------------------------
+    * Milk Chocolate > |        ---         |    4 - 1 - 2      |    4 - 0 - 3      |
+    * Dark Chocolate > |     2 - 1 - 4      |       ---         |    4 - 0 - 3      |
+             Vanilla > |     3 - 0 - 4      |    3 - 0 - 4      |       ---         |
+
+[Condorcet Winner]
+  Condorcet Winner: Milk Chocolate — matches the STAR winner
+
+[Condorcet Loser]
+  Condorcet Loser: Vanilla — loses every head-to-head matchup — elected by Choose-One (Plurality)!
+
+[Divergence from STAR]
+  STAR                   = Milk Chocolate
+  Choose-One (Plurality) = Vanilla   (differs from STAR)
+
+[Vote-splitting check]
+  Choose-One first choices: Vanilla 3, Milk Chocolate 2, Dark Chocolate 2
+  Plurality winner: Vanilla (3, 42.9%)
+  Bloc 'Chocolate' = Milk Chocolate, Dark Chocolate: combined 4 (57.1%); winner Vanilla is OUTSIDE it.
+  => VOTE SPLITTING: the 'Chocolate' bloc is an outright majority (4 vs
+     Vanilla's 3) but split across 2 candidates, so Vanilla won Choose-One.
+     STAR elected Milk Chocolate.
+
+--- STAR Voting Method (single winner) ---
+[STAR Voting]
+ Tabulating 7 ballots.
+Milk Chocolate,Dark Chocolate,Vanilla
+             5,             4,      0
+             5,             3,      0
+             4,             5,      0
+             3,             5,      0
+             0,             0,      5
+             1,             0,      5
+             2,             1,      5
+
+[Score Distribution] (how many ballots gave each star rating)
+                     Score
+Candidate       5  4  3  2  1  0  | Total   Avg
+Milk Chocolate  2  1  1  1  1  1  |    20   2.9
+Dark Chocolate  2  1  1  0  1  2  |    18   2.6
+Vanilla         3  0  0  0  0  4  |    15   2.1
+
+[STAR Voting: Scoring Round]
+ The two highest-scoring candidates advance to the next round.
+   Milk Chocolate -- 20 -- First place
+   Dark Chocolate -- 18 -- Second place
+   Vanilla        -- 15
+ Milk Chocolate and Dark Chocolate advance.
+
+[STAR Voting: Automatic Runoff Round]
+ The candidate preferred in the most head-to-head matchups wins.
+   Milk Chocolate -- 4 -- First place
+   Dark Chocolate -- 2
+   Equal Support  -- 1
+ Milk Chocolate wins.
+   Runoff math:
+     7  ballots cast
+   − 1  Equal Support (no preference between the two finalists)
+     ─
+     6  voters with a preference  (majority = 4)
+           Milk Chocolate 4 (67%)  ·  Dark Chocolate 2 (33%)
+
+[STAR Voting: Winner — STAR Voting Method (single winner)]
+ Milk Chocolate

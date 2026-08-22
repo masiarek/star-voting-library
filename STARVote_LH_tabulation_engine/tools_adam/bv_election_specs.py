@@ -3026,12 +3026,11 @@ _VS_8_RANK = [[1,2,3,5,6,7,4,8], [2,1,3,4,5,7,6,8], [3,2,1,4,5,7,6,8], [3,2,5,1,
               [3,2,4,5,1,6,7,8], [3,2,4,6,7,1,8,5], [3,2,5,4,6,7,1,8],
               [2,4,5,6,7,3,8,1], [2,3,4,5,6,7,8,1]]
 
-_VS_LESSON = ("Full lesson, every rung and the honest limits: "
-              "[Vote splitting & the spoiler effect]"
+_VS_LESSON = ("[Full lesson & tabulation]"
               "(https://masiarek.github.io/star-voting-library/method_comparisons/split_voting/index.html)")
 
 _VS_LADDER = {
-    "test_id": "BVNEXT",
+    "test_id": "BV2293",
     "title": "Seven apples and a banana — watch a spoiler appear one candidate at a time",
     "description": (
         "Nine people choose ONE fruit for the office basket. Seven want an apple, two want a "
@@ -3075,6 +3074,76 @@ _VS_LADDER = {
         "Gala 6-3, no Equal Support); Approval -> Gala 7 (78%); RCV-IRV -> Gala; Ranked Robin -> "
         "Gala (Condorcet winner). LH-verified on all seven races."
     ),
+}
+
+
+_VS_SMALL_C = ["Milk Chocolate", "Dark Chocolate", "Vanilla"]
+_VS_SMALL_PLUR = [[1,0,0],[1,0,0],[0,1,0],[0,1,0],[0,0,1],[0,0,1],[0,0,1]]
+_VS_SMALL_STAR = [[5,4,0],[5,3,0],[4,5,0],[3,5,0],[0,0,5],[1,0,5],[2,1,5]]
+
+_VS_SMALLEST = {
+    "test_id": "BV2294",
+    "title": "The smallest spoiler — seven friends, three flavours, and a minority winner",
+    "description": (
+        "The smallest election in which two similar candidates can cost their own side the win, "
+        "and the 101 rung of this repo's vote-splitting lesson. Seven friends pick ONE tub of ice "
+        "cream. Four want chocolate, three want vanilla — and the chocolate four are divided over "
+        "WHICH chocolate. Race 1, Choose-One: Vanilla 3, Milk Chocolate 2, Dark Chocolate 2. "
+        "Vanilla wins with 3 of 7 (43%) and all four chocolate lovers had it dead last. Race 2 "
+        "hands the identical seven friends a 0-5 ballot. Nothing about their opinions changes; "
+        "the ballot simply records what one mark could not — that a chocolate lover likes BOTH "
+        "chocolates. Scores: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15; the runoff goes to "
+        "Milk Chocolate 4-3. That is the whole argument in seven ballots: Choose-One did not "
+        "count the chocolate votes wrongly, it never asked the question whose answer would have "
+        "changed the result. Why seven is the floor for this shape: the rival needs more marks "
+        "than either similar candidate alone and fewer than both together, and 2 + 2 against 3 is "
+        "the cheapest arithmetic that does it. " + _VS_LESSON
+    ),
+    "races": [
+        {"title": "One mark each (Choose-One)", "method": "Plurality", "num_winners": 1,
+         "candidates": _VS_SMALL_C, "ballots": _VS_SMALL_PLUR},
+        {"title": "The same seven friends, scoring 0-5 (STAR)", "method": "STAR", "num_winners": 1,
+         "candidates": _VS_SMALL_C, "ballots": _VS_SMALL_STAR},
+    ],
+    "enable_write_in": False,
+    "expected": ("Choose-One -> Vanilla 3 of 7 (43%). STAR -> Milk Chocolate "
+                 "(20/18/15; runoff 4-3). LH-verified on both races."),
+}
+
+_VS_FIZZ_C = ["Cola", "Root Beer", "Lemonade", "Sweet Tea", "Diet Cola",
+              "Sparkling Water", "Unsweet Tea"]
+_VS_FIZZ_PLUR = [[1,0,0,0,0,0,0],[0,1,0,0,0,0,0],[0,0,1,0,0,0,0],[0,0,0,1,0,0,0],
+                 [0,0,0,0,1,0,0],[0,0,0,0,1,0,0],[0,0,0,0,0,0,1]]
+_VS_FIZZ_STAR = [[5,4,4,3,1,0,0],[4,5,3,3,1,0,0],[3,2,5,4,0,1,0],[3,2,4,5,0,0,1],
+                 [1,1,0,0,5,4,3],[1,0,0,0,5,3,4],[0,0,1,1,3,4,5]]
+
+_VS_FIZZY = {
+    "test_id": "BV2295",
+    "title": "Fizzy or sweet? Two groupings the same size, only one of them a real clone set",
+    "description": (
+        "The 301 rung of this repo's vote-splitting lesson: you cannot read a spoiler off a "
+        "candidate list. Seven people, seven drinks, and two obvious ways to group them. FIZZY: "
+        "Cola, Root Beer, Diet Cola, Sparkling Water. SUGAR: Cola, Root Beer, Lemonade, Sweet "
+        "Tea. Count first choices and the two groupings are EXACTLY the same size — fizzy holds 4 "
+        "of 7, sugar holds 4 of 7. Both are majorities, both spread across four candidates, and "
+        "from the outside they look like the same situation. They are not. Choose-One elects DIET "
+        "COLA on 2 of 7 (29%). The sugar majority really did split and really did lose. The fizzy "
+        "majority never split at all, because it was never a bloc: a Diet Cola drinker does not "
+        "want a Cola and scores it a 1. 'Fizzy' describes the drinks; it says nothing about who "
+        "backs them. Under STAR the two sweet drinks take both runoff slots, Cola beats Lemonade "
+        "4-3, and Diet Cola — the Choose-One winner — finishes fourth of seven in the scoring "
+        "round. Two candidates are clones when the SAME VOTERS score them alike, which only the "
+        "ballots can tell you. A category is not a clone set. " + _VS_LESSON
+    ),
+    "races": [
+        {"title": "One mark each (Choose-One)", "method": "Plurality", "num_winners": 1,
+         "candidates": _VS_FIZZ_C, "ballots": _VS_FIZZ_PLUR},
+        {"title": "The same seven voters, scoring 0-5 (STAR)", "method": "STAR", "num_winners": 1,
+         "candidates": _VS_FIZZ_C, "ballots": _VS_FIZZ_STAR},
+    ],
+    "enable_write_in": False,
+    "expected": ("Choose-One -> Diet Cola 2 of 7 (29%). STAR -> Cola (17/17/16/15/14/13/12; "
+                 "finalists Cola & Lemonade, runoff 4-3). LH-verified on both races."),
 }
 
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
@@ -6767,7 +6836,7 @@ _BWF_SPEC = {
 }
 
 
-ELECTIONS: list = [_VS_LADDER]   # resting state — point this at a spec only for the run that mints it
+ELECTIONS: list = [_VS_SMALLEST, _VS_FIZZY]   # resting state — point this at a spec only for the run that mints it
 # Previously: [_BCW_SPEC, _BSL_SPEC, _BDM_SPEC, _BHC_SPEC, _BNM_SPEC, _BWF_SPEC]
 #   BV2287 -> xbk9bq, BV2288 -> vxwjc4, BV2289 -> xpr4wk, BV2290 -> 2cdvm6,
 #   BV2291 -> vthdwc, BV2292 -> rq2c3g. All six created as designed, 406 ballots

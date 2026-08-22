@@ -1,0 +1,41 @@
+election_title: "The smallest spoiler — seven friends, three flavours, and a minority winner"
+scenario_description: |-
+  The smallest election in which two similar candidates can cost their own side
+  the win. Seven friends pick ONE tub of ice cream. Four of them want chocolate,
+  three want vanilla — and the chocolate four are divided over WHICH chocolate.
+
+  Choose-One: Vanilla 3, Milk Chocolate 2, Dark Chocolate 2. Vanilla wins with
+  3 of 7 (43%) — and all four chocolate lovers ranked Vanilla DEAD LAST.
+
+  Why seven is the floor for this shape: with two similar candidates, the rival
+  needs more marks than either of them individually and fewer than both together.
+  The cheapest arithmetic that does it is 2 + 2 versus 3. Fewer voters than this
+  and either the chocolate side stops being a majority or one chocolate out-polls
+  the vanilla.
+
+  (Allow THREE similar candidates and the floor drops to five voters: 1 + 1 + 1
+  against 2, a 40% winner. Fewer voters, more candidates — see the fruit-basket
+  ladder, where seven apples and a banana bring it down to 22% on nine ballots.)
+  Live results: https://bettervoting.com/vjp3fj/results
+
+bv_test_id: BV2294
+bv_election_id: vjp3fj
+bv_results_url: https://bettervoting.com/vjp3fj/results
+blocs:
+  Chocolate: [Milk Chocolate, Dark Chocolate]
+
+voting_method: Plurality
+num_winners: 1
+
+ballots: |-
+  Milk Chocolate,Dark Chocolate,Vanilla
+  1,0,0   # milk chocolate, and dark would be fine too
+  1,0,0   # milk chocolate, and dark would be fine too
+  0,1,0   # dark chocolate, and milk would be fine too
+  0,1,0   # dark chocolate, and milk would be fine too
+  0,0,1   # vanilla
+  0,0,1   # vanilla
+  0,0,1   # vanilla
+
+expected_winners:
+  - Vanilla

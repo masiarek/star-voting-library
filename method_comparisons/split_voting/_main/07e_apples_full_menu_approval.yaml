@@ -1,0 +1,35 @@
+election_title: "Rung 4 — the same nine voters, approving: Approval elects Gala too"
+scenario_description: |-
+  The same nine voters and the same eight-candidate menu, marking every candidate
+  they would be happy with rather than exactly one.
+
+  Gala 7 of 9 (78%), Granny Smith 6, Banana 2. The apple side's support adds up
+  instead of dividing, because a voter who likes six apples may now say so.
+
+  Approval and STAR reach the same answer here by different routes: Approval asks
+  who is acceptable to the most people, STAR asks that and then checks which of
+  the top two more voters actually prefer. On this electorate they agree, which
+  is the common case. The point of this rung is not which expressive method you
+  pick — it is that EVERY ballot allowing more than one mark ends the split.
+  Live results: https://bettervoting.com/vq78wk/results
+
+bv_test_id: BV2293
+bv_election_id: vq78wk
+bv_results_url: https://bettervoting.com/vq78wk/results
+voting_method: Approval
+num_winners: 1
+
+ballots: |-
+  Granny Smith,Gala,Fuji,Honeycrisp,Pink Lady,Red Delicious,McIntosh,Banana
+  1,1,0,0,0,0,0,0   # Granny Smith person - Gala is fine too
+  1,1,0,0,0,0,0,0   # Gala person
+  1,1,1,0,0,0,0,0   # Fuji person
+  1,1,0,1,0,0,1,0   # Honeycrisp person
+  1,1,0,0,1,0,0,0   # Pink Lady person
+  0,1,0,0,0,1,0,0   # Red Delicious person
+  1,1,0,1,0,0,1,0   # McIntosh person
+  0,0,0,0,0,0,0,1   # banana person
+  0,0,0,0,0,0,0,1   # banana person
+
+expected_winners:
+  - Gala

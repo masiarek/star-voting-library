@@ -1,0 +1,35 @@
+election_title: "Rung 1 — two candidates: nothing can split"
+scenario_description: |-
+  Nine people pick ONE fruit for the office basket. Seven of them want an apple;
+  two want a banana. With only two names on the paper there is exactly one way to
+  say "apple", so the apple people all say it.
+
+  Gala 7, Banana 2. The apple side holds 78% and wins with 78%.
+
+  This is the baseline every later rung is measured against. With two candidates,
+  Choose-One, STAR, Approval, RCV-IRV and Ranked Robin ALL elect Gala, because
+  with two candidates every reasonable method is the same method: majority rule.
+  Vote splitting has not been prevented here — it is not yet possible. It becomes
+  possible the moment a third name appears.
+  Live results: https://bettervoting.com/vq78wk/results
+
+bv_test_id: BV2293
+bv_election_id: vq78wk
+bv_results_url: https://bettervoting.com/vq78wk/results
+voting_method: Plurality
+num_winners: 1
+
+ballots: |-
+  Gala,Banana
+  1,0   # apple person - would really rather have a Granny Smith
+  1,0   # apple person - Gala is genuinely their favourite
+  1,0   # apple person - would really rather have a Fuji
+  1,0   # apple person - would really rather have a Honeycrisp
+  1,0   # apple person - would really rather have a Pink Lady
+  1,0   # apple person - would really rather have a Red Delicious
+  1,0   # apple person - would really rather have a McIntosh
+  0,1   # banana person
+  0,1   # banana person
+
+expected_winners:
+  - Gala

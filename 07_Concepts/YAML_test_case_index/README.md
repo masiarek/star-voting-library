@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**632 election files** (516 single-winner, 116 multi-winner) across 18 method(s).
+**642 election files** (526 single-winner, 116 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 275 |
-| RCV-IRV (Hare) | 52 |
+| STAR | 279 |
+| RCV-IRV (Hare) | 53 |
 | Ranked Robin (RCV-RR / Copeland) | 105 |
-| Approval | 29 |
+| Approval | 30 |
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
@@ -26,12 +26,12 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | BLOC STAR | 41 |
 | CAV | 1 |
 | IRV | 19 |
-| PLURALITY | 35 |
+| PLURALITY | 39 |
 | RANGE | 4 |
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (275)
+## STAR  (279)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -297,6 +297,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`05a_residual_split_bullet-voting`](../../method_comparisons/split_voting/_main/_main_pages/05a_residual_split_bullet-voting.md) | `method_comparisons/split_voting/_main/` | 1 | STAR's residual split — a coalition bullet-votes itself apart → _Cara_ | [`.yaml`](../../method_comparisons/split_voting/_main/05a_residual_split_bullet-voting.yaml) |
 | [`05b_residual_split_expressive-fix`](../../method_comparisons/split_voting/_main/_main_pages/05b_residual_split_expressive-fix.md) | `method_comparisons/split_voting/_main/` | 1 | The cure — score your ally, and STAR's split disappears → _Ada_ | [`.yaml`](../../method_comparisons/split_voting/_main/05b_residual_split_expressive-fix.yaml) |
 | [`06_sub_majority_not_spoiled`](../../method_comparisons/split_voting/_main/_main_pages/06_sub_majority_not_spoiled.md) | `method_comparisons/split_voting/_main/` | 1 | A 41% winner that nothing spoiled — sub-majority is not the same as split → _Aspen_ | [`.yaml`](../../method_comparisons/split_voting/_main/06_sub_majority_not_spoiled.yaml) |
+| [`07d_apples_full_menu_star`](../../method_comparisons/split_voting/_main/_main_pages/07d_apples_full_menu_star.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 4 — the same nine voters, scored 0-5: STAR elects Gala → _Gala_ | [`.yaml`](../../method_comparisons/split_voting/_main/07d_apples_full_menu_star.yaml) |
+| [`08b_smallest_spoiler_star`](../../method_comparisons/split_voting/_main/_main_pages/08b_smallest_spoiler_star.md) | `method_comparisons/split_voting/_main/` | 1 | The smallest spoiler, fixed — the same seven friends, scoring → _Milk Chocolate_ | [`.yaml`](../../method_comparisons/split_voting/_main/08b_smallest_spoiler_star.yaml) |
+| [`09a_clones_are_voters_not_labels`](../../method_comparisons/split_voting/_main/_main_pages/09a_clones_are_voters_not_labels.md) | `method_comparisons/split_voting/_main/` | 1 | Clones are made of voters, not labels — the sugar group splits, the fizzy group doesn't → _Cola_ | [`.yaml`](../../method_comparisons/split_voting/_main/09a_clones_are_voters_not_labels.yaml) |
+| [`09b_same_ballots_grouped_by_label`](../../method_comparisons/split_voting/_main/_main_pages/09b_same_ballots_grouped_by_label.md) | `method_comparisons/split_voting/_main/` | 1 | The same seven voters, grouped by the FIZZY label instead — no spoiler → _Cola_ | [`.yaml`](../../method_comparisons/split_voting/_main/09b_same_ballots_grouped_by_label.yaml) |
 | [`bv2221_2kcwbw_sincere`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2221_2kcwbw_sincere.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Sincere STAR — the center wins (Beth is the Condorcet winner) → _Beth_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2221_2kcwbw_sincere.yaml) |
 | [`bv2222_rfyk46_510_thin_star`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2222_rfyk46_510_thin_star.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Strategic 5-1-0 STAR — the center is squeezed out (fails the CW) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_star.yaml) |
 | [`bv2223_dyh93j_510_real_star`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2223_dyh93j_510_real_star.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | Strategic 5-1-0 STAR, real moderate base — STAR STILL elects the CW → _Beth_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_star.yaml) |
@@ -311,7 +315,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 | [`zero_support_star`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_star.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (STAR) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_star.yaml) |
 
-## RCV-IRV (Hare)  (52)
+## RCV-IRV (Hare)  (53)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -362,6 +366,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2282_hf3ckp_brams_irv`](../../method_comparisons/rangevoting_irv_examples/cases/cases_pages/bv2282_hf3ckp_brams_irv.md) | `method_comparisons/rangevoting_irv_examples/cases/` | 1 | Brams 1982 — twenty-one voters, and the Condorcet winner goes out second → _B_ | [`.yaml`](../../method_comparisons/rangevoting_irv_examples/cases/bv2282_hf3ckp_brams_irv.yaml) |
 | [`reversal_irv_original`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_irv_original.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — RCV-IRV, original: A wins (best) → _A_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_irv_original.yaml) |
 | [`reversal_irv_reversed`](../../method_comparisons/reversal_symmetry/cases/cases_pages/reversal_irv_reversed.md) | `method_comparisons/reversal_symmetry/cases/` | 1 | Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best) → _A_ | [`.yaml`](../../method_comparisons/reversal_symmetry/cases/reversal_irv_reversed.yaml) |
+| [`07f_apples_full_menu_irv`](../../method_comparisons/split_voting/_main/_main_pages/07f_apples_full_menu_irv.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 4 — the same nine voters, ranked: RCV-IRV also elects Gala → _Gala_ | [`.yaml`](../../method_comparisons/split_voting/_main/07f_apples_full_menu_irv.yaml) |
 | [`bv2222_rfyk46_510_thin_irv`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2222_rfyk46_510_thin_irv.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | RCV-IRV on the same electorate — also squeezes the center (→ Ana) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2222_rfyk46_510_thin_irv.yaml) |
 | [`bv2223_dyh93j_510_real_irv`](../../method_comparisons/star_5_1_0_challenge/cases/cases_pages/bv2223_dyh93j_510_real_irv.md) | `method_comparisons/star_5_1_0_challenge/cases/` | 1 | RCV-IRV, real moderate base — still squeezes the center (→ Ana) → _Ana_ | [`.yaml`](../../method_comparisons/star_5_1_0_challenge/cases/bv2223_dyh93j_510_real_irv.yaml) |
 | [`irv_combined`](../../method_comparisons/summability_demo/cases/cases_pages/irv_combined.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV combined A+B (B eliminated; not summable) → _A_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_combined.yaml) |
@@ -478,7 +483,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`zero_support_ranked_robin`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_ranked_robin.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (RankedRobin) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_ranked_robin.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (29)
+## Approval  (30)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -509,6 +514,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml) |
+| [`07e_apples_full_menu_approval`](../../method_comparisons/split_voting/_main/_main_pages/07e_apples_full_menu_approval.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 4 — the same nine voters, approving: Approval elects Gala too → _Gala_ | [`.yaml`](../../method_comparisons/split_voting/_main/07e_apples_full_menu_approval.yaml) |
 | [`wcl_c3_b5_approval`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_approval.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — the same five voters, on Approval ballots → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_approval.yaml) |
 | [`zero_support_approval`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_approval.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (Approval) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_approval.yaml) |
 
@@ -690,7 +696,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (35)
+## PLURALITY  (39)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -716,6 +722,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`same_matrix_p1_plurality`](../../method_comparisons/same_matrix_different_plurality/cases/cases_pages/same_matrix_p1_plurality.md) | `method_comparisons/same_matrix_different_plurality/cases/` | 1 | Same matrix, different plurality — electorate P1: Choose-One → _Ada_ | [`.yaml`](../../method_comparisons/same_matrix_different_plurality/cases/same_matrix_p1_plurality.yaml) |
 | [`same_matrix_p2_plurality`](../../method_comparisons/same_matrix_different_plurality/cases/cases_pages/same_matrix_p2_plurality.md) | `method_comparisons/same_matrix_different_plurality/cases/` | 1 | Same matrix, different plurality — electorate P2: Choose-One → _Ben_ | [`.yaml`](../../method_comparisons/same_matrix_different_plurality/cases/same_matrix_p2_plurality.yaml) |
 | [`same_matrix_p3_plurality`](../../method_comparisons/same_matrix_different_plurality/cases/cases_pages/same_matrix_p3_plurality.md) | `method_comparisons/same_matrix_different_plurality/cases/` | 1 | Same matrix, different plurality — electorate P3: Choose-One → _Cal_ | [`.yaml`](../../method_comparisons/same_matrix_different_plurality/cases/same_matrix_p3_plurality.yaml) |
+| [`07a_apples_two_candidates`](../../method_comparisons/split_voting/_main/_main_pages/07a_apples_two_candidates.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 1 — two candidates: nothing can split → _Gala_ | [`.yaml`](../../method_comparisons/split_voting/_main/07a_apples_two_candidates.yaml) |
+| [`07b_apples_six_candidates`](../../method_comparisons/split_voting/_main/_main_pages/07b_apples_six_candidates.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 2 — six candidates: the vote splits, and it costs nothing → _Gala_ | [`.yaml`](../../method_comparisons/split_voting/_main/07b_apples_six_candidates.yaml) |
+| [`07c_apples_full_menu`](../../method_comparisons/split_voting/_main/_main_pages/07c_apples_full_menu.md) | `method_comparisons/split_voting/_main/` | 1 | Rung 3 — eight candidates: the banana wins on 22% → _Banana_ | [`.yaml`](../../method_comparisons/split_voting/_main/07c_apples_full_menu.yaml) |
+| [`08a_smallest_spoiler_plurality`](../../method_comparisons/split_voting/_main/_main_pages/08a_smallest_spoiler_plurality.md) | `method_comparisons/split_voting/_main/` | 1 | The smallest spoiler — seven friends, three flavours, and a minority winner → _Vanilla_ | [`.yaml`](../../method_comparisons/split_voting/_main/08a_smallest_spoiler_plurality.yaml) |
 | [`bv2170_pp2q4q_plurality`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_plurality.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — Choose-One: the poles tie, the centrist gets 6 → _Blake_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_plurality.yaml) |
 | [`zero_support_plurality`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_plurality.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (Plurality) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_plurality.yaml) |
 | [`bpv_bakery_block_plurality_c4_b12`](../../method_comparisons/block_preferential/cases/cases_pages/bpv_bakery_block_plurality_c4_b12.md) | `method_comparisons/block_preferential/cases/` | 2 | The same electorate under plurality block voting — the ranked ballot changed nothing → _Almond, Brioche_ | [`.yaml`](../../method_comparisons/block_preferential/cases/bpv_bakery_block_plurality_c4_b12.yaml) |

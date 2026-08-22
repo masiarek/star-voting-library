@@ -1,0 +1,39 @@
+election_title: "Rung 4 — the same nine voters, ranked: RCV-IRV also elects Gala"
+scenario_description: |-
+  The same nine voters and the same eight-candidate menu, ranked rather than
+  scored. Stated plainly because this page is not a sales pitch: RCV-IRV FIXES
+  this spoiler. A ranked ballot lets an apple person say "any apple before the
+  banana", eliminations transfer those votes instead of stranding them, and the
+  apple side consolidates on Gala.
+
+  Ending the classic spoiler is the thing instant-runoff was designed to do and
+  it does it. IRV's own well-known failure is a different one — center squeeze,
+  where a broadly-liked compromise is eliminated early for holding too few FIRST
+  choices — and this election is not an example of it.
+
+  One honest caveat about this particular file: seven candidates start tied on a
+  single first choice each, so the early elimination ORDER is settled by
+  tie-breaking rather than by the voters. The eventual winner is robust to that
+  (every apple's ballots flow to other apples), but do not quote the round-by-
+  round sequence as if the voters chose it.
+  Live results: https://bettervoting.com/vq78wk/results
+
+bv_test_id: BV2293
+bv_election_id: vq78wk
+bv_results_url: https://bettervoting.com/vq78wk/results
+voting_method: RCV_IRV
+num_winners: 1
+
+ballots: |-
+  1:Granny Smith>Gala>Fuji>McIntosh>Honeycrisp>Pink Lady>Red Delicious>Banana
+  1:Gala>Granny Smith>Fuji>Honeycrisp>Pink Lady>McIntosh>Red Delicious>Banana
+  1:Fuji>Gala>Granny Smith>Honeycrisp>Pink Lady>McIntosh>Red Delicious>Banana
+  1:Honeycrisp>Gala>Granny Smith>McIntosh>Fuji>Pink Lady>Red Delicious>Banana
+  1:Pink Lady>Gala>Granny Smith>Fuji>Honeycrisp>Red Delicious>McIntosh>Banana
+  1:Red Delicious>Gala>Granny Smith>Fuji>Banana>Honeycrisp>Pink Lady>McIntosh
+  1:McIntosh>Gala>Granny Smith>Honeycrisp>Fuji>Pink Lady>Red Delicious>Banana
+  1:Banana>Granny Smith>Red Delicious>Gala>Fuji>Honeycrisp>Pink Lady>McIntosh
+  1:Banana>Granny Smith>Gala>Fuji>Honeycrisp>Pink Lady>Red Delicious>McIntosh
+
+expected_winners:
+  - Gala

@@ -1,0 +1,44 @@
+election_title: "Rung 3 — eight candidates: the banana wins on 22%"
+scenario_description: |-
+  The SAME nine people again. Two more apple varieties join the list — Pink Lady
+  and McIntosh — and they are the true favourites of the last two voters who were
+  still marking Gala. Both peel away.
+
+  Now every apple holds exactly ONE mark and Banana holds two. Banana wins with
+  2 of 9 — twenty-two percent — while seven of the nine people (78%) came in
+  wanting an apple. Nobody changed their mind between this rung and the last one.
+  Nobody voted strategically. Two candidates joined the ballot.
+
+  Look at where the two newcomers finished: Pink Lady and McIntosh got one vote
+  each. Neither could win. Both changed who did. That is exactly what the word
+  SPOILER means — not a candidate who wins unfairly, but one who cannot win and
+  alters the result anyway.
+
+  The general rule, visible across rungs 1-3: the rival takes the lead the moment
+  no single member of the split side holds more first choices than the rival
+  does. Adding candidates cannot help the side doing the adding.
+  Live results: https://bettervoting.com/vq78wk/results
+
+bv_test_id: BV2293
+bv_election_id: vq78wk
+bv_results_url: https://bettervoting.com/vq78wk/results
+blocs:
+  Apples: [Granny Smith, Gala, Fuji, Honeycrisp, Pink Lady, Red Delicious, McIntosh]
+
+voting_method: Plurality
+num_winners: 1
+
+ballots: |-
+  Granny Smith,Gala,Fuji,Honeycrisp,Pink Lady,Red Delicious,McIntosh,Banana
+  1,0,0,0,0,0,0,0   # Granny Smith
+  0,1,0,0,0,0,0,0   # Gala
+  0,0,1,0,0,0,0,0   # Fuji
+  0,0,0,1,0,0,0,0   # Honeycrisp
+  0,0,0,0,1,0,0,0   # Pink Lady - was marking Gala at rung 2
+  0,0,0,0,0,1,0,0   # Red Delicious
+  0,0,0,0,0,0,1,0   # McIntosh - was marking Gala at rung 2
+  0,0,0,0,0,0,0,1   # banana person
+  0,0,0,0,0,0,0,1   # banana person
+
+expected_winners:
+  - Banana

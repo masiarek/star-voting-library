@@ -1,0 +1,68 @@
+======================================================================
+SOURCE FILE:     07b_apples_six_candidates.yaml
+TABULATED FILE:  07b_apples_six_candidates_tabulated.txt
+======================================================================
+
+election_title: "Rung 2 — six candidates: the vote splits, and it costs nothing"
+scenario_description: |-
+  The SAME nine people, the same opinions, four more apple varieties on the list.
+  Each apple person now marks whichever of the available apples they like best.
+
+  Gala 3, Banana 2, and one each for Granny Smith, Fuji, Honeycrisp and Red
+  Delicious. Gala wins with 3 of 9 — 33%, well under half.
+
+  Read the warning signs and this looks alarming: the winner has a third of the
+  vote, and the candidates who lost hold twice as much between them. Read the
+  result and nothing went wrong at all. The apple vote IS splitting — five ways —
+  and the apple side still wins, because Gala's pile is still bigger than
+  Banana's.
+
+  This rung is the one most explanations skip, and it is the reason "the winner
+  got under 50%" is a screening flag rather than a finding. Splitting is not the
+  same as being spoiled. What matters is not whether a side divides, but whether
+  it divides FAR ENOUGH that its largest piece drops below the rival's.
+  Live results: https://bettervoting.com/vq78wk/results
+
+bv_test_id: BV2293
+bv_election_id: vq78wk
+bv_results_url: https://bettervoting.com/vq78wk/results
+voting_method: Plurality
+num_winners: 1
+
+ballots: |-
+  Granny Smith,Gala,Fuji,Honeycrisp,Red Delicious,Banana
+  1,0,0,0,0,0   # Granny Smith is on the list now, so that is the mark
+  0,1,0,0,0,0   # Gala really is this voter's favourite
+  0,0,1,0,0,0   # Fuji is on the list now
+  0,0,0,1,0,0   # Honeycrisp is on the list now
+  0,1,0,0,0,0   # would prefer a Pink Lady - not on the list, so Gala
+  0,0,0,0,1,0   # Red Delicious is on the list now
+  0,1,0,0,0,0   # would prefer a McIntosh - not on the list, so Gala
+  0,0,0,0,0,1   # banana person
+  0,0,0,0,0,1   # banana person
+
+expected_winners:
+  - Gala
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Choose-One / Plurality Voting Method (single winner) ---
+ Tabulating 9 ballots.
+
+                                                       Granny Smith   Gala   Fuji  Honeycrisp  Red Delicious  Banana 
+  Granny Smith is on the list now, so that is the mark      X          -      -        -             -          -    
+  Gala really is this voter's favourite                     -          X      -        -             -          -    
+  Fuji is on the list now                                   -          -      X        -             -          -    
+  Honeycrisp is on the list now                             -          -      -        X             -          -    
+  would prefer a Pink Lady - not on the list, so Gala       -          X      -        -             -          -    
+  Red Delicious is on the list now                          -          -      -        -             X          -    
+  would prefer a McIntosh - not on the list, so Gala        -          X      -        -             -          -    
+  banana person                                             -          -      -        -             -          X    
+  banana person                                             -          -      -        -             -          X    
+
+  Count the marks:  Gala 3 · Banana 2 · Granny Smith 1 · Fuji 1 · Honeycrisp 1 · Red Delicious 1
+
+Winner — Choose-One / Plurality Voting Method (single winner)
+ Gala   (3 of 9 marks)
