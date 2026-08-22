@@ -39,7 +39,7 @@ scenario_description: |-
   clean statement of the difference: the same ballots, one count answering "who
   is most liked?" four times over, the other asking "who is not yet
   represented?" Read that result as a seat COUNT per faction, not as a list of
-  names: two of the four seats are decided by a tie-break (see below).
+  names: THREE of the four seats are decided by a tie-break (see below).
 
   Reproduced on BetterVoting (election vthdwc), which counts the SAME 101
   ballots twice. The BLOC STAR race — the subject of this file — matches the LH
@@ -49,10 +49,20 @@ scenario_description: |-
   TIE-DEPENDENT. After Jaya is elected, a Hare quota of 25.25 voters is spent —
   the 21 ballots scoring Jaya 4 are consumed outright and the 80 scoring Jaya 3
   are reduced to weight 303/320 — and at that point Ada and Bram hold EXACTLY
-  the same reweighted score, 2727/16. Gita and Hank are likewise tied at 303/2.
+  the same reweighted score, 2727/16. Gita and Hank are likewise tied at 303/2,
+  and Dov, Esme and Ines at 2121/16.
   Each faction's candidates are scored identically by every bloc but one, so
   reweighting lands them on the same number. LH breaks it to Ada and Gita; BV
   breaks it to Bram and Hank, and elects Jaya, Bram, Dov, Hank.
+
+  Note the count: the engine prints THREE [Lot-decided tie - rare] banners here,
+  not two. Seat 3 goes to a lot as well - Dov against Esme, once Ada's quota is
+  spent - and it is easy to miss because both engines' lots land on Dov, so it
+  never shows up in an LH-vs-BV diff. Two ties DIVERGE; three ties DECIDE a seat,
+  and those are different counts. It strengthens rather than weakens the advice
+  above: quote the seat count. Three of these four names are a coin toss, and the
+  faction spread - Blue, Green, Amber, independent, one each - is identical on
+  both engines' paths.
 
   Neither engine is wrong. This is the last rung of the ladder — LH's published
   lot against BV's seeded shuffle — and it is the one place the two are known to
@@ -127,7 +137,7 @@ TABULATION RESULTS
   clean statement of the difference: the same ballots, one count answering "who
   is most liked?" four times over, the other asking "who is not yet
   represented?" Read that result as a seat COUNT per faction, not as a list of
-  names: two of the four seats are decided by a tie-break (see below).
+  names: THREE of the four seats are decided by a tie-break (see below).
 
   Reproduced on BetterVoting (election vthdwc), which counts the SAME 101
   ballots twice. The BLOC STAR race — the subject of this file — matches the LH
@@ -137,10 +147,20 @@ TABULATION RESULTS
   TIE-DEPENDENT. After Jaya is elected, a Hare quota of 25.25 voters is spent —
   the 21 ballots scoring Jaya 4 are consumed outright and the 80 scoring Jaya 3
   are reduced to weight 303/320 — and at that point Ada and Bram hold EXACTLY
-  the same reweighted score, 2727/16. Gita and Hank are likewise tied at 303/2.
+  the same reweighted score, 2727/16. Gita and Hank are likewise tied at 303/2,
+  and Dov, Esme and Ines at 2121/16.
   Each faction's candidates are scored identically by every bloc but one, so
   reweighting lands them on the same number. LH breaks it to Ada and Gita; BV
   breaks it to Bram and Hank, and elects Jaya, Bram, Dov, Hank.
+
+  Note the count: the engine prints THREE [Lot-decided tie - rare] banners here,
+  not two. Seat 3 goes to a lot as well - Dov against Esme, once Ada's quota is
+  spent - and it is easy to miss because both engines' lots land on Dov, so it
+  never shows up in an LH-vs-BV diff. Two ties DIVERGE; three ties DECIDE a seat,
+  and those are different counts. It strengthens rather than weakens the advice
+  above: quote the seat count. Three of these four names are a coin toss, and the
+  faction spread - Blue, Green, Amber, independent, one each - is identical on
+  both engines' paths.
 
   Neither engine is wrong. This is the last rung of the ladder — LH's published
   lot against BV's seeded shuffle — and it is the one place the two are known to
