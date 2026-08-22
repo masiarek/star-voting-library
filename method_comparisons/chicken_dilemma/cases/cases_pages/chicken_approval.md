@@ -83,4 +83,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [The tie-breaking ladder (full chain)](../../../../01_STAR/01_Learn/Tie_Breaking_STAR/tie_breaking.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [chicken_star](chicken_star.md)
+More cases in this set: [chicken_approval_both_defect](chicken_approval_both_defect.md) · [chicken_star](chicken_star.md)

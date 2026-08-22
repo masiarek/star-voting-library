@@ -153,7 +153,12 @@ What every one of these ballots has in common is not a brand. It is that each on
 
 **"A winner under 50% means the election was spoiled."** No — see rung 2, and the deliberate control case: [`06`](_main/_main_pages/06_sub_majority_not_spoiled.md), a 41% winner that every method confirms. Same warning signs, opposite verdict. Telling them apart needs preference data, which a one-mark ballot never collects.
 
-**"STAR and Approval are immune to vote splitting."** Overstated, and this repo's own case files say so. They remove **forced** splitting — you are never made to choose between allies. A faction can still split *itself* by refusing to score its ally: [`05a`](_main/_main_pages/05a_residual_split_bullet-voting.md) hands the seat to a 40% opponent, and [`05b`](_main/_main_pages/05b_residual_split_expressive-fix.md) shows the cure. The difference from choose-one is that the remedy is in the voters' hands.
+**"STAR and Approval are immune to vote splitting."** Overstated, and this repo's own case files say so — for *both* of them. They remove **forced** splitting: you are never made to choose between allies. A faction can still split *itself* by declining to support one.
+
+- **STAR** — [`05a`](_main/_main_pages/05a_residual_split_bullet-voting.md): a 60% side bullet-votes its own allies apart and hands the seat to a 40% opponent. [`05b`](_main/_main_pages/05b_residual_split_expressive-fix.md) is the cure — score the ally even a 3 and the split vanishes.
+- **Approval** — the **Burr dilemma**, named for the 1800 Jefferson–Burr tie. Honest cooperation leaves two allies [tied 60–60](../chicken_dilemma/cases/cases_pages/chicken_approval.md), so each is tempted to bullet-vote; when [both sides defect](../chicken_dilemma/cases/cases_pages/chicken_approval_both_defect.md), the same 60% majority loses to the same 40% opponent. The threshold is concrete: C only takes the lead once **more than 20** of A's 35 supporters *and* **more than 20** of B's 25 defect — it is defection becoming general, not one defector, that does it.
+
+The difference from choose-one is that the remedy is in the voters' hands. That is a real difference and worth defending. It is not immunity, and neither method should be sold as immune. Full set: [the chicken / Burr dilemma](../chicken_dilemma/README.md).
 
 **"You can tell which candidates will split by reading the ballot."** You cannot — and this is the deepest point on the page.
 

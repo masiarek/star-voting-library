@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**644 election files** (528 single-winner, 116 multi-winner) across 18 method(s).
+**645 election files** (529 single-winner, 116 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
 | STAR | 279 |
 | RCV-IRV (Hare) | 53 |
 | Ranked Robin (RCV-RR / Copeland) | 107 |
-| Approval | 30 |
+| Approval | 31 |
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
@@ -485,7 +485,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`zero_support_ranked_robin`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_ranked_robin.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (RankedRobin) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_ranked_robin.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (30)
+## Approval  (31)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -501,6 +501,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`hh41_05_majority_bullet_votes`](../../method_comparisons/approval_majority_criterion/cases/cases_pages/hh41_05_majority_bullet_votes.md) | `method_comparisons/approval_majority_criterion/cases/` | 1 | Hamlin & Hua §4.1 — the majority bullet-votes instead: A wins, same electorate → _A_ | [`.yaml`](../../method_comparisons/approval_majority_criterion/cases/hh41_05_majority_bullet_votes.yaml) |
 | [`Black_Curtain_01a_c3_b5_approval`](../../method_comparisons/black_curtain/cases/cases_pages/Black_Curtain_01a_c3_b5_approval.md) | `method_comparisons/black_curtain/cases/` | 1 | The Black Curtain → _Bob_ | [`.yaml`](../../method_comparisons/black_curtain/cases/Black_Curtain_01a_c3_b5_approval.yaml) |
 | [`chicken_approval`](../../method_comparisons/chicken_dilemma/cases/cases_pages/chicken_approval.md) | `method_comparisons/chicken_dilemma/cases/` | 1 | Chicken / Burr dilemma — Approval, honest: A and B tie 60-60 (the trap) → _A_ | [`.yaml`](../../method_comparisons/chicken_dilemma/cases/chicken_approval.yaml) |
+| [`chicken_approval_both_defect`](../../method_comparisons/chicken_dilemma/cases/cases_pages/chicken_approval_both_defect.md) | `method_comparisons/chicken_dilemma/cases/` | 1 | Chicken / Burr dilemma — Approval, both sides defect: C wins on 40% → _C_ | [`.yaml`](../../method_comparisons/chicken_dilemma/cases/chicken_approval_both_defect.yaml) |
 | [`crowded_field_c3_approval`](../../method_comparisons/crowded_field/cases/cases_pages/crowded_field_c3_approval.md) | `method_comparisons/crowded_field/cases/` | 1 | Crowded field, rung 3 — 3 candidates, 65 voters, counted by Approval → _Diego_ | [`.yaml`](../../method_comparisons/crowded_field/cases/crowded_field_c3_approval.yaml) |
 | [`crowded_field_c5_approval`](../../method_comparisons/crowded_field/cases/cases_pages/crowded_field_c5_approval.md) | `method_comparisons/crowded_field/cases/` | 1 | Crowded field, rung 5 — 5 candidates, 65 voters, counted by Approval → _Diego_ | [`.yaml`](../../method_comparisons/crowded_field/cases/crowded_field_c5_approval.yaml) |
 | [`crowded_field_c7_approval`](../../method_comparisons/crowded_field/cases/cases_pages/crowded_field_c7_approval.md) | `method_comparisons/crowded_field/cases/` | 1 | Crowded field, rung 7 — 7 candidates, 65 voters, counted by Approval → _Felix_ | [`.yaml`](../../method_comparisons/crowded_field/cases/crowded_field_c7_approval.yaml) |

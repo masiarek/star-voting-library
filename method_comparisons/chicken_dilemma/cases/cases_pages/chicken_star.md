@@ -120,4 +120,4 @@ python STARVote_LH_tabulation_engine/starvote_larry_hastings.py method_compariso
 - [Runoff reversal (worked set)](../../../../01_STAR/02_Examples/runoff_overturns_leader/README.md)
 - [Glossary](../../../../07_Concepts/GLOSSARY.md) · [all cases by method](../../../../07_Concepts/YAML_test_case_index/README.md)
 
-More cases in this set: [chicken_approval](chicken_approval.md)
+More cases in this set: [chicken_approval](chicken_approval.md) · [chicken_approval_both_defect](chicken_approval_both_defect.md)

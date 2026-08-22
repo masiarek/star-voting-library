@@ -18,6 +18,22 @@ Two similar candidates, **A** and **B**, must team up to beat **C**, whom the ma
 
 A 60-voter majority prefers *either* ally to C. The question is whether they can coordinate.
 
+## When both sides defect → C wins on 40% ([`chicken_approval_both_defect`](cases/cases_pages/chicken_approval_both_defect.md))
+
+The bottom of the slope, now run rather than described. The 35 A-first voters approve only A; the 25 B-first voters approve only B. Neither is lying about who they prefer — each is just withholding approval from an ally to win the intra-faction contest:
+
+```
+C -- 40  <- Elected
+A -- 35
+B -- 25
+```
+
+**Sixty voters preferred either ally to C, and C won.** Approval never forced that split; the faction's two halves each declined to support the other.
+
+**Where the avalanche starts.** With `a` of the 35 A-first voters and `b` of the 25 B-first voters bullet-voting, A holds `60 − b` approvals and B holds `60 − a`. C takes the lead only once **both `a > 20` and `b > 20`** — so it is not one defector who does the damage, it is defection becoming general. That threshold is precisely what makes the Approval slope slippery, and precisely what STAR's runoff removes.
+
+This is Approval's exact counterpart to [STAR's residual split](../split_voting/_main/_main_pages/05a_residual_split_bullet-voting.md), where a 60% side loses to a 40% opponent the same way. Both are **self-inflicted**: the ballot offered a remedy and the voters declined it — a real difference from Choose-One, where no remedy is on offer at all, but not immunity. Neither method should be sold as immune. → [vote splitting & the spoiler effect](../split_voting/README.md)
+
 ## Under Approval → a 60–60 tie, and a slippery slope ([`chicken_approval`](cases/cases_pages/chicken_approval.md))
 
 Honestly, the 60 A/B voters approve **both** allies (both are well above the midpoint); the 40 C voters approve C:
