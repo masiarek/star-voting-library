@@ -34,6 +34,20 @@ exist to survive.
 
 Fails OPEN — if git can't answer at all, everything counts as tracked and the
 guards behave exactly as they did before.
+
+...EXCEPT for paths git is IGNORING, which fail CLOSED, and that exception is
+load-bearing. Failing open sweeps `06_Other/_demo_dropbox/processed/` back in —
+3900 files against 680 tracked, several of them stale June demo artifacts — so
+the fail-open branch turns the very directory this helper was written to exclude
+back into a suite-wide failure. It is reachable without anybody holding a lock:
+`_git_tracked_paths()` reports `ok` when EITHER git command succeeds, so a
+transient empty `ls-files` (documented in CLAUDE.md as a thing this shared
+checkout does) returns an empty set, which `tracked_set()` cannot distinguish
+from "no answer" and reports as None. Ignore status does not depend on the index
+at all, so it is still answerable exactly when the tracked set is not — and an
+ignored file is never part of the committed surface by definition. `git ls-files
+--others --ignored` lists only UNTRACKED ignored files, so a tracked file
+matching an ignore rule is unaffected.
 """
 
 import importlib.util
@@ -64,19 +78,48 @@ def tracked_set():
     return frozenset(paths) if paths else None
 
 
+@lru_cache(maxsize=1)
+def ignored_set():
+    """Repo-relative paths git is ignoring, or None if git can't answer.
+
+    `--others --ignored --exclude-standard` lists untracked-and-ignored files
+    only, so nothing tracked can appear here.
+    """
+    import os
+    import subprocess
+    try:
+        out = subprocess.run(
+            ["git", "-C", str(REPO_ROOT), "ls-files", "--others", "--ignored",
+             "--exclude-standard", "-z"],
+            capture_output=True, text=True, check=True, timeout=60).stdout
+    except Exception:
+        return None
+    return frozenset(os.path.normpath(p) for p in out.split("\0") if p)
+
+
 def is_tracked(path):
-    """True when `path` is in the index or HEAD. Absolute or repo-relative."""
-    known = tracked_set()
-    if known is None:
-        return True
+    """True when `path` is in the index or HEAD. Absolute or repo-relative.
+
+    An ignored path is always False, even when the tracked set is unavailable —
+    see the module docstring for why that exception has to come first.
+    """
+    import os
     p = Path(path)
     if p.is_absolute():
         try:
             p = p.resolve().relative_to(REPO_ROOT.resolve())
         except ValueError:
             return True          # outside the repo — not ours to police
-    import os
-    return os.path.normpath(str(p)) in known
+    rel = os.path.normpath(str(p))
+
+    ignored = ignored_set()
+    if ignored is not None and rel in ignored:
+        return False
+
+    known = tracked_set()
+    if known is None:
+        return True
+    return rel in known
 
 
 def only_tracked(paths):
