@@ -70,7 +70,9 @@ On seven of the ten, yes. This table is generated from the same ballots run unde
 | No majority † | Jaya, Ada, Gita, Bram | Ada, **Dov**, Gita, Jaya | ✔ |
 | Widest field | Lena, Alma, Mateo, Bruno, Clara, Dex | Alma, Bruno, **Elsie, Frank, Ivan**, Lena | ✔ |
 
-† **Read that one as a seat count, not a list of names.** Nine of the ten cases are tie-free under Allocated Score as well as under Bloc STAR. `bloc_no_majority_bridge` is the exception: once Jaya's quota is spent, Ada and Bram hold *exactly* the same reweighted score (2727⁄16), as do Gita and Hank (303⁄2). Every proportional method gives Blue, Green and Amber one seat each plus the independent — that is the claim the case supports — but which of two tied candidates fills a faction's seat is a coin toss, and LH and BetterVoting toss it differently.
+† **Read that one as a seat count, not a list of names.** Nine of the ten cases are tie-free under Allocated Score as well as under Bloc STAR. `bloc_no_majority_bridge` is the exception, and it is tied harder than it first looks: once Jaya's quota is spent, Ada and Bram hold *exactly* the same reweighted score (2727⁄16), Gita and Hank the same (303⁄2), and Dov, Esme and Ines are in a three-way tie at 2121⁄16. The engine prints **three** `[Lot-decided tie — rare]` banners — **three of the four seats go to a lot**. Every proportional method still gives Blue, Green and Amber one seat each plus the independent, which is the claim the case supports; *which* candidate fills a faction's seat is a coin toss.
+
+Worth naming the mistake that first put "two" here, because it is an easy one: the count was assembled from the **LH-vs-BetterVoting diff** rather than from the election. Seat 3 is lot-decided too, but both engines' lots happen to land on Dov, so it never appears in a divergence. *Where two engines disagree* and *where the ballots failed to decide* are different questions, and only the second is a fact about the election — count ties from the engine's own banners or a from-ballots recomputation, never from the diff.
 
 Three things in that table are worth stating plainly.
 
