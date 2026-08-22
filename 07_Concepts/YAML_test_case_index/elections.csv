@@ -88,6 +88,7 @@ wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; on
 x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
 xbk9bq,BV2287 — Bloc STAR vs STAR-PR - the Condorcet winner who never reaches a runoff,2,contested (multi-race),5,"STAR, STAR_PR",BV
 xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him,3,contested (multi-race),33,"Plurality, RankedRobin, STAR",BV
+xj8pxc,2026 Election Poll For Florida Voters,4,contested (multi-race),25,STAR,BV
 xpr4wk,BV2289 — Bloc STAR vs STAR-PR - a divided majority wins nothing,2,contested (multi-race),12,"STAR, STAR_PR",BV
 y2fbpc,"BV2261 — A three-way Ranked Robin tie: the random tiebreak is recorded, not lost",2,contested (multi-race),6,RankedRobin,BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
@@ -404,10 +405,10 @@ LH:reinf_south_c3_b3_rr,"Reinforcement — South district alone (3 voters, Ada i
 LH:reinf_south_cara_c3_b3_rr,"Reinforcement — South district, Cara branch (3 voters, Cara is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
 LH:resign_av_holds_after_kai_c6_b5,"Resignation monotonicity — Kai resigns, and Approval keeps everyone else",1,single-race,5,Approval,LH-only
 LH:resign_av_holds_c7_b5,"Resignation monotonicity — plain Approval, before the resignation",1,single-race,5,Approval,LH-only
-LH:resign_rrv_after_hana_c4_b5,"Resignation monotonicity — Hana resigns, and Gus loses his seat",1,single-race,5,Reweighted Range Voting,LH-only
-LH:resign_rrv_seated_c5_b5,Resignation monotonicity — the three seats RRV fills,1,single-race,5,Reweighted Range Voting,LH-only
-LH:resign_star_pr_after_bruno_c3_b5,"Resignation monotonicity — Bruno resigns, and Ana loses her seat",1,single-race,5,Allocated Score Voting,LH-only
-LH:resign_star_pr_seated_c4_b5,Resignation monotonicity — the board STAR-PR actually elects,1,single-race,5,Allocated Score Voting,LH-only
+LH:resign_rrv_after_hana_c4_b5,"Resignation monotonicity — Hana resigns, and Gus loses his seat",1,single-race,5,STAR_PR,LH-only
+LH:resign_rrv_seated_c5_b5,Resignation monotonicity — the three seats RRV fills,1,single-race,5,STAR_PR,LH-only
+LH:resign_star_pr_after_bruno_c3_b5,"Resignation monotonicity — Bruno resigns, and Ana loses her seat",1,single-race,5,STAR_PR,LH-only
+LH:resign_star_pr_seated_c4_b5,Resignation monotonicity — the board STAR-PR actually elects,1,single-race,5,STAR_PR,LH-only
 LH:reversal_convincing_c3_b100,"Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise",1,single-race,100,STAR,LH-only
 LH:reversal_irv_original,"Reversal symmetry — RCV-IRV, original: A wins (best)",1,single-race,24,IRV,LH-only
 LH:reversal_irv_reversed,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)",1,single-race,24,IRV,LH-only

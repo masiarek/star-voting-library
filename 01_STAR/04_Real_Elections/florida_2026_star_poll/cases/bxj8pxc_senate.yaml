@@ -1,0 +1,60 @@
+election_title: "FL 2026 poll — 2026 U.S. Senate special election"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/xj8pxc ·
+  results: https://bettervoting.com/xj8pxc/results
+  One of four STAR races in a public, open-to-anyone online poll of the 2026 Florida
+  statewide ballot. Not our election — frozen here as a real-world STAR count.
+
+bv_election_id: xj8pxc
+bv_results_url: https://bettervoting.com/xj8pxc/results
+
+scenario_description: |-
+  **2026 U.S. Senate special election** — the seven-way U.S. Senate special-election field — the race the poll was built around. Two Democrats take both runoff slots, and **15 of the 22 tallied ballots score them equally**, so the runoff is decided by 7 voters out of 25 ballots cast.
+
+  Scoring round: Nixon (DEM) 57 · Vindman (DEM) 47 · Moody (REP)* 37 · Gillespie (NPA) 23 · Rivera (REP) 16 · Gleason (REP) 8 · Perry (REP) 7.
+  Automatic Runoff: Nixon (DEM) 6 vs Vindman (DEM) 1, with 15 of the
+  22 tallied ballots showing Equal Support for both finalists.
+
+  25 ballots were cast in the poll; 3 left this race blank (22 tallied).
+  Markers: `&` = the BetterVoting `null` (candidate left unscored) — it tabulates as 0,
+  and a ballot that is `&` all the way across is an abstention in this race.
+  Party tags are the candidates' own ballot labels; `*` marks the incumbent.
+
+  Frozen from the live poll on 2026-08-22 (the poll stays open to 2026-11-11, so the
+  live page will keep moving — this file is the snapshot LH is checked against).
+
+num_winners: 1
+voting_method: STAR
+
+ballots: |-
+  Moody (REP)*,Nixon (DEM),Vindman (DEM),Gillespie (NPA),Gleason (REP),Perry (REP),Rivera (REP)
+  &,&,&,5,&,&,&   # b-d67ygqqb
+  &,&,&,&,&,&,&   # b-7qr6fp6d
+  &,5,&,&,&,&,&   # b-dh7xj93b
+  &,5,5,&,&,&,&   # b-qkyw76rq
+  5,&,&,&,&,&,&   # b-cqcfrhgf
+  &,&,&,&,&,&,&   # b-6mwmcfmd
+  &,&,&,&,&,&,5   # b-8kq29hv8
+  0,5,5,4,0,0,0   # b-xfftm9yb
+  0,5,5,3,0,0,0   # b-gyvqdrry
+  0,0,0,0,0,0,0   # b-6ywyq88y
+  &,5,3,0,0,0,0   # b-9v7q4dvt
+  0,4,4,1,0,0,0   # b-6c2y3d3p
+  5,&,&,&,&,&,&   # b-3xdd4ptb
+  0,5,0,0,0,0,0   # b-9ry7jmwv
+  5,0,0,0,0,0,0   # b-rqd88v3w
+  0,5,4,1,0,0,0   # b-bk8xd8fw
+  0,5,5,4,1,1,1   # b-8bfw9dyf
+  0,&,5,&,&,&,&   # b-gffckf36
+  5,0,0,0,0,0,5   # b-6hfy233k
+  5,&,&,&,&,&,&   # b-ypm6vddm
+  5,&,&,&,&,&,&   # b-pfvxtxmh
+  2,5,4,3,2,1,0   # b-fhgbkw3x
+  0,5,4,1,0,0,0   # b-mybbty26
+  0,3,3,1,0,0,0   # b-xc3yfg8c
+  5,0,0,0,5,5,5   # b-vjpmvx6c
+
+expected_winners:
+  - Nixon (DEM)
+
+# file: bxj8pxc_senate.yaml

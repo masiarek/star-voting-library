@@ -38,6 +38,9 @@ AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/bv830_vb3xv2_no_condorcet_tie_s
 AGREE,01_STAR/03_Criteria/tie_break_ladder/cases/tie_break_ladder_matchups_eliminate_loser.yaml,4,5,Ada,Ada,Ada,Ada,Ada,Ada,Ada,,,0,False,False,True
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml,2,3,Ann,Ann,Bob,Ann,Ann,Ann,Ann,,Ann,3,True,False,True
 AGREE,01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml,2,2,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,Option 1,0,False,False,False
+AGREE,01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_agriculture.yaml,5,25,Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),Matt The Welder (REP),4,False,False,False
+AGREE,01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_cfo.yaml,4,25,Smith (NPA),Smith (NPA),Smith (NPA),Smith (NPA),Smith (NPA),Smith (NPA),Smith (NPA),Smith (NPA),Smith (NPA),5,False,False,False
+AGREE,01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_senate.yaml,7,25,Nixon (DEM),Nixon (DEM),Vindman (DEM),Nixon (DEM),Nixon (DEM),Nixon (DEM),Nixon (DEM),Nixon (DEM),Nixon (DEM),9,True,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml,2,6,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,Dog,1,False,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/best_pet_c7_b461.yaml,7,461,Dog,Dog,Cat,Dog,Dog,Dog,Dog,Dog,Dog,360,True,False,False
 AGREE,01_STAR/04_Real_Elections/pet_real_bv_election/cases/bv2283_hb4qvv_all_equal_recheck.yaml,2,5,A,A,A,A,A,A,A,A,A,1,False,False,False
@@ -206,6 +209,7 @@ IRV_DIFFERS_ARTIFACT,01_STAR/02_Examples/cases/star_ala_approval.yaml,4,8,D,A,D,
 IRV_DIFFERS_ARTIFACT,01_STAR/03_Criteria/majority_criterion/cases/majority_vs_consensus_51_49.yaml,3,100,Celia,Alma,Alma,Celia,Alma,Celia,Celia,Celia,Alma,3,False,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/03_Criteria/tactical_maximization/cases/tactical_max_c3_b9_hedged.yaml,3,9,Bruno,Alma,Bruno,Bruno,Alma,Bruno,Bruno,Bruno,Alma,4,True,True,False
 IRV_DIFFERS_ARTIFACT,01_STAR/03_Criteria/tie_break_dead_rung/cases/tie_break_05_scoring_five_star_vs_adversarial_lot.yaml,3,5,Ben,Cara,Ben,Ben,Cara,Ann,Ann,,,1,True,True,True
+IRV_DIFFERS_ARTIFACT,01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_attorney_general.yaml,4,25,Rodriguez (DEM),Lewis (DEM),Rodriguez (DEM),Rodriguez (DEM),Lewis (DEM),Lewis (DEM),Rodriguez (DEM),Rodriguez (DEM),Lewis (DEM),6,True,True,False
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/01_c3_b31_graders-divide.yaml,3,31,Clara,Bruno,Bruno,Clara,Bruno,Abby,Bruno,,Bruno,9,False,True,True
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/02_c4_b40_cliff-city.yaml,4,40,Churro,Bao,Churro,Churro,Bao,Churro,Bao,Churro,Bao,10,True,True,False
 IRV_DIFFERS_ARTIFACT,06_Other/ballot_style_lab/cases/05_c3_b38_squeeze-survives.yaml,3,38,Ben,Cora,Cora,Ben,Ben,Cora,Cora,Ben,Ben,2,False,False,False

@@ -1,0 +1,65 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  FL 2026 poll — 2026 FL Attorney General
+ Tabulating 25 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Lewis (DEM), Rodriguez (DEM), Leskovich (REP), Uthmeier (REP)*
+     1 ×   Lewis (DEM)      (5, 0, 0, 0)
+     4 ×   (all unranked)      (0, 0, 0, 0)
+     1 ×   Leskovich (REP)      (0, 0, 5, 0)
+     3 ×   Lewis (DEM) > Rodriguez (DEM)      (5, 5, 0, 0)
+     5 ×   Uthmeier (REP)*      (0, 0, 0, 5)
+     3 ×   Rodriguez (DEM) > Lewis (DEM)      (4, 5, 0, 0)
+     2 ×   Rodriguez (DEM)      (0, 5, 0, 0)
+     1 ×   Leskovich (REP) > Uthmeier (REP)*      (0, 0, 4, 4)
+     1 ×   Lewis (DEM) > Rodriguez (DEM) > Leskovich (REP)      (5, 5, 1, 0)
+     1 ×   Leskovich (REP) > Uthmeier (REP)*      (0, 0, 5, 5)
+     1 ×   Lewis (DEM) > Rodriguez (DEM) > Leskovich (REP)      (5, 3, 1, 0)
+     1 ×   Lewis (DEM) > Rodriguez (DEM)      (4, 2, 0, 0)
+     1 ×   Leskovich (REP) > Uthmeier (REP)*      (0, 0, 5, 4)
+
+ROUND 1
+Candidate          Votes  Status
+---------------  -------  --------
+Lewis (DEM)            7  Hopeful
+Rodriguez (DEM)        5  Hopeful
+Uthmeier (REP)*        5  Hopeful
+Leskovich (REP)        4  Rejected
+Blank Votes            4  Rejected
+
+ROUND 2
+Candidate          Votes  Status
+---------------  -------  --------
+Uthmeier (REP)*        8  Hopeful
+Lewis (DEM)            7  Hopeful
+Rodriguez (DEM)        5  Rejected
+Leskovich (REP)        0  Rejected
+Blank Votes            5  Rejected
+
+FINAL RESULT
+Candidate          Votes  Status
+---------------  -------  --------
+Lewis (DEM)           10  Elected
+Uthmeier (REP)*        8  Rejected
+Rodriguez (DEM)        0  Rejected
+Leskovich (REP)        0  Rejected
+Blank Votes            7  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Lewis (DEM)
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (1 of 4): Rodriguez (DEM)
+   Outside (3):        Lewis (DEM), Leskovich (REP), Uthmeier (REP)*
+   One member ⇒ Rodriguez (DEM) is the Condorcet winner, beating every rival head-to-head.
+   RCV-IRV winner Lewis (DEM) is OUTSIDE the Smith set. ✗
+      Every member of the set (Rodriguez (DEM)) beats Lewis (DEM) head-to-head, yet
+      RCV-IRV elected Lewis (DEM) anyway. RCV-IRV is not Smith-efficient (nor
+      Condorcet-efficient) — this is the shape a center squeeze leaves behind.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

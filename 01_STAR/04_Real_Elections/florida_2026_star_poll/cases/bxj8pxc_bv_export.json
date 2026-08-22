@@ -1,0 +1,4083 @@
+{
+  "Election": {
+    "election_id": "xj8pxc",
+    "title": "2026 Election Poll For Florida Voters",
+    "description": "U.S. Senate, Attorney General, Commissioner of Agriculture, Chief Financial Officer. \n\n* is for incumbent.\n(REP) is Republican party.\n(DEM) is Democrat party.\n(NPA) is No Party Affiliation.",
+    "frontend_url": "",
+    "start_time": "2026-05-05T23:55:23.122Z",
+    "end_time": "2026-11-11T04:59:00.000Z",
+    "owner_id": "ba7fdbe2-b64f-40df-b035-d76ab3a7ad90",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "2026 FL Commissioner of Agriculture and Consumer Services",
+        "description": "",
+        "race_id": "r-jk8",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-hk2",
+            "candidate_name": "Romagnano, Chase A (DEM)"
+          },
+          {
+            "candidate_id": "c-yrk",
+            "candidate_name": "Gibson, Kyle C (NPA)"
+          },
+          {
+            "candidate_id": "c-6yj",
+            "candidate_name": "Olle Jr, Richard E (REP)"
+          },
+          {
+            "candidate_id": "c-2d7",
+            "candidate_name": "Simpson, Wilton (REP) *"
+          },
+          {
+            "candidate_id": "c-6wd",
+            "candidate_name": "Matt The Welder (REP)"
+          }
+        ]
+      },
+      {
+        "title": "2026 U.S. Senate special election",
+        "description": "to fill Marco Rubio's seat in 2026",
+        "race_id": "r-bbw",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-6pt",
+            "candidate_name": "Moody, Ashley (REP) *"
+          },
+          {
+            "candidate_id": "c-9q8",
+            "candidate_name": "Nixon, Angie (DEM)",
+            "photo_filename": ""
+          },
+          {
+            "candidate_id": "c-32r",
+            "candidate_name": "Vindman, Alex (DEM)"
+          },
+          {
+            "candidate_id": "c-dd7",
+            "candidate_name": "Gillespie, Neil J. (NPA)"
+          },
+          {
+            "candidate_id": "c-wmd",
+            "candidate_name": "Gleason, Chris (REP)"
+          },
+          {
+            "candidate_id": "c-gpq",
+            "candidate_name": "Perry, Neelam T (REP)"
+          },
+          {
+            "candidate_id": "c-tgw",
+            "candidate_name": "Rivera, Ernest E (REP)"
+          }
+        ]
+      },
+      {
+        "title": "2026 FL Attorney General",
+        "description": "",
+        "race_id": "r-282",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-h8d",
+            "candidate_name": "Lewis, Jim (DEM)"
+          },
+          {
+            "candidate_id": "c-v6f",
+            "candidate_name": "Rodriguez, Jose Javier (DEM)"
+          },
+          {
+            "candidate_id": "c-tff",
+            "candidate_name": "Leskovich, Steven (REP)"
+          },
+          {
+            "candidate_id": "c-4mr",
+            "candidate_name": "Uthmeier, James (REP) *"
+          }
+        ],
+        "enable_write_in": false
+      },
+      {
+        "title": "2026 FL Chief Financial Officer",
+        "description": "",
+        "race_id": "r-b27",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "c-hbm",
+            "candidate_name": "Smith, John D (NPA)"
+          },
+          {
+            "candidate_id": "c-k74",
+            "candidate_name": "Collige, Frank W (REP)"
+          },
+          {
+            "candidate_id": "c-ymf",
+            "candidate_name": "Gruters, Joe (REP)"
+          },
+          {
+            "candidate_id": "c-vky",
+            "candidate_name": "Ingoglia, Blaise (REP) *"
+          }
+        ],
+        "enable_write_in": false
+      }
+    ],
+    "settings": {
+      "term_type": "poll",
+      "voter_access": "open",
+      "contact_email": "",
+      "ballot_updates": false,
+      "public_results": true,
+      "draggable_ballot": false,
+      "voter_authentication": {
+        "voter_id": true
+      },
+      "random_candidate_order": false,
+      "require_instruction_confirmation": false
+    },
+    "claim_key_hash": "349e4d3ac3fb62f3d0f360354c45159218e1750e3fc7f5c0eb96b232335e9c6a",
+    "is_public": true,
+    "create_date": "2026-03-21T20:53:32.915Z",
+    "update_date": "1778025507913",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-d67ygqqb",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-7qr6fp6d",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-dh7xj93b",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-qkyw76rq",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-cqcfrhgf",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-6mwmcfmd",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-8kq29hv8",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-xfftm9yb",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-gyvqdrry",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-6ywyq88y",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-9v7q4dvt",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": null
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-6c2y3d3p",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-3xdd4ptb",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-9ry7jmwv",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-rqd88v3w",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-bk8xd8fw",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-8bfw9dyf",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-hk2"
+            },
+            {
+              "score": 4,
+              "candidate_id": "c-yrk"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-6yj"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-2d7"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-6wd"
+            }
+          ],
+          "race_id": "r-jk8"
+        },
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "c-6pt"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-9q8"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-32r"
+            },
+            {
+              "score": 4,
+              "candidate_id": "c-dd7"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-wmd"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-gpq"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-tgw"
+            }
+          ],
+          "race_id": "r-bbw"
+        },
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-h8d"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-v6f"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-tff"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-4mr"
+            }
+          ],
+          "race_id": "r-282"
+        },
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-hbm"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-k74"
+            },
+            {
+              "score": 1,
+              "candidate_id": "c-ymf"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-vky"
+            }
+          ],
+          "race_id": "r-b27"
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-gffckf36",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-6hfy233k",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-ypm6vddm",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-pfvxtxmh",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": null
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": null
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": null
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": null
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": null
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": null
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": null
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": null
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": null
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": null
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": null
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": null
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": null
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-fhgbkw3x",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 4
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 2
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 2
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 2
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 2
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-mybbty26",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 5
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-xc3yfg8c",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "r-jk8",
+          "scores": [
+            {
+              "candidate_id": "c-hk2",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-yrk",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-6yj",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-2d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-6wd",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-bbw",
+          "scores": [
+            {
+              "candidate_id": "c-6pt",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-9q8",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-32r",
+              "score": 3
+            },
+            {
+              "candidate_id": "c-dd7",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-wmd",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-gpq",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-tgw",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-282",
+          "scores": [
+            {
+              "candidate_id": "c-h8d",
+              "score": 4
+            },
+            {
+              "candidate_id": "c-v6f",
+              "score": 2
+            },
+            {
+              "candidate_id": "c-tff",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-4mr",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "r-b27",
+          "scores": [
+            {
+              "candidate_id": "c-hbm",
+              "score": 1
+            },
+            {
+              "candidate_id": "c-k74",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-ymf",
+              "score": 0
+            },
+            {
+              "candidate_id": "c-vky",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-vjpmvx6c",
+      "election_id": "xj8pxc",
+      "precinct": null,
+      "votes": [
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "c-hk2"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-yrk"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-6yj"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-2d7"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-6wd"
+            }
+          ],
+          "race_id": "r-jk8"
+        },
+        {
+          "scores": [
+            {
+              "score": 5,
+              "candidate_id": "c-6pt"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-9q8"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-32r"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-dd7"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-wmd"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-gpq"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-tgw"
+            }
+          ],
+          "race_id": "r-bbw"
+        },
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "c-h8d"
+            },
+            {
+              "score": 0,
+              "candidate_id": "c-v6f"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-tff"
+            },
+            {
+              "score": 4,
+              "candidate_id": "c-4mr"
+            }
+          ],
+          "race_id": "r-282"
+        },
+        {
+          "scores": [
+            {
+              "score": 0,
+              "candidate_id": "c-hbm"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-k74"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-ymf"
+            },
+            {
+              "score": 5,
+              "candidate_id": "c-vky"
+            }
+          ],
+          "race_id": "r-b27"
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-6wd",
+          "name": "Matt The Welder (REP)",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "c-2d7": 15,
+            "c-6yj": 15,
+            "c-hk2": 15,
+            "c-6wd": 0,
+            "c-yrk": 15
+          },
+          "winsAgainst": {
+            "c-2d7": true,
+            "c-6yj": true,
+            "c-hk2": true,
+            "c-6wd": false,
+            "c-yrk": true
+          },
+          "score": 79,
+          "fiveStarCount": 15
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-hk2",
+          "name": "Romagnano, Chase A (DEM)",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "c-2d7": 9,
+            "c-6yj": 8,
+            "c-hk2": 0,
+            "c-6wd": 8,
+            "c-yrk": 8
+          },
+          "winsAgainst": {
+            "c-2d7": true,
+            "c-6yj": true,
+            "c-hk2": false,
+            "c-6wd": false,
+            "c-yrk": true
+          },
+          "score": 39,
+          "fiveStarCount": 6
+        },
+        {
+          "id": "c-2d7",
+          "name": "Simpson, Wilton (REP) *",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-2d7": 0,
+            "c-6yj": 4,
+            "c-hk2": 4,
+            "c-6wd": 3,
+            "c-yrk": 4
+          },
+          "winsAgainst": {
+            "c-2d7": false,
+            "c-6yj": true,
+            "c-hk2": false,
+            "c-6wd": false,
+            "c-yrk": false
+          },
+          "score": 23,
+          "fiveStarCount": 3
+        },
+        {
+          "id": "c-yrk",
+          "name": "Gibson, Kyle C (NPA)",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "c-2d7": 9,
+            "c-6yj": 8,
+            "c-hk2": 0,
+            "c-6wd": 7,
+            "c-yrk": 0
+          },
+          "winsAgainst": {
+            "c-2d7": true,
+            "c-6yj": true,
+            "c-hk2": false,
+            "c-6wd": false,
+            "c-yrk": false
+          },
+          "score": 20,
+          "fiveStarCount": 0
+        },
+        {
+          "id": "c-6yj",
+          "name": "Olle Jr, Richard E (REP)",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-2d7": 1,
+            "c-6yj": 0,
+            "c-hk2": 1,
+            "c-6wd": 1,
+            "c-yrk": 1
+          },
+          "winsAgainst": {
+            "c-2d7": false,
+            "c-6yj": false,
+            "c-hk2": false,
+            "c-6wd": false,
+            "c-yrk": false
+          },
+          "score": 7,
+          "fiveStarCount": 1
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-6wd",
+              "name": "Matt The Welder (REP)",
+              "tieBreakOrder": 3,
+              "votesPreferredOver": {
+                "c-2d7": 15,
+                "c-6yj": 15,
+                "c-hk2": 15,
+                "c-6wd": 0,
+                "c-yrk": 15
+              },
+              "winsAgainst": {
+                "c-2d7": true,
+                "c-6yj": true,
+                "c-hk2": true,
+                "c-6wd": false,
+                "c-yrk": true
+              },
+              "score": 79,
+              "fiveStarCount": 15
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-hk2",
+              "name": "Romagnano, Chase A (DEM)",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "c-2d7": 9,
+                "c-6yj": 8,
+                "c-hk2": 0,
+                "c-6wd": 8,
+                "c-yrk": 8
+              },
+              "winsAgainst": {
+                "c-2d7": true,
+                "c-6yj": true,
+                "c-hk2": false,
+                "c-6wd": false,
+                "c-yrk": true
+              },
+              "score": 39,
+              "fiveStarCount": 6
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Matt The Welder (REP)",
+                "Romagnano, Chase A (DEM)"
+              ],
+              "stars": [
+                "79",
+                "39"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Matt The Welder (REP)",
+              "runner_up": "Romagnano, Chase A (DEM)",
+              "winner_votes": 15,
+              "runner_up_votes": 8,
+              "equal_votes": 2
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-6wd",
+            "name": "Matt The Welder (REP)",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "c-2d7": 15,
+              "c-6yj": 15,
+              "c-hk2": 15,
+              "c-6wd": 0,
+              "c-yrk": 15
+            },
+            "winsAgainst": {
+              "c-2d7": true,
+              "c-6yj": true,
+              "c-hk2": true,
+              "c-6wd": false,
+              "c-yrk": true
+            },
+            "score": 79,
+            "fiveStarCount": 15
+          },
+          {
+            "id": "c-hk2",
+            "name": "Romagnano, Chase A (DEM)",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "c-2d7": 9,
+              "c-6yj": 8,
+              "c-hk2": 0,
+              "c-6wd": 8,
+              "c-yrk": 8
+            },
+            "winsAgainst": {
+              "c-2d7": true,
+              "c-6yj": true,
+              "c-hk2": false,
+              "c-6wd": false,
+              "c-yrk": true
+            },
+            "score": 39,
+            "fiveStarCount": 6
+          },
+          {
+            "id": "c-2d7",
+            "name": "Simpson, Wilton (REP) *",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-2d7": 0,
+              "c-6yj": 4,
+              "c-hk2": 4,
+              "c-6wd": 3,
+              "c-yrk": 4
+            },
+            "winsAgainst": {
+              "c-2d7": false,
+              "c-6yj": true,
+              "c-hk2": false,
+              "c-6wd": false,
+              "c-yrk": false
+            },
+            "score": 23,
+            "fiveStarCount": 3
+          },
+          {
+            "id": "c-yrk",
+            "name": "Gibson, Kyle C (NPA)",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "c-2d7": 9,
+              "c-6yj": 8,
+              "c-hk2": 0,
+              "c-6wd": 7,
+              "c-yrk": 0
+            },
+            "winsAgainst": {
+              "c-2d7": true,
+              "c-6yj": true,
+              "c-hk2": false,
+              "c-6wd": false,
+              "c-yrk": false
+            },
+            "score": 20,
+            "fiveStarCount": 0
+          },
+          {
+            "id": "c-6yj",
+            "name": "Olle Jr, Richard E (REP)",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-2d7": 1,
+              "c-6yj": 0,
+              "c-hk2": 1,
+              "c-6wd": 1,
+              "c-yrk": 1
+            },
+            "winsAgainst": {
+              "c-2d7": false,
+              "c-6yj": false,
+              "c-hk2": false,
+              "c-6wd": false,
+              "c-yrk": false
+            },
+            "score": 7,
+            "fiveStarCount": 1
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 25
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "c-2d7",
+        "c-6yj",
+        "c-hk2",
+        "c-6wd",
+        "c-yrk"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-9q8",
+          "name": "Nixon, Angie (DEM)",
+          "tieBreakOrder": 6,
+          "votesPreferredOver": {
+            "c-tgw": 12,
+            "c-wmd": 12,
+            "c-32r": 6,
+            "c-dd7": 12,
+            "c-6pt": 12,
+            "c-gpq": 12,
+            "c-9q8": 0
+          },
+          "winsAgainst": {
+            "c-tgw": true,
+            "c-wmd": true,
+            "c-32r": true,
+            "c-dd7": true,
+            "c-6pt": true,
+            "c-gpq": true,
+            "c-9q8": false
+          },
+          "score": 57,
+          "fiveStarCount": 10
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-32r",
+          "name": "Vindman, Alex (DEM)",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "c-tgw": 11,
+            "c-wmd": 11,
+            "c-32r": 0,
+            "c-dd7": 11,
+            "c-6pt": 11,
+            "c-gpq": 11,
+            "c-9q8": 1
+          },
+          "winsAgainst": {
+            "c-tgw": true,
+            "c-wmd": true,
+            "c-32r": false,
+            "c-dd7": true,
+            "c-6pt": true,
+            "c-gpq": true,
+            "c-9q8": false
+          },
+          "score": 47,
+          "fiveStarCount": 5
+        },
+        {
+          "id": "c-6pt",
+          "name": "Moody, Ashley (REP) *",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "c-tgw": 6,
+            "c-wmd": 6,
+            "c-32r": 7,
+            "c-dd7": 7,
+            "c-6pt": 0,
+            "c-gpq": 7,
+            "c-9q8": 7
+          },
+          "winsAgainst": {
+            "c-tgw": true,
+            "c-wmd": true,
+            "c-32r": false,
+            "c-dd7": false,
+            "c-6pt": false,
+            "c-gpq": true,
+            "c-9q8": false
+          },
+          "score": 37,
+          "fiveStarCount": 7
+        },
+        {
+          "id": "c-dd7",
+          "name": "Gillespie, Neil J. (NPA)",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "c-tgw": 9,
+            "c-wmd": 9,
+            "c-32r": 1,
+            "c-dd7": 0,
+            "c-6pt": 9,
+            "c-gpq": 9,
+            "c-9q8": 1
+          },
+          "winsAgainst": {
+            "c-tgw": true,
+            "c-wmd": true,
+            "c-32r": false,
+            "c-dd7": false,
+            "c-6pt": true,
+            "c-gpq": true,
+            "c-9q8": false
+          },
+          "score": 23,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "c-tgw",
+          "name": "Rivera, Ernest E (REP)",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-tgw": 0,
+            "c-wmd": 2,
+            "c-32r": 3,
+            "c-dd7": 3,
+            "c-6pt": 2,
+            "c-gpq": 2,
+            "c-9q8": 3
+          },
+          "winsAgainst": {
+            "c-tgw": false,
+            "c-wmd": true,
+            "c-32r": false,
+            "c-dd7": false,
+            "c-6pt": false,
+            "c-gpq": true,
+            "c-9q8": false
+          },
+          "score": 16,
+          "fiveStarCount": 3
+        },
+        {
+          "id": "c-wmd",
+          "name": "Gleason, Chris (REP)",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-tgw": 1,
+            "c-wmd": 0,
+            "c-32r": 1,
+            "c-dd7": 1,
+            "c-6pt": 1,
+            "c-gpq": 1,
+            "c-9q8": 1
+          },
+          "winsAgainst": {
+            "c-tgw": false,
+            "c-wmd": false,
+            "c-32r": false,
+            "c-dd7": false,
+            "c-6pt": false,
+            "c-gpq": true,
+            "c-9q8": false
+          },
+          "score": 8,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "c-gpq",
+          "name": "Perry, Neelam T (REP)",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "c-tgw": 1,
+            "c-wmd": 0,
+            "c-32r": 1,
+            "c-dd7": 1,
+            "c-6pt": 1,
+            "c-gpq": 0,
+            "c-9q8": 1
+          },
+          "winsAgainst": {
+            "c-tgw": false,
+            "c-wmd": false,
+            "c-32r": false,
+            "c-dd7": false,
+            "c-6pt": false,
+            "c-gpq": false,
+            "c-9q8": false
+          },
+          "score": 7,
+          "fiveStarCount": 1
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-9q8",
+              "name": "Nixon, Angie (DEM)",
+              "tieBreakOrder": 6,
+              "votesPreferredOver": {
+                "c-tgw": 12,
+                "c-wmd": 12,
+                "c-32r": 6,
+                "c-dd7": 12,
+                "c-6pt": 12,
+                "c-gpq": 12,
+                "c-9q8": 0
+              },
+              "winsAgainst": {
+                "c-tgw": true,
+                "c-wmd": true,
+                "c-32r": true,
+                "c-dd7": true,
+                "c-6pt": true,
+                "c-gpq": true,
+                "c-9q8": false
+              },
+              "score": 57,
+              "fiveStarCount": 10
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-32r",
+              "name": "Vindman, Alex (DEM)",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "c-tgw": 11,
+                "c-wmd": 11,
+                "c-32r": 0,
+                "c-dd7": 11,
+                "c-6pt": 11,
+                "c-gpq": 11,
+                "c-9q8": 1
+              },
+              "winsAgainst": {
+                "c-tgw": true,
+                "c-wmd": true,
+                "c-32r": false,
+                "c-dd7": true,
+                "c-6pt": true,
+                "c-gpq": true,
+                "c-9q8": false
+              },
+              "score": 47,
+              "fiveStarCount": 5
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Nixon, Angie (DEM)",
+                "Vindman, Alex (DEM)"
+              ],
+              "stars": [
+                "57",
+                "47"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Nixon, Angie (DEM)",
+              "runner_up": "Vindman, Alex (DEM)",
+              "winner_votes": 6,
+              "runner_up_votes": 1,
+              "equal_votes": 15
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-9q8",
+            "name": "Nixon, Angie (DEM)",
+            "tieBreakOrder": 6,
+            "votesPreferredOver": {
+              "c-tgw": 12,
+              "c-wmd": 12,
+              "c-32r": 6,
+              "c-dd7": 12,
+              "c-6pt": 12,
+              "c-gpq": 12,
+              "c-9q8": 0
+            },
+            "winsAgainst": {
+              "c-tgw": true,
+              "c-wmd": true,
+              "c-32r": true,
+              "c-dd7": true,
+              "c-6pt": true,
+              "c-gpq": true,
+              "c-9q8": false
+            },
+            "score": 57,
+            "fiveStarCount": 10
+          },
+          {
+            "id": "c-32r",
+            "name": "Vindman, Alex (DEM)",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "c-tgw": 11,
+              "c-wmd": 11,
+              "c-32r": 0,
+              "c-dd7": 11,
+              "c-6pt": 11,
+              "c-gpq": 11,
+              "c-9q8": 1
+            },
+            "winsAgainst": {
+              "c-tgw": true,
+              "c-wmd": true,
+              "c-32r": false,
+              "c-dd7": true,
+              "c-6pt": true,
+              "c-gpq": true,
+              "c-9q8": false
+            },
+            "score": 47,
+            "fiveStarCount": 5
+          },
+          {
+            "id": "c-6pt",
+            "name": "Moody, Ashley (REP) *",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "c-tgw": 6,
+              "c-wmd": 6,
+              "c-32r": 7,
+              "c-dd7": 7,
+              "c-6pt": 0,
+              "c-gpq": 7,
+              "c-9q8": 7
+            },
+            "winsAgainst": {
+              "c-tgw": true,
+              "c-wmd": true,
+              "c-32r": false,
+              "c-dd7": false,
+              "c-6pt": false,
+              "c-gpq": true,
+              "c-9q8": false
+            },
+            "score": 37,
+            "fiveStarCount": 7
+          },
+          {
+            "id": "c-dd7",
+            "name": "Gillespie, Neil J. (NPA)",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "c-tgw": 9,
+              "c-wmd": 9,
+              "c-32r": 1,
+              "c-dd7": 0,
+              "c-6pt": 9,
+              "c-gpq": 9,
+              "c-9q8": 1
+            },
+            "winsAgainst": {
+              "c-tgw": true,
+              "c-wmd": true,
+              "c-32r": false,
+              "c-dd7": false,
+              "c-6pt": true,
+              "c-gpq": true,
+              "c-9q8": false
+            },
+            "score": 23,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "c-tgw",
+            "name": "Rivera, Ernest E (REP)",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-tgw": 0,
+              "c-wmd": 2,
+              "c-32r": 3,
+              "c-dd7": 3,
+              "c-6pt": 2,
+              "c-gpq": 2,
+              "c-9q8": 3
+            },
+            "winsAgainst": {
+              "c-tgw": false,
+              "c-wmd": true,
+              "c-32r": false,
+              "c-dd7": false,
+              "c-6pt": false,
+              "c-gpq": true,
+              "c-9q8": false
+            },
+            "score": 16,
+            "fiveStarCount": 3
+          },
+          {
+            "id": "c-wmd",
+            "name": "Gleason, Chris (REP)",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-tgw": 1,
+              "c-wmd": 0,
+              "c-32r": 1,
+              "c-dd7": 1,
+              "c-6pt": 1,
+              "c-gpq": 1,
+              "c-9q8": 1
+            },
+            "winsAgainst": {
+              "c-tgw": false,
+              "c-wmd": false,
+              "c-32r": false,
+              "c-dd7": false,
+              "c-6pt": false,
+              "c-gpq": true,
+              "c-9q8": false
+            },
+            "score": 8,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "c-gpq",
+            "name": "Perry, Neelam T (REP)",
+            "tieBreakOrder": 5,
+            "votesPreferredOver": {
+              "c-tgw": 1,
+              "c-wmd": 0,
+              "c-32r": 1,
+              "c-dd7": 1,
+              "c-6pt": 1,
+              "c-gpq": 0,
+              "c-9q8": 1
+            },
+            "winsAgainst": {
+              "c-tgw": false,
+              "c-wmd": false,
+              "c-32r": false,
+              "c-dd7": false,
+              "c-6pt": false,
+              "c-gpq": false,
+              "c-9q8": false
+            },
+            "score": 7,
+            "fiveStarCount": 1
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 3,
+        "nTallyVotes": 22
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "c-tgw",
+        "c-wmd",
+        "c-32r",
+        "c-dd7",
+        "c-6pt",
+        "c-gpq",
+        "c-9q8"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-v6f",
+          "name": "Rodriguez, Jose Javier (DEM)",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "c-4mr": 11,
+            "c-h8d": 5,
+            "c-v6f": 0,
+            "c-tff": 11
+          },
+          "winsAgainst": {
+            "c-4mr": true,
+            "c-h8d": true,
+            "c-v6f": false,
+            "c-tff": true
+          },
+          "score": 50,
+          "fiveStarCount": 9
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-h8d",
+          "name": "Lewis, Jim (DEM)",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-4mr": 10,
+            "c-h8d": 0,
+            "c-v6f": 3,
+            "c-tff": 10
+          },
+          "winsAgainst": {
+            "c-4mr": true,
+            "c-h8d": false,
+            "c-v6f": false,
+            "c-tff": true
+          },
+          "score": 46,
+          "fiveStarCount": 6
+        },
+        {
+          "id": "c-4mr",
+          "name": "Uthmeier, James (REP) *",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-4mr": 0,
+            "c-h8d": 8,
+            "c-v6f": 8,
+            "c-tff": 5
+          },
+          "winsAgainst": {
+            "c-4mr": false,
+            "c-h8d": false,
+            "c-v6f": false,
+            "c-tff": true
+          },
+          "score": 38,
+          "fiveStarCount": 6
+        },
+        {
+          "id": "c-tff",
+          "name": "Leskovich, Steven (REP)",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "c-4mr": 4,
+            "c-h8d": 4,
+            "c-v6f": 4,
+            "c-tff": 0
+          },
+          "winsAgainst": {
+            "c-4mr": false,
+            "c-h8d": false,
+            "c-v6f": false,
+            "c-tff": false
+          },
+          "score": 21,
+          "fiveStarCount": 3
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-v6f",
+              "name": "Rodriguez, Jose Javier (DEM)",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "c-4mr": 11,
+                "c-h8d": 5,
+                "c-v6f": 0,
+                "c-tff": 11
+              },
+              "winsAgainst": {
+                "c-4mr": true,
+                "c-h8d": true,
+                "c-v6f": false,
+                "c-tff": true
+              },
+              "score": 50,
+              "fiveStarCount": 9
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-h8d",
+              "name": "Lewis, Jim (DEM)",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "c-4mr": 10,
+                "c-h8d": 0,
+                "c-v6f": 3,
+                "c-tff": 10
+              },
+              "winsAgainst": {
+                "c-4mr": true,
+                "c-h8d": false,
+                "c-v6f": false,
+                "c-tff": true
+              },
+              "score": 46,
+              "fiveStarCount": 6
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Rodriguez, Jose Javier (DEM)",
+                "Lewis, Jim (DEM)"
+              ],
+              "stars": [
+                "50",
+                "46"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Rodriguez, Jose Javier (DEM)",
+              "runner_up": "Lewis, Jim (DEM)",
+              "winner_votes": 5,
+              "runner_up_votes": 3,
+              "equal_votes": 13
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-v6f",
+            "name": "Rodriguez, Jose Javier (DEM)",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "c-4mr": 11,
+              "c-h8d": 5,
+              "c-v6f": 0,
+              "c-tff": 11
+            },
+            "winsAgainst": {
+              "c-4mr": true,
+              "c-h8d": true,
+              "c-v6f": false,
+              "c-tff": true
+            },
+            "score": 50,
+            "fiveStarCount": 9
+          },
+          {
+            "id": "c-h8d",
+            "name": "Lewis, Jim (DEM)",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-4mr": 10,
+              "c-h8d": 0,
+              "c-v6f": 3,
+              "c-tff": 10
+            },
+            "winsAgainst": {
+              "c-4mr": true,
+              "c-h8d": false,
+              "c-v6f": false,
+              "c-tff": true
+            },
+            "score": 46,
+            "fiveStarCount": 6
+          },
+          {
+            "id": "c-4mr",
+            "name": "Uthmeier, James (REP) *",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-4mr": 0,
+              "c-h8d": 8,
+              "c-v6f": 8,
+              "c-tff": 5
+            },
+            "winsAgainst": {
+              "c-4mr": false,
+              "c-h8d": false,
+              "c-v6f": false,
+              "c-tff": true
+            },
+            "score": 38,
+            "fiveStarCount": 6
+          },
+          {
+            "id": "c-tff",
+            "name": "Leskovich, Steven (REP)",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "c-4mr": 4,
+              "c-h8d": 4,
+              "c-v6f": 4,
+              "c-tff": 0
+            },
+            "winsAgainst": {
+              "c-4mr": false,
+              "c-h8d": false,
+              "c-v6f": false,
+              "c-tff": false
+            },
+            "score": 21,
+            "fiveStarCount": 3
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 4,
+        "nTallyVotes": 21
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "c-4mr",
+        "c-h8d",
+        "c-v6f",
+        "c-tff"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "c-hbm",
+          "name": "Smith, John D (NPA)",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "c-ymf": 9,
+            "c-vky": 9,
+            "c-hbm": 0,
+            "c-k74": 9
+          },
+          "winsAgainst": {
+            "c-ymf": true,
+            "c-vky": true,
+            "c-hbm": false,
+            "c-k74": true
+          },
+          "score": 37,
+          "fiveStarCount": 7
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "c-k74",
+          "name": "Collige, Frank W (REP)",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "c-ymf": 2,
+            "c-vky": 5,
+            "c-hbm": 5,
+            "c-k74": 0
+          },
+          "winsAgainst": {
+            "c-ymf": true,
+            "c-vky": true,
+            "c-hbm": false,
+            "c-k74": false
+          },
+          "score": 26,
+          "fiveStarCount": 4
+        },
+        {
+          "id": "c-vky",
+          "name": "Ingoglia, Blaise (REP) *",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "c-ymf": 3,
+            "c-vky": 0,
+            "c-hbm": 5,
+            "c-k74": 3
+          },
+          "winsAgainst": {
+            "c-ymf": false,
+            "c-vky": false,
+            "c-hbm": false,
+            "c-k74": false
+          },
+          "score": 23,
+          "fiveStarCount": 4
+        },
+        {
+          "id": "c-ymf",
+          "name": "Gruters, Joe (REP)",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "c-ymf": 0,
+            "c-vky": 4,
+            "c-hbm": 4,
+            "c-k74": 1
+          },
+          "winsAgainst": {
+            "c-ymf": false,
+            "c-vky": true,
+            "c-hbm": false,
+            "c-k74": false
+          },
+          "score": 21,
+          "fiveStarCount": 3
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c-hbm",
+              "name": "Smith, John D (NPA)",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "c-ymf": 9,
+                "c-vky": 9,
+                "c-hbm": 0,
+                "c-k74": 9
+              },
+              "winsAgainst": {
+                "c-ymf": true,
+                "c-vky": true,
+                "c-hbm": false,
+                "c-k74": true
+              },
+              "score": 37,
+              "fiveStarCount": 7
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "c-k74",
+              "name": "Collige, Frank W (REP)",
+              "tieBreakOrder": 3,
+              "votesPreferredOver": {
+                "c-ymf": 2,
+                "c-vky": 5,
+                "c-hbm": 5,
+                "c-k74": 0
+              },
+              "winsAgainst": {
+                "c-ymf": true,
+                "c-vky": true,
+                "c-hbm": false,
+                "c-k74": false
+              },
+              "score": 26,
+              "fiveStarCount": 4
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Smith, John D (NPA)",
+                "Collige, Frank W (REP)"
+              ],
+              "stars": [
+                "37",
+                "26"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Smith, John D (NPA)",
+              "runner_up": "Collige, Frank W (REP)",
+              "winner_votes": 9,
+              "runner_up_votes": 5,
+              "equal_votes": 4
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c-hbm",
+            "name": "Smith, John D (NPA)",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "c-ymf": 9,
+              "c-vky": 9,
+              "c-hbm": 0,
+              "c-k74": 9
+            },
+            "winsAgainst": {
+              "c-ymf": true,
+              "c-vky": true,
+              "c-hbm": false,
+              "c-k74": true
+            },
+            "score": 37,
+            "fiveStarCount": 7
+          },
+          {
+            "id": "c-k74",
+            "name": "Collige, Frank W (REP)",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "c-ymf": 2,
+              "c-vky": 5,
+              "c-hbm": 5,
+              "c-k74": 0
+            },
+            "winsAgainst": {
+              "c-ymf": true,
+              "c-vky": true,
+              "c-hbm": false,
+              "c-k74": false
+            },
+            "score": 26,
+            "fiveStarCount": 4
+          },
+          {
+            "id": "c-vky",
+            "name": "Ingoglia, Blaise (REP) *",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "c-ymf": 3,
+              "c-vky": 0,
+              "c-hbm": 5,
+              "c-k74": 3
+            },
+            "winsAgainst": {
+              "c-ymf": false,
+              "c-vky": false,
+              "c-hbm": false,
+              "c-k74": false
+            },
+            "score": 23,
+            "fiveStarCount": 4
+          },
+          {
+            "id": "c-ymf",
+            "name": "Gruters, Joe (REP)",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "c-ymf": 0,
+              "c-vky": 4,
+              "c-hbm": 4,
+              "c-k74": 1
+            },
+            "winsAgainst": {
+              "c-ymf": false,
+              "c-vky": true,
+              "c-hbm": false,
+              "c-k74": false
+            },
+            "score": 21,
+            "fiveStarCount": 3
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 7,
+        "nTallyVotes": 18
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "c-ymf",
+        "c-vky",
+        "c-hbm",
+        "c-k74"
+      ]
+    }
+  ]
+}

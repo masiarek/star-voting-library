@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**661 election files** (538 single-winner, 123 multi-winner) across 18 method(s).
+**665 election files** (542 single-winner, 123 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 285 |
+| STAR | 289 |
 | RCV-IRV (Hare) | 56 |
 | Ranked Robin (RCV-RR / Copeland) | 107 |
 | Approval | 31 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (285)
+## STAR  (289)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -113,6 +113,10 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bhckrf7_range_of_scores`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bhckrf7_range_of_scores.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | hckrf7 — Range of Scores counts 3 ballots on a page that says 1 voter → _Cal Creative_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bhckrf7_range_of_scores.yaml) |
 | [`bv11_6xhfp8_full_equal_support`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv11_6xhfp8_full_equal_support.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV11 — full & equal support (5,5) counted as abstentions → _Ann_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv11_6xhfp8_full_equal_support.yaml) |
 | [`bv655_jfrk9t_equal_opposition`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/cases_pages/bv655_jfrk9t_equal_opposition.md) | `01_STAR/04_Real_Elections/abstain_bugs/cases/` | 1 | BV655 — 'equal opposition' (all-0) mislabeled as Abstained → _Option 1_ | [`.yaml`](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition.yaml) |
+| [`bxj8pxc_agriculture`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/cases_pages/bxj8pxc_agriculture.md) | `01_STAR/04_Real_Elections/florida_2026_star_poll/cases/` | 1 | FL 2026 poll — 2026 FL Commissioner of Agriculture and Consumer Services → _Matt The Welder (REP)_ | [`.yaml`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_agriculture.yaml) |
+| [`bxj8pxc_attorney_general`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/cases_pages/bxj8pxc_attorney_general.md) | `01_STAR/04_Real_Elections/florida_2026_star_poll/cases/` | 1 | FL 2026 poll — 2026 FL Attorney General → _Rodriguez (DEM)_ | [`.yaml`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_attorney_general.yaml) |
+| [`bxj8pxc_cfo`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/cases_pages/bxj8pxc_cfo.md) | `01_STAR/04_Real_Elections/florida_2026_star_poll/cases/` | 1 | FL 2026 poll — 2026 FL Chief Financial Officer → _Smith (NPA)_ | [`.yaml`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_cfo.yaml) |
+| [`bxj8pxc_senate`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/cases_pages/bxj8pxc_senate.md) | `01_STAR/04_Real_Elections/florida_2026_star_poll/cases/` | 1 | FL 2026 poll — 2026 U.S. Senate special election → _Nixon (DEM)_ | [`.yaml`](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_senate.yaml) |
 | [`abstention_reconciliation_min_c2_b6`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/abstention_reconciliation_min_c2_b6.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | Abstention vs Equal Support — the minimal reconciliation case → _Dog_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/abstention_reconciliation_min_c2_b6.yaml) |
 | [`best_pet_c7_b461`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/best_pet_c7_b461.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | What Makes the Best Pet? → _Dog_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/best_pet_c7_b461.yaml) |
 | [`bv2283_hb4qvv_all_equal_recheck`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/cases_pages/bv2283_hb4qvv_all_equal_recheck.md) | `01_STAR/04_Real_Elections/pet_real_bv_election/cases/` | 1 | BV2283 — Score both candidates 5 (STAR, 2 candidates): a vote, or an abstention? → _A_ | [`.yaml`](../../01_STAR/04_Real_Elections/pet_real_bv_election/cases/bv2283_hb4qvv_all_equal_recheck.yaml) |

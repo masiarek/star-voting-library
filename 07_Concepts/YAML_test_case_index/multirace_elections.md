@@ -957,6 +957,17 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV655 - “equal opposition” vote - the “Same-Score Ballots”  | STAR | 2 | **Option 1** | [results ↗](https://bettervoting.com/jfrk9t/results) |
 | Abstain Vote | STAR | 2 | **Option 2** | [results ↗](https://bettervoting.com/jfrk9t/results) |
 
+## — — 2026 Election Poll For Florida Voters
+
+**Election** [`xj8pxc`](https://bettervoting.com/xj8pxc/results) · **4 races** · **25 ballots** · [frozen export](../../01_STAR/04_Real_Elections/florida_2026_star_poll/cases/bxj8pxc_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| 2026 FL Commissioner of Agriculture and Consumer Services | STAR | 5 | **Matt The Welder (REP)** | [results ↗](https://bettervoting.com/xj8pxc/results) |
+| 2026 U.S. Senate special election | STAR | 7 | **Nixon, Angie (DEM)** | [results ↗](https://bettervoting.com/xj8pxc/results) |
+| 2026 FL Attorney General | STAR | 4 | **Rodriguez, Jose Javier (DEM)** | [results ↗](https://bettervoting.com/xj8pxc/results) |
+| 2026 FL Chief Financial Officer | STAR | 4 | **Smith, John D (NPA)** | [results ↗](https://bettervoting.com/xj8pxc/results) |
+
 ## — — 2026 California Governor Election
 
 **Election** [`gvdy42`](https://bettervoting.com/gvdy42/results) · **2 races** · **319 ballots** · [frozen export](../../01_STAR/04_Real_Elections/runoff_reversal_bv_cases/cases/Runoff_08_ca_governor_reversal_gvdy42_bv_export.json)

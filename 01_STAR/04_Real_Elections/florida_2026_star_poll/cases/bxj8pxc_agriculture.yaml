@@ -1,0 +1,60 @@
+election_title: "FL 2026 poll — 2026 FL Commissioner of Agriculture and Consumer Services"
+election_description: |-
+  Live on BetterVoting: https://bettervoting.com/xj8pxc ·
+  results: https://bettervoting.com/xj8pxc/results
+  One of four STAR races in a public, open-to-anyone online poll of the 2026 Florida
+  statewide ballot. Not our election — frozen here as a real-world STAR count.
+
+bv_election_id: xj8pxc
+bv_results_url: https://bettervoting.com/xj8pxc/results
+
+scenario_description: |-
+  **2026 FL Commissioner of Agriculture and Consumer Services** — the one race a Republican wins, and by the widest margin in the poll: **Matt The Welder** leads the scoring round 79-39 and takes the runoff 15-8. It is also the only race every one of the 25 ballots voted in.
+
+  Scoring round: Matt The Welder (REP) 79 · Romagnano (DEM) 39 · Simpson (REP)* 23 · Gibson (NPA) 20 · Olle Jr (REP) 7.
+  Automatic Runoff: Matt The Welder (REP) 15 vs Romagnano (DEM) 8, with 2 of the
+  25 tallied ballots showing Equal Support for both finalists.
+
+  25 ballots were cast in the poll; 0 left this race blank (25 tallied).
+  Markers: `&` = the BetterVoting `null` (candidate left unscored) — it tabulates as 0,
+  and a ballot that is `&` all the way across is an abstention in this race.
+  Party tags are the candidates' own ballot labels; `*` marks the incumbent.
+
+  Frozen from the live poll on 2026-08-22 (the poll stays open to 2026-11-11, so the
+  live page will keep moving — this file is the snapshot LH is checked against).
+
+num_winners: 1
+voting_method: STAR
+
+ballots: |-
+  Romagnano (DEM),Gibson (NPA),Olle Jr (REP),Simpson (REP)*,Matt The Welder (REP)
+  &,&,&,&,5   # b-d67ygqqb
+  1,1,1,0,5   # b-7qr6fp6d
+  &,&,&,&,5   # b-dh7xj93b
+  &,&,&,&,5   # b-qkyw76rq
+  &,&,&,&,5   # b-cqcfrhgf
+  &,&,&,&,5   # b-6mwmcfmd
+  &,&,&,&,5   # b-8kq29hv8
+  5,4,0,0,0   # b-xfftm9yb
+  5,3,0,0,0   # b-gyvqdrry
+  0,0,0,0,5   # b-6ywyq88y
+  0,0,0,0,5   # b-9v7q4dvt
+  5,1,0,0,0   # b-6c2y3d3p
+  &,&,&,5,&   # b-3xdd4ptb
+  0,0,0,4,5   # b-9ry7jmwv
+  0,0,0,5,0   # b-rqd88v3w
+  4,1,0,&,0   # b-bk8xd8fw
+  5,4,1,1,0   # b-8bfw9dyf
+  &,&,&,0,5   # b-gffckf36
+  0,0,0,0,5   # b-6hfy233k
+  &,&,&,&,5   # b-ypm6vddm
+  &,&,&,&,5   # b-pfvxtxmh
+  5,4,0,3,4   # b-fhgbkw3x
+  5,1,0,0,0   # b-mybbty26
+  4,1,0,0,0   # b-xc3yfg8c
+  0,0,5,5,5   # b-vjpmvx6c
+
+expected_winners:
+  - Matt The Welder (REP)
+
+# file: bxj8pxc_agriculture.yaml
