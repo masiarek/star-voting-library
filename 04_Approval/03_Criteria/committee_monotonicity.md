@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - multi-winner
+---
+
 # Committee monotonicity — add a seat, keep the winner
 
 **Level: 301 · deep dive**

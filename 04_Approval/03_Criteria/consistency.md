@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - multi-winner
+  - theory
+---
+
 # Consistency — two electorates that agree should keep agreeing
 
 **Level: 301 · deep dive**

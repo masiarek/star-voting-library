@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - multi-winner
+  - theory
+---
+
 # Resignation monotonicity — a winner resigns; can the count throw out someone who stayed?
 
 **Level: 301 · deep dive**

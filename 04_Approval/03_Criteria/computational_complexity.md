@@ -1,3 +1,9 @@
+---
+tags:
+  - theory
+  - multi-winner
+---
+
 # Computational complexity — why the rules people deploy are the ones that fail axioms
 
 **Level: 301 · deep dive**

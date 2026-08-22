@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - multi-winner
+---
+
 # Pareto efficiency — can a rule elect a committee everybody would trade away?
 
 **Level: 301 · deep dive**

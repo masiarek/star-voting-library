@@ -1,3 +1,9 @@
+---
+tags:
+  - criteria
+  - multi-winner
+---
+
 # Support monotonicity — can more approvals cost you your seat?
 
 **Level: 301 · deep dive**

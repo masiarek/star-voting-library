@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - strategy
+  - multi-winner
+---
+
 # Inclusion-strategyproofness — the column where AV stands alone
 
 **Level: 301 · deep dive**

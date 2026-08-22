@@ -1,3 +1,10 @@
+---
+tags:
+  - criteria
+  - multi-winner
+  - theory
+---
+
 # Condorcet committees — the criterion that usually has nothing to satisfy
 
 **Level: 301 · deep dive**

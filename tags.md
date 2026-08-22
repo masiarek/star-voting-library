@@ -2,7 +2,7 @@
 
 *The cross-cutting index. The folders answer "which method?" — this page answers "what kind of question?", which is the axis a folder tree cannot show.*
 
-Nine tags, applied to the [cross-method concept pages](07_Concepts/topics/README.md). A page carries at most three.
+Nine tags, applied to the [cross-method concept pages](07_Concepts/topics/README.md) and to the [approval committee criteria](04_Approval/03_Criteria/README.md) — the two sets of pages that answer a question rather than describe a method. A page carries at most three; a folder's own `README.md` carries none, since it is the folder index rather than a page about anything.
 
 | Tag | What it gathers |
 |---|---|
