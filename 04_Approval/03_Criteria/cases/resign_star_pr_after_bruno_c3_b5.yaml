@@ -1,0 +1,36 @@
+election_title: Resignation monotonicity — Bruno resigns, and Ana loses her seat
+voting_method: Allocated Score Voting
+num_winners: 2
+scenario_description: |-
+  The same five voters and the same two seats as
+  `resign_star_pr_seated_c4_b5.yaml`, with one change: Bruno has resigned, so his
+  column is struck from every ballot and the count is re-run.
+
+  Nobody changed their mind. No ballot was re-marked. Ana's supporter never
+  mentioned Bruno at all. Yet Allocated Score now elects Cleo AND Dev — the two
+  wings of the bloc that just lost its own winner — and Ana is off the board.
+
+  The mechanism is the point: Bruno was the candidate ABSORBING the bloc's voting
+  power. Electing him spent their ballots down to a remainder too small to beat
+  Ana's full-weight vote. Take Bruno away and that power is unspent, so the bloc
+  buys both seats outright.
+
+  That is a failure of RESIGNATION MONOTONICITY (Oh & Peters, arXiv:2608.06156):
+  re-running the rule after a winner resigns must not unseat a winner who stayed.
+
+  The failure is not a tie-breaking artefact. Cleo and Dev do tie for the FIRST
+  seat here (10 apiece), so the lot decides which of them is seated first — but
+  whichever wins it, the other takes the second seat. The COMMITTEE {Cleo, Dev} is
+  the same under every tie-breaking order, and so is {Ana, Bruno} in the before
+  half; only the seating order is a coin flip.
+ballots: |-
+  Ana,Cleo,Dev
+  5,0,0     # the lone voter — Ana only
+  0,5,0     # bloc voter, Cleo wing
+  0,5,0     # bloc voter, Cleo wing
+  0,0,5     # bloc voter, Dev wing
+  0,0,5     # bloc voter, Dev wing
+lot_numbers: [Ana, Cleo, Dev]
+expected_winners: [Cleo, Dev]
+
+# file: resign_star_pr_after_bruno_c3_b5.yaml

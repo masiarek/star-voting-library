@@ -1,0 +1,49 @@
+--- RCV / Instant-Runoff Voting (single winner) ---
+  Resignation monotonicity — Bruno resigns, and Ana loses her seat
+ Tabulating 5 ballots (converted from score ballots; 0 = unranked, equal scores broken by candidate priority).
+
+Ballots:
+   the ranking RCV-IRV reads (0 = unranked, equal scores broken by priority);
+   the source score ballot follows in () per column: Ana, Cleo, Dev
+     1 ×   Ana      (5, 0, 0)
+     2 ×   Cleo      (0, 5, 0)
+     2 ×   Dev      (0, 0, 5)
+
+ROUND 1
+Candidate      Votes  Status
+-----------  -------  --------
+Cleo               2  Hopeful
+Dev                2  Hopeful
+Ana                1  Rejected
+
+FINAL RESULT
+Candidate      Votes  Status
+-----------  -------  --------
+Dev                2  Elected
+Cleo               2  Rejected
+Ana                0  Rejected
+Blank Votes        1  Rejected
+
+
+Winner(s) — RCV / Instant-Runoff Voting (single winner)
+  Dev
+
+--- Smith Set (the generalized Condorcet winner) ---
+The smallest group whose every member beats every candidate outside it —
+the honest answer to "who is even in contention?".
+   Smith set (2 of 3): Cleo, Dev
+   Outside (1):        Ana
+   More than one member ⇒ NO Condorcet winner: the top of the tournament is a
+   dead heat (its members DRAW each other head-to-head), so the strongest
+   "candidate" is a set, not a person. No member beats another, so there is no
+   loop for Minimax / Ranked Pairs / Schulze to disagree about — which member
+   wins is left to the tiebreak, not to a cycle rule. See
+   05_Ranked_Robin/01_Learn/rr_tiebreak_lh_vs_bv.md.
+   RCV-IRV winner Dev is INSIDE the Smith set. ✓
+      Not guaranteed — RCV-IRV is not Smith-efficient — but it holds here.
+   Fine print: this set contains a pairwise DRAW, and a draw is enough to keep a
+   candidate in the Smith set but not in the tighter Schwartz set — so Schwartz
+   may be smaller here.
+   More: 07_Concepts/topics/smith_set.md
+
+NOTE: a generated cross-method view of the STAR ballots, for comparison only — not the official STAR result.

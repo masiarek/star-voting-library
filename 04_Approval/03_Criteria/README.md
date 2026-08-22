@@ -4,7 +4,7 @@
 
 Chapter 2 of Lackner & Skowron's [*Multi-Winner Voting with Approval Preferences*](https://link.springer.com/book/10.1007/978-3-031-09016-5) introduces the approval-based committee (ABC) rules; this repo covers those in [`01_Learn/Multiwinner_Approval/`](../01_Learn/Multiwinner_Approval/README.md). Chapter 3 asks the harder question — **which of them keep their promises** — and answers it with one grid, Table 3.1.
 
-This folder is that grid, **recomputed rather than copied** — plus one page for the axiom Chapter 3 discusses but does not tabulate, [Condorcet committees](condorcet_committees.md), because on approval ballots the thing it asks for usually does not exist. Every ✗ below is a theorem with a witness: a specific tiny approval profile on which the rule visibly misbehaves. The book prints those witnesses in Appendix A; [`abc_axiom_check.py`](../../06_Other/abcvoting_tabulation_engine/abc_axiom_check.py) replays all thirty of them through [`abcvoting`](https://github.com/martinlackner/abcvoting), Lackner's own peer-reviewed implementation, and the run is gated by [`tests/test_abc_axioms.py`](../../STARVote_LH_tabulation_engine/tests/test_abc_axioms.py).
+This folder is that grid, **recomputed rather than copied** — plus two pages for axioms the grid does not carry: [Condorcet committees](condorcet_committees.md), which Chapter 3 discusses but does not tabulate (on approval ballots the thing it asks for usually does not exist), and [resignation monotonicity](resignation_monotonicity.md), which postdates the book. Every ✗ below is a theorem with a witness: a specific tiny approval profile on which the rule visibly misbehaves. The book prints those witnesses in Appendix A; [`abc_axiom_check.py`](../../06_Other/abcvoting_tabulation_engine/abc_axiom_check.py) replays all thirty of them through [`abcvoting`](https://github.com/martinlackner/abcvoting), Lackner's own peer-reviewed implementation, and the run is gated by [`tests/test_abc_axioms.py`](../../STARVote_LH_tabulation_engine/tests/test_abc_axioms.py).
 
 ## Table 3.1, recomputed
 
@@ -53,6 +53,7 @@ And the two `?` cells turn out to be a genuine subtlety rather than a gap. Table
 | [Inclusion-strategyproofness](inclusion_strategyproofness.md) | Can a voter do better by **misreporting** her approvals? AV alone says no. |
 | [Computational complexity](computational_complexity.md) | P or NP-hard — and why "just compute the optimum" is not available. |
 | [Condorcet committees](condorcet_committees.md) *(§3.2, not a Table 3.1 column)* | Lift "beats everyone head to head" to committees — and find that on approval ballots there is usually **nothing** that qualifies. |
+| [Resignation monotonicity](resignation_monotonicity.md) *(Oh & Peters 2026, not in the book)* | A winner **resigns** and the count is re-run. Can it unseat somebody who stayed? AV alone says no — and so, it turns out, do none of this engine's score-based PR rules. |
 
 ## The runnable cases
 
@@ -63,6 +64,12 @@ And the two `?` cells turn out to be a genuine subtlety rather than a gap. Table
 | Committee monotonicity (1 of 2) — one seat | The consensus candidate takes the single seat | [page](cases/cases_pages/abc_committee_monotonicity_1seat_c3_b10.md) | [`abc_committee_monotonicity_1seat_c3_b10.yaml`](cases/abc_committee_monotonicity_1seat_c3_b10.yaml) |
 | Committee monotonicity (2 of 2) — two seats | Add a seat, and five rules drop the one-seat winner | [page](cases/cases_pages/abc_committee_monotonicity_2seats_c3_b10.md) | [`abc_committee_monotonicity_2seats_c3_b10.yaml`](cases/abc_committee_monotonicity_2seats_c3_b10.yaml) |
 | SAV rewards a bullet vote | Two voters: narrowing an honest ballot wins the seat | [page](cases/cases_pages/sav_strategy_bullet_vote_c5_b2.md) | [`sav_strategy_bullet_vote_c5_b2.yaml`](cases/sav_strategy_bullet_vote_c5_b2.yaml) |
+| Resignation (1 of 6) — STAR-PR seats the lone voter | Allocated Score gives the four-voter bloc one seat and the lone voter the other | [page](cases/cases_pages/resign_star_pr_seated_c4_b5.md) | [`resign_star_pr_seated_c4_b5.yaml`](cases/resign_star_pr_seated_c4_b5.yaml) |
+| Resignation (2 of 6) — Bruno resigns, Ana is evicted | Re-run the same count minus one column and the bloc takes both seats | [page](cases/cases_pages/resign_star_pr_after_bruno_c3_b5.md) | [`resign_star_pr_after_bruno_c3_b5.yaml`](cases/resign_star_pr_after_bruno_c3_b5.yaml) |
+| Resignation (3 of 6) — RRV's three seats | Reweighted Range Voting elects two one-supporter winners and a slate leader | [page](cases/cases_pages/resign_rrv_seated_c5_b5.md) | [`resign_rrv_seated_c5_b5.yaml`](cases/resign_rrv_seated_c5_b5.yaml) |
+| Resignation (4 of 6) — Hana resigns, Gus is evicted | The vacated seat goes to the slate that lost its own winner | [page](cases/cases_pages/resign_rrv_after_hana_c4_b5.md) | [`resign_rrv_after_hana_c4_b5.yaml`](cases/resign_rrv_after_hana_c4_b5.yaml) |
+| Resignation (5 of 6) — the Approval control | Oh & Peters' Example 3.3, counted by plain multi-winner Approval | [page](cases/cases_pages/resign_av_holds_c7_b5.md) | [`resign_av_holds_c7_b5.yaml`](cases/resign_av_holds_c7_b5.yaml) |
+| Resignation (6 of 6) — Kai resigns, Approval holds | Every survivor keeps their seat, where PAV and Equal Shares cannot | [page](cases/cases_pages/resign_av_holds_after_kai_c6_b5.md) | [`resign_av_holds_after_kai_c6_b5.yaml`](cases/resign_av_holds_after_kai_c6_b5.yaml) |
 
 Each case file's own count is plain **Approval** — the control, showing what AV does with the same ballots. The rule under test is counted by `abcvoting`, because CC, PAV, Monroe, leximax-Phragmén, Equal Shares, MAV and SAV exist in neither the [LH engine](../../STARVote_LH_tabulation_engine/README.md) nor [BetterVoting](https://bettervoting.com/). That is also why these cases are LH-only.
 

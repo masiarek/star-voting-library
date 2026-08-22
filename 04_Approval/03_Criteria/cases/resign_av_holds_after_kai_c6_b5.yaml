@@ -1,0 +1,27 @@
+election_title: Resignation monotonicity — Kai resigns, and Approval keeps everyone else
+voting_method: Approval_Multi_Winner
+num_winners: 5
+scenario_description: |-
+  `resign_av_holds_c7_b5.yaml` again with Kai's column struck after he resigns.
+
+  Approval re-runs and returns Nora, Omar, Pia and Quinn — every winner who
+  stayed — plus whichever of Lena and Milo the lot favours for the vacated seat.
+  That is resignation monotonicity holding, and it holds for a reason a voter can
+  check by eye: Approval ranks candidates by a score that does not depend on who
+  else is elected, so striking one name cannot reorder the rest.
+
+  The contrast is the lesson. On this same profile PAV, seq-Phragmén and the
+  Method of Equal Shares elect the same five as Approval does before the
+  resignation — and afterwards, NONE of them will return all four of Nora, Omar,
+  Pia and Quinn, under any tie-breaking. Justified representation now demands a
+  seat for Lena AND one for Milo, and there is only one seat free. The full
+  account is on the resignation monotonicity page in 04_Approval/03_Criteria.
+ballots: |-
+  Lena,Milo,Nora,Omar,Pia,Quinn
+  1,0,0,0,0,0     # was Kai + Lena
+  0,1,0,0,0,0     # was Kai + Milo
+  0,0,1,1,1,1     # the slate
+  0,0,1,1,1,1     # the slate
+  0,0,1,1,1,1     # the slate
+lot_numbers: [Lena, Milo, Nora, Omar, Pia, Quinn]
+expected_winners: [Lena, Nora, Omar, Pia, Quinn]

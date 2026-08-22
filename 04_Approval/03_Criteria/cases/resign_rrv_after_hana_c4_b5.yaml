@@ -1,0 +1,24 @@
+election_title: Resignation monotonicity — Hana resigns, and Gus loses his seat
+voting_method: Reweighted Range Voting
+num_winners: 3
+scenario_description: |-
+  The same five voters and the same three seats as
+  `resign_rrv_seated_c5_b5.yaml`, with Hana's column struck after she resigns.
+
+  RRV now elects Fern, Ivan and Juno. Gus — whose single supporter never
+  mentioned Hana, and who was seated before — is out, and his seat goes to the
+  slate that just lost its own winner.
+
+  Same failure as the Allocated Score pair on this page, in the second of the
+  engine's proportional score rules: re-running the count after a resignation
+  unseats a winner who stayed. Unique answer under every tie-breaking order.
+ballots: |-
+  Fern,Gus,Ivan,Juno
+  5,0,0,0     # Fern only
+  0,5,0,0     # Gus only
+  0,0,5,0     # was Hana + Ivan
+  0,0,0,5     # was Hana + Juno
+  5,0,5,5     # Fern + the rest of the slate
+expected_winners: [Fern, Ivan, Juno]
+
+# file: resign_rrv_after_hana_c4_b5.yaml

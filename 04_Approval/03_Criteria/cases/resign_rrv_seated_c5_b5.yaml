@@ -1,0 +1,25 @@
+election_title: Resignation monotonicity — the three seats RRV fills
+voting_method: Reweighted Range Voting
+num_winners: 3
+scenario_description: |-
+  Five voters, three seats, under Reweighted Range Voting — the other
+  proportional score rule in this engine.
+
+  Fern and Gus each have exactly one supporter and nothing else. Hana, Ivan and
+  Juno share three overlapping supporters, one of whom (the fifth voter) also
+  backs Fern.
+
+  RRV elects Fern, Gus and Hana — unique under every tie-breaking order.
+
+  BEFORE half of a matched pair; Hana then resigns in
+  `resign_rrv_after_hana_c4_b5.yaml`.
+ballots: |-
+  Fern,Gus,Hana,Ivan,Juno
+  5,0,0,0,0     # Fern only
+  0,5,0,0,0     # Gus only
+  0,0,5,5,0     # Hana + Ivan
+  0,0,5,0,5     # Hana + Juno
+  5,0,5,5,5     # Fern + the whole Hana/Ivan/Juno slate
+expected_winners: [Fern, Gus, Hana]
+
+# file: resign_rrv_seated_c5_b5.yaml

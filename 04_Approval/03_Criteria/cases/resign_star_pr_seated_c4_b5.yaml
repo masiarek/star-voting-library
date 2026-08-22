@@ -1,0 +1,26 @@
+election_title: Resignation monotonicity — the board STAR-PR actually elects
+voting_method: Allocated Score Voting
+num_winners: 2
+scenario_description: |-
+  A two-seat board. Four of the five voters are one bloc: every one of them backs
+  Bruno, and they split evenly on a second name — two also back Cleo, two also
+  back Dev. The fifth voter backs Ana and nobody else.
+
+  Allocated Score (the STAR-PR rule BetterVoting runs) does what proportional
+  representation is supposed to do: the four-voter bloc gets one of the two seats
+  (Bruno), and the lone voter gets the other (Ana). One seat each, no ties
+  anywhere in the count.
+
+  This is the BEFORE half of a matched pair. Bruno then resigns, and the count is
+  re-run on the remaining three names in
+  `resign_star_pr_after_bruno_c3_b5.yaml` — where Ana loses her seat too.
+ballots: |-
+  Ana,Bruno,Cleo,Dev
+  5,0,0,0     # the lone voter — Ana only
+  0,5,5,0     # bloc voter, Cleo wing
+  0,5,5,0     # bloc voter, Cleo wing
+  0,5,0,5     # bloc voter, Dev wing
+  0,5,0,5     # bloc voter, Dev wing
+expected_winners: [Ana, Bruno]
+
+# file: resign_star_pr_seated_c4_b5.yaml

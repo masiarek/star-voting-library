@@ -1,0 +1,145 @@
+======================================================================
+SOURCE FILE:     resign_rrv_after_hana_c4_b5.yaml
+TABULATED FILE:  resign_rrv_after_hana_c4_b5_tabulated.txt
+======================================================================
+
+election_title: Resignation monotonicity — Hana resigns, and Gus loses his seat
+voting_method: Reweighted Range Voting
+num_winners: 3
+scenario_description: |-
+  The same five voters and the same three seats as
+  `resign_rrv_seated_c5_b5.yaml`, with Hana's column struck after she resigns.
+
+  RRV now elects Fern, Ivan and Juno. Gus — whose single supporter never
+  mentioned Hana, and who was seated before — is out, and his seat goes to the
+  slate that just lost its own winner.
+
+  Same failure as the Allocated Score pair on this page, in the second of the
+  engine's proportional score rules: re-running the count after a resignation
+  unseats a winner who stayed. Unique answer under every tie-breaking order.
+ballots: |-
+  Fern,Gus,Ivan,Juno
+  5,0,0,0     # Fern only
+  0,5,0,0     # Gus only
+  0,0,5,0     # was Hana + Ivan
+  0,0,0,5     # was Hana + Juno
+  5,0,5,5     # Fern + the rest of the slate
+expected_winners: [Fern, Ivan, Juno]
+
+# file: resign_rrv_after_hana_c4_b5.yaml
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+=== Resignation monotonicity — Hana resigns, and Gus loses his seat ===
+  The same five voters and the same three seats as
+  `resign_rrv_seated_c5_b5.yaml`, with Hana's column struck after she resigns.
+
+  RRV now elects Fern, Ivan and Juno. Gus — whose single supporter never
+  mentioned Hana, and who was seated before — is out, and his seat goes to the
+  slate that just lost its own winner.
+
+  Same failure as the Allocated Score pair on this page, in the second of the
+  engine's proportional score rules: re-running the count after a resignation
+  unseats a winner who stayed. Unique answer under every tie-breaking order.
+
+--- Preference Matrix ---
+Head-to-head / pairwise comparison
+Legend: For - Equal Support - Against
+        Informational only — not part of the 3-winner count below,
+        so no Top-2 finalists are marked.
+               |     Fern   |    Gus    |    Ivan   |    Juno   |
+-----------------------------------------------------------------
+        Fern > |    ---     |2 - 2 - 1  |1 - 3 - 1  |1 - 3 - 1  |
+         Gus > | 1 - 2 - 2  |   ---     |1 - 2 - 2  |1 - 2 - 2  |
+        Ivan > | 1 - 3 - 1  |2 - 2 - 1  |   ---     |1 - 3 - 1  |
+        Juno > | 1 - 3 - 1  |2 - 2 - 1  |1 - 3 - 1  |   ---     |
+
+[Condorcet Winner]
+  No strict Condorcet winner; unbeaten candidates: Fern, Ivan, Juno (pairwise ties)
+
+[Condorcet Loser]
+  Condorcet Loser: Gus — loses every head-to-head matchup
+
+--- Reweighted Range Voting Method (3 winners) ---
+[Reweighted Range Voting]
+ Tabulating 5 ballots to fill 3 seats.
+Fern,Gus,Ivan,Juno
+   5,  0,   0,   0
+   0,  5,   0,   0
+   0,  0,   5,   0
+   0,  0,   0,   5
+   5,  0,   5,   5
+
+[Score Distribution] (how many ballots gave each star rating)
+                Score
+Candidate  5  4  3  2  1  0  | Total   Avg
+Fern       2  0  0  0  0  3  |    10   2.0
+Gus        1  0  0  0  0  4  |     5   1.0
+Ivan       2  0  0  0  0  3  |    10   2.0
+Juno       2  0  0  0  0  3  |    10   2.0
+
+[Reweighted Range Voting: Round 1: Score round]
+ The highest-scoring candidate wins a seat.
+   Fern          -- 10 -- Tied for first place
+   Ivan          -- 10 -- Tied for first place
+   Juno          -- 10 -- Tied for first place
+   Gus           --  5
+ There's a three-way tie for first.
+
+*** No official tie-breaking lot numbers were provided.
+    Ties are resolved using a fallback order: CSV column order.
+    Lot-number priority order: ['Fern', 'Gus', 'Ivan', 'Juno']
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Fern', 'Ivan', 'Juno']
+  Resolved: ['Fern'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: Reweighted Range Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
+
+[Reweighted Range Voting: Round 1: Reweighing Ballots]
+ 2 ballots reweighted from 1 to 1/2.
+
+[Reweighted Range Voting: Round 2: Score round]
+ The highest-scoring candidate wins a seat.
+   Ivan          -- 7+1/2 -- Tied for first place
+   Juno          -- 7+1/2 -- Tied for first place
+   Gus           -- 5
+ There's a two-way tie for first.
+
+[Tiebreaker: Lot Number Priority]
+  Tie among: ['Ivan', 'Juno']
+  Resolved: ['Ivan'] (selected by lot-number priority).
+
+[Lot-decided tie — rare]
+  ⚠ The ballots did not break this tie: Reweighted Range Voting has one
+    deterministic rung per seat — the round's weighted score total —
+    and the tied candidates came back equal on it, so the pre-published
+    LOT order chose among them — the result here was set by lot, not by
+    the votes. No head-to-head or five-star rung runs on this path: a
+    tie on the weighted total goes straight to the lot. Verify the tied
+    candidates' totals in the round above.
+
+[Reweighted Range Voting: Round 2: Reweighing Ballots]
+ Reweighted 2 ballots:
+   1 ballot reweighted from 1 to 1/2.
+   1 ballot reweighted from 1/2 to 1/3.
+
+[Reweighted Range Voting: Round 3: Score round]
+ The highest-scoring candidate wins a seat.
+   Juno          -- 6+2/3 -- First place
+   Gus           -- 5
+ Juno wins a seat.
+
+[Reweighted Range Voting: Winners — Reweighted Range Voting Method (3 winners)]
+ Fern
+ Ivan
+ Juno

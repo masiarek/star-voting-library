@@ -402,6 +402,12 @@ LH:reinf_north_c3_b6_rr,"Reinforcement — North district alone (6 voters, a per
 LH:reinf_south_ben_c3_b3_rr,"Reinforcement — South district, Ben branch (3 voters, Ben is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
 LH:reinf_south_c3_b3_rr,"Reinforcement — South district alone (3 voters, Ada is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
 LH:reinf_south_cara_c3_b3_rr,"Reinforcement — South district, Cara branch (3 voters, Cara is the clear Condorcet winner)",1,single-race,3,RankedRobin,LH-only
+LH:resign_av_holds_after_kai_c6_b5,"Resignation monotonicity — Kai resigns, and Approval keeps everyone else",1,single-race,5,Approval,LH-only
+LH:resign_av_holds_c7_b5,"Resignation monotonicity — plain Approval, before the resignation",1,single-race,5,Approval,LH-only
+LH:resign_rrv_after_hana_c4_b5,"Resignation monotonicity — Hana resigns, and Gus loses his seat",1,single-race,5,Reweighted Range Voting,LH-only
+LH:resign_rrv_seated_c5_b5,Resignation monotonicity — the three seats RRV fills,1,single-race,5,Reweighted Range Voting,LH-only
+LH:resign_star_pr_after_bruno_c3_b5,"Resignation monotonicity — Bruno resigns, and Ana loses her seat",1,single-race,5,Allocated Score Voting,LH-only
+LH:resign_star_pr_seated_c4_b5,Resignation monotonicity — the board STAR-PR actually elects,1,single-race,5,Allocated Score Voting,LH-only
 LH:reversal_convincing_c3_b100,"Runoff reversal, the convincing case — an intense minority favorite loses to the majority's compromise",1,single-race,100,STAR,LH-only
 LH:reversal_irv_original,"Reversal symmetry — RCV-IRV, original: A wins (best)",1,single-race,24,IRV,LH-only
 LH:reversal_irv_reversed,"Reversal symmetry — RCV-IRV, reversed: A wins AGAIN (worst = best)",1,single-race,24,IRV,LH-only

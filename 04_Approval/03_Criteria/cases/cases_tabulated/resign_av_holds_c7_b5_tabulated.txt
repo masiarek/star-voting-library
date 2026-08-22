@@ -1,0 +1,70 @@
+======================================================================
+SOURCE FILE:     resign_av_holds_c7_b5.yaml
+TABULATED FILE:  resign_av_holds_c7_b5_tabulated.txt
+======================================================================
+
+election_title: Resignation monotonicity — plain Approval, before the resignation
+voting_method: Approval_Multi_Winner
+num_winners: 5
+scenario_description: |-
+  Example 3.3 of Oh & Peters (arXiv:2608.06156), counted by plain multi-winner
+  Approval — the ONE rule the paper proves is resignation monotone.
+
+  Five voters, five seats, seven candidates. Two voters share Kai and split on a
+  second name (Lena, Milo); the other three all approve the same slate of four
+  (Nora, Omar, Pia, Quinn).
+
+  Approval seats the four-strong slate plus Kai. Under PAV, seq-Phragmén and the
+  Method of Equal Shares the answer is the SAME committee — and that is what makes
+  this example sharp: the proportional rules cannot keep it together after Kai
+  resigns, and Approval can. The after half is
+  `resign_av_holds_after_kai_c6_b5.yaml`.
+ballots: |-
+  Kai,Lena,Milo,Nora,Omar,Pia,Quinn
+  1,1,0,0,0,0,0     # Kai + Lena
+  1,0,1,0,0,0,0     # Kai + Milo
+  0,0,0,1,1,1,1     # the slate
+  0,0,0,1,1,1,1     # the slate
+  0,0,0,1,1,1,1     # the slate
+expected_winners: [Kai, Nora, Omar, Pia, Quinn]
+
+======================================================================
+TABULATION RESULTS
+======================================================================
+
+--- Approval Voting (5 winners) ---
+ Tabulating 5 ballots (any non-zero score = approval).
+
+Ballots:
+   columns = Kai, Lena, Milo, Nora, Omar, Pia, Quinn      (1 = approve; 0 = not approved)
+     1 × 1,1,0,0,0,0,0
+     1 × 1,0,1,0,0,0,0
+     3 × 0,0,0,1,1,1,1
+
+   Nora  -- 3 (60%) -- Elected
+   Omar  -- 3 (60%) -- Elected
+   Pia   -- 3 (60%) -- Elected
+   Quinn -- 3 (60%) -- Elected
+   Kai   -- 2 (40%) -- Elected
+   Lena  -- 1 (20%)
+   Milo  -- 1 (20%)
+
+[Approval Distribution] (how many candidates each ballot approved)
+   16 approvals across 5 ballots — average 3.2 of 7 (range 2–4).
+     approved 2: 2 ballots
+     approved 4: 3 ballots
+
+[Co-Approval Matrix]
+ Of the voters who approved the ROW candidate, the % who ALSO approved the COLUMN candidate.
+          |  Nora  |  Omar  |  Pia   | Quinn  |  Kai   |  Lena  |  Milo  |
+   -----------------------------------------------------------------------
+   Nora   |   --   |  100%  |  100%  |  100%  |   0%   |   0%   |   0%   |
+   Omar   |  100%  |   --   |  100%  |  100%  |   0%   |   0%   |   0%   |
+   Pia    |  100%  |  100%  |   --   |  100%  |   0%   |   0%   |   0%   |
+   Quinn  |  100%  |  100%  |  100%  |   --   |   0%   |   0%   |   0%   |
+   Kai    |   0%   |   0%   |   0%   |   0%   |   --   |  50%   |  50%   |
+   Lena   |   0%   |   0%   |   0%   |   0%   |  100%  |   --   |   0%   |
+   Milo   |   0%   |   0%   |   0%   |   0%   |  100%  |   0%   |   --   |
+
+Winners — Approval Voting (5 winners)
+  Nora, Omar, Pia, Quinn, Kai
