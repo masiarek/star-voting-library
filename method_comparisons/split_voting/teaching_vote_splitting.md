@@ -215,3 +215,66 @@ No — it is about *any* two similar candidates, which is most often two candida
 **301** — 1. Fizzy and sugar both hold 4 of 7 first choices. Why is only one a clone set? · 2. Could you have predicted the spoiler from the candidate list alone? *(No — you need the ballots.)* · 3. Give a case that is a spoiler but not a center squeeze, and one that is the reverse. · 4. Someone says "the fizzy vote will split three ways." What do you ask for? *(The ballots.)* · 5. Why is "STAR is immune to vote splitting" wrong, and what is the accurate claim?
 
 **The question that separates memorisation from understanding** is 201.1 and 201.5. A learner who answers "yes, spoiled" to a 33% winner has learned a slogan. A learner who asks for the preference data has learned the concept.
+
+---
+
+## Three different things are called "vote splitting" — say which one you mean
+
+This trips up more reading than any other thing on the topic, and a room that has googled the term beforehand may arrive with the wrong one. All three are real, all three are called vote splitting in print, and only the first is what this page teaches.
+
+| | The name | What it actually is | Where you meet it |
+|:-:|---|---|---|
+| **1** | **Vote splitting / the spoiler effect** | Similar candidates dividing one pool of supporters under a one-mark ballot | This page. Election-reform writing |
+| **2** | **Split-ticket voting** | *One voter* choosing different parties in concurrent races — the German two-vote ballot, mixed-member systems | Political-science literature: Pappi & Thurner, Gschwend, Bochsler, Plescia, Bugarin |
+| **3** | **Splitting electoral votes** | A state allocating its electoral votes by district instead of winner-take-all | Nebraska and Maine ([Nebraska Public Media](https://nebraskapublicmedia.org/en/news/news-articles/nebraska-and-maine-split-their-electoral-vote-is-it-a-better-system-than-winner-take-all/)) |
+
+Sense **2** has a large, serious empirical literature — ecological inference, coalition insurance, strategic ticket-splitting in mixed systems — and **none of it is about spoilers.** A reader who follows a citation trail from this page into that literature will end up somewhere entirely different and think they have found the academic treatment of our topic. If you cite academic work on vote splitting, check which sense it uses first.
+
+## Where to send people next
+
+Sourced by tier, with the lean stated — [house rule](../../CLAUDE.md): match the source to the claim, and disclose the advocacy where it exists.
+
+**Best on-ramps for someone who has never thought about this**
+
+- **[CGP Grey — *Why Your Vote Doesn't Count*](https://www.youtube.com/watch?v=s7tWHJfhiyo)** — the animal-kingdom framing. Using animals instead of politicians sidesteps partisan defensiveness entirely, which is why it remains the single best cold-open for a general audience.
+- **[Teach With TVW — *Ever heard of 'Vote Splitting'?*](https://www.youtube.com/shorts/TV6davN3IVk)** — sixty seconds, from a **public-affairs broadcaster rather than a reform group**. The only non-advocacy video on this list, which makes it the safest thing to hand a skeptical audience.
+- **[Nicky Case — *To Build a Better Ballot*](https://ncase.me/ballot/)** — an interactive explorable with draggable voters and candidates on a 2-D ideological plane, simulating Choose-One, Approval, Borda, RCV-IRV and Score. The gold standard of the genre, and the closest thing to letting someone *play* with a spoiler.
+- **[Ka-Ping Yee's voting simulations](https://web.archive.org/web/2023/https://zesty.ca/voting/sim/)** — the "Yee diagrams": 2-D win-zone maps showing how a centrist is crushed under plurality and preserved under Condorcet and score methods. *(The original host is currently down — Wayback link. The repo's own [spatial voting model](../../07_Concepts/topics/spatial_voting_model.md) page covers the same ground.)*
+
+**Reference — neutral or definitional**
+
+- **[Wikipedia — Spoiler effect](https://en.wikipedia.org/wiki/Spoiler_effect)** — the neutral family term, and the right citation for any *criteria* claim, since it carries NPOV pressure that the advocacy wikis do not.
+- **[electowiki — Vote splitting](https://electowiki.org/wiki/Vote_splitting)** · **[Strategic nomination](https://electowiki.org/wiki/Strategic_nomination)** · **[Independence of irrelevant alternatives](https://electowiki.org/wiki/Independence_of_irrelevant_alternatives)** · **[Independence of Smith-dominated alternatives](https://electowiki.org/wiki/Independence_of_Smith-dominated_alternatives)** — best available on the *mechanics* and on the formal criteria, where Wikipedia is thin. Reform-advocacy-adjacent: excellent for definitions, weak for verdicts. **Strategic nomination is the one to read** — it is the deliberate version of everything on this page, and it belongs at 301 beside [ex11](../../01_STAR/05_Practice/ex11_recruit_a_spoiler.md).
+
+**Advocacy sources — useful, lean stated**
+
+- **[Center for Election Science — What is vote splitting?](https://electionscience.org/education/vote-splitting)** · **[video](https://www.youtube.com/watch?v=uVtQQ6pFiPI)** · **[How our voting system (and IRV) betrays your favourite candidate](https://www.youtube.com/watch?v=JtKAScORevQ)** · **[Hyper-partisanship](https://electionscience.org/education/hyper-partisanship)** — plain-language and well made. **CES advocates Approval voting**, and the IRV video is a critique piece, so quote it for definitions rather than for verdicts about other methods.
+- **[FairVote — Defining the spoiler effect](https://fairvote.org/defining-the-spoiler-effect/)** — **FairVote advocates RCV-IRV.** Read it: it makes one distinction genuinely worth having (spoiler ≠ IIA) and one claim that does not survive contact with the ballots. See the claim-check note below before quoting it either way.
+- **[Unsplit The Vote](https://unsplitthevote.org/about/vote-splitting-problem/)** — a campaign built entirely around this one problem; good framing, advocacy throughout.
+- **Glossary entries** at [fiveable](https://fiveable.me/game-theory/key-terms/vote-splitting) (the **game-theory framing** — vote splitting as a *coordination* problem, which is where the "what it does before anyone votes" section above comes from), [Model Diplomat](https://modeldiplomat.com/learn/glossary/vote-splitting) and [Good Party](https://goodparty.org/political-terms/third-party). Study-notes tier: fine for a framing, not for a claim.
+
+## Two definitions worth borrowing — with one correction
+
+The Equal Vote / STAR Voting glossary wording is clean and worth reusing:
+
+> **Vote splitting** — like-minded voters end up split between two or more similar candidates, often causing both to lose to a candidate less preferred than either.
+
+> **Spoiler effect** — a losing candidate draws votes away from one who would otherwise have won; the election is "spoiled" if it elects someone less preferred, or opposed by a majority.
+
+Both are good. But the glossary continues that STAR and Approval are **"immune to vote-splitting"**, and that is stronger than this repo's own evidence supports. Use this instead:
+
+> STAR and Approval remove **forced** vote splitting — a voter is never made to choose between allies. A faction can still split *itself* by bullet-voting, as [`05a`](_main/_main_pages/05a_residual_split_bullet-voting.md) shows and [`05b`](_main/_main_pages/05b_residual_split_expressive-fix.md) cures. The difference from choose-one is that the remedy is in the voters' hands.
+
+Saying "immune" wins the sentence and loses the argument the first time someone finds `05a`. Our own case file is the reason to say the narrower thing — and being the people who volunteer the limit is worth more than the adjective.
+
+## The FairVote claim-check — what to concede and what to correct
+
+If someone brings [FairVote's spoiler article](https://fairvote.org/defining-the-spoiler-effect/) to the discussion, concede three things immediately, because all three are correct:
+
+- **Don't blame the third-party candidate** — *"the problem isn't with the candidate, it's with our elections."* This repo agrees completely.
+- **Spoiler ≠ IIA.** They are genuinely different, and reform advocates do conflate them.
+- **RCV-IRV does prevent the classic vote-splitting spoiler.** Our own ranked race in [BV2293 ↗](https://bettervoting.com/vq78wk/results) elects Gala.
+
+Then the one claim that does not hold: *"Palin did not spoil the race for Begich, because she did not split the Republican vote."* Alaska 2022's own ballots say otherwise — **Begich beat Peltola head-to-head 93,052 to 79,558**, and was eliminated anyway for holding too few first choices while the Republican-leaning vote was divided with Palin. That is vote splitting deciding an elimination order, which is FairVote's own definition applied to their own example. The article's rebuttal — that many Begich voters ranked Peltola second — shows the electorate was not cleanly partisan, which is true and does not rescue the claim.
+
+The deeper move to name, politely: the article defines "spoiler" narrowly enough (*"votes in a majority bloc splintered between several candidates"*) that no real electorate, which is never cleanly blocked, can ever qualify. A definition that cannot be satisfied by any actual election is not a definition worth defending. The repo's worked count is [Alaska 2022](../alaska_2022/README.md); the standing pattern for this kind of response is [FairVote's Condorcet article, counted](../fairvote_condorcet_claims/README.md).
