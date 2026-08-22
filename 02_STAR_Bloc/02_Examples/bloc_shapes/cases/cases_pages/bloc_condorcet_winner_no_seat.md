@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Cyrus, Ada
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xbk9bq) · **[results ↗](https://bettervoting.com/xbk9bq/results)** (election `xbk9bq` · test `BV2287`).
+
 ## Scenario
 
 Five voters fill two seats from four candidates. Bex beats every other
@@ -38,6 +40,13 @@ Bloc STAR can pass someone over.
 
 Proportional STAR (Allocated Score) elects Ada and Bex on these same ballots —
 it seats the Condorcet winner that Bloc STAR misses.
+
+Reproduced on BetterVoting (election xbk9bq), which counts the SAME ballots
+twice — once as Bloc STAR, once as STAR-PR. Both races match the LH count
+exactly: Bloc STAR elects Cyrus and Ada with tieBreakType 'none'; STAR-PR
+elects Ada and Bex. Frozen export:
+bloc_condorcet_winner_no_seat_bv_export.json.
+Live results: https://bettervoting.com/xbk9bq/results
 
 ## Ballots
 

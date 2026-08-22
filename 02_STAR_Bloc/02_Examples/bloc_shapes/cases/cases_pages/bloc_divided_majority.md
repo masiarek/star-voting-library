@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **2 seats** · **Expected winners:** Uma, Ugo
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/xpr4wk) · **[results ↗](https://bettervoting.com/xpr4wk/results)** (election `xpr4wk` · test `BV2289`).
+
 ## Scenario
 
 Twelve voters fill two seats. Seven of them (58%) favour the Maya/Miles/Mina
@@ -41,6 +43,12 @@ like one of them do NOT like the other two.
 
 Proportional STAR (Allocated Score) elects Maya and Uma on these same ballots —
 one seat for each side, which is what 58/42 across two seats looks like.
+
+Reproduced on BetterVoting (election xpr4wk), which counts the SAME ballots
+twice. Both races match the LH count exactly: Bloc STAR elects Uma and Ugo
+with tieBreakType 'none'; STAR-PR elects Maya and Uma. Frozen export:
+bloc_divided_majority_bv_export.json.
+Live results: https://bettervoting.com/xpr4wk/results
 
 ## Ballots
 

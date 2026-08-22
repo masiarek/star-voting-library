@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **6 seats** · **Expected winners:** Lena, Alma, Mateo, Bruno, Clara, Dex
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/rq2c3g) · **[results ↗](https://bettervoting.com/rq2c3g/results)** (election `rq2c3g` · test `BV2292`).
+
 ## Scenario
 
 The widest shape in this folder: 175 voters, FOURTEEN candidates, SIX seats,
@@ -52,6 +54,13 @@ Summit 1, independent 1 — proportional. Reweighted Range gives Summit's seat t
 a second independent instead. "Proportional" names a family, not a single
 answer, and the family only visibly splits when the field is wide enough to
 give it room.
+
+Reproduced on BetterVoting (election rq2c3g), which counts the SAME 175
+ballots twice. Both races match the LH count exactly: Bloc STAR elects Lena,
+Alma, Mateo, Bruno, Clara and Dex with tieBreakType 'none'; STAR-PR elects
+Alma, Bruno, Elsie, Frank, Ivan and Lena. Frozen export:
+bloc_widest_field_bv_export.json.
+Live results: https://bettervoting.com/rq2c3g/results
 
 ## Ballots
 

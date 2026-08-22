@@ -1,4 +1,5 @@
 ﻿election_id,title,races,kind,voters,methods,backing
+2cdvm6,BV2290 — Bloc STAR vs STAR-PR - Harborview city council: a 52% slate takes all five seats,2,contested (multi-race),108,"STAR, STAR_PR",BV
 2jrfpg,"BV2169 — FairVote's hypothetical, electorate shifted left — the strong Liberal is the Condorcet winner",2,contested (multi-race),100,"IRV, STAR",BV
 2p33qq,"BV2215 — Minority winner — 34% wins Choose-One, but STAR & Ranked Robin elect the candidate a majority prefers",3,contested (multi-race),100,"Plurality, RankedRobin, STAR",BV
 37yf8x,"BV2280 — Ballot expressiveness — nine candidates, one electorate, four different ballots",4,contested (multi-race),25,"IRV, RankedRobin, STAR",BV
@@ -73,12 +74,17 @@ r6ctvy,BV2152 — Felsenthal & Maoz's Approval paradox — the Condorcet winner 
 r6qc8h,BV2160 — Fishburn's Borda truncation electorate — STAR and Choose-One disagree; Borda's paradox is on paper,2,contested (multi-race),7,"Plurality, STAR",BV
 rfyk46,BV2222 — STAR vs strategy — 5-1-0 min-max squeezes the center like IRV (thin moderate),2,contested (multi-race),100,"IRV, STAR",BV
 rhbfj7,"BV2189 — Two Districts, One Mayor (II of III) — East District: STAR elects Avery again",2,contested (multi-race),9,"RankedRobin, STAR",BV
+rq2c3g,"BV2292 — Bloc STAR vs STAR-PR - fourteen candidates, six seats",2,contested (multi-race),175,"STAR, STAR_PR",BV
 t4by6x,"BV2254 — Reinforcement paradox: two towns pick Ada, together pick Cara",2,contested (multi-race),9,"RankedRobin, STAR",BV
 tqfdbg,BV2277 — The Mayor's Race — the third-place candidate who beats everyone head-to-head,4,contested (multi-race),100,"IRV, Plurality, RankedRobin, STAR",BV
 v8r66y,"BV2177 — The Post-it election, seven ways — all four candidates win, depending on the method",7,contested (multi-race),20,"Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV",BV
+vthdwc,BV2291 — Bloc STAR vs STAR-PR - no faction has a majority,2,contested (multi-race),101,"STAR, STAR_PR",BV
+vxwjc4,BV2288 — Bloc STAR vs STAR-PR - the score leader shut out of every seat,2,contested (multi-race),5,"STAR, STAR_PR",BV
 wq6yv7,"BV2154 — Felsenthal's Approval paradox — the absolute loser wins; one electorate, three winners",3,contested (multi-race),15,"Approval, IRV, RankedRobin",BV
 x4dkfd,BV2193 — Bullet Voting Backfires (1 of 2) — the honest ballots elect the compromise,3,contested (multi-race),9,"IRV, RankedRobin, STAR",BV
+xbk9bq,BV2287 — Bloc STAR vs STAR-PR - the Condorcet winner who never reaches a runoff,2,contested (multi-race),5,"STAR, STAR_PR",BV
 xbqq8t,BV2164 — Coombs deletes the Condorcet winner first — STAR and Ranked Robin elect him,3,contested (multi-race),33,"Plurality, RankedRobin, STAR",BV
+xpr4wk,BV2289 — Bloc STAR vs STAR-PR - a divided majority wins nothing,2,contested (multi-race),12,"STAR, STAR_PR",BV
 y2fbpc,"BV2261 — A three-way Ranked Robin tie: the random tiebreak is recorded, not lost",2,contested (multi-race),6,RankedRobin,BV
 ykjjhy,"BV2132 — Pet poll: four methods, three winners",4,contested (multi-race),22,"Approval, IRV, Plurality, STAR",BV
 ywckmg,BV2137 — Center Squeeze — the centrist Condorcet winner that Instant-Runoff eliminates,4,contested (multi-race),100,"IRV, RankedRobin, STAR, STV",BV
@@ -87,7 +93,6 @@ ywx39y,BV2225 — Preference vs Support — the center TOLERATED (wings score Bl
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 24b623,"BV2232 — FairVote-vs-STAR check: Washington 2010 burial — squeeze works on STAR, IRV resists",1,single-race,100,STAR,BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
-2cdvm6,Bloc STAR — Harborview city council: a 52% slate takes all five seats,1,single-race,108,STAR,BV
 2gvwr9,"BV2262 — Nine candidates, a nine-way dead heat: does the recorded tiebreak still pin the winner?",1,single-race,9,RankedRobin,BV
 2hqmrd,BV2230 — FairVote-vs-STAR check: French 2017 coordinated burial — Macron squeezed out,1,single-race,100,STAR,BV
 2kcwbw,BV2221 — STAR vs strategy — sincere ballots elect the Condorcet winner (Beth),1,single-race,100,STAR,BV
@@ -508,7 +513,6 @@ qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,si
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
-rq2c3g,"Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented",1,single-race,175,STAR,BV
 t488h9,"BV2269 — Three candidates, three seats — a race nobody can lose",1,single-race,7,STAR,BV
 td7jfy,"BV2238 — Does the squeeze survive noise? Two poles, one consensus middle",1,single-race,38,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
@@ -519,14 +523,10 @@ tk776t,BV2201 — The Transfer Machine — a book club buys two novels by STV,1,
 v9rhhr,"BV2247 — Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards",1,single-race,44,STAR,BV
 vb3xv2,BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score,1,single-race,3,STAR,BV
 vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
-vthdwc,"Bloc STAR — no faction has a majority, and the second-largest wins nothing",1,single-race,101,STAR,BV
 vx89hj,"BV2285 — Three candidates, three possible winners — a STAR tie no rung can break",1,single-race,3,STAR,BV
-vxwjc4,Bloc STAR — the score leader is shut out of every seat,1,single-race,5,STAR,BV
 w3vvff,BV2105-r2 — Favorite ice cream (Bloc STAR): the partial ballot re-check,1,single-race,4,STAR,BV
 w9f4vd,BV2236 — Bullet Storm — a bullet-voting electorate and the few who spread,1,single-race,33,STAR,BV
-xbk9bq,Bloc STAR — the Condorcet winner never reaches a runoff,1,single-race,5,STAR,BV
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
-xpr4wk,Bloc STAR — a divided majority wins nothing,1,single-race,12,STAR,BV
 xw23m9,BV2263 — Over 50% — every point on every ballot,1,single-race,3,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV

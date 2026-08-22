@@ -852,6 +852,60 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2286 — Ballot B: three dogs on the paper — STAR | STAR | 5 | **Labrador** | [results ↗](https://bettervoting.com/p2wggg/results) |
 | BV2286 — Ballot B: three dogs on the paper — Ranked Robin | RankedRobin | 5 | **Labrador** | [results ↗](https://bettervoting.com/p2wggg/results) |
 
+## BV2287 — Bloc STAR vs STAR-PR - the Condorcet winner who never reaches a runoff
+
+**Election** [`xbk9bq`](https://bettervoting.com/xbk9bq/results) · **2 races** · **5 ballots** · [frozen export](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_condorcet_winner_no_seat_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2287 — Fill 2 seats - Bloc STAR (majoritarian) | STAR | 4 | **Cyrus, Ada** | [results ↗](https://bettervoting.com/xbk9bq/results) |
+| BV2287 — Fill 2 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 4 | **Ada, Bex** | [results ↗](https://bettervoting.com/xbk9bq/results) |
+
+## BV2288 — Bloc STAR vs STAR-PR - the score leader shut out of every seat
+
+**Election** [`vxwjc4`](https://bettervoting.com/vxwjc4/results) · **2 races** · **5 ballots** · [frozen export](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_score_leader_shut_out_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2288 — Fill 3 seats - Bloc STAR (majoritarian) | STAR | 4 | **Dev, Bo, Cleo** | [results ↗](https://bettervoting.com/vxwjc4/results) |
+| BV2288 — Fill 3 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 4 | **Ada, Dev, Cleo** | [results ↗](https://bettervoting.com/vxwjc4/results) |
+
+## BV2289 — Bloc STAR vs STAR-PR - a divided majority wins nothing
+
+**Election** [`xpr4wk`](https://bettervoting.com/xpr4wk/results) · **2 races** · **12 ballots** · [frozen export](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_divided_majority_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2289 — Fill 2 seats - Bloc STAR (majoritarian) | STAR | 5 | **Uma, Ugo** | [results ↗](https://bettervoting.com/xpr4wk/results) |
+| BV2289 — Fill 2 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 5 | **Uma, Maya** | [results ↗](https://bettervoting.com/xpr4wk/results) |
+
+## BV2290 — Bloc STAR vs STAR-PR - Harborview city council: a 52% slate takes all five seats
+
+**Election** [`2cdvm6`](https://bettervoting.com/2cdvm6/results) · **2 races** · **108 ballots** · [frozen export](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_harborview_council_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2290 — Fill 5 seats - Bloc STAR (majoritarian) | STAR | 12 | **Ana, Beto, Cora, Dmitri, Elena** | [results ↗](https://bettervoting.com/2cdvm6/results) |
+| BV2290 — Fill 5 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 12 | **Ana, Farid, Beto, Gina, Cora** | [results ↗](https://bettervoting.com/2cdvm6/results) |
+
+## BV2291 — Bloc STAR vs STAR-PR - no faction has a majority
+
+**Election** [`vthdwc`](https://bettervoting.com/vthdwc/results) · **2 races** · **101 ballots** · [frozen export](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_no_majority_bridge_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2291 — Fill 4 seats - Bloc STAR (majoritarian) | STAR | 10 | **Jaya, Ada, Gita, Bram** | [results ↗](https://bettervoting.com/vthdwc/results) |
+| BV2291 — Fill 4 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 10 | **Jaya, Bram, Dov, Hank** | [results ↗](https://bettervoting.com/vthdwc/results) |
+
+## BV2292 — Bloc STAR vs STAR-PR - fourteen candidates, six seats
+
+**Election** [`rq2c3g`](https://bettervoting.com/rq2c3g/results) · **2 races** · **175 ballots** · [frozen export](../../02_STAR_Bloc/02_Examples/bloc_shapes/cases/bloc_widest_field_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2292 — Fill 6 seats - Bloc STAR (majoritarian) | STAR | 14 | **Lena, Alma, Mateo, Bruno, Clara, Dex** | [results ↗](https://bettervoting.com/rq2c3g/results) |
+| BV2292 — Fill 6 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 14 | **Lena, Alma, Elsie, Ivan, Bruno, Frank** | [results ↗](https://bettervoting.com/rq2c3g/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **3 seats** · **Expected winners:** Dev, Bo, Cleo
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vxwjc4) · **[results ↗](https://bettervoting.com/vxwjc4/results)** (election `vxwjc4` · test `BV2288`).
+
 ## Scenario
 
 Five voters fill three seats from four candidates. Ada has the highest score in
@@ -34,6 +36,12 @@ this candidate rated?" but "how many voters prefer this candidate to that one?"
 
 Proportional STAR (Allocated Score) elects Ada, Cleo and Dev on these same
 ballots — it seats Ada first, precisely the candidate Bloc STAR shuts out.
+
+Reproduced on BetterVoting (election vxwjc4), which counts the SAME ballots
+twice. Both races match the LH count exactly: Bloc STAR elects Dev, Bo and
+Cleo with tieBreakType 'none'; STAR-PR elects Ada, Cleo and Dev. Frozen
+export: bloc_score_leader_shut_out_bv_export.json.
+Live results: https://bettervoting.com/vxwjc4/results
 
 ## Ballots
 

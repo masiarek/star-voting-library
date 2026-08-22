@@ -65,8 +65,10 @@ On seven of the ten, yes. This table is generated from the same ballots run unde
 | Equal Support seat | Croissant, Almond, Brioche | same three | — |
 | All but one | Ana, Cleo, Bram, Dov, Esme | same five | — |
 | Harborview council | Ana, Beto, Cora, Dmitri, Elena | Ana, Beto, Cora, **Farid, Gina** | ✔ |
-| No majority | Jaya, Ada, Gita, Bram | Ada, **Dov**, Gita, Jaya | ✔ |
+| No majority † | Jaya, Ada, Gita, Bram | Ada, **Dov**, Gita, Jaya | ✔ |
 | Widest field | Lena, Alma, Mateo, Bruno, Clara, Dex | Alma, Bruno, **Elsie, Frank, Ivan**, Lena | ✔ |
+
+† **Read that one as a seat count, not a list of names.** Nine of the ten cases are tie-free under Allocated Score as well as under Bloc STAR. `bloc_no_majority_bridge` is the exception: once Jaya's quota is spent, Ada and Bram hold *exactly* the same reweighted score (2727⁄16), as do Gita and Hank (303⁄2). Every proportional method gives Blue, Green and Amber one seat each plus the independent — that is the claim the case supports — but which of two tied candidates fills a faction's seat is a coin toss, and LH and BetterVoting toss it differently.
 
 Three things in that table are worth stating plainly.
 
@@ -75,6 +77,23 @@ Three things in that table are worth stating plainly.
 **Agreement is common too, and the three no-divergence rows are there on purpose.** A folder of nothing but failures would misrepresent how often the choice of method actually changes an outcome. When one voter decides, when nearly every candidate wins, or when the same candidates lead on both breadth and depth, the methods converge — and `bloc_all_but_one` shows the structural reason: as seats approach candidates, proportionality has nothing left to reallocate.
 
 **"Proportional" names a family, not an answer.** Allocated Score, Sequentially Spent Score and Reweighted Range agree with each other on nine of the ten. They part company on [the widest field](cases/cases_pages/bloc_widest_field.md), which is the only case with enough candidates to give them room to disagree.
+
+## Six of them are live on BetterVoting — and its Bloc STAR path agrees
+
+Each of the six BV elections below counts the **same ballots twice**: one race as Bloc STAR (BV's `STAR` with more than one winner, which routes through `runBlocTabulator`) and one as `STAR_PR`. So the majoritarian/proportional divergence is not just an argument in this repo — you can click it.
+
+| Case | Live | Bloc STAR race | STAR-PR race |
+|---|---|:--:|:--:|
+| [Condorcet winner no seat](cases/cases_pages/bloc_condorcet_winner_no_seat.md) | [BV2287 ↗](https://bettervoting.com/xbk9bq/results) | ✅ matches LH | ✅ matches LH |
+| [Score leader shut out](cases/cases_pages/bloc_score_leader_shut_out.md) | [BV2288 ↗](https://bettervoting.com/vxwjc4/results) | ✅ matches LH | ✅ matches LH |
+| [Divided majority](cases/cases_pages/bloc_divided_majority.md) | [BV2289 ↗](https://bettervoting.com/xpr4wk/results) | ✅ matches LH | ✅ matches LH |
+| [Harborview council](cases/cases_pages/bloc_harborview_council.md) | [BV2290 ↗](https://bettervoting.com/2cdvm6/results) | ✅ matches LH | ✅ matches LH |
+| [No majority](cases/cases_pages/bloc_no_majority_bridge.md) | [BV2291 ↗](https://bettervoting.com/vthdwc/results) | ✅ matches LH | ⚠ tie broken differently |
+| [Widest field](cases/cases_pages/bloc_widest_field.md) | [BV2292 ↗](https://bettervoting.com/rq2c3g/results) | ✅ matches LH | ✅ matches LH |
+
+**All six Bloc STAR races match this engine exactly**, up to and including fourteen candidates over six seats and 175 ballots, every one reporting `tieBreakType: none`. Given that BV's own suite never runs STAR with more than one seat, that is worth having on record rather than assumed.
+
+The single ⚠ is not a count bug in either engine. It is the [last rung of the tie-break ladder](../../../07_Concepts/tabulation_engines/tiebreak_ladders.md) — LH's published lot against BV's seeded shuffle — landing on different candidates in the one case where Allocated Score produces an exact tie. Both engines agree on every *number* in that race; they disagree only about how to toss a coin. (BV labels every `STAR_PR` race `tieBreakType: "random"` whether or not a tie occurred — that mislabel is [bettervoting#1507](https://github.com/Equal-Vote/bettervoting/issues/1507), and it is why the label alone cannot tell you a tie happened. Here one did.)
 
 ## One case is aimed at the engine, not the reader
 

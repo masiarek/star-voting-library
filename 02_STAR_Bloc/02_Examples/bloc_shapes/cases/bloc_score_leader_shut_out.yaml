@@ -25,6 +25,12 @@ scenario_description: |-
   Proportional STAR (Allocated Score) elects Ada, Cleo and Dev on these same
   ballots — it seats Ada first, precisely the candidate Bloc STAR shuts out.
 
+  Reproduced on BetterVoting (election vxwjc4), which counts the SAME ballots
+  twice. Both races match the LH count exactly: Bloc STAR elects Dev, Bo and
+  Cleo with tieBreakType 'none'; STAR-PR elects Ada, Cleo and Dev. Frozen
+  export: bloc_score_leader_shut_out_bv_export.json.
+  Live results: https://bettervoting.com/vxwjc4/results
+
 num_winners: 3
 voting_method: Bloc STAR
 ballots: |-
@@ -34,6 +40,10 @@ ballots: |-
   5,1,1,0   # the other Ada enthusiast
   1,2,3,3
   0,1,1,2
+
+bv_test_id: BV2288
+bv_election_id: vxwjc4
+bv_results_url: https://bettervoting.com/vxwjc4/results
 
 expected_winners:
   - Dev

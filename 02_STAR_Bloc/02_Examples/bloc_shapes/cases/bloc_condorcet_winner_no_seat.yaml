@@ -29,6 +29,13 @@ scenario_description: |-
   Proportional STAR (Allocated Score) elects Ada and Bex on these same ballots —
   it seats the Condorcet winner that Bloc STAR misses.
 
+  Reproduced on BetterVoting (election xbk9bq), which counts the SAME ballots
+  twice — once as Bloc STAR, once as STAR-PR. Both races match the LH count
+  exactly: Bloc STAR elects Cyrus and Ada with tieBreakType 'none'; STAR-PR
+  elects Ada and Bex. Frozen export:
+  bloc_condorcet_winner_no_seat_bv_export.json.
+  Live results: https://bettervoting.com/xbk9bq/results
+
 num_winners: 2
 voting_method: Bloc STAR
 ballots: |-
@@ -38,6 +45,10 @@ ballots: |-
   4,1,0,3
   1,2,2,0
   4,0,4,3
+
+bv_test_id: BV2287
+bv_election_id: xbk9bq
+bv_results_url: https://bettervoting.com/xbk9bq/results
 
 expected_winners:
   - Cyrus

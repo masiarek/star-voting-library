@@ -6427,3 +6427,278 @@ ELECTIONS: list = []   # resting state — point this at a spec only for the run
 #   (Ana / Beto / Cleo) and reports tieBreakType 'none' everywhere — nothing in
 #   this election rests on a tie-break, which matters because the lesson is that
 #   the combined winner won neither district.
+
+
+# --------------------------------------------------------------------------
+# Bloc STAR shape set (BV2287-BV2292) - backs 02_STAR_Bloc/02_Examples/bloc_shapes/.
+# Each election runs the SAME ballots TWICE: once as Bloc STAR (BV method 'STAR'
+# with num_winners > 1, which routes through runBlocTabulator) and once as
+# STAR_PR / Allocated Score. That puts the majoritarian/proportional divergence
+# on BetterVoting itself rather than only in the repo. Worth doing here in
+# particular: BV's own Star.test.ts passes nWinners = 1 in all twenty tests, so
+# Bloc STAR is the one bloc path its suite never exercises (the shared loop IS
+# covered, via Approval/Plurality/RankedRobin).
+# --------------------------------------------------------------------------
+
+_BCW_CANDS = ['Ada', 'Bex', 'Cyrus', 'Dov']
+_BCW_BALLOTS = _expand([
+    (1, [4, 5, 5, 4]),
+    (1, [0, 1, 0, 0]),
+    (1, [4, 1, 0, 3]),
+    (1, [1, 2, 2, 0]),
+    (1, [4, 0, 4, 3]),
+])
+
+_BCW_SPEC = {
+    "test_id": "BV2287",
+    "title": "Bloc STAR vs STAR-PR - the Condorcet winner who never reaches a runoff",
+    "description": (
+        "Five voters fill two seats from four candidates, counted TWICE on "
+        "the identical 0-5 ballots: once as Bloc STAR (majoritarian) and once "
+        "as STAR-PR / Allocated Score (proportional). Bex beats every other "
+        "candidate head-to-head - Ada 3-2, Cyrus 2-1, Dov 3-2 - and is the "
+        "lowest scorer at 9 points. Bloc STAR sends only the top two SCORERS "
+        "to each automatic runoff, so Bex never gets into one and wins no "
+        "seat. STAR-PR seats Bex. Nothing here is settled by a tie-break. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_condorcet_winner_no_seat.html)"
+    ),
+    "races": [
+        {"title": "Fill 2 seats - Bloc STAR (majoritarian)",
+         "method": "STAR", "num_winners": 2,
+         "candidates": _BCW_CANDS, "ballots": _BCW_BALLOTS},
+        {"title": "Fill 2 seats - STAR-PR / Allocated Score (proportional)",
+         "method": "STAR_PR", "num_winners": 2,
+         "candidates": _BCW_CANDS, "ballots": _BCW_BALLOTS},
+    ],
+    "expected": (
+        "Bloc STAR -> Cyrus, Ada. STAR-PR (Allocated Score) -> Ada, Bex. Both LH- "
+        "verified; tieBreakType should be 'none' in both races. Test ID BV2287. "
+    ),
+}
+
+_BSL_CANDS = ['Ada', 'Bo', 'Cleo', 'Dev']
+_BSL_BALLOTS = _expand([
+    (1, [5, 1, 0, 2]),
+    (1, [2, 5, 3, 5]),
+    (1, [5, 1, 1, 0]),
+    (1, [1, 2, 3, 3]),
+    (1, [0, 1, 1, 2]),
+])
+
+_BSL_SPEC = {
+    "test_id": "BV2288",
+    "title": "Bloc STAR vs STAR-PR - the score leader shut out of every seat",
+    "description": (
+        "Five voters fill three seats from four candidates, counted TWICE on "
+        "the identical 0-5 ballots. Ada has the highest score in the scoring "
+        "round of ALL THREE Bloc STAR rounds - 13 points, ahead of everyone, "
+        "every time - and loses all three automatic runoffs 3-2, finishing "
+        "with no seat. Two voters score Ada 5; the other three prefer almost "
+        "anyone to Ada, and it is the same three voters in every runoff. "
+        "STAR-PR seats Ada first. This is the sharpest demonstration that "
+        "Bloc STAR is not 'elect the top N scorers'. Nothing here is settled "
+        "by a tie-break. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_score_leader_shut_out.html)"
+    ),
+    "races": [
+        {"title": "Fill 3 seats - Bloc STAR (majoritarian)",
+         "method": "STAR", "num_winners": 3,
+         "candidates": _BSL_CANDS, "ballots": _BSL_BALLOTS},
+        {"title": "Fill 3 seats - STAR-PR / Allocated Score (proportional)",
+         "method": "STAR_PR", "num_winners": 3,
+         "candidates": _BSL_CANDS, "ballots": _BSL_BALLOTS},
+    ],
+    "expected": (
+        "Bloc STAR -> Dev, Bo, Cleo (Ada shut out). STAR-PR (Allocated Score) -> Ada, "
+        "Cleo, Dev. Both LH-verified; tieBreakType should be 'none' in both races. "
+        "Test ID BV2288. "
+    ),
+}
+
+_BDM_CANDS = ['Maya', 'Miles', 'Mina', 'Uma', 'Ugo']
+_BDM_BALLOTS = _expand([
+    (1, [5, 0, 0, 1, 1]),
+    (1, [5, 0, 0, 1, 1]),
+    (1, [5, 0, 0, 1, 1]),
+    (1, [0, 5, 0, 1, 1]),
+    (1, [0, 5, 0, 1, 1]),
+    (1, [0, 0, 5, 1, 1]),
+    (1, [0, 0, 5, 1, 1]),
+    (1, [0, 0, 0, 5, 4]),
+    (1, [0, 0, 0, 5, 4]),
+    (1, [0, 0, 0, 5, 4]),
+    (1, [0, 0, 0, 5, 4]),
+    (1, [0, 0, 0, 5, 4]),
+])
+
+_BDM_SPEC = {
+    "test_id": "BV2289",
+    "title": "Bloc STAR vs STAR-PR - a divided majority wins nothing",
+    "description": (
+        "Twelve voters fill two seats from five candidates, counted TWICE on "
+        "the identical 0-5 ballots. Seven voters (58%) favour the "
+        "Maya/Miles/Mina group but split three ways over it and score each "
+        "other's favourites 0, so none of the three ever nears the top of the "
+        "scoring round. The united five-voter minority (42%) takes BOTH "
+        "seats. These ballots are sincere, not strategic: these voters "
+        "genuinely rate only their own candidate highly. STAR-PR gives each "
+        "side one seat. Nothing here is settled by a tie-break. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_divided_majority.html)"
+    ),
+    "races": [
+        {"title": "Fill 2 seats - Bloc STAR (majoritarian)",
+         "method": "STAR", "num_winners": 2,
+         "candidates": _BDM_CANDS, "ballots": _BDM_BALLOTS},
+        {"title": "Fill 2 seats - STAR-PR / Allocated Score (proportional)",
+         "method": "STAR_PR", "num_winners": 2,
+         "candidates": _BDM_CANDS, "ballots": _BDM_BALLOTS},
+    ],
+    "expected": (
+        "Bloc STAR -> Uma, Ugo (the 58% elects nobody). STAR-PR (Allocated Score) -> "
+        "Maya, Uma. Both LH-verified; tieBreakType should be 'none' in both races. "
+        "Test ID BV2289. "
+    ),
+}
+
+_BHC_CANDS = ['Ana', 'Beto', 'Cora', 'Dmitri', 'Elena', 'Farid', 'Gina', 'Hugo', 'Iris', 'Jonas', 'Kira', 'Luis']
+_BHC_BALLOTS = _expand([
+    (44, [5, 5, 4, 4, 4, 0, 0, 0, 0, 1, 1, 1]),
+    (12, [5, 4, 4, 3, 2, 1, 1, 1, 1, 2, 2, 2]),
+    (30, [0, 0, 0, 0, 0, 5, 5, 4, 4, 1, 1, 1]),
+    (8, [1, 1, 1, 1, 1, 5, 4, 4, 3, 2, 2, 2]),
+    (14, [2, 2, 2, 2, 2, 2, 2, 2, 2, 5, 5, 4]),
+])
+
+_BHC_SPEC = {
+    "test_id": "BV2290",
+    "title": "Bloc STAR vs STAR-PR - Harborview city council: a 52% slate takes all five seats",
+    "description": (
+        "One hundred and eight voters fill five at-large council seats from "
+        "twelve candidates, counted TWICE on the identical 0-5 ballots. The "
+        "Harbor slate is backed by 56 of 108 voters (52%) and wins EVERY seat "
+        "under Bloc STAR; the Ridge slate, backed by 38 voters (35%), elects "
+        "nobody. Only the fifth round is a contest between the slates - "
+        "rounds 1-4 are Harbor-versus-Harbor, with 96 of the 108 voters "
+        "scoring both finalists identically and expressing no preference. "
+        "This is the majority sweep at municipal scale, and the mechanism at "
+        "issue in Voting Rights Act litigation over at-large seats. STAR-PR "
+        "splits the council 3-2. Nothing here is settled by a tie-break. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_harborview_council.html)"
+    ),
+    "races": [
+        {"title": "Fill 5 seats - Bloc STAR (majoritarian)",
+         "method": "STAR", "num_winners": 5,
+         "candidates": _BHC_CANDS, "ballots": _BHC_BALLOTS},
+        {"title": "Fill 5 seats - STAR-PR / Allocated Score (proportional)",
+         "method": "STAR_PR", "num_winners": 5,
+         "candidates": _BHC_CANDS, "ballots": _BHC_BALLOTS},
+    ],
+    "expected": (
+        "Bloc STAR -> Ana, Beto, Cora, Dmitri, Elena (Harbor sweeps 5/5). STAR-PR "
+        "(Allocated Score) -> Ana, Beto, Cora, Farid, Gina (Harbor 3, Ridge 2). Both "
+        "LH-verified; tieBreakType should be 'none' in both races. Test ID BV2290. "
+    ),
+}
+
+_BNM_CANDS = ['Ada', 'Bram', 'Ceci', 'Dov', 'Esme', 'Finn', 'Gita', 'Hank', 'Ines', 'Jaya']
+_BNM_BALLOTS = _expand([
+    (32, [5, 5, 4, 0, 0, 0, 1, 1, 1, 3]),
+    (8, [5, 4, 4, 1, 1, 1, 0, 0, 0, 4]),
+    (28, [0, 0, 0, 5, 5, 4, 1, 1, 1, 3]),
+    (7, [1, 1, 1, 5, 4, 4, 0, 0, 0, 4]),
+    (20, [1, 1, 1, 0, 0, 0, 5, 5, 4, 3]),
+    (6, [0, 0, 0, 1, 1, 1, 5, 4, 4, 4]),
+])
+
+_BNM_SPEC = {
+    "test_id": "BV2291",
+    "title": "Bloc STAR vs STAR-PR - no faction has a majority",
+    "description": (
+        "One hundred and one voters fill four seats from ten candidates, "
+        "counted TWICE on the identical 0-5 ballots. No faction has a "
+        "majority: Blue 40%, Green 35%, Amber 26%. Jaya runs as an "
+        "independent, is nobody's first choice, and is scored 3 or 4 by "
+        "everyone - and wins the first seat outright on breadth rather than "
+        "depth, which is the thing a 0-5 ballot can see and a choose-one "
+        "ballot cannot. But the SECOND-LARGEST faction, Green at 35%, elects "
+        "nobody under Bloc STAR, while Amber at 26% wins a seat: bloc seat "
+        "allocation does not track faction size. STAR-PR gives each faction "
+        "one seat plus the independent. Nothing here is settled by a tie- "
+        "break. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_no_majority_bridge.html)"
+    ),
+    "races": [
+        {"title": "Fill 4 seats - Bloc STAR (majoritarian)",
+         "method": "STAR", "num_winners": 4,
+         "candidates": _BNM_CANDS, "ballots": _BNM_BALLOTS},
+        {"title": "Fill 4 seats - STAR-PR / Allocated Score (proportional)",
+         "method": "STAR_PR", "num_winners": 4,
+         "candidates": _BNM_CANDS, "ballots": _BNM_BALLOTS},
+    ],
+    "expected": (
+        "Bloc STAR -> Jaya, Ada, Gita, Bram (Green shut out). STAR-PR (Allocated "
+        "Score) -> Ada, Dov, Gita, Jaya (one per faction + the independent). Both LH- "
+        "verified; tieBreakType should be 'none' in both races. Test ID BV2291. "
+    ),
+}
+
+_BWF_CANDS = ['Alma', 'Bruno', 'Clara', 'Dex', 'Elsie', 'Frank', 'Greta', 'Hugo', 'Ivan', 'June', 'Karl', 'Lena', 'Mateo', 'Nora']
+_BWF_BALLOTS = _expand([
+    (52, [5, 5, 4, 4, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1]),
+    (14, [5, 4, 4, 3, 1, 1, 1, 1, 1, 1, 1, 3, 2, 2]),
+    (40, [0, 0, 0, 0, 5, 5, 4, 4, 1, 1, 1, 2, 2, 1]),
+    (11, [1, 1, 1, 1, 5, 4, 4, 3, 0, 0, 0, 3, 2, 2]),
+    (30, [1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 4, 2, 2, 1]),
+    (8, [0, 0, 0, 0, 0, 0, 0, 0, 5, 4, 4, 3, 2, 2]),
+    (20, [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 5, 4, 4]),
+])
+
+_BWF_SPEC = {
+    "test_id": "BV2292",
+    "title": "Bloc STAR vs STAR-PR - fourteen candidates, six seats",
+    "description": (
+        "One hundred and seventy-five voters fill six seats from fourteen "
+        "candidates, counted TWICE on the identical 0-5 ballots - the widest "
+        "field in this repo's Bloc STAR set. Coast is 38% of the electorate, "
+        "not a majority, and takes four of the six seats (67% of the council) "
+        "because it is the largest cohesive group and every seat is decided "
+        "by the same undivided electorate. Valley (29%) and Summit (22%) - "
+        "together 51% of the voters - elect nobody. Two independents who "
+        "attract broad middling scores take the other two seats. STAR-PR "
+        "seats Coast 2, Valley 2, Summit 1, independent 1. Nothing here is "
+        "settled by a tie-break. "
+        "[Full lesson & tabulation](https://masiarek.github.io/star-voting-library/02_STAR_Bloc/02_Examples/bloc_shapes/cases/cases_pages/bloc_widest_field.html)"
+    ),
+    "races": [
+        {"title": "Fill 6 seats - Bloc STAR (majoritarian)",
+         "method": "STAR", "num_winners": 6,
+         "candidates": _BWF_CANDS, "ballots": _BWF_BALLOTS},
+        {"title": "Fill 6 seats - STAR-PR / Allocated Score (proportional)",
+         "method": "STAR_PR", "num_winners": 6,
+         "candidates": _BWF_CANDS, "ballots": _BWF_BALLOTS},
+    ],
+    "expected": (
+        "Bloc STAR -> Lena, Alma, Mateo, Bruno, Clara, Dex. STAR-PR (Allocated Score) "
+        "-> Alma, Bruno, Elsie, Frank, Ivan, Lena. Both LH-verified; tieBreakType "
+        "should be 'none' in both races. Test ID BV2292. "
+    ),
+}
+
+
+ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: [_BCW_SPEC, _BSL_SPEC, _BDM_SPEC, _BHC_SPEC, _BNM_SPEC, _BWF_SPEC]
+#   BV2287 -> xbk9bq, BV2288 -> vxwjc4, BV2289 -> xpr4wk, BV2290 -> 2cdvm6,
+#   BV2291 -> vthdwc, BV2292 -> rq2c3g. All six created as designed, 406 ballots
+#   across 12 races. The headline: BV's Bloc STAR agrees with LH on ALL SIX bloc
+#   races — up to 14 candidates over 6 seats on 175 ballots — every one reporting
+#   tieBreakType 'none'. Worth having on record, since BV's own Star.test.ts
+#   passes nWinners = 1 in all twenty of its tests, so multi-winner STAR is the
+#   one bloc path its suite never runs.
+#   STAR_PR matched on five of six. The exception is BV2291 (vthdwc), and it is
+#   NOT a count bug: once Jaya's Hare quota is spent, Ada and Bram hold exactly
+#   the same reweighted score (2727/16), as do Gita and Hank (303/2). LH's
+#   published lot breaks it to Ada/Gita, BV's seeded shuffle to Bram/Hank. Both
+#   engines agree on every number in that race. (BV labels every STAR_PR race
+#   tieBreakType 'random' whether or not a tie occurred — bettervoting#1507 —
+#   so the label alone never tells you; here the tie is real.)
+#   Backs 02_STAR_Bloc/02_Examples/bloc_shapes/README.md.

@@ -40,6 +40,13 @@ scenario_description: |-
   these SAME ballots — Harbor 3, Ridge 2, which is close to the 52/35 split of
   the electorate. That contrast is the lesson; see the folder README.
 
+  Reproduced on BetterVoting (election 2cdvm6), which counts the SAME 108
+  ballots twice. Both races match the LH count exactly: Bloc STAR elects Ana,
+  Beto, Cora, Dmitri and Elena with tieBreakType 'none'; STAR-PR elects Ana,
+  Beto, Cora, Farid and Gina. Frozen export:
+  bloc_harborview_council_bv_export.json.
+  Live results: https://bettervoting.com/2cdvm6/results
+
 num_winners: 5
 voting_method: Bloc STAR
 ballots: |-
@@ -49,6 +56,10 @@ ballots: |-
   30:0,0,0,0,0,5,5,4,4,1,1,1   # Ridge loyalists
   8:1,1,1,1,1,5,4,4,3,2,2,2    # Ridge leaners
   14:2,2,2,2,2,2,2,2,2,5,5,4   # independents
+
+bv_test_id: BV2290
+bv_election_id: 2cdvm6
+bv_results_url: https://bettervoting.com/2cdvm6/results
 
 expected_winners:
   - Ana
@@ -97,6 +108,13 @@ TABULATION RESULTS
   All three proportional STAR methods elect Ana, Beto, Cora, Farid and Gina on
   these SAME ballots — Harbor 3, Ridge 2, which is close to the 52/35 split of
   the electorate. That contrast is the lesson; see the folder README.
+
+  Reproduced on BetterVoting (election 2cdvm6), which counts the SAME 108
+  ballots twice. Both races match the LH count exactly: Bloc STAR elects Ana,
+  Beto, Cora, Dmitri and Elena with tieBreakType 'none'; STAR-PR elects Ana,
+  Beto, Cora, Farid and Gina. Frozen export:
+  bloc_harborview_council_bv_export.json.
+  Live results: https://bettervoting.com/2cdvm6/results
 
 --- Preference Matrix ---
 Head-to-head / pairwise comparison

@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **5 seats** · **Expected winners:** Ana, Beto, Cora, Dmitri, Elena
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/2cdvm6) · **[results ↗](https://bettervoting.com/2cdvm6/results)** (election `2cdvm6` · test `BV2290`).
+
 ## Scenario
 
 One hundred and eight voters fill FIVE at-large council seats from TWELVE
@@ -44,6 +46,13 @@ can shut a large minority out of a legislature entirely.
 All three proportional STAR methods elect Ana, Beto, Cora, Farid and Gina on
 these SAME ballots — Harbor 3, Ridge 2, which is close to the 52/35 split of
 the electorate. That contrast is the lesson; see the folder README.
+
+Reproduced on BetterVoting (election 2cdvm6), which counts the SAME 108
+ballots twice. Both races match the LH count exactly: Bloc STAR elects Ana,
+Beto, Cora, Dmitri and Elena with tieBreakType 'none'; STAR-PR elects Ana,
+Beto, Cora, Farid and Gina. Frozen export:
+bloc_harborview_council_bv_export.json.
+Live results: https://bettervoting.com/2cdvm6/results
 
 ## Ballots
 

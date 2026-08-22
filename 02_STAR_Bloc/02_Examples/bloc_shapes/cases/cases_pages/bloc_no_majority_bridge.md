@@ -9,6 +9,8 @@ search:
 
 **Method:** [Bloc STAR (multi-winner, majoritarian)](../../../../01_Learn/README.md) · **4 seats** · **Expected winners:** Jaya, Ada, Gita, Bram
 
+**▶ Live on BetterVoting:** [vote](https://bettervoting.com/vthdwc) · **[results ↗](https://bettervoting.com/vthdwc/results)** (election `vthdwc` · test `BV2291`).
+
 ## Scenario
 
 One hundred and one voters fill FOUR seats from TEN candidates. No faction has
@@ -39,11 +41,37 @@ a seat. Bloc STAR's seat allocation does not track faction size, and here it
 is not even monotone in it: a smaller faction is represented and a larger one
 is not.
 
-Proportional STAR (Allocated Score, and both other PR methods) elects Ada, Dov,
-Gita and Jaya — one seat for each of the three factions, plus the independent.
-That is the clean statement of the difference: the same ballots, one count
-answering "who is most liked?" four times over, the other asking "who is not
-yet represented?"
+Proportional STAR gives each of the three factions one seat plus the
+independent — Allocated Score returns Ada, Dov, Gita and Jaya. That is the
+clean statement of the difference: the same ballots, one count answering "who
+is most liked?" four times over, the other asking "who is not yet
+represented?" Read that result as a seat COUNT per faction, not as a list of
+names: two of the four seats are decided by a tie-break (see below).
+
+Reproduced on BetterVoting (election vthdwc), which counts the SAME 101
+ballots twice. The BLOC STAR race — the subject of this file — matches the LH
+count exactly, with tieBreakType 'none'.
+
+The STAR-PR race does NOT, and the reason is worth writing down: that count is
+TIE-DEPENDENT. After Jaya is elected, a Hare quota of 25.25 voters is spent —
+the 21 ballots scoring Jaya 4 are consumed outright and the 80 scoring Jaya 3
+are reduced to weight 303/320 — and at that point Ada and Bram hold EXACTLY
+the same reweighted score, 2727/16. Gita and Hank are likewise tied at 303/2.
+Each faction's candidates are scored identically by every bloc but one, so
+reweighting lands them on the same number. LH breaks it to Ada and Gita; BV
+breaks it to Bram and Hank, and elects Jaya, Bram, Dov, Hank.
+
+Neither engine is wrong. This is the last rung of the ladder — LH's published
+lot against BV's seeded shuffle — and it is the one place the two are known to
+differ. (BV labels every STAR_PR race tieBreakType 'random' whether or not a
+tie occurred; that mislabel is bettervoting#1507. Here the tie is real.)
+
+So quote the seat COUNT, not the names, when using this case for the
+proportional half of the lesson: every proportional method gives Blue, Green
+and Amber one seat each plus the independent, which is the point. Which of two
+tied Blue candidates takes Blue's seat is a coin toss, and the file does not
+pretend otherwise. Frozen export: bloc_no_majority_bridge_bv_export.json.
+Live results: https://bettervoting.com/vthdwc/results
 
 ## Ballots
 
