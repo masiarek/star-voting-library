@@ -8,14 +8,14 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**614 election files** (509 single-winner, 105 multi-winner) across 18 method(s).
+**622 election files** (516 single-winner, 106 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 273 |
-| RCV-IRV (Hare) | 51 |
-| Ranked Robin (RCV-RR / Copeland) | 104 |
-| Approval | 28 |
+| STAR | 275 |
+| RCV-IRV (Hare) | 52 |
+| Ranked Robin (RCV-RR / Copeland) | 105 |
+| Approval | 29 |
 | STV (proportional RCV) | 11 |
 | Bloc STAR | 2 |
 | STAR-PR (Sequential Selection) | 8 |
@@ -23,15 +23,15 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | Allocated Score (STAR-PR) | 28 |
 | 3-2-1 | 1 |
 | APPROVAL_MULTI_WINNER | 11 |
-| BLOC STAR | 30 |
+| BLOC STAR | 31 |
 | CAV | 1 |
 | IRV | 19 |
-| PLURALITY | 33 |
+| PLURALITY | 35 |
 | RANGE | 4 |
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (273)
+## STAR  (275)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -276,6 +276,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2157_mmcmpy_condorcet_cycle_rps`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2157_mmcmpy_condorcet_cycle_rps.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | A Condorcet cycle — rock, paper, scissors: no pairwise winner exists (BV2157) → _Rock_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2157_mmcmpy_condorcet_cycle_rps.yaml) |
 | [`bv2174_yyhr66_noshow_baseline`](../../method_comparisons/participation_no_show/cases/cases_pages/bv2174_yyhr66_noshow_baseline.md) | `method_comparisons/participation_no_show/cases/` | 1 | No-show paradox (1 of 2) — 8 April fans stay home; RCV-IRV elects Bruno → _Bruno_ | [`.yaml`](../../method_comparisons/participation_no_show/cases/bv2174_yyhr66_noshow_baseline.yaml) |
 | [`bv2175_9dhv8y_noshow_showup`](../../method_comparisons/participation_no_show/cases/cases_pages/bv2175_9dhv8y_noshow_showup.md) | `method_comparisons/participation_no_show/cases/` | 1 | No-show paradox (2 of 2) — the 8 April fans vote; RCV-IRV hands them their LAST choice → _April_ | [`.yaml`](../../method_comparisons/participation_no_show/cases/bv2175_9dhv8y_noshow_showup.yaml) |
+| [`bv2286_p2wggg_a2_one_dog_star`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_a2_one_dog_star.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot A (one dog on the paper): STAR agrees, Dog again → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_a2_one_dog_star.yaml) |
+| [`bv2286_p2wggg_b4_three_dogs_star`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_b4_three_dogs_star.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot B (three dogs on the paper): STAR elects the Labrador → _Labrador_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b4_three_dogs_star.yaml) |
 | [`bv2132_ykjjhy_pet_star`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_star.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (STAR): the consensus center Cat wins → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_star.yaml) |
 | [`bv2133_dyxrbr_pet2_star`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_star.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (STAR): the consensus Cat wins → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_star.yaml) |
 | [`bv2176_p8dp28_star`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_star.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it RCV example (20 voters) — STAR: Blue wins the runoff RCV-IRV never held → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_star.yaml) |
@@ -309,7 +311,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`wcl_c3_b5_star`](../../method_comparisons/weak_condorcet_loser/cases/cases_pages/wcl_c3_b5_star.md) | `method_comparisons/weak_condorcet_loser/cases/` | 1 | Weak Condorcet loser — STAR elects a candidate who beats nobody → _Ben_ | [`.yaml`](../../method_comparisons/weak_condorcet_loser/cases/wcl_c3_b5_star.yaml) |
 | [`zero_support_star`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_star.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (STAR) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_star.yaml) |
 
-## RCV-IRV (Hare)  (51)
+## RCV-IRV (Hare)  (52)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -353,6 +355,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2158_gr72hd_ossipoff_centrist_irv`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2158_gr72hd_ossipoff_centrist_irv.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | IRV buries the centrist — Ossipoff's 303-voter one-dimensional example (BV2158) | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2158_gr72hd_ossipoff_centrist_irv.yaml) |
 | [`bv2159_f4cjpy_brams_irv_pathologies`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2159_f4cjpy_brams_irv_pathologies.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | Many IRV pathologies in one election — Brams' 21-voter sampler (BV2159) | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2159_f4cjpy_brams_irv_pathologies.yaml) |
 | [`bv2183_dfw8rj_forced_exhaustion_ceiling`](../../method_comparisons/paradoxes_and_whoops/cases/cases_pages/bv2183_dfw8rj_forced_exhaustion_ceiling.md) | `method_comparisons/paradoxes_and_whoops/cases/` | 1 | BV2183 — Forced Exhaustion Ceiling (RCV-IRV, 2-rank cap) → _Ada_ | [`.yaml`](../../method_comparisons/paradoxes_and_whoops/cases/bv2183_dfw8rj_forced_exhaustion_ceiling.yaml) |
+| [`bv2286_p2wggg_b2_three_dogs_irv`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_b2_three_dogs_irv.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot B (three dogs on the paper): RCV-IRV elects the Golden Retriever → _Golden Retriever_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b2_three_dogs_irv.yaml) |
 | [`bv2132_ykjjhy_pet_irv`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_irv.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (RCV-IRV): center squeeze elects Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_irv.yaml) |
 | [`bv2133_dyxrbr_pet2_irv`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_irv.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (RCV-IRV): transfers elect Fish → _Fish_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_irv.yaml) |
 | [`bv2281_qycpbx_ossipoff_irv`](../../method_comparisons/rangevoting_irv_examples/cases/cases_pages/bv2281_qycpbx_ossipoff_irv.md) | `method_comparisons/rangevoting_irv_examples/cases/` | 1 | Ossipoff's 303 — the first-round LEADER is eliminated → _D_ | [`.yaml`](../../method_comparisons/rangevoting_irv_examples/cases/bv2281_qycpbx_ossipoff_irv.yaml) |
@@ -365,7 +368,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`irv_district_A`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_A.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district A (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_A.yaml) |
 | [`irv_district_B`](../../method_comparisons/summability_demo/cases/cases_pages/irv_district_B.md) | `method_comparisons/summability_demo/cases/` | 1 | Summability demo — RCV-IRV district B (B wins) → _B_ | [`.yaml`](../../method_comparisons/summability_demo/cases/irv_district_B.yaml) |
 
-## Ranked Robin (RCV-RR / Copeland)  (104)
+## Ranked Robin (RCV-RR / Copeland)  (105)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -449,6 +452,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`tilted_cycle_c3_b5_rr`](../../method_comparisons/minimal_tilted_cycle/cases/cases_pages/tilted_cycle_c3_b5_rr.md) | `method_comparisons/minimal_tilted_cycle/cases/` | 1 | Minimal tilted cycle — 5 voters, margins 3–1–1 (Ranked Robin) → _Ada_ | [`.yaml`](../../method_comparisons/minimal_tilted_cycle/cases/tilted_cycle_c3_b5_rr.yaml) |
 | [`minneapolis_2017_ranked_robin`](../../method_comparisons/minneapolis_2017/cases/cases_pages/minneapolis_2017_ranked_robin.md) | `method_comparisons/minneapolis_2017/cases/` | 1 | Minneapolis 2017 Mayor — the head-to-head check: right winner, wrong runner-up → _Jacob Frey_ | [`.yaml`](../../method_comparisons/minneapolis_2017/cases/minneapolis_2017_ranked_robin.yaml) |
 | [`bv2138_cxrf8v_ranked_robin`](../../method_comparisons/no_condorcet_bv2138/cases/cases_pages/bv2138_cxrf8v_ranked_robin.md) | `method_comparisons/no_condorcet_bv2138/cases/` | 1 | No Condorcet Winner — Ranked Robin (Copeland): a two-way tie, settled head-to-head → _Brad_ | [`.yaml`](../../method_comparisons/no_condorcet_bv2138/cases/bv2138_cxrf8v_ranked_robin.yaml) |
+| [`bv2286_p2wggg_b5_three_dogs_ranked_robin`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_b5_three_dogs_ranked_robin.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot B (three dogs on the paper): Ranked Robin confirms the Labrador → _Labrador_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b5_three_dogs_ranked_robin.yaml) |
 | [`pets_gov_ranked_robin`](../../method_comparisons/pets_governance/cases/cases_pages/pets_gov_ranked_robin.md) | `method_comparisons/pets_governance/cases/` | 1 | Pets Governance — Mayor by Ranked Robin (1 seat): the Condorcet winner → _Dog_ | [`.yaml`](../../method_comparisons/pets_governance/cases/pets_gov_ranked_robin.yaml) |
 | [`bv2176_p8dp28_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2176_p8dp28_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it RCV example (20 voters) — Ranked Robin: a cycle, a 2-1 tie, settled head-to-head → _Green_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2176_p8dp28_ranked_robin.yaml) |
 | [`bv2178_8kg698_ranked_robin`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_ranked_robin.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — Ranked Robin: Blue, now the outright Condorcet winner → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_ranked_robin.yaml) |
@@ -474,7 +478,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`zero_support_ranked_robin`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_ranked_robin.md) | `method_comparisons/zero_support_election/cases/` | 1 | Zero support — nobody scored anybody (RankedRobin) → _Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_ranked_robin.yaml) |
 | [`bv2210_fvg8y8_bloc_rr_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_rr_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc Ranked Robin: ranked ballots sweep too → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_rr_sweep.yaml) |
 
-## Approval  (28)
+## Approval  (29)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -501,6 +505,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2275_6mcgkq_approval_intense`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/bv2275_6mcgkq_approval_intense.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are intense → _Berry_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_approval_intense.yaml) |
 | [`bv2275_6mcgkq_approval_lukewarm`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/cases_pages/bv2275_6mcgkq_approval_lukewarm.md) | `method_comparisons/kim_ordinal_vs_cardinal/cases/` | 1 | Kim (A,B)-scoring, A=0/B=1 — Approval, when second choices are lukewarm → _Almond_ | [`.yaml`](../../method_comparisons/kim_ordinal_vs_cardinal/cases/bv2275_6mcgkq_approval_lukewarm.yaml) |
 | [`bv2279_qywq7d_approval`](../../method_comparisons/majoritarian_vs_utilitarian/cases/cases_pages/bv2279_qywq7d_approval.md) | `method_comparisons/majoritarian_vs_utilitarian/cases/` | 1 | Three brothers, one fruit — Approval lands on the utilitarian winner → _Orange_ | [`.yaml`](../../method_comparisons/majoritarian_vs_utilitarian/cases/bv2279_qywq7d_approval.yaml) |
+| [`bv2286_p2wggg_b3_three_dogs_approval`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_b3_three_dogs_approval.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot B (three dogs on the paper): Approval elects the Golden Retriever → _Golden Retriever_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b3_three_dogs_approval.yaml) |
 | [`bv2132_ykjjhy_pet_approval`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_approval.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Approval): broad support elects Cat → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_approval.yaml) |
 | [`bv2133_dyxrbr_pet2_approval`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_approval.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Approval): broad support elects Bird → _Bird_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_approval.yaml) |
 | [`bv2177_v8r66y_approval`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_approval.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Approval: Pink, if approving means any support → _Pink_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_approval.yaml) |
@@ -609,7 +614,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`coop_board_approval`](../../method_comparisons/proportional_ballots/cases/cases_pages/coop_board_approval.md) | `method_comparisons/proportional_ballots/cases/` | 3 | Co-op board — Yes/No approval ballot (same nine voters) → _Chris, Dana, Ella_ | [`.yaml`](../../method_comparisons/proportional_ballots/cases/coop_board_approval.yaml) |
 | [`approval_bloc_4seats_c7_b12_lackner_skowron`](../../04_Approval/02_Examples/multiwinner/cases/cases_pages/approval_bloc_4seats_c7_b12_lackner_skowron.md) | `04_Approval/02_Examples/multiwinner/cases/` | 4 | Bloc Approval — Lackner & Skowron's running example (k=4) → _A, B, C, D_ | [`.yaml`](../../04_Approval/02_Examples/multiwinner/cases/approval_bloc_4seats_c7_b12_lackner_skowron.yaml) |
 
-## BLOC STAR  (30)
+## BLOC STAR  (31)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -633,6 +638,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2265_th3pbp_joiner_council_worse`](../../02_STAR_Bloc/03_Criteria/participation/cases/cases_pages/bv2265_th3pbp_joiner_council_worse.md) | `02_STAR_Bloc/03_Criteria/participation/cases/` | 2 | BV2265 — Participation (2 of 2): one more honest voter, and the council gets worse for them → _Ada, Dov_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/participation/cases/bv2265_th3pbp_joiner_council_worse.yaml) |
 | [`bv2266_k7pfqt_condorcet_winner_seated_second`](../../02_STAR_Bloc/03_Criteria/seat_order/cases/cases_pages/bv2266_k7pfqt_condorcet_winner_seated_second.md) | `02_STAR_Bloc/03_Criteria/seat_order/cases/` | 2 | BV2266 — Seat order: the candidate who beats every rival is seated second → _Dev, Anika_ | [`.yaml`](../../02_STAR_Bloc/03_Criteria/seat_order/cases/bv2266_k7pfqt_condorcet_winner_seated_second.yaml) |
 | [`bv2210_fvg8y8_bloc_star_sweep`](../../method_comparisons/food_truck_row/cases/cases_pages/bv2210_fvg8y8_bloc_star_sweep.md) | `method_comparisons/food_truck_row/cases/` | 2 | Food-Truck Row — Bloc STAR: the same majority sweeps both seats → _Arepa, Bao_ | [`.yaml`](../../method_comparisons/food_truck_row/cases/bv2210_fvg8y8_bloc_star_sweep.yaml) |
+| [`one_point_bloc_star`](../../method_comparisons/zero_support_election/cases/cases_pages/one_point_bloc_star.md) | `method_comparisons/zero_support_election/cases/` | 2 | One point — a single mark fills one seat and the lot fills the other (Bloc STAR) → _Ben, Ada_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/one_point_bloc_star.yaml) |
 | [`zero_support_bloc_star`](../../method_comparisons/zero_support_election/cases/cases_pages/zero_support_bloc_star.md) | `method_comparisons/zero_support_election/cases/` | 2 | Zero support — nobody scored anybody (Bloc STAR) → _Ada, Ben_ | [`.yaml`](../../method_comparisons/zero_support_election/cases/zero_support_bloc_star.yaml) |
 | [`bv130_bloc_pagination_731`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130_bloc_pagination_731.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV130 — 6 candidates / 3 winners, Bloc STAR (original; star-server#731) → _Someone I Like, Santa Claus, The Lesser Evil_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv130_bloc_pagination_731.yaml) |
 | [`bv130r2_dead_rung_bloc`](../../02_STAR_Bloc/02_Examples/cases/cases_pages/bv130r2_dead_rung_bloc.md) | `02_STAR_Bloc/02_Examples/cases/` | 3 | BV130-r2 — 6 candidates / 3 winners, Bloc STAR (dead-rung lot tie; 9ff9jk) → _Dan, Ada, Eve_ | [`.yaml`](../../02_STAR_Bloc/02_Examples/cases/bv130r2_dead_rung_bloc.yaml) |
@@ -674,7 +680,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2178_8kg698_irv`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2178_8kg698_irv.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it switch, made real — RCV-IRV: Green eliminated, Blue 10, Purple 9 → _Blue_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2178_8kg698_irv.yaml) |
 | [`bv2170_pp2q4q_irv`](../../method_comparisons/symmetric_centrist_bv2170/cases/cases_pages/bv2170_pp2q4q_irv.md) | `method_comparisons/symmetric_centrist_bv2170/cases/` | 1 | Symmetric centrist (47/47/3/3) — RCV-IRV: the centrist is squeezed, the poles deadlock → _Avery_ | [`.yaml`](../../method_comparisons/symmetric_centrist_bv2170/cases/bv2170_pp2q4q_irv.yaml) |
 
-## PLURALITY  (33)
+## PLURALITY  (35)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -692,6 +698,8 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`bv2167_f3dxq9_plurality`](../../method_comparisons/felsenthal_paradoxes/cases/cases_pages/bv2167_f3dxq9_plurality.md) | `method_comparisons/felsenthal_paradoxes/cases/` | 1 | Minimax Ex.29 — Choose-One: agrees with Minimax, elects the absolute loser D → _D_ | [`.yaml`](../../method_comparisons/felsenthal_paradoxes/cases/bv2167_f3dxq9_plurality.yaml) |
 | [`bv2277_tqfdbg_mayor_plurality`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2277_tqfdbg_mayor_plurality.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | BV2277 — The mayor's race (Choose-One): Ada wins on 33% → _Ada_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2277_tqfdbg_mayor_plurality.yaml) |
 | [`bv2278_8cdkkc_five_way_plurality`](../../method_comparisons/kissel_single_elimination_rcv/cases/cases_pages/bv2278_8cdkkc_five_way_plurality.md) | `method_comparisons/kissel_single_elimination_rcv/cases/` | 1 | BV2278 — Kissel's five-way example (Choose-One): A wins on 30.6% → _A_ | [`.yaml`](../../method_comparisons/kissel_single_elimination_rcv/cases/bv2278_8cdkkc_five_way_plurality.yaml) |
+| [`bv2286_p2wggg_a1_one_dog_plurality`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_a1_one_dog_plurality.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot A (one dog on the paper): Choose-One elects Dog outright → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_a1_one_dog_plurality.yaml) |
+| [`bv2286_p2wggg_b1_three_dogs_plurality`](../../method_comparisons/pet_poll_breed_split/cases/cases_pages/bv2286_p2wggg_b1_three_dogs_plurality.md) | `method_comparisons/pet_poll_breed_split/cases/` | 1 | BV2286 — Ballot B (three dogs on the paper): Choose-One elects the CAT on 33% → _Cat_ | [`.yaml`](../../method_comparisons/pet_poll_breed_split/cases/bv2286_p2wggg_b1_three_dogs_plurality.yaml) |
 | [`bv2132_ykjjhy_pet_plurality`](../../method_comparisons/pet_poll_four_methods/cases/cases_pages/bv2132_ykjjhy_pet_plurality.md) | `method_comparisons/pet_poll_four_methods/cases/` | 1 | BV2132 — Pet poll (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_methods/cases/bv2132_ykjjhy_pet_plurality.yaml) |
 | [`bv2133_dyxrbr_pet2_plurality`](../../method_comparisons/pet_poll_four_winners/cases/cases_pages/bv2133_dyxrbr_pet2_plurality.md) | `method_comparisons/pet_poll_four_winners/cases/` | 1 | BV2133 — Pet poll II (Plurality): the front-runner Dog wins → _Dog_ | [`.yaml`](../../method_comparisons/pet_poll_four_winners/cases/bv2133_dyxrbr_pet2_plurality.yaml) |
 | [`bv2177_v8r66y_plurality`](../../method_comparisons/postit_rcv_example/cases/cases_pages/bv2177_v8r66y_plurality.md) | `method_comparisons/postit_rcv_example/cases/` | 1 | The Post-it election, seven ways — Choose-One: Purple on 7 first choices → _Purple_ | [`.yaml`](../../method_comparisons/postit_rcv_example/cases/bv2177_v8r66y_plurality.yaml) |
