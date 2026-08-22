@@ -906,6 +906,39 @@ Every race row carries a **results ↗** link to the live tabulation. BetterVoti
 | BV2292 — Fill 6 seats - Bloc STAR (majoritarian) | STAR | 14 | **Lena, Alma, Mateo, Bruno, Clara, Dex** | [results ↗](https://bettervoting.com/rq2c3g/results) |
 | BV2292 — Fill 6 seats - STAR-PR / Allocated Score (proportional) | STAR_PR | 14 | **Lena, Alma, Elsie, Ivan, Bruno, Frank** | [results ↗](https://bettervoting.com/rq2c3g/results) |
 
+## BV2293 — Seven apples and a banana — watch a spoiler appear one candidate at a time
+
+**Election** [`vq78wk`](https://bettervoting.com/vq78wk/results) · **7 races** · **9 ballots** · [frozen export](../../method_comparisons/split_voting/_main/bv2293_vq78wk_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2293 — Rung 1 — two names on the paper (Choose-One) | Plurality | 2 | **Gala** | [results ↗](https://bettervoting.com/vq78wk/results) |
+| BV2293 — Rung 2 — six names: the vote splits and costs nothing (Choose-One) | Plurality | 6 | **Gala** | [results ↗](https://bettervoting.com/vq78wk/results) |
+| BV2293 — Rung 3 — eight names: the banana wins on 22% (Choose-One) | Plurality | 8 | **Banana** | [results ↗](https://bettervoting.com/vq78wk/results) |
+| BV2293 — Rung 4 — the same nine voters, scoring 0-5 (STAR) | STAR | 8 | **Gala** | [results ↗](https://bettervoting.com/vq78wk/results) |
+| BV2293 — Rung 4 — the same nine voters, approving (Approval) | Approval | 8 | **Gala** | [results ↗](https://bettervoting.com/vq78wk/results) |
+| BV2293 — Rung 4 — the same nine voters, ranked (RCV-IRV) | IRV | 8 | **Gala** | [results ↗](https://bettervoting.com/vq78wk/results) |
+| BV2293 — Rung 4 — the same nine voters, head-to-head (Ranked Robin) | RankedRobin | 8 | **Gala** | [results ↗](https://bettervoting.com/vq78wk/results) |
+
+## BV2295 — Fizzy or sweet? Two groupings the same size, only one of them a real clone set
+
+**Election** [`8xrpyp`](https://bettervoting.com/8xrpyp/results) · **2 races** · **7 ballots** · [frozen export](../../method_comparisons/split_voting/_main/bv2295_8xrpyp_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2295 — One mark each (Choose-One) | Plurality | 7 | **Diet Cola** | [results ↗](https://bettervoting.com/8xrpyp/results) |
+| BV2295 — The same seven voters, scoring 0-5 (STAR) | STAR | 7 | **Cola** | [results ↗](https://bettervoting.com/8xrpyp/results) |
+
+## BV2296 — The smallest spoiler — seven friends, three flavours, one minority winner
+
+**Election** [`9cff2d`](https://bettervoting.com/9cff2d/results) · **3 races** · **7 ballots** · [frozen export](../../method_comparisons/split_voting/_main/bv2296_9cff2d_bv_export.json)
+
+| Race | Method | Candidates | Winner | Live |
+|------|--------|:----------:|--------|:----:|
+| BV2296 — One mark each (Choose-One) | Plurality | 3 | **Vanilla** | [results ↗](https://bettervoting.com/9cff2d/results) |
+| BV2296 — The same seven friends, scoring 0-5 (STAR) | STAR | 3 | **Milk Chocolate** | [results ↗](https://bettervoting.com/9cff2d/results) |
+| BV2296 — The same seven friends, head-to-head (Ranked Robin) | RankedRobin | 3 | **Milk Chocolate** | [results ↗](https://bettervoting.com/9cff2d/results) |
+
 ## BV655 - “equal opposition” vote - the “Same-Score Ballots” 
 
 **Election** [`jfrk9t`](https://bettervoting.com/jfrk9t/results) · **2 races** · **2 ballots** · [frozen export](../../01_STAR/04_Real_Elections/abstain_bugs/cases/bv655_jfrk9t_equal_opposition_bv_export.json)

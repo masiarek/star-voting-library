@@ -45,7 +45,7 @@ Each level is its **own page** so it can stand alone; this page is just the hub.
 *Presenting or teaching STAR? [Teaching STAR Voting](../01_STAR/01_Learn/hands_on/teaching_star_voting.md) turns this pacing into a full guide — the arc, the terms to cover, which example to use when, and the misconceptions to head off.*
 
 - **Public talk (15–20 min):** [101](curriculum/CURRICULUM_101.md) only (the problem → the two rounds → the compromise → the payoff). Skip theory.
-- **Workshop (60–90 min):** all of [101](curriculum/CURRICULUM_101.md) + [201.1–201.4](curriculum/CURRICULUM_201.md), hands-on with the files.
+- **Workshop (60–90 min):** all of [101](curriculum/CURRICULUM_101.md) + [201.1–201.4 + 201.7](curriculum/CURRICULUM_201.md), hands-on with the files (201.7 — diagnosing a spoiler — is the natural workshop rung).
 - **Officials / administrators:** 101.0, then [201.1](curriculum/CURRICULUM_201.md) (summability / audit) + the scorecard.
 - **Academic / skeptic / RCV advocate:** 101 fast, then [301](curriculum/CURRICULUM_301.md) with the precise caveats.
 

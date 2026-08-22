@@ -1,0 +1,1027 @@
+{
+  "Election": {
+    "election_id": "9cff2d",
+    "title": "BV2296 — The smallest spoiler — seven friends, three flavours, one minority winner",
+    "description": "The smallest election in which two similar candidates can cost their own side the win, and the 101 rung of this repo's vote-splitting lesson. Seven friends pick ONE tub of ice cream. Four want chocolate, three want vanilla — and the chocolate four are divided over WHICH chocolate. RACE 1, Choose-One: Vanilla 3, Milk Chocolate 2, Dark Chocolate 2. Vanilla wins with 3 of 7 (43%) and all four chocolate lovers had it dead last. RACE 2 hands the identical seven friends a 0-5 ballot. Nothing about their opinions changes; the ballot simply records what one mark could not — that a chocolate lover likes BOTH chocolates. Scores: Milk Chocolate 20, Dark Chocolate 18, Vanilla 15. Watch where Vanilla lands: the Choose-One winner finishes LAST of three and is shut out of the runoff entirely, because the two chocolates take both finalist slots. The Automatic Runoff is Milk Chocolate 4, Dark Chocolate 2, with one voter at Equal Support. Read that 4 carefully — it is NOT the chocolate four reunited. Those four split 2-2 between the chocolates, exactly as they should, because they genuinely disagree about chocolate; the margin comes from two vanilla voters leaning mildly toward milk. The score ballot did not end their disagreement, it stopped their disagreement costing them the election. RACE 3 counts the same seven ballots head-to-head: Milk Chocolate beats Dark 5-2 and Vanilla 4-3, so it is the Condorcet winner — and either chocolate beats Vanilla 4-3, which is the majority Choose-One threw away. Why seven voters is the floor for this shape: the rival needs more marks than either similar candidate alone and fewer than both together, and 2 + 2 against 3 is the cheapest arithmetic that does it — fewer and the race either ties or the chocolate side stops being a majority. [Full lesson & tabulation](https://masiarek.github.io/star-voting-library/method_comparisons/split_voting/index.html)",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2296 — One mark each (Choose-One)",
+        "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+        "num_winners": 1,
+        "voting_method": "Plurality",
+        "candidates": [
+          {
+            "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+            "candidate_name": "Milk Chocolate"
+          },
+          {
+            "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+            "candidate_name": "Dark Chocolate"
+          },
+          {
+            "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+            "candidate_name": "Vanilla"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      },
+      {
+        "title": "BV2296 — The same seven friends, scoring 0-5 (STAR)",
+        "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+            "candidate_name": "Milk Chocolate"
+          },
+          {
+            "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+            "candidate_name": "Dark Chocolate"
+          },
+          {
+            "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+            "candidate_name": "Vanilla"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      },
+      {
+        "title": "BV2296 — The same seven friends, head-to-head (Ranked Robin)",
+        "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+        "num_winners": 1,
+        "voting_method": "RankedRobin",
+        "candidates": [
+          {
+            "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+            "candidate_name": "Milk Chocolate"
+          },
+          {
+            "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+            "candidate_name": "Dark Chocolate"
+          },
+          {
+            "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+            "candidate_name": "Vanilla"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false,
+        "max_rankings": 3
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-08-22T03:29:41.990Z",
+    "update_date": "1787369381990",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-w67j3xfm",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 1
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 0
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 5
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 4
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 1
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 2
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-ypmmfw26",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 0
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 1
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 3
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 5
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 2
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 1
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-r6pb43kr",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 0
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 0
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 2
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 1
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 2
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 3
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-pd8mw2gt",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 0
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 0
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 0
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 0
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 2
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 3
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-cdwyrpcd",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 0
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 1
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 4
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 5
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 2
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 1
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-y6j297ry",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 0
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 0
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 1
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 0
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 5
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 2
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 3
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-rwpyw949",
+      "election_id": "9cff2d",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "00a72232-16b1-4d7d-a200-513d4d8f87f2",
+          "scores": [
+            {
+              "candidate_id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+              "score": 1
+            },
+            {
+              "candidate_id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+              "score": 0
+            },
+            {
+              "candidate_id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "d53458fa-0864-4f80-8a5b-936c433953c1",
+          "scores": [
+            {
+              "candidate_id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "score": 5
+            },
+            {
+              "candidate_id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "score": 3
+            },
+            {
+              "candidate_id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "80192d31-9dc0-4e8d-970e-845d5ccbf141",
+          "scores": [
+            {
+              "candidate_id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "score": 1
+            },
+            {
+              "candidate_id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+              "score": 2
+            },
+            {
+              "candidate_id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "Plurality",
+      "elected": [
+        {
+          "id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+          "name": "Vanilla",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": 0,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": 3,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 3
+          },
+          "winsAgainst": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": true,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": true
+          },
+          "score": 3
+        }
+      ],
+      "tied": [
+        {
+          "id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+          "name": "Vanilla",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": 0,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": 3,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 3
+          },
+          "winsAgainst": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": true,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": true
+          },
+          "score": 3
+        }
+      ],
+      "other": [
+        {
+          "id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+          "name": "Dark Chocolate",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": 2,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": 0,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 2
+          },
+          "winsAgainst": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": false,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": false
+          },
+          "score": 2
+        },
+        {
+          "id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+          "name": "Milk Chocolate",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": 2,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": 2,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 0
+          },
+          "winsAgainst": {
+            "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+            "34cbd765-3aab-44de-ae96-8d877a6e62ce": false,
+            "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": false
+          },
+          "score": 2
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "name": "Vanilla",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "6d0caf80-3e08-4041-90bc-120163f4805f": 0,
+                "34cbd765-3aab-44de-ae96-8d877a6e62ce": 3,
+                "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 3
+              },
+              "winsAgainst": {
+                "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+                "34cbd765-3aab-44de-ae96-8d877a6e62ce": true,
+                "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": true
+              },
+              "score": 3
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Vanilla has the most votes and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+              "name": "Vanilla",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "6d0caf80-3e08-4041-90bc-120163f4805f": 0,
+                "34cbd765-3aab-44de-ae96-8d877a6e62ce": 3,
+                "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 3
+              },
+              "winsAgainst": {
+                "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+                "34cbd765-3aab-44de-ae96-8d877a6e62ce": true,
+                "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": true
+              },
+              "score": 3
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "6d0caf80-3e08-4041-90bc-120163f4805f",
+            "name": "Vanilla",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "6d0caf80-3e08-4041-90bc-120163f4805f": 0,
+              "34cbd765-3aab-44de-ae96-8d877a6e62ce": 3,
+              "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 3
+            },
+            "winsAgainst": {
+              "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+              "34cbd765-3aab-44de-ae96-8d877a6e62ce": true,
+              "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": true
+            },
+            "score": 3
+          },
+          {
+            "id": "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+            "name": "Dark Chocolate",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "6d0caf80-3e08-4041-90bc-120163f4805f": 2,
+              "34cbd765-3aab-44de-ae96-8d877a6e62ce": 0,
+              "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 2
+            },
+            "winsAgainst": {
+              "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+              "34cbd765-3aab-44de-ae96-8d877a6e62ce": false,
+              "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": false
+            },
+            "score": 2
+          },
+          {
+            "id": "d1ee27ff-9470-48ec-8a01-3e8d5a34a056",
+            "name": "Milk Chocolate",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "6d0caf80-3e08-4041-90bc-120163f4805f": 2,
+              "34cbd765-3aab-44de-ae96-8d877a6e62ce": 2,
+              "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": 0
+            },
+            "winsAgainst": {
+              "6d0caf80-3e08-4041-90bc-120163f4805f": false,
+              "34cbd765-3aab-44de-ae96-8d877a6e62ce": false,
+              "d1ee27ff-9470-48ec-8a01-3e8d5a34a056": false
+            },
+            "score": 2
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nOvervotes": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "6d0caf80-3e08-4041-90bc-120163f4805f",
+        "34cbd765-3aab-44de-ae96-8d877a6e62ce",
+        "d1ee27ff-9470-48ec-8a01-3e8d5a34a056"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+          "name": "Milk Chocolate",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 0,
+            "829166ec-0490-4294-8550-7bbcea4dd49a": 4,
+            "327523c9-3779-4963-a18f-ff00901a4f12": 4
+          },
+          "winsAgainst": {
+            "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+            "829166ec-0490-4294-8550-7bbcea4dd49a": true,
+            "327523c9-3779-4963-a18f-ff00901a4f12": true
+          },
+          "score": 20,
+          "fiveStarCount": 2
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "327523c9-3779-4963-a18f-ff00901a4f12",
+          "name": "Dark Chocolate",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 2,
+            "829166ec-0490-4294-8550-7bbcea4dd49a": 4,
+            "327523c9-3779-4963-a18f-ff00901a4f12": 0
+          },
+          "winsAgainst": {
+            "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+            "829166ec-0490-4294-8550-7bbcea4dd49a": true,
+            "327523c9-3779-4963-a18f-ff00901a4f12": false
+          },
+          "score": 18,
+          "fiveStarCount": 2
+        },
+        {
+          "id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+          "name": "Vanilla",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 3,
+            "829166ec-0490-4294-8550-7bbcea4dd49a": 0,
+            "327523c9-3779-4963-a18f-ff00901a4f12": 3
+          },
+          "winsAgainst": {
+            "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+            "829166ec-0490-4294-8550-7bbcea4dd49a": false,
+            "327523c9-3779-4963-a18f-ff00901a4f12": false
+          },
+          "score": 15,
+          "fiveStarCount": 3
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+              "name": "Milk Chocolate",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 0,
+                "829166ec-0490-4294-8550-7bbcea4dd49a": 4,
+                "327523c9-3779-4963-a18f-ff00901a4f12": 4
+              },
+              "winsAgainst": {
+                "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+                "829166ec-0490-4294-8550-7bbcea4dd49a": true,
+                "327523c9-3779-4963-a18f-ff00901a4f12": true
+              },
+              "score": 20,
+              "fiveStarCount": 2
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "327523c9-3779-4963-a18f-ff00901a4f12",
+              "name": "Dark Chocolate",
+              "tieBreakOrder": 2,
+              "votesPreferredOver": {
+                "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 2,
+                "829166ec-0490-4294-8550-7bbcea4dd49a": 4,
+                "327523c9-3779-4963-a18f-ff00901a4f12": 0
+              },
+              "winsAgainst": {
+                "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+                "829166ec-0490-4294-8550-7bbcea4dd49a": true,
+                "327523c9-3779-4963-a18f-ff00901a4f12": false
+              },
+              "score": 18,
+              "fiveStarCount": 2
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_basic",
+              "names": [
+                "Milk Chocolate",
+                "Dark Chocolate"
+              ],
+              "stars": [
+                "20",
+                "18"
+              ]
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Milk Chocolate",
+              "runner_up": "Dark Chocolate",
+              "winner_votes": 4,
+              "runner_up_votes": 2,
+              "equal_votes": 1
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+            "name": "Milk Chocolate",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 0,
+              "829166ec-0490-4294-8550-7bbcea4dd49a": 4,
+              "327523c9-3779-4963-a18f-ff00901a4f12": 4
+            },
+            "winsAgainst": {
+              "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+              "829166ec-0490-4294-8550-7bbcea4dd49a": true,
+              "327523c9-3779-4963-a18f-ff00901a4f12": true
+            },
+            "score": 20,
+            "fiveStarCount": 2
+          },
+          {
+            "id": "327523c9-3779-4963-a18f-ff00901a4f12",
+            "name": "Dark Chocolate",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 2,
+              "829166ec-0490-4294-8550-7bbcea4dd49a": 4,
+              "327523c9-3779-4963-a18f-ff00901a4f12": 0
+            },
+            "winsAgainst": {
+              "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+              "829166ec-0490-4294-8550-7bbcea4dd49a": true,
+              "327523c9-3779-4963-a18f-ff00901a4f12": false
+            },
+            "score": 18,
+            "fiveStarCount": 2
+          },
+          {
+            "id": "829166ec-0490-4294-8550-7bbcea4dd49a",
+            "name": "Vanilla",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "d87d5cfd-8308-4ffc-bf5e-41b82539265b": 3,
+              "829166ec-0490-4294-8550-7bbcea4dd49a": 0,
+              "327523c9-3779-4963-a18f-ff00901a4f12": 3
+            },
+            "winsAgainst": {
+              "d87d5cfd-8308-4ffc-bf5e-41b82539265b": false,
+              "829166ec-0490-4294-8550-7bbcea4dd49a": false,
+              "327523c9-3779-4963-a18f-ff00901a4f12": false
+            },
+            "score": 15,
+            "fiveStarCount": 3
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "d87d5cfd-8308-4ffc-bf5e-41b82539265b",
+        "829166ec-0490-4294-8550-7bbcea4dd49a",
+        "327523c9-3779-4963-a18f-ff00901a4f12"
+      ]
+    },
+    {
+      "votingMethod": "RankedRobin",
+      "elected": [
+        {
+          "id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+          "name": "Milk Chocolate",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "720628e0-41b6-4f0e-b19b-95b3f3958194": 0,
+            "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 4,
+            "cc1d6d9b-bd73-41eb-8189-52337f84555e": 5
+          },
+          "winsAgainst": {
+            "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+            "1d1c003f-fa40-4c9b-a8b7-04255eea8138": true,
+            "cc1d6d9b-bd73-41eb-8189-52337f84555e": true
+          },
+          "copelandScore": 2
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+          "name": "Dark Chocolate",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "720628e0-41b6-4f0e-b19b-95b3f3958194": 2,
+            "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 4,
+            "cc1d6d9b-bd73-41eb-8189-52337f84555e": 0
+          },
+          "winsAgainst": {
+            "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+            "1d1c003f-fa40-4c9b-a8b7-04255eea8138": true,
+            "cc1d6d9b-bd73-41eb-8189-52337f84555e": false
+          },
+          "copelandScore": 1
+        },
+        {
+          "id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+          "name": "Vanilla",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "720628e0-41b6-4f0e-b19b-95b3f3958194": 3,
+            "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 0,
+            "cc1d6d9b-bd73-41eb-8189-52337f84555e": 3
+          },
+          "winsAgainst": {
+            "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+            "1d1c003f-fa40-4c9b-a8b7-04255eea8138": false,
+            "cc1d6d9b-bd73-41eb-8189-52337f84555e": false
+          },
+          "copelandScore": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+              "name": "Milk Chocolate",
+              "tieBreakOrder": 0,
+              "votesPreferredOver": {
+                "720628e0-41b6-4f0e-b19b-95b3f3958194": 0,
+                "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 4,
+                "cc1d6d9b-bd73-41eb-8189-52337f84555e": 5
+              },
+              "winsAgainst": {
+                "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+                "1d1c003f-fa40-4c9b-a8b7-04255eea8138": true,
+                "cc1d6d9b-bd73-41eb-8189-52337f84555e": true
+              },
+              "copelandScore": 2
+            }
+          ],
+          "runner_up": [],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            "Milk Chocolate wins round with highest number of wins."
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "720628e0-41b6-4f0e-b19b-95b3f3958194",
+            "name": "Milk Chocolate",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "720628e0-41b6-4f0e-b19b-95b3f3958194": 0,
+              "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 4,
+              "cc1d6d9b-bd73-41eb-8189-52337f84555e": 5
+            },
+            "winsAgainst": {
+              "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+              "1d1c003f-fa40-4c9b-a8b7-04255eea8138": true,
+              "cc1d6d9b-bd73-41eb-8189-52337f84555e": true
+            },
+            "copelandScore": 2
+          },
+          {
+            "id": "cc1d6d9b-bd73-41eb-8189-52337f84555e",
+            "name": "Dark Chocolate",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "720628e0-41b6-4f0e-b19b-95b3f3958194": 2,
+              "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 4,
+              "cc1d6d9b-bd73-41eb-8189-52337f84555e": 0
+            },
+            "winsAgainst": {
+              "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+              "1d1c003f-fa40-4c9b-a8b7-04255eea8138": true,
+              "cc1d6d9b-bd73-41eb-8189-52337f84555e": false
+            },
+            "copelandScore": 1
+          },
+          {
+            "id": "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+            "name": "Vanilla",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "720628e0-41b6-4f0e-b19b-95b3f3958194": 3,
+              "1d1c003f-fa40-4c9b-a8b7-04255eea8138": 0,
+              "cc1d6d9b-bd73-41eb-8189-52337f84555e": 3
+            },
+            "winsAgainst": {
+              "720628e0-41b6-4f0e-b19b-95b3f3958194": false,
+              "1d1c003f-fa40-4c9b-a8b7-04255eea8138": false,
+              "cc1d6d9b-bd73-41eb-8189-52337f84555e": false
+            },
+            "copelandScore": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "720628e0-41b6-4f0e-b19b-95b3f3958194",
+        "1d1c003f-fa40-4c9b-a8b7-04255eea8138",
+        "cc1d6d9b-bd73-41eb-8189-52337f84555e"
+      ]
+    }
+  ]
+}

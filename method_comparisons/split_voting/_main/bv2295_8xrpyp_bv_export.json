@@ -1,0 +1,1529 @@
+{
+  "Election": {
+    "election_id": "8xrpyp",
+    "title": "BV2295 — Fizzy or sweet? Two groupings the same size, only one of them a real clone set",
+    "description": "The 301 rung of this repo's vote-splitting lesson: you cannot read a spoiler off a candidate list. Seven people, seven drinks, and two obvious ways to group them. FIZZY: Cola, Root Beer, Diet Cola, Sparkling Water. SUGAR: Cola, Root Beer, Lemonade, Sweet Tea. Count first choices and the two groupings are EXACTLY the same size — fizzy holds 4 of 7, sugar holds 4 of 7. Both are majorities, both spread across four candidates, and from the outside they look like the same situation. They are not. Choose-One elects DIET COLA on 2 of 7 (29%). The sugar majority really did split and really did lose. The fizzy majority never split at all, because it was never a bloc: a Diet Cola drinker does not want a Cola and scores it a 1. 'Fizzy' describes the drinks; it says nothing about who backs them. Under STAR the two sweet drinks take both runoff slots, Cola beats Lemonade 4-3, and Diet Cola — the Choose-One winner — finishes fourth of seven in the scoring round. Two candidates are clones when the SAME VOTERS score them alike, which only the ballots can tell you. A category is not a clone set. [Full lesson & tabulation](https://masiarek.github.io/star-voting-library/method_comparisons/split_voting/index.html)",
+    "frontend_url": "",
+    "start_time": null,
+    "end_time": null,
+    "owner_id": "ea09e7c7-b00d-427a-bef8-32ade437d49d",
+    "audit_ids": null,
+    "admin_ids": null,
+    "credential_ids": null,
+    "state": "open",
+    "races": [
+      {
+        "title": "BV2295 — One mark each (Choose-One)",
+        "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+        "num_winners": 1,
+        "voting_method": "Plurality",
+        "candidates": [
+          {
+            "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+            "candidate_name": "Cola"
+          },
+          {
+            "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+            "candidate_name": "Root Beer"
+          },
+          {
+            "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+            "candidate_name": "Lemonade"
+          },
+          {
+            "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+            "candidate_name": "Sweet Tea"
+          },
+          {
+            "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+            "candidate_name": "Diet Cola"
+          },
+          {
+            "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+            "candidate_name": "Sparkling Water"
+          },
+          {
+            "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+            "candidate_name": "Unsweet Tea"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      },
+      {
+        "title": "BV2295 — The same seven voters, scoring 0-5 (STAR)",
+        "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+        "num_winners": 1,
+        "voting_method": "STAR",
+        "candidates": [
+          {
+            "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+            "candidate_name": "Cola"
+          },
+          {
+            "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+            "candidate_name": "Root Beer"
+          },
+          {
+            "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+            "candidate_name": "Lemonade"
+          },
+          {
+            "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+            "candidate_name": "Sweet Tea"
+          },
+          {
+            "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+            "candidate_name": "Diet Cola"
+          },
+          {
+            "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+            "candidate_name": "Sparkling Water"
+          },
+          {
+            "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+            "candidate_name": "Unsweet Tea"
+          }
+        ],
+        "description": "",
+        "enable_write_in": false
+      }
+    ],
+    "settings": {
+      "voter_access": "open",
+      "voter_authentication": {
+        "ip_address": false,
+        "voter_id": false,
+        "email": false
+      },
+      "ballot_updates": false,
+      "public_results": true,
+      "time_zone": "America/Los_Angeles",
+      "random_candidate_order": false,
+      "require_instruction_confirmation": true
+    },
+    "claim_key_hash": null,
+    "is_public": null,
+    "create_date": "2026-08-22T03:09:14.356Z",
+    "update_date": "1787368154356",
+    "head": true,
+    "ballot_source": "live_election",
+    "public_archive_id": null
+  },
+  "Ballots": [
+    {
+      "ballot_id": "b-v47jqbgx",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 0
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 0
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 0
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 1
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 0
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 0
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 1
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 1
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 3
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-tjhx6d7k",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 0
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 0
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 0
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 1
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 1
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 0
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 0
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 0
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 5
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 3
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-m2g6p3cy",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 1
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 0
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 0
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 4
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 5
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 3
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 3
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 1
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-r3xqwbw9",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 0
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 0
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 1
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 3
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 2
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 4
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 5
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 0
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-xqcbrmff",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 1
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 0
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 0
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 0
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 5
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 4
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 4
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 3
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 1
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 0
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-9687tvjj",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 0
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 1
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 0
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 0
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 3
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 2
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 5
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 4
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 0
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 1
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ballot_id": "b-ddfjfqyk",
+      "election_id": "8xrpyp",
+      "precinct": null,
+      "votes": [
+        {
+          "race_id": "f8effd73-8868-491e-a229-e031f9110555",
+          "scores": [
+            {
+              "candidate_id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+              "score": 0
+            },
+            {
+              "candidate_id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+              "score": 0
+            },
+            {
+              "candidate_id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+              "score": 0
+            },
+            {
+              "candidate_id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+              "score": 0
+            },
+            {
+              "candidate_id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "score": 1
+            },
+            {
+              "candidate_id": "5f17316d-a812-4b13-b547-e702134f1b15",
+              "score": 0
+            },
+            {
+              "candidate_id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "race_id": "800d2ec7-8bda-4640-b9b8-59a0a46661f2",
+          "scores": [
+            {
+              "candidate_id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "score": 1
+            },
+            {
+              "candidate_id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+              "score": 1
+            },
+            {
+              "candidate_id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "score": 0
+            },
+            {
+              "candidate_id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+              "score": 0
+            },
+            {
+              "candidate_id": "95200560-8940-482f-ab21-78bee807e333",
+              "score": 5
+            },
+            {
+              "candidate_id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+              "score": 4
+            },
+            {
+              "candidate_id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+              "score": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "votingMethod": "Plurality",
+      "elected": [
+        {
+          "id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+          "name": "Diet Cola",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 2,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 2,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 2,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 2,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 2,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 2
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": true,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": true,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": true,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": true,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": true
+          },
+          "score": 2
+        }
+      ],
+      "tied": [
+        {
+          "id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+          "name": "Diet Cola",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 2,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 2,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 2,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 2,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 2,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 2
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": true,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": true,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": true,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": true,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": true
+          },
+          "score": 2
+        }
+      ],
+      "other": [
+        {
+          "id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+          "name": "Lemonade",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 0,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+          },
+          "score": 1
+        },
+        {
+          "id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+          "name": "Unsweet Tea",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 0,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+          },
+          "score": 1
+        },
+        {
+          "id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+          "name": "Sweet Tea",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 0,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+          },
+          "score": 1
+        },
+        {
+          "id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+          "name": "Root Beer",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 0,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+          },
+          "score": 1
+        },
+        {
+          "id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+          "name": "Cola",
+          "tieBreakOrder": 6,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 0
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+            "5f17316d-a812-4b13-b547-e702134f1b15": true,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+          },
+          "score": 1
+        },
+        {
+          "id": "5f17316d-a812-4b13-b547-e702134f1b15",
+          "name": "Sparkling Water",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": 0,
+            "5f17316d-a812-4b13-b547-e702134f1b15": 0,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": 0,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 0,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 0,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 0
+          },
+          "winsAgainst": {
+            "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+            "5f17316d-a812-4b13-b547-e702134f1b15": false,
+            "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+            "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+            "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+            "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+            "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+          },
+          "score": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "name": "Diet Cola",
+              "tieBreakOrder": 5,
+              "votesPreferredOver": {
+                "16360cac-c797-4c29-98d5-d1f532fce9bf": 2,
+                "5f17316d-a812-4b13-b547-e702134f1b15": 2,
+                "437097de-c99a-4b0a-bf2e-71a1b7e38236": 2,
+                "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 2,
+                "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 2,
+                "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+                "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 2
+              },
+              "winsAgainst": {
+                "16360cac-c797-4c29-98d5-d1f532fce9bf": true,
+                "5f17316d-a812-4b13-b547-e702134f1b15": true,
+                "437097de-c99a-4b0a-bf2e-71a1b7e38236": true,
+                "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": true,
+                "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": true,
+                "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+                "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": true
+              },
+              "score": 2
+            }
+          ],
+          "runner_up": [],
+          "logs": [
+            "Diet Cola has the most votes and wins the round"
+          ],
+          "tieBreakType": "none",
+          "tied": [
+            {
+              "id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+              "name": "Diet Cola",
+              "tieBreakOrder": 5,
+              "votesPreferredOver": {
+                "16360cac-c797-4c29-98d5-d1f532fce9bf": 2,
+                "5f17316d-a812-4b13-b547-e702134f1b15": 2,
+                "437097de-c99a-4b0a-bf2e-71a1b7e38236": 2,
+                "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 2,
+                "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 2,
+                "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+                "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 2
+              },
+              "winsAgainst": {
+                "16360cac-c797-4c29-98d5-d1f532fce9bf": true,
+                "5f17316d-a812-4b13-b547-e702134f1b15": true,
+                "437097de-c99a-4b0a-bf2e-71a1b7e38236": true,
+                "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": true,
+                "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": true,
+                "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+                "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": true
+              },
+              "score": 2
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+            "name": "Diet Cola",
+            "tieBreakOrder": 5,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 2,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 2,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 2,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 2,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 2,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 2
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": true,
+              "5f17316d-a812-4b13-b547-e702134f1b15": true,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": true,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": true,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": true,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": true
+            },
+            "score": 2
+          },
+          {
+            "id": "16360cac-c797-4c29-98d5-d1f532fce9bf",
+            "name": "Lemonade",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 0,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+              "5f17316d-a812-4b13-b547-e702134f1b15": true,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+            },
+            "score": 1
+          },
+          {
+            "id": "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+            "name": "Unsweet Tea",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 0,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+              "5f17316d-a812-4b13-b547-e702134f1b15": true,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+            },
+            "score": 1
+          },
+          {
+            "id": "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+            "name": "Sweet Tea",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 0,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+              "5f17316d-a812-4b13-b547-e702134f1b15": true,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+            },
+            "score": 1
+          },
+          {
+            "id": "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+            "name": "Root Beer",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 0,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 1
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+              "5f17316d-a812-4b13-b547-e702134f1b15": true,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+            },
+            "score": 1
+          },
+          {
+            "id": "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f",
+            "name": "Cola",
+            "tieBreakOrder": 6,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 1,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 1,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 1,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 1,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 1,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 1,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 0
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+              "5f17316d-a812-4b13-b547-e702134f1b15": true,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+            },
+            "score": 1
+          },
+          {
+            "id": "5f17316d-a812-4b13-b547-e702134f1b15",
+            "name": "Sparkling Water",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": 0,
+              "5f17316d-a812-4b13-b547-e702134f1b15": 0,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": 0,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": 0,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": 0,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": 0,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": 0
+            },
+            "winsAgainst": {
+              "16360cac-c797-4c29-98d5-d1f532fce9bf": false,
+              "5f17316d-a812-4b13-b547-e702134f1b15": false,
+              "437097de-c99a-4b0a-bf2e-71a1b7e38236": false,
+              "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e": false,
+              "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1": false,
+              "c5306900-fa0c-4e33-8f68-6937b15ba0d7": false,
+              "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f": false
+            },
+            "score": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nOvervotes": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "16360cac-c797-4c29-98d5-d1f532fce9bf",
+        "5f17316d-a812-4b13-b547-e702134f1b15",
+        "437097de-c99a-4b0a-bf2e-71a1b7e38236",
+        "b8c4d7a7-7bc1-426c-b8a2-eebdec53523e",
+        "ef79ff4d-fb90-48e7-8f00-ddb3b0e461b1",
+        "c5306900-fa0c-4e33-8f68-6937b15ba0d7",
+        "8d5a5f9b-ef4c-4361-ab95-6197eaf6b05f"
+      ]
+    },
+    {
+      "votingMethod": "STAR",
+      "elected": [
+        {
+          "id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+          "name": "Cola",
+          "tieBreakOrder": 1,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 0,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 4,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+            "95200560-8940-482f-ab21-78bee807e333": 4,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 4,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 4
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": true,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+            "95200560-8940-482f-ab21-78bee807e333": true,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": true,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": true
+          },
+          "score": 17,
+          "fiveStarCount": 1
+        }
+      ],
+      "tied": [],
+      "other": [
+        {
+          "id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+          "name": "Lemonade",
+          "tieBreakOrder": 5,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 2,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+            "95200560-8940-482f-ab21-78bee807e333": 4,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 0,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": true,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+            "95200560-8940-482f-ab21-78bee807e333": true,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": true
+          },
+          "score": 17,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+          "name": "Sweet Tea",
+          "tieBreakOrder": 2,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 0,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+            "95200560-8940-482f-ab21-78bee807e333": 4,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 1,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+            "95200560-8940-482f-ab21-78bee807e333": true,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+          },
+          "score": 16,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "95200560-8940-482f-ab21-78bee807e333",
+          "name": "Diet Cola",
+          "tieBreakOrder": 4,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+            "95200560-8940-482f-ab21-78bee807e333": 0,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 3,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+            "95200560-8940-482f-ab21-78bee807e333": false,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+          },
+          "score": 15,
+          "fiveStarCount": 2
+        },
+        {
+          "id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+          "name": "Root Beer",
+          "tieBreakOrder": 6,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 1,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+            "95200560-8940-482f-ab21-78bee807e333": 4,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 2,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 0
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+            "95200560-8940-482f-ab21-78bee807e333": true,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+          },
+          "score": 14,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+          "name": "Unsweet Tea",
+          "tieBreakOrder": 3,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 3,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 0,
+            "95200560-8940-482f-ab21-78bee807e333": 2,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 3,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": false,
+            "95200560-8940-482f-ab21-78bee807e333": false,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+          },
+          "score": 13,
+          "fiveStarCount": 1
+        },
+        {
+          "id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+          "name": "Sparkling Water",
+          "tieBreakOrder": 0,
+          "votesPreferredOver": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": 0,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 2,
+            "95200560-8940-482f-ab21-78bee807e333": 2,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 3,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+          },
+          "winsAgainst": {
+            "4db7fb69-ea52-437b-967f-a441126c66a3": false,
+            "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+            "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+            "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": false,
+            "95200560-8940-482f-ab21-78bee807e333": false,
+            "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+            "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+          },
+          "score": 12,
+          "fiveStarCount": 0
+        }
+      ],
+      "roundResults": [
+        {
+          "winners": [
+            {
+              "id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+              "name": "Cola",
+              "tieBreakOrder": 1,
+              "votesPreferredOver": {
+                "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+                "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 0,
+                "bfda9dbc-1515-45f3-8535-27f9617aab96": 4,
+                "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+                "95200560-8940-482f-ab21-78bee807e333": 4,
+                "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 4,
+                "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 4
+              },
+              "winsAgainst": {
+                "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+                "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+                "bfda9dbc-1515-45f3-8535-27f9617aab96": true,
+                "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+                "95200560-8940-482f-ab21-78bee807e333": true,
+                "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": true,
+                "2f0e3496-bf38-4cb1-91df-2e03eb51e043": true
+              },
+              "score": 17,
+              "fiveStarCount": 1
+            }
+          ],
+          "runner_up": [
+            {
+              "id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+              "name": "Lemonade",
+              "tieBreakOrder": 5,
+              "votesPreferredOver": {
+                "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+                "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+                "bfda9dbc-1515-45f3-8535-27f9617aab96": 2,
+                "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+                "95200560-8940-482f-ab21-78bee807e333": 4,
+                "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 0,
+                "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+              },
+              "winsAgainst": {
+                "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+                "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+                "bfda9dbc-1515-45f3-8535-27f9617aab96": true,
+                "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+                "95200560-8940-482f-ab21-78bee807e333": true,
+                "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+                "2f0e3496-bf38-4cb1-91df-2e03eb51e043": true
+              },
+              "score": 17,
+              "fiveStarCount": 1
+            }
+          ],
+          "tied": [],
+          "tieBreakType": "none",
+          "logs": [
+            {
+              "key": "tabulation_logs.star.advance_to_runoff_same_score",
+              "names": [
+                "Cola",
+                "Lemonade"
+              ],
+              "star": 17
+            },
+            {
+              "key": "tabulation_logs.star.runoff_win",
+              "winner": "Cola",
+              "runner_up": "Lemonade",
+              "winner_votes": 4,
+              "runner_up_votes": 3,
+              "equal_votes": 0
+            }
+          ]
+        }
+      ],
+      "summaryData": {
+        "candidates": [
+          {
+            "id": "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+            "name": "Cola",
+            "tieBreakOrder": 1,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 0,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 4,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+              "95200560-8940-482f-ab21-78bee807e333": 4,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 4,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 4
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": true,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+              "95200560-8940-482f-ab21-78bee807e333": true,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": true,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": true
+            },
+            "score": 17,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+            "name": "Lemonade",
+            "tieBreakOrder": 5,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 2,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+              "95200560-8940-482f-ab21-78bee807e333": 4,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 0,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": true,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+              "95200560-8940-482f-ab21-78bee807e333": true,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": true
+            },
+            "score": 17,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "bfda9dbc-1515-45f3-8535-27f9617aab96",
+            "name": "Sweet Tea",
+            "tieBreakOrder": 2,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 0,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+              "95200560-8940-482f-ab21-78bee807e333": 4,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 1,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+              "95200560-8940-482f-ab21-78bee807e333": true,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+            },
+            "score": 16,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "95200560-8940-482f-ab21-78bee807e333",
+            "name": "Diet Cola",
+            "tieBreakOrder": 4,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+              "95200560-8940-482f-ab21-78bee807e333": 0,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 3,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+              "95200560-8940-482f-ab21-78bee807e333": false,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+            },
+            "score": 15,
+            "fiveStarCount": 2
+          },
+          {
+            "id": "2f0e3496-bf38-4cb1-91df-2e03eb51e043",
+            "name": "Root Beer",
+            "tieBreakOrder": 6,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 4,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 1,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 4,
+              "95200560-8940-482f-ab21-78bee807e333": 4,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 2,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 0
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": true,
+              "95200560-8940-482f-ab21-78bee807e333": true,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+            },
+            "score": 14,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+            "name": "Unsweet Tea",
+            "tieBreakOrder": 3,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 3,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 0,
+              "95200560-8940-482f-ab21-78bee807e333": 2,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 3,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": true,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": false,
+              "95200560-8940-482f-ab21-78bee807e333": false,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+            },
+            "score": 13,
+            "fiveStarCount": 1
+          },
+          {
+            "id": "4db7fb69-ea52-437b-967f-a441126c66a3",
+            "name": "Sparkling Water",
+            "tieBreakOrder": 0,
+            "votesPreferredOver": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": 0,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": 3,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": 3,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": 2,
+              "95200560-8940-482f-ab21-78bee807e333": 2,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": 3,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": 3
+            },
+            "winsAgainst": {
+              "4db7fb69-ea52-437b-967f-a441126c66a3": false,
+              "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16": false,
+              "bfda9dbc-1515-45f3-8535-27f9617aab96": false,
+              "e4b1a7ad-d915-4d47-b109-4b023bfb49e9": false,
+              "95200560-8940-482f-ab21-78bee807e333": false,
+              "1b468043-9ff7-4a2f-8e7c-6d8835b92e77": false,
+              "2f0e3496-bf38-4cb1-91df-2e03eb51e043": false
+            },
+            "score": 12,
+            "fiveStarCount": 0
+          }
+        ],
+        "nOutOfBoundsVotes": 0,
+        "nAbstentions": 0,
+        "nTallyVotes": 7
+      },
+      "tieBreakType": "none",
+      "perm": [
+        "4db7fb69-ea52-437b-967f-a441126c66a3",
+        "b8547220-c0b5-4b4f-8dd5-5ed17a17dc16",
+        "bfda9dbc-1515-45f3-8535-27f9617aab96",
+        "e4b1a7ad-d915-4d47-b109-4b023bfb49e9",
+        "95200560-8940-482f-ab21-78bee807e333",
+        "1b468043-9ff7-4a2f-8e7c-6d8835b92e77",
+        "2f0e3496-bf38-4cb1-91df-2e03eb51e043"
+      ]
+    }
+  ]
+}

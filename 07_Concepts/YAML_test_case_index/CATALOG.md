@@ -36,11 +36,11 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`89wwvr`](https://bettervoting.com/89wwvr/results) | BV2199 — Two Seats, One Neighborhood — Bloc STAR swe | 2 | contested (multi-race) | 10 | STAR, STAR_PR | BV |
 | [`8cdkkc`](https://bettervoting.com/8cdkkc/results) | BV2278 — Five-Way Race — the moderate who beats both | 4 | contested (multi-race) | 1000 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`8kg698`](https://bettervoting.com/8kg698/results) | BV2178 — The Post-it election's round-2 switch, made | 4 | contested (multi-race) | 20 | IRV, Plurality, RankedRobin, STAR | BV |
-| [`8xrpyp`](https://bettervoting.com/8xrpyp/results) | Clones are made of voters, not labels — the sugar gr | 2 | contested (multi-race) | 7 | STAR | BV |
+| [`8xrpyp`](https://bettervoting.com/8xrpyp/results) | BV2295 — Fizzy or sweet? Two groupings the same size | 2 | contested (multi-race) | 7 | STAR | BV |
 | [`923q3d`](https://bettervoting.com/923q3d/results) | BV2190 — Two Districts, One Mayor (III of III) — the | 2 | contested (multi-race) | 18 | RankedRobin, STAR | BV |
 | [`93gjx6`](https://bettervoting.com/93gjx6/results) | BV2198 — Recruit a Spoiler (2 of 2) — the clone ente | 4 | contested (multi-race) | 9 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`97hbpw`](https://bettervoting.com/97hbpw/results) | BV2151 — Felsenthal's No-Show paradox (2 of 2) — two | 3 | contested (multi-race) | 9 | IRV, RankedRobin, STAR | BV |
-| [`9cff2d`](https://bettervoting.com/9cff2d/results) | The smallest spoiler — seven friends, three flavours | 3 | contested (multi-race) | 7 | Plurality, RankedRobin, STAR | BV |
+| [`9cff2d`](https://bettervoting.com/9cff2d/results) | BV2296 — The smallest spoiler — seven friends, three | 3 | contested (multi-race) | 7 | Plurality, RankedRobin, STAR | BV |
 | [`9gdrqg`](https://bettervoting.com/9gdrqg/results) | BV2147 — Felsenthal's Reinforcement paradox (I of II | 2 | contested (multi-race) | 17 | IRV, STAR | BV |
 | [`9kffcv`](https://bettervoting.com/9kffcv/results) | BV2273 — Same ranks, different utilities — two elect | 3 | contested (multi-race) | 3 | RankedRobin, STAR | BV |
 | [`9vxcj7`](https://bettervoting.com/9vxcj7/results) | BV2165 — Coombs' No-Show electorate (1 of 2) — every | 2 | contested (multi-race) | 15 | Plurality, STAR | BV |
@@ -96,7 +96,7 @@ Each race carries derived facets so you can slice: **ballot type** (score / rank
 | [`t4by6x`](https://bettervoting.com/t4by6x/results) | BV2254 — Reinforcement paradox: two towns pick Ada,  | 2 | contested (multi-race) | 9 | RankedRobin, STAR | BV |
 | [`tqfdbg`](https://bettervoting.com/tqfdbg/results) | BV2277 — The Mayor's Race — the third-place candidat | 4 | contested (multi-race) | 100 | IRV, Plurality, RankedRobin, STAR | BV |
 | [`v8r66y`](https://bettervoting.com/v8r66y/results) | BV2177 — The Post-it election, seven ways — all four | 7 | contested (multi-race) | 20 | Approval, IRV, Plurality, RankedRobin, STAR, STAR_PR, STV | BV |
-| [`vq78wk`](https://bettervoting.com/vq78wk/results) | Rung 1 — two candidates: nothing can split | 7 | contested (multi-race) | 9 | Approval, IRV, Plurality, RankedRobin, STAR | BV |
+| [`vq78wk`](https://bettervoting.com/vq78wk/results) | BV2293 — Seven apples and a banana — watch a spoiler | 7 | contested (multi-race) | 9 | Approval, IRV, Plurality, RankedRobin, STAR | BV |
 | [`vthdwc`](https://bettervoting.com/vthdwc/results) | BV2291 — Bloc STAR vs STAR-PR - no faction has a maj | 2 | contested (multi-race) | 101 | STAR, STAR_PR | BV |
 | [`vxwjc4`](https://bettervoting.com/vxwjc4/results) | BV2288 — Bloc STAR vs STAR-PR - the score leader shu | 2 | contested (multi-race) | 5 | STAR, STAR_PR | BV |
 | [`wq6yv7`](https://bettervoting.com/wq6yv7/results) | BV2154 — Felsenthal's Approval paradox — the absolut | 3 | contested (multi-race) | 15 | Approval, IRV, RankedRobin | BV |
