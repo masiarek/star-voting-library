@@ -55,6 +55,8 @@ Rows are candidates, columns are counting rules — one electorate, read five wa
 
 **Labrador is the [Condorcet winner](../../07_Concepts/topics/condorcet/README.md)** — it beats every other candidate head-to-head, including the cat 34–26 — and STAR and Ranked Robin both find it. RCV-IRV lands on the Golden Retriever: the Labrador is eliminated in the third round with 14 first choices, one round before it would have won. Approval also elects the Golden Retriever, the dog with the broadest reach across the three breed camps.
 
+The RCV-IRV report now states that miss as a named criterion failure rather than leaving a reader to infer it: the [Smith set](../../07_Concepts/topics/smith_set.md) here is the single candidate **Labrador**, and the block closes *"RCV-IRV winner Golden Retriever is OUTSIDE the Smith set. ✗"* — RCV-IRV is not Smith-efficient, which is [the shape a center squeeze leaves behind](../../07_Concepts/topics/center_squeeze/README.md). Worth being precise about what that adds: when the Smith set has one member it *is* the Condorcet winner, so this is the same miss the paragraph above describes, stated in the general form that still works when the set is a cycle. The line was invisible until 2026-08-21 — a delimiter bug mangled the two-word breed names, so the block could not match its own winner and silently printed nothing.
+
 ### Run them yourself
 
 | # | Race | Winner | Read · run |

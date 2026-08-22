@@ -87,6 +87,7 @@ ywx39y,BV2225 — Preference vs Support — the center TOLERATED (wings score Bl
 yyhj9x,BV2196 — Later-No-Harm (2 of 2) — the generous ballots reveal Bess,2,contested (multi-race),9,"IRV, STAR",BV
 24b623,"BV2232 — FairVote-vs-STAR check: Washington 2010 burial — squeeze works on STAR, IRV resists",1,single-race,100,STAR,BV
 26khr3,NOTA test — None of the Above wins (with a null abstention),1,single-race,6,STAR,BV
+2cdvm6,Bloc STAR — Harborview city council: a 52% slate takes all five seats,1,single-race,108,STAR,BV
 2gvwr9,"BV2262 — Nine candidates, a nine-way dead heat: does the recorded tiebreak still pin the winner?",1,single-race,9,RankedRobin,BV
 2hqmrd,BV2230 — FairVote-vs-STAR check: French 2017 coordinated burial — Macron squeezed out,1,single-race,100,STAR,BV
 2kcwbw,BV2221 — STAR vs strategy — sincere ballots elect the Condorcet winner (Beth),1,single-race,100,STAR,BV
@@ -207,17 +208,11 @@ LH:batch_all_out_condorcet_c3_b3,Batch elimination empties the field — with a 
 LH:batch_all_out_cycle_c3_b3,Batch elimination empties the field — the perfect cycle,1,single-race,3,IRV,LH-only
 LH:batch_all_out_round2_c4_b6,The field empties in round two — and Pareto is what keeps Dev out of the tie,1,single-race,6,IRV,LH-only
 LH:bloc_all_but_one,"Bloc STAR — five seats, six candidates: the election that only excludes",1,single-race,7,STAR,LH-only
-LH:bloc_condorcet_winner_no_seat,Bloc STAR — the Condorcet winner never reaches a runoff,1,single-race,5,STAR,LH-only
-LH:bloc_divided_majority,Bloc STAR — a divided majority wins nothing,1,single-race,12,STAR,LH-only
 LH:bloc_equal_support_seat,Bloc STAR — a seat decided by 11 voters out of 31,1,single-race,31,STAR,LH-only
 LH:bloc_finalist_wins_nothing,Bloc STAR — making the first runoff buys you nothing,1,single-race,7,STAR,LH-only
-LH:bloc_harborview_council,Bloc STAR — Harborview city council: a 52% slate takes all five seats,1,single-race,108,STAR,LH-only
 LH:bloc_lot_path_dependence_a_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot A: Nadia first),1,single-race,5,STAR,LH-only
 LH:bloc_lot_path_dependence_b_c3_b5,Bloc STAR — a seat-1 lot decides who wins seat 2 (lot B: Omar first),1,single-race,5,STAR,LH-only
-LH:bloc_no_majority_bridge,"Bloc STAR — no faction has a majority, and the second-largest wins nothing",1,single-race,101,STAR,LH-only
 LH:bloc_one_voter_council,Bloc STAR — one voter fills a two-seat council,1,single-race,1,STAR,LH-only
-LH:bloc_score_leader_shut_out,Bloc STAR — the score leader is shut out of every seat,1,single-race,5,STAR,LH-only
-LH:bloc_widest_field,"Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented",1,single-race,175,STAR,LH-only
 LH:blocs_bloc_c9_b10,"Left, Centre, Right — Bloc STAR fills the council",1,single-race,10,bloc,LH-only
 LH:blocs_pr_c9_b10,"Left, Centre, Right — Proportional STAR fills the council",1,single-race,10,STAR_PR,LH-only
 LH:bpv_bakery_block_plurality_c4_b12,The same electorate under plurality block voting — the ranked ballot changed nothing,1,single-race,12,Plurality,LH-only
@@ -513,6 +508,7 @@ qrw6wb,"Ann, Bob, Cal - the canonical leading example (single-winner STAR)",1,si
 r2pvc9,Runoff confirms the leader (control) ,1,single-race,3,STAR,BV
 r4dqvd,BV2105 - Favorite ice cream (Bloc STAR) - without end date,1,single-race,4,STAR,BV
 rkgtpk,"Runoff_03 — the 201-level reversal in a bigger field (""two enthusiasts vs the majority"")",1,single-race,5,STAR,BV
+rq2c3g,"Bloc STAR — fourteen candidates, six seats, and half the electorate unrepresented",1,single-race,175,STAR,BV
 t488h9,"BV2269 — Three candidates, three seats — a race nobody can lose",1,single-race,7,STAR,BV
 td7jfy,"BV2238 — Does the squeeze survive noise? Two poles, one consensus middle",1,single-race,38,STAR,BV
 tf73v9,Runoff_07 (WIP) — flat ballot exposes the BV abstention bug,1,single-race,4,STAR,BV
@@ -523,10 +519,14 @@ tk776t,BV2201 — The Transfer Machine — a book club buys two novels by STV,1,
 v9rhhr,"BV2247 — Replant the Park — Bloc STAR with 7 trees, 4 seats, and wildcards",1,single-race,44,STAR,BV
 vb3xv2,BV830 — No Condorcet winner (top-two tie) — STAR breaks it by score,1,single-race,3,STAR,BV
 vqyqkr,Tennessee capital — Ranked Robin (RR/Condorcet = Nashville),1,single-race,100,RankedRobin,BV
+vthdwc,"Bloc STAR — no faction has a majority, and the second-largest wins nothing",1,single-race,101,STAR,BV
 vx89hj,"BV2285 — Three candidates, three possible winners — a STAR tie no rung can break",1,single-race,3,STAR,BV
+vxwjc4,Bloc STAR — the score leader is shut out of every seat,1,single-race,5,STAR,BV
 w3vvff,BV2105-r2 — Favorite ice cream (Bloc STAR): the partial ballot re-check,1,single-race,4,STAR,BV
 w9f4vd,BV2236 — Bullet Storm — a bullet-voting electorate and the few who spread,1,single-race,33,STAR,BV
+xbk9bq,Bloc STAR — the Condorcet winner never reaches a runoff,1,single-race,5,STAR,BV
 xgkw3w,Runoff_05 - Reversal with Equal Support,1,single-race,5,STAR,BV
+xpr4wk,Bloc STAR — a divided majority wins nothing,1,single-race,12,STAR,BV
 xw23m9,BV2263 — Over 50% — every point on every ballot,1,single-race,3,STAR,BV
 y3tvxm,BV2136 — Village Council by SNTV — a concentrated minority wins a seat,1,single-race,9,Plurality,BV
 yhxy7q,"BV130 - original steering committee (Bloc STAR, k=3; star-server#731)",1,single-race,9,STAR,BV
