@@ -24,7 +24,7 @@ A `.abif` file is a few kinds of line:
   - **`=`** — the previous candidate is ranked *equal to* the next.
   - **`,`** — the candidates are simply *listed*, no order asserted (used for pure score/approval ballots).
 
-Here is the file from the screenshot, `testfiles/test003.abif`, line by line:
+Here is a file from ABIF's own test corpus, `test003.abif`, line by line:
 
 ```abif
 # Case 3 — Scores using = and > as delimiters
@@ -49,11 +49,11 @@ Because ranks and scores are both first-class, ABIF has three registers:
 | **Rated** (strength only) | `Allie/5, Billy/5, Candace/4, Dennis/3` | [STAR](../../01_STAR/01_Learn/STAR_start_here.md) / Score / Approval ballot |
 | **Hybrid** (both at once) | `Allie/5 =Billy/5 >Candace/4` | scores **and** explicit operators — `test003` above |
 
-The first two are clean. The **hybrid** is what tripped you up, and the confusion is legitimate: it encodes the ordering **twice** — once in the numbers (`5`, `5`, `4`) and again in the operators (`=`, `>`). In `test003` the two agree by construction (every `=` sits between equal scores, every `>` between descending ones), so it's a tidy belt-and-suspenders demo. But nothing in the *syntax* forces agreement — `Allie/5 >Billy/6` is writable, and now the operator says "Allie beats Billy" while the scores say the opposite. A reader (or parser) has to know which wins. **Two sources of truth for one fact is a footgun**, and the hybrid form is where ABIF looks most like line noise for the least added information.
+The first two are clean. The **hybrid** is the one that trips people up, and the confusion is legitimate: it encodes the ordering **twice** — once in the numbers (`5`, `5`, `4`) and again in the operators (`=`, `>`). In `test003` the two agree by construction (every `=` sits between equal scores, every `>` between descending ones), so it's a tidy belt-and-suspenders demo. But nothing in the *syntax* forces agreement — `Allie/5 >Billy/6` is writable, and now the operator says "Allie beats Billy" while the scores say the opposite. A reader (or parser) has to know which wins. **Two sources of truth for one fact is a footgun**, and the hybrid form is where ABIF looks most like line noise for the least added information.
 
 ## The same election, both ways
 
-Here is `test003` exactly, rewritten in this library's YAML grid — the [format you're proposing as the house standard](score_ballot.md#writing-it-down-the-grid-and-why-not-to-read-it-by-columns):
+Here are the same three votelines in this library's [YAML grid](score_ballot.md#writing-it-down-the-grid-and-why-not-to-read-it-by-columns) — nothing dropped but the operators, which `test003` makes redundant anyway:
 
 ```yaml
 ballots: |
@@ -63,7 +63,7 @@ ballots: |
    5 × 0, 3, 2, 3, 4, 5, 3, 4
 ```
 
-Same 24 ballots, same scores, same everything — it tabulates identically. Put the two side by side and the trade is visible at a glance:
+Same 24 ballots, same scores — it tabulates identically, electing **Allie** either way. Put the two side by side and the trade is visible at a glance:
 
 - **ABIF** repeats the candidate names on every line and threads `>`/`=`/`/` through them; each line is a self-contained sentence.
 - **The grid** names the candidates **once** in a header and lets every ballot be a plain row of numbers you could type in a spreadsheet.
@@ -89,7 +89,7 @@ So the honest mapping is **ABIF votelines ↔ our `ballots:` grid**, and our ful
 
 **Where ABIF hurts**
 
-- **Punctuation density.** `/`, `>`, `=`, `:` all in one line is a steep first read — your reaction is the common one, and the hybrid form is the worst offender.
+- **Punctuation density.** `/`, `>`, `=`, `:` all in one line is a steep first read — "line noise" is the common first reaction, and the hybrid form is the worst offender.
 - **Redundancy you can contradict.** As above: scores *and* operators encode order twice, so a file can disagree with itself and a parser must define who wins.
 - **Not spreadsheet-native.** You can't open it as columns, sort it, or eyeball one candidate's column. Editing is text-surgery, not grid-editing.
 - **Names repeat on every distinct line** — more to type, more to fat-finger (weighting mitigates it, not eliminates it).
@@ -109,9 +109,9 @@ They're optimized for **different jobs**, and "which is better" is really "bette
 - **ABIF is an interchange format** — tool-to-tool, one grammar for all methods, self-describing, order-explicit. Its density is the *price of universality*, and for holding voters constant across methods it's excellent. The hybrid `/` + `>`/`=` form, though, is a genuine design smell, not just unfamiliarity — avoid authoring in it.
 - **The grid is an authoring and teaching format** — spreadsheet-native, minimal punctuation, human-first. Its positional coupling is the *price of simplicity*.
 
-So: keep the grid as this library's authoring standard, and treat ABIF the way we already treat [BetterVoting's JSON](../tabulation_engines/bettervoting_and_the_engine.md) — a format to **import from and export to**, not to hand-write lessons in. That bridge exists: [`convert_abif.py`](../../STARVote_LH_tabulation_engine/tools_adam/convert_abif.py) converts ABIF↔grid in both directions (rated *and* ranked, with the aggregated `count:` prefixes), so you can pull in the electorama test corpus and re-tabulate it with the LH engine — `test003.abif` above converts to a grid that elects **Allie**, exactly as tabulating the ABIF directly would. "Getting used to" ABIF is real and worth doing if you work across tools — but your instinct that the grid reads more easily for *teaching* is also correct. Different beast, different pasture.
+So: keep the grid as this library's authoring standard, and treat ABIF the way we already treat [BetterVoting's JSON](../tabulation_engines/bettervoting_and_the_engine.md) — a format to **import from and export to**, not to hand-write lessons in. That bridge exists: [`convert_abif.py`](../../STARVote_LH_tabulation_engine/tools_adam/convert_abif.py) converts ABIF↔grid in both directions (rated *and* ranked, with the aggregated `count:` prefixes), so you can pull in the electorama test corpus and re-tabulate it with the LH engine — `test003.abif` above converts to a grid that elects **Allie**, exactly as tabulating the ABIF directly would. "Getting used to" ABIF is real and worth doing if you work across tools — and the grid still reads more easily for *teaching*. Different beast, different pasture.
 
-> **Try it:** `python STARVote_LH_tabulation_engine/tools_adam/convert_abif.py testfiles/test003.abif --check` reads ABIF, writes the grid, and tabulates it in one step. Reverse it with `convert_abif.py your_case.yaml -o out.abif` (add `--operators` for the `A/5 > B/4` form).
+> **Try it:** save the three votelines above as `test003.abif` (it is electorama's file, not one this repo ships), then `python STARVote_LH_tabulation_engine/tools_adam/convert_abif.py test003.abif --check` reads ABIF, writes the grid, and tabulates it in one step. Reverse it with `convert_abif.py your_case.yaml -o out.abif` (add `--operators` for the `A/5 > B/4` form).
 
 ## Related
 
