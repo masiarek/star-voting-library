@@ -3255,6 +3255,82 @@ _VS_LADDER_PLAIN = {
                  "STAR, Approval, RCV-IRV, Ranked Robin all -> Gala."),
 }
 
+
+# UNBRANDED twins of BV2197 (ggg7hd) and BV2198 (93gjx6). The originals' PERMANENT
+# descriptions open with "From the exercises set of the STAR education repo
+# (github.com/masiarek/star-voting-library, 01_STAR/exercises/)" — the repo link
+# is the first sentence a reader meets, above the lesson, and the path it names
+# no longer exists (the exercise moved to 01_STAR/05_Practice/). Both are
+# unfixable. These twins carry the same ballots with self-contained descriptions.
+# Minted with BV_ALLOW_NO_TESTID=1 so no "BV#### — " rides the titles.
+_SPOIL_BASE_C = ["Alba", "Brett"]
+_SPOIL_CLONE_C = ["Alba", "Axl", "Brett"]
+_SPOIL_BASE_PLUR = _expand([(5, [1, 0]), (4, [0, 1])])
+_SPOIL_BASE_STAR = _expand([(5, [5, 0]), (4, [0, 5])])
+_SPOIL_CLONE_PLUR = _expand([(3, [1, 0, 0]), (2, [0, 1, 0]), (4, [0, 0, 1])])
+_SPOIL_CLONE_STAR = _expand([(3, [5, 4, 0]), (2, [4, 5, 0]), (4, [0, 0, 5])])
+_SPOIL_CLONE_RANK = _expand([(3, [1, 2, 3]), (2, [2, 1, 3]), (4, [0, 0, 1])])
+
+_SPOILER_PAIR_PLAIN = [
+  {
+    "title": "Recruit a spoiler (1 of 2) — the two-way race, before anything changes",
+    "description": (
+        "Nine voters, two candidates, and no controversy at all. Five back Alba, four back "
+        "Brett. Alba wins 5-4 under Choose-One, and wins under STAR as well — with only two "
+        "names on the ballot every reasonable voting method is the same method, because there "
+        "is nothing to do but count which side is bigger.\n\n"
+        "This election exists to be the BEFORE picture. Nothing is wrong with it. Hold on to "
+        "the result, then open part 2, where the same nine voters — same opinions, nobody "
+        "persuaded of anything — face one extra name on the ballot."
+    ),
+    "races": [
+        {"title": "One mark each (choose one)", "method": "Plurality", "num_winners": 1,
+         "candidates": _SPOIL_BASE_C, "ballots": _SPOIL_BASE_PLUR},
+        {"title": "The same nine voters, scoring 0-5 (STAR)", "method": "STAR", "num_winners": 1,
+         "candidates": _SPOIL_BASE_C, "ballots": _SPOIL_BASE_STAR},
+    ],
+    "enable_write_in": False,
+    "expected": "Choose-One -> Alba 5-4. STAR -> Alba. Unbranded twin of BV2197 (ggg7hd).",
+  },
+  {
+    "title": "Recruit a spoiler (2 of 2) — one more candidate, and Choose-One changes its mind",
+    "description": (
+        "The same nine voters as part 1. Same opinions. Nobody has been persuaded of anything. "
+        "One thing is different: Axl is on the ballot — a candidate so similar to Alba that "
+        "Alba's five supporters simply divide over which of the two they like marginally "
+        "better. Three still put Alba first, two now put Axl first, and every one of the five "
+        "would be perfectly happy with either. Brett's four are untouched.\n\n"
+        "Under Choose-One that is enough to hand the race to BRETT, on 4 of 9. Alba's side is "
+        "still five voters out of nine — a majority — but it now holds two names and one mark "
+        "each, so its largest pile is three. Axl cannot win; Axl's presence alone changes who "
+        "does. That is what the word 'spoiler' means, and note that nobody did anything wrong: "
+        "the two voters who switched to Axl voted for the candidate they honestly preferred.\n\n"
+        "The other three races count the identical ballots. RCV-IRV elects Alba: Axl is "
+        "eliminated and those ballots move to Alba rather than being stranded. STAR elects "
+        "Alba: scoring both clones highly costs a voter nothing. Ranked Robin elects Alba: she "
+        "beats every rival head-to-head. Three methods that read more than a first choice, "
+        "three times the same answer — the one the majority actually wanted.\n\n"
+        "The lesson is not that Choose-One counted badly. It counted perfectly. It never asked "
+        "whether an Alba voter would also be happy with Axl, and that was the only question "
+        "that mattered."
+    ),
+    "races": [
+        {"title": "One mark each (choose one)", "method": "Plurality", "num_winners": 1,
+         "candidates": _SPOIL_CLONE_C, "ballots": _SPOIL_CLONE_PLUR},
+        {"title": "The same nine voters, ranked (RCV-IRV)", "method": "IRV", "num_winners": 1,
+         "max_rankings": 3, "candidates": _SPOIL_CLONE_C, "ballots": _SPOIL_CLONE_RANK},
+        {"title": "The same nine voters, scoring 0-5 (STAR)", "method": "STAR", "num_winners": 1,
+         "candidates": _SPOIL_CLONE_C, "ballots": _SPOIL_CLONE_STAR},
+        {"title": "The same nine voters, head-to-head (Ranked Robin)", "method": "RankedRobin",
+         "num_winners": 1, "max_rankings": 3, "candidates": _SPOIL_CLONE_C,
+         "ballots": _SPOIL_CLONE_RANK},
+    ],
+    "enable_write_in": False,
+    "expected": ("Choose-One -> Brett 4 of 9. RCV-IRV, STAR and Ranked Robin all -> Alba. "
+                 "Unbranded twin of BV2198 (93gjx6)."),
+  },
+]
+
 # ── WHAT TO CREATE ─────────────────────────────────────────────────────────
 # Point ELECTIONS at the spec(s) you want to create THIS run, then run the
 # engine. Empty = create nothing (the safe resting state). You need NOT keep
@@ -6946,6 +7022,17 @@ _BWF_SPEC = {
 
 
 ELECTIONS: list = []   # resting state — point this at a spec only for the run that mints it
+# Previously: _SPOILER_PAIR_PLAIN   # (no BV numbers) -> 2vt282 (base), jbwtqy (clone added)
+#   Unbranded twins of BV2197 (ggg7hd) / BV2198 (93gjx6), minted 2026-08-22 for the
+#   Equal Vote Slack. Identical ballots, identical results: base Choose-One and STAR
+#   both -> Alba; with the clone added, Choose-One -> Brett on 4 of 9 while RCV-IRV,
+#   STAR and Ranked Robin all -> Alba. BV agrees with LH on all six races.
+#   Why twins and not the originals: the originals' PERMANENT descriptions open with
+#   "From the exercises set of the STAR education repo (github.com/masiarek/...,
+#   01_STAR/exercises/)" — a repo link in the first sentence, above the lesson, and a
+#   path that no longer exists (the exercise moved to 01_STAR/05_Practice/). Both
+#   unfixable. The title's BV#### prefix was NOT the reason; that reads as a version
+#   tag. Descriptions here are self-contained. Tracked by bvid only.   # resting state — point this at a spec only for the run that mints it
 # Previously: [_VS_LADDER_PLAIN]   # (no BV number) -> mm38gt
 #   The UNBRANDED twin of BV2293 (vq78wk), minted 2026-08-22 for sharing in the
 #   Equal Vote Slack without leading with a link to this repo. Same nine voters,
