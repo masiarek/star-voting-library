@@ -9,7 +9,7 @@ tags:
 
 *[VSE](what_makes_a_good_winner.md#measuring-it-empirically-vse-bayesian-regret) asks **"does this method pick a good winner?"** PVSI asks the other half of the question: **"does this method reward you for lying on your ballot?"** It is VSE's companion metric, introduced in the same peer-reviewed paper, and it's the number behind claims like "in STAR, strategy is as likely to backfire as to work."*
 
-**Level: 301 · deep dive** Source: [Wolk, Quinn & Ogren (2023)](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) — peer-reviewed, open access, and claim-checked here (the authors are STAR advocates; lean disclosed).
+**Level: 301 · deep dive** Source: [Wolk, Quinn & Ogren (2023)](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) — peer-reviewed, open access, and claim-checked here (the authors are STAR advocates; lean disclosed). The code both metrics come out of: [vse-sim, read from source](vse_sim.md).
 
 ---
 

@@ -11,6 +11,7 @@ Before the per-topic criteria: **what are we even optimizing for?**
 - [**What makes a good winner?**](what_makes_a_good_winner.md) — the "correct" winner, consensus/Condorcet vs. utilitarian vs. majority, and why there's no single ideal.
 - [**What makes a voting *method* good?**](what_makes_a_voting_method_good.md) — the criteria beyond the winner (simplicity, summability, auditability, honesty/strategy, competition), VSE, and "a perfect system will never exist."
 - [**Election simulation models**](election_simulation_models.md) — how VSE studies generate synthetic electorates (Impartial Culture, spatial, Mallows, urn…), and why results depend on the model.
+- [**vse-sim — the simulator behind the VSE numbers**](vse_sim.md) — the canonical VSE codebase read from source: the exact formula, the 40-voter/6-candidate electorate the published charts used, what "a strategic voter" is, and which questions a VSE chart can't answer from its own face.
 - [**The six Euclidean spaces**](euclidean_spaces.md) — the spatial model in close-up: what `uniform_ball`, `gaussian_cube` and the rest actually draw, with pictures, and the seeding trap that silently degenerates them.
 - [**AI advice — a verdict, on the record**](ai_advice.md) — the one page that *does* pick: asked to play all-knowing and all-powerful, the library's AI names STAR by a nose over Ranked Robin, shows the reasoning, states where the pick flips — and discloses its own leans first.
 
