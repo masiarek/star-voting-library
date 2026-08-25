@@ -150,7 +150,7 @@ The CSV's first line records the media model, repo version, seed, model, methods
 
 **Caveat as of 2026-08-24:** at `ef44ce4` that script does not run — `ModuleNotFoundError: No module named 'debugDump'`. It still imports `from vse import CsvBatch, …` and `from debugDump import setDebug`, module names that the move to the `src/vse_sim/` layout retired; the test suite imports `vse_sim.*`. The script was born working and was broken **two minutes later**: `d999795` created it alongside the reproduction guide while a root `vse.py` still existed, and the very next commit `f77a30f` — "Modernize package and move to Python 3.14" — moved the modules under `src/` without touching it. It has not been edited since. CI stays green because `testpaths` covers `src/vse_sim` and `tests`, so `scripts/` is never collected. The fix really is two lines (`from vse_sim.diagnostics import setDebug` / `from vse_sim.simulation import CsvBatch, KSModel, allSystems, fuzzyMediaFor` — `simulation.py` re-exports the last two), verified end-to-end on a copy: exit 0, and a self-describing CSV.
 
-The general lesson is worth more than the bug: **a reproduction command that no test executes is not a reproduction command.** This repo has the same exposure wherever a documented one-liner sits outside the suite.
+The general lesson is worth more than the bug: **a reproduction command that no test executes is not a reproduction command.** Full write-up — the evidence, the timeline, the fix, and the same audit run against this repo's own twenty documented-but-untested scripts: [a reproduction command nobody runs](../about_this_repo/vse_sim_reproduction_gap.md).
 
 ## References
 

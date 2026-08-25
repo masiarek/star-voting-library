@@ -8,6 +8,14 @@ This is the follow-up list: every report **we** filed against a project we don't
 
 ---
 
+## Found, verified, not filed
+
+Findings that are ready to go upstream but haven't been sent — kept separate from the tables below, which record only reports we actually opened. A row moves down into a table on the day it is filed, not before.
+
+| Finding | Verified | What it is |
+|---|---|---|
+| [`electionscience/vse-sim` — the documented chart-reproduction command fails at import](vse_sim_reproduction_gap.md) | 2026-08-24 | `scripts/generate_published_results.py` still imports the root `vse` / `debugDump` modules that the move to `src/vse_sim/` retired, so the repo's own guide to regenerating the published VSE data dies on `ModuleNotFoundError`. Born working in `d999795` and broken **two minutes later** by `f77a30f`; untouched since. CI can't see it (`testpaths` covers `src/vse_sim` and `tests`, never `scripts/`). Two-line fix, verified end-to-end. Not a duplicate — no open PRs, no matching issue |
+
 ## BetterVoting — [Equal-Vote/bettervoting](https://github.com/Equal-Vote/bettervoting/issues)
 
 | Issue | Filed | State | What it is |
