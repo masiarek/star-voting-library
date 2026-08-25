@@ -156,5 +156,6 @@ The general lesson is worth more than the bug: **a reproduction command that no 
 
 - [`electionscience/vse-sim`](https://github.com/electionscience/vse-sim) — the code · [VSE FAQ and charts](https://electionscience.github.io/vse-sim/) · [interactive chart](https://electionscience.github.io/vse-sim/vse-graph.html) · [strategy view](https://electionscience.github.io/vse-sim/stratstuff.html)
 - [Wolk, Quinn & Ogren (2023)](../../01_STAR/01_Learn/reference/wolk_quinn_ogren_2023.md) — the peer-reviewed VSE/PVSI paper, claim-checked here (authors are STAR advocates; lean disclosed)
+- [A voting simulation harness — goals, requirements, and the landscape](../../06_Other/simulations/SIMULATOR_REQUIREMENTS.md) — where this simulator sits among the fifteen others, what it does *not* cover (Bloc STAR, STAR-PR, Ranked Robin — it is single-winner only), and whether a replacement is worth writing
 - [Distortion](distortion.md) — VSE's proved, worst-case academic sibling
 - [Formal compliance vs. strategic preservation](compliance_vs_strategic_preservation.md) — this repo's own strategy simulations, and the five-question checklist for any study of that shape

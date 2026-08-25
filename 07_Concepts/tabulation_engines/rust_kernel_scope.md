@@ -16,6 +16,8 @@ This is a strategy note, not a plan of record. Nothing here has been built. It e
 
 So the case library stays exactly where it is. Rust, if it happens, is a **consumer** of the case library on equal footing with the other five.
 
+**"Should the *simulator* be Rust?"** — A different question again, and it is answered on its own page with a benchmark rather than an argument: [A voting simulation harness — goals, requirements, and the landscape](../../06_Other/simulations/SIMULATOR_REQUIREMENTS.md). Short version: no for sampling realistic electorates (2.9× over numpy), yes for the exhaustive ballot-space search below (238×, measured) — and that page also surveys the fifteen simulators that already exist, one of which covers all six of this library's methods.
+
 **"Should there be a Rust tabulation kernel?"** — That is the real question, and the answer is conditional. It depends entirely on whether the goal is *a faster engine* (no) or *the two capabilities in the next-but-one section* (yes).
 
 ---

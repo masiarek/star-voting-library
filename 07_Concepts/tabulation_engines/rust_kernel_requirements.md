@@ -8,6 +8,8 @@
 >
 > **What survives the decision is Track A** — the JSON result contract, the 48 missing answer keys (closed 2026-08-20 — see [the scope note's item 2](rust_kernel_scope.md) for how few were real), the alias table, the [written tiebreak ladders](tiebreak_ladders.md) (done 2026-08-20). Those were always worth doing in Python, and they are now the whole recommendation.
 >
+> **A third workload was measured separately, and it splits the answer:** a *simulator* is not a test library, so its dominant cost is running rather than authoring. [A voting simulation harness](../../06_Other/simulations/SIMULATOR_REQUIREMENTS.md) benchmarks the same STAR kernel in both languages and finds Rust worth only **2.9× over well-written numpy** for Monte-Carlo sampling — which *strengthens* the decision above — but **238×** for the tiny-election enumeration of G2, which is the one case where the language genuinely changes what is possible. Even there the profile count grows ~26× per added voter, so 238× buys fewer than two extra voters.
+>
 > **What Rust keeps a real claim to is a different project:** software that counts a real, high-stakes election under verifiable encryption. That is not this repo's job, it needs a funded independent audit, and it would have a different owner. The analysis below is kept because it is the argument for why — and so the question does not get re-opened from scratch.
 
 > **Superseded in scope, kept for the reasoning.** The exploration on this page converged on a much smaller and better-defined target: [the STAR reference package](star_reference_package.md), with the certification landscape in [what would it take to certify STAR Voting software?](certifying_star_software.md). Read those two first; this page is the argument that got there.
