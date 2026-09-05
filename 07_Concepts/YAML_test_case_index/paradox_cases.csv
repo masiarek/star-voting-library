@@ -1,4 +1,4 @@
-paradox,kind,case_title,method,expected_winners,bv_test_id,bv_election_id,yaml_path
+﻿paradox,kind,case_title,method,expected_winners,bv_test_id,bv_election_id,yaml_path
 Condorcet winner paradox,Simple,Favorite betrayal in STAR (1 of 2) — honest ballots: the tepid consensus misses the runoff,STAR,Clover,BV2206,7mckyg,01_STAR/03_Criteria/favorite_betrayal/cases/bv2206_7mckyg_fbc_honest_tepid_consensus.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR B)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C03_fewV15_noise_1.yaml
 Condorcet winner paradox,Simple,"STAR vs RR divergence -- 3 cands, 15 voters, cycle (STAR A, RR C)",STAR,A,,,05_Ranked_Robin/02_Examples/star_vs_rr_divergence/cycle_C03_fewV15_noise_2.yaml
