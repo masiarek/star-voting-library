@@ -72,11 +72,14 @@ def test_affine_invariance_check_holds():
     assert "✓ holds — the (−1,0,+1) and (0,1,2) scales agree." in r.stdout, r.stdout
 
 
-def test_blank_cells_are_refused_not_miscounted():
+def test_blank_cells_are_refused_not_miscounted(tmp_path):
     """A blank parses to 0, which on this scale reads as Against. The engine
-    must refuse the file with a clear message and exit 1 — no traceback."""
-    bad = CASES_DIR / "cases_tabulated" / "_tmp_blank_trap.yaml"
-    bad.parent.mkdir(parents=True, exist_ok=True)
+    must refuse the file with a clear message and exit 1 — no traceback.
+
+    The trap file lives under pytest's tmp_path, not the repo tree: until
+    2026-09-13 it was written into cases_tabulated/ and removed in a finally,
+    and an interrupted run left `_tmp_*_trap.yaml` strays in `git status`."""
+    bad = tmp_path / "blank_trap.yaml"
     bad.write_text(
         "election_title: blank trap\n"
         "voting_method: CAV\n"
@@ -85,20 +88,16 @@ def test_blank_cells_are_refused_not_miscounted():
         "  2,\n"
         "  1,2\n",
         encoding="utf-8")
-    try:
-        r = _run(CAV, bad)
-        assert r.returncode == 1, f"expected exit 1, got {r.returncode}:\n{r.stdout}"
-        assert "not a valid CAV ballot grid" in r.stdout, r.stdout
-        assert "An abstention is written 1, NOT left blank" in r.stdout, r.stdout
-        assert "Traceback" not in (r.stderr + r.stdout), r.stderr
-    finally:
-        bad.unlink(missing_ok=True)
+    r = _run(CAV, bad)
+    assert r.returncode == 1, f"expected exit 1, got {r.returncode}:\n{r.stdout}"
+    assert "not a valid CAV ballot grid" in r.stdout, r.stdout
+    assert "An abstention is written 1, NOT left blank" in r.stdout, r.stdout
+    assert "Traceback" not in (r.stderr + r.stdout), r.stderr
 
 
-def test_out_of_range_marks_are_refused():
+def test_out_of_range_marks_are_refused(tmp_path):
     """CAV is a three-level ballot; a 5 is not a CAV mark."""
-    bad = CASES_DIR / "cases_tabulated" / "_tmp_range_trap.yaml"
-    bad.parent.mkdir(parents=True, exist_ok=True)
+    bad = tmp_path / "range_trap.yaml"
     bad.write_text(
         "election_title: range trap\n"
         "voting_method: CAV\n"
@@ -107,13 +106,10 @@ def test_out_of_range_marks_are_refused():
         "  5,2\n"
         "  1,2\n",
         encoding="utf-8")
-    try:
-        r = _run(CAV, bad)
-        assert r.returncode == 1, f"expected exit 1, got {r.returncode}:\n{r.stdout}"
-        assert "three-level ballot" in r.stdout, r.stdout
-        assert "Traceback" not in (r.stderr + r.stdout), r.stderr
-    finally:
-        bad.unlink(missing_ok=True)
+    r = _run(CAV, bad)
+    assert r.returncode == 1, f"expected exit 1, got {r.returncode}:\n{r.stdout}"
+    assert "three-level ballot" in r.stdout, r.stdout
+    assert "Traceback" not in (r.stderr + r.stdout), r.stderr
 
 
 def test_blank_encoding_reverses_the_field():
