@@ -169,5 +169,5 @@ It cannot be undone from either side: clearing `auth_key` needs `canEditElection
 
 - [BV — BetterVoting (the live web app)](README.md)
 - The script + how to run it: [`create_bv_test_election.py` — tool guide](../../../STARVote_LH_tabulation_engine/tools_adam/create_bv_test_election.md)
-- The BV-backed case workflow is documented in the repo's `CLAUDE.md` (steps 3–4).
+- The BV-backed case workflow is documented in the repo's `bettervoting` skill (`.claude/skills/bettervoting/SKILL.md`, steps 3–4).
 

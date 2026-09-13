@@ -41,4 +41,4 @@
 
 1. It must earn a **distinct job** none of the set above already does — canonical status is about *reuse*, so a one-page example doesn't qualify.
 2. Smallest ballots that make the point ([voter-count tips](TIPS_choosing_voter_counts.md)); fresh cast per the CLAUDE.md name rules.
-3. Brainstorm in `trash_delete.yaml`, get Adam's go, then **freeze**: BV-back it if the result is deterministic (the standard [BV workflow](../../CLAUDE.md)), register it in this table, and only then start reusing it.
+3. Brainstorm in `trash_delete.yaml`, get Adam's go, then **freeze**: BV-back it if the result is deterministic (the standard BV workflow in the repo's `bettervoting` skill), register it in this table, and only then start reusing it.

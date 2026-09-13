@@ -112,7 +112,7 @@ Round 2: Automatic Runoff Round: First tiebreaker
  The highest-scoring candidate wins.
 ```
 
-…while `--json` reports `"tiebreaks": []` at schema 1.2.0. That is not a new bug; it is the blind spot [CLAUDE.md](../../../CLAUDE.md) already names in print — the rungs *below* the lot inside a Bloc/PR round run in starvote's own counting functions and report nothing back, so the [result contract](../../../07_Concepts/tabulation_engines/result_schema.md) cannot see them. Keep this file as the fixture that fails first when someone closes that gap. The tie decides the *order* of two seats, not the winner set, so the answer key is stable either way.
+…while `--json` reports `"tiebreaks": []` at schema 1.2.0. That is not a new bug; it is a blind spot the [result contract](../../../07_Concepts/tabulation_engines/result_schema.md) already names in print — the rungs *below* the lot inside a Bloc/PR round run in starvote's own counting functions and report nothing back, so the contract cannot see them. Keep this file as the fixture that fails first when someone closes that gap. The tie decides the *order* of two seats, not the winner set, so the answer key is stable either way.
 
 ## Run them yourself
 

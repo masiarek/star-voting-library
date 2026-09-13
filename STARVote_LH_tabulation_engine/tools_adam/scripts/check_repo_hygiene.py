@@ -1466,8 +1466,9 @@ def check_code_span_paths():
     return bad
 
 
-# Paths in CLAUDE.md that are deliberately unresolvable.  Both are QUOTATIONS
-# inside its own writeup of the bare-code-text bug, not references to anything:
+# Paths that are deliberately unresolvable.  Both were QUOTATIONS inside
+# CLAUDE.md's writeup of the bare-code-text bug (that story now lives in the
+# check_code_span_paths docstring; 2026-09-12), not references to anything:
 # the first is its worked example of a path that rotted through the 2026-08-02
 # reorganization, the second its example of a legitimate reference to ANOTHER
 # codebase (BetterVoting's).  Each has to stay broken to keep being an example
@@ -1475,6 +1476,14 @@ def check_code_span_paths():
 _CLAUDE_MD_ILLUSTRATIVE = {
     "07_Concepts/residual_vote_splitting.md",
     "packages/frontend/src/i18n/en.yaml",
+}
+
+# Paths in ANOTHER codebase that a skill names on purpose: the bv-docs skill is
+# about files in BetterVoting's docs/ tree, which this repo does not hold, so
+# they resolve from neither the root nor a tail match — by design, not by rot.
+_OTHER_CODEBASE_PATHS = {
+    "help/faq.md",                                # BV docs/, in bv-docs
+    "contributions/developers/1_local_setup.md",  # BV docs/, in bv-docs
 }
 
 
@@ -1549,6 +1558,12 @@ def check_ballot_weight_side():
 def check_claude_md_paths(source=None):
     """Return [(rel:line, msg)] for CLAUDE.md path references that no longer resolve.
 
+    Also reads every `.claude/skills/*/SKILL.md` (since 2026-09-12).  Whole
+    sections moved out of CLAUDE.md into those skills, to shrink what every
+    session loads, and they kept the same root-relative code-text paths — but
+    `.claude` is in SKIP_DIRS, so no other check reads them.  Moving a section
+    out of the always-loaded file must not also move it out of this check.
+
     CLAUDE.md is the one file where a root-relative path in code text is already
     correct: it sits AT the repo root, so root-relative is page-relative, and
     `check_code_span_paths` rightly has nothing to say about its ~41 paths.  It
@@ -1581,35 +1596,49 @@ def check_claude_md_paths(source=None):
     """
     bad = []
     if source is None:
-        path_ = os.path.join(REPO, "CLAUDE.md")
-        if not os.path.exists(path_):
-            return bad
-        with open(path_, encoding="utf-8") as fh:
-            text = fh.read()
+        sources = []
+        for rel in _agent_instruction_files():
+            with open(os.path.join(REPO, rel), encoding="utf-8") as fh:
+                sources.append((rel, fh.read()))
     else:
-        text = source
-    for i, line in enumerate(text.splitlines(), 1):
-        for m in _CODE_SPAN_PATH.finditer(line):
-            path = m.group(1)
-            if "/" not in path:
-                continue          # a file's NAME, not a location — see docstring
-            if path in _CLAUDE_MD_ILLUSTRATIVE:
-                continue          # deliberately broken; it IS the example
-            if os.path.exists(os.path.join(REPO, path)):
-                continue          # resolves from the root, where CLAUDE.md lives
-            hits = [h for h in _repo_files_named(os.path.basename(path))
-                    if h.endswith("/" + path)]
-            if len(hits) == 1:
-                continue          # engine-dir shorthand, still reachable
-            near = _repo_files_named(os.path.basename(path))
-            where = f" (basename now at: {', '.join(near[:3])})" if near else \
-                    " (basename found nowhere in the repo)"
-            bad.append((f"CLAUDE.md:{i}",
-                        f"`{path}` no longer resolves{where}. CLAUDE.md's paths "
-                        f"are inert code text, so nothing else catches this — "
-                        f"repoint it, or add it to _CLAUDE_MD_ILLUSTRATIVE if it "
-                        f"is a deliberate example."))
+        sources = [("CLAUDE.md", source)]
+    for rel, text in sources:
+        for i, line in enumerate(text.splitlines(), 1):
+            for m in _CODE_SPAN_PATH.finditer(line):
+                path = m.group(1)
+                if "/" not in path:
+                    continue      # a file's NAME, not a location — see docstring
+                if path in _CLAUDE_MD_ILLUSTRATIVE:
+                    continue      # deliberately broken; it IS the example
+                if path in _OTHER_CODEBASE_PATHS:
+                    continue      # BetterVoting's file, not ours
+                if os.path.exists(os.path.join(REPO, path)):
+                    continue      # resolves from the root, where CLAUDE.md lives
+                hits = [h for h in _repo_files_named(os.path.basename(path))
+                        if h.endswith("/" + path)]
+                if len(hits) == 1:
+                    continue      # engine-dir shorthand, still reachable
+                near = _repo_files_named(os.path.basename(path))
+                where = f" (basename now at: {', '.join(near[:3])})" if near else \
+                        " (basename found nowhere in the repo)"
+                bad.append((f"{rel}:{i}",
+                            f"`{path}` no longer resolves{where}. These paths "
+                            f"are inert code text, so nothing else catches this — "
+                            f"repoint it, or add it to _CLAUDE_MD_ILLUSTRATIVE if "
+                            f"it is a deliberate example."))
     return bad
+
+
+def _agent_instruction_files():
+    """CLAUDE.md, then every on-demand skill, as repo-relative paths."""
+    files = ["CLAUDE.md"] if os.path.exists(os.path.join(REPO, "CLAUDE.md")) else []
+    skills = os.path.join(REPO, ".claude", "skills")
+    if os.path.isdir(skills):
+        for name in sorted(os.listdir(skills)):
+            rel = f".claude/skills/{name}/SKILL.md"
+            if os.path.exists(os.path.join(REPO, rel)):
+                files.append(rel)
+    return files
 
 
 # --------------------------------------------------------------------------- #
@@ -1705,7 +1734,7 @@ def main(argv):
         for rel, msg in hits:
             print(f"   • {rel}\n       {msg}")
         print("\n  (House rules: BV screenshots → img/<bv_id>_*.png; BV exports → "
-              "<descriptor>_<bvid>_bv_export.json. See CLAUDE.md.)")
+              "<descriptor>_<bvid>_bv_export.json. See the bettervoting skill.)")
     dead = check_links()
     if not dead:
         print("repo-hygiene: ✓ all relative Markdown links resolve.")
@@ -1851,7 +1880,7 @@ def main(argv):
         rc = 1
         print(f"repo-hygiene: ⚠️  hand-pasted engine reports ({len(pasted)}) — nothing "
               "tests a pasted report, so it goes stale the next time the engine's")
-        print("              output format changes (see CLAUDE.md, 'Route the short "
+        print("              output format changes (see the embedding-reports skill, 'Route the short "
               "snippet to the full report'):")
         for rel, msg in pasted:
             print(f"   • {rel}\n       {msg}")
@@ -1885,10 +1914,10 @@ def main(argv):
             print(f"   • {rel}\n       {msg}")
     claude_paths = check_claude_md_paths()
     if not claude_paths:
-        print("repo-hygiene: ✓ every path CLAUDE.md names still resolves.")
+        print("repo-hygiene: ✓ every path CLAUDE.md and the skills name still resolves.")
     else:
         rc = 1
-        print(f"repo-hygiene: ⚠️  stale paths in CLAUDE.md ({len(claude_paths)}) — "
+        print(f"repo-hygiene: ⚠️  stale paths in CLAUDE.md / skills ({len(claude_paths)}) — "
               "these are inert code text, correct as written from the repo")
         print("              root, and therefore invisible to every other check "
               "here. CLAUDE.md is what both contributors and each agent")

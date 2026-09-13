@@ -70,7 +70,7 @@ SCAN_DIRS = ["01_STAR", "method_comparisons", "YAML_library/1_positive",
              "06_Other/ballot_style_lab"]
 
 # ...but a scratch file sitting in one of those folders is NOT a curated case.
-# CLAUDE.md's workflow step 1 says to brainstorm new scenarios in
+# CLAUDE.md says to brainstorm new scenarios in
 # `trash_delete.yaml` and never commit it, so whatever is parked there is
 # transient by definition — and it kept leaking in here: when the scratch copy
 # duplicated a real case, _dedupe() hung an "_also at: …trash_delete.yaml_" note

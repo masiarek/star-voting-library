@@ -72,7 +72,7 @@ Worth checking, because it's easy to assume the methods differ everywhere:
 - **[Ranked Robin](../../05_Ranked_Robin/01_Learn/README.md)** — one pairwise matchup *is* the whole round robin.
 - **[Approval](../../04_Approval/01_Learn/README.md)** — among voters who distinguish the two, it is majority rule; approving both or neither abstains from the pair.
 
-So the repo's own convention that [two-candidate intro files suppress the finalists matrix](../../CLAUDE.md) — because it merely echoes the runoff — isn't a display quirk. It's May's Theorem showing up in the output: at two candidates there is only one thing any of these methods can be doing.
+So the repo's own convention that [a two-candidate race hides the finalists matrix](../../01_STAR/01_Learn/reporting/reporting_LH/options.md) — because it merely echoes the runoff — isn't a display quirk. It's May's Theorem showing up in the output: at two candidates there is only one thing any of these methods can be doing.
 
 **The honest limit.** This makes May's Theorem a *baseline*, not an argument for any method. It says nothing whatsoever about which multi-candidate rule is better, because its whole content evaporates at three. Anyone citing May to defend a particular reform has overreached.
 

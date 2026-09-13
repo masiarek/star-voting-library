@@ -57,4 +57,4 @@ Two things that are *no longer* limitations. API-created elections **are** admin
 ## See also
 
 - [BV — BetterVoting (the live web app)](../../07_Concepts/tabulation_engines/BV/README.md)
-- Repo `CLAUDE.md` — the full 9-step BV-backed case workflow.
+- The repo's `bettervoting` skill (`.claude/skills/bettervoting/SKILL.md`) — the full nine-step BV-backed case workflow.

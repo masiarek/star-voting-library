@@ -201,6 +201,22 @@ def test_claude_md_path_check_is_not_vacuous():
     )
 
 
+def test_skill_files_are_path_checked_too():
+    """The on-demand skills are scanned along with CLAUDE.md.
+
+    Whole sections moved out of CLAUDE.md into `.claude/skills/*/SKILL.md`
+    (2026-09-08 and 2026-09-12) with their root-relative code-text paths intact,
+    and `.claude` is in SKIP_DIRS — so without this, shrinking the always-loaded
+    file would quietly have shrunk what the stale-path check covers.
+    """
+    mod = _load_hygiene()
+    files = mod._agent_instruction_files()
+    assert files and files[0] == "CLAUDE.md", files
+    skills = [f for f in files if f.startswith(".claude/skills/")]
+    assert ".claude/skills/bettervoting/SKILL.md" in skills, files
+    assert ".claude/skills/tabulation-engines/SKILL.md" in skills, files
+
+
 def test_no_new_hand_pasted_engine_reports():
     """A long engine report on a companion page must be embedded, not pasted.
 
@@ -544,7 +560,7 @@ def test_redirect_map_check_is_not_vacuous():
 def test_bv_backed_pages_link_their_live_election():
     """A BV-backed case page must link its own election's /results, clickably.
 
-    CLAUDE.md and the `bettervoting` skill both require this — "not just the
+    The `bettervoting` skill requires this — "not just the
     bare election id" — and for a long time nothing enforced it, which is how
     31 pages drifted: 17 with no link at all (build_yaml_pages.py guessed the
     bvid from the FILENAME with a regex that wants it in the middle, so every

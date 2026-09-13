@@ -39,7 +39,7 @@ round-2 runoff tie is resolved by a DETERMINISTIC rung (score) inside a bloc
 round, and the machine-readable contract does not see it: the printed report
 shows "Round 2: Automatic Runoff Round: First tiebreaker" while
 `--json` reports `tiebreaks: []` at schema 1.2.0. That is the known blind spot
-named in CLAUDE.md — the rungs below the lot inside a Bloc/PR round run in
+named on the result-schema page — the rungs below the lot inside a Bloc/PR round run in
 starvote's own counting functions and report nothing back. Keep this file as
 the fixture that fails first when someone closes that gap.
 

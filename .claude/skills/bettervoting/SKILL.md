@@ -133,7 +133,7 @@ only what is BV-specific, so non-BV sessions don't pay for it.
   tabulation engine ignores them; `tools_adam/scripts/build_bv_registry.py` reads
   them (falling back to the frozen `_bv_export.json` for the true election id, and
   the `bv…` filename for the Test ID) and regenerates
-  `00_start_here/YAML_test_case_index/BV_registry.md` + `bv_cases.csv` — a
+  `07_Concepts/YAML_test_case_index/BV_registry.md` + `bv_cases.csv` — a
   sortable, repo-native index (method / winners / candidates / ballots / bvid /
   page / yaml). **The repo registry is canonical for tabulation cases** — the
   `.yaml` (source of truth) + `.md` (writeup) + the auto-generated
@@ -184,7 +184,7 @@ only what is BV-specific, so non-BV sessions don't pay for it.
     Approval/Plurality = 0/1; ranked (IRV/STV/RankedRobin) = **ranks** in the
     score slot (1 = top … 0 = unranked), validated `0..max_rankings`. Multi-race
     elections carry several `races[]`; each voter votes every race — grouped in
-    `00_start_here/YAML_test_case_index/multirace_elections.md`.
+    `07_Concepts/YAML_test_case_index/multirace_elections.md`.
   - **BV titles are PERMANENT and PUBLIC.** API-created elections can't be
     renamed, closed, or deleted (only a BV admin with DB access can purge them),
     and the title shows on the public results page — so give a real, meaningful
@@ -313,3 +313,26 @@ The loop that's working well (**Adam** = human, **AI** = assistant):
 **LH-only cases** (no BetterVoting election — e.g. a reproduction of a Larry
 `starvote` test file) skip steps 3–4 and the `<bvid>` filename segment; everything
 else is the same.
+
+## Frozen exports are historical
+
+*Migrated out of `CLAUDE.md` on 2026-09-12 so it loads on demand instead of in every session. The rules below are unchanged.*
+
+- **A frozen `_bv_export.json` records what BetterVoting PERMANENTLY stores — never migrate it**
+  (learned the hard way 2026-08-22). BV descriptions cannot be edited, so the frozen export
+  is the repo's only evidence of what a public, unchangeable artifact actually says. Its
+  paths are therefore *historical*, exactly like `mkdocs.yml`'s redirect keys, and for the
+  same reason. The 2026-08-02 reorganization rewrote paths inside **22** of them, because
+  `migrate_concept_links.py` has `.json` in its `TEXT_EXT` — so the frozen copies read
+  `01_STAR/05_Practice/` while the live BV descriptions still say `01_STAR/exercises/`. Two
+  harms, and the second is the nastier: the file asserts something BV never said, *and* the
+  edit conceals that BV's permanent text now names a folder that does not exist. The script
+  now skips `*_bv_export.json` (`SKIP_FILE_SUFFIXES`), and the 22 were restored from the live
+  API. **To audit:** fetch `/API/Election/<bvid>` for every `bv_election_id:` in the corpus
+  and diff `description` against the frozen copy — they must be identical. Worth knowing what
+  the same sweep found *undamaged*: all 38 clickable `masiarek.github.io` URLs inside BV
+  descriptions still resolve, because `redirects.redirect_maps` covers them. It is the **bare
+  path** references that rot, since nothing redirects those — 23 live elections (BV2188–2209,
+  all minted before the reorganization) name four folders that no longer exist. Those are
+  permanent and unfixable; the lesson for new mints is to put the *published URL* in a
+  description, never a bare repo path.
