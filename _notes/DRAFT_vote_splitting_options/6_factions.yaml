@@ -1,0 +1,45 @@
+election_title: "OPTION 6 — Left1, Center1, Right1: the labels do the explaining"
+scenario_description: |-
+  Nine voters, seven candidates, and names that say who is who — so nobody has to
+  be persuaded that two candidates are alike. Two on the left, four in the
+  centre, one on the right.
+
+  Every candidate except Right1 has exactly ONE supporter as a first choice. The
+  right is consolidated: all three of its voters mark Right1.
+
+  Choose-One elects RIGHT1 with 3 of 9 (33%) — the only candidate the other six
+  voters rank at or near the bottom. The four centrists are near-substitutes for
+  one another and hold 4 first choices between them, more than Right1's 3, but a
+  single mark cannot say so.
+
+  Under STAR every voter scores all seven. Center1 and Center2 take both runoff
+  slots, and Center1 wins 5-4 with nobody at Equal Support. Right1 finishes
+  FOURTH of seven in the scoring round.
+
+  Trade-off to weigh: abstract labels make the clone structure unarguable, which
+  is exactly what the food scenarios cannot do. The cost is that the repo's house
+  style reserves abstract names for academic illustrations, because a learner
+  meets a name like "Center2" as a variable rather than a person.
+
+blocs:
+  Centre: [Center1, Center2, Center3, Center4]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Left1,Left2,Center1,Center2,Center3,Center4,Right1
+  5,4,4,3,2,2,0   # a Left1 voter - the centre is acceptable, the right is not
+  4,5,4,3,2,2,0   # a Left2 voter
+  2,2,5,3,3,3,0   # a Center1 voter
+  2,2,4,5,3,3,0   # a Center2 voter
+  1,1,4,3,5,3,1   # a Center3 voter
+  1,1,4,3,3,5,1   # a Center4 voter
+  0,0,0,1,1,1,5   # a Right1 voter - only Right1 will do
+  0,0,0,1,1,1,5   # a Right1 voter
+  0,0,0,1,1,1,5   # a Right1 voter
+
+expected_winners:
+  - Center1
+
+# file: 6_factions.yaml

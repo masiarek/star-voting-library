@@ -1,0 +1,38 @@
+election_title: "OPTION 1 — The ice cream counter: seven chocolates and a vanilla"
+scenario_description: |-
+  Nine people. Eight flavours. Seven of the eight tubs are chocolate in some
+  form, and every chocolate lover has a different favourite, so each chocolate
+  collects exactly ONE first choice. The two vanilla eaters agree with each
+  other.
+
+  Choose-One elects Vanilla with 2 of 9 — twenty-two percent — while SEVEN of
+  the nine people (78%) came in wanting chocolate. Nobody's vote was wasted by
+  accident and nobody voted strategically; the chocolate side simply had seven
+  names to spread nine people's single marks across.
+
+  Under STAR a chocolate lover scores every chocolate, the split vanishes, and
+  Milk Chocolate wins the runoff 6-3 with nobody at Equal Support. Vanilla
+  finishes DEAD LAST of eight in the scoring round.
+
+blocs:
+  Chocolate: [Dark Chocolate, Milk Chocolate, Chocolate Chip, Chocolate Fudge, Rocky Road, Mint Chip, Brownie Batter]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Dark Chocolate,Milk Chocolate,Chocolate Chip,Chocolate Fudge,Rocky Road,Mint Chip,Brownie Batter,Vanilla
+  5,4,2,2,1,1,2,0   # dark chocolate is my favourite
+  3,5,2,2,2,1,2,0   # milk chocolate is my favourite
+  3,4,5,2,2,1,2,0   # chocolate chip is my favourite
+  3,4,2,5,1,1,3,0   # chocolate fudge is my favourite
+  3,4,2,1,5,1,1,0   # rocky road is my favourite
+  2,4,2,1,1,5,1,1   # mint chip is my favourite
+  3,4,2,3,1,1,5,0   # brownie batter is my favourite
+  1,0,0,0,0,1,0,5   # vanilla, please
+  1,0,0,0,0,0,0,5   # vanilla, please
+
+expected_winners:
+  - Milk Chocolate
+
+# file: 1_ice_cream_counter.yaml

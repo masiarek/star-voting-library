@@ -1,0 +1,31 @@
+election_title: "OPTION 4 — Pizza toppings: six meats and a mushroom"
+scenario_description: |-
+  Eight people, one pizza, one topping. Six of the seven options on the board are
+  meat, and every meat eater has a different favourite, so each meat collects
+  exactly ONE first choice. The two mushroom eaters agree with each other.
+
+  Choose-One elects Mushroom with 2 of 8 (25%) while SIX of the eight (75%)
+  wanted meat on the pizza. Under STAR a meat eater scores every meat, the split
+  vanishes, and Pepperoni wins. Mushroom finishes LAST of seven on score.
+
+blocs:
+  Meat: [Pepperoni, Sausage, Bacon, Ham, Meatball, Salami]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Pepperoni,Sausage,Bacon,Ham,Meatball,Salami,Mushroom
+  5,4,3,2,2,2,0   # pepperoni for me
+  4,5,3,2,2,2,0   # sausage for me
+  4,3,5,2,1,2,0   # bacon for me
+  4,3,2,5,2,2,0   # ham for me
+  4,3,2,2,5,2,1   # meatball for me
+  4,3,2,2,2,5,0   # salami for me
+  1,0,1,0,0,0,5   # mushroom, please
+  1,0,0,0,0,0,5   # mushroom, please
+
+expected_winners:
+  - Pepperoni
+
+# file: 4_pizza_toppings.yaml

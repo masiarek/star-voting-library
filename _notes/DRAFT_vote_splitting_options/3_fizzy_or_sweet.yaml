@@ -1,0 +1,46 @@
+election_title: "OPTION 3 — Fizzy or sweet? Two groupings the same size, only one of them real"
+scenario_description: |-
+  Seven people, seven drinks, and two obvious ways to group them:
+
+      Cola             fizzy   sugar        Diet Cola        fizzy   no sugar
+      Root Beer        fizzy   sugar        Sparkling Water  fizzy   no sugar
+      Lemonade         still   sugar        Unsweet Tea      still   no sugar
+      Sweet Tea        still   sugar
+
+  Count first choices by label and the two groupings are EXACTLY THE SAME SIZE:
+  fizzy holds 4 of 7, sugar holds 4 of 7. Both are majorities. Both are spread
+  across several candidates. From the outside they look like the same situation.
+
+  They are not. Choose-One elects DIET COLA on 2 of 7 (29%). The sugar majority
+  really did split and really did lose. The fizzy majority never split at all —
+  because it was never a bloc. A Diet Cola drinker does not want a Cola; they
+  score it a 1. "Fizzy" describes the drinks, not the drinkers.
+
+  Under STAR the two sugary drinks take BOTH runoff slots, Cola beats Lemonade
+  4-3, and Diet Cola — the Choose-One winner — finishes fourth of seven in the
+  scoring round.
+
+  Run 3b_fizzy_label.yaml next: byte-for-byte the same election with the blocs:
+  key naming the fizzy four instead. Same ballots, same winner, opposite verdict
+  from the engine's [Vote-splitting check].
+
+blocs:
+  Sugar (a real clone set): [Cola, Root Beer, Lemonade, Sweet Tea]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Cola,Root Beer,Lemonade,Sweet Tea,Diet Cola,Sparkling Water,Unsweet Tea
+  5,4,4,3,1,0,0   # cola, and anything sweet will do
+  4,5,3,3,1,0,0   # root beer, and anything sweet will do
+  3,2,5,4,0,1,0   # lemonade, and anything sweet will do
+  3,2,4,5,0,0,1   # sweet tea, and anything sweet will do
+  1,1,0,0,5,4,3   # diet cola - no sugar, thanks
+  1,0,0,0,5,3,4   # diet cola - no sugar, thanks
+  0,0,1,1,3,4,5   # unsweet tea - no sugar, thanks
+
+expected_winners:
+  - Cola
+
+# file: 3_fizzy_or_sweet.yaml

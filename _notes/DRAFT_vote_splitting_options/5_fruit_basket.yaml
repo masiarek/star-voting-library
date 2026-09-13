@@ -1,0 +1,38 @@
+election_title: "OPTION 5 — The fruit basket: seven apples and a banana"
+scenario_description: |-
+  Nine people, one fruit for the office basket, eight on the list. Seven of the
+  eight are APPLES — not "similar", not "arguably alike", the same fruit — and
+  every apple eater has a different variety, so each apple collects exactly ONE
+  first choice. The two banana eaters agree with each other.
+
+  Choose-One elects Banana with 2 of 9 — twenty-two percent — while SEVEN of the
+  nine people (78%) came in wanting an apple. Under STAR an apple eater scores
+  every apple, the split vanishes, and Gala wins the runoff 6-3. Banana finishes
+  LAST of eight in the scoring round.
+
+  The virtue of this cast over the ice cream one: nobody can argue about who is
+  in the family. "Is Rocky Road really chocolate?" is a debate. "Is a Honeycrisp
+  really an apple?" is not.
+
+blocs:
+  Apples: [Granny Smith, Gala, Fuji, Honeycrisp, Pink Lady, Red Delicious, McIntosh]
+
+voting_method: STAR
+num_winners: 1
+
+ballots: |-
+  Granny Smith,Gala,Fuji,Honeycrisp,Pink Lady,Red Delicious,McIntosh,Banana
+  5,4,2,2,1,1,2,0   # granny smith for me
+  3,5,2,2,2,1,2,0   # gala for me
+  3,4,5,2,2,1,2,0   # fuji for me
+  3,4,2,5,1,1,3,0   # honeycrisp for me
+  3,4,2,1,5,1,1,0   # pink lady for me
+  2,4,2,1,1,5,1,1   # red delicious for me
+  3,4,2,3,1,1,5,0   # mcintosh for me
+  1,0,0,0,0,1,0,5   # banana, please
+  1,0,0,0,0,0,0,5   # banana, please
+
+expected_winners:
+  - Gala
+
+# file: 5_fruit_basket.yaml
