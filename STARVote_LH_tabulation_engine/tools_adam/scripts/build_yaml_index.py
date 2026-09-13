@@ -33,7 +33,8 @@ OUT = os.path.join(REPO, "07_Concepts", "YAML_test_case_index", "README.md")
 EXCLUDE = ("/.venv/", "/.git/", "node_modules", "_tabulated", "_tabulation_engine",
            "_demo_dropbox", "/_generated", "/negative_cases/",
            "/harness_cases/", "/2_negative/", "/tests/",
-           "/site/")  # mkdocs build output (mirrors the whole repo)
+           "/site/",   # mkdocs build output (mirrors the whole repo)
+           "/_notes/")  # personal working notes: drafts, site-excluded, not content
 
 # Friendly section names + ordering for the methods we expect.
 METHOD_ORDER = ["STAR", "RCV_IRV", "RCV", "RANKEDROBIN", "APPROVAL",

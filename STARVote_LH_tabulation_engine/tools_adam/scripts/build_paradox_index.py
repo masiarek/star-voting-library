@@ -50,7 +50,8 @@ PAGES_DIR = "07_Concepts/voting_paradoxes"
 
 EXCLUDE = ("_tabulated", "_generated", "_demo_dropbox", "/tests/", "/negative",
            "/2_negative", "harness_cases", "trash_delete",
-           "/site/")  # mkdocs build output (mirrors the whole repo)
+           "/site/",   # mkdocs build output (mirrors the whole repo)
+           "/_notes/")  # personal working notes: drafts, site-excluded, not content
 
 # tag -> (display name, Felsenthal kind, teaching page filename or None, definition)
 VOCAB = {

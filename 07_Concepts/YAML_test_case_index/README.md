@@ -8,11 +8,11 @@ Election YAMLs live in many folders (the test harnesses glob specific ones, so t
 
 Titles come from each file's **`election_title`** field (the convention — add one to make a file's title explicit & searchable). Where that's missing, a file's first `#` comment line is shown *in italics* as a fallback.
 
-**672 election files** (549 single-winner, 123 multi-winner) across 18 method(s).
+**665 election files** (542 single-winner, 123 multi-winner) across 18 method(s).
 
 | Method | Files |
 |--------|------:|
-| STAR | 296 |
+| STAR | 289 |
 | RCV-IRV (Hare) | 56 |
 | Ranked Robin (RCV-RR / Copeland) | 107 |
 | Approval | 31 |
@@ -31,7 +31,7 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | RCV-IRV | 3 |
 | RR | 1 |
 
-## STAR  (296)
+## STAR  (289)
 
 | Case (page) | Folder | Winners | Title / expected | src |
 |------|--------|:------:|------------------|:--:|
@@ -197,13 +197,6 @@ Titles come from each file's **`election_title`** field (the convention — add 
 | [`06_c4_b24_narrow-bands`](../../06_Other/ballot_style_lab/cases/cases_pages/06_c4_b24_narrow-bands.md) | `06_Other/ballot_style_lab/cases/` | 1 | Narrow Bands — a paint-swatch election scored in slivers of the scale → _Beige_ | [`.yaml`](../../06_Other/ballot_style_lab/cases/06_c4_b24_narrow-bands.yaml) |
 | [`lot_tiebreak_bv_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_bv_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following BetterVoting's drawn order → _Ben_ | — |
 | [`lot_tiebreak_published_order.yaml`](../../YAML_library/1_positive/lot_tiebreak_published_order.yaml) | `YAML_library/1_positive/` | 1 | Lot tiebreak — following the new published-lot approach → _Ada_ | — |
-| [`1_ice_cream_counter.yaml`](../../_notes/DRAFT_vote_splitting_options/1_ice_cream_counter.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 1 — The ice cream counter: seven chocolates and a vanilla → _Milk Chocolate_ | — |
-| [`2_coffee_menu.yaml`](../../_notes/DRAFT_vote_splitting_options/2_coffee_menu.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 2 — The coffee menu: six ways to have espresso with milk, and a drip → _Latte_ | — |
-| [`3_fizzy_or_sweet.yaml`](../../_notes/DRAFT_vote_splitting_options/3_fizzy_or_sweet.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 3 — Fizzy or sweet? Two groupings the same size, only one of them real → _Cola_ | — |
-| [`3b_fizzy_label.yaml`](../../_notes/DRAFT_vote_splitting_options/3b_fizzy_label.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 3b — the same seven voters, asking about the FIZZY label instead → _Cola_ | — |
-| [`4_pizza_toppings.yaml`](../../_notes/DRAFT_vote_splitting_options/4_pizza_toppings.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 4 — Pizza toppings: six meats and a mushroom → _Pepperoni_ | — |
-| [`5_fruit_basket.yaml`](../../_notes/DRAFT_vote_splitting_options/5_fruit_basket.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 5 — The fruit basket: seven apples and a banana → _Gala_ | — |
-| [`6_factions.yaml`](../../_notes/DRAFT_vote_splitting_options/6_factions.yaml) | `_notes/DRAFT_vote_splitting_options/` | 1 | OPTION 6 — Left1, Center1, Right1: the labels do the explaining → _Center1_ | — |
 | [`BV_Library_star_condorcet_winner`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_condorcet_winner.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — STAR: highest-scoring Condorcet winner → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_condorcet_winner.yaml) |
 | [`BV_Library_star_runnerup_tie`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_runnerup_tie.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — STAR: runner-up tie, Allison wins → _Allison_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_runnerup_tie.yaml) |
 | [`BV_Library_star_runoff`](../../method_comparisons/BV_Library/cases/cases_pages/BV_Library_star_runoff.md) | `method_comparisons/BV_Library/cases/` | 1 | BV parity — STAR: runoff, lower total wins the runoff → _Bill_ | [`.yaml`](../../method_comparisons/BV_Library/cases/BV_Library_star_runoff.yaml) |

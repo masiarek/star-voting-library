@@ -40,7 +40,8 @@ import _bv_ids  # noqa: E402  — the shared BV-id resolver
 
 EXCLUDE = ("/_tabulated", "_tabulated/", "/_demo_dropbox/", "/_generated",
            "/negative", "/tests/", "/test_elections/", "/YAML_library/2_negative",
-           "/site/")  # mkdocs build output (mirrors the whole repo)
+           "/site/",   # mkdocs build output (mirrors the whole repo)
+           "/_notes/")  # personal working notes: drafts, site-excluded, not content
 
 
 def _find_repo(start):
